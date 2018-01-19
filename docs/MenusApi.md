@@ -1,0 +1,622 @@
+# Flipdish.Api.MenusApi
+
+All URIs are relative to *https://api.flipdish.co*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**DeleteMenuItemMetadata**](MenusApi.md#deletemenuitemmetadata) | **GET** /api/v{apiVersion}/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get a menu item metadata by key
+[**DeleteMenuItemMetadata_0**](MenusApi.md#deletemenuitemmetadata_0) | **DELETE** /api/v{apiVersion}/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Update a menu items metadata
+[**DeleteMenuSectionImage**](MenusApi.md#deletemenusectionimage) | **DELETE** /api/v{apiVersion}/menus/{menuId}/image | Delete menu image
+[**GetMenuById**](MenusApi.md#getmenubyid) | **GET** /api/v{apiVersion}/menus/{menuId} | Get menu by identifier
+[**GetMenuItemMetadata**](MenusApi.md#getmenuitemmetadata) | **GET** /api/v{apiVersion}/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get a menu items metadata
+[**GetMenuItemOptionSetItemMetadata**](MenusApi.md#getmenuitemoptionsetitemmetadata) | **GET** /api/v{apiVersion}/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get a menu item option set item metadata by key
+[**SetMenuItemMetadata**](MenusApi.md#setmenuitemmetadata) | **PUT** /api/v{apiVersion}/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update a menu items metadata
+[**SetMenuItemOptionSetItemMetadata**](MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v{apiVersion}/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update a menu item option set items metadata
+[**UploadMenuSectionImage**](MenusApi.md#uploadmenusectionimage) | **POST** /api/v{apiVersion}/menus/{menuId}/image | Upload menu image
+
+
+<a name="deletemenuitemmetadata"></a>
+# **DeleteMenuItemMetadata**
+> void DeleteMenuItemMetadata (int? menuId, int? storeId, int? menuItemId, string key, string apiVersion)
+
+Get a menu item metadata by key
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class DeleteMenuItemMetadataExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var storeId = 56;  // int? | Store identifier
+            var menuItemId = 56;  // int? | Menu item identifier
+            var key = key_example;  // string | Metadata key
+            var apiVersion = apiVersion_example;  // string | API version
+
+            try
+            {
+                // Get a menu item metadata by key
+                apiInstance.DeleteMenuItemMetadata(menuId, storeId, menuItemId, key, apiVersion);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.DeleteMenuItemMetadata: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **storeId** | **int?**| Store identifier | 
+ **menuItemId** | **int?**| Menu item identifier | 
+ **key** | **string**| Metadata key | 
+ **apiVersion** | **string**| API version | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletemenuitemmetadata_0"></a>
+# **DeleteMenuItemMetadata_0**
+> void DeleteMenuItemMetadata_0 (int? menuId, int? storeId, int? menuItemId, string key, string apiVersion)
+
+Update a menu items metadata
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class DeleteMenuItemMetadata_0Example
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var storeId = 56;  // int? | Store identifier
+            var menuItemId = 56;  // int? | Menu item identifier
+            var key = key_example;  // string | Metadata key
+            var apiVersion = apiVersion_example;  // string | API version
+
+            try
+            {
+                // Update a menu items metadata
+                apiInstance.DeleteMenuItemMetadata_0(menuId, storeId, menuItemId, key, apiVersion);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.DeleteMenuItemMetadata_0: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **storeId** | **int?**| Store identifier | 
+ **menuItemId** | **int?**| Menu item identifier | 
+ **key** | **string**| Metadata key | 
+ **apiVersion** | **string**| API version | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletemenusectionimage"></a>
+# **DeleteMenuSectionImage**
+> void DeleteMenuSectionImage (int? menuId, string apiVersion)
+
+Delete menu image
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class DeleteMenuSectionImageExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var apiVersion = apiVersion_example;  // string | API version
+
+            try
+            {
+                // Delete menu image
+                apiInstance.DeleteMenuSectionImage(menuId, apiVersion);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.DeleteMenuSectionImage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **apiVersion** | **string**| API version | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getmenubyid"></a>
+# **GetMenuById**
+> RestApiResultMenu GetMenuById (int? menuId, string apiVersion)
+
+Get menu by identifier
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetMenuByIdExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var apiVersion = apiVersion_example;  // string | API version
+
+            try
+            {
+                // Get menu by identifier
+                RestApiResultMenu result = apiInstance.GetMenuById(menuId, apiVersion);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.GetMenuById: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **apiVersion** | **string**| API version | 
+
+### Return type
+
+[**RestApiResultMenu**](RestApiResultMenu.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getmenuitemmetadata"></a>
+# **GetMenuItemMetadata**
+> RestApiArrayResultMetadata GetMenuItemMetadata (int? menuId, int? storeId, int? menuItemId, string apiVersion)
+
+Get a menu items metadata
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetMenuItemMetadataExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var storeId = 56;  // int? | Store identifier
+            var menuItemId = 56;  // int? | Menu item identifier
+            var apiVersion = apiVersion_example;  // string | API version
+
+            try
+            {
+                // Get a menu items metadata
+                RestApiArrayResultMetadata result = apiInstance.GetMenuItemMetadata(menuId, storeId, menuItemId, apiVersion);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.GetMenuItemMetadata: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **storeId** | **int?**| Store identifier | 
+ **menuItemId** | **int?**| Menu item identifier | 
+ **apiVersion** | **string**| API version | 
+
+### Return type
+
+[**RestApiArrayResultMetadata**](RestApiArrayResultMetadata.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getmenuitemoptionsetitemmetadata"></a>
+# **GetMenuItemOptionSetItemMetadata**
+> RestApiResultMetadata GetMenuItemOptionSetItemMetadata (int? menuId, int? storeId, int? optionSetItemId, string apiVersion)
+
+Get a menu item option set item metadata by key
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetMenuItemOptionSetItemMetadataExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var storeId = 56;  // int? | Store identifier
+            var optionSetItemId = 56;  // int? | Menu item option set item identifier
+            var apiVersion = apiVersion_example;  // string | API version
+
+            try
+            {
+                // Get a menu item option set item metadata by key
+                RestApiResultMetadata result = apiInstance.GetMenuItemOptionSetItemMetadata(menuId, storeId, optionSetItemId, apiVersion);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.GetMenuItemOptionSetItemMetadata: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **storeId** | **int?**| Store identifier | 
+ **optionSetItemId** | **int?**| Menu item option set item identifier | 
+ **apiVersion** | **string**| API version | 
+
+### Return type
+
+[**RestApiResultMetadata**](RestApiResultMetadata.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="setmenuitemmetadata"></a>
+# **SetMenuItemMetadata**
+> void SetMenuItemMetadata (int? menuId, int? storeId, int? menuItemId, Metadata metadata, string apiVersion)
+
+Update a menu items metadata
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SetMenuItemMetadataExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var storeId = 56;  // int? | Store identifier
+            var menuItemId = 56;  // int? | Menu item identifier
+            var metadata = new Metadata(); // Metadata | Metadata object
+            var apiVersion = apiVersion_example;  // string | API version
+
+            try
+            {
+                // Update a menu items metadata
+                apiInstance.SetMenuItemMetadata(menuId, storeId, menuItemId, metadata, apiVersion);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.SetMenuItemMetadata: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **storeId** | **int?**| Store identifier | 
+ **menuItemId** | **int?**| Menu item identifier | 
+ **metadata** | [**Metadata**](Metadata.md)| Metadata object | 
+ **apiVersion** | **string**| API version | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="setmenuitemoptionsetitemmetadata"></a>
+# **SetMenuItemOptionSetItemMetadata**
+> void SetMenuItemOptionSetItemMetadata (int? menuId, int? storeId, int? optionSetItemId, Metadata metadata, string apiVersion)
+
+Update a menu item option set items metadata
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SetMenuItemOptionSetItemMetadataExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var storeId = 56;  // int? | Store identifier
+            var optionSetItemId = 56;  // int? | Menu item option set item identifier
+            var metadata = new Metadata(); // Metadata | Metadata object
+            var apiVersion = apiVersion_example;  // string | API version
+
+            try
+            {
+                // Update a menu item option set items metadata
+                apiInstance.SetMenuItemOptionSetItemMetadata(menuId, storeId, optionSetItemId, metadata, apiVersion);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.SetMenuItemOptionSetItemMetadata: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **storeId** | **int?**| Store identifier | 
+ **optionSetItemId** | **int?**| Menu item option set item identifier | 
+ **metadata** | [**Metadata**](Metadata.md)| Metadata object | 
+ **apiVersion** | **string**| API version | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uploadmenusectionimage"></a>
+# **UploadMenuSectionImage**
+> RestApiStringResult UploadMenuSectionImage (int? menuId, string apiVersion, System.IO.Stream image)
+
+Upload menu image
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UploadMenuSectionImageExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var apiVersion = apiVersion_example;  // string | API version
+            var image = new System.IO.Stream(); // System.IO.Stream | Menu image
+
+            try
+            {
+                // Upload menu image
+                RestApiStringResult result = apiInstance.UploadMenuSectionImage(menuId, apiVersion, image);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.UploadMenuSectionImage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **apiVersion** | **string**| API version | 
+ **image** | **System.IO.Stream**| Menu image | 
+
+### Return type
+
+[**RestApiStringResult**](RestApiStringResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
