@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **DeliveryAmount** | **double?** |  | [optional] 
 **OrderItemsAmount** | **double?** |  | [optional] 
 **Amount** | **double?** |  | [optional] 
-**OnlineOrderingFee** | **double?** |  | [optional] 
+**ProcessingFee** | **double?** |  | [optional] 
 **PaymentAccountType** | **string** |  | [optional] 
 **PaymentAccountDescription** | **string** |  | [optional] 
 **DeliveryLocation** | [**DeliveryLocation**](DeliveryLocation.md) |  | [optional] 

@@ -4,12 +4,12 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetRoles**](UsersApi.md#getroles) | **GET** /api/v{apiVersion}/users/roles | Get role names
+[**GetRoles**](UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | Get role names
 
 
 <a name="getroles"></a>
 # **GetRoles**
-> RestApiStringArrayResult GetRoles (string apiVersion)
+> RestApiStringArrayResult GetRoles ()
 
 Get role names
 
@@ -31,12 +31,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get role names
-                RestApiStringArrayResult result = apiInstance.GetRoles(apiVersion);
+                RestApiStringArrayResult result = apiInstance.GetRoles();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -49,10 +48,7 @@ namespace Example
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiVersion** | **string**| API version | 
+This endpoint does not need any parameter.
 
 ### Return type
 

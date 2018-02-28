@@ -4,20 +4,20 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CraeteWebhookSubscription**](WebhooksApi.md#craetewebhooksubscription) | **POST** /api/v{apiVersion}/webhooks/{clientId}/subscriptions | Create a webhook subscription for you Oauth client
-[**CreateWebhookSubscriptionEventNames**](WebhooksApi.md#createwebhooksubscriptioneventnames) | **POST** /api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Add event name to your webhook subscription
-[**DeleteWebhookSubscription**](WebhooksApi.md#deletewebhooksubscription) | **DELETE** /api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId} | Delete you webhook subscription
-[**DeleteWebhookSubscriptionEventName**](WebhooksApi.md#deletewebhooksubscriptioneventname) | **DELETE** /api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Remove event name to your webhook subscription
-[**GetWebhookEventNames**](WebhooksApi.md#getwebhookeventnames) | **GET** /api/v{apiVersion}/webhooks/events | Get all webhook subscription event names
-[**GetWebhookEventNamesBySubscriptionId**](WebhooksApi.md#getwebhookeventnamesbysubscriptionid) | **GET** /api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events | Get your webhook subscriptions selected event names
-[**GetWebhookLogs**](WebhooksApi.md#getwebhooklogs) | **GET** /api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/logs | Get logs for your webhook subscription
-[**GetWebhookSubscriptions**](WebhooksApi.md#getwebhooksubscriptions) | **GET** /api/v{apiVersion}/webhooks/{clientId}/subscriptions | Get all webhook subscriptions by your Oauth client id
-[**UpdateWebhookSubscription**](WebhooksApi.md#updatewebhooksubscription) | **PUT** /api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId} | Update a webhook subscription object
+[**CraeteWebhookSubscription**](WebhooksApi.md#craetewebhooksubscription) | **POST** /api/v1.0/webhooks/{clientId}/subscriptions | Create a webhook subscription for you Oauth client
+[**CreateWebhookSubscriptionEventNames**](WebhooksApi.md#createwebhooksubscriptioneventnames) | **POST** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Add event name to your webhook subscription
+[**DeleteWebhookSubscription**](WebhooksApi.md#deletewebhooksubscription) | **DELETE** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId} | Delete you webhook subscription
+[**DeleteWebhookSubscriptionEventName**](WebhooksApi.md#deletewebhooksubscriptioneventname) | **DELETE** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Remove event name to your webhook subscription
+[**GetWebhookEventNames**](WebhooksApi.md#getwebhookeventnames) | **GET** /api/v1.0/webhooks/events | Get all webhook subscription event names
+[**GetWebhookEventNamesBySubscriptionId**](WebhooksApi.md#getwebhookeventnamesbysubscriptionid) | **GET** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events | Get your webhook subscriptions selected event names
+[**GetWebhookLogs**](WebhooksApi.md#getwebhooklogs) | **GET** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/logs | Get logs for your webhook subscription
+[**GetWebhookSubscriptions**](WebhooksApi.md#getwebhooksubscriptions) | **GET** /api/v1.0/webhooks/{clientId}/subscriptions | Get all webhook subscriptions by your Oauth client id
+[**UpdateWebhookSubscription**](WebhooksApi.md#updatewebhooksubscription) | **PUT** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId} | Update a webhook subscription object
 
 
 <a name="craetewebhooksubscription"></a>
 # **CraeteWebhookSubscription**
-> RestApiIntegerResult CraeteWebhookSubscription (string clientId, WebhookSubscription webhookSubscription, string apiVersion)
+> RestApiIntegerResult CraeteWebhookSubscription (string clientId, WebhookSubscription webhookSubscription)
 
 Create a webhook subscription for you Oauth client
 
@@ -41,12 +41,11 @@ namespace Example
             var apiInstance = new WebhooksApi();
             var clientId = clientId_example;  // string | Oauth client identifier
             var webhookSubscription = new WebhookSubscription(); // WebhookSubscription | Webhook subscription object
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Create a webhook subscription for you Oauth client
-                RestApiIntegerResult result = apiInstance.CraeteWebhookSubscription(clientId, webhookSubscription, apiVersion);
+                RestApiIntegerResult result = apiInstance.CraeteWebhookSubscription(clientId, webhookSubscription);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -64,7 +63,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **clientId** | **string**| Oauth client identifier | 
  **webhookSubscription** | [**WebhookSubscription**](WebhookSubscription.md)| Webhook subscription object | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -83,7 +81,7 @@ Name | Type | Description  | Notes
 
 <a name="createwebhooksubscriptioneventnames"></a>
 # **CreateWebhookSubscriptionEventNames**
-> void CreateWebhookSubscriptionEventNames (string clientId, int? webhookSubscriptionId, string eventName, string apiVersion)
+> void CreateWebhookSubscriptionEventNames (string clientId, int? webhookSubscriptionId, string eventName)
 
 Add event name to your webhook subscription
 
@@ -108,12 +106,11 @@ namespace Example
             var clientId = clientId_example;  // string | Oauth client identifier
             var webhookSubscriptionId = 56;  // int? | Webhook subscription identifier
             var eventName = eventName_example;  // string | Webhook subscription event name
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Add event name to your webhook subscription
-                apiInstance.CreateWebhookSubscriptionEventNames(clientId, webhookSubscriptionId, eventName, apiVersion);
+                apiInstance.CreateWebhookSubscriptionEventNames(clientId, webhookSubscriptionId, eventName);
             }
             catch (Exception e)
             {
@@ -131,7 +128,6 @@ Name | Type | Description  | Notes
  **clientId** | **string**| Oauth client identifier | 
  **webhookSubscriptionId** | **int?**| Webhook subscription identifier | 
  **eventName** | **string**| Webhook subscription event name | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -150,7 +146,7 @@ void (empty response body)
 
 <a name="deletewebhooksubscription"></a>
 # **DeleteWebhookSubscription**
-> void DeleteWebhookSubscription (string clientId, int? webhookSubscriptionId, string apiVersion)
+> void DeleteWebhookSubscription (string clientId, int? webhookSubscriptionId)
 
 Delete you webhook subscription
 
@@ -174,12 +170,11 @@ namespace Example
             var apiInstance = new WebhooksApi();
             var clientId = clientId_example;  // string | Oauth client identifier
             var webhookSubscriptionId = 56;  // int? | Webhook subscription identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Delete you webhook subscription
-                apiInstance.DeleteWebhookSubscription(clientId, webhookSubscriptionId, apiVersion);
+                apiInstance.DeleteWebhookSubscription(clientId, webhookSubscriptionId);
             }
             catch (Exception e)
             {
@@ -196,7 +191,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **clientId** | **string**| Oauth client identifier | 
  **webhookSubscriptionId** | **int?**| Webhook subscription identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -215,7 +209,7 @@ void (empty response body)
 
 <a name="deletewebhooksubscriptioneventname"></a>
 # **DeleteWebhookSubscriptionEventName**
-> void DeleteWebhookSubscriptionEventName (string clientId, int? webhookSubscriptionId, string eventName, string apiVersion)
+> void DeleteWebhookSubscriptionEventName (string clientId, int? webhookSubscriptionId, string eventName)
 
 Remove event name to your webhook subscription
 
@@ -240,12 +234,11 @@ namespace Example
             var clientId = clientId_example;  // string | Oauth client identifier
             var webhookSubscriptionId = 56;  // int? | Webhook subscription identifier
             var eventName = eventName_example;  // string | Webhook subscription event name
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Remove event name to your webhook subscription
-                apiInstance.DeleteWebhookSubscriptionEventName(clientId, webhookSubscriptionId, eventName, apiVersion);
+                apiInstance.DeleteWebhookSubscriptionEventName(clientId, webhookSubscriptionId, eventName);
             }
             catch (Exception e)
             {
@@ -263,7 +256,6 @@ Name | Type | Description  | Notes
  **clientId** | **string**| Oauth client identifier | 
  **webhookSubscriptionId** | **int?**| Webhook subscription identifier | 
  **eventName** | **string**| Webhook subscription event name | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -282,7 +274,7 @@ void (empty response body)
 
 <a name="getwebhookeventnames"></a>
 # **GetWebhookEventNames**
-> RestApiStringArrayResult GetWebhookEventNames (string apiVersion)
+> RestApiStringArrayResult GetWebhookEventNames ()
 
 Get all webhook subscription event names
 
@@ -304,12 +296,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebhooksApi();
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get all webhook subscription event names
-                RestApiStringArrayResult result = apiInstance.GetWebhookEventNames(apiVersion);
+                RestApiStringArrayResult result = apiInstance.GetWebhookEventNames();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -322,10 +313,7 @@ namespace Example
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiVersion** | **string**| API version | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -344,7 +332,7 @@ Name | Type | Description  | Notes
 
 <a name="getwebhookeventnamesbysubscriptionid"></a>
 # **GetWebhookEventNamesBySubscriptionId**
-> RestApiStringArrayResult GetWebhookEventNamesBySubscriptionId (string clientId, int? webhookSubscriptionId, string apiVersion)
+> RestApiStringArrayResult GetWebhookEventNamesBySubscriptionId (string clientId, int? webhookSubscriptionId)
 
 Get your webhook subscriptions selected event names
 
@@ -368,12 +356,11 @@ namespace Example
             var apiInstance = new WebhooksApi();
             var clientId = clientId_example;  // string | Oauth client identifier
             var webhookSubscriptionId = 56;  // int? | Webhook subscription identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get your webhook subscriptions selected event names
-                RestApiStringArrayResult result = apiInstance.GetWebhookEventNamesBySubscriptionId(clientId, webhookSubscriptionId, apiVersion);
+                RestApiStringArrayResult result = apiInstance.GetWebhookEventNamesBySubscriptionId(clientId, webhookSubscriptionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -391,7 +378,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **clientId** | **string**| Oauth client identifier | 
  **webhookSubscriptionId** | **int?**| Webhook subscription identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -410,7 +396,7 @@ Name | Type | Description  | Notes
 
 <a name="getwebhooklogs"></a>
 # **GetWebhookLogs**
-> RestApiArrayResultWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string apiVersion, int? take = null)
+> RestApiArrayResultWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
 
 Get logs for your webhook subscription
 
@@ -436,13 +422,12 @@ namespace Example
             var webhookSubscriptionId = 56;  // int? | Webhook subscription identifier
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start time
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End time
-            var apiVersion = apiVersion_example;  // string | API version
             var take = 56;  // int? | Page size (optional) 
 
             try
             {
                 // Get logs for your webhook subscription
-                RestApiArrayResultWebhookLog result = apiInstance.GetWebhookLogs(clientId, webhookSubscriptionId, start, end, apiVersion, take);
+                RestApiArrayResultWebhookLog result = apiInstance.GetWebhookLogs(clientId, webhookSubscriptionId, start, end, take);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -462,7 +447,6 @@ Name | Type | Description  | Notes
  **webhookSubscriptionId** | **int?**| Webhook subscription identifier | 
  **start** | **DateTime?**| Start time | 
  **end** | **DateTime?**| End time | 
- **apiVersion** | **string**| API version | 
  **take** | **int?**| Page size | [optional] 
 
 ### Return type
@@ -482,7 +466,7 @@ Name | Type | Description  | Notes
 
 <a name="getwebhooksubscriptions"></a>
 # **GetWebhookSubscriptions**
-> RestApiArrayResultWebhookSubscription GetWebhookSubscriptions (string clientId, string apiVersion)
+> RestApiArrayResultWebhookSubscription GetWebhookSubscriptions (string clientId)
 
 Get all webhook subscriptions by your Oauth client id
 
@@ -505,12 +489,11 @@ namespace Example
 
             var apiInstance = new WebhooksApi();
             var clientId = clientId_example;  // string | Oauth client identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get all webhook subscriptions by your Oauth client id
-                RestApiArrayResultWebhookSubscription result = apiInstance.GetWebhookSubscriptions(clientId, apiVersion);
+                RestApiArrayResultWebhookSubscription result = apiInstance.GetWebhookSubscriptions(clientId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -527,7 +510,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **clientId** | **string**| Oauth client identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -546,7 +528,7 @@ Name | Type | Description  | Notes
 
 <a name="updatewebhooksubscription"></a>
 # **UpdateWebhookSubscription**
-> void UpdateWebhookSubscription (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string apiVersion)
+> void UpdateWebhookSubscription (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription)
 
 Update a webhook subscription object
 
@@ -571,12 +553,11 @@ namespace Example
             var clientId = clientId_example;  // string | Oauth client identifier
             var webhookSubscriptionId = 56;  // int? | Webhook subscription identifier
             var webhookSubscription = new WebhookSubscription(); // WebhookSubscription | Webhook subscription object
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Update a webhook subscription object
-                apiInstance.UpdateWebhookSubscription(clientId, webhookSubscriptionId, webhookSubscription, apiVersion);
+                apiInstance.UpdateWebhookSubscription(clientId, webhookSubscriptionId, webhookSubscription);
             }
             catch (Exception e)
             {
@@ -594,7 +575,6 @@ Name | Type | Description  | Notes
  **clientId** | **string**| Oauth client identifier | 
  **webhookSubscriptionId** | **int?**| Webhook subscription identifier | 
  **webhookSubscription** | [**WebhookSubscription**](WebhookSubscription.md)| Webhook subscription object | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 

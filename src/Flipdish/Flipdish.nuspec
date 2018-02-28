@@ -3,7 +3,7 @@
     <metadata>
         <!-- The identifier that must be unique within the hosting gallery -->
         <id>$id$</id>
-        <title>Swagger Library</title>
+        <title>Flipdish Api Client Library</title>
 
         <!-- The package version number that is used when resolving dependencies -->
         <version>$version$</version>
@@ -26,8 +26,6 @@
 
             <dependency id="NewtonSoft.Json" version="10.0.3" />
             <dependency id="RestSharp" version="105.1.0" />
-            <dependency id="Fody" version="1.29.4" />
-            <dependency id="PropertyChanged.Fody" version="1.51.3" />
 
         </dependencies>
     </metadata>
@@ -36,7 +34,6 @@
         <!-- A readme.txt will be displayed when the package is installed -->
         <file src="..\..\README.md" target="" />
         <file src="..\..\docs\**\*.*" target="docs" />
-        <file src="..\..\packages\Fody.1.29.4\build\portable-net+sl+win+wpa+wp\Fody.targets" target="build" />
 
     </files>
 </package>

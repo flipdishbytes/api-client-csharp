@@ -4,17 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteVoucherMetadata**](VouchersApi.md#deletevouchermetadata) | **DELETE** /api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Delete voucher metadata
-[**GetVoucherById**](VouchersApi.md#getvoucherbyid) | **GET** /api/v{apiVersion}/vouchers/{voucherId} | Get voucher by identifier
-[**GetVoucherMetadata**](VouchersApi.md#getvouchermetadata) | **GET** /api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata | Get voucher metadata
-[**GetVoucherMetadata_0**](VouchersApi.md#getvouchermetadata_0) | **GET** /api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Get voucher metadata
-[**GetVouchers**](VouchersApi.md#getvouchers) | **GET** /api/v{apiVersion}/vouchers | Get vouchers
-[**SetVoucherMetadata**](VouchersApi.md#setvouchermetadata) | **PUT** /api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Add voucher metadata
+[**DeleteVoucherMetadata**](VouchersApi.md#deletevouchermetadata) | **DELETE** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Delete voucher metadata
+[**GetVoucherById**](VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | Get voucher by identifier
+[**GetVoucherMetadata**](VouchersApi.md#getvouchermetadata) | **GET** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata | Get voucher metadata
+[**GetVoucherMetadata_0**](VouchersApi.md#getvouchermetadata_0) | **GET** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Get voucher metadata
+[**GetVouchers**](VouchersApi.md#getvouchers) | **GET** /api/v1.0/vouchers | Get vouchers
+[**SetVoucherMetadata**](VouchersApi.md#setvouchermetadata) | **PUT** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Add voucher metadata
 
 
 <a name="deletevouchermetadata"></a>
 # **DeleteVoucherMetadata**
-> RestApiArrayResultRestApiDefaultResponse DeleteVoucherMetadata (int? voucherId, int? menuId, int? storeId, string key, string apiVersion)
+> RestApiArrayResultRestApiDefaultResponse DeleteVoucherMetadata (int? voucherId, int? menuId, int? storeId, string key)
 
 Delete voucher metadata
 
@@ -40,12 +40,11 @@ namespace Example
             var menuId = 56;  // int? | 
             var storeId = 56;  // int? | 
             var key = key_example;  // string | 
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Delete voucher metadata
-                RestApiArrayResultRestApiDefaultResponse result = apiInstance.DeleteVoucherMetadata(voucherId, menuId, storeId, key, apiVersion);
+                RestApiArrayResultRestApiDefaultResponse result = apiInstance.DeleteVoucherMetadata(voucherId, menuId, storeId, key);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -65,7 +64,6 @@ Name | Type | Description  | Notes
  **menuId** | **int?**|  | 
  **storeId** | **int?**|  | 
  **key** | **string**|  | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -84,7 +82,7 @@ Name | Type | Description  | Notes
 
 <a name="getvoucherbyid"></a>
 # **GetVoucherById**
-> RestApiResultVoucher GetVoucherById (int? voucherId, string apiVersion)
+> RestApiResultVoucher GetVoucherById (int? voucherId)
 
 Get voucher by identifier
 
@@ -107,12 +105,11 @@ namespace Example
 
             var apiInstance = new VouchersApi();
             var voucherId = 56;  // int? | 
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get voucher by identifier
-                RestApiResultVoucher result = apiInstance.GetVoucherById(voucherId, apiVersion);
+                RestApiResultVoucher result = apiInstance.GetVoucherById(voucherId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -129,7 +126,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **voucherId** | **int?**|  | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -148,7 +144,7 @@ Name | Type | Description  | Notes
 
 <a name="getvouchermetadata"></a>
 # **GetVoucherMetadata**
-> RestApiArrayResultMetadata GetVoucherMetadata (int? voucherId, int? menuId, int? storeId, string apiVersion)
+> RestApiArrayResultMetadata GetVoucherMetadata (int? voucherId, int? menuId, int? storeId)
 
 Get voucher metadata
 
@@ -173,12 +169,11 @@ namespace Example
             var voucherId = 56;  // int? | 
             var menuId = 56;  // int? | 
             var storeId = 56;  // int? | 
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get voucher metadata
-                RestApiArrayResultMetadata result = apiInstance.GetVoucherMetadata(voucherId, menuId, storeId, apiVersion);
+                RestApiArrayResultMetadata result = apiInstance.GetVoucherMetadata(voucherId, menuId, storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -197,7 +192,6 @@ Name | Type | Description  | Notes
  **voucherId** | **int?**|  | 
  **menuId** | **int?**|  | 
  **storeId** | **int?**|  | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -216,7 +210,7 @@ Name | Type | Description  | Notes
 
 <a name="getvouchermetadata_0"></a>
 # **GetVoucherMetadata_0**
-> RestApiResultMetadata GetVoucherMetadata_0 (int? voucherId, int? menuId, int? storeId, string key, string apiVersion)
+> RestApiResultMetadata GetVoucherMetadata_0 (int? voucherId, int? menuId, int? storeId, string key)
 
 Get voucher metadata
 
@@ -242,12 +236,11 @@ namespace Example
             var menuId = 56;  // int? | 
             var storeId = 56;  // int? | 
             var key = key_example;  // string | 
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get voucher metadata
-                RestApiResultMetadata result = apiInstance.GetVoucherMetadata_0(voucherId, menuId, storeId, key, apiVersion);
+                RestApiResultMetadata result = apiInstance.GetVoucherMetadata_0(voucherId, menuId, storeId, key);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -267,7 +260,6 @@ Name | Type | Description  | Notes
  **menuId** | **int?**|  | 
  **storeId** | **int?**|  | 
  **key** | **string**|  | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -286,7 +278,7 @@ Name | Type | Description  | Notes
 
 <a name="getvouchers"></a>
 # **GetVouchers**
-> RestApiPaginationResultVoucher GetVouchers (string apiVersion, string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null)
+> RestApiPaginationResultVoucher GetVouchers (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null)
 
 Get vouchers
 
@@ -308,7 +300,6 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VouchersApi();
-            var apiVersion = apiVersion_example;  // string | API version
             var filter = filter_example;  // string |  (optional) 
             var pageNumber = 56;  // int? |  (optional) 
             var pageSize = 56;  // int? |  (optional) 
@@ -328,7 +319,7 @@ namespace Example
             try
             {
                 // Get vouchers
-                RestApiPaginationResultVoucher result = apiInstance.GetVouchers(apiVersion, filter, pageNumber, pageSize, sortOrder, orderBy, subType, status, code, validFromBegin, validFromEnd, expiryBegin, expiryEnd, amount, voucherType, description);
+                RestApiPaginationResultVoucher result = apiInstance.GetVouchers(filter, pageNumber, pageSize, sortOrder, orderBy, subType, status, code, validFromBegin, validFromEnd, expiryBegin, expiryEnd, amount, voucherType, description);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -344,7 +335,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiVersion** | **string**| API version | 
  **filter** | **string**|  | [optional] 
  **pageNumber** | **int?**|  | [optional] 
  **pageSize** | **int?**|  | [optional] 
@@ -378,7 +368,7 @@ Name | Type | Description  | Notes
 
 <a name="setvouchermetadata"></a>
 # **SetVoucherMetadata**
-> void SetVoucherMetadata (int? voucherId, int? menuId, int? storeId, string key, string value, string apiVersion)
+> void SetVoucherMetadata (int? voucherId, int? menuId, int? storeId, string key, string value)
 
 Add voucher metadata
 
@@ -405,12 +395,11 @@ namespace Example
             var storeId = 56;  // int? | 
             var key = key_example;  // string | 
             var value = value_example;  // string | 
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Add voucher metadata
-                apiInstance.SetVoucherMetadata(voucherId, menuId, storeId, key, value, apiVersion);
+                apiInstance.SetVoucherMetadata(voucherId, menuId, storeId, key, value);
             }
             catch (Exception e)
             {
@@ -430,7 +419,6 @@ Name | Type | Description  | Notes
  **storeId** | **int?**|  | 
  **key** | **string**|  | 
  **value** | **string**|  | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 

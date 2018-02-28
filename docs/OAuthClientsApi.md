@@ -4,20 +4,20 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddRedirectUri**](OAuthClientsApi.md#addredirecturi) | **POST** /api/v{apiVersion}/oauthclients/{oAuthClientId}/redirecturis | Create OAuth client redirect uri
-[**CreateOAuthClient**](OAuthClientsApi.md#createoauthclient) | **POST** /api/v{apiVersion}/oauthclients | Create OAuth client
-[**DeleteOAuthClient**](OAuthClientsApi.md#deleteoauthclient) | **DELETE** /api/v{apiVersion}/oauthclients/{oAuthClientId} | Delete OAuth client
-[**GetOAuthClientByClientId**](OAuthClientsApi.md#getoauthclientbyclientid) | **GET** /api/v{apiVersion}/oauthclients/{clientId} | Get OAuth client by identifier
-[**GetOAuthClientSecret**](OAuthClientsApi.md#getoauthclientsecret) | **GET** /api/v{apiVersion}/oauthclients/{clientId}/secret | Get OAuth client secret key
-[**GetOAuthClients**](OAuthClientsApi.md#getoauthclients) | **GET** /api/v{apiVersion}/oauthclients | Get all OAuth client
-[**GetOauthAccessToken**](OAuthClientsApi.md#getoauthaccesstoken) | **GET** /api/v{apiVersion}/oauthclients/{oAuthClientId}/accesstoken | Get OAuth access token for client
-[**GetRedirectUris**](OAuthClientsApi.md#getredirecturis) | **GET** /api/v{apiVersion}/oauthclients/{oAuthClientId}/redirecturis | Get OAuth client redirect uris
-[**RemoveRedirectUri**](OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v{apiVersion}/oauthclients/{oAuthClientId}/redirecturis/{uriId} | Delete OAuth client redirect uri
+[**AddRedirectUri**](OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis | Create OAuth client redirect uri
+[**CreateOAuthClient**](OAuthClientsApi.md#createoauthclient) | **POST** /api/v1.0/oauthclients | Create OAuth client
+[**DeleteOAuthClient**](OAuthClientsApi.md#deleteoauthclient) | **DELETE** /api/v1.0/oauthclients/{oAuthClientId} | Delete OAuth client
+[**GetOAuthClientByClientId**](OAuthClientsApi.md#getoauthclientbyclientid) | **GET** /api/v1.0/oauthclients/{clientId} | Get OAuth client by identifier
+[**GetOAuthClientSecret**](OAuthClientsApi.md#getoauthclientsecret) | **GET** /api/v1.0/oauthclients/{clientId}/secret | Get OAuth client secret key
+[**GetOAuthClients**](OAuthClientsApi.md#getoauthclients) | **GET** /api/v1.0/oauthclients | Get all OAuth client
+[**GetOauthAccessToken**](OAuthClientsApi.md#getoauthaccesstoken) | **GET** /api/v1.0/oauthclients/{oAuthClientId}/accesstoken | Get OAuth access token for client
+[**GetRedirectUris**](OAuthClientsApi.md#getredirecturis) | **GET** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis | Get OAuth client redirect uris
+[**RemoveRedirectUri**](OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis/{uriId} | Delete OAuth client redirect uri
 
 
 <a name="addredirecturi"></a>
 # **AddRedirectUri**
-> RestApiResultOauthClientRedirectUri AddRedirectUri (string oAuthClientId, string uri, string apiVersion)
+> RestApiResultOauthClientRedirectUri AddRedirectUri (string oAuthClientId, string uri)
 
 Create OAuth client redirect uri
 
@@ -41,12 +41,11 @@ namespace Example
             var apiInstance = new OAuthClientsApi();
             var oAuthClientId = oAuthClientId_example;  // string | OAuth client identifier
             var uri = uri_example;  // string | Redirect uri
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Create OAuth client redirect uri
-                RestApiResultOauthClientRedirectUri result = apiInstance.AddRedirectUri(oAuthClientId, uri, apiVersion);
+                RestApiResultOauthClientRedirectUri result = apiInstance.AddRedirectUri(oAuthClientId, uri);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -64,7 +63,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **oAuthClientId** | **string**| OAuth client identifier | 
  **uri** | **string**| Redirect uri | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -83,7 +81,7 @@ Name | Type | Description  | Notes
 
 <a name="createoauthclient"></a>
 # **CreateOAuthClient**
-> void CreateOAuthClient (OAuthClient oAuthClient, string apiVersion)
+> void CreateOAuthClient (OAuthClient oAuthClient)
 
 Create OAuth client
 
@@ -106,12 +104,11 @@ namespace Example
 
             var apiInstance = new OAuthClientsApi();
             var oAuthClient = new OAuthClient(); // OAuthClient | OAuth client
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Create OAuth client
-                apiInstance.CreateOAuthClient(oAuthClient, apiVersion);
+                apiInstance.CreateOAuthClient(oAuthClient);
             }
             catch (Exception e)
             {
@@ -127,7 +124,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **oAuthClient** | [**OAuthClient**](OAuthClient.md)| OAuth client | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -146,7 +142,7 @@ void (empty response body)
 
 <a name="deleteoauthclient"></a>
 # **DeleteOAuthClient**
-> void DeleteOAuthClient (string oAuthClientId, string apiVersion)
+> void DeleteOAuthClient (string oAuthClientId)
 
 Delete OAuth client
 
@@ -169,12 +165,11 @@ namespace Example
 
             var apiInstance = new OAuthClientsApi();
             var oAuthClientId = oAuthClientId_example;  // string | OAuth client identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Delete OAuth client
-                apiInstance.DeleteOAuthClient(oAuthClientId, apiVersion);
+                apiInstance.DeleteOAuthClient(oAuthClientId);
             }
             catch (Exception e)
             {
@@ -190,7 +185,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **oAuthClientId** | **string**| OAuth client identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -209,7 +203,7 @@ void (empty response body)
 
 <a name="getoauthclientbyclientid"></a>
 # **GetOAuthClientByClientId**
-> RestApiResultOAuthClient GetOAuthClientByClientId (string clientId, string apiVersion)
+> RestApiResultOAuthClient GetOAuthClientByClientId (string clientId)
 
 Get OAuth client by identifier
 
@@ -232,12 +226,11 @@ namespace Example
 
             var apiInstance = new OAuthClientsApi();
             var clientId = clientId_example;  // string | OAuth client identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get OAuth client by identifier
-                RestApiResultOAuthClient result = apiInstance.GetOAuthClientByClientId(clientId, apiVersion);
+                RestApiResultOAuthClient result = apiInstance.GetOAuthClientByClientId(clientId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -254,7 +247,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **clientId** | **string**| OAuth client identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -273,7 +265,7 @@ Name | Type | Description  | Notes
 
 <a name="getoauthclientsecret"></a>
 # **GetOAuthClientSecret**
-> RestApiStringResult GetOAuthClientSecret (string clientId, string apiVersion)
+> RestApiStringResult GetOAuthClientSecret (string clientId)
 
 Get OAuth client secret key
 
@@ -296,12 +288,11 @@ namespace Example
 
             var apiInstance = new OAuthClientsApi();
             var clientId = clientId_example;  // string | OAuth client identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get OAuth client secret key
-                RestApiStringResult result = apiInstance.GetOAuthClientSecret(clientId, apiVersion);
+                RestApiStringResult result = apiInstance.GetOAuthClientSecret(clientId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -318,7 +309,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **clientId** | **string**| OAuth client identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -337,7 +327,7 @@ Name | Type | Description  | Notes
 
 <a name="getoauthclients"></a>
 # **GetOAuthClients**
-> RestApiArrayResultOAuthClient GetOAuthClients (string apiVersion)
+> RestApiArrayResultOAuthClient GetOAuthClients ()
 
 Get all OAuth client
 
@@ -359,12 +349,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthClientsApi();
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get all OAuth client
-                RestApiArrayResultOAuthClient result = apiInstance.GetOAuthClients(apiVersion);
+                RestApiArrayResultOAuthClient result = apiInstance.GetOAuthClients();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -377,10 +366,7 @@ namespace Example
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiVersion** | **string**| API version | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -399,7 +385,7 @@ Name | Type | Description  | Notes
 
 <a name="getoauthaccesstoken"></a>
 # **GetOauthAccessToken**
-> RestApiStringResult GetOauthAccessToken (string oAuthClientId, string apiVersion)
+> RestApiStringResult GetOauthAccessToken (string oAuthClientId)
 
 Get OAuth access token for client
 
@@ -422,12 +408,11 @@ namespace Example
 
             var apiInstance = new OAuthClientsApi();
             var oAuthClientId = oAuthClientId_example;  // string | OAuth client identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get OAuth access token for client
-                RestApiStringResult result = apiInstance.GetOauthAccessToken(oAuthClientId, apiVersion);
+                RestApiStringResult result = apiInstance.GetOauthAccessToken(oAuthClientId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -444,7 +429,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **oAuthClientId** | **string**| OAuth client identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -463,7 +447,7 @@ Name | Type | Description  | Notes
 
 <a name="getredirecturis"></a>
 # **GetRedirectUris**
-> RestApiArrayResultOauthClientRedirectUri GetRedirectUris (string oAuthClientId, string apiVersion)
+> RestApiArrayResultOauthClientRedirectUri GetRedirectUris (string oAuthClientId)
 
 Get OAuth client redirect uris
 
@@ -486,12 +470,11 @@ namespace Example
 
             var apiInstance = new OAuthClientsApi();
             var oAuthClientId = oAuthClientId_example;  // string | OAuth client identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get OAuth client redirect uris
-                RestApiArrayResultOauthClientRedirectUri result = apiInstance.GetRedirectUris(oAuthClientId, apiVersion);
+                RestApiArrayResultOauthClientRedirectUri result = apiInstance.GetRedirectUris(oAuthClientId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -508,7 +491,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **oAuthClientId** | **string**| OAuth client identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -527,7 +509,7 @@ Name | Type | Description  | Notes
 
 <a name="removeredirecturi"></a>
 # **RemoveRedirectUri**
-> void RemoveRedirectUri (string oAuthClientId, int? uriId, string apiVersion)
+> void RemoveRedirectUri (string oAuthClientId, int? uriId)
 
 Delete OAuth client redirect uri
 
@@ -551,12 +533,11 @@ namespace Example
             var apiInstance = new OAuthClientsApi();
             var oAuthClientId = oAuthClientId_example;  // string | OAuth client identifier
             var uriId = 56;  // int? | Redirect uri identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Delete OAuth client redirect uri
-                apiInstance.RemoveRedirectUri(oAuthClientId, uriId, apiVersion);
+                apiInstance.RemoveRedirectUri(oAuthClientId, uriId);
             }
             catch (Exception e)
             {
@@ -573,7 +554,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **oAuthClientId** | **string**| OAuth client identifier | 
  **uriId** | **int?**| Redirect uri identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 

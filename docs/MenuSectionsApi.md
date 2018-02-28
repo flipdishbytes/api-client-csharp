@@ -4,18 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateMenuSection**](MenuSectionsApi.md#createmenusection) | **POST** /api/v{apiVersion}/menus/{menuId}/sections | Create menu section
-[**DeleteMenuSection**](MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId} | Delete menu section
-[**DeleteMenuSectionImage**](MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
-[**GetMenuSectionById**](MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
-[**GetMenuSections**](MenuSectionsApi.md#getmenusections) | **GET** /api/v{apiVersion}/menus/{menuId}/sections | Get menu sections
-[**UpdateMenuSection**](MenuSectionsApi.md#updatemenusection) | **PATCH** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId} | Update menu section
-[**UploadMenuSectionImage**](MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
+[**CreateMenuSection**](MenuSectionsApi.md#createmenusection) | **POST** /api/v1.0/menus/{menuId}/sections | Create menu section
+[**DeleteMenuSection**](MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Delete menu section
+[**DeleteMenuSectionImage**](MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
+[**GetMenuSectionById**](MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
+[**GetMenuSections**](MenuSectionsApi.md#getmenusections) | **GET** /api/v1.0/menus/{menuId}/sections | Get menu sections
+[**UpdateMenuSection**](MenuSectionsApi.md#updatemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Update menu section
+[**UploadMenuSectionImage**](MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
 
 
 <a name="createmenusection"></a>
 # **CreateMenuSection**
-> Object CreateMenuSection (int? menuId, MenuSectionBase menuSection, string apiVersion)
+> Object CreateMenuSection (int? menuId, MenuSectionBase menuSection)
 
 Create menu section
 
@@ -39,12 +39,11 @@ namespace Example
             var apiInstance = new MenuSectionsApi();
             var menuId = 56;  // int? | Menu identifier
             var menuSection = new MenuSectionBase(); // MenuSectionBase | Menu section
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Create menu section
-                Object result = apiInstance.CreateMenuSection(menuId, menuSection, apiVersion);
+                Object result = apiInstance.CreateMenuSection(menuId, menuSection);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -62,7 +61,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **int?**| Menu identifier | 
  **menuSection** | [**MenuSectionBase**](MenuSectionBase.md)| Menu section | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -81,7 +79,7 @@ Name | Type | Description  | Notes
 
 <a name="deletemenusection"></a>
 # **DeleteMenuSection**
-> void DeleteMenuSection (int? menuId, int? menuSectionId, string apiVersion)
+> void DeleteMenuSection (int? menuId, int? menuSectionId)
 
 Delete menu section
 
@@ -105,12 +103,11 @@ namespace Example
             var apiInstance = new MenuSectionsApi();
             var menuId = 56;  // int? | Menu identifier
             var menuSectionId = 56;  // int? | Menu section identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Delete menu section
-                apiInstance.DeleteMenuSection(menuId, menuSectionId, apiVersion);
+                apiInstance.DeleteMenuSection(menuId, menuSectionId);
             }
             catch (Exception e)
             {
@@ -127,7 +124,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **int?**| Menu identifier | 
  **menuSectionId** | **int?**| Menu section identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -146,7 +142,7 @@ void (empty response body)
 
 <a name="deletemenusectionimage"></a>
 # **DeleteMenuSectionImage**
-> void DeleteMenuSectionImage (int? menuId, int? menuSectionId, string apiVersion)
+> void DeleteMenuSectionImage (int? menuId, int? menuSectionId)
 
 Delete menu section image
 
@@ -170,12 +166,11 @@ namespace Example
             var apiInstance = new MenuSectionsApi();
             var menuId = 56;  // int? | Menu identifier
             var menuSectionId = 56;  // int? | Menu section identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Delete menu section image
-                apiInstance.DeleteMenuSectionImage(menuId, menuSectionId, apiVersion);
+                apiInstance.DeleteMenuSectionImage(menuId, menuSectionId);
             }
             catch (Exception e)
             {
@@ -192,7 +187,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **int?**| Menu identifier | 
  **menuSectionId** | **int?**| Menu section identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -211,7 +205,7 @@ void (empty response body)
 
 <a name="getmenusectionbyid"></a>
 # **GetMenuSectionById**
-> RestApiResultMenuSection GetMenuSectionById (int? menuId, int? menuSectionId, string apiVersion)
+> RestApiResultMenuSection GetMenuSectionById (int? menuId, int? menuSectionId)
 
 Get menu section by identifier
 
@@ -235,12 +229,11 @@ namespace Example
             var apiInstance = new MenuSectionsApi();
             var menuId = 56;  // int? | Menu identifier
             var menuSectionId = 56;  // int? | Menu section identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get menu section by identifier
-                RestApiResultMenuSection result = apiInstance.GetMenuSectionById(menuId, menuSectionId, apiVersion);
+                RestApiResultMenuSection result = apiInstance.GetMenuSectionById(menuId, menuSectionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -258,7 +251,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **int?**| Menu identifier | 
  **menuSectionId** | **int?**| Menu section identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -277,7 +269,7 @@ Name | Type | Description  | Notes
 
 <a name="getmenusections"></a>
 # **GetMenuSections**
-> RestApiArrayResultMenuSection GetMenuSections (int? menuId, string apiVersion)
+> RestApiArrayResultMenuSection GetMenuSections (int? menuId)
 
 Get menu sections
 
@@ -300,12 +292,11 @@ namespace Example
 
             var apiInstance = new MenuSectionsApi();
             var menuId = 56;  // int? | Menu identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get menu sections
-                RestApiArrayResultMenuSection result = apiInstance.GetMenuSections(menuId, apiVersion);
+                RestApiArrayResultMenuSection result = apiInstance.GetMenuSections(menuId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -322,7 +313,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **int?**| Menu identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -341,7 +331,7 @@ Name | Type | Description  | Notes
 
 <a name="updatemenusection"></a>
 # **UpdateMenuSection**
-> void UpdateMenuSection (int? menuId, MenuSectionBase menuSection, string apiVersion, string menuSectionId)
+> void UpdateMenuSection (int? menuId, int? menuSectionId, MenuSectionBase menuSection)
 
 Update menu section
 
@@ -364,14 +354,13 @@ namespace Example
 
             var apiInstance = new MenuSectionsApi();
             var menuId = 56;  // int? | Menu identifier
+            var menuSectionId = 56;  // int? | Menu section identifier
             var menuSection = new MenuSectionBase(); // MenuSectionBase | Menu section changes (delta)
-            var apiVersion = apiVersion_example;  // string | API version
-            var menuSectionId = menuSectionId_example;  // string | 
 
             try
             {
                 // Update menu section
-                apiInstance.UpdateMenuSection(menuId, menuSection, apiVersion, menuSectionId);
+                apiInstance.UpdateMenuSection(menuId, menuSectionId, menuSection);
             }
             catch (Exception e)
             {
@@ -387,9 +376,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **int?**| Menu identifier | 
+ **menuSectionId** | **int?**| Menu section identifier | 
  **menuSection** | [**MenuSectionBase**](MenuSectionBase.md)| Menu section changes (delta) | 
- **apiVersion** | **string**| API version | 
- **menuSectionId** | **string**|  | 
 
 ### Return type
 
@@ -408,7 +396,7 @@ void (empty response body)
 
 <a name="uploadmenusectionimage"></a>
 # **UploadMenuSectionImage**
-> RestApiStringResult UploadMenuSectionImage (int? menuId, int? menuSectionId, string apiVersion, System.IO.Stream image)
+> RestApiStringResult UploadMenuSectionImage (int? menuId, int? menuSectionId, System.IO.Stream image)
 
 Upload menu section image
 
@@ -432,13 +420,12 @@ namespace Example
             var apiInstance = new MenuSectionsApi();
             var menuId = 56;  // int? | Menu identifier
             var menuSectionId = 56;  // int? | Menu section identifier
-            var apiVersion = apiVersion_example;  // string | API version
             var image = new System.IO.Stream(); // System.IO.Stream | Menu section image
 
             try
             {
                 // Upload menu section image
-                RestApiStringResult result = apiInstance.UploadMenuSectionImage(menuId, menuSectionId, apiVersion, image);
+                RestApiStringResult result = apiInstance.UploadMenuSectionImage(menuId, menuSectionId, image);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -456,7 +443,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **int?**| Menu identifier | 
  **menuSectionId** | **int?**| Menu section identifier | 
- **apiVersion** | **string**| API version | 
  **image** | **System.IO.Stream**| Menu section image | 
 
 ### Return type

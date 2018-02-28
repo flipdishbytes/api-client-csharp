@@ -4,15 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetStoreById**](StoresApi.md#getstorebyid) | **GET** /api/v{apiVersion}/stores/{storeId} | 
-[**GetStores**](StoresApi.md#getstores) | **GET** /api/v{apiVersion}/stores | Get all stores
+[**GetStoreById**](StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
+[**GetStores**](StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores
 
 
 <a name="getstorebyid"></a>
 # **GetStoreById**
-> RestApiResultStore GetStoreById (int? storeId, string apiVersion)
+> RestApiResultStore GetStoreById (int? storeId)
 
-
+Get store by identifier
 
 ### Example
 ```csharp
@@ -32,12 +32,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | 
-            var apiVersion = apiVersion_example;  // string | API version
+            var storeId = 56;  // int? | Store identifier
 
             try
             {
-                RestApiResultStore result = apiInstance.GetStoreById(storeId, apiVersion);
+                // Get store by identifier
+                RestApiResultStore result = apiInstance.GetStoreById(storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -53,8 +53,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**|  | 
- **apiVersion** | **string**| API version | 
+ **storeId** | **int?**| Store identifier | 
 
 ### Return type
 
@@ -73,7 +72,7 @@ Name | Type | Description  | Notes
 
 <a name="getstores"></a>
 # **GetStores**
-> RestApiPaginationResultStore GetStores (string apiVersion, string searchQuery = null, int? page = null, int? limit = null)
+> RestApiPaginationResultStore GetStores (string searchQuery = null, int? page = null, int? limit = null)
 
 Get all stores
 
@@ -95,7 +94,6 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var apiVersion = apiVersion_example;  // string | API version
             var searchQuery = searchQuery_example;  // string | Search query (optional) 
             var page = 56;  // int? | Requested page index (optional) 
             var limit = 56;  // int? | Requested page limit (optional) 
@@ -103,7 +101,7 @@ namespace Example
             try
             {
                 // Get all stores
-                RestApiPaginationResultStore result = apiInstance.GetStores(apiVersion, searchQuery, page, limit);
+                RestApiPaginationResultStore result = apiInstance.GetStores(searchQuery, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -119,7 +117,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiVersion** | **string**| API version | 
  **searchQuery** | **string**| Search query | [optional] 
  **page** | **int?**| Requested page index | [optional] 
  **limit** | **int?**| Requested page limit | [optional] 

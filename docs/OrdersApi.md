@@ -4,16 +4,16 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AcceptOrder**](OrdersApi.md#acceptorder) | **POST** /api/v{apiVersion}/orders/{id}/accept | Accept order
-[**GetOrderById**](OrdersApi.md#getorderbyid) | **GET** /api/v{apiVersion}/orders/{id} | Get order by ID
-[**GetOrders**](OrdersApi.md#getorders) | **GET** /api/v{apiVersion}/orders | Get orders by filter
-[**RefundOrder**](OrdersApi.md#refundorder) | **POST** /api/v{apiVersion}/orders/{id}/refund | Refund order
-[**RejectOrder**](OrdersApi.md#rejectorder) | **POST** /api/v{apiVersion}/orders/{id}/reject | Reject order
+[**AcceptOrder**](OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
+[**GetOrderById**](OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | Get order by ID
+[**GetOrders**](OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
+[**RefundOrder**](OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
+[**RejectOrder**](OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 
 
 <a name="acceptorder"></a>
 # **AcceptOrder**
-> void AcceptOrder (int? id, Accept acceptObject, string apiVersion)
+> void AcceptOrder (int? id, Accept acceptObject)
 
 Accept order
 
@@ -39,12 +39,11 @@ namespace Example
             var apiInstance = new OrdersApi();
             var id = 56;  // int? | Order identifier
             var acceptObject = new Accept(); // Accept | 
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Accept order
-                apiInstance.AcceptOrder(id, acceptObject, apiVersion);
+                apiInstance.AcceptOrder(id, acceptObject);
             }
             catch (Exception e)
             {
@@ -61,7 +60,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**| Order identifier | 
  **acceptObject** | [**Accept**](Accept.md)|  | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -80,7 +78,7 @@ void (empty response body)
 
 <a name="getorderbyid"></a>
 # **GetOrderById**
-> RestApiResultOrder GetOrderById (int? id, string apiVersion)
+> RestApiResultOrder GetOrderById (int? id)
 
 Get order by ID
 
@@ -103,12 +101,11 @@ namespace Example
 
             var apiInstance = new OrdersApi();
             var id = 56;  // int? | Order identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get order by ID
-                RestApiResultOrder result = apiInstance.GetOrderById(id, apiVersion);
+                RestApiResultOrder result = apiInstance.GetOrderById(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -125,7 +122,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**| Order identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -144,7 +140,7 @@ Name | Type | Description  | Notes
 
 <a name="getorders"></a>
 # **GetOrders**
-> RestApiPaginationResultOrder GetOrders (string apiVersion, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+> RestApiPaginationResultOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
 
 Get orders by filter
 
@@ -166,7 +162,6 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var apiVersion = apiVersion_example;  // string | API version
             var physicalRestaurantId = new List<int?>(); // List<int?> | Physical restaurant identifiers (optional) 
             var state = new List<string>(); // List<string> | Order states (optional) 
             var page = 56;  // int? | Requested page number (optional) 
@@ -175,7 +170,7 @@ namespace Example
             try
             {
                 // Get orders by filter
-                RestApiPaginationResultOrder result = apiInstance.GetOrders(apiVersion, physicalRestaurantId, state, page, limit);
+                RestApiPaginationResultOrder result = apiInstance.GetOrders(physicalRestaurantId, state, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -191,7 +186,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiVersion** | **string**| API version | 
  **physicalRestaurantId** | [**List&lt;int?&gt;**](int?.md)| Physical restaurant identifiers | [optional] 
  **state** | [**List&lt;string&gt;**](string.md)| Order states | [optional] 
  **page** | **int?**| Requested page number | [optional] 
@@ -214,7 +208,7 @@ Name | Type | Description  | Notes
 
 <a name="refundorder"></a>
 # **RefundOrder**
-> void RefundOrder (int? id, Refund refundObject, string apiVersion)
+> void RefundOrder (int? id, Refund refundObject)
 
 Refund order
 
@@ -240,12 +234,11 @@ namespace Example
             var apiInstance = new OrdersApi();
             var id = 56;  // int? | Order identifier
             var refundObject = new Refund(); // Refund | 
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Refund order
-                apiInstance.RefundOrder(id, refundObject, apiVersion);
+                apiInstance.RefundOrder(id, refundObject);
             }
             catch (Exception e)
             {
@@ -262,7 +255,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**| Order identifier | 
  **refundObject** | [**Refund**](Refund.md)|  | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -281,7 +273,7 @@ void (empty response body)
 
 <a name="rejectorder"></a>
 # **RejectOrder**
-> void RejectOrder (int? id, Reject rejectObject, string apiVersion)
+> void RejectOrder (int? id, Reject rejectObject)
 
 Reject order
 
@@ -307,12 +299,11 @@ namespace Example
             var apiInstance = new OrdersApi();
             var id = 56;  // int? | Order identifier
             var rejectObject = new Reject(); // Reject | 
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Reject order
-                apiInstance.RejectOrder(id, rejectObject, apiVersion);
+                apiInstance.RejectOrder(id, rejectObject);
             }
             catch (Exception e)
             {
@@ -329,7 +320,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**| Order identifier | 
  **rejectObject** | [**Reject**](Reject.md)|  | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 

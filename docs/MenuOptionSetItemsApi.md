@@ -4,18 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#addmenuitemoptionsetitem) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Create menu item option set item
-[**DeleteOptionSetItemImage**](MenuOptionSetItemsApi.md#deleteoptionsetitemimage) | **DELETE** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Delete menu item option set item image
-[**GetMenuItemOptionSetItemById**](MenuOptionSetItemsApi.md#getmenuitemoptionsetitembyid) | **GET** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
-[**GetMenuItemOptionSetItems**](MenuOptionSetItemsApi.md#getmenuitemoptionsetitems) | **GET** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Get menu item option set items
-[**RemoveMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#removemenuitemoptionsetitem) | **DELETE** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Delete menu item option set item
-[**UpdateMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#updatemenuitemoptionsetitem) | **PATCH** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Update menu item option set item
-[**UploadOptionSetItemImage**](MenuOptionSetItemsApi.md#uploadoptionsetitemimage) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Upload menu item option set item image
+[**AddMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#addmenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Create menu item option set item
+[**DeleteOptionSetItemImage**](MenuOptionSetItemsApi.md#deleteoptionsetitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Delete menu item option set item image
+[**GetMenuItemOptionSetItemById**](MenuOptionSetItemsApi.md#getmenuitemoptionsetitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
+[**GetMenuItemOptionSetItems**](MenuOptionSetItemsApi.md#getmenuitemoptionsetitems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Get menu item option set items
+[**RemoveMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#removemenuitemoptionsetitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Delete menu item option set item
+[**UpdateMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#updatemenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Update menu item option set item
+[**UploadOptionSetItemImage**](MenuOptionSetItemsApi.md#uploadoptionsetitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Upload menu item option set item image
 
 
 <a name="addmenuitemoptionsetitem"></a>
 # **AddMenuItemOptionSetItem**
-> Object AddMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, MenuItemOptionSetItemBase menuItemOptionSetItem, string apiVersion)
+> Object AddMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, MenuItemOptionSetItemBase menuItemOptionSetItem)
 
 Create menu item option set item
 
@@ -42,12 +42,11 @@ namespace Example
             var menuSectionItemId = 56;  // int? | Menu section item identifier
             var optionSetId = 56;  // int? | Option set identifier
             var menuItemOptionSetItem = new MenuItemOptionSetItemBase(); // MenuItemOptionSetItemBase | Option set item
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Create menu item option set item
-                Object result = apiInstance.AddMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItem, apiVersion);
+                Object result = apiInstance.AddMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItem);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -68,7 +67,6 @@ Name | Type | Description  | Notes
  **menuSectionItemId** | **int?**| Menu section item identifier | 
  **optionSetId** | **int?**| Option set identifier | 
  **menuItemOptionSetItem** | [**MenuItemOptionSetItemBase**](MenuItemOptionSetItemBase.md)| Option set item | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -87,7 +85,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteoptionsetitemimage"></a>
 # **DeleteOptionSetItemImage**
-> void DeleteOptionSetItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, string apiVersion)
+> void DeleteOptionSetItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId)
 
 Delete menu item option set item image
 
@@ -114,12 +112,11 @@ namespace Example
             var menuSectionItemId = 56;  // int? | Menu section item identifier
             var optionSetId = 56;  // int? | Option set identifier
             var menuItemOptionSetItemId = 56;  // int? | Option set item identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Delete menu item option set item image
-                apiInstance.DeleteOptionSetItemImage(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, apiVersion);
+                apiInstance.DeleteOptionSetItemImage(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId);
             }
             catch (Exception e)
             {
@@ -139,7 +136,6 @@ Name | Type | Description  | Notes
  **menuSectionItemId** | **int?**| Menu section item identifier | 
  **optionSetId** | **int?**| Option set identifier | 
  **menuItemOptionSetItemId** | **int?**| Option set item identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -158,7 +154,7 @@ void (empty response body)
 
 <a name="getmenuitemoptionsetitembyid"></a>
 # **GetMenuItemOptionSetItemById**
-> RestApiResultMenuItemOptionSetItem GetMenuItemOptionSetItemById (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, string apiVersion)
+> RestApiResultMenuItemOptionSetItem GetMenuItemOptionSetItemById (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId)
 
 Get menu item option set item by identifier
 
@@ -185,12 +181,11 @@ namespace Example
             var menuSectionItemId = 56;  // int? | Menu section item identifier
             var optionSetId = 56;  // int? | Option set identifier
             var menuItemOptionSetItemId = 56;  // int? | Option set item identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get menu item option set item by identifier
-                RestApiResultMenuItemOptionSetItem result = apiInstance.GetMenuItemOptionSetItemById(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, apiVersion);
+                RestApiResultMenuItemOptionSetItem result = apiInstance.GetMenuItemOptionSetItemById(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -211,7 +206,6 @@ Name | Type | Description  | Notes
  **menuSectionItemId** | **int?**| Menu section item identifier | 
  **optionSetId** | **int?**| Option set identifier | 
  **menuItemOptionSetItemId** | **int?**| Option set item identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -230,7 +224,7 @@ Name | Type | Description  | Notes
 
 <a name="getmenuitemoptionsetitems"></a>
 # **GetMenuItemOptionSetItems**
-> RestApiArrayResultMenuItemOptionSetItem GetMenuItemOptionSetItems (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, string apiVersion)
+> RestApiArrayResultMenuItemOptionSetItem GetMenuItemOptionSetItems (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId)
 
 Get menu item option set items
 
@@ -256,12 +250,11 @@ namespace Example
             var menuSectionId = 56;  // int? | Menu section identifier
             var menuSectionItemId = 56;  // int? | Menu section item identifier
             var optionSetId = 56;  // int? | Option set identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Get menu item option set items
-                RestApiArrayResultMenuItemOptionSetItem result = apiInstance.GetMenuItemOptionSetItems(menuId, menuSectionId, menuSectionItemId, optionSetId, apiVersion);
+                RestApiArrayResultMenuItemOptionSetItem result = apiInstance.GetMenuItemOptionSetItems(menuId, menuSectionId, menuSectionItemId, optionSetId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -281,7 +274,6 @@ Name | Type | Description  | Notes
  **menuSectionId** | **int?**| Menu section identifier | 
  **menuSectionItemId** | **int?**| Menu section item identifier | 
  **optionSetId** | **int?**| Option set identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -300,7 +292,7 @@ Name | Type | Description  | Notes
 
 <a name="removemenuitemoptionsetitem"></a>
 # **RemoveMenuItemOptionSetItem**
-> void RemoveMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, string apiVersion)
+> void RemoveMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId)
 
 Delete menu item option set item
 
@@ -327,12 +319,11 @@ namespace Example
             var menuSectionItemId = 56;  // int? | Menu section item identifier
             var optionSetId = 56;  // int? | Option set identifier
             var menuItemOptionSetItemId = 56;  // int? | Option set item identifier
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Delete menu item option set item
-                apiInstance.RemoveMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, apiVersion);
+                apiInstance.RemoveMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId);
             }
             catch (Exception e)
             {
@@ -352,7 +343,6 @@ Name | Type | Description  | Notes
  **menuSectionItemId** | **int?**| Menu section item identifier | 
  **optionSetId** | **int?**| Option set identifier | 
  **menuItemOptionSetItemId** | **int?**| Option set item identifier | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -371,7 +361,7 @@ void (empty response body)
 
 <a name="updatemenuitemoptionsetitem"></a>
 # **UpdateMenuItemOptionSetItem**
-> void UpdateMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem, string apiVersion)
+> void UpdateMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem)
 
 Update menu item option set item
 
@@ -399,12 +389,11 @@ namespace Example
             var optionSetId = 56;  // int? | Option set identifier
             var menuItemOptionSetItemId = 56;  // int? | Option set item identifier
             var menuItemOptionSetItem = new MenuItemOptionSetItemBase(); // MenuItemOptionSetItemBase | Option set item (delta)
-            var apiVersion = apiVersion_example;  // string | API version
 
             try
             {
                 // Update menu item option set item
-                apiInstance.UpdateMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, menuItemOptionSetItem, apiVersion);
+                apiInstance.UpdateMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, menuItemOptionSetItem);
             }
             catch (Exception e)
             {
@@ -425,7 +414,6 @@ Name | Type | Description  | Notes
  **optionSetId** | **int?**| Option set identifier | 
  **menuItemOptionSetItemId** | **int?**| Option set item identifier | 
  **menuItemOptionSetItem** | [**MenuItemOptionSetItemBase**](MenuItemOptionSetItemBase.md)| Option set item (delta) | 
- **apiVersion** | **string**| API version | 
 
 ### Return type
 
@@ -444,7 +432,7 @@ void (empty response body)
 
 <a name="uploadoptionsetitemimage"></a>
 # **UploadOptionSetItemImage**
-> RestApiStringResult UploadOptionSetItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, string apiVersion, System.IO.Stream image)
+> RestApiStringResult UploadOptionSetItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, System.IO.Stream image)
 
 Upload menu item option set item image
 
@@ -471,13 +459,12 @@ namespace Example
             var menuSectionItemId = 56;  // int? | Menu section item identifier
             var optionSetId = 56;  // int? | Option set identifier
             var menuItemOptionSetItemId = 56;  // int? | Option set item identifier
-            var apiVersion = apiVersion_example;  // string | API version
             var image = new System.IO.Stream(); // System.IO.Stream | Option set item image
 
             try
             {
                 // Upload menu item option set item image
-                RestApiStringResult result = apiInstance.UploadOptionSetItemImage(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, apiVersion, image);
+                RestApiStringResult result = apiInstance.UploadOptionSetItemImage(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, image);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -498,7 +485,6 @@ Name | Type | Description  | Notes
  **menuSectionItemId** | **int?**| Menu section item identifier | 
  **optionSetId** | **int?**| Option set identifier | 
  **menuItemOptionSetItemId** | **int?**| Option set item identifier | 
- **apiVersion** | **string**| API version | 
  **image** | **System.IO.Stream**| Option set item image | 
 
 ### Return type
