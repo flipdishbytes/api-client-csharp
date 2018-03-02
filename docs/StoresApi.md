@@ -4,8 +4,8 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetStoreById**](StoresApi.md#getstorebyid) | **GET** /api/v{apiVersion}/stores/{storeId} | Get store by identifier
-[**GetStores**](StoresApi.md#getstores) | **GET** /api/v{apiVersion}/stores | Get all stores
+[**GetStoreById**](StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
+[**GetStores**](StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores
 
 
 <a name="getstorebyid"></a>

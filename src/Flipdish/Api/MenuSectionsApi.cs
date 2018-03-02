@@ -493,7 +493,7 @@ namespace Flipdish.Api
             if (menuSection == null)
                 throw new ApiException(400, "Missing required parameter 'menuSection' when calling MenuSectionsApi->CreateMenuSection");
 
-            var localVarPath = "/api/v{apiVersion}/menus/{menuId}/sections";
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -587,7 +587,7 @@ namespace Flipdish.Api
             if (menuSection == null)
                 throw new ApiException(400, "Missing required parameter 'menuSection' when calling MenuSectionsApi->CreateMenuSection");
 
-            var localVarPath = "/api/v{apiVersion}/menus/{menuId}/sections";
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -679,7 +679,7 @@ namespace Flipdish.Api
             if (menuSectionId == null)
                 throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->DeleteMenuSection");
 
-            var localVarPath = "/api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}";
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -760,7 +760,7 @@ namespace Flipdish.Api
             if (menuSectionId == null)
                 throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->DeleteMenuSection");
 
-            var localVarPath = "/api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}";
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -840,7 +840,7 @@ namespace Flipdish.Api
             if (menuSectionId == null)
                 throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->DeleteMenuSectionImage");
 
-            var localVarPath = "/api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/image";
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/image";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -921,7 +921,7 @@ namespace Flipdish.Api
             if (menuSectionId == null)
                 throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->DeleteMenuSectionImage");
 
-            var localVarPath = "/api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/image";
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/image";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1002,7 +1002,7 @@ namespace Flipdish.Api
             if (menuSectionId == null)
                 throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->GetMenuSectionById");
 
-            var localVarPath = "/api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}";
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1084,7 +1084,7 @@ namespace Flipdish.Api
             if (menuSectionId == null)
                 throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->GetMenuSectionById");
 
-            var localVarPath = "/api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}";
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1160,7 +1160,7 @@ namespace Flipdish.Api
             if (menuId == null)
                 throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuSectionsApi->GetMenuSections");
 
-            var localVarPath = "/api/v{apiVersion}/menus/{menuId}/sections";
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1236,7 +1236,7 @@ namespace Flipdish.Api
             if (menuId == null)
                 throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuSectionsApi->GetMenuSections");
 
-            var localVarPath = "/api/v{apiVersion}/menus/{menuId}/sections";
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1320,7 +1320,7 @@ namespace Flipdish.Api
             if (menuSection == null)
                 throw new ApiException(400, "Missing required parameter 'menuSection' when calling MenuSectionsApi->UpdateMenuSection");
 
-            var localVarPath = "/api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}";
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1419,7 +1419,7 @@ namespace Flipdish.Api
             if (menuSection == null)
                 throw new ApiException(400, "Missing required parameter 'menuSection' when calling MenuSectionsApi->UpdateMenuSection");
 
-            var localVarPath = "/api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}";
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1518,7 +1518,7 @@ namespace Flipdish.Api
             if (image == null)
                 throw new ApiException(400, "Missing required parameter 'image' when calling MenuSectionsApi->UploadMenuSectionImage");
 
-            var localVarPath = "/api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/image";
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/image";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1607,7 +1607,7 @@ namespace Flipdish.Api
             if (image == null)
                 throw new ApiException(400, "Missing required parameter 'image' when calling MenuSectionsApi->UploadMenuSectionImage");
 
-            var localVarPath = "/api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/image";
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/image";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

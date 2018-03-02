@@ -4,13 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateMenuSection**](MenuSectionsApi.md#createmenusection) | **POST** /api/v{apiVersion}/menus/{menuId}/sections | Create menu section
-[**DeleteMenuSection**](MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId} | Delete menu section
-[**DeleteMenuSectionImage**](MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
-[**GetMenuSectionById**](MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
-[**GetMenuSections**](MenuSectionsApi.md#getmenusections) | **GET** /api/v{apiVersion}/menus/{menuId}/sections | Get menu sections
-[**UpdateMenuSection**](MenuSectionsApi.md#updatemenusection) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId} | Update menu section
-[**UploadMenuSectionImage**](MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
+[**CreateMenuSection**](MenuSectionsApi.md#createmenusection) | **POST** /api/v1.0/menus/{menuId}/sections | Create menu section
+[**DeleteMenuSection**](MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Delete menu section
+[**DeleteMenuSectionImage**](MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
+[**GetMenuSectionById**](MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
+[**GetMenuSections**](MenuSectionsApi.md#getmenusections) | **GET** /api/v1.0/menus/{menuId}/sections | Get menu sections
+[**UpdateMenuSection**](MenuSectionsApi.md#updatemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Update menu section
+[**UploadMenuSectionImage**](MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
 
 
 <a name="createmenusection"></a>

@@ -254,7 +254,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetStoreById");
 
-            var localVarPath = "/api/v{apiVersion}/stores/{storeId}";
+            var localVarPath = "/api/v1.0/stores/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -330,7 +330,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetStoreById");
 
-            var localVarPath = "/api/v{apiVersion}/stores/{storeId}";
+            var localVarPath = "/api/v1.0/stores/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -406,7 +406,7 @@ namespace Flipdish.Api
         public ApiResponse< RestApiPaginationResultStore > GetStoresWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null)
         {
 
-            var localVarPath = "/api/v{apiVersion}/stores";
+            var localVarPath = "/api/v1.0/stores";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -485,7 +485,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresAsyncWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null)
         {
 
-            var localVarPath = "/api/v{apiVersion}/stores";
+            var localVarPath = "/api/v1.0/stores";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

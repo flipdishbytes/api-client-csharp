@@ -4,7 +4,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetRoles**](UsersApi.md#getroles) | **GET** /api/v{apiVersion}/users/roles | Get role names
+[**GetRoles**](UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | Get role names
 
 
 <a name="getroles"></a>
