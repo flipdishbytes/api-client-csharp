@@ -4,15 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddRedirectUri**](OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis | Create OAuth client redirect uri
-[**CreateOAuthClient**](OAuthClientsApi.md#createoauthclient) | **POST** /api/v1.0/oauthclients | Create OAuth client
-[**DeleteOAuthClient**](OAuthClientsApi.md#deleteoauthclient) | **DELETE** /api/v1.0/oauthclients/{oAuthClientId} | Delete OAuth client
-[**GetOAuthClientByClientId**](OAuthClientsApi.md#getoauthclientbyclientid) | **GET** /api/v1.0/oauthclients/{clientId} | Get OAuth client by identifier
-[**GetOAuthClientSecret**](OAuthClientsApi.md#getoauthclientsecret) | **GET** /api/v1.0/oauthclients/{clientId}/secret | Get OAuth client secret key
-[**GetOAuthClients**](OAuthClientsApi.md#getoauthclients) | **GET** /api/v1.0/oauthclients | Get all OAuth client
-[**GetOauthAccessToken**](OAuthClientsApi.md#getoauthaccesstoken) | **GET** /api/v1.0/oauthclients/{oAuthClientId}/accesstoken | Get OAuth access token for client
-[**GetRedirectUris**](OAuthClientsApi.md#getredirecturis) | **GET** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis | Get OAuth client redirect uris
-[**RemoveRedirectUri**](OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis/{uriId} | Delete OAuth client redirect uri
+[**AddRedirectUri**](OAuthClientsApi.md#addredirecturi) | **POST** /api/v{apiVersion}/oauthclients/{oAuthClientId}/redirecturis | Create OAuth client redirect uri
+[**CreateOAuthClient**](OAuthClientsApi.md#createoauthclient) | **POST** /api/v{apiVersion}/oauthclients | Create OAuth client
+[**DeleteOAuthClient**](OAuthClientsApi.md#deleteoauthclient) | **DELETE** /api/v{apiVersion}/oauthclients/{oAuthClientId} | Delete OAuth client
+[**GetOAuthClientByClientId**](OAuthClientsApi.md#getoauthclientbyclientid) | **GET** /api/v{apiVersion}/oauthclients/{clientId} | Get OAuth client by identifier
+[**GetOAuthClientSecret**](OAuthClientsApi.md#getoauthclientsecret) | **GET** /api/v{apiVersion}/oauthclients/{clientId}/secret | Get OAuth client secret key
+[**GetOAuthClients**](OAuthClientsApi.md#getoauthclients) | **GET** /api/v{apiVersion}/oauthclients | Get all OAuth client
+[**GetOauthAccessToken**](OAuthClientsApi.md#getoauthaccesstoken) | **GET** /api/v{apiVersion}/oauthclients/{oAuthClientId}/accesstoken | Get OAuth access token for client
+[**GetRedirectUris**](OAuthClientsApi.md#getredirecturis) | **GET** /api/v{apiVersion}/oauthclients/{oAuthClientId}/redirecturis | Get OAuth client redirect uris
+[**RemoveRedirectUri**](OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v{apiVersion}/oauthclients/{oAuthClientId}/redirecturis/{uriId} | Delete OAuth client redirect uri
 
 
 <a name="addredirecturi"></a>

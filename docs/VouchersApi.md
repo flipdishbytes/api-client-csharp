@@ -4,12 +4,12 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteVoucherMetadata**](VouchersApi.md#deletevouchermetadata) | **DELETE** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Delete voucher metadata
-[**GetVoucherById**](VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | Get voucher by identifier
-[**GetVoucherMetadata**](VouchersApi.md#getvouchermetadata) | **GET** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata | Get voucher metadata
-[**GetVoucherMetadata_0**](VouchersApi.md#getvouchermetadata_0) | **GET** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Get voucher metadata
-[**GetVouchers**](VouchersApi.md#getvouchers) | **GET** /api/v1.0/vouchers | Get vouchers
-[**SetVoucherMetadata**](VouchersApi.md#setvouchermetadata) | **PUT** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Add voucher metadata
+[**DeleteVoucherMetadata**](VouchersApi.md#deletevouchermetadata) | **DELETE** /api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Delete voucher metadata
+[**GetVoucherById**](VouchersApi.md#getvoucherbyid) | **GET** /api/v{apiVersion}/vouchers/{voucherId} | Get voucher by identifier
+[**GetVoucherMetadata**](VouchersApi.md#getvouchermetadata) | **GET** /api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata | Get voucher metadata
+[**GetVoucherMetadata_0**](VouchersApi.md#getvouchermetadata_0) | **GET** /api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Get voucher metadata
+[**GetVouchers**](VouchersApi.md#getvouchers) | **GET** /api/v{apiVersion}/vouchers | Get vouchers
+[**SetVoucherMetadata**](VouchersApi.md#setvouchermetadata) | **PUT** /api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Add voucher metadata
 
 
 <a name="deletevouchermetadata"></a>

@@ -549,7 +549,7 @@ namespace Flipdish.Api
             if (uri == null)
                 throw new ApiException(400, "Missing required parameter 'uri' when calling OAuthClientsApi->AddRedirectUri");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/redirecturis";
+            var localVarPath = "/api/v{apiVersion}/oauthclients/{oAuthClientId}/redirecturis";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -643,7 +643,7 @@ namespace Flipdish.Api
             if (uri == null)
                 throw new ApiException(400, "Missing required parameter 'uri' when calling OAuthClientsApi->AddRedirectUri");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/redirecturis";
+            var localVarPath = "/api/v{apiVersion}/oauthclients/{oAuthClientId}/redirecturis";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -730,7 +730,7 @@ namespace Flipdish.Api
             if (oAuthClient == null)
                 throw new ApiException(400, "Missing required parameter 'oAuthClient' when calling OAuthClientsApi->CreateOAuthClient");
 
-            var localVarPath = "/api/v1.0/oauthclients";
+            var localVarPath = "/api/v{apiVersion}/oauthclients";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -817,7 +817,7 @@ namespace Flipdish.Api
             if (oAuthClient == null)
                 throw new ApiException(400, "Missing required parameter 'oAuthClient' when calling OAuthClientsApi->CreateOAuthClient");
 
-            var localVarPath = "/api/v1.0/oauthclients";
+            var localVarPath = "/api/v{apiVersion}/oauthclients";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -903,7 +903,7 @@ namespace Flipdish.Api
             if (oAuthClientId == null)
                 throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->DeleteOAuthClient");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}";
+            var localVarPath = "/api/v{apiVersion}/oauthclients/{oAuthClientId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -978,7 +978,7 @@ namespace Flipdish.Api
             if (oAuthClientId == null)
                 throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->DeleteOAuthClient");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}";
+            var localVarPath = "/api/v{apiVersion}/oauthclients/{oAuthClientId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1053,7 +1053,7 @@ namespace Flipdish.Api
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthClientsApi->GetOAuthClientByClientId");
 
-            var localVarPath = "/api/v1.0/oauthclients/{clientId}";
+            var localVarPath = "/api/v{apiVersion}/oauthclients/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1129,7 +1129,7 @@ namespace Flipdish.Api
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthClientsApi->GetOAuthClientByClientId");
 
-            var localVarPath = "/api/v1.0/oauthclients/{clientId}";
+            var localVarPath = "/api/v{apiVersion}/oauthclients/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1204,7 +1204,7 @@ namespace Flipdish.Api
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthClientsApi->GetOAuthClientSecret");
 
-            var localVarPath = "/api/v1.0/oauthclients/{clientId}/secret";
+            var localVarPath = "/api/v{apiVersion}/oauthclients/{clientId}/secret";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1280,7 +1280,7 @@ namespace Flipdish.Api
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthClientsApi->GetOAuthClientSecret");
 
-            var localVarPath = "/api/v1.0/oauthclients/{clientId}/secret";
+            var localVarPath = "/api/v{apiVersion}/oauthclients/{clientId}/secret";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1350,7 +1350,7 @@ namespace Flipdish.Api
         public ApiResponse< RestApiArrayResultOAuthClient > GetOAuthClientsWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/oauthclients";
+            var localVarPath = "/api/v{apiVersion}/oauthclients";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1420,7 +1420,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOAuthClient>> GetOAuthClientsAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/oauthclients";
+            var localVarPath = "/api/v{apiVersion}/oauthclients";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1494,7 +1494,7 @@ namespace Flipdish.Api
             if (oAuthClientId == null)
                 throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->GetOauthAccessToken");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/accesstoken";
+            var localVarPath = "/api/v{apiVersion}/oauthclients/{oAuthClientId}/accesstoken";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1570,7 +1570,7 @@ namespace Flipdish.Api
             if (oAuthClientId == null)
                 throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->GetOauthAccessToken");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/accesstoken";
+            var localVarPath = "/api/v{apiVersion}/oauthclients/{oAuthClientId}/accesstoken";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1645,7 +1645,7 @@ namespace Flipdish.Api
             if (oAuthClientId == null)
                 throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->GetRedirectUris");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/redirecturis";
+            var localVarPath = "/api/v{apiVersion}/oauthclients/{oAuthClientId}/redirecturis";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1721,7 +1721,7 @@ namespace Flipdish.Api
             if (oAuthClientId == null)
                 throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->GetRedirectUris");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/redirecturis";
+            var localVarPath = "/api/v{apiVersion}/oauthclients/{oAuthClientId}/redirecturis";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1800,7 +1800,7 @@ namespace Flipdish.Api
             if (uriId == null)
                 throw new ApiException(400, "Missing required parameter 'uriId' when calling OAuthClientsApi->RemoveRedirectUri");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/redirecturis/{uriId}";
+            var localVarPath = "/api/v{apiVersion}/oauthclients/{oAuthClientId}/redirecturis/{uriId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1881,7 +1881,7 @@ namespace Flipdish.Api
             if (uriId == null)
                 throw new ApiException(400, "Missing required parameter 'uriId' when calling OAuthClientsApi->RemoveRedirectUri");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/redirecturis/{uriId}";
+            var localVarPath = "/api/v{apiVersion}/oauthclients/{oAuthClientId}/redirecturis/{uriId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

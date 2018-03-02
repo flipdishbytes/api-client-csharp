@@ -533,7 +533,7 @@ namespace Flipdish.Api
             if (key == null)
                 throw new ApiException(400, "Missing required parameter 'key' when calling VouchersApi->DeleteVoucherMetadata");
 
-            var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
+            var localVarPath = "/api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -627,7 +627,7 @@ namespace Flipdish.Api
             if (key == null)
                 throw new ApiException(400, "Missing required parameter 'key' when calling VouchersApi->DeleteVoucherMetadata");
 
-            var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
+            var localVarPath = "/api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -705,7 +705,7 @@ namespace Flipdish.Api
             if (voucherId == null)
                 throw new ApiException(400, "Missing required parameter 'voucherId' when calling VouchersApi->GetVoucherById");
 
-            var localVarPath = "/api/v1.0/vouchers/{voucherId}";
+            var localVarPath = "/api/v{apiVersion}/vouchers/{voucherId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -781,7 +781,7 @@ namespace Flipdish.Api
             if (voucherId == null)
                 throw new ApiException(400, "Missing required parameter 'voucherId' when calling VouchersApi->GetVoucherById");
 
-            var localVarPath = "/api/v1.0/vouchers/{voucherId}";
+            var localVarPath = "/api/v{apiVersion}/vouchers/{voucherId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -866,7 +866,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling VouchersApi->GetVoucherMetadata");
 
-            var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata";
+            var localVarPath = "/api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -954,7 +954,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling VouchersApi->GetVoucherMetadata");
 
-            var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata";
+            var localVarPath = "/api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1046,7 +1046,7 @@ namespace Flipdish.Api
             if (key == null)
                 throw new ApiException(400, "Missing required parameter 'key' when calling VouchersApi->GetVoucherMetadata_0");
 
-            var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
+            var localVarPath = "/api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1140,7 +1140,7 @@ namespace Flipdish.Api
             if (key == null)
                 throw new ApiException(400, "Missing required parameter 'key' when calling VouchersApi->GetVoucherMetadata_0");
 
-            var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
+            var localVarPath = "/api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1243,7 +1243,7 @@ namespace Flipdish.Api
         public ApiResponse< RestApiPaginationResultVoucher > GetVouchersWithHttpInfo (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null)
         {
 
-            var localVarPath = "/api/v1.0/vouchers";
+            var localVarPath = "/api/v{apiVersion}/vouchers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1358,7 +1358,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultVoucher>> GetVouchersAsyncWithHttpInfo (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null)
         {
 
-            var localVarPath = "/api/v1.0/vouchers";
+            var localVarPath = "/api/v{apiVersion}/vouchers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1466,7 +1466,7 @@ namespace Flipdish.Api
             if (value == null)
                 throw new ApiException(400, "Missing required parameter 'value' when calling VouchersApi->SetVoucherMetadata");
 
-            var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
+            var localVarPath = "/api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1577,7 +1577,7 @@ namespace Flipdish.Api
             if (value == null)
                 throw new ApiException(400, "Missing required parameter 'value' when calling VouchersApi->SetVoucherMetadata");
 
-            var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
+            var localVarPath = "/api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
