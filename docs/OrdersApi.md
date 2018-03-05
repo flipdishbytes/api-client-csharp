@@ -4,11 +4,11 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AcceptOrder**](OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
-[**GetOrderById**](OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | Get order by ID
-[**GetOrders**](OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
-[**RefundOrder**](OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
-[**RejectOrder**](OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
+[**AcceptOrder**](OrdersApi.md#acceptorder) | **POST** /api/v{apiVersion}/orders/{id}/accept | Accept order
+[**GetOrderById**](OrdersApi.md#getorderbyid) | **GET** /api/v{apiVersion}/orders/{id} | Get order by ID
+[**GetOrders**](OrdersApi.md#getorders) | **GET** /api/v{apiVersion}/orders | Get orders by filter
+[**RefundOrder**](OrdersApi.md#refundorder) | **POST** /api/v{apiVersion}/orders/{id}/refund | Refund order
+[**RejectOrder**](OrdersApi.md#rejectorder) | **POST** /api/v{apiVersion}/orders/{id}/reject | Reject order
 
 
 <a name="acceptorder"></a>

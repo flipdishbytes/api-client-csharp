@@ -258,7 +258,7 @@ namespace Flipdish.Api
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling AuthorizationTokensApi->GetAuthorizationTokens");
 
-            var localVarPath = "/api/v1.0/authorizationtokens/{clientId}";
+            var localVarPath = "/api/v{apiVersion}/authorizationtokens/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -340,7 +340,7 @@ namespace Flipdish.Api
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling AuthorizationTokensApi->GetAuthorizationTokens");
 
-            var localVarPath = "/api/v1.0/authorizationtokens/{clientId}";
+            var localVarPath = "/api/v{apiVersion}/authorizationtokens/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -416,7 +416,7 @@ namespace Flipdish.Api
             if (key == null)
                 throw new ApiException(400, "Missing required parameter 'key' when calling AuthorizationTokensApi->RevokeToken");
 
-            var localVarPath = "/api/v1.0/authorizationtokens/{key}";
+            var localVarPath = "/api/v{apiVersion}/authorizationtokens/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -491,7 +491,7 @@ namespace Flipdish.Api
             if (key == null)
                 throw new ApiException(400, "Missing required parameter 'key' when calling AuthorizationTokensApi->RevokeToken");
 
-            var localVarPath = "/api/v1.0/authorizationtokens/{key}";
+            var localVarPath = "/api/v{apiVersion}/authorizationtokens/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
