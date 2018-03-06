@@ -593,7 +593,7 @@ namespace Flipdish.Api
             if (webhookSubscription == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscription' when calling WebhooksApi->CraeteWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -687,7 +687,7 @@ namespace Flipdish.Api
             if (webhookSubscription == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscription' when calling WebhooksApi->CraeteWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -784,7 +784,7 @@ namespace Flipdish.Api
             if (eventName == null)
                 throw new ApiException(400, "Missing required parameter 'eventName' when calling WebhooksApi->CreateWebhookSubscriptionEventNames");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -871,7 +871,7 @@ namespace Flipdish.Api
             if (eventName == null)
                 throw new ApiException(400, "Missing required parameter 'eventName' when calling WebhooksApi->CreateWebhookSubscriptionEventNames");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -952,7 +952,7 @@ namespace Flipdish.Api
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->DeleteWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1033,7 +1033,7 @@ namespace Flipdish.Api
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->DeleteWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1118,7 +1118,7 @@ namespace Flipdish.Api
             if (eventName == null)
                 throw new ApiException(400, "Missing required parameter 'eventName' when calling WebhooksApi->DeleteWebhookSubscriptionEventName");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1205,7 +1205,7 @@ namespace Flipdish.Api
             if (eventName == null)
                 throw new ApiException(400, "Missing required parameter 'eventName' when calling WebhooksApi->DeleteWebhookSubscriptionEventName");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1277,7 +1277,7 @@ namespace Flipdish.Api
         public ApiResponse< RestApiStringArrayResult > GetWebhookEventNamesWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/webhooks/events";
+            var localVarPath = "/api/v{apiVersion}/webhooks/events";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1347,7 +1347,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/webhooks/events";
+            var localVarPath = "/api/v{apiVersion}/webhooks/events";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1426,7 +1426,7 @@ namespace Flipdish.Api
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->GetWebhookEventNamesBySubscriptionId");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1508,7 +1508,7 @@ namespace Flipdish.Api
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->GetWebhookEventNamesBySubscriptionId");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1601,7 +1601,7 @@ namespace Flipdish.Api
             if (end == null)
                 throw new ApiException(400, "Missing required parameter 'end' when calling WebhooksApi->GetWebhookLogs");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/logs";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/logs";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1698,7 +1698,7 @@ namespace Flipdish.Api
             if (end == null)
                 throw new ApiException(400, "Missing required parameter 'end' when calling WebhooksApi->GetWebhookLogs");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/logs";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/logs";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1777,7 +1777,7 @@ namespace Flipdish.Api
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->GetWebhookSubscriptions");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1853,7 +1853,7 @@ namespace Flipdish.Api
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->GetWebhookSubscriptions");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1937,7 +1937,7 @@ namespace Flipdish.Api
             if (webhookSubscription == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscription' when calling WebhooksApi->UpdateWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2036,7 +2036,7 @@ namespace Flipdish.Api
             if (webhookSubscription == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscription' when calling WebhooksApi->UpdateWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}";
+            var localVarPath = "/api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

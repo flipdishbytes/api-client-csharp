@@ -195,7 +195,7 @@ namespace Flipdish.Api
         public ApiResponse< RestApiStringArrayResult > GetRolesWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/users/roles";
+            var localVarPath = "/api/v{apiVersion}/users/roles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -265,7 +265,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetRolesAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/users/roles";
+            var localVarPath = "/api/v{apiVersion}/users/roles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

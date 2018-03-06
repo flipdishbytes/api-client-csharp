@@ -400,7 +400,7 @@ namespace Flipdish.Api
             if (acceptObject == null)
                 throw new ApiException(400, "Missing required parameter 'acceptObject' when calling OrdersApi->AcceptOrder");
 
-            var localVarPath = "/api/v1.0/orders/{id}/accept";
+            var localVarPath = "/api/v{apiVersion}/orders/{id}/accept";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -493,7 +493,7 @@ namespace Flipdish.Api
             if (acceptObject == null)
                 throw new ApiException(400, "Missing required parameter 'acceptObject' when calling OrdersApi->AcceptOrder");
 
-            var localVarPath = "/api/v1.0/orders/{id}/accept";
+            var localVarPath = "/api/v{apiVersion}/orders/{id}/accept";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -581,7 +581,7 @@ namespace Flipdish.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling OrdersApi->GetOrderById");
 
-            var localVarPath = "/api/v1.0/orders/{id}";
+            var localVarPath = "/api/v{apiVersion}/orders/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -657,7 +657,7 @@ namespace Flipdish.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling OrdersApi->GetOrderById");
 
-            var localVarPath = "/api/v1.0/orders/{id}";
+            var localVarPath = "/api/v{apiVersion}/orders/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -735,7 +735,7 @@ namespace Flipdish.Api
         public ApiResponse< RestApiPaginationResultOrder > GetOrdersWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
         {
 
-            var localVarPath = "/api/v1.0/orders";
+            var localVarPath = "/api/v{apiVersion}/orders";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -817,7 +817,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrder>> GetOrdersAsyncWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
         {
 
-            var localVarPath = "/api/v1.0/orders";
+            var localVarPath = "/api/v{apiVersion}/orders";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -899,7 +899,7 @@ namespace Flipdish.Api
             if (refundObject == null)
                 throw new ApiException(400, "Missing required parameter 'refundObject' when calling OrdersApi->RefundOrder");
 
-            var localVarPath = "/api/v1.0/orders/{id}/refund";
+            var localVarPath = "/api/v{apiVersion}/orders/{id}/refund";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -992,7 +992,7 @@ namespace Flipdish.Api
             if (refundObject == null)
                 throw new ApiException(400, "Missing required parameter 'refundObject' when calling OrdersApi->RefundOrder");
 
-            var localVarPath = "/api/v1.0/orders/{id}/refund";
+            var localVarPath = "/api/v{apiVersion}/orders/{id}/refund";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1084,7 +1084,7 @@ namespace Flipdish.Api
             if (rejectObject == null)
                 throw new ApiException(400, "Missing required parameter 'rejectObject' when calling OrdersApi->RejectOrder");
 
-            var localVarPath = "/api/v1.0/orders/{id}/reject";
+            var localVarPath = "/api/v{apiVersion}/orders/{id}/reject";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1177,7 +1177,7 @@ namespace Flipdish.Api
             if (rejectObject == null)
                 throw new ApiException(400, "Missing required parameter 'rejectObject' when calling OrdersApi->RejectOrder");
 
-            var localVarPath = "/api/v1.0/orders/{id}/reject";
+            var localVarPath = "/api/v{apiVersion}/orders/{id}/reject";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
