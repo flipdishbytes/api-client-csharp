@@ -4,8 +4,8 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAuthorizationTokens**](AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v{apiVersion}/authorizationtokens/{clientId} | Get authorization tokens
-[**RevokeToken**](AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v{apiVersion}/authorizationtokens/{key} | Revoke token
+[**GetAuthorizationTokens**](AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
+[**RevokeToken**](AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
 
 
 <a name="getauthorizationtokens"></a>
