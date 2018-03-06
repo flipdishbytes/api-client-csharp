@@ -99,77 +99,77 @@ All URIs are relative to *https://api.flipdish.co*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v{apiVersion}/authorizationtokens/{clientId} | Get authorization tokens
-*AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v{apiVersion}/authorizationtokens/{key} | Revoke token
-*MenuOptionSetItemsApi* | [**AddMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#addmenuitemoptionsetitem) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Create menu item option set item
-*MenuOptionSetItemsApi* | [**DeleteOptionSetItemImage**](docs/MenuOptionSetItemsApi.md#deleteoptionsetitemimage) | **DELETE** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Delete menu item option set item image
-*MenuOptionSetItemsApi* | [**GetMenuItemOptionSetItemById**](docs/MenuOptionSetItemsApi.md#getmenuitemoptionsetitembyid) | **GET** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
-*MenuOptionSetItemsApi* | [**GetMenuItemOptionSetItems**](docs/MenuOptionSetItemsApi.md#getmenuitemoptionsetitems) | **GET** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Get menu item option set items
-*MenuOptionSetItemsApi* | [**RemoveMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#removemenuitemoptionsetitem) | **DELETE** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Delete menu item option set item
-*MenuOptionSetItemsApi* | [**UpdateMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#updatemenuitemoptionsetitem) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Update menu item option set item
-*MenuOptionSetItemsApi* | [**UploadOptionSetItemImage**](docs/MenuOptionSetItemsApi.md#uploadoptionsetitemimage) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Upload menu item option set item image
-*MenuOptionSetsApi* | [**CreateMenuItemOptionSet**](docs/MenuOptionSetsApi.md#createmenuitemoptionset) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets | Create menu item option set
-*MenuOptionSetsApi* | [**DeleteMenuItemOptionSet**](docs/MenuOptionSetsApi.md#deletemenuitemoptionset) | **DELETE** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Delete menu item option set
-*MenuOptionSetsApi* | [**DeleteOptionSetImage**](docs/MenuOptionSetsApi.md#deleteoptionsetimage) | **DELETE** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | Delete option set image
-*MenuOptionSetsApi* | [**GetMenuItemOptionSetById**](docs/MenuOptionSetsApi.md#getmenuitemoptionsetbyid) | **GET** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Get menu item option set by identifier
-*MenuOptionSetsApi* | [**GetMenuItemOptionSets**](docs/MenuOptionSetsApi.md#getmenuitemoptionsets) | **GET** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets | Get menu item option sets
-*MenuOptionSetsApi* | [**UpdateMenuItemOptionSet**](docs/MenuOptionSetsApi.md#updatemenuitemoptionset) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Update menu item option set
-*MenuOptionSetsApi* | [**UploadOptionSetImage**](docs/MenuOptionSetsApi.md#uploadoptionsetimage) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | Upload menu item option set image
-*MenuSectionItemsApi* | [**CreateMenuSectionItem**](docs/MenuSectionItemsApi.md#createmenusectionitem) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems | Create menu section item
-*MenuSectionItemsApi* | [**DeleteMenuSectionItem**](docs/MenuSectionItemsApi.md#deletemenusectionitem) | **DELETE** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Delete menu section item
-*MenuSectionItemsApi* | [**DeleteMenuSectionItemImage**](docs/MenuSectionItemsApi.md#deletemenusectionitemimage) | **DELETE** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
-*MenuSectionItemsApi* | [**GetMenuItemById**](docs/MenuSectionItemsApi.md#getmenuitembyid) | **GET** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Get menu item by identifier
-*MenuSectionItemsApi* | [**GetMenuItems**](docs/MenuSectionItemsApi.md#getmenuitems) | **GET** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems | Get menu items
-*MenuSectionItemsApi* | [**UpdateMenuSectionItem**](docs/MenuSectionItemsApi.md#updatemenusectionitem) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Update menu section item
-*MenuSectionItemsApi* | [**UploadMenuSectionItemImage**](docs/MenuSectionItemsApi.md#uploadmenusectionitemimage) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Upload menu section item image
-*MenuSectionsApi* | [**CreateMenuSection**](docs/MenuSectionsApi.md#createmenusection) | **POST** /api/v{apiVersion}/menus/{menuId}/sections | Create menu section
-*MenuSectionsApi* | [**DeleteMenuSection**](docs/MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId} | Delete menu section
-*MenuSectionsApi* | [**DeleteMenuSectionImage**](docs/MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
-*MenuSectionsApi* | [**GetMenuSectionById**](docs/MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
-*MenuSectionsApi* | [**GetMenuSections**](docs/MenuSectionsApi.md#getmenusections) | **GET** /api/v{apiVersion}/menus/{menuId}/sections | Get menu sections
-*MenuSectionsApi* | [**UpdateMenuSection**](docs/MenuSectionsApi.md#updatemenusection) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId} | Update menu section
-*MenuSectionsApi* | [**UploadMenuSectionImage**](docs/MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v{apiVersion}/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
-*MenusApi* | [**DeleteMenuItemMetadata**](docs/MenusApi.md#deletemenuitemmetadata) | **GET** /api/v{apiVersion}/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get a menu item metadata by key
-*MenusApi* | [**DeleteMenuItemMetadata_0**](docs/MenusApi.md#deletemenuitemmetadata_0) | **DELETE** /api/v{apiVersion}/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Update a menu items metadata
-*MenusApi* | [**DeleteMenuSectionImage**](docs/MenusApi.md#deletemenusectionimage) | **DELETE** /api/v{apiVersion}/menus/{menuId}/image | Delete menu image
-*MenusApi* | [**GetMenuById**](docs/MenusApi.md#getmenubyid) | **GET** /api/v{apiVersion}/menus/{menuId} | Get menu by identifier
-*MenusApi* | [**GetMenuItemMetadata**](docs/MenusApi.md#getmenuitemmetadata) | **GET** /api/v{apiVersion}/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get a menu items metadata
-*MenusApi* | [**GetMenuItemOptionSetItemMetadata**](docs/MenusApi.md#getmenuitemoptionsetitemmetadata) | **GET** /api/v{apiVersion}/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get a menu item option set item metadata by key
-*MenusApi* | [**SetMenuItemMetadata**](docs/MenusApi.md#setmenuitemmetadata) | **PUT** /api/v{apiVersion}/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update a menu items metadata
-*MenusApi* | [**SetMenuItemOptionSetItemMetadata**](docs/MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v{apiVersion}/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update a menu item option set items metadata
-*MenusApi* | [**UploadMenuSectionImage**](docs/MenusApi.md#uploadmenusectionimage) | **POST** /api/v{apiVersion}/menus/{menuId}/image | Upload menu image
-*OAuthClientsApi* | [**AddRedirectUri**](docs/OAuthClientsApi.md#addredirecturi) | **POST** /api/v{apiVersion}/oauthclients/{oAuthClientId}/redirecturis | Create OAuth client redirect uri
-*OAuthClientsApi* | [**CreateOAuthClient**](docs/OAuthClientsApi.md#createoauthclient) | **POST** /api/v{apiVersion}/oauthclients | Create OAuth client
-*OAuthClientsApi* | [**DeleteOAuthClient**](docs/OAuthClientsApi.md#deleteoauthclient) | **DELETE** /api/v{apiVersion}/oauthclients/{oAuthClientId} | Delete OAuth client
-*OAuthClientsApi* | [**GetOAuthClientByClientId**](docs/OAuthClientsApi.md#getoauthclientbyclientid) | **GET** /api/v{apiVersion}/oauthclients/{clientId} | Get OAuth client by identifier
-*OAuthClientsApi* | [**GetOAuthClientSecret**](docs/OAuthClientsApi.md#getoauthclientsecret) | **GET** /api/v{apiVersion}/oauthclients/{clientId}/secret | Get OAuth client secret key
-*OAuthClientsApi* | [**GetOAuthClients**](docs/OAuthClientsApi.md#getoauthclients) | **GET** /api/v{apiVersion}/oauthclients | Get all OAuth client
-*OAuthClientsApi* | [**GetOauthAccessToken**](docs/OAuthClientsApi.md#getoauthaccesstoken) | **GET** /api/v{apiVersion}/oauthclients/{oAuthClientId}/accesstoken | Get OAuth access token for client
-*OAuthClientsApi* | [**GetRedirectUris**](docs/OAuthClientsApi.md#getredirecturis) | **GET** /api/v{apiVersion}/oauthclients/{oAuthClientId}/redirecturis | Get OAuth client redirect uris
-*OAuthClientsApi* | [**RemoveRedirectUri**](docs/OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v{apiVersion}/oauthclients/{oAuthClientId}/redirecturis/{uriId} | Delete OAuth client redirect uri
-*OrdersApi* | [**AcceptOrder**](docs/OrdersApi.md#acceptorder) | **POST** /api/v{apiVersion}/orders/{id}/accept | Accept order
-*OrdersApi* | [**GetOrderById**](docs/OrdersApi.md#getorderbyid) | **GET** /api/v{apiVersion}/orders/{id} | Get order by ID
-*OrdersApi* | [**GetOrders**](docs/OrdersApi.md#getorders) | **GET** /api/v{apiVersion}/orders | Get orders by filter
-*OrdersApi* | [**RefundOrder**](docs/OrdersApi.md#refundorder) | **POST** /api/v{apiVersion}/orders/{id}/refund | Refund order
-*OrdersApi* | [**RejectOrder**](docs/OrdersApi.md#rejectorder) | **POST** /api/v{apiVersion}/orders/{id}/reject | Reject order
-*StoresApi* | [**GetStoreById**](docs/StoresApi.md#getstorebyid) | **GET** /api/v{apiVersion}/stores/{storeId} | Get store by identifier
-*StoresApi* | [**GetStores**](docs/StoresApi.md#getstores) | **GET** /api/v{apiVersion}/stores | Get all stores
-*UsersApi* | [**GetRoles**](docs/UsersApi.md#getroles) | **GET** /api/v{apiVersion}/users/roles | Get role names
-*VouchersApi* | [**DeleteVoucherMetadata**](docs/VouchersApi.md#deletevouchermetadata) | **DELETE** /api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Delete voucher metadata
-*VouchersApi* | [**GetVoucherById**](docs/VouchersApi.md#getvoucherbyid) | **GET** /api/v{apiVersion}/vouchers/{voucherId} | Get voucher by identifier
-*VouchersApi* | [**GetVoucherMetadata**](docs/VouchersApi.md#getvouchermetadata) | **GET** /api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata | Get voucher metadata
-*VouchersApi* | [**GetVoucherMetadata_0**](docs/VouchersApi.md#getvouchermetadata_0) | **GET** /api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Get voucher metadata
-*VouchersApi* | [**GetVouchers**](docs/VouchersApi.md#getvouchers) | **GET** /api/v{apiVersion}/vouchers | Get vouchers
-*VouchersApi* | [**SetVoucherMetadata**](docs/VouchersApi.md#setvouchermetadata) | **PUT** /api/v{apiVersion}/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Add voucher metadata
-*WebhooksApi* | [**CraeteWebhookSubscription**](docs/WebhooksApi.md#craetewebhooksubscription) | **POST** /api/v{apiVersion}/webhooks/{clientId}/subscriptions | Create a webhook subscription for you Oauth client
-*WebhooksApi* | [**CreateWebhookSubscriptionEventNames**](docs/WebhooksApi.md#createwebhooksubscriptioneventnames) | **POST** /api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Add event name to your webhook subscription
-*WebhooksApi* | [**DeleteWebhookSubscription**](docs/WebhooksApi.md#deletewebhooksubscription) | **DELETE** /api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId} | Delete you webhook subscription
-*WebhooksApi* | [**DeleteWebhookSubscriptionEventName**](docs/WebhooksApi.md#deletewebhooksubscriptioneventname) | **DELETE** /api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Remove event name to your webhook subscription
-*WebhooksApi* | [**GetWebhookEventNames**](docs/WebhooksApi.md#getwebhookeventnames) | **GET** /api/v{apiVersion}/webhooks/events | Get all webhook subscription event names
-*WebhooksApi* | [**GetWebhookEventNamesBySubscriptionId**](docs/WebhooksApi.md#getwebhookeventnamesbysubscriptionid) | **GET** /api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events | Get your webhook subscriptions selected event names
-*WebhooksApi* | [**GetWebhookLogs**](docs/WebhooksApi.md#getwebhooklogs) | **GET** /api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/logs | Get logs for your webhook subscription
-*WebhooksApi* | [**GetWebhookSubscriptions**](docs/WebhooksApi.md#getwebhooksubscriptions) | **GET** /api/v{apiVersion}/webhooks/{clientId}/subscriptions | Get all webhook subscriptions by your Oauth client id
-*WebhooksApi* | [**UpdateWebhookSubscription**](docs/WebhooksApi.md#updatewebhooksubscription) | **PUT** /api/v{apiVersion}/webhooks/{clientId}/subscriptions/{webhookSubscriptionId} | Update a webhook subscription object
+*AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
+*AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
+*MenuOptionSetItemsApi* | [**AddMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#addmenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Create menu item option set item
+*MenuOptionSetItemsApi* | [**DeleteOptionSetItemImage**](docs/MenuOptionSetItemsApi.md#deleteoptionsetitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Delete menu item option set item image
+*MenuOptionSetItemsApi* | [**GetMenuItemOptionSetItemById**](docs/MenuOptionSetItemsApi.md#getmenuitemoptionsetitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
+*MenuOptionSetItemsApi* | [**GetMenuItemOptionSetItems**](docs/MenuOptionSetItemsApi.md#getmenuitemoptionsetitems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Get menu item option set items
+*MenuOptionSetItemsApi* | [**RemoveMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#removemenuitemoptionsetitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Delete menu item option set item
+*MenuOptionSetItemsApi* | [**UpdateMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#updatemenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Update menu item option set item
+*MenuOptionSetItemsApi* | [**UploadOptionSetItemImage**](docs/MenuOptionSetItemsApi.md#uploadoptionsetitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Upload menu item option set item image
+*MenuOptionSetsApi* | [**CreateMenuItemOptionSet**](docs/MenuOptionSetsApi.md#createmenuitemoptionset) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets | Create menu item option set
+*MenuOptionSetsApi* | [**DeleteMenuItemOptionSet**](docs/MenuOptionSetsApi.md#deletemenuitemoptionset) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Delete menu item option set
+*MenuOptionSetsApi* | [**DeleteOptionSetImage**](docs/MenuOptionSetsApi.md#deleteoptionsetimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | Delete option set image
+*MenuOptionSetsApi* | [**GetMenuItemOptionSetById**](docs/MenuOptionSetsApi.md#getmenuitemoptionsetbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Get menu item option set by identifier
+*MenuOptionSetsApi* | [**GetMenuItemOptionSets**](docs/MenuOptionSetsApi.md#getmenuitemoptionsets) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets | Get menu item option sets
+*MenuOptionSetsApi* | [**UpdateMenuItemOptionSet**](docs/MenuOptionSetsApi.md#updatemenuitemoptionset) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Update menu item option set
+*MenuOptionSetsApi* | [**UploadOptionSetImage**](docs/MenuOptionSetsApi.md#uploadoptionsetimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | Upload menu item option set image
+*MenuSectionItemsApi* | [**CreateMenuSectionItem**](docs/MenuSectionItemsApi.md#createmenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Create menu section item
+*MenuSectionItemsApi* | [**DeleteMenuSectionItem**](docs/MenuSectionItemsApi.md#deletemenusectionitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Delete menu section item
+*MenuSectionItemsApi* | [**DeleteMenuSectionItemImage**](docs/MenuSectionItemsApi.md#deletemenusectionitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
+*MenuSectionItemsApi* | [**GetMenuItemById**](docs/MenuSectionItemsApi.md#getmenuitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Get menu item by identifier
+*MenuSectionItemsApi* | [**GetMenuItems**](docs/MenuSectionItemsApi.md#getmenuitems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Get menu items
+*MenuSectionItemsApi* | [**UpdateMenuSectionItem**](docs/MenuSectionItemsApi.md#updatemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Update menu section item
+*MenuSectionItemsApi* | [**UploadMenuSectionItemImage**](docs/MenuSectionItemsApi.md#uploadmenusectionitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Upload menu section item image
+*MenuSectionsApi* | [**CreateMenuSection**](docs/MenuSectionsApi.md#createmenusection) | **POST** /api/v1.0/menus/{menuId}/sections | Create menu section
+*MenuSectionsApi* | [**DeleteMenuSection**](docs/MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Delete menu section
+*MenuSectionsApi* | [**DeleteMenuSectionImage**](docs/MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
+*MenuSectionsApi* | [**GetMenuSectionById**](docs/MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
+*MenuSectionsApi* | [**GetMenuSections**](docs/MenuSectionsApi.md#getmenusections) | **GET** /api/v1.0/menus/{menuId}/sections | Get menu sections
+*MenuSectionsApi* | [**UpdateMenuSection**](docs/MenuSectionsApi.md#updatemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Update menu section
+*MenuSectionsApi* | [**UploadMenuSectionImage**](docs/MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
+*MenusApi* | [**DeleteMenuItemMetadata**](docs/MenusApi.md#deletemenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get a menu item metadata by key
+*MenusApi* | [**DeleteMenuItemMetadata_0**](docs/MenusApi.md#deletemenuitemmetadata_0) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Update a menu items metadata
+*MenusApi* | [**DeleteMenuSectionImage**](docs/MenusApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
+*MenusApi* | [**GetMenuById**](docs/MenusApi.md#getmenubyid) | **GET** /api/v1.0/menus/{menuId} | Get menu by identifier
+*MenusApi* | [**GetMenuItemMetadata**](docs/MenusApi.md#getmenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get a menu items metadata
+*MenusApi* | [**GetMenuItemOptionSetItemMetadata**](docs/MenusApi.md#getmenuitemoptionsetitemmetadata) | **GET** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get a menu item option set item metadata by key
+*MenusApi* | [**SetMenuItemMetadata**](docs/MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update a menu items metadata
+*MenusApi* | [**SetMenuItemOptionSetItemMetadata**](docs/MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update a menu item option set items metadata
+*MenusApi* | [**UploadMenuSectionImage**](docs/MenusApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
+*OAuthClientsApi* | [**AddRedirectUri**](docs/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis | Create OAuth client redirect uri
+*OAuthClientsApi* | [**CreateOAuthClient**](docs/OAuthClientsApi.md#createoauthclient) | **POST** /api/v1.0/oauthclients | Create OAuth client
+*OAuthClientsApi* | [**DeleteOAuthClient**](docs/OAuthClientsApi.md#deleteoauthclient) | **DELETE** /api/v1.0/oauthclients/{oAuthClientId} | Delete OAuth client
+*OAuthClientsApi* | [**GetOAuthClientByClientId**](docs/OAuthClientsApi.md#getoauthclientbyclientid) | **GET** /api/v1.0/oauthclients/{clientId} | Get OAuth client by identifier
+*OAuthClientsApi* | [**GetOAuthClientSecret**](docs/OAuthClientsApi.md#getoauthclientsecret) | **GET** /api/v1.0/oauthclients/{clientId}/secret | Get OAuth client secret key
+*OAuthClientsApi* | [**GetOAuthClients**](docs/OAuthClientsApi.md#getoauthclients) | **GET** /api/v1.0/oauthclients | Get all OAuth client
+*OAuthClientsApi* | [**GetOauthAccessToken**](docs/OAuthClientsApi.md#getoauthaccesstoken) | **GET** /api/v1.0/oauthclients/{oAuthClientId}/accesstoken | Get OAuth access token for client
+*OAuthClientsApi* | [**GetRedirectUris**](docs/OAuthClientsApi.md#getredirecturis) | **GET** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis | Get OAuth client redirect uris
+*OAuthClientsApi* | [**RemoveRedirectUri**](docs/OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis/{uriId} | Delete OAuth client redirect uri
+*OrdersApi* | [**AcceptOrder**](docs/OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
+*OrdersApi* | [**GetOrderById**](docs/OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | Get order by ID
+*OrdersApi* | [**GetOrders**](docs/OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
+*OrdersApi* | [**RefundOrder**](docs/OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
+*OrdersApi* | [**RejectOrder**](docs/OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
+*StoresApi* | [**GetStoreById**](docs/StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
+*StoresApi* | [**GetStores**](docs/StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores
+*UsersApi* | [**GetRoles**](docs/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | Get role names
+*VouchersApi* | [**DeleteVoucherMetadata**](docs/VouchersApi.md#deletevouchermetadata) | **DELETE** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Delete voucher metadata
+*VouchersApi* | [**GetVoucherById**](docs/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | Get voucher by identifier
+*VouchersApi* | [**GetVoucherMetadata**](docs/VouchersApi.md#getvouchermetadata) | **GET** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata | Get voucher metadata
+*VouchersApi* | [**GetVoucherMetadata_0**](docs/VouchersApi.md#getvouchermetadata_0) | **GET** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Get voucher metadata
+*VouchersApi* | [**GetVouchers**](docs/VouchersApi.md#getvouchers) | **GET** /api/v1.0/vouchers | Get vouchers
+*VouchersApi* | [**SetVoucherMetadata**](docs/VouchersApi.md#setvouchermetadata) | **PUT** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Add voucher metadata
+*WebhooksApi* | [**CraeteWebhookSubscription**](docs/WebhooksApi.md#craetewebhooksubscription) | **POST** /api/v1.0/webhooks/{clientId}/subscriptions | Create a webhook subscription for you Oauth client
+*WebhooksApi* | [**CreateWebhookSubscriptionEventNames**](docs/WebhooksApi.md#createwebhooksubscriptioneventnames) | **POST** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Add event name to your webhook subscription
+*WebhooksApi* | [**DeleteWebhookSubscription**](docs/WebhooksApi.md#deletewebhooksubscription) | **DELETE** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId} | Delete you webhook subscription
+*WebhooksApi* | [**DeleteWebhookSubscriptionEventName**](docs/WebhooksApi.md#deletewebhooksubscriptioneventname) | **DELETE** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Remove event name to your webhook subscription
+*WebhooksApi* | [**GetWebhookEventNames**](docs/WebhooksApi.md#getwebhookeventnames) | **GET** /api/v1.0/webhooks/events | Get all webhook subscription event names
+*WebhooksApi* | [**GetWebhookEventNamesBySubscriptionId**](docs/WebhooksApi.md#getwebhookeventnamesbysubscriptionid) | **GET** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events | Get your webhook subscriptions selected event names
+*WebhooksApi* | [**GetWebhookLogs**](docs/WebhooksApi.md#getwebhooklogs) | **GET** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/logs | Get logs for your webhook subscription
+*WebhooksApi* | [**GetWebhookSubscriptions**](docs/WebhooksApi.md#getwebhooksubscriptions) | **GET** /api/v1.0/webhooks/{clientId}/subscriptions | Get all webhook subscriptions by your Oauth client id
+*WebhooksApi* | [**UpdateWebhookSubscription**](docs/WebhooksApi.md#updatewebhooksubscription) | **PUT** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId} | Update a webhook subscription object
 
 
 <a name="documentation-for-models"></a>
