@@ -101,6 +101,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
+*HttpRequestResponseLogsApi* | [**GetHttpLogsByUserIdAsync**](docs/HttpRequestResponseLogsApi.md#gethttplogsbyuseridasync) | **GET** /api/v1.0/interactions/logs | 
 *MenuOptionSetItemsApi* | [**AddMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#addmenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Create menu item option set item
 *MenuOptionSetItemsApi* | [**DeleteOptionSetItemImage**](docs/MenuOptionSetItemsApi.md#deleteoptionsetitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Delete menu item option set item image
 *MenuOptionSetItemsApi* | [**GetMenuItemOptionSetItemById**](docs/MenuOptionSetItemsApi.md#getmenuitemoptionsetitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
@@ -182,6 +183,7 @@ Class | Method | HTTP request | Description
  - [Model.DeliveryFeeArea](docs/DeliveryFeeArea.md)
  - [Model.DeliveryLocation](docs/DeliveryLocation.md)
  - [Model.FeeSummary](docs/FeeSummary.md)
+ - [Model.HttpRequestAndResponseLog](docs/HttpRequestAndResponseLog.md)
  - [Model.Menu](docs/Menu.md)
  - [Model.MenuItemOptionSet](docs/MenuItemOptionSet.md)
  - [Model.MenuItemOptionSetBase](docs/MenuItemOptionSetBase.md)
@@ -202,6 +204,7 @@ Class | Method | HTTP request | Description
  - [Model.Range](docs/Range.md)
  - [Model.Refund](docs/Refund.md)
  - [Model.Reject](docs/Reject.md)
+ - [Model.RestApiArrayResultHttpRequestAndResponseLog](docs/RestApiArrayResultHttpRequestAndResponseLog.md)
  - [Model.RestApiArrayResultMenuItemOptionSet](docs/RestApiArrayResultMenuItemOptionSet.md)
  - [Model.RestApiArrayResultMenuItemOptionSetItem](docs/RestApiArrayResultMenuItemOptionSetItem.md)
  - [Model.RestApiArrayResultMenuSection](docs/RestApiArrayResultMenuSection.md)
