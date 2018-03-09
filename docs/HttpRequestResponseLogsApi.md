@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="gethttplogsbyuseridasync"></a>
 # **GetHttpLogsByUserIdAsync**
-> RestApiArrayResultHttpRequestAndResponseLog GetHttpLogsByUserIdAsync (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null)
+> FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog GetHttpLogsByUserIdAsync (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null)
 
 
 
@@ -38,7 +38,7 @@ namespace Example
 
             try
             {
-                RestApiArrayResultHttpRequestAndResponseLog result = apiInstance.GetHttpLogsByUserIdAsync(start, end, filterByUserId, take);
+                FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog result = apiInstance.GetHttpLogsByUserIdAsync(start, end, filterByUserId, take);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiArrayResultHttpRequestAndResponseLog**](RestApiArrayResultHttpRequestAndResponseLog.md)
+[**FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog**](FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog.md)
 
 ### Authorization
 

@@ -75,7 +75,7 @@ namespace Flipdish.Test
             //int? page = null;
             //int? limit = null;
             //var response = instance.GetAuthorizationTokens(clientId, page, limit);
-            //Assert.IsInstanceOf<RestApiPaginationResultOAuthTokenModel> (response, "response is RestApiPaginationResultOAuthTokenModel");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel");
         }
         
         /// <summary>

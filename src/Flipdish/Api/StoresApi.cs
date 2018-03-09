@@ -32,8 +32,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>RestApiResultStore</returns>
-        RestApiResultStore GetStoreById (int? storeId);
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore</returns>
+        FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore GetStoreById (int? storeId);
 
         /// <summary>
         /// Get store by identifier
@@ -43,8 +43,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>ApiResponse of RestApiResultStore</returns>
-        ApiResponse<RestApiResultStore> GetStoreByIdWithHttpInfo (int? storeId);
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore</returns>
+        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore> GetStoreByIdWithHttpInfo (int? storeId);
         /// <summary>
         /// Get all stores
         /// </summary>
@@ -55,8 +55,8 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>RestApiPaginationResultStore</returns>
-        RestApiPaginationResultStore GetStores (string searchQuery = null, int? page = null, int? limit = null);
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore</returns>
+        FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore GetStores (string searchQuery = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all stores
@@ -68,8 +68,8 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>ApiResponse of RestApiPaginationResultStore</returns>
-        ApiResponse<RestApiPaginationResultStore> GetStoresWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null);
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore</returns>
+        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore> GetStoresWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -80,8 +80,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>Task of RestApiResultStore</returns>
-        System.Threading.Tasks.Task<RestApiResultStore> GetStoreByIdAsync (int? storeId);
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore</returns>
+        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore> GetStoreByIdAsync (int? storeId);
 
         /// <summary>
         /// Get store by identifier
@@ -91,8 +91,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> GetStoreByIdAsyncWithHttpInfo (int? storeId);
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore>> GetStoreByIdAsyncWithHttpInfo (int? storeId);
         /// <summary>
         /// Get all stores
         /// </summary>
@@ -103,8 +103,8 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>Task of RestApiPaginationResultStore</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresAsync (string searchQuery = null, int? page = null, int? limit = null);
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore</returns>
+        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore> GetStoresAsync (string searchQuery = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all stores
@@ -116,8 +116,8 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultStore)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresAsyncWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore>> GetStoresAsyncWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null);
         #endregion Asynchronous Operations
     }
 
@@ -235,10 +235,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>RestApiResultStore</returns>
-        public RestApiResultStore GetStoreById (int? storeId)
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore</returns>
+        public FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore GetStoreById (int? storeId)
         {
-             ApiResponse<RestApiResultStore> localVarResponse = GetStoreByIdWithHttpInfo(storeId);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore> localVarResponse = GetStoreByIdWithHttpInfo(storeId);
              return localVarResponse.Data;
         }
 
@@ -247,8 +247,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>ApiResponse of RestApiResultStore</returns>
-        public ApiResponse< RestApiResultStore > GetStoreByIdWithHttpInfo (int? storeId)
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore</returns>
+        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore > GetStoreByIdWithHttpInfo (int? storeId)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -300,9 +300,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultStore>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultStore) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStore)));
+                (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore)));
         }
 
         /// <summary>
@@ -310,10 +310,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>Task of RestApiResultStore</returns>
-        public async System.Threading.Tasks.Task<RestApiResultStore> GetStoreByIdAsync (int? storeId)
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore</returns>
+        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore> GetStoreByIdAsync (int? storeId)
         {
-             ApiResponse<RestApiResultStore> localVarResponse = await GetStoreByIdAsyncWithHttpInfo(storeId);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore> localVarResponse = await GetStoreByIdAsyncWithHttpInfo(storeId);
              return localVarResponse.Data;
 
         }
@@ -323,8 +323,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> GetStoreByIdAsyncWithHttpInfo (int? storeId)
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore>> GetStoreByIdAsyncWithHttpInfo (int? storeId)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -376,9 +376,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultStore>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultStore) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStore)));
+                (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore)));
         }
 
         /// <summary>
@@ -388,10 +388,10 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>RestApiPaginationResultStore</returns>
-        public RestApiPaginationResultStore GetStores (string searchQuery = null, int? page = null, int? limit = null)
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore</returns>
+        public FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore GetStores (string searchQuery = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultStore> localVarResponse = GetStoresWithHttpInfo(searchQuery, page, limit);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore> localVarResponse = GetStoresWithHttpInfo(searchQuery, page, limit);
              return localVarResponse.Data;
         }
 
@@ -402,8 +402,8 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>ApiResponse of RestApiPaginationResultStore</returns>
-        public ApiResponse< RestApiPaginationResultStore > GetStoresWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null)
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore</returns>
+        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore > GetStoresWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v1.0/stores";
@@ -454,9 +454,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultStore>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultStore) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultStore)));
+                (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore)));
         }
 
         /// <summary>
@@ -466,10 +466,10 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>Task of RestApiPaginationResultStore</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresAsync (string searchQuery = null, int? page = null, int? limit = null)
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore</returns>
+        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore> GetStoresAsync (string searchQuery = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultStore> localVarResponse = await GetStoresAsyncWithHttpInfo(searchQuery, page, limit);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore> localVarResponse = await GetStoresAsyncWithHttpInfo(searchQuery, page, limit);
              return localVarResponse.Data;
 
         }
@@ -481,8 +481,8 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultStore)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresAsyncWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore>> GetStoresAsyncWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v1.0/stores";
@@ -533,9 +533,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultStore>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultStore) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultStore)));
+                (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore)));
         }
 
     }

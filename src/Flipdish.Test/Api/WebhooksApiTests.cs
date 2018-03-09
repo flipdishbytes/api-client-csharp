@@ -72,9 +72,9 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string clientId = null;
-            //WebhookSubscription webhookSubscription = null;
+            //FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription = null;
             //var response = instance.CraeteWebhookSubscription(clientId, webhookSubscription);
-            //Assert.IsInstanceOf<RestApiIntegerResult> (response, "response is RestApiIntegerResult");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiIntegerResult> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiIntegerResult");
         }
         
         /// <summary>
@@ -126,7 +126,7 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.GetWebhookEventNames();
-            //Assert.IsInstanceOf<RestApiStringArrayResult> (response, "response is RestApiStringArrayResult");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult");
         }
         
         /// <summary>
@@ -139,7 +139,7 @@ namespace Flipdish.Test
             //string clientId = null;
             //int? webhookSubscriptionId = null;
             //var response = instance.GetWebhookEventNamesBySubscriptionId(clientId, webhookSubscriptionId);
-            //Assert.IsInstanceOf<RestApiStringArrayResult> (response, "response is RestApiStringArrayResult");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult");
         }
         
         /// <summary>
@@ -155,7 +155,7 @@ namespace Flipdish.Test
             //DateTime? end = null;
             //int? take = null;
             //var response = instance.GetWebhookLogs(clientId, webhookSubscriptionId, start, end, take);
-            //Assert.IsInstanceOf<RestApiArrayResultWebhookLog> (response, "response is RestApiArrayResultWebhookLog");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog");
         }
         
         /// <summary>
@@ -167,7 +167,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string clientId = null;
             //var response = instance.GetWebhookSubscriptions(clientId);
-            //Assert.IsInstanceOf<RestApiArrayResultWebhookSubscription> (response, "response is RestApiArrayResultWebhookSubscription");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription");
         }
         
         /// <summary>
@@ -179,7 +179,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string clientId = null;
             //int? webhookSubscriptionId = null;
-            //WebhookSubscription webhookSubscription = null;
+            //FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription = null;
             //instance.UpdateWebhookSubscription(clientId, webhookSubscriptionId, webhookSubscription);
             
         }

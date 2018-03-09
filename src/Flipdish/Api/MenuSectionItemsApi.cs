@@ -35,7 +35,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItem">Menu section item</param>
         /// <returns>Object</returns>
-        Object CreateMenuSectionItem (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem);
+        Object CreateMenuSectionItem (int? menuId, int? menuSectionId, FlipdishPublicModelsV1MenusMenuSectionItemBase menuSectionItem);
 
         /// <summary>
         /// Create menu section item
@@ -48,7 +48,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItem">Menu section item</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> CreateMenuSectionItemWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem);
+        ApiResponse<Object> CreateMenuSectionItemWithHttpInfo (int? menuId, int? menuSectionId, FlipdishPublicModelsV1MenusMenuSectionItemBase menuSectionItem);
         /// <summary>
         /// Delete menu section item
         /// </summary>
@@ -109,8 +109,8 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu item identifier</param>
-        /// <returns>RestApiResultMenuSectionItem</returns>
-        RestApiResultMenuSectionItem GetMenuItemById (int? menuId, int? menuSectionId, int? menuSectionItemId);
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem</returns>
+        FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem GetMenuItemById (int? menuId, int? menuSectionId, int? menuSectionItemId);
 
         /// <summary>
         /// Get menu item by identifier
@@ -122,8 +122,8 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu item identifier</param>
-        /// <returns>ApiResponse of RestApiResultMenuSectionItem</returns>
-        ApiResponse<RestApiResultMenuSectionItem> GetMenuItemByIdWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId);
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem</returns>
+        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem> GetMenuItemByIdWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId);
         /// <summary>
         /// Get menu items
         /// </summary>
@@ -133,8 +133,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <returns>RestApiArrayResultMenuSectionItem</returns>
-        RestApiArrayResultMenuSectionItem GetMenuItems (int? menuId, int? menuSectionId);
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem</returns>
+        FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem GetMenuItems (int? menuId, int? menuSectionId);
 
         /// <summary>
         /// Get menu items
@@ -145,8 +145,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <returns>ApiResponse of RestApiArrayResultMenuSectionItem</returns>
-        ApiResponse<RestApiArrayResultMenuSectionItem> GetMenuItemsWithHttpInfo (int? menuId, int? menuSectionId);
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem</returns>
+        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem> GetMenuItemsWithHttpInfo (int? menuId, int? menuSectionId);
         /// <summary>
         /// Update menu section item
         /// </summary>
@@ -185,8 +185,8 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="image">Menu section item image</param>
-        /// <returns>RestApiStringResult</returns>
-        RestApiStringResult UploadMenuSectionItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image);
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
+        FlipdishPublicModelsV1ApiResultsRestApiStringResult UploadMenuSectionItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image);
 
         /// <summary>
         /// Upload menu section item image
@@ -199,8 +199,8 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="image">Menu section item image</param>
-        /// <returns>ApiResponse of RestApiStringResult</returns>
-        ApiResponse<RestApiStringResult> UploadMenuSectionItemImageWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image);
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
+        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult> UploadMenuSectionItemImageWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -214,7 +214,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItem">Menu section item</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> CreateMenuSectionItemAsync (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem);
+        System.Threading.Tasks.Task<Object> CreateMenuSectionItemAsync (int? menuId, int? menuSectionId, FlipdishPublicModelsV1MenusMenuSectionItemBase menuSectionItem);
 
         /// <summary>
         /// Create menu section item
@@ -227,7 +227,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItem">Menu section item</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSectionItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSectionItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, FlipdishPublicModelsV1MenusMenuSectionItemBase menuSectionItem);
         /// <summary>
         /// Delete menu section item
         /// </summary>
@@ -288,8 +288,8 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu item identifier</param>
-        /// <returns>Task of RestApiResultMenuSectionItem</returns>
-        System.Threading.Tasks.Task<RestApiResultMenuSectionItem> GetMenuItemByIdAsync (int? menuId, int? menuSectionId, int? menuSectionItemId);
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem</returns>
+        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem> GetMenuItemByIdAsync (int? menuId, int? menuSectionId, int? menuSectionItemId);
 
         /// <summary>
         /// Get menu item by identifier
@@ -301,8 +301,8 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu item identifier</param>
-        /// <returns>Task of ApiResponse (RestApiResultMenuSectionItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultMenuSectionItem>> GetMenuItemByIdAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId);
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem>> GetMenuItemByIdAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId);
         /// <summary>
         /// Get menu items
         /// </summary>
@@ -312,8 +312,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <returns>Task of RestApiArrayResultMenuSectionItem</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultMenuSectionItem> GetMenuItemsAsync (int? menuId, int? menuSectionId);
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem</returns>
+        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem> GetMenuItemsAsync (int? menuId, int? menuSectionId);
 
         /// <summary>
         /// Get menu items
@@ -324,8 +324,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultMenuSectionItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuSectionItem>> GetMenuItemsAsyncWithHttpInfo (int? menuId, int? menuSectionId);
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem>> GetMenuItemsAsyncWithHttpInfo (int? menuId, int? menuSectionId);
         /// <summary>
         /// Update menu section item
         /// </summary>
@@ -364,8 +364,8 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="image">Menu section item image</param>
-        /// <returns>Task of RestApiStringResult</returns>
-        System.Threading.Tasks.Task<RestApiStringResult> UploadMenuSectionItemImageAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image);
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
+        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiStringResult> UploadMenuSectionItemImageAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image);
 
         /// <summary>
         /// Upload menu section item image
@@ -378,8 +378,8 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="image">Menu section item image</param>
-        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> UploadMenuSectionItemImageAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image);
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiStringResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult>> UploadMenuSectionItemImageAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image);
         #endregion Asynchronous Operations
     }
 
@@ -500,7 +500,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItem">Menu section item</param>
         /// <returns>Object</returns>
-        public Object CreateMenuSectionItem (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem)
+        public Object CreateMenuSectionItem (int? menuId, int? menuSectionId, FlipdishPublicModelsV1MenusMenuSectionItemBase menuSectionItem)
         {
              ApiResponse<Object> localVarResponse = CreateMenuSectionItemWithHttpInfo(menuId, menuSectionId, menuSectionItem);
              return localVarResponse.Data;
@@ -514,7 +514,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItem">Menu section item</param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > CreateMenuSectionItemWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem)
+        public ApiResponse< Object > CreateMenuSectionItemWithHttpInfo (int? menuId, int? menuSectionId, FlipdishPublicModelsV1MenusMenuSectionItemBase menuSectionItem)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -599,7 +599,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItem">Menu section item</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> CreateMenuSectionItemAsync (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem)
+        public async System.Threading.Tasks.Task<Object> CreateMenuSectionItemAsync (int? menuId, int? menuSectionId, FlipdishPublicModelsV1MenusMenuSectionItemBase menuSectionItem)
         {
              ApiResponse<Object> localVarResponse = await CreateMenuSectionItemAsyncWithHttpInfo(menuId, menuSectionId, menuSectionItem);
              return localVarResponse.Data;
@@ -614,7 +614,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItem">Menu section item</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSectionItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSectionItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, FlipdishPublicModelsV1MenusMenuSectionItemBase menuSectionItem)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -1044,10 +1044,10 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu item identifier</param>
-        /// <returns>RestApiResultMenuSectionItem</returns>
-        public RestApiResultMenuSectionItem GetMenuItemById (int? menuId, int? menuSectionId, int? menuSectionItemId)
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem</returns>
+        public FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem GetMenuItemById (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
-             ApiResponse<RestApiResultMenuSectionItem> localVarResponse = GetMenuItemByIdWithHttpInfo(menuId, menuSectionId, menuSectionItemId);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem> localVarResponse = GetMenuItemByIdWithHttpInfo(menuId, menuSectionId, menuSectionItemId);
              return localVarResponse.Data;
         }
 
@@ -1058,8 +1058,8 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu item identifier</param>
-        /// <returns>ApiResponse of RestApiResultMenuSectionItem</returns>
-        public ApiResponse< RestApiResultMenuSectionItem > GetMenuItemByIdWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId)
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem</returns>
+        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem > GetMenuItemByIdWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -1119,9 +1119,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultMenuSectionItem>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultMenuSectionItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMenuSectionItem)));
+                (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem)));
         }
 
         /// <summary>
@@ -1131,10 +1131,10 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu item identifier</param>
-        /// <returns>Task of RestApiResultMenuSectionItem</returns>
-        public async System.Threading.Tasks.Task<RestApiResultMenuSectionItem> GetMenuItemByIdAsync (int? menuId, int? menuSectionId, int? menuSectionItemId)
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem</returns>
+        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem> GetMenuItemByIdAsync (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
-             ApiResponse<RestApiResultMenuSectionItem> localVarResponse = await GetMenuItemByIdAsyncWithHttpInfo(menuId, menuSectionId, menuSectionItemId);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem> localVarResponse = await GetMenuItemByIdAsyncWithHttpInfo(menuId, menuSectionId, menuSectionItemId);
              return localVarResponse.Data;
 
         }
@@ -1146,8 +1146,8 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu item identifier</param>
-        /// <returns>Task of ApiResponse (RestApiResultMenuSectionItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultMenuSectionItem>> GetMenuItemByIdAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId)
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem>> GetMenuItemByIdAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -1207,9 +1207,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultMenuSectionItem>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultMenuSectionItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMenuSectionItem)));
+                (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem)));
         }
 
         /// <summary>
@@ -1218,10 +1218,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <returns>RestApiArrayResultMenuSectionItem</returns>
-        public RestApiArrayResultMenuSectionItem GetMenuItems (int? menuId, int? menuSectionId)
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem</returns>
+        public FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem GetMenuItems (int? menuId, int? menuSectionId)
         {
-             ApiResponse<RestApiArrayResultMenuSectionItem> localVarResponse = GetMenuItemsWithHttpInfo(menuId, menuSectionId);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem> localVarResponse = GetMenuItemsWithHttpInfo(menuId, menuSectionId);
              return localVarResponse.Data;
         }
 
@@ -1231,8 +1231,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <returns>ApiResponse of RestApiArrayResultMenuSectionItem</returns>
-        public ApiResponse< RestApiArrayResultMenuSectionItem > GetMenuItemsWithHttpInfo (int? menuId, int? menuSectionId)
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem</returns>
+        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem > GetMenuItemsWithHttpInfo (int? menuId, int? menuSectionId)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -1288,9 +1288,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultMenuSectionItem>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultMenuSectionItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMenuSectionItem)));
+                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem)));
         }
 
         /// <summary>
@@ -1299,10 +1299,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <returns>Task of RestApiArrayResultMenuSectionItem</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultMenuSectionItem> GetMenuItemsAsync (int? menuId, int? menuSectionId)
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem</returns>
+        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem> GetMenuItemsAsync (int? menuId, int? menuSectionId)
         {
-             ApiResponse<RestApiArrayResultMenuSectionItem> localVarResponse = await GetMenuItemsAsyncWithHttpInfo(menuId, menuSectionId);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem> localVarResponse = await GetMenuItemsAsyncWithHttpInfo(menuId, menuSectionId);
              return localVarResponse.Data;
 
         }
@@ -1313,8 +1313,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultMenuSectionItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuSectionItem>> GetMenuItemsAsyncWithHttpInfo (int? menuId, int? menuSectionId)
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem>> GetMenuItemsAsyncWithHttpInfo (int? menuId, int? menuSectionId)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -1370,9 +1370,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultMenuSectionItem>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultMenuSectionItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMenuSectionItem)));
+                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem)));
         }
 
         /// <summary>
@@ -1592,10 +1592,10 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="image">Menu section item image</param>
-        /// <returns>RestApiStringResult</returns>
-        public RestApiStringResult UploadMenuSectionItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image)
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
+        public FlipdishPublicModelsV1ApiResultsRestApiStringResult UploadMenuSectionItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = UploadMenuSectionItemImageWithHttpInfo(menuId, menuSectionId, menuSectionItemId, image);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult> localVarResponse = UploadMenuSectionItemImageWithHttpInfo(menuId, menuSectionId, menuSectionItemId, image);
              return localVarResponse.Data;
         }
 
@@ -1607,8 +1607,8 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="image">Menu section item image</param>
-        /// <returns>ApiResponse of RestApiStringResult</returns>
-        public ApiResponse< RestApiStringResult > UploadMenuSectionItemImageWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image)
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
+        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiStringResult > UploadMenuSectionItemImageWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -1673,9 +1673,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiStringResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+                (FlipdishPublicModelsV1ApiResultsRestApiStringResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiStringResult)));
         }
 
         /// <summary>
@@ -1686,10 +1686,10 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="image">Menu section item image</param>
-        /// <returns>Task of RestApiStringResult</returns>
-        public async System.Threading.Tasks.Task<RestApiStringResult> UploadMenuSectionItemImageAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image)
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
+        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiStringResult> UploadMenuSectionItemImageAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = await UploadMenuSectionItemImageAsyncWithHttpInfo(menuId, menuSectionId, menuSectionItemId, image);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult> localVarResponse = await UploadMenuSectionItemImageAsyncWithHttpInfo(menuId, menuSectionId, menuSectionItemId, image);
              return localVarResponse.Data;
 
         }
@@ -1702,8 +1702,8 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="image">Menu section item image</param>
-        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> UploadMenuSectionItemImageAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image)
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiStringResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult>> UploadMenuSectionItemImageAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -1768,9 +1768,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiStringResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+                (FlipdishPublicModelsV1ApiResultsRestApiStringResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiStringResult)));
         }
 
     }

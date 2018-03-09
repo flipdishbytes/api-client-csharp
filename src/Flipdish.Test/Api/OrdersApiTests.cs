@@ -72,7 +72,7 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? id = null;
-            //Accept acceptObject = null;
+            //FlipdishPublicModelsV1OrdersAccept acceptObject = null;
             //instance.AcceptOrder(id, acceptObject);
             
         }
@@ -86,7 +86,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? id = null;
             //var response = instance.GetOrderById(id);
-            //Assert.IsInstanceOf<RestApiResultOrder> (response, "response is RestApiResultOrder");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder");
         }
         
         /// <summary>
@@ -101,7 +101,7 @@ namespace Flipdish.Test
             //int? page = null;
             //int? limit = null;
             //var response = instance.GetOrders(physicalRestaurantId, state, page, limit);
-            //Assert.IsInstanceOf<RestApiPaginationResultOrder> (response, "response is RestApiPaginationResultOrder");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder");
         }
         
         /// <summary>
@@ -112,7 +112,7 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? id = null;
-            //Refund refundObject = null;
+            //FlipdishPublicModelsV1OrdersRefund refundObject = null;
             //instance.RefundOrder(id, refundObject);
             
         }
@@ -125,7 +125,7 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? id = null;
-            //Reject rejectObject = null;
+            //FlipdishPublicModelsV1OrdersReject rejectObject = null;
             //instance.RejectOrder(id, rejectObject);
             
         }

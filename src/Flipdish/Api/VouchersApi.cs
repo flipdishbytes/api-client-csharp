@@ -35,8 +35,8 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>RestApiArrayResultRestApiDefaultResponse</returns>
-        RestApiArrayResultRestApiDefaultResponse DeleteVoucherMetadata (int? voucherId, int? menuId, int? storeId, string key);
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse</returns>
+        FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse DeleteVoucherMetadata (int? voucherId, int? menuId, int? storeId, string key);
 
         /// <summary>
         /// Delete voucher metadata
@@ -49,8 +49,8 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
-        ApiResponse<RestApiArrayResultRestApiDefaultResponse> DeleteVoucherMetadataWithHttpInfo (int? voucherId, int? menuId, int? storeId, string key);
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse</returns>
+        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse> DeleteVoucherMetadataWithHttpInfo (int? voucherId, int? menuId, int? storeId, string key);
         /// <summary>
         /// Get voucher by identifier
         /// </summary>
@@ -59,8 +59,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>
-        /// <returns>RestApiResultVoucher</returns>
-        RestApiResultVoucher GetVoucherById (int? voucherId);
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher</returns>
+        FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher GetVoucherById (int? voucherId);
 
         /// <summary>
         /// Get voucher by identifier
@@ -70,8 +70,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>
-        /// <returns>ApiResponse of RestApiResultVoucher</returns>
-        ApiResponse<RestApiResultVoucher> GetVoucherByIdWithHttpInfo (int? voucherId);
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher</returns>
+        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher> GetVoucherByIdWithHttpInfo (int? voucherId);
         /// <summary>
         /// Get voucher metadata
         /// </summary>
@@ -82,8 +82,8 @@ namespace Flipdish.Api
         /// <param name="voucherId"></param>
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
-        /// <returns>RestApiArrayResultMetadata</returns>
-        RestApiArrayResultMetadata GetVoucherMetadata (int? voucherId, int? menuId, int? storeId);
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata</returns>
+        FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata GetVoucherMetadata (int? voucherId, int? menuId, int? storeId);
 
         /// <summary>
         /// Get voucher metadata
@@ -95,8 +95,8 @@ namespace Flipdish.Api
         /// <param name="voucherId"></param>
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
-        /// <returns>ApiResponse of RestApiArrayResultMetadata</returns>
-        ApiResponse<RestApiArrayResultMetadata> GetVoucherMetadataWithHttpInfo (int? voucherId, int? menuId, int? storeId);
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata</returns>
+        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata> GetVoucherMetadataWithHttpInfo (int? voucherId, int? menuId, int? storeId);
         /// <summary>
         /// Get voucher metadata
         /// </summary>
@@ -108,8 +108,8 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>RestApiResultMetadata</returns>
-        RestApiResultMetadata GetVoucherMetadata_0 (int? voucherId, int? menuId, int? storeId, string key);
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata</returns>
+        FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata GetVoucherMetadata_0 (int? voucherId, int? menuId, int? storeId, string key);
 
         /// <summary>
         /// Get voucher metadata
@@ -122,8 +122,8 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>ApiResponse of RestApiResultMetadata</returns>
-        ApiResponse<RestApiResultMetadata> GetVoucherMetadata_0WithHttpInfo (int? voucherId, int? menuId, int? storeId, string key);
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata</returns>
+        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata> GetVoucherMetadata_0WithHttpInfo (int? voucherId, int? menuId, int? storeId, string key);
         /// <summary>
         /// Get vouchers
         /// </summary>
@@ -146,8 +146,8 @@ namespace Flipdish.Api
         /// <param name="amount"> (optional)</param>
         /// <param name="voucherType"> (optional)</param>
         /// <param name="description"> (optional)</param>
-        /// <returns>RestApiPaginationResultVoucher</returns>
-        RestApiPaginationResultVoucher GetVouchers (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null);
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher</returns>
+        FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher GetVouchers (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null);
 
         /// <summary>
         /// Get vouchers
@@ -171,8 +171,8 @@ namespace Flipdish.Api
         /// <param name="amount"> (optional)</param>
         /// <param name="voucherType"> (optional)</param>
         /// <param name="description"> (optional)</param>
-        /// <returns>ApiResponse of RestApiPaginationResultVoucher</returns>
-        ApiResponse<RestApiPaginationResultVoucher> GetVouchersWithHttpInfo (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null);
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher</returns>
+        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher> GetVouchersWithHttpInfo (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null);
         /// <summary>
         /// Add voucher metadata
         /// </summary>
@@ -215,8 +215,8 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>Task of RestApiArrayResultRestApiDefaultResponse</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> DeleteVoucherMetadataAsync (int? voucherId, int? menuId, int? storeId, string key);
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse> DeleteVoucherMetadataAsync (int? voucherId, int? menuId, int? storeId, string key);
 
         /// <summary>
         /// Delete voucher metadata
@@ -229,8 +229,8 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> DeleteVoucherMetadataAsyncWithHttpInfo (int? voucherId, int? menuId, int? storeId, string key);
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse>> DeleteVoucherMetadataAsyncWithHttpInfo (int? voucherId, int? menuId, int? storeId, string key);
         /// <summary>
         /// Get voucher by identifier
         /// </summary>
@@ -239,8 +239,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>
-        /// <returns>Task of RestApiResultVoucher</returns>
-        System.Threading.Tasks.Task<RestApiResultVoucher> GetVoucherByIdAsync (int? voucherId);
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher</returns>
+        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher> GetVoucherByIdAsync (int? voucherId);
 
         /// <summary>
         /// Get voucher by identifier
@@ -250,8 +250,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>
-        /// <returns>Task of ApiResponse (RestApiResultVoucher)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucher>> GetVoucherByIdAsyncWithHttpInfo (int? voucherId);
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher>> GetVoucherByIdAsyncWithHttpInfo (int? voucherId);
         /// <summary>
         /// Get voucher metadata
         /// </summary>
@@ -262,8 +262,8 @@ namespace Flipdish.Api
         /// <param name="voucherId"></param>
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of RestApiArrayResultMetadata</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultMetadata> GetVoucherMetadataAsync (int? voucherId, int? menuId, int? storeId);
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata</returns>
+        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata> GetVoucherMetadataAsync (int? voucherId, int? menuId, int? storeId);
 
         /// <summary>
         /// Get voucher metadata
@@ -275,8 +275,8 @@ namespace Flipdish.Api
         /// <param name="voucherId"></param>
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultMetadata)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMetadata>> GetVoucherMetadataAsyncWithHttpInfo (int? voucherId, int? menuId, int? storeId);
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata>> GetVoucherMetadataAsyncWithHttpInfo (int? voucherId, int? menuId, int? storeId);
         /// <summary>
         /// Get voucher metadata
         /// </summary>
@@ -288,8 +288,8 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>Task of RestApiResultMetadata</returns>
-        System.Threading.Tasks.Task<RestApiResultMetadata> GetVoucherMetadata_0Async (int? voucherId, int? menuId, int? storeId, string key);
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata</returns>
+        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata> GetVoucherMetadata_0Async (int? voucherId, int? menuId, int? storeId, string key);
 
         /// <summary>
         /// Get voucher metadata
@@ -302,8 +302,8 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>Task of ApiResponse (RestApiResultMetadata)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultMetadata>> GetVoucherMetadata_0AsyncWithHttpInfo (int? voucherId, int? menuId, int? storeId, string key);
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata>> GetVoucherMetadata_0AsyncWithHttpInfo (int? voucherId, int? menuId, int? storeId, string key);
         /// <summary>
         /// Get vouchers
         /// </summary>
@@ -326,8 +326,8 @@ namespace Flipdish.Api
         /// <param name="amount"> (optional)</param>
         /// <param name="voucherType"> (optional)</param>
         /// <param name="description"> (optional)</param>
-        /// <returns>Task of RestApiPaginationResultVoucher</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultVoucher> GetVouchersAsync (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null);
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher</returns>
+        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher> GetVouchersAsync (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null);
 
         /// <summary>
         /// Get vouchers
@@ -351,8 +351,8 @@ namespace Flipdish.Api
         /// <param name="amount"> (optional)</param>
         /// <param name="voucherType"> (optional)</param>
         /// <param name="description"> (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultVoucher)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultVoucher>> GetVouchersAsyncWithHttpInfo (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null);
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher>> GetVouchersAsyncWithHttpInfo (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null);
         /// <summary>
         /// Add voucher metadata
         /// </summary>
@@ -502,10 +502,10 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>RestApiArrayResultRestApiDefaultResponse</returns>
-        public RestApiArrayResultRestApiDefaultResponse DeleteVoucherMetadata (int? voucherId, int? menuId, int? storeId, string key)
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse</returns>
+        public FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse DeleteVoucherMetadata (int? voucherId, int? menuId, int? storeId, string key)
         {
-             ApiResponse<RestApiArrayResultRestApiDefaultResponse> localVarResponse = DeleteVoucherMetadataWithHttpInfo(voucherId, menuId, storeId, key);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse> localVarResponse = DeleteVoucherMetadataWithHttpInfo(voucherId, menuId, storeId, key);
              return localVarResponse.Data;
         }
 
@@ -517,8 +517,8 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
-        public ApiResponse< RestApiArrayResultRestApiDefaultResponse > DeleteVoucherMetadataWithHttpInfo (int? voucherId, int? menuId, int? storeId, string key)
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse</returns>
+        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse > DeleteVoucherMetadataWithHttpInfo (int? voucherId, int? menuId, int? storeId, string key)
         {
             // verify the required parameter 'voucherId' is set
             if (voucherId == null)
@@ -582,9 +582,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultRestApiDefaultResponse>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultRestApiDefaultResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultRestApiDefaultResponse)));
+                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse)));
         }
 
         /// <summary>
@@ -595,10 +595,10 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>Task of RestApiArrayResultRestApiDefaultResponse</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> DeleteVoucherMetadataAsync (int? voucherId, int? menuId, int? storeId, string key)
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse> DeleteVoucherMetadataAsync (int? voucherId, int? menuId, int? storeId, string key)
         {
-             ApiResponse<RestApiArrayResultRestApiDefaultResponse> localVarResponse = await DeleteVoucherMetadataAsyncWithHttpInfo(voucherId, menuId, storeId, key);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse> localVarResponse = await DeleteVoucherMetadataAsyncWithHttpInfo(voucherId, menuId, storeId, key);
              return localVarResponse.Data;
 
         }
@@ -611,8 +611,8 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> DeleteVoucherMetadataAsyncWithHttpInfo (int? voucherId, int? menuId, int? storeId, string key)
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse>> DeleteVoucherMetadataAsyncWithHttpInfo (int? voucherId, int? menuId, int? storeId, string key)
         {
             // verify the required parameter 'voucherId' is set
             if (voucherId == null)
@@ -676,9 +676,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultRestApiDefaultResponse>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultRestApiDefaultResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultRestApiDefaultResponse)));
+                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse)));
         }
 
         /// <summary>
@@ -686,10 +686,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>
-        /// <returns>RestApiResultVoucher</returns>
-        public RestApiResultVoucher GetVoucherById (int? voucherId)
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher</returns>
+        public FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher GetVoucherById (int? voucherId)
         {
-             ApiResponse<RestApiResultVoucher> localVarResponse = GetVoucherByIdWithHttpInfo(voucherId);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher> localVarResponse = GetVoucherByIdWithHttpInfo(voucherId);
              return localVarResponse.Data;
         }
 
@@ -698,8 +698,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>
-        /// <returns>ApiResponse of RestApiResultVoucher</returns>
-        public ApiResponse< RestApiResultVoucher > GetVoucherByIdWithHttpInfo (int? voucherId)
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher</returns>
+        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher > GetVoucherByIdWithHttpInfo (int? voucherId)
         {
             // verify the required parameter 'voucherId' is set
             if (voucherId == null)
@@ -751,9 +751,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultVoucher>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultVoucher) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultVoucher)));
+                (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher)));
         }
 
         /// <summary>
@@ -761,10 +761,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>
-        /// <returns>Task of RestApiResultVoucher</returns>
-        public async System.Threading.Tasks.Task<RestApiResultVoucher> GetVoucherByIdAsync (int? voucherId)
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher</returns>
+        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher> GetVoucherByIdAsync (int? voucherId)
         {
-             ApiResponse<RestApiResultVoucher> localVarResponse = await GetVoucherByIdAsyncWithHttpInfo(voucherId);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher> localVarResponse = await GetVoucherByIdAsyncWithHttpInfo(voucherId);
              return localVarResponse.Data;
 
         }
@@ -774,8 +774,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>
-        /// <returns>Task of ApiResponse (RestApiResultVoucher)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucher>> GetVoucherByIdAsyncWithHttpInfo (int? voucherId)
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher>> GetVoucherByIdAsyncWithHttpInfo (int? voucherId)
         {
             // verify the required parameter 'voucherId' is set
             if (voucherId == null)
@@ -827,9 +827,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultVoucher>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultVoucher) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultVoucher)));
+                (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher)));
         }
 
         /// <summary>
@@ -839,10 +839,10 @@ namespace Flipdish.Api
         /// <param name="voucherId"></param>
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
-        /// <returns>RestApiArrayResultMetadata</returns>
-        public RestApiArrayResultMetadata GetVoucherMetadata (int? voucherId, int? menuId, int? storeId)
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata</returns>
+        public FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata GetVoucherMetadata (int? voucherId, int? menuId, int? storeId)
         {
-             ApiResponse<RestApiArrayResultMetadata> localVarResponse = GetVoucherMetadataWithHttpInfo(voucherId, menuId, storeId);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata> localVarResponse = GetVoucherMetadataWithHttpInfo(voucherId, menuId, storeId);
              return localVarResponse.Data;
         }
 
@@ -853,8 +853,8 @@ namespace Flipdish.Api
         /// <param name="voucherId"></param>
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
-        /// <returns>ApiResponse of RestApiArrayResultMetadata</returns>
-        public ApiResponse< RestApiArrayResultMetadata > GetVoucherMetadataWithHttpInfo (int? voucherId, int? menuId, int? storeId)
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata</returns>
+        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata > GetVoucherMetadataWithHttpInfo (int? voucherId, int? menuId, int? storeId)
         {
             // verify the required parameter 'voucherId' is set
             if (voucherId == null)
@@ -914,9 +914,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultMetadata>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultMetadata) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMetadata)));
+                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata)));
         }
 
         /// <summary>
@@ -926,10 +926,10 @@ namespace Flipdish.Api
         /// <param name="voucherId"></param>
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of RestApiArrayResultMetadata</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultMetadata> GetVoucherMetadataAsync (int? voucherId, int? menuId, int? storeId)
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata</returns>
+        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata> GetVoucherMetadataAsync (int? voucherId, int? menuId, int? storeId)
         {
-             ApiResponse<RestApiArrayResultMetadata> localVarResponse = await GetVoucherMetadataAsyncWithHttpInfo(voucherId, menuId, storeId);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata> localVarResponse = await GetVoucherMetadataAsyncWithHttpInfo(voucherId, menuId, storeId);
              return localVarResponse.Data;
 
         }
@@ -941,8 +941,8 @@ namespace Flipdish.Api
         /// <param name="voucherId"></param>
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultMetadata)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMetadata>> GetVoucherMetadataAsyncWithHttpInfo (int? voucherId, int? menuId, int? storeId)
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata>> GetVoucherMetadataAsyncWithHttpInfo (int? voucherId, int? menuId, int? storeId)
         {
             // verify the required parameter 'voucherId' is set
             if (voucherId == null)
@@ -1002,9 +1002,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultMetadata>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultMetadata) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMetadata)));
+                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata)));
         }
 
         /// <summary>
@@ -1015,10 +1015,10 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>RestApiResultMetadata</returns>
-        public RestApiResultMetadata GetVoucherMetadata_0 (int? voucherId, int? menuId, int? storeId, string key)
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata</returns>
+        public FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata GetVoucherMetadata_0 (int? voucherId, int? menuId, int? storeId, string key)
         {
-             ApiResponse<RestApiResultMetadata> localVarResponse = GetVoucherMetadata_0WithHttpInfo(voucherId, menuId, storeId, key);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata> localVarResponse = GetVoucherMetadata_0WithHttpInfo(voucherId, menuId, storeId, key);
              return localVarResponse.Data;
         }
 
@@ -1030,8 +1030,8 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>ApiResponse of RestApiResultMetadata</returns>
-        public ApiResponse< RestApiResultMetadata > GetVoucherMetadata_0WithHttpInfo (int? voucherId, int? menuId, int? storeId, string key)
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata</returns>
+        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata > GetVoucherMetadata_0WithHttpInfo (int? voucherId, int? menuId, int? storeId, string key)
         {
             // verify the required parameter 'voucherId' is set
             if (voucherId == null)
@@ -1095,9 +1095,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultMetadata>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultMetadata) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMetadata)));
+                (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata)));
         }
 
         /// <summary>
@@ -1108,10 +1108,10 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>Task of RestApiResultMetadata</returns>
-        public async System.Threading.Tasks.Task<RestApiResultMetadata> GetVoucherMetadata_0Async (int? voucherId, int? menuId, int? storeId, string key)
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata</returns>
+        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata> GetVoucherMetadata_0Async (int? voucherId, int? menuId, int? storeId, string key)
         {
-             ApiResponse<RestApiResultMetadata> localVarResponse = await GetVoucherMetadata_0AsyncWithHttpInfo(voucherId, menuId, storeId, key);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata> localVarResponse = await GetVoucherMetadata_0AsyncWithHttpInfo(voucherId, menuId, storeId, key);
              return localVarResponse.Data;
 
         }
@@ -1124,8 +1124,8 @@ namespace Flipdish.Api
         /// <param name="menuId"></param>
         /// <param name="storeId"></param>
         /// <param name="key"></param>
-        /// <returns>Task of ApiResponse (RestApiResultMetadata)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultMetadata>> GetVoucherMetadata_0AsyncWithHttpInfo (int? voucherId, int? menuId, int? storeId, string key)
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata>> GetVoucherMetadata_0AsyncWithHttpInfo (int? voucherId, int? menuId, int? storeId, string key)
         {
             // verify the required parameter 'voucherId' is set
             if (voucherId == null)
@@ -1189,9 +1189,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultMetadata>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultMetadata) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMetadata)));
+                (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata)));
         }
 
         /// <summary>
@@ -1213,10 +1213,10 @@ namespace Flipdish.Api
         /// <param name="amount"> (optional)</param>
         /// <param name="voucherType"> (optional)</param>
         /// <param name="description"> (optional)</param>
-        /// <returns>RestApiPaginationResultVoucher</returns>
-        public RestApiPaginationResultVoucher GetVouchers (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null)
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher</returns>
+        public FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher GetVouchers (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null)
         {
-             ApiResponse<RestApiPaginationResultVoucher> localVarResponse = GetVouchersWithHttpInfo(filter, pageNumber, pageSize, sortOrder, orderBy, subType, status, code, validFromBegin, validFromEnd, expiryBegin, expiryEnd, amount, voucherType, description);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher> localVarResponse = GetVouchersWithHttpInfo(filter, pageNumber, pageSize, sortOrder, orderBy, subType, status, code, validFromBegin, validFromEnd, expiryBegin, expiryEnd, amount, voucherType, description);
              return localVarResponse.Data;
         }
 
@@ -1239,8 +1239,8 @@ namespace Flipdish.Api
         /// <param name="amount"> (optional)</param>
         /// <param name="voucherType"> (optional)</param>
         /// <param name="description"> (optional)</param>
-        /// <returns>ApiResponse of RestApiPaginationResultVoucher</returns>
-        public ApiResponse< RestApiPaginationResultVoucher > GetVouchersWithHttpInfo (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null)
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher</returns>
+        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher > GetVouchersWithHttpInfo (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null)
         {
 
             var localVarPath = "/api/v1.0/vouchers";
@@ -1303,9 +1303,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultVoucher>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultVoucher) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultVoucher)));
+                (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher)));
         }
 
         /// <summary>
@@ -1327,10 +1327,10 @@ namespace Flipdish.Api
         /// <param name="amount"> (optional)</param>
         /// <param name="voucherType"> (optional)</param>
         /// <param name="description"> (optional)</param>
-        /// <returns>Task of RestApiPaginationResultVoucher</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultVoucher> GetVouchersAsync (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null)
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher</returns>
+        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher> GetVouchersAsync (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null)
         {
-             ApiResponse<RestApiPaginationResultVoucher> localVarResponse = await GetVouchersAsyncWithHttpInfo(filter, pageNumber, pageSize, sortOrder, orderBy, subType, status, code, validFromBegin, validFromEnd, expiryBegin, expiryEnd, amount, voucherType, description);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher> localVarResponse = await GetVouchersAsyncWithHttpInfo(filter, pageNumber, pageSize, sortOrder, orderBy, subType, status, code, validFromBegin, validFromEnd, expiryBegin, expiryEnd, amount, voucherType, description);
              return localVarResponse.Data;
 
         }
@@ -1354,8 +1354,8 @@ namespace Flipdish.Api
         /// <param name="amount"> (optional)</param>
         /// <param name="voucherType"> (optional)</param>
         /// <param name="description"> (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultVoucher)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultVoucher>> GetVouchersAsyncWithHttpInfo (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null)
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher>> GetVouchersAsyncWithHttpInfo (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null)
         {
 
             var localVarPath = "/api/v1.0/vouchers";
@@ -1418,9 +1418,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultVoucher>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultVoucher) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultVoucher)));
+                (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher)));
         }
 
         /// <summary>

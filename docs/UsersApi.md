@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getroles"></a>
 # **GetRoles**
-> RestApiStringArrayResult GetRoles ()
+> FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult GetRoles ()
 
 Get role names
 
@@ -35,7 +35,7 @@ namespace Example
             try
             {
                 // Get role names
-                RestApiStringArrayResult result = apiInstance.GetRoles();
+                FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult result = apiInstance.GetRoles();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -52,7 +52,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**RestApiStringArrayResult**](RestApiStringArrayResult.md)
+[**FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult**](FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult.md)
 
 ### Authorization
 

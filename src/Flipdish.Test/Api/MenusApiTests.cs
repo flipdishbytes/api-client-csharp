@@ -115,7 +115,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? menuId = null;
             //var response = instance.GetMenuById(menuId);
-            //Assert.IsInstanceOf<RestApiResultMenu> (response, "response is RestApiResultMenu");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenu> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenu");
         }
         
         /// <summary>
@@ -129,7 +129,7 @@ namespace Flipdish.Test
             //int? storeId = null;
             //int? menuItemId = null;
             //var response = instance.GetMenuItemMetadata(menuId, storeId, menuItemId);
-            //Assert.IsInstanceOf<RestApiArrayResultMetadata> (response, "response is RestApiArrayResultMetadata");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata");
         }
         
         /// <summary>
@@ -143,7 +143,7 @@ namespace Flipdish.Test
             //int? storeId = null;
             //int? optionSetItemId = null;
             //var response = instance.GetMenuItemOptionSetItemMetadata(menuId, storeId, optionSetItemId);
-            //Assert.IsInstanceOf<RestApiResultMetadata> (response, "response is RestApiResultMetadata");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata");
         }
         
         /// <summary>
@@ -156,7 +156,7 @@ namespace Flipdish.Test
             //int? menuId = null;
             //int? storeId = null;
             //int? menuItemId = null;
-            //Metadata metadata = null;
+            //FlipdishPublicModelsV1Metadata metadata = null;
             //instance.SetMenuItemMetadata(menuId, storeId, menuItemId, metadata);
             
         }
@@ -171,7 +171,7 @@ namespace Flipdish.Test
             //int? menuId = null;
             //int? storeId = null;
             //int? optionSetItemId = null;
-            //Metadata metadata = null;
+            //FlipdishPublicModelsV1Metadata metadata = null;
             //instance.SetMenuItemOptionSetItemMetadata(menuId, storeId, optionSetItemId, metadata);
             
         }
@@ -186,7 +186,7 @@ namespace Flipdish.Test
             //int? menuId = null;
             //System.IO.Stream image = null;
             //var response = instance.UploadMenuSectionImage(menuId, image);
-            //Assert.IsInstanceOf<RestApiStringResult> (response, "response is RestApiStringResult");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiStringResult> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiStringResult");
         }
         
     }

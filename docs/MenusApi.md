@@ -212,7 +212,7 @@ void (empty response body)
 
 <a name="getmenubyid"></a>
 # **GetMenuById**
-> RestApiResultMenu GetMenuById (int? menuId)
+> FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenu GetMenuById (int? menuId)
 
 Get menu by identifier
 
@@ -239,7 +239,7 @@ namespace Example
             try
             {
                 // Get menu by identifier
-                RestApiResultMenu result = apiInstance.GetMenuById(menuId);
+                FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenu result = apiInstance.GetMenuById(menuId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiResultMenu**](RestApiResultMenu.md)
+[**FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenu**](FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenu.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 
 <a name="getmenuitemmetadata"></a>
 # **GetMenuItemMetadata**
-> RestApiArrayResultMetadata GetMenuItemMetadata (int? menuId, int? storeId, int? menuItemId)
+> FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata GetMenuItemMetadata (int? menuId, int? storeId, int? menuItemId)
 
 Get a menu items metadata
 
@@ -303,7 +303,7 @@ namespace Example
             try
             {
                 // Get a menu items metadata
-                RestApiArrayResultMetadata result = apiInstance.GetMenuItemMetadata(menuId, storeId, menuItemId);
+                FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata result = apiInstance.GetMenuItemMetadata(menuId, storeId, menuItemId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -325,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiArrayResultMetadata**](RestApiArrayResultMetadata.md)
+[**FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata**](FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata.md)
 
 ### Authorization
 
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 
 <a name="getmenuitemoptionsetitemmetadata"></a>
 # **GetMenuItemOptionSetItemMetadata**
-> RestApiResultMetadata GetMenuItemOptionSetItemMetadata (int? menuId, int? storeId, int? optionSetItemId)
+> FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata GetMenuItemOptionSetItemMetadata (int? menuId, int? storeId, int? optionSetItemId)
 
 Get a menu item option set item metadata by key
 
@@ -369,7 +369,7 @@ namespace Example
             try
             {
                 // Get a menu item option set item metadata by key
-                RestApiResultMetadata result = apiInstance.GetMenuItemOptionSetItemMetadata(menuId, storeId, optionSetItemId);
+                FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata result = apiInstance.GetMenuItemOptionSetItemMetadata(menuId, storeId, optionSetItemId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -391,7 +391,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiResultMetadata**](RestApiResultMetadata.md)
+[**FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata**](FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata.md)
 
 ### Authorization
 
@@ -406,7 +406,7 @@ Name | Type | Description  | Notes
 
 <a name="setmenuitemmetadata"></a>
 # **SetMenuItemMetadata**
-> void SetMenuItemMetadata (int? menuId, int? storeId, int? menuItemId, Metadata metadata)
+> void SetMenuItemMetadata (int? menuId, int? storeId, int? menuItemId, FlipdishPublicModelsV1Metadata metadata)
 
 Update a menu items metadata
 
@@ -431,7 +431,7 @@ namespace Example
             var menuId = 56;  // int? | Menu identifier
             var storeId = 56;  // int? | Store identifier
             var menuItemId = 56;  // int? | Menu item identifier
-            var metadata = new Metadata(); // Metadata | Metadata object
+            var metadata = new FlipdishPublicModelsV1Metadata(); // FlipdishPublicModelsV1Metadata | Metadata object
 
             try
             {
@@ -454,7 +454,7 @@ Name | Type | Description  | Notes
  **menuId** | **int?**| Menu identifier | 
  **storeId** | **int?**| Store identifier | 
  **menuItemId** | **int?**| Menu item identifier | 
- **metadata** | [**Metadata**](Metadata.md)| Metadata object | 
+ **metadata** | [**FlipdishPublicModelsV1Metadata**](FlipdishPublicModelsV1Metadata.md)| Metadata object | 
 
 ### Return type
 
@@ -473,7 +473,7 @@ void (empty response body)
 
 <a name="setmenuitemoptionsetitemmetadata"></a>
 # **SetMenuItemOptionSetItemMetadata**
-> void SetMenuItemOptionSetItemMetadata (int? menuId, int? storeId, int? optionSetItemId, Metadata metadata)
+> void SetMenuItemOptionSetItemMetadata (int? menuId, int? storeId, int? optionSetItemId, FlipdishPublicModelsV1Metadata metadata)
 
 Update a menu item option set items metadata
 
@@ -498,7 +498,7 @@ namespace Example
             var menuId = 56;  // int? | Menu identifier
             var storeId = 56;  // int? | Store identifier
             var optionSetItemId = 56;  // int? | Menu item option set item identifier
-            var metadata = new Metadata(); // Metadata | Metadata object
+            var metadata = new FlipdishPublicModelsV1Metadata(); // FlipdishPublicModelsV1Metadata | Metadata object
 
             try
             {
@@ -521,7 +521,7 @@ Name | Type | Description  | Notes
  **menuId** | **int?**| Menu identifier | 
  **storeId** | **int?**| Store identifier | 
  **optionSetItemId** | **int?**| Menu item option set item identifier | 
- **metadata** | [**Metadata**](Metadata.md)| Metadata object | 
+ **metadata** | [**FlipdishPublicModelsV1Metadata**](FlipdishPublicModelsV1Metadata.md)| Metadata object | 
 
 ### Return type
 
@@ -540,7 +540,7 @@ void (empty response body)
 
 <a name="uploadmenusectionimage"></a>
 # **UploadMenuSectionImage**
-> RestApiStringResult UploadMenuSectionImage (int? menuId, System.IO.Stream image)
+> FlipdishPublicModelsV1ApiResultsRestApiStringResult UploadMenuSectionImage (int? menuId, System.IO.Stream image)
 
 Upload menu image
 
@@ -568,7 +568,7 @@ namespace Example
             try
             {
                 // Upload menu image
-                RestApiStringResult result = apiInstance.UploadMenuSectionImage(menuId, image);
+                FlipdishPublicModelsV1ApiResultsRestApiStringResult result = apiInstance.UploadMenuSectionImage(menuId, image);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -589,7 +589,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiStringResult**](RestApiStringResult.md)
+[**FlipdishPublicModelsV1ApiResultsRestApiStringResult**](FlipdishPublicModelsV1ApiResultsRestApiStringResult.md)
 
 ### Authorization
 

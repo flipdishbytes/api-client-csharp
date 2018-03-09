@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 <a name="createmenusection"></a>
 # **CreateMenuSection**
-> Object CreateMenuSection (int? menuId, MenuSectionBase menuSection)
+> Object CreateMenuSection (int? menuId, FlipdishPublicModelsV1MenusMenuSectionBase menuSection)
 
 Create menu section
 
@@ -38,7 +38,7 @@ namespace Example
 
             var apiInstance = new MenuSectionsApi();
             var menuId = 56;  // int? | Menu identifier
-            var menuSection = new MenuSectionBase(); // MenuSectionBase | Menu section
+            var menuSection = new FlipdishPublicModelsV1MenusMenuSectionBase(); // FlipdishPublicModelsV1MenusMenuSectionBase | Menu section
 
             try
             {
@@ -60,7 +60,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **int?**| Menu identifier | 
- **menuSection** | [**MenuSectionBase**](MenuSectionBase.md)| Menu section | 
+ **menuSection** | [**FlipdishPublicModelsV1MenusMenuSectionBase**](FlipdishPublicModelsV1MenusMenuSectionBase.md)| Menu section | 
 
 ### Return type
 
@@ -205,7 +205,7 @@ void (empty response body)
 
 <a name="getmenusectionbyid"></a>
 # **GetMenuSectionById**
-> RestApiResultMenuSection GetMenuSectionById (int? menuId, int? menuSectionId)
+> FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSection GetMenuSectionById (int? menuId, int? menuSectionId)
 
 Get menu section by identifier
 
@@ -233,7 +233,7 @@ namespace Example
             try
             {
                 // Get menu section by identifier
-                RestApiResultMenuSection result = apiInstance.GetMenuSectionById(menuId, menuSectionId);
+                FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSection result = apiInstance.GetMenuSectionById(menuId, menuSectionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiResultMenuSection**](RestApiResultMenuSection.md)
+[**FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSection**](FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSection.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 <a name="getmenusections"></a>
 # **GetMenuSections**
-> RestApiArrayResultMenuSection GetMenuSections (int? menuId)
+> FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSection GetMenuSections (int? menuId)
 
 Get menu sections
 
@@ -296,7 +296,7 @@ namespace Example
             try
             {
                 // Get menu sections
-                RestApiArrayResultMenuSection result = apiInstance.GetMenuSections(menuId);
+                FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSection result = apiInstance.GetMenuSections(menuId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiArrayResultMenuSection**](RestApiArrayResultMenuSection.md)
+[**FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSection**](FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSection.md)
 
 ### Authorization
 
@@ -396,7 +396,7 @@ void (empty response body)
 
 <a name="uploadmenusectionimage"></a>
 # **UploadMenuSectionImage**
-> RestApiStringResult UploadMenuSectionImage (int? menuId, int? menuSectionId, System.IO.Stream image)
+> FlipdishPublicModelsV1ApiResultsRestApiStringResult UploadMenuSectionImage (int? menuId, int? menuSectionId, System.IO.Stream image)
 
 Upload menu section image
 
@@ -425,7 +425,7 @@ namespace Example
             try
             {
                 // Upload menu section image
-                RestApiStringResult result = apiInstance.UploadMenuSectionImage(menuId, menuSectionId, image);
+                FlipdishPublicModelsV1ApiResultsRestApiStringResult result = apiInstance.UploadMenuSectionImage(menuId, menuSectionId, image);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -447,7 +447,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiStringResult**](RestApiStringResult.md)
+[**FlipdishPublicModelsV1ApiResultsRestApiStringResult**](FlipdishPublicModelsV1ApiResultsRestApiStringResult.md)
 
 ### Authorization
 

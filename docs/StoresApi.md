@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getstorebyid"></a>
 # **GetStoreById**
-> RestApiResultStore GetStoreById (int? storeId)
+> FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore GetStoreById (int? storeId)
 
 Get store by identifier
 
@@ -37,7 +37,7 @@ namespace Example
             try
             {
                 // Get store by identifier
-                RestApiResultStore result = apiInstance.GetStoreById(storeId);
+                FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore result = apiInstance.GetStoreById(storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiResultStore**](RestApiResultStore.md)
+[**FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore**](FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 <a name="getstores"></a>
 # **GetStores**
-> RestApiPaginationResultStore GetStores (string searchQuery = null, int? page = null, int? limit = null)
+> FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore GetStores (string searchQuery = null, int? page = null, int? limit = null)
 
 Get all stores
 
@@ -101,7 +101,7 @@ namespace Example
             try
             {
                 // Get all stores
-                RestApiPaginationResultStore result = apiInstance.GetStores(searchQuery, page, limit);
+                FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore result = apiInstance.GetStores(searchQuery, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiPaginationResultStore**](RestApiPaginationResultStore.md)
+[**FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore**](FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore.md)
 
 ### Authorization
 

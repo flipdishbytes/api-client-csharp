@@ -76,7 +76,7 @@ namespace Flipdish.Test
             //int? filterByUserId = null;
             //int? take = null;
             //var response = instance.GetHttpLogsByUserIdAsync(start, end, filterByUserId, take);
-            //Assert.IsInstanceOf<RestApiArrayResultHttpRequestAndResponseLog> (response, "response is RestApiArrayResultHttpRequestAndResponseLog");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog");
         }
         
     }

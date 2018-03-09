@@ -34,7 +34,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="acceptObject"></param>
         /// <returns></returns>
-        void AcceptOrder (int? id, Accept acceptObject);
+        void AcceptOrder (int? id, FlipdishPublicModelsV1OrdersAccept acceptObject);
 
         /// <summary>
         /// Accept order
@@ -46,7 +46,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="acceptObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> AcceptOrderWithHttpInfo (int? id, Accept acceptObject);
+        ApiResponse<Object> AcceptOrderWithHttpInfo (int? id, FlipdishPublicModelsV1OrdersAccept acceptObject);
         /// <summary>
         /// Get order by ID
         /// </summary>
@@ -55,8 +55,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Order identifier</param>
-        /// <returns>RestApiResultOrder</returns>
-        RestApiResultOrder GetOrderById (int? id);
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder</returns>
+        FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder GetOrderById (int? id);
 
         /// <summary>
         /// Get order by ID
@@ -66,8 +66,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Order identifier</param>
-        /// <returns>ApiResponse of RestApiResultOrder</returns>
-        ApiResponse<RestApiResultOrder> GetOrderByIdWithHttpInfo (int? id);
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder</returns>
+        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder> GetOrderByIdWithHttpInfo (int? id);
         /// <summary>
         /// Get orders by filter
         /// </summary>
@@ -79,8 +79,8 @@ namespace Flipdish.Api
         /// <param name="state">Order states (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>RestApiPaginationResultOrder</returns>
-        RestApiPaginationResultOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder</returns>
+        FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get orders by filter
@@ -93,8 +93,8 @@ namespace Flipdish.Api
         /// <param name="state">Order states (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>ApiResponse of RestApiPaginationResultOrder</returns>
-        ApiResponse<RestApiPaginationResultOrder> GetOrdersWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder</returns>
+        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder> GetOrdersWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
         /// <summary>
         /// Refund order
         /// </summary>
@@ -105,7 +105,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="refundObject"></param>
         /// <returns></returns>
-        void RefundOrder (int? id, Refund refundObject);
+        void RefundOrder (int? id, FlipdishPublicModelsV1OrdersRefund refundObject);
 
         /// <summary>
         /// Refund order
@@ -117,7 +117,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="refundObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RefundOrderWithHttpInfo (int? id, Refund refundObject);
+        ApiResponse<Object> RefundOrderWithHttpInfo (int? id, FlipdishPublicModelsV1OrdersRefund refundObject);
         /// <summary>
         /// Reject order
         /// </summary>
@@ -128,7 +128,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="rejectObject"></param>
         /// <returns></returns>
-        void RejectOrder (int? id, Reject rejectObject);
+        void RejectOrder (int? id, FlipdishPublicModelsV1OrdersReject rejectObject);
 
         /// <summary>
         /// Reject order
@@ -140,7 +140,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="rejectObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RejectOrderWithHttpInfo (int? id, Reject rejectObject);
+        ApiResponse<Object> RejectOrderWithHttpInfo (int? id, FlipdishPublicModelsV1OrdersReject rejectObject);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -153,7 +153,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="acceptObject"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task AcceptOrderAsync (int? id, Accept acceptObject);
+        System.Threading.Tasks.Task AcceptOrderAsync (int? id, FlipdishPublicModelsV1OrdersAccept acceptObject);
 
         /// <summary>
         /// Accept order
@@ -165,7 +165,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="acceptObject"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AcceptOrderAsyncWithHttpInfo (int? id, Accept acceptObject);
+        System.Threading.Tasks.Task<ApiResponse<Object>> AcceptOrderAsyncWithHttpInfo (int? id, FlipdishPublicModelsV1OrdersAccept acceptObject);
         /// <summary>
         /// Get order by ID
         /// </summary>
@@ -174,8 +174,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Order identifier</param>
-        /// <returns>Task of RestApiResultOrder</returns>
-        System.Threading.Tasks.Task<RestApiResultOrder> GetOrderByIdAsync (int? id);
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder</returns>
+        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder> GetOrderByIdAsync (int? id);
 
         /// <summary>
         /// Get order by ID
@@ -185,8 +185,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Order identifier</param>
-        /// <returns>Task of ApiResponse (RestApiResultOrder)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultOrder>> GetOrderByIdAsyncWithHttpInfo (int? id);
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder>> GetOrderByIdAsyncWithHttpInfo (int? id);
         /// <summary>
         /// Get orders by filter
         /// </summary>
@@ -198,8 +198,8 @@ namespace Flipdish.Api
         /// <param name="state">Order states (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>Task of RestApiPaginationResultOrder</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultOrder> GetOrdersAsync (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder</returns>
+        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder> GetOrdersAsync (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get orders by filter
@@ -212,8 +212,8 @@ namespace Flipdish.Api
         /// <param name="state">Order states (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultOrder)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrder>> GetOrdersAsyncWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder>> GetOrdersAsyncWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
         /// <summary>
         /// Refund order
         /// </summary>
@@ -224,7 +224,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="refundObject"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RefundOrderAsync (int? id, Refund refundObject);
+        System.Threading.Tasks.Task RefundOrderAsync (int? id, FlipdishPublicModelsV1OrdersRefund refundObject);
 
         /// <summary>
         /// Refund order
@@ -236,7 +236,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="refundObject"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RefundOrderAsyncWithHttpInfo (int? id, Refund refundObject);
+        System.Threading.Tasks.Task<ApiResponse<Object>> RefundOrderAsyncWithHttpInfo (int? id, FlipdishPublicModelsV1OrdersRefund refundObject);
         /// <summary>
         /// Reject order
         /// </summary>
@@ -247,7 +247,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="rejectObject"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RejectOrderAsync (int? id, Reject rejectObject);
+        System.Threading.Tasks.Task RejectOrderAsync (int? id, FlipdishPublicModelsV1OrdersReject rejectObject);
 
         /// <summary>
         /// Reject order
@@ -259,7 +259,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="rejectObject"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RejectOrderAsyncWithHttpInfo (int? id, Reject rejectObject);
+        System.Threading.Tasks.Task<ApiResponse<Object>> RejectOrderAsyncWithHttpInfo (int? id, FlipdishPublicModelsV1OrdersReject rejectObject);
         #endregion Asynchronous Operations
     }
 
@@ -379,7 +379,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="acceptObject"></param>
         /// <returns></returns>
-        public void AcceptOrder (int? id, Accept acceptObject)
+        public void AcceptOrder (int? id, FlipdishPublicModelsV1OrdersAccept acceptObject)
         {
              AcceptOrderWithHttpInfo(id, acceptObject);
         }
@@ -391,7 +391,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="acceptObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> AcceptOrderWithHttpInfo (int? id, Accept acceptObject)
+        public ApiResponse<Object> AcceptOrderWithHttpInfo (int? id, FlipdishPublicModelsV1OrdersAccept acceptObject)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -471,7 +471,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="acceptObject"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task AcceptOrderAsync (int? id, Accept acceptObject)
+        public async System.Threading.Tasks.Task AcceptOrderAsync (int? id, FlipdishPublicModelsV1OrdersAccept acceptObject)
         {
              await AcceptOrderAsyncWithHttpInfo(id, acceptObject);
 
@@ -484,7 +484,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="acceptObject"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AcceptOrderAsyncWithHttpInfo (int? id, Accept acceptObject)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AcceptOrderAsyncWithHttpInfo (int? id, FlipdishPublicModelsV1OrdersAccept acceptObject)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -562,10 +562,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Order identifier</param>
-        /// <returns>RestApiResultOrder</returns>
-        public RestApiResultOrder GetOrderById (int? id)
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder</returns>
+        public FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder GetOrderById (int? id)
         {
-             ApiResponse<RestApiResultOrder> localVarResponse = GetOrderByIdWithHttpInfo(id);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder> localVarResponse = GetOrderByIdWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -574,8 +574,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Order identifier</param>
-        /// <returns>ApiResponse of RestApiResultOrder</returns>
-        public ApiResponse< RestApiResultOrder > GetOrderByIdWithHttpInfo (int? id)
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder</returns>
+        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder > GetOrderByIdWithHttpInfo (int? id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -627,9 +627,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultOrder>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultOrder) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrder)));
+                (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder)));
         }
 
         /// <summary>
@@ -637,10 +637,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Order identifier</param>
-        /// <returns>Task of RestApiResultOrder</returns>
-        public async System.Threading.Tasks.Task<RestApiResultOrder> GetOrderByIdAsync (int? id)
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder</returns>
+        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder> GetOrderByIdAsync (int? id)
         {
-             ApiResponse<RestApiResultOrder> localVarResponse = await GetOrderByIdAsyncWithHttpInfo(id);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder> localVarResponse = await GetOrderByIdAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -650,8 +650,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Order identifier</param>
-        /// <returns>Task of ApiResponse (RestApiResultOrder)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrder>> GetOrderByIdAsyncWithHttpInfo (int? id)
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder>> GetOrderByIdAsyncWithHttpInfo (int? id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -703,9 +703,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultOrder>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultOrder) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrder)));
+                (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder)));
         }
 
         /// <summary>
@@ -716,10 +716,10 @@ namespace Flipdish.Api
         /// <param name="state">Order states (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>RestApiPaginationResultOrder</returns>
-        public RestApiPaginationResultOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder</returns>
+        public FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultOrder> localVarResponse = GetOrdersWithHttpInfo(physicalRestaurantId, state, page, limit);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder> localVarResponse = GetOrdersWithHttpInfo(physicalRestaurantId, state, page, limit);
              return localVarResponse.Data;
         }
 
@@ -731,8 +731,8 @@ namespace Flipdish.Api
         /// <param name="state">Order states (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>ApiResponse of RestApiPaginationResultOrder</returns>
-        public ApiResponse< RestApiPaginationResultOrder > GetOrdersWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder</returns>
+        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder > GetOrdersWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v1.0/orders";
@@ -784,9 +784,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultOrder>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultOrder) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultOrder)));
+                (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder)));
         }
 
         /// <summary>
@@ -797,10 +797,10 @@ namespace Flipdish.Api
         /// <param name="state">Order states (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>Task of RestApiPaginationResultOrder</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultOrder> GetOrdersAsync (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder</returns>
+        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder> GetOrdersAsync (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultOrder> localVarResponse = await GetOrdersAsyncWithHttpInfo(physicalRestaurantId, state, page, limit);
+             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder> localVarResponse = await GetOrdersAsyncWithHttpInfo(physicalRestaurantId, state, page, limit);
              return localVarResponse.Data;
 
         }
@@ -813,8 +813,8 @@ namespace Flipdish.Api
         /// <param name="state">Order states (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultOrder)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrder>> GetOrdersAsyncWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder>> GetOrdersAsyncWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v1.0/orders";
@@ -866,9 +866,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultOrder>(localVarStatusCode,
+            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultOrder) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultOrder)));
+                (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder)));
         }
 
         /// <summary>
@@ -878,7 +878,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="refundObject"></param>
         /// <returns></returns>
-        public void RefundOrder (int? id, Refund refundObject)
+        public void RefundOrder (int? id, FlipdishPublicModelsV1OrdersRefund refundObject)
         {
              RefundOrderWithHttpInfo(id, refundObject);
         }
@@ -890,7 +890,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="refundObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> RefundOrderWithHttpInfo (int? id, Refund refundObject)
+        public ApiResponse<Object> RefundOrderWithHttpInfo (int? id, FlipdishPublicModelsV1OrdersRefund refundObject)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -970,7 +970,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="refundObject"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RefundOrderAsync (int? id, Refund refundObject)
+        public async System.Threading.Tasks.Task RefundOrderAsync (int? id, FlipdishPublicModelsV1OrdersRefund refundObject)
         {
              await RefundOrderAsyncWithHttpInfo(id, refundObject);
 
@@ -983,7 +983,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="refundObject"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> RefundOrderAsyncWithHttpInfo (int? id, Refund refundObject)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RefundOrderAsyncWithHttpInfo (int? id, FlipdishPublicModelsV1OrdersRefund refundObject)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1063,7 +1063,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="rejectObject"></param>
         /// <returns></returns>
-        public void RejectOrder (int? id, Reject rejectObject)
+        public void RejectOrder (int? id, FlipdishPublicModelsV1OrdersReject rejectObject)
         {
              RejectOrderWithHttpInfo(id, rejectObject);
         }
@@ -1075,7 +1075,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="rejectObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> RejectOrderWithHttpInfo (int? id, Reject rejectObject)
+        public ApiResponse<Object> RejectOrderWithHttpInfo (int? id, FlipdishPublicModelsV1OrdersReject rejectObject)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1155,7 +1155,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="rejectObject"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RejectOrderAsync (int? id, Reject rejectObject)
+        public async System.Threading.Tasks.Task RejectOrderAsync (int? id, FlipdishPublicModelsV1OrdersReject rejectObject)
         {
              await RejectOrderAsyncWithHttpInfo(id, rejectObject);
 
@@ -1168,7 +1168,7 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <param name="rejectObject"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> RejectOrderAsyncWithHttpInfo (int? id, Reject rejectObject)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RejectOrderAsyncWithHttpInfo (int? id, FlipdishPublicModelsV1OrdersReject rejectObject)
         {
             // verify the required parameter 'id' is set
             if (id == null)

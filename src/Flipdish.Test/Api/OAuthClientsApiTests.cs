@@ -74,7 +74,7 @@ namespace Flipdish.Test
             //string oAuthClientId = null;
             //string uri = null;
             //var response = instance.AddRedirectUri(oAuthClientId, uri);
-            //Assert.IsInstanceOf<RestApiResultOauthClientRedirectUri> (response, "response is RestApiResultOauthClientRedirectUri");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri");
         }
         
         /// <summary>
@@ -84,7 +84,7 @@ namespace Flipdish.Test
         public void CreateOAuthClientTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //OAuthClient oAuthClient = null;
+            //FlipdishPublicModelsV1OAuthClientsOAuthClient oAuthClient = null;
             //instance.CreateOAuthClient(oAuthClient);
             
         }
@@ -110,7 +110,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string clientId = null;
             //var response = instance.GetOAuthClientByClientId(clientId);
-            //Assert.IsInstanceOf<RestApiResultOAuthClient> (response, "response is RestApiResultOAuthClient");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient");
         }
         
         /// <summary>
@@ -122,7 +122,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string clientId = null;
             //var response = instance.GetOAuthClientSecret(clientId);
-            //Assert.IsInstanceOf<RestApiStringResult> (response, "response is RestApiStringResult");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiStringResult> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiStringResult");
         }
         
         /// <summary>
@@ -133,7 +133,7 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.GetOAuthClients();
-            //Assert.IsInstanceOf<RestApiArrayResultOAuthClient> (response, "response is RestApiArrayResultOAuthClient");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient");
         }
         
         /// <summary>
@@ -145,7 +145,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string oAuthClientId = null;
             //var response = instance.GetOauthAccessToken(oAuthClientId);
-            //Assert.IsInstanceOf<RestApiStringResult> (response, "response is RestApiStringResult");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiStringResult> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiStringResult");
         }
         
         /// <summary>
@@ -157,7 +157,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string oAuthClientId = null;
             //var response = instance.GetRedirectUris(oAuthClientId);
-            //Assert.IsInstanceOf<RestApiArrayResultOauthClientRedirectUri> (response, "response is RestApiArrayResultOauthClientRedirectUri");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri");
         }
         
         /// <summary>

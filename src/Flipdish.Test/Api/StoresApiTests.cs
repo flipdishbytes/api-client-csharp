@@ -73,7 +73,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? storeId = null;
             //var response = instance.GetStoreById(storeId);
-            //Assert.IsInstanceOf<RestApiResultStore> (response, "response is RestApiResultStore");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1StoresStore");
         }
         
         /// <summary>
@@ -87,7 +87,7 @@ namespace Flipdish.Test
             //int? page = null;
             //int? limit = null;
             //var response = instance.GetStores(searchQuery, page, limit);
-            //Assert.IsInstanceOf<RestApiPaginationResultStore> (response, "response is RestApiPaginationResultStore");
+            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1StoresStore");
         }
         
     }
