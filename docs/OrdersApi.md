@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="acceptorder"></a>
 # **AcceptOrder**
-> void AcceptOrder (int? id, FlipdishPublicModelsV1OrdersAccept acceptObject)
+> void AcceptOrder (int? id, Accept acceptObject)
 
 Accept order
 
@@ -38,7 +38,7 @@ namespace Example
 
             var apiInstance = new OrdersApi();
             var id = 56;  // int? | Order identifier
-            var acceptObject = new FlipdishPublicModelsV1OrdersAccept(); // FlipdishPublicModelsV1OrdersAccept | 
+            var acceptObject = new Accept(); // Accept | 
 
             try
             {
@@ -59,7 +59,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**| Order identifier | 
- **acceptObject** | [**FlipdishPublicModelsV1OrdersAccept**](FlipdishPublicModelsV1OrdersAccept.md)|  | 
+ **acceptObject** | [**Accept**](Accept.md)|  | 
 
 ### Return type
 
@@ -78,7 +78,7 @@ void (empty response body)
 
 <a name="getorderbyid"></a>
 # **GetOrderById**
-> FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder GetOrderById (int? id)
+> RestApiResultOrder GetOrderById (int? id)
 
 Get order by ID
 
@@ -105,7 +105,7 @@ namespace Example
             try
             {
                 // Get order by ID
-                FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder result = apiInstance.GetOrderById(id);
+                RestApiResultOrder result = apiInstance.GetOrderById(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder**](FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OrdersOrder.md)
+[**RestApiResultOrder**](RestApiResultOrder.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 <a name="getorders"></a>
 # **GetOrders**
-> FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+> RestApiPaginationResultOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
 
 Get orders by filter
 
@@ -170,7 +170,7 @@ namespace Example
             try
             {
                 // Get orders by filter
-                FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder result = apiInstance.GetOrders(physicalRestaurantId, state, page, limit);
+                RestApiPaginationResultOrder result = apiInstance.GetOrders(physicalRestaurantId, state, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder**](FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OrdersOrder.md)
+[**RestApiPaginationResultOrder**](RestApiPaginationResultOrder.md)
 
 ### Authorization
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 <a name="refundorder"></a>
 # **RefundOrder**
-> void RefundOrder (int? id, FlipdishPublicModelsV1OrdersRefund refundObject)
+> void RefundOrder (int? id, Refund refundObject)
 
 Refund order
 
@@ -233,7 +233,7 @@ namespace Example
 
             var apiInstance = new OrdersApi();
             var id = 56;  // int? | Order identifier
-            var refundObject = new FlipdishPublicModelsV1OrdersRefund(); // FlipdishPublicModelsV1OrdersRefund | 
+            var refundObject = new Refund(); // Refund | 
 
             try
             {
@@ -254,7 +254,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**| Order identifier | 
- **refundObject** | [**FlipdishPublicModelsV1OrdersRefund**](FlipdishPublicModelsV1OrdersRefund.md)|  | 
+ **refundObject** | [**Refund**](Refund.md)|  | 
 
 ### Return type
 
@@ -273,7 +273,7 @@ void (empty response body)
 
 <a name="rejectorder"></a>
 # **RejectOrder**
-> void RejectOrder (int? id, FlipdishPublicModelsV1OrdersReject rejectObject)
+> void RejectOrder (int? id, Reject rejectObject)
 
 Reject order
 
@@ -298,7 +298,7 @@ namespace Example
 
             var apiInstance = new OrdersApi();
             var id = 56;  // int? | Order identifier
-            var rejectObject = new FlipdishPublicModelsV1OrdersReject(); // FlipdishPublicModelsV1OrdersReject | 
+            var rejectObject = new Reject(); // Reject | 
 
             try
             {
@@ -319,7 +319,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**| Order identifier | 
- **rejectObject** | [**FlipdishPublicModelsV1OrdersReject**](FlipdishPublicModelsV1OrdersReject.md)|  | 
+ **rejectObject** | [**Reject**](Reject.md)|  | 
 
 ### Return type
 

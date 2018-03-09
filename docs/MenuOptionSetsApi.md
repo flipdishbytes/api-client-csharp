@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 <a name="createmenuitemoptionset"></a>
 # **CreateMenuItemOptionSet**
-> Object CreateMenuItemOptionSet (int? menuId, int? menuSectionId, int? menuSectionItemId, FlipdishPublicModelsV1MenusMenuItemOptionSetBase menuItemOptionSet)
+> Object CreateMenuItemOptionSet (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuItemOptionSetBase menuItemOptionSet)
 
 Create menu item option set
 
@@ -40,7 +40,7 @@ namespace Example
             var menuId = 56;  // int? | Menu identifier
             var menuSectionId = 56;  // int? | Menu section identifier
             var menuSectionItemId = 56;  // int? | Menu section item identifier
-            var menuItemOptionSet = new FlipdishPublicModelsV1MenusMenuItemOptionSetBase(); // FlipdishPublicModelsV1MenusMenuItemOptionSetBase | Menu item option set
+            var menuItemOptionSet = new MenuItemOptionSetBase(); // MenuItemOptionSetBase | Menu item option set
 
             try
             {
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
  **menuId** | **int?**| Menu identifier | 
  **menuSectionId** | **int?**| Menu section identifier | 
  **menuSectionItemId** | **int?**| Menu section item identifier | 
- **menuItemOptionSet** | [**FlipdishPublicModelsV1MenusMenuItemOptionSetBase**](FlipdishPublicModelsV1MenusMenuItemOptionSetBase.md)| Menu item option set | 
+ **menuItemOptionSet** | [**MenuItemOptionSetBase**](MenuItemOptionSetBase.md)| Menu item option set | 
 
 ### Return type
 
@@ -217,7 +217,7 @@ void (empty response body)
 
 <a name="getmenuitemoptionsetbyid"></a>
 # **GetMenuItemOptionSetById**
-> FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuItemOptionSet GetMenuItemOptionSetById (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId)
+> RestApiResultMenuItemOptionSet GetMenuItemOptionSetById (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId)
 
 Get menu item option set by identifier
 
@@ -247,7 +247,7 @@ namespace Example
             try
             {
                 // Get menu item option set by identifier
-                FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuItemOptionSet result = apiInstance.GetMenuItemOptionSetById(menuId, menuSectionId, menuSectionItemId, optionSetId);
+                RestApiResultMenuItemOptionSet result = apiInstance.GetMenuItemOptionSetById(menuId, menuSectionId, menuSectionItemId, optionSetId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuItemOptionSet**](FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuItemOptionSet.md)
+[**RestApiResultMenuItemOptionSet**](RestApiResultMenuItemOptionSet.md)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 
 <a name="getmenuitemoptionsets"></a>
 # **GetMenuItemOptionSets**
-> FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuItemOptionSet GetMenuItemOptionSets (int? menuId, int? menuSectionId, int? menuSectionItemId)
+> RestApiArrayResultMenuItemOptionSet GetMenuItemOptionSets (int? menuId, int? menuSectionId, int? menuSectionItemId)
 
 Get menu item option sets
 
@@ -314,7 +314,7 @@ namespace Example
             try
             {
                 // Get menu item option sets
-                FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuItemOptionSet result = apiInstance.GetMenuItemOptionSets(menuId, menuSectionId, menuSectionItemId);
+                RestApiArrayResultMenuItemOptionSet result = apiInstance.GetMenuItemOptionSets(menuId, menuSectionId, menuSectionItemId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuItemOptionSet**](FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuItemOptionSet.md)
+[**RestApiArrayResultMenuItemOptionSet**](RestApiArrayResultMenuItemOptionSet.md)
 
 ### Authorization
 
@@ -420,7 +420,7 @@ void (empty response body)
 
 <a name="uploadoptionsetimage"></a>
 # **UploadOptionSetImage**
-> FlipdishPublicModelsV1ApiResultsRestApiStringResult UploadOptionSetImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, System.IO.Stream image)
+> RestApiStringResult UploadOptionSetImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, System.IO.Stream image)
 
 Upload menu item option set image
 
@@ -451,7 +451,7 @@ namespace Example
             try
             {
                 // Upload menu item option set image
-                FlipdishPublicModelsV1ApiResultsRestApiStringResult result = apiInstance.UploadOptionSetImage(menuId, menuSectionId, menuSectionItemId, optionSetId, image);
+                RestApiStringResult result = apiInstance.UploadOptionSetImage(menuId, menuSectionId, menuSectionItemId, optionSetId, image);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -475,7 +475,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiStringResult**](FlipdishPublicModelsV1ApiResultsRestApiStringResult.md)
+[**RestApiStringResult**](RestApiStringResult.md)
 
 ### Authorization
 

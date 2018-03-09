@@ -33,8 +33,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiIntegerResult</returns>
-        FlipdishPublicModelsV1ApiResultsRestApiIntegerResult CraeteWebhookSubscription (string clientId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription);
+        /// <returns>RestApiIntegerResult</returns>
+        RestApiIntegerResult CraeteWebhookSubscription (string clientId, WebhookSubscription webhookSubscription);
 
         /// <summary>
         /// Create a webhook subscription for you Oauth client
@@ -45,8 +45,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiIntegerResult</returns>
-        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiIntegerResult> CraeteWebhookSubscriptionWithHttpInfo (string clientId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription);
+        /// <returns>ApiResponse of RestApiIntegerResult</returns>
+        ApiResponse<RestApiIntegerResult> CraeteWebhookSubscriptionWithHttpInfo (string clientId, WebhookSubscription webhookSubscription);
         /// <summary>
         /// Add event name to your webhook subscription
         /// </summary>
@@ -127,8 +127,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult GetWebhookEventNames ();
+        /// <returns>RestApiStringArrayResult</returns>
+        RestApiStringArrayResult GetWebhookEventNames ();
 
         /// <summary>
         /// Get all webhook subscription event names
@@ -137,8 +137,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> GetWebhookEventNamesWithHttpInfo ();
+        /// <returns>ApiResponse of RestApiStringArrayResult</returns>
+        ApiResponse<RestApiStringArrayResult> GetWebhookEventNamesWithHttpInfo ();
         /// <summary>
         /// Get your webhook subscriptions selected event names
         /// </summary>
@@ -148,8 +148,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult GetWebhookEventNamesBySubscriptionId (string clientId, int? webhookSubscriptionId);
+        /// <returns>RestApiStringArrayResult</returns>
+        RestApiStringArrayResult GetWebhookEventNamesBySubscriptionId (string clientId, int? webhookSubscriptionId);
 
         /// <summary>
         /// Get your webhook subscriptions selected event names
@@ -160,8 +160,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdWithHttpInfo (string clientId, int? webhookSubscriptionId);
+        /// <returns>ApiResponse of RestApiStringArrayResult</returns>
+        ApiResponse<RestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdWithHttpInfo (string clientId, int? webhookSubscriptionId);
         /// <summary>
         /// Get logs for your webhook subscription
         /// </summary>
@@ -174,8 +174,8 @@ namespace Flipdish.Api
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
         /// <param name="take">Page size (optional)</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog</returns>
-        FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null);
+        /// <returns>RestApiArrayResultWebhookLog</returns>
+        RestApiArrayResultWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null);
 
         /// <summary>
         /// Get logs for your webhook subscription
@@ -189,8 +189,8 @@ namespace Flipdish.Api
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
         /// <param name="take">Page size (optional)</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog</returns>
-        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog> GetWebhookLogsWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null);
+        /// <returns>ApiResponse of RestApiArrayResultWebhookLog</returns>
+        ApiResponse<RestApiArrayResultWebhookLog> GetWebhookLogsWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null);
         /// <summary>
         /// Get all webhook subscriptions by your Oauth client id
         /// </summary>
@@ -199,8 +199,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription</returns>
-        FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription GetWebhookSubscriptions (string clientId);
+        /// <returns>RestApiArrayResultWebhookSubscription</returns>
+        RestApiArrayResultWebhookSubscription GetWebhookSubscriptions (string clientId);
 
         /// <summary>
         /// Get all webhook subscriptions by your Oauth client id
@@ -210,8 +210,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription</returns>
-        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription> GetWebhookSubscriptionsWithHttpInfo (string clientId);
+        /// <returns>ApiResponse of RestApiArrayResultWebhookSubscription</returns>
+        ApiResponse<RestApiArrayResultWebhookSubscription> GetWebhookSubscriptionsWithHttpInfo (string clientId);
         /// <summary>
         /// Update a webhook subscription object
         /// </summary>
@@ -223,7 +223,7 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <returns></returns>
-        void UpdateWebhookSubscription (string clientId, int? webhookSubscriptionId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription);
+        void UpdateWebhookSubscription (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription);
 
         /// <summary>
         /// Update a webhook subscription object
@@ -236,7 +236,7 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateWebhookSubscriptionWithHttpInfo (string clientId, int? webhookSubscriptionId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription);
+        ApiResponse<Object> UpdateWebhookSubscriptionWithHttpInfo (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -248,8 +248,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiIntegerResult</returns>
-        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiIntegerResult> CraeteWebhookSubscriptionAsync (string clientId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription);
+        /// <returns>Task of RestApiIntegerResult</returns>
+        System.Threading.Tasks.Task<RestApiIntegerResult> CraeteWebhookSubscriptionAsync (string clientId, WebhookSubscription webhookSubscription);
 
         /// <summary>
         /// Create a webhook subscription for you Oauth client
@@ -260,8 +260,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiIntegerResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiIntegerResult>> CraeteWebhookSubscriptionAsyncWithHttpInfo (string clientId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription);
+        /// <returns>Task of ApiResponse (RestApiIntegerResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> CraeteWebhookSubscriptionAsyncWithHttpInfo (string clientId, WebhookSubscription webhookSubscription);
         /// <summary>
         /// Add event name to your webhook subscription
         /// </summary>
@@ -342,8 +342,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> GetWebhookEventNamesAsync ();
+        /// <returns>Task of RestApiStringArrayResult</returns>
+        System.Threading.Tasks.Task<RestApiStringArrayResult> GetWebhookEventNamesAsync ();
 
         /// <summary>
         /// Get all webhook subscription event names
@@ -352,8 +352,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult>> GetWebhookEventNamesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (RestApiStringArrayResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesAsyncWithHttpInfo ();
         /// <summary>
         /// Get your webhook subscriptions selected event names
         /// </summary>
@@ -363,8 +363,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdAsync (string clientId, int? webhookSubscriptionId);
+        /// <returns>Task of RestApiStringArrayResult</returns>
+        System.Threading.Tasks.Task<RestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdAsync (string clientId, int? webhookSubscriptionId);
 
         /// <summary>
         /// Get your webhook subscriptions selected event names
@@ -375,8 +375,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult>> GetWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId);
+        /// <returns>Task of ApiResponse (RestApiStringArrayResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId);
         /// <summary>
         /// Get logs for your webhook subscription
         /// </summary>
@@ -389,8 +389,8 @@ namespace Flipdish.Api
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
         /// <param name="take">Page size (optional)</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog</returns>
-        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog> GetWebhookLogsAsync (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null);
+        /// <returns>Task of RestApiArrayResultWebhookLog</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultWebhookLog> GetWebhookLogsAsync (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null);
 
         /// <summary>
         /// Get logs for your webhook subscription
@@ -404,8 +404,8 @@ namespace Flipdish.Api
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
         /// <param name="take">Page size (optional)</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog>> GetWebhookLogsAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null);
+        /// <returns>Task of ApiResponse (RestApiArrayResultWebhookLog)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultWebhookLog>> GetWebhookLogsAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null);
         /// <summary>
         /// Get all webhook subscriptions by your Oauth client id
         /// </summary>
@@ -414,8 +414,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription</returns>
-        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription> GetWebhookSubscriptionsAsync (string clientId);
+        /// <returns>Task of RestApiArrayResultWebhookSubscription</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultWebhookSubscription> GetWebhookSubscriptionsAsync (string clientId);
 
         /// <summary>
         /// Get all webhook subscriptions by your Oauth client id
@@ -425,8 +425,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription>> GetWebhookSubscriptionsAsyncWithHttpInfo (string clientId);
+        /// <returns>Task of ApiResponse (RestApiArrayResultWebhookSubscription)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultWebhookSubscription>> GetWebhookSubscriptionsAsyncWithHttpInfo (string clientId);
         /// <summary>
         /// Update a webhook subscription object
         /// </summary>
@@ -438,7 +438,7 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateWebhookSubscriptionAsync (string clientId, int? webhookSubscriptionId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription);
+        System.Threading.Tasks.Task UpdateWebhookSubscriptionAsync (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription);
 
         /// <summary>
         /// Update a webhook subscription object
@@ -451,7 +451,7 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWebhookSubscriptionAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWebhookSubscriptionAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription);
         #endregion Asynchronous Operations
     }
 
@@ -570,10 +570,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiIntegerResult</returns>
-        public FlipdishPublicModelsV1ApiResultsRestApiIntegerResult CraeteWebhookSubscription (string clientId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription)
+        /// <returns>RestApiIntegerResult</returns>
+        public RestApiIntegerResult CraeteWebhookSubscription (string clientId, WebhookSubscription webhookSubscription)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiIntegerResult> localVarResponse = CraeteWebhookSubscriptionWithHttpInfo(clientId, webhookSubscription);
+             ApiResponse<RestApiIntegerResult> localVarResponse = CraeteWebhookSubscriptionWithHttpInfo(clientId, webhookSubscription);
              return localVarResponse.Data;
         }
 
@@ -583,8 +583,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiIntegerResult</returns>
-        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiIntegerResult > CraeteWebhookSubscriptionWithHttpInfo (string clientId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription)
+        /// <returns>ApiResponse of RestApiIntegerResult</returns>
+        public ApiResponse< RestApiIntegerResult > CraeteWebhookSubscriptionWithHttpInfo (string clientId, WebhookSubscription webhookSubscription)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -652,9 +652,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiIntegerResult>(localVarStatusCode,
+            return new ApiResponse<RestApiIntegerResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiIntegerResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiIntegerResult)));
+                (RestApiIntegerResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiIntegerResult)));
         }
 
         /// <summary>
@@ -663,10 +663,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiIntegerResult</returns>
-        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiIntegerResult> CraeteWebhookSubscriptionAsync (string clientId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription)
+        /// <returns>Task of RestApiIntegerResult</returns>
+        public async System.Threading.Tasks.Task<RestApiIntegerResult> CraeteWebhookSubscriptionAsync (string clientId, WebhookSubscription webhookSubscription)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiIntegerResult> localVarResponse = await CraeteWebhookSubscriptionAsyncWithHttpInfo(clientId, webhookSubscription);
+             ApiResponse<RestApiIntegerResult> localVarResponse = await CraeteWebhookSubscriptionAsyncWithHttpInfo(clientId, webhookSubscription);
              return localVarResponse.Data;
 
         }
@@ -677,8 +677,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiIntegerResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiIntegerResult>> CraeteWebhookSubscriptionAsyncWithHttpInfo (string clientId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription)
+        /// <returns>Task of ApiResponse (RestApiIntegerResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> CraeteWebhookSubscriptionAsyncWithHttpInfo (string clientId, WebhookSubscription webhookSubscription)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -746,9 +746,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiIntegerResult>(localVarStatusCode,
+            return new ApiResponse<RestApiIntegerResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiIntegerResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiIntegerResult)));
+                (RestApiIntegerResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiIntegerResult)));
         }
 
         /// <summary>
@@ -1262,10 +1262,10 @@ namespace Flipdish.Api
         /// Get all webhook subscription event names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        public FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult GetWebhookEventNames ()
+        /// <returns>RestApiStringArrayResult</returns>
+        public RestApiStringArrayResult GetWebhookEventNames ()
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> localVarResponse = GetWebhookEventNamesWithHttpInfo();
+             ApiResponse<RestApiStringArrayResult> localVarResponse = GetWebhookEventNamesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -1273,8 +1273,8 @@ namespace Flipdish.Api
         /// Get all webhook subscription event names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult > GetWebhookEventNamesWithHttpInfo ()
+        /// <returns>ApiResponse of RestApiStringArrayResult</returns>
+        public ApiResponse< RestApiStringArrayResult > GetWebhookEventNamesWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1.0/webhooks/events";
@@ -1322,19 +1322,19 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult>(localVarStatusCode,
+            return new ApiResponse<RestApiStringArrayResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult)));
+                (RestApiStringArrayResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringArrayResult)));
         }
 
         /// <summary>
         /// Get all webhook subscription event names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> GetWebhookEventNamesAsync ()
+        /// <returns>Task of RestApiStringArrayResult</returns>
+        public async System.Threading.Tasks.Task<RestApiStringArrayResult> GetWebhookEventNamesAsync ()
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> localVarResponse = await GetWebhookEventNamesAsyncWithHttpInfo();
+             ApiResponse<RestApiStringArrayResult> localVarResponse = await GetWebhookEventNamesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1343,8 +1343,8 @@ namespace Flipdish.Api
         /// Get all webhook subscription event names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult>> GetWebhookEventNamesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (RestApiStringArrayResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1.0/webhooks/events";
@@ -1392,9 +1392,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult>(localVarStatusCode,
+            return new ApiResponse<RestApiStringArrayResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult)));
+                (RestApiStringArrayResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringArrayResult)));
         }
 
         /// <summary>
@@ -1403,10 +1403,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        public FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult GetWebhookEventNamesBySubscriptionId (string clientId, int? webhookSubscriptionId)
+        /// <returns>RestApiStringArrayResult</returns>
+        public RestApiStringArrayResult GetWebhookEventNamesBySubscriptionId (string clientId, int? webhookSubscriptionId)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> localVarResponse = GetWebhookEventNamesBySubscriptionIdWithHttpInfo(clientId, webhookSubscriptionId);
+             ApiResponse<RestApiStringArrayResult> localVarResponse = GetWebhookEventNamesBySubscriptionIdWithHttpInfo(clientId, webhookSubscriptionId);
              return localVarResponse.Data;
         }
 
@@ -1416,8 +1416,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult > GetWebhookEventNamesBySubscriptionIdWithHttpInfo (string clientId, int? webhookSubscriptionId)
+        /// <returns>ApiResponse of RestApiStringArrayResult</returns>
+        public ApiResponse< RestApiStringArrayResult > GetWebhookEventNamesBySubscriptionIdWithHttpInfo (string clientId, int? webhookSubscriptionId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1473,9 +1473,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult>(localVarStatusCode,
+            return new ApiResponse<RestApiStringArrayResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult)));
+                (RestApiStringArrayResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringArrayResult)));
         }
 
         /// <summary>
@@ -1484,10 +1484,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdAsync (string clientId, int? webhookSubscriptionId)
+        /// <returns>Task of RestApiStringArrayResult</returns>
+        public async System.Threading.Tasks.Task<RestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdAsync (string clientId, int? webhookSubscriptionId)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> localVarResponse = await GetWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo(clientId, webhookSubscriptionId);
+             ApiResponse<RestApiStringArrayResult> localVarResponse = await GetWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo(clientId, webhookSubscriptionId);
              return localVarResponse.Data;
 
         }
@@ -1498,8 +1498,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult>> GetWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId)
+        /// <returns>Task of ApiResponse (RestApiStringArrayResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1555,9 +1555,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult>(localVarStatusCode,
+            return new ApiResponse<RestApiStringArrayResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult)));
+                (RestApiStringArrayResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringArrayResult)));
         }
 
         /// <summary>
@@ -1569,10 +1569,10 @@ namespace Flipdish.Api
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
         /// <param name="take">Page size (optional)</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog</returns>
-        public FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
+        /// <returns>RestApiArrayResultWebhookLog</returns>
+        public RestApiArrayResultWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog> localVarResponse = GetWebhookLogsWithHttpInfo(clientId, webhookSubscriptionId, start, end, take);
+             ApiResponse<RestApiArrayResultWebhookLog> localVarResponse = GetWebhookLogsWithHttpInfo(clientId, webhookSubscriptionId, start, end, take);
              return localVarResponse.Data;
         }
 
@@ -1585,8 +1585,8 @@ namespace Flipdish.Api
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
         /// <param name="take">Page size (optional)</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog</returns>
-        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog > GetWebhookLogsWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
+        /// <returns>ApiResponse of RestApiArrayResultWebhookLog</returns>
+        public ApiResponse< RestApiArrayResultWebhookLog > GetWebhookLogsWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1651,9 +1651,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultWebhookLog>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog)));
+                (RestApiArrayResultWebhookLog) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultWebhookLog)));
         }
 
         /// <summary>
@@ -1665,10 +1665,10 @@ namespace Flipdish.Api
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
         /// <param name="take">Page size (optional)</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog</returns>
-        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog> GetWebhookLogsAsync (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
+        /// <returns>Task of RestApiArrayResultWebhookLog</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultWebhookLog> GetWebhookLogsAsync (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog> localVarResponse = await GetWebhookLogsAsyncWithHttpInfo(clientId, webhookSubscriptionId, start, end, take);
+             ApiResponse<RestApiArrayResultWebhookLog> localVarResponse = await GetWebhookLogsAsyncWithHttpInfo(clientId, webhookSubscriptionId, start, end, take);
              return localVarResponse.Data;
 
         }
@@ -1682,8 +1682,8 @@ namespace Flipdish.Api
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
         /// <param name="take">Page size (optional)</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog>> GetWebhookLogsAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
+        /// <returns>Task of ApiResponse (RestApiArrayResultWebhookLog)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultWebhookLog>> GetWebhookLogsAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1748,9 +1748,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultWebhookLog>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog)));
+                (RestApiArrayResultWebhookLog) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultWebhookLog)));
         }
 
         /// <summary>
@@ -1758,10 +1758,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription</returns>
-        public FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription GetWebhookSubscriptions (string clientId)
+        /// <returns>RestApiArrayResultWebhookSubscription</returns>
+        public RestApiArrayResultWebhookSubscription GetWebhookSubscriptions (string clientId)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription> localVarResponse = GetWebhookSubscriptionsWithHttpInfo(clientId);
+             ApiResponse<RestApiArrayResultWebhookSubscription> localVarResponse = GetWebhookSubscriptionsWithHttpInfo(clientId);
              return localVarResponse.Data;
         }
 
@@ -1770,8 +1770,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription</returns>
-        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription > GetWebhookSubscriptionsWithHttpInfo (string clientId)
+        /// <returns>ApiResponse of RestApiArrayResultWebhookSubscription</returns>
+        public ApiResponse< RestApiArrayResultWebhookSubscription > GetWebhookSubscriptionsWithHttpInfo (string clientId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1823,9 +1823,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultWebhookSubscription>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription)));
+                (RestApiArrayResultWebhookSubscription) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultWebhookSubscription)));
         }
 
         /// <summary>
@@ -1833,10 +1833,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription</returns>
-        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription> GetWebhookSubscriptionsAsync (string clientId)
+        /// <returns>Task of RestApiArrayResultWebhookSubscription</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultWebhookSubscription> GetWebhookSubscriptionsAsync (string clientId)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription> localVarResponse = await GetWebhookSubscriptionsAsyncWithHttpInfo(clientId);
+             ApiResponse<RestApiArrayResultWebhookSubscription> localVarResponse = await GetWebhookSubscriptionsAsyncWithHttpInfo(clientId);
              return localVarResponse.Data;
 
         }
@@ -1846,8 +1846,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Oauth client identifier</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription>> GetWebhookSubscriptionsAsyncWithHttpInfo (string clientId)
+        /// <returns>Task of ApiResponse (RestApiArrayResultWebhookSubscription)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultWebhookSubscription>> GetWebhookSubscriptionsAsyncWithHttpInfo (string clientId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1899,9 +1899,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultWebhookSubscription>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription)));
+                (RestApiArrayResultWebhookSubscription) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultWebhookSubscription)));
         }
 
         /// <summary>
@@ -1912,7 +1912,7 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <returns></returns>
-        public void UpdateWebhookSubscription (string clientId, int? webhookSubscriptionId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription)
+        public void UpdateWebhookSubscription (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription)
         {
              UpdateWebhookSubscriptionWithHttpInfo(clientId, webhookSubscriptionId, webhookSubscription);
         }
@@ -1925,7 +1925,7 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateWebhookSubscriptionWithHttpInfo (string clientId, int? webhookSubscriptionId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription)
+        public ApiResponse<Object> UpdateWebhookSubscriptionWithHttpInfo (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -2010,7 +2010,7 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateWebhookSubscriptionAsync (string clientId, int? webhookSubscriptionId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription)
+        public async System.Threading.Tasks.Task UpdateWebhookSubscriptionAsync (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription)
         {
              await UpdateWebhookSubscriptionAsyncWithHttpInfo(clientId, webhookSubscriptionId, webhookSubscription);
 
@@ -2024,7 +2024,7 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWebhookSubscriptionAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWebhookSubscriptionAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)

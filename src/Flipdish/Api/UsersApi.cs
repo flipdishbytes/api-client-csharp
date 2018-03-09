@@ -31,8 +31,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult GetRoles ();
+        /// <returns>RestApiStringArrayResult</returns>
+        RestApiStringArrayResult GetRoles ();
 
         /// <summary>
         /// Get role names
@@ -41,8 +41,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> GetRolesWithHttpInfo ();
+        /// <returns>ApiResponse of RestApiStringArrayResult</returns>
+        ApiResponse<RestApiStringArrayResult> GetRolesWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -52,8 +52,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> GetRolesAsync ();
+        /// <returns>Task of RestApiStringArrayResult</returns>
+        System.Threading.Tasks.Task<RestApiStringArrayResult> GetRolesAsync ();
 
         /// <summary>
         /// Get role names
@@ -62,8 +62,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult>> GetRolesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (RestApiStringArrayResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetRolesAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -180,10 +180,10 @@ namespace Flipdish.Api
         /// Get role names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        public FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult GetRoles ()
+        /// <returns>RestApiStringArrayResult</returns>
+        public RestApiStringArrayResult GetRoles ()
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> localVarResponse = GetRolesWithHttpInfo();
+             ApiResponse<RestApiStringArrayResult> localVarResponse = GetRolesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -191,8 +191,8 @@ namespace Flipdish.Api
         /// Get role names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult > GetRolesWithHttpInfo ()
+        /// <returns>ApiResponse of RestApiStringArrayResult</returns>
+        public ApiResponse< RestApiStringArrayResult > GetRolesWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1.0/users/roles";
@@ -240,19 +240,19 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult>(localVarStatusCode,
+            return new ApiResponse<RestApiStringArrayResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult)));
+                (RestApiStringArrayResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringArrayResult)));
         }
 
         /// <summary>
         /// Get role names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult</returns>
-        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> GetRolesAsync ()
+        /// <returns>Task of RestApiStringArrayResult</returns>
+        public async System.Threading.Tasks.Task<RestApiStringArrayResult> GetRolesAsync ()
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> localVarResponse = await GetRolesAsyncWithHttpInfo();
+             ApiResponse<RestApiStringArrayResult> localVarResponse = await GetRolesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -261,8 +261,8 @@ namespace Flipdish.Api
         /// Get role names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult>> GetRolesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (RestApiStringArrayResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetRolesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1.0/users/roles";
@@ -310,9 +310,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult>(localVarStatusCode,
+            return new ApiResponse<RestApiStringArrayResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult)));
+                (RestApiStringArrayResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringArrayResult)));
         }
 
     }

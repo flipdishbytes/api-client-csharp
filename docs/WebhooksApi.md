@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="craetewebhooksubscription"></a>
 # **CraeteWebhookSubscription**
-> FlipdishPublicModelsV1ApiResultsRestApiIntegerResult CraeteWebhookSubscription (string clientId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription)
+> RestApiIntegerResult CraeteWebhookSubscription (string clientId, WebhookSubscription webhookSubscription)
 
 Create a webhook subscription for you Oauth client
 
@@ -40,12 +40,12 @@ namespace Example
 
             var apiInstance = new WebhooksApi();
             var clientId = clientId_example;  // string | Oauth client identifier
-            var webhookSubscription = new FlipdishPublicModelsV1WebhooksWebhookSubscription(); // FlipdishPublicModelsV1WebhooksWebhookSubscription | Webhook subscription object
+            var webhookSubscription = new WebhookSubscription(); // WebhookSubscription | Webhook subscription object
 
             try
             {
                 // Create a webhook subscription for you Oauth client
-                FlipdishPublicModelsV1ApiResultsRestApiIntegerResult result = apiInstance.CraeteWebhookSubscription(clientId, webhookSubscription);
+                RestApiIntegerResult result = apiInstance.CraeteWebhookSubscription(clientId, webhookSubscription);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -62,11 +62,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **clientId** | **string**| Oauth client identifier | 
- **webhookSubscription** | [**FlipdishPublicModelsV1WebhooksWebhookSubscription**](FlipdishPublicModelsV1WebhooksWebhookSubscription.md)| Webhook subscription object | 
+ **webhookSubscription** | [**WebhookSubscription**](WebhookSubscription.md)| Webhook subscription object | 
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiIntegerResult**](FlipdishPublicModelsV1ApiResultsRestApiIntegerResult.md)
+[**RestApiIntegerResult**](RestApiIntegerResult.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ void (empty response body)
 
 <a name="getwebhookeventnames"></a>
 # **GetWebhookEventNames**
-> FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult GetWebhookEventNames ()
+> RestApiStringArrayResult GetWebhookEventNames ()
 
 Get all webhook subscription event names
 
@@ -300,7 +300,7 @@ namespace Example
             try
             {
                 // Get all webhook subscription event names
-                FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult result = apiInstance.GetWebhookEventNames();
+                RestApiStringArrayResult result = apiInstance.GetWebhookEventNames();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -317,7 +317,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult**](FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult.md)
+[**RestApiStringArrayResult**](RestApiStringArrayResult.md)
 
 ### Authorization
 
@@ -332,7 +332,7 @@ This endpoint does not need any parameter.
 
 <a name="getwebhookeventnamesbysubscriptionid"></a>
 # **GetWebhookEventNamesBySubscriptionId**
-> FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult GetWebhookEventNamesBySubscriptionId (string clientId, int? webhookSubscriptionId)
+> RestApiStringArrayResult GetWebhookEventNamesBySubscriptionId (string clientId, int? webhookSubscriptionId)
 
 Get your webhook subscriptions selected event names
 
@@ -360,7 +360,7 @@ namespace Example
             try
             {
                 // Get your webhook subscriptions selected event names
-                FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult result = apiInstance.GetWebhookEventNamesBySubscriptionId(clientId, webhookSubscriptionId);
+                RestApiStringArrayResult result = apiInstance.GetWebhookEventNamesBySubscriptionId(clientId, webhookSubscriptionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult**](FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult.md)
+[**RestApiStringArrayResult**](RestApiStringArrayResult.md)
 
 ### Authorization
 
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 <a name="getwebhooklogs"></a>
 # **GetWebhookLogs**
-> FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
+> RestApiArrayResultWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
 
 Get logs for your webhook subscription
 
@@ -427,7 +427,7 @@ namespace Example
             try
             {
                 // Get logs for your webhook subscription
-                FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog result = apiInstance.GetWebhookLogs(clientId, webhookSubscriptionId, start, end, take);
+                RestApiArrayResultWebhookLog result = apiInstance.GetWebhookLogs(clientId, webhookSubscriptionId, start, end, take);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -451,7 +451,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog**](FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookLog.md)
+[**RestApiArrayResultWebhookLog**](RestApiArrayResultWebhookLog.md)
 
 ### Authorization
 
@@ -466,7 +466,7 @@ Name | Type | Description  | Notes
 
 <a name="getwebhooksubscriptions"></a>
 # **GetWebhookSubscriptions**
-> FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription GetWebhookSubscriptions (string clientId)
+> RestApiArrayResultWebhookSubscription GetWebhookSubscriptions (string clientId)
 
 Get all webhook subscriptions by your Oauth client id
 
@@ -493,7 +493,7 @@ namespace Example
             try
             {
                 // Get all webhook subscriptions by your Oauth client id
-                FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription result = apiInstance.GetWebhookSubscriptions(clientId);
+                RestApiArrayResultWebhookSubscription result = apiInstance.GetWebhookSubscriptions(clientId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -513,7 +513,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription**](FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1WebhooksWebhookSubscription.md)
+[**RestApiArrayResultWebhookSubscription**](RestApiArrayResultWebhookSubscription.md)
 
 ### Authorization
 
@@ -528,7 +528,7 @@ Name | Type | Description  | Notes
 
 <a name="updatewebhooksubscription"></a>
 # **UpdateWebhookSubscription**
-> void UpdateWebhookSubscription (string clientId, int? webhookSubscriptionId, FlipdishPublicModelsV1WebhooksWebhookSubscription webhookSubscription)
+> void UpdateWebhookSubscription (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription)
 
 Update a webhook subscription object
 
@@ -552,7 +552,7 @@ namespace Example
             var apiInstance = new WebhooksApi();
             var clientId = clientId_example;  // string | Oauth client identifier
             var webhookSubscriptionId = 56;  // int? | Webhook subscription identifier
-            var webhookSubscription = new FlipdishPublicModelsV1WebhooksWebhookSubscription(); // FlipdishPublicModelsV1WebhooksWebhookSubscription | Webhook subscription object
+            var webhookSubscription = new WebhookSubscription(); // WebhookSubscription | Webhook subscription object
 
             try
             {
@@ -574,7 +574,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **clientId** | **string**| Oauth client identifier | 
  **webhookSubscriptionId** | **int?**| Webhook subscription identifier | 
- **webhookSubscription** | [**FlipdishPublicModelsV1WebhooksWebhookSubscription**](FlipdishPublicModelsV1WebhooksWebhookSubscription.md)| Webhook subscription object | 
+ **webhookSubscription** | [**WebhookSubscription**](WebhookSubscription.md)| Webhook subscription object | 
 
 ### Return type
 

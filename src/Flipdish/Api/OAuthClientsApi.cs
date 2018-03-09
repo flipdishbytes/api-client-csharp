@@ -33,8 +33,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
         /// <param name="uri">Redirect uri</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri</returns>
-        FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri AddRedirectUri (string oAuthClientId, string uri);
+        /// <returns>RestApiResultOauthClientRedirectUri</returns>
+        RestApiResultOauthClientRedirectUri AddRedirectUri (string oAuthClientId, string uri);
 
         /// <summary>
         /// Create OAuth client redirect uri
@@ -45,8 +45,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
         /// <param name="uri">Redirect uri</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri</returns>
-        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri> AddRedirectUriWithHttpInfo (string oAuthClientId, string uri);
+        /// <returns>ApiResponse of RestApiResultOauthClientRedirectUri</returns>
+        ApiResponse<RestApiResultOauthClientRedirectUri> AddRedirectUriWithHttpInfo (string oAuthClientId, string uri);
         /// <summary>
         /// Create OAuth client
         /// </summary>
@@ -56,7 +56,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClient">OAuth client</param>
         /// <returns></returns>
-        void CreateOAuthClient (FlipdishPublicModelsV1OAuthClientsOAuthClient oAuthClient);
+        void CreateOAuthClient (OAuthClient oAuthClient);
 
         /// <summary>
         /// Create OAuth client
@@ -67,7 +67,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClient">OAuth client</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateOAuthClientWithHttpInfo (FlipdishPublicModelsV1OAuthClientsOAuthClient oAuthClient);
+        ApiResponse<Object> CreateOAuthClientWithHttpInfo (OAuthClient oAuthClient);
         /// <summary>
         /// Delete OAuth client
         /// </summary>
@@ -97,8 +97,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient</returns>
-        FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient GetOAuthClientByClientId (string clientId);
+        /// <returns>RestApiResultOAuthClient</returns>
+        RestApiResultOAuthClient GetOAuthClientByClientId (string clientId);
 
         /// <summary>
         /// Get OAuth client by identifier
@@ -108,8 +108,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient</returns>
-        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient> GetOAuthClientByClientIdWithHttpInfo (string clientId);
+        /// <returns>ApiResponse of RestApiResultOAuthClient</returns>
+        ApiResponse<RestApiResultOAuthClient> GetOAuthClientByClientIdWithHttpInfo (string clientId);
         /// <summary>
         /// Get OAuth client secret key
         /// </summary>
@@ -118,8 +118,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
-        FlipdishPublicModelsV1ApiResultsRestApiStringResult GetOAuthClientSecret (string clientId);
+        /// <returns>RestApiStringResult</returns>
+        RestApiStringResult GetOAuthClientSecret (string clientId);
 
         /// <summary>
         /// Get OAuth client secret key
@@ -129,8 +129,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
-        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult> GetOAuthClientSecretWithHttpInfo (string clientId);
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        ApiResponse<RestApiStringResult> GetOAuthClientSecretWithHttpInfo (string clientId);
         /// <summary>
         /// Get all OAuth client
         /// </summary>
@@ -138,8 +138,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient</returns>
-        FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient GetOAuthClients ();
+        /// <returns>RestApiArrayResultOAuthClient</returns>
+        RestApiArrayResultOAuthClient GetOAuthClients ();
 
         /// <summary>
         /// Get all OAuth client
@@ -148,8 +148,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient</returns>
-        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient> GetOAuthClientsWithHttpInfo ();
+        /// <returns>ApiResponse of RestApiArrayResultOAuthClient</returns>
+        ApiResponse<RestApiArrayResultOAuthClient> GetOAuthClientsWithHttpInfo ();
         /// <summary>
         /// Get OAuth access token for client
         /// </summary>
@@ -158,8 +158,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
-        FlipdishPublicModelsV1ApiResultsRestApiStringResult GetOauthAccessToken (string oAuthClientId);
+        /// <returns>RestApiStringResult</returns>
+        RestApiStringResult GetOauthAccessToken (string oAuthClientId);
 
         /// <summary>
         /// Get OAuth access token for client
@@ -169,8 +169,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
-        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult> GetOauthAccessTokenWithHttpInfo (string oAuthClientId);
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        ApiResponse<RestApiStringResult> GetOauthAccessTokenWithHttpInfo (string oAuthClientId);
         /// <summary>
         /// Get OAuth client redirect uris
         /// </summary>
@@ -179,8 +179,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri</returns>
-        FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri GetRedirectUris (string oAuthClientId);
+        /// <returns>RestApiArrayResultOauthClientRedirectUri</returns>
+        RestApiArrayResultOauthClientRedirectUri GetRedirectUris (string oAuthClientId);
 
         /// <summary>
         /// Get OAuth client redirect uris
@@ -190,8 +190,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri</returns>
-        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri> GetRedirectUrisWithHttpInfo (string oAuthClientId);
+        /// <returns>ApiResponse of RestApiArrayResultOauthClientRedirectUri</returns>
+        ApiResponse<RestApiArrayResultOauthClientRedirectUri> GetRedirectUrisWithHttpInfo (string oAuthClientId);
         /// <summary>
         /// Delete OAuth client redirect uri
         /// </summary>
@@ -226,8 +226,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
         /// <param name="uri">Redirect uri</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri</returns>
-        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri> AddRedirectUriAsync (string oAuthClientId, string uri);
+        /// <returns>Task of RestApiResultOauthClientRedirectUri</returns>
+        System.Threading.Tasks.Task<RestApiResultOauthClientRedirectUri> AddRedirectUriAsync (string oAuthClientId, string uri);
 
         /// <summary>
         /// Create OAuth client redirect uri
@@ -238,8 +238,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
         /// <param name="uri">Redirect uri</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri>> AddRedirectUriAsyncWithHttpInfo (string oAuthClientId, string uri);
+        /// <returns>Task of ApiResponse (RestApiResultOauthClientRedirectUri)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultOauthClientRedirectUri>> AddRedirectUriAsyncWithHttpInfo (string oAuthClientId, string uri);
         /// <summary>
         /// Create OAuth client
         /// </summary>
@@ -249,7 +249,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClient">OAuth client</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateOAuthClientAsync (FlipdishPublicModelsV1OAuthClientsOAuthClient oAuthClient);
+        System.Threading.Tasks.Task CreateOAuthClientAsync (OAuthClient oAuthClient);
 
         /// <summary>
         /// Create OAuth client
@@ -260,7 +260,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClient">OAuth client</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateOAuthClientAsyncWithHttpInfo (FlipdishPublicModelsV1OAuthClientsOAuthClient oAuthClient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateOAuthClientAsyncWithHttpInfo (OAuthClient oAuthClient);
         /// <summary>
         /// Delete OAuth client
         /// </summary>
@@ -290,8 +290,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient</returns>
-        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient> GetOAuthClientByClientIdAsync (string clientId);
+        /// <returns>Task of RestApiResultOAuthClient</returns>
+        System.Threading.Tasks.Task<RestApiResultOAuthClient> GetOAuthClientByClientIdAsync (string clientId);
 
         /// <summary>
         /// Get OAuth client by identifier
@@ -301,8 +301,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient>> GetOAuthClientByClientIdAsyncWithHttpInfo (string clientId);
+        /// <returns>Task of ApiResponse (RestApiResultOAuthClient)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultOAuthClient>> GetOAuthClientByClientIdAsyncWithHttpInfo (string clientId);
         /// <summary>
         /// Get OAuth client secret key
         /// </summary>
@@ -311,8 +311,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
-        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiStringResult> GetOAuthClientSecretAsync (string clientId);
+        /// <returns>Task of RestApiStringResult</returns>
+        System.Threading.Tasks.Task<RestApiStringResult> GetOAuthClientSecretAsync (string clientId);
 
         /// <summary>
         /// Get OAuth client secret key
@@ -322,8 +322,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiStringResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult>> GetOAuthClientSecretAsyncWithHttpInfo (string clientId);
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetOAuthClientSecretAsyncWithHttpInfo (string clientId);
         /// <summary>
         /// Get all OAuth client
         /// </summary>
@@ -331,8 +331,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient</returns>
-        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient> GetOAuthClientsAsync ();
+        /// <returns>Task of RestApiArrayResultOAuthClient</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultOAuthClient> GetOAuthClientsAsync ();
 
         /// <summary>
         /// Get all OAuth client
@@ -341,8 +341,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient>> GetOAuthClientsAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (RestApiArrayResultOAuthClient)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOAuthClient>> GetOAuthClientsAsyncWithHttpInfo ();
         /// <summary>
         /// Get OAuth access token for client
         /// </summary>
@@ -351,8 +351,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
-        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiStringResult> GetOauthAccessTokenAsync (string oAuthClientId);
+        /// <returns>Task of RestApiStringResult</returns>
+        System.Threading.Tasks.Task<RestApiStringResult> GetOauthAccessTokenAsync (string oAuthClientId);
 
         /// <summary>
         /// Get OAuth access token for client
@@ -362,8 +362,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiStringResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult>> GetOauthAccessTokenAsyncWithHttpInfo (string oAuthClientId);
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetOauthAccessTokenAsyncWithHttpInfo (string oAuthClientId);
         /// <summary>
         /// Get OAuth client redirect uris
         /// </summary>
@@ -372,8 +372,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri</returns>
-        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri> GetRedirectUrisAsync (string oAuthClientId);
+        /// <returns>Task of RestApiArrayResultOauthClientRedirectUri</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultOauthClientRedirectUri> GetRedirectUrisAsync (string oAuthClientId);
 
         /// <summary>
         /// Get OAuth client redirect uris
@@ -383,8 +383,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri>> GetRedirectUrisAsyncWithHttpInfo (string oAuthClientId);
+        /// <returns>Task of ApiResponse (RestApiArrayResultOauthClientRedirectUri)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOauthClientRedirectUri>> GetRedirectUrisAsyncWithHttpInfo (string oAuthClientId);
         /// <summary>
         /// Delete OAuth client redirect uri
         /// </summary>
@@ -526,10 +526,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
         /// <param name="uri">Redirect uri</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri</returns>
-        public FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri AddRedirectUri (string oAuthClientId, string uri)
+        /// <returns>RestApiResultOauthClientRedirectUri</returns>
+        public RestApiResultOauthClientRedirectUri AddRedirectUri (string oAuthClientId, string uri)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri> localVarResponse = AddRedirectUriWithHttpInfo(oAuthClientId, uri);
+             ApiResponse<RestApiResultOauthClientRedirectUri> localVarResponse = AddRedirectUriWithHttpInfo(oAuthClientId, uri);
              return localVarResponse.Data;
         }
 
@@ -539,8 +539,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
         /// <param name="uri">Redirect uri</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri</returns>
-        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri > AddRedirectUriWithHttpInfo (string oAuthClientId, string uri)
+        /// <returns>ApiResponse of RestApiResultOauthClientRedirectUri</returns>
+        public ApiResponse< RestApiResultOauthClientRedirectUri > AddRedirectUriWithHttpInfo (string oAuthClientId, string uri)
         {
             // verify the required parameter 'oAuthClientId' is set
             if (oAuthClientId == null)
@@ -608,9 +608,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri>(localVarStatusCode,
+            return new ApiResponse<RestApiResultOauthClientRedirectUri>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri)));
+                (RestApiResultOauthClientRedirectUri) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOauthClientRedirectUri)));
         }
 
         /// <summary>
@@ -619,10 +619,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
         /// <param name="uri">Redirect uri</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri</returns>
-        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri> AddRedirectUriAsync (string oAuthClientId, string uri)
+        /// <returns>Task of RestApiResultOauthClientRedirectUri</returns>
+        public async System.Threading.Tasks.Task<RestApiResultOauthClientRedirectUri> AddRedirectUriAsync (string oAuthClientId, string uri)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri> localVarResponse = await AddRedirectUriAsyncWithHttpInfo(oAuthClientId, uri);
+             ApiResponse<RestApiResultOauthClientRedirectUri> localVarResponse = await AddRedirectUriAsyncWithHttpInfo(oAuthClientId, uri);
              return localVarResponse.Data;
 
         }
@@ -633,8 +633,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
         /// <param name="uri">Redirect uri</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri>> AddRedirectUriAsyncWithHttpInfo (string oAuthClientId, string uri)
+        /// <returns>Task of ApiResponse (RestApiResultOauthClientRedirectUri)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOauthClientRedirectUri>> AddRedirectUriAsyncWithHttpInfo (string oAuthClientId, string uri)
         {
             // verify the required parameter 'oAuthClientId' is set
             if (oAuthClientId == null)
@@ -702,9 +702,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri>(localVarStatusCode,
+            return new ApiResponse<RestApiResultOauthClientRedirectUri>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri)));
+                (RestApiResultOauthClientRedirectUri) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOauthClientRedirectUri)));
         }
 
         /// <summary>
@@ -713,7 +713,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClient">OAuth client</param>
         /// <returns></returns>
-        public void CreateOAuthClient (FlipdishPublicModelsV1OAuthClientsOAuthClient oAuthClient)
+        public void CreateOAuthClient (OAuthClient oAuthClient)
         {
              CreateOAuthClientWithHttpInfo(oAuthClient);
         }
@@ -724,7 +724,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClient">OAuth client</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CreateOAuthClientWithHttpInfo (FlipdishPublicModelsV1OAuthClientsOAuthClient oAuthClient)
+        public ApiResponse<Object> CreateOAuthClientWithHttpInfo (OAuthClient oAuthClient)
         {
             // verify the required parameter 'oAuthClient' is set
             if (oAuthClient == null)
@@ -799,7 +799,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClient">OAuth client</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreateOAuthClientAsync (FlipdishPublicModelsV1OAuthClientsOAuthClient oAuthClient)
+        public async System.Threading.Tasks.Task CreateOAuthClientAsync (OAuthClient oAuthClient)
         {
              await CreateOAuthClientAsyncWithHttpInfo(oAuthClient);
 
@@ -811,7 +811,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClient">OAuth client</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateOAuthClientAsyncWithHttpInfo (FlipdishPublicModelsV1OAuthClientsOAuthClient oAuthClient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateOAuthClientAsyncWithHttpInfo (OAuthClient oAuthClient)
         {
             // verify the required parameter 'oAuthClient' is set
             if (oAuthClient == null)
@@ -1034,10 +1034,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient</returns>
-        public FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient GetOAuthClientByClientId (string clientId)
+        /// <returns>RestApiResultOAuthClient</returns>
+        public RestApiResultOAuthClient GetOAuthClientByClientId (string clientId)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient> localVarResponse = GetOAuthClientByClientIdWithHttpInfo(clientId);
+             ApiResponse<RestApiResultOAuthClient> localVarResponse = GetOAuthClientByClientIdWithHttpInfo(clientId);
              return localVarResponse.Data;
         }
 
@@ -1046,8 +1046,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient</returns>
-        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient > GetOAuthClientByClientIdWithHttpInfo (string clientId)
+        /// <returns>ApiResponse of RestApiResultOAuthClient</returns>
+        public ApiResponse< RestApiResultOAuthClient > GetOAuthClientByClientIdWithHttpInfo (string clientId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1099,9 +1099,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient>(localVarStatusCode,
+            return new ApiResponse<RestApiResultOAuthClient>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient)));
+                (RestApiResultOAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOAuthClient)));
         }
 
         /// <summary>
@@ -1109,10 +1109,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient</returns>
-        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient> GetOAuthClientByClientIdAsync (string clientId)
+        /// <returns>Task of RestApiResultOAuthClient</returns>
+        public async System.Threading.Tasks.Task<RestApiResultOAuthClient> GetOAuthClientByClientIdAsync (string clientId)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient> localVarResponse = await GetOAuthClientByClientIdAsyncWithHttpInfo(clientId);
+             ApiResponse<RestApiResultOAuthClient> localVarResponse = await GetOAuthClientByClientIdAsyncWithHttpInfo(clientId);
              return localVarResponse.Data;
 
         }
@@ -1122,8 +1122,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient>> GetOAuthClientByClientIdAsyncWithHttpInfo (string clientId)
+        /// <returns>Task of ApiResponse (RestApiResultOAuthClient)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOAuthClient>> GetOAuthClientByClientIdAsyncWithHttpInfo (string clientId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1175,9 +1175,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient>(localVarStatusCode,
+            return new ApiResponse<RestApiResultOAuthClient>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient)));
+                (RestApiResultOAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOAuthClient)));
         }
 
         /// <summary>
@@ -1185,10 +1185,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
-        public FlipdishPublicModelsV1ApiResultsRestApiStringResult GetOAuthClientSecret (string clientId)
+        /// <returns>RestApiStringResult</returns>
+        public RestApiStringResult GetOAuthClientSecret (string clientId)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult> localVarResponse = GetOAuthClientSecretWithHttpInfo(clientId);
+             ApiResponse<RestApiStringResult> localVarResponse = GetOAuthClientSecretWithHttpInfo(clientId);
              return localVarResponse.Data;
         }
 
@@ -1197,8 +1197,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
-        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiStringResult > GetOAuthClientSecretWithHttpInfo (string clientId)
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        public ApiResponse< RestApiStringResult > GetOAuthClientSecretWithHttpInfo (string clientId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1250,9 +1250,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult>(localVarStatusCode,
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiStringResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiStringResult)));
+                (RestApiStringResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
         /// <summary>
@@ -1260,10 +1260,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
-        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiStringResult> GetOAuthClientSecretAsync (string clientId)
+        /// <returns>Task of RestApiStringResult</returns>
+        public async System.Threading.Tasks.Task<RestApiStringResult> GetOAuthClientSecretAsync (string clientId)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult> localVarResponse = await GetOAuthClientSecretAsyncWithHttpInfo(clientId);
+             ApiResponse<RestApiStringResult> localVarResponse = await GetOAuthClientSecretAsyncWithHttpInfo(clientId);
              return localVarResponse.Data;
 
         }
@@ -1273,8 +1273,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiStringResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult>> GetOAuthClientSecretAsyncWithHttpInfo (string clientId)
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetOAuthClientSecretAsyncWithHttpInfo (string clientId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1326,19 +1326,19 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult>(localVarStatusCode,
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiStringResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiStringResult)));
+                (RestApiStringResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
         /// <summary>
         /// Get all OAuth client 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient</returns>
-        public FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient GetOAuthClients ()
+        /// <returns>RestApiArrayResultOAuthClient</returns>
+        public RestApiArrayResultOAuthClient GetOAuthClients ()
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient> localVarResponse = GetOAuthClientsWithHttpInfo();
+             ApiResponse<RestApiArrayResultOAuthClient> localVarResponse = GetOAuthClientsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -1346,8 +1346,8 @@ namespace Flipdish.Api
         /// Get all OAuth client 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient</returns>
-        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient > GetOAuthClientsWithHttpInfo ()
+        /// <returns>ApiResponse of RestApiArrayResultOAuthClient</returns>
+        public ApiResponse< RestApiArrayResultOAuthClient > GetOAuthClientsWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1.0/oauthclients";
@@ -1395,19 +1395,19 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultOAuthClient>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient)));
+                (RestApiArrayResultOAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultOAuthClient)));
         }
 
         /// <summary>
         /// Get all OAuth client 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient</returns>
-        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient> GetOAuthClientsAsync ()
+        /// <returns>Task of RestApiArrayResultOAuthClient</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultOAuthClient> GetOAuthClientsAsync ()
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient> localVarResponse = await GetOAuthClientsAsyncWithHttpInfo();
+             ApiResponse<RestApiArrayResultOAuthClient> localVarResponse = await GetOAuthClientsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1416,8 +1416,8 @@ namespace Flipdish.Api
         /// Get all OAuth client 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient>> GetOAuthClientsAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (RestApiArrayResultOAuthClient)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOAuthClient>> GetOAuthClientsAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1.0/oauthclients";
@@ -1465,9 +1465,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultOAuthClient>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient)));
+                (RestApiArrayResultOAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultOAuthClient)));
         }
 
         /// <summary>
@@ -1475,10 +1475,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
-        public FlipdishPublicModelsV1ApiResultsRestApiStringResult GetOauthAccessToken (string oAuthClientId)
+        /// <returns>RestApiStringResult</returns>
+        public RestApiStringResult GetOauthAccessToken (string oAuthClientId)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult> localVarResponse = GetOauthAccessTokenWithHttpInfo(oAuthClientId);
+             ApiResponse<RestApiStringResult> localVarResponse = GetOauthAccessTokenWithHttpInfo(oAuthClientId);
              return localVarResponse.Data;
         }
 
@@ -1487,8 +1487,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
-        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiStringResult > GetOauthAccessTokenWithHttpInfo (string oAuthClientId)
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        public ApiResponse< RestApiStringResult > GetOauthAccessTokenWithHttpInfo (string oAuthClientId)
         {
             // verify the required parameter 'oAuthClientId' is set
             if (oAuthClientId == null)
@@ -1540,9 +1540,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult>(localVarStatusCode,
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiStringResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiStringResult)));
+                (RestApiStringResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
         /// <summary>
@@ -1550,10 +1550,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiStringResult</returns>
-        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiStringResult> GetOauthAccessTokenAsync (string oAuthClientId)
+        /// <returns>Task of RestApiStringResult</returns>
+        public async System.Threading.Tasks.Task<RestApiStringResult> GetOauthAccessTokenAsync (string oAuthClientId)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult> localVarResponse = await GetOauthAccessTokenAsyncWithHttpInfo(oAuthClientId);
+             ApiResponse<RestApiStringResult> localVarResponse = await GetOauthAccessTokenAsyncWithHttpInfo(oAuthClientId);
              return localVarResponse.Data;
 
         }
@@ -1563,8 +1563,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiStringResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult>> GetOauthAccessTokenAsyncWithHttpInfo (string oAuthClientId)
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetOauthAccessTokenAsyncWithHttpInfo (string oAuthClientId)
         {
             // verify the required parameter 'oAuthClientId' is set
             if (oAuthClientId == null)
@@ -1616,9 +1616,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiStringResult>(localVarStatusCode,
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiStringResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiStringResult)));
+                (RestApiStringResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
         /// <summary>
@@ -1626,10 +1626,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri</returns>
-        public FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri GetRedirectUris (string oAuthClientId)
+        /// <returns>RestApiArrayResultOauthClientRedirectUri</returns>
+        public RestApiArrayResultOauthClientRedirectUri GetRedirectUris (string oAuthClientId)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri> localVarResponse = GetRedirectUrisWithHttpInfo(oAuthClientId);
+             ApiResponse<RestApiArrayResultOauthClientRedirectUri> localVarResponse = GetRedirectUrisWithHttpInfo(oAuthClientId);
              return localVarResponse.Data;
         }
 
@@ -1638,8 +1638,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri</returns>
-        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri > GetRedirectUrisWithHttpInfo (string oAuthClientId)
+        /// <returns>ApiResponse of RestApiArrayResultOauthClientRedirectUri</returns>
+        public ApiResponse< RestApiArrayResultOauthClientRedirectUri > GetRedirectUrisWithHttpInfo (string oAuthClientId)
         {
             // verify the required parameter 'oAuthClientId' is set
             if (oAuthClientId == null)
@@ -1691,9 +1691,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultOauthClientRedirectUri>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri)));
+                (RestApiArrayResultOauthClientRedirectUri) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultOauthClientRedirectUri)));
         }
 
         /// <summary>
@@ -1701,10 +1701,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri</returns>
-        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri> GetRedirectUrisAsync (string oAuthClientId)
+        /// <returns>Task of RestApiArrayResultOauthClientRedirectUri</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultOauthClientRedirectUri> GetRedirectUrisAsync (string oAuthClientId)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri> localVarResponse = await GetRedirectUrisAsyncWithHttpInfo(oAuthClientId);
+             ApiResponse<RestApiArrayResultOauthClientRedirectUri> localVarResponse = await GetRedirectUrisAsyncWithHttpInfo(oAuthClientId);
              return localVarResponse.Data;
 
         }
@@ -1714,8 +1714,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oAuthClientId">OAuth client identifier</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri>> GetRedirectUrisAsyncWithHttpInfo (string oAuthClientId)
+        /// <returns>Task of ApiResponse (RestApiArrayResultOauthClientRedirectUri)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOauthClientRedirectUri>> GetRedirectUrisAsyncWithHttpInfo (string oAuthClientId)
         {
             // verify the required parameter 'oAuthClientId' is set
             if (oAuthClientId == null)
@@ -1767,9 +1767,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultOauthClientRedirectUri>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri)));
+                (RestApiArrayResultOauthClientRedirectUri) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultOauthClientRedirectUri)));
         }
 
         /// <summary>

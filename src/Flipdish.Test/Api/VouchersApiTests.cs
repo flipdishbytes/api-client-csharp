@@ -76,7 +76,7 @@ namespace Flipdish.Test
             //int? storeId = null;
             //string key = null;
             //var response = instance.DeleteVoucherMetadata(voucherId, menuId, storeId, key);
-            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse");
+            //Assert.IsInstanceOf<RestApiArrayResultRestApiDefaultResponse> (response, "response is RestApiArrayResultRestApiDefaultResponse");
         }
         
         /// <summary>
@@ -88,7 +88,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? voucherId = null;
             //var response = instance.GetVoucherById(voucherId);
-            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher");
+            //Assert.IsInstanceOf<RestApiResultVoucher> (response, "response is RestApiResultVoucher");
         }
         
         /// <summary>
@@ -102,7 +102,7 @@ namespace Flipdish.Test
             //int? menuId = null;
             //int? storeId = null;
             //var response = instance.GetVoucherMetadata(voucherId, menuId, storeId);
-            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata");
+            //Assert.IsInstanceOf<RestApiArrayResultMetadata> (response, "response is RestApiArrayResultMetadata");
         }
         
         /// <summary>
@@ -117,7 +117,7 @@ namespace Flipdish.Test
             //int? storeId = null;
             //string key = null;
             //var response = instance.GetVoucherMetadata_0(voucherId, menuId, storeId, key);
-            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata");
+            //Assert.IsInstanceOf<RestApiResultMetadata> (response, "response is RestApiResultMetadata");
         }
         
         /// <summary>
@@ -143,7 +143,7 @@ namespace Flipdish.Test
             //string voucherType = null;
             //string description = null;
             //var response = instance.GetVouchers(filter, pageNumber, pageSize, sortOrder, orderBy, subType, status, code, validFromBegin, validFromEnd, expiryBegin, expiryEnd, amount, voucherType, description);
-            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher");
+            //Assert.IsInstanceOf<RestApiPaginationResultVoucher> (response, "response is RestApiPaginationResultVoucher");
         }
         
         /// <summary>

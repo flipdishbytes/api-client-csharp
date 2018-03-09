@@ -72,7 +72,7 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.GetRoles();
-            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiStringArrayResult");
+            //Assert.IsInstanceOf<RestApiStringArrayResult> (response, "response is RestApiStringArrayResult");
         }
         
     }

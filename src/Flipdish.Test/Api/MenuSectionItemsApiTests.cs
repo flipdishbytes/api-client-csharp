@@ -73,7 +73,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? menuId = null;
             //int? menuSectionId = null;
-            //FlipdishPublicModelsV1MenusMenuSectionItemBase menuSectionItem = null;
+            //MenuSectionItemBase menuSectionItem = null;
             //var response = instance.CreateMenuSectionItem(menuId, menuSectionId, menuSectionItem);
             //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
@@ -117,7 +117,7 @@ namespace Flipdish.Test
             //int? menuSectionId = null;
             //int? menuSectionItemId = null;
             //var response = instance.GetMenuItemById(menuId, menuSectionId, menuSectionItemId);
-            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuSectionItem");
+            //Assert.IsInstanceOf<RestApiResultMenuSectionItem> (response, "response is RestApiResultMenuSectionItem");
         }
         
         /// <summary>
@@ -130,7 +130,7 @@ namespace Flipdish.Test
             //int? menuId = null;
             //int? menuSectionId = null;
             //var response = instance.GetMenuItems(menuId, menuSectionId);
-            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuSectionItem");
+            //Assert.IsInstanceOf<RestApiArrayResultMenuSectionItem> (response, "response is RestApiArrayResultMenuSectionItem");
         }
         
         /// <summary>
@@ -160,7 +160,7 @@ namespace Flipdish.Test
             //int? menuSectionItemId = null;
             //System.IO.Stream image = null;
             //var response = instance.UploadMenuSectionItemImage(menuId, menuSectionId, menuSectionItemId, image);
-            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiStringResult> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiStringResult");
+            //Assert.IsInstanceOf<RestApiStringResult> (response, "response is RestApiStringResult");
         }
         
     }

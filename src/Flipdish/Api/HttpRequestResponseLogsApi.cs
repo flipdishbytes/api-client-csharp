@@ -35,8 +35,8 @@ namespace Flipdish.Api
         /// <param name="end"></param>
         /// <param name="filterByUserId"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog</returns>
-        FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog GetHttpLogsByUserIdAsync (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null);
+        /// <returns>RestApiArrayResultHttpRequestAndResponseLog</returns>
+        RestApiArrayResultHttpRequestAndResponseLog GetHttpLogsByUserIdAsync (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null);
 
         /// <summary>
         /// 
@@ -49,8 +49,8 @@ namespace Flipdish.Api
         /// <param name="end"></param>
         /// <param name="filterByUserId"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog</returns>
-        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog> GetHttpLogsByUserIdAsyncWithHttpInfo (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null);
+        /// <returns>ApiResponse of RestApiArrayResultHttpRequestAndResponseLog</returns>
+        ApiResponse<RestApiArrayResultHttpRequestAndResponseLog> GetHttpLogsByUserIdAsyncWithHttpInfo (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -64,8 +64,8 @@ namespace Flipdish.Api
         /// <param name="end"></param>
         /// <param name="filterByUserId"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog</returns>
-        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog> GetHttpLogsByUserIdAsyncAsync (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null);
+        /// <returns>Task of RestApiArrayResultHttpRequestAndResponseLog</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultHttpRequestAndResponseLog> GetHttpLogsByUserIdAsyncAsync (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null);
 
         /// <summary>
         /// 
@@ -78,8 +78,8 @@ namespace Flipdish.Api
         /// <param name="end"></param>
         /// <param name="filterByUserId"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog>> GetHttpLogsByUserIdAsyncAsyncWithHttpInfo (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null);
+        /// <returns>Task of ApiResponse (RestApiArrayResultHttpRequestAndResponseLog)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultHttpRequestAndResponseLog>> GetHttpLogsByUserIdAsyncAsyncWithHttpInfo (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null);
         #endregion Asynchronous Operations
     }
 
@@ -200,10 +200,10 @@ namespace Flipdish.Api
         /// <param name="end"></param>
         /// <param name="filterByUserId"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog</returns>
-        public FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog GetHttpLogsByUserIdAsync (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null)
+        /// <returns>RestApiArrayResultHttpRequestAndResponseLog</returns>
+        public RestApiArrayResultHttpRequestAndResponseLog GetHttpLogsByUserIdAsync (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog> localVarResponse = GetHttpLogsByUserIdAsyncWithHttpInfo(start, end, filterByUserId, take);
+             ApiResponse<RestApiArrayResultHttpRequestAndResponseLog> localVarResponse = GetHttpLogsByUserIdAsyncWithHttpInfo(start, end, filterByUserId, take);
              return localVarResponse.Data;
         }
 
@@ -215,8 +215,8 @@ namespace Flipdish.Api
         /// <param name="end"></param>
         /// <param name="filterByUserId"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog</returns>
-        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog > GetHttpLogsByUserIdAsyncWithHttpInfo (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null)
+        /// <returns>ApiResponse of RestApiArrayResultHttpRequestAndResponseLog</returns>
+        public ApiResponse< RestApiArrayResultHttpRequestAndResponseLog > GetHttpLogsByUserIdAsyncWithHttpInfo (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null)
         {
             // verify the required parameter 'start' is set
             if (start == null)
@@ -274,9 +274,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultHttpRequestAndResponseLog>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog)));
+                (RestApiArrayResultHttpRequestAndResponseLog) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultHttpRequestAndResponseLog)));
         }
 
         /// <summary>
@@ -287,10 +287,10 @@ namespace Flipdish.Api
         /// <param name="end"></param>
         /// <param name="filterByUserId"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog</returns>
-        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog> GetHttpLogsByUserIdAsyncAsync (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null)
+        /// <returns>Task of RestApiArrayResultHttpRequestAndResponseLog</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultHttpRequestAndResponseLog> GetHttpLogsByUserIdAsyncAsync (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog> localVarResponse = await GetHttpLogsByUserIdAsyncAsyncWithHttpInfo(start, end, filterByUserId, take);
+             ApiResponse<RestApiArrayResultHttpRequestAndResponseLog> localVarResponse = await GetHttpLogsByUserIdAsyncAsyncWithHttpInfo(start, end, filterByUserId, take);
              return localVarResponse.Data;
 
         }
@@ -303,8 +303,8 @@ namespace Flipdish.Api
         /// <param name="end"></param>
         /// <param name="filterByUserId"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog>> GetHttpLogsByUserIdAsyncAsyncWithHttpInfo (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null)
+        /// <returns>Task of ApiResponse (RestApiArrayResultHttpRequestAndResponseLog)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultHttpRequestAndResponseLog>> GetHttpLogsByUserIdAsyncAsyncWithHttpInfo (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null)
         {
             // verify the required parameter 'start' is set
             if (start == null)
@@ -362,9 +362,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultHttpRequestAndResponseLog>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiRequestResponseLogHttpRequestAndResponseLog)));
+                (RestApiArrayResultHttpRequestAndResponseLog) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultHttpRequestAndResponseLog)));
         }
 
     }

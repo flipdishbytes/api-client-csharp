@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="deletevouchermetadata"></a>
 # **DeleteVoucherMetadata**
-> FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse DeleteVoucherMetadata (int? voucherId, int? menuId, int? storeId, string key)
+> RestApiArrayResultRestApiDefaultResponse DeleteVoucherMetadata (int? voucherId, int? menuId, int? storeId, string key)
 
 Delete voucher metadata
 
@@ -44,7 +44,7 @@ namespace Example
             try
             {
                 // Delete voucher metadata
-                FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse result = apiInstance.DeleteVoucherMetadata(voucherId, menuId, storeId, key);
+                RestApiArrayResultRestApiDefaultResponse result = apiInstance.DeleteVoucherMetadata(voucherId, menuId, storeId, key);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse**](FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1ApiResultsRestApiDefaultResponse.md)
+[**RestApiArrayResultRestApiDefaultResponse**](RestApiArrayResultRestApiDefaultResponse.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 <a name="getvoucherbyid"></a>
 # **GetVoucherById**
-> FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher GetVoucherById (int? voucherId)
+> RestApiResultVoucher GetVoucherById (int? voucherId)
 
 Get voucher by identifier
 
@@ -109,7 +109,7 @@ namespace Example
             try
             {
                 // Get voucher by identifier
-                FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher result = apiInstance.GetVoucherById(voucherId);
+                RestApiResultVoucher result = apiInstance.GetVoucherById(voucherId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher**](FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1VouchersVoucher.md)
+[**RestApiResultVoucher**](RestApiResultVoucher.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 <a name="getvouchermetadata"></a>
 # **GetVoucherMetadata**
-> FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata GetVoucherMetadata (int? voucherId, int? menuId, int? storeId)
+> RestApiArrayResultMetadata GetVoucherMetadata (int? voucherId, int? menuId, int? storeId)
 
 Get voucher metadata
 
@@ -173,7 +173,7 @@ namespace Example
             try
             {
                 // Get voucher metadata
-                FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata result = apiInstance.GetVoucherMetadata(voucherId, menuId, storeId);
+                RestApiArrayResultMetadata result = apiInstance.GetVoucherMetadata(voucherId, menuId, storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata**](FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1Metadata.md)
+[**RestApiArrayResultMetadata**](RestApiArrayResultMetadata.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 <a name="getvouchermetadata_0"></a>
 # **GetVoucherMetadata_0**
-> FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata GetVoucherMetadata_0 (int? voucherId, int? menuId, int? storeId, string key)
+> RestApiResultMetadata GetVoucherMetadata_0 (int? voucherId, int? menuId, int? storeId, string key)
 
 Get voucher metadata
 
@@ -240,7 +240,7 @@ namespace Example
             try
             {
                 // Get voucher metadata
-                FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata result = apiInstance.GetVoucherMetadata_0(voucherId, menuId, storeId, key);
+                RestApiResultMetadata result = apiInstance.GetVoucherMetadata_0(voucherId, menuId, storeId, key);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata**](FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1Metadata.md)
+[**RestApiResultMetadata**](RestApiResultMetadata.md)
 
 ### Authorization
 
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 
 <a name="getvouchers"></a>
 # **GetVouchers**
-> FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher GetVouchers (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null)
+> RestApiPaginationResultVoucher GetVouchers (string filter = null, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string orderBy = null, string subType = null, string status = null, string code = null, DateTime? validFromBegin = null, DateTime? validFromEnd = null, DateTime? expiryBegin = null, DateTime? expiryEnd = null, double? amount = null, string voucherType = null, string description = null)
 
 Get vouchers
 
@@ -319,7 +319,7 @@ namespace Example
             try
             {
                 // Get vouchers
-                FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher result = apiInstance.GetVouchers(filter, pageNumber, pageSize, sortOrder, orderBy, subType, status, code, validFromBegin, validFromEnd, expiryBegin, expiryEnd, amount, voucherType, description);
+                RestApiPaginationResultVoucher result = apiInstance.GetVouchers(filter, pageNumber, pageSize, sortOrder, orderBy, subType, status, code, validFromBegin, validFromEnd, expiryBegin, expiryEnd, amount, voucherType, description);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher**](FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1VouchersVoucher.md)
+[**RestApiPaginationResultVoucher**](RestApiPaginationResultVoucher.md)
 
 ### Authorization
 

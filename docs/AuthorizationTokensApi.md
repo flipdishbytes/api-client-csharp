@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getauthorizationtokens"></a>
 # **GetAuthorizationTokens**
-> FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel GetAuthorizationTokens (string clientId, int? page = null, int? limit = null)
+> RestApiPaginationResultOAuthTokenModel GetAuthorizationTokens (string clientId, int? page = null, int? limit = null)
 
 Get authorization tokens
 
@@ -41,7 +41,7 @@ namespace Example
             try
             {
                 // Get authorization tokens
-                FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel result = apiInstance.GetAuthorizationTokens(clientId, page, limit);
+                RestApiPaginationResultOAuthTokenModel result = apiInstance.GetAuthorizationTokens(clientId, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel**](FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel.md)
+[**RestApiPaginationResultOAuthTokenModel**](RestApiPaginationResultOAuthTokenModel.md)
 
 ### Authorization
 

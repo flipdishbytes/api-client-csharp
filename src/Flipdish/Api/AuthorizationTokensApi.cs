@@ -34,8 +34,8 @@ namespace Flipdish.Api
         /// <param name="clientId">Client identifier</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel</returns>
-        FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel GetAuthorizationTokens (string clientId, int? page = null, int? limit = null);
+        /// <returns>RestApiPaginationResultOAuthTokenModel</returns>
+        RestApiPaginationResultOAuthTokenModel GetAuthorizationTokens (string clientId, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get authorization tokens
@@ -47,8 +47,8 @@ namespace Flipdish.Api
         /// <param name="clientId">Client identifier</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel</returns>
-        ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel> GetAuthorizationTokensWithHttpInfo (string clientId, int? page = null, int? limit = null);
+        /// <returns>ApiResponse of RestApiPaginationResultOAuthTokenModel</returns>
+        ApiResponse<RestApiPaginationResultOAuthTokenModel> GetAuthorizationTokensWithHttpInfo (string clientId, int? page = null, int? limit = null);
         /// <summary>
         /// Revoke token
         /// </summary>
@@ -82,8 +82,8 @@ namespace Flipdish.Api
         /// <param name="clientId">Client identifier</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel</returns>
-        System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel> GetAuthorizationTokensAsync (string clientId, int? page = null, int? limit = null);
+        /// <returns>Task of RestApiPaginationResultOAuthTokenModel</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultOAuthTokenModel> GetAuthorizationTokensAsync (string clientId, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get authorization tokens
@@ -95,8 +95,8 @@ namespace Flipdish.Api
         /// <param name="clientId">Client identifier</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel>> GetAuthorizationTokensAsyncWithHttpInfo (string clientId, int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (RestApiPaginationResultOAuthTokenModel)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOAuthTokenModel>> GetAuthorizationTokensAsyncWithHttpInfo (string clientId, int? page = null, int? limit = null);
         /// <summary>
         /// Revoke token
         /// </summary>
@@ -237,10 +237,10 @@ namespace Flipdish.Api
         /// <param name="clientId">Client identifier</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel</returns>
-        public FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel GetAuthorizationTokens (string clientId, int? page = null, int? limit = null)
+        /// <returns>RestApiPaginationResultOAuthTokenModel</returns>
+        public RestApiPaginationResultOAuthTokenModel GetAuthorizationTokens (string clientId, int? page = null, int? limit = null)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel> localVarResponse = GetAuthorizationTokensWithHttpInfo(clientId, page, limit);
+             ApiResponse<RestApiPaginationResultOAuthTokenModel> localVarResponse = GetAuthorizationTokensWithHttpInfo(clientId, page, limit);
              return localVarResponse.Data;
         }
 
@@ -251,8 +251,8 @@ namespace Flipdish.Api
         /// <param name="clientId">Client identifier</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>ApiResponse of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel</returns>
-        public ApiResponse< FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel > GetAuthorizationTokensWithHttpInfo (string clientId, int? page = null, int? limit = null)
+        /// <returns>ApiResponse of RestApiPaginationResultOAuthTokenModel</returns>
+        public ApiResponse< RestApiPaginationResultOAuthTokenModel > GetAuthorizationTokensWithHttpInfo (string clientId, int? page = null, int? limit = null)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -306,9 +306,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultOAuthTokenModel>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel)));
+                (RestApiPaginationResultOAuthTokenModel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultOAuthTokenModel)));
         }
 
         /// <summary>
@@ -318,10 +318,10 @@ namespace Flipdish.Api
         /// <param name="clientId">Client identifier</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>Task of FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel</returns>
-        public async System.Threading.Tasks.Task<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel> GetAuthorizationTokensAsync (string clientId, int? page = null, int? limit = null)
+        /// <returns>Task of RestApiPaginationResultOAuthTokenModel</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultOAuthTokenModel> GetAuthorizationTokensAsync (string clientId, int? page = null, int? limit = null)
         {
-             ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel> localVarResponse = await GetAuthorizationTokensAsyncWithHttpInfo(clientId, page, limit);
+             ApiResponse<RestApiPaginationResultOAuthTokenModel> localVarResponse = await GetAuthorizationTokensAsyncWithHttpInfo(clientId, page, limit);
              return localVarResponse.Data;
 
         }
@@ -333,8 +333,8 @@ namespace Flipdish.Api
         /// <param name="clientId">Client identifier</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <returns>Task of ApiResponse (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel>> GetAuthorizationTokensAsyncWithHttpInfo (string clientId, int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (RestApiPaginationResultOAuthTokenModel)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOAuthTokenModel>> GetAuthorizationTokensAsyncWithHttpInfo (string clientId, int? page = null, int? limit = null)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -388,9 +388,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultOAuthTokenModel>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlipdishPublicModelsV1ApiResultsRestApiPaginationResultFlipdishPublicModelsV1OAuthClientsOAuthTokenModel)));
+                (RestApiPaginationResultOAuthTokenModel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultOAuthTokenModel)));
         }
 
         /// <summary>

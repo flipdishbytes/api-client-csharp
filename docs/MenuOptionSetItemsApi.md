@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 <a name="addmenuitemoptionsetitem"></a>
 # **AddMenuItemOptionSetItem**
-> Object AddMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, FlipdishPublicModelsV1MenusMenuItemOptionSetItemBase menuItemOptionSetItem)
+> Object AddMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, MenuItemOptionSetItemBase menuItemOptionSetItem)
 
 Create menu item option set item
 
@@ -41,7 +41,7 @@ namespace Example
             var menuSectionId = 56;  // int? | Menu section identifier
             var menuSectionItemId = 56;  // int? | Menu section item identifier
             var optionSetId = 56;  // int? | Option set identifier
-            var menuItemOptionSetItem = new FlipdishPublicModelsV1MenusMenuItemOptionSetItemBase(); // FlipdishPublicModelsV1MenusMenuItemOptionSetItemBase | Option set item
+            var menuItemOptionSetItem = new MenuItemOptionSetItemBase(); // MenuItemOptionSetItemBase | Option set item
 
             try
             {
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
  **menuSectionId** | **int?**| Menu section identifier | 
  **menuSectionItemId** | **int?**| Menu section item identifier | 
  **optionSetId** | **int?**| Option set identifier | 
- **menuItemOptionSetItem** | [**FlipdishPublicModelsV1MenusMenuItemOptionSetItemBase**](FlipdishPublicModelsV1MenusMenuItemOptionSetItemBase.md)| Option set item | 
+ **menuItemOptionSetItem** | [**MenuItemOptionSetItemBase**](MenuItemOptionSetItemBase.md)| Option set item | 
 
 ### Return type
 
@@ -154,7 +154,7 @@ void (empty response body)
 
 <a name="getmenuitemoptionsetitembyid"></a>
 # **GetMenuItemOptionSetItemById**
-> FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuItemOptionSetItem GetMenuItemOptionSetItemById (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId)
+> RestApiResultMenuItemOptionSetItem GetMenuItemOptionSetItemById (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId)
 
 Get menu item option set item by identifier
 
@@ -185,7 +185,7 @@ namespace Example
             try
             {
                 // Get menu item option set item by identifier
-                FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuItemOptionSetItem result = apiInstance.GetMenuItemOptionSetItemById(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId);
+                RestApiResultMenuItemOptionSetItem result = apiInstance.GetMenuItemOptionSetItemById(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuItemOptionSetItem**](FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuItemOptionSetItem.md)
+[**RestApiResultMenuItemOptionSetItem**](RestApiResultMenuItemOptionSetItem.md)
 
 ### Authorization
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 <a name="getmenuitemoptionsetitems"></a>
 # **GetMenuItemOptionSetItems**
-> FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuItemOptionSetItem GetMenuItemOptionSetItems (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId)
+> RestApiArrayResultMenuItemOptionSetItem GetMenuItemOptionSetItems (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId)
 
 Get menu item option set items
 
@@ -254,7 +254,7 @@ namespace Example
             try
             {
                 // Get menu item option set items
-                FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuItemOptionSetItem result = apiInstance.GetMenuItemOptionSetItems(menuId, menuSectionId, menuSectionItemId, optionSetId);
+                RestApiArrayResultMenuItemOptionSetItem result = apiInstance.GetMenuItemOptionSetItems(menuId, menuSectionId, menuSectionItemId, optionSetId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuItemOptionSetItem**](FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuItemOptionSetItem.md)
+[**RestApiArrayResultMenuItemOptionSetItem**](RestApiArrayResultMenuItemOptionSetItem.md)
 
 ### Authorization
 
@@ -432,7 +432,7 @@ void (empty response body)
 
 <a name="uploadoptionsetitemimage"></a>
 # **UploadOptionSetItemImage**
-> FlipdishPublicModelsV1ApiResultsRestApiStringResult UploadOptionSetItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, System.IO.Stream image)
+> RestApiStringResult UploadOptionSetItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, System.IO.Stream image)
 
 Upload menu item option set item image
 
@@ -464,7 +464,7 @@ namespace Example
             try
             {
                 // Upload menu item option set item image
-                FlipdishPublicModelsV1ApiResultsRestApiStringResult result = apiInstance.UploadOptionSetItemImage(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, image);
+                RestApiStringResult result = apiInstance.UploadOptionSetItemImage(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, image);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -489,7 +489,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiStringResult**](FlipdishPublicModelsV1ApiResultsRestApiStringResult.md)
+[**RestApiStringResult**](RestApiStringResult.md)
 
 ### Authorization
 

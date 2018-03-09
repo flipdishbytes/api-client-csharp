@@ -75,7 +75,7 @@ namespace Flipdish.Test
             //int? menuSectionId = null;
             //int? menuSectionItemId = null;
             //int? optionSetId = null;
-            //FlipdishPublicModelsV1MenusMenuItemOptionSetItemBase menuItemOptionSetItem = null;
+            //MenuItemOptionSetItemBase menuItemOptionSetItem = null;
             //var response = instance.AddMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItem);
             //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
@@ -109,7 +109,7 @@ namespace Flipdish.Test
             //int? optionSetId = null;
             //int? menuItemOptionSetItemId = null;
             //var response = instance.GetMenuItemOptionSetItemById(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId);
-            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuItemOptionSetItem> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1MenusMenuItemOptionSetItem");
+            //Assert.IsInstanceOf<RestApiResultMenuItemOptionSetItem> (response, "response is RestApiResultMenuItemOptionSetItem");
         }
         
         /// <summary>
@@ -124,7 +124,7 @@ namespace Flipdish.Test
             //int? menuSectionItemId = null;
             //int? optionSetId = null;
             //var response = instance.GetMenuItemOptionSetItems(menuId, menuSectionId, menuSectionItemId, optionSetId);
-            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuItemOptionSetItem> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1MenusMenuItemOptionSetItem");
+            //Assert.IsInstanceOf<RestApiArrayResultMenuItemOptionSetItem> (response, "response is RestApiArrayResultMenuItemOptionSetItem");
         }
         
         /// <summary>
@@ -174,7 +174,7 @@ namespace Flipdish.Test
             //int? menuItemOptionSetItemId = null;
             //System.IO.Stream image = null;
             //var response = instance.UploadOptionSetItemImage(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, image);
-            //Assert.IsInstanceOf<FlipdishPublicModelsV1ApiResultsRestApiStringResult> (response, "response is FlipdishPublicModelsV1ApiResultsRestApiStringResult");
+            //Assert.IsInstanceOf<RestApiStringResult> (response, "response is RestApiStringResult");
         }
         
     }

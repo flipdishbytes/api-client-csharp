@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="addredirecturi"></a>
 # **AddRedirectUri**
-> FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri AddRedirectUri (string oAuthClientId, string uri)
+> RestApiResultOauthClientRedirectUri AddRedirectUri (string oAuthClientId, string uri)
 
 Create OAuth client redirect uri
 
@@ -45,7 +45,7 @@ namespace Example
             try
             {
                 // Create OAuth client redirect uri
-                FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri result = apiInstance.AddRedirectUri(oAuthClientId, uri);
+                RestApiResultOauthClientRedirectUri result = apiInstance.AddRedirectUri(oAuthClientId, uri);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri**](FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri.md)
+[**RestApiResultOauthClientRedirectUri**](RestApiResultOauthClientRedirectUri.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 <a name="createoauthclient"></a>
 # **CreateOAuthClient**
-> void CreateOAuthClient (FlipdishPublicModelsV1OAuthClientsOAuthClient oAuthClient)
+> void CreateOAuthClient (OAuthClient oAuthClient)
 
 Create OAuth client
 
@@ -103,7 +103,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthClientsApi();
-            var oAuthClient = new FlipdishPublicModelsV1OAuthClientsOAuthClient(); // FlipdishPublicModelsV1OAuthClientsOAuthClient | OAuth client
+            var oAuthClient = new OAuthClient(); // OAuthClient | OAuth client
 
             try
             {
@@ -123,7 +123,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oAuthClient** | [**FlipdishPublicModelsV1OAuthClientsOAuthClient**](FlipdishPublicModelsV1OAuthClientsOAuthClient.md)| OAuth client | 
+ **oAuthClient** | [**OAuthClient**](OAuthClient.md)| OAuth client | 
 
 ### Return type
 
@@ -203,7 +203,7 @@ void (empty response body)
 
 <a name="getoauthclientbyclientid"></a>
 # **GetOAuthClientByClientId**
-> FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient GetOAuthClientByClientId (string clientId)
+> RestApiResultOAuthClient GetOAuthClientByClientId (string clientId)
 
 Get OAuth client by identifier
 
@@ -230,7 +230,7 @@ namespace Example
             try
             {
                 // Get OAuth client by identifier
-                FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient result = apiInstance.GetOAuthClientByClientId(clientId);
+                RestApiResultOAuthClient result = apiInstance.GetOAuthClientByClientId(clientId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient**](FlipdishPublicModelsV1ApiResultsRestApiResultFlipdishPublicModelsV1OAuthClientsOAuthClient.md)
+[**RestApiResultOAuthClient**](RestApiResultOAuthClient.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 
 <a name="getoauthclientsecret"></a>
 # **GetOAuthClientSecret**
-> FlipdishPublicModelsV1ApiResultsRestApiStringResult GetOAuthClientSecret (string clientId)
+> RestApiStringResult GetOAuthClientSecret (string clientId)
 
 Get OAuth client secret key
 
@@ -292,7 +292,7 @@ namespace Example
             try
             {
                 // Get OAuth client secret key
-                FlipdishPublicModelsV1ApiResultsRestApiStringResult result = apiInstance.GetOAuthClientSecret(clientId);
+                RestApiStringResult result = apiInstance.GetOAuthClientSecret(clientId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiStringResult**](FlipdishPublicModelsV1ApiResultsRestApiStringResult.md)
+[**RestApiStringResult**](RestApiStringResult.md)
 
 ### Authorization
 
@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 
 <a name="getoauthclients"></a>
 # **GetOAuthClients**
-> FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient GetOAuthClients ()
+> RestApiArrayResultOAuthClient GetOAuthClients ()
 
 Get all OAuth client
 
@@ -353,7 +353,7 @@ namespace Example
             try
             {
                 // Get all OAuth client
-                FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient result = apiInstance.GetOAuthClients();
+                RestApiArrayResultOAuthClient result = apiInstance.GetOAuthClients();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -370,7 +370,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient**](FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOAuthClient.md)
+[**RestApiArrayResultOAuthClient**](RestApiArrayResultOAuthClient.md)
 
 ### Authorization
 
@@ -385,7 +385,7 @@ This endpoint does not need any parameter.
 
 <a name="getoauthaccesstoken"></a>
 # **GetOauthAccessToken**
-> FlipdishPublicModelsV1ApiResultsRestApiStringResult GetOauthAccessToken (string oAuthClientId)
+> RestApiStringResult GetOauthAccessToken (string oAuthClientId)
 
 Get OAuth access token for client
 
@@ -412,7 +412,7 @@ namespace Example
             try
             {
                 // Get OAuth access token for client
-                FlipdishPublicModelsV1ApiResultsRestApiStringResult result = apiInstance.GetOauthAccessToken(oAuthClientId);
+                RestApiStringResult result = apiInstance.GetOauthAccessToken(oAuthClientId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -432,7 +432,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiStringResult**](FlipdishPublicModelsV1ApiResultsRestApiStringResult.md)
+[**RestApiStringResult**](RestApiStringResult.md)
 
 ### Authorization
 
@@ -447,7 +447,7 @@ Name | Type | Description  | Notes
 
 <a name="getredirecturis"></a>
 # **GetRedirectUris**
-> FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri GetRedirectUris (string oAuthClientId)
+> RestApiArrayResultOauthClientRedirectUri GetRedirectUris (string oAuthClientId)
 
 Get OAuth client redirect uris
 
@@ -474,7 +474,7 @@ namespace Example
             try
             {
                 // Get OAuth client redirect uris
-                FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri result = apiInstance.GetRedirectUris(oAuthClientId);
+                RestApiArrayResultOauthClientRedirectUri result = apiInstance.GetRedirectUris(oAuthClientId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri**](FlipdishPublicModelsV1ApiResultsRestApiArrayResultFlipdishPublicModelsV1OAuthClientsOauthClientRedirectUri.md)
+[**RestApiArrayResultOauthClientRedirectUri**](RestApiArrayResultOauthClientRedirectUri.md)
 
 ### Authorization
 
