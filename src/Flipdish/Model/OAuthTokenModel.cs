@@ -106,50 +106,48 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as OAuthTokenModel);
+            return this.Equals(input as OAuthTokenModel);
         }
 
         /// <summary>
         /// Returns true if OAuthTokenModel instances are equal
         /// </summary>
-        /// <param name="other">Instance of OAuthTokenModel to be compared</param>
+        /// <param name="input">Instance of OAuthTokenModel to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OAuthTokenModel other)
+        public bool Equals(OAuthTokenModel input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.Key == other.Key ||
-                    this.Key != null &&
-                    this.Key.Equals(other.Key)
+                    this.Key == input.Key ||
+                    (this.Key != null &&
+                    this.Key.Equals(input.Key))
                 ) && 
                 (
-                    this.TokenType == other.TokenType ||
-                    this.TokenType != null &&
-                    this.TokenType.Equals(other.TokenType)
+                    this.TokenType == input.TokenType ||
+                    (this.TokenType != null &&
+                    this.TokenType.Equals(input.TokenType))
                 ) && 
                 (
-                    this.SubjectId == other.SubjectId ||
-                    this.SubjectId != null &&
-                    this.SubjectId.Equals(other.SubjectId)
+                    this.SubjectId == input.SubjectId ||
+                    (this.SubjectId != null &&
+                    this.SubjectId.Equals(input.SubjectId))
                 ) && 
                 (
-                    this.ClientId == other.ClientId ||
-                    this.ClientId != null &&
-                    this.ClientId.Equals(other.ClientId)
+                    this.ClientId == input.ClientId ||
+                    (this.ClientId != null &&
+                    this.ClientId.Equals(input.ClientId))
                 ) && 
                 (
-                    this.Expiry == other.Expiry ||
-                    this.Expiry != null &&
-                    this.Expiry.Equals(other.Expiry)
+                    this.Expiry == input.Expiry ||
+                    (this.Expiry != null &&
+                    this.Expiry.Equals(input.Expiry))
                 );
         }
 
@@ -159,22 +157,20 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.Key != null)
-                    hash = hash * 59 + this.Key.GetHashCode();
+                    hashCode = hashCode * 59 + this.Key.GetHashCode();
                 if (this.TokenType != null)
-                    hash = hash * 59 + this.TokenType.GetHashCode();
+                    hashCode = hashCode * 59 + this.TokenType.GetHashCode();
                 if (this.SubjectId != null)
-                    hash = hash * 59 + this.SubjectId.GetHashCode();
+                    hashCode = hashCode * 59 + this.SubjectId.GetHashCode();
                 if (this.ClientId != null)
-                    hash = hash * 59 + this.ClientId.GetHashCode();
+                    hashCode = hashCode * 59 + this.ClientId.GetHashCode();
                 if (this.Expiry != null)
-                    hash = hash * 59 + this.Expiry.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.Expiry.GetHashCode();
+                return hashCode;
             }
         }
 

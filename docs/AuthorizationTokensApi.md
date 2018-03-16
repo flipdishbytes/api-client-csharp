@@ -14,8 +14,6 @@ Method | HTTP request | Description
 
 Get authorization tokens
 
-
-
 ### Example
 ```csharp
 using System;

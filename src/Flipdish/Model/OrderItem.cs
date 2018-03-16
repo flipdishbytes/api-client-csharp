@@ -33,6 +33,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderItem" /> class.
         /// </summary>
+        /// <param name="OrderItemOptions">OrderItemOptions.</param>
+        /// <param name="Metadata">Metadata.</param>
         /// <param name="MenuSectionName">MenuSectionName.</param>
         /// <param name="MenuSectionDisplayOrder">MenuSectionDisplayOrder.</param>
         /// <param name="Name">Name.</param>
@@ -42,10 +44,10 @@ namespace Flipdish.Model
         /// <param name="MenuItemId">MenuItemId.</param>
         /// <param name="MenuItemDisplayOrder">MenuItemDisplayOrder.</param>
         /// <param name="IsAvailable">IsAvailable.</param>
-        /// <param name="OrderItemOptions">OrderItemOptions.</param>
-        /// <param name="Metadata">Metadata.</param>
-        public OrderItem(string MenuSectionName = default(string), int? MenuSectionDisplayOrder = default(int?), string Name = default(string), string Description = default(string), double? Price = default(double?), double? PriceIncludingOptionSetItems = default(double?), int? MenuItemId = default(int?), int? MenuItemDisplayOrder = default(int?), bool? IsAvailable = default(bool?), List<OrderItemOption> OrderItemOptions = default(List<OrderItemOption>), Dictionary<string, string> Metadata = default(Dictionary<string, string>))
+        public OrderItem(List<OrderItemOption> OrderItemOptions = default(List<OrderItemOption>), Dictionary<string, string> Metadata = default(Dictionary<string, string>), string MenuSectionName = default(string), int? MenuSectionDisplayOrder = default(int?), string Name = default(string), string Description = default(string), double? Price = default(double?), double? PriceIncludingOptionSetItems = default(double?), int? MenuItemId = default(int?), int? MenuItemDisplayOrder = default(int?), bool? IsAvailable = default(bool?))
         {
+            this.OrderItemOptions = OrderItemOptions;
+            this.Metadata = Metadata;
             this.MenuSectionName = MenuSectionName;
             this.MenuSectionDisplayOrder = MenuSectionDisplayOrder;
             this.Name = Name;
@@ -55,10 +57,20 @@ namespace Flipdish.Model
             this.MenuItemId = MenuItemId;
             this.MenuItemDisplayOrder = MenuItemDisplayOrder;
             this.IsAvailable = IsAvailable;
-            this.OrderItemOptions = OrderItemOptions;
-            this.Metadata = Metadata;
         }
         
+        /// <summary>
+        /// Gets or Sets OrderItemOptions
+        /// </summary>
+        [DataMember(Name="orderItemOptions", EmitDefaultValue=false)]
+        public List<OrderItemOption> OrderItemOptions { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Metadata
+        /// </summary>
+        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        public Dictionary<string, string> Metadata { get; set; }
+
         /// <summary>
         /// Gets or Sets MenuSectionName
         /// </summary>
@@ -114,18 +126,6 @@ namespace Flipdish.Model
         public bool? IsAvailable { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrderItemOptions
-        /// </summary>
-        [DataMember(Name="orderItemOptions", EmitDefaultValue=false)]
-        public List<OrderItemOption> OrderItemOptions { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Metadata
-        /// </summary>
-        [DataMember(Name="metadata", EmitDefaultValue=false)]
-        public Dictionary<string, string> Metadata { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -133,6 +133,8 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OrderItem {\n");
+            sb.Append("  OrderItemOptions: ").Append(OrderItemOptions).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  MenuSectionName: ").Append(MenuSectionName).Append("\n");
             sb.Append("  MenuSectionDisplayOrder: ").Append(MenuSectionDisplayOrder).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -142,8 +144,6 @@ namespace Flipdish.Model
             sb.Append("  MenuItemId: ").Append(MenuItemId).Append("\n");
             sb.Append("  MenuItemDisplayOrder: ").Append(MenuItemDisplayOrder).Append("\n");
             sb.Append("  IsAvailable: ").Append(IsAvailable).Append("\n");
-            sb.Append("  OrderItemOptions: ").Append(OrderItemOptions).Append("\n");
-            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,80 +160,78 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as OrderItem);
+            return this.Equals(input as OrderItem);
         }
 
         /// <summary>
         /// Returns true if OrderItem instances are equal
         /// </summary>
-        /// <param name="other">Instance of OrderItem to be compared</param>
+        /// <param name="input">Instance of OrderItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OrderItem other)
+        public bool Equals(OrderItem input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.MenuSectionName == other.MenuSectionName ||
-                    this.MenuSectionName != null &&
-                    this.MenuSectionName.Equals(other.MenuSectionName)
-                ) && 
-                (
-                    this.MenuSectionDisplayOrder == other.MenuSectionDisplayOrder ||
-                    this.MenuSectionDisplayOrder != null &&
-                    this.MenuSectionDisplayOrder.Equals(other.MenuSectionDisplayOrder)
-                ) && 
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) && 
-                (
-                    this.Description == other.Description ||
-                    this.Description != null &&
-                    this.Description.Equals(other.Description)
-                ) && 
-                (
-                    this.Price == other.Price ||
-                    this.Price != null &&
-                    this.Price.Equals(other.Price)
-                ) && 
-                (
-                    this.PriceIncludingOptionSetItems == other.PriceIncludingOptionSetItems ||
-                    this.PriceIncludingOptionSetItems != null &&
-                    this.PriceIncludingOptionSetItems.Equals(other.PriceIncludingOptionSetItems)
-                ) && 
-                (
-                    this.MenuItemId == other.MenuItemId ||
-                    this.MenuItemId != null &&
-                    this.MenuItemId.Equals(other.MenuItemId)
-                ) && 
-                (
-                    this.MenuItemDisplayOrder == other.MenuItemDisplayOrder ||
-                    this.MenuItemDisplayOrder != null &&
-                    this.MenuItemDisplayOrder.Equals(other.MenuItemDisplayOrder)
-                ) && 
-                (
-                    this.IsAvailable == other.IsAvailable ||
-                    this.IsAvailable != null &&
-                    this.IsAvailable.Equals(other.IsAvailable)
-                ) && 
-                (
-                    this.OrderItemOptions == other.OrderItemOptions ||
+                    this.OrderItemOptions == input.OrderItemOptions ||
                     this.OrderItemOptions != null &&
-                    this.OrderItemOptions.SequenceEqual(other.OrderItemOptions)
+                    this.OrderItemOptions.SequenceEqual(input.OrderItemOptions)
                 ) && 
                 (
-                    this.Metadata == other.Metadata ||
+                    this.Metadata == input.Metadata ||
                     this.Metadata != null &&
-                    this.Metadata.SequenceEqual(other.Metadata)
+                    this.Metadata.SequenceEqual(input.Metadata)
+                ) && 
+                (
+                    this.MenuSectionName == input.MenuSectionName ||
+                    (this.MenuSectionName != null &&
+                    this.MenuSectionName.Equals(input.MenuSectionName))
+                ) && 
+                (
+                    this.MenuSectionDisplayOrder == input.MenuSectionDisplayOrder ||
+                    (this.MenuSectionDisplayOrder != null &&
+                    this.MenuSectionDisplayOrder.Equals(input.MenuSectionDisplayOrder))
+                ) && 
+                (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.Description == input.Description ||
+                    (this.Description != null &&
+                    this.Description.Equals(input.Description))
+                ) && 
+                (
+                    this.Price == input.Price ||
+                    (this.Price != null &&
+                    this.Price.Equals(input.Price))
+                ) && 
+                (
+                    this.PriceIncludingOptionSetItems == input.PriceIncludingOptionSetItems ||
+                    (this.PriceIncludingOptionSetItems != null &&
+                    this.PriceIncludingOptionSetItems.Equals(input.PriceIncludingOptionSetItems))
+                ) && 
+                (
+                    this.MenuItemId == input.MenuItemId ||
+                    (this.MenuItemId != null &&
+                    this.MenuItemId.Equals(input.MenuItemId))
+                ) && 
+                (
+                    this.MenuItemDisplayOrder == input.MenuItemDisplayOrder ||
+                    (this.MenuItemDisplayOrder != null &&
+                    this.MenuItemDisplayOrder.Equals(input.MenuItemDisplayOrder))
+                ) && 
+                (
+                    this.IsAvailable == input.IsAvailable ||
+                    (this.IsAvailable != null &&
+                    this.IsAvailable.Equals(input.IsAvailable))
                 );
         }
 
@@ -243,34 +241,32 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
-                if (this.MenuSectionName != null)
-                    hash = hash * 59 + this.MenuSectionName.GetHashCode();
-                if (this.MenuSectionDisplayOrder != null)
-                    hash = hash * 59 + this.MenuSectionDisplayOrder.GetHashCode();
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                if (this.Description != null)
-                    hash = hash * 59 + this.Description.GetHashCode();
-                if (this.Price != null)
-                    hash = hash * 59 + this.Price.GetHashCode();
-                if (this.PriceIncludingOptionSetItems != null)
-                    hash = hash * 59 + this.PriceIncludingOptionSetItems.GetHashCode();
-                if (this.MenuItemId != null)
-                    hash = hash * 59 + this.MenuItemId.GetHashCode();
-                if (this.MenuItemDisplayOrder != null)
-                    hash = hash * 59 + this.MenuItemDisplayOrder.GetHashCode();
-                if (this.IsAvailable != null)
-                    hash = hash * 59 + this.IsAvailable.GetHashCode();
+                int hashCode = 41;
                 if (this.OrderItemOptions != null)
-                    hash = hash * 59 + this.OrderItemOptions.GetHashCode();
+                    hashCode = hashCode * 59 + this.OrderItemOptions.GetHashCode();
                 if (this.Metadata != null)
-                    hash = hash * 59 + this.Metadata.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.Metadata.GetHashCode();
+                if (this.MenuSectionName != null)
+                    hashCode = hashCode * 59 + this.MenuSectionName.GetHashCode();
+                if (this.MenuSectionDisplayOrder != null)
+                    hashCode = hashCode * 59 + this.MenuSectionDisplayOrder.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Description != null)
+                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.Price != null)
+                    hashCode = hashCode * 59 + this.Price.GetHashCode();
+                if (this.PriceIncludingOptionSetItems != null)
+                    hashCode = hashCode * 59 + this.PriceIncludingOptionSetItems.GetHashCode();
+                if (this.MenuItemId != null)
+                    hashCode = hashCode * 59 + this.MenuItemId.GetHashCode();
+                if (this.MenuItemDisplayOrder != null)
+                    hashCode = hashCode * 59 + this.MenuItemDisplayOrder.GetHashCode();
+                if (this.IsAvailable != null)
+                    hashCode = hashCode * 59 + this.IsAvailable.GetHashCode();
+                return hashCode;
             }
         }
 

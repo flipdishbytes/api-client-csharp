@@ -31,29 +31,29 @@ namespace Flipdish.Model
     public partial class MenuItemOptionSetItemBase :  IEquatable<MenuItemOptionSetItemBase>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets CellLayoutType
+        /// Defines CellLayoutType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum CellLayoutTypeEnum
         {
             
             /// <summary>
-            /// Enum Small for "Small"
+            /// Enum Small for value: Small
             /// </summary>
             [EnumMember(Value = "Small")]
-            Small,
+            Small = 1,
             
             /// <summary>
-            /// Enum Medium for "Medium"
+            /// Enum Medium for value: Medium
             /// </summary>
             [EnumMember(Value = "Medium")]
-            Medium,
+            Medium = 2,
             
             /// <summary>
-            /// Enum Large for "Large"
+            /// Enum Large for value: Large
             /// </summary>
             [EnumMember(Value = "Large")]
-            Large
+            Large = 3
         }
 
         /// <summary>
@@ -132,50 +132,48 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as MenuItemOptionSetItemBase);
+            return this.Equals(input as MenuItemOptionSetItemBase);
         }
 
         /// <summary>
         /// Returns true if MenuItemOptionSetItemBase instances are equal
         /// </summary>
-        /// <param name="other">Instance of MenuItemOptionSetItemBase to be compared</param>
+        /// <param name="input">Instance of MenuItemOptionSetItemBase to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MenuItemOptionSetItemBase other)
+        public bool Equals(MenuItemOptionSetItemBase input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Price == other.Price ||
-                    this.Price != null &&
-                    this.Price.Equals(other.Price)
+                    this.Price == input.Price ||
+                    (this.Price != null &&
+                    this.Price.Equals(input.Price))
                 ) && 
                 (
-                    this.IsAvailable == other.IsAvailable ||
-                    this.IsAvailable != null &&
-                    this.IsAvailable.Equals(other.IsAvailable)
+                    this.IsAvailable == input.IsAvailable ||
+                    (this.IsAvailable != null &&
+                    this.IsAvailable.Equals(input.IsAvailable))
                 ) && 
                 (
-                    this.DisplayOrder == other.DisplayOrder ||
-                    this.DisplayOrder != null &&
-                    this.DisplayOrder.Equals(other.DisplayOrder)
+                    this.DisplayOrder == input.DisplayOrder ||
+                    (this.DisplayOrder != null &&
+                    this.DisplayOrder.Equals(input.DisplayOrder))
                 ) && 
                 (
-                    this.CellLayoutType == other.CellLayoutType ||
-                    this.CellLayoutType != null &&
-                    this.CellLayoutType.Equals(other.CellLayoutType)
+                    this.CellLayoutType == input.CellLayoutType ||
+                    (this.CellLayoutType != null &&
+                    this.CellLayoutType.Equals(input.CellLayoutType))
                 );
         }
 
@@ -185,22 +183,20 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Price != null)
-                    hash = hash * 59 + this.Price.GetHashCode();
+                    hashCode = hashCode * 59 + this.Price.GetHashCode();
                 if (this.IsAvailable != null)
-                    hash = hash * 59 + this.IsAvailable.GetHashCode();
+                    hashCode = hashCode * 59 + this.IsAvailable.GetHashCode();
                 if (this.DisplayOrder != null)
-                    hash = hash * 59 + this.DisplayOrder.GetHashCode();
+                    hashCode = hashCode * 59 + this.DisplayOrder.GetHashCode();
                 if (this.CellLayoutType != null)
-                    hash = hash * 59 + this.CellLayoutType.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.CellLayoutType.GetHashCode();
+                return hashCode;
             }
         }
 

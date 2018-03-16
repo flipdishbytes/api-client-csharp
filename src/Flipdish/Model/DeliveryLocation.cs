@@ -124,60 +124,58 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as DeliveryLocation);
+            return this.Equals(input as DeliveryLocation);
         }
 
         /// <summary>
         /// Returns true if DeliveryLocation instances are equal
         /// </summary>
-        /// <param name="other">Instance of DeliveryLocation to be compared</param>
+        /// <param name="input">Instance of DeliveryLocation to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DeliveryLocation other)
+        public bool Equals(DeliveryLocation input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.Coordinates == other.Coordinates ||
-                    this.Coordinates != null &&
-                    this.Coordinates.Equals(other.Coordinates)
+                    this.Coordinates == input.Coordinates ||
+                    (this.Coordinates != null &&
+                    this.Coordinates.Equals(input.Coordinates))
                 ) && 
                 (
-                    this.Building == other.Building ||
-                    this.Building != null &&
-                    this.Building.Equals(other.Building)
+                    this.Building == input.Building ||
+                    (this.Building != null &&
+                    this.Building.Equals(input.Building))
                 ) && 
                 (
-                    this.Street == other.Street ||
-                    this.Street != null &&
-                    this.Street.Equals(other.Street)
+                    this.Street == input.Street ||
+                    (this.Street != null &&
+                    this.Street.Equals(input.Street))
                 ) && 
                 (
-                    this.Town == other.Town ||
-                    this.Town != null &&
-                    this.Town.Equals(other.Town)
+                    this.Town == input.Town ||
+                    (this.Town != null &&
+                    this.Town.Equals(input.Town))
                 ) && 
                 (
-                    this.PostCode == other.PostCode ||
-                    this.PostCode != null &&
-                    this.PostCode.Equals(other.PostCode)
+                    this.PostCode == input.PostCode ||
+                    (this.PostCode != null &&
+                    this.PostCode.Equals(input.PostCode))
                 ) && 
                 (
-                    this.DeliveryInstructions == other.DeliveryInstructions ||
-                    this.DeliveryInstructions != null &&
-                    this.DeliveryInstructions.Equals(other.DeliveryInstructions)
+                    this.DeliveryInstructions == input.DeliveryInstructions ||
+                    (this.DeliveryInstructions != null &&
+                    this.DeliveryInstructions.Equals(input.DeliveryInstructions))
                 ) && 
                 (
-                    this.PrettyAddressString == other.PrettyAddressString ||
-                    this.PrettyAddressString != null &&
-                    this.PrettyAddressString.Equals(other.PrettyAddressString)
+                    this.PrettyAddressString == input.PrettyAddressString ||
+                    (this.PrettyAddressString != null &&
+                    this.PrettyAddressString.Equals(input.PrettyAddressString))
                 );
         }
 
@@ -187,26 +185,24 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.Coordinates != null)
-                    hash = hash * 59 + this.Coordinates.GetHashCode();
+                    hashCode = hashCode * 59 + this.Coordinates.GetHashCode();
                 if (this.Building != null)
-                    hash = hash * 59 + this.Building.GetHashCode();
+                    hashCode = hashCode * 59 + this.Building.GetHashCode();
                 if (this.Street != null)
-                    hash = hash * 59 + this.Street.GetHashCode();
+                    hashCode = hashCode * 59 + this.Street.GetHashCode();
                 if (this.Town != null)
-                    hash = hash * 59 + this.Town.GetHashCode();
+                    hashCode = hashCode * 59 + this.Town.GetHashCode();
                 if (this.PostCode != null)
-                    hash = hash * 59 + this.PostCode.GetHashCode();
+                    hashCode = hashCode * 59 + this.PostCode.GetHashCode();
                 if (this.DeliveryInstructions != null)
-                    hash = hash * 59 + this.DeliveryInstructions.GetHashCode();
+                    hashCode = hashCode * 59 + this.DeliveryInstructions.GetHashCode();
                 if (this.PrettyAddressString != null)
-                    hash = hash * 59 + this.PrettyAddressString.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.PrettyAddressString.GetHashCode();
+                return hashCode;
             }
         }
 

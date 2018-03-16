@@ -31,53 +31,53 @@ namespace Flipdish.Model
     public partial class BusinessHoursPeriod :  IEquatable<BusinessHoursPeriod>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets DayOfWeek
+        /// Defines DayOfWeek
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DayOfWeekEnum
         {
             
             /// <summary>
-            /// Enum Sunday for "Sunday"
+            /// Enum Sunday for value: Sunday
             /// </summary>
             [EnumMember(Value = "Sunday")]
-            Sunday,
+            Sunday = 1,
             
             /// <summary>
-            /// Enum Monday for "Monday"
+            /// Enum Monday for value: Monday
             /// </summary>
             [EnumMember(Value = "Monday")]
-            Monday,
+            Monday = 2,
             
             /// <summary>
-            /// Enum Tuesday for "Tuesday"
+            /// Enum Tuesday for value: Tuesday
             /// </summary>
             [EnumMember(Value = "Tuesday")]
-            Tuesday,
+            Tuesday = 3,
             
             /// <summary>
-            /// Enum Wednesday for "Wednesday"
+            /// Enum Wednesday for value: Wednesday
             /// </summary>
             [EnumMember(Value = "Wednesday")]
-            Wednesday,
+            Wednesday = 4,
             
             /// <summary>
-            /// Enum Thursday for "Thursday"
+            /// Enum Thursday for value: Thursday
             /// </summary>
             [EnumMember(Value = "Thursday")]
-            Thursday,
+            Thursday = 5,
             
             /// <summary>
-            /// Enum Friday for "Friday"
+            /// Enum Friday for value: Friday
             /// </summary>
             [EnumMember(Value = "Friday")]
-            Friday,
+            Friday = 6,
             
             /// <summary>
-            /// Enum Saturday for "Saturday"
+            /// Enum Saturday for value: Saturday
             /// </summary>
             [EnumMember(Value = "Saturday")]
-            Saturday
+            Saturday = 7
         }
 
         /// <summary>
@@ -183,65 +183,63 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessHoursPeriod);
+            return this.Equals(input as BusinessHoursPeriod);
         }
 
         /// <summary>
         /// Returns true if BusinessHoursPeriod instances are equal
         /// </summary>
-        /// <param name="other">Instance of BusinessHoursPeriod to be compared</param>
+        /// <param name="input">Instance of BusinessHoursPeriod to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessHoursPeriod other)
+        public bool Equals(BusinessHoursPeriod input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.DayOfWeek == other.DayOfWeek ||
-                    this.DayOfWeek != null &&
-                    this.DayOfWeek.Equals(other.DayOfWeek)
+                    this.DayOfWeek == input.DayOfWeek ||
+                    (this.DayOfWeek != null &&
+                    this.DayOfWeek.Equals(input.DayOfWeek))
                 ) && 
                 (
-                    this.StartTime == other.StartTime ||
-                    this.StartTime != null &&
-                    this.StartTime.Equals(other.StartTime)
+                    this.StartTime == input.StartTime ||
+                    (this.StartTime != null &&
+                    this.StartTime.Equals(input.StartTime))
                 ) && 
                 (
-                    this.Period == other.Period ||
-                    this.Period != null &&
-                    this.Period.Equals(other.Period)
+                    this.Period == input.Period ||
+                    (this.Period != null &&
+                    this.Period.Equals(input.Period))
                 ) && 
                 (
-                    this.StartTimeEarly == other.StartTimeEarly ||
-                    this.StartTimeEarly != null &&
-                    this.StartTimeEarly.Equals(other.StartTimeEarly)
+                    this.StartTimeEarly == input.StartTimeEarly ||
+                    (this.StartTimeEarly != null &&
+                    this.StartTimeEarly.Equals(input.StartTimeEarly))
                 ) && 
                 (
-                    this.PeriodEarly == other.PeriodEarly ||
-                    this.PeriodEarly != null &&
-                    this.PeriodEarly.Equals(other.PeriodEarly)
+                    this.PeriodEarly == input.PeriodEarly ||
+                    (this.PeriodEarly != null &&
+                    this.PeriodEarly.Equals(input.PeriodEarly))
                 ) && 
                 (
-                    this.Early == other.Early ||
-                    this.Early != null &&
-                    this.Early.Equals(other.Early)
+                    this.Early == input.Early ||
+                    (this.Early != null &&
+                    this.Early.Equals(input.Early))
                 ) && 
                 (
-                    this.Late == other.Late ||
-                    this.Late != null &&
-                    this.Late.Equals(other.Late)
+                    this.Late == input.Late ||
+                    (this.Late != null &&
+                    this.Late.Equals(input.Late))
                 ) && 
                 (
-                    this.Ranges == other.Ranges ||
+                    this.Ranges == input.Ranges ||
                     this.Ranges != null &&
-                    this.Ranges.SequenceEqual(other.Ranges)
+                    this.Ranges.SequenceEqual(input.Ranges)
                 );
         }
 
@@ -251,28 +249,26 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.DayOfWeek != null)
-                    hash = hash * 59 + this.DayOfWeek.GetHashCode();
+                    hashCode = hashCode * 59 + this.DayOfWeek.GetHashCode();
                 if (this.StartTime != null)
-                    hash = hash * 59 + this.StartTime.GetHashCode();
+                    hashCode = hashCode * 59 + this.StartTime.GetHashCode();
                 if (this.Period != null)
-                    hash = hash * 59 + this.Period.GetHashCode();
+                    hashCode = hashCode * 59 + this.Period.GetHashCode();
                 if (this.StartTimeEarly != null)
-                    hash = hash * 59 + this.StartTimeEarly.GetHashCode();
+                    hashCode = hashCode * 59 + this.StartTimeEarly.GetHashCode();
                 if (this.PeriodEarly != null)
-                    hash = hash * 59 + this.PeriodEarly.GetHashCode();
+                    hashCode = hashCode * 59 + this.PeriodEarly.GetHashCode();
                 if (this.Early != null)
-                    hash = hash * 59 + this.Early.GetHashCode();
+                    hashCode = hashCode * 59 + this.Early.GetHashCode();
                 if (this.Late != null)
-                    hash = hash * 59 + this.Late.GetHashCode();
+                    hashCode = hashCode * 59 + this.Late.GetHashCode();
                 if (this.Ranges != null)
-                    hash = hash * 59 + this.Ranges.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.Ranges.GetHashCode();
+                return hashCode;
             }
         }
 

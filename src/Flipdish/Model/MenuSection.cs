@@ -142,70 +142,68 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as MenuSection);
+            return this.Equals(input as MenuSection);
         }
 
         /// <summary>
         /// Returns true if MenuSection instances are equal
         /// </summary>
-        /// <param name="other">Instance of MenuSection to be compared</param>
+        /// <param name="input">Instance of MenuSection to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MenuSection other)
+        public bool Equals(MenuSection input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.MenuSectionId == other.MenuSectionId ||
-                    this.MenuSectionId != null &&
-                    this.MenuSectionId.Equals(other.MenuSectionId)
+                    this.MenuSectionId == input.MenuSectionId ||
+                    (this.MenuSectionId != null &&
+                    this.MenuSectionId.Equals(input.MenuSectionId))
                 ) && 
                 (
-                    this.ImageUrl == other.ImageUrl ||
-                    this.ImageUrl != null &&
-                    this.ImageUrl.Equals(other.ImageUrl)
+                    this.ImageUrl == input.ImageUrl ||
+                    (this.ImageUrl != null &&
+                    this.ImageUrl.Equals(input.ImageUrl))
                 ) && 
                 (
-                    this.MenuItems == other.MenuItems ||
+                    this.MenuItems == input.MenuItems ||
                     this.MenuItems != null &&
-                    this.MenuItems.SequenceEqual(other.MenuItems)
+                    this.MenuItems.SequenceEqual(input.MenuItems)
                 ) && 
                 (
-                    this.MenuSectionAvailability == other.MenuSectionAvailability ||
-                    this.MenuSectionAvailability != null &&
-                    this.MenuSectionAvailability.Equals(other.MenuSectionAvailability)
+                    this.MenuSectionAvailability == input.MenuSectionAvailability ||
+                    (this.MenuSectionAvailability != null &&
+                    this.MenuSectionAvailability.Equals(input.MenuSectionAvailability))
                 ) && 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Description == other.Description ||
-                    this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Description == input.Description ||
+                    (this.Description != null &&
+                    this.Description.Equals(input.Description))
                 ) && 
                 (
-                    this.DisplayOrder == other.DisplayOrder ||
-                    this.DisplayOrder != null &&
-                    this.DisplayOrder.Equals(other.DisplayOrder)
+                    this.DisplayOrder == input.DisplayOrder ||
+                    (this.DisplayOrder != null &&
+                    this.DisplayOrder.Equals(input.DisplayOrder))
                 ) && 
                 (
-                    this.IsAvailable == other.IsAvailable ||
-                    this.IsAvailable != null &&
-                    this.IsAvailable.Equals(other.IsAvailable)
+                    this.IsAvailable == input.IsAvailable ||
+                    (this.IsAvailable != null &&
+                    this.IsAvailable.Equals(input.IsAvailable))
                 ) && 
                 (
-                    this.IsHiddenFromCustomers == other.IsHiddenFromCustomers ||
-                    this.IsHiddenFromCustomers != null &&
-                    this.IsHiddenFromCustomers.Equals(other.IsHiddenFromCustomers)
+                    this.IsHiddenFromCustomers == input.IsHiddenFromCustomers ||
+                    (this.IsHiddenFromCustomers != null &&
+                    this.IsHiddenFromCustomers.Equals(input.IsHiddenFromCustomers))
                 );
         }
 
@@ -215,30 +213,28 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.MenuSectionId != null)
-                    hash = hash * 59 + this.MenuSectionId.GetHashCode();
+                    hashCode = hashCode * 59 + this.MenuSectionId.GetHashCode();
                 if (this.ImageUrl != null)
-                    hash = hash * 59 + this.ImageUrl.GetHashCode();
+                    hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 if (this.MenuItems != null)
-                    hash = hash * 59 + this.MenuItems.GetHashCode();
+                    hashCode = hashCode * 59 + this.MenuItems.GetHashCode();
                 if (this.MenuSectionAvailability != null)
-                    hash = hash * 59 + this.MenuSectionAvailability.GetHashCode();
+                    hashCode = hashCode * 59 + this.MenuSectionAvailability.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
-                    hash = hash * 59 + this.Description.GetHashCode();
+                    hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.DisplayOrder != null)
-                    hash = hash * 59 + this.DisplayOrder.GetHashCode();
+                    hashCode = hashCode * 59 + this.DisplayOrder.GetHashCode();
                 if (this.IsAvailable != null)
-                    hash = hash * 59 + this.IsAvailable.GetHashCode();
+                    hashCode = hashCode * 59 + this.IsAvailable.GetHashCode();
                 if (this.IsHiddenFromCustomers != null)
-                    hash = hash * 59 + this.IsHiddenFromCustomers.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.IsHiddenFromCustomers.GetHashCode();
+                return hashCode;
             }
         }
 

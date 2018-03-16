@@ -31,23 +31,23 @@ namespace Flipdish.Model
     public partial class Store :  IEquatable<Store>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets PrintoutLayoutType
+        /// Defines PrintoutLayoutType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PrintoutLayoutTypeEnum
         {
             
             /// <summary>
-            /// Enum Default for "Default"
+            /// Enum Default for value: Default
             /// </summary>
             [EnumMember(Value = "Default")]
-            Default,
+            Default = 1,
             
             /// <summary>
-            /// Enum Centra for "Centra"
+            /// Enum Centra for value: Centra
             /// </summary>
             [EnumMember(Value = "Centra")]
-            Centra
+            Centra = 2
         }
 
         /// <summary>
@@ -387,195 +387,193 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Store);
+            return this.Equals(input as Store);
         }
 
         /// <summary>
         /// Returns true if Store instances are equal
         /// </summary>
-        /// <param name="other">Instance of Store to be compared</param>
+        /// <param name="input">Instance of Store to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Store other)
+        public bool Equals(Store input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.StoreId == other.StoreId ||
-                    this.StoreId != null &&
-                    this.StoreId.Equals(other.StoreId)
+                    this.StoreId == input.StoreId ||
+                    (this.StoreId != null &&
+                    this.StoreId.Equals(input.StoreId))
                 ) && 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.ApmPhoneNumber == other.ApmPhoneNumber ||
-                    this.ApmPhoneNumber != null &&
-                    this.ApmPhoneNumber.Equals(other.ApmPhoneNumber)
+                    this.ApmPhoneNumber == input.ApmPhoneNumber ||
+                    (this.ApmPhoneNumber != null &&
+                    this.ApmPhoneNumber.Equals(input.ApmPhoneNumber))
                 ) && 
                 (
-                    this.PhoneNumber == other.PhoneNumber ||
-                    this.PhoneNumber != null &&
-                    this.PhoneNumber.Equals(other.PhoneNumber)
+                    this.PhoneNumber == input.PhoneNumber ||
+                    (this.PhoneNumber != null &&
+                    this.PhoneNumber.Equals(input.PhoneNumber))
                 ) && 
                 (
-                    this.EmailAddress == other.EmailAddress ||
-                    this.EmailAddress != null &&
-                    this.EmailAddress.Equals(other.EmailAddress)
+                    this.EmailAddress == input.EmailAddress ||
+                    (this.EmailAddress != null &&
+                    this.EmailAddress.Equals(input.EmailAddress))
                 ) && 
                 (
-                    this.Address == other.Address ||
-                    this.Address != null &&
-                    this.Address.Equals(other.Address)
+                    this.Address == input.Address ||
+                    (this.Address != null &&
+                    this.Address.Equals(input.Address))
                 ) && 
                 (
-                    this.PreOrderEnabled == other.PreOrderEnabled ||
-                    this.PreOrderEnabled != null &&
-                    this.PreOrderEnabled.Equals(other.PreOrderEnabled)
+                    this.PreOrderEnabled == input.PreOrderEnabled ||
+                    (this.PreOrderEnabled != null &&
+                    this.PreOrderEnabled.Equals(input.PreOrderEnabled))
                 ) && 
                 (
-                    this.TakeOutEnabled == other.TakeOutEnabled ||
-                    this.TakeOutEnabled != null &&
-                    this.TakeOutEnabled.Equals(other.TakeOutEnabled)
+                    this.TakeOutEnabled == input.TakeOutEnabled ||
+                    (this.TakeOutEnabled != null &&
+                    this.TakeOutEnabled.Equals(input.TakeOutEnabled))
                 ) && 
                 (
-                    this.TableServiceEnabled == other.TableServiceEnabled ||
-                    this.TableServiceEnabled != null &&
-                    this.TableServiceEnabled.Equals(other.TableServiceEnabled)
+                    this.TableServiceEnabled == input.TableServiceEnabled ||
+                    (this.TableServiceEnabled != null &&
+                    this.TableServiceEnabled.Equals(input.TableServiceEnabled))
                 ) && 
                 (
-                    this.DineInEnabled == other.DineInEnabled ||
-                    this.DineInEnabled != null &&
-                    this.DineInEnabled.Equals(other.DineInEnabled)
+                    this.DineInEnabled == input.DineInEnabled ||
+                    (this.DineInEnabled != null &&
+                    this.DineInEnabled.Equals(input.DineInEnabled))
                 ) && 
                 (
-                    this.AllowPreOrdersAndTableService == other.AllowPreOrdersAndTableService ||
-                    this.AllowPreOrdersAndTableService != null &&
-                    this.AllowPreOrdersAndTableService.Equals(other.AllowPreOrdersAndTableService)
+                    this.AllowPreOrdersAndTableService == input.AllowPreOrdersAndTableService ||
+                    (this.AllowPreOrdersAndTableService != null &&
+                    this.AllowPreOrdersAndTableService.Equals(input.AllowPreOrdersAndTableService))
                 ) && 
                 (
-                    this.PickupEnabled == other.PickupEnabled ||
-                    this.PickupEnabled != null &&
-                    this.PickupEnabled.Equals(other.PickupEnabled)
+                    this.PickupEnabled == input.PickupEnabled ||
+                    (this.PickupEnabled != null &&
+                    this.PickupEnabled.Equals(input.PickupEnabled))
                 ) && 
                 (
-                    this.DeliveryEnabled == other.DeliveryEnabled ||
-                    this.DeliveryEnabled != null &&
-                    this.DeliveryEnabled.Equals(other.DeliveryEnabled)
+                    this.DeliveryEnabled == input.DeliveryEnabled ||
+                    (this.DeliveryEnabled != null &&
+                    this.DeliveryEnabled.Equals(input.DeliveryEnabled))
                 ) && 
                 (
-                    this.CardOrderDeliveryEnabled == other.CardOrderDeliveryEnabled ||
-                    this.CardOrderDeliveryEnabled != null &&
-                    this.CardOrderDeliveryEnabled.Equals(other.CardOrderDeliveryEnabled)
+                    this.CardOrderDeliveryEnabled == input.CardOrderDeliveryEnabled ||
+                    (this.CardOrderDeliveryEnabled != null &&
+                    this.CardOrderDeliveryEnabled.Equals(input.CardOrderDeliveryEnabled))
                 ) && 
                 (
-                    this.CashOrdersDeliveryEnabled == other.CashOrdersDeliveryEnabled ||
-                    this.CashOrdersDeliveryEnabled != null &&
-                    this.CashOrdersDeliveryEnabled.Equals(other.CashOrdersDeliveryEnabled)
+                    this.CashOrdersDeliveryEnabled == input.CashOrdersDeliveryEnabled ||
+                    (this.CashOrdersDeliveryEnabled != null &&
+                    this.CashOrdersDeliveryEnabled.Equals(input.CashOrdersDeliveryEnabled))
                 ) && 
                 (
-                    this.CardOrdersPickupEnabled == other.CardOrdersPickupEnabled ||
-                    this.CardOrdersPickupEnabled != null &&
-                    this.CardOrdersPickupEnabled.Equals(other.CardOrdersPickupEnabled)
+                    this.CardOrdersPickupEnabled == input.CardOrdersPickupEnabled ||
+                    (this.CardOrdersPickupEnabled != null &&
+                    this.CardOrdersPickupEnabled.Equals(input.CardOrdersPickupEnabled))
                 ) && 
                 (
-                    this.CashOrdersPickupEnabled == other.CashOrdersPickupEnabled ||
-                    this.CashOrdersPickupEnabled != null &&
-                    this.CashOrdersPickupEnabled.Equals(other.CashOrdersPickupEnabled)
+                    this.CashOrdersPickupEnabled == input.CashOrdersPickupEnabled ||
+                    (this.CashOrdersPickupEnabled != null &&
+                    this.CashOrdersPickupEnabled.Equals(input.CashOrdersPickupEnabled))
                 ) && 
                 (
-                    this.TipsEnabled == other.TipsEnabled ||
-                    this.TipsEnabled != null &&
-                    this.TipsEnabled.Equals(other.TipsEnabled)
+                    this.TipsEnabled == input.TipsEnabled ||
+                    (this.TipsEnabled != null &&
+                    this.TipsEnabled.Equals(input.TipsEnabled))
                 ) && 
                 (
-                    this.AutomaticallyAcceptOrders == other.AutomaticallyAcceptOrders ||
-                    this.AutomaticallyAcceptOrders != null &&
-                    this.AutomaticallyAcceptOrders.Equals(other.AutomaticallyAcceptOrders)
+                    this.AutomaticallyAcceptOrders == input.AutomaticallyAcceptOrders ||
+                    (this.AutomaticallyAcceptOrders != null &&
+                    this.AutomaticallyAcceptOrders.Equals(input.AutomaticallyAcceptOrders))
                 ) && 
                 (
-                    this.OpenForDelivery == other.OpenForDelivery ||
-                    this.OpenForDelivery != null &&
-                    this.OpenForDelivery.Equals(other.OpenForDelivery)
+                    this.OpenForDelivery == input.OpenForDelivery ||
+                    (this.OpenForDelivery != null &&
+                    this.OpenForDelivery.Equals(input.OpenForDelivery))
                 ) && 
                 (
-                    this.OpenForPickup == other.OpenForPickup ||
-                    this.OpenForPickup != null &&
-                    this.OpenForPickup.Equals(other.OpenForPickup)
+                    this.OpenForPickup == input.OpenForPickup ||
+                    (this.OpenForPickup != null &&
+                    this.OpenForPickup.Equals(input.OpenForPickup))
                 ) && 
                 (
-                    this.MinimumPickupOrderAmount == other.MinimumPickupOrderAmount ||
-                    this.MinimumPickupOrderAmount != null &&
-                    this.MinimumPickupOrderAmount.Equals(other.MinimumPickupOrderAmount)
+                    this.MinimumPickupOrderAmount == input.MinimumPickupOrderAmount ||
+                    (this.MinimumPickupOrderAmount != null &&
+                    this.MinimumPickupOrderAmount.Equals(input.MinimumPickupOrderAmount))
                 ) && 
                 (
-                    this.DeliveryFeeAreas == other.DeliveryFeeAreas ||
+                    this.DeliveryFeeAreas == input.DeliveryFeeAreas ||
                     this.DeliveryFeeAreas != null &&
-                    this.DeliveryFeeAreas.SequenceEqual(other.DeliveryFeeAreas)
+                    this.DeliveryFeeAreas.SequenceEqual(input.DeliveryFeeAreas)
                 ) && 
                 (
-                    this.RequireCustomerNameForPickup == other.RequireCustomerNameForPickup ||
-                    this.RequireCustomerNameForPickup != null &&
-                    this.RequireCustomerNameForPickup.Equals(other.RequireCustomerNameForPickup)
+                    this.RequireCustomerNameForPickup == input.RequireCustomerNameForPickup ||
+                    (this.RequireCustomerNameForPickup != null &&
+                    this.RequireCustomerNameForPickup.Equals(input.RequireCustomerNameForPickup))
                 ) && 
                 (
-                    this.RequireCustomerNameForDelivery == other.RequireCustomerNameForDelivery ||
-                    this.RequireCustomerNameForDelivery != null &&
-                    this.RequireCustomerNameForDelivery.Equals(other.RequireCustomerNameForDelivery)
+                    this.RequireCustomerNameForDelivery == input.RequireCustomerNameForDelivery ||
+                    (this.RequireCustomerNameForDelivery != null &&
+                    this.RequireCustomerNameForDelivery.Equals(input.RequireCustomerNameForDelivery))
                 ) && 
                 (
-                    this.PickupHours == other.PickupHours ||
+                    this.PickupHours == input.PickupHours ||
                     this.PickupHours != null &&
-                    this.PickupHours.SequenceEqual(other.PickupHours)
+                    this.PickupHours.SequenceEqual(input.PickupHours)
                 ) && 
                 (
-                    this.DeliveryHours == other.DeliveryHours ||
+                    this.DeliveryHours == input.DeliveryHours ||
                     this.DeliveryHours != null &&
-                    this.DeliveryHours.SequenceEqual(other.DeliveryHours)
+                    this.DeliveryHours.SequenceEqual(input.DeliveryHours)
                 ) && 
                 (
-                    this.MicrosoftTimeZone == other.MicrosoftTimeZone ||
-                    this.MicrosoftTimeZone != null &&
-                    this.MicrosoftTimeZone.Equals(other.MicrosoftTimeZone)
+                    this.MicrosoftTimeZone == input.MicrosoftTimeZone ||
+                    (this.MicrosoftTimeZone != null &&
+                    this.MicrosoftTimeZone.Equals(input.MicrosoftTimeZone))
                 ) && 
                 (
-                    this.IanaTimeZone == other.IanaTimeZone ||
-                    this.IanaTimeZone != null &&
-                    this.IanaTimeZone.Equals(other.IanaTimeZone)
+                    this.IanaTimeZone == input.IanaTimeZone ||
+                    (this.IanaTimeZone != null &&
+                    this.IanaTimeZone.Equals(input.IanaTimeZone))
                 ) && 
                 (
-                    this.MenuId == other.MenuId ||
-                    this.MenuId != null &&
-                    this.MenuId.Equals(other.MenuId)
+                    this.MenuId == input.MenuId ||
+                    (this.MenuId != null &&
+                    this.MenuId.Equals(input.MenuId))
                 ) && 
                 (
-                    this.OrderConfirmationMessageOverrideDelivery == other.OrderConfirmationMessageOverrideDelivery ||
-                    this.OrderConfirmationMessageOverrideDelivery != null &&
-                    this.OrderConfirmationMessageOverrideDelivery.Equals(other.OrderConfirmationMessageOverrideDelivery)
+                    this.OrderConfirmationMessageOverrideDelivery == input.OrderConfirmationMessageOverrideDelivery ||
+                    (this.OrderConfirmationMessageOverrideDelivery != null &&
+                    this.OrderConfirmationMessageOverrideDelivery.Equals(input.OrderConfirmationMessageOverrideDelivery))
                 ) && 
                 (
-                    this.OrderConfirmationMessageOverridePickup == other.OrderConfirmationMessageOverridePickup ||
-                    this.OrderConfirmationMessageOverridePickup != null &&
-                    this.OrderConfirmationMessageOverridePickup.Equals(other.OrderConfirmationMessageOverridePickup)
+                    this.OrderConfirmationMessageOverridePickup == input.OrderConfirmationMessageOverridePickup ||
+                    (this.OrderConfirmationMessageOverridePickup != null &&
+                    this.OrderConfirmationMessageOverridePickup.Equals(input.OrderConfirmationMessageOverridePickup))
                 ) && 
                 (
-                    this.PrintoutLayoutType == other.PrintoutLayoutType ||
-                    this.PrintoutLayoutType != null &&
-                    this.PrintoutLayoutType.Equals(other.PrintoutLayoutType)
+                    this.PrintoutLayoutType == input.PrintoutLayoutType ||
+                    (this.PrintoutLayoutType != null &&
+                    this.PrintoutLayoutType.Equals(input.PrintoutLayoutType))
                 ) && 
                 (
-                    this.StoreNotes == other.StoreNotes ||
+                    this.StoreNotes == input.StoreNotes ||
                     this.StoreNotes != null &&
-                    this.StoreNotes.SequenceEqual(other.StoreNotes)
+                    this.StoreNotes.SequenceEqual(input.StoreNotes)
                 );
         }
 
@@ -585,80 +583,78 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.StoreId != null)
-                    hash = hash * 59 + this.StoreId.GetHashCode();
+                    hashCode = hashCode * 59 + this.StoreId.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.ApmPhoneNumber != null)
-                    hash = hash * 59 + this.ApmPhoneNumber.GetHashCode();
+                    hashCode = hashCode * 59 + this.ApmPhoneNumber.GetHashCode();
                 if (this.PhoneNumber != null)
-                    hash = hash * 59 + this.PhoneNumber.GetHashCode();
+                    hashCode = hashCode * 59 + this.PhoneNumber.GetHashCode();
                 if (this.EmailAddress != null)
-                    hash = hash * 59 + this.EmailAddress.GetHashCode();
+                    hashCode = hashCode * 59 + this.EmailAddress.GetHashCode();
                 if (this.Address != null)
-                    hash = hash * 59 + this.Address.GetHashCode();
+                    hashCode = hashCode * 59 + this.Address.GetHashCode();
                 if (this.PreOrderEnabled != null)
-                    hash = hash * 59 + this.PreOrderEnabled.GetHashCode();
+                    hashCode = hashCode * 59 + this.PreOrderEnabled.GetHashCode();
                 if (this.TakeOutEnabled != null)
-                    hash = hash * 59 + this.TakeOutEnabled.GetHashCode();
+                    hashCode = hashCode * 59 + this.TakeOutEnabled.GetHashCode();
                 if (this.TableServiceEnabled != null)
-                    hash = hash * 59 + this.TableServiceEnabled.GetHashCode();
+                    hashCode = hashCode * 59 + this.TableServiceEnabled.GetHashCode();
                 if (this.DineInEnabled != null)
-                    hash = hash * 59 + this.DineInEnabled.GetHashCode();
+                    hashCode = hashCode * 59 + this.DineInEnabled.GetHashCode();
                 if (this.AllowPreOrdersAndTableService != null)
-                    hash = hash * 59 + this.AllowPreOrdersAndTableService.GetHashCode();
+                    hashCode = hashCode * 59 + this.AllowPreOrdersAndTableService.GetHashCode();
                 if (this.PickupEnabled != null)
-                    hash = hash * 59 + this.PickupEnabled.GetHashCode();
+                    hashCode = hashCode * 59 + this.PickupEnabled.GetHashCode();
                 if (this.DeliveryEnabled != null)
-                    hash = hash * 59 + this.DeliveryEnabled.GetHashCode();
+                    hashCode = hashCode * 59 + this.DeliveryEnabled.GetHashCode();
                 if (this.CardOrderDeliveryEnabled != null)
-                    hash = hash * 59 + this.CardOrderDeliveryEnabled.GetHashCode();
+                    hashCode = hashCode * 59 + this.CardOrderDeliveryEnabled.GetHashCode();
                 if (this.CashOrdersDeliveryEnabled != null)
-                    hash = hash * 59 + this.CashOrdersDeliveryEnabled.GetHashCode();
+                    hashCode = hashCode * 59 + this.CashOrdersDeliveryEnabled.GetHashCode();
                 if (this.CardOrdersPickupEnabled != null)
-                    hash = hash * 59 + this.CardOrdersPickupEnabled.GetHashCode();
+                    hashCode = hashCode * 59 + this.CardOrdersPickupEnabled.GetHashCode();
                 if (this.CashOrdersPickupEnabled != null)
-                    hash = hash * 59 + this.CashOrdersPickupEnabled.GetHashCode();
+                    hashCode = hashCode * 59 + this.CashOrdersPickupEnabled.GetHashCode();
                 if (this.TipsEnabled != null)
-                    hash = hash * 59 + this.TipsEnabled.GetHashCode();
+                    hashCode = hashCode * 59 + this.TipsEnabled.GetHashCode();
                 if (this.AutomaticallyAcceptOrders != null)
-                    hash = hash * 59 + this.AutomaticallyAcceptOrders.GetHashCode();
+                    hashCode = hashCode * 59 + this.AutomaticallyAcceptOrders.GetHashCode();
                 if (this.OpenForDelivery != null)
-                    hash = hash * 59 + this.OpenForDelivery.GetHashCode();
+                    hashCode = hashCode * 59 + this.OpenForDelivery.GetHashCode();
                 if (this.OpenForPickup != null)
-                    hash = hash * 59 + this.OpenForPickup.GetHashCode();
+                    hashCode = hashCode * 59 + this.OpenForPickup.GetHashCode();
                 if (this.MinimumPickupOrderAmount != null)
-                    hash = hash * 59 + this.MinimumPickupOrderAmount.GetHashCode();
+                    hashCode = hashCode * 59 + this.MinimumPickupOrderAmount.GetHashCode();
                 if (this.DeliveryFeeAreas != null)
-                    hash = hash * 59 + this.DeliveryFeeAreas.GetHashCode();
+                    hashCode = hashCode * 59 + this.DeliveryFeeAreas.GetHashCode();
                 if (this.RequireCustomerNameForPickup != null)
-                    hash = hash * 59 + this.RequireCustomerNameForPickup.GetHashCode();
+                    hashCode = hashCode * 59 + this.RequireCustomerNameForPickup.GetHashCode();
                 if (this.RequireCustomerNameForDelivery != null)
-                    hash = hash * 59 + this.RequireCustomerNameForDelivery.GetHashCode();
+                    hashCode = hashCode * 59 + this.RequireCustomerNameForDelivery.GetHashCode();
                 if (this.PickupHours != null)
-                    hash = hash * 59 + this.PickupHours.GetHashCode();
+                    hashCode = hashCode * 59 + this.PickupHours.GetHashCode();
                 if (this.DeliveryHours != null)
-                    hash = hash * 59 + this.DeliveryHours.GetHashCode();
+                    hashCode = hashCode * 59 + this.DeliveryHours.GetHashCode();
                 if (this.MicrosoftTimeZone != null)
-                    hash = hash * 59 + this.MicrosoftTimeZone.GetHashCode();
+                    hashCode = hashCode * 59 + this.MicrosoftTimeZone.GetHashCode();
                 if (this.IanaTimeZone != null)
-                    hash = hash * 59 + this.IanaTimeZone.GetHashCode();
+                    hashCode = hashCode * 59 + this.IanaTimeZone.GetHashCode();
                 if (this.MenuId != null)
-                    hash = hash * 59 + this.MenuId.GetHashCode();
+                    hashCode = hashCode * 59 + this.MenuId.GetHashCode();
                 if (this.OrderConfirmationMessageOverrideDelivery != null)
-                    hash = hash * 59 + this.OrderConfirmationMessageOverrideDelivery.GetHashCode();
+                    hashCode = hashCode * 59 + this.OrderConfirmationMessageOverrideDelivery.GetHashCode();
                 if (this.OrderConfirmationMessageOverridePickup != null)
-                    hash = hash * 59 + this.OrderConfirmationMessageOverridePickup.GetHashCode();
+                    hashCode = hashCode * 59 + this.OrderConfirmationMessageOverridePickup.GetHashCode();
                 if (this.PrintoutLayoutType != null)
-                    hash = hash * 59 + this.PrintoutLayoutType.GetHashCode();
+                    hashCode = hashCode * 59 + this.PrintoutLayoutType.GetHashCode();
                 if (this.StoreNotes != null)
-                    hash = hash * 59 + this.StoreNotes.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.StoreNotes.GetHashCode();
+                return hashCode;
             }
         }
 

@@ -33,24 +33,30 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderItemOption" /> class.
         /// </summary>
+        /// <param name="Metadata">Metadata.</param>
         /// <param name="MenuItemOptionId">MenuItemOptionId.</param>
         /// <param name="IsMasterOptionSetItem">IsMasterOptionSetItem.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Price">Price.</param>
         /// <param name="MenuItemOptionDisplayOrder">MenuItemOptionDisplayOrder.</param>
         /// <param name="MenuItemOptionSetDisplayOrder">MenuItemOptionSetDisplayOrder.</param>
-        /// <param name="Metadata">Metadata.</param>
-        public OrderItemOption(int? MenuItemOptionId = default(int?), bool? IsMasterOptionSetItem = default(bool?), string Name = default(string), double? Price = default(double?), int? MenuItemOptionDisplayOrder = default(int?), int? MenuItemOptionSetDisplayOrder = default(int?), Dictionary<string, string> Metadata = default(Dictionary<string, string>))
+        public OrderItemOption(Dictionary<string, string> Metadata = default(Dictionary<string, string>), int? MenuItemOptionId = default(int?), bool? IsMasterOptionSetItem = default(bool?), string Name = default(string), double? Price = default(double?), int? MenuItemOptionDisplayOrder = default(int?), int? MenuItemOptionSetDisplayOrder = default(int?))
         {
+            this.Metadata = Metadata;
             this.MenuItemOptionId = MenuItemOptionId;
             this.IsMasterOptionSetItem = IsMasterOptionSetItem;
             this.Name = Name;
             this.Price = Price;
             this.MenuItemOptionDisplayOrder = MenuItemOptionDisplayOrder;
             this.MenuItemOptionSetDisplayOrder = MenuItemOptionSetDisplayOrder;
-            this.Metadata = Metadata;
         }
         
+        /// <summary>
+        /// Gets or Sets Metadata
+        /// </summary>
+        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        public Dictionary<string, string> Metadata { get; set; }
+
         /// <summary>
         /// Gets or Sets MenuItemOptionId
         /// </summary>
@@ -88,12 +94,6 @@ namespace Flipdish.Model
         public int? MenuItemOptionSetDisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or Sets Metadata
-        /// </summary>
-        [DataMember(Name="metadata", EmitDefaultValue=false)]
-        public Dictionary<string, string> Metadata { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -101,13 +101,13 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OrderItemOption {\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  MenuItemOptionId: ").Append(MenuItemOptionId).Append("\n");
             sb.Append("  IsMasterOptionSetItem: ").Append(IsMasterOptionSetItem).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("  MenuItemOptionDisplayOrder: ").Append(MenuItemOptionDisplayOrder).Append("\n");
             sb.Append("  MenuItemOptionSetDisplayOrder: ").Append(MenuItemOptionSetDisplayOrder).Append("\n");
-            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,60 +124,58 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as OrderItemOption);
+            return this.Equals(input as OrderItemOption);
         }
 
         /// <summary>
         /// Returns true if OrderItemOption instances are equal
         /// </summary>
-        /// <param name="other">Instance of OrderItemOption to be compared</param>
+        /// <param name="input">Instance of OrderItemOption to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OrderItemOption other)
+        public bool Equals(OrderItemOption input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.MenuItemOptionId == other.MenuItemOptionId ||
-                    this.MenuItemOptionId != null &&
-                    this.MenuItemOptionId.Equals(other.MenuItemOptionId)
-                ) && 
-                (
-                    this.IsMasterOptionSetItem == other.IsMasterOptionSetItem ||
-                    this.IsMasterOptionSetItem != null &&
-                    this.IsMasterOptionSetItem.Equals(other.IsMasterOptionSetItem)
-                ) && 
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) && 
-                (
-                    this.Price == other.Price ||
-                    this.Price != null &&
-                    this.Price.Equals(other.Price)
-                ) && 
-                (
-                    this.MenuItemOptionDisplayOrder == other.MenuItemOptionDisplayOrder ||
-                    this.MenuItemOptionDisplayOrder != null &&
-                    this.MenuItemOptionDisplayOrder.Equals(other.MenuItemOptionDisplayOrder)
-                ) && 
-                (
-                    this.MenuItemOptionSetDisplayOrder == other.MenuItemOptionSetDisplayOrder ||
-                    this.MenuItemOptionSetDisplayOrder != null &&
-                    this.MenuItemOptionSetDisplayOrder.Equals(other.MenuItemOptionSetDisplayOrder)
-                ) && 
-                (
-                    this.Metadata == other.Metadata ||
+                    this.Metadata == input.Metadata ||
                     this.Metadata != null &&
-                    this.Metadata.SequenceEqual(other.Metadata)
+                    this.Metadata.SequenceEqual(input.Metadata)
+                ) && 
+                (
+                    this.MenuItemOptionId == input.MenuItemOptionId ||
+                    (this.MenuItemOptionId != null &&
+                    this.MenuItemOptionId.Equals(input.MenuItemOptionId))
+                ) && 
+                (
+                    this.IsMasterOptionSetItem == input.IsMasterOptionSetItem ||
+                    (this.IsMasterOptionSetItem != null &&
+                    this.IsMasterOptionSetItem.Equals(input.IsMasterOptionSetItem))
+                ) && 
+                (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.Price == input.Price ||
+                    (this.Price != null &&
+                    this.Price.Equals(input.Price))
+                ) && 
+                (
+                    this.MenuItemOptionDisplayOrder == input.MenuItemOptionDisplayOrder ||
+                    (this.MenuItemOptionDisplayOrder != null &&
+                    this.MenuItemOptionDisplayOrder.Equals(input.MenuItemOptionDisplayOrder))
+                ) && 
+                (
+                    this.MenuItemOptionSetDisplayOrder == input.MenuItemOptionSetDisplayOrder ||
+                    (this.MenuItemOptionSetDisplayOrder != null &&
+                    this.MenuItemOptionSetDisplayOrder.Equals(input.MenuItemOptionSetDisplayOrder))
                 );
         }
 
@@ -187,26 +185,24 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
-                if (this.MenuItemOptionId != null)
-                    hash = hash * 59 + this.MenuItemOptionId.GetHashCode();
-                if (this.IsMasterOptionSetItem != null)
-                    hash = hash * 59 + this.IsMasterOptionSetItem.GetHashCode();
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                if (this.Price != null)
-                    hash = hash * 59 + this.Price.GetHashCode();
-                if (this.MenuItemOptionDisplayOrder != null)
-                    hash = hash * 59 + this.MenuItemOptionDisplayOrder.GetHashCode();
-                if (this.MenuItemOptionSetDisplayOrder != null)
-                    hash = hash * 59 + this.MenuItemOptionSetDisplayOrder.GetHashCode();
+                int hashCode = 41;
                 if (this.Metadata != null)
-                    hash = hash * 59 + this.Metadata.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.Metadata.GetHashCode();
+                if (this.MenuItemOptionId != null)
+                    hashCode = hashCode * 59 + this.MenuItemOptionId.GetHashCode();
+                if (this.IsMasterOptionSetItem != null)
+                    hashCode = hashCode * 59 + this.IsMasterOptionSetItem.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Price != null)
+                    hashCode = hashCode * 59 + this.Price.GetHashCode();
+                if (this.MenuItemOptionDisplayOrder != null)
+                    hashCode = hashCode * 59 + this.MenuItemOptionDisplayOrder.GetHashCode();
+                if (this.MenuItemOptionSetDisplayOrder != null)
+                    hashCode = hashCode * 59 + this.MenuItemOptionSetDisplayOrder.GetHashCode();
+                return hashCode;
             }
         }
 

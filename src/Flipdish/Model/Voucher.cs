@@ -31,105 +31,35 @@ namespace Flipdish.Model
     public partial class Voucher :  IEquatable<Voucher>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets VoucherType
+        /// Defines VoucherType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum VoucherTypeEnum
         {
             
             /// <summary>
-            /// Enum PercentageDiscount for "PercentageDiscount"
+            /// Enum PercentageDiscount for value: PercentageDiscount
             /// </summary>
             [EnumMember(Value = "PercentageDiscount")]
-            PercentageDiscount,
+            PercentageDiscount = 1,
             
             /// <summary>
-            /// Enum LumpDiscount for "LumpDiscount"
+            /// Enum LumpDiscount for value: LumpDiscount
             /// </summary>
             [EnumMember(Value = "LumpDiscount")]
-            LumpDiscount,
+            LumpDiscount = 2,
             
             /// <summary>
-            /// Enum AddItem for "AddItem"
+            /// Enum AddItem for value: AddItem
             /// </summary>
             [EnumMember(Value = "AddItem")]
-            AddItem,
+            AddItem = 3,
             
             /// <summary>
-            /// Enum CreditNote for "CreditNote"
+            /// Enum CreditNote for value: CreditNote
             /// </summary>
             [EnumMember(Value = "CreditNote")]
-            CreditNote
-        }
-
-        /// <summary>
-        /// Gets or Sets VoucherSubType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum VoucherSubTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum None for "None"
-            /// </summary>
-            [EnumMember(Value = "None")]
-            None,
-            
-            /// <summary>
-            /// Enum SignUp for "SignUp"
-            /// </summary>
-            [EnumMember(Value = "SignUp")]
-            SignUp,
-            
-            /// <summary>
-            /// Enum Loyalty for "Loyalty"
-            /// </summary>
-            [EnumMember(Value = "Loyalty")]
-            Loyalty,
-            
-            /// <summary>
-            /// Enum Loyalty25 for "Loyalty25"
-            /// </summary>
-            [EnumMember(Value = "Loyalty25")]
-            Loyalty25,
-            
-            /// <summary>
-            /// Enum Retention for "Retention"
-            /// </summary>
-            [EnumMember(Value = "Retention")]
-            Retention,
-            
-            /// <summary>
-            /// Enum SecondaryRetention for "SecondaryRetention"
-            /// </summary>
-            [EnumMember(Value = "SecondaryRetention")]
-            SecondaryRetention,
-            
-            /// <summary>
-            /// Enum Custom for "Custom"
-            /// </summary>
-            [EnumMember(Value = "Custom")]
-            Custom
-        }
-
-        /// <summary>
-        /// Gets or Sets VoucherPayer
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum VoucherPayerEnum
-        {
-            
-            /// <summary>
-            /// Enum Flipdish for "Flipdish"
-            /// </summary>
-            [EnumMember(Value = "Flipdish")]
-            Flipdish,
-            
-            /// <summary>
-            /// Enum Store for "Store"
-            /// </summary>
-            [EnumMember(Value = "Store")]
-            Store
+            CreditNote = 4
         }
 
         /// <summary>
@@ -138,10 +68,80 @@ namespace Flipdish.Model
         [DataMember(Name="voucherType", EmitDefaultValue=false)]
         public VoucherTypeEnum? VoucherType { get; set; }
         /// <summary>
+        /// Defines VoucherSubType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum VoucherSubTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum None for value: None
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None = 1,
+            
+            /// <summary>
+            /// Enum SignUp for value: SignUp
+            /// </summary>
+            [EnumMember(Value = "SignUp")]
+            SignUp = 2,
+            
+            /// <summary>
+            /// Enum Loyalty for value: Loyalty
+            /// </summary>
+            [EnumMember(Value = "Loyalty")]
+            Loyalty = 3,
+            
+            /// <summary>
+            /// Enum Loyalty25 for value: Loyalty25
+            /// </summary>
+            [EnumMember(Value = "Loyalty25")]
+            Loyalty25 = 4,
+            
+            /// <summary>
+            /// Enum Retention for value: Retention
+            /// </summary>
+            [EnumMember(Value = "Retention")]
+            Retention = 5,
+            
+            /// <summary>
+            /// Enum SecondaryRetention for value: SecondaryRetention
+            /// </summary>
+            [EnumMember(Value = "SecondaryRetention")]
+            SecondaryRetention = 6,
+            
+            /// <summary>
+            /// Enum Custom for value: Custom
+            /// </summary>
+            [EnumMember(Value = "Custom")]
+            Custom = 7
+        }
+
+        /// <summary>
         /// Gets or Sets VoucherSubType
         /// </summary>
         [DataMember(Name="voucherSubType", EmitDefaultValue=false)]
         public VoucherSubTypeEnum? VoucherSubType { get; set; }
+        /// <summary>
+        /// Defines VoucherPayer
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum VoucherPayerEnum
+        {
+            
+            /// <summary>
+            /// Enum Flipdish for value: Flipdish
+            /// </summary>
+            [EnumMember(Value = "Flipdish")]
+            Flipdish = 1,
+            
+            /// <summary>
+            /// Enum Store for value: Store
+            /// </summary>
+            [EnumMember(Value = "Store")]
+            Store = 2
+        }
+
         /// <summary>
         /// Gets or Sets VoucherPayer
         /// </summary>
@@ -383,140 +383,138 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Voucher);
+            return this.Equals(input as Voucher);
         }
 
         /// <summary>
         /// Returns true if Voucher instances are equal
         /// </summary>
-        /// <param name="other">Instance of Voucher to be compared</param>
+        /// <param name="input">Instance of Voucher to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Voucher other)
+        public bool Equals(Voucher input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.VoucherId == other.VoucherId ||
-                    this.VoucherId != null &&
-                    this.VoucherId.Equals(other.VoucherId)
+                    this.VoucherId == input.VoucherId ||
+                    (this.VoucherId != null &&
+                    this.VoucherId.Equals(input.VoucherId))
                 ) && 
                 (
-                    this.VoucherType == other.VoucherType ||
-                    this.VoucherType != null &&
-                    this.VoucherType.Equals(other.VoucherType)
+                    this.VoucherType == input.VoucherType ||
+                    (this.VoucherType != null &&
+                    this.VoucherType.Equals(input.VoucherType))
                 ) && 
                 (
-                    this.IsEnabled == other.IsEnabled ||
-                    this.IsEnabled != null &&
-                    this.IsEnabled.Equals(other.IsEnabled)
+                    this.IsEnabled == input.IsEnabled ||
+                    (this.IsEnabled != null &&
+                    this.IsEnabled.Equals(input.IsEnabled))
                 ) && 
                 (
-                    this.IsUsedUp == other.IsUsedUp ||
-                    this.IsUsedUp != null &&
-                    this.IsUsedUp.Equals(other.IsUsedUp)
+                    this.IsUsedUp == input.IsUsedUp ||
+                    (this.IsUsedUp != null &&
+                    this.IsUsedUp.Equals(input.IsUsedUp))
                 ) && 
                 (
-                    this.VoucherSubType == other.VoucherSubType ||
-                    this.VoucherSubType != null &&
-                    this.VoucherSubType.Equals(other.VoucherSubType)
+                    this.VoucherSubType == input.VoucherSubType ||
+                    (this.VoucherSubType != null &&
+                    this.VoucherSubType.Equals(input.VoucherSubType))
                 ) && 
                 (
-                    this.PublicDescription == other.PublicDescription ||
-                    this.PublicDescription != null &&
-                    this.PublicDescription.Equals(other.PublicDescription)
+                    this.PublicDescription == input.PublicDescription ||
+                    (this.PublicDescription != null &&
+                    this.PublicDescription.Equals(input.PublicDescription))
                 ) && 
                 (
-                    this.PrivateDescription == other.PrivateDescription ||
-                    this.PrivateDescription != null &&
-                    this.PrivateDescription.Equals(other.PrivateDescription)
+                    this.PrivateDescription == input.PrivateDescription ||
+                    (this.PrivateDescription != null &&
+                    this.PrivateDescription.Equals(input.PrivateDescription))
                 ) && 
                 (
-                    this.ValidFrom == other.ValidFrom ||
-                    this.ValidFrom != null &&
-                    this.ValidFrom.Equals(other.ValidFrom)
+                    this.ValidFrom == input.ValidFrom ||
+                    (this.ValidFrom != null &&
+                    this.ValidFrom.Equals(input.ValidFrom))
                 ) && 
                 (
-                    this.Expiry == other.Expiry ||
-                    this.Expiry != null &&
-                    this.Expiry.Equals(other.Expiry)
+                    this.Expiry == input.Expiry ||
+                    (this.Expiry != null &&
+                    this.Expiry.Equals(input.Expiry))
                 ) && 
                 (
-                    this.VoucherPayer == other.VoucherPayer ||
-                    this.VoucherPayer != null &&
-                    this.VoucherPayer.Equals(other.VoucherPayer)
+                    this.VoucherPayer == input.VoucherPayer ||
+                    (this.VoucherPayer != null &&
+                    this.VoucherPayer.Equals(input.VoucherPayer))
                 ) && 
                 (
-                    this.IsVisibleToStore == other.IsVisibleToStore ||
-                    this.IsVisibleToStore != null &&
-                    this.IsVisibleToStore.Equals(other.IsVisibleToStore)
+                    this.IsVisibleToStore == input.IsVisibleToStore ||
+                    (this.IsVisibleToStore != null &&
+                    this.IsVisibleToStore.Equals(input.IsVisibleToStore))
                 ) && 
                 (
-                    this.IsReusable == other.IsReusable ||
-                    this.IsReusable != null &&
-                    this.IsReusable.Equals(other.IsReusable)
+                    this.IsReusable == input.IsReusable ||
+                    (this.IsReusable != null &&
+                    this.IsReusable.Equals(input.IsReusable))
                 ) && 
                 (
-                    this.IsValidForDeliveryOrders == other.IsValidForDeliveryOrders ||
-                    this.IsValidForDeliveryOrders != null &&
-                    this.IsValidForDeliveryOrders.Equals(other.IsValidForDeliveryOrders)
+                    this.IsValidForDeliveryOrders == input.IsValidForDeliveryOrders ||
+                    (this.IsValidForDeliveryOrders != null &&
+                    this.IsValidForDeliveryOrders.Equals(input.IsValidForDeliveryOrders))
                 ) && 
                 (
-                    this.IsValidForPickupOrders == other.IsValidForPickupOrders ||
-                    this.IsValidForPickupOrders != null &&
-                    this.IsValidForPickupOrders.Equals(other.IsValidForPickupOrders)
+                    this.IsValidForPickupOrders == input.IsValidForPickupOrders ||
+                    (this.IsValidForPickupOrders != null &&
+                    this.IsValidForPickupOrders.Equals(input.IsValidForPickupOrders))
                 ) && 
                 (
-                    this.IsValidForCardOrders == other.IsValidForCardOrders ||
-                    this.IsValidForCardOrders != null &&
-                    this.IsValidForCardOrders.Equals(other.IsValidForCardOrders)
+                    this.IsValidForCardOrders == input.IsValidForCardOrders ||
+                    (this.IsValidForCardOrders != null &&
+                    this.IsValidForCardOrders.Equals(input.IsValidForCardOrders))
                 ) && 
                 (
-                    this.IsValidForCashOrders == other.IsValidForCashOrders ||
-                    this.IsValidForCashOrders != null &&
-                    this.IsValidForCashOrders.Equals(other.IsValidForCashOrders)
+                    this.IsValidForCashOrders == input.IsValidForCashOrders ||
+                    (this.IsValidForCashOrders != null &&
+                    this.IsValidForCashOrders.Equals(input.IsValidForCashOrders))
                 ) && 
                 (
-                    this.IsValidForFirstOrderOnly == other.IsValidForFirstOrderOnly ||
-                    this.IsValidForFirstOrderOnly != null &&
-                    this.IsValidForFirstOrderOnly.Equals(other.IsValidForFirstOrderOnly)
+                    this.IsValidForFirstOrderOnly == input.IsValidForFirstOrderOnly ||
+                    (this.IsValidForFirstOrderOnly != null &&
+                    this.IsValidForFirstOrderOnly.Equals(input.IsValidForFirstOrderOnly))
                 ) && 
                 (
-                    this.MinimumOrderAmount == other.MinimumOrderAmount ||
-                    this.MinimumOrderAmount != null &&
-                    this.MinimumOrderAmount.Equals(other.MinimumOrderAmount)
+                    this.MinimumOrderAmount == input.MinimumOrderAmount ||
+                    (this.MinimumOrderAmount != null &&
+                    this.MinimumOrderAmount.Equals(input.MinimumOrderAmount))
                 ) && 
                 (
-                    this.IsValidOncePerCustomer == other.IsValidOncePerCustomer ||
-                    this.IsValidOncePerCustomer != null &&
-                    this.IsValidOncePerCustomer.Equals(other.IsValidOncePerCustomer)
+                    this.IsValidOncePerCustomer == input.IsValidOncePerCustomer ||
+                    (this.IsValidOncePerCustomer != null &&
+                    this.IsValidOncePerCustomer.Equals(input.IsValidOncePerCustomer))
                 ) && 
                 (
-                    this.AutoApply == other.AutoApply ||
-                    this.AutoApply != null &&
-                    this.AutoApply.Equals(other.AutoApply)
+                    this.AutoApply == input.AutoApply ||
+                    (this.AutoApply != null &&
+                    this.AutoApply.Equals(input.AutoApply))
                 ) && 
                 (
-                    this.AutoApplyOrder == other.AutoApplyOrder ||
-                    this.AutoApplyOrder != null &&
-                    this.AutoApplyOrder.Equals(other.AutoApplyOrder)
+                    this.AutoApplyOrder == input.AutoApplyOrder ||
+                    (this.AutoApplyOrder != null &&
+                    this.AutoApplyOrder.Equals(input.AutoApplyOrder))
                 ) && 
                 (
-                    this.IncludeDeliveryFee == other.IncludeDeliveryFee ||
-                    this.IncludeDeliveryFee != null &&
-                    this.IncludeDeliveryFee.Equals(other.IncludeDeliveryFee)
+                    this.IncludeDeliveryFee == input.IncludeDeliveryFee ||
+                    (this.IncludeDeliveryFee != null &&
+                    this.IncludeDeliveryFee.Equals(input.IncludeDeliveryFee))
                 ) && 
                 (
-                    this.Code == other.Code ||
-                    this.Code != null &&
-                    this.Code.Equals(other.Code)
+                    this.Code == input.Code ||
+                    (this.Code != null &&
+                    this.Code.Equals(input.Code))
                 );
         }
 
@@ -526,58 +524,56 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.VoucherId != null)
-                    hash = hash * 59 + this.VoucherId.GetHashCode();
+                    hashCode = hashCode * 59 + this.VoucherId.GetHashCode();
                 if (this.VoucherType != null)
-                    hash = hash * 59 + this.VoucherType.GetHashCode();
+                    hashCode = hashCode * 59 + this.VoucherType.GetHashCode();
                 if (this.IsEnabled != null)
-                    hash = hash * 59 + this.IsEnabled.GetHashCode();
+                    hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
                 if (this.IsUsedUp != null)
-                    hash = hash * 59 + this.IsUsedUp.GetHashCode();
+                    hashCode = hashCode * 59 + this.IsUsedUp.GetHashCode();
                 if (this.VoucherSubType != null)
-                    hash = hash * 59 + this.VoucherSubType.GetHashCode();
+                    hashCode = hashCode * 59 + this.VoucherSubType.GetHashCode();
                 if (this.PublicDescription != null)
-                    hash = hash * 59 + this.PublicDescription.GetHashCode();
+                    hashCode = hashCode * 59 + this.PublicDescription.GetHashCode();
                 if (this.PrivateDescription != null)
-                    hash = hash * 59 + this.PrivateDescription.GetHashCode();
+                    hashCode = hashCode * 59 + this.PrivateDescription.GetHashCode();
                 if (this.ValidFrom != null)
-                    hash = hash * 59 + this.ValidFrom.GetHashCode();
+                    hashCode = hashCode * 59 + this.ValidFrom.GetHashCode();
                 if (this.Expiry != null)
-                    hash = hash * 59 + this.Expiry.GetHashCode();
+                    hashCode = hashCode * 59 + this.Expiry.GetHashCode();
                 if (this.VoucherPayer != null)
-                    hash = hash * 59 + this.VoucherPayer.GetHashCode();
+                    hashCode = hashCode * 59 + this.VoucherPayer.GetHashCode();
                 if (this.IsVisibleToStore != null)
-                    hash = hash * 59 + this.IsVisibleToStore.GetHashCode();
+                    hashCode = hashCode * 59 + this.IsVisibleToStore.GetHashCode();
                 if (this.IsReusable != null)
-                    hash = hash * 59 + this.IsReusable.GetHashCode();
+                    hashCode = hashCode * 59 + this.IsReusable.GetHashCode();
                 if (this.IsValidForDeliveryOrders != null)
-                    hash = hash * 59 + this.IsValidForDeliveryOrders.GetHashCode();
+                    hashCode = hashCode * 59 + this.IsValidForDeliveryOrders.GetHashCode();
                 if (this.IsValidForPickupOrders != null)
-                    hash = hash * 59 + this.IsValidForPickupOrders.GetHashCode();
+                    hashCode = hashCode * 59 + this.IsValidForPickupOrders.GetHashCode();
                 if (this.IsValidForCardOrders != null)
-                    hash = hash * 59 + this.IsValidForCardOrders.GetHashCode();
+                    hashCode = hashCode * 59 + this.IsValidForCardOrders.GetHashCode();
                 if (this.IsValidForCashOrders != null)
-                    hash = hash * 59 + this.IsValidForCashOrders.GetHashCode();
+                    hashCode = hashCode * 59 + this.IsValidForCashOrders.GetHashCode();
                 if (this.IsValidForFirstOrderOnly != null)
-                    hash = hash * 59 + this.IsValidForFirstOrderOnly.GetHashCode();
+                    hashCode = hashCode * 59 + this.IsValidForFirstOrderOnly.GetHashCode();
                 if (this.MinimumOrderAmount != null)
-                    hash = hash * 59 + this.MinimumOrderAmount.GetHashCode();
+                    hashCode = hashCode * 59 + this.MinimumOrderAmount.GetHashCode();
                 if (this.IsValidOncePerCustomer != null)
-                    hash = hash * 59 + this.IsValidOncePerCustomer.GetHashCode();
+                    hashCode = hashCode * 59 + this.IsValidOncePerCustomer.GetHashCode();
                 if (this.AutoApply != null)
-                    hash = hash * 59 + this.AutoApply.GetHashCode();
+                    hashCode = hashCode * 59 + this.AutoApply.GetHashCode();
                 if (this.AutoApplyOrder != null)
-                    hash = hash * 59 + this.AutoApplyOrder.GetHashCode();
+                    hashCode = hashCode * 59 + this.AutoApplyOrder.GetHashCode();
                 if (this.IncludeDeliveryFee != null)
-                    hash = hash * 59 + this.IncludeDeliveryFee.GetHashCode();
+                    hashCode = hashCode * 59 + this.IncludeDeliveryFee.GetHashCode();
                 if (this.Code != null)
-                    hash = hash * 59 + this.Code.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.Code.GetHashCode();
+                return hashCode;
             }
         }
 

@@ -69,30 +69,28 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as RestApiForbiddenResult);
+            return this.Equals(input as RestApiForbiddenResult);
         }
 
         /// <summary>
         /// Returns true if RestApiForbiddenResult instances are equal
         /// </summary>
-        /// <param name="other">Instance of RestApiForbiddenResult to be compared</param>
+        /// <param name="input">Instance of RestApiForbiddenResult to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RestApiForbiddenResult other)
+        public bool Equals(RestApiForbiddenResult input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.Message == other.Message ||
-                    this.Message != null &&
-                    this.Message.Equals(other.Message)
+                    this.Message == input.Message ||
+                    (this.Message != null &&
+                    this.Message.Equals(input.Message))
                 );
         }
 
@@ -102,14 +100,12 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.Message != null)
-                    hash = hash * 59 + this.Message.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.Message.GetHashCode();
+                return hashCode;
             }
         }
 

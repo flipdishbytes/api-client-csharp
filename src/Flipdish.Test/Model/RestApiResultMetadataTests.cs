@@ -19,6 +19,7 @@ using Flipdish.Api;
 using Flipdish.Model;
 using Flipdish.Client;
 using System.Reflection;
+using Newtonsoft.Json;
 
 namespace Flipdish.Test
 {
@@ -63,6 +64,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test "IsInstanceOfType" RestApiResultMetadata
             //Assert.IsInstanceOfType<RestApiResultMetadata> (instance, "variable 'instance' is a RestApiResultMetadata");
         }
+
 
         /// <summary>
         /// Test the property 'Data'

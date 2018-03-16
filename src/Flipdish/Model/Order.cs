@@ -31,223 +31,23 @@ namespace Flipdish.Model
     public partial class Order :  IEquatable<Order>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets DeliveryType
+        /// Defines DeliveryType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DeliveryTypeEnum
         {
             
             /// <summary>
-            /// Enum Delivery for "Delivery"
+            /// Enum Delivery for value: Delivery
             /// </summary>
             [EnumMember(Value = "Delivery")]
-            Delivery,
+            Delivery = 1,
             
             /// <summary>
-            /// Enum Pickup for "Pickup"
+            /// Enum Pickup for value: Pickup
             /// </summary>
             [EnumMember(Value = "Pickup")]
-            Pickup
-        }
-
-        /// <summary>
-        /// Gets or Sets PickupLocationType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum PickupLocationTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum TakeOut for "TakeOut"
-            /// </summary>
-            [EnumMember(Value = "TakeOut")]
-            TakeOut,
-            
-            /// <summary>
-            /// Enum TableService for "TableService"
-            /// </summary>
-            [EnumMember(Value = "TableService")]
-            TableService,
-            
-            /// <summary>
-            /// Enum DineIn for "DineIn"
-            /// </summary>
-            [EnumMember(Value = "DineIn")]
-            DineIn
-        }
-
-        /// <summary>
-        /// Gets or Sets PaymentAccountType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum PaymentAccountTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum Card for "Card"
-            /// </summary>
-            [EnumMember(Value = "Card")]
-            Card,
-            
-            /// <summary>
-            /// Enum Cash for "Cash"
-            /// </summary>
-            [EnumMember(Value = "Cash")]
-            Cash
-        }
-
-        /// <summary>
-        /// Gets or Sets OrderState
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum OrderStateEnum
-        {
-            
-            /// <summary>
-            /// Enum Created for "Created"
-            /// </summary>
-            [EnumMember(Value = "Created")]
-            Created,
-            
-            /// <summary>
-            /// Enum PlacedCanBeCancelled for "PlacedCanBeCancelled"
-            /// </summary>
-            [EnumMember(Value = "PlacedCanBeCancelled")]
-            PlacedCanBeCancelled,
-            
-            /// <summary>
-            /// Enum ReadyToProcess for "ReadyToProcess"
-            /// </summary>
-            [EnumMember(Value = "ReadyToProcess")]
-            ReadyToProcess,
-            
-            /// <summary>
-            /// Enum AcceptedByRestaurant for "AcceptedByRestaurant"
-            /// </summary>
-            [EnumMember(Value = "AcceptedByRestaurant")]
-            AcceptedByRestaurant,
-            
-            /// <summary>
-            /// Enum Dispatched for "Dispatched"
-            /// </summary>
-            [EnumMember(Value = "Dispatched")]
-            Dispatched,
-            
-            /// <summary>
-            /// Enum Delivered for "Delivered"
-            /// </summary>
-            [EnumMember(Value = "Delivered")]
-            Delivered,
-            
-            /// <summary>
-            /// Enum Cancelled for "Cancelled"
-            /// </summary>
-            [EnumMember(Value = "Cancelled")]
-            Cancelled,
-            
-            /// <summary>
-            /// Enum ManualReview for "ManualReview"
-            /// </summary>
-            [EnumMember(Value = "ManualReview")]
-            ManualReview,
-            
-            /// <summary>
-            /// Enum RejectedByStore for "RejectedByStore"
-            /// </summary>
-            [EnumMember(Value = "RejectedByStore")]
-            RejectedByStore,
-            
-            /// <summary>
-            /// Enum RejectedByFlipdish for "RejectedByFlipdish"
-            /// </summary>
-            [EnumMember(Value = "RejectedByFlipdish")]
-            RejectedByFlipdish,
-            
-            /// <summary>
-            /// Enum RejectedAutomatically for "RejectedAutomatically"
-            /// </summary>
-            [EnumMember(Value = "RejectedAutomatically")]
-            RejectedAutomatically,
-            
-            /// <summary>
-            /// Enum RejectedAfterBeingAccepted for "RejectedAfterBeingAccepted"
-            /// </summary>
-            [EnumMember(Value = "RejectedAfterBeingAccepted")]
-            RejectedAfterBeingAccepted,
-            
-            /// <summary>
-            /// Enum AcceptedAndRefunded for "AcceptedAndRefunded"
-            /// </summary>
-            [EnumMember(Value = "AcceptedAndRefunded")]
-            AcceptedAndRefunded
-        }
-
-        /// <summary>
-        /// Gets or Sets AppType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum AppTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum Unknown for "Unknown"
-            /// </summary>
-            [EnumMember(Value = "Unknown")]
-            Unknown,
-            
-            /// <summary>
-            /// Enum Ios for "Ios"
-            /// </summary>
-            [EnumMember(Value = "Ios")]
-            Ios,
-            
-            /// <summary>
-            /// Enum Android for "Android"
-            /// </summary>
-            [EnumMember(Value = "Android")]
-            Android,
-            
-            /// <summary>
-            /// Enum Web for "Web"
-            /// </summary>
-            [EnumMember(Value = "Web")]
-            Web,
-            
-            /// <summary>
-            /// Enum Kiosk for "Kiosk"
-            /// </summary>
-            [EnumMember(Value = "Kiosk")]
-            Kiosk,
-            
-            /// <summary>
-            /// Enum Pos for "Pos"
-            /// </summary>
-            [EnumMember(Value = "Pos")]
-            Pos,
-            
-            /// <summary>
-            /// Enum TelephoneCall for "TelephoneCall"
-            /// </summary>
-            [EnumMember(Value = "TelephoneCall")]
-            TelephoneCall,
-            
-            /// <summary>
-            /// Enum Sms for "Sms"
-            /// </summary>
-            [EnumMember(Value = "Sms")]
-            Sms,
-            
-            /// <summary>
-            /// Enum PwaAndroid for "PwaAndroid"
-            /// </summary>
-            [EnumMember(Value = "PwaAndroid")]
-            PwaAndroid,
-            
-            /// <summary>
-            /// Enum PwaIos for "PwaIos"
-            /// </summary>
-            [EnumMember(Value = "PwaIos")]
-            PwaIos
+            Pickup = 2
         }
 
         /// <summary>
@@ -256,20 +56,220 @@ namespace Flipdish.Model
         [DataMember(Name="deliveryType", EmitDefaultValue=false)]
         public DeliveryTypeEnum? DeliveryType { get; set; }
         /// <summary>
+        /// Defines PickupLocationType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PickupLocationTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum TakeOut for value: TakeOut
+            /// </summary>
+            [EnumMember(Value = "TakeOut")]
+            TakeOut = 1,
+            
+            /// <summary>
+            /// Enum TableService for value: TableService
+            /// </summary>
+            [EnumMember(Value = "TableService")]
+            TableService = 2,
+            
+            /// <summary>
+            /// Enum DineIn for value: DineIn
+            /// </summary>
+            [EnumMember(Value = "DineIn")]
+            DineIn = 3
+        }
+
+        /// <summary>
         /// Gets or Sets PickupLocationType
         /// </summary>
         [DataMember(Name="pickupLocationType", EmitDefaultValue=false)]
         public PickupLocationTypeEnum? PickupLocationType { get; set; }
+        /// <summary>
+        /// Defines PaymentAccountType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PaymentAccountTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Card for value: Card
+            /// </summary>
+            [EnumMember(Value = "Card")]
+            Card = 1,
+            
+            /// <summary>
+            /// Enum Cash for value: Cash
+            /// </summary>
+            [EnumMember(Value = "Cash")]
+            Cash = 2
+        }
+
         /// <summary>
         /// Gets or Sets PaymentAccountType
         /// </summary>
         [DataMember(Name="paymentAccountType", EmitDefaultValue=false)]
         public PaymentAccountTypeEnum? PaymentAccountType { get; set; }
         /// <summary>
+        /// Defines OrderState
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum OrderStateEnum
+        {
+            
+            /// <summary>
+            /// Enum Created for value: Created
+            /// </summary>
+            [EnumMember(Value = "Created")]
+            Created = 1,
+            
+            /// <summary>
+            /// Enum PlacedCanBeCancelled for value: PlacedCanBeCancelled
+            /// </summary>
+            [EnumMember(Value = "PlacedCanBeCancelled")]
+            PlacedCanBeCancelled = 2,
+            
+            /// <summary>
+            /// Enum ReadyToProcess for value: ReadyToProcess
+            /// </summary>
+            [EnumMember(Value = "ReadyToProcess")]
+            ReadyToProcess = 3,
+            
+            /// <summary>
+            /// Enum AcceptedByRestaurant for value: AcceptedByRestaurant
+            /// </summary>
+            [EnumMember(Value = "AcceptedByRestaurant")]
+            AcceptedByRestaurant = 4,
+            
+            /// <summary>
+            /// Enum Dispatched for value: Dispatched
+            /// </summary>
+            [EnumMember(Value = "Dispatched")]
+            Dispatched = 5,
+            
+            /// <summary>
+            /// Enum Delivered for value: Delivered
+            /// </summary>
+            [EnumMember(Value = "Delivered")]
+            Delivered = 6,
+            
+            /// <summary>
+            /// Enum Cancelled for value: Cancelled
+            /// </summary>
+            [EnumMember(Value = "Cancelled")]
+            Cancelled = 7,
+            
+            /// <summary>
+            /// Enum ManualReview for value: ManualReview
+            /// </summary>
+            [EnumMember(Value = "ManualReview")]
+            ManualReview = 8,
+            
+            /// <summary>
+            /// Enum RejectedByStore for value: RejectedByStore
+            /// </summary>
+            [EnumMember(Value = "RejectedByStore")]
+            RejectedByStore = 9,
+            
+            /// <summary>
+            /// Enum RejectedByFlipdish for value: RejectedByFlipdish
+            /// </summary>
+            [EnumMember(Value = "RejectedByFlipdish")]
+            RejectedByFlipdish = 10,
+            
+            /// <summary>
+            /// Enum RejectedAutomatically for value: RejectedAutomatically
+            /// </summary>
+            [EnumMember(Value = "RejectedAutomatically")]
+            RejectedAutomatically = 11,
+            
+            /// <summary>
+            /// Enum RejectedAfterBeingAccepted for value: RejectedAfterBeingAccepted
+            /// </summary>
+            [EnumMember(Value = "RejectedAfterBeingAccepted")]
+            RejectedAfterBeingAccepted = 12,
+            
+            /// <summary>
+            /// Enum AcceptedAndRefunded for value: AcceptedAndRefunded
+            /// </summary>
+            [EnumMember(Value = "AcceptedAndRefunded")]
+            AcceptedAndRefunded = 13
+        }
+
+        /// <summary>
         /// Gets or Sets OrderState
         /// </summary>
         [DataMember(Name="orderState", EmitDefaultValue=false)]
         public OrderStateEnum? OrderState { get; set; }
+        /// <summary>
+        /// Defines AppType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AppTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Unknown for value: Unknown
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown = 1,
+            
+            /// <summary>
+            /// Enum Ios for value: Ios
+            /// </summary>
+            [EnumMember(Value = "Ios")]
+            Ios = 2,
+            
+            /// <summary>
+            /// Enum Android for value: Android
+            /// </summary>
+            [EnumMember(Value = "Android")]
+            Android = 3,
+            
+            /// <summary>
+            /// Enum Web for value: Web
+            /// </summary>
+            [EnumMember(Value = "Web")]
+            Web = 4,
+            
+            /// <summary>
+            /// Enum Kiosk for value: Kiosk
+            /// </summary>
+            [EnumMember(Value = "Kiosk")]
+            Kiosk = 5,
+            
+            /// <summary>
+            /// Enum Pos for value: Pos
+            /// </summary>
+            [EnumMember(Value = "Pos")]
+            Pos = 6,
+            
+            /// <summary>
+            /// Enum TelephoneCall for value: TelephoneCall
+            /// </summary>
+            [EnumMember(Value = "TelephoneCall")]
+            TelephoneCall = 7,
+            
+            /// <summary>
+            /// Enum Sms for value: Sms
+            /// </summary>
+            [EnumMember(Value = "Sms")]
+            Sms = 8,
+            
+            /// <summary>
+            /// Enum PwaAndroid for value: PwaAndroid
+            /// </summary>
+            [EnumMember(Value = "PwaAndroid")]
+            PwaAndroid = 9,
+            
+            /// <summary>
+            /// Enum PwaIos for value: PwaIos
+            /// </summary>
+            [EnumMember(Value = "PwaIos")]
+            PwaIos = 10
+        }
+
         /// <summary>
         /// Gets or Sets AppType
         /// </summary>
@@ -278,14 +278,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Order" /> class.
         /// </summary>
-        /// <param name="OrderId">OrderId.</param>
         /// <param name="Store">Store.</param>
         /// <param name="Customer">Customer.</param>
         /// <param name="Voucher">Voucher.</param>
         /// <param name="Fees">Fees.</param>
+        /// <param name="OrderItems">OrderItems.</param>
+        /// <param name="DeliveryLocation">DeliveryLocation.</param>
+        /// <param name="CustomerLocation">CustomerLocation.</param>
+        /// <param name="OrderId">OrderId.</param>
         /// <param name="DeliveryType">DeliveryType.</param>
         /// <param name="PickupLocationType">PickupLocationType.</param>
-        /// <param name="OrderItems">OrderItems.</param>
         /// <param name="TipAmount">TipAmount.</param>
         /// <param name="DeliveryAmount">DeliveryAmount.</param>
         /// <param name="OrderItemsAmount">OrderItemsAmount.</param>
@@ -293,8 +295,6 @@ namespace Flipdish.Model
         /// <param name="ProcessingFee">ProcessingFee.</param>
         /// <param name="PaymentAccountType">PaymentAccountType.</param>
         /// <param name="PaymentAccountDescription">PaymentAccountDescription.</param>
-        /// <param name="DeliveryLocation">DeliveryLocation.</param>
-        /// <param name="CustomerLocation">CustomerLocation.</param>
         /// <param name="OrderState">OrderState.</param>
         /// <param name="IsPreOrder">IsPreOrder.</param>
         /// <param name="PlacedTime">PlacedTime.</param>
@@ -302,16 +302,18 @@ namespace Flipdish.Model
         /// <param name="ChefNote">ChefNote.</param>
         /// <param name="AppType">AppType.</param>
         /// <param name="UserRating">UserRating.</param>
-        public Order(int? OrderId = default(int?), StoreSummary Store = default(StoreSummary), CustomerSummary Customer = default(CustomerSummary), VoucherSummary Voucher = default(VoucherSummary), FeeSummary Fees = default(FeeSummary), DeliveryTypeEnum? DeliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? PickupLocationType = default(PickupLocationTypeEnum?), List<OrderItem> OrderItems = default(List<OrderItem>), double? TipAmount = default(double?), double? DeliveryAmount = default(double?), double? OrderItemsAmount = default(double?), double? Amount = default(double?), double? ProcessingFee = default(double?), PaymentAccountTypeEnum? PaymentAccountType = default(PaymentAccountTypeEnum?), string PaymentAccountDescription = default(string), DeliveryLocation DeliveryLocation = default(DeliveryLocation), Coordinates CustomerLocation = default(Coordinates), OrderStateEnum? OrderState = default(OrderStateEnum?), bool? IsPreOrder = default(bool?), DateTime? PlacedTime = default(DateTime?), DateTime? RequestedForTime = default(DateTime?), string ChefNote = default(string), AppTypeEnum? AppType = default(AppTypeEnum?), int? UserRating = default(int?))
+        public Order(StoreSummary Store = default(StoreSummary), CustomerSummary Customer = default(CustomerSummary), VoucherSummary Voucher = default(VoucherSummary), FeeSummary Fees = default(FeeSummary), List<OrderItem> OrderItems = default(List<OrderItem>), DeliveryLocation DeliveryLocation = default(DeliveryLocation), Coordinates CustomerLocation = default(Coordinates), int? OrderId = default(int?), DeliveryTypeEnum? DeliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? PickupLocationType = default(PickupLocationTypeEnum?), double? TipAmount = default(double?), double? DeliveryAmount = default(double?), double? OrderItemsAmount = default(double?), double? Amount = default(double?), double? ProcessingFee = default(double?), PaymentAccountTypeEnum? PaymentAccountType = default(PaymentAccountTypeEnum?), string PaymentAccountDescription = default(string), OrderStateEnum? OrderState = default(OrderStateEnum?), bool? IsPreOrder = default(bool?), DateTime? PlacedTime = default(DateTime?), DateTime? RequestedForTime = default(DateTime?), string ChefNote = default(string), AppTypeEnum? AppType = default(AppTypeEnum?), int? UserRating = default(int?))
         {
-            this.OrderId = OrderId;
             this.Store = Store;
             this.Customer = Customer;
             this.Voucher = Voucher;
             this.Fees = Fees;
+            this.OrderItems = OrderItems;
+            this.DeliveryLocation = DeliveryLocation;
+            this.CustomerLocation = CustomerLocation;
+            this.OrderId = OrderId;
             this.DeliveryType = DeliveryType;
             this.PickupLocationType = PickupLocationType;
-            this.OrderItems = OrderItems;
             this.TipAmount = TipAmount;
             this.DeliveryAmount = DeliveryAmount;
             this.OrderItemsAmount = OrderItemsAmount;
@@ -319,8 +321,6 @@ namespace Flipdish.Model
             this.ProcessingFee = ProcessingFee;
             this.PaymentAccountType = PaymentAccountType;
             this.PaymentAccountDescription = PaymentAccountDescription;
-            this.DeliveryLocation = DeliveryLocation;
-            this.CustomerLocation = CustomerLocation;
             this.OrderState = OrderState;
             this.IsPreOrder = IsPreOrder;
             this.PlacedTime = PlacedTime;
@@ -330,12 +330,6 @@ namespace Flipdish.Model
             this.UserRating = UserRating;
         }
         
-        /// <summary>
-        /// Gets or Sets OrderId
-        /// </summary>
-        [DataMember(Name="orderId", EmitDefaultValue=false)]
-        public int? OrderId { get; set; }
-
         /// <summary>
         /// Gets or Sets Store
         /// </summary>
@@ -360,13 +354,31 @@ namespace Flipdish.Model
         [DataMember(Name="fees", EmitDefaultValue=false)]
         public FeeSummary Fees { get; set; }
 
-
-
         /// <summary>
         /// Gets or Sets OrderItems
         /// </summary>
         [DataMember(Name="orderItems", EmitDefaultValue=false)]
         public List<OrderItem> OrderItems { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DeliveryLocation
+        /// </summary>
+        [DataMember(Name="deliveryLocation", EmitDefaultValue=false)]
+        public DeliveryLocation DeliveryLocation { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CustomerLocation
+        /// </summary>
+        [DataMember(Name="customerLocation", EmitDefaultValue=false)]
+        public Coordinates CustomerLocation { get; set; }
+
+        /// <summary>
+        /// Gets or Sets OrderId
+        /// </summary>
+        [DataMember(Name="orderId", EmitDefaultValue=false)]
+        public int? OrderId { get; set; }
+
+
 
         /// <summary>
         /// Gets or Sets TipAmount
@@ -404,18 +416,6 @@ namespace Flipdish.Model
         /// </summary>
         [DataMember(Name="paymentAccountDescription", EmitDefaultValue=false)]
         public string PaymentAccountDescription { get; set; }
-
-        /// <summary>
-        /// Gets or Sets DeliveryLocation
-        /// </summary>
-        [DataMember(Name="deliveryLocation", EmitDefaultValue=false)]
-        public DeliveryLocation DeliveryLocation { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CustomerLocation
-        /// </summary>
-        [DataMember(Name="customerLocation", EmitDefaultValue=false)]
-        public Coordinates CustomerLocation { get; set; }
 
 
         /// <summary>
@@ -457,14 +457,16 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Order {\n");
-            sb.Append("  OrderId: ").Append(OrderId).Append("\n");
             sb.Append("  Store: ").Append(Store).Append("\n");
             sb.Append("  Customer: ").Append(Customer).Append("\n");
             sb.Append("  Voucher: ").Append(Voucher).Append("\n");
             sb.Append("  Fees: ").Append(Fees).Append("\n");
+            sb.Append("  OrderItems: ").Append(OrderItems).Append("\n");
+            sb.Append("  DeliveryLocation: ").Append(DeliveryLocation).Append("\n");
+            sb.Append("  CustomerLocation: ").Append(CustomerLocation).Append("\n");
+            sb.Append("  OrderId: ").Append(OrderId).Append("\n");
             sb.Append("  DeliveryType: ").Append(DeliveryType).Append("\n");
             sb.Append("  PickupLocationType: ").Append(PickupLocationType).Append("\n");
-            sb.Append("  OrderItems: ").Append(OrderItems).Append("\n");
             sb.Append("  TipAmount: ").Append(TipAmount).Append("\n");
             sb.Append("  DeliveryAmount: ").Append(DeliveryAmount).Append("\n");
             sb.Append("  OrderItemsAmount: ").Append(OrderItemsAmount).Append("\n");
@@ -472,8 +474,6 @@ namespace Flipdish.Model
             sb.Append("  ProcessingFee: ").Append(ProcessingFee).Append("\n");
             sb.Append("  PaymentAccountType: ").Append(PaymentAccountType).Append("\n");
             sb.Append("  PaymentAccountDescription: ").Append(PaymentAccountDescription).Append("\n");
-            sb.Append("  DeliveryLocation: ").Append(DeliveryLocation).Append("\n");
-            sb.Append("  CustomerLocation: ").Append(CustomerLocation).Append("\n");
             sb.Append("  OrderState: ").Append(OrderState).Append("\n");
             sb.Append("  IsPreOrder: ").Append(IsPreOrder).Append("\n");
             sb.Append("  PlacedTime: ").Append(PlacedTime).Append("\n");
@@ -497,145 +497,143 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Order);
+            return this.Equals(input as Order);
         }
 
         /// <summary>
         /// Returns true if Order instances are equal
         /// </summary>
-        /// <param name="other">Instance of Order to be compared</param>
+        /// <param name="input">Instance of Order to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Order other)
+        public bool Equals(Order input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.OrderId == other.OrderId ||
-                    this.OrderId != null &&
-                    this.OrderId.Equals(other.OrderId)
+                    this.Store == input.Store ||
+                    (this.Store != null &&
+                    this.Store.Equals(input.Store))
                 ) && 
                 (
-                    this.Store == other.Store ||
-                    this.Store != null &&
-                    this.Store.Equals(other.Store)
+                    this.Customer == input.Customer ||
+                    (this.Customer != null &&
+                    this.Customer.Equals(input.Customer))
                 ) && 
                 (
-                    this.Customer == other.Customer ||
-                    this.Customer != null &&
-                    this.Customer.Equals(other.Customer)
+                    this.Voucher == input.Voucher ||
+                    (this.Voucher != null &&
+                    this.Voucher.Equals(input.Voucher))
                 ) && 
                 (
-                    this.Voucher == other.Voucher ||
-                    this.Voucher != null &&
-                    this.Voucher.Equals(other.Voucher)
+                    this.Fees == input.Fees ||
+                    (this.Fees != null &&
+                    this.Fees.Equals(input.Fees))
                 ) && 
                 (
-                    this.Fees == other.Fees ||
-                    this.Fees != null &&
-                    this.Fees.Equals(other.Fees)
-                ) && 
-                (
-                    this.DeliveryType == other.DeliveryType ||
-                    this.DeliveryType != null &&
-                    this.DeliveryType.Equals(other.DeliveryType)
-                ) && 
-                (
-                    this.PickupLocationType == other.PickupLocationType ||
-                    this.PickupLocationType != null &&
-                    this.PickupLocationType.Equals(other.PickupLocationType)
-                ) && 
-                (
-                    this.OrderItems == other.OrderItems ||
+                    this.OrderItems == input.OrderItems ||
                     this.OrderItems != null &&
-                    this.OrderItems.SequenceEqual(other.OrderItems)
+                    this.OrderItems.SequenceEqual(input.OrderItems)
                 ) && 
                 (
-                    this.TipAmount == other.TipAmount ||
-                    this.TipAmount != null &&
-                    this.TipAmount.Equals(other.TipAmount)
+                    this.DeliveryLocation == input.DeliveryLocation ||
+                    (this.DeliveryLocation != null &&
+                    this.DeliveryLocation.Equals(input.DeliveryLocation))
                 ) && 
                 (
-                    this.DeliveryAmount == other.DeliveryAmount ||
-                    this.DeliveryAmount != null &&
-                    this.DeliveryAmount.Equals(other.DeliveryAmount)
+                    this.CustomerLocation == input.CustomerLocation ||
+                    (this.CustomerLocation != null &&
+                    this.CustomerLocation.Equals(input.CustomerLocation))
                 ) && 
                 (
-                    this.OrderItemsAmount == other.OrderItemsAmount ||
-                    this.OrderItemsAmount != null &&
-                    this.OrderItemsAmount.Equals(other.OrderItemsAmount)
+                    this.OrderId == input.OrderId ||
+                    (this.OrderId != null &&
+                    this.OrderId.Equals(input.OrderId))
                 ) && 
                 (
-                    this.Amount == other.Amount ||
-                    this.Amount != null &&
-                    this.Amount.Equals(other.Amount)
+                    this.DeliveryType == input.DeliveryType ||
+                    (this.DeliveryType != null &&
+                    this.DeliveryType.Equals(input.DeliveryType))
                 ) && 
                 (
-                    this.ProcessingFee == other.ProcessingFee ||
-                    this.ProcessingFee != null &&
-                    this.ProcessingFee.Equals(other.ProcessingFee)
+                    this.PickupLocationType == input.PickupLocationType ||
+                    (this.PickupLocationType != null &&
+                    this.PickupLocationType.Equals(input.PickupLocationType))
                 ) && 
                 (
-                    this.PaymentAccountType == other.PaymentAccountType ||
-                    this.PaymentAccountType != null &&
-                    this.PaymentAccountType.Equals(other.PaymentAccountType)
+                    this.TipAmount == input.TipAmount ||
+                    (this.TipAmount != null &&
+                    this.TipAmount.Equals(input.TipAmount))
                 ) && 
                 (
-                    this.PaymentAccountDescription == other.PaymentAccountDescription ||
-                    this.PaymentAccountDescription != null &&
-                    this.PaymentAccountDescription.Equals(other.PaymentAccountDescription)
+                    this.DeliveryAmount == input.DeliveryAmount ||
+                    (this.DeliveryAmount != null &&
+                    this.DeliveryAmount.Equals(input.DeliveryAmount))
                 ) && 
                 (
-                    this.DeliveryLocation == other.DeliveryLocation ||
-                    this.DeliveryLocation != null &&
-                    this.DeliveryLocation.Equals(other.DeliveryLocation)
+                    this.OrderItemsAmount == input.OrderItemsAmount ||
+                    (this.OrderItemsAmount != null &&
+                    this.OrderItemsAmount.Equals(input.OrderItemsAmount))
                 ) && 
                 (
-                    this.CustomerLocation == other.CustomerLocation ||
-                    this.CustomerLocation != null &&
-                    this.CustomerLocation.Equals(other.CustomerLocation)
+                    this.Amount == input.Amount ||
+                    (this.Amount != null &&
+                    this.Amount.Equals(input.Amount))
                 ) && 
                 (
-                    this.OrderState == other.OrderState ||
-                    this.OrderState != null &&
-                    this.OrderState.Equals(other.OrderState)
+                    this.ProcessingFee == input.ProcessingFee ||
+                    (this.ProcessingFee != null &&
+                    this.ProcessingFee.Equals(input.ProcessingFee))
                 ) && 
                 (
-                    this.IsPreOrder == other.IsPreOrder ||
-                    this.IsPreOrder != null &&
-                    this.IsPreOrder.Equals(other.IsPreOrder)
+                    this.PaymentAccountType == input.PaymentAccountType ||
+                    (this.PaymentAccountType != null &&
+                    this.PaymentAccountType.Equals(input.PaymentAccountType))
                 ) && 
                 (
-                    this.PlacedTime == other.PlacedTime ||
-                    this.PlacedTime != null &&
-                    this.PlacedTime.Equals(other.PlacedTime)
+                    this.PaymentAccountDescription == input.PaymentAccountDescription ||
+                    (this.PaymentAccountDescription != null &&
+                    this.PaymentAccountDescription.Equals(input.PaymentAccountDescription))
                 ) && 
                 (
-                    this.RequestedForTime == other.RequestedForTime ||
-                    this.RequestedForTime != null &&
-                    this.RequestedForTime.Equals(other.RequestedForTime)
+                    this.OrderState == input.OrderState ||
+                    (this.OrderState != null &&
+                    this.OrderState.Equals(input.OrderState))
                 ) && 
                 (
-                    this.ChefNote == other.ChefNote ||
-                    this.ChefNote != null &&
-                    this.ChefNote.Equals(other.ChefNote)
+                    this.IsPreOrder == input.IsPreOrder ||
+                    (this.IsPreOrder != null &&
+                    this.IsPreOrder.Equals(input.IsPreOrder))
                 ) && 
                 (
-                    this.AppType == other.AppType ||
-                    this.AppType != null &&
-                    this.AppType.Equals(other.AppType)
+                    this.PlacedTime == input.PlacedTime ||
+                    (this.PlacedTime != null &&
+                    this.PlacedTime.Equals(input.PlacedTime))
                 ) && 
                 (
-                    this.UserRating == other.UserRating ||
-                    this.UserRating != null &&
-                    this.UserRating.Equals(other.UserRating)
+                    this.RequestedForTime == input.RequestedForTime ||
+                    (this.RequestedForTime != null &&
+                    this.RequestedForTime.Equals(input.RequestedForTime))
+                ) && 
+                (
+                    this.ChefNote == input.ChefNote ||
+                    (this.ChefNote != null &&
+                    this.ChefNote.Equals(input.ChefNote))
+                ) && 
+                (
+                    this.AppType == input.AppType ||
+                    (this.AppType != null &&
+                    this.AppType.Equals(input.AppType))
+                ) && 
+                (
+                    this.UserRating == input.UserRating ||
+                    (this.UserRating != null &&
+                    this.UserRating.Equals(input.UserRating))
                 );
         }
 
@@ -645,60 +643,58 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
-                if (this.OrderId != null)
-                    hash = hash * 59 + this.OrderId.GetHashCode();
+                int hashCode = 41;
                 if (this.Store != null)
-                    hash = hash * 59 + this.Store.GetHashCode();
+                    hashCode = hashCode * 59 + this.Store.GetHashCode();
                 if (this.Customer != null)
-                    hash = hash * 59 + this.Customer.GetHashCode();
+                    hashCode = hashCode * 59 + this.Customer.GetHashCode();
                 if (this.Voucher != null)
-                    hash = hash * 59 + this.Voucher.GetHashCode();
+                    hashCode = hashCode * 59 + this.Voucher.GetHashCode();
                 if (this.Fees != null)
-                    hash = hash * 59 + this.Fees.GetHashCode();
-                if (this.DeliveryType != null)
-                    hash = hash * 59 + this.DeliveryType.GetHashCode();
-                if (this.PickupLocationType != null)
-                    hash = hash * 59 + this.PickupLocationType.GetHashCode();
+                    hashCode = hashCode * 59 + this.Fees.GetHashCode();
                 if (this.OrderItems != null)
-                    hash = hash * 59 + this.OrderItems.GetHashCode();
-                if (this.TipAmount != null)
-                    hash = hash * 59 + this.TipAmount.GetHashCode();
-                if (this.DeliveryAmount != null)
-                    hash = hash * 59 + this.DeliveryAmount.GetHashCode();
-                if (this.OrderItemsAmount != null)
-                    hash = hash * 59 + this.OrderItemsAmount.GetHashCode();
-                if (this.Amount != null)
-                    hash = hash * 59 + this.Amount.GetHashCode();
-                if (this.ProcessingFee != null)
-                    hash = hash * 59 + this.ProcessingFee.GetHashCode();
-                if (this.PaymentAccountType != null)
-                    hash = hash * 59 + this.PaymentAccountType.GetHashCode();
-                if (this.PaymentAccountDescription != null)
-                    hash = hash * 59 + this.PaymentAccountDescription.GetHashCode();
+                    hashCode = hashCode * 59 + this.OrderItems.GetHashCode();
                 if (this.DeliveryLocation != null)
-                    hash = hash * 59 + this.DeliveryLocation.GetHashCode();
+                    hashCode = hashCode * 59 + this.DeliveryLocation.GetHashCode();
                 if (this.CustomerLocation != null)
-                    hash = hash * 59 + this.CustomerLocation.GetHashCode();
+                    hashCode = hashCode * 59 + this.CustomerLocation.GetHashCode();
+                if (this.OrderId != null)
+                    hashCode = hashCode * 59 + this.OrderId.GetHashCode();
+                if (this.DeliveryType != null)
+                    hashCode = hashCode * 59 + this.DeliveryType.GetHashCode();
+                if (this.PickupLocationType != null)
+                    hashCode = hashCode * 59 + this.PickupLocationType.GetHashCode();
+                if (this.TipAmount != null)
+                    hashCode = hashCode * 59 + this.TipAmount.GetHashCode();
+                if (this.DeliveryAmount != null)
+                    hashCode = hashCode * 59 + this.DeliveryAmount.GetHashCode();
+                if (this.OrderItemsAmount != null)
+                    hashCode = hashCode * 59 + this.OrderItemsAmount.GetHashCode();
+                if (this.Amount != null)
+                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                if (this.ProcessingFee != null)
+                    hashCode = hashCode * 59 + this.ProcessingFee.GetHashCode();
+                if (this.PaymentAccountType != null)
+                    hashCode = hashCode * 59 + this.PaymentAccountType.GetHashCode();
+                if (this.PaymentAccountDescription != null)
+                    hashCode = hashCode * 59 + this.PaymentAccountDescription.GetHashCode();
                 if (this.OrderState != null)
-                    hash = hash * 59 + this.OrderState.GetHashCode();
+                    hashCode = hashCode * 59 + this.OrderState.GetHashCode();
                 if (this.IsPreOrder != null)
-                    hash = hash * 59 + this.IsPreOrder.GetHashCode();
+                    hashCode = hashCode * 59 + this.IsPreOrder.GetHashCode();
                 if (this.PlacedTime != null)
-                    hash = hash * 59 + this.PlacedTime.GetHashCode();
+                    hashCode = hashCode * 59 + this.PlacedTime.GetHashCode();
                 if (this.RequestedForTime != null)
-                    hash = hash * 59 + this.RequestedForTime.GetHashCode();
+                    hashCode = hashCode * 59 + this.RequestedForTime.GetHashCode();
                 if (this.ChefNote != null)
-                    hash = hash * 59 + this.ChefNote.GetHashCode();
+                    hashCode = hashCode * 59 + this.ChefNote.GetHashCode();
                 if (this.AppType != null)
-                    hash = hash * 59 + this.AppType.GetHashCode();
+                    hashCode = hashCode * 59 + this.AppType.GetHashCode();
                 if (this.UserRating != null)
-                    hash = hash * 59 + this.UserRating.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.UserRating.GetHashCode();
+                return hashCode;
             }
         }
 

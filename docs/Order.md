@@ -3,14 +3,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OrderId** | **int?** |  | [optional] 
 **Store** | [**StoreSummary**](StoreSummary.md) |  | [optional] 
 **Customer** | [**CustomerSummary**](CustomerSummary.md) |  | [optional] 
 **Voucher** | [**VoucherSummary**](VoucherSummary.md) |  | [optional] 
 **Fees** | [**FeeSummary**](FeeSummary.md) |  | [optional] 
+**OrderItems** | [**List&lt;OrderItem&gt;**](OrderItem.md) |  | [optional] 
+**DeliveryLocation** | [**DeliveryLocation**](DeliveryLocation.md) |  | [optional] 
+**CustomerLocation** | [**Coordinates**](Coordinates.md) |  | [optional] 
+**OrderId** | **int?** |  | [optional] 
 **DeliveryType** | **string** |  | [optional] 
 **PickupLocationType** | **string** |  | [optional] 
-**OrderItems** | [**List&lt;OrderItem&gt;**](OrderItem.md) |  | [optional] 
 **TipAmount** | **double?** |  | [optional] 
 **DeliveryAmount** | **double?** |  | [optional] 
 **OrderItemsAmount** | **double?** |  | [optional] 
@@ -18,8 +20,6 @@ Name | Type | Description | Notes
 **ProcessingFee** | **double?** |  | [optional] 
 **PaymentAccountType** | **string** |  | [optional] 
 **PaymentAccountDescription** | **string** |  | [optional] 
-**DeliveryLocation** | [**DeliveryLocation**](DeliveryLocation.md) |  | [optional] 
-**CustomerLocation** | [**Coordinates**](Coordinates.md) |  | [optional] 
 **OrderState** | **string** |  | [optional] 
 **IsPreOrder** | **bool?** |  | [optional] 
 **PlacedTime** | **DateTime?** |  | [optional] 

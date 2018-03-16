@@ -88,40 +88,38 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FeeSummary);
+            return this.Equals(input as FeeSummary);
         }
 
         /// <summary>
         /// Returns true if FeeSummary instances are equal
         /// </summary>
-        /// <param name="other">Instance of FeeSummary to be compared</param>
+        /// <param name="input">Instance of FeeSummary to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FeeSummary other)
+        public bool Equals(FeeSummary input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.FeeAmount == other.FeeAmount ||
-                    this.FeeAmount != null &&
-                    this.FeeAmount.Equals(other.FeeAmount)
+                    this.FeeAmount == input.FeeAmount ||
+                    (this.FeeAmount != null &&
+                    this.FeeAmount.Equals(input.FeeAmount))
                 ) && 
                 (
-                    this.PercentageRate == other.PercentageRate ||
-                    this.PercentageRate != null &&
-                    this.PercentageRate.Equals(other.PercentageRate)
+                    this.PercentageRate == input.PercentageRate ||
+                    (this.PercentageRate != null &&
+                    this.PercentageRate.Equals(input.PercentageRate))
                 ) && 
                 (
-                    this.PerTransactionFee == other.PerTransactionFee ||
-                    this.PerTransactionFee != null &&
-                    this.PerTransactionFee.Equals(other.PerTransactionFee)
+                    this.PerTransactionFee == input.PerTransactionFee ||
+                    (this.PerTransactionFee != null &&
+                    this.PerTransactionFee.Equals(input.PerTransactionFee))
                 );
         }
 
@@ -131,18 +129,16 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.FeeAmount != null)
-                    hash = hash * 59 + this.FeeAmount.GetHashCode();
+                    hashCode = hashCode * 59 + this.FeeAmount.GetHashCode();
                 if (this.PercentageRate != null)
-                    hash = hash * 59 + this.PercentageRate.GetHashCode();
+                    hashCode = hashCode * 59 + this.PercentageRate.GetHashCode();
                 if (this.PerTransactionFee != null)
-                    hash = hash * 59 + this.PerTransactionFee.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.PerTransactionFee.GetHashCode();
+                return hashCode;
             }
         }
 

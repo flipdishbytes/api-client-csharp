@@ -106,50 +106,48 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Menu);
+            return this.Equals(input as Menu);
         }
 
         /// <summary>
         /// Returns true if Menu instances are equal
         /// </summary>
-        /// <param name="other">Instance of Menu to be compared</param>
+        /// <param name="input">Instance of Menu to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Menu other)
+        public bool Equals(Menu input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.MenuId == other.MenuId ||
-                    this.MenuId != null &&
-                    this.MenuId.Equals(other.MenuId)
+                    this.MenuId == input.MenuId ||
+                    (this.MenuId != null &&
+                    this.MenuId.Equals(input.MenuId))
                 ) && 
                 (
-                    this.VersionNumber == other.VersionNumber ||
-                    this.VersionNumber != null &&
-                    this.VersionNumber.Equals(other.VersionNumber)
+                    this.VersionNumber == input.VersionNumber ||
+                    (this.VersionNumber != null &&
+                    this.VersionNumber.Equals(input.VersionNumber))
                 ) && 
                 (
-                    this.ModifiedTime == other.ModifiedTime ||
-                    this.ModifiedTime != null &&
-                    this.ModifiedTime.Equals(other.ModifiedTime)
+                    this.ModifiedTime == input.ModifiedTime ||
+                    (this.ModifiedTime != null &&
+                    this.ModifiedTime.Equals(input.ModifiedTime))
                 ) && 
                 (
-                    this.MenuSections == other.MenuSections ||
+                    this.MenuSections == input.MenuSections ||
                     this.MenuSections != null &&
-                    this.MenuSections.SequenceEqual(other.MenuSections)
+                    this.MenuSections.SequenceEqual(input.MenuSections)
                 ) && 
                 (
-                    this.ImageUrl == other.ImageUrl ||
-                    this.ImageUrl != null &&
-                    this.ImageUrl.Equals(other.ImageUrl)
+                    this.ImageUrl == input.ImageUrl ||
+                    (this.ImageUrl != null &&
+                    this.ImageUrl.Equals(input.ImageUrl))
                 );
         }
 
@@ -159,22 +157,20 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.MenuId != null)
-                    hash = hash * 59 + this.MenuId.GetHashCode();
+                    hashCode = hashCode * 59 + this.MenuId.GetHashCode();
                 if (this.VersionNumber != null)
-                    hash = hash * 59 + this.VersionNumber.GetHashCode();
+                    hashCode = hashCode * 59 + this.VersionNumber.GetHashCode();
                 if (this.ModifiedTime != null)
-                    hash = hash * 59 + this.ModifiedTime.GetHashCode();
+                    hashCode = hashCode * 59 + this.ModifiedTime.GetHashCode();
                 if (this.MenuSections != null)
-                    hash = hash * 59 + this.MenuSections.GetHashCode();
+                    hashCode = hashCode * 59 + this.MenuSections.GetHashCode();
                 if (this.ImageUrl != null)
-                    hash = hash * 59 + this.ImageUrl.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
+                return hashCode;
             }
         }
 

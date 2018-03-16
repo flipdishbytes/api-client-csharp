@@ -31,85 +31,35 @@ namespace Flipdish.Model
     public partial class VoucherSummary :  IEquatable<VoucherSummary>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets Type
+        /// Defines Type
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
             
             /// <summary>
-            /// Enum PercentageDiscount for "PercentageDiscount"
+            /// Enum PercentageDiscount for value: PercentageDiscount
             /// </summary>
             [EnumMember(Value = "PercentageDiscount")]
-            PercentageDiscount,
+            PercentageDiscount = 1,
             
             /// <summary>
-            /// Enum LumpDiscount for "LumpDiscount"
+            /// Enum LumpDiscount for value: LumpDiscount
             /// </summary>
             [EnumMember(Value = "LumpDiscount")]
-            LumpDiscount,
+            LumpDiscount = 2,
             
             /// <summary>
-            /// Enum AddItem for "AddItem"
+            /// Enum AddItem for value: AddItem
             /// </summary>
             [EnumMember(Value = "AddItem")]
-            AddItem,
+            AddItem = 3,
             
             /// <summary>
-            /// Enum CreditNote for "CreditNote"
+            /// Enum CreditNote for value: CreditNote
             /// </summary>
             [EnumMember(Value = "CreditNote")]
-            CreditNote
-        }
-
-        /// <summary>
-        /// Gets or Sets SubType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum SubTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum None for "None"
-            /// </summary>
-            [EnumMember(Value = "None")]
-            None,
-            
-            /// <summary>
-            /// Enum SignUp for "SignUp"
-            /// </summary>
-            [EnumMember(Value = "SignUp")]
-            SignUp,
-            
-            /// <summary>
-            /// Enum Loyalty for "Loyalty"
-            /// </summary>
-            [EnumMember(Value = "Loyalty")]
-            Loyalty,
-            
-            /// <summary>
-            /// Enum Loyalty25 for "Loyalty25"
-            /// </summary>
-            [EnumMember(Value = "Loyalty25")]
-            Loyalty25,
-            
-            /// <summary>
-            /// Enum Retention for "Retention"
-            /// </summary>
-            [EnumMember(Value = "Retention")]
-            Retention,
-            
-            /// <summary>
-            /// Enum SecondaryRetention for "SecondaryRetention"
-            /// </summary>
-            [EnumMember(Value = "SecondaryRetention")]
-            SecondaryRetention,
-            
-            /// <summary>
-            /// Enum Custom for "Custom"
-            /// </summary>
-            [EnumMember(Value = "Custom")]
-            Custom
+            CreditNote = 4
         }
 
         /// <summary>
@@ -117,6 +67,56 @@ namespace Flipdish.Model
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        /// <summary>
+        /// Defines SubType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SubTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum None for value: None
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None = 1,
+            
+            /// <summary>
+            /// Enum SignUp for value: SignUp
+            /// </summary>
+            [EnumMember(Value = "SignUp")]
+            SignUp = 2,
+            
+            /// <summary>
+            /// Enum Loyalty for value: Loyalty
+            /// </summary>
+            [EnumMember(Value = "Loyalty")]
+            Loyalty = 3,
+            
+            /// <summary>
+            /// Enum Loyalty25 for value: Loyalty25
+            /// </summary>
+            [EnumMember(Value = "Loyalty25")]
+            Loyalty25 = 4,
+            
+            /// <summary>
+            /// Enum Retention for value: Retention
+            /// </summary>
+            [EnumMember(Value = "Retention")]
+            Retention = 5,
+            
+            /// <summary>
+            /// Enum SecondaryRetention for value: SecondaryRetention
+            /// </summary>
+            [EnumMember(Value = "SecondaryRetention")]
+            SecondaryRetention = 6,
+            
+            /// <summary>
+            /// Enum Custom for value: Custom
+            /// </summary>
+            [EnumMember(Value = "Custom")]
+            Custom = 7
+        }
+
         /// <summary>
         /// Gets or Sets SubType
         /// </summary>
@@ -197,55 +197,53 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as VoucherSummary);
+            return this.Equals(input as VoucherSummary);
         }
 
         /// <summary>
         /// Returns true if VoucherSummary instances are equal
         /// </summary>
-        /// <param name="other">Instance of VoucherSummary to be compared</param>
+        /// <param name="input">Instance of VoucherSummary to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(VoucherSummary other)
+        public bool Equals(VoucherSummary input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Description == other.Description ||
-                    this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Description == input.Description ||
+                    (this.Description != null &&
+                    this.Description.Equals(input.Description))
                 ) && 
                 (
-                    this.Code == other.Code ||
-                    this.Code != null &&
-                    this.Code.Equals(other.Code)
+                    this.Code == input.Code ||
+                    (this.Code != null &&
+                    this.Code.Equals(input.Code))
                 ) && 
                 (
-                    this.Amount == other.Amount ||
-                    this.Amount != null &&
-                    this.Amount.Equals(other.Amount)
+                    this.Amount == input.Amount ||
+                    (this.Amount != null &&
+                    this.Amount.Equals(input.Amount))
                 ) && 
                 (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
+                    this.Type == input.Type ||
+                    (this.Type != null &&
+                    this.Type.Equals(input.Type))
                 ) && 
                 (
-                    this.SubType == other.SubType ||
-                    this.SubType != null &&
-                    this.SubType.Equals(other.SubType)
+                    this.SubType == input.SubType ||
+                    (this.SubType != null &&
+                    this.SubType.Equals(input.SubType))
                 );
         }
 
@@ -255,24 +253,22 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
-                    hash = hash * 59 + this.Description.GetHashCode();
+                    hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Code != null)
-                    hash = hash * 59 + this.Code.GetHashCode();
+                    hashCode = hashCode * 59 + this.Code.GetHashCode();
                 if (this.Amount != null)
-                    hash = hash * 59 + this.Amount.GetHashCode();
+                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
                 if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.SubType != null)
-                    hash = hash * 59 + this.SubType.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.SubType.GetHashCode();
+                return hashCode;
             }
         }
 

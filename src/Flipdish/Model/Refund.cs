@@ -109,40 +109,38 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Refund);
+            return this.Equals(input as Refund);
         }
 
         /// <summary>
         /// Returns true if Refund instances are equal
         /// </summary>
-        /// <param name="other">Instance of Refund to be compared</param>
+        /// <param name="input">Instance of Refund to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Refund other)
+        public bool Equals(Refund input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.RefundReason == other.RefundReason ||
-                    this.RefundReason != null &&
-                    this.RefundReason.Equals(other.RefundReason)
+                    this.RefundReason == input.RefundReason ||
+                    (this.RefundReason != null &&
+                    this.RefundReason.Equals(input.RefundReason))
                 ) && 
                 (
-                    this.RefundAmount == other.RefundAmount ||
-                    this.RefundAmount != null &&
-                    this.RefundAmount.Equals(other.RefundAmount)
+                    this.RefundAmount == input.RefundAmount ||
+                    (this.RefundAmount != null &&
+                    this.RefundAmount.Equals(input.RefundAmount))
                 ) && 
                 (
-                    this.NotifyCustomer == other.NotifyCustomer ||
-                    this.NotifyCustomer != null &&
-                    this.NotifyCustomer.Equals(other.NotifyCustomer)
+                    this.NotifyCustomer == input.NotifyCustomer ||
+                    (this.NotifyCustomer != null &&
+                    this.NotifyCustomer.Equals(input.NotifyCustomer))
                 );
         }
 
@@ -152,18 +150,16 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.RefundReason != null)
-                    hash = hash * 59 + this.RefundReason.GetHashCode();
+                    hashCode = hashCode * 59 + this.RefundReason.GetHashCode();
                 if (this.RefundAmount != null)
-                    hash = hash * 59 + this.RefundAmount.GetHashCode();
+                    hashCode = hashCode * 59 + this.RefundAmount.GetHashCode();
                 if (this.NotifyCustomer != null)
-                    hash = hash * 59 + this.NotifyCustomer.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.NotifyCustomer.GetHashCode();
+                return hashCode;
             }
         }
 

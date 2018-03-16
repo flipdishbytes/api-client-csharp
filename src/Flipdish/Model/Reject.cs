@@ -31,72 +31,72 @@ namespace Flipdish.Model
     public partial class Reject :  IEquatable<Reject>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets RejectReason
+        /// Defines RejectReason
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum RejectReasonEnum
         {
             
             /// <summary>
-            /// Enum TooBusy for "TooBusy"
+            /// Enum TooBusy for value: TooBusy
             /// </summary>
             [EnumMember(Value = "TooBusy")]
-            TooBusy,
+            TooBusy = 1,
             
             /// <summary>
-            /// Enum FoodUnavailable for "FoodUnavailable"
+            /// Enum FoodUnavailable for value: FoodUnavailable
             /// </summary>
             [EnumMember(Value = "FoodUnavailable")]
-            FoodUnavailable,
+            FoodUnavailable = 2,
             
             /// <summary>
-            /// Enum UnableToDeliver for "UnableToDeliver"
+            /// Enum UnableToDeliver for value: UnableToDeliver
             /// </summary>
             [EnumMember(Value = "UnableToDeliver")]
-            UnableToDeliver,
+            UnableToDeliver = 3,
             
             /// <summary>
-            /// Enum UnknownAddress for "UnknownAddress"
+            /// Enum UnknownAddress for value: UnknownAddress
             /// </summary>
             [EnumMember(Value = "UnknownAddress")]
-            UnknownAddress,
+            UnknownAddress = 4,
             
             /// <summary>
-            /// Enum UnknownReason for "UnknownReason"
+            /// Enum UnknownReason for value: UnknownReason
             /// </summary>
             [EnumMember(Value = "UnknownReason")]
-            UnknownReason,
+            UnknownReason = 5,
             
             /// <summary>
-            /// Enum TooSoon for "TooSoon"
+            /// Enum TooSoon for value: TooSoon
             /// </summary>
             [EnumMember(Value = "TooSoon")]
-            TooSoon,
+            TooSoon = 6,
             
             /// <summary>
-            /// Enum TimeUnavailable for "TimeUnavailable"
+            /// Enum TimeUnavailable for value: TimeUnavailable
             /// </summary>
             [EnumMember(Value = "TimeUnavailable")]
-            TimeUnavailable,
+            TimeUnavailable = 7,
             
             /// <summary>
-            /// Enum DontDeliverToArea for "DontDeliverToArea"
+            /// Enum DontDeliverToArea for value: DontDeliverToArea
             /// </summary>
             [EnumMember(Value = "DontDeliverToArea")]
-            DontDeliverToArea,
+            DontDeliverToArea = 8,
             
             /// <summary>
-            /// Enum StoreUncontactable for "StoreUncontactable"
+            /// Enum StoreUncontactable for value: StoreUncontactable
             /// </summary>
             [EnumMember(Value = "StoreUncontactable")]
-            StoreUncontactable
+            StoreUncontactable = 9
         }
 
         /// <summary>
         /// Gets or Sets RejectReason
         /// </summary>
         [DataMember(Name="rejectReason", EmitDefaultValue=false)]
-        public RejectReasonEnum? RejectReason { get; set; }
+        public RejectReasonEnum RejectReason { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Reject" /> class.
         /// </summary>
@@ -106,7 +106,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="Reject" /> class.
         /// </summary>
         /// <param name="RejectReason">RejectReason (required).</param>
-        public Reject(RejectReasonEnum? RejectReason = default(RejectReasonEnum?))
+        public Reject(RejectReasonEnum RejectReason = default(RejectReasonEnum))
         {
             // to ensure "RejectReason" is required (not null)
             if (RejectReason == null)
@@ -145,30 +145,28 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Reject);
+            return this.Equals(input as Reject);
         }
 
         /// <summary>
         /// Returns true if Reject instances are equal
         /// </summary>
-        /// <param name="other">Instance of Reject to be compared</param>
+        /// <param name="input">Instance of Reject to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Reject other)
+        public bool Equals(Reject input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.RejectReason == other.RejectReason ||
-                    this.RejectReason != null &&
-                    this.RejectReason.Equals(other.RejectReason)
+                    this.RejectReason == input.RejectReason ||
+                    (this.RejectReason != null &&
+                    this.RejectReason.Equals(input.RejectReason))
                 );
         }
 
@@ -178,14 +176,12 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.RejectReason != null)
-                    hash = hash * 59 + this.RejectReason.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.RejectReason.GetHashCode();
+                return hashCode;
             }
         }
 

@@ -398,15 +398,9 @@ namespace Flipdish.Api
         /// <returns></returns>
         public VouchersApi(String basePath)
         {
-            this.Configuration = new Configuration(new ApiClient(basePath));
+            this.Configuration = new Configuration { BasePath = basePath };
 
             ExceptionFactory = Flipdish.Client.Configuration.DefaultExceptionFactory;
-
-            // ensure API client has configuration ready
-            if (Configuration.ApiClient.Configuration == null)
-            {
-                this.Configuration.ApiClient.Configuration = this.Configuration;
-            }
         }
 
         /// <summary>
@@ -423,12 +417,6 @@ namespace Flipdish.Api
                 this.Configuration = configuration;
 
             ExceptionFactory = Flipdish.Client.Configuration.DefaultExceptionFactory;
-
-            // ensure API client has configuration ready
-            if (Configuration.ApiClient.Configuration == null)
-            {
-                this.Configuration.ApiClient.Configuration = this.Configuration;
-            }
         }
 
         /// <summary>
@@ -477,9 +465,9 @@ namespace Flipdish.Api
         /// </summary>
         /// <returns>Dictionary of HTTP header</returns>
         [Obsolete("DefaultHeader is deprecated, please use Configuration.DefaultHeader instead.")]
-        public Dictionary<String, String> DefaultHeader()
+        public IDictionary<String, String> DefaultHeader()
         {
-            return this.Configuration.DefaultHeader;
+            return new ReadOnlyDictionary<string, string>(this.Configuration.DefaultHeader);
         }
 
         /// <summary>
@@ -535,7 +523,7 @@ namespace Flipdish.Api
 
             var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -629,7 +617,7 @@ namespace Flipdish.Api
 
             var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -707,7 +695,7 @@ namespace Flipdish.Api
 
             var localVarPath = "/api/v1.0/vouchers/{voucherId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -783,7 +771,7 @@ namespace Flipdish.Api
 
             var localVarPath = "/api/v1.0/vouchers/{voucherId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -868,7 +856,7 @@ namespace Flipdish.Api
 
             var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -956,7 +944,7 @@ namespace Flipdish.Api
 
             var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1048,7 +1036,7 @@ namespace Flipdish.Api
 
             var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1142,7 +1130,7 @@ namespace Flipdish.Api
 
             var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1245,7 +1233,7 @@ namespace Flipdish.Api
 
             var localVarPath = "/api/v1.0/vouchers";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1267,21 +1255,21 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (filter != null) localVarQueryParams.Add("filter", Configuration.ApiClient.ParameterToString(filter)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            if (orderBy != null) localVarQueryParams.Add("orderBy", Configuration.ApiClient.ParameterToString(orderBy)); // query parameter
-            if (subType != null) localVarQueryParams.Add("subType", Configuration.ApiClient.ParameterToString(subType)); // query parameter
-            if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
-            if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.ParameterToString(code)); // query parameter
-            if (validFromBegin != null) localVarQueryParams.Add("validFromBegin", Configuration.ApiClient.ParameterToString(validFromBegin)); // query parameter
-            if (validFromEnd != null) localVarQueryParams.Add("validFromEnd", Configuration.ApiClient.ParameterToString(validFromEnd)); // query parameter
-            if (expiryBegin != null) localVarQueryParams.Add("expiryBegin", Configuration.ApiClient.ParameterToString(expiryBegin)); // query parameter
-            if (expiryEnd != null) localVarQueryParams.Add("expiryEnd", Configuration.ApiClient.ParameterToString(expiryEnd)); // query parameter
-            if (amount != null) localVarQueryParams.Add("amount", Configuration.ApiClient.ParameterToString(amount)); // query parameter
-            if (voucherType != null) localVarQueryParams.Add("voucherType", Configuration.ApiClient.ParameterToString(voucherType)); // query parameter
-            if (description != null) localVarQueryParams.Add("description", Configuration.ApiClient.ParameterToString(description)); // query parameter
+            if (filter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filter", filter)); // query parameter
+            if (pageNumber != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pageNumber", pageNumber)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pageSize", pageSize)); // query parameter
+            if (sortOrder != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sortOrder", sortOrder)); // query parameter
+            if (orderBy != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "orderBy", orderBy)); // query parameter
+            if (subType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "subType", subType)); // query parameter
+            if (status != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "status", status)); // query parameter
+            if (code != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "code", code)); // query parameter
+            if (validFromBegin != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "validFromBegin", validFromBegin)); // query parameter
+            if (validFromEnd != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "validFromEnd", validFromEnd)); // query parameter
+            if (expiryBegin != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiryBegin", expiryBegin)); // query parameter
+            if (expiryEnd != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiryEnd", expiryEnd)); // query parameter
+            if (amount != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "amount", amount)); // query parameter
+            if (voucherType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherType", voucherType)); // query parameter
+            if (description != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "description", description)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1360,7 +1348,7 @@ namespace Flipdish.Api
 
             var localVarPath = "/api/v1.0/vouchers";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1382,21 +1370,21 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (filter != null) localVarQueryParams.Add("filter", Configuration.ApiClient.ParameterToString(filter)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            if (orderBy != null) localVarQueryParams.Add("orderBy", Configuration.ApiClient.ParameterToString(orderBy)); // query parameter
-            if (subType != null) localVarQueryParams.Add("subType", Configuration.ApiClient.ParameterToString(subType)); // query parameter
-            if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
-            if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.ParameterToString(code)); // query parameter
-            if (validFromBegin != null) localVarQueryParams.Add("validFromBegin", Configuration.ApiClient.ParameterToString(validFromBegin)); // query parameter
-            if (validFromEnd != null) localVarQueryParams.Add("validFromEnd", Configuration.ApiClient.ParameterToString(validFromEnd)); // query parameter
-            if (expiryBegin != null) localVarQueryParams.Add("expiryBegin", Configuration.ApiClient.ParameterToString(expiryBegin)); // query parameter
-            if (expiryEnd != null) localVarQueryParams.Add("expiryEnd", Configuration.ApiClient.ParameterToString(expiryEnd)); // query parameter
-            if (amount != null) localVarQueryParams.Add("amount", Configuration.ApiClient.ParameterToString(amount)); // query parameter
-            if (voucherType != null) localVarQueryParams.Add("voucherType", Configuration.ApiClient.ParameterToString(voucherType)); // query parameter
-            if (description != null) localVarQueryParams.Add("description", Configuration.ApiClient.ParameterToString(description)); // query parameter
+            if (filter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filter", filter)); // query parameter
+            if (pageNumber != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pageNumber", pageNumber)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pageSize", pageSize)); // query parameter
+            if (sortOrder != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sortOrder", sortOrder)); // query parameter
+            if (orderBy != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "orderBy", orderBy)); // query parameter
+            if (subType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "subType", subType)); // query parameter
+            if (status != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "status", status)); // query parameter
+            if (code != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "code", code)); // query parameter
+            if (validFromBegin != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "validFromBegin", validFromBegin)); // query parameter
+            if (validFromEnd != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "validFromEnd", validFromEnd)); // query parameter
+            if (expiryBegin != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiryBegin", expiryBegin)); // query parameter
+            if (expiryEnd != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiryEnd", expiryEnd)); // query parameter
+            if (amount != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "amount", amount)); // query parameter
+            if (voucherType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherType", voucherType)); // query parameter
+            if (description != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "description", description)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1468,7 +1456,7 @@ namespace Flipdish.Api
 
             var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1579,7 +1567,7 @@ namespace Flipdish.Api
 
             var localVarPath = "/api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();

@@ -19,6 +19,7 @@ using Flipdish.Api;
 using Flipdish.Model;
 using Flipdish.Client;
 using System.Reflection;
+using Newtonsoft.Json;
 
 namespace Flipdish.Test
 {
@@ -64,14 +65,7 @@ namespace Flipdish.Test
             //Assert.IsInstanceOfType<Order> (instance, "variable 'instance' is a Order");
         }
 
-        /// <summary>
-        /// Test the property 'OrderId'
-        /// </summary>
-        [Test]
-        public void OrderIdTest()
-        {
-            // TODO unit test for the property 'OrderId'
-        }
+
         /// <summary>
         /// Test the property 'Store'
         /// </summary>
@@ -105,6 +99,38 @@ namespace Flipdish.Test
             // TODO unit test for the property 'Fees'
         }
         /// <summary>
+        /// Test the property 'OrderItems'
+        /// </summary>
+        [Test]
+        public void OrderItemsTest()
+        {
+            // TODO unit test for the property 'OrderItems'
+        }
+        /// <summary>
+        /// Test the property 'DeliveryLocation'
+        /// </summary>
+        [Test]
+        public void DeliveryLocationTest()
+        {
+            // TODO unit test for the property 'DeliveryLocation'
+        }
+        /// <summary>
+        /// Test the property 'CustomerLocation'
+        /// </summary>
+        [Test]
+        public void CustomerLocationTest()
+        {
+            // TODO unit test for the property 'CustomerLocation'
+        }
+        /// <summary>
+        /// Test the property 'OrderId'
+        /// </summary>
+        [Test]
+        public void OrderIdTest()
+        {
+            // TODO unit test for the property 'OrderId'
+        }
+        /// <summary>
         /// Test the property 'DeliveryType'
         /// </summary>
         [Test]
@@ -119,14 +145,6 @@ namespace Flipdish.Test
         public void PickupLocationTypeTest()
         {
             // TODO unit test for the property 'PickupLocationType'
-        }
-        /// <summary>
-        /// Test the property 'OrderItems'
-        /// </summary>
-        [Test]
-        public void OrderItemsTest()
-        {
-            // TODO unit test for the property 'OrderItems'
         }
         /// <summary>
         /// Test the property 'TipAmount'
@@ -183,22 +201,6 @@ namespace Flipdish.Test
         public void PaymentAccountDescriptionTest()
         {
             // TODO unit test for the property 'PaymentAccountDescription'
-        }
-        /// <summary>
-        /// Test the property 'DeliveryLocation'
-        /// </summary>
-        [Test]
-        public void DeliveryLocationTest()
-        {
-            // TODO unit test for the property 'DeliveryLocation'
-        }
-        /// <summary>
-        /// Test the property 'CustomerLocation'
-        /// </summary>
-        [Test]
-        public void CustomerLocationTest()
-        {
-            // TODO unit test for the property 'CustomerLocation'
         }
         /// <summary>
         /// Test the property 'OrderState'

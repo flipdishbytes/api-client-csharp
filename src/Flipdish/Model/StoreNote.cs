@@ -88,40 +88,38 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as StoreNote);
+            return this.Equals(input as StoreNote);
         }
 
         /// <summary>
         /// Returns true if StoreNote instances are equal
         /// </summary>
-        /// <param name="other">Instance of StoreNote to be compared</param>
+        /// <param name="input">Instance of StoreNote to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StoreNote other)
+        public bool Equals(StoreNote input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.UserId == other.UserId ||
-                    this.UserId != null &&
-                    this.UserId.Equals(other.UserId)
+                    this.UserId == input.UserId ||
+                    (this.UserId != null &&
+                    this.UserId.Equals(input.UserId))
                 ) && 
                 (
-                    this.CreateTime == other.CreateTime ||
-                    this.CreateTime != null &&
-                    this.CreateTime.Equals(other.CreateTime)
+                    this.CreateTime == input.CreateTime ||
+                    (this.CreateTime != null &&
+                    this.CreateTime.Equals(input.CreateTime))
                 ) && 
                 (
-                    this.Note == other.Note ||
-                    this.Note != null &&
-                    this.Note.Equals(other.Note)
+                    this.Note == input.Note ||
+                    (this.Note != null &&
+                    this.Note.Equals(input.Note))
                 );
         }
 
@@ -131,18 +129,16 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.UserId != null)
-                    hash = hash * 59 + this.UserId.GetHashCode();
+                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
                 if (this.CreateTime != null)
-                    hash = hash * 59 + this.CreateTime.GetHashCode();
+                    hashCode = hashCode * 59 + this.CreateTime.GetHashCode();
                 if (this.Note != null)
-                    hash = hash * 59 + this.Note.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.Note.GetHashCode();
+                return hashCode;
             }
         }
 

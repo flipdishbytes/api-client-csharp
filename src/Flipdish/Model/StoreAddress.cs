@@ -124,60 +124,58 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as StoreAddress);
+            return this.Equals(input as StoreAddress);
         }
 
         /// <summary>
         /// Returns true if StoreAddress instances are equal
         /// </summary>
-        /// <param name="other">Instance of StoreAddress to be compared</param>
+        /// <param name="input">Instance of StoreAddress to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StoreAddress other)
+        public bool Equals(StoreAddress input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.AddressId == other.AddressId ||
-                    this.AddressId != null &&
-                    this.AddressId.Equals(other.AddressId)
+                    this.AddressId == input.AddressId ||
+                    (this.AddressId != null &&
+                    this.AddressId.Equals(input.AddressId))
                 ) && 
                 (
-                    this.Line1 == other.Line1 ||
-                    this.Line1 != null &&
-                    this.Line1.Equals(other.Line1)
+                    this.Line1 == input.Line1 ||
+                    (this.Line1 != null &&
+                    this.Line1.Equals(input.Line1))
                 ) && 
                 (
-                    this.Postcode == other.Postcode ||
-                    this.Postcode != null &&
-                    this.Postcode.Equals(other.Postcode)
+                    this.Postcode == input.Postcode ||
+                    (this.Postcode != null &&
+                    this.Postcode.Equals(input.Postcode))
                 ) && 
                 (
-                    this.City == other.City ||
-                    this.City != null &&
-                    this.City.Equals(other.City)
+                    this.City == input.City ||
+                    (this.City != null &&
+                    this.City.Equals(input.City))
                 ) && 
                 (
-                    this.CountryCode == other.CountryCode ||
-                    this.CountryCode != null &&
-                    this.CountryCode.Equals(other.CountryCode)
+                    this.CountryCode == input.CountryCode ||
+                    (this.CountryCode != null &&
+                    this.CountryCode.Equals(input.CountryCode))
                 ) && 
                 (
-                    this.DisplayForCustomer == other.DisplayForCustomer ||
-                    this.DisplayForCustomer != null &&
-                    this.DisplayForCustomer.Equals(other.DisplayForCustomer)
+                    this.DisplayForCustomer == input.DisplayForCustomer ||
+                    (this.DisplayForCustomer != null &&
+                    this.DisplayForCustomer.Equals(input.DisplayForCustomer))
                 ) && 
                 (
-                    this.Coordinates == other.Coordinates ||
-                    this.Coordinates != null &&
-                    this.Coordinates.Equals(other.Coordinates)
+                    this.Coordinates == input.Coordinates ||
+                    (this.Coordinates != null &&
+                    this.Coordinates.Equals(input.Coordinates))
                 );
         }
 
@@ -187,26 +185,24 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.AddressId != null)
-                    hash = hash * 59 + this.AddressId.GetHashCode();
+                    hashCode = hashCode * 59 + this.AddressId.GetHashCode();
                 if (this.Line1 != null)
-                    hash = hash * 59 + this.Line1.GetHashCode();
+                    hashCode = hashCode * 59 + this.Line1.GetHashCode();
                 if (this.Postcode != null)
-                    hash = hash * 59 + this.Postcode.GetHashCode();
+                    hashCode = hashCode * 59 + this.Postcode.GetHashCode();
                 if (this.City != null)
-                    hash = hash * 59 + this.City.GetHashCode();
+                    hashCode = hashCode * 59 + this.City.GetHashCode();
                 if (this.CountryCode != null)
-                    hash = hash * 59 + this.CountryCode.GetHashCode();
+                    hashCode = hashCode * 59 + this.CountryCode.GetHashCode();
                 if (this.DisplayForCustomer != null)
-                    hash = hash * 59 + this.DisplayForCustomer.GetHashCode();
+                    hashCode = hashCode * 59 + this.DisplayForCustomer.GetHashCode();
                 if (this.Coordinates != null)
-                    hash = hash * 59 + this.Coordinates.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.Coordinates.GetHashCode();
+                return hashCode;
             }
         }
 

@@ -31,53 +31,53 @@ namespace Flipdish.Model
     public partial class Range :  IEquatable<Range>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets DayOfWeek
+        /// Defines DayOfWeek
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DayOfWeekEnum
         {
             
             /// <summary>
-            /// Enum Sunday for "Sunday"
+            /// Enum Sunday for value: Sunday
             /// </summary>
             [EnumMember(Value = "Sunday")]
-            Sunday,
+            Sunday = 1,
             
             /// <summary>
-            /// Enum Monday for "Monday"
+            /// Enum Monday for value: Monday
             /// </summary>
             [EnumMember(Value = "Monday")]
-            Monday,
+            Monday = 2,
             
             /// <summary>
-            /// Enum Tuesday for "Tuesday"
+            /// Enum Tuesday for value: Tuesday
             /// </summary>
             [EnumMember(Value = "Tuesday")]
-            Tuesday,
+            Tuesday = 3,
             
             /// <summary>
-            /// Enum Wednesday for "Wednesday"
+            /// Enum Wednesday for value: Wednesday
             /// </summary>
             [EnumMember(Value = "Wednesday")]
-            Wednesday,
+            Wednesday = 4,
             
             /// <summary>
-            /// Enum Thursday for "Thursday"
+            /// Enum Thursday for value: Thursday
             /// </summary>
             [EnumMember(Value = "Thursday")]
-            Thursday,
+            Thursday = 5,
             
             /// <summary>
-            /// Enum Friday for "Friday"
+            /// Enum Friday for value: Friday
             /// </summary>
             [EnumMember(Value = "Friday")]
-            Friday,
+            Friday = 6,
             
             /// <summary>
-            /// Enum Saturday for "Saturday"
+            /// Enum Saturday for value: Saturday
             /// </summary>
             [EnumMember(Value = "Saturday")]
-            Saturday
+            Saturday = 7
         }
 
         /// <summary>
@@ -138,40 +138,38 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Range);
+            return this.Equals(input as Range);
         }
 
         /// <summary>
         /// Returns true if Range instances are equal
         /// </summary>
-        /// <param name="other">Instance of Range to be compared</param>
+        /// <param name="input">Instance of Range to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Range other)
+        public bool Equals(Range input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.StartTime == other.StartTime ||
-                    this.StartTime != null &&
-                    this.StartTime.Equals(other.StartTime)
+                    this.StartTime == input.StartTime ||
+                    (this.StartTime != null &&
+                    this.StartTime.Equals(input.StartTime))
                 ) && 
                 (
-                    this.Period == other.Period ||
-                    this.Period != null &&
-                    this.Period.Equals(other.Period)
+                    this.Period == input.Period ||
+                    (this.Period != null &&
+                    this.Period.Equals(input.Period))
                 ) && 
                 (
-                    this.DayOfWeek == other.DayOfWeek ||
-                    this.DayOfWeek != null &&
-                    this.DayOfWeek.Equals(other.DayOfWeek)
+                    this.DayOfWeek == input.DayOfWeek ||
+                    (this.DayOfWeek != null &&
+                    this.DayOfWeek.Equals(input.DayOfWeek))
                 );
         }
 
@@ -181,18 +179,16 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.StartTime != null)
-                    hash = hash * 59 + this.StartTime.GetHashCode();
+                    hashCode = hashCode * 59 + this.StartTime.GetHashCode();
                 if (this.Period != null)
-                    hash = hash * 59 + this.Period.GetHashCode();
+                    hashCode = hashCode * 59 + this.Period.GetHashCode();
                 if (this.DayOfWeek != null)
-                    hash = hash * 59 + this.DayOfWeek.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.DayOfWeek.GetHashCode();
+                return hashCode;
             }
         }
 

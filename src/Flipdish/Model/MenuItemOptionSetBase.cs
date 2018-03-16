@@ -31,29 +31,29 @@ namespace Flipdish.Model
     public partial class MenuItemOptionSetBase :  IEquatable<MenuItemOptionSetBase>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets CellLayoutType
+        /// Defines CellLayoutType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum CellLayoutTypeEnum
         {
             
             /// <summary>
-            /// Enum Small for "Small"
+            /// Enum Small for value: Small
             /// </summary>
             [EnumMember(Value = "Small")]
-            Small,
+            Small = 1,
             
             /// <summary>
-            /// Enum Medium for "Medium"
+            /// Enum Medium for value: Medium
             /// </summary>
             [EnumMember(Value = "Medium")]
-            Medium,
+            Medium = 2,
             
             /// <summary>
-            /// Enum Large for "Large"
+            /// Enum Large for value: Large
             /// </summary>
             [EnumMember(Value = "Large")]
-            Large
+            Large = 3
         }
 
         /// <summary>
@@ -141,55 +141,53 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as MenuItemOptionSetBase);
+            return this.Equals(input as MenuItemOptionSetBase);
         }
 
         /// <summary>
         /// Returns true if MenuItemOptionSetBase instances are equal
         /// </summary>
-        /// <param name="other">Instance of MenuItemOptionSetBase to be compared</param>
+        /// <param name="input">Instance of MenuItemOptionSetBase to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MenuItemOptionSetBase other)
+        public bool Equals(MenuItemOptionSetBase input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.IsMasterOptionSet == other.IsMasterOptionSet ||
-                    this.IsMasterOptionSet != null &&
-                    this.IsMasterOptionSet.Equals(other.IsMasterOptionSet)
+                    this.IsMasterOptionSet == input.IsMasterOptionSet ||
+                    (this.IsMasterOptionSet != null &&
+                    this.IsMasterOptionSet.Equals(input.IsMasterOptionSet))
                 ) && 
                 (
-                    this.DisplayOrder == other.DisplayOrder ||
-                    this.DisplayOrder != null &&
-                    this.DisplayOrder.Equals(other.DisplayOrder)
+                    this.DisplayOrder == input.DisplayOrder ||
+                    (this.DisplayOrder != null &&
+                    this.DisplayOrder.Equals(input.DisplayOrder))
                 ) && 
                 (
-                    this.MinSelectCount == other.MinSelectCount ||
-                    this.MinSelectCount != null &&
-                    this.MinSelectCount.Equals(other.MinSelectCount)
+                    this.MinSelectCount == input.MinSelectCount ||
+                    (this.MinSelectCount != null &&
+                    this.MinSelectCount.Equals(input.MinSelectCount))
                 ) && 
                 (
-                    this.MaxSelectCount == other.MaxSelectCount ||
-                    this.MaxSelectCount != null &&
-                    this.MaxSelectCount.Equals(other.MaxSelectCount)
+                    this.MaxSelectCount == input.MaxSelectCount ||
+                    (this.MaxSelectCount != null &&
+                    this.MaxSelectCount.Equals(input.MaxSelectCount))
                 ) && 
                 (
-                    this.CellLayoutType == other.CellLayoutType ||
-                    this.CellLayoutType != null &&
-                    this.CellLayoutType.Equals(other.CellLayoutType)
+                    this.CellLayoutType == input.CellLayoutType ||
+                    (this.CellLayoutType != null &&
+                    this.CellLayoutType.Equals(input.CellLayoutType))
                 );
         }
 
@@ -199,24 +197,22 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.IsMasterOptionSet != null)
-                    hash = hash * 59 + this.IsMasterOptionSet.GetHashCode();
+                    hashCode = hashCode * 59 + this.IsMasterOptionSet.GetHashCode();
                 if (this.DisplayOrder != null)
-                    hash = hash * 59 + this.DisplayOrder.GetHashCode();
+                    hashCode = hashCode * 59 + this.DisplayOrder.GetHashCode();
                 if (this.MinSelectCount != null)
-                    hash = hash * 59 + this.MinSelectCount.GetHashCode();
+                    hashCode = hashCode * 59 + this.MinSelectCount.GetHashCode();
                 if (this.MaxSelectCount != null)
-                    hash = hash * 59 + this.MaxSelectCount.GetHashCode();
+                    hashCode = hashCode * 59 + this.MaxSelectCount.GetHashCode();
                 if (this.CellLayoutType != null)
-                    hash = hash * 59 + this.CellLayoutType.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.CellLayoutType.GetHashCode();
+                return hashCode;
             }
         }
 

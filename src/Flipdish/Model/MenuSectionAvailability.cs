@@ -31,35 +31,35 @@ namespace Flipdish.Model
     public partial class MenuSectionAvailability :  IEquatable<MenuSectionAvailability>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets AvailabilityMode
+        /// Defines AvailabilityMode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum AvailabilityModeEnum
         {
             
             /// <summary>
-            /// Enum DisplayAlways for "DisplayAlways"
+            /// Enum DisplayAlways for value: DisplayAlways
             /// </summary>
             [EnumMember(Value = "DisplayAlways")]
-            DisplayAlways,
+            DisplayAlways = 1,
             
             /// <summary>
-            /// Enum DisplayBasedOnTimes for "DisplayBasedOnTimes"
+            /// Enum DisplayBasedOnTimes for value: DisplayBasedOnTimes
             /// </summary>
             [EnumMember(Value = "DisplayBasedOnTimes")]
-            DisplayBasedOnTimes,
+            DisplayBasedOnTimes = 2,
             
             /// <summary>
-            /// Enum DisplayAlwaysStartCollapsed for "DisplayAlwaysStartCollapsed"
+            /// Enum DisplayAlwaysStartCollapsed for value: DisplayAlwaysStartCollapsed
             /// </summary>
             [EnumMember(Value = "DisplayAlwaysStartCollapsed")]
-            DisplayAlwaysStartCollapsed,
+            DisplayAlwaysStartCollapsed = 3,
             
             /// <summary>
-            /// Enum DisplayAlwaysStartCollapsedBasedOnTimes for "DisplayAlwaysStartCollapsedBasedOnTimes"
+            /// Enum DisplayAlwaysStartCollapsedBasedOnTimes for value: DisplayAlwaysStartCollapsedBasedOnTimes
             /// </summary>
             [EnumMember(Value = "DisplayAlwaysStartCollapsedBasedOnTimes")]
-            DisplayAlwaysStartCollapsedBasedOnTimes
+            DisplayAlwaysStartCollapsedBasedOnTimes = 4
         }
 
         /// <summary>
@@ -111,35 +111,33 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as MenuSectionAvailability);
+            return this.Equals(input as MenuSectionAvailability);
         }
 
         /// <summary>
         /// Returns true if MenuSectionAvailability instances are equal
         /// </summary>
-        /// <param name="other">Instance of MenuSectionAvailability to be compared</param>
+        /// <param name="input">Instance of MenuSectionAvailability to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MenuSectionAvailability other)
+        public bool Equals(MenuSectionAvailability input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.AvailableTimes == other.AvailableTimes ||
+                    this.AvailableTimes == input.AvailableTimes ||
                     this.AvailableTimes != null &&
-                    this.AvailableTimes.SequenceEqual(other.AvailableTimes)
+                    this.AvailableTimes.SequenceEqual(input.AvailableTimes)
                 ) && 
                 (
-                    this.AvailabilityMode == other.AvailabilityMode ||
-                    this.AvailabilityMode != null &&
-                    this.AvailabilityMode.Equals(other.AvailabilityMode)
+                    this.AvailabilityMode == input.AvailabilityMode ||
+                    (this.AvailabilityMode != null &&
+                    this.AvailabilityMode.Equals(input.AvailabilityMode))
                 );
         }
 
@@ -149,16 +147,14 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.AvailableTimes != null)
-                    hash = hash * 59 + this.AvailableTimes.GetHashCode();
+                    hashCode = hashCode * 59 + this.AvailableTimes.GetHashCode();
                 if (this.AvailabilityMode != null)
-                    hash = hash * 59 + this.AvailabilityMode.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.AvailabilityMode.GetHashCode();
+                return hashCode;
             }
         }
 

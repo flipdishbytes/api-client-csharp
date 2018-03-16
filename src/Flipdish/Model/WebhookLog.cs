@@ -187,95 +187,93 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as WebhookLog);
+            return this.Equals(input as WebhookLog);
         }
 
         /// <summary>
         /// Returns true if WebhookLog instances are equal
         /// </summary>
-        /// <param name="other">Instance of WebhookLog to be compared</param>
+        /// <param name="input">Instance of WebhookLog to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(WebhookLog other)
+        public bool Equals(WebhookLog input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.WebhookSubscriptionOwnerUserId == other.WebhookSubscriptionOwnerUserId ||
-                    this.WebhookSubscriptionOwnerUserId != null &&
-                    this.WebhookSubscriptionOwnerUserId.Equals(other.WebhookSubscriptionOwnerUserId)
+                    this.WebhookSubscriptionOwnerUserId == input.WebhookSubscriptionOwnerUserId ||
+                    (this.WebhookSubscriptionOwnerUserId != null &&
+                    this.WebhookSubscriptionOwnerUserId.Equals(input.WebhookSubscriptionOwnerUserId))
                 ) && 
                 (
-                    this.EventCreated == other.EventCreated ||
-                    this.EventCreated != null &&
-                    this.EventCreated.Equals(other.EventCreated)
+                    this.EventCreated == input.EventCreated ||
+                    (this.EventCreated != null &&
+                    this.EventCreated.Equals(input.EventCreated))
                 ) && 
                 (
-                    this.WebhookTriggered == other.WebhookTriggered ||
-                    this.WebhookTriggered != null &&
-                    this.WebhookTriggered.Equals(other.WebhookTriggered)
+                    this.WebhookTriggered == input.WebhookTriggered ||
+                    (this.WebhookTriggered != null &&
+                    this.WebhookTriggered.Equals(input.WebhookTriggered))
                 ) && 
                 (
-                    this.WebhookEventName == other.WebhookEventName ||
-                    this.WebhookEventName != null &&
-                    this.WebhookEventName.Equals(other.WebhookEventName)
+                    this.WebhookEventName == input.WebhookEventName ||
+                    (this.WebhookEventName != null &&
+                    this.WebhookEventName.Equals(input.WebhookEventName))
                 ) && 
                 (
-                    this.WebhookSubscriptionCallbackUrl == other.WebhookSubscriptionCallbackUrl ||
-                    this.WebhookSubscriptionCallbackUrl != null &&
-                    this.WebhookSubscriptionCallbackUrl.Equals(other.WebhookSubscriptionCallbackUrl)
+                    this.WebhookSubscriptionCallbackUrl == input.WebhookSubscriptionCallbackUrl ||
+                    (this.WebhookSubscriptionCallbackUrl != null &&
+                    this.WebhookSubscriptionCallbackUrl.Equals(input.WebhookSubscriptionCallbackUrl))
                 ) && 
                 (
-                    this.HttpResponseStatusCode == other.HttpResponseStatusCode ||
-                    this.HttpResponseStatusCode != null &&
-                    this.HttpResponseStatusCode.Equals(other.HttpResponseStatusCode)
+                    this.HttpResponseStatusCode == input.HttpResponseStatusCode ||
+                    (this.HttpResponseStatusCode != null &&
+                    this.HttpResponseStatusCode.Equals(input.HttpResponseStatusCode))
                 ) && 
                 (
-                    this.HttpResponseStatus == other.HttpResponseStatus ||
-                    this.HttpResponseStatus != null &&
-                    this.HttpResponseStatus.Equals(other.HttpResponseStatus)
+                    this.HttpResponseStatus == input.HttpResponseStatus ||
+                    (this.HttpResponseStatus != null &&
+                    this.HttpResponseStatus.Equals(input.HttpResponseStatus))
                 ) && 
                 (
-                    this.RequestHeaders == other.RequestHeaders ||
-                    this.RequestHeaders != null &&
-                    this.RequestHeaders.Equals(other.RequestHeaders)
+                    this.RequestHeaders == input.RequestHeaders ||
+                    (this.RequestHeaders != null &&
+                    this.RequestHeaders.Equals(input.RequestHeaders))
                 ) && 
                 (
-                    this.RequestBody == other.RequestBody ||
-                    this.RequestBody != null &&
-                    this.RequestBody.Equals(other.RequestBody)
+                    this.RequestBody == input.RequestBody ||
+                    (this.RequestBody != null &&
+                    this.RequestBody.Equals(input.RequestBody))
                 ) && 
                 (
-                    this.ResponseHeaders == other.ResponseHeaders ||
-                    this.ResponseHeaders != null &&
-                    this.ResponseHeaders.Equals(other.ResponseHeaders)
+                    this.ResponseHeaders == input.ResponseHeaders ||
+                    (this.ResponseHeaders != null &&
+                    this.ResponseHeaders.Equals(input.ResponseHeaders))
                 ) && 
                 (
-                    this.ResponseBody == other.ResponseBody ||
-                    this.ResponseBody != null &&
-                    this.ResponseBody.Equals(other.ResponseBody)
+                    this.ResponseBody == input.ResponseBody ||
+                    (this.ResponseBody != null &&
+                    this.ResponseBody.Equals(input.ResponseBody))
                 ) && 
                 (
-                    this.Duration == other.Duration ||
-                    this.Duration != null &&
-                    this.Duration.Equals(other.Duration)
+                    this.Duration == input.Duration ||
+                    (this.Duration != null &&
+                    this.Duration.Equals(input.Duration))
                 ) && 
                 (
-                    this.RetryCount == other.RetryCount ||
-                    this.RetryCount != null &&
-                    this.RetryCount.Equals(other.RetryCount)
+                    this.RetryCount == input.RetryCount ||
+                    (this.RetryCount != null &&
+                    this.RetryCount.Equals(input.RetryCount))
                 ) && 
                 (
-                    this.FlipdishWebhookId == other.FlipdishWebhookId ||
-                    this.FlipdishWebhookId != null &&
-                    this.FlipdishWebhookId.Equals(other.FlipdishWebhookId)
+                    this.FlipdishWebhookId == input.FlipdishWebhookId ||
+                    (this.FlipdishWebhookId != null &&
+                    this.FlipdishWebhookId.Equals(input.FlipdishWebhookId))
                 );
         }
 
@@ -285,40 +283,38 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.WebhookSubscriptionOwnerUserId != null)
-                    hash = hash * 59 + this.WebhookSubscriptionOwnerUserId.GetHashCode();
+                    hashCode = hashCode * 59 + this.WebhookSubscriptionOwnerUserId.GetHashCode();
                 if (this.EventCreated != null)
-                    hash = hash * 59 + this.EventCreated.GetHashCode();
+                    hashCode = hashCode * 59 + this.EventCreated.GetHashCode();
                 if (this.WebhookTriggered != null)
-                    hash = hash * 59 + this.WebhookTriggered.GetHashCode();
+                    hashCode = hashCode * 59 + this.WebhookTriggered.GetHashCode();
                 if (this.WebhookEventName != null)
-                    hash = hash * 59 + this.WebhookEventName.GetHashCode();
+                    hashCode = hashCode * 59 + this.WebhookEventName.GetHashCode();
                 if (this.WebhookSubscriptionCallbackUrl != null)
-                    hash = hash * 59 + this.WebhookSubscriptionCallbackUrl.GetHashCode();
+                    hashCode = hashCode * 59 + this.WebhookSubscriptionCallbackUrl.GetHashCode();
                 if (this.HttpResponseStatusCode != null)
-                    hash = hash * 59 + this.HttpResponseStatusCode.GetHashCode();
+                    hashCode = hashCode * 59 + this.HttpResponseStatusCode.GetHashCode();
                 if (this.HttpResponseStatus != null)
-                    hash = hash * 59 + this.HttpResponseStatus.GetHashCode();
+                    hashCode = hashCode * 59 + this.HttpResponseStatus.GetHashCode();
                 if (this.RequestHeaders != null)
-                    hash = hash * 59 + this.RequestHeaders.GetHashCode();
+                    hashCode = hashCode * 59 + this.RequestHeaders.GetHashCode();
                 if (this.RequestBody != null)
-                    hash = hash * 59 + this.RequestBody.GetHashCode();
+                    hashCode = hashCode * 59 + this.RequestBody.GetHashCode();
                 if (this.ResponseHeaders != null)
-                    hash = hash * 59 + this.ResponseHeaders.GetHashCode();
+                    hashCode = hashCode * 59 + this.ResponseHeaders.GetHashCode();
                 if (this.ResponseBody != null)
-                    hash = hash * 59 + this.ResponseBody.GetHashCode();
+                    hashCode = hashCode * 59 + this.ResponseBody.GetHashCode();
                 if (this.Duration != null)
-                    hash = hash * 59 + this.Duration.GetHashCode();
+                    hashCode = hashCode * 59 + this.Duration.GetHashCode();
                 if (this.RetryCount != null)
-                    hash = hash * 59 + this.RetryCount.GetHashCode();
+                    hashCode = hashCode * 59 + this.RetryCount.GetHashCode();
                 if (this.FlipdishWebhookId != null)
-                    hash = hash * 59 + this.FlipdishWebhookId.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.FlipdishWebhookId.GetHashCode();
+                return hashCode;
             }
         }
 

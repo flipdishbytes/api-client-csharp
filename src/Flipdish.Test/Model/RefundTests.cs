@@ -19,6 +19,7 @@ using Flipdish.Api;
 using Flipdish.Model;
 using Flipdish.Client;
 using System.Reflection;
+using Newtonsoft.Json;
 
 namespace Flipdish.Test
 {
@@ -63,6 +64,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test "IsInstanceOfType" Refund
             //Assert.IsInstanceOfType<Refund> (instance, "variable 'instance' is a Refund");
         }
+
 
         /// <summary>
         /// Test the property 'RefundReason'

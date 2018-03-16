@@ -115,55 +115,53 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as WebhookSubscription);
+            return this.Equals(input as WebhookSubscription);
         }
 
         /// <summary>
         /// Returns true if WebhookSubscription instances are equal
         /// </summary>
-        /// <param name="other">Instance of WebhookSubscription to be compared</param>
+        /// <param name="input">Instance of WebhookSubscription to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(WebhookSubscription other)
+        public bool Equals(WebhookSubscription input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.OwnerUserId == other.OwnerUserId ||
-                    this.OwnerUserId != null &&
-                    this.OwnerUserId.Equals(other.OwnerUserId)
+                    this.OwnerUserId == input.OwnerUserId ||
+                    (this.OwnerUserId != null &&
+                    this.OwnerUserId.Equals(input.OwnerUserId))
                 ) && 
                 (
-                    this.EventNames == other.EventNames ||
+                    this.EventNames == input.EventNames ||
                     this.EventNames != null &&
-                    this.EventNames.SequenceEqual(other.EventNames)
+                    this.EventNames.SequenceEqual(input.EventNames)
                 ) && 
                 (
-                    this.CallbackUrl == other.CallbackUrl ||
-                    this.CallbackUrl != null &&
-                    this.CallbackUrl.Equals(other.CallbackUrl)
+                    this.CallbackUrl == input.CallbackUrl ||
+                    (this.CallbackUrl != null &&
+                    this.CallbackUrl.Equals(input.CallbackUrl))
                 ) && 
                 (
-                    this.Enabled == other.Enabled ||
-                    this.Enabled != null &&
-                    this.Enabled.Equals(other.Enabled)
+                    this.Enabled == input.Enabled ||
+                    (this.Enabled != null &&
+                    this.Enabled.Equals(input.Enabled))
                 ) && 
                 (
-                    this.VerifyToken == other.VerifyToken ||
-                    this.VerifyToken != null &&
-                    this.VerifyToken.Equals(other.VerifyToken)
+                    this.VerifyToken == input.VerifyToken ||
+                    (this.VerifyToken != null &&
+                    this.VerifyToken.Equals(input.VerifyToken))
                 );
         }
 
@@ -173,24 +171,22 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.OwnerUserId != null)
-                    hash = hash * 59 + this.OwnerUserId.GetHashCode();
+                    hashCode = hashCode * 59 + this.OwnerUserId.GetHashCode();
                 if (this.EventNames != null)
-                    hash = hash * 59 + this.EventNames.GetHashCode();
+                    hashCode = hashCode * 59 + this.EventNames.GetHashCode();
                 if (this.CallbackUrl != null)
-                    hash = hash * 59 + this.CallbackUrl.GetHashCode();
+                    hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
                 if (this.Enabled != null)
-                    hash = hash * 59 + this.Enabled.GetHashCode();
+                    hashCode = hashCode * 59 + this.Enabled.GetHashCode();
                 if (this.VerifyToken != null)
-                    hash = hash * 59 + this.VerifyToken.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.VerifyToken.GetHashCode();
+                return hashCode;
             }
         }
 

@@ -31,683 +31,683 @@ namespace Flipdish.Model
     public partial class StoreSummary :  IEquatable<StoreSummary>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets Currency
+        /// Defines Currency
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum CurrencyEnum
         {
             
             /// <summary>
-            /// Enum EUR for "EUR"
+            /// Enum EUR for value: EUR
             /// </summary>
             [EnumMember(Value = "EUR")]
-            EUR,
+            EUR = 1,
             
             /// <summary>
-            /// Enum USD for "USD"
+            /// Enum USD for value: USD
             /// </summary>
             [EnumMember(Value = "USD")]
-            USD,
+            USD = 2,
             
             /// <summary>
-            /// Enum GBP for "GBP"
+            /// Enum GBP for value: GBP
             /// </summary>
             [EnumMember(Value = "GBP")]
-            GBP,
+            GBP = 3,
             
             /// <summary>
-            /// Enum CAD for "CAD"
+            /// Enum CAD for value: CAD
             /// </summary>
             [EnumMember(Value = "CAD")]
-            CAD,
+            CAD = 4,
             
             /// <summary>
-            /// Enum AUD for "AUD"
+            /// Enum AUD for value: AUD
             /// </summary>
             [EnumMember(Value = "AUD")]
-            AUD,
+            AUD = 5,
             
             /// <summary>
-            /// Enum DJF for "DJF"
+            /// Enum DJF for value: DJF
             /// </summary>
             [EnumMember(Value = "DJF")]
-            DJF,
+            DJF = 6,
             
             /// <summary>
-            /// Enum ZAR for "ZAR"
+            /// Enum ZAR for value: ZAR
             /// </summary>
             [EnumMember(Value = "ZAR")]
-            ZAR,
+            ZAR = 7,
             
             /// <summary>
-            /// Enum ETB for "ETB"
+            /// Enum ETB for value: ETB
             /// </summary>
             [EnumMember(Value = "ETB")]
-            ETB,
+            ETB = 8,
             
             /// <summary>
-            /// Enum AED for "AED"
+            /// Enum AED for value: AED
             /// </summary>
             [EnumMember(Value = "AED")]
-            AED,
+            AED = 9,
             
             /// <summary>
-            /// Enum BHD for "BHD"
+            /// Enum BHD for value: BHD
             /// </summary>
             [EnumMember(Value = "BHD")]
-            BHD,
+            BHD = 10,
             
             /// <summary>
-            /// Enum DZD for "DZD"
+            /// Enum DZD for value: DZD
             /// </summary>
             [EnumMember(Value = "DZD")]
-            DZD,
+            DZD = 11,
             
             /// <summary>
-            /// Enum EGP for "EGP"
+            /// Enum EGP for value: EGP
             /// </summary>
             [EnumMember(Value = "EGP")]
-            EGP,
+            EGP = 12,
             
             /// <summary>
-            /// Enum IQD for "IQD"
+            /// Enum IQD for value: IQD
             /// </summary>
             [EnumMember(Value = "IQD")]
-            IQD,
+            IQD = 13,
             
             /// <summary>
-            /// Enum JOD for "JOD"
+            /// Enum JOD for value: JOD
             /// </summary>
             [EnumMember(Value = "JOD")]
-            JOD,
+            JOD = 14,
             
             /// <summary>
-            /// Enum KWD for "KWD"
+            /// Enum KWD for value: KWD
             /// </summary>
             [EnumMember(Value = "KWD")]
-            KWD,
+            KWD = 15,
             
             /// <summary>
-            /// Enum LBP for "LBP"
+            /// Enum LBP for value: LBP
             /// </summary>
             [EnumMember(Value = "LBP")]
-            LBP,
+            LBP = 16,
             
             /// <summary>
-            /// Enum LYD for "LYD"
+            /// Enum LYD for value: LYD
             /// </summary>
             [EnumMember(Value = "LYD")]
-            LYD,
+            LYD = 17,
             
             /// <summary>
-            /// Enum MAD for "MAD"
+            /// Enum MAD for value: MAD
             /// </summary>
             [EnumMember(Value = "MAD")]
-            MAD,
+            MAD = 18,
             
             /// <summary>
-            /// Enum OMR for "OMR"
+            /// Enum OMR for value: OMR
             /// </summary>
             [EnumMember(Value = "OMR")]
-            OMR,
+            OMR = 19,
             
             /// <summary>
-            /// Enum QAR for "QAR"
+            /// Enum QAR for value: QAR
             /// </summary>
             [EnumMember(Value = "QAR")]
-            QAR,
+            QAR = 20,
             
             /// <summary>
-            /// Enum SAR for "SAR"
+            /// Enum SAR for value: SAR
             /// </summary>
             [EnumMember(Value = "SAR")]
-            SAR,
+            SAR = 21,
             
             /// <summary>
-            /// Enum SYP for "SYP"
+            /// Enum SYP for value: SYP
             /// </summary>
             [EnumMember(Value = "SYP")]
-            SYP,
+            SYP = 22,
             
             /// <summary>
-            /// Enum TND for "TND"
+            /// Enum TND for value: TND
             /// </summary>
             [EnumMember(Value = "TND")]
-            TND,
+            TND = 23,
             
             /// <summary>
-            /// Enum YER for "YER"
+            /// Enum YER for value: YER
             /// </summary>
             [EnumMember(Value = "YER")]
-            YER,
+            YER = 24,
             
             /// <summary>
-            /// Enum CLP for "CLP"
+            /// Enum CLP for value: CLP
             /// </summary>
             [EnumMember(Value = "CLP")]
-            CLP,
+            CLP = 25,
             
             /// <summary>
-            /// Enum INR for "INR"
+            /// Enum INR for value: INR
             /// </summary>
             [EnumMember(Value = "INR")]
-            INR,
+            INR = 26,
             
             /// <summary>
-            /// Enum AZN for "AZN"
+            /// Enum AZN for value: AZN
             /// </summary>
             [EnumMember(Value = "AZN")]
-            AZN,
+            AZN = 27,
             
             /// <summary>
-            /// Enum RUB for "RUB"
+            /// Enum RUB for value: RUB
             /// </summary>
             [EnumMember(Value = "RUB")]
-            RUB,
+            RUB = 28,
             
             /// <summary>
-            /// Enum BYN for "BYN"
+            /// Enum BYN for value: BYN
             /// </summary>
             [EnumMember(Value = "BYN")]
-            BYN,
+            BYN = 29,
             
             /// <summary>
-            /// Enum BGN for "BGN"
+            /// Enum BGN for value: BGN
             /// </summary>
             [EnumMember(Value = "BGN")]
-            BGN,
+            BGN = 30,
             
             /// <summary>
-            /// Enum NGN for "NGN"
+            /// Enum NGN for value: NGN
             /// </summary>
             [EnumMember(Value = "NGN")]
-            NGN,
+            NGN = 31,
             
             /// <summary>
-            /// Enum BDT for "BDT"
+            /// Enum BDT for value: BDT
             /// </summary>
             [EnumMember(Value = "BDT")]
-            BDT,
+            BDT = 32,
             
             /// <summary>
-            /// Enum CNY for "CNY"
+            /// Enum CNY for value: CNY
             /// </summary>
             [EnumMember(Value = "CNY")]
-            CNY,
+            CNY = 33,
             
             /// <summary>
-            /// Enum BAM for "BAM"
+            /// Enum BAM for value: BAM
             /// </summary>
             [EnumMember(Value = "BAM")]
-            BAM,
+            BAM = 34,
             
             /// <summary>
-            /// Enum CZK for "CZK"
+            /// Enum CZK for value: CZK
             /// </summary>
             [EnumMember(Value = "CZK")]
-            CZK,
+            CZK = 35,
             
             /// <summary>
-            /// Enum DKK for "DKK"
+            /// Enum DKK for value: DKK
             /// </summary>
             [EnumMember(Value = "DKK")]
-            DKK,
+            DKK = 36,
             
             /// <summary>
-            /// Enum CHF for "CHF"
+            /// Enum CHF for value: CHF
             /// </summary>
             [EnumMember(Value = "CHF")]
-            CHF,
+            CHF = 37,
             
             /// <summary>
-            /// Enum MVR for "MVR"
+            /// Enum MVR for value: MVR
             /// </summary>
             [EnumMember(Value = "MVR")]
-            MVR,
+            MVR = 38,
             
             /// <summary>
-            /// Enum BTN for "BTN"
+            /// Enum BTN for value: BTN
             /// </summary>
             [EnumMember(Value = "BTN")]
-            BTN,
+            BTN = 39,
             
             /// <summary>
-            /// Enum XCD for "XCD"
+            /// Enum XCD for value: XCD
             /// </summary>
             [EnumMember(Value = "XCD")]
-            XCD,
+            XCD = 40,
             
             /// <summary>
-            /// Enum BZD for "BZD"
+            /// Enum BZD for value: BZD
             /// </summary>
             [EnumMember(Value = "BZD")]
-            BZD,
+            BZD = 41,
             
             /// <summary>
-            /// Enum HKD for "HKD"
+            /// Enum HKD for value: HKD
             /// </summary>
             [EnumMember(Value = "HKD")]
-            HKD,
+            HKD = 42,
             
             /// <summary>
-            /// Enum IDR for "IDR"
+            /// Enum IDR for value: IDR
             /// </summary>
             [EnumMember(Value = "IDR")]
-            IDR,
+            IDR = 43,
             
             /// <summary>
-            /// Enum JMD for "JMD"
+            /// Enum JMD for value: JMD
             /// </summary>
             [EnumMember(Value = "JMD")]
-            JMD,
+            JMD = 44,
             
             /// <summary>
-            /// Enum MYR for "MYR"
+            /// Enum MYR for value: MYR
             /// </summary>
             [EnumMember(Value = "MYR")]
-            MYR,
+            MYR = 45,
             
             /// <summary>
-            /// Enum NZD for "NZD"
+            /// Enum NZD for value: NZD
             /// </summary>
             [EnumMember(Value = "NZD")]
-            NZD,
+            NZD = 46,
             
             /// <summary>
-            /// Enum PHP for "PHP"
+            /// Enum PHP for value: PHP
             /// </summary>
             [EnumMember(Value = "PHP")]
-            PHP,
+            PHP = 47,
             
             /// <summary>
-            /// Enum SGD for "SGD"
+            /// Enum SGD for value: SGD
             /// </summary>
             [EnumMember(Value = "SGD")]
-            SGD,
+            SGD = 48,
             
             /// <summary>
-            /// Enum TTD for "TTD"
+            /// Enum TTD for value: TTD
             /// </summary>
             [EnumMember(Value = "TTD")]
-            TTD,
+            TTD = 49,
             
             /// <summary>
-            /// Enum XDR for "XDR"
+            /// Enum XDR for value: XDR
             /// </summary>
             [EnumMember(Value = "XDR")]
-            XDR,
+            XDR = 50,
             
             /// <summary>
-            /// Enum ARS for "ARS"
+            /// Enum ARS for value: ARS
             /// </summary>
             [EnumMember(Value = "ARS")]
-            ARS,
+            ARS = 51,
             
             /// <summary>
-            /// Enum BOB for "BOB"
+            /// Enum BOB for value: BOB
             /// </summary>
             [EnumMember(Value = "BOB")]
-            BOB,
+            BOB = 52,
             
             /// <summary>
-            /// Enum COP for "COP"
+            /// Enum COP for value: COP
             /// </summary>
             [EnumMember(Value = "COP")]
-            COP,
+            COP = 53,
             
             /// <summary>
-            /// Enum CRC for "CRC"
+            /// Enum CRC for value: CRC
             /// </summary>
             [EnumMember(Value = "CRC")]
-            CRC,
+            CRC = 54,
             
             /// <summary>
-            /// Enum CUP for "CUP"
+            /// Enum CUP for value: CUP
             /// </summary>
             [EnumMember(Value = "CUP")]
-            CUP,
+            CUP = 55,
             
             /// <summary>
-            /// Enum DOP for "DOP"
+            /// Enum DOP for value: DOP
             /// </summary>
             [EnumMember(Value = "DOP")]
-            DOP,
+            DOP = 56,
             
             /// <summary>
-            /// Enum GTQ for "GTQ"
+            /// Enum GTQ for value: GTQ
             /// </summary>
             [EnumMember(Value = "GTQ")]
-            GTQ,
+            GTQ = 57,
             
             /// <summary>
-            /// Enum HNL for "HNL"
+            /// Enum HNL for value: HNL
             /// </summary>
             [EnumMember(Value = "HNL")]
-            HNL,
+            HNL = 58,
             
             /// <summary>
-            /// Enum MXN for "MXN"
+            /// Enum MXN for value: MXN
             /// </summary>
             [EnumMember(Value = "MXN")]
-            MXN,
+            MXN = 59,
             
             /// <summary>
-            /// Enum NIO for "NIO"
+            /// Enum NIO for value: NIO
             /// </summary>
             [EnumMember(Value = "NIO")]
-            NIO,
+            NIO = 60,
             
             /// <summary>
-            /// Enum PAB for "PAB"
+            /// Enum PAB for value: PAB
             /// </summary>
             [EnumMember(Value = "PAB")]
-            PAB,
+            PAB = 61,
             
             /// <summary>
-            /// Enum PEN for "PEN"
+            /// Enum PEN for value: PEN
             /// </summary>
             [EnumMember(Value = "PEN")]
-            PEN,
+            PEN = 62,
             
             /// <summary>
-            /// Enum PYG for "PYG"
+            /// Enum PYG for value: PYG
             /// </summary>
             [EnumMember(Value = "PYG")]
-            PYG,
+            PYG = 63,
             
             /// <summary>
-            /// Enum UYU for "UYU"
+            /// Enum UYU for value: UYU
             /// </summary>
             [EnumMember(Value = "UYU")]
-            UYU,
+            UYU = 64,
             
             /// <summary>
-            /// Enum VEF for "VEF"
+            /// Enum VEF for value: VEF
             /// </summary>
             [EnumMember(Value = "VEF")]
-            VEF,
+            VEF = 65,
             
             /// <summary>
-            /// Enum IRR for "IRR"
+            /// Enum IRR for value: IRR
             /// </summary>
             [EnumMember(Value = "IRR")]
-            IRR,
+            IRR = 66,
             
             /// <summary>
-            /// Enum XOF for "XOF"
+            /// Enum XOF for value: XOF
             /// </summary>
             [EnumMember(Value = "XOF")]
-            XOF,
+            XOF = 67,
             
             /// <summary>
-            /// Enum CDF for "CDF"
+            /// Enum CDF for value: CDF
             /// </summary>
             [EnumMember(Value = "CDF")]
-            CDF,
+            CDF = 68,
             
             /// <summary>
-            /// Enum XAF for "XAF"
+            /// Enum XAF for value: XAF
             /// </summary>
             [EnumMember(Value = "XAF")]
-            XAF,
+            XAF = 69,
             
             /// <summary>
-            /// Enum HTG for "HTG"
+            /// Enum HTG for value: HTG
             /// </summary>
             [EnumMember(Value = "HTG")]
-            HTG,
+            HTG = 70,
             
             /// <summary>
-            /// Enum ILS for "ILS"
+            /// Enum ILS for value: ILS
             /// </summary>
             [EnumMember(Value = "ILS")]
-            ILS,
+            ILS = 71,
             
             /// <summary>
-            /// Enum HRK for "HRK"
+            /// Enum HRK for value: HRK
             /// </summary>
             [EnumMember(Value = "HRK")]
-            HRK,
+            HRK = 72,
             
             /// <summary>
-            /// Enum HUF for "HUF"
+            /// Enum HUF for value: HUF
             /// </summary>
             [EnumMember(Value = "HUF")]
-            HUF,
+            HUF = 73,
             
             /// <summary>
-            /// Enum AMD for "AMD"
+            /// Enum AMD for value: AMD
             /// </summary>
             [EnumMember(Value = "AMD")]
-            AMD,
+            AMD = 74,
             
             /// <summary>
-            /// Enum ISK for "ISK"
+            /// Enum ISK for value: ISK
             /// </summary>
             [EnumMember(Value = "ISK")]
-            ISK,
+            ISK = 75,
             
             /// <summary>
-            /// Enum JPY for "JPY"
+            /// Enum JPY for value: JPY
             /// </summary>
             [EnumMember(Value = "JPY")]
-            JPY,
+            JPY = 76,
             
             /// <summary>
-            /// Enum GEL for "GEL"
+            /// Enum GEL for value: GEL
             /// </summary>
             [EnumMember(Value = "GEL")]
-            GEL,
+            GEL = 77,
             
             /// <summary>
-            /// Enum KZT for "KZT"
+            /// Enum KZT for value: KZT
             /// </summary>
             [EnumMember(Value = "KZT")]
-            KZT,
+            KZT = 78,
             
             /// <summary>
-            /// Enum KHR for "KHR"
+            /// Enum KHR for value: KHR
             /// </summary>
             [EnumMember(Value = "KHR")]
-            KHR,
+            KHR = 79,
             
             /// <summary>
-            /// Enum KRW for "KRW"
+            /// Enum KRW for value: KRW
             /// </summary>
             [EnumMember(Value = "KRW")]
-            KRW,
+            KRW = 80,
             
             /// <summary>
-            /// Enum KGS for "KGS"
+            /// Enum KGS for value: KGS
             /// </summary>
             [EnumMember(Value = "KGS")]
-            KGS,
+            KGS = 81,
             
             /// <summary>
-            /// Enum LAK for "LAK"
+            /// Enum LAK for value: LAK
             /// </summary>
             [EnumMember(Value = "LAK")]
-            LAK,
+            LAK = 82,
             
             /// <summary>
-            /// Enum MKD for "MKD"
+            /// Enum MKD for value: MKD
             /// </summary>
             [EnumMember(Value = "MKD")]
-            MKD,
+            MKD = 83,
             
             /// <summary>
-            /// Enum MNT for "MNT"
+            /// Enum MNT for value: MNT
             /// </summary>
             [EnumMember(Value = "MNT")]
-            MNT,
+            MNT = 84,
             
             /// <summary>
-            /// Enum BND for "BND"
+            /// Enum BND for value: BND
             /// </summary>
             [EnumMember(Value = "BND")]
-            BND,
+            BND = 85,
             
             /// <summary>
-            /// Enum MMK for "MMK"
+            /// Enum MMK for value: MMK
             /// </summary>
             [EnumMember(Value = "MMK")]
-            MMK,
+            MMK = 86,
             
             /// <summary>
-            /// Enum NOK for "NOK"
+            /// Enum NOK for value: NOK
             /// </summary>
             [EnumMember(Value = "NOK")]
-            NOK,
+            NOK = 87,
             
             /// <summary>
-            /// Enum NPR for "NPR"
+            /// Enum NPR for value: NPR
             /// </summary>
             [EnumMember(Value = "NPR")]
-            NPR,
+            NPR = 88,
             
             /// <summary>
-            /// Enum PKR for "PKR"
+            /// Enum PKR for value: PKR
             /// </summary>
             [EnumMember(Value = "PKR")]
-            PKR,
+            PKR = 89,
             
             /// <summary>
-            /// Enum PLN for "PLN"
+            /// Enum PLN for value: PLN
             /// </summary>
             [EnumMember(Value = "PLN")]
-            PLN,
+            PLN = 90,
             
             /// <summary>
-            /// Enum AFN for "AFN"
+            /// Enum AFN for value: AFN
             /// </summary>
             [EnumMember(Value = "AFN")]
-            AFN,
+            AFN = 91,
             
             /// <summary>
-            /// Enum BRL for "BRL"
+            /// Enum BRL for value: BRL
             /// </summary>
             [EnumMember(Value = "BRL")]
-            BRL,
+            BRL = 92,
             
             /// <summary>
-            /// Enum MDL for "MDL"
+            /// Enum MDL for value: MDL
             /// </summary>
             [EnumMember(Value = "MDL")]
-            MDL,
+            MDL = 93,
             
             /// <summary>
-            /// Enum RON for "RON"
+            /// Enum RON for value: RON
             /// </summary>
             [EnumMember(Value = "RON")]
-            RON,
+            RON = 94,
             
             /// <summary>
-            /// Enum RWF for "RWF"
+            /// Enum RWF for value: RWF
             /// </summary>
             [EnumMember(Value = "RWF")]
-            RWF,
+            RWF = 95,
             
             /// <summary>
-            /// Enum SEK for "SEK"
+            /// Enum SEK for value: SEK
             /// </summary>
             [EnumMember(Value = "SEK")]
-            SEK,
+            SEK = 96,
             
             /// <summary>
-            /// Enum LKR for "LKR"
+            /// Enum LKR for value: LKR
             /// </summary>
             [EnumMember(Value = "LKR")]
-            LKR,
+            LKR = 97,
             
             /// <summary>
-            /// Enum SOS for "SOS"
+            /// Enum SOS for value: SOS
             /// </summary>
             [EnumMember(Value = "SOS")]
-            SOS,
+            SOS = 98,
             
             /// <summary>
-            /// Enum ALL for "ALL"
+            /// Enum ALL for value: ALL
             /// </summary>
             [EnumMember(Value = "ALL")]
-            ALL,
+            ALL = 99,
             
             /// <summary>
-            /// Enum RSD for "RSD"
+            /// Enum RSD for value: RSD
             /// </summary>
             [EnumMember(Value = "RSD")]
-            RSD,
+            RSD = 100,
             
             /// <summary>
-            /// Enum KES for "KES"
+            /// Enum KES for value: KES
             /// </summary>
             [EnumMember(Value = "KES")]
-            KES,
+            KES = 101,
             
             /// <summary>
-            /// Enum TJS for "TJS"
+            /// Enum TJS for value: TJS
             /// </summary>
             [EnumMember(Value = "TJS")]
-            TJS,
+            TJS = 102,
             
             /// <summary>
-            /// Enum THB for "THB"
+            /// Enum THB for value: THB
             /// </summary>
             [EnumMember(Value = "THB")]
-            THB,
+            THB = 103,
             
             /// <summary>
-            /// Enum ERN for "ERN"
+            /// Enum ERN for value: ERN
             /// </summary>
             [EnumMember(Value = "ERN")]
-            ERN,
+            ERN = 104,
             
             /// <summary>
-            /// Enum TMT for "TMT"
+            /// Enum TMT for value: TMT
             /// </summary>
             [EnumMember(Value = "TMT")]
-            TMT,
+            TMT = 105,
             
             /// <summary>
-            /// Enum BWP for "BWP"
+            /// Enum BWP for value: BWP
             /// </summary>
             [EnumMember(Value = "BWP")]
-            BWP,
+            BWP = 106,
             
             /// <summary>
-            /// Enum TRY for "TRY"
+            /// Enum TRY for value: TRY
             /// </summary>
             [EnumMember(Value = "TRY")]
-            TRY,
+            TRY = 107,
             
             /// <summary>
-            /// Enum UAH for "UAH"
+            /// Enum UAH for value: UAH
             /// </summary>
             [EnumMember(Value = "UAH")]
-            UAH,
+            UAH = 108,
             
             /// <summary>
-            /// Enum UZS for "UZS"
+            /// Enum UZS for value: UZS
             /// </summary>
             [EnumMember(Value = "UZS")]
-            UZS,
+            UZS = 109,
             
             /// <summary>
-            /// Enum VND for "VND"
+            /// Enum VND for value: VND
             /// </summary>
             [EnumMember(Value = "VND")]
-            VND,
+            VND = 110,
             
             /// <summary>
-            /// Enum MOP for "MOP"
+            /// Enum MOP for value: MOP
             /// </summary>
             [EnumMember(Value = "MOP")]
-            MOP,
+            MOP = 111,
             
             /// <summary>
-            /// Enum TWD for "TWD"
+            /// Enum TWD for value: TWD
             /// </summary>
             [EnumMember(Value = "TWD")]
-            TWD
+            TWD = 112
         }
 
         /// <summary>
@@ -786,50 +786,48 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as StoreSummary);
+            return this.Equals(input as StoreSummary);
         }
 
         /// <summary>
         /// Returns true if StoreSummary instances are equal
         /// </summary>
-        /// <param name="other">Instance of StoreSummary to be compared</param>
+        /// <param name="input">Instance of StoreSummary to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StoreSummary other)
+        public bool Equals(StoreSummary input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.MenuId == other.MenuId ||
-                    this.MenuId != null &&
-                    this.MenuId.Equals(other.MenuId)
+                    this.MenuId == input.MenuId ||
+                    (this.MenuId != null &&
+                    this.MenuId.Equals(input.MenuId))
                 ) && 
                 (
-                    this.Metadata == other.Metadata ||
+                    this.Metadata == input.Metadata ||
                     this.Metadata != null &&
-                    this.Metadata.SequenceEqual(other.Metadata)
+                    this.Metadata.SequenceEqual(input.Metadata)
                 ) && 
                 (
-                    this.Currency == other.Currency ||
-                    this.Currency != null &&
-                    this.Currency.Equals(other.Currency)
+                    this.Currency == input.Currency ||
+                    (this.Currency != null &&
+                    this.Currency.Equals(input.Currency))
                 );
         }
 
@@ -839,22 +837,20 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.MenuId != null)
-                    hash = hash * 59 + this.MenuId.GetHashCode();
+                    hashCode = hashCode * 59 + this.MenuId.GetHashCode();
                 if (this.Metadata != null)
-                    hash = hash * 59 + this.Metadata.GetHashCode();
+                    hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 if (this.Currency != null)
-                    hash = hash * 59 + this.Currency.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.Currency.GetHashCode();
+                return hashCode;
             }
         }
 

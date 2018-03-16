@@ -187,95 +187,93 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as HttpRequestAndResponseLog);
+            return this.Equals(input as HttpRequestAndResponseLog);
         }
 
         /// <summary>
         /// Returns true if HttpRequestAndResponseLog instances are equal
         /// </summary>
-        /// <param name="other">Instance of HttpRequestAndResponseLog to be compared</param>
+        /// <param name="input">Instance of HttpRequestAndResponseLog to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(HttpRequestAndResponseLog other)
+        public bool Equals(HttpRequestAndResponseLog input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.Verb == other.Verb ||
-                    this.Verb != null &&
-                    this.Verb.Equals(other.Verb)
+                    this.Verb == input.Verb ||
+                    (this.Verb != null &&
+                    this.Verb.Equals(input.Verb))
                 ) && 
                 (
-                    this.RequestUri == other.RequestUri ||
-                    this.RequestUri != null &&
-                    this.RequestUri.Equals(other.RequestUri)
+                    this.RequestUri == input.RequestUri ||
+                    (this.RequestUri != null &&
+                    this.RequestUri.Equals(input.RequestUri))
                 ) && 
                 (
-                    this.StatusCode == other.StatusCode ||
-                    this.StatusCode != null &&
-                    this.StatusCode.Equals(other.StatusCode)
+                    this.StatusCode == input.StatusCode ||
+                    (this.StatusCode != null &&
+                    this.StatusCode.Equals(input.StatusCode))
                 ) && 
                 (
-                    this.ReasonPhrase == other.ReasonPhrase ||
-                    this.ReasonPhrase != null &&
-                    this.ReasonPhrase.Equals(other.ReasonPhrase)
+                    this.ReasonPhrase == input.ReasonPhrase ||
+                    (this.ReasonPhrase != null &&
+                    this.ReasonPhrase.Equals(input.ReasonPhrase))
                 ) && 
                 (
-                    this.CallDurationInMilliseconds == other.CallDurationInMilliseconds ||
-                    this.CallDurationInMilliseconds != null &&
-                    this.CallDurationInMilliseconds.Equals(other.CallDurationInMilliseconds)
+                    this.CallDurationInMilliseconds == input.CallDurationInMilliseconds ||
+                    (this.CallDurationInMilliseconds != null &&
+                    this.CallDurationInMilliseconds.Equals(input.CallDurationInMilliseconds))
                 ) && 
                 (
-                    this.UserId == other.UserId ||
-                    this.UserId != null &&
-                    this.UserId.Equals(other.UserId)
+                    this.UserId == input.UserId ||
+                    (this.UserId != null &&
+                    this.UserId.Equals(input.UserId))
                 ) && 
                 (
-                    this.IpAddress == other.IpAddress ||
-                    this.IpAddress != null &&
-                    this.IpAddress.Equals(other.IpAddress)
+                    this.IpAddress == input.IpAddress ||
+                    (this.IpAddress != null &&
+                    this.IpAddress.Equals(input.IpAddress))
                 ) && 
                 (
-                    this.CreatedDateTime == other.CreatedDateTime ||
-                    this.CreatedDateTime != null &&
-                    this.CreatedDateTime.Equals(other.CreatedDateTime)
+                    this.CreatedDateTime == input.CreatedDateTime ||
+                    (this.CreatedDateTime != null &&
+                    this.CreatedDateTime.Equals(input.CreatedDateTime))
                 ) && 
                 (
-                    this.RequestHeaders == other.RequestHeaders ||
+                    this.RequestHeaders == input.RequestHeaders ||
                     this.RequestHeaders != null &&
-                    this.RequestHeaders.SequenceEqual(other.RequestHeaders)
+                    this.RequestHeaders.SequenceEqual(input.RequestHeaders)
                 ) && 
                 (
-                    this.RequestBody == other.RequestBody ||
-                    this.RequestBody != null &&
-                    this.RequestBody.Equals(other.RequestBody)
+                    this.RequestBody == input.RequestBody ||
+                    (this.RequestBody != null &&
+                    this.RequestBody.Equals(input.RequestBody))
                 ) && 
                 (
-                    this.RequestLength == other.RequestLength ||
-                    this.RequestLength != null &&
-                    this.RequestLength.Equals(other.RequestLength)
+                    this.RequestLength == input.RequestLength ||
+                    (this.RequestLength != null &&
+                    this.RequestLength.Equals(input.RequestLength))
                 ) && 
                 (
-                    this.ResponseHeaders == other.ResponseHeaders ||
+                    this.ResponseHeaders == input.ResponseHeaders ||
                     this.ResponseHeaders != null &&
-                    this.ResponseHeaders.SequenceEqual(other.ResponseHeaders)
+                    this.ResponseHeaders.SequenceEqual(input.ResponseHeaders)
                 ) && 
                 (
-                    this.ResponseBody == other.ResponseBody ||
-                    this.ResponseBody != null &&
-                    this.ResponseBody.Equals(other.ResponseBody)
+                    this.ResponseBody == input.ResponseBody ||
+                    (this.ResponseBody != null &&
+                    this.ResponseBody.Equals(input.ResponseBody))
                 ) && 
                 (
-                    this.ResponseLength == other.ResponseLength ||
-                    this.ResponseLength != null &&
-                    this.ResponseLength.Equals(other.ResponseLength)
+                    this.ResponseLength == input.ResponseLength ||
+                    (this.ResponseLength != null &&
+                    this.ResponseLength.Equals(input.ResponseLength))
                 );
         }
 
@@ -285,40 +283,38 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.Verb != null)
-                    hash = hash * 59 + this.Verb.GetHashCode();
+                    hashCode = hashCode * 59 + this.Verb.GetHashCode();
                 if (this.RequestUri != null)
-                    hash = hash * 59 + this.RequestUri.GetHashCode();
+                    hashCode = hashCode * 59 + this.RequestUri.GetHashCode();
                 if (this.StatusCode != null)
-                    hash = hash * 59 + this.StatusCode.GetHashCode();
+                    hashCode = hashCode * 59 + this.StatusCode.GetHashCode();
                 if (this.ReasonPhrase != null)
-                    hash = hash * 59 + this.ReasonPhrase.GetHashCode();
+                    hashCode = hashCode * 59 + this.ReasonPhrase.GetHashCode();
                 if (this.CallDurationInMilliseconds != null)
-                    hash = hash * 59 + this.CallDurationInMilliseconds.GetHashCode();
+                    hashCode = hashCode * 59 + this.CallDurationInMilliseconds.GetHashCode();
                 if (this.UserId != null)
-                    hash = hash * 59 + this.UserId.GetHashCode();
+                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
                 if (this.IpAddress != null)
-                    hash = hash * 59 + this.IpAddress.GetHashCode();
+                    hashCode = hashCode * 59 + this.IpAddress.GetHashCode();
                 if (this.CreatedDateTime != null)
-                    hash = hash * 59 + this.CreatedDateTime.GetHashCode();
+                    hashCode = hashCode * 59 + this.CreatedDateTime.GetHashCode();
                 if (this.RequestHeaders != null)
-                    hash = hash * 59 + this.RequestHeaders.GetHashCode();
+                    hashCode = hashCode * 59 + this.RequestHeaders.GetHashCode();
                 if (this.RequestBody != null)
-                    hash = hash * 59 + this.RequestBody.GetHashCode();
+                    hashCode = hashCode * 59 + this.RequestBody.GetHashCode();
                 if (this.RequestLength != null)
-                    hash = hash * 59 + this.RequestLength.GetHashCode();
+                    hashCode = hashCode * 59 + this.RequestLength.GetHashCode();
                 if (this.ResponseHeaders != null)
-                    hash = hash * 59 + this.ResponseHeaders.GetHashCode();
+                    hashCode = hashCode * 59 + this.ResponseHeaders.GetHashCode();
                 if (this.ResponseBody != null)
-                    hash = hash * 59 + this.ResponseBody.GetHashCode();
+                    hashCode = hashCode * 59 + this.ResponseBody.GetHashCode();
                 if (this.ResponseLength != null)
-                    hash = hash * 59 + this.ResponseLength.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.ResponseLength.GetHashCode();
+                return hashCode;
             }
         }
 

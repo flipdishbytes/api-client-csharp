@@ -97,45 +97,43 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as OAuthClient);
+            return this.Equals(input as OAuthClient);
         }
 
         /// <summary>
         /// Returns true if OAuthClient instances are equal
         /// </summary>
-        /// <param name="other">Instance of OAuthClient to be compared</param>
+        /// <param name="input">Instance of OAuthClient to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OAuthClient other)
+        public bool Equals(OAuthClient input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.ClientId == other.ClientId ||
-                    this.ClientId != null &&
-                    this.ClientId.Equals(other.ClientId)
+                    this.ClientId == input.ClientId ||
+                    (this.ClientId != null &&
+                    this.ClientId.Equals(input.ClientId))
                 ) && 
                 (
-                    this.ClientName == other.ClientName ||
-                    this.ClientName != null &&
-                    this.ClientName.Equals(other.ClientName)
+                    this.ClientName == input.ClientName ||
+                    (this.ClientName != null &&
+                    this.ClientName.Equals(input.ClientName))
                 ) && 
                 (
-                    this.OwnerUserId == other.OwnerUserId ||
-                    this.OwnerUserId != null &&
-                    this.OwnerUserId.Equals(other.OwnerUserId)
+                    this.OwnerUserId == input.OwnerUserId ||
+                    (this.OwnerUserId != null &&
+                    this.OwnerUserId.Equals(input.OwnerUserId))
                 ) && 
                 (
-                    this.LogoUri == other.LogoUri ||
-                    this.LogoUri != null &&
-                    this.LogoUri.Equals(other.LogoUri)
+                    this.LogoUri == input.LogoUri ||
+                    (this.LogoUri != null &&
+                    this.LogoUri.Equals(input.LogoUri))
                 );
         }
 
@@ -145,20 +143,18 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.ClientId != null)
-                    hash = hash * 59 + this.ClientId.GetHashCode();
+                    hashCode = hashCode * 59 + this.ClientId.GetHashCode();
                 if (this.ClientName != null)
-                    hash = hash * 59 + this.ClientName.GetHashCode();
+                    hashCode = hashCode * 59 + this.ClientName.GetHashCode();
                 if (this.OwnerUserId != null)
-                    hash = hash * 59 + this.OwnerUserId.GetHashCode();
+                    hashCode = hashCode * 59 + this.OwnerUserId.GetHashCode();
                 if (this.LogoUri != null)
-                    hash = hash * 59 + this.LogoUri.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.LogoUri.GetHashCode();
+                return hashCode;
             }
         }
 

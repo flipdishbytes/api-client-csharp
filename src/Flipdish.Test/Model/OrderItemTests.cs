@@ -19,6 +19,7 @@ using Flipdish.Api;
 using Flipdish.Model;
 using Flipdish.Client;
 using System.Reflection;
+using Newtonsoft.Json;
 
 namespace Flipdish.Test
 {
@@ -64,6 +65,23 @@ namespace Flipdish.Test
             //Assert.IsInstanceOfType<OrderItem> (instance, "variable 'instance' is a OrderItem");
         }
 
+
+        /// <summary>
+        /// Test the property 'OrderItemOptions'
+        /// </summary>
+        [Test]
+        public void OrderItemOptionsTest()
+        {
+            // TODO unit test for the property 'OrderItemOptions'
+        }
+        /// <summary>
+        /// Test the property 'Metadata'
+        /// </summary>
+        [Test]
+        public void MetadataTest()
+        {
+            // TODO unit test for the property 'Metadata'
+        }
         /// <summary>
         /// Test the property 'MenuSectionName'
         /// </summary>
@@ -135,22 +153,6 @@ namespace Flipdish.Test
         public void IsAvailableTest()
         {
             // TODO unit test for the property 'IsAvailable'
-        }
-        /// <summary>
-        /// Test the property 'OrderItemOptions'
-        /// </summary>
-        [Test]
-        public void OrderItemOptionsTest()
-        {
-            // TODO unit test for the property 'OrderItemOptions'
-        }
-        /// <summary>
-        /// Test the property 'Metadata'
-        /// </summary>
-        [Test]
-        public void MetadataTest()
-        {
-            // TODO unit test for the property 'Metadata'
         }
 
     }

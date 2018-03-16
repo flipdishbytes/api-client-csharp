@@ -106,50 +106,48 @@ namespace Flipdish.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CustomerSummary);
+            return this.Equals(input as CustomerSummary);
         }
 
         /// <summary>
         /// Returns true if CustomerSummary instances are equal
         /// </summary>
-        /// <param name="other">Instance of CustomerSummary to be compared</param>
+        /// <param name="input">Instance of CustomerSummary to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CustomerSummary other)
+        public bool Equals(CustomerSummary input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.EmailAddress == other.EmailAddress ||
-                    this.EmailAddress != null &&
-                    this.EmailAddress.Equals(other.EmailAddress)
+                    this.EmailAddress == input.EmailAddress ||
+                    (this.EmailAddress != null &&
+                    this.EmailAddress.Equals(input.EmailAddress))
                 ) && 
                 (
-                    this.PhoneNumberLocalFormat == other.PhoneNumberLocalFormat ||
-                    this.PhoneNumberLocalFormat != null &&
-                    this.PhoneNumberLocalFormat.Equals(other.PhoneNumberLocalFormat)
+                    this.PhoneNumberLocalFormat == input.PhoneNumberLocalFormat ||
+                    (this.PhoneNumberLocalFormat != null &&
+                    this.PhoneNumberLocalFormat.Equals(input.PhoneNumberLocalFormat))
                 ) && 
                 (
-                    this.PhoneNumber == other.PhoneNumber ||
-                    this.PhoneNumber != null &&
-                    this.PhoneNumber.Equals(other.PhoneNumber)
+                    this.PhoneNumber == input.PhoneNumber ||
+                    (this.PhoneNumber != null &&
+                    this.PhoneNumber.Equals(input.PhoneNumber))
                 );
         }
 
@@ -159,22 +157,20 @@ namespace Flipdish.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.EmailAddress != null)
-                    hash = hash * 59 + this.EmailAddress.GetHashCode();
+                    hashCode = hashCode * 59 + this.EmailAddress.GetHashCode();
                 if (this.PhoneNumberLocalFormat != null)
-                    hash = hash * 59 + this.PhoneNumberLocalFormat.GetHashCode();
+                    hashCode = hashCode * 59 + this.PhoneNumberLocalFormat.GetHashCode();
                 if (this.PhoneNumber != null)
-                    hash = hash * 59 + this.PhoneNumber.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.PhoneNumber.GetHashCode();
+                return hashCode;
             }
         }
 

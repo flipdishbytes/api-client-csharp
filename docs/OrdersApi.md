@@ -163,7 +163,7 @@ namespace Example
 
             var apiInstance = new OrdersApi();
             var physicalRestaurantId = new List<int?>(); // List<int?> | Physical restaurant identifiers (optional) 
-            var state = new List<string>(); // List<string> | Order states (optional) 
+            var state = state_example;  // List<string> | Order states (optional) 
             var page = 56;  // int? | Requested page number (optional) 
             var limit = 56;  // int? | Requested page limit (optional) 
 
@@ -187,7 +187,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **physicalRestaurantId** | [**List&lt;int?&gt;**](int?.md)| Physical restaurant identifiers | [optional] 
- **state** | [**List&lt;string&gt;**](string.md)| Order states | [optional] 
+ **state** | **List&lt;string&gt;**| Order states | [optional] 
  **page** | **int?**| Requested page number | [optional] 
  **limit** | **int?**| Requested page limit | [optional] 
 
