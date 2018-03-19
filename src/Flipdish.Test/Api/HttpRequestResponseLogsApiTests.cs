@@ -74,9 +74,10 @@ namespace Flipdish.Test
             //DateTime? start = null;
             //DateTime? end = null;
             //int? filterByUserId = null;
-            //int? take = null;
-            //var response = instance.GetHttpLogsByUserIdAsync(start, end, filterByUserId, take);
-            //Assert.IsInstanceOf<RestApiArrayResultHttpRequestAndResponseLog> (response, "response is RestApiArrayResultHttpRequestAndResponseLog");
+            //int? page = null;
+            //int? limit = null;
+            //var response = instance.GetHttpLogsByUserIdAsync(start, end, filterByUserId, page, limit);
+            //Assert.IsInstanceOf<RestApiPaginationResultHttpRequestAndResponseLog> (response, "response is RestApiPaginationResultHttpRequestAndResponseLog");
         }
         
     }

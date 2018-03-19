@@ -103,7 +103,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
-*HttpRequestResponseLogsApi* | [**GetHttpLogsByUserIdAsync**](docs/HttpRequestResponseLogsApi.md#gethttplogsbyuseridasync) | **GET** /api/v1.0/interactions/logs | 
+*HttpRequestResponseLogsApi* | [**GetHttpLogsByUserIdAsync**](docs/HttpRequestResponseLogsApi.md#gethttplogsbyuseridasync) | **GET** /api/v1.0/interactions/logs | Get API interaction logs
 *MenuOptionSetItemsApi* | [**AddMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#addmenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Create menu item option set item
 *MenuOptionSetItemsApi* | [**DeleteOptionSetItemImage**](docs/MenuOptionSetItemsApi.md#deleteoptionsetitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Delete menu item option set item image
 *MenuOptionSetItemsApi* | [**GetMenuItemOptionSetItemById**](docs/MenuOptionSetItemsApi.md#getmenuitemoptionsetitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
@@ -207,7 +207,6 @@ Class | Method | HTTP request | Description
  - [Model.Range](docs/Range.md)
  - [Model.Refund](docs/Refund.md)
  - [Model.Reject](docs/Reject.md)
- - [Model.RestApiArrayResultHttpRequestAndResponseLog](docs/RestApiArrayResultHttpRequestAndResponseLog.md)
  - [Model.RestApiArrayResultMenuItemOptionSet](docs/RestApiArrayResultMenuItemOptionSet.md)
  - [Model.RestApiArrayResultMenuItemOptionSetItem](docs/RestApiArrayResultMenuItemOptionSetItem.md)
  - [Model.RestApiArrayResultMenuSection](docs/RestApiArrayResultMenuSection.md)
@@ -216,16 +215,17 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultOAuthClient](docs/RestApiArrayResultOAuthClient.md)
  - [Model.RestApiArrayResultOauthClientRedirectUri](docs/RestApiArrayResultOauthClientRedirectUri.md)
  - [Model.RestApiArrayResultRestApiDefaultResponse](docs/RestApiArrayResultRestApiDefaultResponse.md)
- - [Model.RestApiArrayResultWebhookLog](docs/RestApiArrayResultWebhookLog.md)
  - [Model.RestApiArrayResultWebhookSubscription](docs/RestApiArrayResultWebhookSubscription.md)
  - [Model.RestApiDefaultResponse](docs/RestApiDefaultResponse.md)
  - [Model.RestApiErrorResult](docs/RestApiErrorResult.md)
  - [Model.RestApiForbiddenResult](docs/RestApiForbiddenResult.md)
  - [Model.RestApiIntegerResult](docs/RestApiIntegerResult.md)
+ - [Model.RestApiPaginationResultHttpRequestAndResponseLog](docs/RestApiPaginationResultHttpRequestAndResponseLog.md)
  - [Model.RestApiPaginationResultOAuthTokenModel](docs/RestApiPaginationResultOAuthTokenModel.md)
  - [Model.RestApiPaginationResultOrder](docs/RestApiPaginationResultOrder.md)
  - [Model.RestApiPaginationResultStore](docs/RestApiPaginationResultStore.md)
  - [Model.RestApiPaginationResultVoucher](docs/RestApiPaginationResultVoucher.md)
+ - [Model.RestApiPaginationResultWebhookLog](docs/RestApiPaginationResultWebhookLog.md)
  - [Model.RestApiResultMenu](docs/RestApiResultMenu.md)
  - [Model.RestApiResultMenuItemOptionSet](docs/RestApiResultMenuItemOptionSet.md)
  - [Model.RestApiResultMenuItemOptionSetItem](docs/RestApiResultMenuItemOptionSetItem.md)

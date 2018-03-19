@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 <a name="getwebhooklogs"></a>
 # **GetWebhookLogs**
-> RestApiArrayResultWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
+> RestApiPaginationResultWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null)
 
 Get logs for your webhook subscription
 
@@ -422,12 +422,13 @@ namespace Example
             var webhookSubscriptionId = 56;  // int? | Webhook subscription identifier
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start time
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End time
-            var take = 56;  // int? | Page size (optional) 
+            var page = 56;  // int? | Page number (optional) 
+            var limit = 56;  // int? | Page size (optional) 
 
             try
             {
                 // Get logs for your webhook subscription
-                RestApiArrayResultWebhookLog result = apiInstance.GetWebhookLogs(clientId, webhookSubscriptionId, start, end, take);
+                RestApiPaginationResultWebhookLog result = apiInstance.GetWebhookLogs(clientId, webhookSubscriptionId, start, end, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -447,11 +448,12 @@ Name | Type | Description  | Notes
  **webhookSubscriptionId** | **int?**| Webhook subscription identifier | 
  **start** | **DateTime?**| Start time | 
  **end** | **DateTime?**| End time | 
- **take** | **int?**| Page size | [optional] 
+ **page** | **int?**| Page number | [optional] 
+ **limit** | **int?**| Page size | [optional] 
 
 ### Return type
 
-[**RestApiArrayResultWebhookLog**](RestApiArrayResultWebhookLog.md)
+[**RestApiPaginationResultWebhookLog**](RestApiPaginationResultWebhookLog.md)
 
 ### Authorization
 

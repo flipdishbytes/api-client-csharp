@@ -153,9 +153,10 @@ namespace Flipdish.Test
             //int? webhookSubscriptionId = null;
             //DateTime? start = null;
             //DateTime? end = null;
-            //int? take = null;
-            //var response = instance.GetWebhookLogs(clientId, webhookSubscriptionId, start, end, take);
-            //Assert.IsInstanceOf<RestApiArrayResultWebhookLog> (response, "response is RestApiArrayResultWebhookLog");
+            //int? page = null;
+            //int? limit = null;
+            //var response = instance.GetWebhookLogs(clientId, webhookSubscriptionId, start, end, page, limit);
+            //Assert.IsInstanceOf<RestApiPaginationResultWebhookLog> (response, "response is RestApiPaginationResultWebhookLog");
         }
         
         /// <summary>

@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetHttpLogsByUserIdAsync**](HttpRequestResponseLogsApi.md#gethttplogsbyuseridasync) | **GET** /api/v1.0/interactions/logs | 
+[**GetHttpLogsByUserIdAsync**](HttpRequestResponseLogsApi.md#gethttplogsbyuseridasync) | **GET** /api/v1.0/interactions/logs | Get API interaction logs
 
 
 <a name="gethttplogsbyuseridasync"></a>
 # **GetHttpLogsByUserIdAsync**
-> RestApiArrayResultHttpRequestAndResponseLog GetHttpLogsByUserIdAsync (DateTime? start, DateTime? end, int? filterByUserId = null, int? take = null)
+> RestApiPaginationResultHttpRequestAndResponseLog GetHttpLogsByUserIdAsync (DateTime? start, DateTime? end, int? filterByUserId = null, int? page = null, int? limit = null)
 
-
+Get API interaction logs
 
 ### Example
 ```csharp
@@ -31,14 +31,16 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new HttpRequestResponseLogsApi();
-            var start = 2013-10-20T19:20:30+01:00;  // DateTime? | 
-            var end = 2013-10-20T19:20:30+01:00;  // DateTime? | 
-            var filterByUserId = 56;  // int? |  (optional) 
-            var take = 56;  // int? |  (optional) 
+            var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date time
+            var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date time
+            var filterByUserId = 56;  // int? | User id (optional) (optional) 
+            var page = 56;  // int? | Page number (optional) 
+            var limit = 56;  // int? | Page size (optional) 
 
             try
             {
-                RestApiArrayResultHttpRequestAndResponseLog result = apiInstance.GetHttpLogsByUserIdAsync(start, end, filterByUserId, take);
+                // Get API interaction logs
+                RestApiPaginationResultHttpRequestAndResponseLog result = apiInstance.GetHttpLogsByUserIdAsync(start, end, filterByUserId, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -54,14 +56,15 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start** | **DateTime?**|  | 
- **end** | **DateTime?**|  | 
- **filterByUserId** | **int?**|  | [optional] 
- **take** | **int?**|  | [optional] 
+ **start** | **DateTime?**| Start date time | 
+ **end** | **DateTime?**| End date time | 
+ **filterByUserId** | **int?**| User id (optional) | [optional] 
+ **page** | **int?**| Page number | [optional] 
+ **limit** | **int?**| Page size | [optional] 
 
 ### Return type
 
-[**RestApiArrayResultHttpRequestAndResponseLog**](RestApiArrayResultHttpRequestAndResponseLog.md)
+[**RestApiPaginationResultHttpRequestAndResponseLog**](RestApiPaginationResultHttpRequestAndResponseLog.md)
 
 ### Authorization
 

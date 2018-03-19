@@ -173,9 +173,10 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
-        /// <param name="take">Page size (optional)</param>
-        /// <returns>RestApiArrayResultWebhookLog</returns>
-        RestApiArrayResultWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null);
+        /// <param name="page">Page number (optional)</param>
+        /// <param name="limit">Page size (optional)</param>
+        /// <returns>RestApiPaginationResultWebhookLog</returns>
+        RestApiPaginationResultWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get logs for your webhook subscription
@@ -188,9 +189,10 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
-        /// <param name="take">Page size (optional)</param>
-        /// <returns>ApiResponse of RestApiArrayResultWebhookLog</returns>
-        ApiResponse<RestApiArrayResultWebhookLog> GetWebhookLogsWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null);
+        /// <param name="page">Page number (optional)</param>
+        /// <param name="limit">Page size (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultWebhookLog</returns>
+        ApiResponse<RestApiPaginationResultWebhookLog> GetWebhookLogsWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null);
         /// <summary>
         /// Get all webhook subscriptions by your Oauth client id
         /// </summary>
@@ -388,9 +390,10 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
-        /// <param name="take">Page size (optional)</param>
-        /// <returns>Task of RestApiArrayResultWebhookLog</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultWebhookLog> GetWebhookLogsAsync (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null);
+        /// <param name="page">Page number (optional)</param>
+        /// <param name="limit">Page size (optional)</param>
+        /// <returns>Task of RestApiPaginationResultWebhookLog</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultWebhookLog> GetWebhookLogsAsync (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get logs for your webhook subscription
@@ -403,9 +406,10 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
-        /// <param name="take">Page size (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultWebhookLog)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultWebhookLog>> GetWebhookLogsAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null);
+        /// <param name="page">Page number (optional)</param>
+        /// <param name="limit">Page size (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultWebhookLog)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultWebhookLog>> GetWebhookLogsAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null);
         /// <summary>
         /// Get all webhook subscriptions by your Oauth client id
         /// </summary>
@@ -1556,11 +1560,12 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
-        /// <param name="take">Page size (optional)</param>
-        /// <returns>RestApiArrayResultWebhookLog</returns>
-        public RestApiArrayResultWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
+        /// <param name="page">Page number (optional)</param>
+        /// <param name="limit">Page size (optional)</param>
+        /// <returns>RestApiPaginationResultWebhookLog</returns>
+        public RestApiPaginationResultWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiArrayResultWebhookLog> localVarResponse = GetWebhookLogsWithHttpInfo(clientId, webhookSubscriptionId, start, end, take);
+             ApiResponse<RestApiPaginationResultWebhookLog> localVarResponse = GetWebhookLogsWithHttpInfo(clientId, webhookSubscriptionId, start, end, page, limit);
              return localVarResponse.Data;
         }
 
@@ -1572,9 +1577,10 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
-        /// <param name="take">Page size (optional)</param>
-        /// <returns>ApiResponse of RestApiArrayResultWebhookLog</returns>
-        public ApiResponse< RestApiArrayResultWebhookLog > GetWebhookLogsWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
+        /// <param name="page">Page number (optional)</param>
+        /// <param name="limit">Page size (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultWebhookLog</returns>
+        public ApiResponse< RestApiPaginationResultWebhookLog > GetWebhookLogsWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1617,7 +1623,8 @@ namespace Flipdish.Api
             if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
             if (start != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (take != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "take", take)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1639,9 +1646,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultWebhookLog>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultWebhookLog>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultWebhookLog) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultWebhookLog)));
+                (RestApiPaginationResultWebhookLog) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultWebhookLog)));
         }
 
         /// <summary>
@@ -1652,11 +1659,12 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
-        /// <param name="take">Page size (optional)</param>
-        /// <returns>Task of RestApiArrayResultWebhookLog</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultWebhookLog> GetWebhookLogsAsync (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
+        /// <param name="page">Page number (optional)</param>
+        /// <param name="limit">Page size (optional)</param>
+        /// <returns>Task of RestApiPaginationResultWebhookLog</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultWebhookLog> GetWebhookLogsAsync (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiArrayResultWebhookLog> localVarResponse = await GetWebhookLogsAsyncWithHttpInfo(clientId, webhookSubscriptionId, start, end, take);
+             ApiResponse<RestApiPaginationResultWebhookLog> localVarResponse = await GetWebhookLogsAsyncWithHttpInfo(clientId, webhookSubscriptionId, start, end, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1669,9 +1677,10 @@ namespace Flipdish.Api
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
-        /// <param name="take">Page size (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultWebhookLog)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultWebhookLog>> GetWebhookLogsAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? take = null)
+        /// <param name="page">Page number (optional)</param>
+        /// <param name="limit">Page size (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultWebhookLog)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultWebhookLog>> GetWebhookLogsAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1714,7 +1723,8 @@ namespace Flipdish.Api
             if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
             if (start != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (take != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "take", take)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1736,9 +1746,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultWebhookLog>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultWebhookLog>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultWebhookLog) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultWebhookLog)));
+                (RestApiPaginationResultWebhookLog) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultWebhookLog)));
         }
 
         /// <summary>
