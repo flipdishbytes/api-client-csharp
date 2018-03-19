@@ -75,6 +75,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'MenuId'
         }
         /// <summary>
+        /// Test the property 'ModifiedTime'
+        /// </summary>
+        [Test]
+        public void ModifiedTimeTest()
+        {
+            // TODO unit test for the property 'ModifiedTime'
+        }
+        /// <summary>
         /// Test the property 'VersionNumber'
         /// </summary>
         [Test]
@@ -83,12 +91,12 @@ namespace Flipdish.Test
             // TODO unit test for the property 'VersionNumber'
         }
         /// <summary>
-        /// Test the property 'ModifiedTime'
+        /// Test the property 'ImageUrl'
         /// </summary>
         [Test]
-        public void ModifiedTimeTest()
+        public void ImageUrlTest()
         {
-            // TODO unit test for the property 'ModifiedTime'
+            // TODO unit test for the property 'ImageUrl'
         }
         /// <summary>
         /// Test the property 'MenuSections'
@@ -99,12 +107,20 @@ namespace Flipdish.Test
             // TODO unit test for the property 'MenuSections'
         }
         /// <summary>
-        /// Test the property 'ImageUrl'
+        /// Test the property 'DisplaySectionLinks'
         /// </summary>
         [Test]
-        public void ImageUrlTest()
+        public void DisplaySectionLinksTest()
         {
-            // TODO unit test for the property 'ImageUrl'
+            // TODO unit test for the property 'DisplaySectionLinks'
+        }
+        /// <summary>
+        /// Test the property 'MenuSectionBehaviour'
+        /// </summary>
+        [Test]
+        public void MenuSectionBehaviourTest()
+        {
+            // TODO unit test for the property 'MenuSectionBehaviour'
         }
 
     }

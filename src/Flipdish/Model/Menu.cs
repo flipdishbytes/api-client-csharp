@@ -31,20 +31,49 @@ namespace Flipdish.Model
     public partial class Menu :  IEquatable<Menu>, IValidatableObject
     {
         /// <summary>
+        /// Defines MenuSectionBehaviour
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MenuSectionBehaviourEnum
+        {
+            
+            /// <summary>
+            /// Enum ExpandSingle for value: ExpandSingle
+            /// </summary>
+            [EnumMember(Value = "ExpandSingle")]
+            ExpandSingle = 1,
+            
+            /// <summary>
+            /// Enum ExpandMultiple for value: ExpandMultiple
+            /// </summary>
+            [EnumMember(Value = "ExpandMultiple")]
+            ExpandMultiple = 2
+        }
+
+        /// <summary>
+        /// Gets or Sets MenuSectionBehaviour
+        /// </summary>
+        [DataMember(Name="menuSectionBehaviour", EmitDefaultValue=false)]
+        public MenuSectionBehaviourEnum? MenuSectionBehaviour { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Menu" /> class.
         /// </summary>
         /// <param name="MenuId">MenuId.</param>
-        /// <param name="VersionNumber">VersionNumber.</param>
         /// <param name="ModifiedTime">ModifiedTime.</param>
-        /// <param name="MenuSections">MenuSections.</param>
+        /// <param name="VersionNumber">VersionNumber.</param>
         /// <param name="ImageUrl">ImageUrl.</param>
-        public Menu(int? MenuId = default(int?), int? VersionNumber = default(int?), DateTime? ModifiedTime = default(DateTime?), List<MenuSection> MenuSections = default(List<MenuSection>), string ImageUrl = default(string))
+        /// <param name="MenuSections">MenuSections.</param>
+        /// <param name="DisplaySectionLinks">DisplaySectionLinks.</param>
+        /// <param name="MenuSectionBehaviour">MenuSectionBehaviour.</param>
+        public Menu(int? MenuId = default(int?), DateTime? ModifiedTime = default(DateTime?), int? VersionNumber = default(int?), string ImageUrl = default(string), List<MenuSection> MenuSections = default(List<MenuSection>), bool? DisplaySectionLinks = default(bool?), MenuSectionBehaviourEnum? MenuSectionBehaviour = default(MenuSectionBehaviourEnum?))
         {
             this.MenuId = MenuId;
-            this.VersionNumber = VersionNumber;
             this.ModifiedTime = ModifiedTime;
-            this.MenuSections = MenuSections;
+            this.VersionNumber = VersionNumber;
             this.ImageUrl = ImageUrl;
+            this.MenuSections = MenuSections;
+            this.DisplaySectionLinks = DisplaySectionLinks;
+            this.MenuSectionBehaviour = MenuSectionBehaviour;
         }
         
         /// <summary>
@@ -54,16 +83,22 @@ namespace Flipdish.Model
         public int? MenuId { get; set; }
 
         /// <summary>
+        /// Gets or Sets ModifiedTime
+        /// </summary>
+        [DataMember(Name="modifiedTime", EmitDefaultValue=false)]
+        public DateTime? ModifiedTime { get; set; }
+
+        /// <summary>
         /// Gets or Sets VersionNumber
         /// </summary>
         [DataMember(Name="versionNumber", EmitDefaultValue=false)]
         public int? VersionNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets ModifiedTime
+        /// Gets or Sets ImageUrl
         /// </summary>
-        [DataMember(Name="modifiedTime", EmitDefaultValue=false)]
-        public DateTime? ModifiedTime { get; set; }
+        [DataMember(Name="imageUrl", EmitDefaultValue=false)]
+        public string ImageUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets MenuSections
@@ -72,10 +107,11 @@ namespace Flipdish.Model
         public List<MenuSection> MenuSections { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageUrl
+        /// Gets or Sets DisplaySectionLinks
         /// </summary>
-        [DataMember(Name="imageUrl", EmitDefaultValue=false)]
-        public string ImageUrl { get; set; }
+        [DataMember(Name="displaySectionLinks", EmitDefaultValue=false)]
+        public bool? DisplaySectionLinks { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -86,10 +122,12 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class Menu {\n");
             sb.Append("  MenuId: ").Append(MenuId).Append("\n");
-            sb.Append("  VersionNumber: ").Append(VersionNumber).Append("\n");
             sb.Append("  ModifiedTime: ").Append(ModifiedTime).Append("\n");
-            sb.Append("  MenuSections: ").Append(MenuSections).Append("\n");
+            sb.Append("  VersionNumber: ").Append(VersionNumber).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
+            sb.Append("  MenuSections: ").Append(MenuSections).Append("\n");
+            sb.Append("  DisplaySectionLinks: ").Append(DisplaySectionLinks).Append("\n");
+            sb.Append("  MenuSectionBehaviour: ").Append(MenuSectionBehaviour).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -130,14 +168,19 @@ namespace Flipdish.Model
                     this.MenuId.Equals(input.MenuId))
                 ) && 
                 (
+                    this.ModifiedTime == input.ModifiedTime ||
+                    (this.ModifiedTime != null &&
+                    this.ModifiedTime.Equals(input.ModifiedTime))
+                ) && 
+                (
                     this.VersionNumber == input.VersionNumber ||
                     (this.VersionNumber != null &&
                     this.VersionNumber.Equals(input.VersionNumber))
                 ) && 
                 (
-                    this.ModifiedTime == input.ModifiedTime ||
-                    (this.ModifiedTime != null &&
-                    this.ModifiedTime.Equals(input.ModifiedTime))
+                    this.ImageUrl == input.ImageUrl ||
+                    (this.ImageUrl != null &&
+                    this.ImageUrl.Equals(input.ImageUrl))
                 ) && 
                 (
                     this.MenuSections == input.MenuSections ||
@@ -145,9 +188,14 @@ namespace Flipdish.Model
                     this.MenuSections.SequenceEqual(input.MenuSections)
                 ) && 
                 (
-                    this.ImageUrl == input.ImageUrl ||
-                    (this.ImageUrl != null &&
-                    this.ImageUrl.Equals(input.ImageUrl))
+                    this.DisplaySectionLinks == input.DisplaySectionLinks ||
+                    (this.DisplaySectionLinks != null &&
+                    this.DisplaySectionLinks.Equals(input.DisplaySectionLinks))
+                ) && 
+                (
+                    this.MenuSectionBehaviour == input.MenuSectionBehaviour ||
+                    (this.MenuSectionBehaviour != null &&
+                    this.MenuSectionBehaviour.Equals(input.MenuSectionBehaviour))
                 );
         }
 
@@ -162,14 +210,18 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.MenuId != null)
                     hashCode = hashCode * 59 + this.MenuId.GetHashCode();
-                if (this.VersionNumber != null)
-                    hashCode = hashCode * 59 + this.VersionNumber.GetHashCode();
                 if (this.ModifiedTime != null)
                     hashCode = hashCode * 59 + this.ModifiedTime.GetHashCode();
-                if (this.MenuSections != null)
-                    hashCode = hashCode * 59 + this.MenuSections.GetHashCode();
+                if (this.VersionNumber != null)
+                    hashCode = hashCode * 59 + this.VersionNumber.GetHashCode();
                 if (this.ImageUrl != null)
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
+                if (this.MenuSections != null)
+                    hashCode = hashCode * 59 + this.MenuSections.GetHashCode();
+                if (this.DisplaySectionLinks != null)
+                    hashCode = hashCode * 59 + this.DisplaySectionLinks.GetHashCode();
+                if (this.MenuSectionBehaviour != null)
+                    hashCode = hashCode * 59 + this.MenuSectionBehaviour.GetHashCode();
                 return hashCode;
             }
         }

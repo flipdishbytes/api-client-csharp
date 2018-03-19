@@ -177,6 +177,19 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test UpdateMenu
+        /// </summary>
+        [Test]
+        public void UpdateMenuTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //MenuBase menu = null;
+            //instance.UpdateMenu(menuId, menu);
+            
+        }
+        
+        /// <summary>
         /// Test UploadMenuSectionImage
         /// </summary>
         [Test]

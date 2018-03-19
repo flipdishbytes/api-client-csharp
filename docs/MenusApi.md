@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**GetMenuItemOptionSetItemMetadata**](MenusApi.md#getmenuitemoptionsetitemmetadata) | **GET** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get a menu item option set item metadata by key
 [**SetMenuItemMetadata**](MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update a menu items metadata
 [**SetMenuItemOptionSetItemMetadata**](MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update a menu item option set items metadata
+[**UpdateMenu**](MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | Update menu section item
 [**UploadMenuSectionImage**](MenusApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
 
 
@@ -522,6 +523,69 @@ Name | Type | Description  | Notes
  **storeId** | **int?**| Store identifier | 
  **optionSetItemId** | **int?**| Menu item option set item identifier | 
  **metadata** | [**Metadata**](Metadata.md)| Metadata object | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="updatemenu"></a>
+# **UpdateMenu**
+> void UpdateMenu (int? menuId, MenuBase menu)
+
+Update menu section item
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UpdateMenuExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var menu = new MenuBase(); // MenuBase | Menu (delta)
+
+            try
+            {
+                // Update menu section item
+                apiInstance.UpdateMenu(menuId, menu);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.UpdateMenu: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **menu** | [**MenuBase**](MenuBase.md)| Menu (delta) | 
 
 ### Return type
 
