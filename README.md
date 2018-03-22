@@ -188,6 +188,7 @@ Class | Method | HTTP request | Description
  - [Model.FeeSummary](docs/FeeSummary.md)
  - [Model.HttpRequestAndResponseLog](docs/HttpRequestAndResponseLog.md)
  - [Model.Menu](docs/Menu.md)
+ - [Model.MenuBase](docs/MenuBase.md)
  - [Model.MenuItemOptionSet](docs/MenuItemOptionSet.md)
  - [Model.MenuItemOptionSetBase](docs/MenuItemOptionSetBase.md)
  - [Model.MenuItemOptionSetItem](docs/MenuItemOptionSetItem.md)
