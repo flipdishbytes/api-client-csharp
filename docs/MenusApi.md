@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**GetMenuItemOptionSetItemMetadata**](MenusApi.md#getmenuitemoptionsetitemmetadata) | **GET** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get a menu item option set item metadata by key
 [**SetMenuItemMetadata**](MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update a menu items metadata
 [**SetMenuItemOptionSetItemMetadata**](MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update a menu item option set items metadata
-[**UpdateMenu**](MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | Update menu section item
+[**UpdateMenu**](MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
 [**UploadMenuSectionImage**](MenusApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
 
 
@@ -543,7 +543,7 @@ void (empty response body)
 # **UpdateMenu**
 > void UpdateMenu (int? menuId, MenuBase menu)
 
-Update menu section item
+Update menu
 
 ### Example
 ```csharp
@@ -568,7 +568,7 @@ namespace Example
 
             try
             {
-                // Update menu section item
+                // Update menu
                 apiInstance.UpdateMenu(menuId, menu);
             }
             catch (Exception e)

@@ -225,7 +225,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SetMenuItemOptionSetItemMetadataWithHttpInfo (int? menuId, int? storeId, int? optionSetItemId, Metadata metadata);
         /// <summary>
-        /// Update menu section item
+        /// Update menu
         /// </summary>
         /// <remarks>
         /// 
@@ -237,7 +237,7 @@ namespace Flipdish.Api
         void UpdateMenu (int? menuId, MenuBase menu);
 
         /// <summary>
-        /// Update menu section item
+        /// Update menu
         /// </summary>
         /// <remarks>
         /// 
@@ -473,7 +473,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuItemOptionSetItemMetadataAsyncWithHttpInfo (int? menuId, int? storeId, int? optionSetItemId, Metadata metadata);
         /// <summary>
-        /// Update menu section item
+        /// Update menu
         /// </summary>
         /// <remarks>
         /// 
@@ -485,7 +485,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task UpdateMenuAsync (int? menuId, MenuBase menu);
 
         /// <summary>
-        /// Update menu section item
+        /// Update menu
         /// </summary>
         /// <remarks>
         /// 
@@ -2057,7 +2057,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update menu section item 
+        /// Update menu 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2069,7 +2069,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update menu section item 
+        /// Update menu 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2149,7 +2149,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update menu section item 
+        /// Update menu 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2162,7 +2162,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update menu section item 
+        /// Update menu 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
