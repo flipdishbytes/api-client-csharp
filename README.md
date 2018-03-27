@@ -103,6 +103,15 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
+*EventsApi* | [**GetCustomerEvents**](docs/EventsApi.md#getcustomerevents) | **GET** /api/v1.0/events/customer/{customerId} | Get order events
+*EventsApi* | [**GetEvents**](docs/EventsApi.md#getevents) | **GET** /api/v1.0/events | Get events
+*EventsApi* | [**GetEventsById**](docs/EventsApi.md#geteventsbyid) | **GET** /api/v1.0/events/{eventId} | Get event by Id
+*EventsApi* | [**GetMenuEvents**](docs/EventsApi.md#getmenuevents) | **GET** /api/v1.0/events/menu/{menuId} | Get Menu Events
+*EventsApi* | [**GetOrderEvents**](docs/EventsApi.md#getorderevents) | **GET** /api/v1.0/events/order/{orderId} | Get order events
+*EventsApi* | [**GetOrderEventsByCustomer**](docs/EventsApi.md#getordereventsbycustomer) | **GET** /api/v1.0/events/order | Get order events by customer
+*EventsApi* | [**GetStoreEvents**](docs/EventsApi.md#getstoreevents) | **GET** /api/v1.0/events/store/{storeId} | Get store events
+*EventsApi* | [**GetUserEvents**](docs/EventsApi.md#getuserevents) | **GET** /api/v1.0/events/user/{userId} | Get order events
+*EventsApi* | [**GetWhiteLabelEvents**](docs/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get White Label Events
 *HttpRequestResponseLogsApi* | [**GetHttpLogsByUserIdAsync**](docs/HttpRequestResponseLogsApi.md#gethttplogsbyuseridasync) | **GET** /api/v1.0/interactions/logs | Get API interaction logs
 *MenuOptionSetItemsApi* | [**AddMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#addmenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Create menu item option set item
 *MenuOptionSetItemsApi* | [**DeleteOptionSetItemImage**](docs/MenuOptionSetItemsApi.md#deleteoptionsetitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Delete menu item option set item image
@@ -182,13 +191,17 @@ Class | Method | HTTP request | Description
  - [Model.Accept](docs/Accept.md)
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
  - [Model.Coordinates](docs/Coordinates.md)
+ - [Model.CustomerCreatedEvent](docs/CustomerCreatedEvent.md)
  - [Model.CustomerSummary](docs/CustomerSummary.md)
+ - [Model.CustomerUpdatedEvent](docs/CustomerUpdatedEvent.md)
  - [Model.DeliveryFeeArea](docs/DeliveryFeeArea.md)
  - [Model.DeliveryLocation](docs/DeliveryLocation.md)
+ - [Model.EventSearchResult](docs/EventSearchResult.md)
  - [Model.FeeSummary](docs/FeeSummary.md)
  - [Model.HttpRequestAndResponseLog](docs/HttpRequestAndResponseLog.md)
  - [Model.Menu](docs/Menu.md)
  - [Model.MenuBase](docs/MenuBase.md)
+ - [Model.MenuCreatedEvent](docs/MenuCreatedEvent.md)
  - [Model.MenuItemOptionSet](docs/MenuItemOptionSet.md)
  - [Model.MenuItemOptionSetBase](docs/MenuItemOptionSetBase.md)
  - [Model.MenuItemOptionSetItem](docs/MenuItemOptionSetItem.md)
@@ -198,13 +211,20 @@ Class | Method | HTTP request | Description
  - [Model.MenuSectionBase](docs/MenuSectionBase.md)
  - [Model.MenuSectionItem](docs/MenuSectionItem.md)
  - [Model.MenuSectionItemBase](docs/MenuSectionItemBase.md)
+ - [Model.MenuUpdatedEvent](docs/MenuUpdatedEvent.md)
  - [Model.Metadata](docs/Metadata.md)
  - [Model.OAuthClient](docs/OAuthClient.md)
  - [Model.OAuthTokenModel](docs/OAuthTokenModel.md)
  - [Model.OauthClientRedirectUri](docs/OauthClientRedirectUri.md)
  - [Model.Order](docs/Order.md)
+ - [Model.OrderAcceptedEvent](docs/OrderAcceptedEvent.md)
+ - [Model.OrderCreatedEvent](docs/OrderCreatedEvent.md)
  - [Model.OrderItem](docs/OrderItem.md)
  - [Model.OrderItemOption](docs/OrderItemOption.md)
+ - [Model.OrderRatingUpdatedEvent](docs/OrderRatingUpdatedEvent.md)
+ - [Model.OrderRefundedEvent](docs/OrderRefundedEvent.md)
+ - [Model.OrderRejectedEvent](docs/OrderRejectedEvent.md)
+ - [Model.OrderTipUpdatedEvent](docs/OrderTipUpdatedEvent.md)
  - [Model.Range](docs/Range.md)
  - [Model.Refund](docs/Refund.md)
  - [Model.Reject](docs/Reject.md)
@@ -219,6 +239,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultWebhookSubscription](docs/RestApiArrayResultWebhookSubscription.md)
  - [Model.RestApiDefaultResponse](docs/RestApiDefaultResponse.md)
  - [Model.RestApiErrorResult](docs/RestApiErrorResult.md)
+ - [Model.RestApiEventSearchPaginationResult](docs/RestApiEventSearchPaginationResult.md)
  - [Model.RestApiForbiddenResult](docs/RestApiForbiddenResult.md)
  - [Model.RestApiIntegerResult](docs/RestApiIntegerResult.md)
  - [Model.RestApiPaginationResultHttpRequestAndResponseLog](docs/RestApiPaginationResultHttpRequestAndResponseLog.md)
@@ -241,10 +262,17 @@ Class | Method | HTTP request | Description
  - [Model.RestApiStringArrayResult](docs/RestApiStringArrayResult.md)
  - [Model.RestApiStringResult](docs/RestApiStringResult.md)
  - [Model.RestApiUnauthorizedResult](docs/RestApiUnauthorizedResult.md)
+ - [Model.SearchCriteria](docs/SearchCriteria.md)
  - [Model.Store](docs/Store.md)
  - [Model.StoreAddress](docs/StoreAddress.md)
+ - [Model.StoreCreatedEvent](docs/StoreCreatedEvent.md)
+ - [Model.StoreDeletedEvent](docs/StoreDeletedEvent.md)
+ - [Model.StoreDeliveryZoneUpdatedEvent](docs/StoreDeliveryZoneUpdatedEvent.md)
  - [Model.StoreNote](docs/StoreNote.md)
+ - [Model.StoreOpeningHoursUpdatedEvent](docs/StoreOpeningHoursUpdatedEvent.md)
  - [Model.StoreSummary](docs/StoreSummary.md)
+ - [Model.StoreUpdatedEvent](docs/StoreUpdatedEvent.md)
+ - [Model.UserEventInfo](docs/UserEventInfo.md)
  - [Model.ValidationErrorResult](docs/ValidationErrorResult.md)
  - [Model.Voucher](docs/Voucher.md)
  - [Model.VoucherSummary](docs/VoucherSummary.md)
