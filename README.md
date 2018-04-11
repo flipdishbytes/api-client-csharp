@@ -190,7 +190,9 @@ Class | Method | HTTP request | Description
 
  - [Model.Accept](docs/Accept.md)
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
+ - [Model.CampaignCreatedEvent](docs/CampaignCreatedEvent.md)
  - [Model.Coordinates](docs/Coordinates.md)
+ - [Model.CustomerConsentUpdatedEvent](docs/CustomerConsentUpdatedEvent.md)
  - [Model.CustomerCreatedEvent](docs/CustomerCreatedEvent.md)
  - [Model.CustomerSummary](docs/CustomerSummary.md)
  - [Model.CustomerUpdatedEvent](docs/CustomerUpdatedEvent.md)
@@ -278,6 +280,10 @@ Class | Method | HTTP request | Description
  - [Model.VoucherSummary](docs/VoucherSummary.md)
  - [Model.WebhookLog](docs/WebhookLog.md)
  - [Model.WebhookSubscription](docs/WebhookSubscription.md)
+ - [Model.WebhookSubscriptionCreatedEvent](docs/WebhookSubscriptionCreatedEvent.md)
+ - [Model.WebhookSubscriptionDeletedEvent](docs/WebhookSubscriptionDeletedEvent.md)
+ - [Model.WebhookSubscriptionEventInfo](docs/WebhookSubscriptionEventInfo.md)
+ - [Model.WebhookSubscriptionUpdatedEvent](docs/WebhookSubscriptionUpdatedEvent.md)
 
 
 <a name="documentation-for-authorization"></a>

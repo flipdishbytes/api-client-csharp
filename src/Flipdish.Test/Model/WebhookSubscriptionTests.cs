@@ -83,6 +83,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'OwnerUserId'
         }
         /// <summary>
+        /// Test the property 'Version'
+        /// </summary>
+        [Test]
+        public void VersionTest()
+        {
+            // TODO unit test for the property 'Version'
+        }
+        /// <summary>
         /// Test the property 'EventNames'
         /// </summary>
         [Test]

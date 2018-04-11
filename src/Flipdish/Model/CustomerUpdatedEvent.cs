@@ -38,16 +38,14 @@ namespace Flipdish.Model
         /// <param name="EventName">EventName.</param>
         /// <param name="FlipdishEventId">FlipdishEventId.</param>
         /// <param name="CreateTime">CreateTime.</param>
-        /// <param name="Details">Details.</param>
         /// <param name="Position">Position.</param>
-        public CustomerUpdatedEvent(UserEventInfo User = default(UserEventInfo), string Description = default(string), string EventName = default(string), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), string Details = default(string), int? Position = default(int?))
+        public CustomerUpdatedEvent(UserEventInfo User = default(UserEventInfo), string Description = default(string), string EventName = default(string), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
         {
             this.User = User;
             this.Description = Description;
             this.EventName = EventName;
             this.FlipdishEventId = FlipdishEventId;
             this.CreateTime = CreateTime;
-            this.Details = Details;
             this.Position = Position;
         }
         
@@ -82,12 +80,6 @@ namespace Flipdish.Model
         public DateTime? CreateTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets Details
-        /// </summary>
-        [DataMember(Name="details", EmitDefaultValue=false)]
-        public string Details { get; set; }
-
-        /// <summary>
         /// Gets or Sets Position
         /// </summary>
         [DataMember(Name="position", EmitDefaultValue=false)]
@@ -106,7 +98,6 @@ namespace Flipdish.Model
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
-            sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -168,11 +159,6 @@ namespace Flipdish.Model
                     this.CreateTime.Equals(input.CreateTime))
                 ) && 
                 (
-                    this.Details == input.Details ||
-                    (this.Details != null &&
-                    this.Details.Equals(input.Details))
-                ) && 
-                (
                     this.Position == input.Position ||
                     (this.Position != null &&
                     this.Position.Equals(input.Position))
@@ -198,8 +184,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)
                     hashCode = hashCode * 59 + this.CreateTime.GetHashCode();
-                if (this.Details != null)
-                    hashCode = hashCode * 59 + this.Details.GetHashCode();
                 if (this.Position != null)
                     hashCode = hashCode * 59 + this.Position.GetHashCode();
                 return hashCode;

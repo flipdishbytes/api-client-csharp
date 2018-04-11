@@ -186,6 +186,46 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'CustomerUpdatedEvent'
         }
+        /// <summary>
+        /// Test the property 'CustomerConsentUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void CustomerConsentUpdatedEventTest()
+        {
+            // TODO unit test for the property 'CustomerConsentUpdatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'CampaignCreatedEvent'
+        /// </summary>
+        [Test]
+        public void CampaignCreatedEventTest()
+        {
+            // TODO unit test for the property 'CampaignCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'WebhookSubscriptionCreatedEvent'
+        /// </summary>
+        [Test]
+        public void WebhookSubscriptionCreatedEventTest()
+        {
+            // TODO unit test for the property 'WebhookSubscriptionCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'WebhookSubscriptionUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void WebhookSubscriptionUpdatedEventTest()
+        {
+            // TODO unit test for the property 'WebhookSubscriptionUpdatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'WebhookSubscriptionDeletedEvent'
+        /// </summary>
+        [Test]
+        public void WebhookSubscriptionDeletedEventTest()
+        {
+            // TODO unit test for the property 'WebhookSubscriptionDeletedEvent'
+        }
 
     }
 

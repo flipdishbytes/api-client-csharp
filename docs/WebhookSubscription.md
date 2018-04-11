@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **int?** |  | [optional] 
 **OwnerUserId** | **int?** |  | [optional] 
+**Version** | **string** |  | [optional] 
 **EventNames** | **List&lt;string&gt;** |  | [optional] 
 **CallbackUrl** | **string** |  | [optional] 
 **Enabled** | **bool?** |  | [optional] 

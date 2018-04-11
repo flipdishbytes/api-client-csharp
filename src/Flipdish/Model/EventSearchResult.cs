@@ -48,7 +48,12 @@ namespace Flipdish.Model
         /// <param name="MenuUpdatedEvent">MenuUpdatedEvent.</param>
         /// <param name="CustomerCreatedEvent">CustomerCreatedEvent.</param>
         /// <param name="CustomerUpdatedEvent">CustomerUpdatedEvent.</param>
-        public EventSearchResult(List<OrderAcceptedEvent> OrderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderCreatedEvent> OrderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> OrderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> OrderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> OrderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> OrderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<StoreCreatedEvent> StoreCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> StoreDeletedEvent = default(List<StoreDeletedEvent>), List<StoreDeliveryZoneUpdatedEvent> StoreDeliveryZoneUpdatedEvent = default(List<StoreDeliveryZoneUpdatedEvent>), List<StoreOpeningHoursUpdatedEvent> StoreOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreUpdatedEvent> StoreUpdatedEvent = default(List<StoreUpdatedEvent>), List<MenuCreatedEvent> MenuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> MenuUpdatedEvent = default(List<MenuUpdatedEvent>), List<CustomerCreatedEvent> CustomerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> CustomerUpdatedEvent = default(List<CustomerUpdatedEvent>))
+        /// <param name="CustomerConsentUpdatedEvent">CustomerConsentUpdatedEvent.</param>
+        /// <param name="CampaignCreatedEvent">CampaignCreatedEvent.</param>
+        /// <param name="WebhookSubscriptionCreatedEvent">WebhookSubscriptionCreatedEvent.</param>
+        /// <param name="WebhookSubscriptionUpdatedEvent">WebhookSubscriptionUpdatedEvent.</param>
+        /// <param name="WebhookSubscriptionDeletedEvent">WebhookSubscriptionDeletedEvent.</param>
+        public EventSearchResult(List<OrderAcceptedEvent> OrderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderCreatedEvent> OrderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> OrderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> OrderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> OrderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> OrderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<StoreCreatedEvent> StoreCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> StoreDeletedEvent = default(List<StoreDeletedEvent>), List<StoreDeliveryZoneUpdatedEvent> StoreDeliveryZoneUpdatedEvent = default(List<StoreDeliveryZoneUpdatedEvent>), List<StoreOpeningHoursUpdatedEvent> StoreOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreUpdatedEvent> StoreUpdatedEvent = default(List<StoreUpdatedEvent>), List<MenuCreatedEvent> MenuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> MenuUpdatedEvent = default(List<MenuUpdatedEvent>), List<CustomerCreatedEvent> CustomerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> CustomerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> CustomerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<CampaignCreatedEvent> CampaignCreatedEvent = default(List<CampaignCreatedEvent>), List<WebhookSubscriptionCreatedEvent> WebhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> WebhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> WebhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>))
         {
             this.OrderAcceptedEvent = OrderAcceptedEvent;
             this.OrderCreatedEvent = OrderCreatedEvent;
@@ -65,6 +70,11 @@ namespace Flipdish.Model
             this.MenuUpdatedEvent = MenuUpdatedEvent;
             this.CustomerCreatedEvent = CustomerCreatedEvent;
             this.CustomerUpdatedEvent = CustomerUpdatedEvent;
+            this.CustomerConsentUpdatedEvent = CustomerConsentUpdatedEvent;
+            this.CampaignCreatedEvent = CampaignCreatedEvent;
+            this.WebhookSubscriptionCreatedEvent = WebhookSubscriptionCreatedEvent;
+            this.WebhookSubscriptionUpdatedEvent = WebhookSubscriptionUpdatedEvent;
+            this.WebhookSubscriptionDeletedEvent = WebhookSubscriptionDeletedEvent;
         }
         
         /// <summary>
@@ -158,6 +168,36 @@ namespace Flipdish.Model
         public List<CustomerUpdatedEvent> CustomerUpdatedEvent { get; set; }
 
         /// <summary>
+        /// Gets or Sets CustomerConsentUpdatedEvent
+        /// </summary>
+        [DataMember(Name="customerConsentUpdatedEvent", EmitDefaultValue=false)]
+        public List<CustomerConsentUpdatedEvent> CustomerConsentUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CampaignCreatedEvent
+        /// </summary>
+        [DataMember(Name="campaignCreatedEvent", EmitDefaultValue=false)]
+        public List<CampaignCreatedEvent> CampaignCreatedEvent { get; set; }
+
+        /// <summary>
+        /// Gets or Sets WebhookSubscriptionCreatedEvent
+        /// </summary>
+        [DataMember(Name="webhookSubscriptionCreatedEvent", EmitDefaultValue=false)]
+        public List<WebhookSubscriptionCreatedEvent> WebhookSubscriptionCreatedEvent { get; set; }
+
+        /// <summary>
+        /// Gets or Sets WebhookSubscriptionUpdatedEvent
+        /// </summary>
+        [DataMember(Name="webhookSubscriptionUpdatedEvent", EmitDefaultValue=false)]
+        public List<WebhookSubscriptionUpdatedEvent> WebhookSubscriptionUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// Gets or Sets WebhookSubscriptionDeletedEvent
+        /// </summary>
+        [DataMember(Name="webhookSubscriptionDeletedEvent", EmitDefaultValue=false)]
+        public List<WebhookSubscriptionDeletedEvent> WebhookSubscriptionDeletedEvent { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -180,6 +220,11 @@ namespace Flipdish.Model
             sb.Append("  MenuUpdatedEvent: ").Append(MenuUpdatedEvent).Append("\n");
             sb.Append("  CustomerCreatedEvent: ").Append(CustomerCreatedEvent).Append("\n");
             sb.Append("  CustomerUpdatedEvent: ").Append(CustomerUpdatedEvent).Append("\n");
+            sb.Append("  CustomerConsentUpdatedEvent: ").Append(CustomerConsentUpdatedEvent).Append("\n");
+            sb.Append("  CampaignCreatedEvent: ").Append(CampaignCreatedEvent).Append("\n");
+            sb.Append("  WebhookSubscriptionCreatedEvent: ").Append(WebhookSubscriptionCreatedEvent).Append("\n");
+            sb.Append("  WebhookSubscriptionUpdatedEvent: ").Append(WebhookSubscriptionUpdatedEvent).Append("\n");
+            sb.Append("  WebhookSubscriptionDeletedEvent: ").Append(WebhookSubscriptionDeletedEvent).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -288,6 +333,31 @@ namespace Flipdish.Model
                     this.CustomerUpdatedEvent == input.CustomerUpdatedEvent ||
                     this.CustomerUpdatedEvent != null &&
                     this.CustomerUpdatedEvent.SequenceEqual(input.CustomerUpdatedEvent)
+                ) && 
+                (
+                    this.CustomerConsentUpdatedEvent == input.CustomerConsentUpdatedEvent ||
+                    this.CustomerConsentUpdatedEvent != null &&
+                    this.CustomerConsentUpdatedEvent.SequenceEqual(input.CustomerConsentUpdatedEvent)
+                ) && 
+                (
+                    this.CampaignCreatedEvent == input.CampaignCreatedEvent ||
+                    this.CampaignCreatedEvent != null &&
+                    this.CampaignCreatedEvent.SequenceEqual(input.CampaignCreatedEvent)
+                ) && 
+                (
+                    this.WebhookSubscriptionCreatedEvent == input.WebhookSubscriptionCreatedEvent ||
+                    this.WebhookSubscriptionCreatedEvent != null &&
+                    this.WebhookSubscriptionCreatedEvent.SequenceEqual(input.WebhookSubscriptionCreatedEvent)
+                ) && 
+                (
+                    this.WebhookSubscriptionUpdatedEvent == input.WebhookSubscriptionUpdatedEvent ||
+                    this.WebhookSubscriptionUpdatedEvent != null &&
+                    this.WebhookSubscriptionUpdatedEvent.SequenceEqual(input.WebhookSubscriptionUpdatedEvent)
+                ) && 
+                (
+                    this.WebhookSubscriptionDeletedEvent == input.WebhookSubscriptionDeletedEvent ||
+                    this.WebhookSubscriptionDeletedEvent != null &&
+                    this.WebhookSubscriptionDeletedEvent.SequenceEqual(input.WebhookSubscriptionDeletedEvent)
                 );
         }
 
@@ -330,6 +400,16 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CustomerCreatedEvent.GetHashCode();
                 if (this.CustomerUpdatedEvent != null)
                     hashCode = hashCode * 59 + this.CustomerUpdatedEvent.GetHashCode();
+                if (this.CustomerConsentUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.CustomerConsentUpdatedEvent.GetHashCode();
+                if (this.CampaignCreatedEvent != null)
+                    hashCode = hashCode * 59 + this.CampaignCreatedEvent.GetHashCode();
+                if (this.WebhookSubscriptionCreatedEvent != null)
+                    hashCode = hashCode * 59 + this.WebhookSubscriptionCreatedEvent.GetHashCode();
+                if (this.WebhookSubscriptionUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.WebhookSubscriptionUpdatedEvent.GetHashCode();
+                if (this.WebhookSubscriptionDeletedEvent != null)
+                    hashCode = hashCode * 59 + this.WebhookSubscriptionDeletedEvent.GetHashCode();
                 return hashCode;
             }
         }

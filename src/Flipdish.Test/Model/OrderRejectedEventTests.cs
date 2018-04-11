@@ -115,14 +115,6 @@ namespace Flipdish.Test
             // TODO unit test for the property 'CreateTime'
         }
         /// <summary>
-        /// Test the property 'Details'
-        /// </summary>
-        [Test]
-        public void DetailsTest()
-        {
-            // TODO unit test for the property 'Details'
-        }
-        /// <summary>
         /// Test the property 'Position'
         /// </summary>
         [Test]

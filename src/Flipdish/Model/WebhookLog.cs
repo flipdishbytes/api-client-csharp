@@ -47,7 +47,8 @@ namespace Flipdish.Model
         /// <param name="Duration">Duration.</param>
         /// <param name="RetryCount">RetryCount.</param>
         /// <param name="FlipdishWebhookId">FlipdishWebhookId.</param>
-        public WebhookLog(int? WebhookSubscriptionOwnerUserId = default(int?), string EventCreated = default(string), string WebhookTriggered = default(string), string WebhookEventName = default(string), string WebhookSubscriptionCallbackUrl = default(string), string HttpResponseStatusCode = default(string), string HttpResponseStatus = default(string), string RequestHeaders = default(string), string RequestBody = default(string), string ResponseHeaders = default(string), string ResponseBody = default(string), string Duration = default(string), int? RetryCount = default(int?), Guid? FlipdishWebhookId = default(Guid?))
+        /// <param name="Version">Version.</param>
+        public WebhookLog(int? WebhookSubscriptionOwnerUserId = default(int?), string EventCreated = default(string), string WebhookTriggered = default(string), string WebhookEventName = default(string), string WebhookSubscriptionCallbackUrl = default(string), string HttpResponseStatusCode = default(string), string HttpResponseStatus = default(string), string RequestHeaders = default(string), string RequestBody = default(string), string ResponseHeaders = default(string), string ResponseBody = default(string), string Duration = default(string), int? RetryCount = default(int?), Guid? FlipdishWebhookId = default(Guid?), string Version = default(string))
         {
             this.WebhookSubscriptionOwnerUserId = WebhookSubscriptionOwnerUserId;
             this.EventCreated = EventCreated;
@@ -63,6 +64,7 @@ namespace Flipdish.Model
             this.Duration = Duration;
             this.RetryCount = RetryCount;
             this.FlipdishWebhookId = FlipdishWebhookId;
+            this.Version = Version;
         }
         
         /// <summary>
@@ -150,6 +152,12 @@ namespace Flipdish.Model
         public Guid? FlipdishWebhookId { get; set; }
 
         /// <summary>
+        /// Gets or Sets Version
+        /// </summary>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public string Version { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -171,6 +179,7 @@ namespace Flipdish.Model
             sb.Append("  Duration: ").Append(Duration).Append("\n");
             sb.Append("  RetryCount: ").Append(RetryCount).Append("\n");
             sb.Append("  FlipdishWebhookId: ").Append(FlipdishWebhookId).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -274,6 +283,11 @@ namespace Flipdish.Model
                     this.FlipdishWebhookId == input.FlipdishWebhookId ||
                     (this.FlipdishWebhookId != null &&
                     this.FlipdishWebhookId.Equals(input.FlipdishWebhookId))
+                ) && 
+                (
+                    this.Version == input.Version ||
+                    (this.Version != null &&
+                    this.Version.Equals(input.Version))
                 );
         }
 
@@ -314,6 +328,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.RetryCount.GetHashCode();
                 if (this.FlipdishWebhookId != null)
                     hashCode = hashCode * 59 + this.FlipdishWebhookId.GetHashCode();
+                if (this.Version != null)
+                    hashCode = hashCode * 59 + this.Version.GetHashCode();
                 return hashCode;
             }
         }

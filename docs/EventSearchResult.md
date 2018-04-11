@@ -18,6 +18,11 @@ Name | Type | Description | Notes
 **MenuUpdatedEvent** | [**List&lt;MenuUpdatedEvent&gt;**](MenuUpdatedEvent.md) |  | [optional] 
 **CustomerCreatedEvent** | [**List&lt;CustomerCreatedEvent&gt;**](CustomerCreatedEvent.md) |  | [optional] 
 **CustomerUpdatedEvent** | [**List&lt;CustomerUpdatedEvent&gt;**](CustomerUpdatedEvent.md) |  | [optional] 
+**CustomerConsentUpdatedEvent** | [**List&lt;CustomerConsentUpdatedEvent&gt;**](CustomerConsentUpdatedEvent.md) |  | [optional] 
+**CampaignCreatedEvent** | [**List&lt;CampaignCreatedEvent&gt;**](CampaignCreatedEvent.md) |  | [optional] 
+**WebhookSubscriptionCreatedEvent** | [**List&lt;WebhookSubscriptionCreatedEvent&gt;**](WebhookSubscriptionCreatedEvent.md) |  | [optional] 
+**WebhookSubscriptionUpdatedEvent** | [**List&lt;WebhookSubscriptionUpdatedEvent&gt;**](WebhookSubscriptionUpdatedEvent.md) |  | [optional] 
+**WebhookSubscriptionDeletedEvent** | [**List&lt;WebhookSubscriptionDeletedEvent&gt;**](WebhookSubscriptionDeletedEvent.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

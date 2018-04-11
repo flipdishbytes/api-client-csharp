@@ -35,14 +35,16 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="OwnerUserId">OwnerUserId.</param>
+        /// <param name="Version">Version.</param>
         /// <param name="EventNames">EventNames.</param>
         /// <param name="CallbackUrl">CallbackUrl.</param>
         /// <param name="Enabled">Enabled.</param>
         /// <param name="VerifyToken">VerifyToken.</param>
-        public WebhookSubscription(int? Id = default(int?), int? OwnerUserId = default(int?), List<string> EventNames = default(List<string>), string CallbackUrl = default(string), bool? Enabled = default(bool?), string VerifyToken = default(string))
+        public WebhookSubscription(int? Id = default(int?), int? OwnerUserId = default(int?), string Version = default(string), List<string> EventNames = default(List<string>), string CallbackUrl = default(string), bool? Enabled = default(bool?), string VerifyToken = default(string))
         {
             this.Id = Id;
             this.OwnerUserId = OwnerUserId;
+            this.Version = Version;
             this.EventNames = EventNames;
             this.CallbackUrl = CallbackUrl;
             this.Enabled = Enabled;
@@ -60,6 +62,12 @@ namespace Flipdish.Model
         /// </summary>
         [DataMember(Name="ownerUserId", EmitDefaultValue=false)]
         public int? OwnerUserId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Version
+        /// </summary>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public string Version { get; set; }
 
         /// <summary>
         /// Gets or Sets EventNames
@@ -95,6 +103,7 @@ namespace Flipdish.Model
             sb.Append("class WebhookSubscription {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  OwnerUserId: ").Append(OwnerUserId).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  EventNames: ").Append(EventNames).Append("\n");
             sb.Append("  CallbackUrl: ").Append(CallbackUrl).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
@@ -144,6 +153,11 @@ namespace Flipdish.Model
                     this.OwnerUserId.Equals(input.OwnerUserId))
                 ) && 
                 (
+                    this.Version == input.Version ||
+                    (this.Version != null &&
+                    this.Version.Equals(input.Version))
+                ) && 
+                (
                     this.EventNames == input.EventNames ||
                     this.EventNames != null &&
                     this.EventNames.SequenceEqual(input.EventNames)
@@ -178,6 +192,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.OwnerUserId != null)
                     hashCode = hashCode * 59 + this.OwnerUserId.GetHashCode();
+                if (this.Version != null)
+                    hashCode = hashCode * 59 + this.Version.GetHashCode();
                 if (this.EventNames != null)
                     hashCode = hashCode * 59 + this.EventNames.GetHashCode();
                 if (this.CallbackUrl != null)
