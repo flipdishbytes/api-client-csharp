@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
 
 <a name="updatemenusectionitem"></a>
 # **UpdateMenuSectionItem**
-> void UpdateMenuSectionItem (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem)
+> void UpdateMenuSectionItem (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null)
 
 Update menu section item
 
@@ -367,11 +367,12 @@ namespace Example
             var menuSectionId = 56;  // int? | Menu section identifier
             var menuSectionItemId = 56;  // int? | Menu section item identifier
             var menuSectionItem = new MenuSectionItemBase(); // MenuSectionItemBase | Menu section item (delta)
+            var undoAfter = 1.2;  // double? | An optional time period, in hours, after which the hide-section operaton will be undone. (optional) 
 
             try
             {
                 // Update menu section item
-                apiInstance.UpdateMenuSectionItem(menuId, menuSectionId, menuSectionItemId, menuSectionItem);
+                apiInstance.UpdateMenuSectionItem(menuId, menuSectionId, menuSectionItemId, menuSectionItem, undoAfter);
             }
             catch (Exception e)
             {
@@ -390,6 +391,7 @@ Name | Type | Description  | Notes
  **menuSectionId** | **int?**| Menu section identifier | 
  **menuSectionItemId** | **int?**| Menu section item identifier | 
  **menuSectionItem** | [**MenuSectionItemBase**](MenuSectionItemBase.md)| Menu section item (delta) | 
+ **undoAfter** | **double?**| An optional time period, in hours, after which the hide-section operaton will be undone. | [optional] 
 
 ### Return type
 

@@ -144,7 +144,8 @@ namespace Flipdish.Test
             //int? menuSectionId = null;
             //int? menuSectionItemId = null;
             //MenuSectionItemBase menuSectionItem = null;
-            //instance.UpdateMenuSectionItem(menuId, menuSectionId, menuSectionItemId, menuSectionItem);
+            //double? undoAfter = null;
+            //instance.UpdateMenuSectionItem(menuId, menuSectionId, menuSectionItemId, menuSectionItem, undoAfter);
             
         }
         
