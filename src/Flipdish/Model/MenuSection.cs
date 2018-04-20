@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// MenuSection
+    /// Menu section
     /// </summary>
     [DataContract]
     public partial class MenuSection :  IEquatable<MenuSection>, IValidatableObject
@@ -33,15 +33,15 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuSection" /> class.
         /// </summary>
-        /// <param name="MenuSectionId">MenuSectionId.</param>
-        /// <param name="ImageUrl">ImageUrl.</param>
-        /// <param name="MenuItems">MenuItems.</param>
-        /// <param name="MenuSectionAvailability">MenuSectionAvailability.</param>
+        /// <param name="MenuSectionId">Menu section identifier.</param>
+        /// <param name="ImageUrl">Image url.</param>
+        /// <param name="MenuItems">Menu items.</param>
+        /// <param name="MenuSectionAvailability">Menu section availability.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
-        /// <param name="DisplayOrder">DisplayOrder.</param>
-        /// <param name="IsAvailable">IsAvailable.</param>
-        /// <param name="IsHiddenFromCustomers">IsHiddenFromCustomers.</param>
+        /// <param name="DisplayOrder">Display order.</param>
+        /// <param name="IsAvailable">Is available.</param>
+        /// <param name="IsHiddenFromCustomers">Is hidden from customer. Perhaps when the item is out of stock..</param>
         public MenuSection(int? MenuSectionId = default(int?), string ImageUrl = default(string), List<MenuSectionItem> MenuItems = default(List<MenuSectionItem>), MenuSectionAvailability MenuSectionAvailability = default(MenuSectionAvailability), string Name = default(string), string Description = default(string), int? DisplayOrder = default(int?), bool? IsAvailable = default(bool?), bool? IsHiddenFromCustomers = default(bool?))
         {
             this.MenuSectionId = MenuSectionId;
@@ -56,56 +56,65 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets MenuSectionId
+        /// Menu section identifier
         /// </summary>
+        /// <value>Menu section identifier</value>
         [DataMember(Name="menuSectionId", EmitDefaultValue=false)]
         public int? MenuSectionId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageUrl
+        /// Image url
         /// </summary>
+        /// <value>Image url</value>
         [DataMember(Name="imageUrl", EmitDefaultValue=false)]
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets MenuItems
+        /// Menu items
         /// </summary>
+        /// <value>Menu items</value>
         [DataMember(Name="menuItems", EmitDefaultValue=false)]
         public List<MenuSectionItem> MenuItems { get; set; }
 
         /// <summary>
-        /// Gets or Sets MenuSectionAvailability
+        /// Menu section availability
         /// </summary>
+        /// <value>Menu section availability</value>
         [DataMember(Name="menuSectionAvailability", EmitDefaultValue=false)]
         public MenuSectionAvailability MenuSectionAvailability { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Name
         /// </summary>
+        /// <value>Name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        /// Description
         /// </summary>
+        /// <value>Description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayOrder
+        /// Display order
         /// </summary>
+        /// <value>Display order</value>
         [DataMember(Name="displayOrder", EmitDefaultValue=false)]
         public int? DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsAvailable
+        /// Is available
         /// </summary>
+        /// <value>Is available</value>
         [DataMember(Name="isAvailable", EmitDefaultValue=false)]
         public bool? IsAvailable { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsHiddenFromCustomers
+        /// Is hidden from customer. Perhaps when the item is out of stock.
         /// </summary>
+        /// <value>Is hidden from customer. Perhaps when the item is out of stock.</value>
         [DataMember(Name="isHiddenFromCustomers", EmitDefaultValue=false)]
         public bool? IsHiddenFromCustomers { get; set; }
 

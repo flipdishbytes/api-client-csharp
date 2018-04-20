@@ -3,11 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Limit** | **int?** |  | [optional] 
-**Page** | **int?** |  | [optional] 
-**Start** | **DateTime?** |  | [optional] 
-**End** | **DateTime?** |  | [optional] 
-**Name** | **List&lt;string&gt;** |  | [optional] 
+**Limit** | **int?** | The maximum elements to return | [optional] 
+**Page** | **int?** | The index of the page to return, starting by 1 | [optional] 
+**Start** | **DateTime?** | Start date | [optional] 
+**End** | **DateTime?** | End date | [optional] 
+**Name** | **List&lt;string&gt;** | Event names to filter in | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

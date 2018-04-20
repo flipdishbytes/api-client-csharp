@@ -3,17 +3,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OrderItemOptions** | [**List&lt;OrderItemOption&gt;**](OrderItemOption.md) |  | [optional] 
-**Metadata** | **Dictionary&lt;string, string&gt;** |  | [optional] 
-**MenuSectionName** | **string** |  | [optional] 
-**MenuSectionDisplayOrder** | **int?** |  | [optional] 
-**Name** | **string** |  | [optional] 
-**Description** | **string** |  | [optional] 
-**Price** | **double?** |  | [optional] 
-**PriceIncludingOptionSetItems** | **double?** |  | [optional] 
-**MenuItemId** | **int?** |  | [optional] 
-**MenuItemDisplayOrder** | **int?** |  | [optional] 
-**IsAvailable** | **bool?** |  | [optional] 
+**OrderItemOptions** | [**List&lt;OrderItemOption&gt;**](OrderItemOption.md) | Option list | [optional] 
+**Metadata** | **Dictionary&lt;string, string&gt;** | Metadata | [optional] 
+**MenuSectionName** | **string** | Menu section name | [optional] 
+**MenuSectionDisplayOrder** | **int?** | Menu section display order | [optional] 
+**Name** | **string** | Name | [optional] 
+**Description** | **string** | Description | [optional] 
+**Price** | **double?** | Price | [optional] 
+**PriceIncludingOptionSetItems** | **double?** | Price including option set items | [optional] 
+**MenuItemId** | **int?** | Menu item identifier | [optional] 
+**MenuItemDisplayOrder** | **int?** | Menu item display order | [optional] 
+**IsAvailable** | **bool?** | Is available | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

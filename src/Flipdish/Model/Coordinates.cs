@@ -42,14 +42,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Latitude
+        /// Latitude
         /// </summary>
+        /// <value>Latitude</value>
         [DataMember(Name="latitude", EmitDefaultValue=false)]
         public double? Latitude { get; set; }
 
         /// <summary>
-        /// Gets or Sets Longitude
+        /// Longitude
         /// </summary>
+        /// <value>Longitude</value>
         [DataMember(Name="longitude", EmitDefaultValue=false)]
         public double? Longitude { get; set; }
 

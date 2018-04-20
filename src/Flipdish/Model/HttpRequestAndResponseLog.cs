@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// HttpRequestAndResponseLog
+    /// Http Request and Response Log
     /// </summary>
     [DataContract]
     public partial class HttpRequestAndResponseLog :  IEquatable<HttpRequestAndResponseLog>, IValidatableObject
@@ -33,20 +33,20 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HttpRequestAndResponseLog" /> class.
         /// </summary>
-        /// <param name="Verb">Verb.</param>
-        /// <param name="RequestUri">RequestUri.</param>
-        /// <param name="StatusCode">StatusCode.</param>
-        /// <param name="ReasonPhrase">ReasonPhrase.</param>
-        /// <param name="CallDurationInMilliseconds">CallDurationInMilliseconds.</param>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="IpAddress">IpAddress.</param>
-        /// <param name="CreatedDateTime">CreatedDateTime.</param>
-        /// <param name="RequestHeaders">RequestHeaders.</param>
-        /// <param name="RequestBody">RequestBody.</param>
-        /// <param name="RequestLength">RequestLength.</param>
-        /// <param name="ResponseHeaders">ResponseHeaders.</param>
-        /// <param name="ResponseBody">ResponseBody.</param>
-        /// <param name="ResponseLength">ResponseLength.</param>
+        /// <param name="Verb">Verb associated with the HTTP call..</param>
+        /// <param name="RequestUri">Http request URI..</param>
+        /// <param name="StatusCode">Http response status code..</param>
+        /// <param name="ReasonPhrase">Http response status line..</param>
+        /// <param name="CallDurationInMilliseconds">Call duration representing the duration of the HTTP call in milliseconds..</param>
+        /// <param name="UserId">Identity of the caller..</param>
+        /// <param name="IpAddress">Ip address of the caller.</param>
+        /// <param name="CreatedDateTime">Timestamp at which the HTTP call took place..</param>
+        /// <param name="RequestHeaders">Http request headers..</param>
+        /// <param name="RequestBody">Http request body, if any..</param>
+        /// <param name="RequestLength">Http request content-length.</param>
+        /// <param name="ResponseHeaders">Http response headers..</param>
+        /// <param name="ResponseBody">Http response body..</param>
+        /// <param name="ResponseLength">Http response content-length.</param>
         public HttpRequestAndResponseLog(string Verb = default(string), string RequestUri = default(string), int? StatusCode = default(int?), string ReasonPhrase = default(string), long? CallDurationInMilliseconds = default(long?), string UserId = default(string), string IpAddress = default(string), string CreatedDateTime = default(string), Dictionary<string, string> RequestHeaders = default(Dictionary<string, string>), string RequestBody = default(string), long? RequestLength = default(long?), Dictionary<string, string> ResponseHeaders = default(Dictionary<string, string>), string ResponseBody = default(string), long? ResponseLength = default(long?))
         {
             this.Verb = Verb;
@@ -66,86 +66,100 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Verb
+        /// Verb associated with the HTTP call.
         /// </summary>
+        /// <value>Verb associated with the HTTP call.</value>
         [DataMember(Name="verb", EmitDefaultValue=false)]
         public string Verb { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequestUri
+        /// Http request URI.
         /// </summary>
+        /// <value>Http request URI.</value>
         [DataMember(Name="requestUri", EmitDefaultValue=false)]
         public string RequestUri { get; set; }
 
         /// <summary>
-        /// Gets or Sets StatusCode
+        /// Http response status code.
         /// </summary>
+        /// <value>Http response status code.</value>
         [DataMember(Name="statusCode", EmitDefaultValue=false)]
         public int? StatusCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets ReasonPhrase
+        /// Http response status line.
         /// </summary>
+        /// <value>Http response status line.</value>
         [DataMember(Name="reasonPhrase", EmitDefaultValue=false)]
         public string ReasonPhrase { get; set; }
 
         /// <summary>
-        /// Gets or Sets CallDurationInMilliseconds
+        /// Call duration representing the duration of the HTTP call in milliseconds.
         /// </summary>
+        /// <value>Call duration representing the duration of the HTTP call in milliseconds.</value>
         [DataMember(Name="callDurationInMilliseconds", EmitDefaultValue=false)]
         public long? CallDurationInMilliseconds { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserId
+        /// Identity of the caller.
         /// </summary>
+        /// <value>Identity of the caller.</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
 
         /// <summary>
-        /// Gets or Sets IpAddress
+        /// Ip address of the caller
         /// </summary>
+        /// <value>Ip address of the caller</value>
         [DataMember(Name="ipAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreatedDateTime
+        /// Timestamp at which the HTTP call took place.
         /// </summary>
+        /// <value>Timestamp at which the HTTP call took place.</value>
         [DataMember(Name="createdDateTime", EmitDefaultValue=false)]
         public string CreatedDateTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequestHeaders
+        /// Http request headers.
         /// </summary>
+        /// <value>Http request headers.</value>
         [DataMember(Name="requestHeaders", EmitDefaultValue=false)]
         public Dictionary<string, string> RequestHeaders { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequestBody
+        /// Http request body, if any.
         /// </summary>
+        /// <value>Http request body, if any.</value>
         [DataMember(Name="requestBody", EmitDefaultValue=false)]
         public string RequestBody { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequestLength
+        /// Http request content-length
         /// </summary>
+        /// <value>Http request content-length</value>
         [DataMember(Name="requestLength", EmitDefaultValue=false)]
         public long? RequestLength { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResponseHeaders
+        /// Http response headers.
         /// </summary>
+        /// <value>Http response headers.</value>
         [DataMember(Name="responseHeaders", EmitDefaultValue=false)]
         public Dictionary<string, string> ResponseHeaders { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResponseBody
+        /// Http response body.
         /// </summary>
+        /// <value>Http response body.</value>
         [DataMember(Name="responseBody", EmitDefaultValue=false)]
         public string ResponseBody { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResponseLength
+        /// Http response content-length
         /// </summary>
+        /// <value>Http response content-length</value>
         [DataMember(Name="responseLength", EmitDefaultValue=false)]
         public long? ResponseLength { get; set; }
 

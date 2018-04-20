@@ -67,20 +67,20 @@ namespace Flipdish.Test
 
 
         /// <summary>
-        /// Test the property 'WebhookSubscriptionEventInfo'
-        /// </summary>
-        [Test]
-        public void WebhookSubscriptionEventInfoTest()
-        {
-            // TODO unit test for the property 'WebhookSubscriptionEventInfo'
-        }
-        /// <summary>
         /// Test the property 'EventName'
         /// </summary>
         [Test]
         public void EventNameTest()
         {
             // TODO unit test for the property 'EventName'
+        }
+        /// <summary>
+        /// Test the property 'WebhookSubscriptionEventInfo'
+        /// </summary>
+        [Test]
+        public void WebhookSubscriptionEventInfoTest()
+        {
+            // TODO unit test for the property 'WebhookSubscriptionEventInfo'
         }
         /// <summary>
         /// Test the property 'FlipdishEventId'

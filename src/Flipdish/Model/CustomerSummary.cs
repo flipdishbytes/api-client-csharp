@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// CustomerSummary
+    /// Customer summary
     /// </summary>
     [DataContract]
     public partial class CustomerSummary :  IEquatable<CustomerSummary>, IValidatableObject
@@ -33,11 +33,11 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomerSummary" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="EmailAddress">EmailAddress.</param>
-        /// <param name="PhoneNumberLocalFormat">PhoneNumberLocalFormat.</param>
-        /// <param name="PhoneNumber">PhoneNumber.</param>
+        /// <param name="Id">Customer identifier.</param>
+        /// <param name="Name">Customer name.</param>
+        /// <param name="EmailAddress">Customer email address.</param>
+        /// <param name="PhoneNumberLocalFormat">Customer local phone number.</param>
+        /// <param name="PhoneNumber">Customer phone number.</param>
         public CustomerSummary(int? Id = default(int?), string Name = default(string), string EmailAddress = default(string), string PhoneNumberLocalFormat = default(string), string PhoneNumber = default(string))
         {
             this.Id = Id;
@@ -48,32 +48,37 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Customer identifier
         /// </summary>
+        /// <value>Customer identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Customer name
         /// </summary>
+        /// <value>Customer name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets EmailAddress
+        /// Customer email address
         /// </summary>
+        /// <value>Customer email address</value>
         [DataMember(Name="emailAddress", EmitDefaultValue=false)]
         public string EmailAddress { get; set; }
 
         /// <summary>
-        /// Gets or Sets PhoneNumberLocalFormat
+        /// Customer local phone number
         /// </summary>
+        /// <value>Customer local phone number</value>
         [DataMember(Name="phoneNumberLocalFormat", EmitDefaultValue=false)]
         public string PhoneNumberLocalFormat { get; set; }
 
         /// <summary>
-        /// Gets or Sets PhoneNumber
+        /// Customer phone number
         /// </summary>
+        /// <value>Customer phone number</value>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
 

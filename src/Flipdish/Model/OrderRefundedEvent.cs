@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// OrderRefundedEvent
+    /// Order Refunded Event
     /// </summary>
     [DataContract]
     public partial class OrderRefundedEvent :  IEquatable<OrderRefundedEvent>, IValidatableObject
@@ -33,63 +33,70 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderRefundedEvent" /> class.
         /// </summary>
-        /// <param name="RefundedAmount">RefundedAmount.</param>
+        /// <param name="EventName">The event name.</param>
+        /// <param name="RefundedAmount">The amount refunded.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Order">Order.</param>
-        /// <param name="EventName">EventName.</param>
-        /// <param name="FlipdishEventId">FlipdishEventId.</param>
-        /// <param name="CreateTime">CreateTime.</param>
+        /// <param name="FlipdishEventId">The identitfier of the event.</param>
+        /// <param name="CreateTime">The time of creation of the event.</param>
         /// <param name="Position">Position.</param>
-        public OrderRefundedEvent(double? RefundedAmount = default(double?), string Description = default(string), Order Order = default(Order), string EventName = default(string), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        public OrderRefundedEvent(string EventName = default(string), double? RefundedAmount = default(double?), string Description = default(string), Order Order = default(Order), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
         {
+            this.EventName = EventName;
             this.RefundedAmount = RefundedAmount;
             this.Description = Description;
             this.Order = Order;
-            this.EventName = EventName;
             this.FlipdishEventId = FlipdishEventId;
             this.CreateTime = CreateTime;
             this.Position = Position;
         }
         
         /// <summary>
-        /// Gets or Sets RefundedAmount
+        /// The event name
         /// </summary>
-        [DataMember(Name="refundedAmount", EmitDefaultValue=false)]
-        public double? RefundedAmount { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Description
-        /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
-        public string Description { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Order
-        /// </summary>
-        [DataMember(Name="order", EmitDefaultValue=false)]
-        public Order Order { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EventName
-        /// </summary>
+        /// <value>The event name</value>
         [DataMember(Name="eventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
 
         /// <summary>
-        /// Gets or Sets FlipdishEventId
+        /// The amount refunded
         /// </summary>
+        /// <value>The amount refunded</value>
+        [DataMember(Name="refundedAmount", EmitDefaultValue=false)]
+        public double? RefundedAmount { get; set; }
+
+        /// <summary>
+        /// Description
+        /// </summary>
+        /// <value>Description</value>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
+
+        /// <summary>
+        /// Order
+        /// </summary>
+        /// <value>Order</value>
+        [DataMember(Name="order", EmitDefaultValue=false)]
+        public Order Order { get; set; }
+
+        /// <summary>
+        /// The identitfier of the event
+        /// </summary>
+        /// <value>The identitfier of the event</value>
         [DataMember(Name="flipdishEventId", EmitDefaultValue=false)]
         public Guid? FlipdishEventId { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreateTime
+        /// The time of creation of the event
         /// </summary>
+        /// <value>The time of creation of the event</value>
         [DataMember(Name="createTime", EmitDefaultValue=false)]
         public DateTime? CreateTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets Position
+        /// Position
         /// </summary>
+        /// <value>Position</value>
         [DataMember(Name="position", EmitDefaultValue=false)]
         public int? Position { get; set; }
 
@@ -101,10 +108,10 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OrderRefundedEvent {\n");
+            sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  RefundedAmount: ").Append(RefundedAmount).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
-            sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -143,6 +150,11 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.EventName == input.EventName ||
+                    (this.EventName != null &&
+                    this.EventName.Equals(input.EventName))
+                ) && 
+                (
                     this.RefundedAmount == input.RefundedAmount ||
                     (this.RefundedAmount != null &&
                     this.RefundedAmount.Equals(input.RefundedAmount))
@@ -156,11 +168,6 @@ namespace Flipdish.Model
                     this.Order == input.Order ||
                     (this.Order != null &&
                     this.Order.Equals(input.Order))
-                ) && 
-                (
-                    this.EventName == input.EventName ||
-                    (this.EventName != null &&
-                    this.EventName.Equals(input.EventName))
                 ) && 
                 (
                     this.FlipdishEventId == input.FlipdishEventId ||
@@ -188,14 +195,14 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.EventName != null)
+                    hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.RefundedAmount != null)
                     hashCode = hashCode * 59 + this.RefundedAmount.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Order != null)
                     hashCode = hashCode * 59 + this.Order.GetHashCode();
-                if (this.EventName != null)
-                    hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)

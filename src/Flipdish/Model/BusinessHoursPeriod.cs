@@ -25,14 +25,15 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// BusinessHoursPeriod
+    /// Business hours period
     /// </summary>
     [DataContract]
     public partial class BusinessHoursPeriod :  IEquatable<BusinessHoursPeriod>, IValidatableObject
     {
         /// <summary>
-        /// Defines DayOfWeek
+        /// Day of week
         /// </summary>
+        /// <value>Day of week</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DayOfWeekEnum
         {
@@ -81,18 +82,19 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets DayOfWeek
+        /// Day of week
         /// </summary>
+        /// <value>Day of week</value>
         [DataMember(Name="dayOfWeek", EmitDefaultValue=false)]
         public DayOfWeekEnum? DayOfWeek { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessHoursPeriod" /> class.
         /// </summary>
-        /// <param name="DayOfWeek">DayOfWeek.</param>
-        /// <param name="StartTime">StartTime.</param>
+        /// <param name="DayOfWeek">Day of week.</param>
+        /// <param name="StartTime">Start time.</param>
         /// <param name="Period">Period.</param>
-        /// <param name="StartTimeEarly">StartTimeEarly.</param>
-        /// <param name="PeriodEarly">PeriodEarly.</param>
+        /// <param name="StartTimeEarly">Start time early.</param>
+        /// <param name="PeriodEarly">Period early.</param>
         /// <param name="Early">Early.</param>
         /// <param name="Late">Late.</param>
         /// <param name="Ranges">Ranges.</param>
@@ -110,44 +112,51 @@ namespace Flipdish.Model
         
 
         /// <summary>
-        /// Gets or Sets StartTime
+        /// Start time
         /// </summary>
+        /// <value>Start time</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets Period
+        /// Period
         /// </summary>
+        /// <value>Period</value>
         [DataMember(Name="period", EmitDefaultValue=false)]
         public string Period { get; set; }
 
         /// <summary>
-        /// Gets or Sets StartTimeEarly
+        /// Start time early
         /// </summary>
+        /// <value>Start time early</value>
         [DataMember(Name="startTimeEarly", EmitDefaultValue=false)]
         public string StartTimeEarly { get; set; }
 
         /// <summary>
-        /// Gets or Sets PeriodEarly
+        /// Period early
         /// </summary>
+        /// <value>Period early</value>
         [DataMember(Name="periodEarly", EmitDefaultValue=false)]
         public string PeriodEarly { get; set; }
 
         /// <summary>
-        /// Gets or Sets Early
+        /// Early
         /// </summary>
+        /// <value>Early</value>
         [DataMember(Name="early", EmitDefaultValue=false)]
         public Range Early { get; set; }
 
         /// <summary>
-        /// Gets or Sets Late
+        /// Late
         /// </summary>
+        /// <value>Late</value>
         [DataMember(Name="late", EmitDefaultValue=false)]
         public Range Late { get; set; }
 
         /// <summary>
-        /// Gets or Sets Ranges
+        /// Ranges
         /// </summary>
+        /// <value>Ranges</value>
         [DataMember(Name="ranges", EmitDefaultValue=false)]
         public List<Range> Ranges { get; set; }
 

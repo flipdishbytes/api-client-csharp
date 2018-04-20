@@ -25,14 +25,15 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// StoreSummary
+    /// Store summary
     /// </summary>
     [DataContract]
     public partial class StoreSummary :  IEquatable<StoreSummary>, IValidatableObject
     {
         /// <summary>
-        /// Defines Currency
+        /// Currency which used by the Store
         /// </summary>
+        /// <value>Currency which used by the Store</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum CurrencyEnum
         {
@@ -711,18 +712,19 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets Currency
+        /// Currency which used by the Store
         /// </summary>
+        /// <value>Currency which used by the Store</value>
         [DataMember(Name="currency", EmitDefaultValue=false)]
         public CurrencyEnum? Currency { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreSummary" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="MenuId">MenuId.</param>
-        /// <param name="Metadata">Metadata.</param>
-        /// <param name="Currency">Currency.</param>
+        /// <param name="Id">Store identifier.</param>
+        /// <param name="Name">Store name.</param>
+        /// <param name="MenuId">Stores menu identifier.</param>
+        /// <param name="Metadata">Store metadata.</param>
+        /// <param name="Currency">Currency which used by the Store.</param>
         public StoreSummary(int? Id = default(int?), string Name = default(string), int? MenuId = default(int?), Dictionary<string, string> Metadata = default(Dictionary<string, string>), CurrencyEnum? Currency = default(CurrencyEnum?))
         {
             this.Id = Id;
@@ -733,26 +735,30 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Store identifier
         /// </summary>
+        /// <value>Store identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Store name
         /// </summary>
+        /// <value>Store name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets MenuId
+        /// Stores menu identifier
         /// </summary>
+        /// <value>Stores menu identifier</value>
         [DataMember(Name="menuId", EmitDefaultValue=false)]
         public int? MenuId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Metadata
+        /// Store metadata
         /// </summary>
+        /// <value>Store metadata</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public Dictionary<string, string> Metadata { get; set; }
 

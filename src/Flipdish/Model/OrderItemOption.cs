@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// OrderItemOption
+    /// Order item option
     /// </summary>
     [DataContract]
     public partial class OrderItemOption :  IEquatable<OrderItemOption>, IValidatableObject
@@ -34,12 +34,12 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="OrderItemOption" /> class.
         /// </summary>
         /// <param name="Metadata">Metadata.</param>
-        /// <param name="MenuItemOptionId">MenuItemOptionId.</param>
-        /// <param name="IsMasterOptionSetItem">IsMasterOptionSetItem.</param>
+        /// <param name="MenuItemOptionId">Menu item option identifier.</param>
+        /// <param name="IsMasterOptionSetItem">Is master option set item.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Price">Price.</param>
-        /// <param name="MenuItemOptionDisplayOrder">MenuItemOptionDisplayOrder.</param>
-        /// <param name="MenuItemOptionSetDisplayOrder">MenuItemOptionSetDisplayOrder.</param>
+        /// <param name="MenuItemOptionDisplayOrder">Menu item option display order.</param>
+        /// <param name="MenuItemOptionSetDisplayOrder">Menu item option set display order.</param>
         public OrderItemOption(Dictionary<string, string> Metadata = default(Dictionary<string, string>), int? MenuItemOptionId = default(int?), bool? IsMasterOptionSetItem = default(bool?), string Name = default(string), double? Price = default(double?), int? MenuItemOptionDisplayOrder = default(int?), int? MenuItemOptionSetDisplayOrder = default(int?))
         {
             this.Metadata = Metadata;
@@ -52,44 +52,51 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Metadata
+        /// Metadata
         /// </summary>
+        /// <value>Metadata</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public Dictionary<string, string> Metadata { get; set; }
 
         /// <summary>
-        /// Gets or Sets MenuItemOptionId
+        /// Menu item option identifier
         /// </summary>
+        /// <value>Menu item option identifier</value>
         [DataMember(Name="menuItemOptionId", EmitDefaultValue=false)]
         public int? MenuItemOptionId { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsMasterOptionSetItem
+        /// Is master option set item
         /// </summary>
+        /// <value>Is master option set item</value>
         [DataMember(Name="isMasterOptionSetItem", EmitDefaultValue=false)]
         public bool? IsMasterOptionSetItem { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Name
         /// </summary>
+        /// <value>Name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Price
+        /// Price
         /// </summary>
+        /// <value>Price</value>
         [DataMember(Name="price", EmitDefaultValue=false)]
         public double? Price { get; set; }
 
         /// <summary>
-        /// Gets or Sets MenuItemOptionDisplayOrder
+        /// Menu item option display order
         /// </summary>
+        /// <value>Menu item option display order</value>
         [DataMember(Name="menuItemOptionDisplayOrder", EmitDefaultValue=false)]
         public int? MenuItemOptionDisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or Sets MenuItemOptionSetDisplayOrder
+        /// Menu item option set display order
         /// </summary>
+        /// <value>Menu item option set display order</value>
         [DataMember(Name="menuItemOptionSetDisplayOrder", EmitDefaultValue=false)]
         public int? MenuItemOptionSetDisplayOrder { get; set; }
 

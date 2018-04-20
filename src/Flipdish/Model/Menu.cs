@@ -31,8 +31,9 @@ namespace Flipdish.Model
     public partial class Menu :  IEquatable<Menu>, IValidatableObject
     {
         /// <summary>
-        /// Defines MenuSectionBehaviour
+        /// Menu section behaviour
         /// </summary>
+        /// <value>Menu section behaviour</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MenuSectionBehaviourEnum
         {
@@ -51,20 +52,21 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets MenuSectionBehaviour
+        /// Menu section behaviour
         /// </summary>
+        /// <value>Menu section behaviour</value>
         [DataMember(Name="menuSectionBehaviour", EmitDefaultValue=false)]
         public MenuSectionBehaviourEnum? MenuSectionBehaviour { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Menu" /> class.
         /// </summary>
-        /// <param name="MenuId">MenuId.</param>
-        /// <param name="ModifiedTime">ModifiedTime.</param>
-        /// <param name="VersionNumber">VersionNumber.</param>
-        /// <param name="ImageUrl">ImageUrl.</param>
-        /// <param name="MenuSections">MenuSections.</param>
-        /// <param name="DisplaySectionLinks">DisplaySectionLinks.</param>
-        /// <param name="MenuSectionBehaviour">MenuSectionBehaviour.</param>
+        /// <param name="MenuId">Menu identifier.</param>
+        /// <param name="ModifiedTime">Last modified time.</param>
+        /// <param name="VersionNumber">Menu version.</param>
+        /// <param name="ImageUrl">Image url.</param>
+        /// <param name="MenuSections">Menu sections (startes, main etc).</param>
+        /// <param name="DisplaySectionLinks">Display menu section link on UI.</param>
+        /// <param name="MenuSectionBehaviour">Menu section behaviour.</param>
         public Menu(int? MenuId = default(int?), DateTime? ModifiedTime = default(DateTime?), int? VersionNumber = default(int?), string ImageUrl = default(string), List<MenuSection> MenuSections = default(List<MenuSection>), bool? DisplaySectionLinks = default(bool?), MenuSectionBehaviourEnum? MenuSectionBehaviour = default(MenuSectionBehaviourEnum?))
         {
             this.MenuId = MenuId;
@@ -77,38 +79,44 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets MenuId
+        /// Menu identifier
         /// </summary>
+        /// <value>Menu identifier</value>
         [DataMember(Name="menuId", EmitDefaultValue=false)]
         public int? MenuId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ModifiedTime
+        /// Last modified time
         /// </summary>
+        /// <value>Last modified time</value>
         [DataMember(Name="modifiedTime", EmitDefaultValue=false)]
         public DateTime? ModifiedTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets VersionNumber
+        /// Menu version
         /// </summary>
+        /// <value>Menu version</value>
         [DataMember(Name="versionNumber", EmitDefaultValue=false)]
         public int? VersionNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageUrl
+        /// Image url
         /// </summary>
+        /// <value>Image url</value>
         [DataMember(Name="imageUrl", EmitDefaultValue=false)]
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets MenuSections
+        /// Menu sections (startes, main etc)
         /// </summary>
+        /// <value>Menu sections (startes, main etc)</value>
         [DataMember(Name="menuSections", EmitDefaultValue=false)]
         public List<MenuSection> MenuSections { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplaySectionLinks
+        /// Display menu section link on UI
         /// </summary>
+        /// <value>Display menu section link on UI</value>
         [DataMember(Name="displaySectionLinks", EmitDefaultValue=false)]
         public bool? DisplaySectionLinks { get; set; }
 

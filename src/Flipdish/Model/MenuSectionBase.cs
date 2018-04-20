@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// MenuSectionBase
+    /// Menu section
     /// </summary>
     [DataContract]
     public partial class MenuSectionBase :  IEquatable<MenuSectionBase>, IValidatableObject
@@ -35,9 +35,9 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
-        /// <param name="DisplayOrder">DisplayOrder.</param>
-        /// <param name="IsAvailable">IsAvailable.</param>
-        /// <param name="IsHiddenFromCustomers">IsHiddenFromCustomers.</param>
+        /// <param name="DisplayOrder">Display order.</param>
+        /// <param name="IsAvailable">Is available.</param>
+        /// <param name="IsHiddenFromCustomers">Is hidden from customer. Perhaps when the item is out of stock..</param>
         public MenuSectionBase(string Name = default(string), string Description = default(string), int? DisplayOrder = default(int?), bool? IsAvailable = default(bool?), bool? IsHiddenFromCustomers = default(bool?))
         {
             this.Name = Name;
@@ -48,32 +48,37 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Name
         /// </summary>
+        /// <value>Name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        /// Description
         /// </summary>
+        /// <value>Description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayOrder
+        /// Display order
         /// </summary>
+        /// <value>Display order</value>
         [DataMember(Name="displayOrder", EmitDefaultValue=false)]
         public int? DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsAvailable
+        /// Is available
         /// </summary>
+        /// <value>Is available</value>
         [DataMember(Name="isAvailable", EmitDefaultValue=false)]
         public bool? IsAvailable { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsHiddenFromCustomers
+        /// Is hidden from customer. Perhaps when the item is out of stock.
         /// </summary>
+        /// <value>Is hidden from customer. Perhaps when the item is out of stock.</value>
         [DataMember(Name="isHiddenFromCustomers", EmitDefaultValue=false)]
         public bool? IsHiddenFromCustomers { get; set; }
 

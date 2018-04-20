@@ -31,8 +31,9 @@ namespace Flipdish.Model
     public partial class Reject :  IEquatable<Reject>, IValidatableObject
     {
         /// <summary>
-        /// Defines RejectReason
+        /// Reject reason
         /// </summary>
+        /// <value>Reject reason</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum RejectReasonEnum
         {
@@ -93,8 +94,9 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets RejectReason
+        /// Reject reason
         /// </summary>
+        /// <value>Reject reason</value>
         [DataMember(Name="rejectReason", EmitDefaultValue=false)]
         public RejectReasonEnum RejectReason { get; set; }
         /// <summary>
@@ -105,7 +107,7 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Reject" /> class.
         /// </summary>
-        /// <param name="RejectReason">RejectReason (required).</param>
+        /// <param name="RejectReason">Reject reason (required).</param>
         public Reject(RejectReasonEnum RejectReason = default(RejectReasonEnum))
         {
             // to ensure "RejectReason" is required (not null)

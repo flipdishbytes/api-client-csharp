@@ -25,14 +25,15 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// MenuBase
+    /// Menu base
     /// </summary>
     [DataContract]
     public partial class MenuBase :  IEquatable<MenuBase>, IValidatableObject
     {
         /// <summary>
-        /// Defines MenuSectionBehaviour
+        /// Menu section behaviour
         /// </summary>
+        /// <value>Menu section behaviour</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MenuSectionBehaviourEnum
         {
@@ -51,15 +52,16 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets MenuSectionBehaviour
+        /// Menu section behaviour
         /// </summary>
+        /// <value>Menu section behaviour</value>
         [DataMember(Name="menuSectionBehaviour", EmitDefaultValue=false)]
         public MenuSectionBehaviourEnum? MenuSectionBehaviour { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuBase" /> class.
         /// </summary>
-        /// <param name="DisplaySectionLinks">DisplaySectionLinks.</param>
-        /// <param name="MenuSectionBehaviour">MenuSectionBehaviour.</param>
+        /// <param name="DisplaySectionLinks">Display menu section link on UI.</param>
+        /// <param name="MenuSectionBehaviour">Menu section behaviour.</param>
         public MenuBase(bool? DisplaySectionLinks = default(bool?), MenuSectionBehaviourEnum? MenuSectionBehaviour = default(MenuSectionBehaviourEnum?))
         {
             this.DisplaySectionLinks = DisplaySectionLinks;
@@ -67,8 +69,9 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets DisplaySectionLinks
+        /// Display menu section link on UI
         /// </summary>
+        /// <value>Display menu section link on UI</value>
         [DataMember(Name="displaySectionLinks", EmitDefaultValue=false)]
         public bool? DisplaySectionLinks { get; set; }
 

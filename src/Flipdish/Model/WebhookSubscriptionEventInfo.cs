@@ -33,10 +33,10 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookSubscriptionEventInfo" /> class.
         /// </summary>
-        /// <param name="OwnerUserId">OwnerUserId.</param>
-        /// <param name="WebhookSubscriptionId">WebhookSubscriptionId.</param>
-        /// <param name="ClientId">ClientId.</param>
-        /// <param name="CallbackUrl">CallbackUrl.</param>
+        /// <param name="OwnerUserId">Webhook subscription owner user identifier.</param>
+        /// <param name="WebhookSubscriptionId">Webhook subscription identifier.</param>
+        /// <param name="ClientId">Oauth client identifier.</param>
+        /// <param name="CallbackUrl">Webhook callback url.</param>
         public WebhookSubscriptionEventInfo(int? OwnerUserId = default(int?), int? WebhookSubscriptionId = default(int?), string ClientId = default(string), string CallbackUrl = default(string))
         {
             this.OwnerUserId = OwnerUserId;
@@ -46,26 +46,30 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets OwnerUserId
+        /// Webhook subscription owner user identifier
         /// </summary>
+        /// <value>Webhook subscription owner user identifier</value>
         [DataMember(Name="ownerUserId", EmitDefaultValue=false)]
         public int? OwnerUserId { get; set; }
 
         /// <summary>
-        /// Gets or Sets WebhookSubscriptionId
+        /// Webhook subscription identifier
         /// </summary>
+        /// <value>Webhook subscription identifier</value>
         [DataMember(Name="webhookSubscriptionId", EmitDefaultValue=false)]
         public int? WebhookSubscriptionId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientId
+        /// Oauth client identifier
         /// </summary>
+        /// <value>Oauth client identifier</value>
         [DataMember(Name="clientId", EmitDefaultValue=false)]
         public string ClientId { get; set; }
 
         /// <summary>
-        /// Gets or Sets CallbackUrl
+        /// Webhook callback url
         /// </summary>
+        /// <value>Webhook callback url</value>
         [DataMember(Name="callbackUrl", EmitDefaultValue=false)]
         public string CallbackUrl { get; set; }
 

@@ -33,26 +33,26 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EventSearchResult" /> class.
         /// </summary>
-        /// <param name="OrderAcceptedEvent">OrderAcceptedEvent.</param>
-        /// <param name="OrderCreatedEvent">OrderCreatedEvent.</param>
-        /// <param name="OrderRatingUpdatedEvent">OrderRatingUpdatedEvent.</param>
-        /// <param name="OrderRefundedEvent">OrderRefundedEvent.</param>
-        /// <param name="OrderRejectedEvent">OrderRejectedEvent.</param>
-        /// <param name="OrderTipUpdatedEvent">OrderTipUpdatedEvent.</param>
-        /// <param name="StoreCreatedEvent">StoreCreatedEvent.</param>
-        /// <param name="StoreDeletedEvent">StoreDeletedEvent.</param>
-        /// <param name="StoreDeliveryZoneUpdatedEvent">StoreDeliveryZoneUpdatedEvent.</param>
-        /// <param name="StoreOpeningHoursUpdatedEvent">StoreOpeningHoursUpdatedEvent.</param>
-        /// <param name="StoreUpdatedEvent">StoreUpdatedEvent.</param>
-        /// <param name="MenuCreatedEvent">MenuCreatedEvent.</param>
-        /// <param name="MenuUpdatedEvent">MenuUpdatedEvent.</param>
-        /// <param name="CustomerCreatedEvent">CustomerCreatedEvent.</param>
-        /// <param name="CustomerUpdatedEvent">CustomerUpdatedEvent.</param>
-        /// <param name="CustomerConsentUpdatedEvent">CustomerConsentUpdatedEvent.</param>
-        /// <param name="CampaignCreatedEvent">CampaignCreatedEvent.</param>
-        /// <param name="WebhookSubscriptionCreatedEvent">WebhookSubscriptionCreatedEvent.</param>
-        /// <param name="WebhookSubscriptionUpdatedEvent">WebhookSubscriptionUpdatedEvent.</param>
-        /// <param name="WebhookSubscriptionDeletedEvent">WebhookSubscriptionDeletedEvent.</param>
+        /// <param name="OrderAcceptedEvent">Order accepted events.</param>
+        /// <param name="OrderCreatedEvent">Order created events.</param>
+        /// <param name="OrderRatingUpdatedEvent">Order rating updated events.</param>
+        /// <param name="OrderRefundedEvent">Order refunded events.</param>
+        /// <param name="OrderRejectedEvent">Order rejected events.</param>
+        /// <param name="OrderTipUpdatedEvent">Order tip updated events.</param>
+        /// <param name="StoreCreatedEvent">Store created events.</param>
+        /// <param name="StoreDeletedEvent">Store deleted events.</param>
+        /// <param name="StoreDeliveryZoneUpdatedEvent">Store delivery zone updated events.</param>
+        /// <param name="StoreOpeningHoursUpdatedEvent">Store opening hours updated events.</param>
+        /// <param name="StoreUpdatedEvent">Store updated events.</param>
+        /// <param name="MenuCreatedEvent">Menu created events.</param>
+        /// <param name="MenuUpdatedEvent">Menu updated events.</param>
+        /// <param name="CustomerCreatedEvent">Customer created events.</param>
+        /// <param name="CustomerUpdatedEvent">Customer updated events.</param>
+        /// <param name="CustomerConsentUpdatedEvent">Customer consent updated events.</param>
+        /// <param name="CampaignCreatedEvent">Campaign created events.</param>
+        /// <param name="WebhookSubscriptionCreatedEvent">Webhook subscription created events.</param>
+        /// <param name="WebhookSubscriptionUpdatedEvent">Webhook subscription updated events.</param>
+        /// <param name="WebhookSubscriptionDeletedEvent">Webhook subscription deleted events.</param>
         public EventSearchResult(List<OrderAcceptedEvent> OrderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderCreatedEvent> OrderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> OrderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> OrderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> OrderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> OrderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<StoreCreatedEvent> StoreCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> StoreDeletedEvent = default(List<StoreDeletedEvent>), List<StoreDeliveryZoneUpdatedEvent> StoreDeliveryZoneUpdatedEvent = default(List<StoreDeliveryZoneUpdatedEvent>), List<StoreOpeningHoursUpdatedEvent> StoreOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreUpdatedEvent> StoreUpdatedEvent = default(List<StoreUpdatedEvent>), List<MenuCreatedEvent> MenuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> MenuUpdatedEvent = default(List<MenuUpdatedEvent>), List<CustomerCreatedEvent> CustomerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> CustomerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> CustomerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<CampaignCreatedEvent> CampaignCreatedEvent = default(List<CampaignCreatedEvent>), List<WebhookSubscriptionCreatedEvent> WebhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> WebhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> WebhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>))
         {
             this.OrderAcceptedEvent = OrderAcceptedEvent;
@@ -78,122 +78,142 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets OrderAcceptedEvent
+        /// Order accepted events
         /// </summary>
+        /// <value>Order accepted events</value>
         [DataMember(Name="orderAcceptedEvent", EmitDefaultValue=false)]
         public List<OrderAcceptedEvent> OrderAcceptedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrderCreatedEvent
+        /// Order created events
         /// </summary>
+        /// <value>Order created events</value>
         [DataMember(Name="orderCreatedEvent", EmitDefaultValue=false)]
         public List<OrderCreatedEvent> OrderCreatedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrderRatingUpdatedEvent
+        /// Order rating updated events
         /// </summary>
+        /// <value>Order rating updated events</value>
         [DataMember(Name="orderRatingUpdatedEvent", EmitDefaultValue=false)]
         public List<OrderRatingUpdatedEvent> OrderRatingUpdatedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrderRefundedEvent
+        /// Order refunded events
         /// </summary>
+        /// <value>Order refunded events</value>
         [DataMember(Name="orderRefundedEvent", EmitDefaultValue=false)]
         public List<OrderRefundedEvent> OrderRefundedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrderRejectedEvent
+        /// Order rejected events
         /// </summary>
+        /// <value>Order rejected events</value>
         [DataMember(Name="orderRejectedEvent", EmitDefaultValue=false)]
         public List<OrderRejectedEvent> OrderRejectedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrderTipUpdatedEvent
+        /// Order tip updated events
         /// </summary>
+        /// <value>Order tip updated events</value>
         [DataMember(Name="orderTipUpdatedEvent", EmitDefaultValue=false)]
         public List<OrderTipUpdatedEvent> OrderTipUpdatedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets StoreCreatedEvent
+        /// Store created events
         /// </summary>
+        /// <value>Store created events</value>
         [DataMember(Name="storeCreatedEvent", EmitDefaultValue=false)]
         public List<StoreCreatedEvent> StoreCreatedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets StoreDeletedEvent
+        /// Store deleted events
         /// </summary>
+        /// <value>Store deleted events</value>
         [DataMember(Name="storeDeletedEvent", EmitDefaultValue=false)]
         public List<StoreDeletedEvent> StoreDeletedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets StoreDeliveryZoneUpdatedEvent
+        /// Store delivery zone updated events
         /// </summary>
+        /// <value>Store delivery zone updated events</value>
         [DataMember(Name="storeDeliveryZoneUpdatedEvent", EmitDefaultValue=false)]
         public List<StoreDeliveryZoneUpdatedEvent> StoreDeliveryZoneUpdatedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets StoreOpeningHoursUpdatedEvent
+        /// Store opening hours updated events
         /// </summary>
+        /// <value>Store opening hours updated events</value>
         [DataMember(Name="storeOpeningHoursUpdatedEvent", EmitDefaultValue=false)]
         public List<StoreOpeningHoursUpdatedEvent> StoreOpeningHoursUpdatedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets StoreUpdatedEvent
+        /// Store updated events
         /// </summary>
+        /// <value>Store updated events</value>
         [DataMember(Name="storeUpdatedEvent", EmitDefaultValue=false)]
         public List<StoreUpdatedEvent> StoreUpdatedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets MenuCreatedEvent
+        /// Menu created events
         /// </summary>
+        /// <value>Menu created events</value>
         [DataMember(Name="menuCreatedEvent", EmitDefaultValue=false)]
         public List<MenuCreatedEvent> MenuCreatedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets MenuUpdatedEvent
+        /// Menu updated events
         /// </summary>
+        /// <value>Menu updated events</value>
         [DataMember(Name="menuUpdatedEvent", EmitDefaultValue=false)]
         public List<MenuUpdatedEvent> MenuUpdatedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets CustomerCreatedEvent
+        /// Customer created events
         /// </summary>
+        /// <value>Customer created events</value>
         [DataMember(Name="customerCreatedEvent", EmitDefaultValue=false)]
         public List<CustomerCreatedEvent> CustomerCreatedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets CustomerUpdatedEvent
+        /// Customer updated events
         /// </summary>
+        /// <value>Customer updated events</value>
         [DataMember(Name="customerUpdatedEvent", EmitDefaultValue=false)]
         public List<CustomerUpdatedEvent> CustomerUpdatedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets CustomerConsentUpdatedEvent
+        /// Customer consent updated events
         /// </summary>
+        /// <value>Customer consent updated events</value>
         [DataMember(Name="customerConsentUpdatedEvent", EmitDefaultValue=false)]
         public List<CustomerConsentUpdatedEvent> CustomerConsentUpdatedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets CampaignCreatedEvent
+        /// Campaign created events
         /// </summary>
+        /// <value>Campaign created events</value>
         [DataMember(Name="campaignCreatedEvent", EmitDefaultValue=false)]
         public List<CampaignCreatedEvent> CampaignCreatedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets WebhookSubscriptionCreatedEvent
+        /// Webhook subscription created events
         /// </summary>
+        /// <value>Webhook subscription created events</value>
         [DataMember(Name="webhookSubscriptionCreatedEvent", EmitDefaultValue=false)]
         public List<WebhookSubscriptionCreatedEvent> WebhookSubscriptionCreatedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets WebhookSubscriptionUpdatedEvent
+        /// Webhook subscription updated events
         /// </summary>
+        /// <value>Webhook subscription updated events</value>
         [DataMember(Name="webhookSubscriptionUpdatedEvent", EmitDefaultValue=false)]
         public List<WebhookSubscriptionUpdatedEvent> WebhookSubscriptionUpdatedEvent { get; set; }
 
         /// <summary>
-        /// Gets or Sets WebhookSubscriptionDeletedEvent
+        /// Webhook subscription deleted events
         /// </summary>
+        /// <value>Webhook subscription deleted events</value>
         [DataMember(Name="webhookSubscriptionDeletedEvent", EmitDefaultValue=false)]
         public List<WebhookSubscriptionDeletedEvent> WebhookSubscriptionDeletedEvent { get; set; }
 

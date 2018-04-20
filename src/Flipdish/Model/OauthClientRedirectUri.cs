@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// OauthClientRedirectUri
+    /// OAuth client redirect uri
     /// </summary>
     [DataContract]
     public partial class OauthClientRedirectUri :  IEquatable<OauthClientRedirectUri>, IValidatableObject
@@ -33,8 +33,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OauthClientRedirectUri" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Uri">Uri.</param>
+        /// <param name="Id">Redirect uri identifier.</param>
+        /// <param name="Uri">Redirect uri.</param>
         public OauthClientRedirectUri(int? Id = default(int?), string Uri = default(string))
         {
             this.Id = Id;
@@ -42,14 +42,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Redirect uri identifier
         /// </summary>
+        /// <value>Redirect uri identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Uri
+        /// Redirect uri
         /// </summary>
+        /// <value>Redirect uri</value>
         [DataMember(Name="uri", EmitDefaultValue=false)]
         public string Uri { get; set; }
 

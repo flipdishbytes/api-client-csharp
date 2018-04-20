@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// RestApiUnauthorizedResult
+    /// Rest api unauthorized result
     /// </summary>
     [DataContract]
     public partial class RestApiUnauthorizedResult :  IEquatable<RestApiUnauthorizedResult>, IValidatableObject
@@ -39,8 +39,9 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Message
+        /// Message
         /// </summary>
+        /// <value>Message</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; private set; }
 

@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// OAuthTokenModel
+    /// OAuth token model
     /// </summary>
     [DataContract]
     public partial class OAuthTokenModel :  IEquatable<OAuthTokenModel>, IValidatableObject
@@ -33,11 +33,11 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthTokenModel" /> class.
         /// </summary>
-        /// <param name="Key">Key.</param>
-        /// <param name="TokenType">TokenType.</param>
-        /// <param name="SubjectId">SubjectId.</param>
-        /// <param name="ClientId">ClientId.</param>
-        /// <param name="Expiry">Expiry.</param>
+        /// <param name="Key">Identitifier key.</param>
+        /// <param name="TokenType">Token type.</param>
+        /// <param name="SubjectId">Oauth subject identifier.</param>
+        /// <param name="ClientId">Oauth client identifier.</param>
+        /// <param name="Expiry">Token expiry.</param>
         public OAuthTokenModel(string Key = default(string), string TokenType = default(string), string SubjectId = default(string), string ClientId = default(string), DateTime? Expiry = default(DateTime?))
         {
             this.Key = Key;
@@ -48,32 +48,37 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Key
+        /// Identitifier key
         /// </summary>
+        /// <value>Identitifier key</value>
         [DataMember(Name="key", EmitDefaultValue=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// Gets or Sets TokenType
+        /// Token type
         /// </summary>
+        /// <value>Token type</value>
         [DataMember(Name="tokenType", EmitDefaultValue=false)]
         public string TokenType { get; set; }
 
         /// <summary>
-        /// Gets or Sets SubjectId
+        /// Oauth subject identifier
         /// </summary>
+        /// <value>Oauth subject identifier</value>
         [DataMember(Name="subjectId", EmitDefaultValue=false)]
         public string SubjectId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientId
+        /// Oauth client identifier
         /// </summary>
+        /// <value>Oauth client identifier</value>
         [DataMember(Name="clientId", EmitDefaultValue=false)]
         public string ClientId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Expiry
+        /// Token expiry
         /// </summary>
+        /// <value>Token expiry</value>
         [DataMember(Name="expiry", EmitDefaultValue=false)]
         public DateTime? Expiry { get; set; }
 

@@ -31,8 +31,9 @@ namespace Flipdish.Model
     public partial class Order :  IEquatable<Order>, IValidatableObject
     {
         /// <summary>
-        /// Defines DeliveryType
+        /// Delivery type
         /// </summary>
+        /// <value>Delivery type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DeliveryTypeEnum
         {
@@ -51,13 +52,15 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets DeliveryType
+        /// Delivery type
         /// </summary>
+        /// <value>Delivery type</value>
         [DataMember(Name="deliveryType", EmitDefaultValue=false)]
         public DeliveryTypeEnum? DeliveryType { get; set; }
         /// <summary>
-        /// Defines PickupLocationType
+        /// Pickup location type
         /// </summary>
+        /// <value>Pickup location type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PickupLocationTypeEnum
         {
@@ -82,13 +85,15 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets PickupLocationType
+        /// Pickup location type
         /// </summary>
+        /// <value>Pickup location type</value>
         [DataMember(Name="pickupLocationType", EmitDefaultValue=false)]
         public PickupLocationTypeEnum? PickupLocationType { get; set; }
         /// <summary>
-        /// Defines PaymentAccountType
+        /// Payment account type
         /// </summary>
+        /// <value>Payment account type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PaymentAccountTypeEnum
         {
@@ -107,13 +112,15 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets PaymentAccountType
+        /// Payment account type
         /// </summary>
+        /// <value>Payment account type</value>
         [DataMember(Name="paymentAccountType", EmitDefaultValue=false)]
         public PaymentAccountTypeEnum? PaymentAccountType { get; set; }
         /// <summary>
-        /// Defines OrderState
+        /// Order state
         /// </summary>
+        /// <value>Order state</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OrderStateEnum
         {
@@ -198,13 +205,15 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets OrderState
+        /// Order state
         /// </summary>
+        /// <value>Order state</value>
         [DataMember(Name="orderState", EmitDefaultValue=false)]
         public OrderStateEnum? OrderState { get; set; }
         /// <summary>
-        /// Defines AppType
+        /// Used app type
         /// </summary>
+        /// <value>Used app type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum AppTypeEnum
         {
@@ -271,37 +280,38 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets AppType
+        /// Used app type
         /// </summary>
+        /// <value>Used app type</value>
         [DataMember(Name="appType", EmitDefaultValue=false)]
         public AppTypeEnum? AppType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Order" /> class.
         /// </summary>
-        /// <param name="Store">Store.</param>
-        /// <param name="Customer">Customer.</param>
-        /// <param name="Voucher">Voucher.</param>
-        /// <param name="Fees">Fees.</param>
-        /// <param name="OrderItems">OrderItems.</param>
-        /// <param name="DeliveryLocation">DeliveryLocation.</param>
-        /// <param name="CustomerLocation">CustomerLocation.</param>
-        /// <param name="OrderId">OrderId.</param>
-        /// <param name="DeliveryType">DeliveryType.</param>
-        /// <param name="PickupLocationType">PickupLocationType.</param>
-        /// <param name="TipAmount">TipAmount.</param>
-        /// <param name="DeliveryAmount">DeliveryAmount.</param>
-        /// <param name="OrderItemsAmount">OrderItemsAmount.</param>
-        /// <param name="Amount">Amount.</param>
-        /// <param name="ProcessingFee">ProcessingFee.</param>
-        /// <param name="PaymentAccountType">PaymentAccountType.</param>
-        /// <param name="PaymentAccountDescription">PaymentAccountDescription.</param>
-        /// <param name="OrderState">OrderState.</param>
-        /// <param name="IsPreOrder">IsPreOrder.</param>
-        /// <param name="PlacedTime">PlacedTime.</param>
-        /// <param name="RequestedForTime">RequestedForTime.</param>
-        /// <param name="ChefNote">ChefNote.</param>
-        /// <param name="AppType">AppType.</param>
-        /// <param name="UserRating">UserRating.</param>
+        /// <param name="Store">Store summary.</param>
+        /// <param name="Customer">Customer summary.</param>
+        /// <param name="Voucher">Voucher summary.</param>
+        /// <param name="Fees">Fee summary.</param>
+        /// <param name="OrderItems">Ordered items.</param>
+        /// <param name="DeliveryLocation">Delivery location for delivery orders.</param>
+        /// <param name="CustomerLocation">Customer location.</param>
+        /// <param name="OrderId">Order identifier.</param>
+        /// <param name="DeliveryType">Delivery type.</param>
+        /// <param name="PickupLocationType">Pickup location type.</param>
+        /// <param name="TipAmount">Tip amount.</param>
+        /// <param name="DeliveryAmount">Delivery amount.</param>
+        /// <param name="OrderItemsAmount">Ordered items amount.</param>
+        /// <param name="Amount">This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer..</param>
+        /// <param name="ProcessingFee">This contains the online ordering processing fee. For card payments this is charged directly to the customer and for cash orders it is paid by the customer to the store. It is tax inclusive..</param>
+        /// <param name="PaymentAccountType">Payment account type.</param>
+        /// <param name="PaymentAccountDescription">Payment account description (like Visa ****2371 or Apple Pay. or Cash).</param>
+        /// <param name="OrderState">Order state.</param>
+        /// <param name="IsPreOrder">Is pre-order.</param>
+        /// <param name="PlacedTime">Order placed time.</param>
+        /// <param name="RequestedForTime">Order requested for.</param>
+        /// <param name="ChefNote">Chef note.</param>
+        /// <param name="AppType">Used app type.</param>
+        /// <param name="UserRating">User rating.</param>
         public Order(StoreSummary Store = default(StoreSummary), CustomerSummary Customer = default(CustomerSummary), VoucherSummary Voucher = default(VoucherSummary), FeeSummary Fees = default(FeeSummary), List<OrderItem> OrderItems = default(List<OrderItem>), DeliveryLocation DeliveryLocation = default(DeliveryLocation), Coordinates CustomerLocation = default(Coordinates), int? OrderId = default(int?), DeliveryTypeEnum? DeliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? PickupLocationType = default(PickupLocationTypeEnum?), double? TipAmount = default(double?), double? DeliveryAmount = default(double?), double? OrderItemsAmount = default(double?), double? Amount = default(double?), double? ProcessingFee = default(double?), PaymentAccountTypeEnum? PaymentAccountType = default(PaymentAccountTypeEnum?), string PaymentAccountDescription = default(string), OrderStateEnum? OrderState = default(OrderStateEnum?), bool? IsPreOrder = default(bool?), DateTime? PlacedTime = default(DateTime?), DateTime? RequestedForTime = default(DateTime?), string ChefNote = default(string), AppTypeEnum? AppType = default(AppTypeEnum?), int? UserRating = default(int?))
         {
             this.Store = Store;
@@ -331,121 +341,140 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Store
+        /// Store summary
         /// </summary>
+        /// <value>Store summary</value>
         [DataMember(Name="store", EmitDefaultValue=false)]
         public StoreSummary Store { get; set; }
 
         /// <summary>
-        /// Gets or Sets Customer
+        /// Customer summary
         /// </summary>
+        /// <value>Customer summary</value>
         [DataMember(Name="customer", EmitDefaultValue=false)]
         public CustomerSummary Customer { get; set; }
 
         /// <summary>
-        /// Gets or Sets Voucher
+        /// Voucher summary
         /// </summary>
+        /// <value>Voucher summary</value>
         [DataMember(Name="voucher", EmitDefaultValue=false)]
         public VoucherSummary Voucher { get; set; }
 
         /// <summary>
-        /// Gets or Sets Fees
+        /// Fee summary
         /// </summary>
+        /// <value>Fee summary</value>
         [DataMember(Name="fees", EmitDefaultValue=false)]
         public FeeSummary Fees { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrderItems
+        /// Ordered items
         /// </summary>
+        /// <value>Ordered items</value>
         [DataMember(Name="orderItems", EmitDefaultValue=false)]
         public List<OrderItem> OrderItems { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeliveryLocation
+        /// Delivery location for delivery orders
         /// </summary>
+        /// <value>Delivery location for delivery orders</value>
         [DataMember(Name="deliveryLocation", EmitDefaultValue=false)]
         public DeliveryLocation DeliveryLocation { get; set; }
 
         /// <summary>
-        /// Gets or Sets CustomerLocation
+        /// Customer location
         /// </summary>
+        /// <value>Customer location</value>
         [DataMember(Name="customerLocation", EmitDefaultValue=false)]
         public Coordinates CustomerLocation { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrderId
+        /// Order identifier
         /// </summary>
+        /// <value>Order identifier</value>
         [DataMember(Name="orderId", EmitDefaultValue=false)]
         public int? OrderId { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets TipAmount
+        /// Tip amount
         /// </summary>
+        /// <value>Tip amount</value>
         [DataMember(Name="tipAmount", EmitDefaultValue=false)]
         public double? TipAmount { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeliveryAmount
+        /// Delivery amount
         /// </summary>
+        /// <value>Delivery amount</value>
         [DataMember(Name="deliveryAmount", EmitDefaultValue=false)]
         public double? DeliveryAmount { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrderItemsAmount
+        /// Ordered items amount
         /// </summary>
+        /// <value>Ordered items amount</value>
         [DataMember(Name="orderItemsAmount", EmitDefaultValue=false)]
         public double? OrderItemsAmount { get; set; }
 
         /// <summary>
-        /// Gets or Sets Amount
+        /// This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer.
         /// </summary>
+        /// <value>This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer.</value>
         [DataMember(Name="amount", EmitDefaultValue=false)]
         public double? Amount { get; set; }
 
         /// <summary>
-        /// Gets or Sets ProcessingFee
+        /// This contains the online ordering processing fee. For card payments this is charged directly to the customer and for cash orders it is paid by the customer to the store. It is tax inclusive.
         /// </summary>
+        /// <value>This contains the online ordering processing fee. For card payments this is charged directly to the customer and for cash orders it is paid by the customer to the store. It is tax inclusive.</value>
         [DataMember(Name="processingFee", EmitDefaultValue=false)]
         public double? ProcessingFee { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets PaymentAccountDescription
+        /// Payment account description (like Visa ****2371 or Apple Pay. or Cash)
         /// </summary>
+        /// <value>Payment account description (like Visa ****2371 or Apple Pay. or Cash)</value>
         [DataMember(Name="paymentAccountDescription", EmitDefaultValue=false)]
         public string PaymentAccountDescription { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets IsPreOrder
+        /// Is pre-order
         /// </summary>
+        /// <value>Is pre-order</value>
         [DataMember(Name="isPreOrder", EmitDefaultValue=false)]
         public bool? IsPreOrder { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlacedTime
+        /// Order placed time
         /// </summary>
+        /// <value>Order placed time</value>
         [DataMember(Name="placedTime", EmitDefaultValue=false)]
         public DateTime? PlacedTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequestedForTime
+        /// Order requested for
         /// </summary>
+        /// <value>Order requested for</value>
         [DataMember(Name="requestedForTime", EmitDefaultValue=false)]
         public DateTime? RequestedForTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets ChefNote
+        /// Chef note
         /// </summary>
+        /// <value>Chef note</value>
         [DataMember(Name="chefNote", EmitDefaultValue=false)]
         public string ChefNote { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets UserRating
+        /// User rating
         /// </summary>
+        /// <value>User rating</value>
         [DataMember(Name="userRating", EmitDefaultValue=false)]
         public int? UserRating { get; set; }
 

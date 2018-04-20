@@ -33,47 +33,52 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookSubscriptionUpdatedEvent" /> class.
         /// </summary>
-        /// <param name="WebhookSubscriptionEventInfo">WebhookSubscriptionEventInfo.</param>
-        /// <param name="EventName">EventName.</param>
-        /// <param name="FlipdishEventId">FlipdishEventId.</param>
-        /// <param name="CreateTime">CreateTime.</param>
+        /// <param name="EventName">The event name.</param>
+        /// <param name="WebhookSubscriptionEventInfo">Webhook subscription details.</param>
+        /// <param name="FlipdishEventId">The identitfier of the event.</param>
+        /// <param name="CreateTime">The time of creation of the event.</param>
         /// <param name="Position">Position.</param>
-        public WebhookSubscriptionUpdatedEvent(WebhookSubscriptionEventInfo WebhookSubscriptionEventInfo = default(WebhookSubscriptionEventInfo), string EventName = default(string), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        public WebhookSubscriptionUpdatedEvent(string EventName = default(string), WebhookSubscriptionEventInfo WebhookSubscriptionEventInfo = default(WebhookSubscriptionEventInfo), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
         {
-            this.WebhookSubscriptionEventInfo = WebhookSubscriptionEventInfo;
             this.EventName = EventName;
+            this.WebhookSubscriptionEventInfo = WebhookSubscriptionEventInfo;
             this.FlipdishEventId = FlipdishEventId;
             this.CreateTime = CreateTime;
             this.Position = Position;
         }
         
         /// <summary>
-        /// Gets or Sets WebhookSubscriptionEventInfo
+        /// The event name
         /// </summary>
-        [DataMember(Name="webhookSubscriptionEventInfo", EmitDefaultValue=false)]
-        public WebhookSubscriptionEventInfo WebhookSubscriptionEventInfo { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EventName
-        /// </summary>
+        /// <value>The event name</value>
         [DataMember(Name="eventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
 
         /// <summary>
-        /// Gets or Sets FlipdishEventId
+        /// Webhook subscription details
         /// </summary>
+        /// <value>Webhook subscription details</value>
+        [DataMember(Name="webhookSubscriptionEventInfo", EmitDefaultValue=false)]
+        public WebhookSubscriptionEventInfo WebhookSubscriptionEventInfo { get; set; }
+
+        /// <summary>
+        /// The identitfier of the event
+        /// </summary>
+        /// <value>The identitfier of the event</value>
         [DataMember(Name="flipdishEventId", EmitDefaultValue=false)]
         public Guid? FlipdishEventId { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreateTime
+        /// The time of creation of the event
         /// </summary>
+        /// <value>The time of creation of the event</value>
         [DataMember(Name="createTime", EmitDefaultValue=false)]
         public DateTime? CreateTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets Position
+        /// Position
         /// </summary>
+        /// <value>Position</value>
         [DataMember(Name="position", EmitDefaultValue=false)]
         public int? Position { get; set; }
 
@@ -85,8 +90,8 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebhookSubscriptionUpdatedEvent {\n");
-            sb.Append("  WebhookSubscriptionEventInfo: ").Append(WebhookSubscriptionEventInfo).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
+            sb.Append("  WebhookSubscriptionEventInfo: ").Append(WebhookSubscriptionEventInfo).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -125,14 +130,14 @@ namespace Flipdish.Model
 
             return 
                 (
-                    this.WebhookSubscriptionEventInfo == input.WebhookSubscriptionEventInfo ||
-                    (this.WebhookSubscriptionEventInfo != null &&
-                    this.WebhookSubscriptionEventInfo.Equals(input.WebhookSubscriptionEventInfo))
-                ) && 
-                (
                     this.EventName == input.EventName ||
                     (this.EventName != null &&
                     this.EventName.Equals(input.EventName))
+                ) && 
+                (
+                    this.WebhookSubscriptionEventInfo == input.WebhookSubscriptionEventInfo ||
+                    (this.WebhookSubscriptionEventInfo != null &&
+                    this.WebhookSubscriptionEventInfo.Equals(input.WebhookSubscriptionEventInfo))
                 ) && 
                 (
                     this.FlipdishEventId == input.FlipdishEventId ||
@@ -160,10 +165,10 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.WebhookSubscriptionEventInfo != null)
-                    hashCode = hashCode * 59 + this.WebhookSubscriptionEventInfo.GetHashCode();
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
+                if (this.WebhookSubscriptionEventInfo != null)
+                    hashCode = hashCode * 59 + this.WebhookSubscriptionEventInfo.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)

@@ -25,14 +25,15 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// MenuSectionAvailability
+    /// Menu section availability
     /// </summary>
     [DataContract]
     public partial class MenuSectionAvailability :  IEquatable<MenuSectionAvailability>, IValidatableObject
     {
         /// <summary>
-        /// Defines AvailabilityMode
+        /// Availability mode
         /// </summary>
+        /// <value>Availability mode</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum AvailabilityModeEnum
         {
@@ -63,15 +64,16 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets AvailabilityMode
+        /// Availability mode
         /// </summary>
+        /// <value>Availability mode</value>
         [DataMember(Name="availabilityMode", EmitDefaultValue=false)]
         public AvailabilityModeEnum? AvailabilityMode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuSectionAvailability" /> class.
         /// </summary>
-        /// <param name="AvailableTimes">AvailableTimes.</param>
-        /// <param name="AvailabilityMode">AvailabilityMode.</param>
+        /// <param name="AvailableTimes">Available times.</param>
+        /// <param name="AvailabilityMode">Availability mode.</param>
         public MenuSectionAvailability(List<BusinessHoursPeriod> AvailableTimes = default(List<BusinessHoursPeriod>), AvailabilityModeEnum? AvailabilityMode = default(AvailabilityModeEnum?))
         {
             this.AvailableTimes = AvailableTimes;
@@ -79,8 +81,9 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets AvailableTimes
+        /// Available times
         /// </summary>
+        /// <value>Available times</value>
         [DataMember(Name="availableTimes", EmitDefaultValue=false)]
         public List<BusinessHoursPeriod> AvailableTimes { get; set; }
 

@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// DeliveryLocation
+    /// Delivery location
     /// </summary>
     [DataContract]
     public partial class DeliveryLocation :  IEquatable<DeliveryLocation>, IValidatableObject
@@ -33,13 +33,13 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DeliveryLocation" /> class.
         /// </summary>
-        /// <param name="Coordinates">Coordinates.</param>
+        /// <param name="Coordinates">Geo cordinate.</param>
         /// <param name="Building">Building.</param>
         /// <param name="Street">Street.</param>
         /// <param name="Town">Town.</param>
-        /// <param name="PostCode">PostCode.</param>
-        /// <param name="DeliveryInstructions">DeliveryInstructions.</param>
-        /// <param name="PrettyAddressString">PrettyAddressString.</param>
+        /// <param name="PostCode">Post code.</param>
+        /// <param name="DeliveryInstructions">Delivery instructions.</param>
+        /// <param name="PrettyAddressString">Formatted, pretty address string.</param>
         public DeliveryLocation(Coordinates Coordinates = default(Coordinates), string Building = default(string), string Street = default(string), string Town = default(string), string PostCode = default(string), string DeliveryInstructions = default(string), string PrettyAddressString = default(string))
         {
             this.Coordinates = Coordinates;
@@ -52,44 +52,51 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Coordinates
+        /// Geo cordinate
         /// </summary>
+        /// <value>Geo cordinate</value>
         [DataMember(Name="coordinates", EmitDefaultValue=false)]
         public Coordinates Coordinates { get; set; }
 
         /// <summary>
-        /// Gets or Sets Building
+        /// Building
         /// </summary>
+        /// <value>Building</value>
         [DataMember(Name="building", EmitDefaultValue=false)]
         public string Building { get; set; }
 
         /// <summary>
-        /// Gets or Sets Street
+        /// Street
         /// </summary>
+        /// <value>Street</value>
         [DataMember(Name="street", EmitDefaultValue=false)]
         public string Street { get; set; }
 
         /// <summary>
-        /// Gets or Sets Town
+        /// Town
         /// </summary>
+        /// <value>Town</value>
         [DataMember(Name="town", EmitDefaultValue=false)]
         public string Town { get; set; }
 
         /// <summary>
-        /// Gets or Sets PostCode
+        /// Post code
         /// </summary>
+        /// <value>Post code</value>
         [DataMember(Name="postCode", EmitDefaultValue=false)]
         public string PostCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeliveryInstructions
+        /// Delivery instructions
         /// </summary>
+        /// <value>Delivery instructions</value>
         [DataMember(Name="deliveryInstructions", EmitDefaultValue=false)]
         public string DeliveryInstructions { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrettyAddressString
+        /// Formatted, pretty address string
         /// </summary>
+        /// <value>Formatted, pretty address string</value>
         [DataMember(Name="prettyAddressString", EmitDefaultValue=false)]
         public string PrettyAddressString { get; set; }
 

@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// FeeSummary
+    /// Fee Summary
     /// </summary>
     [DataContract]
     public partial class FeeSummary :  IEquatable<FeeSummary>, IValidatableObject
@@ -33,9 +33,9 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FeeSummary" /> class.
         /// </summary>
-        /// <param name="FeeAmount">FeeAmount.</param>
-        /// <param name="PercentageRate">PercentageRate.</param>
-        /// <param name="PerTransactionFee">PerTransactionFee.</param>
+        /// <param name="FeeAmount">Fee amount.</param>
+        /// <param name="PercentageRate">Percentage rate.</param>
+        /// <param name="PerTransactionFee">Per transaction fee.</param>
         public FeeSummary(double? FeeAmount = default(double?), double? PercentageRate = default(double?), double? PerTransactionFee = default(double?))
         {
             this.FeeAmount = FeeAmount;
@@ -44,20 +44,23 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets FeeAmount
+        /// Fee amount
         /// </summary>
+        /// <value>Fee amount</value>
         [DataMember(Name="feeAmount", EmitDefaultValue=false)]
         public double? FeeAmount { get; set; }
 
         /// <summary>
-        /// Gets or Sets PercentageRate
+        /// Percentage rate
         /// </summary>
+        /// <value>Percentage rate</value>
         [DataMember(Name="percentageRate", EmitDefaultValue=false)]
         public double? PercentageRate { get; set; }
 
         /// <summary>
-        /// Gets or Sets PerTransactionFee
+        /// Per transaction fee
         /// </summary>
+        /// <value>Per transaction fee</value>
         [DataMember(Name="perTransactionFee", EmitDefaultValue=false)]
         public double? PerTransactionFee { get; set; }
 

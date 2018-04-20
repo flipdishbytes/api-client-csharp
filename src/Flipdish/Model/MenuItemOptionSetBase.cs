@@ -25,14 +25,15 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// MenuItemOptionSetBase
+    /// Menu item option set
     /// </summary>
     [DataContract]
     public partial class MenuItemOptionSetBase :  IEquatable<MenuItemOptionSetBase>, IValidatableObject
     {
         /// <summary>
-        /// Defines CellLayoutType
+        /// Small | Medium | Large  Affects the layout of the menu.
         /// </summary>
+        /// <value>Small | Medium | Large  Affects the layout of the menu.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum CellLayoutTypeEnum
         {
@@ -57,19 +58,20 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets CellLayoutType
+        /// Small | Medium | Large  Affects the layout of the menu.
         /// </summary>
+        /// <value>Small | Medium | Large  Affects the layout of the menu.</value>
         [DataMember(Name="cellLayoutType", EmitDefaultValue=false)]
         public CellLayoutTypeEnum? CellLayoutType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuItemOptionSetBase" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="IsMasterOptionSet">IsMasterOptionSet.</param>
-        /// <param name="DisplayOrder">DisplayOrder.</param>
-        /// <param name="MinSelectCount">MinSelectCount.</param>
-        /// <param name="MaxSelectCount">MaxSelectCount.</param>
-        /// <param name="CellLayoutType">CellLayoutType.</param>
+        /// <param name="Name">Menu item option set name.</param>
+        /// <param name="IsMasterOptionSet">Is master option set. This can affect the layout of the options in the menu displayed to the customer. Usually it is true if the option could be considerd a standalone item as opposed to an addition (\&quot;with ketchup\&quot;) or modifier (\&quot;large\&quot;)..</param>
+        /// <param name="DisplayOrder">Display order. Displayed in ascending order..</param>
+        /// <param name="MinSelectCount">Minimum items must be selected.</param>
+        /// <param name="MaxSelectCount">Maximum number of items can be selected.</param>
+        /// <param name="CellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
         public MenuItemOptionSetBase(string Name = default(string), bool? IsMasterOptionSet = default(bool?), int? DisplayOrder = default(int?), int? MinSelectCount = default(int?), int? MaxSelectCount = default(int?), CellLayoutTypeEnum? CellLayoutType = default(CellLayoutTypeEnum?))
         {
             this.Name = Name;
@@ -81,32 +83,37 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Menu item option set name
         /// </summary>
+        /// <value>Menu item option set name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsMasterOptionSet
+        /// Is master option set. This can affect the layout of the options in the menu displayed to the customer. Usually it is true if the option could be considerd a standalone item as opposed to an addition (\&quot;with ketchup\&quot;) or modifier (\&quot;large\&quot;).
         /// </summary>
+        /// <value>Is master option set. This can affect the layout of the options in the menu displayed to the customer. Usually it is true if the option could be considerd a standalone item as opposed to an addition (\&quot;with ketchup\&quot;) or modifier (\&quot;large\&quot;).</value>
         [DataMember(Name="isMasterOptionSet", EmitDefaultValue=false)]
         public bool? IsMasterOptionSet { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayOrder
+        /// Display order. Displayed in ascending order.
         /// </summary>
+        /// <value>Display order. Displayed in ascending order.</value>
         [DataMember(Name="displayOrder", EmitDefaultValue=false)]
         public int? DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or Sets MinSelectCount
+        /// Minimum items must be selected
         /// </summary>
+        /// <value>Minimum items must be selected</value>
         [DataMember(Name="minSelectCount", EmitDefaultValue=false)]
         public int? MinSelectCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets MaxSelectCount
+        /// Maximum number of items can be selected
         /// </summary>
+        /// <value>Maximum number of items can be selected</value>
         [DataMember(Name="maxSelectCount", EmitDefaultValue=false)]
         public int? MaxSelectCount { get; set; }
 

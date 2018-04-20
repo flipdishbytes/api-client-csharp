@@ -25,14 +25,15 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// MenuItemOptionSetItem
+    /// Menu item option set item
     /// </summary>
     [DataContract]
     public partial class MenuItemOptionSetItem :  IEquatable<MenuItemOptionSetItem>, IValidatableObject
     {
         /// <summary>
-        /// Defines CellLayoutType
+        /// Small | Medium | Large  Affects the layout of the menu.
         /// </summary>
+        /// <value>Small | Medium | Large  Affects the layout of the menu.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum CellLayoutTypeEnum
         {
@@ -57,20 +58,21 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets CellLayoutType
+        /// Small | Medium | Large  Affects the layout of the menu.
         /// </summary>
+        /// <value>Small | Medium | Large  Affects the layout of the menu.</value>
         [DataMember(Name="cellLayoutType", EmitDefaultValue=false)]
         public CellLayoutTypeEnum? CellLayoutType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuItemOptionSetItem" /> class.
         /// </summary>
-        /// <param name="MenuItemOptionSetItemId">MenuItemOptionSetItemId.</param>
-        /// <param name="ImageUrl">ImageUrl.</param>
+        /// <param name="MenuItemOptionSetItemId">Menu item option set item identifier.</param>
+        /// <param name="ImageUrl">Image url.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Price">Price.</param>
-        /// <param name="IsAvailable">IsAvailable.</param>
-        /// <param name="DisplayOrder">DisplayOrder.</param>
-        /// <param name="CellLayoutType">CellLayoutType.</param>
+        /// <param name="IsAvailable">Is available.</param>
+        /// <param name="DisplayOrder">Display order. Displayed in ascending order..</param>
+        /// <param name="CellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
         public MenuItemOptionSetItem(int? MenuItemOptionSetItemId = default(int?), string ImageUrl = default(string), string Name = default(string), double? Price = default(double?), bool? IsAvailable = default(bool?), int? DisplayOrder = default(int?), CellLayoutTypeEnum? CellLayoutType = default(CellLayoutTypeEnum?))
         {
             this.MenuItemOptionSetItemId = MenuItemOptionSetItemId;
@@ -83,38 +85,44 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets MenuItemOptionSetItemId
+        /// Menu item option set item identifier
         /// </summary>
+        /// <value>Menu item option set item identifier</value>
         [DataMember(Name="menuItemOptionSetItemId", EmitDefaultValue=false)]
         public int? MenuItemOptionSetItemId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageUrl
+        /// Image url
         /// </summary>
+        /// <value>Image url</value>
         [DataMember(Name="imageUrl", EmitDefaultValue=false)]
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Name
         /// </summary>
+        /// <value>Name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Price
+        /// Price
         /// </summary>
+        /// <value>Price</value>
         [DataMember(Name="price", EmitDefaultValue=false)]
         public double? Price { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsAvailable
+        /// Is available
         /// </summary>
+        /// <value>Is available</value>
         [DataMember(Name="isAvailable", EmitDefaultValue=false)]
         public bool? IsAvailable { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayOrder
+        /// Display order. Displayed in ascending order.
         /// </summary>
+        /// <value>Display order. Displayed in ascending order.</value>
         [DataMember(Name="displayOrder", EmitDefaultValue=false)]
         public int? DisplayOrder { get; set; }
 

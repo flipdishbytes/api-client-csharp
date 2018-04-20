@@ -38,9 +38,9 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Refund" /> class.
         /// </summary>
-        /// <param name="RefundReason">RefundReason.</param>
-        /// <param name="RefundAmount">RefundAmount (required).</param>
-        /// <param name="NotifyCustomer">NotifyCustomer (required).</param>
+        /// <param name="RefundReason">Refund reason.</param>
+        /// <param name="RefundAmount">Refund amount (required).</param>
+        /// <param name="NotifyCustomer">If ture, the system sends notification to the customer about the refund (required).</param>
         public Refund(string RefundReason = default(string), double? RefundAmount = default(double?), bool? NotifyCustomer = default(bool?))
         {
             // to ensure "RefundAmount" is required (not null)
@@ -65,20 +65,23 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets RefundReason
+        /// Refund reason
         /// </summary>
+        /// <value>Refund reason</value>
         [DataMember(Name="refundReason", EmitDefaultValue=false)]
         public string RefundReason { get; set; }
 
         /// <summary>
-        /// Gets or Sets RefundAmount
+        /// Refund amount
         /// </summary>
+        /// <value>Refund amount</value>
         [DataMember(Name="refundAmount", EmitDefaultValue=false)]
         public double? RefundAmount { get; set; }
 
         /// <summary>
-        /// Gets or Sets NotifyCustomer
+        /// If ture, the system sends notification to the customer about the refund
         /// </summary>
+        /// <value>If ture, the system sends notification to the customer about the refund</value>
         [DataMember(Name="notifyCustomer", EmitDefaultValue=false)]
         public bool? NotifyCustomer { get; set; }
 

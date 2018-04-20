@@ -25,14 +25,15 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// MenuSectionItemBase
+    /// Menu item
     /// </summary>
     [DataContract]
     public partial class MenuSectionItemBase :  IEquatable<MenuSectionItemBase>, IValidatableObject
     {
         /// <summary>
-        /// Defines SpicinessRating
+        /// Spiciness rating
         /// </summary>
+        /// <value>Spiciness rating</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SpicinessRatingEnum
         {
@@ -63,20 +64,21 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets SpicinessRating
+        /// Spiciness rating
         /// </summary>
+        /// <value>Spiciness rating</value>
         [DataMember(Name="spicinessRating", EmitDefaultValue=false)]
         public SpicinessRatingEnum? SpicinessRating { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuSectionItemBase" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="SpicinessRating">SpicinessRating.</param>
-        /// <param name="Price">Price.</param>
-        /// <param name="DisplayOrder">DisplayOrder.</param>
-        /// <param name="Alcohol">Alcohol.</param>
-        /// <param name="IsAvailable">IsAvailable.</param>
+        /// <param name="Name">Menu item name (like \&quot;Korma\&quot;).</param>
+        /// <param name="Description">Description (like \&quot;A lovely dish from the east\&quot;).</param>
+        /// <param name="SpicinessRating">Spiciness rating.</param>
+        /// <param name="Price">Price - this is only used when there is no master option set and should be set to 0 if a master option set exists..</param>
+        /// <param name="DisplayOrder">Display order.</param>
+        /// <param name="Alcohol">To be set true if the item or an option of the item contains an alcoholic drink..</param>
+        /// <param name="IsAvailable">True if we accept orders for this item still.</param>
         public MenuSectionItemBase(string Name = default(string), string Description = default(string), SpicinessRatingEnum? SpicinessRating = default(SpicinessRatingEnum?), double? Price = default(double?), int? DisplayOrder = default(int?), bool? Alcohol = default(bool?), bool? IsAvailable = default(bool?))
         {
             this.Name = Name;
@@ -89,39 +91,45 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Menu item name (like \&quot;Korma\&quot;)
         /// </summary>
+        /// <value>Menu item name (like \&quot;Korma\&quot;)</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        /// Description (like \&quot;A lovely dish from the east\&quot;)
         /// </summary>
+        /// <value>Description (like \&quot;A lovely dish from the east\&quot;)</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets Price
+        /// Price - this is only used when there is no master option set and should be set to 0 if a master option set exists.
         /// </summary>
+        /// <value>Price - this is only used when there is no master option set and should be set to 0 if a master option set exists.</value>
         [DataMember(Name="price", EmitDefaultValue=false)]
         public double? Price { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayOrder
+        /// Display order
         /// </summary>
+        /// <value>Display order</value>
         [DataMember(Name="displayOrder", EmitDefaultValue=false)]
         public int? DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or Sets Alcohol
+        /// To be set true if the item or an option of the item contains an alcoholic drink.
         /// </summary>
+        /// <value>To be set true if the item or an option of the item contains an alcoholic drink.</value>
         [DataMember(Name="alcohol", EmitDefaultValue=false)]
         public bool? Alcohol { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsAvailable
+        /// True if we accept orders for this item still
         /// </summary>
+        /// <value>True if we accept orders for this item still</value>
         [DataMember(Name="isAvailable", EmitDefaultValue=false)]
         public bool? IsAvailable { get; set; }
 

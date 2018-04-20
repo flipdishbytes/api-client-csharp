@@ -3,13 +3,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Metadata** | **Dictionary&lt;string, string&gt;** |  | [optional] 
-**MenuItemOptionId** | **int?** |  | [optional] 
-**IsMasterOptionSetItem** | **bool?** |  | [optional] 
-**Name** | **string** |  | [optional] 
-**Price** | **double?** |  | [optional] 
-**MenuItemOptionDisplayOrder** | **int?** |  | [optional] 
-**MenuItemOptionSetDisplayOrder** | **int?** |  | [optional] 
+**Metadata** | **Dictionary&lt;string, string&gt;** | Metadata | [optional] 
+**MenuItemOptionId** | **int?** | Menu item option identifier | [optional] 
+**IsMasterOptionSetItem** | **bool?** | Is master option set item | [optional] 
+**Name** | **string** | Name | [optional] 
+**Price** | **double?** | Price | [optional] 
+**MenuItemOptionDisplayOrder** | **int?** | Menu item option display order | [optional] 
+**MenuItemOptionSetDisplayOrder** | **int?** | Menu item option set display order | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FeeAmount** | **double?** |  | [optional] 
-**PercentageRate** | **double?** |  | [optional] 
-**PerTransactionFee** | **double?** |  | [optional] 
+**FeeAmount** | **double?** | Fee amount | [optional] 
+**PercentageRate** | **double?** | Percentage rate | [optional] 
+**PerTransactionFee** | **double?** | Per transaction fee | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

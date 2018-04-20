@@ -25,14 +25,15 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// VoucherSummary
+    /// Voucher summary
     /// </summary>
     [DataContract]
     public partial class VoucherSummary :  IEquatable<VoucherSummary>, IValidatableObject
     {
         /// <summary>
-        /// Defines Type
+        /// Voucher type
         /// </summary>
+        /// <value>Voucher type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
@@ -63,13 +64,15 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// Voucher type
         /// </summary>
+        /// <value>Voucher type</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
-        /// Defines SubType
+        /// Voucher sub type
         /// </summary>
+        /// <value>Voucher sub type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SubTypeEnum
         {
@@ -118,19 +121,20 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets SubType
+        /// Voucher sub type
         /// </summary>
+        /// <value>Voucher sub type</value>
         [DataMember(Name="subType", EmitDefaultValue=false)]
         public SubTypeEnum? SubType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="VoucherSummary" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Code">Code.</param>
-        /// <param name="Amount">Amount.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="SubType">SubType.</param>
+        /// <param name="Name">Voucher name.</param>
+        /// <param name="Description">Voucher description.</param>
+        /// <param name="Code">Voucher code.</param>
+        /// <param name="Amount">Voucher amount.</param>
+        /// <param name="Type">Voucher type.</param>
+        /// <param name="SubType">Voucher sub type.</param>
         public VoucherSummary(string Name = default(string), string Description = default(string), string Code = default(string), double? Amount = default(double?), TypeEnum? Type = default(TypeEnum?), SubTypeEnum? SubType = default(SubTypeEnum?))
         {
             this.Name = Name;
@@ -142,26 +146,30 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Voucher name
         /// </summary>
+        /// <value>Voucher name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        /// Voucher description
         /// </summary>
+        /// <value>Voucher description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets Code
+        /// Voucher code
         /// </summary>
+        /// <value>Voucher code</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// Gets or Sets Amount
+        /// Voucher amount
         /// </summary>
+        /// <value>Voucher amount</value>
         [DataMember(Name="amount", EmitDefaultValue=false)]
         public double? Amount { get; set; }
 

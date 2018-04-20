@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// StoreNote
+    /// Store note
     /// </summary>
     [DataContract]
     public partial class StoreNote :  IEquatable<StoreNote>, IValidatableObject
@@ -33,8 +33,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreNote" /> class.
         /// </summary>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="CreateTime">CreateTime.</param>
+        /// <param name="UserId">User identifier.</param>
+        /// <param name="CreateTime">Create time.</param>
         /// <param name="Note">Note.</param>
         public StoreNote(int? UserId = default(int?), DateTime? CreateTime = default(DateTime?), string Note = default(string))
         {
@@ -44,20 +44,23 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets UserId
+        /// User identifier
         /// </summary>
+        /// <value>User identifier</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public int? UserId { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreateTime
+        /// Create time
         /// </summary>
+        /// <value>Create time</value>
         [DataMember(Name="createTime", EmitDefaultValue=false)]
         public DateTime? CreateTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets Note
+        /// Note
         /// </summary>
+        /// <value>Note</value>
         [DataMember(Name="note", EmitDefaultValue=false)]
         public string Note { get; set; }
 

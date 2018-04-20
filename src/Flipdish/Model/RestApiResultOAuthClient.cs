@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// RestApiResultOAuthClient
+    /// Rest api result
     /// </summary>
     [DataContract]
     public partial class RestApiResultOAuthClient :  IEquatable<RestApiResultOAuthClient>, IValidatableObject
@@ -38,7 +38,7 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiResultOAuthClient" /> class.
         /// </summary>
-        /// <param name="Data">Data (required).</param>
+        /// <param name="Data">Generic data object. (required).</param>
         public RestApiResultOAuthClient(OAuthClient Data = default(OAuthClient))
         {
             // to ensure "Data" is required (not null)
@@ -53,8 +53,9 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Data
+        /// Generic data object.
         /// </summary>
+        /// <value>Generic data object.</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public OAuthClient Data { get; set; }
 

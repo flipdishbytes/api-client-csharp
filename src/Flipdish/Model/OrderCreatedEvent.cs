@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// OrderCreatedEvent
+    /// Order Created Event
     /// </summary>
     [DataContract]
     public partial class OrderCreatedEvent :  IEquatable<OrderCreatedEvent>, IValidatableObject
@@ -33,63 +33,70 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderCreatedEvent" /> class.
         /// </summary>
+        /// <param name="EventName">The event name.</param>
         /// <param name="Description">Description.</param>
-        /// <param name="OrderCreatedTime">OrderCreatedTime.</param>
+        /// <param name="OrderCreatedTime">Order Created Time.</param>
         /// <param name="Order">Order.</param>
-        /// <param name="EventName">EventName.</param>
-        /// <param name="FlipdishEventId">FlipdishEventId.</param>
-        /// <param name="CreateTime">CreateTime.</param>
+        /// <param name="FlipdishEventId">The identitfier of the event.</param>
+        /// <param name="CreateTime">The time of creation of the event.</param>
         /// <param name="Position">Position.</param>
-        public OrderCreatedEvent(string Description = default(string), DateTime? OrderCreatedTime = default(DateTime?), Order Order = default(Order), string EventName = default(string), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        public OrderCreatedEvent(string EventName = default(string), string Description = default(string), DateTime? OrderCreatedTime = default(DateTime?), Order Order = default(Order), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
         {
+            this.EventName = EventName;
             this.Description = Description;
             this.OrderCreatedTime = OrderCreatedTime;
             this.Order = Order;
-            this.EventName = EventName;
             this.FlipdishEventId = FlipdishEventId;
             this.CreateTime = CreateTime;
             this.Position = Position;
         }
         
         /// <summary>
-        /// Gets or Sets Description
+        /// The event name
         /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
-        public string Description { get; set; }
-
-        /// <summary>
-        /// Gets or Sets OrderCreatedTime
-        /// </summary>
-        [DataMember(Name="orderCreatedTime", EmitDefaultValue=false)]
-        public DateTime? OrderCreatedTime { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Order
-        /// </summary>
-        [DataMember(Name="order", EmitDefaultValue=false)]
-        public Order Order { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EventName
-        /// </summary>
+        /// <value>The event name</value>
         [DataMember(Name="eventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
 
         /// <summary>
-        /// Gets or Sets FlipdishEventId
+        /// Description
         /// </summary>
+        /// <value>Description</value>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
+
+        /// <summary>
+        /// Order Created Time
+        /// </summary>
+        /// <value>Order Created Time</value>
+        [DataMember(Name="orderCreatedTime", EmitDefaultValue=false)]
+        public DateTime? OrderCreatedTime { get; set; }
+
+        /// <summary>
+        /// Order
+        /// </summary>
+        /// <value>Order</value>
+        [DataMember(Name="order", EmitDefaultValue=false)]
+        public Order Order { get; set; }
+
+        /// <summary>
+        /// The identitfier of the event
+        /// </summary>
+        /// <value>The identitfier of the event</value>
         [DataMember(Name="flipdishEventId", EmitDefaultValue=false)]
         public Guid? FlipdishEventId { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreateTime
+        /// The time of creation of the event
         /// </summary>
+        /// <value>The time of creation of the event</value>
         [DataMember(Name="createTime", EmitDefaultValue=false)]
         public DateTime? CreateTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets Position
+        /// Position
         /// </summary>
+        /// <value>Position</value>
         [DataMember(Name="position", EmitDefaultValue=false)]
         public int? Position { get; set; }
 
@@ -101,10 +108,10 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OrderCreatedEvent {\n");
+            sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  OrderCreatedTime: ").Append(OrderCreatedTime).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
-            sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -143,6 +150,11 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.EventName == input.EventName ||
+                    (this.EventName != null &&
+                    this.EventName.Equals(input.EventName))
+                ) && 
+                (
                     this.Description == input.Description ||
                     (this.Description != null &&
                     this.Description.Equals(input.Description))
@@ -156,11 +168,6 @@ namespace Flipdish.Model
                     this.Order == input.Order ||
                     (this.Order != null &&
                     this.Order.Equals(input.Order))
-                ) && 
-                (
-                    this.EventName == input.EventName ||
-                    (this.EventName != null &&
-                    this.EventName.Equals(input.EventName))
                 ) && 
                 (
                     this.FlipdishEventId == input.FlipdishEventId ||
@@ -188,14 +195,14 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.EventName != null)
+                    hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.OrderCreatedTime != null)
                     hashCode = hashCode * 59 + this.OrderCreatedTime.GetHashCode();
                 if (this.Order != null)
                     hashCode = hashCode * 59 + this.Order.GetHashCode();
-                if (this.EventName != null)
-                    hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)

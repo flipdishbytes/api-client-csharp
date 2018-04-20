@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// RestApiStringArrayResult
+    /// Rest api string array result
     /// </summary>
     [DataContract]
     public partial class RestApiStringArrayResult :  IEquatable<RestApiStringArrayResult>, IValidatableObject
@@ -38,7 +38,7 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiStringArrayResult" /> class.
         /// </summary>
-        /// <param name="Data">Data (required).</param>
+        /// <param name="Data">Data string array (required).</param>
         public RestApiStringArrayResult(List<string> Data = default(List<string>))
         {
             // to ensure "Data" is required (not null)
@@ -53,8 +53,9 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Data
+        /// Data string array
         /// </summary>
+        /// <value>Data string array</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public List<string> Data { get; set; }
 

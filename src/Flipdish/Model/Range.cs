@@ -25,14 +25,15 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Range
+    /// A class that represents a single opening period in a day.  This starts &#39;StartTime&#39; after midnight and runs for a &#39;Period&#39;  after that, on the given DayOfWeek.
     /// </summary>
     [DataContract]
     public partial class Range :  IEquatable<Range>, IValidatableObject
     {
         /// <summary>
-        /// Defines DayOfWeek
+        /// Day of week
         /// </summary>
+        /// <value>Day of week</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DayOfWeekEnum
         {
@@ -81,16 +82,17 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets DayOfWeek
+        /// Day of week
         /// </summary>
+        /// <value>Day of week</value>
         [DataMember(Name="dayOfWeek", EmitDefaultValue=false)]
         public DayOfWeekEnum? DayOfWeek { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Range" /> class.
         /// </summary>
-        /// <param name="StartTime">StartTime.</param>
+        /// <param name="StartTime">Start time.</param>
         /// <param name="Period">Period.</param>
-        /// <param name="DayOfWeek">DayOfWeek.</param>
+        /// <param name="DayOfWeek">Day of week.</param>
         public Range(string StartTime = default(string), string Period = default(string), DayOfWeekEnum? DayOfWeek = default(DayOfWeekEnum?))
         {
             this.StartTime = StartTime;
@@ -99,14 +101,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets StartTime
+        /// Start time
         /// </summary>
+        /// <value>Start time</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets Period
+        /// Period
         /// </summary>
+        /// <value>Period</value>
         [DataMember(Name="period", EmitDefaultValue=false)]
         public string Period { get; set; }
 

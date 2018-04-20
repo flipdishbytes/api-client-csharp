@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// ValidationErrorResult
+    /// Validation error result
     /// </summary>
     [DataContract]
     public partial class ValidationErrorResult :  IEquatable<ValidationErrorResult>, IValidatableObject
@@ -33,8 +33,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidationErrorResult" /> class.
         /// </summary>
-        /// <param name="FieldName">FieldName.</param>
-        /// <param name="Errors">Errors.</param>
+        /// <param name="FieldName">Field name.</param>
+        /// <param name="Errors">List of errors relates to field.</param>
         public ValidationErrorResult(string FieldName = default(string), List<string> Errors = default(List<string>))
         {
             this.FieldName = FieldName;
@@ -42,14 +42,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets FieldName
+        /// Field name
         /// </summary>
+        /// <value>Field name</value>
         [DataMember(Name="fieldName", EmitDefaultValue=false)]
         public string FieldName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Errors
+        /// List of errors relates to field
         /// </summary>
+        /// <value>List of errors relates to field</value>
         [DataMember(Name="errors", EmitDefaultValue=false)]
         public List<string> Errors { get; set; }
 

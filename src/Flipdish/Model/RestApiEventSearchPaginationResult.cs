@@ -38,10 +38,10 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiEventSearchPaginationResult" /> class.
         /// </summary>
-        /// <param name="Data">Data (required).</param>
-        /// <param name="Page">Page (required).</param>
-        /// <param name="Limit">Limit (required).</param>
-        /// <param name="TotalRecordCount">TotalRecordCount (required).</param>
+        /// <param name="Data">Event results (required).</param>
+        /// <param name="Page">Current page index (required).</param>
+        /// <param name="Limit">Current page size (required).</param>
+        /// <param name="TotalRecordCount">Total record count (required).</param>
         public RestApiEventSearchPaginationResult(EventSearchResult Data = default(EventSearchResult), int? Page = default(int?), int? Limit = default(int?), int? TotalRecordCount = default(int?))
         {
             // to ensure "Data" is required (not null)
@@ -83,26 +83,30 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Data
+        /// Event results
         /// </summary>
+        /// <value>Event results</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public EventSearchResult Data { get; set; }
 
         /// <summary>
-        /// Gets or Sets Page
+        /// Current page index
         /// </summary>
+        /// <value>Current page index</value>
         [DataMember(Name="page", EmitDefaultValue=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// Gets or Sets Limit
+        /// Current page size
         /// </summary>
+        /// <value>Current page size</value>
         [DataMember(Name="limit", EmitDefaultValue=false)]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalRecordCount
+        /// Total record count
         /// </summary>
+        /// <value>Total record count</value>
         [DataMember(Name="totalRecordCount", EmitDefaultValue=false)]
         public int? TotalRecordCount { get; set; }
 

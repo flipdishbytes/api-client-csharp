@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// WebhookLog
+    /// Webhook log
     /// </summary>
     [DataContract]
     public partial class WebhookLog :  IEquatable<WebhookLog>, IValidatableObject
@@ -33,21 +33,21 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookLog" /> class.
         /// </summary>
-        /// <param name="WebhookSubscriptionOwnerUserId">WebhookSubscriptionOwnerUserId.</param>
-        /// <param name="EventCreated">EventCreated.</param>
-        /// <param name="WebhookTriggered">WebhookTriggered.</param>
-        /// <param name="WebhookEventName">WebhookEventName.</param>
-        /// <param name="WebhookSubscriptionCallbackUrl">WebhookSubscriptionCallbackUrl.</param>
-        /// <param name="HttpResponseStatusCode">HttpResponseStatusCode.</param>
-        /// <param name="HttpResponseStatus">HttpResponseStatus.</param>
-        /// <param name="RequestHeaders">RequestHeaders.</param>
-        /// <param name="RequestBody">RequestBody.</param>
-        /// <param name="ResponseHeaders">ResponseHeaders.</param>
-        /// <param name="ResponseBody">ResponseBody.</param>
-        /// <param name="Duration">Duration.</param>
-        /// <param name="RetryCount">RetryCount.</param>
-        /// <param name="FlipdishWebhookId">FlipdishWebhookId.</param>
-        /// <param name="Version">Version.</param>
+        /// <param name="WebhookSubscriptionOwnerUserId">Webhook subscription owner user identifier.</param>
+        /// <param name="EventCreated">Event created.</param>
+        /// <param name="WebhookTriggered">Webhook triggered.</param>
+        /// <param name="WebhookEventName">Webhook event name.</param>
+        /// <param name="WebhookSubscriptionCallbackUrl">Webhook subscription callback url.</param>
+        /// <param name="HttpResponseStatusCode">Received HTTP repsonse status HTTP code.</param>
+        /// <param name="HttpResponseStatus">Received HTTP repsonse status.</param>
+        /// <param name="RequestHeaders">Request headers.</param>
+        /// <param name="RequestBody">Request body.</param>
+        /// <param name="ResponseHeaders">Received response headers.</param>
+        /// <param name="ResponseBody">Received response body.</param>
+        /// <param name="Duration">Duration of HTTP request.</param>
+        /// <param name="RetryCount">Retry count.</param>
+        /// <param name="FlipdishWebhookId">Flipdish webhook identifier.</param>
+        /// <param name="Version">Flipdish webhook version.</param>
         public WebhookLog(int? WebhookSubscriptionOwnerUserId = default(int?), string EventCreated = default(string), string WebhookTriggered = default(string), string WebhookEventName = default(string), string WebhookSubscriptionCallbackUrl = default(string), string HttpResponseStatusCode = default(string), string HttpResponseStatus = default(string), string RequestHeaders = default(string), string RequestBody = default(string), string ResponseHeaders = default(string), string ResponseBody = default(string), string Duration = default(string), int? RetryCount = default(int?), Guid? FlipdishWebhookId = default(Guid?), string Version = default(string))
         {
             this.WebhookSubscriptionOwnerUserId = WebhookSubscriptionOwnerUserId;
@@ -68,92 +68,107 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets WebhookSubscriptionOwnerUserId
+        /// Webhook subscription owner user identifier
         /// </summary>
+        /// <value>Webhook subscription owner user identifier</value>
         [DataMember(Name="webhookSubscriptionOwnerUserId", EmitDefaultValue=false)]
         public int? WebhookSubscriptionOwnerUserId { get; set; }
 
         /// <summary>
-        /// Gets or Sets EventCreated
+        /// Event created
         /// </summary>
+        /// <value>Event created</value>
         [DataMember(Name="eventCreated", EmitDefaultValue=false)]
         public string EventCreated { get; set; }
 
         /// <summary>
-        /// Gets or Sets WebhookTriggered
+        /// Webhook triggered
         /// </summary>
+        /// <value>Webhook triggered</value>
         [DataMember(Name="webhookTriggered", EmitDefaultValue=false)]
         public string WebhookTriggered { get; set; }
 
         /// <summary>
-        /// Gets or Sets WebhookEventName
+        /// Webhook event name
         /// </summary>
+        /// <value>Webhook event name</value>
         [DataMember(Name="webhookEventName", EmitDefaultValue=false)]
         public string WebhookEventName { get; set; }
 
         /// <summary>
-        /// Gets or Sets WebhookSubscriptionCallbackUrl
+        /// Webhook subscription callback url
         /// </summary>
+        /// <value>Webhook subscription callback url</value>
         [DataMember(Name="webhookSubscriptionCallbackUrl", EmitDefaultValue=false)]
         public string WebhookSubscriptionCallbackUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets HttpResponseStatusCode
+        /// Received HTTP repsonse status HTTP code
         /// </summary>
+        /// <value>Received HTTP repsonse status HTTP code</value>
         [DataMember(Name="httpResponseStatusCode", EmitDefaultValue=false)]
         public string HttpResponseStatusCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets HttpResponseStatus
+        /// Received HTTP repsonse status
         /// </summary>
+        /// <value>Received HTTP repsonse status</value>
         [DataMember(Name="httpResponseStatus", EmitDefaultValue=false)]
         public string HttpResponseStatus { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequestHeaders
+        /// Request headers
         /// </summary>
+        /// <value>Request headers</value>
         [DataMember(Name="requestHeaders", EmitDefaultValue=false)]
         public string RequestHeaders { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequestBody
+        /// Request body
         /// </summary>
+        /// <value>Request body</value>
         [DataMember(Name="requestBody", EmitDefaultValue=false)]
         public string RequestBody { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResponseHeaders
+        /// Received response headers
         /// </summary>
+        /// <value>Received response headers</value>
         [DataMember(Name="responseHeaders", EmitDefaultValue=false)]
         public string ResponseHeaders { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResponseBody
+        /// Received response body
         /// </summary>
+        /// <value>Received response body</value>
         [DataMember(Name="responseBody", EmitDefaultValue=false)]
         public string ResponseBody { get; set; }
 
         /// <summary>
-        /// Gets or Sets Duration
+        /// Duration of HTTP request
         /// </summary>
+        /// <value>Duration of HTTP request</value>
         [DataMember(Name="duration", EmitDefaultValue=false)]
         public string Duration { get; set; }
 
         /// <summary>
-        /// Gets or Sets RetryCount
+        /// Retry count
         /// </summary>
+        /// <value>Retry count</value>
         [DataMember(Name="retryCount", EmitDefaultValue=false)]
         public int? RetryCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets FlipdishWebhookId
+        /// Flipdish webhook identifier
         /// </summary>
+        /// <value>Flipdish webhook identifier</value>
         [DataMember(Name="flipdishWebhookId", EmitDefaultValue=false)]
         public Guid? FlipdishWebhookId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Version
+        /// Flipdish webhook version
         /// </summary>
+        /// <value>Flipdish webhook version</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; set; }
 

@@ -25,7 +25,7 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get order events
+        /// Get customer events
         /// </summary>
         /// <remarks>
         /// 
@@ -41,7 +41,7 @@ namespace Flipdish.Api
         RestApiEventSearchPaginationResult GetCustomerEvents (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get order events
+        /// Get customer events
         /// </summary>
         /// <remarks>
         /// 
@@ -112,7 +112,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of EventSearchResult</returns>
         ApiResponse<EventSearchResult> GetEventsByIdWithHttpInfo (Guid? eventId);
         /// <summary>
-        /// Get Menu Events
+        /// Get menu events
         /// </summary>
         /// <remarks>
         /// 
@@ -128,7 +128,7 @@ namespace Flipdish.Api
         RestApiEventSearchPaginationResult GetMenuEvents (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get Menu Events
+        /// Get menu events
         /// </summary>
         /// <remarks>
         /// 
@@ -236,7 +236,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
         ApiResponse<RestApiEventSearchPaginationResult> GetStoreEventsWithHttpInfo (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get order events
+        /// Get user events
         /// </summary>
         /// <remarks>
         /// 
@@ -252,7 +252,7 @@ namespace Flipdish.Api
         RestApiEventSearchPaginationResult GetUserEvents (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get order events
+        /// Get user events
         /// </summary>
         /// <remarks>
         /// 
@@ -267,7 +267,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
         ApiResponse<RestApiEventSearchPaginationResult> GetUserEventsWithHttpInfo (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get White Label Events
+        /// Get WhiteLabel events
         /// </summary>
         /// <remarks>
         /// 
@@ -283,7 +283,7 @@ namespace Flipdish.Api
         RestApiEventSearchPaginationResult GetWhiteLabelEvents (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get White Label Events
+        /// Get WhiteLabel events
         /// </summary>
         /// <remarks>
         /// 
@@ -300,7 +300,7 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get order events
+        /// Get customer events
         /// </summary>
         /// <remarks>
         /// 
@@ -316,7 +316,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetCustomerEventsAsync (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get order events
+        /// Get customer events
         /// </summary>
         /// <remarks>
         /// 
@@ -387,7 +387,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (EventSearchResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<EventSearchResult>> GetEventsByIdAsyncWithHttpInfo (Guid? eventId);
         /// <summary>
-        /// Get Menu Events
+        /// Get menu events
         /// </summary>
         /// <remarks>
         /// 
@@ -403,7 +403,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetMenuEventsAsync (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get Menu Events
+        /// Get menu events
         /// </summary>
         /// <remarks>
         /// 
@@ -511,7 +511,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetStoreEventsAsyncWithHttpInfo (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get order events
+        /// Get user events
         /// </summary>
         /// <remarks>
         /// 
@@ -527,7 +527,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetUserEventsAsync (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get order events
+        /// Get user events
         /// </summary>
         /// <remarks>
         /// 
@@ -542,7 +542,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetUserEventsAsyncWithHttpInfo (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get White Label Events
+        /// Get WhiteLabel events
         /// </summary>
         /// <remarks>
         /// 
@@ -558,7 +558,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetWhiteLabelEventsAsync (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get White Label Events
+        /// Get WhiteLabel events
         /// </summary>
         /// <remarks>
         /// 
@@ -673,7 +673,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events 
+        /// Get customer events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Customer identifier identifier</param>
@@ -690,7 +690,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events 
+        /// Get customer events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Customer identifier identifier</param>
@@ -763,7 +763,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events 
+        /// Get customer events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Customer identifier identifier</param>
@@ -781,7 +781,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events 
+        /// Get customer events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Customer identifier identifier</param>
@@ -1192,7 +1192,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Menu Events 
+        /// Get menu events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -1209,7 +1209,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Menu Events 
+        /// Get menu events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -1282,7 +1282,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Menu Events 
+        /// Get menu events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -1300,7 +1300,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Menu Events 
+        /// Get menu events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -1916,7 +1916,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events 
+        /// Get user events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User identifier</param>
@@ -1933,7 +1933,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events 
+        /// Get user events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User identifier</param>
@@ -2006,7 +2006,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events 
+        /// Get user events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User identifier</param>
@@ -2024,7 +2024,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events 
+        /// Get user events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User identifier</param>
@@ -2097,7 +2097,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get White Label Events 
+        /// Get WhiteLabel events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId">White Label Identifier</param>
@@ -2114,7 +2114,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get White Label Events 
+        /// Get WhiteLabel events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId">White Label Identifier</param>
@@ -2187,7 +2187,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get White Label Events 
+        /// Get WhiteLabel events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId">White Label Identifier</param>
@@ -2205,7 +2205,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get White Label Events 
+        /// Get WhiteLabel events 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId">White Label Identifier</param>

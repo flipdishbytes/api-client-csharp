@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// RestApiErrorResult
+    /// Rest api error result
     /// </summary>
     [DataContract]
     public partial class RestApiErrorResult :  IEquatable<RestApiErrorResult>, IValidatableObject
@@ -38,8 +38,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiErrorResult" /> class.
         /// </summary>
-        /// <param name="Message">Message (required).</param>
-        /// <param name="Errors">Errors.</param>
+        /// <param name="Message">Error message (required).</param>
+        /// <param name="Errors">List of errors grouped by field name.</param>
         public RestApiErrorResult(string Message = default(string), List<ValidationErrorResult> Errors = default(List<ValidationErrorResult>))
         {
             // to ensure "Message" is required (not null)
@@ -55,14 +55,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Message
+        /// Error message
         /// </summary>
+        /// <value>Error message</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Gets or Sets Errors
+        /// List of errors grouped by field name
         /// </summary>
+        /// <value>List of errors grouped by field name</value>
         [DataMember(Name="errors", EmitDefaultValue=false)]
         public List<ValidationErrorResult> Errors { get; set; }
 

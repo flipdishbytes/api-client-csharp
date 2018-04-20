@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// StoreAddress
+    /// Store address
     /// </summary>
     [DataContract]
     public partial class StoreAddress :  IEquatable<StoreAddress>, IValidatableObject
@@ -33,13 +33,13 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreAddress" /> class.
         /// </summary>
-        /// <param name="AddressId">AddressId.</param>
-        /// <param name="Line1">Line1.</param>
+        /// <param name="AddressId">Address identifier.</param>
+        /// <param name="Line1">Address line 1.</param>
         /// <param name="Postcode">Postcode.</param>
         /// <param name="City">City.</param>
-        /// <param name="CountryCode">CountryCode.</param>
-        /// <param name="DisplayForCustomer">DisplayForCustomer.</param>
-        /// <param name="Coordinates">Coordinates.</param>
+        /// <param name="CountryCode">Country code (ISO-alpha2).</param>
+        /// <param name="DisplayForCustomer">Display for customer.</param>
+        /// <param name="Coordinates">Coordinate.</param>
         public StoreAddress(int? AddressId = default(int?), string Line1 = default(string), string Postcode = default(string), string City = default(string), string CountryCode = default(string), string DisplayForCustomer = default(string), Coordinates Coordinates = default(Coordinates))
         {
             this.AddressId = AddressId;
@@ -52,44 +52,51 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets AddressId
+        /// Address identifier
         /// </summary>
+        /// <value>Address identifier</value>
         [DataMember(Name="addressId", EmitDefaultValue=false)]
         public int? AddressId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Line1
+        /// Address line 1
         /// </summary>
+        /// <value>Address line 1</value>
         [DataMember(Name="line1", EmitDefaultValue=false)]
         public string Line1 { get; set; }
 
         /// <summary>
-        /// Gets or Sets Postcode
+        /// Postcode
         /// </summary>
+        /// <value>Postcode</value>
         [DataMember(Name="postcode", EmitDefaultValue=false)]
         public string Postcode { get; set; }
 
         /// <summary>
-        /// Gets or Sets City
+        /// City
         /// </summary>
+        /// <value>City</value>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
 
         /// <summary>
-        /// Gets or Sets CountryCode
+        /// Country code (ISO-alpha2)
         /// </summary>
+        /// <value>Country code (ISO-alpha2)</value>
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayForCustomer
+        /// Display for customer
         /// </summary>
+        /// <value>Display for customer</value>
         [DataMember(Name="displayForCustomer", EmitDefaultValue=false)]
         public string DisplayForCustomer { get; set; }
 
         /// <summary>
-        /// Gets or Sets Coordinates
+        /// Coordinate
         /// </summary>
+        /// <value>Coordinate</value>
         [DataMember(Name="coordinates", EmitDefaultValue=false)]
         public Coordinates Coordinates { get; set; }
 

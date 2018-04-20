@@ -33,8 +33,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Metadata" /> class.
         /// </summary>
-        /// <param name="Key">Key.</param>
-        /// <param name="Value">Value.</param>
+        /// <param name="Key">Metadata key (Unique identifier).</param>
+        /// <param name="Value">Metadata value.</param>
         public Metadata(string Key = default(string), string Value = default(string))
         {
             this.Key = Key;
@@ -42,14 +42,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Key
+        /// Metadata key (Unique identifier)
         /// </summary>
+        /// <value>Metadata key (Unique identifier)</value>
         [DataMember(Name="key", EmitDefaultValue=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// Gets or Sets Value
+        /// Metadata value
         /// </summary>
+        /// <value>Metadata value</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 

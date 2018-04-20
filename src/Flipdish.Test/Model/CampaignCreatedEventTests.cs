@@ -67,6 +67,14 @@ namespace Flipdish.Test
 
 
         /// <summary>
+        /// Test the property 'EventName'
+        /// </summary>
+        [Test]
+        public void EventNameTest()
+        {
+            // TODO unit test for the property 'EventName'
+        }
+        /// <summary>
         /// Test the property 'CampaignId'
         /// </summary>
         [Test]
@@ -89,14 +97,6 @@ namespace Flipdish.Test
         public void VirtualRestaurantIdTest()
         {
             // TODO unit test for the property 'VirtualRestaurantId'
-        }
-        /// <summary>
-        /// Test the property 'EventName'
-        /// </summary>
-        [Test]
-        public void EventNameTest()
-        {
-            // TODO unit test for the property 'EventName'
         }
         /// <summary>
         /// Test the property 'FlipdishEventId'

@@ -33,24 +33,31 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignCreatedEvent" /> class.
         /// </summary>
+        /// <param name="EventName">The event name.</param>
         /// <param name="CampaignId">CampaignId.</param>
         /// <param name="VirtualRestaurantName">VirtualRestaurantName.</param>
         /// <param name="VirtualRestaurantId">VirtualRestaurantId.</param>
-        /// <param name="EventName">EventName.</param>
-        /// <param name="FlipdishEventId">FlipdishEventId.</param>
-        /// <param name="CreateTime">CreateTime.</param>
+        /// <param name="FlipdishEventId">The identitfier of the event.</param>
+        /// <param name="CreateTime">The time of creation of the event.</param>
         /// <param name="Position">Position.</param>
-        public CampaignCreatedEvent(int? CampaignId = default(int?), string VirtualRestaurantName = default(string), int? VirtualRestaurantId = default(int?), string EventName = default(string), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        public CampaignCreatedEvent(string EventName = default(string), int? CampaignId = default(int?), string VirtualRestaurantName = default(string), int? VirtualRestaurantId = default(int?), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
         {
+            this.EventName = EventName;
             this.CampaignId = CampaignId;
             this.VirtualRestaurantName = VirtualRestaurantName;
             this.VirtualRestaurantId = VirtualRestaurantId;
-            this.EventName = EventName;
             this.FlipdishEventId = FlipdishEventId;
             this.CreateTime = CreateTime;
             this.Position = Position;
         }
         
+        /// <summary>
+        /// The event name
+        /// </summary>
+        /// <value>The event name</value>
+        [DataMember(Name="eventName", EmitDefaultValue=false)]
+        public string EventName { get; set; }
+
         /// <summary>
         /// Gets or Sets CampaignId
         /// </summary>
@@ -70,26 +77,23 @@ namespace Flipdish.Model
         public int? VirtualRestaurantId { get; set; }
 
         /// <summary>
-        /// Gets or Sets EventName
+        /// The identitfier of the event
         /// </summary>
-        [DataMember(Name="eventName", EmitDefaultValue=false)]
-        public string EventName { get; set; }
-
-        /// <summary>
-        /// Gets or Sets FlipdishEventId
-        /// </summary>
+        /// <value>The identitfier of the event</value>
         [DataMember(Name="flipdishEventId", EmitDefaultValue=false)]
         public Guid? FlipdishEventId { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreateTime
+        /// The time of creation of the event
         /// </summary>
+        /// <value>The time of creation of the event</value>
         [DataMember(Name="createTime", EmitDefaultValue=false)]
         public DateTime? CreateTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets Position
+        /// Position
         /// </summary>
+        /// <value>Position</value>
         [DataMember(Name="position", EmitDefaultValue=false)]
         public int? Position { get; set; }
 
@@ -101,10 +105,10 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignCreatedEvent {\n");
+            sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  CampaignId: ").Append(CampaignId).Append("\n");
             sb.Append("  VirtualRestaurantName: ").Append(VirtualRestaurantName).Append("\n");
             sb.Append("  VirtualRestaurantId: ").Append(VirtualRestaurantId).Append("\n");
-            sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -143,6 +147,11 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.EventName == input.EventName ||
+                    (this.EventName != null &&
+                    this.EventName.Equals(input.EventName))
+                ) && 
+                (
                     this.CampaignId == input.CampaignId ||
                     (this.CampaignId != null &&
                     this.CampaignId.Equals(input.CampaignId))
@@ -156,11 +165,6 @@ namespace Flipdish.Model
                     this.VirtualRestaurantId == input.VirtualRestaurantId ||
                     (this.VirtualRestaurantId != null &&
                     this.VirtualRestaurantId.Equals(input.VirtualRestaurantId))
-                ) && 
-                (
-                    this.EventName == input.EventName ||
-                    (this.EventName != null &&
-                    this.EventName.Equals(input.EventName))
                 ) && 
                 (
                     this.FlipdishEventId == input.FlipdishEventId ||
@@ -188,14 +192,14 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.EventName != null)
+                    hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.CampaignId != null)
                     hashCode = hashCode * 59 + this.CampaignId.GetHashCode();
                 if (this.VirtualRestaurantName != null)
                     hashCode = hashCode * 59 + this.VirtualRestaurantName.GetHashCode();
                 if (this.VirtualRestaurantId != null)
                     hashCode = hashCode * 59 + this.VirtualRestaurantId.GetHashCode();
-                if (this.EventName != null)
-                    hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)

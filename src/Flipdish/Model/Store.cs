@@ -31,8 +31,9 @@ namespace Flipdish.Model
     public partial class Store :  IEquatable<Store>, IValidatableObject
     {
         /// <summary>
-        /// Defines PrintoutLayoutType
+        /// Printout layout
         /// </summary>
+        /// <value>Printout layout</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PrintoutLayoutTypeEnum
         {
@@ -51,47 +52,48 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets PrintoutLayoutType
+        /// Printout layout
         /// </summary>
+        /// <value>Printout layout</value>
         [DataMember(Name="printoutLayoutType", EmitDefaultValue=false)]
         public PrintoutLayoutTypeEnum? PrintoutLayoutType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Store" /> class.
         /// </summary>
-        /// <param name="StoreId">StoreId.</param>
+        /// <param name="StoreId">Store identifier.</param>
         /// <param name="Name">Name.</param>
-        /// <param name="ApmPhoneNumber">ApmPhoneNumber.</param>
-        /// <param name="PhoneNumber">PhoneNumber.</param>
-        /// <param name="EmailAddress">EmailAddress.</param>
-        /// <param name="Address">Address.</param>
-        /// <param name="PreOrderEnabled">PreOrderEnabled.</param>
-        /// <param name="TakeOutEnabled">TakeOutEnabled.</param>
-        /// <param name="TableServiceEnabled">TableServiceEnabled.</param>
-        /// <param name="DineInEnabled">DineInEnabled.</param>
-        /// <param name="AllowPreOrdersAndTableService">AllowPreOrdersAndTableService.</param>
-        /// <param name="PickupEnabled">PickupEnabled.</param>
-        /// <param name="DeliveryEnabled">DeliveryEnabled.</param>
-        /// <param name="CardOrderDeliveryEnabled">CardOrderDeliveryEnabled.</param>
-        /// <param name="CashOrdersDeliveryEnabled">CashOrdersDeliveryEnabled.</param>
-        /// <param name="CardOrdersPickupEnabled">CardOrdersPickupEnabled.</param>
-        /// <param name="CashOrdersPickupEnabled">CashOrdersPickupEnabled.</param>
-        /// <param name="TipsEnabled">TipsEnabled.</param>
-        /// <param name="AutomaticallyAcceptOrders">AutomaticallyAcceptOrders.</param>
-        /// <param name="OpenForDelivery">OpenForDelivery.</param>
-        /// <param name="OpenForPickup">OpenForPickup.</param>
-        /// <param name="MinimumPickupOrderAmount">MinimumPickupOrderAmount.</param>
-        /// <param name="DeliveryFeeAreas">DeliveryFeeAreas.</param>
-        /// <param name="RequireCustomerNameForPickup">RequireCustomerNameForPickup.</param>
-        /// <param name="RequireCustomerNameForDelivery">RequireCustomerNameForDelivery.</param>
-        /// <param name="PickupHours">PickupHours.</param>
-        /// <param name="DeliveryHours">DeliveryHours.</param>
-        /// <param name="MicrosoftTimeZone">MicrosoftTimeZone.</param>
-        /// <param name="IanaTimeZone">IanaTimeZone.</param>
-        /// <param name="MenuId">MenuId.</param>
-        /// <param name="OrderConfirmationMessageOverrideDelivery">OrderConfirmationMessageOverrideDelivery.</param>
-        /// <param name="OrderConfirmationMessageOverridePickup">OrderConfirmationMessageOverridePickup.</param>
-        /// <param name="PrintoutLayoutType">PrintoutLayoutType.</param>
-        /// <param name="StoreNotes">StoreNotes.</param>
+        /// <param name="ApmPhoneNumber">Automated Phone Marketing number.</param>
+        /// <param name="PhoneNumber">Phone number.</param>
+        /// <param name="EmailAddress">Email address (visible to customers).</param>
+        /// <param name="Address">Store address.</param>
+        /// <param name="PreOrderEnabled">True if the store accepts pre-orders.</param>
+        /// <param name="TakeOutEnabled">True if the store accepts take-out orders.</param>
+        /// <param name="TableServiceEnabled">True if the store has table service.</param>
+        /// <param name="DineInEnabled">True if the store accepts dine-in orders.</param>
+        /// <param name="AllowPreOrdersAndTableService">True if both pre-orders and talbe service can be enabled.</param>
+        /// <param name="PickupEnabled">True if the store accepts pickup orders.</param>
+        /// <param name="DeliveryEnabled">True if the store accepts delivery orders.</param>
+        /// <param name="CardOrderDeliveryEnabled">True if the store accepts card payment for delivery orders.</param>
+        /// <param name="CashOrdersDeliveryEnabled">True if the store accepts cash payment for delivery orders.</param>
+        /// <param name="CardOrdersPickupEnabled">True if the store accepts card payment for pickup orders.</param>
+        /// <param name="CashOrdersPickupEnabled">True if the store accepts cash payment for pickup orders.</param>
+        /// <param name="TipsEnabled">True if the store accepts tips.</param>
+        /// <param name="AutomaticallyAcceptOrders">True if the stores orders are automatically accepted in Flipdish.</param>
+        /// <param name="OpenForDelivery">True if the store is open for delivery.</param>
+        /// <param name="OpenForPickup">True if the store is open for pickup.</param>
+        /// <param name="MinimumPickupOrderAmount">Minimum pickup order amount.</param>
+        /// <param name="DeliveryFeeAreas">Delivery fee areas.</param>
+        /// <param name="RequireCustomerNameForPickup">True if customer name required for pickup orders.</param>
+        /// <param name="RequireCustomerNameForDelivery">True if customer name required for delivery orders.</param>
+        /// <param name="PickupHours">Pickup hours.</param>
+        /// <param name="DeliveryHours">Delivery hours.</param>
+        /// <param name="MicrosoftTimeZone">Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391).</param>
+        /// <param name="IanaTimeZone">IANA Time Zone (https://www.iana.org/time-zones).</param>
+        /// <param name="MenuId">Menu identifier.</param>
+        /// <param name="OrderConfirmationMessageOverrideDelivery">Overridden confirmation message for delivery orders.</param>
+        /// <param name="OrderConfirmationMessageOverridePickup">Overridden confirmation message for pickup orders.</param>
+        /// <param name="PrintoutLayoutType">Printout layout.</param>
+        /// <param name="StoreNotes">Store notes.</param>
         public Store(int? StoreId = default(int?), string Name = default(string), string ApmPhoneNumber = default(string), string PhoneNumber = default(string), string EmailAddress = default(string), StoreAddress Address = default(StoreAddress), bool? PreOrderEnabled = default(bool?), bool? TakeOutEnabled = default(bool?), bool? TableServiceEnabled = default(bool?), bool? DineInEnabled = default(bool?), bool? AllowPreOrdersAndTableService = default(bool?), bool? PickupEnabled = default(bool?), bool? DeliveryEnabled = default(bool?), bool? CardOrderDeliveryEnabled = default(bool?), bool? CashOrdersDeliveryEnabled = default(bool?), bool? CardOrdersPickupEnabled = default(bool?), bool? CashOrdersPickupEnabled = default(bool?), bool? TipsEnabled = default(bool?), bool? AutomaticallyAcceptOrders = default(bool?), bool? OpenForDelivery = default(bool?), bool? OpenForPickup = default(bool?), double? MinimumPickupOrderAmount = default(double?), List<DeliveryFeeArea> DeliveryFeeAreas = default(List<DeliveryFeeArea>), bool? RequireCustomerNameForPickup = default(bool?), bool? RequireCustomerNameForDelivery = default(bool?), List<BusinessHoursPeriod> PickupHours = default(List<BusinessHoursPeriod>), List<BusinessHoursPeriod> DeliveryHours = default(List<BusinessHoursPeriod>), string MicrosoftTimeZone = default(string), string IanaTimeZone = default(string), int? MenuId = default(int?), string OrderConfirmationMessageOverrideDelivery = default(string), string OrderConfirmationMessageOverridePickup = default(string), PrintoutLayoutTypeEnum? PrintoutLayoutType = default(PrintoutLayoutTypeEnum?), List<StoreNote> StoreNotes = default(List<StoreNote>))
         {
             this.StoreId = StoreId;
@@ -131,201 +133,234 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets StoreId
+        /// Store identifier
         /// </summary>
+        /// <value>Store identifier</value>
         [DataMember(Name="storeId", EmitDefaultValue=false)]
         public int? StoreId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Name
         /// </summary>
+        /// <value>Name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets ApmPhoneNumber
+        /// Automated Phone Marketing number
         /// </summary>
+        /// <value>Automated Phone Marketing number</value>
         [DataMember(Name="apmPhoneNumber", EmitDefaultValue=false)]
         public string ApmPhoneNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets PhoneNumber
+        /// Phone number
         /// </summary>
+        /// <value>Phone number</value>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets EmailAddress
+        /// Email address (visible to customers)
         /// </summary>
+        /// <value>Email address (visible to customers)</value>
         [DataMember(Name="emailAddress", EmitDefaultValue=false)]
         public string EmailAddress { get; set; }
 
         /// <summary>
-        /// Gets or Sets Address
+        /// Store address
         /// </summary>
+        /// <value>Store address</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public StoreAddress Address { get; set; }
 
         /// <summary>
-        /// Gets or Sets PreOrderEnabled
+        /// True if the store accepts pre-orders
         /// </summary>
+        /// <value>True if the store accepts pre-orders</value>
         [DataMember(Name="preOrderEnabled", EmitDefaultValue=false)]
         public bool? PreOrderEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets TakeOutEnabled
+        /// True if the store accepts take-out orders
         /// </summary>
+        /// <value>True if the store accepts take-out orders</value>
         [DataMember(Name="takeOutEnabled", EmitDefaultValue=false)]
         public bool? TakeOutEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets TableServiceEnabled
+        /// True if the store has table service
         /// </summary>
+        /// <value>True if the store has table service</value>
         [DataMember(Name="tableServiceEnabled", EmitDefaultValue=false)]
         public bool? TableServiceEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets DineInEnabled
+        /// True if the store accepts dine-in orders
         /// </summary>
+        /// <value>True if the store accepts dine-in orders</value>
         [DataMember(Name="dineInEnabled", EmitDefaultValue=false)]
         public bool? DineInEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets AllowPreOrdersAndTableService
+        /// True if both pre-orders and talbe service can be enabled
         /// </summary>
+        /// <value>True if both pre-orders and talbe service can be enabled</value>
         [DataMember(Name="allowPreOrdersAndTableService", EmitDefaultValue=false)]
         public bool? AllowPreOrdersAndTableService { get; set; }
 
         /// <summary>
-        /// Gets or Sets PickupEnabled
+        /// True if the store accepts pickup orders
         /// </summary>
+        /// <value>True if the store accepts pickup orders</value>
         [DataMember(Name="pickupEnabled", EmitDefaultValue=false)]
         public bool? PickupEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeliveryEnabled
+        /// True if the store accepts delivery orders
         /// </summary>
+        /// <value>True if the store accepts delivery orders</value>
         [DataMember(Name="deliveryEnabled", EmitDefaultValue=false)]
         public bool? DeliveryEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets CardOrderDeliveryEnabled
+        /// True if the store accepts card payment for delivery orders
         /// </summary>
+        /// <value>True if the store accepts card payment for delivery orders</value>
         [DataMember(Name="cardOrderDeliveryEnabled", EmitDefaultValue=false)]
         public bool? CardOrderDeliveryEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets CashOrdersDeliveryEnabled
+        /// True if the store accepts cash payment for delivery orders
         /// </summary>
+        /// <value>True if the store accepts cash payment for delivery orders</value>
         [DataMember(Name="cashOrdersDeliveryEnabled", EmitDefaultValue=false)]
         public bool? CashOrdersDeliveryEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets CardOrdersPickupEnabled
+        /// True if the store accepts card payment for pickup orders
         /// </summary>
+        /// <value>True if the store accepts card payment for pickup orders</value>
         [DataMember(Name="cardOrdersPickupEnabled", EmitDefaultValue=false)]
         public bool? CardOrdersPickupEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets CashOrdersPickupEnabled
+        /// True if the store accepts cash payment for pickup orders
         /// </summary>
+        /// <value>True if the store accepts cash payment for pickup orders</value>
         [DataMember(Name="cashOrdersPickupEnabled", EmitDefaultValue=false)]
         public bool? CashOrdersPickupEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets TipsEnabled
+        /// True if the store accepts tips
         /// </summary>
+        /// <value>True if the store accepts tips</value>
         [DataMember(Name="tipsEnabled", EmitDefaultValue=false)]
         public bool? TipsEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets AutomaticallyAcceptOrders
+        /// True if the stores orders are automatically accepted in Flipdish
         /// </summary>
+        /// <value>True if the stores orders are automatically accepted in Flipdish</value>
         [DataMember(Name="automaticallyAcceptOrders", EmitDefaultValue=false)]
         public bool? AutomaticallyAcceptOrders { get; set; }
 
         /// <summary>
-        /// Gets or Sets OpenForDelivery
+        /// True if the store is open for delivery
         /// </summary>
+        /// <value>True if the store is open for delivery</value>
         [DataMember(Name="openForDelivery", EmitDefaultValue=false)]
         public bool? OpenForDelivery { get; set; }
 
         /// <summary>
-        /// Gets or Sets OpenForPickup
+        /// True if the store is open for pickup
         /// </summary>
+        /// <value>True if the store is open for pickup</value>
         [DataMember(Name="openForPickup", EmitDefaultValue=false)]
         public bool? OpenForPickup { get; set; }
 
         /// <summary>
-        /// Gets or Sets MinimumPickupOrderAmount
+        /// Minimum pickup order amount
         /// </summary>
+        /// <value>Minimum pickup order amount</value>
         [DataMember(Name="minimumPickupOrderAmount", EmitDefaultValue=false)]
         public double? MinimumPickupOrderAmount { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeliveryFeeAreas
+        /// Delivery fee areas
         /// </summary>
+        /// <value>Delivery fee areas</value>
         [DataMember(Name="deliveryFeeAreas", EmitDefaultValue=false)]
         public List<DeliveryFeeArea> DeliveryFeeAreas { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequireCustomerNameForPickup
+        /// True if customer name required for pickup orders
         /// </summary>
+        /// <value>True if customer name required for pickup orders</value>
         [DataMember(Name="requireCustomerNameForPickup", EmitDefaultValue=false)]
         public bool? RequireCustomerNameForPickup { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequireCustomerNameForDelivery
+        /// True if customer name required for delivery orders
         /// </summary>
+        /// <value>True if customer name required for delivery orders</value>
         [DataMember(Name="requireCustomerNameForDelivery", EmitDefaultValue=false)]
         public bool? RequireCustomerNameForDelivery { get; set; }
 
         /// <summary>
-        /// Gets or Sets PickupHours
+        /// Pickup hours
         /// </summary>
+        /// <value>Pickup hours</value>
         [DataMember(Name="pickupHours", EmitDefaultValue=false)]
         public List<BusinessHoursPeriod> PickupHours { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeliveryHours
+        /// Delivery hours
         /// </summary>
+        /// <value>Delivery hours</value>
         [DataMember(Name="deliveryHours", EmitDefaultValue=false)]
         public List<BusinessHoursPeriod> DeliveryHours { get; set; }
 
         /// <summary>
-        /// Gets or Sets MicrosoftTimeZone
+        /// Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391)
         /// </summary>
+        /// <value>Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391)</value>
         [DataMember(Name="microsoftTimeZone", EmitDefaultValue=false)]
         public string MicrosoftTimeZone { get; set; }
 
         /// <summary>
-        /// Gets or Sets IanaTimeZone
+        /// IANA Time Zone (https://www.iana.org/time-zones)
         /// </summary>
+        /// <value>IANA Time Zone (https://www.iana.org/time-zones)</value>
         [DataMember(Name="ianaTimeZone", EmitDefaultValue=false)]
         public string IanaTimeZone { get; set; }
 
         /// <summary>
-        /// Gets or Sets MenuId
+        /// Menu identifier
         /// </summary>
+        /// <value>Menu identifier</value>
         [DataMember(Name="menuId", EmitDefaultValue=false)]
         public int? MenuId { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrderConfirmationMessageOverrideDelivery
+        /// Overridden confirmation message for delivery orders
         /// </summary>
+        /// <value>Overridden confirmation message for delivery orders</value>
         [DataMember(Name="orderConfirmationMessageOverrideDelivery", EmitDefaultValue=false)]
         public string OrderConfirmationMessageOverrideDelivery { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrderConfirmationMessageOverridePickup
+        /// Overridden confirmation message for pickup orders
         /// </summary>
+        /// <value>Overridden confirmation message for pickup orders</value>
         [DataMember(Name="orderConfirmationMessageOverridePickup", EmitDefaultValue=false)]
         public string OrderConfirmationMessageOverridePickup { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets StoreNotes
+        /// Store notes
         /// </summary>
+        /// <value>Store notes</value>
         [DataMember(Name="storeNotes", EmitDefaultValue=false)]
         public List<StoreNote> StoreNotes { get; set; }
 

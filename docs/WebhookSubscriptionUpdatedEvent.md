@@ -3,11 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WebhookSubscriptionEventInfo** | [**WebhookSubscriptionEventInfo**](WebhookSubscriptionEventInfo.md) |  | [optional] 
-**EventName** | **string** |  | [optional] 
-**FlipdishEventId** | **Guid?** |  | [optional] 
-**CreateTime** | **DateTime?** |  | [optional] 
-**Position** | **int?** |  | [optional] 
+**EventName** | **string** | The event name | [optional] 
+**WebhookSubscriptionEventInfo** | [**WebhookSubscriptionEventInfo**](WebhookSubscriptionEventInfo.md) | Webhook subscription details | [optional] 
+**FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
+**CreateTime** | **DateTime?** | The time of creation of the event | [optional] 
+**Position** | **int?** | Position | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

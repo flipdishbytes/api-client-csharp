@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// UserEventInfo
+    /// User Event Info
     /// </summary>
     [DataContract]
     public partial class UserEventInfo :  IEquatable<UserEventInfo>, IValidatableObject
@@ -33,10 +33,10 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserEventInfo" /> class.
         /// </summary>
-        /// <param name="UserId">UserId.</param>
+        /// <param name="UserId">User Id.</param>
         /// <param name="UserName">UserName.</param>
-        /// <param name="UserPhoneNumber">UserPhoneNumber.</param>
-        /// <param name="UserEmail">UserEmail.</param>
+        /// <param name="UserPhoneNumber">User Phone Number.</param>
+        /// <param name="UserEmail">User Email.</param>
         public UserEventInfo(int? UserId = default(int?), string UserName = default(string), string UserPhoneNumber = default(string), string UserEmail = default(string))
         {
             this.UserId = UserId;
@@ -46,26 +46,30 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets UserId
+        /// User Id
         /// </summary>
+        /// <value>User Id</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public int? UserId { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserName
+        /// UserName
         /// </summary>
+        /// <value>UserName</value>
         [DataMember(Name="userName", EmitDefaultValue=false)]
         public string UserName { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserPhoneNumber
+        /// User Phone Number
         /// </summary>
+        /// <value>User Phone Number</value>
         [DataMember(Name="userPhoneNumber", EmitDefaultValue=false)]
         public string UserPhoneNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserEmail
+        /// User Email
         /// </summary>
+        /// <value>User Email</value>
         [DataMember(Name="userEmail", EmitDefaultValue=false)]
         public string UserEmail { get; set; }
 

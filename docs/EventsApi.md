@@ -4,22 +4,22 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetCustomerEvents**](EventsApi.md#getcustomerevents) | **GET** /api/v1.0/events/customer/{customerId} | Get order events
+[**GetCustomerEvents**](EventsApi.md#getcustomerevents) | **GET** /api/v1.0/events/customer/{customerId} | Get customer events
 [**GetEvents**](EventsApi.md#getevents) | **GET** /api/v1.0/events | Get events
 [**GetEventsById**](EventsApi.md#geteventsbyid) | **GET** /api/v1.0/events/{eventId} | Get event by Id
-[**GetMenuEvents**](EventsApi.md#getmenuevents) | **GET** /api/v1.0/events/menu/{menuId} | Get Menu Events
+[**GetMenuEvents**](EventsApi.md#getmenuevents) | **GET** /api/v1.0/events/menu/{menuId} | Get menu events
 [**GetOrderEvents**](EventsApi.md#getorderevents) | **GET** /api/v1.0/events/order/{orderId} | Get order events
 [**GetOrderEventsByCustomer**](EventsApi.md#getordereventsbycustomer) | **GET** /api/v1.0/events/order | Get order events by customer
 [**GetStoreEvents**](EventsApi.md#getstoreevents) | **GET** /api/v1.0/events/store/{storeId} | Get store events
-[**GetUserEvents**](EventsApi.md#getuserevents) | **GET** /api/v1.0/events/user/{userId} | Get order events
-[**GetWhiteLabelEvents**](EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get White Label Events
+[**GetUserEvents**](EventsApi.md#getuserevents) | **GET** /api/v1.0/events/user/{userId} | Get user events
+[**GetWhiteLabelEvents**](EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get WhiteLabel events
 
 
 <a name="getcustomerevents"></a>
 # **GetCustomerEvents**
 > RestApiEventSearchPaginationResult GetCustomerEvents (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
 
-Get order events
+Get customer events
 
 ### Example
 ```csharp
@@ -48,7 +48,7 @@ namespace Example
 
             try
             {
-                // Get order events
+                // Get customer events
                 RestApiEventSearchPaginationResult result = apiInstance.GetCustomerEvents(customerId, limit, page, start, end, name);
                 Debug.WriteLine(result);
             }
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 # **GetMenuEvents**
 > RestApiEventSearchPaginationResult GetMenuEvents (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
 
-Get Menu Events
+Get menu events
 
 ### Example
 ```csharp
@@ -258,7 +258,7 @@ namespace Example
 
             try
             {
-                // Get Menu Events
+                // Get menu events
                 RestApiEventSearchPaginationResult result = apiInstance.GetMenuEvents(menuId, limit, page, start, end, name);
                 Debug.WriteLine(result);
             }
@@ -517,7 +517,7 @@ Name | Type | Description  | Notes
 # **GetUserEvents**
 > RestApiEventSearchPaginationResult GetUserEvents (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
 
-Get order events
+Get user events
 
 ### Example
 ```csharp
@@ -546,7 +546,7 @@ namespace Example
 
             try
             {
-                // Get order events
+                // Get user events
                 RestApiEventSearchPaginationResult result = apiInstance.GetUserEvents(userId, limit, page, start, end, name);
                 Debug.WriteLine(result);
             }
@@ -589,7 +589,7 @@ Name | Type | Description  | Notes
 # **GetWhiteLabelEvents**
 > RestApiEventSearchPaginationResult GetWhiteLabelEvents (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
 
-Get White Label Events
+Get WhiteLabel events
 
 ### Example
 ```csharp
@@ -618,7 +618,7 @@ namespace Example
 
             try
             {
-                // Get White Label Events
+                // Get WhiteLabel events
                 RestApiEventSearchPaginationResult result = apiInstance.GetWhiteLabelEvents(whitelabelId, limit, page, start, end, name);
                 Debug.WriteLine(result);
             }

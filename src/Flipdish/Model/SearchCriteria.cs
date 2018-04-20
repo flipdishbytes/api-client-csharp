@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// SearchCriteria
+    /// Search Criteria
     /// </summary>
     [DataContract]
     public partial class SearchCriteria :  IEquatable<SearchCriteria>, IValidatableObject
@@ -33,11 +33,11 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchCriteria" /> class.
         /// </summary>
-        /// <param name="Limit">Limit.</param>
-        /// <param name="Page">Page.</param>
-        /// <param name="Start">Start.</param>
-        /// <param name="End">End.</param>
-        /// <param name="Name">Name.</param>
+        /// <param name="Limit">The maximum elements to return.</param>
+        /// <param name="Page">The index of the page to return, starting by 1.</param>
+        /// <param name="Start">Start date.</param>
+        /// <param name="End">End date.</param>
+        /// <param name="Name">Event names to filter in.</param>
         public SearchCriteria(int? Limit = default(int?), int? Page = default(int?), DateTime? Start = default(DateTime?), DateTime? End = default(DateTime?), List<string> Name = default(List<string>))
         {
             this.Limit = Limit;
@@ -48,32 +48,37 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Limit
+        /// The maximum elements to return
         /// </summary>
+        /// <value>The maximum elements to return</value>
         [DataMember(Name="limit", EmitDefaultValue=false)]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// Gets or Sets Page
+        /// The index of the page to return, starting by 1
         /// </summary>
+        /// <value>The index of the page to return, starting by 1</value>
         [DataMember(Name="page", EmitDefaultValue=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// Gets or Sets Start
+        /// Start date
         /// </summary>
+        /// <value>Start date</value>
         [DataMember(Name="start", EmitDefaultValue=false)]
         public DateTime? Start { get; set; }
 
         /// <summary>
-        /// Gets or Sets End
+        /// End date
         /// </summary>
+        /// <value>End date</value>
         [DataMember(Name="end", EmitDefaultValue=false)]
         public DateTime? End { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Event names to filter in
         /// </summary>
+        /// <value>Event names to filter in</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public List<string> Name { get; set; }
 

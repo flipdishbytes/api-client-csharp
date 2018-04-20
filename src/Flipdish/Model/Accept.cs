@@ -33,15 +33,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Accept" /> class.
         /// </summary>
-        /// <param name="EstimatedMinutesForDelivery">EstimatedMinutesForDelivery.</param>
+        /// <param name="EstimatedMinutesForDelivery">Estimated minutes for delivery.</param>
         public Accept(int? EstimatedMinutesForDelivery = default(int?))
         {
             this.EstimatedMinutesForDelivery = EstimatedMinutesForDelivery;
         }
         
         /// <summary>
-        /// Gets or Sets EstimatedMinutesForDelivery
+        /// Estimated minutes for delivery
         /// </summary>
+        /// <value>Estimated minutes for delivery</value>
         [DataMember(Name="estimatedMinutesForDelivery", EmitDefaultValue=false)]
         public int? EstimatedMinutesForDelivery { get; set; }
 

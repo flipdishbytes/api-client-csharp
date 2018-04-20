@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// DeliveryFeeArea
+    /// Delivery fee area
     /// </summary>
     [DataContract]
     public partial class DeliveryFeeArea :  IEquatable<DeliveryFeeArea>, IValidatableObject
@@ -33,8 +33,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DeliveryFeeArea" /> class.
         /// </summary>
-        /// <param name="DeliveryFee">DeliveryFee.</param>
-        /// <param name="MinimumDeliveryOrder">MinimumDeliveryOrder.</param>
+        /// <param name="DeliveryFee">Delivery fee.</param>
+        /// <param name="MinimumDeliveryOrder">Minimum delivery order amount.</param>
         public DeliveryFeeArea(double? DeliveryFee = default(double?), double? MinimumDeliveryOrder = default(double?))
         {
             this.DeliveryFee = DeliveryFee;
@@ -42,14 +42,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets DeliveryFee
+        /// Delivery fee
         /// </summary>
+        /// <value>Delivery fee</value>
         [DataMember(Name="deliveryFee", EmitDefaultValue=false)]
         public double? DeliveryFee { get; set; }
 
         /// <summary>
-        /// Gets or Sets MinimumDeliveryOrder
+        /// Minimum delivery order amount
         /// </summary>
+        /// <value>Minimum delivery order amount</value>
         [DataMember(Name="minimumDeliveryOrder", EmitDefaultValue=false)]
         public double? MinimumDeliveryOrder { get; set; }
 

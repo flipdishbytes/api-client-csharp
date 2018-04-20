@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// OAuthClient
+    /// Oauth client (also knowns as &#39;app&#39;)
     /// </summary>
     [DataContract]
     public partial class OAuthClient :  IEquatable<OAuthClient>, IValidatableObject
@@ -33,10 +33,10 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthClient" /> class.
         /// </summary>
-        /// <param name="ClientId">ClientId.</param>
-        /// <param name="ClientName">ClientName.</param>
-        /// <param name="OwnerUserId">OwnerUserId.</param>
-        /// <param name="LogoUri">LogoUri.</param>
+        /// <param name="ClientId">Oauth client identifier.</param>
+        /// <param name="ClientName">Oauth client name.</param>
+        /// <param name="OwnerUserId">Oauth client owner user identifier.</param>
+        /// <param name="LogoUri">Oauth client logo uri.</param>
         public OAuthClient(string ClientId = default(string), string ClientName = default(string), int? OwnerUserId = default(int?), string LogoUri = default(string))
         {
             this.ClientId = ClientId;
@@ -46,26 +46,30 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets ClientId
+        /// Oauth client identifier
         /// </summary>
+        /// <value>Oauth client identifier</value>
         [DataMember(Name="clientId", EmitDefaultValue=false)]
         public string ClientId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientName
+        /// Oauth client name
         /// </summary>
+        /// <value>Oauth client name</value>
         [DataMember(Name="clientName", EmitDefaultValue=false)]
         public string ClientName { get; set; }
 
         /// <summary>
-        /// Gets or Sets OwnerUserId
+        /// Oauth client owner user identifier
         /// </summary>
+        /// <value>Oauth client owner user identifier</value>
         [DataMember(Name="ownerUserId", EmitDefaultValue=false)]
         public int? OwnerUserId { get; set; }
 
         /// <summary>
-        /// Gets or Sets LogoUri
+        /// Oauth client logo uri
         /// </summary>
+        /// <value>Oauth client logo uri</value>
         [DataMember(Name="logoUri", EmitDefaultValue=false)]
         public string LogoUri { get; set; }
 
