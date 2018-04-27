@@ -51,35 +51,35 @@ namespace Flipdish.Model
         /// The event name
         /// </summary>
         /// <value>The event name</value>
-        [DataMember(Name="eventName", EmitDefaultValue=false)]
+        [DataMember(Name="EventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
 
         /// <summary>
         /// Webhook subscription details
         /// </summary>
         /// <value>Webhook subscription details</value>
-        [DataMember(Name="webhookSubscriptionEventInfo", EmitDefaultValue=false)]
+        [DataMember(Name="WebhookSubscriptionEventInfo", EmitDefaultValue=false)]
         public WebhookSubscriptionEventInfo WebhookSubscriptionEventInfo { get; set; }
 
         /// <summary>
         /// The identitfier of the event
         /// </summary>
         /// <value>The identitfier of the event</value>
-        [DataMember(Name="flipdishEventId", EmitDefaultValue=false)]
+        [DataMember(Name="FlipdishEventId", EmitDefaultValue=false)]
         public Guid? FlipdishEventId { get; set; }
 
         /// <summary>
         /// The time of creation of the event
         /// </summary>
         /// <value>The time of creation of the event</value>
-        [DataMember(Name="createTime", EmitDefaultValue=false)]
+        [DataMember(Name="CreateTime", EmitDefaultValue=false)]
         public DateTime? CreateTime { get; set; }
 
         /// <summary>
         /// Position
         /// </summary>
         /// <value>Position</value>
-        [DataMember(Name="position", EmitDefaultValue=false)]
+        [DataMember(Name="Position", EmitDefaultValue=false)]
         public int? Position { get; set; }
 
         /// <summary>

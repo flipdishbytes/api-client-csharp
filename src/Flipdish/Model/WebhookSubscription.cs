@@ -55,49 +55,49 @@ namespace Flipdish.Model
         /// Webhook subscription identifier
         /// </summary>
         /// <value>Webhook subscription identifier</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="Id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
         /// Webhook subscription owner user identifier
         /// </summary>
         /// <value>Webhook subscription owner user identifier</value>
-        [DataMember(Name="ownerUserId", EmitDefaultValue=false)]
+        [DataMember(Name="OwnerUserId", EmitDefaultValue=false)]
         public int? OwnerUserId { get; set; }
 
         /// <summary>
         /// Webhook subscription owner user identifier
         /// </summary>
         /// <value>Webhook subscription owner user identifier</value>
-        [DataMember(Name="version", EmitDefaultValue=false)]
+        [DataMember(Name="Version", EmitDefaultValue=false)]
         public string Version { get; set; }
 
         /// <summary>
         /// Webhook subscription event names
         /// </summary>
         /// <value>Webhook subscription event names</value>
-        [DataMember(Name="eventNames", EmitDefaultValue=false)]
+        [DataMember(Name="EventNames", EmitDefaultValue=false)]
         public List<string> EventNames { get; set; }
 
         /// <summary>
         /// Callback url. Flipdish system POST messages to this url.
         /// </summary>
         /// <value>Callback url. Flipdish system POST messages to this url.</value>
-        [DataMember(Name="callbackUrl", EmitDefaultValue=false)]
+        [DataMember(Name="CallbackUrl", EmitDefaultValue=false)]
         public string CallbackUrl { get; set; }
 
         /// <summary>
         /// Is webhook subscription enabled.
         /// </summary>
         /// <value>Is webhook subscription enabled.</value>
-        [DataMember(Name="enabled", EmitDefaultValue=false)]
+        [DataMember(Name="Enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
 
         /// <summary>
         /// This is your token which will be in the Header of each POST request from Flipdish with name: X-Verify-Token.
         /// </summary>
         /// <value>This is your token which will be in the Header of each POST request from Flipdish with name: X-Verify-Token.</value>
-        [DataMember(Name="verifyToken", EmitDefaultValue=false)]
+        [DataMember(Name="VerifyToken", EmitDefaultValue=false)]
         public string VerifyToken { get; set; }
 
         /// <summary>

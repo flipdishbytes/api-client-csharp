@@ -67,7 +67,7 @@ namespace Flipdish.Model
         /// Availability mode
         /// </summary>
         /// <value>Availability mode</value>
-        [DataMember(Name="availabilityMode", EmitDefaultValue=false)]
+        [DataMember(Name="AvailabilityMode", EmitDefaultValue=false)]
         public AvailabilityModeEnum? AvailabilityMode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuSectionAvailability" /> class.
@@ -84,7 +84,7 @@ namespace Flipdish.Model
         /// Available times
         /// </summary>
         /// <value>Available times</value>
-        [DataMember(Name="availableTimes", EmitDefaultValue=false)]
+        [DataMember(Name="AvailableTimes", EmitDefaultValue=false)]
         public List<BusinessHoursPeriod> AvailableTimes { get; set; }
 
 

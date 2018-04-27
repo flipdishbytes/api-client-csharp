@@ -61,7 +61,7 @@ namespace Flipdish.Model
         /// Small | Medium | Large  Affects the layout of the menu.
         /// </summary>
         /// <value>Small | Medium | Large  Affects the layout of the menu.</value>
-        [DataMember(Name="cellLayoutType", EmitDefaultValue=false)]
+        [DataMember(Name="CellLayoutType", EmitDefaultValue=false)]
         public CellLayoutTypeEnum? CellLayoutType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuItemOptionSetItem" /> class.
@@ -88,42 +88,42 @@ namespace Flipdish.Model
         /// Menu item option set item identifier
         /// </summary>
         /// <value>Menu item option set item identifier</value>
-        [DataMember(Name="menuItemOptionSetItemId", EmitDefaultValue=false)]
+        [DataMember(Name="MenuItemOptionSetItemId", EmitDefaultValue=false)]
         public int? MenuItemOptionSetItemId { get; set; }
 
         /// <summary>
         /// Image url
         /// </summary>
         /// <value>Image url</value>
-        [DataMember(Name="imageUrl", EmitDefaultValue=false)]
+        [DataMember(Name="ImageUrl", EmitDefaultValue=false)]
         public string ImageUrl { get; set; }
 
         /// <summary>
         /// Name
         /// </summary>
         /// <value>Name</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Price
         /// </summary>
         /// <value>Price</value>
-        [DataMember(Name="price", EmitDefaultValue=false)]
+        [DataMember(Name="Price", EmitDefaultValue=false)]
         public double? Price { get; set; }
 
         /// <summary>
         /// Is available
         /// </summary>
         /// <value>Is available</value>
-        [DataMember(Name="isAvailable", EmitDefaultValue=false)]
+        [DataMember(Name="IsAvailable", EmitDefaultValue=false)]
         public bool? IsAvailable { get; set; }
 
         /// <summary>
         /// Display order. Displayed in ascending order.
         /// </summary>
         /// <value>Display order. Displayed in ascending order.</value>
-        [DataMember(Name="displayOrder", EmitDefaultValue=false)]
+        [DataMember(Name="DisplayOrder", EmitDefaultValue=false)]
         public int? DisplayOrder { get; set; }
 
 

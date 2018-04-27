@@ -85,7 +85,7 @@ namespace Flipdish.Model
         /// Day of week
         /// </summary>
         /// <value>Day of week</value>
-        [DataMember(Name="dayOfWeek", EmitDefaultValue=false)]
+        [DataMember(Name="DayOfWeek", EmitDefaultValue=false)]
         public DayOfWeekEnum? DayOfWeek { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessHoursPeriod" /> class.
@@ -115,49 +115,49 @@ namespace Flipdish.Model
         /// Start time
         /// </summary>
         /// <value>Start time</value>
-        [DataMember(Name="startTime", EmitDefaultValue=false)]
+        [DataMember(Name="StartTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
 
         /// <summary>
         /// Period
         /// </summary>
         /// <value>Period</value>
-        [DataMember(Name="period", EmitDefaultValue=false)]
+        [DataMember(Name="Period", EmitDefaultValue=false)]
         public string Period { get; set; }
 
         /// <summary>
         /// Start time early
         /// </summary>
         /// <value>Start time early</value>
-        [DataMember(Name="startTimeEarly", EmitDefaultValue=false)]
+        [DataMember(Name="StartTimeEarly", EmitDefaultValue=false)]
         public string StartTimeEarly { get; set; }
 
         /// <summary>
         /// Period early
         /// </summary>
         /// <value>Period early</value>
-        [DataMember(Name="periodEarly", EmitDefaultValue=false)]
+        [DataMember(Name="PeriodEarly", EmitDefaultValue=false)]
         public string PeriodEarly { get; set; }
 
         /// <summary>
         /// Early
         /// </summary>
         /// <value>Early</value>
-        [DataMember(Name="early", EmitDefaultValue=false)]
+        [DataMember(Name="Early", EmitDefaultValue=false)]
         public Range Early { get; set; }
 
         /// <summary>
         /// Late
         /// </summary>
         /// <value>Late</value>
-        [DataMember(Name="late", EmitDefaultValue=false)]
+        [DataMember(Name="Late", EmitDefaultValue=false)]
         public Range Late { get; set; }
 
         /// <summary>
         /// Ranges
         /// </summary>
         /// <value>Ranges</value>
-        [DataMember(Name="ranges", EmitDefaultValue=false)]
+        [DataMember(Name="Ranges", EmitDefaultValue=false)]
         public List<Range> Ranges { get; set; }
 
         /// <summary>

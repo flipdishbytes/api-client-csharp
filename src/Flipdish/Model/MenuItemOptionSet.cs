@@ -61,7 +61,7 @@ namespace Flipdish.Model
         /// Small | Medium | Large  Affects the layout of the menu.
         /// </summary>
         /// <value>Small | Medium | Large  Affects the layout of the menu.</value>
-        [DataMember(Name="cellLayoutType", EmitDefaultValue=false)]
+        [DataMember(Name="CellLayoutType", EmitDefaultValue=false)]
         public CellLayoutTypeEnum? CellLayoutType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuItemOptionSet" /> class.
@@ -92,56 +92,56 @@ namespace Flipdish.Model
         /// Menu item option set identifier
         /// </summary>
         /// <value>Menu item option set identifier</value>
-        [DataMember(Name="menuItemOptionSetId", EmitDefaultValue=false)]
+        [DataMember(Name="MenuItemOptionSetId", EmitDefaultValue=false)]
         public int? MenuItemOptionSetId { get; set; }
 
         /// <summary>
         /// Image url
         /// </summary>
         /// <value>Image url</value>
-        [DataMember(Name="imageUrl", EmitDefaultValue=false)]
+        [DataMember(Name="ImageUrl", EmitDefaultValue=false)]
         public string ImageUrl { get; set; }
 
         /// <summary>
         /// Option set items
         /// </summary>
         /// <value>Option set items</value>
-        [DataMember(Name="menuItemOptionSetItems", EmitDefaultValue=false)]
+        [DataMember(Name="MenuItemOptionSetItems", EmitDefaultValue=false)]
         public List<MenuItemOptionSetItem> MenuItemOptionSetItems { get; set; }
 
         /// <summary>
         /// Menu item option set name
         /// </summary>
         /// <value>Menu item option set name</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Is master option set. This can affect the layout of the options in the menu displayed to the customer. Usually it is true if the option could be considerd a standalone item as opposed to an addition (\&quot;with ketchup\&quot;) or modifier (\&quot;large\&quot;).
         /// </summary>
         /// <value>Is master option set. This can affect the layout of the options in the menu displayed to the customer. Usually it is true if the option could be considerd a standalone item as opposed to an addition (\&quot;with ketchup\&quot;) or modifier (\&quot;large\&quot;).</value>
-        [DataMember(Name="isMasterOptionSet", EmitDefaultValue=false)]
+        [DataMember(Name="IsMasterOptionSet", EmitDefaultValue=false)]
         public bool? IsMasterOptionSet { get; set; }
 
         /// <summary>
         /// Display order. Displayed in ascending order.
         /// </summary>
         /// <value>Display order. Displayed in ascending order.</value>
-        [DataMember(Name="displayOrder", EmitDefaultValue=false)]
+        [DataMember(Name="DisplayOrder", EmitDefaultValue=false)]
         public int? DisplayOrder { get; set; }
 
         /// <summary>
         /// Minimum items must be selected
         /// </summary>
         /// <value>Minimum items must be selected</value>
-        [DataMember(Name="minSelectCount", EmitDefaultValue=false)]
+        [DataMember(Name="MinSelectCount", EmitDefaultValue=false)]
         public int? MinSelectCount { get; set; }
 
         /// <summary>
         /// Maximum number of items can be selected
         /// </summary>
         /// <value>Maximum number of items can be selected</value>
-        [DataMember(Name="maxSelectCount", EmitDefaultValue=false)]
+        [DataMember(Name="MaxSelectCount", EmitDefaultValue=false)]
         public int? MaxSelectCount { get; set; }
 
 

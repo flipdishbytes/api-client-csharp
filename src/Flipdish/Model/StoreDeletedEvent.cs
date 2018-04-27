@@ -55,49 +55,49 @@ namespace Flipdish.Model
         /// The event name
         /// </summary>
         /// <value>The event name</value>
-        [DataMember(Name="eventName", EmitDefaultValue=false)]
+        [DataMember(Name="EventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
 
         /// <summary>
         /// Store Id
         /// </summary>
         /// <value>Store Id</value>
-        [DataMember(Name="storeId", EmitDefaultValue=false)]
+        [DataMember(Name="StoreId", EmitDefaultValue=false)]
         public int? StoreId { get; set; }
 
         /// <summary>
         /// Info User
         /// </summary>
         /// <value>Info User</value>
-        [DataMember(Name="user", EmitDefaultValue=false)]
+        [DataMember(Name="User", EmitDefaultValue=false)]
         public UserEventInfo User { get; set; }
 
         /// <summary>
         /// Description
         /// </summary>
         /// <value>Description</value>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
         /// The identitfier of the event
         /// </summary>
         /// <value>The identitfier of the event</value>
-        [DataMember(Name="flipdishEventId", EmitDefaultValue=false)]
+        [DataMember(Name="FlipdishEventId", EmitDefaultValue=false)]
         public Guid? FlipdishEventId { get; set; }
 
         /// <summary>
         /// The time of creation of the event
         /// </summary>
         /// <value>The time of creation of the event</value>
-        [DataMember(Name="createTime", EmitDefaultValue=false)]
+        [DataMember(Name="CreateTime", EmitDefaultValue=false)]
         public DateTime? CreateTime { get; set; }
 
         /// <summary>
         /// Position
         /// </summary>
         /// <value>Position</value>
-        [DataMember(Name="position", EmitDefaultValue=false)]
+        [DataMember(Name="Position", EmitDefaultValue=false)]
         public int? Position { get; set; }
 
         /// <summary>

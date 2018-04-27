@@ -59,63 +59,63 @@ namespace Flipdish.Model
         /// Menu section identifier
         /// </summary>
         /// <value>Menu section identifier</value>
-        [DataMember(Name="menuSectionId", EmitDefaultValue=false)]
+        [DataMember(Name="MenuSectionId", EmitDefaultValue=false)]
         public int? MenuSectionId { get; set; }
 
         /// <summary>
         /// Image url
         /// </summary>
         /// <value>Image url</value>
-        [DataMember(Name="imageUrl", EmitDefaultValue=false)]
+        [DataMember(Name="ImageUrl", EmitDefaultValue=false)]
         public string ImageUrl { get; set; }
 
         /// <summary>
         /// Menu items
         /// </summary>
         /// <value>Menu items</value>
-        [DataMember(Name="menuItems", EmitDefaultValue=false)]
+        [DataMember(Name="MenuItems", EmitDefaultValue=false)]
         public List<MenuSectionItem> MenuItems { get; set; }
 
         /// <summary>
         /// Menu section availability
         /// </summary>
         /// <value>Menu section availability</value>
-        [DataMember(Name="menuSectionAvailability", EmitDefaultValue=false)]
+        [DataMember(Name="MenuSectionAvailability", EmitDefaultValue=false)]
         public MenuSectionAvailability MenuSectionAvailability { get; set; }
 
         /// <summary>
         /// Name
         /// </summary>
         /// <value>Name</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Description
         /// </summary>
         /// <value>Description</value>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
         /// Display order
         /// </summary>
         /// <value>Display order</value>
-        [DataMember(Name="displayOrder", EmitDefaultValue=false)]
+        [DataMember(Name="DisplayOrder", EmitDefaultValue=false)]
         public int? DisplayOrder { get; set; }
 
         /// <summary>
         /// Is available
         /// </summary>
         /// <value>Is available</value>
-        [DataMember(Name="isAvailable", EmitDefaultValue=false)]
+        [DataMember(Name="IsAvailable", EmitDefaultValue=false)]
         public bool? IsAvailable { get; set; }
 
         /// <summary>
         /// Is hidden from customer. Perhaps when the item is out of stock.
         /// </summary>
         /// <value>Is hidden from customer. Perhaps when the item is out of stock.</value>
-        [DataMember(Name="isHiddenFromCustomers", EmitDefaultValue=false)]
+        [DataMember(Name="IsHiddenFromCustomers", EmitDefaultValue=false)]
         public bool? IsHiddenFromCustomers { get; set; }
 
         /// <summary>

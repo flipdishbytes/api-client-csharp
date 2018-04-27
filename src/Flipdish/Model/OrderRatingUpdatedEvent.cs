@@ -34,16 +34,16 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="OrderRatingUpdatedEvent" /> class.
         /// </summary>
         /// <param name="EventName">The event name.</param>
-        /// <param name="NewUserRating">New User Rating.</param>
+        /// <param name="Rating">New User Rating.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Order">Order.</param>
         /// <param name="FlipdishEventId">The identitfier of the event.</param>
         /// <param name="CreateTime">The time of creation of the event.</param>
         /// <param name="Position">Position.</param>
-        public OrderRatingUpdatedEvent(string EventName = default(string), int? NewUserRating = default(int?), string Description = default(string), Order Order = default(Order), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        public OrderRatingUpdatedEvent(string EventName = default(string), int? Rating = default(int?), string Description = default(string), Order Order = default(Order), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
         {
             this.EventName = EventName;
-            this.NewUserRating = NewUserRating;
+            this.Rating = Rating;
             this.Description = Description;
             this.Order = Order;
             this.FlipdishEventId = FlipdishEventId;
@@ -55,49 +55,49 @@ namespace Flipdish.Model
         /// The event name
         /// </summary>
         /// <value>The event name</value>
-        [DataMember(Name="eventName", EmitDefaultValue=false)]
+        [DataMember(Name="EventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
 
         /// <summary>
         /// New User Rating
         /// </summary>
         /// <value>New User Rating</value>
-        [DataMember(Name="newUserRating", EmitDefaultValue=false)]
-        public int? NewUserRating { get; set; }
+        [DataMember(Name="Rating", EmitDefaultValue=false)]
+        public int? Rating { get; set; }
 
         /// <summary>
         /// Description
         /// </summary>
         /// <value>Description</value>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
         /// Order
         /// </summary>
         /// <value>Order</value>
-        [DataMember(Name="order", EmitDefaultValue=false)]
+        [DataMember(Name="Order", EmitDefaultValue=false)]
         public Order Order { get; set; }
 
         /// <summary>
         /// The identitfier of the event
         /// </summary>
         /// <value>The identitfier of the event</value>
-        [DataMember(Name="flipdishEventId", EmitDefaultValue=false)]
+        [DataMember(Name="FlipdishEventId", EmitDefaultValue=false)]
         public Guid? FlipdishEventId { get; set; }
 
         /// <summary>
         /// The time of creation of the event
         /// </summary>
         /// <value>The time of creation of the event</value>
-        [DataMember(Name="createTime", EmitDefaultValue=false)]
+        [DataMember(Name="CreateTime", EmitDefaultValue=false)]
         public DateTime? CreateTime { get; set; }
 
         /// <summary>
         /// Position
         /// </summary>
         /// <value>Position</value>
-        [DataMember(Name="position", EmitDefaultValue=false)]
+        [DataMember(Name="Position", EmitDefaultValue=false)]
         public int? Position { get; set; }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class OrderRatingUpdatedEvent {\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
-            sb.Append("  NewUserRating: ").Append(NewUserRating).Append("\n");
+            sb.Append("  Rating: ").Append(Rating).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
@@ -155,9 +155,9 @@ namespace Flipdish.Model
                     this.EventName.Equals(input.EventName))
                 ) && 
                 (
-                    this.NewUserRating == input.NewUserRating ||
-                    (this.NewUserRating != null &&
-                    this.NewUserRating.Equals(input.NewUserRating))
+                    this.Rating == input.Rating ||
+                    (this.Rating != null &&
+                    this.Rating.Equals(input.Rating))
                 ) && 
                 (
                     this.Description == input.Description ||
@@ -197,8 +197,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
-                if (this.NewUserRating != null)
-                    hashCode = hashCode * 59 + this.NewUserRating.GetHashCode();
+                if (this.Rating != null)
+                    hashCode = hashCode * 59 + this.Rating.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Order != null)

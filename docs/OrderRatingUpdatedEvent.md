@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EventName** | **string** | The event name | [optional] 
-**NewUserRating** | **int?** | New User Rating | [optional] 
+**Rating** | **int?** | New User Rating | [optional] 
 **Description** | **string** | Description | [optional] 
 **Order** | [**Order**](Order.md) | Order | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 

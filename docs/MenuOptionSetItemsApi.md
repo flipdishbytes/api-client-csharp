@@ -361,7 +361,7 @@ void (empty response body)
 
 <a name="updatemenuitemoptionsetitem"></a>
 # **UpdateMenuItemOptionSetItem**
-> void UpdateMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem)
+> void UpdateMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem, double? undoAfter)
 
 Update menu item option set item
 
@@ -389,11 +389,12 @@ namespace Example
             var optionSetId = 56;  // int? | Option set identifier
             var menuItemOptionSetItemId = 56;  // int? | Option set item identifier
             var menuItemOptionSetItem = new MenuItemOptionSetItemBase(); // MenuItemOptionSetItemBase | Option set item (delta)
+            var undoAfter = 1.2;  // double? | An optional time period, in hours, after which the hide-section operaton will be undone.
 
             try
             {
                 // Update menu item option set item
-                apiInstance.UpdateMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, menuItemOptionSetItem);
+                apiInstance.UpdateMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, menuItemOptionSetItem, undoAfter);
             }
             catch (Exception e)
             {
@@ -414,6 +415,7 @@ Name | Type | Description  | Notes
  **optionSetId** | **int?**| Option set identifier | 
  **menuItemOptionSetItemId** | **int?**| Option set item identifier | 
  **menuItemOptionSetItem** | [**MenuItemOptionSetItemBase**](MenuItemOptionSetItemBase.md)| Option set item (delta) | 
+ **undoAfter** | **double?**| An optional time period, in hours, after which the hide-section operaton will be undone. | 
 
 ### Return type
 

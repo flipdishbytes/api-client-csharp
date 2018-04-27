@@ -45,14 +45,14 @@ namespace Flipdish.Model
         /// Delivery fee
         /// </summary>
         /// <value>Delivery fee</value>
-        [DataMember(Name="deliveryFee", EmitDefaultValue=false)]
+        [DataMember(Name="DeliveryFee", EmitDefaultValue=false)]
         public double? DeliveryFee { get; set; }
 
         /// <summary>
         /// Minimum delivery order amount
         /// </summary>
         /// <value>Minimum delivery order amount</value>
-        [DataMember(Name="minimumDeliveryOrder", EmitDefaultValue=false)]
+        [DataMember(Name="MinimumDeliveryOrder", EmitDefaultValue=false)]
         public double? MinimumDeliveryOrder { get; set; }
 
         /// <summary>

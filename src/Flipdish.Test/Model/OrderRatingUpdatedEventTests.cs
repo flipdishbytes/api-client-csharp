@@ -75,12 +75,12 @@ namespace Flipdish.Test
             // TODO unit test for the property 'EventName'
         }
         /// <summary>
-        /// Test the property 'NewUserRating'
+        /// Test the property 'Rating'
         /// </summary>
         [Test]
-        public void NewUserRatingTest()
+        public void RatingTest()
         {
-            // TODO unit test for the property 'NewUserRating'
+            // TODO unit test for the property 'Rating'
         }
         /// <summary>
         /// Test the property 'Description'

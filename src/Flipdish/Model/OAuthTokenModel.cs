@@ -51,35 +51,35 @@ namespace Flipdish.Model
         /// Identitifier key
         /// </summary>
         /// <value>Identitifier key</value>
-        [DataMember(Name="key", EmitDefaultValue=false)]
+        [DataMember(Name="Key", EmitDefaultValue=false)]
         public string Key { get; set; }
 
         /// <summary>
         /// Token type
         /// </summary>
         /// <value>Token type</value>
-        [DataMember(Name="tokenType", EmitDefaultValue=false)]
+        [DataMember(Name="TokenType", EmitDefaultValue=false)]
         public string TokenType { get; set; }
 
         /// <summary>
         /// Oauth subject identifier
         /// </summary>
         /// <value>Oauth subject identifier</value>
-        [DataMember(Name="subjectId", EmitDefaultValue=false)]
+        [DataMember(Name="SubjectId", EmitDefaultValue=false)]
         public string SubjectId { get; set; }
 
         /// <summary>
         /// Oauth client identifier
         /// </summary>
         /// <value>Oauth client identifier</value>
-        [DataMember(Name="clientId", EmitDefaultValue=false)]
+        [DataMember(Name="ClientId", EmitDefaultValue=false)]
         public string ClientId { get; set; }
 
         /// <summary>
         /// Token expiry
         /// </summary>
         /// <value>Token expiry</value>
-        [DataMember(Name="expiry", EmitDefaultValue=false)]
+        [DataMember(Name="Expiry", EmitDefaultValue=false)]
         public DateTime? Expiry { get; set; }
 
         /// <summary>

@@ -33,56 +33,35 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Refund" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected Refund() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Refund" /> class.
-        /// </summary>
         /// <param name="RefundReason">Refund reason.</param>
-        /// <param name="RefundAmount">Refund amount (required).</param>
-        /// <param name="NotifyCustomer">If ture, the system sends notification to the customer about the refund (required).</param>
+        /// <param name="RefundAmount">Refund amount.</param>
+        /// <param name="NotifyCustomer">If ture, the system sends notification to the customer about the refund.</param>
         public Refund(string RefundReason = default(string), double? RefundAmount = default(double?), bool? NotifyCustomer = default(bool?))
         {
-            // to ensure "RefundAmount" is required (not null)
-            if (RefundAmount == null)
-            {
-                throw new InvalidDataException("RefundAmount is a required property for Refund and cannot be null");
-            }
-            else
-            {
-                this.RefundAmount = RefundAmount;
-            }
-            // to ensure "NotifyCustomer" is required (not null)
-            if (NotifyCustomer == null)
-            {
-                throw new InvalidDataException("NotifyCustomer is a required property for Refund and cannot be null");
-            }
-            else
-            {
-                this.NotifyCustomer = NotifyCustomer;
-            }
             this.RefundReason = RefundReason;
+            this.RefundAmount = RefundAmount;
+            this.NotifyCustomer = NotifyCustomer;
         }
         
         /// <summary>
         /// Refund reason
         /// </summary>
         /// <value>Refund reason</value>
-        [DataMember(Name="refundReason", EmitDefaultValue=false)]
+        [DataMember(Name="RefundReason", EmitDefaultValue=false)]
         public string RefundReason { get; set; }
 
         /// <summary>
         /// Refund amount
         /// </summary>
         /// <value>Refund amount</value>
-        [DataMember(Name="refundAmount", EmitDefaultValue=false)]
+        [DataMember(Name="RefundAmount", EmitDefaultValue=false)]
         public double? RefundAmount { get; set; }
 
         /// <summary>
         /// If ture, the system sends notification to the customer about the refund
         /// </summary>
         /// <value>If ture, the system sends notification to the customer about the refund</value>
-        [DataMember(Name="notifyCustomer", EmitDefaultValue=false)]
+        [DataMember(Name="NotifyCustomer", EmitDefaultValue=false)]
         public bool? NotifyCustomer { get; set; }
 
         /// <summary>

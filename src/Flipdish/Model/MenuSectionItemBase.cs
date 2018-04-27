@@ -67,8 +67,41 @@ namespace Flipdish.Model
         /// Spiciness rating
         /// </summary>
         /// <value>Spiciness rating</value>
-        [DataMember(Name="spicinessRating", EmitDefaultValue=false)]
+        [DataMember(Name="SpicinessRating", EmitDefaultValue=false)]
         public SpicinessRatingEnum? SpicinessRating { get; set; }
+        /// <summary>
+        /// Small | Medium | Large  Affects the layout of the menu.
+        /// </summary>
+        /// <value>Small | Medium | Large  Affects the layout of the menu.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CellLayoutTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Small for value: Small
+            /// </summary>
+            [EnumMember(Value = "Small")]
+            Small = 1,
+            
+            /// <summary>
+            /// Enum Medium for value: Medium
+            /// </summary>
+            [EnumMember(Value = "Medium")]
+            Medium = 2,
+            
+            /// <summary>
+            /// Enum Large for value: Large
+            /// </summary>
+            [EnumMember(Value = "Large")]
+            Large = 3
+        }
+
+        /// <summary>
+        /// Small | Medium | Large  Affects the layout of the menu.
+        /// </summary>
+        /// <value>Small | Medium | Large  Affects the layout of the menu.</value>
+        [DataMember(Name="CellLayoutType", EmitDefaultValue=false)]
+        public CellLayoutTypeEnum? CellLayoutType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuSectionItemBase" /> class.
         /// </summary>
@@ -79,7 +112,8 @@ namespace Flipdish.Model
         /// <param name="DisplayOrder">Display order.</param>
         /// <param name="Alcohol">To be set true if the item or an option of the item contains an alcoholic drink..</param>
         /// <param name="IsAvailable">True if we accept orders for this item still.</param>
-        public MenuSectionItemBase(string Name = default(string), string Description = default(string), SpicinessRatingEnum? SpicinessRating = default(SpicinessRatingEnum?), double? Price = default(double?), int? DisplayOrder = default(int?), bool? Alcohol = default(bool?), bool? IsAvailable = default(bool?))
+        /// <param name="CellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
+        public MenuSectionItemBase(string Name = default(string), string Description = default(string), SpicinessRatingEnum? SpicinessRating = default(SpicinessRatingEnum?), double? Price = default(double?), int? DisplayOrder = default(int?), bool? Alcohol = default(bool?), bool? IsAvailable = default(bool?), CellLayoutTypeEnum? CellLayoutType = default(CellLayoutTypeEnum?))
         {
             this.Name = Name;
             this.Description = Description;
@@ -88,20 +122,21 @@ namespace Flipdish.Model
             this.DisplayOrder = DisplayOrder;
             this.Alcohol = Alcohol;
             this.IsAvailable = IsAvailable;
+            this.CellLayoutType = CellLayoutType;
         }
         
         /// <summary>
         /// Menu item name (like \&quot;Korma\&quot;)
         /// </summary>
         /// <value>Menu item name (like \&quot;Korma\&quot;)</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Description (like \&quot;A lovely dish from the east\&quot;)
         /// </summary>
         /// <value>Description (like \&quot;A lovely dish from the east\&quot;)</value>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
 
@@ -109,29 +144,30 @@ namespace Flipdish.Model
         /// Price - this is only used when there is no master option set and should be set to 0 if a master option set exists.
         /// </summary>
         /// <value>Price - this is only used when there is no master option set and should be set to 0 if a master option set exists.</value>
-        [DataMember(Name="price", EmitDefaultValue=false)]
+        [DataMember(Name="Price", EmitDefaultValue=false)]
         public double? Price { get; set; }
 
         /// <summary>
         /// Display order
         /// </summary>
         /// <value>Display order</value>
-        [DataMember(Name="displayOrder", EmitDefaultValue=false)]
+        [DataMember(Name="DisplayOrder", EmitDefaultValue=false)]
         public int? DisplayOrder { get; set; }
 
         /// <summary>
         /// To be set true if the item or an option of the item contains an alcoholic drink.
         /// </summary>
         /// <value>To be set true if the item or an option of the item contains an alcoholic drink.</value>
-        [DataMember(Name="alcohol", EmitDefaultValue=false)]
+        [DataMember(Name="Alcohol", EmitDefaultValue=false)]
         public bool? Alcohol { get; set; }
 
         /// <summary>
         /// True if we accept orders for this item still
         /// </summary>
         /// <value>True if we accept orders for this item still</value>
-        [DataMember(Name="isAvailable", EmitDefaultValue=false)]
+        [DataMember(Name="IsAvailable", EmitDefaultValue=false)]
         public bool? IsAvailable { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -148,6 +184,7 @@ namespace Flipdish.Model
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
             sb.Append("  Alcohol: ").Append(Alcohol).Append("\n");
             sb.Append("  IsAvailable: ").Append(IsAvailable).Append("\n");
+            sb.Append("  CellLayoutType: ").Append(CellLayoutType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -216,6 +253,11 @@ namespace Flipdish.Model
                     this.IsAvailable == input.IsAvailable ||
                     (this.IsAvailable != null &&
                     this.IsAvailable.Equals(input.IsAvailable))
+                ) && 
+                (
+                    this.CellLayoutType == input.CellLayoutType ||
+                    (this.CellLayoutType != null &&
+                    this.CellLayoutType.Equals(input.CellLayoutType))
                 );
         }
 
@@ -242,6 +284,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Alcohol.GetHashCode();
                 if (this.IsAvailable != null)
                     hashCode = hashCode * 59 + this.IsAvailable.GetHashCode();
+                if (this.CellLayoutType != null)
+                    hashCode = hashCode * 59 + this.CellLayoutType.GetHashCode();
                 return hashCode;
             }
         }

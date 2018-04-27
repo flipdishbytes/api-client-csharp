@@ -55,7 +55,7 @@ namespace Flipdish.Model
         /// Printout layout
         /// </summary>
         /// <value>Printout layout</value>
-        [DataMember(Name="printoutLayoutType", EmitDefaultValue=false)]
+        [DataMember(Name="PrintoutLayoutType", EmitDefaultValue=false)]
         public PrintoutLayoutTypeEnum? PrintoutLayoutType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Store" /> class.
@@ -136,224 +136,224 @@ namespace Flipdish.Model
         /// Store identifier
         /// </summary>
         /// <value>Store identifier</value>
-        [DataMember(Name="storeId", EmitDefaultValue=false)]
+        [DataMember(Name="StoreId", EmitDefaultValue=false)]
         public int? StoreId { get; set; }
 
         /// <summary>
         /// Name
         /// </summary>
         /// <value>Name</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Automated Phone Marketing number
         /// </summary>
         /// <value>Automated Phone Marketing number</value>
-        [DataMember(Name="apmPhoneNumber", EmitDefaultValue=false)]
+        [DataMember(Name="ApmPhoneNumber", EmitDefaultValue=false)]
         public string ApmPhoneNumber { get; set; }
 
         /// <summary>
         /// Phone number
         /// </summary>
         /// <value>Phone number</value>
-        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
+        [DataMember(Name="PhoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
 
         /// <summary>
         /// Email address (visible to customers)
         /// </summary>
         /// <value>Email address (visible to customers)</value>
-        [DataMember(Name="emailAddress", EmitDefaultValue=false)]
+        [DataMember(Name="EmailAddress", EmitDefaultValue=false)]
         public string EmailAddress { get; set; }
 
         /// <summary>
         /// Store address
         /// </summary>
         /// <value>Store address</value>
-        [DataMember(Name="address", EmitDefaultValue=false)]
+        [DataMember(Name="Address", EmitDefaultValue=false)]
         public StoreAddress Address { get; set; }
 
         /// <summary>
         /// True if the store accepts pre-orders
         /// </summary>
         /// <value>True if the store accepts pre-orders</value>
-        [DataMember(Name="preOrderEnabled", EmitDefaultValue=false)]
+        [DataMember(Name="PreOrderEnabled", EmitDefaultValue=false)]
         public bool? PreOrderEnabled { get; set; }
 
         /// <summary>
         /// True if the store accepts take-out orders
         /// </summary>
         /// <value>True if the store accepts take-out orders</value>
-        [DataMember(Name="takeOutEnabled", EmitDefaultValue=false)]
+        [DataMember(Name="TakeOutEnabled", EmitDefaultValue=false)]
         public bool? TakeOutEnabled { get; set; }
 
         /// <summary>
         /// True if the store has table service
         /// </summary>
         /// <value>True if the store has table service</value>
-        [DataMember(Name="tableServiceEnabled", EmitDefaultValue=false)]
+        [DataMember(Name="TableServiceEnabled", EmitDefaultValue=false)]
         public bool? TableServiceEnabled { get; set; }
 
         /// <summary>
         /// True if the store accepts dine-in orders
         /// </summary>
         /// <value>True if the store accepts dine-in orders</value>
-        [DataMember(Name="dineInEnabled", EmitDefaultValue=false)]
+        [DataMember(Name="DineInEnabled", EmitDefaultValue=false)]
         public bool? DineInEnabled { get; set; }
 
         /// <summary>
         /// True if both pre-orders and talbe service can be enabled
         /// </summary>
         /// <value>True if both pre-orders and talbe service can be enabled</value>
-        [DataMember(Name="allowPreOrdersAndTableService", EmitDefaultValue=false)]
+        [DataMember(Name="AllowPreOrdersAndTableService", EmitDefaultValue=false)]
         public bool? AllowPreOrdersAndTableService { get; set; }
 
         /// <summary>
         /// True if the store accepts pickup orders
         /// </summary>
         /// <value>True if the store accepts pickup orders</value>
-        [DataMember(Name="pickupEnabled", EmitDefaultValue=false)]
+        [DataMember(Name="PickupEnabled", EmitDefaultValue=false)]
         public bool? PickupEnabled { get; set; }
 
         /// <summary>
         /// True if the store accepts delivery orders
         /// </summary>
         /// <value>True if the store accepts delivery orders</value>
-        [DataMember(Name="deliveryEnabled", EmitDefaultValue=false)]
+        [DataMember(Name="DeliveryEnabled", EmitDefaultValue=false)]
         public bool? DeliveryEnabled { get; set; }
 
         /// <summary>
         /// True if the store accepts card payment for delivery orders
         /// </summary>
         /// <value>True if the store accepts card payment for delivery orders</value>
-        [DataMember(Name="cardOrderDeliveryEnabled", EmitDefaultValue=false)]
+        [DataMember(Name="CardOrderDeliveryEnabled", EmitDefaultValue=false)]
         public bool? CardOrderDeliveryEnabled { get; set; }
 
         /// <summary>
         /// True if the store accepts cash payment for delivery orders
         /// </summary>
         /// <value>True if the store accepts cash payment for delivery orders</value>
-        [DataMember(Name="cashOrdersDeliveryEnabled", EmitDefaultValue=false)]
+        [DataMember(Name="CashOrdersDeliveryEnabled", EmitDefaultValue=false)]
         public bool? CashOrdersDeliveryEnabled { get; set; }
 
         /// <summary>
         /// True if the store accepts card payment for pickup orders
         /// </summary>
         /// <value>True if the store accepts card payment for pickup orders</value>
-        [DataMember(Name="cardOrdersPickupEnabled", EmitDefaultValue=false)]
+        [DataMember(Name="CardOrdersPickupEnabled", EmitDefaultValue=false)]
         public bool? CardOrdersPickupEnabled { get; set; }
 
         /// <summary>
         /// True if the store accepts cash payment for pickup orders
         /// </summary>
         /// <value>True if the store accepts cash payment for pickup orders</value>
-        [DataMember(Name="cashOrdersPickupEnabled", EmitDefaultValue=false)]
+        [DataMember(Name="CashOrdersPickupEnabled", EmitDefaultValue=false)]
         public bool? CashOrdersPickupEnabled { get; set; }
 
         /// <summary>
         /// True if the store accepts tips
         /// </summary>
         /// <value>True if the store accepts tips</value>
-        [DataMember(Name="tipsEnabled", EmitDefaultValue=false)]
+        [DataMember(Name="TipsEnabled", EmitDefaultValue=false)]
         public bool? TipsEnabled { get; set; }
 
         /// <summary>
         /// True if the stores orders are automatically accepted in Flipdish
         /// </summary>
         /// <value>True if the stores orders are automatically accepted in Flipdish</value>
-        [DataMember(Name="automaticallyAcceptOrders", EmitDefaultValue=false)]
+        [DataMember(Name="AutomaticallyAcceptOrders", EmitDefaultValue=false)]
         public bool? AutomaticallyAcceptOrders { get; set; }
 
         /// <summary>
         /// True if the store is open for delivery
         /// </summary>
         /// <value>True if the store is open for delivery</value>
-        [DataMember(Name="openForDelivery", EmitDefaultValue=false)]
+        [DataMember(Name="OpenForDelivery", EmitDefaultValue=false)]
         public bool? OpenForDelivery { get; set; }
 
         /// <summary>
         /// True if the store is open for pickup
         /// </summary>
         /// <value>True if the store is open for pickup</value>
-        [DataMember(Name="openForPickup", EmitDefaultValue=false)]
+        [DataMember(Name="OpenForPickup", EmitDefaultValue=false)]
         public bool? OpenForPickup { get; set; }
 
         /// <summary>
         /// Minimum pickup order amount
         /// </summary>
         /// <value>Minimum pickup order amount</value>
-        [DataMember(Name="minimumPickupOrderAmount", EmitDefaultValue=false)]
+        [DataMember(Name="MinimumPickupOrderAmount", EmitDefaultValue=false)]
         public double? MinimumPickupOrderAmount { get; set; }
 
         /// <summary>
         /// Delivery fee areas
         /// </summary>
         /// <value>Delivery fee areas</value>
-        [DataMember(Name="deliveryFeeAreas", EmitDefaultValue=false)]
+        [DataMember(Name="DeliveryFeeAreas", EmitDefaultValue=false)]
         public List<DeliveryFeeArea> DeliveryFeeAreas { get; set; }
 
         /// <summary>
         /// True if customer name required for pickup orders
         /// </summary>
         /// <value>True if customer name required for pickup orders</value>
-        [DataMember(Name="requireCustomerNameForPickup", EmitDefaultValue=false)]
+        [DataMember(Name="RequireCustomerNameForPickup", EmitDefaultValue=false)]
         public bool? RequireCustomerNameForPickup { get; set; }
 
         /// <summary>
         /// True if customer name required for delivery orders
         /// </summary>
         /// <value>True if customer name required for delivery orders</value>
-        [DataMember(Name="requireCustomerNameForDelivery", EmitDefaultValue=false)]
+        [DataMember(Name="RequireCustomerNameForDelivery", EmitDefaultValue=false)]
         public bool? RequireCustomerNameForDelivery { get; set; }
 
         /// <summary>
         /// Pickup hours
         /// </summary>
         /// <value>Pickup hours</value>
-        [DataMember(Name="pickupHours", EmitDefaultValue=false)]
+        [DataMember(Name="PickupHours", EmitDefaultValue=false)]
         public List<BusinessHoursPeriod> PickupHours { get; set; }
 
         /// <summary>
         /// Delivery hours
         /// </summary>
         /// <value>Delivery hours</value>
-        [DataMember(Name="deliveryHours", EmitDefaultValue=false)]
+        [DataMember(Name="DeliveryHours", EmitDefaultValue=false)]
         public List<BusinessHoursPeriod> DeliveryHours { get; set; }
 
         /// <summary>
         /// Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391)
         /// </summary>
         /// <value>Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391)</value>
-        [DataMember(Name="microsoftTimeZone", EmitDefaultValue=false)]
+        [DataMember(Name="MicrosoftTimeZone", EmitDefaultValue=false)]
         public string MicrosoftTimeZone { get; set; }
 
         /// <summary>
         /// IANA Time Zone (https://www.iana.org/time-zones)
         /// </summary>
         /// <value>IANA Time Zone (https://www.iana.org/time-zones)</value>
-        [DataMember(Name="ianaTimeZone", EmitDefaultValue=false)]
+        [DataMember(Name="IanaTimeZone", EmitDefaultValue=false)]
         public string IanaTimeZone { get; set; }
 
         /// <summary>
         /// Menu identifier
         /// </summary>
         /// <value>Menu identifier</value>
-        [DataMember(Name="menuId", EmitDefaultValue=false)]
+        [DataMember(Name="MenuId", EmitDefaultValue=false)]
         public int? MenuId { get; set; }
 
         /// <summary>
         /// Overridden confirmation message for delivery orders
         /// </summary>
         /// <value>Overridden confirmation message for delivery orders</value>
-        [DataMember(Name="orderConfirmationMessageOverrideDelivery", EmitDefaultValue=false)]
+        [DataMember(Name="OrderConfirmationMessageOverrideDelivery", EmitDefaultValue=false)]
         public string OrderConfirmationMessageOverrideDelivery { get; set; }
 
         /// <summary>
         /// Overridden confirmation message for pickup orders
         /// </summary>
         /// <value>Overridden confirmation message for pickup orders</value>
-        [DataMember(Name="orderConfirmationMessageOverridePickup", EmitDefaultValue=false)]
+        [DataMember(Name="OrderConfirmationMessageOverridePickup", EmitDefaultValue=false)]
         public string OrderConfirmationMessageOverridePickup { get; set; }
 
 
@@ -361,7 +361,7 @@ namespace Flipdish.Model
         /// Store notes
         /// </summary>
         /// <value>Store notes</value>
-        [DataMember(Name="storeNotes", EmitDefaultValue=false)]
+        [DataMember(Name="StoreNotes", EmitDefaultValue=false)]
         public List<StoreNote> StoreNotes { get; set; }
 
         /// <summary>

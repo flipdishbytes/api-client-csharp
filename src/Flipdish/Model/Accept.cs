@@ -43,7 +43,7 @@ namespace Flipdish.Model
         /// Estimated minutes for delivery
         /// </summary>
         /// <value>Estimated minutes for delivery</value>
-        [DataMember(Name="estimatedMinutesForDelivery", EmitDefaultValue=false)]
+        [DataMember(Name="EstimatedMinutesForDelivery", EmitDefaultValue=false)]
         public int? EstimatedMinutesForDelivery { get; set; }
 
         /// <summary>

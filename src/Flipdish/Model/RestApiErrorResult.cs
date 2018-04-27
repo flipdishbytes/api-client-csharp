@@ -33,24 +33,11 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiErrorResult" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected RestApiErrorResult() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiErrorResult" /> class.
-        /// </summary>
-        /// <param name="Message">Error message (required).</param>
+        /// <param name="Message">Error message.</param>
         /// <param name="Errors">List of errors grouped by field name.</param>
         public RestApiErrorResult(string Message = default(string), List<ValidationErrorResult> Errors = default(List<ValidationErrorResult>))
         {
-            // to ensure "Message" is required (not null)
-            if (Message == null)
-            {
-                throw new InvalidDataException("Message is a required property for RestApiErrorResult and cannot be null");
-            }
-            else
-            {
-                this.Message = Message;
-            }
+            this.Message = Message;
             this.Errors = Errors;
         }
         
@@ -58,14 +45,14 @@ namespace Flipdish.Model
         /// Error message
         /// </summary>
         /// <value>Error message</value>
-        [DataMember(Name="message", EmitDefaultValue=false)]
+        [DataMember(Name="Message", EmitDefaultValue=false)]
         public string Message { get; set; }
 
         /// <summary>
         /// List of errors grouped by field name
         /// </summary>
         /// <value>List of errors grouped by field name</value>
-        [DataMember(Name="errors", EmitDefaultValue=false)]
+        [DataMember(Name="Errors", EmitDefaultValue=false)]
         public List<ValidationErrorResult> Errors { get; set; }
 
         /// <summary>

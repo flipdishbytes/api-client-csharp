@@ -51,35 +51,35 @@ namespace Flipdish.Model
         /// Name
         /// </summary>
         /// <value>Name</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Description
         /// </summary>
         /// <value>Description</value>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
         /// Display order
         /// </summary>
         /// <value>Display order</value>
-        [DataMember(Name="displayOrder", EmitDefaultValue=false)]
+        [DataMember(Name="DisplayOrder", EmitDefaultValue=false)]
         public int? DisplayOrder { get; set; }
 
         /// <summary>
         /// Is available
         /// </summary>
         /// <value>Is available</value>
-        [DataMember(Name="isAvailable", EmitDefaultValue=false)]
+        [DataMember(Name="IsAvailable", EmitDefaultValue=false)]
         public bool? IsAvailable { get; set; }
 
         /// <summary>
         /// Is hidden from customer. Perhaps when the item is out of stock.
         /// </summary>
         /// <value>Is hidden from customer. Perhaps when the item is out of stock.</value>
-        [DataMember(Name="isHiddenFromCustomers", EmitDefaultValue=false)]
+        [DataMember(Name="IsHiddenFromCustomers", EmitDefaultValue=false)]
         public bool? IsHiddenFromCustomers { get; set; }
 
         /// <summary>

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **DisplayOrder** | **int?** | Display order | [optional] 
 **Alcohol** | **bool?** | To be set true if the item or an option of the item contains an alcoholic drink. | [optional] 
 **IsAvailable** | **bool?** | True if we accept orders for this item still | [optional] 
+**CellLayoutType** | **string** | Small | Medium | Large  Affects the layout of the menu. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

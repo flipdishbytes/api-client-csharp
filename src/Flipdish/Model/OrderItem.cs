@@ -63,77 +63,77 @@ namespace Flipdish.Model
         /// Option list
         /// </summary>
         /// <value>Option list</value>
-        [DataMember(Name="orderItemOptions", EmitDefaultValue=false)]
+        [DataMember(Name="OrderItemOptions", EmitDefaultValue=false)]
         public List<OrderItemOption> OrderItemOptions { get; set; }
 
         /// <summary>
         /// Metadata
         /// </summary>
         /// <value>Metadata</value>
-        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        [DataMember(Name="Metadata", EmitDefaultValue=false)]
         public Dictionary<string, string> Metadata { get; set; }
 
         /// <summary>
         /// Menu section name
         /// </summary>
         /// <value>Menu section name</value>
-        [DataMember(Name="menuSectionName", EmitDefaultValue=false)]
+        [DataMember(Name="MenuSectionName", EmitDefaultValue=false)]
         public string MenuSectionName { get; set; }
 
         /// <summary>
         /// Menu section display order
         /// </summary>
         /// <value>Menu section display order</value>
-        [DataMember(Name="menuSectionDisplayOrder", EmitDefaultValue=false)]
+        [DataMember(Name="MenuSectionDisplayOrder", EmitDefaultValue=false)]
         public int? MenuSectionDisplayOrder { get; set; }
 
         /// <summary>
         /// Name
         /// </summary>
         /// <value>Name</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Description
         /// </summary>
         /// <value>Description</value>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
         /// Price
         /// </summary>
         /// <value>Price</value>
-        [DataMember(Name="price", EmitDefaultValue=false)]
+        [DataMember(Name="Price", EmitDefaultValue=false)]
         public double? Price { get; set; }
 
         /// <summary>
         /// Price including option set items
         /// </summary>
         /// <value>Price including option set items</value>
-        [DataMember(Name="priceIncludingOptionSetItems", EmitDefaultValue=false)]
+        [DataMember(Name="PriceIncludingOptionSetItems", EmitDefaultValue=false)]
         public double? PriceIncludingOptionSetItems { get; set; }
 
         /// <summary>
         /// Menu item identifier
         /// </summary>
         /// <value>Menu item identifier</value>
-        [DataMember(Name="menuItemId", EmitDefaultValue=false)]
+        [DataMember(Name="MenuItemId", EmitDefaultValue=false)]
         public int? MenuItemId { get; set; }
 
         /// <summary>
         /// Menu item display order
         /// </summary>
         /// <value>Menu item display order</value>
-        [DataMember(Name="menuItemDisplayOrder", EmitDefaultValue=false)]
+        [DataMember(Name="MenuItemDisplayOrder", EmitDefaultValue=false)]
         public int? MenuItemDisplayOrder { get; set; }
 
         /// <summary>
         /// Is available
         /// </summary>
         /// <value>Is available</value>
-        [DataMember(Name="isAvailable", EmitDefaultValue=false)]
+        [DataMember(Name="IsAvailable", EmitDefaultValue=false)]
         public bool? IsAvailable { get; set; }
 
         /// <summary>

@@ -33,30 +33,17 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiResultMenu" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected RestApiResultMenu() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiResultMenu" /> class.
-        /// </summary>
-        /// <param name="Data">Generic data object. (required).</param>
+        /// <param name="Data">Generic data object..</param>
         public RestApiResultMenu(Menu Data = default(Menu))
         {
-            // to ensure "Data" is required (not null)
-            if (Data == null)
-            {
-                throw new InvalidDataException("Data is a required property for RestApiResultMenu and cannot be null");
-            }
-            else
-            {
-                this.Data = Data;
-            }
+            this.Data = Data;
         }
         
         /// <summary>
         /// Generic data object.
         /// </summary>
         /// <value>Generic data object.</value>
-        [DataMember(Name="data", EmitDefaultValue=false)]
+        [DataMember(Name="Data", EmitDefaultValue=false)]
         public Menu Data { get; set; }
 
         /// <summary>

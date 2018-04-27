@@ -81,140 +81,140 @@ namespace Flipdish.Model
         /// Order accepted events
         /// </summary>
         /// <value>Order accepted events</value>
-        [DataMember(Name="orderAcceptedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="OrderAcceptedEvent", EmitDefaultValue=false)]
         public List<OrderAcceptedEvent> OrderAcceptedEvent { get; set; }
 
         /// <summary>
         /// Order created events
         /// </summary>
         /// <value>Order created events</value>
-        [DataMember(Name="orderCreatedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="OrderCreatedEvent", EmitDefaultValue=false)]
         public List<OrderCreatedEvent> OrderCreatedEvent { get; set; }
 
         /// <summary>
         /// Order rating updated events
         /// </summary>
         /// <value>Order rating updated events</value>
-        [DataMember(Name="orderRatingUpdatedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="OrderRatingUpdatedEvent", EmitDefaultValue=false)]
         public List<OrderRatingUpdatedEvent> OrderRatingUpdatedEvent { get; set; }
 
         /// <summary>
         /// Order refunded events
         /// </summary>
         /// <value>Order refunded events</value>
-        [DataMember(Name="orderRefundedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="OrderRefundedEvent", EmitDefaultValue=false)]
         public List<OrderRefundedEvent> OrderRefundedEvent { get; set; }
 
         /// <summary>
         /// Order rejected events
         /// </summary>
         /// <value>Order rejected events</value>
-        [DataMember(Name="orderRejectedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="OrderRejectedEvent", EmitDefaultValue=false)]
         public List<OrderRejectedEvent> OrderRejectedEvent { get; set; }
 
         /// <summary>
         /// Order tip updated events
         /// </summary>
         /// <value>Order tip updated events</value>
-        [DataMember(Name="orderTipUpdatedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="OrderTipUpdatedEvent", EmitDefaultValue=false)]
         public List<OrderTipUpdatedEvent> OrderTipUpdatedEvent { get; set; }
 
         /// <summary>
         /// Store created events
         /// </summary>
         /// <value>Store created events</value>
-        [DataMember(Name="storeCreatedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="StoreCreatedEvent", EmitDefaultValue=false)]
         public List<StoreCreatedEvent> StoreCreatedEvent { get; set; }
 
         /// <summary>
         /// Store deleted events
         /// </summary>
         /// <value>Store deleted events</value>
-        [DataMember(Name="storeDeletedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="StoreDeletedEvent", EmitDefaultValue=false)]
         public List<StoreDeletedEvent> StoreDeletedEvent { get; set; }
 
         /// <summary>
         /// Store delivery zone updated events
         /// </summary>
         /// <value>Store delivery zone updated events</value>
-        [DataMember(Name="storeDeliveryZoneUpdatedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="StoreDeliveryZoneUpdatedEvent", EmitDefaultValue=false)]
         public List<StoreDeliveryZoneUpdatedEvent> StoreDeliveryZoneUpdatedEvent { get; set; }
 
         /// <summary>
         /// Store opening hours updated events
         /// </summary>
         /// <value>Store opening hours updated events</value>
-        [DataMember(Name="storeOpeningHoursUpdatedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="StoreOpeningHoursUpdatedEvent", EmitDefaultValue=false)]
         public List<StoreOpeningHoursUpdatedEvent> StoreOpeningHoursUpdatedEvent { get; set; }
 
         /// <summary>
         /// Store updated events
         /// </summary>
         /// <value>Store updated events</value>
-        [DataMember(Name="storeUpdatedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="StoreUpdatedEvent", EmitDefaultValue=false)]
         public List<StoreUpdatedEvent> StoreUpdatedEvent { get; set; }
 
         /// <summary>
         /// Menu created events
         /// </summary>
         /// <value>Menu created events</value>
-        [DataMember(Name="menuCreatedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="MenuCreatedEvent", EmitDefaultValue=false)]
         public List<MenuCreatedEvent> MenuCreatedEvent { get; set; }
 
         /// <summary>
         /// Menu updated events
         /// </summary>
         /// <value>Menu updated events</value>
-        [DataMember(Name="menuUpdatedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="MenuUpdatedEvent", EmitDefaultValue=false)]
         public List<MenuUpdatedEvent> MenuUpdatedEvent { get; set; }
 
         /// <summary>
         /// Customer created events
         /// </summary>
         /// <value>Customer created events</value>
-        [DataMember(Name="customerCreatedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="CustomerCreatedEvent", EmitDefaultValue=false)]
         public List<CustomerCreatedEvent> CustomerCreatedEvent { get; set; }
 
         /// <summary>
         /// Customer updated events
         /// </summary>
         /// <value>Customer updated events</value>
-        [DataMember(Name="customerUpdatedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="CustomerUpdatedEvent", EmitDefaultValue=false)]
         public List<CustomerUpdatedEvent> CustomerUpdatedEvent { get; set; }
 
         /// <summary>
         /// Customer consent updated events
         /// </summary>
         /// <value>Customer consent updated events</value>
-        [DataMember(Name="customerConsentUpdatedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="CustomerConsentUpdatedEvent", EmitDefaultValue=false)]
         public List<CustomerConsentUpdatedEvent> CustomerConsentUpdatedEvent { get; set; }
 
         /// <summary>
         /// Campaign created events
         /// </summary>
         /// <value>Campaign created events</value>
-        [DataMember(Name="campaignCreatedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="CampaignCreatedEvent", EmitDefaultValue=false)]
         public List<CampaignCreatedEvent> CampaignCreatedEvent { get; set; }
 
         /// <summary>
         /// Webhook subscription created events
         /// </summary>
         /// <value>Webhook subscription created events</value>
-        [DataMember(Name="webhookSubscriptionCreatedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="WebhookSubscriptionCreatedEvent", EmitDefaultValue=false)]
         public List<WebhookSubscriptionCreatedEvent> WebhookSubscriptionCreatedEvent { get; set; }
 
         /// <summary>
         /// Webhook subscription updated events
         /// </summary>
         /// <value>Webhook subscription updated events</value>
-        [DataMember(Name="webhookSubscriptionUpdatedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="WebhookSubscriptionUpdatedEvent", EmitDefaultValue=false)]
         public List<WebhookSubscriptionUpdatedEvent> WebhookSubscriptionUpdatedEvent { get; set; }
 
         /// <summary>
         /// Webhook subscription deleted events
         /// </summary>
         /// <value>Webhook subscription deleted events</value>
-        [DataMember(Name="webhookSubscriptionDeletedEvent", EmitDefaultValue=false)]
+        [DataMember(Name="WebhookSubscriptionDeletedEvent", EmitDefaultValue=false)]
         public List<WebhookSubscriptionDeletedEvent> WebhookSubscriptionDeletedEvent { get; set; }
 
         /// <summary>

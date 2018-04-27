@@ -55,49 +55,49 @@ namespace Flipdish.Model
         /// Metadata
         /// </summary>
         /// <value>Metadata</value>
-        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        [DataMember(Name="Metadata", EmitDefaultValue=false)]
         public Dictionary<string, string> Metadata { get; set; }
 
         /// <summary>
         /// Menu item option identifier
         /// </summary>
         /// <value>Menu item option identifier</value>
-        [DataMember(Name="menuItemOptionId", EmitDefaultValue=false)]
+        [DataMember(Name="MenuItemOptionId", EmitDefaultValue=false)]
         public int? MenuItemOptionId { get; set; }
 
         /// <summary>
         /// Is master option set item
         /// </summary>
         /// <value>Is master option set item</value>
-        [DataMember(Name="isMasterOptionSetItem", EmitDefaultValue=false)]
+        [DataMember(Name="IsMasterOptionSetItem", EmitDefaultValue=false)]
         public bool? IsMasterOptionSetItem { get; set; }
 
         /// <summary>
         /// Name
         /// </summary>
         /// <value>Name</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Price
         /// </summary>
         /// <value>Price</value>
-        [DataMember(Name="price", EmitDefaultValue=false)]
+        [DataMember(Name="Price", EmitDefaultValue=false)]
         public double? Price { get; set; }
 
         /// <summary>
         /// Menu item option display order
         /// </summary>
         /// <value>Menu item option display order</value>
-        [DataMember(Name="menuItemOptionDisplayOrder", EmitDefaultValue=false)]
+        [DataMember(Name="MenuItemOptionDisplayOrder", EmitDefaultValue=false)]
         public int? MenuItemOptionDisplayOrder { get; set; }
 
         /// <summary>
         /// Menu item option set display order
         /// </summary>
         /// <value>Menu item option set display order</value>
-        [DataMember(Name="menuItemOptionSetDisplayOrder", EmitDefaultValue=false)]
+        [DataMember(Name="MenuItemOptionSetDisplayOrder", EmitDefaultValue=false)]
         public int? MenuItemOptionSetDisplayOrder { get; set; }
 
         /// <summary>

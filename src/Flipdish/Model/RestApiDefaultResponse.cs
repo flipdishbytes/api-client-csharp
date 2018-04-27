@@ -42,7 +42,7 @@ namespace Flipdish.Model
         /// Data string
         /// </summary>
         /// <value>Data string</value>
-        [DataMember(Name="data", EmitDefaultValue=false)]
+        [DataMember(Name="Data", EmitDefaultValue=false)]
         public string Data { get; private set; }
 
         /// <summary>

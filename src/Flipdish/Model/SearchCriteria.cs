@@ -51,35 +51,35 @@ namespace Flipdish.Model
         /// The maximum elements to return
         /// </summary>
         /// <value>The maximum elements to return</value>
-        [DataMember(Name="limit", EmitDefaultValue=false)]
+        [DataMember(Name="Limit", EmitDefaultValue=false)]
         public int? Limit { get; set; }
 
         /// <summary>
         /// The index of the page to return, starting by 1
         /// </summary>
         /// <value>The index of the page to return, starting by 1</value>
-        [DataMember(Name="page", EmitDefaultValue=false)]
+        [DataMember(Name="Page", EmitDefaultValue=false)]
         public int? Page { get; set; }
 
         /// <summary>
         /// Start date
         /// </summary>
         /// <value>Start date</value>
-        [DataMember(Name="start", EmitDefaultValue=false)]
+        [DataMember(Name="Start", EmitDefaultValue=false)]
         public DateTime? Start { get; set; }
 
         /// <summary>
         /// End date
         /// </summary>
         /// <value>End date</value>
-        [DataMember(Name="end", EmitDefaultValue=false)]
+        [DataMember(Name="End", EmitDefaultValue=false)]
         public DateTime? End { get; set; }
 
         /// <summary>
         /// Event names to filter in
         /// </summary>
         /// <value>Event names to filter in</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="Name", EmitDefaultValue=false)]
         public List<string> Name { get; set; }
 
         /// <summary>

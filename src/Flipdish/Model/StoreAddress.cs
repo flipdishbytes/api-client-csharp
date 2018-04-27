@@ -55,49 +55,49 @@ namespace Flipdish.Model
         /// Address identifier
         /// </summary>
         /// <value>Address identifier</value>
-        [DataMember(Name="addressId", EmitDefaultValue=false)]
+        [DataMember(Name="AddressId", EmitDefaultValue=false)]
         public int? AddressId { get; set; }
 
         /// <summary>
         /// Address line 1
         /// </summary>
         /// <value>Address line 1</value>
-        [DataMember(Name="line1", EmitDefaultValue=false)]
+        [DataMember(Name="Line1", EmitDefaultValue=false)]
         public string Line1 { get; set; }
 
         /// <summary>
         /// Postcode
         /// </summary>
         /// <value>Postcode</value>
-        [DataMember(Name="postcode", EmitDefaultValue=false)]
+        [DataMember(Name="Postcode", EmitDefaultValue=false)]
         public string Postcode { get; set; }
 
         /// <summary>
         /// City
         /// </summary>
         /// <value>City</value>
-        [DataMember(Name="city", EmitDefaultValue=false)]
+        [DataMember(Name="City", EmitDefaultValue=false)]
         public string City { get; set; }
 
         /// <summary>
         /// Country code (ISO-alpha2)
         /// </summary>
         /// <value>Country code (ISO-alpha2)</value>
-        [DataMember(Name="countryCode", EmitDefaultValue=false)]
+        [DataMember(Name="CountryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
 
         /// <summary>
         /// Display for customer
         /// </summary>
         /// <value>Display for customer</value>
-        [DataMember(Name="displayForCustomer", EmitDefaultValue=false)]
+        [DataMember(Name="DisplayForCustomer", EmitDefaultValue=false)]
         public string DisplayForCustomer { get; set; }
 
         /// <summary>
         /// Coordinate
         /// </summary>
         /// <value>Coordinate</value>
-        [DataMember(Name="coordinates", EmitDefaultValue=false)]
+        [DataMember(Name="Coordinates", EmitDefaultValue=false)]
         public Coordinates Coordinates { get; set; }
 
         /// <summary>

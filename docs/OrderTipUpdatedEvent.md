@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EventName** | **string** | The event name | [optional] 
-**NewTipAmount** | **double?** | Tip Amount | [optional] 
+**TipAmount** | **double?** | Tip Amount | [optional] 
 **Description** | **string** | Description | [optional] 
 **Order** | [**Order**](Order.md) | Order | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 

@@ -49,28 +49,28 @@ namespace Flipdish.Model
         /// User Id
         /// </summary>
         /// <value>User Id</value>
-        [DataMember(Name="userId", EmitDefaultValue=false)]
+        [DataMember(Name="UserId", EmitDefaultValue=false)]
         public int? UserId { get; set; }
 
         /// <summary>
         /// UserName
         /// </summary>
         /// <value>UserName</value>
-        [DataMember(Name="userName", EmitDefaultValue=false)]
+        [DataMember(Name="UserName", EmitDefaultValue=false)]
         public string UserName { get; set; }
 
         /// <summary>
         /// User Phone Number
         /// </summary>
         /// <value>User Phone Number</value>
-        [DataMember(Name="userPhoneNumber", EmitDefaultValue=false)]
+        [DataMember(Name="UserPhoneNumber", EmitDefaultValue=false)]
         public string UserPhoneNumber { get; set; }
 
         /// <summary>
         /// User Email
         /// </summary>
         /// <value>User Email</value>
-        [DataMember(Name="userEmail", EmitDefaultValue=false)]
+        [DataMember(Name="UserEmail", EmitDefaultValue=false)]
         public string UserEmail { get; set; }
 
         /// <summary>

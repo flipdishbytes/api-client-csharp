@@ -49,28 +49,28 @@ namespace Flipdish.Model
         /// Webhook subscription owner user identifier
         /// </summary>
         /// <value>Webhook subscription owner user identifier</value>
-        [DataMember(Name="ownerUserId", EmitDefaultValue=false)]
+        [DataMember(Name="OwnerUserId", EmitDefaultValue=false)]
         public int? OwnerUserId { get; set; }
 
         /// <summary>
         /// Webhook subscription identifier
         /// </summary>
         /// <value>Webhook subscription identifier</value>
-        [DataMember(Name="webhookSubscriptionId", EmitDefaultValue=false)]
+        [DataMember(Name="WebhookSubscriptionId", EmitDefaultValue=false)]
         public int? WebhookSubscriptionId { get; set; }
 
         /// <summary>
         /// Oauth client identifier
         /// </summary>
         /// <value>Oauth client identifier</value>
-        [DataMember(Name="clientId", EmitDefaultValue=false)]
+        [DataMember(Name="ClientId", EmitDefaultValue=false)]
         public string ClientId { get; set; }
 
         /// <summary>
         /// Webhook callback url
         /// </summary>
         /// <value>Webhook callback url</value>
-        [DataMember(Name="callbackUrl", EmitDefaultValue=false)]
+        [DataMember(Name="CallbackUrl", EmitDefaultValue=false)]
         public string CallbackUrl { get; set; }
 
         /// <summary>

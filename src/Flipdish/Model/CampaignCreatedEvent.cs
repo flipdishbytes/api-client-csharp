@@ -55,46 +55,46 @@ namespace Flipdish.Model
         /// The event name
         /// </summary>
         /// <value>The event name</value>
-        [DataMember(Name="eventName", EmitDefaultValue=false)]
+        [DataMember(Name="EventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
 
         /// <summary>
         /// Gets or Sets CampaignId
         /// </summary>
-        [DataMember(Name="campaignId", EmitDefaultValue=false)]
+        [DataMember(Name="CampaignId", EmitDefaultValue=false)]
         public int? CampaignId { get; set; }
 
         /// <summary>
         /// Gets or Sets VirtualRestaurantName
         /// </summary>
-        [DataMember(Name="virtualRestaurantName", EmitDefaultValue=false)]
+        [DataMember(Name="VirtualRestaurantName", EmitDefaultValue=false)]
         public string VirtualRestaurantName { get; set; }
 
         /// <summary>
         /// Gets or Sets VirtualRestaurantId
         /// </summary>
-        [DataMember(Name="virtualRestaurantId", EmitDefaultValue=false)]
+        [DataMember(Name="VirtualRestaurantId", EmitDefaultValue=false)]
         public int? VirtualRestaurantId { get; set; }
 
         /// <summary>
         /// The identitfier of the event
         /// </summary>
         /// <value>The identitfier of the event</value>
-        [DataMember(Name="flipdishEventId", EmitDefaultValue=false)]
+        [DataMember(Name="FlipdishEventId", EmitDefaultValue=false)]
         public Guid? FlipdishEventId { get; set; }
 
         /// <summary>
         /// The time of creation of the event
         /// </summary>
         /// <value>The time of creation of the event</value>
-        [DataMember(Name="createTime", EmitDefaultValue=false)]
+        [DataMember(Name="CreateTime", EmitDefaultValue=false)]
         public DateTime? CreateTime { get; set; }
 
         /// <summary>
         /// Position
         /// </summary>
         /// <value>Position</value>
-        [DataMember(Name="position", EmitDefaultValue=false)]
+        [DataMember(Name="Position", EmitDefaultValue=false)]
         public int? Position { get; set; }
 
         /// <summary>

@@ -45,14 +45,14 @@ namespace Flipdish.Model
         /// Redirect uri identifier
         /// </summary>
         /// <value>Redirect uri identifier</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="Id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
         /// Redirect uri
         /// </summary>
         /// <value>Redirect uri</value>
-        [DataMember(Name="uri", EmitDefaultValue=false)]
+        [DataMember(Name="Uri", EmitDefaultValue=false)]
         public string Uri { get; set; }
 
         /// <summary>

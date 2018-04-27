@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **AutoApply** | **bool?** | Auto apply | [optional] 
 **AutoApplyOrder** | **int?** | Auto apply order.  Lower numbers get applied first. | [optional] 
 **IncludeDeliveryFee** | **bool?** | Include delivery fee | [optional] 
-**Code** | **string** | Voucher code | 
+**Code** | **string** | Voucher code | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

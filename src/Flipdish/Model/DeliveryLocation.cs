@@ -55,49 +55,49 @@ namespace Flipdish.Model
         /// Geo cordinate
         /// </summary>
         /// <value>Geo cordinate</value>
-        [DataMember(Name="coordinates", EmitDefaultValue=false)]
+        [DataMember(Name="Coordinates", EmitDefaultValue=false)]
         public Coordinates Coordinates { get; set; }
 
         /// <summary>
         /// Building
         /// </summary>
         /// <value>Building</value>
-        [DataMember(Name="building", EmitDefaultValue=false)]
+        [DataMember(Name="Building", EmitDefaultValue=false)]
         public string Building { get; set; }
 
         /// <summary>
         /// Street
         /// </summary>
         /// <value>Street</value>
-        [DataMember(Name="street", EmitDefaultValue=false)]
+        [DataMember(Name="Street", EmitDefaultValue=false)]
         public string Street { get; set; }
 
         /// <summary>
         /// Town
         /// </summary>
         /// <value>Town</value>
-        [DataMember(Name="town", EmitDefaultValue=false)]
+        [DataMember(Name="Town", EmitDefaultValue=false)]
         public string Town { get; set; }
 
         /// <summary>
         /// Post code
         /// </summary>
         /// <value>Post code</value>
-        [DataMember(Name="postCode", EmitDefaultValue=false)]
+        [DataMember(Name="PostCode", EmitDefaultValue=false)]
         public string PostCode { get; set; }
 
         /// <summary>
         /// Delivery instructions
         /// </summary>
         /// <value>Delivery instructions</value>
-        [DataMember(Name="deliveryInstructions", EmitDefaultValue=false)]
+        [DataMember(Name="DeliveryInstructions", EmitDefaultValue=false)]
         public string DeliveryInstructions { get; set; }
 
         /// <summary>
         /// Formatted, pretty address string
         /// </summary>
         /// <value>Formatted, pretty address string</value>
-        [DataMember(Name="prettyAddressString", EmitDefaultValue=false)]
+        [DataMember(Name="PrettyAddressString", EmitDefaultValue=false)]
         public string PrettyAddressString { get; set; }
 
         /// <summary>

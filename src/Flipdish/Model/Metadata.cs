@@ -45,14 +45,14 @@ namespace Flipdish.Model
         /// Metadata key (Unique identifier)
         /// </summary>
         /// <value>Metadata key (Unique identifier)</value>
-        [DataMember(Name="key", EmitDefaultValue=false)]
+        [DataMember(Name="Key", EmitDefaultValue=false)]
         public string Key { get; set; }
 
         /// <summary>
         /// Metadata value
         /// </summary>
         /// <value>Metadata value</value>
-        [DataMember(Name="value", EmitDefaultValue=false)]
+        [DataMember(Name="Value", EmitDefaultValue=false)]
         public string Value { get; set; }
 
         /// <summary>

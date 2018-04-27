@@ -47,21 +47,21 @@ namespace Flipdish.Model
         /// Fee amount
         /// </summary>
         /// <value>Fee amount</value>
-        [DataMember(Name="feeAmount", EmitDefaultValue=false)]
+        [DataMember(Name="FeeAmount", EmitDefaultValue=false)]
         public double? FeeAmount { get; set; }
 
         /// <summary>
         /// Percentage rate
         /// </summary>
         /// <value>Percentage rate</value>
-        [DataMember(Name="percentageRate", EmitDefaultValue=false)]
+        [DataMember(Name="PercentageRate", EmitDefaultValue=false)]
         public double? PercentageRate { get; set; }
 
         /// <summary>
         /// Per transaction fee
         /// </summary>
         /// <value>Per transaction fee</value>
-        [DataMember(Name="perTransactionFee", EmitDefaultValue=false)]
+        [DataMember(Name="PerTransactionFee", EmitDefaultValue=false)]
         public double? PerTransactionFee { get; set; }
 
         /// <summary>

@@ -715,7 +715,7 @@ namespace Flipdish.Model
         /// Currency which used by the Store
         /// </summary>
         /// <value>Currency which used by the Store</value>
-        [DataMember(Name="currency", EmitDefaultValue=false)]
+        [DataMember(Name="Currency", EmitDefaultValue=false)]
         public CurrencyEnum? Currency { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreSummary" /> class.
@@ -738,28 +738,28 @@ namespace Flipdish.Model
         /// Store identifier
         /// </summary>
         /// <value>Store identifier</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="Id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
         /// Store name
         /// </summary>
         /// <value>Store name</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Stores menu identifier
         /// </summary>
         /// <value>Stores menu identifier</value>
-        [DataMember(Name="menuId", EmitDefaultValue=false)]
+        [DataMember(Name="MenuId", EmitDefaultValue=false)]
         public int? MenuId { get; set; }
 
         /// <summary>
         /// Store metadata
         /// </summary>
         /// <value>Store metadata</value>
-        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        [DataMember(Name="Metadata", EmitDefaultValue=false)]
         public Dictionary<string, string> Metadata { get; set; }
 
 

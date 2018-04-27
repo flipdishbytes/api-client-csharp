@@ -33,30 +33,17 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiResultStore" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected RestApiResultStore() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiResultStore" /> class.
-        /// </summary>
-        /// <param name="Data">Generic data object. (required).</param>
+        /// <param name="Data">Generic data object..</param>
         public RestApiResultStore(Store Data = default(Store))
         {
-            // to ensure "Data" is required (not null)
-            if (Data == null)
-            {
-                throw new InvalidDataException("Data is a required property for RestApiResultStore and cannot be null");
-            }
-            else
-            {
-                this.Data = Data;
-            }
+            this.Data = Data;
         }
         
         /// <summary>
         /// Generic data object.
         /// </summary>
         /// <value>Generic data object.</value>
-        [DataMember(Name="data", EmitDefaultValue=false)]
+        [DataMember(Name="Data", EmitDefaultValue=false)]
         public Store Data { get; set; }
 
         /// <summary>

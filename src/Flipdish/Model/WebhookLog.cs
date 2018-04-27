@@ -71,105 +71,105 @@ namespace Flipdish.Model
         /// Webhook subscription owner user identifier
         /// </summary>
         /// <value>Webhook subscription owner user identifier</value>
-        [DataMember(Name="webhookSubscriptionOwnerUserId", EmitDefaultValue=false)]
+        [DataMember(Name="WebhookSubscriptionOwnerUserId", EmitDefaultValue=false)]
         public int? WebhookSubscriptionOwnerUserId { get; set; }
 
         /// <summary>
         /// Event created
         /// </summary>
         /// <value>Event created</value>
-        [DataMember(Name="eventCreated", EmitDefaultValue=false)]
+        [DataMember(Name="EventCreated", EmitDefaultValue=false)]
         public string EventCreated { get; set; }
 
         /// <summary>
         /// Webhook triggered
         /// </summary>
         /// <value>Webhook triggered</value>
-        [DataMember(Name="webhookTriggered", EmitDefaultValue=false)]
+        [DataMember(Name="WebhookTriggered", EmitDefaultValue=false)]
         public string WebhookTriggered { get; set; }
 
         /// <summary>
         /// Webhook event name
         /// </summary>
         /// <value>Webhook event name</value>
-        [DataMember(Name="webhookEventName", EmitDefaultValue=false)]
+        [DataMember(Name="WebhookEventName", EmitDefaultValue=false)]
         public string WebhookEventName { get; set; }
 
         /// <summary>
         /// Webhook subscription callback url
         /// </summary>
         /// <value>Webhook subscription callback url</value>
-        [DataMember(Name="webhookSubscriptionCallbackUrl", EmitDefaultValue=false)]
+        [DataMember(Name="WebhookSubscriptionCallbackUrl", EmitDefaultValue=false)]
         public string WebhookSubscriptionCallbackUrl { get; set; }
 
         /// <summary>
         /// Received HTTP repsonse status HTTP code
         /// </summary>
         /// <value>Received HTTP repsonse status HTTP code</value>
-        [DataMember(Name="httpResponseStatusCode", EmitDefaultValue=false)]
+        [DataMember(Name="HttpResponseStatusCode", EmitDefaultValue=false)]
         public string HttpResponseStatusCode { get; set; }
 
         /// <summary>
         /// Received HTTP repsonse status
         /// </summary>
         /// <value>Received HTTP repsonse status</value>
-        [DataMember(Name="httpResponseStatus", EmitDefaultValue=false)]
+        [DataMember(Name="HttpResponseStatus", EmitDefaultValue=false)]
         public string HttpResponseStatus { get; set; }
 
         /// <summary>
         /// Request headers
         /// </summary>
         /// <value>Request headers</value>
-        [DataMember(Name="requestHeaders", EmitDefaultValue=false)]
+        [DataMember(Name="RequestHeaders", EmitDefaultValue=false)]
         public string RequestHeaders { get; set; }
 
         /// <summary>
         /// Request body
         /// </summary>
         /// <value>Request body</value>
-        [DataMember(Name="requestBody", EmitDefaultValue=false)]
+        [DataMember(Name="RequestBody", EmitDefaultValue=false)]
         public string RequestBody { get; set; }
 
         /// <summary>
         /// Received response headers
         /// </summary>
         /// <value>Received response headers</value>
-        [DataMember(Name="responseHeaders", EmitDefaultValue=false)]
+        [DataMember(Name="ResponseHeaders", EmitDefaultValue=false)]
         public string ResponseHeaders { get; set; }
 
         /// <summary>
         /// Received response body
         /// </summary>
         /// <value>Received response body</value>
-        [DataMember(Name="responseBody", EmitDefaultValue=false)]
+        [DataMember(Name="ResponseBody", EmitDefaultValue=false)]
         public string ResponseBody { get; set; }
 
         /// <summary>
         /// Duration of HTTP request
         /// </summary>
         /// <value>Duration of HTTP request</value>
-        [DataMember(Name="duration", EmitDefaultValue=false)]
+        [DataMember(Name="Duration", EmitDefaultValue=false)]
         public string Duration { get; set; }
 
         /// <summary>
         /// Retry count
         /// </summary>
         /// <value>Retry count</value>
-        [DataMember(Name="retryCount", EmitDefaultValue=false)]
+        [DataMember(Name="RetryCount", EmitDefaultValue=false)]
         public int? RetryCount { get; set; }
 
         /// <summary>
         /// Flipdish webhook identifier
         /// </summary>
         /// <value>Flipdish webhook identifier</value>
-        [DataMember(Name="flipdishWebhookId", EmitDefaultValue=false)]
+        [DataMember(Name="FlipdishWebhookId", EmitDefaultValue=false)]
         public Guid? FlipdishWebhookId { get; set; }
 
         /// <summary>
         /// Flipdish webhook version
         /// </summary>
         /// <value>Flipdish webhook version</value>
-        [DataMember(Name="version", EmitDefaultValue=false)]
+        [DataMember(Name="Version", EmitDefaultValue=false)]
         public string Version { get; set; }
 
         /// <summary>

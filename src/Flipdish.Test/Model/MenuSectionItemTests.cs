@@ -154,6 +154,14 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'IsAvailable'
         }
+        /// <summary>
+        /// Test the property 'CellLayoutType'
+        /// </summary>
+        [Test]
+        public void CellLayoutTypeTest()
+        {
+            // TODO unit test for the property 'CellLayoutType'
+        }
 
     }
 

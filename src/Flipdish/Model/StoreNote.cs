@@ -47,21 +47,21 @@ namespace Flipdish.Model
         /// User identifier
         /// </summary>
         /// <value>User identifier</value>
-        [DataMember(Name="userId", EmitDefaultValue=false)]
+        [DataMember(Name="UserId", EmitDefaultValue=false)]
         public int? UserId { get; set; }
 
         /// <summary>
         /// Create time
         /// </summary>
         /// <value>Create time</value>
-        [DataMember(Name="createTime", EmitDefaultValue=false)]
+        [DataMember(Name="CreateTime", EmitDefaultValue=false)]
         public DateTime? CreateTime { get; set; }
 
         /// <summary>
         /// Note
         /// </summary>
         /// <value>Note</value>
-        [DataMember(Name="note", EmitDefaultValue=false)]
+        [DataMember(Name="Note", EmitDefaultValue=false)]
         public string Note { get; set; }
 
         /// <summary>

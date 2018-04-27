@@ -55,7 +55,7 @@ namespace Flipdish.Model
         /// Menu section behaviour
         /// </summary>
         /// <value>Menu section behaviour</value>
-        [DataMember(Name="menuSectionBehaviour", EmitDefaultValue=false)]
+        [DataMember(Name="MenuSectionBehaviour", EmitDefaultValue=false)]
         public MenuSectionBehaviourEnum? MenuSectionBehaviour { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Menu" /> class.
@@ -82,42 +82,42 @@ namespace Flipdish.Model
         /// Menu identifier
         /// </summary>
         /// <value>Menu identifier</value>
-        [DataMember(Name="menuId", EmitDefaultValue=false)]
+        [DataMember(Name="MenuId", EmitDefaultValue=false)]
         public int? MenuId { get; set; }
 
         /// <summary>
         /// Last modified time
         /// </summary>
         /// <value>Last modified time</value>
-        [DataMember(Name="modifiedTime", EmitDefaultValue=false)]
+        [DataMember(Name="ModifiedTime", EmitDefaultValue=false)]
         public DateTime? ModifiedTime { get; set; }
 
         /// <summary>
         /// Menu version
         /// </summary>
         /// <value>Menu version</value>
-        [DataMember(Name="versionNumber", EmitDefaultValue=false)]
+        [DataMember(Name="VersionNumber", EmitDefaultValue=false)]
         public int? VersionNumber { get; set; }
 
         /// <summary>
         /// Image url
         /// </summary>
         /// <value>Image url</value>
-        [DataMember(Name="imageUrl", EmitDefaultValue=false)]
+        [DataMember(Name="ImageUrl", EmitDefaultValue=false)]
         public string ImageUrl { get; set; }
 
         /// <summary>
         /// Menu sections (startes, main etc)
         /// </summary>
         /// <value>Menu sections (startes, main etc)</value>
-        [DataMember(Name="menuSections", EmitDefaultValue=false)]
+        [DataMember(Name="MenuSections", EmitDefaultValue=false)]
         public List<MenuSection> MenuSections { get; set; }
 
         /// <summary>
         /// Display menu section link on UI
         /// </summary>
         /// <value>Display menu section link on UI</value>
-        [DataMember(Name="displaySectionLinks", EmitDefaultValue=false)]
+        [DataMember(Name="DisplaySectionLinks", EmitDefaultValue=false)]
         public bool? DisplaySectionLinks { get; set; }
 
 

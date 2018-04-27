@@ -85,7 +85,7 @@ namespace Flipdish.Model
         /// Day of week
         /// </summary>
         /// <value>Day of week</value>
-        [DataMember(Name="dayOfWeek", EmitDefaultValue=false)]
+        [DataMember(Name="DayOfWeek", EmitDefaultValue=false)]
         public DayOfWeekEnum? DayOfWeek { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Range" /> class.
@@ -104,14 +104,14 @@ namespace Flipdish.Model
         /// Start time
         /// </summary>
         /// <value>Start time</value>
-        [DataMember(Name="startTime", EmitDefaultValue=false)]
+        [DataMember(Name="StartTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
 
         /// <summary>
         /// Period
         /// </summary>
         /// <value>Period</value>
-        [DataMember(Name="period", EmitDefaultValue=false)]
+        [DataMember(Name="Period", EmitDefaultValue=false)]
         public string Period { get; set; }
 
 

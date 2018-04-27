@@ -67,7 +67,7 @@ namespace Flipdish.Model
         /// Voucher type
         /// </summary>
         /// <value>Voucher type</value>
-        [DataMember(Name="type", EmitDefaultValue=false)]
+        [DataMember(Name="Type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
         /// Voucher sub type
@@ -124,7 +124,7 @@ namespace Flipdish.Model
         /// Voucher sub type
         /// </summary>
         /// <value>Voucher sub type</value>
-        [DataMember(Name="subType", EmitDefaultValue=false)]
+        [DataMember(Name="SubType", EmitDefaultValue=false)]
         public SubTypeEnum? SubType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="VoucherSummary" /> class.
@@ -149,28 +149,28 @@ namespace Flipdish.Model
         /// Voucher name
         /// </summary>
         /// <value>Voucher name</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Voucher description
         /// </summary>
         /// <value>Voucher description</value>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
         /// Voucher code
         /// </summary>
         /// <value>Voucher code</value>
-        [DataMember(Name="code", EmitDefaultValue=false)]
+        [DataMember(Name="Code", EmitDefaultValue=false)]
         public string Code { get; set; }
 
         /// <summary>
         /// Voucher amount
         /// </summary>
         /// <value>Voucher amount</value>
-        [DataMember(Name="amount", EmitDefaultValue=false)]
+        [DataMember(Name="Amount", EmitDefaultValue=false)]
         public double? Amount { get; set; }
 
 

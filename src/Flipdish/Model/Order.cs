@@ -55,7 +55,7 @@ namespace Flipdish.Model
         /// Delivery type
         /// </summary>
         /// <value>Delivery type</value>
-        [DataMember(Name="deliveryType", EmitDefaultValue=false)]
+        [DataMember(Name="DeliveryType", EmitDefaultValue=false)]
         public DeliveryTypeEnum? DeliveryType { get; set; }
         /// <summary>
         /// Pickup location type
@@ -88,7 +88,7 @@ namespace Flipdish.Model
         /// Pickup location type
         /// </summary>
         /// <value>Pickup location type</value>
-        [DataMember(Name="pickupLocationType", EmitDefaultValue=false)]
+        [DataMember(Name="PickupLocationType", EmitDefaultValue=false)]
         public PickupLocationTypeEnum? PickupLocationType { get; set; }
         /// <summary>
         /// Payment account type
@@ -115,7 +115,7 @@ namespace Flipdish.Model
         /// Payment account type
         /// </summary>
         /// <value>Payment account type</value>
-        [DataMember(Name="paymentAccountType", EmitDefaultValue=false)]
+        [DataMember(Name="PaymentAccountType", EmitDefaultValue=false)]
         public PaymentAccountTypeEnum? PaymentAccountType { get; set; }
         /// <summary>
         /// Order state
@@ -208,7 +208,7 @@ namespace Flipdish.Model
         /// Order state
         /// </summary>
         /// <value>Order state</value>
-        [DataMember(Name="orderState", EmitDefaultValue=false)]
+        [DataMember(Name="OrderState", EmitDefaultValue=false)]
         public OrderStateEnum? OrderState { get; set; }
         /// <summary>
         /// Used app type
@@ -283,7 +283,7 @@ namespace Flipdish.Model
         /// Used app type
         /// </summary>
         /// <value>Used app type</value>
-        [DataMember(Name="appType", EmitDefaultValue=false)]
+        [DataMember(Name="AppType", EmitDefaultValue=false)]
         public AppTypeEnum? AppType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Order" /> class.
@@ -344,56 +344,56 @@ namespace Flipdish.Model
         /// Store summary
         /// </summary>
         /// <value>Store summary</value>
-        [DataMember(Name="store", EmitDefaultValue=false)]
+        [DataMember(Name="Store", EmitDefaultValue=false)]
         public StoreSummary Store { get; set; }
 
         /// <summary>
         /// Customer summary
         /// </summary>
         /// <value>Customer summary</value>
-        [DataMember(Name="customer", EmitDefaultValue=false)]
+        [DataMember(Name="Customer", EmitDefaultValue=false)]
         public CustomerSummary Customer { get; set; }
 
         /// <summary>
         /// Voucher summary
         /// </summary>
         /// <value>Voucher summary</value>
-        [DataMember(Name="voucher", EmitDefaultValue=false)]
+        [DataMember(Name="Voucher", EmitDefaultValue=false)]
         public VoucherSummary Voucher { get; set; }
 
         /// <summary>
         /// Fee summary
         /// </summary>
         /// <value>Fee summary</value>
-        [DataMember(Name="fees", EmitDefaultValue=false)]
+        [DataMember(Name="Fees", EmitDefaultValue=false)]
         public FeeSummary Fees { get; set; }
 
         /// <summary>
         /// Ordered items
         /// </summary>
         /// <value>Ordered items</value>
-        [DataMember(Name="orderItems", EmitDefaultValue=false)]
+        [DataMember(Name="OrderItems", EmitDefaultValue=false)]
         public List<OrderItem> OrderItems { get; set; }
 
         /// <summary>
         /// Delivery location for delivery orders
         /// </summary>
         /// <value>Delivery location for delivery orders</value>
-        [DataMember(Name="deliveryLocation", EmitDefaultValue=false)]
+        [DataMember(Name="DeliveryLocation", EmitDefaultValue=false)]
         public DeliveryLocation DeliveryLocation { get; set; }
 
         /// <summary>
         /// Customer location
         /// </summary>
         /// <value>Customer location</value>
-        [DataMember(Name="customerLocation", EmitDefaultValue=false)]
+        [DataMember(Name="CustomerLocation", EmitDefaultValue=false)]
         public Coordinates CustomerLocation { get; set; }
 
         /// <summary>
         /// Order identifier
         /// </summary>
         /// <value>Order identifier</value>
-        [DataMember(Name="orderId", EmitDefaultValue=false)]
+        [DataMember(Name="OrderId", EmitDefaultValue=false)]
         public int? OrderId { get; set; }
 
 
@@ -402,35 +402,35 @@ namespace Flipdish.Model
         /// Tip amount
         /// </summary>
         /// <value>Tip amount</value>
-        [DataMember(Name="tipAmount", EmitDefaultValue=false)]
+        [DataMember(Name="TipAmount", EmitDefaultValue=false)]
         public double? TipAmount { get; set; }
 
         /// <summary>
         /// Delivery amount
         /// </summary>
         /// <value>Delivery amount</value>
-        [DataMember(Name="deliveryAmount", EmitDefaultValue=false)]
+        [DataMember(Name="DeliveryAmount", EmitDefaultValue=false)]
         public double? DeliveryAmount { get; set; }
 
         /// <summary>
         /// Ordered items amount
         /// </summary>
         /// <value>Ordered items amount</value>
-        [DataMember(Name="orderItemsAmount", EmitDefaultValue=false)]
+        [DataMember(Name="OrderItemsAmount", EmitDefaultValue=false)]
         public double? OrderItemsAmount { get; set; }
 
         /// <summary>
         /// This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer.
         /// </summary>
         /// <value>This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer.</value>
-        [DataMember(Name="amount", EmitDefaultValue=false)]
+        [DataMember(Name="Amount", EmitDefaultValue=false)]
         public double? Amount { get; set; }
 
         /// <summary>
         /// This contains the online ordering processing fee. For card payments this is charged directly to the customer and for cash orders it is paid by the customer to the store. It is tax inclusive.
         /// </summary>
         /// <value>This contains the online ordering processing fee. For card payments this is charged directly to the customer and for cash orders it is paid by the customer to the store. It is tax inclusive.</value>
-        [DataMember(Name="processingFee", EmitDefaultValue=false)]
+        [DataMember(Name="ProcessingFee", EmitDefaultValue=false)]
         public double? ProcessingFee { get; set; }
 
 
@@ -438,7 +438,7 @@ namespace Flipdish.Model
         /// Payment account description (like Visa ****2371 or Apple Pay. or Cash)
         /// </summary>
         /// <value>Payment account description (like Visa ****2371 or Apple Pay. or Cash)</value>
-        [DataMember(Name="paymentAccountDescription", EmitDefaultValue=false)]
+        [DataMember(Name="PaymentAccountDescription", EmitDefaultValue=false)]
         public string PaymentAccountDescription { get; set; }
 
 
@@ -446,28 +446,28 @@ namespace Flipdish.Model
         /// Is pre-order
         /// </summary>
         /// <value>Is pre-order</value>
-        [DataMember(Name="isPreOrder", EmitDefaultValue=false)]
+        [DataMember(Name="IsPreOrder", EmitDefaultValue=false)]
         public bool? IsPreOrder { get; set; }
 
         /// <summary>
         /// Order placed time
         /// </summary>
         /// <value>Order placed time</value>
-        [DataMember(Name="placedTime", EmitDefaultValue=false)]
+        [DataMember(Name="PlacedTime", EmitDefaultValue=false)]
         public DateTime? PlacedTime { get; set; }
 
         /// <summary>
         /// Order requested for
         /// </summary>
         /// <value>Order requested for</value>
-        [DataMember(Name="requestedForTime", EmitDefaultValue=false)]
+        [DataMember(Name="RequestedForTime", EmitDefaultValue=false)]
         public DateTime? RequestedForTime { get; set; }
 
         /// <summary>
         /// Chef note
         /// </summary>
         /// <value>Chef note</value>
-        [DataMember(Name="chefNote", EmitDefaultValue=false)]
+        [DataMember(Name="ChefNote", EmitDefaultValue=false)]
         public string ChefNote { get; set; }
 
 
@@ -475,7 +475,7 @@ namespace Flipdish.Model
         /// User rating
         /// </summary>
         /// <value>User rating</value>
-        [DataMember(Name="userRating", EmitDefaultValue=false)]
+        [DataMember(Name="UserRating", EmitDefaultValue=false)]
         public int? UserRating { get; set; }
 
         /// <summary>

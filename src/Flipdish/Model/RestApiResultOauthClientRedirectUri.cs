@@ -33,30 +33,17 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiResultOauthClientRedirectUri" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected RestApiResultOauthClientRedirectUri() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiResultOauthClientRedirectUri" /> class.
-        /// </summary>
-        /// <param name="Data">Generic data object. (required).</param>
+        /// <param name="Data">Generic data object..</param>
         public RestApiResultOauthClientRedirectUri(OauthClientRedirectUri Data = default(OauthClientRedirectUri))
         {
-            // to ensure "Data" is required (not null)
-            if (Data == null)
-            {
-                throw new InvalidDataException("Data is a required property for RestApiResultOauthClientRedirectUri and cannot be null");
-            }
-            else
-            {
-                this.Data = Data;
-            }
+            this.Data = Data;
         }
         
         /// <summary>
         /// Generic data object.
         /// </summary>
         /// <value>Generic data object.</value>
-        [DataMember(Name="data", EmitDefaultValue=false)]
+        [DataMember(Name="Data", EmitDefaultValue=false)]
         public OauthClientRedirectUri Data { get; set; }
 
         /// <summary>

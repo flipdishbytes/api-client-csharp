@@ -49,28 +49,28 @@ namespace Flipdish.Model
         /// Oauth client identifier
         /// </summary>
         /// <value>Oauth client identifier</value>
-        [DataMember(Name="clientId", EmitDefaultValue=false)]
+        [DataMember(Name="ClientId", EmitDefaultValue=false)]
         public string ClientId { get; set; }
 
         /// <summary>
         /// Oauth client name
         /// </summary>
         /// <value>Oauth client name</value>
-        [DataMember(Name="clientName", EmitDefaultValue=false)]
+        [DataMember(Name="ClientName", EmitDefaultValue=false)]
         public string ClientName { get; set; }
 
         /// <summary>
         /// Oauth client owner user identifier
         /// </summary>
         /// <value>Oauth client owner user identifier</value>
-        [DataMember(Name="ownerUserId", EmitDefaultValue=false)]
+        [DataMember(Name="OwnerUserId", EmitDefaultValue=false)]
         public int? OwnerUserId { get; set; }
 
         /// <summary>
         /// Oauth client logo uri
         /// </summary>
         /// <value>Oauth client logo uri</value>
-        [DataMember(Name="logoUri", EmitDefaultValue=false)]
+        [DataMember(Name="LogoUri", EmitDefaultValue=false)]
         public string LogoUri { get; set; }
 
         /// <summary>

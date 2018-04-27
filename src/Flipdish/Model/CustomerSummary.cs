@@ -51,35 +51,35 @@ namespace Flipdish.Model
         /// Customer identifier
         /// </summary>
         /// <value>Customer identifier</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="Id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
         /// Customer name
         /// </summary>
         /// <value>Customer name</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Customer email address
         /// </summary>
         /// <value>Customer email address</value>
-        [DataMember(Name="emailAddress", EmitDefaultValue=false)]
+        [DataMember(Name="EmailAddress", EmitDefaultValue=false)]
         public string EmailAddress { get; set; }
 
         /// <summary>
         /// Customer local phone number
         /// </summary>
         /// <value>Customer local phone number</value>
-        [DataMember(Name="phoneNumberLocalFormat", EmitDefaultValue=false)]
+        [DataMember(Name="PhoneNumberLocalFormat", EmitDefaultValue=false)]
         public string PhoneNumberLocalFormat { get; set; }
 
         /// <summary>
         /// Customer phone number
         /// </summary>
         /// <value>Customer phone number</value>
-        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
+        [DataMember(Name="PhoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
 
         /// <summary>

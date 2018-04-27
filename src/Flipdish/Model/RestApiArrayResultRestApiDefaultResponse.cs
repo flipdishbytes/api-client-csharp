@@ -33,30 +33,17 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiArrayResultRestApiDefaultResponse" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected RestApiArrayResultRestApiDefaultResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiArrayResultRestApiDefaultResponse" /> class.
-        /// </summary>
-        /// <param name="Data">Generic data object. (required).</param>
+        /// <param name="Data">Generic data object..</param>
         public RestApiArrayResultRestApiDefaultResponse(List<RestApiDefaultResponse> Data = default(List<RestApiDefaultResponse>))
         {
-            // to ensure "Data" is required (not null)
-            if (Data == null)
-            {
-                throw new InvalidDataException("Data is a required property for RestApiArrayResultRestApiDefaultResponse and cannot be null");
-            }
-            else
-            {
-                this.Data = Data;
-            }
+            this.Data = Data;
         }
         
         /// <summary>
         /// Generic data object.
         /// </summary>
         /// <value>Generic data object.</value>
-        [DataMember(Name="data", EmitDefaultValue=false)]
+        [DataMember(Name="Data", EmitDefaultValue=false)]
         public List<RestApiDefaultResponse> Data { get; set; }
 
         /// <summary>

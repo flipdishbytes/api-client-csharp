@@ -69,98 +69,98 @@ namespace Flipdish.Model
         /// Verb associated with the HTTP call.
         /// </summary>
         /// <value>Verb associated with the HTTP call.</value>
-        [DataMember(Name="verb", EmitDefaultValue=false)]
+        [DataMember(Name="Verb", EmitDefaultValue=false)]
         public string Verb { get; set; }
 
         /// <summary>
         /// Http request URI.
         /// </summary>
         /// <value>Http request URI.</value>
-        [DataMember(Name="requestUri", EmitDefaultValue=false)]
+        [DataMember(Name="RequestUri", EmitDefaultValue=false)]
         public string RequestUri { get; set; }
 
         /// <summary>
         /// Http response status code.
         /// </summary>
         /// <value>Http response status code.</value>
-        [DataMember(Name="statusCode", EmitDefaultValue=false)]
+        [DataMember(Name="StatusCode", EmitDefaultValue=false)]
         public int? StatusCode { get; set; }
 
         /// <summary>
         /// Http response status line.
         /// </summary>
         /// <value>Http response status line.</value>
-        [DataMember(Name="reasonPhrase", EmitDefaultValue=false)]
+        [DataMember(Name="ReasonPhrase", EmitDefaultValue=false)]
         public string ReasonPhrase { get; set; }
 
         /// <summary>
         /// Call duration representing the duration of the HTTP call in milliseconds.
         /// </summary>
         /// <value>Call duration representing the duration of the HTTP call in milliseconds.</value>
-        [DataMember(Name="callDurationInMilliseconds", EmitDefaultValue=false)]
+        [DataMember(Name="CallDurationInMilliseconds", EmitDefaultValue=false)]
         public long? CallDurationInMilliseconds { get; set; }
 
         /// <summary>
         /// Identity of the caller.
         /// </summary>
         /// <value>Identity of the caller.</value>
-        [DataMember(Name="userId", EmitDefaultValue=false)]
+        [DataMember(Name="UserId", EmitDefaultValue=false)]
         public string UserId { get; set; }
 
         /// <summary>
         /// Ip address of the caller
         /// </summary>
         /// <value>Ip address of the caller</value>
-        [DataMember(Name="ipAddress", EmitDefaultValue=false)]
+        [DataMember(Name="IpAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
 
         /// <summary>
         /// Timestamp at which the HTTP call took place.
         /// </summary>
         /// <value>Timestamp at which the HTTP call took place.</value>
-        [DataMember(Name="createdDateTime", EmitDefaultValue=false)]
+        [DataMember(Name="CreatedDateTime", EmitDefaultValue=false)]
         public string CreatedDateTime { get; set; }
 
         /// <summary>
         /// Http request headers.
         /// </summary>
         /// <value>Http request headers.</value>
-        [DataMember(Name="requestHeaders", EmitDefaultValue=false)]
+        [DataMember(Name="RequestHeaders", EmitDefaultValue=false)]
         public Dictionary<string, string> RequestHeaders { get; set; }
 
         /// <summary>
         /// Http request body, if any.
         /// </summary>
         /// <value>Http request body, if any.</value>
-        [DataMember(Name="requestBody", EmitDefaultValue=false)]
+        [DataMember(Name="RequestBody", EmitDefaultValue=false)]
         public string RequestBody { get; set; }
 
         /// <summary>
         /// Http request content-length
         /// </summary>
         /// <value>Http request content-length</value>
-        [DataMember(Name="requestLength", EmitDefaultValue=false)]
+        [DataMember(Name="RequestLength", EmitDefaultValue=false)]
         public long? RequestLength { get; set; }
 
         /// <summary>
         /// Http response headers.
         /// </summary>
         /// <value>Http response headers.</value>
-        [DataMember(Name="responseHeaders", EmitDefaultValue=false)]
+        [DataMember(Name="ResponseHeaders", EmitDefaultValue=false)]
         public Dictionary<string, string> ResponseHeaders { get; set; }
 
         /// <summary>
         /// Http response body.
         /// </summary>
         /// <value>Http response body.</value>
-        [DataMember(Name="responseBody", EmitDefaultValue=false)]
+        [DataMember(Name="ResponseBody", EmitDefaultValue=false)]
         public string ResponseBody { get; set; }
 
         /// <summary>
         /// Http response content-length
         /// </summary>
         /// <value>Http response content-length</value>
-        [DataMember(Name="responseLength", EmitDefaultValue=false)]
+        [DataMember(Name="ResponseLength", EmitDefaultValue=false)]
         public long? ResponseLength { get; set; }
 
         /// <summary>

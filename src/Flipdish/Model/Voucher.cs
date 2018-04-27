@@ -67,7 +67,7 @@ namespace Flipdish.Model
         /// Voucher type
         /// </summary>
         /// <value>Voucher type</value>
-        [DataMember(Name="voucherType", EmitDefaultValue=false)]
+        [DataMember(Name="VoucherType", EmitDefaultValue=false)]
         public VoucherTypeEnum? VoucherType { get; set; }
         /// <summary>
         /// Voucher subtype
@@ -124,7 +124,7 @@ namespace Flipdish.Model
         /// Voucher subtype
         /// </summary>
         /// <value>Voucher subtype</value>
-        [DataMember(Name="voucherSubType", EmitDefaultValue=false)]
+        [DataMember(Name="VoucherSubType", EmitDefaultValue=false)]
         public VoucherSubTypeEnum? VoucherSubType { get; set; }
         /// <summary>
         /// Define who foots the bill for the voucher
@@ -151,13 +151,8 @@ namespace Flipdish.Model
         /// Define who foots the bill for the voucher
         /// </summary>
         /// <value>Define who foots the bill for the voucher</value>
-        [DataMember(Name="voucherPayer", EmitDefaultValue=false)]
+        [DataMember(Name="VoucherPayer", EmitDefaultValue=false)]
         public VoucherPayerEnum? VoucherPayer { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Voucher" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected Voucher() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="Voucher" /> class.
         /// </summary>
@@ -183,18 +178,9 @@ namespace Flipdish.Model
         /// <param name="AutoApply">Auto apply.</param>
         /// <param name="AutoApplyOrder">Auto apply order.  Lower numbers get applied first..</param>
         /// <param name="IncludeDeliveryFee">Include delivery fee.</param>
-        /// <param name="Code">Voucher code (required).</param>
+        /// <param name="Code">Voucher code.</param>
         public Voucher(int? VoucherId = default(int?), VoucherTypeEnum? VoucherType = default(VoucherTypeEnum?), bool? IsEnabled = default(bool?), bool? IsUsedUp = default(bool?), VoucherSubTypeEnum? VoucherSubType = default(VoucherSubTypeEnum?), string PublicDescription = default(string), string PrivateDescription = default(string), DateTime? ValidFrom = default(DateTime?), DateTime? Expiry = default(DateTime?), VoucherPayerEnum? VoucherPayer = default(VoucherPayerEnum?), bool? IsVisibleToStore = default(bool?), bool? IsReusable = default(bool?), bool? IsValidForDeliveryOrders = default(bool?), bool? IsValidForPickupOrders = default(bool?), bool? IsValidForCardOrders = default(bool?), bool? IsValidForCashOrders = default(bool?), bool? IsValidForFirstOrderOnly = default(bool?), double? MinimumOrderAmount = default(double?), bool? IsValidOncePerCustomer = default(bool?), bool? AutoApply = default(bool?), int? AutoApplyOrder = default(int?), bool? IncludeDeliveryFee = default(bool?), string Code = default(string))
         {
-            // to ensure "Code" is required (not null)
-            if (Code == null)
-            {
-                throw new InvalidDataException("Code is a required property for Voucher and cannot be null");
-            }
-            else
-            {
-                this.Code = Code;
-            }
             this.VoucherId = VoucherId;
             this.VoucherType = VoucherType;
             this.IsEnabled = IsEnabled;
@@ -217,13 +203,14 @@ namespace Flipdish.Model
             this.AutoApply = AutoApply;
             this.AutoApplyOrder = AutoApplyOrder;
             this.IncludeDeliveryFee = IncludeDeliveryFee;
+            this.Code = Code;
         }
         
         /// <summary>
         /// Voucher identifier
         /// </summary>
         /// <value>Voucher identifier</value>
-        [DataMember(Name="voucherId", EmitDefaultValue=false)]
+        [DataMember(Name="VoucherId", EmitDefaultValue=false)]
         public int? VoucherId { get; set; }
 
 
@@ -231,14 +218,14 @@ namespace Flipdish.Model
         /// Is voucher enabled
         /// </summary>
         /// <value>Is voucher enabled</value>
-        [DataMember(Name="isEnabled", EmitDefaultValue=false)]
+        [DataMember(Name="IsEnabled", EmitDefaultValue=false)]
         public bool? IsEnabled { get; set; }
 
         /// <summary>
         /// Is voucher used up
         /// </summary>
         /// <value>Is voucher used up</value>
-        [DataMember(Name="isUsedUp", EmitDefaultValue=false)]
+        [DataMember(Name="IsUsedUp", EmitDefaultValue=false)]
         public bool? IsUsedUp { get; set; }
 
 
@@ -246,28 +233,28 @@ namespace Flipdish.Model
         /// Public description
         /// </summary>
         /// <value>Public description</value>
-        [DataMember(Name="publicDescription", EmitDefaultValue=false)]
+        [DataMember(Name="PublicDescription", EmitDefaultValue=false)]
         public string PublicDescription { get; set; }
 
         /// <summary>
         /// Private description
         /// </summary>
         /// <value>Private description</value>
-        [DataMember(Name="privateDescription", EmitDefaultValue=false)]
+        [DataMember(Name="PrivateDescription", EmitDefaultValue=false)]
         public string PrivateDescription { get; set; }
 
         /// <summary>
         /// Valid from
         /// </summary>
         /// <value>Valid from</value>
-        [DataMember(Name="validFrom", EmitDefaultValue=false)]
+        [DataMember(Name="ValidFrom", EmitDefaultValue=false)]
         public DateTime? ValidFrom { get; set; }
 
         /// <summary>
         /// Expiry
         /// </summary>
         /// <value>Expiry</value>
-        [DataMember(Name="expiry", EmitDefaultValue=false)]
+        [DataMember(Name="Expiry", EmitDefaultValue=false)]
         public DateTime? Expiry { get; set; }
 
 
@@ -275,91 +262,91 @@ namespace Flipdish.Model
         /// Define whether we show the fact that a voucher was applied to the restaurant
         /// </summary>
         /// <value>Define whether we show the fact that a voucher was applied to the restaurant</value>
-        [DataMember(Name="isVisibleToStore", EmitDefaultValue=false)]
+        [DataMember(Name="IsVisibleToStore", EmitDefaultValue=false)]
         public bool? IsVisibleToStore { get; set; }
 
         /// <summary>
         /// Is reusable
         /// </summary>
         /// <value>Is reusable</value>
-        [DataMember(Name="isReusable", EmitDefaultValue=false)]
+        [DataMember(Name="IsReusable", EmitDefaultValue=false)]
         public bool? IsReusable { get; set; }
 
         /// <summary>
         /// Is valid for delivery orders
         /// </summary>
         /// <value>Is valid for delivery orders</value>
-        [DataMember(Name="isValidForDeliveryOrders", EmitDefaultValue=false)]
+        [DataMember(Name="IsValidForDeliveryOrders", EmitDefaultValue=false)]
         public bool? IsValidForDeliveryOrders { get; set; }
 
         /// <summary>
         /// Is valid for pickup orders
         /// </summary>
         /// <value>Is valid for pickup orders</value>
-        [DataMember(Name="isValidForPickupOrders", EmitDefaultValue=false)]
+        [DataMember(Name="IsValidForPickupOrders", EmitDefaultValue=false)]
         public bool? IsValidForPickupOrders { get; set; }
 
         /// <summary>
         /// Is valid for card orders
         /// </summary>
         /// <value>Is valid for card orders</value>
-        [DataMember(Name="isValidForCardOrders", EmitDefaultValue=false)]
+        [DataMember(Name="IsValidForCardOrders", EmitDefaultValue=false)]
         public bool? IsValidForCardOrders { get; set; }
 
         /// <summary>
         /// Is valid for cash orders
         /// </summary>
         /// <value>Is valid for cash orders</value>
-        [DataMember(Name="isValidForCashOrders", EmitDefaultValue=false)]
+        [DataMember(Name="IsValidForCashOrders", EmitDefaultValue=false)]
         public bool? IsValidForCashOrders { get; set; }
 
         /// <summary>
         /// Is valid for first order only
         /// </summary>
         /// <value>Is valid for first order only</value>
-        [DataMember(Name="isValidForFirstOrderOnly", EmitDefaultValue=false)]
+        [DataMember(Name="IsValidForFirstOrderOnly", EmitDefaultValue=false)]
         public bool? IsValidForFirstOrderOnly { get; set; }
 
         /// <summary>
         /// Minimum order amount.
         /// </summary>
         /// <value>Minimum order amount.</value>
-        [DataMember(Name="minimumOrderAmount", EmitDefaultValue=false)]
+        [DataMember(Name="MinimumOrderAmount", EmitDefaultValue=false)]
         public double? MinimumOrderAmount { get; set; }
 
         /// <summary>
         /// Is valid once per customer
         /// </summary>
         /// <value>Is valid once per customer</value>
-        [DataMember(Name="isValidOncePerCustomer", EmitDefaultValue=false)]
+        [DataMember(Name="IsValidOncePerCustomer", EmitDefaultValue=false)]
         public bool? IsValidOncePerCustomer { get; set; }
 
         /// <summary>
         /// Auto apply
         /// </summary>
         /// <value>Auto apply</value>
-        [DataMember(Name="autoApply", EmitDefaultValue=false)]
+        [DataMember(Name="AutoApply", EmitDefaultValue=false)]
         public bool? AutoApply { get; set; }
 
         /// <summary>
         /// Auto apply order.  Lower numbers get applied first.
         /// </summary>
         /// <value>Auto apply order.  Lower numbers get applied first.</value>
-        [DataMember(Name="autoApplyOrder", EmitDefaultValue=false)]
+        [DataMember(Name="AutoApplyOrder", EmitDefaultValue=false)]
         public int? AutoApplyOrder { get; set; }
 
         /// <summary>
         /// Include delivery fee
         /// </summary>
         /// <value>Include delivery fee</value>
-        [DataMember(Name="includeDeliveryFee", EmitDefaultValue=false)]
+        [DataMember(Name="IncludeDeliveryFee", EmitDefaultValue=false)]
         public bool? IncludeDeliveryFee { get; set; }
 
         /// <summary>
         /// Voucher code
         /// </summary>
         /// <value>Voucher code</value>
-        [DataMember(Name="code", EmitDefaultValue=false)]
+        [DataMember(Name="Code", EmitDefaultValue=false)]
         public string Code { get; set; }
 
         /// <summary>

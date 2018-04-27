@@ -45,14 +45,14 @@ namespace Flipdish.Model
         /// Field name
         /// </summary>
         /// <value>Field name</value>
-        [DataMember(Name="fieldName", EmitDefaultValue=false)]
+        [DataMember(Name="FieldName", EmitDefaultValue=false)]
         public string FieldName { get; set; }
 
         /// <summary>
         /// List of errors relates to field
         /// </summary>
         /// <value>List of errors relates to field</value>
-        [DataMember(Name="errors", EmitDefaultValue=false)]
+        [DataMember(Name="Errors", EmitDefaultValue=false)]
         public List<string> Errors { get; set; }
 
         /// <summary>
