@@ -147,9 +147,9 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSection">Menu section changes (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone.</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
         /// <returns></returns>
-        void UpdateMenuSection (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter);
+        void UpdateMenuSection (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter = null);
 
         /// <summary>
         /// Update menu section
@@ -161,9 +161,9 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSection">Menu section changes (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone.</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateMenuSectionWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter);
+        ApiResponse<Object> UpdateMenuSectionWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter = null);
         /// <summary>
         /// Upload menu section image
         /// </summary>
@@ -314,9 +314,9 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSection">Menu section changes (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone.</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateMenuSectionAsync (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter);
+        System.Threading.Tasks.Task UpdateMenuSectionAsync (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter = null);
 
         /// <summary>
         /// Update menu section
@@ -328,9 +328,9 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSection">Menu section changes (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone.</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMenuSectionAsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMenuSectionAsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter = null);
         /// <summary>
         /// Upload menu section image
         /// </summary>
@@ -1286,9 +1286,9 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSection">Menu section changes (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone.</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
         /// <returns></returns>
-        public void UpdateMenuSection (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter)
+        public void UpdateMenuSection (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter = null)
         {
              UpdateMenuSectionWithHttpInfo(menuId, menuSectionId, menuSection, undoAfter);
         }
@@ -1300,9 +1300,9 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSection">Menu section changes (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone.</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateMenuSectionWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter)
+        public ApiResponse<Object> UpdateMenuSectionWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter = null)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -1313,9 +1313,6 @@ namespace Flipdish.Api
             // verify the required parameter 'menuSection' is set
             if (menuSection == null)
                 throw new ApiException(400, "Missing required parameter 'menuSection' when calling MenuSectionsApi->UpdateMenuSection");
-            // verify the required parameter 'undoAfter' is set
-            if (undoAfter == null)
-                throw new ApiException(400, "Missing required parameter 'undoAfter' when calling MenuSectionsApi->UpdateMenuSection");
 
             var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1390,9 +1387,9 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSection">Menu section changes (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone.</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateMenuSectionAsync (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter)
+        public async System.Threading.Tasks.Task UpdateMenuSectionAsync (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter = null)
         {
              await UpdateMenuSectionAsyncWithHttpInfo(menuId, menuSectionId, menuSection, undoAfter);
 
@@ -1405,9 +1402,9 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSection">Menu section changes (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone.</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMenuSectionAsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMenuSectionAsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter = null)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -1418,9 +1415,6 @@ namespace Flipdish.Api
             // verify the required parameter 'menuSection' is set
             if (menuSection == null)
                 throw new ApiException(400, "Missing required parameter 'menuSection' when calling MenuSectionsApi->UpdateMenuSection");
-            // verify the required parameter 'undoAfter' is set
-            if (undoAfter == null)
-                throw new ApiException(400, "Missing required parameter 'undoAfter' when calling MenuSectionsApi->UpdateMenuSection");
 
             var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}";
             var localVarPathParams = new Dictionary<String, String>();

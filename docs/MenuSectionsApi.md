@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 <a name="updatemenusection"></a>
 # **UpdateMenuSection**
-> void UpdateMenuSection (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter)
+> void UpdateMenuSection (int? menuId, int? menuSectionId, MenuSectionBase menuSection, double? undoAfter = null)
 
 Update menu section
 
@@ -356,7 +356,7 @@ namespace Example
             var menuId = 56;  // int? | Menu identifier
             var menuSectionId = 56;  // int? | Menu section identifier
             var menuSection = new MenuSectionBase(); // MenuSectionBase | Menu section changes (delta)
-            var undoAfter = 1.2;  // double? | An optional time period, in hours, after which the hide-section operaton will be undone.
+            var undoAfter = 1.2;  // double? | An optional time period, in hours, after which the hide-section operaton will be undone. (optional) 
 
             try
             {
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
  **menuId** | **int?**| Menu identifier | 
  **menuSectionId** | **int?**| Menu section identifier | 
  **menuSection** | [**MenuSectionBase**](MenuSectionBase.md)| Menu section changes (delta) | 
- **undoAfter** | **double?**| An optional time period, in hours, after which the hide-section operaton will be undone. | 
+ **undoAfter** | **double?**| An optional time period, in hours, after which the hide-section operaton will be undone. | [optional] 
 
 ### Return type
 
