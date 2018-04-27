@@ -361,7 +361,7 @@ void (empty response body)
 
 <a name="updatemenuitemoptionsetitem"></a>
 # **UpdateMenuItemOptionSetItem**
-> void UpdateMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem, double? undoAfter)
+> void UpdateMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem, double? undoAfter = null)
 
 Update menu item option set item
 
@@ -389,7 +389,7 @@ namespace Example
             var optionSetId = 56;  // int? | Option set identifier
             var menuItemOptionSetItemId = 56;  // int? | Option set item identifier
             var menuItemOptionSetItem = new MenuItemOptionSetItemBase(); // MenuItemOptionSetItemBase | Option set item (delta)
-            var undoAfter = 1.2;  // double? | An optional time period, in hours, after which the hide-section operaton will be undone.
+            var undoAfter = 1.2;  // double? | An optional time period, in hours, after which the hide-section operaton will be undone. (optional) 
 
             try
             {
@@ -415,7 +415,7 @@ Name | Type | Description  | Notes
  **optionSetId** | **int?**| Option set identifier | 
  **menuItemOptionSetItemId** | **int?**| Option set item identifier | 
  **menuItemOptionSetItem** | [**MenuItemOptionSetItemBase**](MenuItemOptionSetItemBase.md)| Option set item (delta) | 
- **undoAfter** | **double?**| An optional time period, in hours, after which the hide-section operaton will be undone. | 
+ **undoAfter** | **double?**| An optional time period, in hours, after which the hide-section operaton will be undone. | [optional] 
 
 ### Return type
 
