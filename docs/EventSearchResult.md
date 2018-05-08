@@ -23,6 +23,12 @@ Name | Type | Description | Notes
 **WebhookSubscriptionCreatedEvent** | [**List&lt;WebhookSubscriptionCreatedEvent&gt;**](WebhookSubscriptionCreatedEvent.md) | Webhook subscription created events | [optional] 
 **WebhookSubscriptionUpdatedEvent** | [**List&lt;WebhookSubscriptionUpdatedEvent&gt;**](WebhookSubscriptionUpdatedEvent.md) | Webhook subscription updated events | [optional] 
 **WebhookSubscriptionDeletedEvent** | [**List&lt;WebhookSubscriptionDeletedEvent&gt;**](WebhookSubscriptionDeletedEvent.md) | Webhook subscription deleted events | [optional] 
+**PrinterTurnedOnEvent** | [**List&lt;PrinterTurnedOnEvent&gt;**](PrinterTurnedOnEvent.md) | Printer turned ON event | [optional] 
+**PrinterTurnedOffEvent** | [**List&lt;PrinterTurnedOffEvent&gt;**](PrinterTurnedOffEvent.md) | Printer turned OFF event | [optional] 
+**PrinterAssignedToStoreEvent** | [**List&lt;PrinterAssignedToStoreEvent&gt;**](PrinterAssignedToStoreEvent.md) | Printer assigned to store event | [optional] 
+**PrinterUnassignedFromStoreEvent** | [**List&lt;PrinterUnassignedFromStoreEvent&gt;**](PrinterUnassignedFromStoreEvent.md) | Printer unassigned from store event | [optional] 
+**PhoneCallStartedEvent** | [**List&lt;PhoneCallStartedEvent&gt;**](PhoneCallStartedEvent.md) | Phone call started event | [optional] 
+**PhoneCallEndedEvent** | [**List&lt;PhoneCallEndedEvent&gt;**](PhoneCallEndedEvent.md) | Phone call ended event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

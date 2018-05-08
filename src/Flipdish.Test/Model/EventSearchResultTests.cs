@@ -226,6 +226,54 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'WebhookSubscriptionDeletedEvent'
         }
+        /// <summary>
+        /// Test the property 'PrinterTurnedOnEvent'
+        /// </summary>
+        [Test]
+        public void PrinterTurnedOnEventTest()
+        {
+            // TODO unit test for the property 'PrinterTurnedOnEvent'
+        }
+        /// <summary>
+        /// Test the property 'PrinterTurnedOffEvent'
+        /// </summary>
+        [Test]
+        public void PrinterTurnedOffEventTest()
+        {
+            // TODO unit test for the property 'PrinterTurnedOffEvent'
+        }
+        /// <summary>
+        /// Test the property 'PrinterAssignedToStoreEvent'
+        /// </summary>
+        [Test]
+        public void PrinterAssignedToStoreEventTest()
+        {
+            // TODO unit test for the property 'PrinterAssignedToStoreEvent'
+        }
+        /// <summary>
+        /// Test the property 'PrinterUnassignedFromStoreEvent'
+        /// </summary>
+        [Test]
+        public void PrinterUnassignedFromStoreEventTest()
+        {
+            // TODO unit test for the property 'PrinterUnassignedFromStoreEvent'
+        }
+        /// <summary>
+        /// Test the property 'PhoneCallStartedEvent'
+        /// </summary>
+        [Test]
+        public void PhoneCallStartedEventTest()
+        {
+            // TODO unit test for the property 'PhoneCallStartedEvent'
+        }
+        /// <summary>
+        /// Test the property 'PhoneCallEndedEvent'
+        /// </summary>
+        [Test]
+        public void PhoneCallEndedEventTest()
+        {
+            // TODO unit test for the property 'PhoneCallEndedEvent'
+        }
 
     }
 

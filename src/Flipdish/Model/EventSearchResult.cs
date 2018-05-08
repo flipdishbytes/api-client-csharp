@@ -53,7 +53,13 @@ namespace Flipdish.Model
         /// <param name="WebhookSubscriptionCreatedEvent">Webhook subscription created events.</param>
         /// <param name="WebhookSubscriptionUpdatedEvent">Webhook subscription updated events.</param>
         /// <param name="WebhookSubscriptionDeletedEvent">Webhook subscription deleted events.</param>
-        public EventSearchResult(List<OrderAcceptedEvent> OrderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderCreatedEvent> OrderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> OrderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> OrderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> OrderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> OrderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<StoreCreatedEvent> StoreCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> StoreDeletedEvent = default(List<StoreDeletedEvent>), List<StoreDeliveryZoneUpdatedEvent> StoreDeliveryZoneUpdatedEvent = default(List<StoreDeliveryZoneUpdatedEvent>), List<StoreOpeningHoursUpdatedEvent> StoreOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreUpdatedEvent> StoreUpdatedEvent = default(List<StoreUpdatedEvent>), List<MenuCreatedEvent> MenuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> MenuUpdatedEvent = default(List<MenuUpdatedEvent>), List<CustomerCreatedEvent> CustomerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> CustomerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> CustomerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<CampaignCreatedEvent> CampaignCreatedEvent = default(List<CampaignCreatedEvent>), List<WebhookSubscriptionCreatedEvent> WebhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> WebhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> WebhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>))
+        /// <param name="PrinterTurnedOnEvent">Printer turned ON event.</param>
+        /// <param name="PrinterTurnedOffEvent">Printer turned OFF event.</param>
+        /// <param name="PrinterAssignedToStoreEvent">Printer assigned to store event.</param>
+        /// <param name="PrinterUnassignedFromStoreEvent">Printer unassigned from store event.</param>
+        /// <param name="PhoneCallStartedEvent">Phone call started event.</param>
+        /// <param name="PhoneCallEndedEvent">Phone call ended event.</param>
+        public EventSearchResult(List<OrderAcceptedEvent> OrderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderCreatedEvent> OrderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> OrderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> OrderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> OrderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> OrderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<StoreCreatedEvent> StoreCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> StoreDeletedEvent = default(List<StoreDeletedEvent>), List<StoreDeliveryZoneUpdatedEvent> StoreDeliveryZoneUpdatedEvent = default(List<StoreDeliveryZoneUpdatedEvent>), List<StoreOpeningHoursUpdatedEvent> StoreOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreUpdatedEvent> StoreUpdatedEvent = default(List<StoreUpdatedEvent>), List<MenuCreatedEvent> MenuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> MenuUpdatedEvent = default(List<MenuUpdatedEvent>), List<CustomerCreatedEvent> CustomerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> CustomerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> CustomerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<CampaignCreatedEvent> CampaignCreatedEvent = default(List<CampaignCreatedEvent>), List<WebhookSubscriptionCreatedEvent> WebhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> WebhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> WebhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>), List<PrinterTurnedOnEvent> PrinterTurnedOnEvent = default(List<PrinterTurnedOnEvent>), List<PrinterTurnedOffEvent> PrinterTurnedOffEvent = default(List<PrinterTurnedOffEvent>), List<PrinterAssignedToStoreEvent> PrinterAssignedToStoreEvent = default(List<PrinterAssignedToStoreEvent>), List<PrinterUnassignedFromStoreEvent> PrinterUnassignedFromStoreEvent = default(List<PrinterUnassignedFromStoreEvent>), List<PhoneCallStartedEvent> PhoneCallStartedEvent = default(List<PhoneCallStartedEvent>), List<PhoneCallEndedEvent> PhoneCallEndedEvent = default(List<PhoneCallEndedEvent>))
         {
             this.OrderAcceptedEvent = OrderAcceptedEvent;
             this.OrderCreatedEvent = OrderCreatedEvent;
@@ -75,6 +81,12 @@ namespace Flipdish.Model
             this.WebhookSubscriptionCreatedEvent = WebhookSubscriptionCreatedEvent;
             this.WebhookSubscriptionUpdatedEvent = WebhookSubscriptionUpdatedEvent;
             this.WebhookSubscriptionDeletedEvent = WebhookSubscriptionDeletedEvent;
+            this.PrinterTurnedOnEvent = PrinterTurnedOnEvent;
+            this.PrinterTurnedOffEvent = PrinterTurnedOffEvent;
+            this.PrinterAssignedToStoreEvent = PrinterAssignedToStoreEvent;
+            this.PrinterUnassignedFromStoreEvent = PrinterUnassignedFromStoreEvent;
+            this.PhoneCallStartedEvent = PhoneCallStartedEvent;
+            this.PhoneCallEndedEvent = PhoneCallEndedEvent;
         }
         
         /// <summary>
@@ -218,6 +230,48 @@ namespace Flipdish.Model
         public List<WebhookSubscriptionDeletedEvent> WebhookSubscriptionDeletedEvent { get; set; }
 
         /// <summary>
+        /// Printer turned ON event
+        /// </summary>
+        /// <value>Printer turned ON event</value>
+        [DataMember(Name="PrinterTurnedOnEvent", EmitDefaultValue=false)]
+        public List<PrinterTurnedOnEvent> PrinterTurnedOnEvent { get; set; }
+
+        /// <summary>
+        /// Printer turned OFF event
+        /// </summary>
+        /// <value>Printer turned OFF event</value>
+        [DataMember(Name="PrinterTurnedOffEvent", EmitDefaultValue=false)]
+        public List<PrinterTurnedOffEvent> PrinterTurnedOffEvent { get; set; }
+
+        /// <summary>
+        /// Printer assigned to store event
+        /// </summary>
+        /// <value>Printer assigned to store event</value>
+        [DataMember(Name="PrinterAssignedToStoreEvent", EmitDefaultValue=false)]
+        public List<PrinterAssignedToStoreEvent> PrinterAssignedToStoreEvent { get; set; }
+
+        /// <summary>
+        /// Printer unassigned from store event
+        /// </summary>
+        /// <value>Printer unassigned from store event</value>
+        [DataMember(Name="PrinterUnassignedFromStoreEvent", EmitDefaultValue=false)]
+        public List<PrinterUnassignedFromStoreEvent> PrinterUnassignedFromStoreEvent { get; set; }
+
+        /// <summary>
+        /// Phone call started event
+        /// </summary>
+        /// <value>Phone call started event</value>
+        [DataMember(Name="PhoneCallStartedEvent", EmitDefaultValue=false)]
+        public List<PhoneCallStartedEvent> PhoneCallStartedEvent { get; set; }
+
+        /// <summary>
+        /// Phone call ended event
+        /// </summary>
+        /// <value>Phone call ended event</value>
+        [DataMember(Name="PhoneCallEndedEvent", EmitDefaultValue=false)]
+        public List<PhoneCallEndedEvent> PhoneCallEndedEvent { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -245,6 +299,12 @@ namespace Flipdish.Model
             sb.Append("  WebhookSubscriptionCreatedEvent: ").Append(WebhookSubscriptionCreatedEvent).Append("\n");
             sb.Append("  WebhookSubscriptionUpdatedEvent: ").Append(WebhookSubscriptionUpdatedEvent).Append("\n");
             sb.Append("  WebhookSubscriptionDeletedEvent: ").Append(WebhookSubscriptionDeletedEvent).Append("\n");
+            sb.Append("  PrinterTurnedOnEvent: ").Append(PrinterTurnedOnEvent).Append("\n");
+            sb.Append("  PrinterTurnedOffEvent: ").Append(PrinterTurnedOffEvent).Append("\n");
+            sb.Append("  PrinterAssignedToStoreEvent: ").Append(PrinterAssignedToStoreEvent).Append("\n");
+            sb.Append("  PrinterUnassignedFromStoreEvent: ").Append(PrinterUnassignedFromStoreEvent).Append("\n");
+            sb.Append("  PhoneCallStartedEvent: ").Append(PhoneCallStartedEvent).Append("\n");
+            sb.Append("  PhoneCallEndedEvent: ").Append(PhoneCallEndedEvent).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -378,6 +438,36 @@ namespace Flipdish.Model
                     this.WebhookSubscriptionDeletedEvent == input.WebhookSubscriptionDeletedEvent ||
                     this.WebhookSubscriptionDeletedEvent != null &&
                     this.WebhookSubscriptionDeletedEvent.SequenceEqual(input.WebhookSubscriptionDeletedEvent)
+                ) && 
+                (
+                    this.PrinterTurnedOnEvent == input.PrinterTurnedOnEvent ||
+                    this.PrinterTurnedOnEvent != null &&
+                    this.PrinterTurnedOnEvent.SequenceEqual(input.PrinterTurnedOnEvent)
+                ) && 
+                (
+                    this.PrinterTurnedOffEvent == input.PrinterTurnedOffEvent ||
+                    this.PrinterTurnedOffEvent != null &&
+                    this.PrinterTurnedOffEvent.SequenceEqual(input.PrinterTurnedOffEvent)
+                ) && 
+                (
+                    this.PrinterAssignedToStoreEvent == input.PrinterAssignedToStoreEvent ||
+                    this.PrinterAssignedToStoreEvent != null &&
+                    this.PrinterAssignedToStoreEvent.SequenceEqual(input.PrinterAssignedToStoreEvent)
+                ) && 
+                (
+                    this.PrinterUnassignedFromStoreEvent == input.PrinterUnassignedFromStoreEvent ||
+                    this.PrinterUnassignedFromStoreEvent != null &&
+                    this.PrinterUnassignedFromStoreEvent.SequenceEqual(input.PrinterUnassignedFromStoreEvent)
+                ) && 
+                (
+                    this.PhoneCallStartedEvent == input.PhoneCallStartedEvent ||
+                    this.PhoneCallStartedEvent != null &&
+                    this.PhoneCallStartedEvent.SequenceEqual(input.PhoneCallStartedEvent)
+                ) && 
+                (
+                    this.PhoneCallEndedEvent == input.PhoneCallEndedEvent ||
+                    this.PhoneCallEndedEvent != null &&
+                    this.PhoneCallEndedEvent.SequenceEqual(input.PhoneCallEndedEvent)
                 );
         }
 
@@ -430,6 +520,18 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.WebhookSubscriptionUpdatedEvent.GetHashCode();
                 if (this.WebhookSubscriptionDeletedEvent != null)
                     hashCode = hashCode * 59 + this.WebhookSubscriptionDeletedEvent.GetHashCode();
+                if (this.PrinterTurnedOnEvent != null)
+                    hashCode = hashCode * 59 + this.PrinterTurnedOnEvent.GetHashCode();
+                if (this.PrinterTurnedOffEvent != null)
+                    hashCode = hashCode * 59 + this.PrinterTurnedOffEvent.GetHashCode();
+                if (this.PrinterAssignedToStoreEvent != null)
+                    hashCode = hashCode * 59 + this.PrinterAssignedToStoreEvent.GetHashCode();
+                if (this.PrinterUnassignedFromStoreEvent != null)
+                    hashCode = hashCode * 59 + this.PrinterUnassignedFromStoreEvent.GetHashCode();
+                if (this.PhoneCallStartedEvent != null)
+                    hashCode = hashCode * 59 + this.PhoneCallStartedEvent.GetHashCode();
+                if (this.PhoneCallEndedEvent != null)
+                    hashCode = hashCode * 59 + this.PhoneCallEndedEvent.GetHashCode();
                 return hashCode;
             }
         }
