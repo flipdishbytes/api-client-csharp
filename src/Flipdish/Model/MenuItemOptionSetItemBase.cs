@@ -54,7 +54,13 @@ namespace Flipdish.Model
             /// Enum Large for value: Large
             /// </summary>
             [EnumMember(Value = "Large")]
-            Large = 3
+            Large = 3,
+            
+            /// <summary>
+            /// Enum HiddenImage for value: HiddenImage
+            /// </summary>
+            [EnumMember(Value = "HiddenImage")]
+            HiddenImage = 4
         }
 
         /// <summary>
