@@ -195,14 +195,6 @@ namespace Flipdish.Test
             // TODO unit test for the property 'CustomerConsentUpdatedEvent'
         }
         /// <summary>
-        /// Test the property 'CampaignCreatedEvent'
-        /// </summary>
-        [Test]
-        public void CampaignCreatedEventTest()
-        {
-            // TODO unit test for the property 'CampaignCreatedEvent'
-        }
-        /// <summary>
         /// Test the property 'WebhookSubscriptionCreatedEvent'
         /// </summary>
         [Test]
@@ -273,6 +265,54 @@ namespace Flipdish.Test
         public void PhoneCallEndedEventTest()
         {
             // TODO unit test for the property 'PhoneCallEndedEvent'
+        }
+        /// <summary>
+        /// Test the property 'LoyaltyCampaignCreatedEvent'
+        /// </summary>
+        [Test]
+        public void LoyaltyCampaignCreatedEventTest()
+        {
+            // TODO unit test for the property 'LoyaltyCampaignCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'LoyaltyCampaignDeletedEvent'
+        /// </summary>
+        [Test]
+        public void LoyaltyCampaignDeletedEventTest()
+        {
+            // TODO unit test for the property 'LoyaltyCampaignDeletedEvent'
+        }
+        /// <summary>
+        /// Test the property 'LoyaltyCampaignUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void LoyaltyCampaignUpdatedEventTest()
+        {
+            // TODO unit test for the property 'LoyaltyCampaignUpdatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'RetentionCampaignCreatedEvent'
+        /// </summary>
+        [Test]
+        public void RetentionCampaignCreatedEventTest()
+        {
+            // TODO unit test for the property 'RetentionCampaignCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'RetentionCampaignDeletedEvent'
+        /// </summary>
+        [Test]
+        public void RetentionCampaignDeletedEventTest()
+        {
+            // TODO unit test for the property 'RetentionCampaignDeletedEvent'
+        }
+        /// <summary>
+        /// Test the property 'RetentionCampaignUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void RetentionCampaignUpdatedEventTest()
+        {
+            // TODO unit test for the property 'RetentionCampaignUpdatedEvent'
         }
 
     }

@@ -25,27 +25,27 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// CampaignCreatedEvent
+    /// Retention campaign created event
     /// </summary>
     [DataContract]
-    public partial class CampaignCreatedEvent :  IEquatable<CampaignCreatedEvent>, IValidatableObject
+    public partial class RetentionCampaignCreatedEvent :  IEquatable<RetentionCampaignCreatedEvent>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CampaignCreatedEvent" /> class.
+        /// Initializes a new instance of the <see cref="RetentionCampaignCreatedEvent" /> class.
         /// </summary>
         /// <param name="EventName">The event name.</param>
-        /// <param name="CampaignId">CampaignId.</param>
-        /// <param name="VirtualRestaurantName">VirtualRestaurantName.</param>
-        /// <param name="VirtualRestaurantId">VirtualRestaurantId.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="StoreId">Store Id.</param>
+        /// <param name="RetentionCampaign">The retention campaign.</param>
         /// <param name="FlipdishEventId">The identitfier of the event.</param>
         /// <param name="CreateTime">The time of creation of the event.</param>
         /// <param name="Position">Position.</param>
-        public CampaignCreatedEvent(string EventName = default(string), int? CampaignId = default(int?), string VirtualRestaurantName = default(string), int? VirtualRestaurantId = default(int?), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        public RetentionCampaignCreatedEvent(string EventName = default(string), string Description = default(string), int? StoreId = default(int?), RetentionCampaign RetentionCampaign = default(RetentionCampaign), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
         {
             this.EventName = EventName;
-            this.CampaignId = CampaignId;
-            this.VirtualRestaurantName = VirtualRestaurantName;
-            this.VirtualRestaurantId = VirtualRestaurantId;
+            this.Description = Description;
+            this.StoreId = StoreId;
+            this.RetentionCampaign = RetentionCampaign;
             this.FlipdishEventId = FlipdishEventId;
             this.CreateTime = CreateTime;
             this.Position = Position;
@@ -59,22 +59,25 @@ namespace Flipdish.Model
         public string EventName { get; set; }
 
         /// <summary>
-        /// Gets or Sets CampaignId
+        /// Description
         /// </summary>
-        [DataMember(Name="CampaignId", EmitDefaultValue=false)]
-        public int? CampaignId { get; set; }
+        /// <value>Description</value>
+        [DataMember(Name="Description", EmitDefaultValue=false)]
+        public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets VirtualRestaurantName
+        /// Store Id
         /// </summary>
-        [DataMember(Name="VirtualRestaurantName", EmitDefaultValue=false)]
-        public string VirtualRestaurantName { get; set; }
+        /// <value>Store Id</value>
+        [DataMember(Name="StoreId", EmitDefaultValue=false)]
+        public int? StoreId { get; set; }
 
         /// <summary>
-        /// Gets or Sets VirtualRestaurantId
+        /// The retention campaign
         /// </summary>
-        [DataMember(Name="VirtualRestaurantId", EmitDefaultValue=false)]
-        public int? VirtualRestaurantId { get; set; }
+        /// <value>The retention campaign</value>
+        [DataMember(Name="RetentionCampaign", EmitDefaultValue=false)]
+        public RetentionCampaign RetentionCampaign { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -104,11 +107,11 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CampaignCreatedEvent {\n");
+            sb.Append("class RetentionCampaignCreatedEvent {\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
-            sb.Append("  CampaignId: ").Append(CampaignId).Append("\n");
-            sb.Append("  VirtualRestaurantName: ").Append(VirtualRestaurantName).Append("\n");
-            sb.Append("  VirtualRestaurantId: ").Append(VirtualRestaurantId).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  RetentionCampaign: ").Append(RetentionCampaign).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -132,15 +135,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CampaignCreatedEvent);
+            return this.Equals(input as RetentionCampaignCreatedEvent);
         }
 
         /// <summary>
-        /// Returns true if CampaignCreatedEvent instances are equal
+        /// Returns true if RetentionCampaignCreatedEvent instances are equal
         /// </summary>
-        /// <param name="input">Instance of CampaignCreatedEvent to be compared</param>
+        /// <param name="input">Instance of RetentionCampaignCreatedEvent to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CampaignCreatedEvent input)
+        public bool Equals(RetentionCampaignCreatedEvent input)
         {
             if (input == null)
                 return false;
@@ -152,19 +155,19 @@ namespace Flipdish.Model
                     this.EventName.Equals(input.EventName))
                 ) && 
                 (
-                    this.CampaignId == input.CampaignId ||
-                    (this.CampaignId != null &&
-                    this.CampaignId.Equals(input.CampaignId))
+                    this.Description == input.Description ||
+                    (this.Description != null &&
+                    this.Description.Equals(input.Description))
                 ) && 
                 (
-                    this.VirtualRestaurantName == input.VirtualRestaurantName ||
-                    (this.VirtualRestaurantName != null &&
-                    this.VirtualRestaurantName.Equals(input.VirtualRestaurantName))
+                    this.StoreId == input.StoreId ||
+                    (this.StoreId != null &&
+                    this.StoreId.Equals(input.StoreId))
                 ) && 
                 (
-                    this.VirtualRestaurantId == input.VirtualRestaurantId ||
-                    (this.VirtualRestaurantId != null &&
-                    this.VirtualRestaurantId.Equals(input.VirtualRestaurantId))
+                    this.RetentionCampaign == input.RetentionCampaign ||
+                    (this.RetentionCampaign != null &&
+                    this.RetentionCampaign.Equals(input.RetentionCampaign))
                 ) && 
                 (
                     this.FlipdishEventId == input.FlipdishEventId ||
@@ -194,12 +197,12 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
-                if (this.CampaignId != null)
-                    hashCode = hashCode * 59 + this.CampaignId.GetHashCode();
-                if (this.VirtualRestaurantName != null)
-                    hashCode = hashCode * 59 + this.VirtualRestaurantName.GetHashCode();
-                if (this.VirtualRestaurantId != null)
-                    hashCode = hashCode * 59 + this.VirtualRestaurantId.GetHashCode();
+                if (this.Description != null)
+                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.StoreId != null)
+                    hashCode = hashCode * 59 + this.StoreId.GetHashCode();
+                if (this.RetentionCampaign != null)
+                    hashCode = hashCode * 59 + this.RetentionCampaign.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)

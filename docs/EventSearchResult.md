@@ -19,7 +19,6 @@ Name | Type | Description | Notes
 **CustomerCreatedEvent** | [**List&lt;CustomerCreatedEvent&gt;**](CustomerCreatedEvent.md) | Customer created events | [optional] 
 **CustomerUpdatedEvent** | [**List&lt;CustomerUpdatedEvent&gt;**](CustomerUpdatedEvent.md) | Customer updated events | [optional] 
 **CustomerConsentUpdatedEvent** | [**List&lt;CustomerConsentUpdatedEvent&gt;**](CustomerConsentUpdatedEvent.md) | Customer consent updated events | [optional] 
-**CampaignCreatedEvent** | [**List&lt;CampaignCreatedEvent&gt;**](CampaignCreatedEvent.md) | Campaign created events | [optional] 
 **WebhookSubscriptionCreatedEvent** | [**List&lt;WebhookSubscriptionCreatedEvent&gt;**](WebhookSubscriptionCreatedEvent.md) | Webhook subscription created events | [optional] 
 **WebhookSubscriptionUpdatedEvent** | [**List&lt;WebhookSubscriptionUpdatedEvent&gt;**](WebhookSubscriptionUpdatedEvent.md) | Webhook subscription updated events | [optional] 
 **WebhookSubscriptionDeletedEvent** | [**List&lt;WebhookSubscriptionDeletedEvent&gt;**](WebhookSubscriptionDeletedEvent.md) | Webhook subscription deleted events | [optional] 
@@ -29,6 +28,12 @@ Name | Type | Description | Notes
 **PrinterUnassignedFromStoreEvent** | [**List&lt;PrinterUnassignedFromStoreEvent&gt;**](PrinterUnassignedFromStoreEvent.md) | Printer unassigned from store event | [optional] 
 **PhoneCallStartedEvent** | [**List&lt;PhoneCallStartedEvent&gt;**](PhoneCallStartedEvent.md) | Phone call started event | [optional] 
 **PhoneCallEndedEvent** | [**List&lt;PhoneCallEndedEvent&gt;**](PhoneCallEndedEvent.md) | Phone call ended event | [optional] 
+**LoyaltyCampaignCreatedEvent** | [**List&lt;LoyaltyCampaignCreatedEvent&gt;**](LoyaltyCampaignCreatedEvent.md) | Loyalty campaign created event | [optional] 
+**LoyaltyCampaignDeletedEvent** | [**List&lt;LoyaltyCampaignDeletedEvent&gt;**](LoyaltyCampaignDeletedEvent.md) | Loyalty campaign deleted event | [optional] 
+**LoyaltyCampaignUpdatedEvent** | [**List&lt;LoyaltyCampaignUpdatedEvent&gt;**](LoyaltyCampaignUpdatedEvent.md) | Loyalty campaign updated event | [optional] 
+**RetentionCampaignCreatedEvent** | [**List&lt;RetentionCampaignCreatedEvent&gt;**](RetentionCampaignCreatedEvent.md) | Retention campaign created event | [optional] 
+**RetentionCampaignDeletedEvent** | [**List&lt;RetentionCampaignDeletedEvent&gt;**](RetentionCampaignDeletedEvent.md) | Retention campaign deleted event | [optional] 
+**RetentionCampaignUpdatedEvent** | [**List&lt;RetentionCampaignUpdatedEvent&gt;**](RetentionCampaignUpdatedEvent.md) | Retention campaign updated event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

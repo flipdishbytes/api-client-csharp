@@ -1,12 +1,12 @@
-# Flipdish.Model.CampaignCreatedEvent
+# Flipdish.Model.RetentionCampaignUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EventName** | **string** | The event name | [optional] 
-**CampaignId** | **int?** |  | [optional] 
-**VirtualRestaurantName** | **string** |  | [optional] 
-**VirtualRestaurantId** | **int?** |  | [optional] 
+**Description** | **string** | Description | [optional] 
+**StoreId** | **int?** | Store Id | [optional] 
+**RetentionCampaign** | [**RetentionCampaign**](RetentionCampaign.md) | The retention campaign | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 
 **Position** | **int?** | Position | [optional] 
