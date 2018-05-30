@@ -314,6 +314,14 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'RetentionCampaignUpdatedEvent'
         }
+        /// <summary>
+        /// Test the property 'SmsReceivedEvent'
+        /// </summary>
+        [Test]
+        public void SmsReceivedEventTest()
+        {
+            // TODO unit test for the property 'SmsReceivedEvent'
+        }
 
     }
 

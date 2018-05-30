@@ -280,6 +280,8 @@ Class | Method | HTTP request | Description
  - [Model.RetentionCampaignDeletedEvent](docs/RetentionCampaignDeletedEvent.md)
  - [Model.RetentionCampaignUpdatedEvent](docs/RetentionCampaignUpdatedEvent.md)
  - [Model.SearchCriteria](docs/SearchCriteria.md)
+ - [Model.SmsInfo](docs/SmsInfo.md)
+ - [Model.SmsReceivedEvent](docs/SmsReceivedEvent.md)
  - [Model.Store](docs/Store.md)
  - [Model.StoreAddress](docs/StoreAddress.md)
  - [Model.StoreCreatedEvent](docs/StoreCreatedEvent.md)
