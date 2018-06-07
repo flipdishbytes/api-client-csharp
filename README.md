@@ -73,20 +73,18 @@ namespace Example
             // Configure OAuth2 access token for authorization: oauth2
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new AuthorizationTokensApi();
-            var clientId = clientId_example;  // string | Client identifier
-            var page = 56;  // int? | Requested page number (optional) 
-            var limit = 56;  // int? | Requested page limit (optional) 
+            var apiInstance = new AccountsApi();
+            var loginModel = new LoginModel(); // LoginModel | Login model
 
             try
             {
-                // Get authorization tokens
-                RestApiPaginationResultOAuthTokenModel result = apiInstance.GetAuthorizationTokens(clientId, page, limit);
+                // Login with username and password
+                Object result = apiInstance.Login(loginModel);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AuthorizationTokensApi.GetAuthorizationTokens: " + e.Message );
+                Debug.Print("Exception when calling AccountsApi.Login: " + e.Message );
             }
 
         }
@@ -101,6 +99,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccountsApi* | [**Login**](docs/AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | Login with username and password
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
 *EventsApi* | [**GetCustomerEvents**](docs/EventsApi.md#getcustomerevents) | **GET** /api/v1.0/events/customer/{customerId} | Get customer events
@@ -200,6 +199,7 @@ Class | Method | HTTP request | Description
  - [Model.EventSearchResult](docs/EventSearchResult.md)
  - [Model.FeeSummary](docs/FeeSummary.md)
  - [Model.HttpRequestAndResponseLog](docs/HttpRequestAndResponseLog.md)
+ - [Model.LoginModel](docs/LoginModel.md)
  - [Model.LoyaltyCampaign](docs/LoyaltyCampaign.md)
  - [Model.LoyaltyCampaignCreatedEvent](docs/LoyaltyCampaignCreatedEvent.md)
  - [Model.LoyaltyCampaignDeletedEvent](docs/LoyaltyCampaignDeletedEvent.md)
