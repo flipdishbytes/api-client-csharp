@@ -65,6 +65,18 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test CreateAccount
+        /// </summary>
+        [Test]
+        public void CreateAccountTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //CreateAccount createAccountModel = null;
+            //var response = instance.CreateAccount(createAccountModel);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
         /// Test Login
         /// </summary>
         [Test]

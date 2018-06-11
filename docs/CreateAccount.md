@@ -1,12 +1,10 @@
-# Flipdish.Model.UserEventInfo
+# Flipdish.Model.CreateAccount
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UserId** | **int?** | User Id | [optional] 
-**UserName** | **string** | User Name | [optional] 
-**UserPhoneNumber** | **string** | User Phone Number | [optional] 
-**UserEmail** | **string** | User Email | [optional] 
+**Email** | **string** | Email addres | [optional] 
+**StoreName** | **string** | Store name | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

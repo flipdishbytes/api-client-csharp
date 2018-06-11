@@ -36,15 +36,17 @@ namespace Flipdish.Model
         /// <param name="EventName">The event name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="StoreId">Store Id.</param>
+        /// <param name="User">Info User.</param>
         /// <param name="LoyaltyCampaign">The loyalty campaign.</param>
         /// <param name="FlipdishEventId">The identitfier of the event.</param>
         /// <param name="CreateTime">The time of creation of the event.</param>
         /// <param name="Position">Position.</param>
-        public LoyaltyCampaignUpdatedEvent(string EventName = default(string), string Description = default(string), int? StoreId = default(int?), LoyaltyCampaign LoyaltyCampaign = default(LoyaltyCampaign), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        public LoyaltyCampaignUpdatedEvent(string EventName = default(string), string Description = default(string), int? StoreId = default(int?), UserEventInfo User = default(UserEventInfo), LoyaltyCampaign LoyaltyCampaign = default(LoyaltyCampaign), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
         {
             this.EventName = EventName;
             this.Description = Description;
             this.StoreId = StoreId;
+            this.User = User;
             this.LoyaltyCampaign = LoyaltyCampaign;
             this.FlipdishEventId = FlipdishEventId;
             this.CreateTime = CreateTime;
@@ -71,6 +73,13 @@ namespace Flipdish.Model
         /// <value>Store Id</value>
         [DataMember(Name="StoreId", EmitDefaultValue=false)]
         public int? StoreId { get; set; }
+
+        /// <summary>
+        /// Info User
+        /// </summary>
+        /// <value>Info User</value>
+        [DataMember(Name="User", EmitDefaultValue=false)]
+        public UserEventInfo User { get; set; }
 
         /// <summary>
         /// The loyalty campaign
@@ -111,6 +120,7 @@ namespace Flipdish.Model
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  LoyaltyCampaign: ").Append(LoyaltyCampaign).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
@@ -165,6 +175,11 @@ namespace Flipdish.Model
                     this.StoreId.Equals(input.StoreId))
                 ) && 
                 (
+                    this.User == input.User ||
+                    (this.User != null &&
+                    this.User.Equals(input.User))
+                ) && 
+                (
                     this.LoyaltyCampaign == input.LoyaltyCampaign ||
                     (this.LoyaltyCampaign != null &&
                     this.LoyaltyCampaign.Equals(input.LoyaltyCampaign))
@@ -201,6 +216,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.StoreId != null)
                     hashCode = hashCode * 59 + this.StoreId.GetHashCode();
+                if (this.User != null)
+                    hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.LoyaltyCampaign != null)
                     hashCode = hashCode * 59 + this.LoyaltyCampaign.GetHashCode();
                 if (this.FlipdishEventId != null)

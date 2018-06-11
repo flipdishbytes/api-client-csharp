@@ -25,29 +25,25 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Loyalty campaign created event
+    /// User login event
     /// </summary>
     [DataContract]
-    public partial class LoyaltyCampaignCreatedEvent :  IEquatable<LoyaltyCampaignCreatedEvent>, IValidatableObject
+    public partial class UserLoginEvent :  IEquatable<UserLoginEvent>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LoyaltyCampaignCreatedEvent" /> class.
+        /// Initializes a new instance of the <see cref="UserLoginEvent" /> class.
         /// </summary>
         /// <param name="EventName">The event name.</param>
         /// <param name="Description">Description.</param>
-        /// <param name="StoreId">Store Id.</param>
-        /// <param name="User">Info User.</param>
-        /// <param name="LoyaltyCampaign">The loyalty campaign.</param>
+        /// <param name="User">The user.</param>
         /// <param name="FlipdishEventId">The identitfier of the event.</param>
         /// <param name="CreateTime">The time of creation of the event.</param>
         /// <param name="Position">Position.</param>
-        public LoyaltyCampaignCreatedEvent(string EventName = default(string), string Description = default(string), int? StoreId = default(int?), UserEventInfo User = default(UserEventInfo), LoyaltyCampaign LoyaltyCampaign = default(LoyaltyCampaign), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        public UserLoginEvent(string EventName = default(string), string Description = default(string), UserEventInfo User = default(UserEventInfo), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
         {
             this.EventName = EventName;
             this.Description = Description;
-            this.StoreId = StoreId;
             this.User = User;
-            this.LoyaltyCampaign = LoyaltyCampaign;
             this.FlipdishEventId = FlipdishEventId;
             this.CreateTime = CreateTime;
             this.Position = Position;
@@ -68,25 +64,11 @@ namespace Flipdish.Model
         public string Description { get; set; }
 
         /// <summary>
-        /// Store Id
+        /// The user
         /// </summary>
-        /// <value>Store Id</value>
-        [DataMember(Name="StoreId", EmitDefaultValue=false)]
-        public int? StoreId { get; set; }
-
-        /// <summary>
-        /// Info User
-        /// </summary>
-        /// <value>Info User</value>
+        /// <value>The user</value>
         [DataMember(Name="User", EmitDefaultValue=false)]
         public UserEventInfo User { get; set; }
-
-        /// <summary>
-        /// The loyalty campaign
-        /// </summary>
-        /// <value>The loyalty campaign</value>
-        [DataMember(Name="LoyaltyCampaign", EmitDefaultValue=false)]
-        public LoyaltyCampaign LoyaltyCampaign { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -116,12 +98,10 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class LoyaltyCampaignCreatedEvent {\n");
+            sb.Append("class UserLoginEvent {\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
-            sb.Append("  LoyaltyCampaign: ").Append(LoyaltyCampaign).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -145,15 +125,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as LoyaltyCampaignCreatedEvent);
+            return this.Equals(input as UserLoginEvent);
         }
 
         /// <summary>
-        /// Returns true if LoyaltyCampaignCreatedEvent instances are equal
+        /// Returns true if UserLoginEvent instances are equal
         /// </summary>
-        /// <param name="input">Instance of LoyaltyCampaignCreatedEvent to be compared</param>
+        /// <param name="input">Instance of UserLoginEvent to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LoyaltyCampaignCreatedEvent input)
+        public bool Equals(UserLoginEvent input)
         {
             if (input == null)
                 return false;
@@ -170,19 +150,9 @@ namespace Flipdish.Model
                     this.Description.Equals(input.Description))
                 ) && 
                 (
-                    this.StoreId == input.StoreId ||
-                    (this.StoreId != null &&
-                    this.StoreId.Equals(input.StoreId))
-                ) && 
-                (
                     this.User == input.User ||
                     (this.User != null &&
                     this.User.Equals(input.User))
-                ) && 
-                (
-                    this.LoyaltyCampaign == input.LoyaltyCampaign ||
-                    (this.LoyaltyCampaign != null &&
-                    this.LoyaltyCampaign.Equals(input.LoyaltyCampaign))
                 ) && 
                 (
                     this.FlipdishEventId == input.FlipdishEventId ||
@@ -214,12 +184,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
-                if (this.StoreId != null)
-                    hashCode = hashCode * 59 + this.StoreId.GetHashCode();
                 if (this.User != null)
                     hashCode = hashCode * 59 + this.User.GetHashCode();
-                if (this.LoyaltyCampaign != null)
-                    hashCode = hashCode * 59 + this.LoyaltyCampaign.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)

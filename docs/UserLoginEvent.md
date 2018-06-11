@@ -1,13 +1,11 @@
-# Flipdish.Model.LoyaltyCampaignCreatedEvent
+# Flipdish.Model.UserLoginEvent
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EventName** | **string** | The event name | [optional] 
 **Description** | **string** | Description | [optional] 
-**StoreId** | **int?** | Store Id | [optional] 
-**User** | [**UserEventInfo**](UserEventInfo.md) | Info User | [optional] 
-**LoyaltyCampaign** | [**LoyaltyCampaign**](LoyaltyCampaign.md) | The loyalty campaign | [optional] 
+**User** | [**UserEventInfo**](UserEventInfo.md) | The user | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 
 **Position** | **int?** | Position | [optional] 

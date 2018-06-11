@@ -322,6 +322,38 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'SmsReceivedEvent'
         }
+        /// <summary>
+        /// Test the property 'UserLoginEvent'
+        /// </summary>
+        [Test]
+        public void UserLoginEventTest()
+        {
+            // TODO unit test for the property 'UserLoginEvent'
+        }
+        /// <summary>
+        /// Test the property 'UserCreatedEvent'
+        /// </summary>
+        [Test]
+        public void UserCreatedEventTest()
+        {
+            // TODO unit test for the property 'UserCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'UserUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void UserUpdatedEventTest()
+        {
+            // TODO unit test for the property 'UserUpdatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'UserDeletedEvent'
+        /// </summary>
+        [Test]
+        public void UserDeletedEventTest()
+        {
+            // TODO unit test for the property 'UserDeletedEvent'
+        }
 
     }
 

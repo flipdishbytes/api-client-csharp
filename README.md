@@ -74,17 +74,17 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var loginModel = new LoginModel(); // LoginModel | Login model
+            var createAccountModel = new CreateAccount(); // CreateAccount | Create account model
 
             try
             {
-                // Login with username and password
-                Object result = apiInstance.Login(loginModel);
+                // Create account with email address and store name
+                Object result = apiInstance.CreateAccount(createAccountModel);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AccountsApi.Login: " + e.Message );
+                Debug.Print("Exception when calling AccountsApi.CreateAccount: " + e.Message );
             }
 
         }
@@ -99,6 +99,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccountsApi* | [**CreateAccount**](docs/AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | Create account with email address and store name
 *AccountsApi* | [**Login**](docs/AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | Login with username and password
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
@@ -190,6 +191,7 @@ Class | Method | HTTP request | Description
  - [Model.Accept](docs/Accept.md)
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
  - [Model.Coordinates](docs/Coordinates.md)
+ - [Model.CreateAccount](docs/CreateAccount.md)
  - [Model.CustomerConsentUpdatedEvent](docs/CustomerConsentUpdatedEvent.md)
  - [Model.CustomerCreatedEvent](docs/CustomerCreatedEvent.md)
  - [Model.CustomerSummary](docs/CustomerSummary.md)
@@ -291,7 +293,11 @@ Class | Method | HTTP request | Description
  - [Model.StoreOpeningHoursUpdatedEvent](docs/StoreOpeningHoursUpdatedEvent.md)
  - [Model.StoreSummary](docs/StoreSummary.md)
  - [Model.StoreUpdatedEvent](docs/StoreUpdatedEvent.md)
+ - [Model.UserCreatedEvent](docs/UserCreatedEvent.md)
+ - [Model.UserDeletedEvent](docs/UserDeletedEvent.md)
  - [Model.UserEventInfo](docs/UserEventInfo.md)
+ - [Model.UserLoginEvent](docs/UserLoginEvent.md)
+ - [Model.UserUpdatedEvent](docs/UserUpdatedEvent.md)
  - [Model.ValidationErrorResult](docs/ValidationErrorResult.md)
  - [Model.Voucher](docs/Voucher.md)
  - [Model.VoucherSummary](docs/VoucherSummary.md)

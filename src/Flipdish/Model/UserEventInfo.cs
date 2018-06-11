@@ -34,7 +34,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="UserEventInfo" /> class.
         /// </summary>
         /// <param name="UserId">User Id.</param>
-        /// <param name="UserName">UserName.</param>
+        /// <param name="UserName">User Name.</param>
         /// <param name="UserPhoneNumber">User Phone Number.</param>
         /// <param name="UserEmail">User Email.</param>
         public UserEventInfo(int? UserId = default(int?), string UserName = default(string), string UserPhoneNumber = default(string), string UserEmail = default(string))
@@ -53,9 +53,9 @@ namespace Flipdish.Model
         public int? UserId { get; set; }
 
         /// <summary>
-        /// UserName
+        /// User Name
         /// </summary>
-        /// <value>UserName</value>
+        /// <value>User Name</value>
         [DataMember(Name="UserName", EmitDefaultValue=false)]
         public string UserName { get; set; }
 

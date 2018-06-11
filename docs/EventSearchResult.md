@@ -35,6 +35,10 @@ Name | Type | Description | Notes
 **RetentionCampaignDeletedEvent** | [**List&lt;RetentionCampaignDeletedEvent&gt;**](RetentionCampaignDeletedEvent.md) | Retention campaign deleted event | [optional] 
 **RetentionCampaignUpdatedEvent** | [**List&lt;RetentionCampaignUpdatedEvent&gt;**](RetentionCampaignUpdatedEvent.md) | Retention campaign updated event | [optional] 
 **SmsReceivedEvent** | [**List&lt;SmsReceivedEvent&gt;**](SmsReceivedEvent.md) | Sms received event | [optional] 
+**UserLoginEvent** | [**List&lt;UserLoginEvent&gt;**](UserLoginEvent.md) | User login event | [optional] 
+**UserCreatedEvent** | [**List&lt;UserCreatedEvent&gt;**](UserCreatedEvent.md) | User created event | [optional] 
+**UserUpdatedEvent** | [**List&lt;UserUpdatedEvent&gt;**](UserUpdatedEvent.md) | User updated event | [optional] 
+**UserDeletedEvent** | [**List&lt;UserDeletedEvent&gt;**](UserDeletedEvent.md) | User deleted event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

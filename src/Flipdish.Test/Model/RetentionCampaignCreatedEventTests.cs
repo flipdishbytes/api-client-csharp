@@ -91,6 +91,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'StoreId'
         }
         /// <summary>
+        /// Test the property 'User'
+        /// </summary>
+        [Test]
+        public void UserTest()
+        {
+            // TODO unit test for the property 'User'
+        }
+        /// <summary>
         /// Test the property 'RetentionCampaign'
         /// </summary>
         [Test]

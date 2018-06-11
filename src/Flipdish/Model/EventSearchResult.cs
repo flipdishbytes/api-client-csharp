@@ -65,7 +65,11 @@ namespace Flipdish.Model
         /// <param name="RetentionCampaignDeletedEvent">Retention campaign deleted event.</param>
         /// <param name="RetentionCampaignUpdatedEvent">Retention campaign updated event.</param>
         /// <param name="SmsReceivedEvent">Sms received event.</param>
-        public EventSearchResult(List<OrderAcceptedEvent> OrderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderCreatedEvent> OrderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> OrderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> OrderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> OrderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> OrderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<StoreCreatedEvent> StoreCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> StoreDeletedEvent = default(List<StoreDeletedEvent>), List<StoreDeliveryZoneUpdatedEvent> StoreDeliveryZoneUpdatedEvent = default(List<StoreDeliveryZoneUpdatedEvent>), List<StoreOpeningHoursUpdatedEvent> StoreOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreUpdatedEvent> StoreUpdatedEvent = default(List<StoreUpdatedEvent>), List<MenuCreatedEvent> MenuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> MenuUpdatedEvent = default(List<MenuUpdatedEvent>), List<CustomerCreatedEvent> CustomerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> CustomerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> CustomerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<WebhookSubscriptionCreatedEvent> WebhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> WebhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> WebhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>), List<PrinterTurnedOnEvent> PrinterTurnedOnEvent = default(List<PrinterTurnedOnEvent>), List<PrinterTurnedOffEvent> PrinterTurnedOffEvent = default(List<PrinterTurnedOffEvent>), List<PrinterAssignedToStoreEvent> PrinterAssignedToStoreEvent = default(List<PrinterAssignedToStoreEvent>), List<PrinterUnassignedFromStoreEvent> PrinterUnassignedFromStoreEvent = default(List<PrinterUnassignedFromStoreEvent>), List<PhoneCallStartedEvent> PhoneCallStartedEvent = default(List<PhoneCallStartedEvent>), List<PhoneCallEndedEvent> PhoneCallEndedEvent = default(List<PhoneCallEndedEvent>), List<LoyaltyCampaignCreatedEvent> LoyaltyCampaignCreatedEvent = default(List<LoyaltyCampaignCreatedEvent>), List<LoyaltyCampaignDeletedEvent> LoyaltyCampaignDeletedEvent = default(List<LoyaltyCampaignDeletedEvent>), List<LoyaltyCampaignUpdatedEvent> LoyaltyCampaignUpdatedEvent = default(List<LoyaltyCampaignUpdatedEvent>), List<RetentionCampaignCreatedEvent> RetentionCampaignCreatedEvent = default(List<RetentionCampaignCreatedEvent>), List<RetentionCampaignDeletedEvent> RetentionCampaignDeletedEvent = default(List<RetentionCampaignDeletedEvent>), List<RetentionCampaignUpdatedEvent> RetentionCampaignUpdatedEvent = default(List<RetentionCampaignUpdatedEvent>), List<SmsReceivedEvent> SmsReceivedEvent = default(List<SmsReceivedEvent>))
+        /// <param name="UserLoginEvent">User login event.</param>
+        /// <param name="UserCreatedEvent">User created event.</param>
+        /// <param name="UserUpdatedEvent">User updated event.</param>
+        /// <param name="UserDeletedEvent">User deleted event.</param>
+        public EventSearchResult(List<OrderAcceptedEvent> OrderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderCreatedEvent> OrderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> OrderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> OrderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> OrderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> OrderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<StoreCreatedEvent> StoreCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> StoreDeletedEvent = default(List<StoreDeletedEvent>), List<StoreDeliveryZoneUpdatedEvent> StoreDeliveryZoneUpdatedEvent = default(List<StoreDeliveryZoneUpdatedEvent>), List<StoreOpeningHoursUpdatedEvent> StoreOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreUpdatedEvent> StoreUpdatedEvent = default(List<StoreUpdatedEvent>), List<MenuCreatedEvent> MenuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> MenuUpdatedEvent = default(List<MenuUpdatedEvent>), List<CustomerCreatedEvent> CustomerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> CustomerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> CustomerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<WebhookSubscriptionCreatedEvent> WebhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> WebhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> WebhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>), List<PrinterTurnedOnEvent> PrinterTurnedOnEvent = default(List<PrinterTurnedOnEvent>), List<PrinterTurnedOffEvent> PrinterTurnedOffEvent = default(List<PrinterTurnedOffEvent>), List<PrinterAssignedToStoreEvent> PrinterAssignedToStoreEvent = default(List<PrinterAssignedToStoreEvent>), List<PrinterUnassignedFromStoreEvent> PrinterUnassignedFromStoreEvent = default(List<PrinterUnassignedFromStoreEvent>), List<PhoneCallStartedEvent> PhoneCallStartedEvent = default(List<PhoneCallStartedEvent>), List<PhoneCallEndedEvent> PhoneCallEndedEvent = default(List<PhoneCallEndedEvent>), List<LoyaltyCampaignCreatedEvent> LoyaltyCampaignCreatedEvent = default(List<LoyaltyCampaignCreatedEvent>), List<LoyaltyCampaignDeletedEvent> LoyaltyCampaignDeletedEvent = default(List<LoyaltyCampaignDeletedEvent>), List<LoyaltyCampaignUpdatedEvent> LoyaltyCampaignUpdatedEvent = default(List<LoyaltyCampaignUpdatedEvent>), List<RetentionCampaignCreatedEvent> RetentionCampaignCreatedEvent = default(List<RetentionCampaignCreatedEvent>), List<RetentionCampaignDeletedEvent> RetentionCampaignDeletedEvent = default(List<RetentionCampaignDeletedEvent>), List<RetentionCampaignUpdatedEvent> RetentionCampaignUpdatedEvent = default(List<RetentionCampaignUpdatedEvent>), List<SmsReceivedEvent> SmsReceivedEvent = default(List<SmsReceivedEvent>), List<UserLoginEvent> UserLoginEvent = default(List<UserLoginEvent>), List<UserCreatedEvent> UserCreatedEvent = default(List<UserCreatedEvent>), List<UserUpdatedEvent> UserUpdatedEvent = default(List<UserUpdatedEvent>), List<UserDeletedEvent> UserDeletedEvent = default(List<UserDeletedEvent>))
         {
             this.OrderAcceptedEvent = OrderAcceptedEvent;
             this.OrderCreatedEvent = OrderCreatedEvent;
@@ -99,6 +103,10 @@ namespace Flipdish.Model
             this.RetentionCampaignDeletedEvent = RetentionCampaignDeletedEvent;
             this.RetentionCampaignUpdatedEvent = RetentionCampaignUpdatedEvent;
             this.SmsReceivedEvent = SmsReceivedEvent;
+            this.UserLoginEvent = UserLoginEvent;
+            this.UserCreatedEvent = UserCreatedEvent;
+            this.UserUpdatedEvent = UserUpdatedEvent;
+            this.UserDeletedEvent = UserDeletedEvent;
         }
         
         /// <summary>
@@ -326,6 +334,34 @@ namespace Flipdish.Model
         public List<SmsReceivedEvent> SmsReceivedEvent { get; set; }
 
         /// <summary>
+        /// User login event
+        /// </summary>
+        /// <value>User login event</value>
+        [DataMember(Name="UserLoginEvent", EmitDefaultValue=false)]
+        public List<UserLoginEvent> UserLoginEvent { get; set; }
+
+        /// <summary>
+        /// User created event
+        /// </summary>
+        /// <value>User created event</value>
+        [DataMember(Name="UserCreatedEvent", EmitDefaultValue=false)]
+        public List<UserCreatedEvent> UserCreatedEvent { get; set; }
+
+        /// <summary>
+        /// User updated event
+        /// </summary>
+        /// <value>User updated event</value>
+        [DataMember(Name="UserUpdatedEvent", EmitDefaultValue=false)]
+        public List<UserUpdatedEvent> UserUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// User deleted event
+        /// </summary>
+        /// <value>User deleted event</value>
+        [DataMember(Name="UserDeletedEvent", EmitDefaultValue=false)]
+        public List<UserDeletedEvent> UserDeletedEvent { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -365,6 +401,10 @@ namespace Flipdish.Model
             sb.Append("  RetentionCampaignDeletedEvent: ").Append(RetentionCampaignDeletedEvent).Append("\n");
             sb.Append("  RetentionCampaignUpdatedEvent: ").Append(RetentionCampaignUpdatedEvent).Append("\n");
             sb.Append("  SmsReceivedEvent: ").Append(SmsReceivedEvent).Append("\n");
+            sb.Append("  UserLoginEvent: ").Append(UserLoginEvent).Append("\n");
+            sb.Append("  UserCreatedEvent: ").Append(UserCreatedEvent).Append("\n");
+            sb.Append("  UserUpdatedEvent: ").Append(UserUpdatedEvent).Append("\n");
+            sb.Append("  UserDeletedEvent: ").Append(UserDeletedEvent).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -558,6 +598,26 @@ namespace Flipdish.Model
                     this.SmsReceivedEvent == input.SmsReceivedEvent ||
                     this.SmsReceivedEvent != null &&
                     this.SmsReceivedEvent.SequenceEqual(input.SmsReceivedEvent)
+                ) && 
+                (
+                    this.UserLoginEvent == input.UserLoginEvent ||
+                    this.UserLoginEvent != null &&
+                    this.UserLoginEvent.SequenceEqual(input.UserLoginEvent)
+                ) && 
+                (
+                    this.UserCreatedEvent == input.UserCreatedEvent ||
+                    this.UserCreatedEvent != null &&
+                    this.UserCreatedEvent.SequenceEqual(input.UserCreatedEvent)
+                ) && 
+                (
+                    this.UserUpdatedEvent == input.UserUpdatedEvent ||
+                    this.UserUpdatedEvent != null &&
+                    this.UserUpdatedEvent.SequenceEqual(input.UserUpdatedEvent)
+                ) && 
+                (
+                    this.UserDeletedEvent == input.UserDeletedEvent ||
+                    this.UserDeletedEvent != null &&
+                    this.UserDeletedEvent.SequenceEqual(input.UserDeletedEvent)
                 );
         }
 
@@ -634,6 +694,14 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.RetentionCampaignUpdatedEvent.GetHashCode();
                 if (this.SmsReceivedEvent != null)
                     hashCode = hashCode * 59 + this.SmsReceivedEvent.GetHashCode();
+                if (this.UserLoginEvent != null)
+                    hashCode = hashCode * 59 + this.UserLoginEvent.GetHashCode();
+                if (this.UserCreatedEvent != null)
+                    hashCode = hashCode * 59 + this.UserCreatedEvent.GetHashCode();
+                if (this.UserUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.UserUpdatedEvent.GetHashCode();
+                if (this.UserDeletedEvent != null)
+                    hashCode = hashCode * 59 + this.UserDeletedEvent.GetHashCode();
                 return hashCode;
             }
         }
