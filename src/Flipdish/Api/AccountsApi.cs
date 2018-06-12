@@ -25,6 +25,27 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Change password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns>Object</returns>
+        Object ChangePassword (ChangePasswordModel changePasswordModel);
+
+        /// <summary>
+        /// Change password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ChangePasswordWithHttpInfo (ChangePasswordModel changePasswordModel);
+        /// <summary>
         /// Create account with email address and store name
         /// </summary>
         /// <remarks>
@@ -33,7 +54,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAccountModel">Create account model</param>
         /// <returns>Object</returns>
-        Object CreateAccount (CreateAccount createAccountModel);
+        Object CreateAccount (CreateAccountModel createAccountModel);
 
         /// <summary>
         /// Create account with email address and store name
@@ -44,7 +65,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAccountModel">Create account model</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> CreateAccountWithHttpInfo (CreateAccount createAccountModel);
+        ApiResponse<Object> CreateAccountWithHttpInfo (CreateAccountModel createAccountModel);
         /// <summary>
         /// Login with username and password
         /// </summary>
@@ -66,8 +87,71 @@ namespace Flipdish.Api
         /// <param name="loginModel">Login model</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> LoginWithHttpInfo (LoginModel loginModel);
+        /// <summary>
+        /// Reset password with token.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="passwordResetModel">Password reset model</param>
+        /// <returns>Object</returns>
+        Object PasswordResetWithToken (PasswordResetModel passwordResetModel);
+
+        /// <summary>
+        /// Reset password with token.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="passwordResetModel">Password reset model</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> PasswordResetWithTokenWithHttpInfo (PasswordResetModel passwordResetModel);
+        /// <summary>
+        /// Request password reset. Flipdish system will send a token via email.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="email">Email address</param>
+        /// <returns>Object</returns>
+        Object RequestPasswordReset (string email);
+
+        /// <summary>
+        /// Request password reset. Flipdish system will send a token via email.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="email">Email address</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> RequestPasswordResetWithHttpInfo (string email);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Change password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ChangePasswordAsync (ChangePasswordModel changePasswordModel);
+
+        /// <summary>
+        /// Change password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordAsyncWithHttpInfo (ChangePasswordModel changePasswordModel);
         /// <summary>
         /// Create account with email address and store name
         /// </summary>
@@ -77,7 +161,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAccountModel">Create account model</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> CreateAccountAsync (CreateAccount createAccountModel);
+        System.Threading.Tasks.Task<Object> CreateAccountAsync (CreateAccountModel createAccountModel);
 
         /// <summary>
         /// Create account with email address and store name
@@ -88,7 +172,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAccountModel">Create account model</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateAccountAsyncWithHttpInfo (CreateAccount createAccountModel);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateAccountAsyncWithHttpInfo (CreateAccountModel createAccountModel);
         /// <summary>
         /// Login with username and password
         /// </summary>
@@ -110,6 +194,48 @@ namespace Flipdish.Api
         /// <param name="loginModel">Login model</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> LoginAsyncWithHttpInfo (LoginModel loginModel);
+        /// <summary>
+        /// Reset password with token.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="passwordResetModel">Password reset model</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> PasswordResetWithTokenAsync (PasswordResetModel passwordResetModel);
+
+        /// <summary>
+        /// Reset password with token.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="passwordResetModel">Password reset model</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PasswordResetWithTokenAsyncWithHttpInfo (PasswordResetModel passwordResetModel);
+        /// <summary>
+        /// Request password reset. Flipdish system will send a token via email.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="email">Email address</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> RequestPasswordResetAsync (string email);
+
+        /// <summary>
+        /// Request password reset. Flipdish system will send a token via email.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="email">Email address</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> RequestPasswordResetAsyncWithHttpInfo (string email);
         #endregion Asynchronous Operations
     }
 
@@ -211,12 +337,187 @@ namespace Flipdish.Api
         }
 
         /// <summary>
+        /// Change password 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns>Object</returns>
+        public Object ChangePassword (ChangePasswordModel changePasswordModel)
+        {
+             ApiResponse<Object> localVarResponse = ChangePasswordWithHttpInfo(changePasswordModel);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Change password 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ChangePasswordWithHttpInfo (ChangePasswordModel changePasswordModel)
+        {
+            // verify the required parameter 'changePasswordModel' is set
+            if (changePasswordModel == null)
+                throw new ApiException(400, "Missing required parameter 'changePasswordModel' when calling AccountsApi->ChangePassword");
+
+            var localVarPath = "/api/v1.0/accounts/password";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (changePasswordModel != null && changePasswordModel.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(changePasswordModel); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = changePasswordModel; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ChangePassword", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Change password 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ChangePasswordAsync (ChangePasswordModel changePasswordModel)
+        {
+             ApiResponse<Object> localVarResponse = await ChangePasswordAsyncWithHttpInfo(changePasswordModel);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Change password 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordAsyncWithHttpInfo (ChangePasswordModel changePasswordModel)
+        {
+            // verify the required parameter 'changePasswordModel' is set
+            if (changePasswordModel == null)
+                throw new ApiException(400, "Missing required parameter 'changePasswordModel' when calling AccountsApi->ChangePassword");
+
+            var localVarPath = "/api/v1.0/accounts/password";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (changePasswordModel != null && changePasswordModel.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(changePasswordModel); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = changePasswordModel; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ChangePassword", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
         /// Create account with email address and store name 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAccountModel">Create account model</param>
         /// <returns>Object</returns>
-        public Object CreateAccount (CreateAccount createAccountModel)
+        public Object CreateAccount (CreateAccountModel createAccountModel)
         {
              ApiResponse<Object> localVarResponse = CreateAccountWithHttpInfo(createAccountModel);
              return localVarResponse.Data;
@@ -228,7 +529,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAccountModel">Create account model</param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > CreateAccountWithHttpInfo (CreateAccount createAccountModel)
+        public ApiResponse< Object > CreateAccountWithHttpInfo (CreateAccountModel createAccountModel)
         {
             // verify the required parameter 'createAccountModel' is set
             if (createAccountModel == null)
@@ -303,7 +604,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAccountModel">Create account model</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> CreateAccountAsync (CreateAccount createAccountModel)
+        public async System.Threading.Tasks.Task<Object> CreateAccountAsync (CreateAccountModel createAccountModel)
         {
              ApiResponse<Object> localVarResponse = await CreateAccountAsyncWithHttpInfo(createAccountModel);
              return localVarResponse.Data;
@@ -316,7 +617,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAccountModel">Create account model</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateAccountAsyncWithHttpInfo (CreateAccount createAccountModel)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateAccountAsyncWithHttpInfo (CreateAccountModel createAccountModel)
         {
             // verify the required parameter 'createAccountModel' is set
             if (createAccountModel == null)
@@ -552,6 +853,332 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("Login", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Reset password with token. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="passwordResetModel">Password reset model</param>
+        /// <returns>Object</returns>
+        public Object PasswordResetWithToken (PasswordResetModel passwordResetModel)
+        {
+             ApiResponse<Object> localVarResponse = PasswordResetWithTokenWithHttpInfo(passwordResetModel);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Reset password with token. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="passwordResetModel">Password reset model</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > PasswordResetWithTokenWithHttpInfo (PasswordResetModel passwordResetModel)
+        {
+            // verify the required parameter 'passwordResetModel' is set
+            if (passwordResetModel == null)
+                throw new ApiException(400, "Missing required parameter 'passwordResetModel' when calling AccountsApi->PasswordResetWithToken");
+
+            var localVarPath = "/api/v1.0/accounts/password";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (passwordResetModel != null && passwordResetModel.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(passwordResetModel); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = passwordResetModel; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PasswordResetWithToken", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Reset password with token. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="passwordResetModel">Password reset model</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> PasswordResetWithTokenAsync (PasswordResetModel passwordResetModel)
+        {
+             ApiResponse<Object> localVarResponse = await PasswordResetWithTokenAsyncWithHttpInfo(passwordResetModel);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Reset password with token. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="passwordResetModel">Password reset model</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PasswordResetWithTokenAsyncWithHttpInfo (PasswordResetModel passwordResetModel)
+        {
+            // verify the required parameter 'passwordResetModel' is set
+            if (passwordResetModel == null)
+                throw new ApiException(400, "Missing required parameter 'passwordResetModel' when calling AccountsApi->PasswordResetWithToken");
+
+            var localVarPath = "/api/v1.0/accounts/password";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (passwordResetModel != null && passwordResetModel.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(passwordResetModel); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = passwordResetModel; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PasswordResetWithToken", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Request password reset. Flipdish system will send a token via email. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="email">Email address</param>
+        /// <returns>Object</returns>
+        public Object RequestPasswordReset (string email)
+        {
+             ApiResponse<Object> localVarResponse = RequestPasswordResetWithHttpInfo(email);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Request password reset. Flipdish system will send a token via email. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="email">Email address</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > RequestPasswordResetWithHttpInfo (string email)
+        {
+            // verify the required parameter 'email' is set
+            if (email == null)
+                throw new ApiException(400, "Missing required parameter 'email' when calling AccountsApi->RequestPasswordReset");
+
+            var localVarPath = "/api/v1.0/accounts/password";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (email != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "email", email)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RequestPasswordReset", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Request password reset. Flipdish system will send a token via email. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="email">Email address</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> RequestPasswordResetAsync (string email)
+        {
+             ApiResponse<Object> localVarResponse = await RequestPasswordResetAsyncWithHttpInfo(email);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Request password reset. Flipdish system will send a token via email. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="email">Email address</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RequestPasswordResetAsyncWithHttpInfo (string email)
+        {
+            // verify the required parameter 'email' is set
+            if (email == null)
+                throw new ApiException(400, "Missing required parameter 'email' when calling AccountsApi->RequestPasswordReset");
+
+            var localVarPath = "/api/v1.0/accounts/password";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (email != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "email", email)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RequestPasswordReset", localVarResponse);
                 if (exception != null) throw exception;
             }
 

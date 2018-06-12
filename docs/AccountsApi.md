@@ -4,13 +4,78 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**ChangePassword**](AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | Change password
 [**CreateAccount**](AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | Create account with email address and store name
 [**Login**](AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | Login with username and password
+[**PasswordResetWithToken**](AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
+[**RequestPasswordReset**](AccountsApi.md#requestpasswordreset) | **GET** /api/v1.0/accounts/password | Request password reset. Flipdish system will send a token via email.
 
+
+<a name="changepassword"></a>
+# **ChangePassword**
+> Object ChangePassword (ChangePasswordModel changePasswordModel)
+
+Change password
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class ChangePasswordExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AccountsApi();
+            var changePasswordModel = new ChangePasswordModel(); // ChangePasswordModel | Change password model
+
+            try
+            {
+                // Change password
+                Object result = apiInstance.ChangePassword(changePasswordModel);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AccountsApi.ChangePassword: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changePasswordModel** | [**ChangePasswordModel**](ChangePasswordModel.md)| Change password model | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="createaccount"></a>
 # **CreateAccount**
-> Object CreateAccount (CreateAccount createAccountModel)
+> Object CreateAccount (CreateAccountModel createAccountModel)
 
 Create account with email address and store name
 
@@ -32,7 +97,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var createAccountModel = new CreateAccount(); // CreateAccount | Create account model
+            var createAccountModel = new CreateAccountModel(); // CreateAccountModel | Create account model
 
             try
             {
@@ -53,7 +118,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createAccountModel** | [**CreateAccount**](CreateAccount.md)| Create account model | 
+ **createAccountModel** | [**CreateAccountModel**](CreateAccountModel.md)| Create account model | 
 
 ### Return type
 
@@ -128,6 +193,130 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="passwordresetwithtoken"></a>
+# **PasswordResetWithToken**
+> Object PasswordResetWithToken (PasswordResetModel passwordResetModel)
+
+Reset password with token.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class PasswordResetWithTokenExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AccountsApi();
+            var passwordResetModel = new PasswordResetModel(); // PasswordResetModel | Password reset model
+
+            try
+            {
+                // Reset password with token.
+                Object result = apiInstance.PasswordResetWithToken(passwordResetModel);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AccountsApi.PasswordResetWithToken: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **passwordResetModel** | [**PasswordResetModel**](PasswordResetModel.md)| Password reset model | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="requestpasswordreset"></a>
+# **RequestPasswordReset**
+> Object RequestPasswordReset (string email)
+
+Request password reset. Flipdish system will send a token via email.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class RequestPasswordResetExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AccountsApi();
+            var email = email_example;  // string | Email address
+
+            try
+            {
+                // Request password reset. Flipdish system will send a token via email.
+                Object result = apiInstance.RequestPasswordReset(email);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AccountsApi.RequestPasswordReset: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **string**| Email address | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -1,10 +1,8 @@
-# Flipdish.Model.StoreAddress
+# Flipdish.Model.StoreAddressBase
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AddressId** | **int?** | Address identifier | [optional] 
-**Coordinates** | [**Coordinates**](Coordinates.md) | Coordinate | [optional] 
 **Line1** | **string** | Address line 1 | [optional] 
 **Postcode** | **string** | Postcode | [optional] 
 **City** | **string** | City | [optional] 

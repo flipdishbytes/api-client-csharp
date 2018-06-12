@@ -25,35 +25,53 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Create account model
+    /// Password reset model
     /// </summary>
     [DataContract]
-    public partial class CreateAccount :  IEquatable<CreateAccount>, IValidatableObject
+    public partial class PasswordResetModel :  IEquatable<PasswordResetModel>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateAccount" /> class.
+        /// Initializes a new instance of the <see cref="PasswordResetModel" /> class.
         /// </summary>
-        /// <param name="Email">Email addres.</param>
-        /// <param name="StoreName">Store name.</param>
-        public CreateAccount(string Email = default(string), string StoreName = default(string))
+        /// <param name="Email">Email address.</param>
+        /// <param name="Password">Password.</param>
+        /// <param name="PasswordConfirmation">Password confirmation.</param>
+        /// <param name="Token">Password reset token.</param>
+        public PasswordResetModel(string Email = default(string), string Password = default(string), string PasswordConfirmation = default(string), string Token = default(string))
         {
             this.Email = Email;
-            this.StoreName = StoreName;
+            this.Password = Password;
+            this.PasswordConfirmation = PasswordConfirmation;
+            this.Token = Token;
         }
         
         /// <summary>
-        /// Email addres
+        /// Email address
         /// </summary>
-        /// <value>Email addres</value>
+        /// <value>Email address</value>
         [DataMember(Name="Email", EmitDefaultValue=false)]
         public string Email { get; set; }
 
         /// <summary>
-        /// Store name
+        /// Password
         /// </summary>
-        /// <value>Store name</value>
-        [DataMember(Name="StoreName", EmitDefaultValue=false)]
-        public string StoreName { get; set; }
+        /// <value>Password</value>
+        [DataMember(Name="Password", EmitDefaultValue=false)]
+        public string Password { get; set; }
+
+        /// <summary>
+        /// Password confirmation
+        /// </summary>
+        /// <value>Password confirmation</value>
+        [DataMember(Name="PasswordConfirmation", EmitDefaultValue=false)]
+        public string PasswordConfirmation { get; set; }
+
+        /// <summary>
+        /// Password reset token
+        /// </summary>
+        /// <value>Password reset token</value>
+        [DataMember(Name="Token", EmitDefaultValue=false)]
+        public string Token { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,9 +80,11 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CreateAccount {\n");
+            sb.Append("class PasswordResetModel {\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
-            sb.Append("  StoreName: ").Append(StoreName).Append("\n");
+            sb.Append("  Password: ").Append(Password).Append("\n");
+            sb.Append("  PasswordConfirmation: ").Append(PasswordConfirmation).Append("\n");
+            sb.Append("  Token: ").Append(Token).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,15 +105,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CreateAccount);
+            return this.Equals(input as PasswordResetModel);
         }
 
         /// <summary>
-        /// Returns true if CreateAccount instances are equal
+        /// Returns true if PasswordResetModel instances are equal
         /// </summary>
-        /// <param name="input">Instance of CreateAccount to be compared</param>
+        /// <param name="input">Instance of PasswordResetModel to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CreateAccount input)
+        public bool Equals(PasswordResetModel input)
         {
             if (input == null)
                 return false;
@@ -105,9 +125,19 @@ namespace Flipdish.Model
                     this.Email.Equals(input.Email))
                 ) && 
                 (
-                    this.StoreName == input.StoreName ||
-                    (this.StoreName != null &&
-                    this.StoreName.Equals(input.StoreName))
+                    this.Password == input.Password ||
+                    (this.Password != null &&
+                    this.Password.Equals(input.Password))
+                ) && 
+                (
+                    this.PasswordConfirmation == input.PasswordConfirmation ||
+                    (this.PasswordConfirmation != null &&
+                    this.PasswordConfirmation.Equals(input.PasswordConfirmation))
+                ) && 
+                (
+                    this.Token == input.Token ||
+                    (this.Token != null &&
+                    this.Token.Equals(input.Token))
                 );
         }
 
@@ -122,8 +152,12 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.Email != null)
                     hashCode = hashCode * 59 + this.Email.GetHashCode();
-                if (this.StoreName != null)
-                    hashCode = hashCode * 59 + this.StoreName.GetHashCode();
+                if (this.Password != null)
+                    hashCode = hashCode * 59 + this.Password.GetHashCode();
+                if (this.PasswordConfirmation != null)
+                    hashCode = hashCode * 59 + this.PasswordConfirmation.GetHashCode();
+                if (this.Token != null)
+                    hashCode = hashCode * 59 + this.Token.GetHashCode();
                 return hashCode;
             }
         }

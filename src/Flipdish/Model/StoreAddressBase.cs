@@ -25,25 +25,21 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Store address
+    /// Store address base
     /// </summary>
     [DataContract]
-    public partial class StoreAddress :  IEquatable<StoreAddress>, IValidatableObject
+    public partial class StoreAddressBase :  IEquatable<StoreAddressBase>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="StoreAddress" /> class.
+        /// Initializes a new instance of the <see cref="StoreAddressBase" /> class.
         /// </summary>
-        /// <param name="AddressId">Address identifier.</param>
-        /// <param name="Coordinates">Coordinate.</param>
         /// <param name="Line1">Address line 1.</param>
         /// <param name="Postcode">Postcode.</param>
         /// <param name="City">City.</param>
         /// <param name="CountryCode">Country code (ISO-alpha2).</param>
         /// <param name="DisplayForCustomer">Display for customer.</param>
-        public StoreAddress(int? AddressId = default(int?), Coordinates Coordinates = default(Coordinates), string Line1 = default(string), string Postcode = default(string), string City = default(string), string CountryCode = default(string), string DisplayForCustomer = default(string))
+        public StoreAddressBase(string Line1 = default(string), string Postcode = default(string), string City = default(string), string CountryCode = default(string), string DisplayForCustomer = default(string))
         {
-            this.AddressId = AddressId;
-            this.Coordinates = Coordinates;
             this.Line1 = Line1;
             this.Postcode = Postcode;
             this.City = City;
@@ -51,20 +47,6 @@ namespace Flipdish.Model
             this.DisplayForCustomer = DisplayForCustomer;
         }
         
-        /// <summary>
-        /// Address identifier
-        /// </summary>
-        /// <value>Address identifier</value>
-        [DataMember(Name="AddressId", EmitDefaultValue=false)]
-        public int? AddressId { get; set; }
-
-        /// <summary>
-        /// Coordinate
-        /// </summary>
-        /// <value>Coordinate</value>
-        [DataMember(Name="Coordinates", EmitDefaultValue=false)]
-        public Coordinates Coordinates { get; set; }
-
         /// <summary>
         /// Address line 1
         /// </summary>
@@ -107,9 +89,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class StoreAddress {\n");
-            sb.Append("  AddressId: ").Append(AddressId).Append("\n");
-            sb.Append("  Coordinates: ").Append(Coordinates).Append("\n");
+            sb.Append("class StoreAddressBase {\n");
             sb.Append("  Line1: ").Append(Line1).Append("\n");
             sb.Append("  Postcode: ").Append(Postcode).Append("\n");
             sb.Append("  City: ").Append(City).Append("\n");
@@ -135,30 +115,20 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as StoreAddress);
+            return this.Equals(input as StoreAddressBase);
         }
 
         /// <summary>
-        /// Returns true if StoreAddress instances are equal
+        /// Returns true if StoreAddressBase instances are equal
         /// </summary>
-        /// <param name="input">Instance of StoreAddress to be compared</param>
+        /// <param name="input">Instance of StoreAddressBase to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StoreAddress input)
+        public bool Equals(StoreAddressBase input)
         {
             if (input == null)
                 return false;
 
             return 
-                (
-                    this.AddressId == input.AddressId ||
-                    (this.AddressId != null &&
-                    this.AddressId.Equals(input.AddressId))
-                ) && 
-                (
-                    this.Coordinates == input.Coordinates ||
-                    (this.Coordinates != null &&
-                    this.Coordinates.Equals(input.Coordinates))
-                ) && 
                 (
                     this.Line1 == input.Line1 ||
                     (this.Line1 != null &&
@@ -195,10 +165,6 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AddressId != null)
-                    hashCode = hashCode * 59 + this.AddressId.GetHashCode();
-                if (this.Coordinates != null)
-                    hashCode = hashCode * 59 + this.Coordinates.GetHashCode();
                 if (this.Line1 != null)
                     hashCode = hashCode * 59 + this.Line1.GetHashCode();
                 if (this.Postcode != null)

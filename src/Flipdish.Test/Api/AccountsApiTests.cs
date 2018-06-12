@@ -65,13 +65,25 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test ChangePassword
+        /// </summary>
+        [Test]
+        public void ChangePasswordTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ChangePasswordModel changePasswordModel = null;
+            //var response = instance.ChangePassword(changePasswordModel);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
         /// Test CreateAccount
         /// </summary>
         [Test]
         public void CreateAccountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CreateAccount createAccountModel = null;
+            //CreateAccountModel createAccountModel = null;
             //var response = instance.CreateAccount(createAccountModel);
             //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
@@ -85,6 +97,30 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //LoginModel loginModel = null;
             //var response = instance.Login(loginModel);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test PasswordResetWithToken
+        /// </summary>
+        [Test]
+        public void PasswordResetWithTokenTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PasswordResetModel passwordResetModel = null;
+            //var response = instance.PasswordResetWithToken(passwordResetModel);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test RequestPasswordReset
+        /// </summary>
+        [Test]
+        public void RequestPasswordResetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string email = null;
+            //var response = instance.RequestPasswordReset(email);
             //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         

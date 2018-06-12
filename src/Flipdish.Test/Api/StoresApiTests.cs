@@ -90,6 +90,32 @@ namespace Flipdish.Test
             //Assert.IsInstanceOf<RestApiPaginationResultStore> (response, "response is RestApiPaginationResultStore");
         }
         
+        /// <summary>
+        /// Test UpdateStoreAddress
+        /// </summary>
+        [Test]
+        public void UpdateStoreAddressTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //StoreAddressBase storeAddress = null;
+            //var response = instance.UpdateStoreAddress(storeId, storeAddress);
+            //Assert.IsInstanceOf<RestApiResultStoreAddress> (response, "response is RestApiResultStoreAddress");
+        }
+        
+        /// <summary>
+        /// Test UpdateStoreAddressCoordinates
+        /// </summary>
+        [Test]
+        public void UpdateStoreAddressCoordinatesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //Coordinates coordinates = null;
+            //var response = instance.UpdateStoreAddressCoordinates(storeId, coordinates);
+            //Assert.IsInstanceOf<RestApiResultCoordinates> (response, "response is RestApiResultCoordinates");
+        }
+        
     }
 
 }

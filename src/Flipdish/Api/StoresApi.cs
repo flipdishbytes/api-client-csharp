@@ -70,6 +70,52 @@ namespace Flipdish.Api
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStore</returns>
         ApiResponse<RestApiPaginationResultStore> GetStoresWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null);
+        /// <summary>
+        /// Update store address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeAddress">Store address</param>
+        /// <returns>RestApiResultStoreAddress</returns>
+        RestApiResultStoreAddress UpdateStoreAddress (int? storeId, StoreAddressBase storeAddress);
+
+        /// <summary>
+        /// Update store address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeAddress">Store address</param>
+        /// <returns>ApiResponse of RestApiResultStoreAddress</returns>
+        ApiResponse<RestApiResultStoreAddress> UpdateStoreAddressWithHttpInfo (int? storeId, StoreAddressBase storeAddress);
+        /// <summary>
+        /// Update store address coordinates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="coordinates">Store address coordinates</param>
+        /// <returns>RestApiResultCoordinates</returns>
+        RestApiResultCoordinates UpdateStoreAddressCoordinates (int? storeId, Coordinates coordinates);
+
+        /// <summary>
+        /// Update store address coordinates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="coordinates">Store address coordinates</param>
+        /// <returns>ApiResponse of RestApiResultCoordinates</returns>
+        ApiResponse<RestApiResultCoordinates> UpdateStoreAddressCoordinatesWithHttpInfo (int? storeId, Coordinates coordinates);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -118,6 +164,52 @@ namespace Flipdish.Api
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStore)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresAsyncWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null);
+        /// <summary>
+        /// Update store address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeAddress">Store address</param>
+        /// <returns>Task of RestApiResultStoreAddress</returns>
+        System.Threading.Tasks.Task<RestApiResultStoreAddress> UpdateStoreAddressAsync (int? storeId, StoreAddressBase storeAddress);
+
+        /// <summary>
+        /// Update store address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeAddress">Store address</param>
+        /// <returns>Task of ApiResponse (RestApiResultStoreAddress)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreAddress>> UpdateStoreAddressAsyncWithHttpInfo (int? storeId, StoreAddressBase storeAddress);
+        /// <summary>
+        /// Update store address coordinates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="coordinates">Store address coordinates</param>
+        /// <returns>Task of RestApiResultCoordinates</returns>
+        System.Threading.Tasks.Task<RestApiResultCoordinates> UpdateStoreAddressCoordinatesAsync (int? storeId, Coordinates coordinates);
+
+        /// <summary>
+        /// Update store address coordinates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="coordinates">Store address coordinates</param>
+        /// <returns>Task of ApiResponse (RestApiResultCoordinates)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultCoordinates>> UpdateStoreAddressCoordinatesAsyncWithHttpInfo (int? storeId, Coordinates coordinates);
         #endregion Asynchronous Operations
     }
 
@@ -524,6 +616,380 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiPaginationResultStore>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiPaginationResultStore) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultStore)));
+        }
+
+        /// <summary>
+        /// Update store address 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeAddress">Store address</param>
+        /// <returns>RestApiResultStoreAddress</returns>
+        public RestApiResultStoreAddress UpdateStoreAddress (int? storeId, StoreAddressBase storeAddress)
+        {
+             ApiResponse<RestApiResultStoreAddress> localVarResponse = UpdateStoreAddressWithHttpInfo(storeId, storeAddress);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update store address 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeAddress">Store address</param>
+        /// <returns>ApiResponse of RestApiResultStoreAddress</returns>
+        public ApiResponse< RestApiResultStoreAddress > UpdateStoreAddressWithHttpInfo (int? storeId, StoreAddressBase storeAddress)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->UpdateStoreAddress");
+            // verify the required parameter 'storeAddress' is set
+            if (storeAddress == null)
+                throw new ApiException(400, "Missing required parameter 'storeAddress' when calling StoresApi->UpdateStoreAddress");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/address";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (storeAddress != null && storeAddress.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(storeAddress); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = storeAddress; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateStoreAddress", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultStoreAddress>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultStoreAddress) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreAddress)));
+        }
+
+        /// <summary>
+        /// Update store address 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeAddress">Store address</param>
+        /// <returns>Task of RestApiResultStoreAddress</returns>
+        public async System.Threading.Tasks.Task<RestApiResultStoreAddress> UpdateStoreAddressAsync (int? storeId, StoreAddressBase storeAddress)
+        {
+             ApiResponse<RestApiResultStoreAddress> localVarResponse = await UpdateStoreAddressAsyncWithHttpInfo(storeId, storeAddress);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update store address 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeAddress">Store address</param>
+        /// <returns>Task of ApiResponse (RestApiResultStoreAddress)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreAddress>> UpdateStoreAddressAsyncWithHttpInfo (int? storeId, StoreAddressBase storeAddress)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->UpdateStoreAddress");
+            // verify the required parameter 'storeAddress' is set
+            if (storeAddress == null)
+                throw new ApiException(400, "Missing required parameter 'storeAddress' when calling StoresApi->UpdateStoreAddress");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/address";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (storeAddress != null && storeAddress.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(storeAddress); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = storeAddress; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateStoreAddress", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultStoreAddress>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultStoreAddress) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreAddress)));
+        }
+
+        /// <summary>
+        /// Update store address coordinates 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="coordinates">Store address coordinates</param>
+        /// <returns>RestApiResultCoordinates</returns>
+        public RestApiResultCoordinates UpdateStoreAddressCoordinates (int? storeId, Coordinates coordinates)
+        {
+             ApiResponse<RestApiResultCoordinates> localVarResponse = UpdateStoreAddressCoordinatesWithHttpInfo(storeId, coordinates);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update store address coordinates 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="coordinates">Store address coordinates</param>
+        /// <returns>ApiResponse of RestApiResultCoordinates</returns>
+        public ApiResponse< RestApiResultCoordinates > UpdateStoreAddressCoordinatesWithHttpInfo (int? storeId, Coordinates coordinates)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->UpdateStoreAddressCoordinates");
+            // verify the required parameter 'coordinates' is set
+            if (coordinates == null)
+                throw new ApiException(400, "Missing required parameter 'coordinates' when calling StoresApi->UpdateStoreAddressCoordinates");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/address/coordinates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (coordinates != null && coordinates.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(coordinates); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = coordinates; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateStoreAddressCoordinates", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultCoordinates>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultCoordinates) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCoordinates)));
+        }
+
+        /// <summary>
+        /// Update store address coordinates 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="coordinates">Store address coordinates</param>
+        /// <returns>Task of RestApiResultCoordinates</returns>
+        public async System.Threading.Tasks.Task<RestApiResultCoordinates> UpdateStoreAddressCoordinatesAsync (int? storeId, Coordinates coordinates)
+        {
+             ApiResponse<RestApiResultCoordinates> localVarResponse = await UpdateStoreAddressCoordinatesAsyncWithHttpInfo(storeId, coordinates);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update store address coordinates 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="coordinates">Store address coordinates</param>
+        /// <returns>Task of ApiResponse (RestApiResultCoordinates)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCoordinates>> UpdateStoreAddressCoordinatesAsyncWithHttpInfo (int? storeId, Coordinates coordinates)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->UpdateStoreAddressCoordinates");
+            // verify the required parameter 'coordinates' is set
+            if (coordinates == null)
+                throw new ApiException(400, "Missing required parameter 'coordinates' when calling StoresApi->UpdateStoreAddressCoordinates");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/address/coordinates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (coordinates != null && coordinates.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(coordinates); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = coordinates; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateStoreAddressCoordinates", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultCoordinates>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultCoordinates) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCoordinates)));
         }
 
     }

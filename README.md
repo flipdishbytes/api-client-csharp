@@ -74,17 +74,17 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var createAccountModel = new CreateAccount(); // CreateAccount | Create account model
+            var changePasswordModel = new ChangePasswordModel(); // ChangePasswordModel | Change password model
 
             try
             {
-                // Create account with email address and store name
-                Object result = apiInstance.CreateAccount(createAccountModel);
+                // Change password
+                Object result = apiInstance.ChangePassword(changePasswordModel);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AccountsApi.CreateAccount: " + e.Message );
+                Debug.Print("Exception when calling AccountsApi.ChangePassword: " + e.Message );
             }
 
         }
@@ -99,8 +99,11 @@ All URIs are relative to *https://api.flipdish.co*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccountsApi* | [**ChangePassword**](docs/AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | Change password
 *AccountsApi* | [**CreateAccount**](docs/AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | Create account with email address and store name
 *AccountsApi* | [**Login**](docs/AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | Login with username and password
+*AccountsApi* | [**PasswordResetWithToken**](docs/AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
+*AccountsApi* | [**RequestPasswordReset**](docs/AccountsApi.md#requestpasswordreset) | **GET** /api/v1.0/accounts/password | Request password reset. Flipdish system will send a token via email.
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
 *EventsApi* | [**GetCustomerEvents**](docs/EventsApi.md#getcustomerevents) | **GET** /api/v1.0/events/customer/{customerId} | Get customer events
@@ -167,6 +170,8 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**RejectOrder**](docs/OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 *StoresApi* | [**GetStoreById**](docs/StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
 *StoresApi* | [**GetStores**](docs/StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores
+*StoresApi* | [**UpdateStoreAddress**](docs/StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
+*StoresApi* | [**UpdateStoreAddressCoordinates**](docs/StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
 *UsersApi* | [**GetRoles**](docs/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | Get role names
 *VouchersApi* | [**DeleteVoucherMetadata**](docs/VouchersApi.md#deletevouchermetadata) | **DELETE** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Delete voucher metadata
 *VouchersApi* | [**GetVoucherById**](docs/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | Get voucher by identifier
@@ -190,8 +195,9 @@ Class | Method | HTTP request | Description
 
  - [Model.Accept](docs/Accept.md)
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
+ - [Model.ChangePasswordModel](docs/ChangePasswordModel.md)
  - [Model.Coordinates](docs/Coordinates.md)
- - [Model.CreateAccount](docs/CreateAccount.md)
+ - [Model.CreateAccountModel](docs/CreateAccountModel.md)
  - [Model.CustomerConsentUpdatedEvent](docs/CustomerConsentUpdatedEvent.md)
  - [Model.CustomerCreatedEvent](docs/CustomerCreatedEvent.md)
  - [Model.CustomerSummary](docs/CustomerSummary.md)
@@ -232,6 +238,7 @@ Class | Method | HTTP request | Description
  - [Model.OrderRefundedEvent](docs/OrderRefundedEvent.md)
  - [Model.OrderRejectedEvent](docs/OrderRejectedEvent.md)
  - [Model.OrderTipUpdatedEvent](docs/OrderTipUpdatedEvent.md)
+ - [Model.PasswordResetModel](docs/PasswordResetModel.md)
  - [Model.PhoneCall](docs/PhoneCall.md)
  - [Model.PhoneCallEndedEvent](docs/PhoneCallEndedEvent.md)
  - [Model.PhoneCallStartedEvent](docs/PhoneCallStartedEvent.md)
@@ -263,6 +270,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultStore](docs/RestApiPaginationResultStore.md)
  - [Model.RestApiPaginationResultVoucher](docs/RestApiPaginationResultVoucher.md)
  - [Model.RestApiPaginationResultWebhookLog](docs/RestApiPaginationResultWebhookLog.md)
+ - [Model.RestApiResultCoordinates](docs/RestApiResultCoordinates.md)
  - [Model.RestApiResultMenu](docs/RestApiResultMenu.md)
  - [Model.RestApiResultMenuItemOptionSet](docs/RestApiResultMenuItemOptionSet.md)
  - [Model.RestApiResultMenuItemOptionSetItem](docs/RestApiResultMenuItemOptionSetItem.md)
@@ -273,6 +281,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultOauthClientRedirectUri](docs/RestApiResultOauthClientRedirectUri.md)
  - [Model.RestApiResultOrder](docs/RestApiResultOrder.md)
  - [Model.RestApiResultStore](docs/RestApiResultStore.md)
+ - [Model.RestApiResultStoreAddress](docs/RestApiResultStoreAddress.md)
  - [Model.RestApiResultVoucher](docs/RestApiResultVoucher.md)
  - [Model.RestApiStringArrayResult](docs/RestApiStringArrayResult.md)
  - [Model.RestApiStringResult](docs/RestApiStringResult.md)
@@ -286,6 +295,7 @@ Class | Method | HTTP request | Description
  - [Model.SmsReceivedEvent](docs/SmsReceivedEvent.md)
  - [Model.Store](docs/Store.md)
  - [Model.StoreAddress](docs/StoreAddress.md)
+ - [Model.StoreAddressBase](docs/StoreAddressBase.md)
  - [Model.StoreCreatedEvent](docs/StoreCreatedEvent.md)
  - [Model.StoreDeletedEvent](docs/StoreDeletedEvent.md)
  - [Model.StoreDeliveryZoneUpdatedEvent](docs/StoreDeliveryZoneUpdatedEvent.md)
