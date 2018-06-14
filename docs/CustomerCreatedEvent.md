@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EventName** | **string** | The event name | [optional] 
-**WhiteLabelId** | **int?** | White label identifier | [optional] 
+**AppId** | **string** | App name id | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | Customer User info | [optional] 
 **Description** | **string** | Description | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 

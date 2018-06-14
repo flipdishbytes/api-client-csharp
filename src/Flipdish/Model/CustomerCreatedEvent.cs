@@ -34,16 +34,16 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="CustomerCreatedEvent" /> class.
         /// </summary>
         /// <param name="EventName">The event name.</param>
-        /// <param name="WhiteLabelId">White label identifier.</param>
+        /// <param name="AppId">App name id.</param>
         /// <param name="User">Customer User info.</param>
         /// <param name="Description">Description.</param>
         /// <param name="FlipdishEventId">The identitfier of the event.</param>
         /// <param name="CreateTime">The time of creation of the event.</param>
         /// <param name="Position">Position.</param>
-        public CustomerCreatedEvent(string EventName = default(string), int? WhiteLabelId = default(int?), UserEventInfo User = default(UserEventInfo), string Description = default(string), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        public CustomerCreatedEvent(string EventName = default(string), string AppId = default(string), UserEventInfo User = default(UserEventInfo), string Description = default(string), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
         {
             this.EventName = EventName;
-            this.WhiteLabelId = WhiteLabelId;
+            this.AppId = AppId;
             this.User = User;
             this.Description = Description;
             this.FlipdishEventId = FlipdishEventId;
@@ -59,11 +59,11 @@ namespace Flipdish.Model
         public string EventName { get; set; }
 
         /// <summary>
-        /// White label identifier
+        /// App name id
         /// </summary>
-        /// <value>White label identifier</value>
-        [DataMember(Name="WhiteLabelId", EmitDefaultValue=false)]
-        public int? WhiteLabelId { get; set; }
+        /// <value>App name id</value>
+        [DataMember(Name="AppId", EmitDefaultValue=false)]
+        public string AppId { get; set; }
 
         /// <summary>
         /// Customer User info
@@ -109,7 +109,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class CustomerCreatedEvent {\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
-            sb.Append("  WhiteLabelId: ").Append(WhiteLabelId).Append("\n");
+            sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
@@ -155,9 +155,9 @@ namespace Flipdish.Model
                     this.EventName.Equals(input.EventName))
                 ) && 
                 (
-                    this.WhiteLabelId == input.WhiteLabelId ||
-                    (this.WhiteLabelId != null &&
-                    this.WhiteLabelId.Equals(input.WhiteLabelId))
+                    this.AppId == input.AppId ||
+                    (this.AppId != null &&
+                    this.AppId.Equals(input.AppId))
                 ) && 
                 (
                     this.User == input.User ||
@@ -197,8 +197,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
-                if (this.WhiteLabelId != null)
-                    hashCode = hashCode * 59 + this.WhiteLabelId.GetHashCode();
+                if (this.AppId != null)
+                    hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 if (this.User != null)
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.Description != null)

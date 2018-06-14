@@ -75,12 +75,12 @@ namespace Flipdish.Test
             // TODO unit test for the property 'EventName'
         }
         /// <summary>
-        /// Test the property 'WhiteLabelId'
+        /// Test the property 'AppId'
         /// </summary>
         [Test]
-        public void WhiteLabelIdTest()
+        public void AppIdTest()
         {
-            // TODO unit test for the property 'WhiteLabelId'
+            // TODO unit test for the property 'AppId'
         }
         /// <summary>
         /// Test the property 'User'
