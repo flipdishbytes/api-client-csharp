@@ -339,7 +339,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: implicit
-- **Authorization URL**: https://app.getflipdish.com/identity/connect/authorize
+- **Authorization URL**: https://app.flipdish.com/identity/connect/authorize
 - **Scopes**: 
   - api: Access to Flipdish API
 
