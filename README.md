@@ -172,6 +172,14 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**GetStores**](docs/StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores
 *StoresApi* | [**UpdateStoreAddress**](docs/StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
 *StoresApi* | [**UpdateStoreAddressCoordinates**](docs/StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
+*SubscriptionsApi* | [**SubscriptionsCancelSubscription**](docs/SubscriptionsApi.md#subscriptionscancelsubscription) | **DELETE** /api/v1.0/subscriptions/{subscriptionId} | Cancel the subscription
+*SubscriptionsApi* | [**SubscriptionsGetCard**](docs/SubscriptionsApi.md#subscriptionsgetcard) | **GET** /api/v1.0/subscriptions/{subscriptionId}/card | Get the card linked to the subscription
+*SubscriptionsApi* | [**SubscriptionsGetPlansByCurrency**](docs/SubscriptionsApi.md#subscriptionsgetplansbycurrency) | **GET** /api/v1.0/subscriptions/plans | Get avaialble plans for currency's user
+*SubscriptionsApi* | [**SubscriptionsGetSubscription**](docs/SubscriptionsApi.md#subscriptionsgetsubscription) | **GET** /api/v1.0/subscriptions/{subscriptionId} | Get the subscription including the payment history
+*SubscriptionsApi* | [**SubscriptionsReplaceOldCardWithNewCard**](docs/SubscriptionsApi.md#subscriptionsreplaceoldcardwithnewcard) | **POST** /api/v1.0/subscriptions/{subscriptionId}/card/new | Add a new card and replace the old one
+*SubscriptionsApi* | [**SubscriptionsSubscribe**](docs/SubscriptionsApi.md#subscriptionssubscribe) | **POST** /api/v1.0/subscriptions | Create a new subscription
+*SubscriptionsApi* | [**SubscriptionsUpdateCardExpiringDate**](docs/SubscriptionsApi.md#subscriptionsupdatecardexpiringdate) | **POST** /api/v1.0/subscriptions/{subscriptionId}/card | Update card expiring date
+*SubscriptionsApi* | [**SubscriptionsUpdateSubscription**](docs/SubscriptionsApi.md#subscriptionsupdatesubscription) | **POST** /api/v1.0/subscriptions/{subscriptionId} | Update the subscription
 *UsersApi* | [**GetRoles**](docs/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | Get role names
 *VouchersApi* | [**DeleteVoucherMetadata**](docs/VouchersApi.md#deletevouchermetadata) | **DELETE** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Delete voucher metadata
 *VouchersApi* | [**GetVoucherById**](docs/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | Get voucher by identifier
@@ -195,6 +203,8 @@ Class | Method | HTTP request | Description
 
  - [Model.Accept](docs/Accept.md)
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
+ - [Model.CardBase](docs/CardBase.md)
+ - [Model.CardWithToken](docs/CardWithToken.md)
  - [Model.ChangePasswordModel](docs/ChangePasswordModel.md)
  - [Model.Coordinates](docs/Coordinates.md)
  - [Model.CreateAccountModel](docs/CreateAccountModel.md)
@@ -303,6 +313,8 @@ Class | Method | HTTP request | Description
  - [Model.StoreOpeningHoursUpdatedEvent](docs/StoreOpeningHoursUpdatedEvent.md)
  - [Model.StoreSummary](docs/StoreSummary.md)
  - [Model.StoreUpdatedEvent](docs/StoreUpdatedEvent.md)
+ - [Model.SubscriptionBase](docs/SubscriptionBase.md)
+ - [Model.SubscriptionWithToken](docs/SubscriptionWithToken.md)
  - [Model.UserCreatedEvent](docs/UserCreatedEvent.md)
  - [Model.UserDeletedEvent](docs/UserDeletedEvent.md)
  - [Model.UserEventInfo](docs/UserEventInfo.md)

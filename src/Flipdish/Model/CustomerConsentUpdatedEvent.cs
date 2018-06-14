@@ -34,15 +34,17 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="CustomerConsentUpdatedEvent" /> class.
         /// </summary>
         /// <param name="EventName">The event name.</param>
+        /// <param name="AppId">App name id.</param>
         /// <param name="Enabled">Enabled.</param>
         /// <param name="Description">Description.</param>
         /// <param name="User">Customer User info.</param>
         /// <param name="FlipdishEventId">The identitfier of the event.</param>
         /// <param name="CreateTime">The time of creation of the event.</param>
         /// <param name="Position">Position.</param>
-        public CustomerConsentUpdatedEvent(string EventName = default(string), bool? Enabled = default(bool?), string Description = default(string), UserEventInfo User = default(UserEventInfo), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        public CustomerConsentUpdatedEvent(string EventName = default(string), string AppId = default(string), bool? Enabled = default(bool?), string Description = default(string), UserEventInfo User = default(UserEventInfo), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
         {
             this.EventName = EventName;
+            this.AppId = AppId;
             this.Enabled = Enabled;
             this.Description = Description;
             this.User = User;
@@ -57,6 +59,13 @@ namespace Flipdish.Model
         /// <value>The event name</value>
         [DataMember(Name="EventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
+
+        /// <summary>
+        /// App name id
+        /// </summary>
+        /// <value>App name id</value>
+        [DataMember(Name="AppId", EmitDefaultValue=false)]
+        public string AppId { get; set; }
 
         /// <summary>
         /// Enabled
@@ -109,6 +118,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class CustomerConsentUpdatedEvent {\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
+            sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -155,6 +165,11 @@ namespace Flipdish.Model
                     this.EventName.Equals(input.EventName))
                 ) && 
                 (
+                    this.AppId == input.AppId ||
+                    (this.AppId != null &&
+                    this.AppId.Equals(input.AppId))
+                ) && 
+                (
                     this.Enabled == input.Enabled ||
                     (this.Enabled != null &&
                     this.Enabled.Equals(input.Enabled))
@@ -197,6 +212,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
+                if (this.AppId != null)
+                    hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 if (this.Enabled != null)
                     hashCode = hashCode * 59 + this.Enabled.GetHashCode();
                 if (this.Description != null)

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EventName** | **string** | The event name | [optional] 
+**AppId** | **string** | App name id | [optional] 
 **Enabled** | **bool?** | Enabled | [optional] 
 **Description** | **string** | Description | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | Customer User info | [optional] 
