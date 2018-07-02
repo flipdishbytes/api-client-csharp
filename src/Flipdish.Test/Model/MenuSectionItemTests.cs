@@ -99,6 +99,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'MenuItemOptionSets'
         }
         /// <summary>
+        /// Test the property 'DailySpecialHours'
+        /// </summary>
+        [Test]
+        public void DailySpecialHoursTest()
+        {
+            // TODO unit test for the property 'DailySpecialHours'
+        }
+        /// <summary>
         /// Test the property 'Name'
         /// </summary>
         [Test]
@@ -161,6 +169,14 @@ namespace Flipdish.Test
         public void CellLayoutTypeTest()
         {
             // TODO unit test for the property 'CellLayoutType'
+        }
+        /// <summary>
+        /// Test the property 'DisableVouchers'
+        /// </summary>
+        [Test]
+        public void DisableVouchersTest()
+        {
+            // TODO unit test for the property 'DisableVouchers'
         }
 
     }

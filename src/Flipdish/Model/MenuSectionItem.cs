@@ -115,6 +115,7 @@ namespace Flipdish.Model
         /// <param name="ActualPrice">Actual price - the minimum price possible when all required option set items prices are included..</param>
         /// <param name="ImageUrl">Image url.</param>
         /// <param name="MenuItemOptionSets">Menu item option sets.</param>
+        /// <param name="DailySpecialHours">Daily special hours.</param>
         /// <param name="Name">Menu item name (like \&quot;Korma\&quot;).</param>
         /// <param name="Description">Description (like \&quot;A lovely dish from the east\&quot;).</param>
         /// <param name="SpicinessRating">Spiciness rating.</param>
@@ -123,12 +124,14 @@ namespace Flipdish.Model
         /// <param name="Alcohol">To be set true if the item or an option of the item contains an alcoholic drink..</param>
         /// <param name="IsAvailable">True if we accept orders for this item still.</param>
         /// <param name="CellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
-        public MenuSectionItem(int? MenuItemId = default(int?), double? ActualPrice = default(double?), string ImageUrl = default(string), List<MenuItemOptionSet> MenuItemOptionSets = default(List<MenuItemOptionSet>), string Name = default(string), string Description = default(string), SpicinessRatingEnum? SpicinessRating = default(SpicinessRatingEnum?), double? Price = default(double?), int? DisplayOrder = default(int?), bool? Alcohol = default(bool?), bool? IsAvailable = default(bool?), CellLayoutTypeEnum? CellLayoutType = default(CellLayoutTypeEnum?))
+        /// <param name="DisableVouchers">If true, then vouchers won&#39;t be applied for this item.</param>
+        public MenuSectionItem(int? MenuItemId = default(int?), double? ActualPrice = default(double?), string ImageUrl = default(string), List<MenuItemOptionSet> MenuItemOptionSets = default(List<MenuItemOptionSet>), List<BusinessHoursPeriod> DailySpecialHours = default(List<BusinessHoursPeriod>), string Name = default(string), string Description = default(string), SpicinessRatingEnum? SpicinessRating = default(SpicinessRatingEnum?), double? Price = default(double?), int? DisplayOrder = default(int?), bool? Alcohol = default(bool?), bool? IsAvailable = default(bool?), CellLayoutTypeEnum? CellLayoutType = default(CellLayoutTypeEnum?), bool? DisableVouchers = default(bool?))
         {
             this.MenuItemId = MenuItemId;
             this.ActualPrice = ActualPrice;
             this.ImageUrl = ImageUrl;
             this.MenuItemOptionSets = MenuItemOptionSets;
+            this.DailySpecialHours = DailySpecialHours;
             this.Name = Name;
             this.Description = Description;
             this.SpicinessRating = SpicinessRating;
@@ -137,6 +140,7 @@ namespace Flipdish.Model
             this.Alcohol = Alcohol;
             this.IsAvailable = IsAvailable;
             this.CellLayoutType = CellLayoutType;
+            this.DisableVouchers = DisableVouchers;
         }
         
         /// <summary>
@@ -166,6 +170,13 @@ namespace Flipdish.Model
         /// <value>Menu item option sets</value>
         [DataMember(Name="MenuItemOptionSets", EmitDefaultValue=false)]
         public List<MenuItemOptionSet> MenuItemOptionSets { get; set; }
+
+        /// <summary>
+        /// Daily special hours
+        /// </summary>
+        /// <value>Daily special hours</value>
+        [DataMember(Name="DailySpecialHours", EmitDefaultValue=false)]
+        public List<BusinessHoursPeriod> DailySpecialHours { get; set; }
 
         /// <summary>
         /// Menu item name (like \&quot;Korma\&quot;)
@@ -212,6 +223,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// If true, then vouchers won&#39;t be applied for this item
+        /// </summary>
+        /// <value>If true, then vouchers won&#39;t be applied for this item</value>
+        [DataMember(Name="DisableVouchers", EmitDefaultValue=false)]
+        public bool? DisableVouchers { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -223,6 +241,7 @@ namespace Flipdish.Model
             sb.Append("  ActualPrice: ").Append(ActualPrice).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  MenuItemOptionSets: ").Append(MenuItemOptionSets).Append("\n");
+            sb.Append("  DailySpecialHours: ").Append(DailySpecialHours).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  SpicinessRating: ").Append(SpicinessRating).Append("\n");
@@ -231,6 +250,7 @@ namespace Flipdish.Model
             sb.Append("  Alcohol: ").Append(Alcohol).Append("\n");
             sb.Append("  IsAvailable: ").Append(IsAvailable).Append("\n");
             sb.Append("  CellLayoutType: ").Append(CellLayoutType).Append("\n");
+            sb.Append("  DisableVouchers: ").Append(DisableVouchers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -286,6 +306,11 @@ namespace Flipdish.Model
                     this.MenuItemOptionSets.SequenceEqual(input.MenuItemOptionSets)
                 ) && 
                 (
+                    this.DailySpecialHours == input.DailySpecialHours ||
+                    this.DailySpecialHours != null &&
+                    this.DailySpecialHours.SequenceEqual(input.DailySpecialHours)
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -324,6 +349,11 @@ namespace Flipdish.Model
                     this.CellLayoutType == input.CellLayoutType ||
                     (this.CellLayoutType != null &&
                     this.CellLayoutType.Equals(input.CellLayoutType))
+                ) && 
+                (
+                    this.DisableVouchers == input.DisableVouchers ||
+                    (this.DisableVouchers != null &&
+                    this.DisableVouchers.Equals(input.DisableVouchers))
                 );
         }
 
@@ -344,6 +374,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 if (this.MenuItemOptionSets != null)
                     hashCode = hashCode * 59 + this.MenuItemOptionSets.GetHashCode();
+                if (this.DailySpecialHours != null)
+                    hashCode = hashCode * 59 + this.DailySpecialHours.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
@@ -360,6 +392,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.IsAvailable.GetHashCode();
                 if (this.CellLayoutType != null)
                     hashCode = hashCode * 59 + this.CellLayoutType.GetHashCode();
+                if (this.DisableVouchers != null)
+                    hashCode = hashCode * 59 + this.DisableVouchers.GetHashCode();
                 return hashCode;
             }
         }

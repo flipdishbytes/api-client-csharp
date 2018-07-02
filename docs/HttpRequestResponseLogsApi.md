@@ -4,12 +4,12 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetHttpLogsByUserIdAsync**](HttpRequestResponseLogsApi.md#gethttplogsbyuseridasync) | **GET** /api/v1.0/interactions/logs | Get API interaction logs
+[**GetLogs**](HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/interactions/logs | Get API interaction logs
 
 
-<a name="gethttplogsbyuseridasync"></a>
-# **GetHttpLogsByUserIdAsync**
-> RestApiPaginationResultHttpRequestAndResponseLog GetHttpLogsByUserIdAsync (DateTime? start, DateTime? end, int? filterByUserId = null, int? page = null, int? limit = null)
+<a name="getlogs"></a>
+# **GetLogs**
+> RestApiPaginationResultHttpRequestAndResponseLog GetLogs (DateTime? start, DateTime? end, int? filterByUserId = null, int? page = null, int? limit = null)
 
 Get API interaction logs
 
@@ -23,7 +23,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GetHttpLogsByUserIdAsyncExample
+    public class GetLogsExample
     {
         public void main()
         {
@@ -40,12 +40,12 @@ namespace Example
             try
             {
                 // Get API interaction logs
-                RestApiPaginationResultHttpRequestAndResponseLog result = apiInstance.GetHttpLogsByUserIdAsync(start, end, filterByUserId, page, limit);
+                RestApiPaginationResultHttpRequestAndResponseLog result = apiInstance.GetLogs(start, end, filterByUserId, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling HttpRequestResponseLogsApi.GetHttpLogsByUserIdAsync: " + e.Message );
+                Debug.Print("Exception when calling HttpRequestResponseLogsApi.GetLogs: " + e.Message );
             }
         }
     }

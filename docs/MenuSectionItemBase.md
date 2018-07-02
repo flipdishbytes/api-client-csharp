@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **Alcohol** | **bool?** | To be set true if the item or an option of the item contains an alcoholic drink. | [optional] 
 **IsAvailable** | **bool?** | True if we accept orders for this item still | [optional] 
 **CellLayoutType** | **string** | Small | Medium | Large  Affects the layout of the menu. | [optional] 
+**DisableVouchers** | **bool?** | If true, then vouchers won&#39;t be applied for this item | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

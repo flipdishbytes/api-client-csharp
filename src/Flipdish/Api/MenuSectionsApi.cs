@@ -25,6 +25,29 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Clone menu section
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <returns>RestApiResultMenuSection</returns>
+        RestApiResultMenuSection CloneMenuSection (int? menuId, int? menuSectionId);
+
+        /// <summary>
+        /// Clone menu section
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <returns>ApiResponse of RestApiResultMenuSection</returns>
+        ApiResponse<RestApiResultMenuSection> CloneMenuSectionWithHttpInfo (int? menuId, int? menuSectionId);
+        /// <summary>
         /// Create menu section
         /// </summary>
         /// <remarks>
@@ -191,6 +214,29 @@ namespace Flipdish.Api
         ApiResponse<RestApiStringResult> UploadMenuSectionImageWithHttpInfo (int? menuId, int? menuSectionId, System.IO.Stream image);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Clone menu section
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <returns>Task of RestApiResultMenuSection</returns>
+        System.Threading.Tasks.Task<RestApiResultMenuSection> CloneMenuSectionAsync (int? menuId, int? menuSectionId);
+
+        /// <summary>
+        /// Clone menu section
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <returns>Task of ApiResponse (RestApiResultMenuSection)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultMenuSection>> CloneMenuSectionAsyncWithHttpInfo (int? menuId, int? menuSectionId);
         /// <summary>
         /// Create menu section
         /// </summary>
@@ -454,6 +500,169 @@ namespace Flipdish.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Clone menu section 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <returns>RestApiResultMenuSection</returns>
+        public RestApiResultMenuSection CloneMenuSection (int? menuId, int? menuSectionId)
+        {
+             ApiResponse<RestApiResultMenuSection> localVarResponse = CloneMenuSectionWithHttpInfo(menuId, menuSectionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Clone menu section 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <returns>ApiResponse of RestApiResultMenuSection</returns>
+        public ApiResponse< RestApiResultMenuSection > CloneMenuSectionWithHttpInfo (int? menuId, int? menuSectionId)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuSectionsApi->CloneMenuSection");
+            // verify the required parameter 'menuSectionId' is set
+            if (menuSectionId == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->CloneMenuSection");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/clone";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuSectionId != null) localVarPathParams.Add("menuSectionId", Configuration.ApiClient.ParameterToString(menuSectionId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CloneMenuSection", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultMenuSection>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultMenuSection) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMenuSection)));
+        }
+
+        /// <summary>
+        /// Clone menu section 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <returns>Task of RestApiResultMenuSection</returns>
+        public async System.Threading.Tasks.Task<RestApiResultMenuSection> CloneMenuSectionAsync (int? menuId, int? menuSectionId)
+        {
+             ApiResponse<RestApiResultMenuSection> localVarResponse = await CloneMenuSectionAsyncWithHttpInfo(menuId, menuSectionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Clone menu section 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <returns>Task of ApiResponse (RestApiResultMenuSection)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultMenuSection>> CloneMenuSectionAsyncWithHttpInfo (int? menuId, int? menuSectionId)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuSectionsApi->CloneMenuSection");
+            // verify the required parameter 'menuSectionId' is set
+            if (menuSectionId == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->CloneMenuSection");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/clone";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuSectionId != null) localVarPathParams.Add("menuSectionId", Configuration.ApiClient.ParameterToString(menuSectionId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CloneMenuSection", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultMenuSection>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultMenuSection) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMenuSection)));
         }
 
         /// <summary>

@@ -65,10 +65,10 @@ namespace Flipdish.Test
 
         
         /// <summary>
-        /// Test GetHttpLogsByUserIdAsync
+        /// Test GetLogs
         /// </summary>
         [Test]
-        public void GetHttpLogsByUserIdAsyncTest()
+        public void GetLogsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //DateTime? start = null;
@@ -76,7 +76,7 @@ namespace Flipdish.Test
             //int? filterByUserId = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.GetHttpLogsByUserIdAsync(start, end, filterByUserId, page, limit);
+            //var response = instance.GetLogs(start, end, filterByUserId, page, limit);
             //Assert.IsInstanceOf<RestApiPaginationResultHttpRequestAndResponseLog> (response, "response is RestApiPaginationResultHttpRequestAndResponseLog");
         }
         

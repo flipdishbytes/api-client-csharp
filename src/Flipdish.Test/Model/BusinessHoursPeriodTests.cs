@@ -67,6 +67,30 @@ namespace Flipdish.Test
 
 
         /// <summary>
+        /// Test the property 'Early'
+        /// </summary>
+        [Test]
+        public void EarlyTest()
+        {
+            // TODO unit test for the property 'Early'
+        }
+        /// <summary>
+        /// Test the property 'Late'
+        /// </summary>
+        [Test]
+        public void LateTest()
+        {
+            // TODO unit test for the property 'Late'
+        }
+        /// <summary>
+        /// Test the property 'Ranges'
+        /// </summary>
+        [Test]
+        public void RangesTest()
+        {
+            // TODO unit test for the property 'Ranges'
+        }
+        /// <summary>
         /// Test the property 'DayOfWeek'
         /// </summary>
         [Test]
@@ -105,30 +129,6 @@ namespace Flipdish.Test
         public void PeriodEarlyTest()
         {
             // TODO unit test for the property 'PeriodEarly'
-        }
-        /// <summary>
-        /// Test the property 'Early'
-        /// </summary>
-        [Test]
-        public void EarlyTest()
-        {
-            // TODO unit test for the property 'Early'
-        }
-        /// <summary>
-        /// Test the property 'Late'
-        /// </summary>
-        [Test]
-        public void LateTest()
-        {
-            // TODO unit test for the property 'Late'
-        }
-        /// <summary>
-        /// Test the property 'Ranges'
-        /// </summary>
-        [Test]
-        public void RangesTest()
-        {
-            // TODO unit test for the property 'Ranges'
         }
 
     }

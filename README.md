@@ -101,9 +101,12 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AccountsApi* | [**ChangePassword**](docs/AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | Change password
 *AccountsApi* | [**CreateAccount**](docs/AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | Create account with email address and store name
+*AccountsApi* | [**GetAccountDetails**](docs/AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | 
 *AccountsApi* | [**Login**](docs/AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | Login with username and password
 *AccountsApi* | [**PasswordResetWithToken**](docs/AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
 *AccountsApi* | [**RequestPasswordReset**](docs/AccountsApi.md#requestpasswordreset) | **GET** /api/v1.0/accounts/password | Request password reset. Flipdish system will send a token via email.
+*AccountsApi* | [**SkipSignupStep**](docs/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
+*AccountsApi* | [**SkipSignupStep_0**](docs/AccountsApi.md#skipsignupstep_0) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | 
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
 *EventsApi* | [**GetCustomerEvents**](docs/EventsApi.md#getcustomerevents) | **GET** /api/v1.0/events/customer/{customerId} | Get customer events
@@ -115,7 +118,7 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**GetStoreEvents**](docs/EventsApi.md#getstoreevents) | **GET** /api/v1.0/events/store/{storeId} | Get store events
 *EventsApi* | [**GetUserEvents**](docs/EventsApi.md#getuserevents) | **GET** /api/v1.0/events/user/{userId} | Get user events
 *EventsApi* | [**GetWhiteLabelEvents**](docs/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get WhiteLabel events
-*HttpRequestResponseLogsApi* | [**GetHttpLogsByUserIdAsync**](docs/HttpRequestResponseLogsApi.md#gethttplogsbyuseridasync) | **GET** /api/v1.0/interactions/logs | Get API interaction logs
+*HttpRequestResponseLogsApi* | [**GetLogs**](docs/HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/interactions/logs | Get API interaction logs
 *MenuOptionSetItemsApi* | [**AddMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#addmenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Create menu item option set item
 *MenuOptionSetItemsApi* | [**DeleteOptionSetItemImage**](docs/MenuOptionSetItemsApi.md#deleteoptionsetitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Delete menu item option set item image
 *MenuOptionSetItemsApi* | [**GetMenuItemOptionSetItemById**](docs/MenuOptionSetItemsApi.md#getmenuitemoptionsetitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
@@ -130,6 +133,7 @@ Class | Method | HTTP request | Description
 *MenuOptionSetsApi* | [**GetMenuItemOptionSets**](docs/MenuOptionSetsApi.md#getmenuitemoptionsets) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets | Get menu item option sets
 *MenuOptionSetsApi* | [**UpdateMenuItemOptionSet**](docs/MenuOptionSetsApi.md#updatemenuitemoptionset) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Update menu item option set
 *MenuOptionSetsApi* | [**UploadOptionSetImage**](docs/MenuOptionSetsApi.md#uploadoptionsetimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | Upload menu item option set image
+*MenuSectionItemsApi* | [**CloneMenuSectionItem**](docs/MenuSectionItemsApi.md#clonemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/clone | Clone menu section item
 *MenuSectionItemsApi* | [**CreateMenuSectionItem**](docs/MenuSectionItemsApi.md#createmenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Create menu section item
 *MenuSectionItemsApi* | [**DeleteMenuSectionItem**](docs/MenuSectionItemsApi.md#deletemenusectionitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Delete menu section item
 *MenuSectionItemsApi* | [**DeleteMenuSectionItemImage**](docs/MenuSectionItemsApi.md#deletemenusectionitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
@@ -137,6 +141,7 @@ Class | Method | HTTP request | Description
 *MenuSectionItemsApi* | [**GetMenuItems**](docs/MenuSectionItemsApi.md#getmenuitems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Get menu items
 *MenuSectionItemsApi* | [**UpdateMenuSectionItem**](docs/MenuSectionItemsApi.md#updatemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Update menu section item
 *MenuSectionItemsApi* | [**UploadMenuSectionItemImage**](docs/MenuSectionItemsApi.md#uploadmenusectionitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Upload menu section item image
+*MenuSectionsApi* | [**CloneMenuSection**](docs/MenuSectionsApi.md#clonemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/clone | Clone menu section
 *MenuSectionsApi* | [**CreateMenuSection**](docs/MenuSectionsApi.md#createmenusection) | **POST** /api/v1.0/menus/{menuId}/sections | Create menu section
 *MenuSectionsApi* | [**DeleteMenuSection**](docs/MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Delete menu section
 *MenuSectionsApi* | [**DeleteMenuSectionImage**](docs/MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
@@ -174,6 +179,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**UpdateStoreAddressCoordinates**](docs/StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
 *SubscriptionsApi* | [**SubscriptionsCancelSubscription**](docs/SubscriptionsApi.md#subscriptionscancelsubscription) | **DELETE** /api/v1.0/subscriptions/{subscriptionId} | Cancel the subscription
 *SubscriptionsApi* | [**SubscriptionsGetCard**](docs/SubscriptionsApi.md#subscriptionsgetcard) | **GET** /api/v1.0/subscriptions/{subscriptionId}/card | Get the card linked to the subscription
+*SubscriptionsApi* | [**SubscriptionsGetPersonalSubscription**](docs/SubscriptionsApi.md#subscriptionsgetpersonalsubscription) | **GET** /api/v1.0/subscriptions | Get the user's subscription
 *SubscriptionsApi* | [**SubscriptionsGetPlansByCurrency**](docs/SubscriptionsApi.md#subscriptionsgetplansbycurrency) | **GET** /api/v1.0/subscriptions/plans | Get avaialble plans for currency's user
 *SubscriptionsApi* | [**SubscriptionsGetSubscription**](docs/SubscriptionsApi.md#subscriptionsgetsubscription) | **GET** /api/v1.0/subscriptions/{subscriptionId} | Get the subscription including the payment history
 *SubscriptionsApi* | [**SubscriptionsReplaceOldCardWithNewCard**](docs/SubscriptionsApi.md#subscriptionsreplaceoldcardwithnewcard) | **POST** /api/v1.0/subscriptions/{subscriptionId}/card/new | Add a new card and replace the old one
@@ -202,6 +208,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Model.Accept](docs/Accept.md)
+ - [Model.AccountDetail](docs/AccountDetail.md)
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
  - [Model.CardBase](docs/CardBase.md)
  - [Model.CardWithToken](docs/CardWithToken.md)
@@ -252,6 +259,7 @@ Class | Method | HTTP request | Description
  - [Model.PhoneCall](docs/PhoneCall.md)
  - [Model.PhoneCallEndedEvent](docs/PhoneCallEndedEvent.md)
  - [Model.PhoneCallStartedEvent](docs/PhoneCallStartedEvent.md)
+ - [Model.PredefinedAnswer](docs/PredefinedAnswer.md)
  - [Model.Printer](docs/Printer.md)
  - [Model.PrinterAssignedToStoreEvent](docs/PrinterAssignedToStoreEvent.md)
  - [Model.PrinterTurnedOffEvent](docs/PrinterTurnedOffEvent.md)
@@ -280,6 +288,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultStore](docs/RestApiPaginationResultStore.md)
  - [Model.RestApiPaginationResultVoucher](docs/RestApiPaginationResultVoucher.md)
  - [Model.RestApiPaginationResultWebhookLog](docs/RestApiPaginationResultWebhookLog.md)
+ - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
  - [Model.RestApiResultCoordinates](docs/RestApiResultCoordinates.md)
  - [Model.RestApiResultMenu](docs/RestApiResultMenu.md)
  - [Model.RestApiResultMenuItemOptionSet](docs/RestApiResultMenuItemOptionSet.md)
@@ -301,6 +310,7 @@ Class | Method | HTTP request | Description
  - [Model.RetentionCampaignDeletedEvent](docs/RetentionCampaignDeletedEvent.md)
  - [Model.RetentionCampaignUpdatedEvent](docs/RetentionCampaignUpdatedEvent.md)
  - [Model.SearchCriteria](docs/SearchCriteria.md)
+ - [Model.SignupStep](docs/SignupStep.md)
  - [Model.SmsInfo](docs/SmsInfo.md)
  - [Model.SmsReceivedEvent](docs/SmsReceivedEvent.md)
  - [Model.Store](docs/Store.md)

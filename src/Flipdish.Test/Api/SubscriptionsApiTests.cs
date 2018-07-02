@@ -89,6 +89,17 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test SubscriptionsGetPersonalSubscription
+        /// </summary>
+        [Test]
+        public void SubscriptionsGetPersonalSubscriptionTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SubscriptionsGetPersonalSubscription();
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
         /// Test SubscriptionsGetPlansByCurrency
         /// </summary>
         [Test]

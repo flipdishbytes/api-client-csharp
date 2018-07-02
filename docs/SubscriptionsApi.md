@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**SubscriptionsCancelSubscription**](SubscriptionsApi.md#subscriptionscancelsubscription) | **DELETE** /api/v1.0/subscriptions/{subscriptionId} | Cancel the subscription
 [**SubscriptionsGetCard**](SubscriptionsApi.md#subscriptionsgetcard) | **GET** /api/v1.0/subscriptions/{subscriptionId}/card | Get the card linked to the subscription
+[**SubscriptionsGetPersonalSubscription**](SubscriptionsApi.md#subscriptionsgetpersonalsubscription) | **GET** /api/v1.0/subscriptions | Get the user&#39;s subscription
 [**SubscriptionsGetPlansByCurrency**](SubscriptionsApi.md#subscriptionsgetplansbycurrency) | **GET** /api/v1.0/subscriptions/plans | Get avaialble plans for currency&#39;s user
 [**SubscriptionsGetSubscription**](SubscriptionsApi.md#subscriptionsgetsubscription) | **GET** /api/v1.0/subscriptions/{subscriptionId} | Get the subscription including the payment history
 [**SubscriptionsReplaceOldCardWithNewCard**](SubscriptionsApi.md#subscriptionsreplaceoldcardwithnewcard) | **POST** /api/v1.0/subscriptions/{subscriptionId}/card/new | Add a new card and replace the old one
@@ -122,6 +123,64 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscriptionId** | **int?**| Subscription identifier | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="subscriptionsgetpersonalsubscription"></a>
+# **SubscriptionsGetPersonalSubscription**
+> Object SubscriptionsGetPersonalSubscription ()
+
+Get the user's subscription
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SubscriptionsGetPersonalSubscriptionExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new SubscriptionsApi();
+
+            try
+            {
+                // Get the user's subscription
+                Object result = apiInstance.SubscriptionsGetPersonalSubscription();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SubscriptionsApi.SubscriptionsGetPersonalSubscription: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 

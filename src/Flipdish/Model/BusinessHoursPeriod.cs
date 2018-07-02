@@ -90,26 +90,47 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessHoursPeriod" /> class.
         /// </summary>
+        /// <param name="Early">Early.</param>
+        /// <param name="Late">Late.</param>
+        /// <param name="Ranges">Ranges.</param>
         /// <param name="DayOfWeek">Day of week.</param>
         /// <param name="StartTime">Start time.</param>
         /// <param name="Period">Period.</param>
         /// <param name="StartTimeEarly">Start time early.</param>
         /// <param name="PeriodEarly">Period early.</param>
-        /// <param name="Early">Early.</param>
-        /// <param name="Late">Late.</param>
-        /// <param name="Ranges">Ranges.</param>
-        public BusinessHoursPeriod(DayOfWeekEnum? DayOfWeek = default(DayOfWeekEnum?), string StartTime = default(string), string Period = default(string), string StartTimeEarly = default(string), string PeriodEarly = default(string), Range Early = default(Range), Range Late = default(Range), List<Range> Ranges = default(List<Range>))
+        public BusinessHoursPeriod(Range Early = default(Range), Range Late = default(Range), List<Range> Ranges = default(List<Range>), DayOfWeekEnum? DayOfWeek = default(DayOfWeekEnum?), string StartTime = default(string), string Period = default(string), string StartTimeEarly = default(string), string PeriodEarly = default(string))
         {
+            this.Early = Early;
+            this.Late = Late;
+            this.Ranges = Ranges;
             this.DayOfWeek = DayOfWeek;
             this.StartTime = StartTime;
             this.Period = Period;
             this.StartTimeEarly = StartTimeEarly;
             this.PeriodEarly = PeriodEarly;
-            this.Early = Early;
-            this.Late = Late;
-            this.Ranges = Ranges;
         }
         
+        /// <summary>
+        /// Early
+        /// </summary>
+        /// <value>Early</value>
+        [DataMember(Name="Early", EmitDefaultValue=false)]
+        public Range Early { get; set; }
+
+        /// <summary>
+        /// Late
+        /// </summary>
+        /// <value>Late</value>
+        [DataMember(Name="Late", EmitDefaultValue=false)]
+        public Range Late { get; set; }
+
+        /// <summary>
+        /// Ranges
+        /// </summary>
+        /// <value>Ranges</value>
+        [DataMember(Name="Ranges", EmitDefaultValue=false)]
+        public List<Range> Ranges { get; set; }
+
 
         /// <summary>
         /// Start time
@@ -140,27 +161,6 @@ namespace Flipdish.Model
         public string PeriodEarly { get; set; }
 
         /// <summary>
-        /// Early
-        /// </summary>
-        /// <value>Early</value>
-        [DataMember(Name="Early", EmitDefaultValue=false)]
-        public Range Early { get; set; }
-
-        /// <summary>
-        /// Late
-        /// </summary>
-        /// <value>Late</value>
-        [DataMember(Name="Late", EmitDefaultValue=false)]
-        public Range Late { get; set; }
-
-        /// <summary>
-        /// Ranges
-        /// </summary>
-        /// <value>Ranges</value>
-        [DataMember(Name="Ranges", EmitDefaultValue=false)]
-        public List<Range> Ranges { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -168,14 +168,14 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessHoursPeriod {\n");
+            sb.Append("  Early: ").Append(Early).Append("\n");
+            sb.Append("  Late: ").Append(Late).Append("\n");
+            sb.Append("  Ranges: ").Append(Ranges).Append("\n");
             sb.Append("  DayOfWeek: ").Append(DayOfWeek).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  Period: ").Append(Period).Append("\n");
             sb.Append("  StartTimeEarly: ").Append(StartTimeEarly).Append("\n");
             sb.Append("  PeriodEarly: ").Append(PeriodEarly).Append("\n");
-            sb.Append("  Early: ").Append(Early).Append("\n");
-            sb.Append("  Late: ").Append(Late).Append("\n");
-            sb.Append("  Ranges: ").Append(Ranges).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -211,6 +211,21 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.Early == input.Early ||
+                    (this.Early != null &&
+                    this.Early.Equals(input.Early))
+                ) && 
+                (
+                    this.Late == input.Late ||
+                    (this.Late != null &&
+                    this.Late.Equals(input.Late))
+                ) && 
+                (
+                    this.Ranges == input.Ranges ||
+                    this.Ranges != null &&
+                    this.Ranges.SequenceEqual(input.Ranges)
+                ) && 
+                (
                     this.DayOfWeek == input.DayOfWeek ||
                     (this.DayOfWeek != null &&
                     this.DayOfWeek.Equals(input.DayOfWeek))
@@ -234,21 +249,6 @@ namespace Flipdish.Model
                     this.PeriodEarly == input.PeriodEarly ||
                     (this.PeriodEarly != null &&
                     this.PeriodEarly.Equals(input.PeriodEarly))
-                ) && 
-                (
-                    this.Early == input.Early ||
-                    (this.Early != null &&
-                    this.Early.Equals(input.Early))
-                ) && 
-                (
-                    this.Late == input.Late ||
-                    (this.Late != null &&
-                    this.Late.Equals(input.Late))
-                ) && 
-                (
-                    this.Ranges == input.Ranges ||
-                    this.Ranges != null &&
-                    this.Ranges.SequenceEqual(input.Ranges)
                 );
         }
 
@@ -261,6 +261,12 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.Early != null)
+                    hashCode = hashCode * 59 + this.Early.GetHashCode();
+                if (this.Late != null)
+                    hashCode = hashCode * 59 + this.Late.GetHashCode();
+                if (this.Ranges != null)
+                    hashCode = hashCode * 59 + this.Ranges.GetHashCode();
                 if (this.DayOfWeek != null)
                     hashCode = hashCode * 59 + this.DayOfWeek.GetHashCode();
                 if (this.StartTime != null)
@@ -271,12 +277,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StartTimeEarly.GetHashCode();
                 if (this.PeriodEarly != null)
                     hashCode = hashCode * 59 + this.PeriodEarly.GetHashCode();
-                if (this.Early != null)
-                    hashCode = hashCode * 59 + this.Early.GetHashCode();
-                if (this.Late != null)
-                    hashCode = hashCode * 59 + this.Late.GetHashCode();
-                if (this.Ranges != null)
-                    hashCode = hashCode * 59 + this.Ranges.GetHashCode();
                 return hashCode;
             }
         }

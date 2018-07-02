@@ -67,6 +67,25 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> CreateAccountWithHttpInfo (CreateAccountModel createAccountModel);
         /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>RestApiResultAccountDetail</returns>
+        RestApiResultAccountDetail GetAccountDetails ();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of RestApiResultAccountDetail</returns>
+        ApiResponse<RestApiResultAccountDetail> GetAccountDetailsWithHttpInfo ();
+        /// <summary>
         /// Login with username and password
         /// </summary>
         /// <remarks>
@@ -129,6 +148,50 @@ namespace Flipdish.Api
         /// <param name="email">Email address</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> RequestPasswordResetWithHttpInfo (string email);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <returns>RestApiResultAccountDetail</returns>
+        RestApiResultAccountDetail SkipSignupStep (string signupStepAction);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <returns>ApiResponse of RestApiResultAccountDetail</returns>
+        ApiResponse<RestApiResultAccountDetail> SkipSignupStepWithHttpInfo (string signupStepAction);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <param name="answerId"></param>
+        /// <returns>RestApiResultAccountDetail</returns>
+        RestApiResultAccountDetail SkipSignupStep_0 (string signupStepAction, int? answerId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <param name="answerId"></param>
+        /// <returns>ApiResponse of RestApiResultAccountDetail</returns>
+        ApiResponse<RestApiResultAccountDetail> SkipSignupStep_0WithHttpInfo (string signupStepAction, int? answerId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -173,6 +236,25 @@ namespace Flipdish.Api
         /// <param name="createAccountModel">Create account model</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateAccountAsyncWithHttpInfo (CreateAccountModel createAccountModel);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of RestApiResultAccountDetail</returns>
+        System.Threading.Tasks.Task<RestApiResultAccountDetail> GetAccountDetailsAsync ();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (RestApiResultAccountDetail)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAccountDetail>> GetAccountDetailsAsyncWithHttpInfo ();
         /// <summary>
         /// Login with username and password
         /// </summary>
@@ -236,6 +318,50 @@ namespace Flipdish.Api
         /// <param name="email">Email address</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RequestPasswordResetAsyncWithHttpInfo (string email);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <returns>Task of RestApiResultAccountDetail</returns>
+        System.Threading.Tasks.Task<RestApiResultAccountDetail> SkipSignupStepAsync (string signupStepAction);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <returns>Task of ApiResponse (RestApiResultAccountDetail)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAccountDetail>> SkipSignupStepAsyncWithHttpInfo (string signupStepAction);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <param name="answerId"></param>
+        /// <returns>Task of RestApiResultAccountDetail</returns>
+        System.Threading.Tasks.Task<RestApiResultAccountDetail> SkipSignupStep_0Async (string signupStepAction, int? answerId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <param name="answerId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultAccountDetail)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAccountDetail>> SkipSignupStep_0AsyncWithHttpInfo (string signupStepAction, int? answerId);
         #endregion Asynchronous Operations
     }
 
@@ -684,6 +810,145 @@ namespace Flipdish.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>RestApiResultAccountDetail</returns>
+        public RestApiResultAccountDetail GetAccountDetails ()
+        {
+             ApiResponse<RestApiResultAccountDetail> localVarResponse = GetAccountDetailsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of RestApiResultAccountDetail</returns>
+        public ApiResponse< RestApiResultAccountDetail > GetAccountDetailsWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v1.0/accounts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAccountDetails", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAccountDetail>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultAccountDetail) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAccountDetail)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of RestApiResultAccountDetail</returns>
+        public async System.Threading.Tasks.Task<RestApiResultAccountDetail> GetAccountDetailsAsync ()
+        {
+             ApiResponse<RestApiResultAccountDetail> localVarResponse = await GetAccountDetailsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (RestApiResultAccountDetail)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAccountDetail>> GetAccountDetailsAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v1.0/accounts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAccountDetails", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAccountDetail>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultAccountDetail) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAccountDetail)));
         }
 
         /// <summary>
@@ -1185,6 +1450,344 @@ namespace Flipdish.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <returns>RestApiResultAccountDetail</returns>
+        public RestApiResultAccountDetail SkipSignupStep (string signupStepAction)
+        {
+             ApiResponse<RestApiResultAccountDetail> localVarResponse = SkipSignupStepWithHttpInfo(signupStepAction);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <returns>ApiResponse of RestApiResultAccountDetail</returns>
+        public ApiResponse< RestApiResultAccountDetail > SkipSignupStepWithHttpInfo (string signupStepAction)
+        {
+            // verify the required parameter 'signupStepAction' is set
+            if (signupStepAction == null)
+                throw new ApiException(400, "Missing required parameter 'signupStepAction' when calling AccountsApi->SkipSignupStep");
+
+            var localVarPath = "/api/v1.0/accounts/signupstep/{signupStepAction}/skip";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (signupStepAction != null) localVarPathParams.Add("signupStepAction", Configuration.ApiClient.ParameterToString(signupStepAction)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SkipSignupStep", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAccountDetail>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultAccountDetail) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAccountDetail)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <returns>Task of RestApiResultAccountDetail</returns>
+        public async System.Threading.Tasks.Task<RestApiResultAccountDetail> SkipSignupStepAsync (string signupStepAction)
+        {
+             ApiResponse<RestApiResultAccountDetail> localVarResponse = await SkipSignupStepAsyncWithHttpInfo(signupStepAction);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <returns>Task of ApiResponse (RestApiResultAccountDetail)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAccountDetail>> SkipSignupStepAsyncWithHttpInfo (string signupStepAction)
+        {
+            // verify the required parameter 'signupStepAction' is set
+            if (signupStepAction == null)
+                throw new ApiException(400, "Missing required parameter 'signupStepAction' when calling AccountsApi->SkipSignupStep");
+
+            var localVarPath = "/api/v1.0/accounts/signupstep/{signupStepAction}/skip";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (signupStepAction != null) localVarPathParams.Add("signupStepAction", Configuration.ApiClient.ParameterToString(signupStepAction)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SkipSignupStep", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAccountDetail>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultAccountDetail) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAccountDetail)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <param name="answerId"></param>
+        /// <returns>RestApiResultAccountDetail</returns>
+        public RestApiResultAccountDetail SkipSignupStep_0 (string signupStepAction, int? answerId)
+        {
+             ApiResponse<RestApiResultAccountDetail> localVarResponse = SkipSignupStep_0WithHttpInfo(signupStepAction, answerId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <param name="answerId"></param>
+        /// <returns>ApiResponse of RestApiResultAccountDetail</returns>
+        public ApiResponse< RestApiResultAccountDetail > SkipSignupStep_0WithHttpInfo (string signupStepAction, int? answerId)
+        {
+            // verify the required parameter 'signupStepAction' is set
+            if (signupStepAction == null)
+                throw new ApiException(400, "Missing required parameter 'signupStepAction' when calling AccountsApi->SkipSignupStep_0");
+            // verify the required parameter 'answerId' is set
+            if (answerId == null)
+                throw new ApiException(400, "Missing required parameter 'answerId' when calling AccountsApi->SkipSignupStep_0");
+
+            var localVarPath = "/api/v1.0/accounts/signupstep/{signupStepAction}/answer";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (signupStepAction != null) localVarPathParams.Add("signupStepAction", Configuration.ApiClient.ParameterToString(signupStepAction)); // path parameter
+            if (answerId != null && answerId.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(answerId); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = answerId; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SkipSignupStep_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAccountDetail>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultAccountDetail) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAccountDetail)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <param name="answerId"></param>
+        /// <returns>Task of RestApiResultAccountDetail</returns>
+        public async System.Threading.Tasks.Task<RestApiResultAccountDetail> SkipSignupStep_0Async (string signupStepAction, int? answerId)
+        {
+             ApiResponse<RestApiResultAccountDetail> localVarResponse = await SkipSignupStep_0AsyncWithHttpInfo(signupStepAction, answerId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="signupStepAction"></param>
+        /// <param name="answerId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultAccountDetail)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAccountDetail>> SkipSignupStep_0AsyncWithHttpInfo (string signupStepAction, int? answerId)
+        {
+            // verify the required parameter 'signupStepAction' is set
+            if (signupStepAction == null)
+                throw new ApiException(400, "Missing required parameter 'signupStepAction' when calling AccountsApi->SkipSignupStep_0");
+            // verify the required parameter 'answerId' is set
+            if (answerId == null)
+                throw new ApiException(400, "Missing required parameter 'answerId' when calling AccountsApi->SkipSignupStep_0");
+
+            var localVarPath = "/api/v1.0/accounts/signupstep/{signupStepAction}/answer";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (signupStepAction != null) localVarPathParams.Add("signupStepAction", Configuration.ApiClient.ParameterToString(signupStepAction)); // path parameter
+            if (answerId != null && answerId.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(answerId); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = answerId; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SkipSignupStep_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAccountDetail>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultAccountDetail) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAccountDetail)));
         }
 
     }

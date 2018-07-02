@@ -89,6 +89,17 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test GetAccountDetails
+        /// </summary>
+        [Test]
+        public void GetAccountDetailsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.GetAccountDetails();
+            //Assert.IsInstanceOf<RestApiResultAccountDetail> (response, "response is RestApiResultAccountDetail");
+        }
+        
+        /// <summary>
         /// Test Login
         /// </summary>
         [Test]
@@ -122,6 +133,31 @@ namespace Flipdish.Test
             //string email = null;
             //var response = instance.RequestPasswordReset(email);
             //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test SkipSignupStep
+        /// </summary>
+        [Test]
+        public void SkipSignupStepTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string signupStepAction = null;
+            //var response = instance.SkipSignupStep(signupStepAction);
+            //Assert.IsInstanceOf<RestApiResultAccountDetail> (response, "response is RestApiResultAccountDetail");
+        }
+        
+        /// <summary>
+        /// Test SkipSignupStep_0
+        /// </summary>
+        [Test]
+        public void SkipSignupStep_0Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string signupStepAction = null;
+            //int? answerId = null;
+            //var response = instance.SkipSignupStep_0(signupStepAction, answerId);
+            //Assert.IsInstanceOf<RestApiResultAccountDetail> (response, "response is RestApiResultAccountDetail");
         }
         
     }

@@ -119,7 +119,8 @@ namespace Flipdish.Model
         /// <param name="Alcohol">To be set true if the item or an option of the item contains an alcoholic drink..</param>
         /// <param name="IsAvailable">True if we accept orders for this item still.</param>
         /// <param name="CellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
-        public MenuSectionItemBase(string Name = default(string), string Description = default(string), SpicinessRatingEnum? SpicinessRating = default(SpicinessRatingEnum?), double? Price = default(double?), int? DisplayOrder = default(int?), bool? Alcohol = default(bool?), bool? IsAvailable = default(bool?), CellLayoutTypeEnum? CellLayoutType = default(CellLayoutTypeEnum?))
+        /// <param name="DisableVouchers">If true, then vouchers won&#39;t be applied for this item.</param>
+        public MenuSectionItemBase(string Name = default(string), string Description = default(string), SpicinessRatingEnum? SpicinessRating = default(SpicinessRatingEnum?), double? Price = default(double?), int? DisplayOrder = default(int?), bool? Alcohol = default(bool?), bool? IsAvailable = default(bool?), CellLayoutTypeEnum? CellLayoutType = default(CellLayoutTypeEnum?), bool? DisableVouchers = default(bool?))
         {
             this.Name = Name;
             this.Description = Description;
@@ -129,6 +130,7 @@ namespace Flipdish.Model
             this.Alcohol = Alcohol;
             this.IsAvailable = IsAvailable;
             this.CellLayoutType = CellLayoutType;
+            this.DisableVouchers = DisableVouchers;
         }
         
         /// <summary>
@@ -176,6 +178,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// If true, then vouchers won&#39;t be applied for this item
+        /// </summary>
+        /// <value>If true, then vouchers won&#39;t be applied for this item</value>
+        [DataMember(Name="DisableVouchers", EmitDefaultValue=false)]
+        public bool? DisableVouchers { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -191,6 +200,7 @@ namespace Flipdish.Model
             sb.Append("  Alcohol: ").Append(Alcohol).Append("\n");
             sb.Append("  IsAvailable: ").Append(IsAvailable).Append("\n");
             sb.Append("  CellLayoutType: ").Append(CellLayoutType).Append("\n");
+            sb.Append("  DisableVouchers: ").Append(DisableVouchers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -264,6 +274,11 @@ namespace Flipdish.Model
                     this.CellLayoutType == input.CellLayoutType ||
                     (this.CellLayoutType != null &&
                     this.CellLayoutType.Equals(input.CellLayoutType))
+                ) && 
+                (
+                    this.DisableVouchers == input.DisableVouchers ||
+                    (this.DisableVouchers != null &&
+                    this.DisableVouchers.Equals(input.DisableVouchers))
                 );
         }
 
@@ -292,6 +307,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.IsAvailable.GetHashCode();
                 if (this.CellLayoutType != null)
                     hashCode = hashCode * 59 + this.CellLayoutType.GetHashCode();
+                if (this.DisableVouchers != null)
+                    hashCode = hashCode * 59 + this.DisableVouchers.GetHashCode();
                 return hashCode;
             }
         }

@@ -130,6 +130,14 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'CellLayoutType'
         }
+        /// <summary>
+        /// Test the property 'DisableVouchers'
+        /// </summary>
+        [Test]
+        public void DisableVouchersTest()
+        {
+            // TODO unit test for the property 'DisableVouchers'
+        }
 
     }
 

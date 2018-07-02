@@ -65,6 +65,19 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test CloneMenuSection
+        /// </summary>
+        [Test]
+        public void CloneMenuSectionTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //int? menuSectionId = null;
+            //var response = instance.CloneMenuSection(menuId, menuSectionId);
+            //Assert.IsInstanceOf<RestApiResultMenuSection> (response, "response is RestApiResultMenuSection");
+        }
+        
+        /// <summary>
         /// Test CreateMenuSection
         /// </summary>
         [Test]

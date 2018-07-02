@@ -4,6 +4,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**CloneMenuSectionItem**](MenuSectionItemsApi.md#clonemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/clone | Clone menu section item
 [**CreateMenuSectionItem**](MenuSectionItemsApi.md#createmenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Create menu section item
 [**DeleteMenuSectionItem**](MenuSectionItemsApi.md#deletemenusectionitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Delete menu section item
 [**DeleteMenuSectionItemImage**](MenuSectionItemsApi.md#deletemenusectionitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
@@ -12,6 +13,72 @@ Method | HTTP request | Description
 [**UpdateMenuSectionItem**](MenuSectionItemsApi.md#updatemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Update menu section item
 [**UploadMenuSectionItemImage**](MenuSectionItemsApi.md#uploadmenusectionitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Upload menu section item image
 
+
+<a name="clonemenusectionitem"></a>
+# **CloneMenuSectionItem**
+> RestApiResultMenuSectionItem CloneMenuSectionItem (int? menuId, int? menuSectionId, int? menuSectionItemId)
+
+Clone menu section item
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class CloneMenuSectionItemExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenuSectionItemsApi();
+            var menuId = 56;  // int? | Menu identifier
+            var menuSectionId = 56;  // int? | Menu section identifier
+            var menuSectionItemId = 56;  // int? | Menu section item identifier
+
+            try
+            {
+                // Clone menu section item
+                RestApiResultMenuSectionItem result = apiInstance.CloneMenuSectionItem(menuId, menuSectionId, menuSectionItemId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenuSectionItemsApi.CloneMenuSectionItem: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **menuSectionId** | **int?**| Menu section identifier | 
+ **menuSectionItemId** | **int?**| Menu section item identifier | 
+
+### Return type
+
+[**RestApiResultMenuSectionItem**](RestApiResultMenuSectionItem.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="createmenusectionitem"></a>
 # **CreateMenuSectionItem**
