@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 <a name="subscriptionsgetcard"></a>
 # **SubscriptionsGetCard**
-> Object SubscriptionsGetCard (int? subscriptionId)
+> RestApiResultCard SubscriptionsGetCard (int? subscriptionId)
 
 Get the card linked to the subscription
 
@@ -106,7 +106,7 @@ namespace Example
             try
             {
                 // Get the card linked to the subscription
-                Object result = apiInstance.SubscriptionsGetCard(subscriptionId);
+                RestApiResultCard result = apiInstance.SubscriptionsGetCard(subscriptionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiResultCard**](RestApiResultCard.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 <a name="subscriptionsgetpersonalsubscription"></a>
 # **SubscriptionsGetPersonalSubscription**
-> Object SubscriptionsGetPersonalSubscription ()
+> RestApiResultSubscription SubscriptionsGetPersonalSubscription ()
 
 Get the user's subscription
 
@@ -167,7 +167,7 @@ namespace Example
             try
             {
                 // Get the user's subscription
-                Object result = apiInstance.SubscriptionsGetPersonalSubscription();
+                RestApiResultSubscription result = apiInstance.SubscriptionsGetPersonalSubscription();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -184,7 +184,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Object**
+[**RestApiResultSubscription**](RestApiResultSubscription.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ This endpoint does not need any parameter.
 
 <a name="subscriptionsgetplansbycurrency"></a>
 # **SubscriptionsGetPlansByCurrency**
-> Object SubscriptionsGetPlansByCurrency ()
+> RestApiResultSubscriptionPlansResponse SubscriptionsGetPlansByCurrency ()
 
 Get avaialble plans for currency's user
 
@@ -225,7 +225,7 @@ namespace Example
             try
             {
                 // Get avaialble plans for currency's user
-                Object result = apiInstance.SubscriptionsGetPlansByCurrency();
+                RestApiResultSubscriptionPlansResponse result = apiInstance.SubscriptionsGetPlansByCurrency();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -242,7 +242,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Object**
+[**RestApiResultSubscriptionPlansResponse**](RestApiResultSubscriptionPlansResponse.md)
 
 ### Authorization
 
@@ -257,7 +257,7 @@ This endpoint does not need any parameter.
 
 <a name="subscriptionsgetsubscription"></a>
 # **SubscriptionsGetSubscription**
-> Object SubscriptionsGetSubscription (int? subscriptionId)
+> RestApiResultSubscription SubscriptionsGetSubscription (int? subscriptionId)
 
 Get the subscription including the payment history
 
@@ -284,7 +284,7 @@ namespace Example
             try
             {
                 // Get the subscription including the payment history
-                Object result = apiInstance.SubscriptionsGetSubscription(subscriptionId);
+                RestApiResultSubscription result = apiInstance.SubscriptionsGetSubscription(subscriptionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiResultSubscription**](RestApiResultSubscription.md)
 
 ### Authorization
 
@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
 
 <a name="subscriptionsupdatecardexpiringdate"></a>
 # **SubscriptionsUpdateCardExpiringDate**
-> Object SubscriptionsUpdateCardExpiringDate (int? subscriptionId, CardBase card)
+> RestApiResultCard SubscriptionsUpdateCardExpiringDate (int? subscriptionId, CardBase card)
 
 Update card expiring date
 
@@ -473,7 +473,7 @@ namespace Example
             try
             {
                 // Update card expiring date
-                Object result = apiInstance.SubscriptionsUpdateCardExpiringDate(subscriptionId, card);
+                RestApiResultCard result = apiInstance.SubscriptionsUpdateCardExpiringDate(subscriptionId, card);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiResultCard**](RestApiResultCard.md)
 
 ### Authorization
 

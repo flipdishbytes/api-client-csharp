@@ -85,7 +85,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? subscriptionId = null;
             //var response = instance.SubscriptionsGetCard(subscriptionId);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<RestApiResultCard> (response, "response is RestApiResultCard");
         }
         
         /// <summary>
@@ -96,7 +96,7 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.SubscriptionsGetPersonalSubscription();
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<RestApiResultSubscription> (response, "response is RestApiResultSubscription");
         }
         
         /// <summary>
@@ -107,7 +107,7 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.SubscriptionsGetPlansByCurrency();
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<RestApiResultSubscriptionPlansResponse> (response, "response is RestApiResultSubscriptionPlansResponse");
         }
         
         /// <summary>
@@ -119,7 +119,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? subscriptionId = null;
             //var response = instance.SubscriptionsGetSubscription(subscriptionId);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<RestApiResultSubscription> (response, "response is RestApiResultSubscription");
         }
         
         /// <summary>
@@ -157,7 +157,7 @@ namespace Flipdish.Test
             //int? subscriptionId = null;
             //CardBase card = null;
             //var response = instance.SubscriptionsUpdateCardExpiringDate(subscriptionId, card);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<RestApiResultCard> (response, "response is RestApiResultCard");
         }
         
         /// <summary>
