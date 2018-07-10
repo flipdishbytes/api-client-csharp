@@ -36,8 +36,8 @@ namespace Flipdish.Model
         /// <param name="PublishableApiKey">Stripe publishable api key.</param>
         /// <param name="Email">User email.</param>
         /// <param name="SubscriptionPlans">Available plans.</param>
-        /// <param name="AppIds">App ids (or White labels ids) to which the user belongs.</param>
-        public SubscriptionPlansResponse(string PublishableApiKey = default(string), string Email = default(string), List<SubscriptionPlan> SubscriptionPlans = default(List<SubscriptionPlan>), List<int?> AppIds = default(List<int?>))
+        /// <param name="AppIds">App ids (string name) to which the user belongs.</param>
+        public SubscriptionPlansResponse(string PublishableApiKey = default(string), string Email = default(string), List<SubscriptionPlan> SubscriptionPlans = default(List<SubscriptionPlan>), List<string> AppIds = default(List<string>))
         {
             this.PublishableApiKey = PublishableApiKey;
             this.Email = Email;
@@ -67,11 +67,11 @@ namespace Flipdish.Model
         public List<SubscriptionPlan> SubscriptionPlans { get; set; }
 
         /// <summary>
-        /// App ids (or White labels ids) to which the user belongs
+        /// App ids (string name) to which the user belongs
         /// </summary>
-        /// <value>App ids (or White labels ids) to which the user belongs</value>
+        /// <value>App ids (string name) to which the user belongs</value>
         [DataMember(Name="AppIds", EmitDefaultValue=false)]
-        public List<int?> AppIds { get; set; }
+        public List<string> AppIds { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

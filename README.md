@@ -107,6 +107,7 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**RequestPasswordReset**](docs/AccountsApi.md#requestpasswordreset) | **GET** /api/v1.0/accounts/password | Request password reset. Flipdish system will send a token via email.
 *AccountsApi* | [**SkipSignupStep**](docs/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
 *AccountsApi* | [**SkipSignupStep_0**](docs/AccountsApi.md#skipsignupstep_0) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | 
+*AppsApi* | [**GeApps**](docs/AppsApi.md#geapps) | **GET** /api/v1.0/apps | Get all OAuth client
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
 *EventsApi* | [**GetCustomerEvents**](docs/EventsApi.md#getcustomerevents) | **GET** /api/v1.0/events/customer/{customerId} | Get customer events
@@ -179,9 +180,9 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**UpdateStoreAddressCoordinates**](docs/StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
 *SubscriptionsApi* | [**SubscriptionsCancelSubscription**](docs/SubscriptionsApi.md#subscriptionscancelsubscription) | **DELETE** /api/v1.0/subscriptions/{subscriptionId} | Cancel the subscription
 *SubscriptionsApi* | [**SubscriptionsGetCard**](docs/SubscriptionsApi.md#subscriptionsgetcard) | **GET** /api/v1.0/subscriptions/{subscriptionId}/card | Get the card linked to the subscription
-*SubscriptionsApi* | [**SubscriptionsGetPersonalSubscription**](docs/SubscriptionsApi.md#subscriptionsgetpersonalsubscription) | **GET** /api/v1.0/subscriptions | Get the user's subscription
 *SubscriptionsApi* | [**SubscriptionsGetPlansByCurrency**](docs/SubscriptionsApi.md#subscriptionsgetplansbycurrency) | **GET** /api/v1.0/subscriptions/plans | Get avaialble plans for currency's user
 *SubscriptionsApi* | [**SubscriptionsGetSubscription**](docs/SubscriptionsApi.md#subscriptionsgetsubscription) | **GET** /api/v1.0/subscriptions/{subscriptionId} | Get the subscription including the payment history
+*SubscriptionsApi* | [**SubscriptionsGetUserSubscriptionByAppId**](docs/SubscriptionsApi.md#subscriptionsgetusersubscriptionbyappid) | **GET** /api/v1.0/subscriptions | Get subscription by appId
 *SubscriptionsApi* | [**SubscriptionsReplaceOldCardWithNewCard**](docs/SubscriptionsApi.md#subscriptionsreplaceoldcardwithnewcard) | **POST** /api/v1.0/subscriptions/{subscriptionId}/card/new | Add a new card and replace the old one
 *SubscriptionsApi* | [**SubscriptionsSubscribe**](docs/SubscriptionsApi.md#subscriptionssubscribe) | **POST** /api/v1.0/subscriptions | Create a new subscription
 *SubscriptionsApi* | [**SubscriptionsUpdateCardExpiringDate**](docs/SubscriptionsApi.md#subscriptionsupdatecardexpiringdate) | **POST** /api/v1.0/subscriptions/{subscriptionId}/card | Update card expiring date
@@ -209,6 +210,7 @@ Class | Method | HTTP request | Description
 
  - [Model.Accept](docs/Accept.md)
  - [Model.AccountDetail](docs/AccountDetail.md)
+ - [Model.App](docs/App.md)
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
  - [Model.Card](docs/Card.md)
  - [Model.CardBase](docs/CardBase.md)
@@ -283,6 +285,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiEventSearchPaginationResult](docs/RestApiEventSearchPaginationResult.md)
  - [Model.RestApiForbiddenResult](docs/RestApiForbiddenResult.md)
  - [Model.RestApiIntegerResult](docs/RestApiIntegerResult.md)
+ - [Model.RestApiPaginationResultApp](docs/RestApiPaginationResultApp.md)
  - [Model.RestApiPaginationResultHttpRequestAndResponseLog](docs/RestApiPaginationResultHttpRequestAndResponseLog.md)
  - [Model.RestApiPaginationResultOAuthTokenModel](docs/RestApiPaginationResultOAuthTokenModel.md)
  - [Model.RestApiPaginationResultOrder](docs/RestApiPaginationResultOrder.md)

@@ -78,12 +78,12 @@ namespace Flipdish.Model
         /// <param name="UserId">Flipdish user identifier.</param>
         /// <param name="SubscriptionPlan">Subscription Plan.</param>
         /// <param name="Card">Card.</param>
-        /// <param name="AppId">White label Id of the subscription.</param>
+        /// <param name="AppId">App name Id of the subscription.</param>
         /// <param name="VatNumber">Last 4 digits of the card.</param>
         /// <param name="VatCountryCode">Expiry date of the card.</param>
         /// <param name="Quantity">Number of physical restaurants.</param>
         /// <param name="SubscriptionPlanId">Subscription plan identifier.</param>
-        public Subscription(int? SubscriptionId = default(int?), DateTime? StartDate = default(DateTime?), StatusEnum? Status = default(StatusEnum?), int? UserId = default(int?), SubscriptionPlan SubscriptionPlan = default(SubscriptionPlan), Card Card = default(Card), int? AppId = default(int?), string VatNumber = default(string), string VatCountryCode = default(string), int? Quantity = default(int?), int? SubscriptionPlanId = default(int?))
+        public Subscription(int? SubscriptionId = default(int?), DateTime? StartDate = default(DateTime?), StatusEnum? Status = default(StatusEnum?), int? UserId = default(int?), SubscriptionPlan SubscriptionPlan = default(SubscriptionPlan), Card Card = default(Card), string AppId = default(string), string VatNumber = default(string), string VatCountryCode = default(string), int? Quantity = default(int?), int? SubscriptionPlanId = default(int?))
         {
             this.SubscriptionId = SubscriptionId;
             this.StartDate = StartDate;
@@ -135,11 +135,11 @@ namespace Flipdish.Model
         public Card Card { get; set; }
 
         /// <summary>
-        /// White label Id of the subscription
+        /// App name Id of the subscription
         /// </summary>
-        /// <value>White label Id of the subscription</value>
+        /// <value>App name Id of the subscription</value>
         [DataMember(Name="AppId", EmitDefaultValue=false)]
-        public int? AppId { get; set; }
+        public string AppId { get; set; }
 
         /// <summary>
         /// Last 4 digits of the card

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **UserId** | **int?** | Flipdish user identifier | [optional] 
 **SubscriptionPlan** | [**SubscriptionPlan**](SubscriptionPlan.md) | Subscription Plan | [optional] 
 **Card** | [**Card**](Card.md) | Card | [optional] 
-**AppId** | **int?** | White label Id of the subscription | [optional] 
+**AppId** | **string** | App name Id of the subscription | [optional] 
 **VatNumber** | **string** | Last 4 digits of the card | [optional] 
 **VatCountryCode** | **string** | Expiry date of the card | [optional] 
 **Quantity** | **int?** | Number of physical restaurants | [optional] 

@@ -89,17 +89,6 @@ namespace Flipdish.Test
         }
         
         /// <summary>
-        /// Test SubscriptionsGetPersonalSubscription
-        /// </summary>
-        [Test]
-        public void SubscriptionsGetPersonalSubscriptionTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.SubscriptionsGetPersonalSubscription();
-            //Assert.IsInstanceOf<RestApiResultSubscription> (response, "response is RestApiResultSubscription");
-        }
-        
-        /// <summary>
         /// Test SubscriptionsGetPlansByCurrency
         /// </summary>
         [Test]
@@ -119,6 +108,18 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? subscriptionId = null;
             //var response = instance.SubscriptionsGetSubscription(subscriptionId);
+            //Assert.IsInstanceOf<RestApiResultSubscription> (response, "response is RestApiResultSubscription");
+        }
+        
+        /// <summary>
+        /// Test SubscriptionsGetUserSubscriptionByAppId
+        /// </summary>
+        [Test]
+        public void SubscriptionsGetUserSubscriptionByAppIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //var response = instance.SubscriptionsGetUserSubscriptionByAppId(appId);
             //Assert.IsInstanceOf<RestApiResultSubscription> (response, "response is RestApiResultSubscription");
         }
         

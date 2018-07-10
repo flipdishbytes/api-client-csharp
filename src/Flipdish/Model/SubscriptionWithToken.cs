@@ -36,10 +36,10 @@ namespace Flipdish.Model
         /// <param name="Token">Token.</param>
         /// <param name="Quantity">Number of physical restaurants.</param>
         /// <param name="SubscriptionPlanId">Subscription plan identifier.</param>
-        /// <param name="AppId">White label Id of the subscription.</param>
+        /// <param name="AppId">App name Id of the subscription.</param>
         /// <param name="VatNumber">Last 4 digits of the card.</param>
         /// <param name="VatCountryCode">Expiry date of the card.</param>
-        public SubscriptionWithToken(string Token = default(string), int? Quantity = default(int?), int? SubscriptionPlanId = default(int?), int? AppId = default(int?), string VatNumber = default(string), string VatCountryCode = default(string))
+        public SubscriptionWithToken(string Token = default(string), int? Quantity = default(int?), int? SubscriptionPlanId = default(int?), string AppId = default(string), string VatNumber = default(string), string VatCountryCode = default(string))
         {
             this.Token = Token;
             this.Quantity = Quantity;
@@ -71,11 +71,11 @@ namespace Flipdish.Model
         public int? SubscriptionPlanId { get; set; }
 
         /// <summary>
-        /// White label Id of the subscription
+        /// App name Id of the subscription
         /// </summary>
-        /// <value>White label Id of the subscription</value>
+        /// <value>App name Id of the subscription</value>
         [DataMember(Name="AppId", EmitDefaultValue=false)]
-        public int? AppId { get; set; }
+        public string AppId { get; set; }
 
         /// <summary>
         /// Last 4 digits of the card

@@ -6,9 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**SubscriptionsCancelSubscription**](SubscriptionsApi.md#subscriptionscancelsubscription) | **DELETE** /api/v1.0/subscriptions/{subscriptionId} | Cancel the subscription
 [**SubscriptionsGetCard**](SubscriptionsApi.md#subscriptionsgetcard) | **GET** /api/v1.0/subscriptions/{subscriptionId}/card | Get the card linked to the subscription
-[**SubscriptionsGetPersonalSubscription**](SubscriptionsApi.md#subscriptionsgetpersonalsubscription) | **GET** /api/v1.0/subscriptions | Get the user&#39;s subscription
 [**SubscriptionsGetPlansByCurrency**](SubscriptionsApi.md#subscriptionsgetplansbycurrency) | **GET** /api/v1.0/subscriptions/plans | Get avaialble plans for currency&#39;s user
 [**SubscriptionsGetSubscription**](SubscriptionsApi.md#subscriptionsgetsubscription) | **GET** /api/v1.0/subscriptions/{subscriptionId} | Get the subscription including the payment history
+[**SubscriptionsGetUserSubscriptionByAppId**](SubscriptionsApi.md#subscriptionsgetusersubscriptionbyappid) | **GET** /api/v1.0/subscriptions | Get subscription by appId
 [**SubscriptionsReplaceOldCardWithNewCard**](SubscriptionsApi.md#subscriptionsreplaceoldcardwithnewcard) | **POST** /api/v1.0/subscriptions/{subscriptionId}/card/new | Add a new card and replace the old one
 [**SubscriptionsSubscribe**](SubscriptionsApi.md#subscriptionssubscribe) | **POST** /api/v1.0/subscriptions | Create a new subscription
 [**SubscriptionsUpdateCardExpiringDate**](SubscriptionsApi.md#subscriptionsupdatecardexpiringdate) | **POST** /api/v1.0/subscriptions/{subscriptionId}/card | Update card expiring date
@@ -139,64 +139,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="subscriptionsgetpersonalsubscription"></a>
-# **SubscriptionsGetPersonalSubscription**
-> RestApiResultSubscription SubscriptionsGetPersonalSubscription ()
-
-Get the user's subscription
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class SubscriptionsGetPersonalSubscriptionExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new SubscriptionsApi();
-
-            try
-            {
-                // Get the user's subscription
-                RestApiResultSubscription result = apiInstance.SubscriptionsGetPersonalSubscription();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling SubscriptionsApi.SubscriptionsGetPersonalSubscription: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**RestApiResultSubscription**](RestApiResultSubscription.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="subscriptionsgetplansbycurrency"></a>
 # **SubscriptionsGetPlansByCurrency**
 > RestApiResultSubscriptionPlansResponse SubscriptionsGetPlansByCurrency ()
@@ -301,6 +243,68 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscriptionId** | **int?**| Subscription Identifier | 
+
+### Return type
+
+[**RestApiResultSubscription**](RestApiResultSubscription.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="subscriptionsgetusersubscriptionbyappid"></a>
+# **SubscriptionsGetUserSubscriptionByAppId**
+> RestApiResultSubscription SubscriptionsGetUserSubscriptionByAppId (string appId)
+
+Get subscription by appId
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SubscriptionsGetUserSubscriptionByAppIdExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new SubscriptionsApi();
+            var appId = appId_example;  // string | The string app identifier
+
+            try
+            {
+                // Get subscription by appId
+                RestApiResultSubscription result = apiInstance.SubscriptionsGetUserSubscriptionByAppId(appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SubscriptionsApi.SubscriptionsGetUserSubscriptionByAppId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**| The string app identifier | 
 
 ### Return type
 
