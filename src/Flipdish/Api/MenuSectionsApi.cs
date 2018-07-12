@@ -71,6 +71,58 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> CreateMenuSectionWithHttpInfo (int? menuId, MenuSectionBase menuSection);
         /// <summary>
+        /// Create menu section
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="menuSectionAvailability"></param>
+        /// <returns>Object</returns>
+        Object CreateMenuSection_0 (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
+
+        /// <summary>
+        /// Create menu section
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="menuSectionAvailability"></param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> CreateMenuSection_0WithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
+        /// <summary>
+        /// Create menu section
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="dayOfWeek"></param>
+        /// <param name="businessHoursPeriod"></param>
+        /// <returns>Object</returns>
+        Object CreateMenuSection_1 (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod);
+
+        /// <summary>
+        /// Create menu section
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="dayOfWeek"></param>
+        /// <param name="businessHoursPeriod"></param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> CreateMenuSection_1WithHttpInfo (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod);
+        /// <summary>
         /// Delete menu section
         /// </summary>
         /// <remarks>
@@ -260,6 +312,58 @@ namespace Flipdish.Api
         /// <param name="menuSection">Menu section</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSectionAsyncWithHttpInfo (int? menuId, MenuSectionBase menuSection);
+        /// <summary>
+        /// Create menu section
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="menuSectionAvailability"></param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> CreateMenuSection_0Async (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
+
+        /// <summary>
+        /// Create menu section
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="menuSectionAvailability"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSection_0AsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
+        /// <summary>
+        /// Create menu section
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="dayOfWeek"></param>
+        /// <param name="businessHoursPeriod"></param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> CreateMenuSection_1Async (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod);
+
+        /// <summary>
+        /// Create menu section
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="dayOfWeek"></param>
+        /// <param name="businessHoursPeriod"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSection_1AsyncWithHttpInfo (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod);
         /// <summary>
         /// Delete menu section
         /// </summary>
@@ -844,6 +948,416 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("CreateMenuSection", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Create menu section 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="menuSectionAvailability"></param>
+        /// <returns>Object</returns>
+        public Object CreateMenuSection_0 (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
+        {
+             ApiResponse<Object> localVarResponse = CreateMenuSection_0WithHttpInfo(menuId, menuSectionId, menuSectionAvailability);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create menu section 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="menuSectionAvailability"></param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > CreateMenuSection_0WithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuSectionsApi->CreateMenuSection_0");
+            // verify the required parameter 'menuSectionId' is set
+            if (menuSectionId == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->CreateMenuSection_0");
+            // verify the required parameter 'menuSectionAvailability' is set
+            if (menuSectionAvailability == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionAvailability' when calling MenuSectionsApi->CreateMenuSection_0");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuSectionId != null) localVarPathParams.Add("menuSectionId", Configuration.ApiClient.ParameterToString(menuSectionId)); // path parameter
+            if (menuSectionAvailability != null && menuSectionAvailability.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(menuSectionAvailability); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = menuSectionAvailability; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateMenuSection_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Create menu section 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="menuSectionAvailability"></param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> CreateMenuSection_0Async (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
+        {
+             ApiResponse<Object> localVarResponse = await CreateMenuSection_0AsyncWithHttpInfo(menuId, menuSectionId, menuSectionAvailability);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create menu section 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="menuSectionAvailability"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSection_0AsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuSectionsApi->CreateMenuSection_0");
+            // verify the required parameter 'menuSectionId' is set
+            if (menuSectionId == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->CreateMenuSection_0");
+            // verify the required parameter 'menuSectionAvailability' is set
+            if (menuSectionAvailability == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionAvailability' when calling MenuSectionsApi->CreateMenuSection_0");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuSectionId != null) localVarPathParams.Add("menuSectionId", Configuration.ApiClient.ParameterToString(menuSectionId)); // path parameter
+            if (menuSectionAvailability != null && menuSectionAvailability.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(menuSectionAvailability); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = menuSectionAvailability; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateMenuSection_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Create menu section 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="dayOfWeek"></param>
+        /// <param name="businessHoursPeriod"></param>
+        /// <returns>Object</returns>
+        public Object CreateMenuSection_1 (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod)
+        {
+             ApiResponse<Object> localVarResponse = CreateMenuSection_1WithHttpInfo(menuId, menuSectionId, dayOfWeek, businessHoursPeriod);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create menu section 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="dayOfWeek"></param>
+        /// <param name="businessHoursPeriod"></param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > CreateMenuSection_1WithHttpInfo (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuSectionsApi->CreateMenuSection_1");
+            // verify the required parameter 'menuSectionId' is set
+            if (menuSectionId == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->CreateMenuSection_1");
+            // verify the required parameter 'dayOfWeek' is set
+            if (dayOfWeek == null)
+                throw new ApiException(400, "Missing required parameter 'dayOfWeek' when calling MenuSectionsApi->CreateMenuSection_1");
+            // verify the required parameter 'businessHoursPeriod' is set
+            if (businessHoursPeriod == null)
+                throw new ApiException(400, "Missing required parameter 'businessHoursPeriod' when calling MenuSectionsApi->CreateMenuSection_1");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability/times/{dayOfWeek}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuSectionId != null) localVarPathParams.Add("menuSectionId", Configuration.ApiClient.ParameterToString(menuSectionId)); // path parameter
+            if (dayOfWeek != null) localVarPathParams.Add("dayOfWeek", Configuration.ApiClient.ParameterToString(dayOfWeek)); // path parameter
+            if (businessHoursPeriod != null && businessHoursPeriod.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(businessHoursPeriod); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = businessHoursPeriod; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateMenuSection_1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Create menu section 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="dayOfWeek"></param>
+        /// <param name="businessHoursPeriod"></param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> CreateMenuSection_1Async (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod)
+        {
+             ApiResponse<Object> localVarResponse = await CreateMenuSection_1AsyncWithHttpInfo(menuId, menuSectionId, dayOfWeek, businessHoursPeriod);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create menu section 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Menu section identifier</param>
+        /// <param name="dayOfWeek"></param>
+        /// <param name="businessHoursPeriod"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSection_1AsyncWithHttpInfo (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuSectionsApi->CreateMenuSection_1");
+            // verify the required parameter 'menuSectionId' is set
+            if (menuSectionId == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->CreateMenuSection_1");
+            // verify the required parameter 'dayOfWeek' is set
+            if (dayOfWeek == null)
+                throw new ApiException(400, "Missing required parameter 'dayOfWeek' when calling MenuSectionsApi->CreateMenuSection_1");
+            // verify the required parameter 'businessHoursPeriod' is set
+            if (businessHoursPeriod == null)
+                throw new ApiException(400, "Missing required parameter 'businessHoursPeriod' when calling MenuSectionsApi->CreateMenuSection_1");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability/times/{dayOfWeek}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuSectionId != null) localVarPathParams.Add("menuSectionId", Configuration.ApiClient.ParameterToString(menuSectionId)); // path parameter
+            if (dayOfWeek != null) localVarPathParams.Add("dayOfWeek", Configuration.ApiClient.ParameterToString(dayOfWeek)); // path parameter
+            if (businessHoursPeriod != null && businessHoursPeriod.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(businessHoursPeriod); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = businessHoursPeriod; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateMenuSection_1", localVarResponse);
                 if (exception != null) throw exception;
             }
 

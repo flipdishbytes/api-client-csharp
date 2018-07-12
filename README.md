@@ -144,6 +144,8 @@ Class | Method | HTTP request | Description
 *MenuSectionItemsApi* | [**UploadMenuSectionItemImage**](docs/MenuSectionItemsApi.md#uploadmenusectionitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Upload menu section item image
 *MenuSectionsApi* | [**CloneMenuSection**](docs/MenuSectionsApi.md#clonemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/clone | Clone menu section
 *MenuSectionsApi* | [**CreateMenuSection**](docs/MenuSectionsApi.md#createmenusection) | **POST** /api/v1.0/menus/{menuId}/sections | Create menu section
+*MenuSectionsApi* | [**CreateMenuSection_0**](docs/MenuSectionsApi.md#createmenusection_0) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability | Create menu section
+*MenuSectionsApi* | [**CreateMenuSection_1**](docs/MenuSectionsApi.md#createmenusection_1) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability/times/{dayOfWeek} | Create menu section
 *MenuSectionsApi* | [**DeleteMenuSection**](docs/MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Delete menu section
 *MenuSectionsApi* | [**DeleteMenuSectionImage**](docs/MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
 *MenuSectionsApi* | [**GetMenuSectionById**](docs/MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
@@ -174,6 +176,9 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**GetOrders**](docs/OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
 *OrdersApi* | [**RefundOrder**](docs/OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
 *OrdersApi* | [**RejectOrder**](docs/OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
+*ProcessingFeeConfigsApi* | [**GetProcessingFeeConfigsByStoreIds**](docs/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
+*StoresApi* | [**GetProcessingFeeConfigsByStoreId**](docs/StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
+*StoresApi* | [**GetProcessingFeeConfigsByStoreIdAndPaymentAccountType**](docs/StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
 *StoresApi* | [**GetStoreById**](docs/StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
 *StoresApi* | [**GetStores**](docs/StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores
 *StoresApi* | [**UpdateStoreAddress**](docs/StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
@@ -212,6 +217,7 @@ Class | Method | HTTP request | Description
  - [Model.AccountDetail](docs/AccountDetail.md)
  - [Model.App](docs/App.md)
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
+ - [Model.BusinessHoursPeriodBase](docs/BusinessHoursPeriodBase.md)
  - [Model.Card](docs/Card.md)
  - [Model.CardBase](docs/CardBase.md)
  - [Model.CardWithToken](docs/CardWithToken.md)
@@ -241,6 +247,7 @@ Class | Method | HTTP request | Description
  - [Model.MenuItemOptionSetItemBase](docs/MenuItemOptionSetItemBase.md)
  - [Model.MenuSection](docs/MenuSection.md)
  - [Model.MenuSectionAvailability](docs/MenuSectionAvailability.md)
+ - [Model.MenuSectionAvailabilityBase](docs/MenuSectionAvailabilityBase.md)
  - [Model.MenuSectionBase](docs/MenuSectionBase.md)
  - [Model.MenuSectionItem](docs/MenuSectionItem.md)
  - [Model.MenuSectionItemBase](docs/MenuSectionItemBase.md)
@@ -268,6 +275,7 @@ Class | Method | HTTP request | Description
  - [Model.PrinterTurnedOffEvent](docs/PrinterTurnedOffEvent.md)
  - [Model.PrinterTurnedOnEvent](docs/PrinterTurnedOnEvent.md)
  - [Model.PrinterUnassignedFromStoreEvent](docs/PrinterUnassignedFromStoreEvent.md)
+ - [Model.ProcessingFeeConfig](docs/ProcessingFeeConfig.md)
  - [Model.Range](docs/Range.md)
  - [Model.Refund](docs/Refund.md)
  - [Model.Reject](docs/Reject.md)
@@ -278,6 +286,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultMetadata](docs/RestApiArrayResultMetadata.md)
  - [Model.RestApiArrayResultOAuthClient](docs/RestApiArrayResultOAuthClient.md)
  - [Model.RestApiArrayResultOauthClientRedirectUri](docs/RestApiArrayResultOauthClientRedirectUri.md)
+ - [Model.RestApiArrayResultProcessingFeeConfig](docs/RestApiArrayResultProcessingFeeConfig.md)
  - [Model.RestApiArrayResultRestApiDefaultResponse](docs/RestApiArrayResultRestApiDefaultResponse.md)
  - [Model.RestApiArrayResultWebhookSubscription](docs/RestApiArrayResultWebhookSubscription.md)
  - [Model.RestApiDefaultResponse](docs/RestApiDefaultResponse.md)
@@ -293,17 +302,20 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultVoucher](docs/RestApiPaginationResultVoucher.md)
  - [Model.RestApiPaginationResultWebhookLog](docs/RestApiPaginationResultWebhookLog.md)
  - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
+ - [Model.RestApiResultBusinessHoursPeriod](docs/RestApiResultBusinessHoursPeriod.md)
  - [Model.RestApiResultCard](docs/RestApiResultCard.md)
  - [Model.RestApiResultCoordinates](docs/RestApiResultCoordinates.md)
  - [Model.RestApiResultMenu](docs/RestApiResultMenu.md)
  - [Model.RestApiResultMenuItemOptionSet](docs/RestApiResultMenuItemOptionSet.md)
  - [Model.RestApiResultMenuItemOptionSetItem](docs/RestApiResultMenuItemOptionSetItem.md)
  - [Model.RestApiResultMenuSection](docs/RestApiResultMenuSection.md)
+ - [Model.RestApiResultMenuSectionAvailability](docs/RestApiResultMenuSectionAvailability.md)
  - [Model.RestApiResultMenuSectionItem](docs/RestApiResultMenuSectionItem.md)
  - [Model.RestApiResultMetadata](docs/RestApiResultMetadata.md)
  - [Model.RestApiResultOAuthClient](docs/RestApiResultOAuthClient.md)
  - [Model.RestApiResultOauthClientRedirectUri](docs/RestApiResultOauthClientRedirectUri.md)
  - [Model.RestApiResultOrder](docs/RestApiResultOrder.md)
+ - [Model.RestApiResultProcessingFeeConfig](docs/RestApiResultProcessingFeeConfig.md)
  - [Model.RestApiResultStore](docs/RestApiResultStore.md)
  - [Model.RestApiResultStoreAddress](docs/RestApiResultStoreAddress.md)
  - [Model.RestApiResultSubscription](docs/RestApiResultSubscription.md)

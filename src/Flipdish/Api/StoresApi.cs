@@ -25,6 +25,50 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Get processing fee configs by store identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>RestApiArrayResultProcessingFeeConfig</returns>
+        RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreId (int? storeId);
+
+        /// <summary>
+        /// Get processing fee configs by store identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>ApiResponse of RestApiArrayResultProcessingFeeConfig</returns>
+        ApiResponse<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdWithHttpInfo (int? storeId);
+        /// <summary>
+        /// Get processing fee configs by store identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="paymentAccountType"></param>
+        /// <returns>RestApiResultProcessingFeeConfig</returns>
+        RestApiResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIdAndPaymentAccountType (int? storeId, string paymentAccountType);
+
+        /// <summary>
+        /// Get processing fee configs by store identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="paymentAccountType"></param>
+        /// <returns>ApiResponse of RestApiResultProcessingFeeConfig</returns>
+        ApiResponse<RestApiResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo (int? storeId, string paymentAccountType);
+        /// <summary>
         /// Get store by identifier
         /// </summary>
         /// <remarks>
@@ -118,6 +162,50 @@ namespace Flipdish.Api
         ApiResponse<RestApiResultCoordinates> UpdateStoreAddressCoordinatesWithHttpInfo (int? storeId, Coordinates coordinates);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Get processing fee configs by store identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>Task of RestApiArrayResultProcessingFeeConfig</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAsync (int? storeId);
+
+        /// <summary>
+        /// Get processing fee configs by store identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultProcessingFeeConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAsyncWithHttpInfo (int? storeId);
+        /// <summary>
+        /// Get processing fee configs by store identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="paymentAccountType"></param>
+        /// <returns>Task of RestApiResultProcessingFeeConfig</returns>
+        System.Threading.Tasks.Task<RestApiResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsync (int? storeId, string paymentAccountType);
+
+        /// <summary>
+        /// Get processing fee configs by store identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="paymentAccountType"></param>
+        /// <returns>Task of ApiResponse (RestApiResultProcessingFeeConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo (int? storeId, string paymentAccountType);
         /// <summary>
         /// Get store by identifier
         /// </summary>
@@ -308,6 +396,320 @@ namespace Flipdish.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Get processing fee configs by store identifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>RestApiArrayResultProcessingFeeConfig</returns>
+        public RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreId (int? storeId)
+        {
+             ApiResponse<RestApiArrayResultProcessingFeeConfig> localVarResponse = GetProcessingFeeConfigsByStoreIdWithHttpInfo(storeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get processing fee configs by store identifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>ApiResponse of RestApiArrayResultProcessingFeeConfig</returns>
+        public ApiResponse< RestApiArrayResultProcessingFeeConfig > GetProcessingFeeConfigsByStoreIdWithHttpInfo (int? storeId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetProcessingFeeConfigsByStoreId");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/processingfeeconfigs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetProcessingFeeConfigsByStoreId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultProcessingFeeConfig>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultProcessingFeeConfig) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultProcessingFeeConfig)));
+        }
+
+        /// <summary>
+        /// Get processing fee configs by store identifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>Task of RestApiArrayResultProcessingFeeConfig</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAsync (int? storeId)
+        {
+             ApiResponse<RestApiArrayResultProcessingFeeConfig> localVarResponse = await GetProcessingFeeConfigsByStoreIdAsyncWithHttpInfo(storeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get processing fee configs by store identifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultProcessingFeeConfig)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAsyncWithHttpInfo (int? storeId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetProcessingFeeConfigsByStoreId");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/processingfeeconfigs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetProcessingFeeConfigsByStoreId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultProcessingFeeConfig>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultProcessingFeeConfig) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultProcessingFeeConfig)));
+        }
+
+        /// <summary>
+        /// Get processing fee configs by store identifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="paymentAccountType"></param>
+        /// <returns>RestApiResultProcessingFeeConfig</returns>
+        public RestApiResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIdAndPaymentAccountType (int? storeId, string paymentAccountType)
+        {
+             ApiResponse<RestApiResultProcessingFeeConfig> localVarResponse = GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo(storeId, paymentAccountType);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get processing fee configs by store identifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="paymentAccountType"></param>
+        /// <returns>ApiResponse of RestApiResultProcessingFeeConfig</returns>
+        public ApiResponse< RestApiResultProcessingFeeConfig > GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo (int? storeId, string paymentAccountType)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetProcessingFeeConfigsByStoreIdAndPaymentAccountType");
+            // verify the required parameter 'paymentAccountType' is set
+            if (paymentAccountType == null)
+                throw new ApiException(400, "Missing required parameter 'paymentAccountType' when calling StoresApi->GetProcessingFeeConfigsByStoreIdAndPaymentAccountType");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (paymentAccountType != null) localVarPathParams.Add("paymentAccountType", Configuration.ApiClient.ParameterToString(paymentAccountType)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetProcessingFeeConfigsByStoreIdAndPaymentAccountType", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultProcessingFeeConfig>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultProcessingFeeConfig) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultProcessingFeeConfig)));
+        }
+
+        /// <summary>
+        /// Get processing fee configs by store identifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="paymentAccountType"></param>
+        /// <returns>Task of RestApiResultProcessingFeeConfig</returns>
+        public async System.Threading.Tasks.Task<RestApiResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsync (int? storeId, string paymentAccountType)
+        {
+             ApiResponse<RestApiResultProcessingFeeConfig> localVarResponse = await GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo(storeId, paymentAccountType);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get processing fee configs by store identifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="paymentAccountType"></param>
+        /// <returns>Task of ApiResponse (RestApiResultProcessingFeeConfig)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo (int? storeId, string paymentAccountType)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetProcessingFeeConfigsByStoreIdAndPaymentAccountType");
+            // verify the required parameter 'paymentAccountType' is set
+            if (paymentAccountType == null)
+                throw new ApiException(400, "Missing required parameter 'paymentAccountType' when calling StoresApi->GetProcessingFeeConfigsByStoreIdAndPaymentAccountType");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (paymentAccountType != null) localVarPathParams.Add("paymentAccountType", Configuration.ApiClient.ParameterToString(paymentAccountType)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetProcessingFeeConfigsByStoreIdAndPaymentAccountType", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultProcessingFeeConfig>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultProcessingFeeConfig) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultProcessingFeeConfig)));
         }
 
         /// <summary>

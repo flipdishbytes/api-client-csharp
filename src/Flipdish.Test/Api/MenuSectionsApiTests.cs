@@ -91,6 +91,35 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test CreateMenuSection_0
+        /// </summary>
+        [Test]
+        public void CreateMenuSection_0Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //int? menuSectionId = null;
+            //MenuSectionAvailabilityBase menuSectionAvailability = null;
+            //var response = instance.CreateMenuSection_0(menuId, menuSectionId, menuSectionAvailability);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test CreateMenuSection_1
+        /// </summary>
+        [Test]
+        public void CreateMenuSection_1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //int? menuSectionId = null;
+            //string dayOfWeek = null;
+            //BusinessHoursPeriodBase businessHoursPeriod = null;
+            //var response = instance.CreateMenuSection_1(menuId, menuSectionId, dayOfWeek, businessHoursPeriod);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
         /// Test DeleteMenuSection
         /// </summary>
         [Test]

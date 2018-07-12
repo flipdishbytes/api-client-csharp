@@ -108,7 +108,31 @@ namespace Flipdish.Model
             /// Enum Cash for value: Cash
             /// </summary>
             [EnumMember(Value = "Cash")]
-            Cash = 2
+            Cash = 2,
+            
+            /// <summary>
+            /// Enum Ideal for value: Ideal
+            /// </summary>
+            [EnumMember(Value = "Ideal")]
+            Ideal = 3,
+            
+            /// <summary>
+            /// Enum Bancontact for value: Bancontact
+            /// </summary>
+            [EnumMember(Value = "Bancontact")]
+            Bancontact = 4,
+            
+            /// <summary>
+            /// Enum Giropay for value: Giropay
+            /// </summary>
+            [EnumMember(Value = "Giropay")]
+            Giropay = 5,
+            
+            /// <summary>
+            /// Enum Eps for value: Eps
+            /// </summary>
+            [EnumMember(Value = "Eps")]
+            Eps = 6
         }
 
         /// <summary>

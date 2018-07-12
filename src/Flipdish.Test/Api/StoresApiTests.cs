@@ -65,6 +65,31 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test GetProcessingFeeConfigsByStoreId
+        /// </summary>
+        [Test]
+        public void GetProcessingFeeConfigsByStoreIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //var response = instance.GetProcessingFeeConfigsByStoreId(storeId);
+            //Assert.IsInstanceOf<RestApiArrayResultProcessingFeeConfig> (response, "response is RestApiArrayResultProcessingFeeConfig");
+        }
+        
+        /// <summary>
+        /// Test GetProcessingFeeConfigsByStoreIdAndPaymentAccountType
+        /// </summary>
+        [Test]
+        public void GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //string paymentAccountType = null;
+            //var response = instance.GetProcessingFeeConfigsByStoreIdAndPaymentAccountType(storeId, paymentAccountType);
+            //Assert.IsInstanceOf<RestApiResultProcessingFeeConfig> (response, "response is RestApiResultProcessingFeeConfig");
+        }
+        
+        /// <summary>
         /// Test GetStoreById
         /// </summary>
         [Test]

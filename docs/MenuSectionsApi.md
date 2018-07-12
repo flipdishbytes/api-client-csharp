@@ -6,6 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CloneMenuSection**](MenuSectionsApi.md#clonemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/clone | Clone menu section
 [**CreateMenuSection**](MenuSectionsApi.md#createmenusection) | **POST** /api/v1.0/menus/{menuId}/sections | Create menu section
+[**CreateMenuSection_0**](MenuSectionsApi.md#createmenusection_0) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability | Create menu section
+[**CreateMenuSection_1**](MenuSectionsApi.md#createmenusection_1) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability/times/{dayOfWeek} | Create menu section
 [**DeleteMenuSection**](MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Delete menu section
 [**DeleteMenuSectionImage**](MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
 [**GetMenuSectionById**](MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
@@ -126,6 +128,140 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **int?**| Menu identifier | 
  **menuSection** | [**MenuSectionBase**](MenuSectionBase.md)| Menu section | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="createmenusection_0"></a>
+# **CreateMenuSection_0**
+> Object CreateMenuSection_0 (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
+
+Create menu section
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class CreateMenuSection_0Example
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenuSectionsApi();
+            var menuId = 56;  // int? | Menu identifier
+            var menuSectionId = 56;  // int? | Menu section identifier
+            var menuSectionAvailability = new MenuSectionAvailabilityBase(); // MenuSectionAvailabilityBase | 
+
+            try
+            {
+                // Create menu section
+                Object result = apiInstance.CreateMenuSection_0(menuId, menuSectionId, menuSectionAvailability);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenuSectionsApi.CreateMenuSection_0: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **menuSectionId** | **int?**| Menu section identifier | 
+ **menuSectionAvailability** | [**MenuSectionAvailabilityBase**](MenuSectionAvailabilityBase.md)|  | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="createmenusection_1"></a>
+# **CreateMenuSection_1**
+> Object CreateMenuSection_1 (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod)
+
+Create menu section
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class CreateMenuSection_1Example
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenuSectionsApi();
+            var menuId = 56;  // int? | Menu identifier
+            var menuSectionId = 56;  // int? | Menu section identifier
+            var dayOfWeek = dayOfWeek_example;  // string | 
+            var businessHoursPeriod = new BusinessHoursPeriodBase(); // BusinessHoursPeriodBase | 
+
+            try
+            {
+                // Create menu section
+                Object result = apiInstance.CreateMenuSection_1(menuId, menuSectionId, dayOfWeek, businessHoursPeriod);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenuSectionsApi.CreateMenuSection_1: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **menuSectionId** | **int?**| Menu section identifier | 
+ **dayOfWeek** | **string**|  | 
+ **businessHoursPeriod** | [**BusinessHoursPeriodBase**](BusinessHoursPeriodBase.md)|  | 
 
 ### Return type
 
