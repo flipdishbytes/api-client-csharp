@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GeApps**](AppsApi.md#geapps) | **GET** /api/v1.0/apps | Get all OAuth client
+[**GetApps**](AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
 
 
-<a name="geapps"></a>
-# **GeApps**
-> RestApiPaginationResultApp GeApps (string nameFilter = null, int? page = null, int? limit = null)
+<a name="getapps"></a>
+# **GetApps**
+> RestApiPaginationResultApp GetApps (string nameFilter = null, int? page = null, int? limit = null)
 
-Get all OAuth client
+Get Apps
 
 ### Example
 ```csharp
@@ -23,7 +23,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GeAppsExample
+    public class GetAppsExample
     {
         public void main()
         {
@@ -37,13 +37,13 @@ namespace Example
 
             try
             {
-                // Get all OAuth client
-                RestApiPaginationResultApp result = apiInstance.GeApps(nameFilter, page, limit);
+                // Get Apps
+                RestApiPaginationResultApp result = apiInstance.GetApps(nameFilter, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AppsApi.GeApps: " + e.Message );
+                Debug.Print("Exception when calling AppsApi.GetApps: " + e.Message );
             }
         }
     }

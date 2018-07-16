@@ -65,16 +65,16 @@ namespace Flipdish.Test
 
         
         /// <summary>
-        /// Test GeApps
+        /// Test GetApps
         /// </summary>
         [Test]
-        public void GeAppsTest()
+        public void GetAppsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string nameFilter = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.GeApps(nameFilter, page, limit);
+            //var response = instance.GetApps(nameFilter, page, limit);
             //Assert.IsInstanceOf<RestApiPaginationResultApp> (response, "response is RestApiPaginationResultApp");
         }
         

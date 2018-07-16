@@ -25,7 +25,7 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get all OAuth client
+        /// Get Apps
         /// </summary>
         /// <remarks>
         /// 
@@ -35,10 +35,10 @@ namespace Flipdish.Api
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultApp</returns>
-        RestApiPaginationResultApp GeApps (string nameFilter = null, int? page = null, int? limit = null);
+        RestApiPaginationResultApp GetApps (string nameFilter = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all OAuth client
+        /// Get Apps
         /// </summary>
         /// <remarks>
         /// 
@@ -48,11 +48,11 @@ namespace Flipdish.Api
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultApp</returns>
-        ApiResponse<RestApiPaginationResultApp> GeAppsWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null);
+        ApiResponse<RestApiPaginationResultApp> GetAppsWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get all OAuth client
+        /// Get Apps
         /// </summary>
         /// <remarks>
         /// 
@@ -62,10 +62,10 @@ namespace Flipdish.Api
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultApp</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultApp> GeAppsAsync (string nameFilter = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultApp> GetAppsAsync (string nameFilter = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all OAuth client
+        /// Get Apps
         /// </summary>
         /// <remarks>
         /// 
@@ -75,7 +75,7 @@ namespace Flipdish.Api
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultApp)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultApp>> GeAppsAsyncWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultApp>> GetAppsAsyncWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null);
         #endregion Asynchronous Operations
     }
 
@@ -177,28 +177,28 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all OAuth client 
+        /// Get Apps 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nameFilter"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultApp</returns>
-        public RestApiPaginationResultApp GeApps (string nameFilter = null, int? page = null, int? limit = null)
+        public RestApiPaginationResultApp GetApps (string nameFilter = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultApp> localVarResponse = GeAppsWithHttpInfo(nameFilter, page, limit);
+             ApiResponse<RestApiPaginationResultApp> localVarResponse = GetAppsWithHttpInfo(nameFilter, page, limit);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get all OAuth client 
+        /// Get Apps 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nameFilter"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultApp</returns>
-        public ApiResponse< RestApiPaginationResultApp > GeAppsWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null)
+        public ApiResponse< RestApiPaginationResultApp > GetAppsWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v1.0/apps";
@@ -245,7 +245,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GeApps", localVarResponse);
+                Exception exception = ExceptionFactory("GetApps", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -255,29 +255,29 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all OAuth client 
+        /// Get Apps 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nameFilter"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultApp</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultApp> GeAppsAsync (string nameFilter = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultApp> GetAppsAsync (string nameFilter = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultApp> localVarResponse = await GeAppsAsyncWithHttpInfo(nameFilter, page, limit);
+             ApiResponse<RestApiPaginationResultApp> localVarResponse = await GetAppsAsyncWithHttpInfo(nameFilter, page, limit);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get all OAuth client 
+        /// Get Apps 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nameFilter"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultApp)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultApp>> GeAppsAsyncWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultApp>> GetAppsAsyncWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v1.0/apps";
@@ -324,7 +324,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GeApps", localVarResponse);
+                Exception exception = ExceptionFactory("GetApps", localVarResponse);
                 if (exception != null) throw exception;
             }
 
