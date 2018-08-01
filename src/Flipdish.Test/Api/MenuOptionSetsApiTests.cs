@@ -146,11 +146,11 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? menuId = null;
-            //int? menuSectionItemId = null;
             //int? menuSectionId = null;
+            //int? menuSectionItemId = null;
             //int? optionSetId = null;
             //MenuItemOptionSetBase menuItemOptionSet = null;
-            //instance.UpdateMenuItemOptionSet(menuId, menuSectionItemId, menuSectionId, optionSetId, menuItemOptionSet);
+            //instance.UpdateMenuItemOptionSet(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSet);
             
         }
         

@@ -351,7 +351,7 @@ Name | Type | Description  | Notes
 
 <a name="updatemenuitemoptionset"></a>
 # **UpdateMenuItemOptionSet**
-> void UpdateMenuItemOptionSet (int? menuId, int? menuSectionItemId, int? menuSectionId, int? optionSetId, MenuItemOptionSetBase menuItemOptionSet)
+> void UpdateMenuItemOptionSet (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, MenuItemOptionSetBase menuItemOptionSet)
 
 Update menu item option set
 
@@ -374,15 +374,15 @@ namespace Example
 
             var apiInstance = new MenuOptionSetsApi();
             var menuId = 56;  // int? | Menu identifier
-            var menuSectionItemId = 56;  // int? | Menu section item identifier
             var menuSectionId = 56;  // int? | Menu section identifier
+            var menuSectionItemId = 56;  // int? | Menu section item identifier
             var optionSetId = 56;  // int? | Option set identifier
             var menuItemOptionSet = new MenuItemOptionSetBase(); // MenuItemOptionSetBase | Menu item option set (delta)
 
             try
             {
                 // Update menu item option set
-                apiInstance.UpdateMenuItemOptionSet(menuId, menuSectionItemId, menuSectionId, optionSetId, menuItemOptionSet);
+                apiInstance.UpdateMenuItemOptionSet(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSet);
             }
             catch (Exception e)
             {
@@ -398,8 +398,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **int?**| Menu identifier | 
- **menuSectionItemId** | **int?**| Menu section item identifier | 
  **menuSectionId** | **int?**| Menu section identifier | 
+ **menuSectionItemId** | **int?**| Menu section item identifier | 
  **optionSetId** | **int?**| Option set identifier | 
  **menuItemOptionSet** | [**MenuItemOptionSetBase**](MenuItemOptionSetBase.md)| Menu item option set (delta) | 
 
