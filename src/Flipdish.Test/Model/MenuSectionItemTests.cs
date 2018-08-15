@@ -107,6 +107,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'DailySpecialHours'
         }
         /// <summary>
+        /// Test the property 'PublicId'
+        /// </summary>
+        [Test]
+        public void PublicIdTest()
+        {
+            // TODO unit test for the property 'PublicId'
+        }
+        /// <summary>
         /// Test the property 'Name'
         /// </summary>
         [Test]

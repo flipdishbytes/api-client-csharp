@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **MenuItemOptionSetId** | **int?** | Menu item option set identifier | [optional] 
 **ImageUrl** | **string** | Image url | [optional] 
 **MenuItemOptionSetItems** | [**List&lt;MenuItemOptionSetItem&gt;**](MenuItemOptionSetItem.md) | Option set items | [optional] 
+**PublicId** | **Guid?** | Permanent reference to the item. | [optional] 
 **Name** | **string** | Menu item option set name | [optional] 
 **IsMasterOptionSet** | **bool?** | Is master option set. This can affect the layout of the options in the menu displayed to the customer. Usually it is true if the option could be considerd a standalone item as opposed to an addition (\&quot;with ketchup\&quot;) or modifier (\&quot;large\&quot;). | [optional] 
 **DisplayOrder** | **int?** | Display order. Displayed in ascending order. | [optional] 

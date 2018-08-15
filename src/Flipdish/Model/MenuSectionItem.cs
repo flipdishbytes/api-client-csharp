@@ -111,11 +111,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuSectionItem" /> class.
         /// </summary>
-        /// <param name="MenuItemId">Menu item identifier.</param>
+        /// <param name="MenuItemId">Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a perminant reference to the item..</param>
         /// <param name="ActualPrice">Actual price - the minimum price possible when all required option set items prices are included..</param>
         /// <param name="ImageUrl">Image url.</param>
         /// <param name="MenuItemOptionSets">Menu item option sets.</param>
         /// <param name="DailySpecialHours">Daily special hours.</param>
+        /// <param name="PublicId">Permanent reference to the item..</param>
         /// <param name="Name">Menu item name (like \&quot;Korma\&quot;).</param>
         /// <param name="Description">Description (like \&quot;A lovely dish from the east\&quot;).</param>
         /// <param name="SpicinessRating">Spiciness rating.</param>
@@ -125,13 +126,14 @@ namespace Flipdish.Model
         /// <param name="IsAvailable">True if we accept orders for this item still.</param>
         /// <param name="CellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
         /// <param name="DisableVouchers">If true, then vouchers won&#39;t be applied for this item.</param>
-        public MenuSectionItem(int? MenuItemId = default(int?), double? ActualPrice = default(double?), string ImageUrl = default(string), List<MenuItemOptionSet> MenuItemOptionSets = default(List<MenuItemOptionSet>), List<BusinessHoursPeriod> DailySpecialHours = default(List<BusinessHoursPeriod>), string Name = default(string), string Description = default(string), SpicinessRatingEnum? SpicinessRating = default(SpicinessRatingEnum?), double? Price = default(double?), int? DisplayOrder = default(int?), bool? Alcohol = default(bool?), bool? IsAvailable = default(bool?), CellLayoutTypeEnum? CellLayoutType = default(CellLayoutTypeEnum?), bool? DisableVouchers = default(bool?))
+        public MenuSectionItem(int? MenuItemId = default(int?), double? ActualPrice = default(double?), string ImageUrl = default(string), List<MenuItemOptionSet> MenuItemOptionSets = default(List<MenuItemOptionSet>), List<BusinessHoursPeriod> DailySpecialHours = default(List<BusinessHoursPeriod>), Guid? PublicId = default(Guid?), string Name = default(string), string Description = default(string), SpicinessRatingEnum? SpicinessRating = default(SpicinessRatingEnum?), double? Price = default(double?), int? DisplayOrder = default(int?), bool? Alcohol = default(bool?), bool? IsAvailable = default(bool?), CellLayoutTypeEnum? CellLayoutType = default(CellLayoutTypeEnum?), bool? DisableVouchers = default(bool?))
         {
             this.MenuItemId = MenuItemId;
             this.ActualPrice = ActualPrice;
             this.ImageUrl = ImageUrl;
             this.MenuItemOptionSets = MenuItemOptionSets;
             this.DailySpecialHours = DailySpecialHours;
+            this.PublicId = PublicId;
             this.Name = Name;
             this.Description = Description;
             this.SpicinessRating = SpicinessRating;
@@ -144,9 +146,9 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Menu item identifier
+        /// Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a perminant reference to the item.
         /// </summary>
-        /// <value>Menu item identifier</value>
+        /// <value>Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a perminant reference to the item.</value>
         [DataMember(Name="MenuItemId", EmitDefaultValue=false)]
         public int? MenuItemId { get; set; }
 
@@ -177,6 +179,13 @@ namespace Flipdish.Model
         /// <value>Daily special hours</value>
         [DataMember(Name="DailySpecialHours", EmitDefaultValue=false)]
         public List<BusinessHoursPeriod> DailySpecialHours { get; set; }
+
+        /// <summary>
+        /// Permanent reference to the item.
+        /// </summary>
+        /// <value>Permanent reference to the item.</value>
+        [DataMember(Name="PublicId", EmitDefaultValue=false)]
+        public Guid? PublicId { get; set; }
 
         /// <summary>
         /// Menu item name (like \&quot;Korma\&quot;)
@@ -242,6 +251,7 @@ namespace Flipdish.Model
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  MenuItemOptionSets: ").Append(MenuItemOptionSets).Append("\n");
             sb.Append("  DailySpecialHours: ").Append(DailySpecialHours).Append("\n");
+            sb.Append("  PublicId: ").Append(PublicId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  SpicinessRating: ").Append(SpicinessRating).Append("\n");
@@ -311,6 +321,11 @@ namespace Flipdish.Model
                     this.DailySpecialHours.SequenceEqual(input.DailySpecialHours)
                 ) && 
                 (
+                    this.PublicId == input.PublicId ||
+                    (this.PublicId != null &&
+                    this.PublicId.Equals(input.PublicId))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -376,6 +391,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MenuItemOptionSets.GetHashCode();
                 if (this.DailySpecialHours != null)
                     hashCode = hashCode * 59 + this.DailySpecialHours.GetHashCode();
+                if (this.PublicId != null)
+                    hashCode = hashCode * 59 + this.PublicId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Description != null)

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **ImageUrl** | **string** | Image url | [optional] 
 **MenuItems** | [**List&lt;MenuSectionItem&gt;**](MenuSectionItem.md) | Menu items | [optional] 
 **MenuSectionAvailability** | [**MenuSectionAvailability**](MenuSectionAvailability.md) | Menu section availability | [optional] 
+**PublicId** | **Guid?** | Permanent reference to the item. | [optional] 
 **Name** | **string** | Name | [optional] 
 **Description** | **string** | Description | [optional] 
 **DisplayOrder** | **int?** | Display order | [optional] 

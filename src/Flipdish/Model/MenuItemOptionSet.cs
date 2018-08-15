@@ -75,17 +75,19 @@ namespace Flipdish.Model
         /// <param name="MenuItemOptionSetId">Menu item option set identifier.</param>
         /// <param name="ImageUrl">Image url.</param>
         /// <param name="MenuItemOptionSetItems">Option set items.</param>
+        /// <param name="PublicId">Permanent reference to the item..</param>
         /// <param name="Name">Menu item option set name.</param>
         /// <param name="IsMasterOptionSet">Is master option set. This can affect the layout of the options in the menu displayed to the customer. Usually it is true if the option could be considerd a standalone item as opposed to an addition (\&quot;with ketchup\&quot;) or modifier (\&quot;large\&quot;)..</param>
         /// <param name="DisplayOrder">Display order. Displayed in ascending order..</param>
         /// <param name="MinSelectCount">Minimum items must be selected.</param>
         /// <param name="MaxSelectCount">Maximum number of items can be selected.</param>
         /// <param name="CellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
-        public MenuItemOptionSet(int? MenuItemOptionSetId = default(int?), string ImageUrl = default(string), List<MenuItemOptionSetItem> MenuItemOptionSetItems = default(List<MenuItemOptionSetItem>), string Name = default(string), bool? IsMasterOptionSet = default(bool?), int? DisplayOrder = default(int?), int? MinSelectCount = default(int?), int? MaxSelectCount = default(int?), CellLayoutTypeEnum? CellLayoutType = default(CellLayoutTypeEnum?))
+        public MenuItemOptionSet(int? MenuItemOptionSetId = default(int?), string ImageUrl = default(string), List<MenuItemOptionSetItem> MenuItemOptionSetItems = default(List<MenuItemOptionSetItem>), Guid? PublicId = default(Guid?), string Name = default(string), bool? IsMasterOptionSet = default(bool?), int? DisplayOrder = default(int?), int? MinSelectCount = default(int?), int? MaxSelectCount = default(int?), CellLayoutTypeEnum? CellLayoutType = default(CellLayoutTypeEnum?))
         {
             this.MenuItemOptionSetId = MenuItemOptionSetId;
             this.ImageUrl = ImageUrl;
             this.MenuItemOptionSetItems = MenuItemOptionSetItems;
+            this.PublicId = PublicId;
             this.Name = Name;
             this.IsMasterOptionSet = IsMasterOptionSet;
             this.DisplayOrder = DisplayOrder;
@@ -114,6 +116,13 @@ namespace Flipdish.Model
         /// <value>Option set items</value>
         [DataMember(Name="MenuItemOptionSetItems", EmitDefaultValue=false)]
         public List<MenuItemOptionSetItem> MenuItemOptionSetItems { get; set; }
+
+        /// <summary>
+        /// Permanent reference to the item.
+        /// </summary>
+        /// <value>Permanent reference to the item.</value>
+        [DataMember(Name="PublicId", EmitDefaultValue=false)]
+        public Guid? PublicId { get; set; }
 
         /// <summary>
         /// Menu item option set name
@@ -162,6 +171,7 @@ namespace Flipdish.Model
             sb.Append("  MenuItemOptionSetId: ").Append(MenuItemOptionSetId).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  MenuItemOptionSetItems: ").Append(MenuItemOptionSetItems).Append("\n");
+            sb.Append("  PublicId: ").Append(PublicId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  IsMasterOptionSet: ").Append(IsMasterOptionSet).Append("\n");
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
@@ -218,6 +228,11 @@ namespace Flipdish.Model
                     this.MenuItemOptionSetItems.SequenceEqual(input.MenuItemOptionSetItems)
                 ) && 
                 (
+                    this.PublicId == input.PublicId ||
+                    (this.PublicId != null &&
+                    this.PublicId.Equals(input.PublicId))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -264,6 +279,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 if (this.MenuItemOptionSetItems != null)
                     hashCode = hashCode * 59 + this.MenuItemOptionSetItems.GetHashCode();
+                if (this.PublicId != null)
+                    hashCode = hashCode * 59 + this.PublicId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.IsMasterOptionSet != null)
