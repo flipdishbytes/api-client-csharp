@@ -33,10 +33,23 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiResultAccountDetail" /> class.
         /// </summary>
-        /// <param name="Data">Generic data object..</param>
+        [JsonConstructorAttribute]
+        protected RestApiResultAccountDetail() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RestApiResultAccountDetail" /> class.
+        /// </summary>
+        /// <param name="Data">Generic data object. (required).</param>
         public RestApiResultAccountDetail(AccountDetail Data = default(AccountDetail))
         {
-            this.Data = Data;
+            // to ensure "Data" is required (not null)
+            if (Data == null)
+            {
+                throw new InvalidDataException("Data is a required property for RestApiResultAccountDetail and cannot be null");
+            }
+            else
+            {
+                this.Data = Data;
+            }
         }
         
         /// <summary>

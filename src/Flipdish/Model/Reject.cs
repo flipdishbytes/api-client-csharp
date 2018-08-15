@@ -98,14 +98,27 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Reject reason</value>
         [DataMember(Name="RejectReason", EmitDefaultValue=false)]
-        public RejectReasonEnum? RejectReason { get; set; }
+        public RejectReasonEnum RejectReason { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Reject" /> class.
         /// </summary>
-        /// <param name="RejectReason">Reject reason.</param>
-        public Reject(RejectReasonEnum? RejectReason = default(RejectReasonEnum?))
+        [JsonConstructorAttribute]
+        protected Reject() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Reject" /> class.
+        /// </summary>
+        /// <param name="RejectReason">Reject reason (required).</param>
+        public Reject(RejectReasonEnum RejectReason = default(RejectReasonEnum))
         {
-            this.RejectReason = RejectReason;
+            // to ensure "RejectReason" is required (not null)
+            if (RejectReason == null)
+            {
+                throw new InvalidDataException("RejectReason is a required property for Reject and cannot be null");
+            }
+            else
+            {
+                this.RejectReason = RejectReason;
+            }
         }
         
 

@@ -33,12 +33,33 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LoginModel" /> class.
         /// </summary>
-        /// <param name="Email">Email addres.</param>
-        /// <param name="Password">Password.</param>
+        [JsonConstructorAttribute]
+        protected LoginModel() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LoginModel" /> class.
+        /// </summary>
+        /// <param name="Email">Email addres (required).</param>
+        /// <param name="Password">Password (required).</param>
         public LoginModel(string Email = default(string), string Password = default(string))
         {
-            this.Email = Email;
-            this.Password = Password;
+            // to ensure "Email" is required (not null)
+            if (Email == null)
+            {
+                throw new InvalidDataException("Email is a required property for LoginModel and cannot be null");
+            }
+            else
+            {
+                this.Email = Email;
+            }
+            // to ensure "Password" is required (not null)
+            if (Password == null)
+            {
+                throw new InvalidDataException("Password is a required property for LoginModel and cannot be null");
+            }
+            else
+            {
+                this.Password = Password;
+            }
         }
         
         /// <summary>

@@ -33,10 +33,23 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiResultBusinessHoursPeriod" /> class.
         /// </summary>
-        /// <param name="Data">Generic data object..</param>
+        [JsonConstructorAttribute]
+        protected RestApiResultBusinessHoursPeriod() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RestApiResultBusinessHoursPeriod" /> class.
+        /// </summary>
+        /// <param name="Data">Generic data object. (required).</param>
         public RestApiResultBusinessHoursPeriod(BusinessHoursPeriod Data = default(BusinessHoursPeriod))
         {
-            this.Data = Data;
+            // to ensure "Data" is required (not null)
+            if (Data == null)
+            {
+                throw new InvalidDataException("Data is a required property for RestApiResultBusinessHoursPeriod and cannot be null");
+            }
+            else
+            {
+                this.Data = Data;
+            }
         }
         
         /// <summary>

@@ -72,28 +72,49 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Subscription" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Subscription() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Subscription" /> class.
+        /// </summary>
         /// <param name="SubscriptionId">The subscription identifier.</param>
         /// <param name="StartDate">Starting date of the subscription.</param>
         /// <param name="Status">Status of the subscription (TrialPeriod, Ongoing, Unpaid, Canceled).</param>
         /// <param name="UserId">Flipdish user identifier.</param>
         /// <param name="SubscriptionPlan">Subscription Plan.</param>
         /// <param name="Card">Card.</param>
-        /// <param name="AppId">App name Id of the subscription.</param>
+        /// <param name="AppId">App name Id of the subscription (required).</param>
         /// <param name="VatNumber">Last 4 digits of the card.</param>
-        /// <param name="VatCountryCode">Expiry date of the card.</param>
+        /// <param name="VatCountryCode">Expiry date of the card (required).</param>
         /// <param name="Quantity">Number of physical restaurants.</param>
         /// <param name="SubscriptionPlanId">Subscription plan identifier.</param>
         public Subscription(int? SubscriptionId = default(int?), DateTime? StartDate = default(DateTime?), StatusEnum? Status = default(StatusEnum?), int? UserId = default(int?), SubscriptionPlan SubscriptionPlan = default(SubscriptionPlan), Card Card = default(Card), string AppId = default(string), string VatNumber = default(string), string VatCountryCode = default(string), int? Quantity = default(int?), int? SubscriptionPlanId = default(int?))
         {
+            // to ensure "AppId" is required (not null)
+            if (AppId == null)
+            {
+                throw new InvalidDataException("AppId is a required property for Subscription and cannot be null");
+            }
+            else
+            {
+                this.AppId = AppId;
+            }
+            // to ensure "VatCountryCode" is required (not null)
+            if (VatCountryCode == null)
+            {
+                throw new InvalidDataException("VatCountryCode is a required property for Subscription and cannot be null");
+            }
+            else
+            {
+                this.VatCountryCode = VatCountryCode;
+            }
             this.SubscriptionId = SubscriptionId;
             this.StartDate = StartDate;
             this.Status = Status;
             this.UserId = UserId;
             this.SubscriptionPlan = SubscriptionPlan;
             this.Card = Card;
-            this.AppId = AppId;
             this.VatNumber = VatNumber;
-            this.VatCountryCode = VatCountryCode;
             this.Quantity = Quantity;
             this.SubscriptionPlanId = SubscriptionPlanId;
         }

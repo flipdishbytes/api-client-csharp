@@ -33,10 +33,23 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiArrayResultWebhookSubscription" /> class.
         /// </summary>
-        /// <param name="Data">Generic data object..</param>
+        [JsonConstructorAttribute]
+        protected RestApiArrayResultWebhookSubscription() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RestApiArrayResultWebhookSubscription" /> class.
+        /// </summary>
+        /// <param name="Data">Generic data object. (required).</param>
         public RestApiArrayResultWebhookSubscription(List<WebhookSubscription> Data = default(List<WebhookSubscription>))
         {
-            this.Data = Data;
+            // to ensure "Data" is required (not null)
+            if (Data == null)
+            {
+                throw new InvalidDataException("Data is a required property for RestApiArrayResultWebhookSubscription and cannot be null");
+            }
+            else
+            {
+                this.Data = Data;
+            }
         }
         
         /// <summary>

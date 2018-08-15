@@ -33,11 +33,24 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiErrorResult" /> class.
         /// </summary>
-        /// <param name="Message">Error message.</param>
+        [JsonConstructorAttribute]
+        protected RestApiErrorResult() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RestApiErrorResult" /> class.
+        /// </summary>
+        /// <param name="Message">Error message (required).</param>
         /// <param name="Errors">List of errors grouped by field name.</param>
         public RestApiErrorResult(string Message = default(string), List<ValidationErrorResult> Errors = default(List<ValidationErrorResult>))
         {
-            this.Message = Message;
+            // to ensure "Message" is required (not null)
+            if (Message == null)
+            {
+                throw new InvalidDataException("Message is a required property for RestApiErrorResult and cannot be null");
+            }
+            else
+            {
+                this.Message = Message;
+            }
             this.Errors = Errors;
         }
         

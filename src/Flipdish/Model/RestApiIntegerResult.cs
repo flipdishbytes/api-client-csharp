@@ -33,10 +33,23 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiIntegerResult" /> class.
         /// </summary>
-        /// <param name="Data">Data integer.</param>
+        [JsonConstructorAttribute]
+        protected RestApiIntegerResult() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RestApiIntegerResult" /> class.
+        /// </summary>
+        /// <param name="Data">Data integer (required).</param>
         public RestApiIntegerResult(int? Data = default(int?))
         {
-            this.Data = Data;
+            // to ensure "Data" is required (not null)
+            if (Data == null)
+            {
+                throw new InvalidDataException("Data is a required property for RestApiIntegerResult and cannot be null");
+            }
+            else
+            {
+                this.Data = Data;
+            }
         }
         
         /// <summary>

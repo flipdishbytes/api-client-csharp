@@ -33,14 +33,43 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangePasswordModel" /> class.
         /// </summary>
-        /// <param name="OldPassword">Old password.</param>
-        /// <param name="NewPassword">New password.</param>
-        /// <param name="PasswordConfirmation">Password confirmation.</param>
+        [JsonConstructorAttribute]
+        protected ChangePasswordModel() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ChangePasswordModel" /> class.
+        /// </summary>
+        /// <param name="OldPassword">Old password (required).</param>
+        /// <param name="NewPassword">New password (required).</param>
+        /// <param name="PasswordConfirmation">Password confirmation (required).</param>
         public ChangePasswordModel(string OldPassword = default(string), string NewPassword = default(string), string PasswordConfirmation = default(string))
         {
-            this.OldPassword = OldPassword;
-            this.NewPassword = NewPassword;
-            this.PasswordConfirmation = PasswordConfirmation;
+            // to ensure "OldPassword" is required (not null)
+            if (OldPassword == null)
+            {
+                throw new InvalidDataException("OldPassword is a required property for ChangePasswordModel and cannot be null");
+            }
+            else
+            {
+                this.OldPassword = OldPassword;
+            }
+            // to ensure "NewPassword" is required (not null)
+            if (NewPassword == null)
+            {
+                throw new InvalidDataException("NewPassword is a required property for ChangePasswordModel and cannot be null");
+            }
+            else
+            {
+                this.NewPassword = NewPassword;
+            }
+            // to ensure "PasswordConfirmation" is required (not null)
+            if (PasswordConfirmation == null)
+            {
+                throw new InvalidDataException("PasswordConfirmation is a required property for ChangePasswordModel and cannot be null");
+            }
+            else
+            {
+                this.PasswordConfirmation = PasswordConfirmation;
+            }
         }
         
         /// <summary>

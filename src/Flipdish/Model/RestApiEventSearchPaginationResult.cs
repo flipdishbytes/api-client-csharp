@@ -33,16 +33,53 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiEventSearchPaginationResult" /> class.
         /// </summary>
-        /// <param name="Data">Event results.</param>
-        /// <param name="Page">Current page index.</param>
-        /// <param name="Limit">Current page size.</param>
-        /// <param name="TotalRecordCount">Total record count.</param>
+        [JsonConstructorAttribute]
+        protected RestApiEventSearchPaginationResult() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RestApiEventSearchPaginationResult" /> class.
+        /// </summary>
+        /// <param name="Data">Event results (required).</param>
+        /// <param name="Page">Current page index (required).</param>
+        /// <param name="Limit">Current page size (required).</param>
+        /// <param name="TotalRecordCount">Total record count (required).</param>
         public RestApiEventSearchPaginationResult(EventSearchResult Data = default(EventSearchResult), int? Page = default(int?), int? Limit = default(int?), int? TotalRecordCount = default(int?))
         {
-            this.Data = Data;
-            this.Page = Page;
-            this.Limit = Limit;
-            this.TotalRecordCount = TotalRecordCount;
+            // to ensure "Data" is required (not null)
+            if (Data == null)
+            {
+                throw new InvalidDataException("Data is a required property for RestApiEventSearchPaginationResult and cannot be null");
+            }
+            else
+            {
+                this.Data = Data;
+            }
+            // to ensure "Page" is required (not null)
+            if (Page == null)
+            {
+                throw new InvalidDataException("Page is a required property for RestApiEventSearchPaginationResult and cannot be null");
+            }
+            else
+            {
+                this.Page = Page;
+            }
+            // to ensure "Limit" is required (not null)
+            if (Limit == null)
+            {
+                throw new InvalidDataException("Limit is a required property for RestApiEventSearchPaginationResult and cannot be null");
+            }
+            else
+            {
+                this.Limit = Limit;
+            }
+            // to ensure "TotalRecordCount" is required (not null)
+            if (TotalRecordCount == null)
+            {
+                throw new InvalidDataException("TotalRecordCount is a required property for RestApiEventSearchPaginationResult and cannot be null");
+            }
+            else
+            {
+                this.TotalRecordCount = TotalRecordCount;
+            }
         }
         
         /// <summary>

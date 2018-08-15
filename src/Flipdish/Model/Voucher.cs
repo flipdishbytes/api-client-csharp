@@ -156,6 +156,11 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Voucher" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Voucher() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Voucher" /> class.
+        /// </summary>
         /// <param name="VoucherId">Voucher identifier.</param>
         /// <param name="VoucherType">Voucher type.</param>
         /// <param name="IsEnabled">Is voucher enabled.</param>
@@ -178,9 +183,18 @@ namespace Flipdish.Model
         /// <param name="AutoApply">Auto apply.</param>
         /// <param name="AutoApplyOrder">Auto apply order.  Lower numbers get applied first..</param>
         /// <param name="IncludeDeliveryFee">Include delivery fee.</param>
-        /// <param name="Code">Voucher code.</param>
+        /// <param name="Code">Voucher code (required).</param>
         public Voucher(int? VoucherId = default(int?), VoucherTypeEnum? VoucherType = default(VoucherTypeEnum?), bool? IsEnabled = default(bool?), bool? IsUsedUp = default(bool?), VoucherSubTypeEnum? VoucherSubType = default(VoucherSubTypeEnum?), string PublicDescription = default(string), string PrivateDescription = default(string), DateTime? ValidFrom = default(DateTime?), DateTime? Expiry = default(DateTime?), VoucherPayerEnum? VoucherPayer = default(VoucherPayerEnum?), bool? IsVisibleToStore = default(bool?), bool? IsReusable = default(bool?), bool? IsValidForDeliveryOrders = default(bool?), bool? IsValidForPickupOrders = default(bool?), bool? IsValidForCardOrders = default(bool?), bool? IsValidForCashOrders = default(bool?), bool? IsValidForFirstOrderOnly = default(bool?), double? MinimumOrderAmount = default(double?), bool? IsValidOncePerCustomer = default(bool?), bool? AutoApply = default(bool?), int? AutoApplyOrder = default(int?), bool? IncludeDeliveryFee = default(bool?), string Code = default(string))
         {
+            // to ensure "Code" is required (not null)
+            if (Code == null)
+            {
+                throw new InvalidDataException("Code is a required property for Voucher and cannot be null");
+            }
+            else
+            {
+                this.Code = Code;
+            }
             this.VoucherId = VoucherId;
             this.VoucherType = VoucherType;
             this.IsEnabled = IsEnabled;
@@ -203,7 +217,6 @@ namespace Flipdish.Model
             this.AutoApply = AutoApply;
             this.AutoApplyOrder = AutoApplyOrder;
             this.IncludeDeliveryFee = IncludeDeliveryFee;
-            this.Code = Code;
         }
         
         /// <summary>

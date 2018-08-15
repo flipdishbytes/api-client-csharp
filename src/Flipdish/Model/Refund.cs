@@ -33,14 +33,35 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Refund" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Refund() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Refund" /> class.
+        /// </summary>
         /// <param name="RefundReason">Refund reason.</param>
-        /// <param name="RefundAmount">Refund amount.</param>
-        /// <param name="NotifyCustomer">If ture, the system sends notification to the customer about the refund.</param>
+        /// <param name="RefundAmount">Refund amount (required).</param>
+        /// <param name="NotifyCustomer">If ture, the system sends notification to the customer about the refund (required).</param>
         public Refund(string RefundReason = default(string), double? RefundAmount = default(double?), bool? NotifyCustomer = default(bool?))
         {
+            // to ensure "RefundAmount" is required (not null)
+            if (RefundAmount == null)
+            {
+                throw new InvalidDataException("RefundAmount is a required property for Refund and cannot be null");
+            }
+            else
+            {
+                this.RefundAmount = RefundAmount;
+            }
+            // to ensure "NotifyCustomer" is required (not null)
+            if (NotifyCustomer == null)
+            {
+                throw new InvalidDataException("NotifyCustomer is a required property for Refund and cannot be null");
+            }
+            else
+            {
+                this.NotifyCustomer = NotifyCustomer;
+            }
             this.RefundReason = RefundReason;
-            this.RefundAmount = RefundAmount;
-            this.NotifyCustomer = NotifyCustomer;
         }
         
         /// <summary>

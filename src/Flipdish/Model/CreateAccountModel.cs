@@ -33,12 +33,33 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAccountModel" /> class.
         /// </summary>
-        /// <param name="Email">Email addres.</param>
-        /// <param name="StoreName">Store name.</param>
+        [JsonConstructorAttribute]
+        protected CreateAccountModel() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateAccountModel" /> class.
+        /// </summary>
+        /// <param name="Email">Email addres (required).</param>
+        /// <param name="StoreName">Store name (required).</param>
         public CreateAccountModel(string Email = default(string), string StoreName = default(string))
         {
-            this.Email = Email;
-            this.StoreName = StoreName;
+            // to ensure "Email" is required (not null)
+            if (Email == null)
+            {
+                throw new InvalidDataException("Email is a required property for CreateAccountModel and cannot be null");
+            }
+            else
+            {
+                this.Email = Email;
+            }
+            // to ensure "StoreName" is required (not null)
+            if (StoreName == null)
+            {
+                throw new InvalidDataException("StoreName is a required property for CreateAccountModel and cannot be null");
+            }
+            else
+            {
+                this.StoreName = StoreName;
+            }
         }
         
         /// <summary>

@@ -33,16 +33,53 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiPaginationResultApp" /> class.
         /// </summary>
-        /// <param name="Page">Current page index.</param>
-        /// <param name="Limit">Current page size.</param>
-        /// <param name="TotalRecordCount">Total record count.</param>
-        /// <param name="Data">Generic data object..</param>
+        [JsonConstructorAttribute]
+        protected RestApiPaginationResultApp() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RestApiPaginationResultApp" /> class.
+        /// </summary>
+        /// <param name="Page">Current page index (required).</param>
+        /// <param name="Limit">Current page size (required).</param>
+        /// <param name="TotalRecordCount">Total record count (required).</param>
+        /// <param name="Data">Generic data object. (required).</param>
         public RestApiPaginationResultApp(int? Page = default(int?), int? Limit = default(int?), int? TotalRecordCount = default(int?), List<App> Data = default(List<App>))
         {
-            this.Page = Page;
-            this.Limit = Limit;
-            this.TotalRecordCount = TotalRecordCount;
-            this.Data = Data;
+            // to ensure "Page" is required (not null)
+            if (Page == null)
+            {
+                throw new InvalidDataException("Page is a required property for RestApiPaginationResultApp and cannot be null");
+            }
+            else
+            {
+                this.Page = Page;
+            }
+            // to ensure "Limit" is required (not null)
+            if (Limit == null)
+            {
+                throw new InvalidDataException("Limit is a required property for RestApiPaginationResultApp and cannot be null");
+            }
+            else
+            {
+                this.Limit = Limit;
+            }
+            // to ensure "TotalRecordCount" is required (not null)
+            if (TotalRecordCount == null)
+            {
+                throw new InvalidDataException("TotalRecordCount is a required property for RestApiPaginationResultApp and cannot be null");
+            }
+            else
+            {
+                this.TotalRecordCount = TotalRecordCount;
+            }
+            // to ensure "Data" is required (not null)
+            if (Data == null)
+            {
+                throw new InvalidDataException("Data is a required property for RestApiPaginationResultApp and cannot be null");
+            }
+            else
+            {
+                this.Data = Data;
+            }
         }
         
         /// <summary>
