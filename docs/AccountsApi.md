@@ -4,6 +4,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**AnswerSignUpQuestion**](AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | 
 [**ChangePassword**](AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | Change password
 [**CreateAccount**](AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | Create account with email address and store name
 [**GetAccountDetails**](AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | 
@@ -12,8 +13,70 @@ Method | HTTP request | Description
 [**PasswordResetWithToken**](AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
 [**RequestPasswordReset**](AccountsApi.md#requestpasswordreset) | **GET** /api/v1.0/accounts/password | Request password reset. Flipdish system will send a token via email.
 [**SkipSignupStep**](AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
-[**SkipSignupStep_0**](AccountsApi.md#skipsignupstep_0) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | 
 
+
+<a name="answersignupquestion"></a>
+# **AnswerSignUpQuestion**
+> RestApiResultAccountDetail AnswerSignUpQuestion (string signupStepAction, int? answerId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class AnswerSignUpQuestionExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AccountsApi();
+            var signupStepAction = signupStepAction_example;  // string | 
+            var answerId = 56;  // int? | 
+
+            try
+            {
+                RestApiResultAccountDetail result = apiInstance.AnswerSignUpQuestion(signupStepAction, answerId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AccountsApi.AnswerSignUpQuestion: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **signupStepAction** | **string**|  | 
+ **answerId** | **int?**|  | 
+
+### Return type
+
+[**RestApiResultAccountDetail**](RestApiResultAccountDetail.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="changepassword"></a>
 # **ChangePassword**
@@ -497,69 +560,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="skipsignupstep_0"></a>
-# **SkipSignupStep_0**
-> RestApiResultAccountDetail SkipSignupStep_0 (string signupStepAction, int? answerId)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class SkipSignupStep_0Example
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AccountsApi();
-            var signupStepAction = signupStepAction_example;  // string | 
-            var answerId = 56;  // int? | 
-
-            try
-            {
-                RestApiResultAccountDetail result = apiInstance.SkipSignupStep_0(signupStepAction, answerId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AccountsApi.SkipSignupStep_0: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **signupStepAction** | **string**|  | 
- **answerId** | **int?**|  | 
-
-### Return type
-
-[**RestApiResultAccountDetail**](RestApiResultAccountDetail.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

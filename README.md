@@ -74,17 +74,17 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var changePasswordModel = new ChangePasswordModel(); // ChangePasswordModel | Change password model
+            var signupStepAction = signupStepAction_example;  // string | 
+            var answerId = 56;  // int? | 
 
             try
             {
-                // Change password
-                Object result = apiInstance.ChangePassword(changePasswordModel);
+                RestApiResultAccountDetail result = apiInstance.AnswerSignUpQuestion(signupStepAction, answerId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AccountsApi.ChangePassword: " + e.Message );
+                Debug.Print("Exception when calling AccountsApi.AnswerSignUpQuestion: " + e.Message );
             }
 
         }
@@ -99,6 +99,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccountsApi* | [**AnswerSignUpQuestion**](docs/AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | 
 *AccountsApi* | [**ChangePassword**](docs/AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | Change password
 *AccountsApi* | [**CreateAccount**](docs/AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | Create account with email address and store name
 *AccountsApi* | [**GetAccountDetails**](docs/AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | 
@@ -107,7 +108,6 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**PasswordResetWithToken**](docs/AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
 *AccountsApi* | [**RequestPasswordReset**](docs/AccountsApi.md#requestpasswordreset) | **GET** /api/v1.0/accounts/password | Request password reset. Flipdish system will send a token via email.
 *AccountsApi* | [**SkipSignupStep**](docs/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
-*AccountsApi* | [**SkipSignupStep_0**](docs/AccountsApi.md#skipsignupstep_0) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | 
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token

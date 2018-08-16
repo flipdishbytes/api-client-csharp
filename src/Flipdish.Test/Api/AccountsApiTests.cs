@@ -65,6 +65,19 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test AnswerSignUpQuestion
+        /// </summary>
+        [Test]
+        public void AnswerSignUpQuestionTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string signupStepAction = null;
+            //int? answerId = null;
+            //var response = instance.AnswerSignUpQuestion(signupStepAction, answerId);
+            //Assert.IsInstanceOf<RestApiResultAccountDetail> (response, "response is RestApiResultAccountDetail");
+        }
+        
+        /// <summary>
         /// Test ChangePassword
         /// </summary>
         [Test]
@@ -155,19 +168,6 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string signupStepAction = null;
             //var response = instance.SkipSignupStep(signupStepAction);
-            //Assert.IsInstanceOf<RestApiResultAccountDetail> (response, "response is RestApiResultAccountDetail");
-        }
-        
-        /// <summary>
-        /// Test SkipSignupStep_0
-        /// </summary>
-        [Test]
-        public void SkipSignupStep_0Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string signupStepAction = null;
-            //int? answerId = null;
-            //var response = instance.SkipSignupStep_0(signupStepAction, answerId);
             //Assert.IsInstanceOf<RestApiResultAccountDetail> (response, "response is RestApiResultAccountDetail");
         }
         
