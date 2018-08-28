@@ -184,6 +184,9 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**GetStores**](docs/StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores
 *StoresApi* | [**UpdateStoreAddress**](docs/StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
 *StoresApi* | [**UpdateStoreAddressCoordinates**](docs/StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
+*StuartApi* | [**StuartCancelJob**](docs/StuartApi.md#stuartcanceljob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | 
+*StuartApi* | [**StuartGetClientCredentials**](docs/StuartApi.md#stuartgetclientcredentials) | **GET** /api/v1.0/stuart/credentials/{storeId} | Get stuart credentials
+*StuartApi* | [**StuartPostClientCredentials**](docs/StuartApi.md#stuartpostclientcredentials) | **POST** /api/v1.0/stuart/credentials/{storeId} | 
 *SubscriptionsApi* | [**SubscriptionsCancelSubscription**](docs/SubscriptionsApi.md#subscriptionscancelsubscription) | **DELETE** /api/v1.0/subscriptions/{subscriptionId} | Cancel the subscription
 *SubscriptionsApi* | [**SubscriptionsGetCard**](docs/SubscriptionsApi.md#subscriptionsgetcard) | **GET** /api/v1.0/subscriptions/{subscriptionId}/card | Get the card linked to the subscription
 *SubscriptionsApi* | [**SubscriptionsGetPlansByCurrency**](docs/SubscriptionsApi.md#subscriptionsgetplansbycurrency) | **GET** /api/v1.0/subscriptions/plans | Get avaialble plans for currency's user
@@ -223,6 +226,7 @@ Class | Method | HTTP request | Description
  - [Model.CardBase](docs/CardBase.md)
  - [Model.CardWithToken](docs/CardWithToken.md)
  - [Model.ChangePasswordModel](docs/ChangePasswordModel.md)
+ - [Model.ClientCredentials](docs/ClientCredentials.md)
  - [Model.Coordinates](docs/Coordinates.md)
  - [Model.CreateAccountModel](docs/CreateAccountModel.md)
  - [Model.CustomerConsentUpdatedEvent](docs/CustomerConsentUpdatedEvent.md)
@@ -305,6 +309,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
  - [Model.RestApiResultBusinessHoursPeriod](docs/RestApiResultBusinessHoursPeriod.md)
  - [Model.RestApiResultCard](docs/RestApiResultCard.md)
+ - [Model.RestApiResultClientCredentials](docs/RestApiResultClientCredentials.md)
  - [Model.RestApiResultCoordinates](docs/RestApiResultCoordinates.md)
  - [Model.RestApiResultMenu](docs/RestApiResultMenu.md)
  - [Model.RestApiResultMenuItemOptionSet](docs/RestApiResultMenuItemOptionSet.md)
