@@ -28,23 +28,23 @@ namespace Flipdish.Model
     /// Rest api result
     /// </summary>
     [DataContract]
-    public partial class RestApiResultClientCredentials :  IEquatable<RestApiResultClientCredentials>, IValidatableObject
+    public partial class RestApiResultJobResponse :  IEquatable<RestApiResultJobResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiResultClientCredentials" /> class.
+        /// Initializes a new instance of the <see cref="RestApiResultJobResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected RestApiResultClientCredentials() { }
+        protected RestApiResultJobResponse() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiResultClientCredentials" /> class.
+        /// Initializes a new instance of the <see cref="RestApiResultJobResponse" /> class.
         /// </summary>
         /// <param name="Data">Generic data object. (required).</param>
-        public RestApiResultClientCredentials(ClientCredentials Data = default(ClientCredentials))
+        public RestApiResultJobResponse(JobResponse Data = default(JobResponse))
         {
             // to ensure "Data" is required (not null)
             if (Data == null)
             {
-                throw new InvalidDataException("Data is a required property for RestApiResultClientCredentials and cannot be null");
+                throw new InvalidDataException("Data is a required property for RestApiResultJobResponse and cannot be null");
             }
             else
             {
@@ -57,7 +57,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Generic data object.</value>
         [DataMember(Name="Data", EmitDefaultValue=false)]
-        public ClientCredentials Data { get; set; }
+        public JobResponse Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -66,7 +66,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RestApiResultClientCredentials {\n");
+            sb.Append("class RestApiResultJobResponse {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -88,15 +88,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RestApiResultClientCredentials);
+            return this.Equals(input as RestApiResultJobResponse);
         }
 
         /// <summary>
-        /// Returns true if RestApiResultClientCredentials instances are equal
+        /// Returns true if RestApiResultJobResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of RestApiResultClientCredentials to be compared</param>
+        /// <param name="input">Instance of RestApiResultJobResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RestApiResultClientCredentials input)
+        public bool Equals(RestApiResultJobResponse input)
         {
             if (input == null)
                 return false;

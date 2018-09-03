@@ -25,24 +25,73 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Stuart client credentials
+    /// Stuart settings
     /// </summary>
     [DataContract]
-    public partial class ClientCredentials :  IEquatable<ClientCredentials>, IValidatableObject
+    public partial class StuartSettings :  IEquatable<StuartSettings>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ClientCredentials" /> class.
+        /// PackageType
+        /// </summary>
+        /// <value>PackageType</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PackageTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Xsmall for value: Xsmall
+            /// </summary>
+            [EnumMember(Value = "Xsmall")]
+            Xsmall = 1,
+            
+            /// <summary>
+            /// Enum Small for value: Small
+            /// </summary>
+            [EnumMember(Value = "Small")]
+            Small = 2,
+            
+            /// <summary>
+            /// Enum Medium for value: Medium
+            /// </summary>
+            [EnumMember(Value = "Medium")]
+            Medium = 3,
+            
+            /// <summary>
+            /// Enum Large for value: Large
+            /// </summary>
+            [EnumMember(Value = "Large")]
+            Large = 4,
+            
+            /// <summary>
+            /// Enum Xlarge for value: Xlarge
+            /// </summary>
+            [EnumMember(Value = "Xlarge")]
+            Xlarge = 5
+        }
+
+        /// <summary>
+        /// PackageType
+        /// </summary>
+        /// <value>PackageType</value>
+        [DataMember(Name="PackageType", EmitDefaultValue=false)]
+        public PackageTypeEnum? PackageType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="StuartSettings" /> class.
         /// </summary>
         /// <param name="ClientId">Client Id.</param>
         /// <param name="ClientSecret">Client Secret.</param>
         /// <param name="Enabled">Enabled.</param>
         /// <param name="WebhookUrlBasicAuthentication">Webhook url to settle in the Stuart portal.</param>
-        public ClientCredentials(string ClientId = default(string), string ClientSecret = default(string), bool? Enabled = default(bool?), string WebhookUrlBasicAuthentication = default(string))
+        /// <param name="MinutesToPickupBeforeThanDeliveryTime">MinutesToPickupBeforeThanDeliveryTime.</param>
+        /// <param name="PackageType">PackageType.</param>
+        public StuartSettings(string ClientId = default(string), string ClientSecret = default(string), bool? Enabled = default(bool?), string WebhookUrlBasicAuthentication = default(string), int? MinutesToPickupBeforeThanDeliveryTime = default(int?), PackageTypeEnum? PackageType = default(PackageTypeEnum?))
         {
             this.ClientId = ClientId;
             this.ClientSecret = ClientSecret;
             this.Enabled = Enabled;
             this.WebhookUrlBasicAuthentication = WebhookUrlBasicAuthentication;
+            this.MinutesToPickupBeforeThanDeliveryTime = MinutesToPickupBeforeThanDeliveryTime;
+            this.PackageType = PackageType;
         }
         
         /// <summary>
@@ -74,17 +123,27 @@ namespace Flipdish.Model
         public string WebhookUrlBasicAuthentication { get; set; }
 
         /// <summary>
+        /// MinutesToPickupBeforeThanDeliveryTime
+        /// </summary>
+        /// <value>MinutesToPickupBeforeThanDeliveryTime</value>
+        [DataMember(Name="MinutesToPickupBeforeThanDeliveryTime", EmitDefaultValue=false)]
+        public int? MinutesToPickupBeforeThanDeliveryTime { get; set; }
+
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ClientCredentials {\n");
+            sb.Append("class StuartSettings {\n");
             sb.Append("  ClientId: ").Append(ClientId).Append("\n");
             sb.Append("  ClientSecret: ").Append(ClientSecret).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  WebhookUrlBasicAuthentication: ").Append(WebhookUrlBasicAuthentication).Append("\n");
+            sb.Append("  MinutesToPickupBeforeThanDeliveryTime: ").Append(MinutesToPickupBeforeThanDeliveryTime).Append("\n");
+            sb.Append("  PackageType: ").Append(PackageType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,15 +164,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ClientCredentials);
+            return this.Equals(input as StuartSettings);
         }
 
         /// <summary>
-        /// Returns true if ClientCredentials instances are equal
+        /// Returns true if StuartSettings instances are equal
         /// </summary>
-        /// <param name="input">Instance of ClientCredentials to be compared</param>
+        /// <param name="input">Instance of StuartSettings to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ClientCredentials input)
+        public bool Equals(StuartSettings input)
         {
             if (input == null)
                 return false;
@@ -138,6 +197,16 @@ namespace Flipdish.Model
                     this.WebhookUrlBasicAuthentication == input.WebhookUrlBasicAuthentication ||
                     (this.WebhookUrlBasicAuthentication != null &&
                     this.WebhookUrlBasicAuthentication.Equals(input.WebhookUrlBasicAuthentication))
+                ) && 
+                (
+                    this.MinutesToPickupBeforeThanDeliveryTime == input.MinutesToPickupBeforeThanDeliveryTime ||
+                    (this.MinutesToPickupBeforeThanDeliveryTime != null &&
+                    this.MinutesToPickupBeforeThanDeliveryTime.Equals(input.MinutesToPickupBeforeThanDeliveryTime))
+                ) && 
+                (
+                    this.PackageType == input.PackageType ||
+                    (this.PackageType != null &&
+                    this.PackageType.Equals(input.PackageType))
                 );
         }
 
@@ -158,6 +227,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Enabled.GetHashCode();
                 if (this.WebhookUrlBasicAuthentication != null)
                     hashCode = hashCode * 59 + this.WebhookUrlBasicAuthentication.GetHashCode();
+                if (this.MinutesToPickupBeforeThanDeliveryTime != null)
+                    hashCode = hashCode * 59 + this.MinutesToPickupBeforeThanDeliveryTime.GetHashCode();
+                if (this.PackageType != null)
+                    hashCode = hashCode * 59 + this.PackageType.GetHashCode();
                 return hashCode;
             }
         }

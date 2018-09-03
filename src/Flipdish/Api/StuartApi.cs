@@ -48,6 +48,29 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> StuartCancelJobWithHttpInfo (int? jobId, int? storeId);
         /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>RestApiResultJobResponse</returns>
+        RestApiResultJobResponse StuartGetJob (int? jobId, int? storeId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>ApiResponse of RestApiResultJobResponse</returns>
+        ApiResponse<RestApiResultJobResponse> StuartGetJobWithHttpInfo (int? jobId, int? storeId);
+        /// <summary>
         /// Get stuart credentials
         /// </summary>
         /// <remarks>
@@ -55,8 +78,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>RestApiResultClientCredentials</returns>
-        RestApiResultClientCredentials StuartGetClientCredentials (int? storeId);
+        /// <returns>RestApiResultStuartSettings</returns>
+        RestApiResultStuartSettings StuartGetStuartSettings (int? storeId);
 
         /// <summary>
         /// Get stuart credentials
@@ -66,8 +89,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>ApiResponse of RestApiResultClientCredentials</returns>
-        ApiResponse<RestApiResultClientCredentials> StuartGetClientCredentialsWithHttpInfo (int? storeId);
+        /// <returns>ApiResponse of RestApiResultStuartSettings</returns>
+        ApiResponse<RestApiResultStuartSettings> StuartGetStuartSettingsWithHttpInfo (int? storeId);
         /// <summary>
         /// 
         /// </summary>
@@ -76,9 +99,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="clientCredentials"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>Object</returns>
-        Object StuartPostClientCredentials (int? storeId, ClientCredentials clientCredentials);
+        Object StuartPostStuartSettings (int? storeId, StuartSettings stuartSettings);
 
         /// <summary>
         /// 
@@ -88,9 +111,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="clientCredentials"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> StuartPostClientCredentialsWithHttpInfo (int? storeId, ClientCredentials clientCredentials);
+        ApiResponse<Object> StuartPostStuartSettingsWithHttpInfo (int? storeId, StuartSettings stuartSettings);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -117,6 +140,29 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> StuartCancelJobAsyncWithHttpInfo (int? jobId, int? storeId);
         /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>Task of RestApiResultJobResponse</returns>
+        System.Threading.Tasks.Task<RestApiResultJobResponse> StuartGetJobAsync (int? jobId, int? storeId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultJobResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultJobResponse>> StuartGetJobAsyncWithHttpInfo (int? jobId, int? storeId);
+        /// <summary>
         /// Get stuart credentials
         /// </summary>
         /// <remarks>
@@ -124,8 +170,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>Task of RestApiResultClientCredentials</returns>
-        System.Threading.Tasks.Task<RestApiResultClientCredentials> StuartGetClientCredentialsAsync (int? storeId);
+        /// <returns>Task of RestApiResultStuartSettings</returns>
+        System.Threading.Tasks.Task<RestApiResultStuartSettings> StuartGetStuartSettingsAsync (int? storeId);
 
         /// <summary>
         /// Get stuart credentials
@@ -135,8 +181,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>Task of ApiResponse (RestApiResultClientCredentials)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultClientCredentials>> StuartGetClientCredentialsAsyncWithHttpInfo (int? storeId);
+        /// <returns>Task of ApiResponse (RestApiResultStuartSettings)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultStuartSettings>> StuartGetStuartSettingsAsyncWithHttpInfo (int? storeId);
         /// <summary>
         /// 
         /// </summary>
@@ -145,9 +191,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="clientCredentials"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> StuartPostClientCredentialsAsync (int? storeId, ClientCredentials clientCredentials);
+        System.Threading.Tasks.Task<Object> StuartPostStuartSettingsAsync (int? storeId, StuartSettings stuartSettings);
 
         /// <summary>
         /// 
@@ -157,9 +203,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="clientCredentials"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> StuartPostClientCredentialsAsyncWithHttpInfo (int? storeId, ClientCredentials clientCredentials);
+        System.Threading.Tasks.Task<ApiResponse<Object>> StuartPostStuartSettingsAsyncWithHttpInfo (int? storeId, StuartSettings stuartSettings);
         #endregion Asynchronous Operations
     }
 
@@ -424,14 +470,177 @@ namespace Flipdish.Api
         }
 
         /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>RestApiResultJobResponse</returns>
+        public RestApiResultJobResponse StuartGetJob (int? jobId, int? storeId)
+        {
+             ApiResponse<RestApiResultJobResponse> localVarResponse = StuartGetJobWithHttpInfo(jobId, storeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>ApiResponse of RestApiResultJobResponse</returns>
+        public ApiResponse< RestApiResultJobResponse > StuartGetJobWithHttpInfo (int? jobId, int? storeId)
+        {
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling StuartApi->StuartGetJob");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartGetJob");
+
+            var localVarPath = "/api/v1.0/stuart/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (jobId != null) localVarPathParams.Add("jobId", Configuration.ApiClient.ParameterToString(jobId)); // path parameter
+            if (storeId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("StuartGetJob", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultJobResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultJobResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultJobResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>Task of RestApiResultJobResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiResultJobResponse> StuartGetJobAsync (int? jobId, int? storeId)
+        {
+             ApiResponse<RestApiResultJobResponse> localVarResponse = await StuartGetJobAsyncWithHttpInfo(jobId, storeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultJobResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultJobResponse>> StuartGetJobAsyncWithHttpInfo (int? jobId, int? storeId)
+        {
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling StuartApi->StuartGetJob");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartGetJob");
+
+            var localVarPath = "/api/v1.0/stuart/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (jobId != null) localVarPathParams.Add("jobId", Configuration.ApiClient.ParameterToString(jobId)); // path parameter
+            if (storeId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("StuartGetJob", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultJobResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultJobResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultJobResponse)));
+        }
+
+        /// <summary>
         /// Get stuart credentials 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>RestApiResultClientCredentials</returns>
-        public RestApiResultClientCredentials StuartGetClientCredentials (int? storeId)
+        /// <returns>RestApiResultStuartSettings</returns>
+        public RestApiResultStuartSettings StuartGetStuartSettings (int? storeId)
         {
-             ApiResponse<RestApiResultClientCredentials> localVarResponse = StuartGetClientCredentialsWithHttpInfo(storeId);
+             ApiResponse<RestApiResultStuartSettings> localVarResponse = StuartGetStuartSettingsWithHttpInfo(storeId);
              return localVarResponse.Data;
         }
 
@@ -440,14 +649,14 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>ApiResponse of RestApiResultClientCredentials</returns>
-        public ApiResponse< RestApiResultClientCredentials > StuartGetClientCredentialsWithHttpInfo (int? storeId)
+        /// <returns>ApiResponse of RestApiResultStuartSettings</returns>
+        public ApiResponse< RestApiResultStuartSettings > StuartGetStuartSettingsWithHttpInfo (int? storeId)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartGetClientCredentials");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartGetStuartSettings");
 
-            var localVarPath = "/api/v1.0/stuart/credentials/{storeId}";
+            var localVarPath = "/api/v1.0/stuart/settings/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -489,13 +698,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StuartGetClientCredentials", localVarResponse);
+                Exception exception = ExceptionFactory("StuartGetStuartSettings", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultClientCredentials>(localVarStatusCode,
+            return new ApiResponse<RestApiResultStuartSettings>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultClientCredentials) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultClientCredentials)));
+                (RestApiResultStuartSettings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStuartSettings)));
         }
 
         /// <summary>
@@ -503,10 +712,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>Task of RestApiResultClientCredentials</returns>
-        public async System.Threading.Tasks.Task<RestApiResultClientCredentials> StuartGetClientCredentialsAsync (int? storeId)
+        /// <returns>Task of RestApiResultStuartSettings</returns>
+        public async System.Threading.Tasks.Task<RestApiResultStuartSettings> StuartGetStuartSettingsAsync (int? storeId)
         {
-             ApiResponse<RestApiResultClientCredentials> localVarResponse = await StuartGetClientCredentialsAsyncWithHttpInfo(storeId);
+             ApiResponse<RestApiResultStuartSettings> localVarResponse = await StuartGetStuartSettingsAsyncWithHttpInfo(storeId);
              return localVarResponse.Data;
 
         }
@@ -516,14 +725,14 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>Task of ApiResponse (RestApiResultClientCredentials)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultClientCredentials>> StuartGetClientCredentialsAsyncWithHttpInfo (int? storeId)
+        /// <returns>Task of ApiResponse (RestApiResultStuartSettings)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStuartSettings>> StuartGetStuartSettingsAsyncWithHttpInfo (int? storeId)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartGetClientCredentials");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartGetStuartSettings");
 
-            var localVarPath = "/api/v1.0/stuart/credentials/{storeId}";
+            var localVarPath = "/api/v1.0/stuart/settings/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -565,13 +774,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StuartGetClientCredentials", localVarResponse);
+                Exception exception = ExceptionFactory("StuartGetStuartSettings", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultClientCredentials>(localVarStatusCode,
+            return new ApiResponse<RestApiResultStuartSettings>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultClientCredentials) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultClientCredentials)));
+                (RestApiResultStuartSettings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStuartSettings)));
         }
 
         /// <summary>
@@ -579,11 +788,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="clientCredentials"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>Object</returns>
-        public Object StuartPostClientCredentials (int? storeId, ClientCredentials clientCredentials)
+        public Object StuartPostStuartSettings (int? storeId, StuartSettings stuartSettings)
         {
-             ApiResponse<Object> localVarResponse = StuartPostClientCredentialsWithHttpInfo(storeId, clientCredentials);
+             ApiResponse<Object> localVarResponse = StuartPostStuartSettingsWithHttpInfo(storeId, stuartSettings);
              return localVarResponse.Data;
         }
 
@@ -592,18 +801,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="clientCredentials"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > StuartPostClientCredentialsWithHttpInfo (int? storeId, ClientCredentials clientCredentials)
+        public ApiResponse< Object > StuartPostStuartSettingsWithHttpInfo (int? storeId, StuartSettings stuartSettings)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartPostClientCredentials");
-            // verify the required parameter 'clientCredentials' is set
-            if (clientCredentials == null)
-                throw new ApiException(400, "Missing required parameter 'clientCredentials' when calling StuartApi->StuartPostClientCredentials");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartPostStuartSettings");
+            // verify the required parameter 'stuartSettings' is set
+            if (stuartSettings == null)
+                throw new ApiException(400, "Missing required parameter 'stuartSettings' when calling StuartApi->StuartPostStuartSettings");
 
-            var localVarPath = "/api/v1.0/stuart/credentials/{storeId}";
+            var localVarPath = "/api/v1.0/stuart/settings/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -633,13 +842,13 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
-            if (clientCredentials != null && clientCredentials.GetType() != typeof(byte[]))
+            if (stuartSettings != null && stuartSettings.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(clientCredentials); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(stuartSettings); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = clientCredentials; // byte array
+                localVarPostBody = stuartSettings; // byte array
             }
 
             // authentication (oauth2) required
@@ -658,7 +867,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StuartPostClientCredentials", localVarResponse);
+                Exception exception = ExceptionFactory("StuartPostStuartSettings", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -672,11 +881,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="clientCredentials"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> StuartPostClientCredentialsAsync (int? storeId, ClientCredentials clientCredentials)
+        public async System.Threading.Tasks.Task<Object> StuartPostStuartSettingsAsync (int? storeId, StuartSettings stuartSettings)
         {
-             ApiResponse<Object> localVarResponse = await StuartPostClientCredentialsAsyncWithHttpInfo(storeId, clientCredentials);
+             ApiResponse<Object> localVarResponse = await StuartPostStuartSettingsAsyncWithHttpInfo(storeId, stuartSettings);
              return localVarResponse.Data;
 
         }
@@ -686,18 +895,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="clientCredentials"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> StuartPostClientCredentialsAsyncWithHttpInfo (int? storeId, ClientCredentials clientCredentials)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> StuartPostStuartSettingsAsyncWithHttpInfo (int? storeId, StuartSettings stuartSettings)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartPostClientCredentials");
-            // verify the required parameter 'clientCredentials' is set
-            if (clientCredentials == null)
-                throw new ApiException(400, "Missing required parameter 'clientCredentials' when calling StuartApi->StuartPostClientCredentials");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartPostStuartSettings");
+            // verify the required parameter 'stuartSettings' is set
+            if (stuartSettings == null)
+                throw new ApiException(400, "Missing required parameter 'stuartSettings' when calling StuartApi->StuartPostStuartSettings");
 
-            var localVarPath = "/api/v1.0/stuart/credentials/{storeId}";
+            var localVarPath = "/api/v1.0/stuart/settings/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -727,13 +936,13 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
-            if (clientCredentials != null && clientCredentials.GetType() != typeof(byte[]))
+            if (stuartSettings != null && stuartSettings.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(clientCredentials); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(stuartSettings); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = clientCredentials; // byte array
+                localVarPostBody = stuartSettings; // byte array
             }
 
             // authentication (oauth2) required
@@ -752,7 +961,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StuartPostClientCredentials", localVarResponse);
+                Exception exception = ExceptionFactory("StuartPostStuartSettings", localVarResponse);
                 if (exception != null) throw exception;
             }
 

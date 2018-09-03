@@ -1,9 +1,10 @@
-# Flipdish.Model.RestApiResultClientCredentials
+# Flipdish.Model.JobEta
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Data** | [**ClientCredentials**](ClientCredentials.md) | Generic data object. | 
+**Pickup** | **string** | Pickup | [optional] 
+**Dropoff** | **string** | Dropoff | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

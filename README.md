@@ -185,8 +185,9 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**UpdateStoreAddress**](docs/StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
 *StoresApi* | [**UpdateStoreAddressCoordinates**](docs/StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
 *StuartApi* | [**StuartCancelJob**](docs/StuartApi.md#stuartcanceljob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | 
-*StuartApi* | [**StuartGetClientCredentials**](docs/StuartApi.md#stuartgetclientcredentials) | **GET** /api/v1.0/stuart/credentials/{storeId} | Get stuart credentials
-*StuartApi* | [**StuartPostClientCredentials**](docs/StuartApi.md#stuartpostclientcredentials) | **POST** /api/v1.0/stuart/credentials/{storeId} | 
+*StuartApi* | [**StuartGetJob**](docs/StuartApi.md#stuartgetjob) | **GET** /api/v1.0/stuart/jobs/{jobId} | 
+*StuartApi* | [**StuartGetStuartSettings**](docs/StuartApi.md#stuartgetstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | Get stuart credentials
+*StuartApi* | [**StuartPostStuartSettings**](docs/StuartApi.md#stuartpoststuartsettings) | **POST** /api/v1.0/stuart/settings/{storeId} | 
 *SubscriptionsApi* | [**SubscriptionsCancelSubscription**](docs/SubscriptionsApi.md#subscriptionscancelsubscription) | **DELETE** /api/v1.0/subscriptions/{subscriptionId} | Cancel the subscription
 *SubscriptionsApi* | [**SubscriptionsGetCard**](docs/SubscriptionsApi.md#subscriptionsgetcard) | **GET** /api/v1.0/subscriptions/{subscriptionId}/card | Get the card linked to the subscription
 *SubscriptionsApi* | [**SubscriptionsGetPlansByCurrency**](docs/SubscriptionsApi.md#subscriptionsgetplansbycurrency) | **GET** /api/v1.0/subscriptions/plans | Get avaialble plans for currency's user
@@ -226,7 +227,6 @@ Class | Method | HTTP request | Description
  - [Model.CardBase](docs/CardBase.md)
  - [Model.CardWithToken](docs/CardWithToken.md)
  - [Model.ChangePasswordModel](docs/ChangePasswordModel.md)
- - [Model.ClientCredentials](docs/ClientCredentials.md)
  - [Model.Coordinates](docs/Coordinates.md)
  - [Model.CreateAccountModel](docs/CreateAccountModel.md)
  - [Model.CustomerConsentUpdatedEvent](docs/CustomerConsentUpdatedEvent.md)
@@ -238,6 +238,16 @@ Class | Method | HTTP request | Description
  - [Model.EventSearchResult](docs/EventSearchResult.md)
  - [Model.FeeSummary](docs/FeeSummary.md)
  - [Model.HttpRequestAndResponseLog](docs/HttpRequestAndResponseLog.md)
+ - [Model.JobAddress](docs/JobAddress.md)
+ - [Model.JobCancellation](docs/JobCancellation.md)
+ - [Model.JobContact](docs/JobContact.md)
+ - [Model.JobDelivery](docs/JobDelivery.md)
+ - [Model.JobDeliveryDetail](docs/JobDeliveryDetail.md)
+ - [Model.JobDriver](docs/JobDriver.md)
+ - [Model.JobEta](docs/JobEta.md)
+ - [Model.JobPricing](docs/JobPricing.md)
+ - [Model.JobProof](docs/JobProof.md)
+ - [Model.JobResponse](docs/JobResponse.md)
  - [Model.LoginModel](docs/LoginModel.md)
  - [Model.LoyaltyCampaign](docs/LoyaltyCampaign.md)
  - [Model.LoyaltyCampaignCreatedEvent](docs/LoyaltyCampaignCreatedEvent.md)
@@ -309,8 +319,8 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
  - [Model.RestApiResultBusinessHoursPeriod](docs/RestApiResultBusinessHoursPeriod.md)
  - [Model.RestApiResultCard](docs/RestApiResultCard.md)
- - [Model.RestApiResultClientCredentials](docs/RestApiResultClientCredentials.md)
  - [Model.RestApiResultCoordinates](docs/RestApiResultCoordinates.md)
+ - [Model.RestApiResultJobResponse](docs/RestApiResultJobResponse.md)
  - [Model.RestApiResultMenu](docs/RestApiResultMenu.md)
  - [Model.RestApiResultMenuItemOptionSet](docs/RestApiResultMenuItemOptionSet.md)
  - [Model.RestApiResultMenuItemOptionSetItem](docs/RestApiResultMenuItemOptionSetItem.md)
@@ -324,6 +334,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultProcessingFeeConfig](docs/RestApiResultProcessingFeeConfig.md)
  - [Model.RestApiResultStore](docs/RestApiResultStore.md)
  - [Model.RestApiResultStoreAddress](docs/RestApiResultStoreAddress.md)
+ - [Model.RestApiResultStuartSettings](docs/RestApiResultStuartSettings.md)
  - [Model.RestApiResultSubscription](docs/RestApiResultSubscription.md)
  - [Model.RestApiResultSubscriptionPlansResponse](docs/RestApiResultSubscriptionPlansResponse.md)
  - [Model.RestApiResultVoucher](docs/RestApiResultVoucher.md)
@@ -348,6 +359,7 @@ Class | Method | HTTP request | Description
  - [Model.StoreOpeningHoursUpdatedEvent](docs/StoreOpeningHoursUpdatedEvent.md)
  - [Model.StoreSummary](docs/StoreSummary.md)
  - [Model.StoreUpdatedEvent](docs/StoreUpdatedEvent.md)
+ - [Model.StuartSettings](docs/StuartSettings.md)
  - [Model.Subscription](docs/Subscription.md)
  - [Model.SubscriptionBase](docs/SubscriptionBase.md)
  - [Model.SubscriptionPlan](docs/SubscriptionPlan.md)

@@ -78,27 +78,40 @@ namespace Flipdish.Test
         }
         
         /// <summary>
-        /// Test StuartGetClientCredentials
+        /// Test StuartGetJob
         /// </summary>
         [Test]
-        public void StuartGetClientCredentialsTest()
+        public void StuartGetJobTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int? jobId = null;
             //int? storeId = null;
-            //var response = instance.StuartGetClientCredentials(storeId);
-            //Assert.IsInstanceOf<RestApiResultClientCredentials> (response, "response is RestApiResultClientCredentials");
+            //var response = instance.StuartGetJob(jobId, storeId);
+            //Assert.IsInstanceOf<RestApiResultJobResponse> (response, "response is RestApiResultJobResponse");
         }
         
         /// <summary>
-        /// Test StuartPostClientCredentials
+        /// Test StuartGetStuartSettings
         /// </summary>
         [Test]
-        public void StuartPostClientCredentialsTest()
+        public void StuartGetStuartSettingsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? storeId = null;
-            //ClientCredentials clientCredentials = null;
-            //var response = instance.StuartPostClientCredentials(storeId, clientCredentials);
+            //var response = instance.StuartGetStuartSettings(storeId);
+            //Assert.IsInstanceOf<RestApiResultStuartSettings> (response, "response is RestApiResultStuartSettings");
+        }
+        
+        /// <summary>
+        /// Test StuartPostStuartSettings
+        /// </summary>
+        [Test]
+        public void StuartPostStuartSettingsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //StuartSettings stuartSettings = null;
+            //var response = instance.StuartPostStuartSettings(storeId, stuartSettings);
             //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         
