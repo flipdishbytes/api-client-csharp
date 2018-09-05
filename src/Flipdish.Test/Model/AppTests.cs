@@ -83,6 +83,30 @@ namespace Flipdish.Test
             // TODO unit test for the property 'Name'
         }
         /// <summary>
+        /// Test the property 'MapCenter'
+        /// </summary>
+        [Test]
+        public void MapCenterTest()
+        {
+            // TODO unit test for the property 'MapCenter'
+        }
+        /// <summary>
+        /// Test the property 'MapNorthEast'
+        /// </summary>
+        [Test]
+        public void MapNorthEastTest()
+        {
+            // TODO unit test for the property 'MapNorthEast'
+        }
+        /// <summary>
+        /// Test the property 'MapSouthWest'
+        /// </summary>
+        [Test]
+        public void MapSouthWestTest()
+        {
+            // TODO unit test for the property 'MapSouthWest'
+        }
+        /// <summary>
         /// Test the property 'IconUrl'
         /// </summary>
         [Test]

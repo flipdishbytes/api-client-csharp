@@ -35,13 +35,19 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="AppId">App Identifier.</param>
         /// <param name="Name">App name.</param>
+        /// <param name="MapCenter">Center of the map coordinates.</param>
+        /// <param name="MapNorthEast">North East(Top Right) Corner of the map coordinates.</param>
+        /// <param name="MapSouthWest">South West (Bottom Left) Corner of the map coordinates.</param>
         /// <param name="IconUrl">Icon url.</param>
         /// <param name="IconThumbnailUrl">Icon thumbnail url.</param>
         /// <param name="CountryId">Country identifier.</param>
-        public App(string AppId = default(string), string Name = default(string), string IconUrl = default(string), string IconThumbnailUrl = default(string), string CountryId = default(string))
+        public App(string AppId = default(string), string Name = default(string), Coordinates MapCenter = default(Coordinates), Coordinates MapNorthEast = default(Coordinates), Coordinates MapSouthWest = default(Coordinates), string IconUrl = default(string), string IconThumbnailUrl = default(string), string CountryId = default(string))
         {
             this.AppId = AppId;
             this.Name = Name;
+            this.MapCenter = MapCenter;
+            this.MapNorthEast = MapNorthEast;
+            this.MapSouthWest = MapSouthWest;
             this.IconUrl = IconUrl;
             this.IconThumbnailUrl = IconThumbnailUrl;
             this.CountryId = CountryId;
@@ -60,6 +66,27 @@ namespace Flipdish.Model
         /// <value>App name</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Center of the map coordinates
+        /// </summary>
+        /// <value>Center of the map coordinates</value>
+        [DataMember(Name="MapCenter", EmitDefaultValue=false)]
+        public Coordinates MapCenter { get; set; }
+
+        /// <summary>
+        /// North East(Top Right) Corner of the map coordinates
+        /// </summary>
+        /// <value>North East(Top Right) Corner of the map coordinates</value>
+        [DataMember(Name="MapNorthEast", EmitDefaultValue=false)]
+        public Coordinates MapNorthEast { get; set; }
+
+        /// <summary>
+        /// South West (Bottom Left) Corner of the map coordinates
+        /// </summary>
+        /// <value>South West (Bottom Left) Corner of the map coordinates</value>
+        [DataMember(Name="MapSouthWest", EmitDefaultValue=false)]
+        public Coordinates MapSouthWest { get; set; }
 
         /// <summary>
         /// Icon url
@@ -92,6 +119,9 @@ namespace Flipdish.Model
             sb.Append("class App {\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  MapCenter: ").Append(MapCenter).Append("\n");
+            sb.Append("  MapNorthEast: ").Append(MapNorthEast).Append("\n");
+            sb.Append("  MapSouthWest: ").Append(MapSouthWest).Append("\n");
             sb.Append("  IconUrl: ").Append(IconUrl).Append("\n");
             sb.Append("  IconThumbnailUrl: ").Append(IconThumbnailUrl).Append("\n");
             sb.Append("  CountryId: ").Append(CountryId).Append("\n");
@@ -140,6 +170,21 @@ namespace Flipdish.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
+                    this.MapCenter == input.MapCenter ||
+                    (this.MapCenter != null &&
+                    this.MapCenter.Equals(input.MapCenter))
+                ) && 
+                (
+                    this.MapNorthEast == input.MapNorthEast ||
+                    (this.MapNorthEast != null &&
+                    this.MapNorthEast.Equals(input.MapNorthEast))
+                ) && 
+                (
+                    this.MapSouthWest == input.MapSouthWest ||
+                    (this.MapSouthWest != null &&
+                    this.MapSouthWest.Equals(input.MapSouthWest))
+                ) && 
+                (
                     this.IconUrl == input.IconUrl ||
                     (this.IconUrl != null &&
                     this.IconUrl.Equals(input.IconUrl))
@@ -169,6 +214,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.MapCenter != null)
+                    hashCode = hashCode * 59 + this.MapCenter.GetHashCode();
+                if (this.MapNorthEast != null)
+                    hashCode = hashCode * 59 + this.MapNorthEast.GetHashCode();
+                if (this.MapSouthWest != null)
+                    hashCode = hashCode * 59 + this.MapSouthWest.GetHashCode();
                 if (this.IconUrl != null)
                     hashCode = hashCode * 59 + this.IconUrl.GetHashCode();
                 if (this.IconThumbnailUrl != null)
