@@ -220,6 +220,7 @@ Class | Method | HTTP request | Description
 
  - [Model.Accept](docs/Accept.md)
  - [Model.AccountDetail](docs/AccountDetail.md)
+ - [Model.AnalyticsClientEvent](docs/AnalyticsClientEvent.md)
  - [Model.App](docs/App.md)
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
  - [Model.BusinessHoursPeriodBase](docs/BusinessHoursPeriodBase.md)

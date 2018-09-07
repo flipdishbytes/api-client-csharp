@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AnalyticsClientEvent** | [**List&lt;AnalyticsClientEvent&gt;**](AnalyticsClientEvent.md) | Client Analytics events | [optional] 
 **OrderAcceptedEvent** | [**List&lt;OrderAcceptedEvent&gt;**](OrderAcceptedEvent.md) | Order accepted events | [optional] 
 **OrderCreatedEvent** | [**List&lt;OrderCreatedEvent&gt;**](OrderCreatedEvent.md) | Order created events | [optional] 
 **OrderRatingUpdatedEvent** | [**List&lt;OrderRatingUpdatedEvent&gt;**](OrderRatingUpdatedEvent.md) | Order rating updated events | [optional] 

@@ -67,6 +67,14 @@ namespace Flipdish.Test
 
 
         /// <summary>
+        /// Test the property 'AnalyticsClientEvent'
+        /// </summary>
+        [Test]
+        public void AnalyticsClientEventTest()
+        {
+            // TODO unit test for the property 'AnalyticsClientEvent'
+        }
+        /// <summary>
         /// Test the property 'OrderAcceptedEvent'
         /// </summary>
         [Test]
