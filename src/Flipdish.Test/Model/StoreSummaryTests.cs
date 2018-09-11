@@ -106,6 +106,14 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'Currency'
         }
+        /// <summary>
+        /// Test the property 'Coordinates'
+        /// </summary>
+        [Test]
+        public void CoordinatesTest()
+        {
+            // TODO unit test for the property 'Coordinates'
+        }
 
     }
 

@@ -725,13 +725,15 @@ namespace Flipdish.Model
         /// <param name="MenuId">Stores menu identifier.</param>
         /// <param name="Metadata">Store metadata.</param>
         /// <param name="Currency">Currency which used by the Store.</param>
-        public StoreSummary(int? Id = default(int?), string Name = default(string), int? MenuId = default(int?), Dictionary<string, string> Metadata = default(Dictionary<string, string>), CurrencyEnum? Currency = default(CurrencyEnum?))
+        /// <param name="Coordinates">Latitude and longitude of the store.</param>
+        public StoreSummary(int? Id = default(int?), string Name = default(string), int? MenuId = default(int?), Dictionary<string, string> Metadata = default(Dictionary<string, string>), CurrencyEnum? Currency = default(CurrencyEnum?), Coordinates Coordinates = default(Coordinates))
         {
             this.Id = Id;
             this.Name = Name;
             this.MenuId = MenuId;
             this.Metadata = Metadata;
             this.Currency = Currency;
+            this.Coordinates = Coordinates;
         }
         
         /// <summary>
@@ -764,6 +766,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Latitude and longitude of the store
+        /// </summary>
+        /// <value>Latitude and longitude of the store</value>
+        [DataMember(Name="Coordinates", EmitDefaultValue=false)]
+        public Coordinates Coordinates { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -776,6 +785,7 @@ namespace Flipdish.Model
             sb.Append("  MenuId: ").Append(MenuId).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
+            sb.Append("  Coordinates: ").Append(Coordinates).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -834,6 +844,11 @@ namespace Flipdish.Model
                     this.Currency == input.Currency ||
                     (this.Currency != null &&
                     this.Currency.Equals(input.Currency))
+                ) && 
+                (
+                    this.Coordinates == input.Coordinates ||
+                    (this.Coordinates != null &&
+                    this.Coordinates.Equals(input.Coordinates))
                 );
         }
 
@@ -856,6 +871,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 if (this.Currency != null)
                     hashCode = hashCode * 59 + this.Currency.GetHashCode();
+                if (this.Coordinates != null)
+                    hashCode = hashCode * 59 + this.Coordinates.GetHashCode();
                 return hashCode;
             }
         }
