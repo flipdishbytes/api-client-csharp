@@ -79,7 +79,7 @@ namespace Example
 
             try
             {
-                RestApiResultAccountDetail result = apiInstance.AnswerSignUpQuestion(signupStepAction, answerId);
+                Object result = apiInstance.AnswerSignUpQuestion(signupStepAction, answerId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -108,6 +108,7 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**PasswordResetWithToken**](docs/AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
 *AccountsApi* | [**RequestPasswordReset**](docs/AccountsApi.md#requestpasswordreset) | **GET** /api/v1.0/accounts/password | Request password reset. Flipdish system will send a token via email.
 *AccountsApi* | [**SkipSignupStep**](docs/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
+*AccountsApi* | [**UpdateAccount**](docs/AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | Update account with name and language
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
@@ -371,6 +372,7 @@ Class | Method | HTTP request | Description
  - [Model.SubscriptionPlan](docs/SubscriptionPlan.md)
  - [Model.SubscriptionPlansResponse](docs/SubscriptionPlansResponse.md)
  - [Model.SubscriptionWithToken](docs/SubscriptionWithToken.md)
+ - [Model.UpdateAccountModel](docs/UpdateAccountModel.md)
  - [Model.UserCreatedEvent](docs/UserCreatedEvent.md)
  - [Model.UserDeletedEvent](docs/UserDeletedEvent.md)
  - [Model.UserEventInfo](docs/UserEventInfo.md)

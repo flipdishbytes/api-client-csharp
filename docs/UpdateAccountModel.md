@@ -1,12 +1,10 @@
-# Flipdish.Model.AccountDetail
+# Flipdish.Model.UpdateAccountModel
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name | [optional] 
-**Email** | **string** | Email | [optional] 
-**Language** | **string** | Language Id | [optional] 
-**SignupSteps** | [**List&lt;SignupStep&gt;**](SignupStep.md) | Signup steps | [optional] 
+**Name** | **string** | Name of the user | [optional] 
+**Language** | **string** | Language of the user | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

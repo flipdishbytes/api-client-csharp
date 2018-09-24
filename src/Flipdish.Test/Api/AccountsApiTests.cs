@@ -74,7 +74,7 @@ namespace Flipdish.Test
             //string signupStepAction = null;
             //int? answerId = null;
             //var response = instance.AnswerSignUpQuestion(signupStepAction, answerId);
-            //Assert.IsInstanceOf<RestApiResultAccountDetail> (response, "response is RestApiResultAccountDetail");
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         
         /// <summary>
@@ -155,8 +155,8 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string email = null;
-            //var response = instance.RequestPasswordReset(email);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //instance.RequestPasswordReset(email);
+            
         }
         
         /// <summary>
@@ -168,7 +168,19 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string signupStepAction = null;
             //var response = instance.SkipSignupStep(signupStepAction);
-            //Assert.IsInstanceOf<RestApiResultAccountDetail> (response, "response is RestApiResultAccountDetail");
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test UpdateAccount
+        /// </summary>
+        [Test]
+        public void UpdateAccountTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //UpdateAccountModel updateAccountModel = null;
+            //var response = instance.UpdateAccount(updateAccountModel);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         
     }

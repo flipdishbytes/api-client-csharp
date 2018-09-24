@@ -13,11 +13,12 @@ Method | HTTP request | Description
 [**PasswordResetWithToken**](AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
 [**RequestPasswordReset**](AccountsApi.md#requestpasswordreset) | **GET** /api/v1.0/accounts/password | Request password reset. Flipdish system will send a token via email.
 [**SkipSignupStep**](AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
+[**UpdateAccount**](AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | Update account with name and language
 
 
 <a name="answersignupquestion"></a>
 # **AnswerSignUpQuestion**
-> RestApiResultAccountDetail AnswerSignUpQuestion (string signupStepAction, int? answerId)
+> Object AnswerSignUpQuestion (string signupStepAction, int? answerId)
 
 
 
@@ -44,7 +45,7 @@ namespace Example
 
             try
             {
-                RestApiResultAccountDetail result = apiInstance.AnswerSignUpQuestion(signupStepAction, answerId);
+                Object result = apiInstance.AnswerSignUpQuestion(signupStepAction, answerId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -65,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiResultAccountDetail**](RestApiResultAccountDetail.md)
+**Object**
 
 ### Authorization
 
@@ -443,7 +444,7 @@ Name | Type | Description  | Notes
 
 <a name="requestpasswordreset"></a>
 # **RequestPasswordReset**
-> Object RequestPasswordReset (string email)
+> void RequestPasswordReset (string email)
 
 Request password reset. Flipdish system will send a token via email.
 
@@ -470,8 +471,7 @@ namespace Example
             try
             {
                 // Request password reset. Flipdish system will send a token via email.
-                Object result = apiInstance.RequestPasswordReset(email);
-                Debug.WriteLine(result);
+                apiInstance.RequestPasswordReset(email);
             }
             catch (Exception e)
             {
@@ -490,7 +490,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 
@@ -505,7 +505,7 @@ Name | Type | Description  | Notes
 
 <a name="skipsignupstep"></a>
 # **SkipSignupStep**
-> RestApiResultAccountDetail SkipSignupStep (string signupStepAction)
+> Object SkipSignupStep (string signupStepAction)
 
 
 
@@ -531,7 +531,7 @@ namespace Example
 
             try
             {
-                RestApiResultAccountDetail result = apiInstance.SkipSignupStep(signupStepAction);
+                Object result = apiInstance.SkipSignupStep(signupStepAction);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -551,7 +551,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiResultAccountDetail**](RestApiResultAccountDetail.md)
+**Object**
 
 ### Authorization
 
@@ -560,6 +560,68 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="updateaccount"></a>
+# **UpdateAccount**
+> Object UpdateAccount (UpdateAccountModel updateAccountModel)
+
+Update account with name and language
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UpdateAccountExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AccountsApi();
+            var updateAccountModel = new UpdateAccountModel(); // UpdateAccountModel | Update account model
+
+            try
+            {
+                // Update account with name and language
+                Object result = apiInstance.UpdateAccount(updateAccountModel);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AccountsApi.UpdateAccount: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateAccountModel** | [**UpdateAccountModel**](UpdateAccountModel.md)| Update account model | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

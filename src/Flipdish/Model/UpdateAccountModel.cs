@@ -25,53 +25,35 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Account details
+    /// Update account model
     /// </summary>
     [DataContract]
-    public partial class AccountDetail :  IEquatable<AccountDetail>, IValidatableObject
+    public partial class UpdateAccountModel :  IEquatable<UpdateAccountModel>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AccountDetail" /> class.
+        /// Initializes a new instance of the <see cref="UpdateAccountModel" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Email">Email.</param>
-        /// <param name="Language">Language Id.</param>
-        /// <param name="SignupSteps">Signup steps.</param>
-        public AccountDetail(string Name = default(string), string Email = default(string), string Language = default(string), List<SignupStep> SignupSteps = default(List<SignupStep>))
+        /// <param name="Name">Name of the user.</param>
+        /// <param name="Language">Language of the user.</param>
+        public UpdateAccountModel(string Name = default(string), string Language = default(string))
         {
             this.Name = Name;
-            this.Email = Email;
             this.Language = Language;
-            this.SignupSteps = SignupSteps;
         }
         
         /// <summary>
-        /// Name
+        /// Name of the user
         /// </summary>
-        /// <value>Name</value>
+        /// <value>Name of the user</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Email
+        /// Language of the user
         /// </summary>
-        /// <value>Email</value>
-        [DataMember(Name="Email", EmitDefaultValue=false)]
-        public string Email { get; set; }
-
-        /// <summary>
-        /// Language Id
-        /// </summary>
-        /// <value>Language Id</value>
+        /// <value>Language of the user</value>
         [DataMember(Name="Language", EmitDefaultValue=false)]
         public string Language { get; set; }
-
-        /// <summary>
-        /// Signup steps
-        /// </summary>
-        /// <value>Signup steps</value>
-        [DataMember(Name="SignupSteps", EmitDefaultValue=false)]
-        public List<SignupStep> SignupSteps { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -80,11 +62,9 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AccountDetail {\n");
+            sb.Append("class UpdateAccountModel {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
-            sb.Append("  SignupSteps: ").Append(SignupSteps).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,15 +85,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AccountDetail);
+            return this.Equals(input as UpdateAccountModel);
         }
 
         /// <summary>
-        /// Returns true if AccountDetail instances are equal
+        /// Returns true if UpdateAccountModel instances are equal
         /// </summary>
-        /// <param name="input">Instance of AccountDetail to be compared</param>
+        /// <param name="input">Instance of UpdateAccountModel to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AccountDetail input)
+        public bool Equals(UpdateAccountModel input)
         {
             if (input == null)
                 return false;
@@ -125,19 +105,9 @@ namespace Flipdish.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Email == input.Email ||
-                    (this.Email != null &&
-                    this.Email.Equals(input.Email))
-                ) && 
-                (
                     this.Language == input.Language ||
                     (this.Language != null &&
                     this.Language.Equals(input.Language))
-                ) && 
-                (
-                    this.SignupSteps == input.SignupSteps ||
-                    this.SignupSteps != null &&
-                    this.SignupSteps.SequenceEqual(input.SignupSteps)
                 );
         }
 
@@ -152,12 +122,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.Email != null)
-                    hashCode = hashCode * 59 + this.Email.GetHashCode();
                 if (this.Language != null)
                     hashCode = hashCode * 59 + this.Language.GetHashCode();
-                if (this.SignupSteps != null)
-                    hashCode = hashCode * 59 + this.SignupSteps.GetHashCode();
                 return hashCode;
             }
         }

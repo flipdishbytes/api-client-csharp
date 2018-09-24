@@ -33,8 +33,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
         /// <param name="answerId"></param>
-        /// <returns>RestApiResultAccountDetail</returns>
-        RestApiResultAccountDetail AnswerSignUpQuestion (string signupStepAction, int? answerId);
+        /// <returns>Object</returns>
+        Object AnswerSignUpQuestion (string signupStepAction, int? answerId);
 
         /// <summary>
         /// 
@@ -45,8 +45,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
         /// <param name="answerId"></param>
-        /// <returns>ApiResponse of RestApiResultAccountDetail</returns>
-        ApiResponse<RestApiResultAccountDetail> AnswerSignUpQuestionWithHttpInfo (string signupStepAction, int? answerId);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> AnswerSignUpQuestionWithHttpInfo (string signupStepAction, int? answerId);
         /// <summary>
         /// Change password
         /// </summary>
@@ -177,8 +177,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email address</param>
-        /// <returns>Object</returns>
-        Object RequestPasswordReset (string email);
+        /// <returns></returns>
+        void RequestPasswordReset (string email);
 
         /// <summary>
         /// Request password reset. Flipdish system will send a token via email.
@@ -188,7 +188,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email address</param>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RequestPasswordResetWithHttpInfo (string email);
         /// <summary>
         /// 
@@ -198,8 +198,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
-        /// <returns>RestApiResultAccountDetail</returns>
-        RestApiResultAccountDetail SkipSignupStep (string signupStepAction);
+        /// <returns>Object</returns>
+        Object SkipSignupStep (string signupStepAction);
 
         /// <summary>
         /// 
@@ -209,8 +209,29 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
-        /// <returns>ApiResponse of RestApiResultAccountDetail</returns>
-        ApiResponse<RestApiResultAccountDetail> SkipSignupStepWithHttpInfo (string signupStepAction);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> SkipSignupStepWithHttpInfo (string signupStepAction);
+        /// <summary>
+        /// Update account with name and language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateAccountModel">Update account model</param>
+        /// <returns>Object</returns>
+        Object UpdateAccount (UpdateAccountModel updateAccountModel);
+
+        /// <summary>
+        /// Update account with name and language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateAccountModel">Update account model</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> UpdateAccountWithHttpInfo (UpdateAccountModel updateAccountModel);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -222,8 +243,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
         /// <param name="answerId"></param>
-        /// <returns>Task of RestApiResultAccountDetail</returns>
-        System.Threading.Tasks.Task<RestApiResultAccountDetail> AnswerSignUpQuestionAsync (string signupStepAction, int? answerId);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> AnswerSignUpQuestionAsync (string signupStepAction, int? answerId);
 
         /// <summary>
         /// 
@@ -234,8 +255,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
         /// <param name="answerId"></param>
-        /// <returns>Task of ApiResponse (RestApiResultAccountDetail)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultAccountDetail>> AnswerSignUpQuestionAsyncWithHttpInfo (string signupStepAction, int? answerId);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> AnswerSignUpQuestionAsyncWithHttpInfo (string signupStepAction, int? answerId);
         /// <summary>
         /// Change password
         /// </summary>
@@ -366,8 +387,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email address</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> RequestPasswordResetAsync (string email);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task RequestPasswordResetAsync (string email);
 
         /// <summary>
         /// Request password reset. Flipdish system will send a token via email.
@@ -377,7 +398,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email address</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RequestPasswordResetAsyncWithHttpInfo (string email);
         /// <summary>
         /// 
@@ -387,8 +408,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
-        /// <returns>Task of RestApiResultAccountDetail</returns>
-        System.Threading.Tasks.Task<RestApiResultAccountDetail> SkipSignupStepAsync (string signupStepAction);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> SkipSignupStepAsync (string signupStepAction);
 
         /// <summary>
         /// 
@@ -398,8 +419,29 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
-        /// <returns>Task of ApiResponse (RestApiResultAccountDetail)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultAccountDetail>> SkipSignupStepAsyncWithHttpInfo (string signupStepAction);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SkipSignupStepAsyncWithHttpInfo (string signupStepAction);
+        /// <summary>
+        /// Update account with name and language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateAccountModel">Update account model</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> UpdateAccountAsync (UpdateAccountModel updateAccountModel);
+
+        /// <summary>
+        /// Update account with name and language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateAccountModel">Update account model</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAccountAsyncWithHttpInfo (UpdateAccountModel updateAccountModel);
         #endregion Asynchronous Operations
     }
 
@@ -506,10 +548,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
         /// <param name="answerId"></param>
-        /// <returns>RestApiResultAccountDetail</returns>
-        public RestApiResultAccountDetail AnswerSignUpQuestion (string signupStepAction, int? answerId)
+        /// <returns>Object</returns>
+        public Object AnswerSignUpQuestion (string signupStepAction, int? answerId)
         {
-             ApiResponse<RestApiResultAccountDetail> localVarResponse = AnswerSignUpQuestionWithHttpInfo(signupStepAction, answerId);
+             ApiResponse<Object> localVarResponse = AnswerSignUpQuestionWithHttpInfo(signupStepAction, answerId);
              return localVarResponse.Data;
         }
 
@@ -519,8 +561,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
         /// <param name="answerId"></param>
-        /// <returns>ApiResponse of RestApiResultAccountDetail</returns>
-        public ApiResponse< RestApiResultAccountDetail > AnswerSignUpQuestionWithHttpInfo (string signupStepAction, int? answerId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > AnswerSignUpQuestionWithHttpInfo (string signupStepAction, int? answerId)
         {
             // verify the required parameter 'signupStepAction' is set
             if (signupStepAction == null)
@@ -588,9 +630,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultAccountDetail>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultAccountDetail) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAccountDetail)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -599,10 +641,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
         /// <param name="answerId"></param>
-        /// <returns>Task of RestApiResultAccountDetail</returns>
-        public async System.Threading.Tasks.Task<RestApiResultAccountDetail> AnswerSignUpQuestionAsync (string signupStepAction, int? answerId)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> AnswerSignUpQuestionAsync (string signupStepAction, int? answerId)
         {
-             ApiResponse<RestApiResultAccountDetail> localVarResponse = await AnswerSignUpQuestionAsyncWithHttpInfo(signupStepAction, answerId);
+             ApiResponse<Object> localVarResponse = await AnswerSignUpQuestionAsyncWithHttpInfo(signupStepAction, answerId);
              return localVarResponse.Data;
 
         }
@@ -613,8 +655,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
         /// <param name="answerId"></param>
-        /// <returns>Task of ApiResponse (RestApiResultAccountDetail)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAccountDetail>> AnswerSignUpQuestionAsyncWithHttpInfo (string signupStepAction, int? answerId)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AnswerSignUpQuestionAsyncWithHttpInfo (string signupStepAction, int? answerId)
         {
             // verify the required parameter 'signupStepAction' is set
             if (signupStepAction == null)
@@ -682,9 +724,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultAccountDetail>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultAccountDetail) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAccountDetail)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1670,11 +1712,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email address</param>
-        /// <returns>Object</returns>
-        public Object RequestPasswordReset (string email)
+        /// <returns></returns>
+        public void RequestPasswordReset (string email)
         {
-             ApiResponse<Object> localVarResponse = RequestPasswordResetWithHttpInfo(email);
-             return localVarResponse.Data;
+             RequestPasswordResetWithHttpInfo(email);
         }
 
         /// <summary>
@@ -1682,8 +1723,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email address</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > RequestPasswordResetWithHttpInfo (string email)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> RequestPasswordResetWithHttpInfo (string email)
         {
             // verify the required parameter 'email' is set
             if (email == null)
@@ -1737,7 +1778,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -1745,11 +1786,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email address</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> RequestPasswordResetAsync (string email)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task RequestPasswordResetAsync (string email)
         {
-             ApiResponse<Object> localVarResponse = await RequestPasswordResetAsyncWithHttpInfo(email);
-             return localVarResponse.Data;
+             await RequestPasswordResetAsyncWithHttpInfo(email);
 
         }
 
@@ -1758,7 +1798,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email address</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> RequestPasswordResetAsyncWithHttpInfo (string email)
         {
             // verify the required parameter 'email' is set
@@ -1813,7 +1853,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -1821,10 +1861,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
-        /// <returns>RestApiResultAccountDetail</returns>
-        public RestApiResultAccountDetail SkipSignupStep (string signupStepAction)
+        /// <returns>Object</returns>
+        public Object SkipSignupStep (string signupStepAction)
         {
-             ApiResponse<RestApiResultAccountDetail> localVarResponse = SkipSignupStepWithHttpInfo(signupStepAction);
+             ApiResponse<Object> localVarResponse = SkipSignupStepWithHttpInfo(signupStepAction);
              return localVarResponse.Data;
         }
 
@@ -1833,8 +1873,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
-        /// <returns>ApiResponse of RestApiResultAccountDetail</returns>
-        public ApiResponse< RestApiResultAccountDetail > SkipSignupStepWithHttpInfo (string signupStepAction)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > SkipSignupStepWithHttpInfo (string signupStepAction)
         {
             // verify the required parameter 'signupStepAction' is set
             if (signupStepAction == null)
@@ -1886,9 +1926,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultAccountDetail>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultAccountDetail) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAccountDetail)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1896,10 +1936,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
-        /// <returns>Task of RestApiResultAccountDetail</returns>
-        public async System.Threading.Tasks.Task<RestApiResultAccountDetail> SkipSignupStepAsync (string signupStepAction)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> SkipSignupStepAsync (string signupStepAction)
         {
-             ApiResponse<RestApiResultAccountDetail> localVarResponse = await SkipSignupStepAsyncWithHttpInfo(signupStepAction);
+             ApiResponse<Object> localVarResponse = await SkipSignupStepAsyncWithHttpInfo(signupStepAction);
              return localVarResponse.Data;
 
         }
@@ -1909,8 +1949,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction"></param>
-        /// <returns>Task of ApiResponse (RestApiResultAccountDetail)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAccountDetail>> SkipSignupStepAsyncWithHttpInfo (string signupStepAction)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SkipSignupStepAsyncWithHttpInfo (string signupStepAction)
         {
             // verify the required parameter 'signupStepAction' is set
             if (signupStepAction == null)
@@ -1962,9 +2002,184 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultAccountDetail>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultAccountDetail) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAccountDetail)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Update account with name and language 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateAccountModel">Update account model</param>
+        /// <returns>Object</returns>
+        public Object UpdateAccount (UpdateAccountModel updateAccountModel)
+        {
+             ApiResponse<Object> localVarResponse = UpdateAccountWithHttpInfo(updateAccountModel);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update account with name and language 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateAccountModel">Update account model</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > UpdateAccountWithHttpInfo (UpdateAccountModel updateAccountModel)
+        {
+            // verify the required parameter 'updateAccountModel' is set
+            if (updateAccountModel == null)
+                throw new ApiException(400, "Missing required parameter 'updateAccountModel' when calling AccountsApi->UpdateAccount");
+
+            var localVarPath = "/api/v1.0/accounts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (updateAccountModel != null && updateAccountModel.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(updateAccountModel); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = updateAccountModel; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateAccount", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Update account with name and language 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateAccountModel">Update account model</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> UpdateAccountAsync (UpdateAccountModel updateAccountModel)
+        {
+             ApiResponse<Object> localVarResponse = await UpdateAccountAsyncWithHttpInfo(updateAccountModel);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update account with name and language 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateAccountModel">Update account model</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAccountAsyncWithHttpInfo (UpdateAccountModel updateAccountModel)
+        {
+            // verify the required parameter 'updateAccountModel' is set
+            if (updateAccountModel == null)
+                throw new ApiException(400, "Missing required parameter 'updateAccountModel' when calling AccountsApi->UpdateAccount");
+
+            var localVarPath = "/api/v1.0/accounts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (updateAccountModel != null && updateAccountModel.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(updateAccountModel); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = updateAccountModel; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateAccount", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
     }
