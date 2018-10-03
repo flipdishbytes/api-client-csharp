@@ -32,8 +32,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>RestApiArrayResultProcessingFeeConfig</returns>
-        RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreId (int? storeId);
+        RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreId (int? storeId, string appNameId = null);
 
         /// <summary>
         /// Get processing fee configs by store identifier
@@ -43,8 +44,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultProcessingFeeConfig</returns>
-        ApiResponse<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdWithHttpInfo (int? storeId);
+        ApiResponse<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdWithHttpInfo (int? storeId, string appNameId = null);
         /// <summary>
         /// Get processing fee configs by store identifier
         /// </summary>
@@ -54,8 +56,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>RestApiResultProcessingFeeConfig</returns>
-        RestApiResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIdAndPaymentAccountType (int? storeId, string paymentAccountType);
+        RestApiResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIdAndPaymentAccountType (int? storeId, string paymentAccountType, string appNameId = null);
 
         /// <summary>
         /// Get processing fee configs by store identifier
@@ -66,8 +69,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>ApiResponse of RestApiResultProcessingFeeConfig</returns>
-        ApiResponse<RestApiResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo (int? storeId, string paymentAccountType);
+        ApiResponse<RestApiResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo (int? storeId, string paymentAccountType, string appNameId = null);
         /// <summary>
         /// Get store by identifier
         /// </summary>
@@ -99,8 +103,9 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeGroupId">Store Group Id (optional)</param>
         /// <returns>RestApiPaginationResultStore</returns>
-        RestApiPaginationResultStore GetStores (string searchQuery = null, int? page = null, int? limit = null);
+        RestApiPaginationResultStore GetStores (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null);
 
         /// <summary>
         /// Get all stores
@@ -112,8 +117,9 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeGroupId">Store Group Id (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStore</returns>
-        ApiResponse<RestApiPaginationResultStore> GetStoresWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null);
+        ApiResponse<RestApiPaginationResultStore> GetStoresWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null);
         /// <summary>
         /// Update store address
         /// </summary>
@@ -146,8 +152,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>RestApiResultCoordinates</returns>
-        RestApiResultCoordinates UpdateStoreAddressCoordinates (int? storeId, Coordinates coordinates);
+        RestApiResultCoordinates UpdateStoreAddressCoordinates (int? storeId, Coordinates coordinates, string appNameId = null);
 
         /// <summary>
         /// Update store address coordinates
@@ -158,8 +165,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>ApiResponse of RestApiResultCoordinates</returns>
-        ApiResponse<RestApiResultCoordinates> UpdateStoreAddressCoordinatesWithHttpInfo (int? storeId, Coordinates coordinates);
+        ApiResponse<RestApiResultCoordinates> UpdateStoreAddressCoordinatesWithHttpInfo (int? storeId, Coordinates coordinates, string appNameId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -170,8 +178,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>Task of RestApiArrayResultProcessingFeeConfig</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAsync (int? storeId);
+        System.Threading.Tasks.Task<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAsync (int? storeId, string appNameId = null);
 
         /// <summary>
         /// Get processing fee configs by store identifier
@@ -181,8 +190,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultProcessingFeeConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAsyncWithHttpInfo (int? storeId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAsyncWithHttpInfo (int? storeId, string appNameId = null);
         /// <summary>
         /// Get processing fee configs by store identifier
         /// </summary>
@@ -192,8 +202,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>Task of RestApiResultProcessingFeeConfig</returns>
-        System.Threading.Tasks.Task<RestApiResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsync (int? storeId, string paymentAccountType);
+        System.Threading.Tasks.Task<RestApiResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsync (int? storeId, string paymentAccountType, string appNameId = null);
 
         /// <summary>
         /// Get processing fee configs by store identifier
@@ -204,8 +215,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultProcessingFeeConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo (int? storeId, string paymentAccountType);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo (int? storeId, string paymentAccountType, string appNameId = null);
         /// <summary>
         /// Get store by identifier
         /// </summary>
@@ -237,8 +249,9 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeGroupId">Store Group Id (optional)</param>
         /// <returns>Task of RestApiPaginationResultStore</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresAsync (string searchQuery = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresAsync (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null);
 
         /// <summary>
         /// Get all stores
@@ -250,8 +263,9 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeGroupId">Store Group Id (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStore)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresAsyncWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresAsyncWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null);
         /// <summary>
         /// Update store address
         /// </summary>
@@ -284,8 +298,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>Task of RestApiResultCoordinates</returns>
-        System.Threading.Tasks.Task<RestApiResultCoordinates> UpdateStoreAddressCoordinatesAsync (int? storeId, Coordinates coordinates);
+        System.Threading.Tasks.Task<RestApiResultCoordinates> UpdateStoreAddressCoordinatesAsync (int? storeId, Coordinates coordinates, string appNameId = null);
 
         /// <summary>
         /// Update store address coordinates
@@ -296,8 +311,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultCoordinates)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultCoordinates>> UpdateStoreAddressCoordinatesAsyncWithHttpInfo (int? storeId, Coordinates coordinates);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultCoordinates>> UpdateStoreAddressCoordinatesAsyncWithHttpInfo (int? storeId, Coordinates coordinates, string appNameId = null);
         #endregion Asynchronous Operations
     }
 
@@ -403,10 +419,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>RestApiArrayResultProcessingFeeConfig</returns>
-        public RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreId (int? storeId)
+        public RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreId (int? storeId, string appNameId = null)
         {
-             ApiResponse<RestApiArrayResultProcessingFeeConfig> localVarResponse = GetProcessingFeeConfigsByStoreIdWithHttpInfo(storeId);
+             ApiResponse<RestApiArrayResultProcessingFeeConfig> localVarResponse = GetProcessingFeeConfigsByStoreIdWithHttpInfo(storeId, appNameId);
              return localVarResponse.Data;
         }
 
@@ -415,8 +432,9 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultProcessingFeeConfig</returns>
-        public ApiResponse< RestApiArrayResultProcessingFeeConfig > GetProcessingFeeConfigsByStoreIdWithHttpInfo (int? storeId)
+        public ApiResponse< RestApiArrayResultProcessingFeeConfig > GetProcessingFeeConfigsByStoreIdWithHttpInfo (int? storeId, string appNameId = null)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -447,6 +465,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (appNameId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "appNameId", appNameId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -478,10 +497,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>Task of RestApiArrayResultProcessingFeeConfig</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAsync (int? storeId)
+        public async System.Threading.Tasks.Task<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAsync (int? storeId, string appNameId = null)
         {
-             ApiResponse<RestApiArrayResultProcessingFeeConfig> localVarResponse = await GetProcessingFeeConfigsByStoreIdAsyncWithHttpInfo(storeId);
+             ApiResponse<RestApiArrayResultProcessingFeeConfig> localVarResponse = await GetProcessingFeeConfigsByStoreIdAsyncWithHttpInfo(storeId, appNameId);
              return localVarResponse.Data;
 
         }
@@ -491,8 +511,9 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultProcessingFeeConfig)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAsyncWithHttpInfo (int? storeId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAsyncWithHttpInfo (int? storeId, string appNameId = null)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -523,6 +544,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (appNameId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "appNameId", appNameId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -555,10 +577,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>RestApiResultProcessingFeeConfig</returns>
-        public RestApiResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIdAndPaymentAccountType (int? storeId, string paymentAccountType)
+        public RestApiResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIdAndPaymentAccountType (int? storeId, string paymentAccountType, string appNameId = null)
         {
-             ApiResponse<RestApiResultProcessingFeeConfig> localVarResponse = GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo(storeId, paymentAccountType);
+             ApiResponse<RestApiResultProcessingFeeConfig> localVarResponse = GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo(storeId, paymentAccountType, appNameId);
              return localVarResponse.Data;
         }
 
@@ -568,8 +591,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>ApiResponse of RestApiResultProcessingFeeConfig</returns>
-        public ApiResponse< RestApiResultProcessingFeeConfig > GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo (int? storeId, string paymentAccountType)
+        public ApiResponse< RestApiResultProcessingFeeConfig > GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo (int? storeId, string paymentAccountType, string appNameId = null)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -604,6 +628,7 @@ namespace Flipdish.Api
 
             if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
             if (paymentAccountType != null) localVarPathParams.Add("paymentAccountType", Configuration.ApiClient.ParameterToString(paymentAccountType)); // path parameter
+            if (appNameId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "appNameId", appNameId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -636,10 +661,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>Task of RestApiResultProcessingFeeConfig</returns>
-        public async System.Threading.Tasks.Task<RestApiResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsync (int? storeId, string paymentAccountType)
+        public async System.Threading.Tasks.Task<RestApiResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsync (int? storeId, string paymentAccountType, string appNameId = null)
         {
-             ApiResponse<RestApiResultProcessingFeeConfig> localVarResponse = await GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo(storeId, paymentAccountType);
+             ApiResponse<RestApiResultProcessingFeeConfig> localVarResponse = await GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo(storeId, paymentAccountType, appNameId);
              return localVarResponse.Data;
 
         }
@@ -650,8 +676,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultProcessingFeeConfig)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo (int? storeId, string paymentAccountType)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo (int? storeId, string paymentAccountType, string appNameId = null)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -686,6 +713,7 @@ namespace Flipdish.Api
 
             if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
             if (paymentAccountType != null) localVarPathParams.Add("paymentAccountType", Configuration.ApiClient.ParameterToString(paymentAccountType)); // path parameter
+            if (appNameId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "appNameId", appNameId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -870,10 +898,11 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeGroupId">Store Group Id (optional)</param>
         /// <returns>RestApiPaginationResultStore</returns>
-        public RestApiPaginationResultStore GetStores (string searchQuery = null, int? page = null, int? limit = null)
+        public RestApiPaginationResultStore GetStores (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null)
         {
-             ApiResponse<RestApiPaginationResultStore> localVarResponse = GetStoresWithHttpInfo(searchQuery, page, limit);
+             ApiResponse<RestApiPaginationResultStore> localVarResponse = GetStoresWithHttpInfo(searchQuery, page, limit, storeGroupId);
              return localVarResponse.Data;
         }
 
@@ -884,8 +913,9 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeGroupId">Store Group Id (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStore</returns>
-        public ApiResponse< RestApiPaginationResultStore > GetStoresWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null)
+        public ApiResponse< RestApiPaginationResultStore > GetStoresWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null)
         {
 
             var localVarPath = "/api/v1.0/stores";
@@ -915,6 +945,7 @@ namespace Flipdish.Api
             if (searchQuery != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
             if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (storeGroupId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -948,10 +979,11 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeGroupId">Store Group Id (optional)</param>
         /// <returns>Task of RestApiPaginationResultStore</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresAsync (string searchQuery = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresAsync (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null)
         {
-             ApiResponse<RestApiPaginationResultStore> localVarResponse = await GetStoresAsyncWithHttpInfo(searchQuery, page, limit);
+             ApiResponse<RestApiPaginationResultStore> localVarResponse = await GetStoresAsyncWithHttpInfo(searchQuery, page, limit, storeGroupId);
              return localVarResponse.Data;
 
         }
@@ -963,8 +995,9 @@ namespace Flipdish.Api
         /// <param name="searchQuery">Search query (optional)</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeGroupId">Store Group Id (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStore)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresAsyncWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresAsyncWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null)
         {
 
             var localVarPath = "/api/v1.0/stores";
@@ -994,6 +1027,7 @@ namespace Flipdish.Api
             if (searchQuery != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
             if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (storeGroupId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1213,10 +1247,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>RestApiResultCoordinates</returns>
-        public RestApiResultCoordinates UpdateStoreAddressCoordinates (int? storeId, Coordinates coordinates)
+        public RestApiResultCoordinates UpdateStoreAddressCoordinates (int? storeId, Coordinates coordinates, string appNameId = null)
         {
-             ApiResponse<RestApiResultCoordinates> localVarResponse = UpdateStoreAddressCoordinatesWithHttpInfo(storeId, coordinates);
+             ApiResponse<RestApiResultCoordinates> localVarResponse = UpdateStoreAddressCoordinatesWithHttpInfo(storeId, coordinates, appNameId);
              return localVarResponse.Data;
         }
 
@@ -1226,8 +1261,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>ApiResponse of RestApiResultCoordinates</returns>
-        public ApiResponse< RestApiResultCoordinates > UpdateStoreAddressCoordinatesWithHttpInfo (int? storeId, Coordinates coordinates)
+        public ApiResponse< RestApiResultCoordinates > UpdateStoreAddressCoordinatesWithHttpInfo (int? storeId, Coordinates coordinates, string appNameId = null)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -1266,6 +1302,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (appNameId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "appNameId", appNameId)); // query parameter
             if (coordinates != null && coordinates.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(coordinates); // http body (model) parameter
@@ -1306,10 +1343,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>Task of RestApiResultCoordinates</returns>
-        public async System.Threading.Tasks.Task<RestApiResultCoordinates> UpdateStoreAddressCoordinatesAsync (int? storeId, Coordinates coordinates)
+        public async System.Threading.Tasks.Task<RestApiResultCoordinates> UpdateStoreAddressCoordinatesAsync (int? storeId, Coordinates coordinates, string appNameId = null)
         {
-             ApiResponse<RestApiResultCoordinates> localVarResponse = await UpdateStoreAddressCoordinatesAsyncWithHttpInfo(storeId, coordinates);
+             ApiResponse<RestApiResultCoordinates> localVarResponse = await UpdateStoreAddressCoordinatesAsyncWithHttpInfo(storeId, coordinates, appNameId);
              return localVarResponse.Data;
 
         }
@@ -1320,8 +1358,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
+        /// <param name="appNameId">App Name Id (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultCoordinates)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCoordinates>> UpdateStoreAddressCoordinatesAsyncWithHttpInfo (int? storeId, Coordinates coordinates)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCoordinates>> UpdateStoreAddressCoordinatesAsyncWithHttpInfo (int? storeId, Coordinates coordinates, string appNameId = null)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -1360,6 +1399,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (appNameId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "appNameId", appNameId)); // query parameter
             if (coordinates != null && coordinates.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(coordinates); // http body (model) parameter

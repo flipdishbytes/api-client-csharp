@@ -182,6 +182,11 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**RefundOrder**](docs/OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
 *OrdersApi* | [**RejectOrder**](docs/OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 *ProcessingFeeConfigsApi* | [**GetProcessingFeeConfigsByStoreIds**](docs/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
+*StoreGroupsApi* | [**CreateStoreGroup**](docs/StoreGroupsApi.md#createstoregroup) | **POST** /api/v1.0/{appNameId}/storegroups | Creates a Store Group  It will be attached to an existing App
+*StoreGroupsApi* | [**GetStoreGroup**](docs/StoreGroupsApi.md#getstoregroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | Returns a Store Groups
+*StoreGroupsApi* | [**GetStoreGroups**](docs/StoreGroupsApi.md#getstoregroups) | **GET** /api/v1.0/{appNameId}/storegroups | Returns a paginated list of Store Groups
+*StoreGroupsApi* | [**RemoveStoreGroup**](docs/StoreGroupsApi.md#removestoregroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
+*StoreGroupsApi* | [**UpdateStoreGroup**](docs/StoreGroupsApi.md#updatestoregroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | Updates Store Group
 *StoresApi* | [**GetProcessingFeeConfigsByStoreId**](docs/StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
 *StoresApi* | [**GetProcessingFeeConfigsByStoreIdAndPaymentAccountType**](docs/StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
 *StoresApi* | [**GetStoreById**](docs/StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
@@ -320,6 +325,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultOAuthTokenModel](docs/RestApiPaginationResultOAuthTokenModel.md)
  - [Model.RestApiPaginationResultOrder](docs/RestApiPaginationResultOrder.md)
  - [Model.RestApiPaginationResultStore](docs/RestApiPaginationResultStore.md)
+ - [Model.RestApiPaginationResultStoreGroup](docs/RestApiPaginationResultStoreGroup.md)
  - [Model.RestApiPaginationResultVoucher](docs/RestApiPaginationResultVoucher.md)
  - [Model.RestApiPaginationResultWebhookLog](docs/RestApiPaginationResultWebhookLog.md)
  - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
@@ -341,6 +347,8 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultProcessingFeeConfig](docs/RestApiResultProcessingFeeConfig.md)
  - [Model.RestApiResultStore](docs/RestApiResultStore.md)
  - [Model.RestApiResultStoreAddress](docs/RestApiResultStoreAddress.md)
+ - [Model.RestApiResultStoreGroup](docs/RestApiResultStoreGroup.md)
+ - [Model.RestApiResultStoreGroupBase](docs/RestApiResultStoreGroupBase.md)
  - [Model.RestApiResultStuartSettings](docs/RestApiResultStuartSettings.md)
  - [Model.RestApiResultSubscription](docs/RestApiResultSubscription.md)
  - [Model.RestApiResultSubscriptionPlansResponse](docs/RestApiResultSubscriptionPlansResponse.md)
@@ -362,6 +370,8 @@ Class | Method | HTTP request | Description
  - [Model.StoreCreatedEvent](docs/StoreCreatedEvent.md)
  - [Model.StoreDeletedEvent](docs/StoreDeletedEvent.md)
  - [Model.StoreDeliveryZoneUpdatedEvent](docs/StoreDeliveryZoneUpdatedEvent.md)
+ - [Model.StoreGroup](docs/StoreGroup.md)
+ - [Model.StoreGroupBase](docs/StoreGroupBase.md)
  - [Model.StoreNote](docs/StoreNote.md)
  - [Model.StoreOpeningHoursUpdatedEvent](docs/StoreOpeningHoursUpdatedEvent.md)
  - [Model.StoreSummary](docs/StoreSummary.md)

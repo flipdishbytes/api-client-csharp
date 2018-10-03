@@ -72,7 +72,8 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? storeId = null;
-            //var response = instance.GetProcessingFeeConfigsByStoreId(storeId);
+            //string appNameId = null;
+            //var response = instance.GetProcessingFeeConfigsByStoreId(storeId, appNameId);
             //Assert.IsInstanceOf<RestApiArrayResultProcessingFeeConfig> (response, "response is RestApiArrayResultProcessingFeeConfig");
         }
         
@@ -85,7 +86,8 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? storeId = null;
             //string paymentAccountType = null;
-            //var response = instance.GetProcessingFeeConfigsByStoreIdAndPaymentAccountType(storeId, paymentAccountType);
+            //string appNameId = null;
+            //var response = instance.GetProcessingFeeConfigsByStoreIdAndPaymentAccountType(storeId, paymentAccountType, appNameId);
             //Assert.IsInstanceOf<RestApiResultProcessingFeeConfig> (response, "response is RestApiResultProcessingFeeConfig");
         }
         
@@ -111,7 +113,8 @@ namespace Flipdish.Test
             //string searchQuery = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.GetStores(searchQuery, page, limit);
+            //int? storeGroupId = null;
+            //var response = instance.GetStores(searchQuery, page, limit, storeGroupId);
             //Assert.IsInstanceOf<RestApiPaginationResultStore> (response, "response is RestApiPaginationResultStore");
         }
         
@@ -137,7 +140,8 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? storeId = null;
             //Coordinates coordinates = null;
-            //var response = instance.UpdateStoreAddressCoordinates(storeId, coordinates);
+            //string appNameId = null;
+            //var response = instance.UpdateStoreAddressCoordinates(storeId, coordinates, appNameId);
             //Assert.IsInstanceOf<RestApiResultCoordinates> (response, "response is RestApiResultCoordinates");
         }
         

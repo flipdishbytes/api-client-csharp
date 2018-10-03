@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="getprocessingfeeconfigsbystoreid"></a>
 # **GetProcessingFeeConfigsByStoreId**
-> RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreId (int? storeId)
+> RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreId (int? storeId, string appNameId = null)
 
 Get processing fee configs by store identifier
 
@@ -37,11 +37,12 @@ namespace Example
 
             var apiInstance = new StoresApi();
             var storeId = 56;  // int? | Store identifier
+            var appNameId = appNameId_example;  // string | App Name Id (optional) 
 
             try
             {
                 // Get processing fee configs by store identifier
-                RestApiArrayResultProcessingFeeConfig result = apiInstance.GetProcessingFeeConfigsByStoreId(storeId);
+                RestApiArrayResultProcessingFeeConfig result = apiInstance.GetProcessingFeeConfigsByStoreId(storeId, appNameId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -58,6 +59,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeId** | **int?**| Store identifier | 
+ **appNameId** | **string**| App Name Id | [optional] 
 
 ### Return type
 
@@ -76,7 +78,7 @@ Name | Type | Description  | Notes
 
 <a name="getprocessingfeeconfigsbystoreidandpaymentaccounttype"></a>
 # **GetProcessingFeeConfigsByStoreIdAndPaymentAccountType**
-> RestApiResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIdAndPaymentAccountType (int? storeId, string paymentAccountType)
+> RestApiResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIdAndPaymentAccountType (int? storeId, string paymentAccountType, string appNameId = null)
 
 Get processing fee configs by store identifier
 
@@ -100,11 +102,12 @@ namespace Example
             var apiInstance = new StoresApi();
             var storeId = 56;  // int? | Store identifier
             var paymentAccountType = paymentAccountType_example;  // string | 
+            var appNameId = appNameId_example;  // string | App Name Id (optional) 
 
             try
             {
                 // Get processing fee configs by store identifier
-                RestApiResultProcessingFeeConfig result = apiInstance.GetProcessingFeeConfigsByStoreIdAndPaymentAccountType(storeId, paymentAccountType);
+                RestApiResultProcessingFeeConfig result = apiInstance.GetProcessingFeeConfigsByStoreIdAndPaymentAccountType(storeId, paymentAccountType, appNameId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -122,6 +125,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeId** | **int?**| Store identifier | 
  **paymentAccountType** | **string**|  | 
+ **appNameId** | **string**| App Name Id | [optional] 
 
 ### Return type
 
@@ -202,7 +206,7 @@ Name | Type | Description  | Notes
 
 <a name="getstores"></a>
 # **GetStores**
-> RestApiPaginationResultStore GetStores (string searchQuery = null, int? page = null, int? limit = null)
+> RestApiPaginationResultStore GetStores (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null)
 
 Get all stores
 
@@ -227,11 +231,12 @@ namespace Example
             var searchQuery = searchQuery_example;  // string | Search query (optional) 
             var page = 56;  // int? | Requested page index (optional) 
             var limit = 56;  // int? | Requested page limit (optional) 
+            var storeGroupId = 56;  // int? | Store Group Id (optional) 
 
             try
             {
                 // Get all stores
-                RestApiPaginationResultStore result = apiInstance.GetStores(searchQuery, page, limit);
+                RestApiPaginationResultStore result = apiInstance.GetStores(searchQuery, page, limit, storeGroupId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -250,6 +255,7 @@ Name | Type | Description  | Notes
  **searchQuery** | **string**| Search query | [optional] 
  **page** | **int?**| Requested page index | [optional] 
  **limit** | **int?**| Requested page limit | [optional] 
+ **storeGroupId** | **int?**| Store Group Id | [optional] 
 
 ### Return type
 
@@ -332,7 +338,7 @@ Name | Type | Description  | Notes
 
 <a name="updatestoreaddresscoordinates"></a>
 # **UpdateStoreAddressCoordinates**
-> RestApiResultCoordinates UpdateStoreAddressCoordinates (int? storeId, Coordinates coordinates)
+> RestApiResultCoordinates UpdateStoreAddressCoordinates (int? storeId, Coordinates coordinates, string appNameId = null)
 
 Update store address coordinates
 
@@ -356,11 +362,12 @@ namespace Example
             var apiInstance = new StoresApi();
             var storeId = 56;  // int? | Store identifier
             var coordinates = new Coordinates(); // Coordinates | Store address coordinates
+            var appNameId = appNameId_example;  // string | App Name Id (optional) 
 
             try
             {
                 // Update store address coordinates
-                RestApiResultCoordinates result = apiInstance.UpdateStoreAddressCoordinates(storeId, coordinates);
+                RestApiResultCoordinates result = apiInstance.UpdateStoreAddressCoordinates(storeId, coordinates, appNameId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -378,6 +385,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeId** | **int?**| Store identifier | 
  **coordinates** | [**Coordinates**](Coordinates.md)| Store address coordinates | 
+ **appNameId** | **string**| App Name Id | [optional] 
 
 ### Return type
 
