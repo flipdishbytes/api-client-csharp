@@ -35,10 +35,24 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="CompanyId">Company Id.</param>
         /// <param name="Enabled">Enabled.</param>
-        public LightspeedSettings(string CompanyId = default(string), bool? Enabled = default(bool?))
+        /// <param name="EstimatedMinutesForDelivery">Estimated minutes for delivery.</param>
+        /// <param name="EstimatedMinutesForCollection">Estimated minutes for collection.</param>
+        /// <param name="GeographicLocation">Geographic location (euc1, nae1, euw2, ....)).</param>
+        /// <param name="Establishment">Is the CompanyId an establishment (kind of the store of a group of store).</param>
+        /// <param name="VoucherId">The Lightspeed voucher identifier to map with our.</param>
+        /// <param name="DeliveryFeeId">The Lightspeed delivery fee identifier to map with our.</param>
+        /// <param name="ProcessingFeeId">The Lightspeed processing fee identifier to map with our.</param>
+        public LightspeedSettings(string CompanyId = default(string), bool? Enabled = default(bool?), int? EstimatedMinutesForDelivery = default(int?), int? EstimatedMinutesForCollection = default(int?), string GeographicLocation = default(string), bool? Establishment = default(bool?), string VoucherId = default(string), string DeliveryFeeId = default(string), string ProcessingFeeId = default(string))
         {
             this.CompanyId = CompanyId;
             this.Enabled = Enabled;
+            this.EstimatedMinutesForDelivery = EstimatedMinutesForDelivery;
+            this.EstimatedMinutesForCollection = EstimatedMinutesForCollection;
+            this.GeographicLocation = GeographicLocation;
+            this.Establishment = Establishment;
+            this.VoucherId = VoucherId;
+            this.DeliveryFeeId = DeliveryFeeId;
+            this.ProcessingFeeId = ProcessingFeeId;
         }
         
         /// <summary>
@@ -56,6 +70,55 @@ namespace Flipdish.Model
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// Estimated minutes for delivery
+        /// </summary>
+        /// <value>Estimated minutes for delivery</value>
+        [DataMember(Name="EstimatedMinutesForDelivery", EmitDefaultValue=false)]
+        public int? EstimatedMinutesForDelivery { get; set; }
+
+        /// <summary>
+        /// Estimated minutes for collection
+        /// </summary>
+        /// <value>Estimated minutes for collection</value>
+        [DataMember(Name="EstimatedMinutesForCollection", EmitDefaultValue=false)]
+        public int? EstimatedMinutesForCollection { get; set; }
+
+        /// <summary>
+        /// Geographic location (euc1, nae1, euw2, ....))
+        /// </summary>
+        /// <value>Geographic location (euc1, nae1, euw2, ....))</value>
+        [DataMember(Name="GeographicLocation", EmitDefaultValue=false)]
+        public string GeographicLocation { get; set; }
+
+        /// <summary>
+        /// Is the CompanyId an establishment (kind of the store of a group of store)
+        /// </summary>
+        /// <value>Is the CompanyId an establishment (kind of the store of a group of store)</value>
+        [DataMember(Name="Establishment", EmitDefaultValue=false)]
+        public bool? Establishment { get; set; }
+
+        /// <summary>
+        /// The Lightspeed voucher identifier to map with our
+        /// </summary>
+        /// <value>The Lightspeed voucher identifier to map with our</value>
+        [DataMember(Name="VoucherId", EmitDefaultValue=false)]
+        public string VoucherId { get; set; }
+
+        /// <summary>
+        /// The Lightspeed delivery fee identifier to map with our
+        /// </summary>
+        /// <value>The Lightspeed delivery fee identifier to map with our</value>
+        [DataMember(Name="DeliveryFeeId", EmitDefaultValue=false)]
+        public string DeliveryFeeId { get; set; }
+
+        /// <summary>
+        /// The Lightspeed processing fee identifier to map with our
+        /// </summary>
+        /// <value>The Lightspeed processing fee identifier to map with our</value>
+        [DataMember(Name="ProcessingFeeId", EmitDefaultValue=false)]
+        public string ProcessingFeeId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +128,13 @@ namespace Flipdish.Model
             sb.Append("class LightspeedSettings {\n");
             sb.Append("  CompanyId: ").Append(CompanyId).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  EstimatedMinutesForDelivery: ").Append(EstimatedMinutesForDelivery).Append("\n");
+            sb.Append("  EstimatedMinutesForCollection: ").Append(EstimatedMinutesForCollection).Append("\n");
+            sb.Append("  GeographicLocation: ").Append(GeographicLocation).Append("\n");
+            sb.Append("  Establishment: ").Append(Establishment).Append("\n");
+            sb.Append("  VoucherId: ").Append(VoucherId).Append("\n");
+            sb.Append("  DeliveryFeeId: ").Append(DeliveryFeeId).Append("\n");
+            sb.Append("  ProcessingFeeId: ").Append(ProcessingFeeId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,6 +178,41 @@ namespace Flipdish.Model
                     this.Enabled == input.Enabled ||
                     (this.Enabled != null &&
                     this.Enabled.Equals(input.Enabled))
+                ) && 
+                (
+                    this.EstimatedMinutesForDelivery == input.EstimatedMinutesForDelivery ||
+                    (this.EstimatedMinutesForDelivery != null &&
+                    this.EstimatedMinutesForDelivery.Equals(input.EstimatedMinutesForDelivery))
+                ) && 
+                (
+                    this.EstimatedMinutesForCollection == input.EstimatedMinutesForCollection ||
+                    (this.EstimatedMinutesForCollection != null &&
+                    this.EstimatedMinutesForCollection.Equals(input.EstimatedMinutesForCollection))
+                ) && 
+                (
+                    this.GeographicLocation == input.GeographicLocation ||
+                    (this.GeographicLocation != null &&
+                    this.GeographicLocation.Equals(input.GeographicLocation))
+                ) && 
+                (
+                    this.Establishment == input.Establishment ||
+                    (this.Establishment != null &&
+                    this.Establishment.Equals(input.Establishment))
+                ) && 
+                (
+                    this.VoucherId == input.VoucherId ||
+                    (this.VoucherId != null &&
+                    this.VoucherId.Equals(input.VoucherId))
+                ) && 
+                (
+                    this.DeliveryFeeId == input.DeliveryFeeId ||
+                    (this.DeliveryFeeId != null &&
+                    this.DeliveryFeeId.Equals(input.DeliveryFeeId))
+                ) && 
+                (
+                    this.ProcessingFeeId == input.ProcessingFeeId ||
+                    (this.ProcessingFeeId != null &&
+                    this.ProcessingFeeId.Equals(input.ProcessingFeeId))
                 );
         }
 
@@ -124,6 +229,20 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CompanyId.GetHashCode();
                 if (this.Enabled != null)
                     hashCode = hashCode * 59 + this.Enabled.GetHashCode();
+                if (this.EstimatedMinutesForDelivery != null)
+                    hashCode = hashCode * 59 + this.EstimatedMinutesForDelivery.GetHashCode();
+                if (this.EstimatedMinutesForCollection != null)
+                    hashCode = hashCode * 59 + this.EstimatedMinutesForCollection.GetHashCode();
+                if (this.GeographicLocation != null)
+                    hashCode = hashCode * 59 + this.GeographicLocation.GetHashCode();
+                if (this.Establishment != null)
+                    hashCode = hashCode * 59 + this.Establishment.GetHashCode();
+                if (this.VoucherId != null)
+                    hashCode = hashCode * 59 + this.VoucherId.GetHashCode();
+                if (this.DeliveryFeeId != null)
+                    hashCode = hashCode * 59 + this.DeliveryFeeId.GetHashCode();
+                if (this.ProcessingFeeId != null)
+                    hashCode = hashCode * 59 + this.ProcessingFeeId.GetHashCode();
                 return hashCode;
             }
         }

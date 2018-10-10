@@ -82,6 +82,62 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'Enabled'
         }
+        /// <summary>
+        /// Test the property 'EstimatedMinutesForDelivery'
+        /// </summary>
+        [Test]
+        public void EstimatedMinutesForDeliveryTest()
+        {
+            // TODO unit test for the property 'EstimatedMinutesForDelivery'
+        }
+        /// <summary>
+        /// Test the property 'EstimatedMinutesForCollection'
+        /// </summary>
+        [Test]
+        public void EstimatedMinutesForCollectionTest()
+        {
+            // TODO unit test for the property 'EstimatedMinutesForCollection'
+        }
+        /// <summary>
+        /// Test the property 'GeographicLocation'
+        /// </summary>
+        [Test]
+        public void GeographicLocationTest()
+        {
+            // TODO unit test for the property 'GeographicLocation'
+        }
+        /// <summary>
+        /// Test the property 'Establishment'
+        /// </summary>
+        [Test]
+        public void EstablishmentTest()
+        {
+            // TODO unit test for the property 'Establishment'
+        }
+        /// <summary>
+        /// Test the property 'VoucherId'
+        /// </summary>
+        [Test]
+        public void VoucherIdTest()
+        {
+            // TODO unit test for the property 'VoucherId'
+        }
+        /// <summary>
+        /// Test the property 'DeliveryFeeId'
+        /// </summary>
+        [Test]
+        public void DeliveryFeeIdTest()
+        {
+            // TODO unit test for the property 'DeliveryFeeId'
+        }
+        /// <summary>
+        /// Test the property 'ProcessingFeeId'
+        /// </summary>
+        [Test]
+        public void ProcessingFeeIdTest()
+        {
+            // TODO unit test for the property 'ProcessingFeeId'
+        }
 
     }
 
