@@ -1,19 +1,8 @@
-# Flipdish.Model.Store
+# Flipdish.Model.StoreBase
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StoreId** | **int?** | Store identifier | [optional] 
-**Address** | [**StoreAddress**](StoreAddress.md) | Store address | [optional] 
-**DeliveryFeeAreas** | [**List&lt;DeliveryFeeArea&gt;**](DeliveryFeeArea.md) | Delivery fee areas | [optional] 
-**ApmPhoneNumber** | **string** | Automated Phone Marketing number | [optional] 
-**PickupHours** | [**List&lt;BusinessHoursPeriod&gt;**](BusinessHoursPeriod.md) | Pickup hours | [optional] 
-**DeliveryHours** | [**List&lt;BusinessHoursPeriod&gt;**](BusinessHoursPeriod.md) | Delivery hours | [optional] 
-**MenuId** | **int?** | Menu identifier | [optional] 
-**OrderConfirmationMessageOverrideDelivery** | **string** | Overridden confirmation message for delivery orders | [optional] 
-**OrderConfirmationMessageOverridePickup** | **string** | Overridden confirmation message for pickup orders | [optional] 
-**PrintoutLayoutType** | **string** | Printout layout | [optional] 
-**StoreNotes** | [**List&lt;StoreNote&gt;**](StoreNote.md) | Store notes | [optional] 
 **PhoneNumber** | **string** | Phone number | [optional] 
 **PreOrderEnabled** | **bool?** | True if the store accepts pre-orders | [optional] 
 **TakeOutEnabled** | **bool?** | True if the store accepts take-out orders | [optional] 

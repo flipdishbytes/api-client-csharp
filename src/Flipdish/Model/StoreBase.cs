@@ -25,52 +25,14 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Store
+    /// Store Base
     /// </summary>
     [DataContract]
-    public partial class Store :  IEquatable<Store>, IValidatableObject
+    public partial class StoreBase :  IEquatable<StoreBase>, IValidatableObject
     {
         /// <summary>
-        /// Printout layout
+        /// Initializes a new instance of the <see cref="StoreBase" /> class.
         /// </summary>
-        /// <value>Printout layout</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum PrintoutLayoutTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum Default for value: Default
-            /// </summary>
-            [EnumMember(Value = "Default")]
-            Default = 1,
-            
-            /// <summary>
-            /// Enum Centra for value: Centra
-            /// </summary>
-            [EnumMember(Value = "Centra")]
-            Centra = 2
-        }
-
-        /// <summary>
-        /// Printout layout
-        /// </summary>
-        /// <value>Printout layout</value>
-        [DataMember(Name="PrintoutLayoutType", EmitDefaultValue=false)]
-        public PrintoutLayoutTypeEnum? PrintoutLayoutType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Store" /> class.
-        /// </summary>
-        /// <param name="StoreId">Store identifier.</param>
-        /// <param name="Address">Store address.</param>
-        /// <param name="DeliveryFeeAreas">Delivery fee areas.</param>
-        /// <param name="ApmPhoneNumber">Automated Phone Marketing number.</param>
-        /// <param name="PickupHours">Pickup hours.</param>
-        /// <param name="DeliveryHours">Delivery hours.</param>
-        /// <param name="MenuId">Menu identifier.</param>
-        /// <param name="OrderConfirmationMessageOverrideDelivery">Overridden confirmation message for delivery orders.</param>
-        /// <param name="OrderConfirmationMessageOverridePickup">Overridden confirmation message for pickup orders.</param>
-        /// <param name="PrintoutLayoutType">Printout layout.</param>
-        /// <param name="StoreNotes">Store notes.</param>
         /// <param name="PhoneNumber">Phone number.</param>
         /// <param name="PreOrderEnabled">True if the store accepts pre-orders.</param>
         /// <param name="TakeOutEnabled">True if the store accepts take-out orders.</param>
@@ -95,19 +57,8 @@ namespace Flipdish.Model
         /// <param name="Name">Name.</param>
         /// <param name="EmailAddress">Email address (visible to customers).</param>
         /// <param name="StaffLanguage">Staff Language (used for communcation with the staff)  Emails, Printouts etc.</param>
-        public Store(int? StoreId = default(int?), StoreAddress Address = default(StoreAddress), List<DeliveryFeeArea> DeliveryFeeAreas = default(List<DeliveryFeeArea>), string ApmPhoneNumber = default(string), List<BusinessHoursPeriod> PickupHours = default(List<BusinessHoursPeriod>), List<BusinessHoursPeriod> DeliveryHours = default(List<BusinessHoursPeriod>), int? MenuId = default(int?), string OrderConfirmationMessageOverrideDelivery = default(string), string OrderConfirmationMessageOverridePickup = default(string), PrintoutLayoutTypeEnum? PrintoutLayoutType = default(PrintoutLayoutTypeEnum?), List<StoreNote> StoreNotes = default(List<StoreNote>), string PhoneNumber = default(string), bool? PreOrderEnabled = default(bool?), bool? TakeOutEnabled = default(bool?), bool? TableServiceEnabled = default(bool?), bool? DineInEnabled = default(bool?), bool? AllowPreOrdersAndTableService = default(bool?), bool? PickupEnabled = default(bool?), bool? DeliveryEnabled = default(bool?), bool? CardOrderDeliveryEnabled = default(bool?), bool? CashOrdersDeliveryEnabled = default(bool?), bool? CardOrdersPickupEnabled = default(bool?), bool? CashOrdersPickupEnabled = default(bool?), bool? TipsEnabled = default(bool?), bool? AutomaticallyAcceptOrders = default(bool?), bool? OpenForDelivery = default(bool?), bool? OpenForPickup = default(bool?), double? MinimumPickupOrderAmount = default(double?), bool? RequireCustomerNameForPickup = default(bool?), bool? RequireCustomerNameForDelivery = default(bool?), string MicrosoftTimeZone = default(string), string IanaTimeZone = default(string), string Name = default(string), string EmailAddress = default(string), string StaffLanguage = default(string))
+        public StoreBase(string PhoneNumber = default(string), bool? PreOrderEnabled = default(bool?), bool? TakeOutEnabled = default(bool?), bool? TableServiceEnabled = default(bool?), bool? DineInEnabled = default(bool?), bool? AllowPreOrdersAndTableService = default(bool?), bool? PickupEnabled = default(bool?), bool? DeliveryEnabled = default(bool?), bool? CardOrderDeliveryEnabled = default(bool?), bool? CashOrdersDeliveryEnabled = default(bool?), bool? CardOrdersPickupEnabled = default(bool?), bool? CashOrdersPickupEnabled = default(bool?), bool? TipsEnabled = default(bool?), bool? AutomaticallyAcceptOrders = default(bool?), bool? OpenForDelivery = default(bool?), bool? OpenForPickup = default(bool?), double? MinimumPickupOrderAmount = default(double?), bool? RequireCustomerNameForPickup = default(bool?), bool? RequireCustomerNameForDelivery = default(bool?), string MicrosoftTimeZone = default(string), string IanaTimeZone = default(string), string Name = default(string), string EmailAddress = default(string), string StaffLanguage = default(string))
         {
-            this.StoreId = StoreId;
-            this.Address = Address;
-            this.DeliveryFeeAreas = DeliveryFeeAreas;
-            this.ApmPhoneNumber = ApmPhoneNumber;
-            this.PickupHours = PickupHours;
-            this.DeliveryHours = DeliveryHours;
-            this.MenuId = MenuId;
-            this.OrderConfirmationMessageOverrideDelivery = OrderConfirmationMessageOverrideDelivery;
-            this.OrderConfirmationMessageOverridePickup = OrderConfirmationMessageOverridePickup;
-            this.PrintoutLayoutType = PrintoutLayoutType;
-            this.StoreNotes = StoreNotes;
             this.PhoneNumber = PhoneNumber;
             this.PreOrderEnabled = PreOrderEnabled;
             this.TakeOutEnabled = TakeOutEnabled;
@@ -134,77 +85,6 @@ namespace Flipdish.Model
             this.StaffLanguage = StaffLanguage;
         }
         
-        /// <summary>
-        /// Store identifier
-        /// </summary>
-        /// <value>Store identifier</value>
-        [DataMember(Name="StoreId", EmitDefaultValue=false)]
-        public int? StoreId { get; set; }
-
-        /// <summary>
-        /// Store address
-        /// </summary>
-        /// <value>Store address</value>
-        [DataMember(Name="Address", EmitDefaultValue=false)]
-        public StoreAddress Address { get; set; }
-
-        /// <summary>
-        /// Delivery fee areas
-        /// </summary>
-        /// <value>Delivery fee areas</value>
-        [DataMember(Name="DeliveryFeeAreas", EmitDefaultValue=false)]
-        public List<DeliveryFeeArea> DeliveryFeeAreas { get; set; }
-
-        /// <summary>
-        /// Automated Phone Marketing number
-        /// </summary>
-        /// <value>Automated Phone Marketing number</value>
-        [DataMember(Name="ApmPhoneNumber", EmitDefaultValue=false)]
-        public string ApmPhoneNumber { get; set; }
-
-        /// <summary>
-        /// Pickup hours
-        /// </summary>
-        /// <value>Pickup hours</value>
-        [DataMember(Name="PickupHours", EmitDefaultValue=false)]
-        public List<BusinessHoursPeriod> PickupHours { get; set; }
-
-        /// <summary>
-        /// Delivery hours
-        /// </summary>
-        /// <value>Delivery hours</value>
-        [DataMember(Name="DeliveryHours", EmitDefaultValue=false)]
-        public List<BusinessHoursPeriod> DeliveryHours { get; set; }
-
-        /// <summary>
-        /// Menu identifier
-        /// </summary>
-        /// <value>Menu identifier</value>
-        [DataMember(Name="MenuId", EmitDefaultValue=false)]
-        public int? MenuId { get; set; }
-
-        /// <summary>
-        /// Overridden confirmation message for delivery orders
-        /// </summary>
-        /// <value>Overridden confirmation message for delivery orders</value>
-        [DataMember(Name="OrderConfirmationMessageOverrideDelivery", EmitDefaultValue=false)]
-        public string OrderConfirmationMessageOverrideDelivery { get; set; }
-
-        /// <summary>
-        /// Overridden confirmation message for pickup orders
-        /// </summary>
-        /// <value>Overridden confirmation message for pickup orders</value>
-        [DataMember(Name="OrderConfirmationMessageOverridePickup", EmitDefaultValue=false)]
-        public string OrderConfirmationMessageOverridePickup { get; set; }
-
-
-        /// <summary>
-        /// Store notes
-        /// </summary>
-        /// <value>Store notes</value>
-        [DataMember(Name="StoreNotes", EmitDefaultValue=false)]
-        public List<StoreNote> StoreNotes { get; set; }
-
         /// <summary>
         /// Phone number
         /// </summary>
@@ -380,18 +260,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Store {\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
-            sb.Append("  Address: ").Append(Address).Append("\n");
-            sb.Append("  DeliveryFeeAreas: ").Append(DeliveryFeeAreas).Append("\n");
-            sb.Append("  ApmPhoneNumber: ").Append(ApmPhoneNumber).Append("\n");
-            sb.Append("  PickupHours: ").Append(PickupHours).Append("\n");
-            sb.Append("  DeliveryHours: ").Append(DeliveryHours).Append("\n");
-            sb.Append("  MenuId: ").Append(MenuId).Append("\n");
-            sb.Append("  OrderConfirmationMessageOverrideDelivery: ").Append(OrderConfirmationMessageOverrideDelivery).Append("\n");
-            sb.Append("  OrderConfirmationMessageOverridePickup: ").Append(OrderConfirmationMessageOverridePickup).Append("\n");
-            sb.Append("  PrintoutLayoutType: ").Append(PrintoutLayoutType).Append("\n");
-            sb.Append("  StoreNotes: ").Append(StoreNotes).Append("\n");
+            sb.Append("class StoreBase {\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  PreOrderEnabled: ").Append(PreOrderEnabled).Append("\n");
             sb.Append("  TakeOutEnabled: ").Append(TakeOutEnabled).Append("\n");
@@ -436,75 +305,20 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as Store);
+            return this.Equals(input as StoreBase);
         }
 
         /// <summary>
-        /// Returns true if Store instances are equal
+        /// Returns true if StoreBase instances are equal
         /// </summary>
-        /// <param name="input">Instance of Store to be compared</param>
+        /// <param name="input">Instance of StoreBase to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Store input)
+        public bool Equals(StoreBase input)
         {
             if (input == null)
                 return false;
 
             return 
-                (
-                    this.StoreId == input.StoreId ||
-                    (this.StoreId != null &&
-                    this.StoreId.Equals(input.StoreId))
-                ) && 
-                (
-                    this.Address == input.Address ||
-                    (this.Address != null &&
-                    this.Address.Equals(input.Address))
-                ) && 
-                (
-                    this.DeliveryFeeAreas == input.DeliveryFeeAreas ||
-                    this.DeliveryFeeAreas != null &&
-                    this.DeliveryFeeAreas.SequenceEqual(input.DeliveryFeeAreas)
-                ) && 
-                (
-                    this.ApmPhoneNumber == input.ApmPhoneNumber ||
-                    (this.ApmPhoneNumber != null &&
-                    this.ApmPhoneNumber.Equals(input.ApmPhoneNumber))
-                ) && 
-                (
-                    this.PickupHours == input.PickupHours ||
-                    this.PickupHours != null &&
-                    this.PickupHours.SequenceEqual(input.PickupHours)
-                ) && 
-                (
-                    this.DeliveryHours == input.DeliveryHours ||
-                    this.DeliveryHours != null &&
-                    this.DeliveryHours.SequenceEqual(input.DeliveryHours)
-                ) && 
-                (
-                    this.MenuId == input.MenuId ||
-                    (this.MenuId != null &&
-                    this.MenuId.Equals(input.MenuId))
-                ) && 
-                (
-                    this.OrderConfirmationMessageOverrideDelivery == input.OrderConfirmationMessageOverrideDelivery ||
-                    (this.OrderConfirmationMessageOverrideDelivery != null &&
-                    this.OrderConfirmationMessageOverrideDelivery.Equals(input.OrderConfirmationMessageOverrideDelivery))
-                ) && 
-                (
-                    this.OrderConfirmationMessageOverridePickup == input.OrderConfirmationMessageOverridePickup ||
-                    (this.OrderConfirmationMessageOverridePickup != null &&
-                    this.OrderConfirmationMessageOverridePickup.Equals(input.OrderConfirmationMessageOverridePickup))
-                ) && 
-                (
-                    this.PrintoutLayoutType == input.PrintoutLayoutType ||
-                    (this.PrintoutLayoutType != null &&
-                    this.PrintoutLayoutType.Equals(input.PrintoutLayoutType))
-                ) && 
-                (
-                    this.StoreNotes == input.StoreNotes ||
-                    this.StoreNotes != null &&
-                    this.StoreNotes.SequenceEqual(input.StoreNotes)
-                ) && 
                 (
                     this.PhoneNumber == input.PhoneNumber ||
                     (this.PhoneNumber != null &&
@@ -636,28 +450,6 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.StoreId != null)
-                    hashCode = hashCode * 59 + this.StoreId.GetHashCode();
-                if (this.Address != null)
-                    hashCode = hashCode * 59 + this.Address.GetHashCode();
-                if (this.DeliveryFeeAreas != null)
-                    hashCode = hashCode * 59 + this.DeliveryFeeAreas.GetHashCode();
-                if (this.ApmPhoneNumber != null)
-                    hashCode = hashCode * 59 + this.ApmPhoneNumber.GetHashCode();
-                if (this.PickupHours != null)
-                    hashCode = hashCode * 59 + this.PickupHours.GetHashCode();
-                if (this.DeliveryHours != null)
-                    hashCode = hashCode * 59 + this.DeliveryHours.GetHashCode();
-                if (this.MenuId != null)
-                    hashCode = hashCode * 59 + this.MenuId.GetHashCode();
-                if (this.OrderConfirmationMessageOverrideDelivery != null)
-                    hashCode = hashCode * 59 + this.OrderConfirmationMessageOverrideDelivery.GetHashCode();
-                if (this.OrderConfirmationMessageOverridePickup != null)
-                    hashCode = hashCode * 59 + this.OrderConfirmationMessageOverridePickup.GetHashCode();
-                if (this.PrintoutLayoutType != null)
-                    hashCode = hashCode * 59 + this.PrintoutLayoutType.GetHashCode();
-                if (this.StoreNotes != null)
-                    hashCode = hashCode * 59 + this.StoreNotes.GetHashCode();
                 if (this.PhoneNumber != null)
                     hashCode = hashCode * 59 + this.PhoneNumber.GetHashCode();
                 if (this.PreOrderEnabled != null)

@@ -99,44 +99,12 @@ namespace Flipdish.Test
             // TODO unit test for the property 'Name'
         }
         /// <summary>
-        /// Test the property 'IsEnabled'
-        /// </summary>
-        [Test]
-        public void IsEnabledTest()
-        {
-            // TODO unit test for the property 'IsEnabled'
-        }
-        /// <summary>
-        /// Test the property 'UrlName'
-        /// </summary>
-        [Test]
-        public void UrlNameTest()
-        {
-            // TODO unit test for the property 'UrlName'
-        }
-        /// <summary>
         /// Test the property 'Currency'
         /// </summary>
         [Test]
         public void CurrencyTest()
         {
             // TODO unit test for the property 'Currency'
-        }
-        /// <summary>
-        /// Test the property 'DeliveryMenuMessage'
-        /// </summary>
-        [Test]
-        public void DeliveryMenuMessageTest()
-        {
-            // TODO unit test for the property 'DeliveryMenuMessage'
-        }
-        /// <summary>
-        /// Test the property 'CollectionMenuMessage'
-        /// </summary>
-        [Test]
-        public void CollectionMenuMessageTest()
-        {
-            // TODO unit test for the property 'CollectionMenuMessage'
         }
 
     }

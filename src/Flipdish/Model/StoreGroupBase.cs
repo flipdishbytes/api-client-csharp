@@ -721,19 +721,11 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="StoreGroupBase" /> class.
         /// </summary>
         /// <param name="Name">Store Group Name.</param>
-        /// <param name="IsEnabled">Is this group enabled.</param>
-        /// <param name="UrlName">Store Group Url Name.</param>
         /// <param name="Currency">Currency used by the stores in this group.</param>
-        /// <param name="DeliveryMenuMessage">Message on top of Delivery Menu.</param>
-        /// <param name="CollectionMenuMessage">Message on top of Collection Menu.</param>
-        public StoreGroupBase(string Name = default(string), bool? IsEnabled = default(bool?), string UrlName = default(string), CurrencyEnum? Currency = default(CurrencyEnum?), string DeliveryMenuMessage = default(string), string CollectionMenuMessage = default(string))
+        public StoreGroupBase(string Name = default(string), CurrencyEnum? Currency = default(CurrencyEnum?))
         {
             this.Name = Name;
-            this.IsEnabled = IsEnabled;
-            this.UrlName = UrlName;
             this.Currency = Currency;
-            this.DeliveryMenuMessage = DeliveryMenuMessage;
-            this.CollectionMenuMessage = CollectionMenuMessage;
         }
         
         /// <summary>
@@ -743,34 +735,6 @@ namespace Flipdish.Model
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
-        /// <summary>
-        /// Is this group enabled
-        /// </summary>
-        /// <value>Is this group enabled</value>
-        [DataMember(Name="IsEnabled", EmitDefaultValue=false)]
-        public bool? IsEnabled { get; set; }
-
-        /// <summary>
-        /// Store Group Url Name
-        /// </summary>
-        /// <value>Store Group Url Name</value>
-        [DataMember(Name="UrlName", EmitDefaultValue=false)]
-        public string UrlName { get; set; }
-
-
-        /// <summary>
-        /// Message on top of Delivery Menu
-        /// </summary>
-        /// <value>Message on top of Delivery Menu</value>
-        [DataMember(Name="DeliveryMenuMessage", EmitDefaultValue=false)]
-        public string DeliveryMenuMessage { get; set; }
-
-        /// <summary>
-        /// Message on top of Collection Menu
-        /// </summary>
-        /// <value>Message on top of Collection Menu</value>
-        [DataMember(Name="CollectionMenuMessage", EmitDefaultValue=false)]
-        public string CollectionMenuMessage { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -781,11 +745,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class StoreGroupBase {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
-            sb.Append("  UrlName: ").Append(UrlName).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
-            sb.Append("  DeliveryMenuMessage: ").Append(DeliveryMenuMessage).Append("\n");
-            sb.Append("  CollectionMenuMessage: ").Append(CollectionMenuMessage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -826,29 +786,9 @@ namespace Flipdish.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.IsEnabled == input.IsEnabled ||
-                    (this.IsEnabled != null &&
-                    this.IsEnabled.Equals(input.IsEnabled))
-                ) && 
-                (
-                    this.UrlName == input.UrlName ||
-                    (this.UrlName != null &&
-                    this.UrlName.Equals(input.UrlName))
-                ) && 
-                (
                     this.Currency == input.Currency ||
                     (this.Currency != null &&
                     this.Currency.Equals(input.Currency))
-                ) && 
-                (
-                    this.DeliveryMenuMessage == input.DeliveryMenuMessage ||
-                    (this.DeliveryMenuMessage != null &&
-                    this.DeliveryMenuMessage.Equals(input.DeliveryMenuMessage))
-                ) && 
-                (
-                    this.CollectionMenuMessage == input.CollectionMenuMessage ||
-                    (this.CollectionMenuMessage != null &&
-                    this.CollectionMenuMessage.Equals(input.CollectionMenuMessage))
                 );
         }
 
@@ -863,16 +803,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.IsEnabled != null)
-                    hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
-                if (this.UrlName != null)
-                    hashCode = hashCode * 59 + this.UrlName.GetHashCode();
                 if (this.Currency != null)
                     hashCode = hashCode * 59 + this.Currency.GetHashCode();
-                if (this.DeliveryMenuMessage != null)
-                    hashCode = hashCode * 59 + this.DeliveryMenuMessage.GetHashCode();
-                if (this.CollectionMenuMessage != null)
-                    hashCode = hashCode * 59 + this.CollectionMenuMessage.GetHashCode();
                 return hashCode;
             }
         }

@@ -65,6 +65,19 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test CreateStore
+        /// </summary>
+        [Test]
+        public void CreateStoreTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeGroupId = null;
+            //StoreCreateBase store = null;
+            //var response = instance.CreateStore(storeGroupId, store);
+            //Assert.IsInstanceOf<RestApiResultStore> (response, "response is RestApiResultStore");
+        }
+        
+        /// <summary>
         /// Test GetProcessingFeeConfigsByStoreId
         /// </summary>
         [Test]
@@ -116,6 +129,19 @@ namespace Flipdish.Test
             //int? storeGroupId = null;
             //var response = instance.GetStores(searchQuery, page, limit, storeGroupId);
             //Assert.IsInstanceOf<RestApiPaginationResultStore> (response, "response is RestApiPaginationResultStore");
+        }
+        
+        /// <summary>
+        /// Test UpdateStore
+        /// </summary>
+        [Test]
+        public void UpdateStoreTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //StoreBase store = null;
+            //var response = instance.UpdateStore(storeId, store);
+            //Assert.IsInstanceOf<RestApiResultStore> (response, "response is RestApiResultStore");
         }
         
         /// <summary>
