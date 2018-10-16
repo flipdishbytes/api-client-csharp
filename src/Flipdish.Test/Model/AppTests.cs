@@ -130,6 +130,14 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'CountryId'
         }
+        /// <summary>
+        /// Test the property 'AvailableAppLanguages'
+        /// </summary>
+        [Test]
+        public void AvailableAppLanguagesTest()
+        {
+            // TODO unit test for the property 'AvailableAppLanguages'
+        }
 
     }
 

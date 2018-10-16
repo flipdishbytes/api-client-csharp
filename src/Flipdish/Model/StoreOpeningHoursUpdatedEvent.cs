@@ -35,7 +35,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="EventName">The event name.</param>
         /// <param name="StoreId">Store Id.</param>
-        /// <param name="User">Info User.</param>
+        /// <param name="User">User which updated opening hours for this store.</param>
         /// <param name="Description">Description.</param>
         /// <param name="FlipdishEventId">The identitfier of the event.</param>
         /// <param name="CreateTime">The time of creation of the event.</param>
@@ -66,9 +66,9 @@ namespace Flipdish.Model
         public int? StoreId { get; set; }
 
         /// <summary>
-        /// Info User
+        /// User which updated opening hours for this store
         /// </summary>
-        /// <value>Info User</value>
+        /// <value>User which updated opening hours for this store</value>
         [DataMember(Name="User", EmitDefaultValue=false)]
         public UserEventInfo User { get; set; }
 

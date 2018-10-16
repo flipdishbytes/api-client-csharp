@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **IconUrl** | **string** | Icon url | [optional] 
 **IconThumbnailUrl** | **string** | Icon thumbnail url | [optional] 
 **CountryId** | **string** | Country identifier | [optional] 
+**AvailableAppLanguages** | [**List&lt;Language&gt;**](Language.md) | Available Languages for Apps\\Staff | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

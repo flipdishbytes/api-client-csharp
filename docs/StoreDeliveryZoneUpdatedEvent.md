@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EventName** | **string** | The event name | [optional] 
 **StoreId** | **int?** | Store Id | [optional] 
-**User** | [**UserEventInfo**](UserEventInfo.md) | Info User | [optional] 
+**User** | [**UserEventInfo**](UserEventInfo.md) | User which updated delivery zone for this store | [optional] 
 **Description** | **string** | Description | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 

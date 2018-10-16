@@ -260,6 +260,7 @@ Class | Method | HTTP request | Description
  - [Model.JobPricing](docs/JobPricing.md)
  - [Model.JobProof](docs/JobProof.md)
  - [Model.JobResponse](docs/JobResponse.md)
+ - [Model.Language](docs/Language.md)
  - [Model.LightspeedSettings](docs/LightspeedSettings.md)
  - [Model.LoginModel](docs/LoginModel.md)
  - [Model.LoyaltyCampaign](docs/LoyaltyCampaign.md)

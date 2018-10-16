@@ -99,6 +99,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'Description'
         }
         /// <summary>
+        /// Test the property 'Store'
+        /// </summary>
+        [Test]
+        public void StoreTest()
+        {
+            // TODO unit test for the property 'Store'
+        }
+        /// <summary>
         /// Test the property 'FlipdishEventId'
         /// </summary>
         [Test]

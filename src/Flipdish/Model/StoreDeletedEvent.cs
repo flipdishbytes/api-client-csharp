@@ -35,17 +35,19 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="EventName">The event name.</param>
         /// <param name="StoreId">Store Id.</param>
-        /// <param name="User">Info User.</param>
+        /// <param name="User">User which deleted this store.</param>
         /// <param name="Description">Description.</param>
+        /// <param name="Store">Deleted Store.</param>
         /// <param name="FlipdishEventId">The identitfier of the event.</param>
         /// <param name="CreateTime">The time of creation of the event.</param>
         /// <param name="Position">Position.</param>
-        public StoreDeletedEvent(string EventName = default(string), int? StoreId = default(int?), UserEventInfo User = default(UserEventInfo), string Description = default(string), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        public StoreDeletedEvent(string EventName = default(string), int? StoreId = default(int?), UserEventInfo User = default(UserEventInfo), string Description = default(string), Store Store = default(Store), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
         {
             this.EventName = EventName;
             this.StoreId = StoreId;
             this.User = User;
             this.Description = Description;
+            this.Store = Store;
             this.FlipdishEventId = FlipdishEventId;
             this.CreateTime = CreateTime;
             this.Position = Position;
@@ -66,9 +68,9 @@ namespace Flipdish.Model
         public int? StoreId { get; set; }
 
         /// <summary>
-        /// Info User
+        /// User which deleted this store
         /// </summary>
-        /// <value>Info User</value>
+        /// <value>User which deleted this store</value>
         [DataMember(Name="User", EmitDefaultValue=false)]
         public UserEventInfo User { get; set; }
 
@@ -78,6 +80,13 @@ namespace Flipdish.Model
         /// <value>Description</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
+
+        /// <summary>
+        /// Deleted Store
+        /// </summary>
+        /// <value>Deleted Store</value>
+        [DataMember(Name="Store", EmitDefaultValue=false)]
+        public Store Store { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -112,6 +121,7 @@ namespace Flipdish.Model
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Store: ").Append(Store).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -170,6 +180,11 @@ namespace Flipdish.Model
                     this.Description.Equals(input.Description))
                 ) && 
                 (
+                    this.Store == input.Store ||
+                    (this.Store != null &&
+                    this.Store.Equals(input.Store))
+                ) && 
+                (
                     this.FlipdishEventId == input.FlipdishEventId ||
                     (this.FlipdishEventId != null &&
                     this.FlipdishEventId.Equals(input.FlipdishEventId))
@@ -203,6 +218,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.Store != null)
+                    hashCode = hashCode * 59 + this.Store.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)

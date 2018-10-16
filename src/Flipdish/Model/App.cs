@@ -41,7 +41,8 @@ namespace Flipdish.Model
         /// <param name="IconUrl">Icon url.</param>
         /// <param name="IconThumbnailUrl">Icon thumbnail url.</param>
         /// <param name="CountryId">Country identifier.</param>
-        public App(string AppId = default(string), string Name = default(string), Coordinates MapCenter = default(Coordinates), Coordinates MapNorthEast = default(Coordinates), Coordinates MapSouthWest = default(Coordinates), string IconUrl = default(string), string IconThumbnailUrl = default(string), string CountryId = default(string))
+        /// <param name="AvailableAppLanguages">Available Languages for Apps\\Staff.</param>
+        public App(string AppId = default(string), string Name = default(string), Coordinates MapCenter = default(Coordinates), Coordinates MapNorthEast = default(Coordinates), Coordinates MapSouthWest = default(Coordinates), string IconUrl = default(string), string IconThumbnailUrl = default(string), string CountryId = default(string), List<Language> AvailableAppLanguages = default(List<Language>))
         {
             this.AppId = AppId;
             this.Name = Name;
@@ -51,6 +52,7 @@ namespace Flipdish.Model
             this.IconUrl = IconUrl;
             this.IconThumbnailUrl = IconThumbnailUrl;
             this.CountryId = CountryId;
+            this.AvailableAppLanguages = AvailableAppLanguages;
         }
         
         /// <summary>
@@ -110,6 +112,13 @@ namespace Flipdish.Model
         public string CountryId { get; set; }
 
         /// <summary>
+        /// Available Languages for Apps\\Staff
+        /// </summary>
+        /// <value>Available Languages for Apps\\Staff</value>
+        [DataMember(Name="AvailableAppLanguages", EmitDefaultValue=false)]
+        public List<Language> AvailableAppLanguages { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -125,6 +134,7 @@ namespace Flipdish.Model
             sb.Append("  IconUrl: ").Append(IconUrl).Append("\n");
             sb.Append("  IconThumbnailUrl: ").Append(IconThumbnailUrl).Append("\n");
             sb.Append("  CountryId: ").Append(CountryId).Append("\n");
+            sb.Append("  AvailableAppLanguages: ").Append(AvailableAppLanguages).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -198,6 +208,11 @@ namespace Flipdish.Model
                     this.CountryId == input.CountryId ||
                     (this.CountryId != null &&
                     this.CountryId.Equals(input.CountryId))
+                ) && 
+                (
+                    this.AvailableAppLanguages == input.AvailableAppLanguages ||
+                    this.AvailableAppLanguages != null &&
+                    this.AvailableAppLanguages.SequenceEqual(input.AvailableAppLanguages)
                 );
         }
 
@@ -226,6 +241,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.IconThumbnailUrl.GetHashCode();
                 if (this.CountryId != null)
                     hashCode = hashCode * 59 + this.CountryId.GetHashCode();
+                if (this.AvailableAppLanguages != null)
+                    hashCode = hashCode * 59 + this.AvailableAppLanguages.GetHashCode();
                 return hashCode;
             }
         }
