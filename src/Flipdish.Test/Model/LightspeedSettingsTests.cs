@@ -138,6 +138,14 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'ProcessingFeeId'
         }
+        /// <summary>
+        /// Test the property 'PriceType'
+        /// </summary>
+        [Test]
+        public void PriceTypeTest()
+        {
+            // TODO unit test for the property 'PriceType'
+        }
 
     }
 

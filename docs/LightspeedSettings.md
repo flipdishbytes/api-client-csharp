@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **VoucherId** | **string** | The Lightspeed voucher identifier to map with our | [optional] 
 **DeliveryFeeId** | **string** | The Lightspeed delivery fee identifier to map with our | [optional] 
 **ProcessingFeeId** | **string** | The Lightspeed processing fee identifier to map with our | [optional] 
+**PriceType** | **string** | Which price to choose from Lightspeed menu | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

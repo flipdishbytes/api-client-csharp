@@ -31,6 +31,39 @@ namespace Flipdish.Model
     public partial class LightspeedSettings :  IEquatable<LightspeedSettings>, IValidatableObject
     {
         /// <summary>
+        /// Which price to choose from Lightspeed menu
+        /// </summary>
+        /// <value>Which price to choose from Lightspeed menu</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PriceTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Default for value: Default
+            /// </summary>
+            [EnumMember(Value = "Default")]
+            Default = 1,
+            
+            /// <summary>
+            /// Enum Takeaway for value: Takeaway
+            /// </summary>
+            [EnumMember(Value = "Takeaway")]
+            Takeaway = 2,
+            
+            /// <summary>
+            /// Enum Delivery for value: Delivery
+            /// </summary>
+            [EnumMember(Value = "Delivery")]
+            Delivery = 3
+        }
+
+        /// <summary>
+        /// Which price to choose from Lightspeed menu
+        /// </summary>
+        /// <value>Which price to choose from Lightspeed menu</value>
+        [DataMember(Name="PriceType", EmitDefaultValue=false)]
+        public PriceTypeEnum? PriceType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="LightspeedSettings" /> class.
         /// </summary>
         /// <param name="CompanyId">Company Id.</param>
@@ -42,7 +75,8 @@ namespace Flipdish.Model
         /// <param name="VoucherId">The Lightspeed voucher identifier to map with our.</param>
         /// <param name="DeliveryFeeId">The Lightspeed delivery fee identifier to map with our.</param>
         /// <param name="ProcessingFeeId">The Lightspeed processing fee identifier to map with our.</param>
-        public LightspeedSettings(string CompanyId = default(string), bool? Enabled = default(bool?), int? EstimatedMinutesForDelivery = default(int?), int? EstimatedMinutesForCollection = default(int?), string GeographicLocation = default(string), bool? Establishment = default(bool?), string VoucherId = default(string), string DeliveryFeeId = default(string), string ProcessingFeeId = default(string))
+        /// <param name="PriceType">Which price to choose from Lightspeed menu.</param>
+        public LightspeedSettings(string CompanyId = default(string), bool? Enabled = default(bool?), int? EstimatedMinutesForDelivery = default(int?), int? EstimatedMinutesForCollection = default(int?), string GeographicLocation = default(string), bool? Establishment = default(bool?), string VoucherId = default(string), string DeliveryFeeId = default(string), string ProcessingFeeId = default(string), PriceTypeEnum? PriceType = default(PriceTypeEnum?))
         {
             this.CompanyId = CompanyId;
             this.Enabled = Enabled;
@@ -53,6 +87,7 @@ namespace Flipdish.Model
             this.VoucherId = VoucherId;
             this.DeliveryFeeId = DeliveryFeeId;
             this.ProcessingFeeId = ProcessingFeeId;
+            this.PriceType = PriceType;
         }
         
         /// <summary>
@@ -118,6 +153,7 @@ namespace Flipdish.Model
         [DataMember(Name="ProcessingFeeId", EmitDefaultValue=false)]
         public string ProcessingFeeId { get; set; }
 
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -135,6 +171,7 @@ namespace Flipdish.Model
             sb.Append("  VoucherId: ").Append(VoucherId).Append("\n");
             sb.Append("  DeliveryFeeId: ").Append(DeliveryFeeId).Append("\n");
             sb.Append("  ProcessingFeeId: ").Append(ProcessingFeeId).Append("\n");
+            sb.Append("  PriceType: ").Append(PriceType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -213,6 +250,11 @@ namespace Flipdish.Model
                     this.ProcessingFeeId == input.ProcessingFeeId ||
                     (this.ProcessingFeeId != null &&
                     this.ProcessingFeeId.Equals(input.ProcessingFeeId))
+                ) && 
+                (
+                    this.PriceType == input.PriceType ||
+                    (this.PriceType != null &&
+                    this.PriceType.Equals(input.PriceType))
                 );
         }
 
@@ -243,6 +285,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DeliveryFeeId.GetHashCode();
                 if (this.ProcessingFeeId != null)
                     hashCode = hashCode * 59 + this.ProcessingFeeId.GetHashCode();
+                if (this.PriceType != null)
+                    hashCode = hashCode * 59 + this.PriceType.GetHashCode();
                 return hashCode;
             }
         }
