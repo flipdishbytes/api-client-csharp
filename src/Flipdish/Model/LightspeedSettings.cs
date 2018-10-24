@@ -76,7 +76,8 @@ namespace Flipdish.Model
         /// <param name="DeliveryFeeId">The Lightspeed delivery fee identifier to map with our.</param>
         /// <param name="ProcessingFeeId">The Lightspeed processing fee identifier to map with our.</param>
         /// <param name="PriceType">Which price to choose from Lightspeed menu.</param>
-        public LightspeedSettings(string CompanyId = default(string), bool? Enabled = default(bool?), int? EstimatedMinutesForDelivery = default(int?), int? EstimatedMinutesForCollection = default(int?), string GeographicLocation = default(string), bool? Establishment = default(bool?), string VoucherId = default(string), string DeliveryFeeId = default(string), string ProcessingFeeId = default(string), PriceTypeEnum? PriceType = default(PriceTypeEnum?))
+        /// <param name="MenuId">The menu id of the store.</param>
+        public LightspeedSettings(string CompanyId = default(string), bool? Enabled = default(bool?), int? EstimatedMinutesForDelivery = default(int?), int? EstimatedMinutesForCollection = default(int?), string GeographicLocation = default(string), bool? Establishment = default(bool?), string VoucherId = default(string), string DeliveryFeeId = default(string), string ProcessingFeeId = default(string), PriceTypeEnum? PriceType = default(PriceTypeEnum?), int? MenuId = default(int?))
         {
             this.CompanyId = CompanyId;
             this.Enabled = Enabled;
@@ -88,6 +89,7 @@ namespace Flipdish.Model
             this.DeliveryFeeId = DeliveryFeeId;
             this.ProcessingFeeId = ProcessingFeeId;
             this.PriceType = PriceType;
+            this.MenuId = MenuId;
         }
         
         /// <summary>
@@ -155,6 +157,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// The menu id of the store
+        /// </summary>
+        /// <value>The menu id of the store</value>
+        [DataMember(Name="MenuId", EmitDefaultValue=false)]
+        public int? MenuId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -172,6 +181,7 @@ namespace Flipdish.Model
             sb.Append("  DeliveryFeeId: ").Append(DeliveryFeeId).Append("\n");
             sb.Append("  ProcessingFeeId: ").Append(ProcessingFeeId).Append("\n");
             sb.Append("  PriceType: ").Append(PriceType).Append("\n");
+            sb.Append("  MenuId: ").Append(MenuId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -255,6 +265,11 @@ namespace Flipdish.Model
                     this.PriceType == input.PriceType ||
                     (this.PriceType != null &&
                     this.PriceType.Equals(input.PriceType))
+                ) && 
+                (
+                    this.MenuId == input.MenuId ||
+                    (this.MenuId != null &&
+                    this.MenuId.Equals(input.MenuId))
                 );
         }
 
@@ -287,6 +302,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ProcessingFeeId.GetHashCode();
                 if (this.PriceType != null)
                     hashCode = hashCode * 59 + this.PriceType.GetHashCode();
+                if (this.MenuId != null)
+                    hashCode = hashCode * 59 + this.MenuId.GetHashCode();
                 return hashCode;
             }
         }
