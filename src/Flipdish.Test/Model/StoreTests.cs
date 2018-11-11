@@ -83,12 +83,12 @@ namespace Flipdish.Test
             // TODO unit test for the property 'Address'
         }
         /// <summary>
-        /// Test the property 'DeliveryFeeAreas'
+        /// Test the property 'DeliveryZones'
         /// </summary>
         [Test]
-        public void DeliveryFeeAreasTest()
+        public void DeliveryZonesTest()
         {
-            // TODO unit test for the property 'DeliveryFeeAreas'
+            // TODO unit test for the property 'DeliveryZones'
         }
         /// <summary>
         /// Test the property 'ApmPhoneNumber'

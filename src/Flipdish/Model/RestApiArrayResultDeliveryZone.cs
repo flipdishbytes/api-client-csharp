@@ -25,35 +25,39 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Delivery fee area
+    /// Rest api array result
     /// </summary>
     [DataContract]
-    public partial class DeliveryFeeArea :  IEquatable<DeliveryFeeArea>, IValidatableObject
+    public partial class RestApiArrayResultDeliveryZone :  IEquatable<RestApiArrayResultDeliveryZone>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DeliveryFeeArea" /> class.
+        /// Initializes a new instance of the <see cref="RestApiArrayResultDeliveryZone" /> class.
         /// </summary>
-        /// <param name="DeliveryFee">Delivery fee.</param>
-        /// <param name="MinimumDeliveryOrder">Minimum delivery order amount.</param>
-        public DeliveryFeeArea(double? DeliveryFee = default(double?), double? MinimumDeliveryOrder = default(double?))
+        [JsonConstructorAttribute]
+        protected RestApiArrayResultDeliveryZone() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RestApiArrayResultDeliveryZone" /> class.
+        /// </summary>
+        /// <param name="Data">Generic data object. (required).</param>
+        public RestApiArrayResultDeliveryZone(List<DeliveryZone> Data = default(List<DeliveryZone>))
         {
-            this.DeliveryFee = DeliveryFee;
-            this.MinimumDeliveryOrder = MinimumDeliveryOrder;
+            // to ensure "Data" is required (not null)
+            if (Data == null)
+            {
+                throw new InvalidDataException("Data is a required property for RestApiArrayResultDeliveryZone and cannot be null");
+            }
+            else
+            {
+                this.Data = Data;
+            }
         }
         
         /// <summary>
-        /// Delivery fee
+        /// Generic data object.
         /// </summary>
-        /// <value>Delivery fee</value>
-        [DataMember(Name="DeliveryFee", EmitDefaultValue=false)]
-        public double? DeliveryFee { get; set; }
-
-        /// <summary>
-        /// Minimum delivery order amount
-        /// </summary>
-        /// <value>Minimum delivery order amount</value>
-        [DataMember(Name="MinimumDeliveryOrder", EmitDefaultValue=false)]
-        public double? MinimumDeliveryOrder { get; set; }
+        /// <value>Generic data object.</value>
+        [DataMember(Name="Data", EmitDefaultValue=false)]
+        public List<DeliveryZone> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,9 +66,8 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DeliveryFeeArea {\n");
-            sb.Append("  DeliveryFee: ").Append(DeliveryFee).Append("\n");
-            sb.Append("  MinimumDeliveryOrder: ").Append(MinimumDeliveryOrder).Append("\n");
+            sb.Append("class RestApiArrayResultDeliveryZone {\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,29 +88,24 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as DeliveryFeeArea);
+            return this.Equals(input as RestApiArrayResultDeliveryZone);
         }
 
         /// <summary>
-        /// Returns true if DeliveryFeeArea instances are equal
+        /// Returns true if RestApiArrayResultDeliveryZone instances are equal
         /// </summary>
-        /// <param name="input">Instance of DeliveryFeeArea to be compared</param>
+        /// <param name="input">Instance of RestApiArrayResultDeliveryZone to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DeliveryFeeArea input)
+        public bool Equals(RestApiArrayResultDeliveryZone input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.DeliveryFee == input.DeliveryFee ||
-                    (this.DeliveryFee != null &&
-                    this.DeliveryFee.Equals(input.DeliveryFee))
-                ) && 
-                (
-                    this.MinimumDeliveryOrder == input.MinimumDeliveryOrder ||
-                    (this.MinimumDeliveryOrder != null &&
-                    this.MinimumDeliveryOrder.Equals(input.MinimumDeliveryOrder))
+                    this.Data == input.Data ||
+                    this.Data != null &&
+                    this.Data.SequenceEqual(input.Data)
                 );
         }
 
@@ -120,10 +118,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.DeliveryFee != null)
-                    hashCode = hashCode * 59 + this.DeliveryFee.GetHashCode();
-                if (this.MinimumDeliveryOrder != null)
-                    hashCode = hashCode * 59 + this.MinimumDeliveryOrder.GetHashCode();
+                if (this.Data != null)
+                    hashCode = hashCode * 59 + this.Data.GetHashCode();
                 return hashCode;
             }
         }

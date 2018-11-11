@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **StoreId** | **int?** | Store identifier | [optional] 
 **Address** | [**StoreAddress**](StoreAddress.md) | Store address | [optional] 
-**DeliveryFeeAreas** | [**List&lt;DeliveryFeeArea&gt;**](DeliveryFeeArea.md) | Delivery fee areas | [optional] 
+**DeliveryZones** | [**List&lt;DeliveryZone&gt;**](DeliveryZone.md) | Delivery zones | [optional] 
 **ApmPhoneNumber** | **string** | Automated Phone Marketing number | [optional] 
 **PickupHours** | [**List&lt;BusinessHoursPeriod&gt;**](BusinessHoursPeriod.md) | Pickup hours | [optional] 
 **DeliveryHours** | [**List&lt;BusinessHoursPeriod&gt;**](BusinessHoursPeriod.md) | Delivery hours | [optional] 

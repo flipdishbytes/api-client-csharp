@@ -112,6 +112,10 @@ Class | Method | HTTP request | Description
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
+*DeliveryZoneApi* | [**AddDeliveryZone**](docs/DeliveryZoneApi.md#adddeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones | Adds a delivery zone to the store id
+*DeliveryZoneApi* | [**GetDeliveryZones**](docs/DeliveryZoneApi.md#getdeliveryzones) | **GET** /api/v1.0/stores/{storeId}/deliveryzones | Get all the delivery zones associated with a store
+*DeliveryZoneApi* | [**RemoveDeliveryZone**](docs/DeliveryZoneApi.md#removedeliveryzone) | **DELETE** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | Removes the existing delivery zone
+*DeliveryZoneApi* | [**UpdateDeliveryZone**](docs/DeliveryZoneApi.md#updatedeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | Updates the existing delivery zone
 *EventsApi* | [**GetCustomerEvents**](docs/EventsApi.md#getcustomerevents) | **GET** /api/v1.0/events/customer/{customerId} | Get customer events
 *EventsApi* | [**GetEvents**](docs/EventsApi.md#getevents) | **GET** /api/v1.0/events | Get events
 *EventsApi* | [**GetEventsById**](docs/EventsApi.md#geteventsbyid) | **GET** /api/v1.0/events/{eventId} | Get event by Id
@@ -245,8 +249,9 @@ Class | Method | HTTP request | Description
  - [Model.CustomerCreatedEvent](docs/CustomerCreatedEvent.md)
  - [Model.CustomerSummary](docs/CustomerSummary.md)
  - [Model.CustomerUpdatedEvent](docs/CustomerUpdatedEvent.md)
- - [Model.DeliveryFeeArea](docs/DeliveryFeeArea.md)
  - [Model.DeliveryLocation](docs/DeliveryLocation.md)
+ - [Model.DeliveryZone](docs/DeliveryZone.md)
+ - [Model.DeliveryZoneBase](docs/DeliveryZoneBase.md)
  - [Model.EventSearchResult](docs/EventSearchResult.md)
  - [Model.FeeSummary](docs/FeeSummary.md)
  - [Model.HttpRequestAndResponseLog](docs/HttpRequestAndResponseLog.md)
@@ -308,6 +313,7 @@ Class | Method | HTTP request | Description
  - [Model.Range](docs/Range.md)
  - [Model.Refund](docs/Refund.md)
  - [Model.Reject](docs/Reject.md)
+ - [Model.RestApiArrayResultDeliveryZone](docs/RestApiArrayResultDeliveryZone.md)
  - [Model.RestApiArrayResultMenuItemOptionSet](docs/RestApiArrayResultMenuItemOptionSet.md)
  - [Model.RestApiArrayResultMenuItemOptionSetItem](docs/RestApiArrayResultMenuItemOptionSetItem.md)
  - [Model.RestApiArrayResultMenuSection](docs/RestApiArrayResultMenuSection.md)
@@ -335,6 +341,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultBusinessHoursPeriod](docs/RestApiResultBusinessHoursPeriod.md)
  - [Model.RestApiResultCard](docs/RestApiResultCard.md)
  - [Model.RestApiResultCoordinates](docs/RestApiResultCoordinates.md)
+ - [Model.RestApiResultDeliveryZone](docs/RestApiResultDeliveryZone.md)
  - [Model.RestApiResultJobResponse](docs/RestApiResultJobResponse.md)
  - [Model.RestApiResultLightspeedSettings](docs/RestApiResultLightspeedSettings.md)
  - [Model.RestApiResultMenu](docs/RestApiResultMenu.md)

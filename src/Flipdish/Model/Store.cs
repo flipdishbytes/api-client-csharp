@@ -62,7 +62,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="StoreId">Store identifier.</param>
         /// <param name="Address">Store address.</param>
-        /// <param name="DeliveryFeeAreas">Delivery fee areas.</param>
+        /// <param name="DeliveryZones">Delivery zones.</param>
         /// <param name="ApmPhoneNumber">Automated Phone Marketing number.</param>
         /// <param name="PickupHours">Pickup hours.</param>
         /// <param name="DeliveryHours">Delivery hours.</param>
@@ -95,11 +95,11 @@ namespace Flipdish.Model
         /// <param name="Name">Name.</param>
         /// <param name="EmailAddress">Email address (visible to customers).</param>
         /// <param name="StaffLanguage">Staff Language (used for communcation with the staff)  Emails, Printouts etc.</param>
-        public Store(int? StoreId = default(int?), StoreAddress Address = default(StoreAddress), List<DeliveryFeeArea> DeliveryFeeAreas = default(List<DeliveryFeeArea>), string ApmPhoneNumber = default(string), List<BusinessHoursPeriod> PickupHours = default(List<BusinessHoursPeriod>), List<BusinessHoursPeriod> DeliveryHours = default(List<BusinessHoursPeriod>), int? MenuId = default(int?), string OrderConfirmationMessageOverrideDelivery = default(string), string OrderConfirmationMessageOverridePickup = default(string), PrintoutLayoutTypeEnum? PrintoutLayoutType = default(PrintoutLayoutTypeEnum?), List<StoreNote> StoreNotes = default(List<StoreNote>), string PhoneNumber = default(string), bool? PreOrderEnabled = default(bool?), bool? TakeOutEnabled = default(bool?), bool? TableServiceEnabled = default(bool?), bool? DineInEnabled = default(bool?), bool? AllowPreOrdersAndTableService = default(bool?), bool? PickupEnabled = default(bool?), bool? DeliveryEnabled = default(bool?), bool? CardOrderDeliveryEnabled = default(bool?), bool? CashOrdersDeliveryEnabled = default(bool?), bool? CardOrdersPickupEnabled = default(bool?), bool? CashOrdersPickupEnabled = default(bool?), bool? TipsEnabled = default(bool?), bool? AutomaticallyAcceptOrders = default(bool?), bool? OpenForDelivery = default(bool?), bool? OpenForPickup = default(bool?), double? MinimumPickupOrderAmount = default(double?), bool? RequireCustomerNameForPickup = default(bool?), bool? RequireCustomerNameForDelivery = default(bool?), string MicrosoftTimeZone = default(string), string IanaTimeZone = default(string), string Name = default(string), string EmailAddress = default(string), string StaffLanguage = default(string))
+        public Store(int? StoreId = default(int?), StoreAddress Address = default(StoreAddress), List<DeliveryZone> DeliveryZones = default(List<DeliveryZone>), string ApmPhoneNumber = default(string), List<BusinessHoursPeriod> PickupHours = default(List<BusinessHoursPeriod>), List<BusinessHoursPeriod> DeliveryHours = default(List<BusinessHoursPeriod>), int? MenuId = default(int?), string OrderConfirmationMessageOverrideDelivery = default(string), string OrderConfirmationMessageOverridePickup = default(string), PrintoutLayoutTypeEnum? PrintoutLayoutType = default(PrintoutLayoutTypeEnum?), List<StoreNote> StoreNotes = default(List<StoreNote>), string PhoneNumber = default(string), bool? PreOrderEnabled = default(bool?), bool? TakeOutEnabled = default(bool?), bool? TableServiceEnabled = default(bool?), bool? DineInEnabled = default(bool?), bool? AllowPreOrdersAndTableService = default(bool?), bool? PickupEnabled = default(bool?), bool? DeliveryEnabled = default(bool?), bool? CardOrderDeliveryEnabled = default(bool?), bool? CashOrdersDeliveryEnabled = default(bool?), bool? CardOrdersPickupEnabled = default(bool?), bool? CashOrdersPickupEnabled = default(bool?), bool? TipsEnabled = default(bool?), bool? AutomaticallyAcceptOrders = default(bool?), bool? OpenForDelivery = default(bool?), bool? OpenForPickup = default(bool?), double? MinimumPickupOrderAmount = default(double?), bool? RequireCustomerNameForPickup = default(bool?), bool? RequireCustomerNameForDelivery = default(bool?), string MicrosoftTimeZone = default(string), string IanaTimeZone = default(string), string Name = default(string), string EmailAddress = default(string), string StaffLanguage = default(string))
         {
             this.StoreId = StoreId;
             this.Address = Address;
-            this.DeliveryFeeAreas = DeliveryFeeAreas;
+            this.DeliveryZones = DeliveryZones;
             this.ApmPhoneNumber = ApmPhoneNumber;
             this.PickupHours = PickupHours;
             this.DeliveryHours = DeliveryHours;
@@ -149,11 +149,11 @@ namespace Flipdish.Model
         public StoreAddress Address { get; set; }
 
         /// <summary>
-        /// Delivery fee areas
+        /// Delivery zones
         /// </summary>
-        /// <value>Delivery fee areas</value>
-        [DataMember(Name="DeliveryFeeAreas", EmitDefaultValue=false)]
-        public List<DeliveryFeeArea> DeliveryFeeAreas { get; set; }
+        /// <value>Delivery zones</value>
+        [DataMember(Name="DeliveryZones", EmitDefaultValue=false)]
+        public List<DeliveryZone> DeliveryZones { get; set; }
 
         /// <summary>
         /// Automated Phone Marketing number
@@ -383,7 +383,7 @@ namespace Flipdish.Model
             sb.Append("class Store {\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
-            sb.Append("  DeliveryFeeAreas: ").Append(DeliveryFeeAreas).Append("\n");
+            sb.Append("  DeliveryZones: ").Append(DeliveryZones).Append("\n");
             sb.Append("  ApmPhoneNumber: ").Append(ApmPhoneNumber).Append("\n");
             sb.Append("  PickupHours: ").Append(PickupHours).Append("\n");
             sb.Append("  DeliveryHours: ").Append(DeliveryHours).Append("\n");
@@ -461,9 +461,9 @@ namespace Flipdish.Model
                     this.Address.Equals(input.Address))
                 ) && 
                 (
-                    this.DeliveryFeeAreas == input.DeliveryFeeAreas ||
-                    this.DeliveryFeeAreas != null &&
-                    this.DeliveryFeeAreas.SequenceEqual(input.DeliveryFeeAreas)
+                    this.DeliveryZones == input.DeliveryZones ||
+                    this.DeliveryZones != null &&
+                    this.DeliveryZones.SequenceEqual(input.DeliveryZones)
                 ) && 
                 (
                     this.ApmPhoneNumber == input.ApmPhoneNumber ||
@@ -640,8 +640,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreId.GetHashCode();
                 if (this.Address != null)
                     hashCode = hashCode * 59 + this.Address.GetHashCode();
-                if (this.DeliveryFeeAreas != null)
-                    hashCode = hashCode * 59 + this.DeliveryFeeAreas.GetHashCode();
+                if (this.DeliveryZones != null)
+                    hashCode = hashCode * 59 + this.DeliveryZones.GetHashCode();
                 if (this.ApmPhoneNumber != null)
                     hashCode = hashCode * 59 + this.ApmPhoneNumber.GetHashCode();
                 if (this.PickupHours != null)
