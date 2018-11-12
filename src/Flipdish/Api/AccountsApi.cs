@@ -25,26 +25,26 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// Answer a signup question
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
-        /// <param name="answerId"></param>
+        /// <param name="signupStepAction">Signup step action</param>
+        /// <param name="answerId">Identifier of the answer</param>
         /// <returns>Object</returns>
         Object AnswerSignUpQuestion (string signupStepAction, int? answerId);
 
         /// <summary>
-        /// 
+        /// Answer a signup question
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
-        /// <param name="answerId"></param>
+        /// <param name="signupStepAction">Signup step action</param>
+        /// <param name="answerId">Identifier of the answer</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> AnswerSignUpQuestionWithHttpInfo (string signupStepAction, int? answerId);
         /// <summary>
@@ -90,7 +90,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> CreateAccountWithHttpInfo (CreateAccountModel createAccountModel);
         /// <summary>
-        /// 
+        /// Gets the current account detail
         /// </summary>
         /// <remarks>
         /// 
@@ -100,7 +100,7 @@ namespace Flipdish.Api
         RestApiResultAccountDetail GetAccountDetails ();
 
         /// <summary>
-        /// 
+        /// Gets the current account detail
         /// </summary>
         /// <remarks>
         /// 
@@ -191,24 +191,24 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RequestPasswordResetWithHttpInfo (string email);
         /// <summary>
-        /// 
+        /// Skip a signup question
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
+        /// <param name="signupStepAction">Signup step action</param>
         /// <returns>Object</returns>
         Object SkipSignupStep (string signupStepAction);
 
         /// <summary>
-        /// 
+        /// Skip a signup question
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
+        /// <param name="signupStepAction">Signup step action</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> SkipSignupStepWithHttpInfo (string signupStepAction);
         /// <summary>
@@ -235,26 +235,26 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// Answer a signup question
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
-        /// <param name="answerId"></param>
+        /// <param name="signupStepAction">Signup step action</param>
+        /// <param name="answerId">Identifier of the answer</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> AnswerSignUpQuestionAsync (string signupStepAction, int? answerId);
 
         /// <summary>
-        /// 
+        /// Answer a signup question
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
-        /// <param name="answerId"></param>
+        /// <param name="signupStepAction">Signup step action</param>
+        /// <param name="answerId">Identifier of the answer</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AnswerSignUpQuestionAsyncWithHttpInfo (string signupStepAction, int? answerId);
         /// <summary>
@@ -300,7 +300,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateAccountAsyncWithHttpInfo (CreateAccountModel createAccountModel);
         /// <summary>
-        /// 
+        /// Gets the current account detail
         /// </summary>
         /// <remarks>
         /// 
@@ -310,7 +310,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultAccountDetail> GetAccountDetailsAsync ();
 
         /// <summary>
-        /// 
+        /// Gets the current account detail
         /// </summary>
         /// <remarks>
         /// 
@@ -401,24 +401,24 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RequestPasswordResetAsyncWithHttpInfo (string email);
         /// <summary>
-        /// 
+        /// Skip a signup question
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
+        /// <param name="signupStepAction">Signup step action</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> SkipSignupStepAsync (string signupStepAction);
 
         /// <summary>
-        /// 
+        /// Skip a signup question
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
+        /// <param name="signupStepAction">Signup step action</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SkipSignupStepAsyncWithHttpInfo (string signupStepAction);
         /// <summary>
@@ -543,11 +543,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Answer a signup question 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
-        /// <param name="answerId"></param>
+        /// <param name="signupStepAction">Signup step action</param>
+        /// <param name="answerId">Identifier of the answer</param>
         /// <returns>Object</returns>
         public Object AnswerSignUpQuestion (string signupStepAction, int? answerId)
         {
@@ -556,11 +556,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Answer a signup question 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
-        /// <param name="answerId"></param>
+        /// <param name="signupStepAction">Signup step action</param>
+        /// <param name="answerId">Identifier of the answer</param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > AnswerSignUpQuestionWithHttpInfo (string signupStepAction, int? answerId)
         {
@@ -636,11 +636,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Answer a signup question 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
-        /// <param name="answerId"></param>
+        /// <param name="signupStepAction">Signup step action</param>
+        /// <param name="answerId">Identifier of the answer</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> AnswerSignUpQuestionAsync (string signupStepAction, int? answerId)
         {
@@ -650,11 +650,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Answer a signup question 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
-        /// <param name="answerId"></param>
+        /// <param name="signupStepAction">Signup step action</param>
+        /// <param name="answerId">Identifier of the answer</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AnswerSignUpQuestionAsyncWithHttpInfo (string signupStepAction, int? answerId)
         {
@@ -1080,7 +1080,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Gets the current account detail 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RestApiResultAccountDetail</returns>
@@ -1091,7 +1091,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Gets the current account detail 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RestApiResultAccountDetail</returns>
@@ -1149,7 +1149,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Gets the current account detail 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RestApiResultAccountDetail</returns>
@@ -1161,7 +1161,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Gets the current account detail 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RestApiResultAccountDetail)</returns>
@@ -1857,10 +1857,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Skip a signup question 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
+        /// <param name="signupStepAction">Signup step action</param>
         /// <returns>Object</returns>
         public Object SkipSignupStep (string signupStepAction)
         {
@@ -1869,10 +1869,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Skip a signup question 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
+        /// <param name="signupStepAction">Signup step action</param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > SkipSignupStepWithHttpInfo (string signupStepAction)
         {
@@ -1932,10 +1932,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Skip a signup question 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
+        /// <param name="signupStepAction">Signup step action</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> SkipSignupStepAsync (string signupStepAction)
         {
@@ -1945,10 +1945,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Skip a signup question 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="signupStepAction"></param>
+        /// <param name="signupStepAction">Signup step action</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> SkipSignupStepAsyncWithHttpInfo (string signupStepAction)
         {

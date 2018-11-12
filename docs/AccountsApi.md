@@ -4,15 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AnswerSignUpQuestion**](AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | 
+[**AnswerSignUpQuestion**](AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | Answer a signup question
 [**ChangePassword**](AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | Change password
 [**CreateAccount**](AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | Create account with email address and store name
-[**GetAccountDetails**](AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | 
+[**GetAccountDetails**](AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | Gets the current account detail
 [**Login**](AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | Login with username and password
 [**Logout**](AccountsApi.md#logout) | **POST** /api/v1.0/accounts/logout | Log out. It removes Flipdish authorization Cookie.
 [**PasswordResetWithToken**](AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
 [**RequestPasswordReset**](AccountsApi.md#requestpasswordreset) | **GET** /api/v1.0/accounts/password | Request password reset. Flipdish system will send a token via email.
-[**SkipSignupStep**](AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
+[**SkipSignupStep**](AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | Skip a signup question
 [**UpdateAccount**](AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | Update account with name and language
 
 
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 # **AnswerSignUpQuestion**
 > Object AnswerSignUpQuestion (string signupStepAction, int? answerId)
 
-
+Answer a signup question
 
 ### Example
 ```csharp
@@ -40,11 +40,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var signupStepAction = signupStepAction_example;  // string | 
-            var answerId = 56;  // int? | 
+            var signupStepAction = signupStepAction_example;  // string | Signup step action
+            var answerId = 56;  // int? | Identifier of the answer
 
             try
             {
+                // Answer a signup question
                 Object result = apiInstance.AnswerSignUpQuestion(signupStepAction, answerId);
                 Debug.WriteLine(result);
             }
@@ -61,8 +62,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **signupStepAction** | **string**|  | 
- **answerId** | **int?**|  | 
+ **signupStepAction** | **string**| Signup step action | 
+ **answerId** | **int?**| Identifier of the answer | 
 
 ### Return type
 
@@ -207,7 +208,7 @@ Name | Type | Description  | Notes
 # **GetAccountDetails**
 > RestApiResultAccountDetail GetAccountDetails ()
 
-
+Gets the current account detail
 
 ### Example
 ```csharp
@@ -230,6 +231,7 @@ namespace Example
 
             try
             {
+                // Gets the current account detail
                 RestApiResultAccountDetail result = apiInstance.GetAccountDetails();
                 Debug.WriteLine(result);
             }
@@ -507,7 +509,7 @@ void (empty response body)
 # **SkipSignupStep**
 > Object SkipSignupStep (string signupStepAction)
 
-
+Skip a signup question
 
 ### Example
 ```csharp
@@ -527,10 +529,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var signupStepAction = signupStepAction_example;  // string | 
+            var signupStepAction = signupStepAction_example;  // string | Signup step action
 
             try
             {
+                // Skip a signup question
                 Object result = apiInstance.SkipSignupStep(signupStepAction);
                 Debug.WriteLine(result);
             }
@@ -547,7 +550,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **signupStepAction** | **string**|  | 
+ **signupStepAction** | **string**| Signup step action | 
 
 ### Return type
 

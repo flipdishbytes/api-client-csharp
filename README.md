@@ -74,11 +74,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var signupStepAction = signupStepAction_example;  // string | 
-            var answerId = 56;  // int? | 
+            var signupStepAction = signupStepAction_example;  // string | Signup step action
+            var answerId = 56;  // int? | Identifier of the answer
 
             try
             {
+                // Answer a signup question
                 Object result = apiInstance.AnswerSignUpQuestion(signupStepAction, answerId);
                 Debug.WriteLine(result);
             }
@@ -99,15 +100,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccountsApi* | [**AnswerSignUpQuestion**](docs/AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | 
+*AccountsApi* | [**AnswerSignUpQuestion**](docs/AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | Answer a signup question
 *AccountsApi* | [**ChangePassword**](docs/AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | Change password
 *AccountsApi* | [**CreateAccount**](docs/AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | Create account with email address and store name
-*AccountsApi* | [**GetAccountDetails**](docs/AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | 
+*AccountsApi* | [**GetAccountDetails**](docs/AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | Gets the current account detail
 *AccountsApi* | [**Login**](docs/AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | Login with username and password
 *AccountsApi* | [**Logout**](docs/AccountsApi.md#logout) | **POST** /api/v1.0/accounts/logout | Log out. It removes Flipdish authorization Cookie.
 *AccountsApi* | [**PasswordResetWithToken**](docs/AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
 *AccountsApi* | [**RequestPasswordReset**](docs/AccountsApi.md#requestpasswordreset) | **GET** /api/v1.0/accounts/password | Request password reset. Flipdish system will send a token via email.
-*AccountsApi* | [**SkipSignupStep**](docs/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
+*AccountsApi* | [**SkipSignupStep**](docs/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | Skip a signup question
 *AccountsApi* | [**UpdateAccount**](docs/AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | Update account with name and language
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
@@ -125,6 +126,7 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**GetStoreEvents**](docs/EventsApi.md#getstoreevents) | **GET** /api/v1.0/events/store/{storeId} | Get store events
 *EventsApi* | [**GetUserEvents**](docs/EventsApi.md#getuserevents) | **GET** /api/v1.0/events/user/{userId} | Get user events
 *EventsApi* | [**GetWhiteLabelEvents**](docs/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get WhiteLabel events
+*HeartbeatApi* | [**Ping**](docs/HeartbeatApi.md#ping) | **GET** /api/v1.0/heartbeat | 
 *HttpRequestResponseLogsApi* | [**GetLogs**](docs/HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/interactions/logs | Get API interaction logs
 *LightspeedApi* | [**LightspeedGenerateMenu**](docs/LightspeedApi.md#lightspeedgeneratemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
 *LightspeedApi* | [**LightspeedGetStoreSettings**](docs/LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
