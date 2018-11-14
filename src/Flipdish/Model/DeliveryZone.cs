@@ -36,7 +36,7 @@ namespace Flipdish.Model
         /// <param name="Id">Delivery Fee Area Id.</param>
         /// <param name="DeliveryFee">Delivery fee.</param>
         /// <param name="MinimumDeliveryOrderAmount">Minimum delivery order amount.</param>
-        /// <param name="WellKnownText">Spatial data in Well Known Text format  We also support CIRCLE((0 0, 200)) - (centerX centerY, radius in m).</param>
+        /// <param name="WellKnownText">Spatial data in Well Known Text format  We also support CIRCLE((0 0, 200)) - (centerLong centerLat, radius in m).</param>
         public DeliveryZone(int? Id = default(int?), double? DeliveryFee = default(double?), double? MinimumDeliveryOrderAmount = default(double?), string WellKnownText = default(string))
         {
             this.Id = Id;
@@ -67,9 +67,9 @@ namespace Flipdish.Model
         public double? MinimumDeliveryOrderAmount { get; set; }
 
         /// <summary>
-        /// Spatial data in Well Known Text format  We also support CIRCLE((0 0, 200)) - (centerX centerY, radius in m)
+        /// Spatial data in Well Known Text format  We also support CIRCLE((0 0, 200)) - (centerLong centerLat, radius in m)
         /// </summary>
-        /// <value>Spatial data in Well Known Text format  We also support CIRCLE((0 0, 200)) - (centerX centerY, radius in m)</value>
+        /// <value>Spatial data in Well Known Text format  We also support CIRCLE((0 0, 200)) - (centerLong centerLat, radius in m)</value>
         [DataMember(Name="WellKnownText", EmitDefaultValue=false)]
         public string WellKnownText { get; set; }
 

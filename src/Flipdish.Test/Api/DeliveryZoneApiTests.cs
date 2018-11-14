@@ -72,8 +72,8 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? storeId = null;
-            //DeliveryZoneBase deliveryZone = null;
-            //var response = instance.AddDeliveryZone(storeId, deliveryZone);
+            //DeliveryZoneBase deliveryZoneBase = null;
+            //var response = instance.AddDeliveryZone(storeId, deliveryZoneBase);
             //Assert.IsInstanceOf<RestApiResultDeliveryZone> (response, "response is RestApiResultDeliveryZone");
         }
         

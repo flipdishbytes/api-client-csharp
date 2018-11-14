@@ -25,27 +25,29 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Store Delivery Zone Updated Event
+    /// Delivery Zone Deleted Event
     /// </summary>
     [DataContract]
-    public partial class StoreDeliveryZoneUpdatedEvent :  IEquatable<StoreDeliveryZoneUpdatedEvent>, IValidatableObject
+    public partial class DeliveryZoneDeletedEvent :  IEquatable<DeliveryZoneDeletedEvent>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="StoreDeliveryZoneUpdatedEvent" /> class.
+        /// Initializes a new instance of the <see cref="DeliveryZoneDeletedEvent" /> class.
         /// </summary>
         /// <param name="EventName">The event name.</param>
         /// <param name="StoreId">Store Id.</param>
-        /// <param name="User">User which updated delivery zone for this store.</param>
+        /// <param name="User">User which deleted delivery zone for this store.</param>
         /// <param name="Description">Description.</param>
+        /// <param name="DeliveryZone">Deleted Delivery Zone.</param>
         /// <param name="FlipdishEventId">The identitfier of the event.</param>
         /// <param name="CreateTime">The time of creation of the event.</param>
         /// <param name="Position">Position.</param>
-        public StoreDeliveryZoneUpdatedEvent(string EventName = default(string), int? StoreId = default(int?), UserEventInfo User = default(UserEventInfo), string Description = default(string), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        public DeliveryZoneDeletedEvent(string EventName = default(string), int? StoreId = default(int?), UserEventInfo User = default(UserEventInfo), string Description = default(string), DeliveryZone DeliveryZone = default(DeliveryZone), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
         {
             this.EventName = EventName;
             this.StoreId = StoreId;
             this.User = User;
             this.Description = Description;
+            this.DeliveryZone = DeliveryZone;
             this.FlipdishEventId = FlipdishEventId;
             this.CreateTime = CreateTime;
             this.Position = Position;
@@ -66,9 +68,9 @@ namespace Flipdish.Model
         public int? StoreId { get; set; }
 
         /// <summary>
-        /// User which updated delivery zone for this store
+        /// User which deleted delivery zone for this store
         /// </summary>
-        /// <value>User which updated delivery zone for this store</value>
+        /// <value>User which deleted delivery zone for this store</value>
         [DataMember(Name="User", EmitDefaultValue=false)]
         public UserEventInfo User { get; set; }
 
@@ -78,6 +80,13 @@ namespace Flipdish.Model
         /// <value>Description</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
+
+        /// <summary>
+        /// Deleted Delivery Zone
+        /// </summary>
+        /// <value>Deleted Delivery Zone</value>
+        [DataMember(Name="DeliveryZone", EmitDefaultValue=false)]
+        public DeliveryZone DeliveryZone { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -107,11 +116,12 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class StoreDeliveryZoneUpdatedEvent {\n");
+            sb.Append("class DeliveryZoneDeletedEvent {\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  DeliveryZone: ").Append(DeliveryZone).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -135,15 +145,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as StoreDeliveryZoneUpdatedEvent);
+            return this.Equals(input as DeliveryZoneDeletedEvent);
         }
 
         /// <summary>
-        /// Returns true if StoreDeliveryZoneUpdatedEvent instances are equal
+        /// Returns true if DeliveryZoneDeletedEvent instances are equal
         /// </summary>
-        /// <param name="input">Instance of StoreDeliveryZoneUpdatedEvent to be compared</param>
+        /// <param name="input">Instance of DeliveryZoneDeletedEvent to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StoreDeliveryZoneUpdatedEvent input)
+        public bool Equals(DeliveryZoneDeletedEvent input)
         {
             if (input == null)
                 return false;
@@ -168,6 +178,11 @@ namespace Flipdish.Model
                     this.Description == input.Description ||
                     (this.Description != null &&
                     this.Description.Equals(input.Description))
+                ) && 
+                (
+                    this.DeliveryZone == input.DeliveryZone ||
+                    (this.DeliveryZone != null &&
+                    this.DeliveryZone.Equals(input.DeliveryZone))
                 ) && 
                 (
                     this.FlipdishEventId == input.FlipdishEventId ||
@@ -203,6 +218,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.DeliveryZone != null)
+                    hashCode = hashCode * 59 + this.DeliveryZone.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)

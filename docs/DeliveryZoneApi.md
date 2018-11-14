@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="adddeliveryzone"></a>
 # **AddDeliveryZone**
-> RestApiResultDeliveryZone AddDeliveryZone (int? storeId, DeliveryZoneBase deliveryZone = null)
+> RestApiResultDeliveryZone AddDeliveryZone (int? storeId, DeliveryZoneBase deliveryZoneBase)
 
 Adds a delivery zone to the store id
 
@@ -35,12 +35,12 @@ namespace Example
 
             var apiInstance = new DeliveryZoneApi();
             var storeId = 56;  // int? | Store Id to which the delivery zone will be added
-            var deliveryZone = new DeliveryZoneBase(); // DeliveryZoneBase | Optional parameters for delivery zone, if not supplied will create a default zone (optional) 
+            var deliveryZoneBase = new DeliveryZoneBase(); // DeliveryZoneBase | Optional delivery zone, if not supplied will create a default zone
 
             try
             {
                 // Adds a delivery zone to the store id
-                RestApiResultDeliveryZone result = apiInstance.AddDeliveryZone(storeId, deliveryZone);
+                RestApiResultDeliveryZone result = apiInstance.AddDeliveryZone(storeId, deliveryZoneBase);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -57,7 +57,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeId** | **int?**| Store Id to which the delivery zone will be added | 
- **deliveryZone** | [**DeliveryZoneBase**](DeliveryZoneBase.md)| Optional parameters for delivery zone, if not supplied will create a default zone | [optional] 
+ **deliveryZoneBase** | [**DeliveryZoneBase**](DeliveryZoneBase.md)| Optional delivery zone, if not supplied will create a default zone | 
 
 ### Return type
 

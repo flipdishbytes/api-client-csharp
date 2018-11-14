@@ -32,9 +32,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZone">Optional parameters for delivery zone, if not supplied will create a default zone (optional)</param>
+        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
         /// <returns>RestApiResultDeliveryZone</returns>
-        RestApiResultDeliveryZone AddDeliveryZone (int? storeId, DeliveryZoneBase deliveryZone = null);
+        RestApiResultDeliveryZone AddDeliveryZone (int? storeId, DeliveryZoneBase deliveryZoneBase);
 
         /// <summary>
         /// Adds a delivery zone to the store id
@@ -44,9 +44,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZone">Optional parameters for delivery zone, if not supplied will create a default zone (optional)</param>
+        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
         /// <returns>ApiResponse of RestApiResultDeliveryZone</returns>
-        ApiResponse<RestApiResultDeliveryZone> AddDeliveryZoneWithHttpInfo (int? storeId, DeliveryZoneBase deliveryZone = null);
+        ApiResponse<RestApiResultDeliveryZone> AddDeliveryZoneWithHttpInfo (int? storeId, DeliveryZoneBase deliveryZoneBase);
         /// <summary>
         /// Get all the delivery zones associated with a store
         /// </summary>
@@ -126,9 +126,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZone">Optional parameters for delivery zone, if not supplied will create a default zone (optional)</param>
+        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
         /// <returns>Task of RestApiResultDeliveryZone</returns>
-        System.Threading.Tasks.Task<RestApiResultDeliveryZone> AddDeliveryZoneAsync (int? storeId, DeliveryZoneBase deliveryZone = null);
+        System.Threading.Tasks.Task<RestApiResultDeliveryZone> AddDeliveryZoneAsync (int? storeId, DeliveryZoneBase deliveryZoneBase);
 
         /// <summary>
         /// Adds a delivery zone to the store id
@@ -138,9 +138,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZone">Optional parameters for delivery zone, if not supplied will create a default zone (optional)</param>
+        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
         /// <returns>Task of ApiResponse (RestApiResultDeliveryZone)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultDeliveryZone>> AddDeliveryZoneAsyncWithHttpInfo (int? storeId, DeliveryZoneBase deliveryZone = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultDeliveryZone>> AddDeliveryZoneAsyncWithHttpInfo (int? storeId, DeliveryZoneBase deliveryZoneBase);
         /// <summary>
         /// Get all the delivery zones associated with a store
         /// </summary>
@@ -315,11 +315,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZone">Optional parameters for delivery zone, if not supplied will create a default zone (optional)</param>
+        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
         /// <returns>RestApiResultDeliveryZone</returns>
-        public RestApiResultDeliveryZone AddDeliveryZone (int? storeId, DeliveryZoneBase deliveryZone = null)
+        public RestApiResultDeliveryZone AddDeliveryZone (int? storeId, DeliveryZoneBase deliveryZoneBase)
         {
-             ApiResponse<RestApiResultDeliveryZone> localVarResponse = AddDeliveryZoneWithHttpInfo(storeId, deliveryZone);
+             ApiResponse<RestApiResultDeliveryZone> localVarResponse = AddDeliveryZoneWithHttpInfo(storeId, deliveryZoneBase);
              return localVarResponse.Data;
         }
 
@@ -328,13 +328,16 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZone">Optional parameters for delivery zone, if not supplied will create a default zone (optional)</param>
+        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
         /// <returns>ApiResponse of RestApiResultDeliveryZone</returns>
-        public ApiResponse< RestApiResultDeliveryZone > AddDeliveryZoneWithHttpInfo (int? storeId, DeliveryZoneBase deliveryZone = null)
+        public ApiResponse< RestApiResultDeliveryZone > AddDeliveryZoneWithHttpInfo (int? storeId, DeliveryZoneBase deliveryZoneBase)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling DeliveryZoneApi->AddDeliveryZone");
+            // verify the required parameter 'deliveryZoneBase' is set
+            if (deliveryZoneBase == null)
+                throw new ApiException(400, "Missing required parameter 'deliveryZoneBase' when calling DeliveryZoneApi->AddDeliveryZone");
 
             var localVarPath = "/api/v1.0/stores/{storeId}/deliveryzones";
             var localVarPathParams = new Dictionary<String, String>();
@@ -366,13 +369,13 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
-            if (deliveryZone != null && deliveryZone.GetType() != typeof(byte[]))
+            if (deliveryZoneBase != null && deliveryZoneBase.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(deliveryZone); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(deliveryZoneBase); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = deliveryZone; // byte array
+                localVarPostBody = deliveryZoneBase; // byte array
             }
 
             // authentication (oauth2) required
@@ -405,11 +408,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZone">Optional parameters for delivery zone, if not supplied will create a default zone (optional)</param>
+        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
         /// <returns>Task of RestApiResultDeliveryZone</returns>
-        public async System.Threading.Tasks.Task<RestApiResultDeliveryZone> AddDeliveryZoneAsync (int? storeId, DeliveryZoneBase deliveryZone = null)
+        public async System.Threading.Tasks.Task<RestApiResultDeliveryZone> AddDeliveryZoneAsync (int? storeId, DeliveryZoneBase deliveryZoneBase)
         {
-             ApiResponse<RestApiResultDeliveryZone> localVarResponse = await AddDeliveryZoneAsyncWithHttpInfo(storeId, deliveryZone);
+             ApiResponse<RestApiResultDeliveryZone> localVarResponse = await AddDeliveryZoneAsyncWithHttpInfo(storeId, deliveryZoneBase);
              return localVarResponse.Data;
 
         }
@@ -419,13 +422,16 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZone">Optional parameters for delivery zone, if not supplied will create a default zone (optional)</param>
+        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
         /// <returns>Task of ApiResponse (RestApiResultDeliveryZone)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultDeliveryZone>> AddDeliveryZoneAsyncWithHttpInfo (int? storeId, DeliveryZoneBase deliveryZone = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultDeliveryZone>> AddDeliveryZoneAsyncWithHttpInfo (int? storeId, DeliveryZoneBase deliveryZoneBase)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling DeliveryZoneApi->AddDeliveryZone");
+            // verify the required parameter 'deliveryZoneBase' is set
+            if (deliveryZoneBase == null)
+                throw new ApiException(400, "Missing required parameter 'deliveryZoneBase' when calling DeliveryZoneApi->AddDeliveryZone");
 
             var localVarPath = "/api/v1.0/stores/{storeId}/deliveryzones";
             var localVarPathParams = new Dictionary<String, String>();
@@ -457,13 +463,13 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
-            if (deliveryZone != null && deliveryZone.GetType() != typeof(byte[]))
+            if (deliveryZoneBase != null && deliveryZoneBase.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(deliveryZone); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(deliveryZoneBase); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = deliveryZone; // byte array
+                localVarPostBody = deliveryZoneBase; // byte array
             }
 
             // authentication (oauth2) required
