@@ -4,15 +4,84 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**CreateBusinessHoursOverrideByStoreId**](StoresApi.md#createbusinesshoursoverridebystoreid) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | Create Business Hours Override for a store
 [**CreateStore**](StoresApi.md#createstore) | **POST** /api/v1.0/stores | Create store with Store Group identifier
+[**DeleteBusinessHoursOverride**](StoresApi.md#deletebusinesshoursoverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | Delete Business Hours Override for a store
+[**GetBusinessHours**](StoresApi.md#getbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Get Bussiness hours
+[**GetBusinessHoursOverrideByStoreId**](StoresApi.md#getbusinesshoursoverridebystoreid) | **GET** /api/v1.0/stores/{storeId}/businesshoursoverrides | Get business hours overrides by store identifier
 [**GetProcessingFeeConfigsByStoreId**](StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
 [**GetProcessingFeeConfigsByStoreIdAndPaymentAccountType**](StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
 [**GetStoreById**](StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
 [**GetStores**](StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores
+[**SetBusinessHours**](StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType}/times | Set Bussiness hours
 [**UpdateStore**](StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | Update store by identifier
 [**UpdateStoreAddress**](StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
 [**UpdateStoreAddressCoordinates**](StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
 
+
+<a name="createbusinesshoursoverridebystoreid"></a>
+# **CreateBusinessHoursOverrideByStoreId**
+> RestApiResultBusinessHoursOverride CreateBusinessHoursOverrideByStoreId (int? storeId, BusinessHoursOverrideBase businessHoursOverride)
+
+Create Business Hours Override for a store
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class CreateBusinessHoursOverrideByStoreIdExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | Store identifier
+            var businessHoursOverride = new BusinessHoursOverrideBase(); // BusinessHoursOverrideBase | Business Hours Override
+
+            try
+            {
+                // Create Business Hours Override for a store
+                RestApiResultBusinessHoursOverride result = apiInstance.CreateBusinessHoursOverrideByStoreId(storeId, businessHoursOverride);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.CreateBusinessHoursOverrideByStoreId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**| Store identifier | 
+ **businessHoursOverride** | [**BusinessHoursOverrideBase**](BusinessHoursOverrideBase.md)| Business Hours Override | 
+
+### Return type
+
+[**RestApiResultBusinessHoursOverride**](RestApiResultBusinessHoursOverride.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="createstore"></a>
 # **CreateStore**
@@ -74,6 +143,202 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletebusinesshoursoverride"></a>
+# **DeleteBusinessHoursOverride**
+> RestApiArrayResultRestApiDefaultResponse DeleteBusinessHoursOverride (int? storeId, int? businessHoursOverrideId)
+
+Delete Business Hours Override for a store
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class DeleteBusinessHoursOverrideExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | 
+            var businessHoursOverrideId = 56;  // int? | 
+
+            try
+            {
+                // Delete Business Hours Override for a store
+                RestApiArrayResultRestApiDefaultResponse result = apiInstance.DeleteBusinessHoursOverride(storeId, businessHoursOverrideId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.DeleteBusinessHoursOverride: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**|  | 
+ **businessHoursOverrideId** | **int?**|  | 
+
+### Return type
+
+[**RestApiArrayResultRestApiDefaultResponse**](RestApiArrayResultRestApiDefaultResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getbusinesshours"></a>
+# **GetBusinessHours**
+> RestApiArrayResultBusinessHoursPeriod GetBusinessHours (int? storeId, string deliveryType)
+
+Get Bussiness hours
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetBusinessHoursExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | Store identifier
+            var deliveryType = deliveryType_example;  // string | Deliery type
+
+            try
+            {
+                // Get Bussiness hours
+                RestApiArrayResultBusinessHoursPeriod result = apiInstance.GetBusinessHours(storeId, deliveryType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.GetBusinessHours: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**| Store identifier | 
+ **deliveryType** | **string**| Deliery type | 
+
+### Return type
+
+[**RestApiArrayResultBusinessHoursPeriod**](RestApiArrayResultBusinessHoursPeriod.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getbusinesshoursoverridebystoreid"></a>
+# **GetBusinessHoursOverrideByStoreId**
+> RestApiPaginationResultBusinessHoursOverride GetBusinessHoursOverrideByStoreId (int? storeId, DateTime? after = null, int? page = null, int? limit = null)
+
+Get business hours overrides by store identifier
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetBusinessHoursOverrideByStoreIdExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | Store identifier
+            var after = 2013-10-20T19:20:30+01:00;  // DateTime? | Return results that ended after this datetime. Default value is the current datetime. (optional) 
+            var page = 56;  // int? | Requested page index (optional) 
+            var limit = 56;  // int? | Requested page limit (optional) 
+
+            try
+            {
+                // Get business hours overrides by store identifier
+                RestApiPaginationResultBusinessHoursOverride result = apiInstance.GetBusinessHoursOverrideByStoreId(storeId, after, page, limit);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.GetBusinessHoursOverrideByStoreId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**| Store identifier | 
+ **after** | **DateTime?**| Return results that ended after this datetime. Default value is the current datetime. | [optional] 
+ **page** | **int?**| Requested page index | [optional] 
+ **limit** | **int?**| Requested page limit | [optional] 
+
+### Return type
+
+[**RestApiPaginationResultBusinessHoursOverride**](RestApiPaginationResultBusinessHoursOverride.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -334,6 +599,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="setbusinesshours"></a>
+# **SetBusinessHours**
+> RestApiResultBusinessHoursPeriod SetBusinessHours (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod)
+
+Set Bussiness hours
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SetBusinessHoursExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | Store identifier
+            var deliveryType = deliveryType_example;  // string | Deliery type
+            var businessHoursPeriod = new BusinessHoursPeriodBase(); // BusinessHoursPeriodBase | Business Hours Period
+
+            try
+            {
+                // Set Bussiness hours
+                RestApiResultBusinessHoursPeriod result = apiInstance.SetBusinessHours(storeId, deliveryType, businessHoursPeriod);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.SetBusinessHours: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**| Store identifier | 
+ **deliveryType** | **string**| Deliery type | 
+ **businessHoursPeriod** | [**BusinessHoursPeriodBase**](BusinessHoursPeriodBase.md)| Business Hours Period | 
+
+### Return type
+
+[**RestApiResultBusinessHoursPeriod**](RestApiResultBusinessHoursPeriod.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

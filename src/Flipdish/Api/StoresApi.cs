@@ -25,6 +25,29 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Create Business Hours Override for a store
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <returns>RestApiResultBusinessHoursOverride</returns>
+        RestApiResultBusinessHoursOverride CreateBusinessHoursOverrideByStoreId (int? storeId, BusinessHoursOverrideBase businessHoursOverride);
+
+        /// <summary>
+        /// Create Business Hours Override for a store
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <returns>ApiResponse of RestApiResultBusinessHoursOverride</returns>
+        ApiResponse<RestApiResultBusinessHoursOverride> CreateBusinessHoursOverrideByStoreIdWithHttpInfo (int? storeId, BusinessHoursOverrideBase businessHoursOverride);
+        /// <summary>
         /// Create store with Store Group identifier
         /// </summary>
         /// <remarks>
@@ -47,6 +70,79 @@ namespace Flipdish.Api
         /// <param name="store">Store</param>
         /// <returns>ApiResponse of RestApiResultStore</returns>
         ApiResponse<RestApiResultStore> CreateStoreWithHttpInfo (int? storeGroupId, StoreCreateBase store);
+        /// <summary>
+        /// Delete Business Hours Override for a store
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverrideId"></param>
+        /// <returns>RestApiArrayResultRestApiDefaultResponse</returns>
+        RestApiArrayResultRestApiDefaultResponse DeleteBusinessHoursOverride (int? storeId, int? businessHoursOverrideId);
+
+        /// <summary>
+        /// Delete Business Hours Override for a store
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverrideId"></param>
+        /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
+        ApiResponse<RestApiArrayResultRestApiDefaultResponse> DeleteBusinessHoursOverrideWithHttpInfo (int? storeId, int? businessHoursOverrideId);
+        /// <summary>
+        /// Get Bussiness hours
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <returns>RestApiArrayResultBusinessHoursPeriod</returns>
+        RestApiArrayResultBusinessHoursPeriod GetBusinessHours (int? storeId, string deliveryType);
+
+        /// <summary>
+        /// Get Bussiness hours
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <returns>ApiResponse of RestApiArrayResultBusinessHoursPeriod</returns>
+        ApiResponse<RestApiArrayResultBusinessHoursPeriod> GetBusinessHoursWithHttpInfo (int? storeId, string deliveryType);
+        /// <summary>
+        /// Get business hours overrides by store identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>RestApiPaginationResultBusinessHoursOverride</returns>
+        RestApiPaginationResultBusinessHoursOverride GetBusinessHoursOverrideByStoreId (int? storeId, DateTime? after = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Get business hours overrides by store identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultBusinessHoursOverride</returns>
+        ApiResponse<RestApiPaginationResultBusinessHoursOverride> GetBusinessHoursOverrideByStoreIdWithHttpInfo (int? storeId, DateTime? after = null, int? page = null, int? limit = null);
         /// <summary>
         /// Get processing fee configs by store identifier
         /// </summary>
@@ -144,6 +240,31 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultStore</returns>
         ApiResponse<RestApiPaginationResultStore> GetStoresWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null);
         /// <summary>
+        /// Set Bussiness hours
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <returns>RestApiResultBusinessHoursPeriod</returns>
+        RestApiResultBusinessHoursPeriod SetBusinessHours (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod);
+
+        /// <summary>
+        /// Set Bussiness hours
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <returns>ApiResponse of RestApiResultBusinessHoursPeriod</returns>
+        ApiResponse<RestApiResultBusinessHoursPeriod> SetBusinessHoursWithHttpInfo (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod);
+        /// <summary>
         /// Update store by identifier
         /// </summary>
         /// <remarks>
@@ -217,6 +338,29 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
+        /// Create Business Hours Override for a store
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <returns>Task of RestApiResultBusinessHoursOverride</returns>
+        System.Threading.Tasks.Task<RestApiResultBusinessHoursOverride> CreateBusinessHoursOverrideByStoreIdAsync (int? storeId, BusinessHoursOverrideBase businessHoursOverride);
+
+        /// <summary>
+        /// Create Business Hours Override for a store
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <returns>Task of ApiResponse (RestApiResultBusinessHoursOverride)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultBusinessHoursOverride>> CreateBusinessHoursOverrideByStoreIdAsyncWithHttpInfo (int? storeId, BusinessHoursOverrideBase businessHoursOverride);
+        /// <summary>
         /// Create store with Store Group identifier
         /// </summary>
         /// <remarks>
@@ -239,6 +383,79 @@ namespace Flipdish.Api
         /// <param name="store">Store</param>
         /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> CreateStoreAsyncWithHttpInfo (int? storeGroupId, StoreCreateBase store);
+        /// <summary>
+        /// Delete Business Hours Override for a store
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverrideId"></param>
+        /// <returns>Task of RestApiArrayResultRestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> DeleteBusinessHoursOverrideAsync (int? storeId, int? businessHoursOverrideId);
+
+        /// <summary>
+        /// Delete Business Hours Override for a store
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverrideId"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> DeleteBusinessHoursOverrideAsyncWithHttpInfo (int? storeId, int? businessHoursOverrideId);
+        /// <summary>
+        /// Get Bussiness hours
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <returns>Task of RestApiArrayResultBusinessHoursPeriod</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultBusinessHoursPeriod> GetBusinessHoursAsync (int? storeId, string deliveryType);
+
+        /// <summary>
+        /// Get Bussiness hours
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultBusinessHoursPeriod)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultBusinessHoursPeriod>> GetBusinessHoursAsyncWithHttpInfo (int? storeId, string deliveryType);
+        /// <summary>
+        /// Get business hours overrides by store identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>Task of RestApiPaginationResultBusinessHoursOverride</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultBusinessHoursOverride> GetBusinessHoursOverrideByStoreIdAsync (int? storeId, DateTime? after = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Get business hours overrides by store identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultBusinessHoursOverride)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultBusinessHoursOverride>> GetBusinessHoursOverrideByStoreIdAsyncWithHttpInfo (int? storeId, DateTime? after = null, int? page = null, int? limit = null);
         /// <summary>
         /// Get processing fee configs by store identifier
         /// </summary>
@@ -335,6 +552,31 @@ namespace Flipdish.Api
         /// <param name="storeGroupId">Store Group Id (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStore)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresAsyncWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null);
+        /// <summary>
+        /// Set Bussiness hours
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <returns>Task of RestApiResultBusinessHoursPeriod</returns>
+        System.Threading.Tasks.Task<RestApiResultBusinessHoursPeriod> SetBusinessHoursAsync (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod);
+
+        /// <summary>
+        /// Set Bussiness hours
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <returns>Task of ApiResponse (RestApiResultBusinessHoursPeriod)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultBusinessHoursPeriod>> SetBusinessHoursAsyncWithHttpInfo (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod);
         /// <summary>
         /// Update store by identifier
         /// </summary>
@@ -504,6 +746,193 @@ namespace Flipdish.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Create Business Hours Override for a store 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <returns>RestApiResultBusinessHoursOverride</returns>
+        public RestApiResultBusinessHoursOverride CreateBusinessHoursOverrideByStoreId (int? storeId, BusinessHoursOverrideBase businessHoursOverride)
+        {
+             ApiResponse<RestApiResultBusinessHoursOverride> localVarResponse = CreateBusinessHoursOverrideByStoreIdWithHttpInfo(storeId, businessHoursOverride);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Business Hours Override for a store 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <returns>ApiResponse of RestApiResultBusinessHoursOverride</returns>
+        public ApiResponse< RestApiResultBusinessHoursOverride > CreateBusinessHoursOverrideByStoreIdWithHttpInfo (int? storeId, BusinessHoursOverrideBase businessHoursOverride)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->CreateBusinessHoursOverrideByStoreId");
+            // verify the required parameter 'businessHoursOverride' is set
+            if (businessHoursOverride == null)
+                throw new ApiException(400, "Missing required parameter 'businessHoursOverride' when calling StoresApi->CreateBusinessHoursOverrideByStoreId");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/businesshoursoverrides";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (businessHoursOverride != null && businessHoursOverride.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(businessHoursOverride); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = businessHoursOverride; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateBusinessHoursOverrideByStoreId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultBusinessHoursOverride>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultBusinessHoursOverride) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBusinessHoursOverride)));
+        }
+
+        /// <summary>
+        /// Create Business Hours Override for a store 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <returns>Task of RestApiResultBusinessHoursOverride</returns>
+        public async System.Threading.Tasks.Task<RestApiResultBusinessHoursOverride> CreateBusinessHoursOverrideByStoreIdAsync (int? storeId, BusinessHoursOverrideBase businessHoursOverride)
+        {
+             ApiResponse<RestApiResultBusinessHoursOverride> localVarResponse = await CreateBusinessHoursOverrideByStoreIdAsyncWithHttpInfo(storeId, businessHoursOverride);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create Business Hours Override for a store 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <returns>Task of ApiResponse (RestApiResultBusinessHoursOverride)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultBusinessHoursOverride>> CreateBusinessHoursOverrideByStoreIdAsyncWithHttpInfo (int? storeId, BusinessHoursOverrideBase businessHoursOverride)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->CreateBusinessHoursOverrideByStoreId");
+            // verify the required parameter 'businessHoursOverride' is set
+            if (businessHoursOverride == null)
+                throw new ApiException(400, "Missing required parameter 'businessHoursOverride' when calling StoresApi->CreateBusinessHoursOverrideByStoreId");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/businesshoursoverrides";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (businessHoursOverride != null && businessHoursOverride.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(businessHoursOverride); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = businessHoursOverride; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateBusinessHoursOverrideByStoreId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultBusinessHoursOverride>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultBusinessHoursOverride) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBusinessHoursOverride)));
         }
 
         /// <summary>
@@ -691,6 +1120,501 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultStore>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiResultStore) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStore)));
+        }
+
+        /// <summary>
+        /// Delete Business Hours Override for a store 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverrideId"></param>
+        /// <returns>RestApiArrayResultRestApiDefaultResponse</returns>
+        public RestApiArrayResultRestApiDefaultResponse DeleteBusinessHoursOverride (int? storeId, int? businessHoursOverrideId)
+        {
+             ApiResponse<RestApiArrayResultRestApiDefaultResponse> localVarResponse = DeleteBusinessHoursOverrideWithHttpInfo(storeId, businessHoursOverrideId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete Business Hours Override for a store 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverrideId"></param>
+        /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
+        public ApiResponse< RestApiArrayResultRestApiDefaultResponse > DeleteBusinessHoursOverrideWithHttpInfo (int? storeId, int? businessHoursOverrideId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->DeleteBusinessHoursOverride");
+            // verify the required parameter 'businessHoursOverrideId' is set
+            if (businessHoursOverrideId == null)
+                throw new ApiException(400, "Missing required parameter 'businessHoursOverrideId' when calling StoresApi->DeleteBusinessHoursOverride");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (businessHoursOverrideId != null) localVarPathParams.Add("businessHoursOverrideId", Configuration.ApiClient.ParameterToString(businessHoursOverrideId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteBusinessHoursOverride", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultRestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultRestApiDefaultResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultRestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        /// Delete Business Hours Override for a store 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverrideId"></param>
+        /// <returns>Task of RestApiArrayResultRestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> DeleteBusinessHoursOverrideAsync (int? storeId, int? businessHoursOverrideId)
+        {
+             ApiResponse<RestApiArrayResultRestApiDefaultResponse> localVarResponse = await DeleteBusinessHoursOverrideAsyncWithHttpInfo(storeId, businessHoursOverrideId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete Business Hours Override for a store 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverrideId"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> DeleteBusinessHoursOverrideAsyncWithHttpInfo (int? storeId, int? businessHoursOverrideId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->DeleteBusinessHoursOverride");
+            // verify the required parameter 'businessHoursOverrideId' is set
+            if (businessHoursOverrideId == null)
+                throw new ApiException(400, "Missing required parameter 'businessHoursOverrideId' when calling StoresApi->DeleteBusinessHoursOverride");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (businessHoursOverrideId != null) localVarPathParams.Add("businessHoursOverrideId", Configuration.ApiClient.ParameterToString(businessHoursOverrideId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteBusinessHoursOverride", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultRestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultRestApiDefaultResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultRestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        /// Get Bussiness hours 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <returns>RestApiArrayResultBusinessHoursPeriod</returns>
+        public RestApiArrayResultBusinessHoursPeriod GetBusinessHours (int? storeId, string deliveryType)
+        {
+             ApiResponse<RestApiArrayResultBusinessHoursPeriod> localVarResponse = GetBusinessHoursWithHttpInfo(storeId, deliveryType);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Bussiness hours 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <returns>ApiResponse of RestApiArrayResultBusinessHoursPeriod</returns>
+        public ApiResponse< RestApiArrayResultBusinessHoursPeriod > GetBusinessHoursWithHttpInfo (int? storeId, string deliveryType)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetBusinessHours");
+            // verify the required parameter 'deliveryType' is set
+            if (deliveryType == null)
+                throw new ApiException(400, "Missing required parameter 'deliveryType' when calling StoresApi->GetBusinessHours");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/availability/{deliveryType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (deliveryType != null) localVarPathParams.Add("deliveryType", Configuration.ApiClient.ParameterToString(deliveryType)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetBusinessHours", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultBusinessHoursPeriod>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultBusinessHoursPeriod) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultBusinessHoursPeriod)));
+        }
+
+        /// <summary>
+        /// Get Bussiness hours 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <returns>Task of RestApiArrayResultBusinessHoursPeriod</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultBusinessHoursPeriod> GetBusinessHoursAsync (int? storeId, string deliveryType)
+        {
+             ApiResponse<RestApiArrayResultBusinessHoursPeriod> localVarResponse = await GetBusinessHoursAsyncWithHttpInfo(storeId, deliveryType);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Bussiness hours 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultBusinessHoursPeriod)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultBusinessHoursPeriod>> GetBusinessHoursAsyncWithHttpInfo (int? storeId, string deliveryType)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetBusinessHours");
+            // verify the required parameter 'deliveryType' is set
+            if (deliveryType == null)
+                throw new ApiException(400, "Missing required parameter 'deliveryType' when calling StoresApi->GetBusinessHours");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/availability/{deliveryType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (deliveryType != null) localVarPathParams.Add("deliveryType", Configuration.ApiClient.ParameterToString(deliveryType)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetBusinessHours", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultBusinessHoursPeriod>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultBusinessHoursPeriod) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultBusinessHoursPeriod)));
+        }
+
+        /// <summary>
+        /// Get business hours overrides by store identifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>RestApiPaginationResultBusinessHoursOverride</returns>
+        public RestApiPaginationResultBusinessHoursOverride GetBusinessHoursOverrideByStoreId (int? storeId, DateTime? after = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<RestApiPaginationResultBusinessHoursOverride> localVarResponse = GetBusinessHoursOverrideByStoreIdWithHttpInfo(storeId, after, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get business hours overrides by store identifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultBusinessHoursOverride</returns>
+        public ApiResponse< RestApiPaginationResultBusinessHoursOverride > GetBusinessHoursOverrideByStoreIdWithHttpInfo (int? storeId, DateTime? after = null, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetBusinessHoursOverrideByStoreId");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/businesshoursoverrides";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (after != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "after", after)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetBusinessHoursOverrideByStoreId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultBusinessHoursOverride>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiPaginationResultBusinessHoursOverride) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultBusinessHoursOverride)));
+        }
+
+        /// <summary>
+        /// Get business hours overrides by store identifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>Task of RestApiPaginationResultBusinessHoursOverride</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultBusinessHoursOverride> GetBusinessHoursOverrideByStoreIdAsync (int? storeId, DateTime? after = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<RestApiPaginationResultBusinessHoursOverride> localVarResponse = await GetBusinessHoursOverrideByStoreIdAsyncWithHttpInfo(storeId, after, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get business hours overrides by store identifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultBusinessHoursOverride)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultBusinessHoursOverride>> GetBusinessHoursOverrideByStoreIdAsyncWithHttpInfo (int? storeId, DateTime? after = null, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetBusinessHoursOverrideByStoreId");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/businesshoursoverrides";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (after != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "after", after)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetBusinessHoursOverrideByStoreId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultBusinessHoursOverride>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiPaginationResultBusinessHoursOverride) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultBusinessHoursOverride)));
         }
 
         /// <summary>
@@ -1331,6 +2255,205 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiPaginationResultStore>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiPaginationResultStore) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultStore)));
+        }
+
+        /// <summary>
+        /// Set Bussiness hours 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <returns>RestApiResultBusinessHoursPeriod</returns>
+        public RestApiResultBusinessHoursPeriod SetBusinessHours (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod)
+        {
+             ApiResponse<RestApiResultBusinessHoursPeriod> localVarResponse = SetBusinessHoursWithHttpInfo(storeId, deliveryType, businessHoursPeriod);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set Bussiness hours 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <returns>ApiResponse of RestApiResultBusinessHoursPeriod</returns>
+        public ApiResponse< RestApiResultBusinessHoursPeriod > SetBusinessHoursWithHttpInfo (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->SetBusinessHours");
+            // verify the required parameter 'deliveryType' is set
+            if (deliveryType == null)
+                throw new ApiException(400, "Missing required parameter 'deliveryType' when calling StoresApi->SetBusinessHours");
+            // verify the required parameter 'businessHoursPeriod' is set
+            if (businessHoursPeriod == null)
+                throw new ApiException(400, "Missing required parameter 'businessHoursPeriod' when calling StoresApi->SetBusinessHours");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/availability/{deliveryType}/times";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (deliveryType != null) localVarPathParams.Add("deliveryType", Configuration.ApiClient.ParameterToString(deliveryType)); // path parameter
+            if (businessHoursPeriod != null && businessHoursPeriod.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(businessHoursPeriod); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = businessHoursPeriod; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetBusinessHours", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultBusinessHoursPeriod>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultBusinessHoursPeriod) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBusinessHoursPeriod)));
+        }
+
+        /// <summary>
+        /// Set Bussiness hours 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <returns>Task of RestApiResultBusinessHoursPeriod</returns>
+        public async System.Threading.Tasks.Task<RestApiResultBusinessHoursPeriod> SetBusinessHoursAsync (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod)
+        {
+             ApiResponse<RestApiResultBusinessHoursPeriod> localVarResponse = await SetBusinessHoursAsyncWithHttpInfo(storeId, deliveryType, businessHoursPeriod);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set Bussiness hours 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="deliveryType">Deliery type</param>
+        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <returns>Task of ApiResponse (RestApiResultBusinessHoursPeriod)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultBusinessHoursPeriod>> SetBusinessHoursAsyncWithHttpInfo (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->SetBusinessHours");
+            // verify the required parameter 'deliveryType' is set
+            if (deliveryType == null)
+                throw new ApiException(400, "Missing required parameter 'deliveryType' when calling StoresApi->SetBusinessHours");
+            // verify the required parameter 'businessHoursPeriod' is set
+            if (businessHoursPeriod == null)
+                throw new ApiException(400, "Missing required parameter 'businessHoursPeriod' when calling StoresApi->SetBusinessHours");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/availability/{deliveryType}/times";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (deliveryType != null) localVarPathParams.Add("deliveryType", Configuration.ApiClient.ParameterToString(deliveryType)); // path parameter
+            if (businessHoursPeriod != null && businessHoursPeriod.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(businessHoursPeriod); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = businessHoursPeriod; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetBusinessHours", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultBusinessHoursPeriod>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultBusinessHoursPeriod) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBusinessHoursPeriod)));
         }
 
         /// <summary>

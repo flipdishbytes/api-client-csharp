@@ -139,6 +139,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'StoreDeletedEvent'
         }
         /// <summary>
+        /// Test the property 'StoreAddressUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void StoreAddressUpdatedEventTest()
+        {
+            // TODO unit test for the property 'StoreAddressUpdatedEvent'
+        }
+        /// <summary>
         /// Test the property 'DeliveryZoneCreatedEvent'
         /// </summary>
         [Test]

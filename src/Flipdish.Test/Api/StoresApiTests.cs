@@ -65,6 +65,19 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test CreateBusinessHoursOverrideByStoreId
+        /// </summary>
+        [Test]
+        public void CreateBusinessHoursOverrideByStoreIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //BusinessHoursOverrideBase businessHoursOverride = null;
+            //var response = instance.CreateBusinessHoursOverrideByStoreId(storeId, businessHoursOverride);
+            //Assert.IsInstanceOf<RestApiResultBusinessHoursOverride> (response, "response is RestApiResultBusinessHoursOverride");
+        }
+        
+        /// <summary>
         /// Test CreateStore
         /// </summary>
         [Test]
@@ -75,6 +88,47 @@ namespace Flipdish.Test
             //StoreCreateBase store = null;
             //var response = instance.CreateStore(storeGroupId, store);
             //Assert.IsInstanceOf<RestApiResultStore> (response, "response is RestApiResultStore");
+        }
+        
+        /// <summary>
+        /// Test DeleteBusinessHoursOverride
+        /// </summary>
+        [Test]
+        public void DeleteBusinessHoursOverrideTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //int? businessHoursOverrideId = null;
+            //var response = instance.DeleteBusinessHoursOverride(storeId, businessHoursOverrideId);
+            //Assert.IsInstanceOf<RestApiArrayResultRestApiDefaultResponse> (response, "response is RestApiArrayResultRestApiDefaultResponse");
+        }
+        
+        /// <summary>
+        /// Test GetBusinessHours
+        /// </summary>
+        [Test]
+        public void GetBusinessHoursTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //string deliveryType = null;
+            //var response = instance.GetBusinessHours(storeId, deliveryType);
+            //Assert.IsInstanceOf<RestApiArrayResultBusinessHoursPeriod> (response, "response is RestApiArrayResultBusinessHoursPeriod");
+        }
+        
+        /// <summary>
+        /// Test GetBusinessHoursOverrideByStoreId
+        /// </summary>
+        [Test]
+        public void GetBusinessHoursOverrideByStoreIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //DateTime? after = null;
+            //int? page = null;
+            //int? limit = null;
+            //var response = instance.GetBusinessHoursOverrideByStoreId(storeId, after, page, limit);
+            //Assert.IsInstanceOf<RestApiPaginationResultBusinessHoursOverride> (response, "response is RestApiPaginationResultBusinessHoursOverride");
         }
         
         /// <summary>
@@ -129,6 +183,20 @@ namespace Flipdish.Test
             //int? storeGroupId = null;
             //var response = instance.GetStores(searchQuery, page, limit, storeGroupId);
             //Assert.IsInstanceOf<RestApiPaginationResultStore> (response, "response is RestApiPaginationResultStore");
+        }
+        
+        /// <summary>
+        /// Test SetBusinessHours
+        /// </summary>
+        [Test]
+        public void SetBusinessHoursTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //string deliveryType = null;
+            //BusinessHoursPeriodBase businessHoursPeriod = null;
+            //var response = instance.SetBusinessHours(storeId, deliveryType, businessHoursPeriod);
+            //Assert.IsInstanceOf<RestApiResultBusinessHoursPeriod> (response, "response is RestApiResultBusinessHoursPeriod");
         }
         
         /// <summary>

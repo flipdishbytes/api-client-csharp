@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **OrderTipUpdatedEvent** | [**List&lt;OrderTipUpdatedEvent&gt;**](OrderTipUpdatedEvent.md) | Order tip updated events | [optional] 
 **StoreCreatedEvent** | [**List&lt;StoreCreatedEvent&gt;**](StoreCreatedEvent.md) | Store created events | [optional] 
 **StoreDeletedEvent** | [**List&lt;StoreDeletedEvent&gt;**](StoreDeletedEvent.md) | Store deleted events | [optional] 
+**StoreAddressUpdatedEvent** | [**List&lt;StoreAddressUpdatedEvent&gt;**](StoreAddressUpdatedEvent.md) | Store address updated events | [optional] 
 **DeliveryZoneCreatedEvent** | [**List&lt;DeliveryZoneCreatedEvent&gt;**](DeliveryZoneCreatedEvent.md) | Store delivery zone created events | [optional] 
 **DeliveryZoneUpdatedEvent** | [**List&lt;DeliveryZoneUpdatedEvent&gt;**](DeliveryZoneUpdatedEvent.md) | Store delivery zone updated events | [optional] 
 **DeliveryZoneDeletedEvent** | [**List&lt;DeliveryZoneDeletedEvent&gt;**](DeliveryZoneDeletedEvent.md) | Store delivery zone deleted events | [optional] 

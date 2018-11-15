@@ -193,11 +193,16 @@ Class | Method | HTTP request | Description
 *StoreGroupsApi* | [**GetStoreGroups**](docs/StoreGroupsApi.md#getstoregroups) | **GET** /api/v1.0/{appNameId}/storegroups | Returns a paginated list of Store Groups
 *StoreGroupsApi* | [**RemoveStoreGroup**](docs/StoreGroupsApi.md#removestoregroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
 *StoreGroupsApi* | [**UpdateStoreGroup**](docs/StoreGroupsApi.md#updatestoregroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | Updates Store Group
+*StoresApi* | [**CreateBusinessHoursOverrideByStoreId**](docs/StoresApi.md#createbusinesshoursoverridebystoreid) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | Create Business Hours Override for a store
 *StoresApi* | [**CreateStore**](docs/StoresApi.md#createstore) | **POST** /api/v1.0/stores | Create store with Store Group identifier
+*StoresApi* | [**DeleteBusinessHoursOverride**](docs/StoresApi.md#deletebusinesshoursoverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | Delete Business Hours Override for a store
+*StoresApi* | [**GetBusinessHours**](docs/StoresApi.md#getbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Get Bussiness hours
+*StoresApi* | [**GetBusinessHoursOverrideByStoreId**](docs/StoresApi.md#getbusinesshoursoverridebystoreid) | **GET** /api/v1.0/stores/{storeId}/businesshoursoverrides | Get business hours overrides by store identifier
 *StoresApi* | [**GetProcessingFeeConfigsByStoreId**](docs/StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
 *StoresApi* | [**GetProcessingFeeConfigsByStoreIdAndPaymentAccountType**](docs/StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
 *StoresApi* | [**GetStoreById**](docs/StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
 *StoresApi* | [**GetStores**](docs/StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores
+*StoresApi* | [**SetBusinessHours**](docs/StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType}/times | Set Bussiness hours
 *StoresApi* | [**UpdateStore**](docs/StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | Update store by identifier
 *StoresApi* | [**UpdateStoreAddress**](docs/StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
 *StoresApi* | [**UpdateStoreAddressCoordinates**](docs/StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
@@ -239,6 +244,8 @@ Class | Method | HTTP request | Description
  - [Model.AccountDetail](docs/AccountDetail.md)
  - [Model.AnalyticsClientEvent](docs/AnalyticsClientEvent.md)
  - [Model.App](docs/App.md)
+ - [Model.BusinessHoursOverride](docs/BusinessHoursOverride.md)
+ - [Model.BusinessHoursOverrideBase](docs/BusinessHoursOverrideBase.md)
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
  - [Model.BusinessHoursPeriodBase](docs/BusinessHoursPeriodBase.md)
  - [Model.Card](docs/Card.md)
@@ -318,6 +325,7 @@ Class | Method | HTTP request | Description
  - [Model.Range](docs/Range.md)
  - [Model.Refund](docs/Refund.md)
  - [Model.Reject](docs/Reject.md)
+ - [Model.RestApiArrayResultBusinessHoursPeriod](docs/RestApiArrayResultBusinessHoursPeriod.md)
  - [Model.RestApiArrayResultDeliveryZone](docs/RestApiArrayResultDeliveryZone.md)
  - [Model.RestApiArrayResultMenuItemOptionSet](docs/RestApiArrayResultMenuItemOptionSet.md)
  - [Model.RestApiArrayResultMenuItemOptionSetItem](docs/RestApiArrayResultMenuItemOptionSetItem.md)
@@ -335,6 +343,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiForbiddenResult](docs/RestApiForbiddenResult.md)
  - [Model.RestApiIntegerResult](docs/RestApiIntegerResult.md)
  - [Model.RestApiPaginationResultApp](docs/RestApiPaginationResultApp.md)
+ - [Model.RestApiPaginationResultBusinessHoursOverride](docs/RestApiPaginationResultBusinessHoursOverride.md)
  - [Model.RestApiPaginationResultHttpRequestAndResponseLog](docs/RestApiPaginationResultHttpRequestAndResponseLog.md)
  - [Model.RestApiPaginationResultOAuthTokenModel](docs/RestApiPaginationResultOAuthTokenModel.md)
  - [Model.RestApiPaginationResultOrder](docs/RestApiPaginationResultOrder.md)
@@ -343,6 +352,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultVoucher](docs/RestApiPaginationResultVoucher.md)
  - [Model.RestApiPaginationResultWebhookLog](docs/RestApiPaginationResultWebhookLog.md)
  - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
+ - [Model.RestApiResultBusinessHoursOverride](docs/RestApiResultBusinessHoursOverride.md)
  - [Model.RestApiResultBusinessHoursPeriod](docs/RestApiResultBusinessHoursPeriod.md)
  - [Model.RestApiResultCard](docs/RestApiResultCard.md)
  - [Model.RestApiResultCoordinates](docs/RestApiResultCoordinates.md)
@@ -382,6 +392,7 @@ Class | Method | HTTP request | Description
  - [Model.Store](docs/Store.md)
  - [Model.StoreAddress](docs/StoreAddress.md)
  - [Model.StoreAddressBase](docs/StoreAddressBase.md)
+ - [Model.StoreAddressUpdatedEvent](docs/StoreAddressUpdatedEvent.md)
  - [Model.StoreBase](docs/StoreBase.md)
  - [Model.StoreCreateBase](docs/StoreCreateBase.md)
  - [Model.StoreCreatedEvent](docs/StoreCreatedEvent.md)
