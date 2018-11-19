@@ -219,6 +219,11 @@ Class | Method | HTTP request | Description
 *SubscriptionsApi* | [**SubscriptionsSubscribe**](docs/SubscriptionsApi.md#subscriptionssubscribe) | **POST** /api/v1.0/subscriptions | Create a new subscription
 *SubscriptionsApi* | [**SubscriptionsUpdateCardExpiringDate**](docs/SubscriptionsApi.md#subscriptionsupdatecardexpiringdate) | **POST** /api/v1.0/subscriptions/{subscriptionId}/card | Update card expiring date
 *SubscriptionsApi* | [**SubscriptionsUpdateSubscription**](docs/SubscriptionsApi.md#subscriptionsupdatesubscription) | **POST** /api/v1.0/subscriptions/{subscriptionId} | Update the subscription
+*TeammatesApi* | [**CreateTeammate**](docs/TeammatesApi.md#createteammate) | **POST** /api/v1.0/{appId}/teammates | Create teammate and send an invite.
+*TeammatesApi* | [**DeleteTeammate**](docs/TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{email} | Delete teammate
+*TeammatesApi* | [**GetTeammateByAppIdAndEmail**](docs/TeammatesApi.md#getteammatebyappidandemail) | **GET** /api/v1.0/{appId}/teammates/{email} | Get a teammates by email address
+*TeammatesApi* | [**GetTeammatesByAppId**](docs/TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
+*TeammatesApi* | [**UpdateTeammate**](docs/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{email} | Update teammates (this method does not support Deltas!)
 *UsersApi* | [**GetRoles**](docs/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | Get role names
 *VouchersApi* | [**DeleteVoucherMetadata**](docs/VouchersApi.md#deletevouchermetadata) | **DELETE** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Delete voucher metadata
 *VouchersApi* | [**GetVoucherById**](docs/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | Get voucher by identifier
@@ -254,6 +259,7 @@ Class | Method | HTTP request | Description
  - [Model.ChangePasswordModel](docs/ChangePasswordModel.md)
  - [Model.Coordinates](docs/Coordinates.md)
  - [Model.CreateAccountModel](docs/CreateAccountModel.md)
+ - [Model.CreateTeammate](docs/CreateTeammate.md)
  - [Model.CustomerConsentUpdatedEvent](docs/CustomerConsentUpdatedEvent.md)
  - [Model.CustomerCreatedEvent](docs/CustomerCreatedEvent.md)
  - [Model.CustomerSummary](docs/CustomerSummary.md)
@@ -336,6 +342,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultOauthClientRedirectUri](docs/RestApiArrayResultOauthClientRedirectUri.md)
  - [Model.RestApiArrayResultProcessingFeeConfig](docs/RestApiArrayResultProcessingFeeConfig.md)
  - [Model.RestApiArrayResultRestApiDefaultResponse](docs/RestApiArrayResultRestApiDefaultResponse.md)
+ - [Model.RestApiArrayResultTeammate](docs/RestApiArrayResultTeammate.md)
  - [Model.RestApiArrayResultWebhookSubscription](docs/RestApiArrayResultWebhookSubscription.md)
  - [Model.RestApiDefaultResponse](docs/RestApiDefaultResponse.md)
  - [Model.RestApiErrorResult](docs/RestApiErrorResult.md)
@@ -377,6 +384,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultStuartSettings](docs/RestApiResultStuartSettings.md)
  - [Model.RestApiResultSubscription](docs/RestApiResultSubscription.md)
  - [Model.RestApiResultSubscriptionPlansResponse](docs/RestApiResultSubscriptionPlansResponse.md)
+ - [Model.RestApiResultTeammate](docs/RestApiResultTeammate.md)
  - [Model.RestApiResultVoucher](docs/RestApiResultVoucher.md)
  - [Model.RestApiStringArrayResult](docs/RestApiStringArrayResult.md)
  - [Model.RestApiStringResult](docs/RestApiStringResult.md)
@@ -394,6 +402,8 @@ Class | Method | HTTP request | Description
  - [Model.StoreAddressBase](docs/StoreAddressBase.md)
  - [Model.StoreAddressUpdatedEvent](docs/StoreAddressUpdatedEvent.md)
  - [Model.StoreBase](docs/StoreBase.md)
+ - [Model.StoreBusinessHoursOverrideCreatedEvent](docs/StoreBusinessHoursOverrideCreatedEvent.md)
+ - [Model.StoreBusinessHoursOverrideDeletedEvent](docs/StoreBusinessHoursOverrideDeletedEvent.md)
  - [Model.StoreCreateBase](docs/StoreCreateBase.md)
  - [Model.StoreCreatedEvent](docs/StoreCreatedEvent.md)
  - [Model.StoreDeletedEvent](docs/StoreDeletedEvent.md)
@@ -412,6 +422,8 @@ Class | Method | HTTP request | Description
  - [Model.SubscriptionPlan](docs/SubscriptionPlan.md)
  - [Model.SubscriptionPlansResponse](docs/SubscriptionPlansResponse.md)
  - [Model.SubscriptionWithToken](docs/SubscriptionWithToken.md)
+ - [Model.Teammate](docs/Teammate.md)
+ - [Model.TeammateBase](docs/TeammateBase.md)
  - [Model.UpdateAccountModel](docs/UpdateAccountModel.md)
  - [Model.UserCreatedEvent](docs/UserCreatedEvent.md)
  - [Model.UserDeletedEvent](docs/UserDeletedEvent.md)

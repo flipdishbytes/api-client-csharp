@@ -179,6 +179,22 @@ namespace Flipdish.Test
             // TODO unit test for the property 'StoreOpeningHoursUpdatedEvent'
         }
         /// <summary>
+        /// Test the property 'StoreBusinessHoursOverrideCreatedEvent'
+        /// </summary>
+        [Test]
+        public void StoreBusinessHoursOverrideCreatedEventTest()
+        {
+            // TODO unit test for the property 'StoreBusinessHoursOverrideCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'StoreBusinessHoursOverrideDeletedEvent'
+        /// </summary>
+        [Test]
+        public void StoreBusinessHoursOverrideDeletedEventTest()
+        {
+            // TODO unit test for the property 'StoreBusinessHoursOverrideDeletedEvent'
+        }
+        /// <summary>
         /// Test the property 'StoreUpdatedEvent'
         /// </summary>
         [Test]

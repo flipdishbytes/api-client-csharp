@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **DeliveryZoneUpdatedEvent** | [**List&lt;DeliveryZoneUpdatedEvent&gt;**](DeliveryZoneUpdatedEvent.md) | Store delivery zone updated events | [optional] 
 **DeliveryZoneDeletedEvent** | [**List&lt;DeliveryZoneDeletedEvent&gt;**](DeliveryZoneDeletedEvent.md) | Store delivery zone deleted events | [optional] 
 **StoreOpeningHoursUpdatedEvent** | [**List&lt;StoreOpeningHoursUpdatedEvent&gt;**](StoreOpeningHoursUpdatedEvent.md) | Store opening hours updated events | [optional] 
+**StoreBusinessHoursOverrideCreatedEvent** | [**List&lt;StoreBusinessHoursOverrideCreatedEvent&gt;**](StoreBusinessHoursOverrideCreatedEvent.md) | Store business hours override created events | [optional] 
+**StoreBusinessHoursOverrideDeletedEvent** | [**List&lt;StoreBusinessHoursOverrideDeletedEvent&gt;**](StoreBusinessHoursOverrideDeletedEvent.md) | Store business hours override deleted events | [optional] 
 **StoreUpdatedEvent** | [**List&lt;StoreUpdatedEvent&gt;**](StoreUpdatedEvent.md) | Store updated events | [optional] 
 **MenuCreatedEvent** | [**List&lt;MenuCreatedEvent&gt;**](MenuCreatedEvent.md) | Menu created events | [optional] 
 **MenuUpdatedEvent** | [**List&lt;MenuUpdatedEvent&gt;**](MenuUpdatedEvent.md) | Menu updated events | [optional] 
