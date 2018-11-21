@@ -78,6 +78,21 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test CreateMenuAvailabilityForDay
+        /// </summary>
+        [Test]
+        public void CreateMenuAvailabilityForDayTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //int? menuSectionId = null;
+            //string dayOfWeek = null;
+            //BusinessHoursPeriodBase businessHoursPeriod = null;
+            //var response = instance.CreateMenuAvailabilityForDay(menuId, menuSectionId, dayOfWeek, businessHoursPeriod);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
         /// Test CreateMenuSection
         /// </summary>
         [Test]
@@ -101,21 +116,6 @@ namespace Flipdish.Test
             //int? menuSectionId = null;
             //MenuSectionAvailabilityBase menuSectionAvailability = null;
             //var response = instance.CreateMenuSection_0(menuId, menuSectionId, menuSectionAvailability);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
-        }
-        
-        /// <summary>
-        /// Test CreateMenuSection_1
-        /// </summary>
-        [Test]
-        public void CreateMenuSection_1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? menuId = null;
-            //int? menuSectionId = null;
-            //string dayOfWeek = null;
-            //BusinessHoursPeriodBase businessHoursPeriod = null;
-            //var response = instance.CreateMenuSection_1(menuId, menuSectionId, dayOfWeek, businessHoursPeriod);
             //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         

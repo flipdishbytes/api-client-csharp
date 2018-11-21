@@ -25,7 +25,7 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get a menu item metadata by key
+        /// Get menu item metadata by key
         /// </summary>
         /// <remarks>
         /// 
@@ -39,7 +39,7 @@ namespace Flipdish.Api
         void DeleteMenuItemMetadata (int? menuId, int? storeId, int? menuItemId, string key);
 
         /// <summary>
-        /// Get a menu item metadata by key
+        /// Get menu item metadata by key
         /// </summary>
         /// <remarks>
         /// 
@@ -52,7 +52,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteMenuItemMetadataWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
         /// <summary>
-        /// Update a menu items metadata
+        /// Delete menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -66,7 +66,7 @@ namespace Flipdish.Api
         void DeleteMenuItemMetadata_0 (int? menuId, int? storeId, int? menuItemId, string key);
 
         /// <summary>
-        /// Update a menu items metadata
+        /// Delete menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -121,7 +121,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultMenu</returns>
         ApiResponse<RestApiResultMenu> GetMenuByIdWithHttpInfo (int? menuId);
         /// <summary>
-        /// Get a menu items metadata
+        /// Get menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -134,7 +134,7 @@ namespace Flipdish.Api
         RestApiArrayResultMetadata GetMenuItemMetadata (int? menuId, int? storeId, int? menuItemId);
 
         /// <summary>
-        /// Get a menu items metadata
+        /// Get menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -146,7 +146,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultMetadata</returns>
         ApiResponse<RestApiArrayResultMetadata> GetMenuItemMetadataWithHttpInfo (int? menuId, int? storeId, int? menuItemId);
         /// <summary>
-        /// Get a menu item option set item metadata by key
+        /// Get menu item option set item metadata by key
         /// </summary>
         /// <remarks>
         /// 
@@ -159,7 +159,7 @@ namespace Flipdish.Api
         RestApiResultMetadata GetMenuItemOptionSetItemMetadata (int? menuId, int? storeId, int? optionSetItemId);
 
         /// <summary>
-        /// Get a menu item option set item metadata by key
+        /// Get menu item option set item metadata by key
         /// </summary>
         /// <remarks>
         /// 
@@ -171,7 +171,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultMetadata</returns>
         ApiResponse<RestApiResultMetadata> GetMenuItemOptionSetItemMetadataWithHttpInfo (int? menuId, int? storeId, int? optionSetItemId);
         /// <summary>
-        /// Update a menu items metadata
+        /// Update menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -185,7 +185,7 @@ namespace Flipdish.Api
         void SetMenuItemMetadata (int? menuId, int? storeId, int? menuItemId, Metadata metadata);
 
         /// <summary>
-        /// Update a menu items metadata
+        /// Update menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -198,7 +198,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SetMenuItemMetadataWithHttpInfo (int? menuId, int? storeId, int? menuItemId, Metadata metadata);
         /// <summary>
-        /// Update a menu item option set items metadata
+        /// Update menu item option set item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -212,7 +212,7 @@ namespace Flipdish.Api
         void SetMenuItemOptionSetItemMetadata (int? menuId, int? storeId, int? optionSetItemId, Metadata metadata);
 
         /// <summary>
-        /// Update a menu item option set items metadata
+        /// Update menu item option set item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -273,7 +273,7 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get a menu item metadata by key
+        /// Get menu item metadata by key
         /// </summary>
         /// <remarks>
         /// 
@@ -287,7 +287,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task DeleteMenuItemMetadataAsync (int? menuId, int? storeId, int? menuItemId, string key);
 
         /// <summary>
-        /// Get a menu item metadata by key
+        /// Get menu item metadata by key
         /// </summary>
         /// <remarks>
         /// 
@@ -300,7 +300,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuItemMetadataAsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
         /// <summary>
-        /// Update a menu items metadata
+        /// Delete menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -314,7 +314,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task DeleteMenuItemMetadata_0Async (int? menuId, int? storeId, int? menuItemId, string key);
 
         /// <summary>
-        /// Update a menu items metadata
+        /// Delete menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -369,7 +369,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultMenu)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMenu>> GetMenuByIdAsyncWithHttpInfo (int? menuId);
         /// <summary>
-        /// Get a menu items metadata
+        /// Get menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -382,7 +382,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultMetadata> GetMenuItemMetadataAsync (int? menuId, int? storeId, int? menuItemId);
 
         /// <summary>
-        /// Get a menu items metadata
+        /// Get menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -394,7 +394,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultMetadata)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMetadata>> GetMenuItemMetadataAsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId);
         /// <summary>
-        /// Get a menu item option set item metadata by key
+        /// Get menu item option set item metadata by key
         /// </summary>
         /// <remarks>
         /// 
@@ -407,7 +407,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultMetadata> GetMenuItemOptionSetItemMetadataAsync (int? menuId, int? storeId, int? optionSetItemId);
 
         /// <summary>
-        /// Get a menu item option set item metadata by key
+        /// Get menu item option set item metadata by key
         /// </summary>
         /// <remarks>
         /// 
@@ -419,7 +419,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultMetadata)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMetadata>> GetMenuItemOptionSetItemMetadataAsyncWithHttpInfo (int? menuId, int? storeId, int? optionSetItemId);
         /// <summary>
-        /// Update a menu items metadata
+        /// Update menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -433,7 +433,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task SetMenuItemMetadataAsync (int? menuId, int? storeId, int? menuItemId, Metadata metadata);
 
         /// <summary>
-        /// Update a menu items metadata
+        /// Update menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -446,7 +446,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuItemMetadataAsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId, Metadata metadata);
         /// <summary>
-        /// Update a menu item option set items metadata
+        /// Update menu item option set item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -460,7 +460,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task SetMenuItemOptionSetItemMetadataAsync (int? menuId, int? storeId, int? optionSetItemId, Metadata metadata);
 
         /// <summary>
-        /// Update a menu item option set items metadata
+        /// Update menu item option set item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -619,7 +619,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a menu item metadata by key 
+        /// Get menu item metadata by key 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -633,7 +633,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a menu item metadata by key 
+        /// Get menu item metadata by key 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -711,7 +711,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a menu item metadata by key 
+        /// Get menu item metadata by key 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -726,7 +726,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a menu item metadata by key 
+        /// Get menu item metadata by key 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -804,7 +804,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a menu items metadata 
+        /// Delete menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -818,7 +818,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a menu items metadata 
+        /// Delete menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -896,7 +896,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a menu items metadata 
+        /// Delete menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -911,7 +911,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a menu items metadata 
+        /// Delete menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1289,7 +1289,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a menu items metadata 
+        /// Get menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1303,7 +1303,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a menu items metadata 
+        /// Get menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1376,7 +1376,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a menu items metadata 
+        /// Get menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1391,7 +1391,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a menu items metadata 
+        /// Get menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1464,7 +1464,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a menu item option set item metadata by key 
+        /// Get menu item option set item metadata by key 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1478,7 +1478,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a menu item option set item metadata by key 
+        /// Get menu item option set item metadata by key 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1551,7 +1551,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a menu item option set item metadata by key 
+        /// Get menu item option set item metadata by key 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1566,7 +1566,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a menu item option set item metadata by key 
+        /// Get menu item option set item metadata by key 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1639,7 +1639,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a menu items metadata 
+        /// Update menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1653,7 +1653,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a menu items metadata 
+        /// Update menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1743,7 +1743,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a menu items metadata 
+        /// Update menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1758,7 +1758,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a menu items metadata 
+        /// Update menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1848,7 +1848,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a menu item option set items metadata 
+        /// Update menu item option set item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1862,7 +1862,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a menu item option set items metadata 
+        /// Update menu item option set item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1952,7 +1952,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a menu item option set items metadata 
+        /// Update menu item option set item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1967,7 +1967,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a menu item option set items metadata 
+        /// Update menu item option set item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>

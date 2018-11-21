@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteMenuItemMetadata**](MenusApi.md#deletemenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get a menu item metadata by key
-[**DeleteMenuItemMetadata_0**](MenusApi.md#deletemenuitemmetadata_0) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Update a menu items metadata
+[**DeleteMenuItemMetadata**](MenusApi.md#deletemenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
+[**DeleteMenuItemMetadata_0**](MenusApi.md#deletemenuitemmetadata_0) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
 [**DeleteMenuSectionImage**](MenusApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
 [**GetMenuById**](MenusApi.md#getmenubyid) | **GET** /api/v1.0/menus/{menuId} | Get menu by identifier
-[**GetMenuItemMetadata**](MenusApi.md#getmenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get a menu items metadata
-[**GetMenuItemOptionSetItemMetadata**](MenusApi.md#getmenuitemoptionsetitemmetadata) | **GET** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get a menu item option set item metadata by key
-[**SetMenuItemMetadata**](MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update a menu items metadata
-[**SetMenuItemOptionSetItemMetadata**](MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update a menu item option set items metadata
+[**GetMenuItemMetadata**](MenusApi.md#getmenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get menu item metadata
+[**GetMenuItemOptionSetItemMetadata**](MenusApi.md#getmenuitemoptionsetitemmetadata) | **GET** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get menu item option set item metadata by key
+[**SetMenuItemMetadata**](MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update menu item metadata
+[**SetMenuItemOptionSetItemMetadata**](MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update menu item option set item metadata
 [**UpdateMenu**](MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
 [**UploadMenuSectionImage**](MenusApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
 
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 # **DeleteMenuItemMetadata**
 > void DeleteMenuItemMetadata (int? menuId, int? storeId, int? menuItemId, string key)
 
-Get a menu item metadata by key
+Get menu item metadata by key
 
 ### Example
 ```csharp
@@ -47,7 +47,7 @@ namespace Example
 
             try
             {
-                // Get a menu item metadata by key
+                // Get menu item metadata by key
                 apiInstance.DeleteMenuItemMetadata(menuId, storeId, menuItemId, key);
             }
             catch (Exception e)
@@ -87,7 +87,7 @@ void (empty response body)
 # **DeleteMenuItemMetadata_0**
 > void DeleteMenuItemMetadata_0 (int? menuId, int? storeId, int? menuItemId, string key)
 
-Update a menu items metadata
+Delete menu item metadata
 
 ### Example
 ```csharp
@@ -114,7 +114,7 @@ namespace Example
 
             try
             {
-                // Update a menu items metadata
+                // Delete menu item metadata
                 apiInstance.DeleteMenuItemMetadata_0(menuId, storeId, menuItemId, key);
             }
             catch (Exception e)
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 # **GetMenuItemMetadata**
 > RestApiArrayResultMetadata GetMenuItemMetadata (int? menuId, int? storeId, int? menuItemId)
 
-Get a menu items metadata
+Get menu item metadata
 
 ### Example
 ```csharp
@@ -303,7 +303,7 @@ namespace Example
 
             try
             {
-                // Get a menu items metadata
+                // Get menu item metadata
                 RestApiArrayResultMetadata result = apiInstance.GetMenuItemMetadata(menuId, storeId, menuItemId);
                 Debug.WriteLine(result);
             }
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 # **GetMenuItemOptionSetItemMetadata**
 > RestApiResultMetadata GetMenuItemOptionSetItemMetadata (int? menuId, int? storeId, int? optionSetItemId)
 
-Get a menu item option set item metadata by key
+Get menu item option set item metadata by key
 
 ### Example
 ```csharp
@@ -369,7 +369,7 @@ namespace Example
 
             try
             {
-                // Get a menu item option set item metadata by key
+                // Get menu item option set item metadata by key
                 RestApiResultMetadata result = apiInstance.GetMenuItemOptionSetItemMetadata(menuId, storeId, optionSetItemId);
                 Debug.WriteLine(result);
             }
@@ -409,7 +409,7 @@ Name | Type | Description  | Notes
 # **SetMenuItemMetadata**
 > void SetMenuItemMetadata (int? menuId, int? storeId, int? menuItemId, Metadata metadata)
 
-Update a menu items metadata
+Update menu item metadata
 
 ### Example
 ```csharp
@@ -436,7 +436,7 @@ namespace Example
 
             try
             {
-                // Update a menu items metadata
+                // Update menu item metadata
                 apiInstance.SetMenuItemMetadata(menuId, storeId, menuItemId, metadata);
             }
             catch (Exception e)
@@ -476,7 +476,7 @@ void (empty response body)
 # **SetMenuItemOptionSetItemMetadata**
 > void SetMenuItemOptionSetItemMetadata (int? menuId, int? storeId, int? optionSetItemId, Metadata metadata)
 
-Update a menu item option set items metadata
+Update menu item option set item metadata
 
 ### Example
 ```csharp
@@ -503,7 +503,7 @@ namespace Example
 
             try
             {
-                // Update a menu item option set items metadata
+                // Update menu item option set item metadata
                 apiInstance.SetMenuItemOptionSetItemMetadata(menuId, storeId, optionSetItemId, metadata);
             }
             catch (Exception e)
