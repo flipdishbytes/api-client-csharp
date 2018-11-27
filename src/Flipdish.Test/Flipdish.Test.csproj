@@ -81,7 +81,7 @@ OpenAPI spec version: v1.0
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\Flipdish\Flipdish.csproj">
-          <Project>{ECB23A5D-B289-4463-B406-101FC59DA110}</Project>
+          <Project>{40B350ED-D86A-4285-987E-EF5E1F345856}</Project>
           <Name>Flipdish</Name>
       </ProjectReference>
   </ItemGroup>

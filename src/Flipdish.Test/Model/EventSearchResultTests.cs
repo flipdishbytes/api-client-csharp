@@ -219,6 +219,102 @@ namespace Flipdish.Test
             // TODO unit test for the property 'MenuUpdatedEvent'
         }
         /// <summary>
+        /// Test the property 'MenuSectionCreatedEvent'
+        /// </summary>
+        [Test]
+        public void MenuSectionCreatedEventTest()
+        {
+            // TODO unit test for the property 'MenuSectionCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'MenuSectionUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void MenuSectionUpdatedEventTest()
+        {
+            // TODO unit test for the property 'MenuSectionUpdatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'MenuSectionDeletedEvent'
+        /// </summary>
+        [Test]
+        public void MenuSectionDeletedEventTest()
+        {
+            // TODO unit test for the property 'MenuSectionDeletedEvent'
+        }
+        /// <summary>
+        /// Test the property 'MenuSectionItemCreatedEvent'
+        /// </summary>
+        [Test]
+        public void MenuSectionItemCreatedEventTest()
+        {
+            // TODO unit test for the property 'MenuSectionItemCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'MenuSectionItemUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void MenuSectionItemUpdatedEventTest()
+        {
+            // TODO unit test for the property 'MenuSectionItemUpdatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'MenuSectionItemDeletedEvent'
+        /// </summary>
+        [Test]
+        public void MenuSectionItemDeletedEventTest()
+        {
+            // TODO unit test for the property 'MenuSectionItemDeletedEvent'
+        }
+        /// <summary>
+        /// Test the property 'MenuItemOptionSetCreatedEvent'
+        /// </summary>
+        [Test]
+        public void MenuItemOptionSetCreatedEventTest()
+        {
+            // TODO unit test for the property 'MenuItemOptionSetCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'MenuItemOptionSetUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void MenuItemOptionSetUpdatedEventTest()
+        {
+            // TODO unit test for the property 'MenuItemOptionSetUpdatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'MenuItemOptionSetDeletedEvent'
+        /// </summary>
+        [Test]
+        public void MenuItemOptionSetDeletedEventTest()
+        {
+            // TODO unit test for the property 'MenuItemOptionSetDeletedEvent'
+        }
+        /// <summary>
+        /// Test the property 'MenuItemOptionSetItemCreatedEvent'
+        /// </summary>
+        [Test]
+        public void MenuItemOptionSetItemCreatedEventTest()
+        {
+            // TODO unit test for the property 'MenuItemOptionSetItemCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'MenuItemOptionSetItemUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void MenuItemOptionSetItemUpdatedEventTest()
+        {
+            // TODO unit test for the property 'MenuItemOptionSetItemUpdatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'MenuItemOptionSetItemDeletedEvent'
+        /// </summary>
+        [Test]
+        public void MenuItemOptionSetItemDeletedEventTest()
+        {
+            // TODO unit test for the property 'MenuItemOptionSetItemDeletedEvent'
+        }
+        /// <summary>
         /// Test the property 'StoreGroupCreatedEvent'
         /// </summary>
         [Test]

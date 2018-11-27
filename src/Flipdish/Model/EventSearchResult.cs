@@ -52,6 +52,18 @@ namespace Flipdish.Model
         /// <param name="StoreUpdatedEvent">Store updated events.</param>
         /// <param name="MenuCreatedEvent">Menu created events.</param>
         /// <param name="MenuUpdatedEvent">Menu updated events.</param>
+        /// <param name="MenuSectionCreatedEvent">Menu section created events.</param>
+        /// <param name="MenuSectionUpdatedEvent">Menu section updated events.</param>
+        /// <param name="MenuSectionDeletedEvent">Menu section deleted events.</param>
+        /// <param name="MenuSectionItemCreatedEvent">Menu section item created events.</param>
+        /// <param name="MenuSectionItemUpdatedEvent">Menu section item updated events.</param>
+        /// <param name="MenuSectionItemDeletedEvent">Menu section item deleted events.</param>
+        /// <param name="MenuItemOptionSetCreatedEvent">Menu item option set created events.</param>
+        /// <param name="MenuItemOptionSetUpdatedEvent">Menu item option set  updated events.</param>
+        /// <param name="MenuItemOptionSetDeletedEvent">Menu item option set deleted events.</param>
+        /// <param name="MenuItemOptionSetItemCreatedEvent">Menu item option set item created events.</param>
+        /// <param name="MenuItemOptionSetItemUpdatedEvent">Menu item option set item updated events.</param>
+        /// <param name="MenuItemOptionSetItemDeletedEvent">Menu item option set item deleted events.</param>
         /// <param name="StoreGroupCreatedEvent">Store group created events.</param>
         /// <param name="StoreGroupUpdatedEvent">Store group updated events.</param>
         /// <param name="StoreGroupDeletedEvent">Store group deleted events.</param>
@@ -78,7 +90,7 @@ namespace Flipdish.Model
         /// <param name="UserCreatedEvent">User created event.</param>
         /// <param name="UserUpdatedEvent">User updated event.</param>
         /// <param name="UserDeletedEvent">User deleted event.</param>
-        public EventSearchResult(List<AnalyticsClientEvent> AnalyticsClientEvent = default(List<AnalyticsClientEvent>), List<OrderAcceptedEvent> OrderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderCreatedEvent> OrderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> OrderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> OrderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> OrderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> OrderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<StoreCreatedEvent> StoreCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> StoreDeletedEvent = default(List<StoreDeletedEvent>), List<StoreAddressUpdatedEvent> StoreAddressUpdatedEvent = default(List<StoreAddressUpdatedEvent>), List<DeliveryZoneCreatedEvent> DeliveryZoneCreatedEvent = default(List<DeliveryZoneCreatedEvent>), List<DeliveryZoneUpdatedEvent> DeliveryZoneUpdatedEvent = default(List<DeliveryZoneUpdatedEvent>), List<DeliveryZoneDeletedEvent> DeliveryZoneDeletedEvent = default(List<DeliveryZoneDeletedEvent>), List<StoreOpeningHoursUpdatedEvent> StoreOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreBusinessHoursOverrideCreatedEvent> StoreBusinessHoursOverrideCreatedEvent = default(List<StoreBusinessHoursOverrideCreatedEvent>), List<StoreBusinessHoursOverrideDeletedEvent> StoreBusinessHoursOverrideDeletedEvent = default(List<StoreBusinessHoursOverrideDeletedEvent>), List<StoreUpdatedEvent> StoreUpdatedEvent = default(List<StoreUpdatedEvent>), List<MenuCreatedEvent> MenuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> MenuUpdatedEvent = default(List<MenuUpdatedEvent>), List<StoreGroupCreatedEvent> StoreGroupCreatedEvent = default(List<StoreGroupCreatedEvent>), List<StoreGroupUpdatedEvent> StoreGroupUpdatedEvent = default(List<StoreGroupUpdatedEvent>), List<StoreGroupDeletedEvent> StoreGroupDeletedEvent = default(List<StoreGroupDeletedEvent>), List<CustomerCreatedEvent> CustomerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> CustomerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> CustomerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<WebhookSubscriptionCreatedEvent> WebhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> WebhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> WebhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>), List<PrinterTurnedOnEvent> PrinterTurnedOnEvent = default(List<PrinterTurnedOnEvent>), List<PrinterTurnedOffEvent> PrinterTurnedOffEvent = default(List<PrinterTurnedOffEvent>), List<PrinterAssignedToStoreEvent> PrinterAssignedToStoreEvent = default(List<PrinterAssignedToStoreEvent>), List<PrinterUnassignedFromStoreEvent> PrinterUnassignedFromStoreEvent = default(List<PrinterUnassignedFromStoreEvent>), List<PhoneCallStartedEvent> PhoneCallStartedEvent = default(List<PhoneCallStartedEvent>), List<PhoneCallEndedEvent> PhoneCallEndedEvent = default(List<PhoneCallEndedEvent>), List<LoyaltyCampaignCreatedEvent> LoyaltyCampaignCreatedEvent = default(List<LoyaltyCampaignCreatedEvent>), List<LoyaltyCampaignDeletedEvent> LoyaltyCampaignDeletedEvent = default(List<LoyaltyCampaignDeletedEvent>), List<LoyaltyCampaignUpdatedEvent> LoyaltyCampaignUpdatedEvent = default(List<LoyaltyCampaignUpdatedEvent>), List<RetentionCampaignCreatedEvent> RetentionCampaignCreatedEvent = default(List<RetentionCampaignCreatedEvent>), List<RetentionCampaignDeletedEvent> RetentionCampaignDeletedEvent = default(List<RetentionCampaignDeletedEvent>), List<RetentionCampaignUpdatedEvent> RetentionCampaignUpdatedEvent = default(List<RetentionCampaignUpdatedEvent>), List<SmsReceivedEvent> SmsReceivedEvent = default(List<SmsReceivedEvent>), List<UserLoginEvent> UserLoginEvent = default(List<UserLoginEvent>), List<UserCreatedEvent> UserCreatedEvent = default(List<UserCreatedEvent>), List<UserUpdatedEvent> UserUpdatedEvent = default(List<UserUpdatedEvent>), List<UserDeletedEvent> UserDeletedEvent = default(List<UserDeletedEvent>))
+        public EventSearchResult(List<AnalyticsClientEvent> AnalyticsClientEvent = default(List<AnalyticsClientEvent>), List<OrderAcceptedEvent> OrderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderCreatedEvent> OrderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> OrderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> OrderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> OrderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> OrderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<StoreCreatedEvent> StoreCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> StoreDeletedEvent = default(List<StoreDeletedEvent>), List<StoreAddressUpdatedEvent> StoreAddressUpdatedEvent = default(List<StoreAddressUpdatedEvent>), List<DeliveryZoneCreatedEvent> DeliveryZoneCreatedEvent = default(List<DeliveryZoneCreatedEvent>), List<DeliveryZoneUpdatedEvent> DeliveryZoneUpdatedEvent = default(List<DeliveryZoneUpdatedEvent>), List<DeliveryZoneDeletedEvent> DeliveryZoneDeletedEvent = default(List<DeliveryZoneDeletedEvent>), List<StoreOpeningHoursUpdatedEvent> StoreOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreBusinessHoursOverrideCreatedEvent> StoreBusinessHoursOverrideCreatedEvent = default(List<StoreBusinessHoursOverrideCreatedEvent>), List<StoreBusinessHoursOverrideDeletedEvent> StoreBusinessHoursOverrideDeletedEvent = default(List<StoreBusinessHoursOverrideDeletedEvent>), List<StoreUpdatedEvent> StoreUpdatedEvent = default(List<StoreUpdatedEvent>), List<MenuCreatedEvent> MenuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> MenuUpdatedEvent = default(List<MenuUpdatedEvent>), List<MenuSectionCreatedEvent> MenuSectionCreatedEvent = default(List<MenuSectionCreatedEvent>), List<MenuSectionUpdatedEvent> MenuSectionUpdatedEvent = default(List<MenuSectionUpdatedEvent>), List<MenuSectionDeletedEvent> MenuSectionDeletedEvent = default(List<MenuSectionDeletedEvent>), List<MenuSectionItemCreatedEvent> MenuSectionItemCreatedEvent = default(List<MenuSectionItemCreatedEvent>), List<MenuSectionItemUpdatedEvent> MenuSectionItemUpdatedEvent = default(List<MenuSectionItemUpdatedEvent>), List<MenuSectionItemDeletedEvent> MenuSectionItemDeletedEvent = default(List<MenuSectionItemDeletedEvent>), List<MenuItemOptionSetCreatedEvent> MenuItemOptionSetCreatedEvent = default(List<MenuItemOptionSetCreatedEvent>), List<MenuItemOptionSetUpdatedEvent> MenuItemOptionSetUpdatedEvent = default(List<MenuItemOptionSetUpdatedEvent>), List<MenuItemOptionSetDeletedEvent> MenuItemOptionSetDeletedEvent = default(List<MenuItemOptionSetDeletedEvent>), List<MenuItemOptionSetItemCreatedEvent> MenuItemOptionSetItemCreatedEvent = default(List<MenuItemOptionSetItemCreatedEvent>), List<MenuItemOptionSetItemUpdatedEvent> MenuItemOptionSetItemUpdatedEvent = default(List<MenuItemOptionSetItemUpdatedEvent>), List<MenuItemOptionSetItemDeletedEvent> MenuItemOptionSetItemDeletedEvent = default(List<MenuItemOptionSetItemDeletedEvent>), List<StoreGroupCreatedEvent> StoreGroupCreatedEvent = default(List<StoreGroupCreatedEvent>), List<StoreGroupUpdatedEvent> StoreGroupUpdatedEvent = default(List<StoreGroupUpdatedEvent>), List<StoreGroupDeletedEvent> StoreGroupDeletedEvent = default(List<StoreGroupDeletedEvent>), List<CustomerCreatedEvent> CustomerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> CustomerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> CustomerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<WebhookSubscriptionCreatedEvent> WebhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> WebhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> WebhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>), List<PrinterTurnedOnEvent> PrinterTurnedOnEvent = default(List<PrinterTurnedOnEvent>), List<PrinterTurnedOffEvent> PrinterTurnedOffEvent = default(List<PrinterTurnedOffEvent>), List<PrinterAssignedToStoreEvent> PrinterAssignedToStoreEvent = default(List<PrinterAssignedToStoreEvent>), List<PrinterUnassignedFromStoreEvent> PrinterUnassignedFromStoreEvent = default(List<PrinterUnassignedFromStoreEvent>), List<PhoneCallStartedEvent> PhoneCallStartedEvent = default(List<PhoneCallStartedEvent>), List<PhoneCallEndedEvent> PhoneCallEndedEvent = default(List<PhoneCallEndedEvent>), List<LoyaltyCampaignCreatedEvent> LoyaltyCampaignCreatedEvent = default(List<LoyaltyCampaignCreatedEvent>), List<LoyaltyCampaignDeletedEvent> LoyaltyCampaignDeletedEvent = default(List<LoyaltyCampaignDeletedEvent>), List<LoyaltyCampaignUpdatedEvent> LoyaltyCampaignUpdatedEvent = default(List<LoyaltyCampaignUpdatedEvent>), List<RetentionCampaignCreatedEvent> RetentionCampaignCreatedEvent = default(List<RetentionCampaignCreatedEvent>), List<RetentionCampaignDeletedEvent> RetentionCampaignDeletedEvent = default(List<RetentionCampaignDeletedEvent>), List<RetentionCampaignUpdatedEvent> RetentionCampaignUpdatedEvent = default(List<RetentionCampaignUpdatedEvent>), List<SmsReceivedEvent> SmsReceivedEvent = default(List<SmsReceivedEvent>), List<UserLoginEvent> UserLoginEvent = default(List<UserLoginEvent>), List<UserCreatedEvent> UserCreatedEvent = default(List<UserCreatedEvent>), List<UserUpdatedEvent> UserUpdatedEvent = default(List<UserUpdatedEvent>), List<UserDeletedEvent> UserDeletedEvent = default(List<UserDeletedEvent>))
         {
             this.AnalyticsClientEvent = AnalyticsClientEvent;
             this.OrderAcceptedEvent = OrderAcceptedEvent;
@@ -99,6 +111,18 @@ namespace Flipdish.Model
             this.StoreUpdatedEvent = StoreUpdatedEvent;
             this.MenuCreatedEvent = MenuCreatedEvent;
             this.MenuUpdatedEvent = MenuUpdatedEvent;
+            this.MenuSectionCreatedEvent = MenuSectionCreatedEvent;
+            this.MenuSectionUpdatedEvent = MenuSectionUpdatedEvent;
+            this.MenuSectionDeletedEvent = MenuSectionDeletedEvent;
+            this.MenuSectionItemCreatedEvent = MenuSectionItemCreatedEvent;
+            this.MenuSectionItemUpdatedEvent = MenuSectionItemUpdatedEvent;
+            this.MenuSectionItemDeletedEvent = MenuSectionItemDeletedEvent;
+            this.MenuItemOptionSetCreatedEvent = MenuItemOptionSetCreatedEvent;
+            this.MenuItemOptionSetUpdatedEvent = MenuItemOptionSetUpdatedEvent;
+            this.MenuItemOptionSetDeletedEvent = MenuItemOptionSetDeletedEvent;
+            this.MenuItemOptionSetItemCreatedEvent = MenuItemOptionSetItemCreatedEvent;
+            this.MenuItemOptionSetItemUpdatedEvent = MenuItemOptionSetItemUpdatedEvent;
+            this.MenuItemOptionSetItemDeletedEvent = MenuItemOptionSetItemDeletedEvent;
             this.StoreGroupCreatedEvent = StoreGroupCreatedEvent;
             this.StoreGroupUpdatedEvent = StoreGroupUpdatedEvent;
             this.StoreGroupDeletedEvent = StoreGroupDeletedEvent;
@@ -259,6 +283,90 @@ namespace Flipdish.Model
         /// <value>Menu updated events</value>
         [DataMember(Name="MenuUpdatedEvent", EmitDefaultValue=false)]
         public List<MenuUpdatedEvent> MenuUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// Menu section created events
+        /// </summary>
+        /// <value>Menu section created events</value>
+        [DataMember(Name="MenuSectionCreatedEvent", EmitDefaultValue=false)]
+        public List<MenuSectionCreatedEvent> MenuSectionCreatedEvent { get; set; }
+
+        /// <summary>
+        /// Menu section updated events
+        /// </summary>
+        /// <value>Menu section updated events</value>
+        [DataMember(Name="MenuSectionUpdatedEvent", EmitDefaultValue=false)]
+        public List<MenuSectionUpdatedEvent> MenuSectionUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// Menu section deleted events
+        /// </summary>
+        /// <value>Menu section deleted events</value>
+        [DataMember(Name="MenuSectionDeletedEvent", EmitDefaultValue=false)]
+        public List<MenuSectionDeletedEvent> MenuSectionDeletedEvent { get; set; }
+
+        /// <summary>
+        /// Menu section item created events
+        /// </summary>
+        /// <value>Menu section item created events</value>
+        [DataMember(Name="MenuSectionItemCreatedEvent", EmitDefaultValue=false)]
+        public List<MenuSectionItemCreatedEvent> MenuSectionItemCreatedEvent { get; set; }
+
+        /// <summary>
+        /// Menu section item updated events
+        /// </summary>
+        /// <value>Menu section item updated events</value>
+        [DataMember(Name="MenuSectionItemUpdatedEvent", EmitDefaultValue=false)]
+        public List<MenuSectionItemUpdatedEvent> MenuSectionItemUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// Menu section item deleted events
+        /// </summary>
+        /// <value>Menu section item deleted events</value>
+        [DataMember(Name="MenuSectionItemDeletedEvent", EmitDefaultValue=false)]
+        public List<MenuSectionItemDeletedEvent> MenuSectionItemDeletedEvent { get; set; }
+
+        /// <summary>
+        /// Menu item option set created events
+        /// </summary>
+        /// <value>Menu item option set created events</value>
+        [DataMember(Name="MenuItemOptionSetCreatedEvent", EmitDefaultValue=false)]
+        public List<MenuItemOptionSetCreatedEvent> MenuItemOptionSetCreatedEvent { get; set; }
+
+        /// <summary>
+        /// Menu item option set  updated events
+        /// </summary>
+        /// <value>Menu item option set  updated events</value>
+        [DataMember(Name="MenuItemOptionSetUpdatedEvent", EmitDefaultValue=false)]
+        public List<MenuItemOptionSetUpdatedEvent> MenuItemOptionSetUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// Menu item option set deleted events
+        /// </summary>
+        /// <value>Menu item option set deleted events</value>
+        [DataMember(Name="MenuItemOptionSetDeletedEvent", EmitDefaultValue=false)]
+        public List<MenuItemOptionSetDeletedEvent> MenuItemOptionSetDeletedEvent { get; set; }
+
+        /// <summary>
+        /// Menu item option set item created events
+        /// </summary>
+        /// <value>Menu item option set item created events</value>
+        [DataMember(Name="MenuItemOptionSetItemCreatedEvent", EmitDefaultValue=false)]
+        public List<MenuItemOptionSetItemCreatedEvent> MenuItemOptionSetItemCreatedEvent { get; set; }
+
+        /// <summary>
+        /// Menu item option set item updated events
+        /// </summary>
+        /// <value>Menu item option set item updated events</value>
+        [DataMember(Name="MenuItemOptionSetItemUpdatedEvent", EmitDefaultValue=false)]
+        public List<MenuItemOptionSetItemUpdatedEvent> MenuItemOptionSetItemUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// Menu item option set item deleted events
+        /// </summary>
+        /// <value>Menu item option set item deleted events</value>
+        [DataMember(Name="MenuItemOptionSetItemDeletedEvent", EmitDefaultValue=false)]
+        public List<MenuItemOptionSetItemDeletedEvent> MenuItemOptionSetItemDeletedEvent { get; set; }
 
         /// <summary>
         /// Store group created events
@@ -469,6 +577,18 @@ namespace Flipdish.Model
             sb.Append("  StoreUpdatedEvent: ").Append(StoreUpdatedEvent).Append("\n");
             sb.Append("  MenuCreatedEvent: ").Append(MenuCreatedEvent).Append("\n");
             sb.Append("  MenuUpdatedEvent: ").Append(MenuUpdatedEvent).Append("\n");
+            sb.Append("  MenuSectionCreatedEvent: ").Append(MenuSectionCreatedEvent).Append("\n");
+            sb.Append("  MenuSectionUpdatedEvent: ").Append(MenuSectionUpdatedEvent).Append("\n");
+            sb.Append("  MenuSectionDeletedEvent: ").Append(MenuSectionDeletedEvent).Append("\n");
+            sb.Append("  MenuSectionItemCreatedEvent: ").Append(MenuSectionItemCreatedEvent).Append("\n");
+            sb.Append("  MenuSectionItemUpdatedEvent: ").Append(MenuSectionItemUpdatedEvent).Append("\n");
+            sb.Append("  MenuSectionItemDeletedEvent: ").Append(MenuSectionItemDeletedEvent).Append("\n");
+            sb.Append("  MenuItemOptionSetCreatedEvent: ").Append(MenuItemOptionSetCreatedEvent).Append("\n");
+            sb.Append("  MenuItemOptionSetUpdatedEvent: ").Append(MenuItemOptionSetUpdatedEvent).Append("\n");
+            sb.Append("  MenuItemOptionSetDeletedEvent: ").Append(MenuItemOptionSetDeletedEvent).Append("\n");
+            sb.Append("  MenuItemOptionSetItemCreatedEvent: ").Append(MenuItemOptionSetItemCreatedEvent).Append("\n");
+            sb.Append("  MenuItemOptionSetItemUpdatedEvent: ").Append(MenuItemOptionSetItemUpdatedEvent).Append("\n");
+            sb.Append("  MenuItemOptionSetItemDeletedEvent: ").Append(MenuItemOptionSetItemDeletedEvent).Append("\n");
             sb.Append("  StoreGroupCreatedEvent: ").Append(StoreGroupCreatedEvent).Append("\n");
             sb.Append("  StoreGroupUpdatedEvent: ").Append(StoreGroupUpdatedEvent).Append("\n");
             sb.Append("  StoreGroupDeletedEvent: ").Append(StoreGroupDeletedEvent).Append("\n");
@@ -623,6 +743,66 @@ namespace Flipdish.Model
                     this.MenuUpdatedEvent == input.MenuUpdatedEvent ||
                     this.MenuUpdatedEvent != null &&
                     this.MenuUpdatedEvent.SequenceEqual(input.MenuUpdatedEvent)
+                ) && 
+                (
+                    this.MenuSectionCreatedEvent == input.MenuSectionCreatedEvent ||
+                    this.MenuSectionCreatedEvent != null &&
+                    this.MenuSectionCreatedEvent.SequenceEqual(input.MenuSectionCreatedEvent)
+                ) && 
+                (
+                    this.MenuSectionUpdatedEvent == input.MenuSectionUpdatedEvent ||
+                    this.MenuSectionUpdatedEvent != null &&
+                    this.MenuSectionUpdatedEvent.SequenceEqual(input.MenuSectionUpdatedEvent)
+                ) && 
+                (
+                    this.MenuSectionDeletedEvent == input.MenuSectionDeletedEvent ||
+                    this.MenuSectionDeletedEvent != null &&
+                    this.MenuSectionDeletedEvent.SequenceEqual(input.MenuSectionDeletedEvent)
+                ) && 
+                (
+                    this.MenuSectionItemCreatedEvent == input.MenuSectionItemCreatedEvent ||
+                    this.MenuSectionItemCreatedEvent != null &&
+                    this.MenuSectionItemCreatedEvent.SequenceEqual(input.MenuSectionItemCreatedEvent)
+                ) && 
+                (
+                    this.MenuSectionItemUpdatedEvent == input.MenuSectionItemUpdatedEvent ||
+                    this.MenuSectionItemUpdatedEvent != null &&
+                    this.MenuSectionItemUpdatedEvent.SequenceEqual(input.MenuSectionItemUpdatedEvent)
+                ) && 
+                (
+                    this.MenuSectionItemDeletedEvent == input.MenuSectionItemDeletedEvent ||
+                    this.MenuSectionItemDeletedEvent != null &&
+                    this.MenuSectionItemDeletedEvent.SequenceEqual(input.MenuSectionItemDeletedEvent)
+                ) && 
+                (
+                    this.MenuItemOptionSetCreatedEvent == input.MenuItemOptionSetCreatedEvent ||
+                    this.MenuItemOptionSetCreatedEvent != null &&
+                    this.MenuItemOptionSetCreatedEvent.SequenceEqual(input.MenuItemOptionSetCreatedEvent)
+                ) && 
+                (
+                    this.MenuItemOptionSetUpdatedEvent == input.MenuItemOptionSetUpdatedEvent ||
+                    this.MenuItemOptionSetUpdatedEvent != null &&
+                    this.MenuItemOptionSetUpdatedEvent.SequenceEqual(input.MenuItemOptionSetUpdatedEvent)
+                ) && 
+                (
+                    this.MenuItemOptionSetDeletedEvent == input.MenuItemOptionSetDeletedEvent ||
+                    this.MenuItemOptionSetDeletedEvent != null &&
+                    this.MenuItemOptionSetDeletedEvent.SequenceEqual(input.MenuItemOptionSetDeletedEvent)
+                ) && 
+                (
+                    this.MenuItemOptionSetItemCreatedEvent == input.MenuItemOptionSetItemCreatedEvent ||
+                    this.MenuItemOptionSetItemCreatedEvent != null &&
+                    this.MenuItemOptionSetItemCreatedEvent.SequenceEqual(input.MenuItemOptionSetItemCreatedEvent)
+                ) && 
+                (
+                    this.MenuItemOptionSetItemUpdatedEvent == input.MenuItemOptionSetItemUpdatedEvent ||
+                    this.MenuItemOptionSetItemUpdatedEvent != null &&
+                    this.MenuItemOptionSetItemUpdatedEvent.SequenceEqual(input.MenuItemOptionSetItemUpdatedEvent)
+                ) && 
+                (
+                    this.MenuItemOptionSetItemDeletedEvent == input.MenuItemOptionSetItemDeletedEvent ||
+                    this.MenuItemOptionSetItemDeletedEvent != null &&
+                    this.MenuItemOptionSetItemDeletedEvent.SequenceEqual(input.MenuItemOptionSetItemDeletedEvent)
                 ) && 
                 (
                     this.StoreGroupCreatedEvent == input.StoreGroupCreatedEvent ||
@@ -803,6 +983,30 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MenuCreatedEvent.GetHashCode();
                 if (this.MenuUpdatedEvent != null)
                     hashCode = hashCode * 59 + this.MenuUpdatedEvent.GetHashCode();
+                if (this.MenuSectionCreatedEvent != null)
+                    hashCode = hashCode * 59 + this.MenuSectionCreatedEvent.GetHashCode();
+                if (this.MenuSectionUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.MenuSectionUpdatedEvent.GetHashCode();
+                if (this.MenuSectionDeletedEvent != null)
+                    hashCode = hashCode * 59 + this.MenuSectionDeletedEvent.GetHashCode();
+                if (this.MenuSectionItemCreatedEvent != null)
+                    hashCode = hashCode * 59 + this.MenuSectionItemCreatedEvent.GetHashCode();
+                if (this.MenuSectionItemUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.MenuSectionItemUpdatedEvent.GetHashCode();
+                if (this.MenuSectionItemDeletedEvent != null)
+                    hashCode = hashCode * 59 + this.MenuSectionItemDeletedEvent.GetHashCode();
+                if (this.MenuItemOptionSetCreatedEvent != null)
+                    hashCode = hashCode * 59 + this.MenuItemOptionSetCreatedEvent.GetHashCode();
+                if (this.MenuItemOptionSetUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.MenuItemOptionSetUpdatedEvent.GetHashCode();
+                if (this.MenuItemOptionSetDeletedEvent != null)
+                    hashCode = hashCode * 59 + this.MenuItemOptionSetDeletedEvent.GetHashCode();
+                if (this.MenuItemOptionSetItemCreatedEvent != null)
+                    hashCode = hashCode * 59 + this.MenuItemOptionSetItemCreatedEvent.GetHashCode();
+                if (this.MenuItemOptionSetItemUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.MenuItemOptionSetItemUpdatedEvent.GetHashCode();
+                if (this.MenuItemOptionSetItemDeletedEvent != null)
+                    hashCode = hashCode * 59 + this.MenuItemOptionSetItemDeletedEvent.GetHashCode();
                 if (this.StoreGroupCreatedEvent != null)
                     hashCode = hashCode * 59 + this.StoreGroupCreatedEvent.GetHashCode();
                 if (this.StoreGroupUpdatedEvent != null)
