@@ -37,12 +37,14 @@ namespace Flipdish.Model
         /// <param name="DeliveryFee">Delivery fee.</param>
         /// <param name="MinimumDeliveryOrderAmount">Minimum delivery order amount.</param>
         /// <param name="WellKnownText">Spatial data in Well Known Text format  We also support CIRCLE((0 0, 200)) - (centerLong centerLat, radius in m).</param>
-        public DeliveryZone(int? Id = default(int?), double? DeliveryFee = default(double?), double? MinimumDeliveryOrderAmount = default(double?), string WellKnownText = default(string))
+        /// <param name="IsEnabled">Is delivery zone enabled.</param>
+        public DeliveryZone(int? Id = default(int?), double? DeliveryFee = default(double?), double? MinimumDeliveryOrderAmount = default(double?), string WellKnownText = default(string), bool? IsEnabled = default(bool?))
         {
             this.Id = Id;
             this.DeliveryFee = DeliveryFee;
             this.MinimumDeliveryOrderAmount = MinimumDeliveryOrderAmount;
             this.WellKnownText = WellKnownText;
+            this.IsEnabled = IsEnabled;
         }
         
         /// <summary>
@@ -74,6 +76,13 @@ namespace Flipdish.Model
         public string WellKnownText { get; set; }
 
         /// <summary>
+        /// Is delivery zone enabled
+        /// </summary>
+        /// <value>Is delivery zone enabled</value>
+        [DataMember(Name="IsEnabled", EmitDefaultValue=false)]
+        public bool? IsEnabled { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -85,6 +94,7 @@ namespace Flipdish.Model
             sb.Append("  DeliveryFee: ").Append(DeliveryFee).Append("\n");
             sb.Append("  MinimumDeliveryOrderAmount: ").Append(MinimumDeliveryOrderAmount).Append("\n");
             sb.Append("  WellKnownText: ").Append(WellKnownText).Append("\n");
+            sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,6 +148,11 @@ namespace Flipdish.Model
                     this.WellKnownText == input.WellKnownText ||
                     (this.WellKnownText != null &&
                     this.WellKnownText.Equals(input.WellKnownText))
+                ) && 
+                (
+                    this.IsEnabled == input.IsEnabled ||
+                    (this.IsEnabled != null &&
+                    this.IsEnabled.Equals(input.IsEnabled))
                 );
         }
 
@@ -158,6 +173,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MinimumDeliveryOrderAmount.GetHashCode();
                 if (this.WellKnownText != null)
                     hashCode = hashCode * 59 + this.WellKnownText.GetHashCode();
+                if (this.IsEnabled != null)
+                    hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
                 return hashCode;
             }
         }

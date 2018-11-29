@@ -98,6 +98,14 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'WellKnownText'
         }
+        /// <summary>
+        /// Test the property 'IsEnabled'
+        /// </summary>
+        [Test]
+        public void IsEnabledTest()
+        {
+            // TODO unit test for the property 'IsEnabled'
+        }
 
     }
 
