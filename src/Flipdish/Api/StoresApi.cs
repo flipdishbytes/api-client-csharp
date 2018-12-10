@@ -1350,7 +1350,7 @@ namespace Flipdish.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -1432,7 +1432,7 @@ namespace Flipdish.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -2291,7 +2291,7 @@ namespace Flipdish.Api
             if (businessHoursPeriod == null)
                 throw new ApiException(400, "Missing required parameter 'businessHoursPeriod' when calling StoresApi->SetBusinessHours");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/availability/{deliveryType}/times";
+            var localVarPath = "/api/v1.0/stores/{storeId}/availability/{deliveryType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2391,7 +2391,7 @@ namespace Flipdish.Api
             if (businessHoursPeriod == null)
                 throw new ApiException(400, "Missing required parameter 'businessHoursPeriod' when calling StoresApi->SetBusinessHours");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/availability/{deliveryType}/times";
+            var localVarPath = "/api/v1.0/stores/{storeId}/availability/{deliveryType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
