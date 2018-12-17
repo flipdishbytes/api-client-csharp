@@ -110,6 +110,11 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**RequestPasswordReset**](docs/AccountsApi.md#requestpasswordreset) | **GET** /api/v1.0/accounts/password | Request password reset. Flipdish system will send a token via email.
 *AccountsApi* | [**SkipSignupStep**](docs/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | Skip a signup question
 *AccountsApi* | [**UpdateAccount**](docs/AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | Update account with name and language
+*ApmApi* | [**GetBasicStatistics**](docs/ApmApi.md#getbasicstatistics) | **GET** /api/v1.0/apm/statistics | [PRIVATE API] Get Basic Statistics
+*ApmApi* | [**GetCalendarWeekStatistics**](docs/ApmApi.md#getcalendarweekstatistics) | **GET** /api/v1.0/apm/statistics/calendar | [PRIVATE API] Get Calendar statistics
+*ApmApi* | [**GetCallsStatistics**](docs/ApmApi.md#getcallsstatistics) | **GET** /api/v1.0/apm/statistics/calls/{aggregateDataBy} | [PRIVATE API] Get Calls Statistics
+*ApmApi* | [**GetOrderStatistics**](docs/ApmApi.md#getorderstatistics) | **GET** /api/v1.0/apm/statistics/orders/{aggregateDataBy} | [PRIVATE API] Get Order Statistics
+*ApmApi* | [**GetPaginatedCallList**](docs/ApmApi.md#getpaginatedcalllist) | **GET** /api/v1.0/apm/calls | [PRIVATE API] Get paginated APM call list
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
@@ -248,6 +253,10 @@ Class | Method | HTTP request | Description
  - [Model.Accept](docs/Accept.md)
  - [Model.AccountDetail](docs/AccountDetail.md)
  - [Model.AnalyticsClientEvent](docs/AnalyticsClientEvent.md)
+ - [Model.ApmAverageHourlyDataPoint](docs/ApmAverageHourlyDataPoint.md)
+ - [Model.ApmCall](docs/ApmCall.md)
+ - [Model.ApmDataPoint](docs/ApmDataPoint.md)
+ - [Model.ApmStatistics](docs/ApmStatistics.md)
  - [Model.App](docs/App.md)
  - [Model.BusinessHoursOverride](docs/BusinessHoursOverride.md)
  - [Model.BusinessHoursOverrideBase](docs/BusinessHoursOverrideBase.md)
@@ -343,6 +352,8 @@ Class | Method | HTTP request | Description
  - [Model.Range](docs/Range.md)
  - [Model.Refund](docs/Refund.md)
  - [Model.Reject](docs/Reject.md)
+ - [Model.RestApiArrayResultApmAverageHourlyDataPoint](docs/RestApiArrayResultApmAverageHourlyDataPoint.md)
+ - [Model.RestApiArrayResultApmDataPoint](docs/RestApiArrayResultApmDataPoint.md)
  - [Model.RestApiArrayResultBusinessHoursPeriod](docs/RestApiArrayResultBusinessHoursPeriod.md)
  - [Model.RestApiArrayResultDeliveryZone](docs/RestApiArrayResultDeliveryZone.md)
  - [Model.RestApiArrayResultMenuItemOptionSet](docs/RestApiArrayResultMenuItemOptionSet.md)
@@ -361,6 +372,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiEventSearchPaginationResult](docs/RestApiEventSearchPaginationResult.md)
  - [Model.RestApiForbiddenResult](docs/RestApiForbiddenResult.md)
  - [Model.RestApiIntegerResult](docs/RestApiIntegerResult.md)
+ - [Model.RestApiPaginationResultApmCall](docs/RestApiPaginationResultApmCall.md)
  - [Model.RestApiPaginationResultApp](docs/RestApiPaginationResultApp.md)
  - [Model.RestApiPaginationResultBusinessHoursOverride](docs/RestApiPaginationResultBusinessHoursOverride.md)
  - [Model.RestApiPaginationResultHttpRequestAndResponseLog](docs/RestApiPaginationResultHttpRequestAndResponseLog.md)
@@ -371,6 +383,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultVoucher](docs/RestApiPaginationResultVoucher.md)
  - [Model.RestApiPaginationResultWebhookLog](docs/RestApiPaginationResultWebhookLog.md)
  - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
+ - [Model.RestApiResultApmStatistics](docs/RestApiResultApmStatistics.md)
  - [Model.RestApiResultBusinessHoursOverride](docs/RestApiResultBusinessHoursOverride.md)
  - [Model.RestApiResultBusinessHoursPeriod](docs/RestApiResultBusinessHoursPeriod.md)
  - [Model.RestApiResultCard](docs/RestApiResultCard.md)
