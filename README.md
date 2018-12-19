@@ -230,12 +230,9 @@ Class | Method | HTTP request | Description
 *TeammatesApi* | [**GetTeammatesByAppId**](docs/TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
 *TeammatesApi* | [**UpdateTeammate**](docs/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{email} | Update teammates (this method does not support Deltas!)
 *UsersApi* | [**GetRoles**](docs/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | Get role names
-*VouchersApi* | [**DeleteVoucherMetadata**](docs/VouchersApi.md#deletevouchermetadata) | **DELETE** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Delete voucher metadata
 *VouchersApi* | [**GetVoucherById**](docs/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | Get voucher by identifier
-*VouchersApi* | [**GetVoucherMetadata**](docs/VouchersApi.md#getvouchermetadata) | **GET** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata | Get voucher metadata
-*VouchersApi* | [**GetVoucherMetadata_0**](docs/VouchersApi.md#getvouchermetadata_0) | **GET** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Get voucher metadata
-*VouchersApi* | [**GetVouchers**](docs/VouchersApi.md#getvouchers) | **GET** /api/v1.0/vouchers | Get vouchers
-*VouchersApi* | [**SetVoucherMetadata**](docs/VouchersApi.md#setvouchermetadata) | **PUT** /api/v1.0/vouchers/{voucherId}/menu/{menuId}/store/{storeId}/metadata/{key} | Add voucher metadata
+*VouchersApi* | [**GetVouchers**](docs/VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appNameId}/vouchers | Get vouchers for App Id
+*VouchersApi* | [**UpdateVoucher**](docs/VouchersApi.md#updatevoucher) | **POST** /api/v1.0/vouchers/{voucherId} | Updates voucher
 *WebhooksApi* | [**CraeteWebhookSubscription**](docs/WebhooksApi.md#craetewebhooksubscription) | **POST** /api/v1.0/webhooks/{clientId}/subscriptions | Create a webhook subscription for you Oauth client
 *WebhooksApi* | [**CreateWebhookSubscriptionEventNames**](docs/WebhooksApi.md#createwebhooksubscriptioneventnames) | **POST** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Add event name to your webhook subscription
 *WebhooksApi* | [**DeleteWebhookSubscription**](docs/WebhooksApi.md#deletewebhooksubscription) | **DELETE** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId} | Delete you webhook subscription
@@ -380,7 +377,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultOrder](docs/RestApiPaginationResultOrder.md)
  - [Model.RestApiPaginationResultStore](docs/RestApiPaginationResultStore.md)
  - [Model.RestApiPaginationResultStoreGroup](docs/RestApiPaginationResultStoreGroup.md)
- - [Model.RestApiPaginationResultVoucher](docs/RestApiPaginationResultVoucher.md)
+ - [Model.RestApiPaginationResultVoucherWithStats](docs/RestApiPaginationResultVoucherWithStats.md)
  - [Model.RestApiPaginationResultWebhookLog](docs/RestApiPaginationResultWebhookLog.md)
  - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
  - [Model.RestApiResultApmStatistics](docs/RestApiResultApmStatistics.md)
@@ -411,6 +408,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultSubscriptionPlansResponse](docs/RestApiResultSubscriptionPlansResponse.md)
  - [Model.RestApiResultTeammate](docs/RestApiResultTeammate.md)
  - [Model.RestApiResultVoucher](docs/RestApiResultVoucher.md)
+ - [Model.RestApiResultVoucherWithStats](docs/RestApiResultVoucherWithStats.md)
  - [Model.RestApiStringArrayResult](docs/RestApiStringArrayResult.md)
  - [Model.RestApiStringResult](docs/RestApiStringResult.md)
  - [Model.RestApiUnauthorizedResult](docs/RestApiUnauthorizedResult.md)
@@ -457,7 +455,9 @@ Class | Method | HTTP request | Description
  - [Model.UserUpdatedEvent](docs/UserUpdatedEvent.md)
  - [Model.ValidationErrorResult](docs/ValidationErrorResult.md)
  - [Model.Voucher](docs/Voucher.md)
+ - [Model.VoucherBase](docs/VoucherBase.md)
  - [Model.VoucherSummary](docs/VoucherSummary.md)
+ - [Model.VoucherWithStats](docs/VoucherWithStats.md)
  - [Model.WebhookLog](docs/WebhookLog.md)
  - [Model.WebhookSubscription](docs/WebhookSubscription.md)
  - [Model.WebhookSubscriptionCreatedEvent](docs/WebhookSubscriptionCreatedEvent.md)

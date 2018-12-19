@@ -1,8 +1,13 @@
-# Flipdish.Model.Voucher
+# Flipdish.Model.VoucherWithStats
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**TotalUsed** | **int?** | Total times the voucher was used | [optional] 
+**TotalCustomers** | **int?** | Total amount of customers who used this voucher | [optional] 
+**TotalAmountFromOrders** | **double?** | Total amount of money from orders | [optional] 
+**TotalDiscounted** | **double?** | Total amount of money given away | [optional] 
+**AverageOrderSize** | **double?** | Average Order Size | [optional] 
 **VoucherId** | **int?** | Voucher Id | [optional] 
 **Code** | **string** | Voucher Code | [optional] 
 **Status** | **string** | Voucher Status | [optional] 

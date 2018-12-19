@@ -65,21 +65,6 @@ namespace Flipdish.Test
 
         
         /// <summary>
-        /// Test DeleteVoucherMetadata
-        /// </summary>
-        [Test]
-        public void DeleteVoucherMetadataTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? voucherId = null;
-            //int? menuId = null;
-            //int? storeId = null;
-            //string key = null;
-            //var response = instance.DeleteVoucherMetadata(voucherId, menuId, storeId, key);
-            //Assert.IsInstanceOf<RestApiArrayResultRestApiDefaultResponse> (response, "response is RestApiArrayResultRestApiDefaultResponse");
-        }
-        
-        /// <summary>
         /// Test GetVoucherById
         /// </summary>
         [Test]
@@ -88,36 +73,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? voucherId = null;
             //var response = instance.GetVoucherById(voucherId);
-            //Assert.IsInstanceOf<RestApiResultVoucher> (response, "response is RestApiResultVoucher");
-        }
-        
-        /// <summary>
-        /// Test GetVoucherMetadata
-        /// </summary>
-        [Test]
-        public void GetVoucherMetadataTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? voucherId = null;
-            //int? menuId = null;
-            //int? storeId = null;
-            //var response = instance.GetVoucherMetadata(voucherId, menuId, storeId);
-            //Assert.IsInstanceOf<RestApiArrayResultMetadata> (response, "response is RestApiArrayResultMetadata");
-        }
-        
-        /// <summary>
-        /// Test GetVoucherMetadata_0
-        /// </summary>
-        [Test]
-        public void GetVoucherMetadata_0Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? voucherId = null;
-            //int? menuId = null;
-            //int? storeId = null;
-            //string key = null;
-            //var response = instance.GetVoucherMetadata_0(voucherId, menuId, storeId, key);
-            //Assert.IsInstanceOf<RestApiResultMetadata> (response, "response is RestApiResultMetadata");
+            //Assert.IsInstanceOf<RestApiResultVoucherWithStats> (response, "response is RestApiResultVoucherWithStats");
         }
         
         /// <summary>
@@ -127,39 +83,28 @@ namespace Flipdish.Test
         public void GetVouchersTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string filter = null;
-            //int? pageNumber = null;
+            //string appNameId = null;
+            //int? pageIndex = null;
             //int? pageSize = null;
-            //string sortOrder = null;
-            //string orderBy = null;
-            //string subType = null;
-            //string status = null;
-            //string code = null;
-            //DateTime? validFromBegin = null;
-            //DateTime? validFromEnd = null;
-            //DateTime? expiryBegin = null;
-            //DateTime? expiryEnd = null;
-            //double? amount = null;
-            //string voucherType = null;
-            //string description = null;
-            //var response = instance.GetVouchers(filter, pageNumber, pageSize, sortOrder, orderBy, subType, status, code, validFromBegin, validFromEnd, expiryBegin, expiryEnd, amount, voucherType, description);
-            //Assert.IsInstanceOf<RestApiPaginationResultVoucher> (response, "response is RestApiPaginationResultVoucher");
+            //List<string> searchCodes = null;
+            //List<string> statusSearch = null;
+            //List<string> typeSearch = null;
+            //List<int?> physicalRestaurantIds = null;
+            //var response = instance.GetVouchers(appNameId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, physicalRestaurantIds);
+            //Assert.IsInstanceOf<RestApiPaginationResultVoucherWithStats> (response, "response is RestApiPaginationResultVoucherWithStats");
         }
         
         /// <summary>
-        /// Test SetVoucherMetadata
+        /// Test UpdateVoucher
         /// </summary>
         [Test]
-        public void SetVoucherMetadataTest()
+        public void UpdateVoucherTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? voucherId = null;
-            //int? menuId = null;
-            //int? storeId = null;
-            //string key = null;
-            //string value = null;
-            //instance.SetVoucherMetadata(voucherId, menuId, storeId, key, value);
-            
+            //VoucherBase voucher = null;
+            //var response = instance.UpdateVoucher(voucherId, voucher);
+            //Assert.IsInstanceOf<RestApiResultVoucher> (response, "response is RestApiResultVoucher");
         }
         
     }

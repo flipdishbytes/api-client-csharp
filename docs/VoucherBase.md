@@ -1,14 +1,8 @@
-# Flipdish.Model.Voucher
+# Flipdish.Model.VoucherBase
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VoucherId** | **int?** | Voucher Id | [optional] 
-**Code** | **string** | Voucher Code | [optional] 
-**Status** | **string** | Voucher Status | [optional] 
-**VoucherType** | **string** | Voucher Type | [optional] 
-**VoucherSubType** | **string** | Voucher Sub Type | [optional] 
-**StartDate** | **DateTime?** | Voucher Expires On (Time in UTC) | [optional] 
 **Description** | **string** | Voucher Description (Visible on printout) | [optional] 
 **IsEnabled** | **bool?** | Is voucher enabled | [optional] 
 **ExpiryDate** | **DateTime?** | Voucher Expires On (Time in UTC) | [optional] 

@@ -25,10 +25,10 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Voucher
+    /// Voucher With Statistics
     /// </summary>
     [DataContract]
-    public partial class Voucher :  IEquatable<Voucher>, IValidatableObject
+    public partial class VoucherWithStats :  IEquatable<VoucherWithStats>, IValidatableObject
     {
         /// <summary>
         /// Voucher Status
@@ -160,8 +160,13 @@ namespace Flipdish.Model
         [DataMember(Name="VoucherSubType", EmitDefaultValue=false)]
         public VoucherSubTypeEnum? VoucherSubType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="Voucher" /> class.
+        /// Initializes a new instance of the <see cref="VoucherWithStats" /> class.
         /// </summary>
+        /// <param name="TotalUsed">Total times the voucher was used.</param>
+        /// <param name="TotalCustomers">Total amount of customers who used this voucher.</param>
+        /// <param name="TotalAmountFromOrders">Total amount of money from orders.</param>
+        /// <param name="TotalDiscounted">Total amount of money given away.</param>
+        /// <param name="AverageOrderSize">Average Order Size.</param>
         /// <param name="VoucherId">Voucher Id.</param>
         /// <param name="Code">Voucher Code.</param>
         /// <param name="Status">Voucher Status.</param>
@@ -171,8 +176,13 @@ namespace Flipdish.Model
         /// <param name="Description">Voucher Description (Visible on printout).</param>
         /// <param name="IsEnabled">Is voucher enabled.</param>
         /// <param name="ExpiryDate">Voucher Expires On (Time in UTC).</param>
-        public Voucher(int? VoucherId = default(int?), string Code = default(string), StatusEnum? Status = default(StatusEnum?), VoucherTypeEnum? VoucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? VoucherSubType = default(VoucherSubTypeEnum?), DateTime? StartDate = default(DateTime?), string Description = default(string), bool? IsEnabled = default(bool?), DateTime? ExpiryDate = default(DateTime?))
+        public VoucherWithStats(int? TotalUsed = default(int?), int? TotalCustomers = default(int?), double? TotalAmountFromOrders = default(double?), double? TotalDiscounted = default(double?), double? AverageOrderSize = default(double?), int? VoucherId = default(int?), string Code = default(string), StatusEnum? Status = default(StatusEnum?), VoucherTypeEnum? VoucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? VoucherSubType = default(VoucherSubTypeEnum?), DateTime? StartDate = default(DateTime?), string Description = default(string), bool? IsEnabled = default(bool?), DateTime? ExpiryDate = default(DateTime?))
         {
+            this.TotalUsed = TotalUsed;
+            this.TotalCustomers = TotalCustomers;
+            this.TotalAmountFromOrders = TotalAmountFromOrders;
+            this.TotalDiscounted = TotalDiscounted;
+            this.AverageOrderSize = AverageOrderSize;
             this.VoucherId = VoucherId;
             this.Code = Code;
             this.Status = Status;
@@ -184,6 +194,41 @@ namespace Flipdish.Model
             this.ExpiryDate = ExpiryDate;
         }
         
+        /// <summary>
+        /// Total times the voucher was used
+        /// </summary>
+        /// <value>Total times the voucher was used</value>
+        [DataMember(Name="TotalUsed", EmitDefaultValue=false)]
+        public int? TotalUsed { get; set; }
+
+        /// <summary>
+        /// Total amount of customers who used this voucher
+        /// </summary>
+        /// <value>Total amount of customers who used this voucher</value>
+        [DataMember(Name="TotalCustomers", EmitDefaultValue=false)]
+        public int? TotalCustomers { get; set; }
+
+        /// <summary>
+        /// Total amount of money from orders
+        /// </summary>
+        /// <value>Total amount of money from orders</value>
+        [DataMember(Name="TotalAmountFromOrders", EmitDefaultValue=false)]
+        public double? TotalAmountFromOrders { get; set; }
+
+        /// <summary>
+        /// Total amount of money given away
+        /// </summary>
+        /// <value>Total amount of money given away</value>
+        [DataMember(Name="TotalDiscounted", EmitDefaultValue=false)]
+        public double? TotalDiscounted { get; set; }
+
+        /// <summary>
+        /// Average Order Size
+        /// </summary>
+        /// <value>Average Order Size</value>
+        [DataMember(Name="AverageOrderSize", EmitDefaultValue=false)]
+        public double? AverageOrderSize { get; set; }
+
         /// <summary>
         /// Voucher Id
         /// </summary>
@@ -236,7 +281,12 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Voucher {\n");
+            sb.Append("class VoucherWithStats {\n");
+            sb.Append("  TotalUsed: ").Append(TotalUsed).Append("\n");
+            sb.Append("  TotalCustomers: ").Append(TotalCustomers).Append("\n");
+            sb.Append("  TotalAmountFromOrders: ").Append(TotalAmountFromOrders).Append("\n");
+            sb.Append("  TotalDiscounted: ").Append(TotalDiscounted).Append("\n");
+            sb.Append("  AverageOrderSize: ").Append(AverageOrderSize).Append("\n");
             sb.Append("  VoucherId: ").Append(VoucherId).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -266,20 +316,45 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as Voucher);
+            return this.Equals(input as VoucherWithStats);
         }
 
         /// <summary>
-        /// Returns true if Voucher instances are equal
+        /// Returns true if VoucherWithStats instances are equal
         /// </summary>
-        /// <param name="input">Instance of Voucher to be compared</param>
+        /// <param name="input">Instance of VoucherWithStats to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Voucher input)
+        public bool Equals(VoucherWithStats input)
         {
             if (input == null)
                 return false;
 
             return 
+                (
+                    this.TotalUsed == input.TotalUsed ||
+                    (this.TotalUsed != null &&
+                    this.TotalUsed.Equals(input.TotalUsed))
+                ) && 
+                (
+                    this.TotalCustomers == input.TotalCustomers ||
+                    (this.TotalCustomers != null &&
+                    this.TotalCustomers.Equals(input.TotalCustomers))
+                ) && 
+                (
+                    this.TotalAmountFromOrders == input.TotalAmountFromOrders ||
+                    (this.TotalAmountFromOrders != null &&
+                    this.TotalAmountFromOrders.Equals(input.TotalAmountFromOrders))
+                ) && 
+                (
+                    this.TotalDiscounted == input.TotalDiscounted ||
+                    (this.TotalDiscounted != null &&
+                    this.TotalDiscounted.Equals(input.TotalDiscounted))
+                ) && 
+                (
+                    this.AverageOrderSize == input.AverageOrderSize ||
+                    (this.AverageOrderSize != null &&
+                    this.AverageOrderSize.Equals(input.AverageOrderSize))
+                ) && 
                 (
                     this.VoucherId == input.VoucherId ||
                     (this.VoucherId != null &&
@@ -336,6 +411,16 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.TotalUsed != null)
+                    hashCode = hashCode * 59 + this.TotalUsed.GetHashCode();
+                if (this.TotalCustomers != null)
+                    hashCode = hashCode * 59 + this.TotalCustomers.GetHashCode();
+                if (this.TotalAmountFromOrders != null)
+                    hashCode = hashCode * 59 + this.TotalAmountFromOrders.GetHashCode();
+                if (this.TotalDiscounted != null)
+                    hashCode = hashCode * 59 + this.TotalDiscounted.GetHashCode();
+                if (this.AverageOrderSize != null)
+                    hashCode = hashCode * 59 + this.AverageOrderSize.GetHashCode();
                 if (this.VoucherId != null)
                     hashCode = hashCode * 59 + this.VoucherId.GetHashCode();
                 if (this.Code != null)
