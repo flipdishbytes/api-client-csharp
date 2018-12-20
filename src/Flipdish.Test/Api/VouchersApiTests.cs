@@ -83,15 +83,15 @@ namespace Flipdish.Test
         public void GetVouchersTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string appNameId = null;
+            //string appId = null;
             //int? pageIndex = null;
             //int? pageSize = null;
             //List<string> searchCodes = null;
             //List<string> statusSearch = null;
             //List<string> typeSearch = null;
-            //List<int?> physicalRestaurantIds = null;
-            //var response = instance.GetVouchers(appNameId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, physicalRestaurantIds);
-            //Assert.IsInstanceOf<RestApiPaginationResultVoucherWithStats> (response, "response is RestApiPaginationResultVoucherWithStats");
+            //List<int?> storeIds = null;
+            //var response = instance.GetVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, storeIds);
+            //Assert.IsInstanceOf<RestApiPaginationResultVoucher> (response, "response is RestApiPaginationResultVoucher");
         }
         
         /// <summary>

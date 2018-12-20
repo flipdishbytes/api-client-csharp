@@ -28,26 +28,26 @@ namespace Flipdish.Model
     /// Rest api pagination result
     /// </summary>
     [DataContract]
-    public partial class RestApiPaginationResultVoucherWithStats :  IEquatable<RestApiPaginationResultVoucherWithStats>, IValidatableObject
+    public partial class RestApiPaginationResultVoucher :  IEquatable<RestApiPaginationResultVoucher>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiPaginationResultVoucherWithStats" /> class.
+        /// Initializes a new instance of the <see cref="RestApiPaginationResultVoucher" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected RestApiPaginationResultVoucherWithStats() { }
+        protected RestApiPaginationResultVoucher() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiPaginationResultVoucherWithStats" /> class.
+        /// Initializes a new instance of the <see cref="RestApiPaginationResultVoucher" /> class.
         /// </summary>
         /// <param name="Page">Current page index (required).</param>
         /// <param name="Limit">Current page size (required).</param>
         /// <param name="TotalRecordCount">Total record count (required).</param>
         /// <param name="Data">Generic data object. (required).</param>
-        public RestApiPaginationResultVoucherWithStats(int? Page = default(int?), int? Limit = default(int?), int? TotalRecordCount = default(int?), List<VoucherWithStats> Data = default(List<VoucherWithStats>))
+        public RestApiPaginationResultVoucher(int? Page = default(int?), int? Limit = default(int?), int? TotalRecordCount = default(int?), List<Voucher> Data = default(List<Voucher>))
         {
             // to ensure "Page" is required (not null)
             if (Page == null)
             {
-                throw new InvalidDataException("Page is a required property for RestApiPaginationResultVoucherWithStats and cannot be null");
+                throw new InvalidDataException("Page is a required property for RestApiPaginationResultVoucher and cannot be null");
             }
             else
             {
@@ -56,7 +56,7 @@ namespace Flipdish.Model
             // to ensure "Limit" is required (not null)
             if (Limit == null)
             {
-                throw new InvalidDataException("Limit is a required property for RestApiPaginationResultVoucherWithStats and cannot be null");
+                throw new InvalidDataException("Limit is a required property for RestApiPaginationResultVoucher and cannot be null");
             }
             else
             {
@@ -65,7 +65,7 @@ namespace Flipdish.Model
             // to ensure "TotalRecordCount" is required (not null)
             if (TotalRecordCount == null)
             {
-                throw new InvalidDataException("TotalRecordCount is a required property for RestApiPaginationResultVoucherWithStats and cannot be null");
+                throw new InvalidDataException("TotalRecordCount is a required property for RestApiPaginationResultVoucher and cannot be null");
             }
             else
             {
@@ -74,7 +74,7 @@ namespace Flipdish.Model
             // to ensure "Data" is required (not null)
             if (Data == null)
             {
-                throw new InvalidDataException("Data is a required property for RestApiPaginationResultVoucherWithStats and cannot be null");
+                throw new InvalidDataException("Data is a required property for RestApiPaginationResultVoucher and cannot be null");
             }
             else
             {
@@ -108,7 +108,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Generic data object.</value>
         [DataMember(Name="Data", EmitDefaultValue=false)]
-        public List<VoucherWithStats> Data { get; set; }
+        public List<Voucher> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -117,7 +117,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RestApiPaginationResultVoucherWithStats {\n");
+            sb.Append("class RestApiPaginationResultVoucher {\n");
             sb.Append("  Page: ").Append(Page).Append("\n");
             sb.Append("  Limit: ").Append(Limit).Append("\n");
             sb.Append("  TotalRecordCount: ").Append(TotalRecordCount).Append("\n");
@@ -142,15 +142,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RestApiPaginationResultVoucherWithStats);
+            return this.Equals(input as RestApiPaginationResultVoucher);
         }
 
         /// <summary>
-        /// Returns true if RestApiPaginationResultVoucherWithStats instances are equal
+        /// Returns true if RestApiPaginationResultVoucher instances are equal
         /// </summary>
-        /// <param name="input">Instance of RestApiPaginationResultVoucherWithStats to be compared</param>
+        /// <param name="input">Instance of RestApiPaginationResultVoucher to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RestApiPaginationResultVoucherWithStats input)
+        public bool Equals(RestApiPaginationResultVoucher input)
         {
             if (input == null)
                 return false;

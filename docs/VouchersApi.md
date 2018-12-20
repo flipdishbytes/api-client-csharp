@@ -4,16 +4,16 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetVoucherById**](VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | Get voucher by identifier
-[**GetVouchers**](VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appNameId}/vouchers | Get vouchers for App Id
-[**UpdateVoucher**](VouchersApi.md#updatevoucher) | **POST** /api/v1.0/vouchers/{voucherId} | Updates voucher
+[**GetVoucherById**](VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Get voucher by identifier
+[**GetVouchers**](VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appId}/vouchers | [PRIVATE API] Get vouchers for App Id
+[**UpdateVoucher**](VouchersApi.md#updatevoucher) | **POST** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Updates voucher
 
 
 <a name="getvoucherbyid"></a>
 # **GetVoucherById**
 > RestApiResultVoucherWithStats GetVoucherById (int? voucherId)
 
-Get voucher by identifier
+[PRIVATE API] Get voucher by identifier
 
 ### Example
 ```csharp
@@ -37,7 +37,7 @@ namespace Example
 
             try
             {
-                // Get voucher by identifier
+                // [PRIVATE API] Get voucher by identifier
                 RestApiResultVoucherWithStats result = apiInstance.GetVoucherById(voucherId);
                 Debug.WriteLine(result);
             }
@@ -73,9 +73,9 @@ Name | Type | Description  | Notes
 
 <a name="getvouchers"></a>
 # **GetVouchers**
-> RestApiPaginationResultVoucherWithStats GetVouchers (string appNameId, int? pageIndex, int? pageSize, List<string> searchCodes, List<string> statusSearch, List<string> typeSearch, List<int?> physicalRestaurantIds)
+> RestApiPaginationResultVoucher GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<int?> storeIds = null)
 
-Get vouchers for App Id
+[PRIVATE API] Get vouchers for App Id
 
 ### Example
 ```csharp
@@ -95,18 +95,18 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VouchersApi();
-            var appNameId = appNameId_example;  // string | 
-            var pageIndex = 56;  // int? | 
-            var pageSize = 56;  // int? | 
-            var searchCodes = new List<string>(); // List<string> | 
-            var statusSearch = statusSearch_example;  // List<string> | 
-            var typeSearch = typeSearch_example;  // List<string> | 
-            var physicalRestaurantIds = new List<int?>(); // List<int?> | 
+            var appId = appId_example;  // string | 
+            var pageIndex = 56;  // int? |  (optional) 
+            var pageSize = 56;  // int? |  (optional) 
+            var searchCodes = new List<string>(); // List<string> |  (optional) 
+            var statusSearch = statusSearch_example;  // List<string> |  (optional) 
+            var typeSearch = typeSearch_example;  // List<string> |  (optional) 
+            var storeIds = new List<int?>(); // List<int?> |  (optional) 
 
             try
             {
-                // Get vouchers for App Id
-                RestApiPaginationResultVoucherWithStats result = apiInstance.GetVouchers(appNameId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, physicalRestaurantIds);
+                // [PRIVATE API] Get vouchers for App Id
+                RestApiPaginationResultVoucher result = apiInstance.GetVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, storeIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -122,17 +122,17 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appNameId** | **string**|  | 
- **pageIndex** | **int?**|  | 
- **pageSize** | **int?**|  | 
- **searchCodes** | [**List&lt;string&gt;**](string.md)|  | 
- **statusSearch** | **List&lt;string&gt;**|  | 
- **typeSearch** | **List&lt;string&gt;**|  | 
- **physicalRestaurantIds** | [**List&lt;int?&gt;**](int?.md)|  | 
+ **appId** | **string**|  | 
+ **pageIndex** | **int?**|  | [optional] 
+ **pageSize** | **int?**|  | [optional] 
+ **searchCodes** | [**List&lt;string&gt;**](string.md)|  | [optional] 
+ **statusSearch** | **List&lt;string&gt;**|  | [optional] 
+ **typeSearch** | **List&lt;string&gt;**|  | [optional] 
+ **storeIds** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
 
 ### Return type
 
-[**RestApiPaginationResultVoucherWithStats**](RestApiPaginationResultVoucherWithStats.md)
+[**RestApiPaginationResultVoucher**](RestApiPaginationResultVoucher.md)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 # **UpdateVoucher**
 > RestApiResultVoucher UpdateVoucher (int? voucherId, VoucherBase voucher)
 
-Updates voucher
+[PRIVATE API] Updates voucher
 
 ### Example
 ```csharp
@@ -174,7 +174,7 @@ namespace Example
 
             try
             {
-                // Updates voucher
+                // [PRIVATE API] Updates voucher
                 RestApiResultVoucher result = apiInstance.UpdateVoucher(voucherId, voucher);
                 Debug.WriteLine(result);
             }

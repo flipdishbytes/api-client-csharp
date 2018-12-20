@@ -71,8 +71,9 @@ namespace Flipdish.Test
         public void GetBasicStatisticsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
             //List<int?> storeId = null;
-            //var response = instance.GetBasicStatistics(storeId);
+            //var response = instance.GetBasicStatistics(appId, storeId);
             //Assert.IsInstanceOf<RestApiResultApmStatistics> (response, "response is RestApiResultApmStatistics");
         }
         
@@ -83,8 +84,9 @@ namespace Flipdish.Test
         public void GetCalendarWeekStatisticsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
             //List<int?> storeId = null;
-            //var response = instance.GetCalendarWeekStatistics(storeId);
+            //var response = instance.GetCalendarWeekStatistics(appId, storeId);
             //Assert.IsInstanceOf<RestApiArrayResultApmAverageHourlyDataPoint> (response, "response is RestApiArrayResultApmAverageHourlyDataPoint");
         }
         
@@ -95,9 +97,11 @@ namespace Flipdish.Test
         public void GetCallsStatisticsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //List<int?> storeId = null;
+            //string appId = null;
             //string aggregateDataBy = null;
-            //var response = instance.GetCallsStatistics(storeId, aggregateDataBy);
+            //int? dataPointLimit = null;
+            //List<int?> storeId = null;
+            //var response = instance.GetCallsStatistics(appId, aggregateDataBy, dataPointLimit, storeId);
             //Assert.IsInstanceOf<RestApiArrayResultApmDataPoint> (response, "response is RestApiArrayResultApmDataPoint");
         }
         
@@ -108,9 +112,11 @@ namespace Flipdish.Test
         public void GetOrderStatisticsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //List<int?> storeId = null;
+            //string appId = null;
             //string aggregateDataBy = null;
-            //var response = instance.GetOrderStatistics(storeId, aggregateDataBy);
+            //int? dataPointLimit = null;
+            //List<int?> storeId = null;
+            //var response = instance.GetOrderStatistics(appId, aggregateDataBy, dataPointLimit, storeId);
             //Assert.IsInstanceOf<RestApiArrayResultApmDataPoint> (response, "response is RestApiArrayResultApmDataPoint");
         }
         
@@ -121,10 +127,11 @@ namespace Flipdish.Test
         public void GetPaginatedCallListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //List<int?> storeId = null;
+            //string appId = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.GetPaginatedCallList(storeId, page, limit);
+            //List<int?> storeId = null;
+            //var response = instance.GetPaginatedCallList(appId, page, limit, storeId);
             //Assert.IsInstanceOf<RestApiPaginationResultApmCall> (response, "response is RestApiPaginationResultApmCall");
         }
         

@@ -25,7 +25,7 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get voucher by identifier
+        /// [PRIVATE API] Get voucher by identifier
         /// </summary>
         /// <remarks>
         /// 
@@ -36,7 +36,7 @@ namespace Flipdish.Api
         RestApiResultVoucherWithStats GetVoucherById (int? voucherId);
 
         /// <summary>
-        /// Get voucher by identifier
+        /// [PRIVATE API] Get voucher by identifier
         /// </summary>
         /// <remarks>
         /// 
@@ -46,40 +46,40 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
         ApiResponse<RestApiResultVoucherWithStats> GetVoucherByIdWithHttpInfo (int? voucherId);
         /// <summary>
-        /// Get vouchers for App Id
+        /// [PRIVATE API] Get vouchers for App Id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId"></param>
-        /// <param name="pageIndex"></param>
-        /// <param name="pageSize"></param>
-        /// <param name="searchCodes"></param>
-        /// <param name="statusSearch"></param>
-        /// <param name="typeSearch"></param>
-        /// <param name="physicalRestaurantIds"></param>
-        /// <returns>RestApiPaginationResultVoucherWithStats</returns>
-        RestApiPaginationResultVoucherWithStats GetVouchers (string appNameId, int? pageIndex, int? pageSize, List<string> searchCodes, List<string> statusSearch, List<string> typeSearch, List<int?> physicalRestaurantIds);
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>RestApiPaginationResultVoucher</returns>
+        RestApiPaginationResultVoucher GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<int?> storeIds = null);
 
         /// <summary>
-        /// Get vouchers for App Id
+        /// [PRIVATE API] Get vouchers for App Id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId"></param>
-        /// <param name="pageIndex"></param>
-        /// <param name="pageSize"></param>
-        /// <param name="searchCodes"></param>
-        /// <param name="statusSearch"></param>
-        /// <param name="typeSearch"></param>
-        /// <param name="physicalRestaurantIds"></param>
-        /// <returns>ApiResponse of RestApiPaginationResultVoucherWithStats</returns>
-        ApiResponse<RestApiPaginationResultVoucherWithStats> GetVouchersWithHttpInfo (string appNameId, int? pageIndex, int? pageSize, List<string> searchCodes, List<string> statusSearch, List<string> typeSearch, List<int?> physicalRestaurantIds);
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultVoucher</returns>
+        ApiResponse<RestApiPaginationResultVoucher> GetVouchersWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<int?> storeIds = null);
         /// <summary>
-        /// Updates voucher
+        /// [PRIVATE API] Updates voucher
         /// </summary>
         /// <remarks>
         /// 
@@ -91,7 +91,7 @@ namespace Flipdish.Api
         RestApiResultVoucher UpdateVoucher (int? voucherId, VoucherBase voucher);
 
         /// <summary>
-        /// Updates voucher
+        /// [PRIVATE API] Updates voucher
         /// </summary>
         /// <remarks>
         /// 
@@ -104,7 +104,7 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get voucher by identifier
+        /// [PRIVATE API] Get voucher by identifier
         /// </summary>
         /// <remarks>
         /// 
@@ -115,7 +115,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultVoucherWithStats> GetVoucherByIdAsync (int? voucherId);
 
         /// <summary>
-        /// Get voucher by identifier
+        /// [PRIVATE API] Get voucher by identifier
         /// </summary>
         /// <remarks>
         /// 
@@ -125,40 +125,40 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> GetVoucherByIdAsyncWithHttpInfo (int? voucherId);
         /// <summary>
-        /// Get vouchers for App Id
+        /// [PRIVATE API] Get vouchers for App Id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId"></param>
-        /// <param name="pageIndex"></param>
-        /// <param name="pageSize"></param>
-        /// <param name="searchCodes"></param>
-        /// <param name="statusSearch"></param>
-        /// <param name="typeSearch"></param>
-        /// <param name="physicalRestaurantIds"></param>
-        /// <returns>Task of RestApiPaginationResultVoucherWithStats</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultVoucherWithStats> GetVouchersAsync (string appNameId, int? pageIndex, int? pageSize, List<string> searchCodes, List<string> statusSearch, List<string> typeSearch, List<int?> physicalRestaurantIds);
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>Task of RestApiPaginationResultVoucher</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultVoucher> GetVouchersAsync (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<int?> storeIds = null);
 
         /// <summary>
-        /// Get vouchers for App Id
+        /// [PRIVATE API] Get vouchers for App Id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId"></param>
-        /// <param name="pageIndex"></param>
-        /// <param name="pageSize"></param>
-        /// <param name="searchCodes"></param>
-        /// <param name="statusSearch"></param>
-        /// <param name="typeSearch"></param>
-        /// <param name="physicalRestaurantIds"></param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultVoucherWithStats)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultVoucherWithStats>> GetVouchersAsyncWithHttpInfo (string appNameId, int? pageIndex, int? pageSize, List<string> searchCodes, List<string> statusSearch, List<string> typeSearch, List<int?> physicalRestaurantIds);
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultVoucher)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultVoucher>> GetVouchersAsyncWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<int?> storeIds = null);
         /// <summary>
-        /// Updates voucher
+        /// [PRIVATE API] Updates voucher
         /// </summary>
         /// <remarks>
         /// 
@@ -170,7 +170,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultVoucher> UpdateVoucherAsync (int? voucherId, VoucherBase voucher);
 
         /// <summary>
-        /// Updates voucher
+        /// [PRIVATE API] Updates voucher
         /// </summary>
         /// <remarks>
         /// 
@@ -281,7 +281,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get voucher by identifier 
+        /// [PRIVATE API] Get voucher by identifier 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>
@@ -293,7 +293,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get voucher by identifier 
+        /// [PRIVATE API] Get voucher by identifier 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>
@@ -356,7 +356,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get voucher by identifier 
+        /// [PRIVATE API] Get voucher by identifier 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>
@@ -369,7 +369,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get voucher by identifier 
+        /// [PRIVATE API] Get voucher by identifier 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>
@@ -432,60 +432,42 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get vouchers for App Id 
+        /// [PRIVATE API] Get vouchers for App Id 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId"></param>
-        /// <param name="pageIndex"></param>
-        /// <param name="pageSize"></param>
-        /// <param name="searchCodes"></param>
-        /// <param name="statusSearch"></param>
-        /// <param name="typeSearch"></param>
-        /// <param name="physicalRestaurantIds"></param>
-        /// <returns>RestApiPaginationResultVoucherWithStats</returns>
-        public RestApiPaginationResultVoucherWithStats GetVouchers (string appNameId, int? pageIndex, int? pageSize, List<string> searchCodes, List<string> statusSearch, List<string> typeSearch, List<int?> physicalRestaurantIds)
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>RestApiPaginationResultVoucher</returns>
+        public RestApiPaginationResultVoucher GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<int?> storeIds = null)
         {
-             ApiResponse<RestApiPaginationResultVoucherWithStats> localVarResponse = GetVouchersWithHttpInfo(appNameId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, physicalRestaurantIds);
+             ApiResponse<RestApiPaginationResultVoucher> localVarResponse = GetVouchersWithHttpInfo(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, storeIds);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get vouchers for App Id 
+        /// [PRIVATE API] Get vouchers for App Id 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId"></param>
-        /// <param name="pageIndex"></param>
-        /// <param name="pageSize"></param>
-        /// <param name="searchCodes"></param>
-        /// <param name="statusSearch"></param>
-        /// <param name="typeSearch"></param>
-        /// <param name="physicalRestaurantIds"></param>
-        /// <returns>ApiResponse of RestApiPaginationResultVoucherWithStats</returns>
-        public ApiResponse< RestApiPaginationResultVoucherWithStats > GetVouchersWithHttpInfo (string appNameId, int? pageIndex, int? pageSize, List<string> searchCodes, List<string> statusSearch, List<string> typeSearch, List<int?> physicalRestaurantIds)
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultVoucher</returns>
+        public ApiResponse< RestApiPaginationResultVoucher > GetVouchersWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<int?> storeIds = null)
         {
-            // verify the required parameter 'appNameId' is set
-            if (appNameId == null)
-                throw new ApiException(400, "Missing required parameter 'appNameId' when calling VouchersApi->GetVouchers");
-            // verify the required parameter 'pageIndex' is set
-            if (pageIndex == null)
-                throw new ApiException(400, "Missing required parameter 'pageIndex' when calling VouchersApi->GetVouchers");
-            // verify the required parameter 'pageSize' is set
-            if (pageSize == null)
-                throw new ApiException(400, "Missing required parameter 'pageSize' when calling VouchersApi->GetVouchers");
-            // verify the required parameter 'searchCodes' is set
-            if (searchCodes == null)
-                throw new ApiException(400, "Missing required parameter 'searchCodes' when calling VouchersApi->GetVouchers");
-            // verify the required parameter 'statusSearch' is set
-            if (statusSearch == null)
-                throw new ApiException(400, "Missing required parameter 'statusSearch' when calling VouchersApi->GetVouchers");
-            // verify the required parameter 'typeSearch' is set
-            if (typeSearch == null)
-                throw new ApiException(400, "Missing required parameter 'typeSearch' when calling VouchersApi->GetVouchers");
-            // verify the required parameter 'physicalRestaurantIds' is set
-            if (physicalRestaurantIds == null)
-                throw new ApiException(400, "Missing required parameter 'physicalRestaurantIds' when calling VouchersApi->GetVouchers");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling VouchersApi->GetVouchers");
 
-            var localVarPath = "/api/v1.0/{appNameId}/vouchers";
+            var localVarPath = "/api/v1.0/{appId}/vouchers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -509,13 +491,13 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (appNameId != null) localVarPathParams.Add("appNameId", Configuration.ApiClient.ParameterToString(appNameId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (pageIndex != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pageIndex", pageIndex)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pageSize", pageSize)); // query parameter
             if (searchCodes != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("multi", "searchCodes", searchCodes)); // query parameter
             if (statusSearch != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("multi", "statusSearch", statusSearch)); // query parameter
             if (typeSearch != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("multi", "typeSearch", typeSearch)); // query parameter
-            if (physicalRestaurantIds != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("multi", "physicalRestaurantIds", physicalRestaurantIds)); // query parameter
+            if (storeIds != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeIds", storeIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -537,67 +519,49 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultVoucherWithStats>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultVoucher>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultVoucherWithStats) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultVoucherWithStats)));
+                (RestApiPaginationResultVoucher) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultVoucher)));
         }
 
         /// <summary>
-        /// Get vouchers for App Id 
+        /// [PRIVATE API] Get vouchers for App Id 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId"></param>
-        /// <param name="pageIndex"></param>
-        /// <param name="pageSize"></param>
-        /// <param name="searchCodes"></param>
-        /// <param name="statusSearch"></param>
-        /// <param name="typeSearch"></param>
-        /// <param name="physicalRestaurantIds"></param>
-        /// <returns>Task of RestApiPaginationResultVoucherWithStats</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultVoucherWithStats> GetVouchersAsync (string appNameId, int? pageIndex, int? pageSize, List<string> searchCodes, List<string> statusSearch, List<string> typeSearch, List<int?> physicalRestaurantIds)
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>Task of RestApiPaginationResultVoucher</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultVoucher> GetVouchersAsync (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<int?> storeIds = null)
         {
-             ApiResponse<RestApiPaginationResultVoucherWithStats> localVarResponse = await GetVouchersAsyncWithHttpInfo(appNameId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, physicalRestaurantIds);
+             ApiResponse<RestApiPaginationResultVoucher> localVarResponse = await GetVouchersAsyncWithHttpInfo(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, storeIds);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get vouchers for App Id 
+        /// [PRIVATE API] Get vouchers for App Id 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId"></param>
-        /// <param name="pageIndex"></param>
-        /// <param name="pageSize"></param>
-        /// <param name="searchCodes"></param>
-        /// <param name="statusSearch"></param>
-        /// <param name="typeSearch"></param>
-        /// <param name="physicalRestaurantIds"></param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultVoucherWithStats)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultVoucherWithStats>> GetVouchersAsyncWithHttpInfo (string appNameId, int? pageIndex, int? pageSize, List<string> searchCodes, List<string> statusSearch, List<string> typeSearch, List<int?> physicalRestaurantIds)
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultVoucher)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultVoucher>> GetVouchersAsyncWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<int?> storeIds = null)
         {
-            // verify the required parameter 'appNameId' is set
-            if (appNameId == null)
-                throw new ApiException(400, "Missing required parameter 'appNameId' when calling VouchersApi->GetVouchers");
-            // verify the required parameter 'pageIndex' is set
-            if (pageIndex == null)
-                throw new ApiException(400, "Missing required parameter 'pageIndex' when calling VouchersApi->GetVouchers");
-            // verify the required parameter 'pageSize' is set
-            if (pageSize == null)
-                throw new ApiException(400, "Missing required parameter 'pageSize' when calling VouchersApi->GetVouchers");
-            // verify the required parameter 'searchCodes' is set
-            if (searchCodes == null)
-                throw new ApiException(400, "Missing required parameter 'searchCodes' when calling VouchersApi->GetVouchers");
-            // verify the required parameter 'statusSearch' is set
-            if (statusSearch == null)
-                throw new ApiException(400, "Missing required parameter 'statusSearch' when calling VouchersApi->GetVouchers");
-            // verify the required parameter 'typeSearch' is set
-            if (typeSearch == null)
-                throw new ApiException(400, "Missing required parameter 'typeSearch' when calling VouchersApi->GetVouchers");
-            // verify the required parameter 'physicalRestaurantIds' is set
-            if (physicalRestaurantIds == null)
-                throw new ApiException(400, "Missing required parameter 'physicalRestaurantIds' when calling VouchersApi->GetVouchers");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling VouchersApi->GetVouchers");
 
-            var localVarPath = "/api/v1.0/{appNameId}/vouchers";
+            var localVarPath = "/api/v1.0/{appId}/vouchers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -621,13 +585,13 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (appNameId != null) localVarPathParams.Add("appNameId", Configuration.ApiClient.ParameterToString(appNameId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (pageIndex != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pageIndex", pageIndex)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pageSize", pageSize)); // query parameter
             if (searchCodes != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("multi", "searchCodes", searchCodes)); // query parameter
             if (statusSearch != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("multi", "statusSearch", statusSearch)); // query parameter
             if (typeSearch != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("multi", "typeSearch", typeSearch)); // query parameter
-            if (physicalRestaurantIds != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("multi", "physicalRestaurantIds", physicalRestaurantIds)); // query parameter
+            if (storeIds != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeIds", storeIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -649,13 +613,13 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultVoucherWithStats>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultVoucher>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultVoucherWithStats) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultVoucherWithStats)));
+                (RestApiPaginationResultVoucher) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultVoucher)));
         }
 
         /// <summary>
-        /// Updates voucher 
+        /// [PRIVATE API] Updates voucher 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>
@@ -668,7 +632,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates voucher 
+        /// [PRIVATE API] Updates voucher 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>
@@ -748,7 +712,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates voucher 
+        /// [PRIVATE API] Updates voucher 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>
@@ -762,7 +726,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates voucher 
+        /// [PRIVATE API] Updates voucher 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId"></param>

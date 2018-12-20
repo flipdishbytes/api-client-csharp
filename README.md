@@ -110,11 +110,11 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**RequestPasswordReset**](docs/AccountsApi.md#requestpasswordreset) | **GET** /api/v1.0/accounts/password | Request password reset. Flipdish system will send a token via email.
 *AccountsApi* | [**SkipSignupStep**](docs/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | Skip a signup question
 *AccountsApi* | [**UpdateAccount**](docs/AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | Update account with name and language
-*ApmApi* | [**GetBasicStatistics**](docs/ApmApi.md#getbasicstatistics) | **GET** /api/v1.0/apm/statistics | [PRIVATE API] Get Basic Statistics
-*ApmApi* | [**GetCalendarWeekStatistics**](docs/ApmApi.md#getcalendarweekstatistics) | **GET** /api/v1.0/apm/statistics/calendar | [PRIVATE API] Get Calendar statistics
-*ApmApi* | [**GetCallsStatistics**](docs/ApmApi.md#getcallsstatistics) | **GET** /api/v1.0/apm/statistics/calls/{aggregateDataBy} | [PRIVATE API] Get Calls Statistics
-*ApmApi* | [**GetOrderStatistics**](docs/ApmApi.md#getorderstatistics) | **GET** /api/v1.0/apm/statistics/orders/{aggregateDataBy} | [PRIVATE API] Get Order Statistics
-*ApmApi* | [**GetPaginatedCallList**](docs/ApmApi.md#getpaginatedcalllist) | **GET** /api/v1.0/apm/calls | [PRIVATE API] Get paginated APM call list
+*ApmApi* | [**GetBasicStatistics**](docs/ApmApi.md#getbasicstatistics) | **GET** /api/v1.0/{appId}/apm/statistics | [PRIVATE API] Get Basic Statistics
+*ApmApi* | [**GetCalendarWeekStatistics**](docs/ApmApi.md#getcalendarweekstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calendar | [PRIVATE API] Get Calendar statistics
+*ApmApi* | [**GetCallsStatistics**](docs/ApmApi.md#getcallsstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy} | [PRIVATE API] Get Calls Statistics
+*ApmApi* | [**GetOrderStatistics**](docs/ApmApi.md#getorderstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | [PRIVATE API] Get Order Statistics
+*ApmApi* | [**GetPaginatedCallList**](docs/ApmApi.md#getpaginatedcalllist) | **GET** /api/v1.0/{appId}/apm/calls | [PRIVATE API] Get paginated APM call list
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
@@ -230,9 +230,9 @@ Class | Method | HTTP request | Description
 *TeammatesApi* | [**GetTeammatesByAppId**](docs/TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
 *TeammatesApi* | [**UpdateTeammate**](docs/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{email} | Update teammates (this method does not support Deltas!)
 *UsersApi* | [**GetRoles**](docs/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | Get role names
-*VouchersApi* | [**GetVoucherById**](docs/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | Get voucher by identifier
-*VouchersApi* | [**GetVouchers**](docs/VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appNameId}/vouchers | Get vouchers for App Id
-*VouchersApi* | [**UpdateVoucher**](docs/VouchersApi.md#updatevoucher) | **POST** /api/v1.0/vouchers/{voucherId} | Updates voucher
+*VouchersApi* | [**GetVoucherById**](docs/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Get voucher by identifier
+*VouchersApi* | [**GetVouchers**](docs/VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appId}/vouchers | [PRIVATE API] Get vouchers for App Id
+*VouchersApi* | [**UpdateVoucher**](docs/VouchersApi.md#updatevoucher) | **POST** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Updates voucher
 *WebhooksApi* | [**CraeteWebhookSubscription**](docs/WebhooksApi.md#craetewebhooksubscription) | **POST** /api/v1.0/webhooks/{clientId}/subscriptions | Create a webhook subscription for you Oauth client
 *WebhooksApi* | [**CreateWebhookSubscriptionEventNames**](docs/WebhooksApi.md#createwebhooksubscriptioneventnames) | **POST** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Add event name to your webhook subscription
 *WebhooksApi* | [**DeleteWebhookSubscription**](docs/WebhooksApi.md#deletewebhooksubscription) | **DELETE** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId} | Delete you webhook subscription
@@ -377,7 +377,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultOrder](docs/RestApiPaginationResultOrder.md)
  - [Model.RestApiPaginationResultStore](docs/RestApiPaginationResultStore.md)
  - [Model.RestApiPaginationResultStoreGroup](docs/RestApiPaginationResultStoreGroup.md)
- - [Model.RestApiPaginationResultVoucherWithStats](docs/RestApiPaginationResultVoucherWithStats.md)
+ - [Model.RestApiPaginationResultVoucher](docs/RestApiPaginationResultVoucher.md)
  - [Model.RestApiPaginationResultWebhookLog](docs/RestApiPaginationResultWebhookLog.md)
  - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
  - [Model.RestApiResultApmStatistics](docs/RestApiResultApmStatistics.md)
