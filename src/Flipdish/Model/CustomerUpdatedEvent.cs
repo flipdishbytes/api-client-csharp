@@ -33,20 +33,20 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomerUpdatedEvent" /> class.
         /// </summary>
-        /// <param name="EventName">The event name.</param>
-        /// <param name="User">Customer User info.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="FlipdishEventId">The identitfier of the event.</param>
-        /// <param name="CreateTime">The time of creation of the event.</param>
-        /// <param name="Position">Position.</param>
-        public CustomerUpdatedEvent(string EventName = default(string), UserEventInfo User = default(UserEventInfo), string Description = default(string), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        /// <param name="eventName">The event name.</param>
+        /// <param name="user">Customer User info.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="flipdishEventId">The identitfier of the event.</param>
+        /// <param name="createTime">The time of creation of the event.</param>
+        /// <param name="position">Position.</param>
+        public CustomerUpdatedEvent(string eventName = default(string), UserEventInfo user = default(UserEventInfo), string description = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?))
         {
-            this.EventName = EventName;
-            this.User = User;
-            this.Description = Description;
-            this.FlipdishEventId = FlipdishEventId;
-            this.CreateTime = CreateTime;
-            this.Position = Position;
+            this.EventName = eventName;
+            this.User = user;
+            this.Description = description;
+            this.FlipdishEventId = flipdishEventId;
+            this.CreateTime = createTime;
+            this.Position = position;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

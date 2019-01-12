@@ -33,22 +33,22 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderCreatedEvent" /> class.
         /// </summary>
-        /// <param name="EventName">The event name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="OrderCreatedTime">Order Created Time.</param>
-        /// <param name="Order">Order.</param>
-        /// <param name="FlipdishEventId">The identitfier of the event.</param>
-        /// <param name="CreateTime">The time of creation of the event.</param>
-        /// <param name="Position">Position.</param>
-        public OrderCreatedEvent(string EventName = default(string), string Description = default(string), DateTime? OrderCreatedTime = default(DateTime?), Order Order = default(Order), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        /// <param name="eventName">The event name.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="orderCreatedTime">Order Created Time.</param>
+        /// <param name="order">Order.</param>
+        /// <param name="flipdishEventId">The identitfier of the event.</param>
+        /// <param name="createTime">The time of creation of the event.</param>
+        /// <param name="position">Position.</param>
+        public OrderCreatedEvent(string eventName = default(string), string description = default(string), DateTime? orderCreatedTime = default(DateTime?), Order order = default(Order), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?))
         {
-            this.EventName = EventName;
-            this.Description = Description;
-            this.OrderCreatedTime = OrderCreatedTime;
-            this.Order = Order;
-            this.FlipdishEventId = FlipdishEventId;
-            this.CreateTime = CreateTime;
-            this.Position = Position;
+            this.EventName = eventName;
+            this.Description = description;
+            this.OrderCreatedTime = orderCreatedTime;
+            this.Order = order;
+            this.FlipdishEventId = flipdishEventId;
+            this.CreateTime = createTime;
+            this.Position = position;
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

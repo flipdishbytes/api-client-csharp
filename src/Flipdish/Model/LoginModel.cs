@@ -38,27 +38,27 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LoginModel" /> class.
         /// </summary>
-        /// <param name="Email">Email addres (required).</param>
-        /// <param name="Password">Password (required).</param>
-        public LoginModel(string Email = default(string), string Password = default(string))
+        /// <param name="email">Email addres (required).</param>
+        /// <param name="password">Password (required).</param>
+        public LoginModel(string email = default(string), string password = default(string))
         {
-            // to ensure "Email" is required (not null)
-            if (Email == null)
+            // to ensure "email" is required (not null)
+            if (email == null)
             {
-                throw new InvalidDataException("Email is a required property for LoginModel and cannot be null");
+                throw new InvalidDataException("email is a required property for LoginModel and cannot be null");
             }
             else
             {
-                this.Email = Email;
+                this.Email = email;
             }
-            // to ensure "Password" is required (not null)
-            if (Password == null)
+            // to ensure "password" is required (not null)
+            if (password == null)
             {
-                throw new InvalidDataException("Password is a required property for LoginModel and cannot be null");
+                throw new InvalidDataException("password is a required property for LoginModel and cannot be null");
             }
             else
             {
-                this.Password = Password;
+                this.Password = password;
             }
         }
         
@@ -94,7 +94,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

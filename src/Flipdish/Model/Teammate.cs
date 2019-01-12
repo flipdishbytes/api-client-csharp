@@ -84,22 +84,22 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Teammate" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="LastAcitivity">Last activity.</param>
-        /// <param name="AppId">Access level is for this App.</param>
-        /// <param name="Email">Email address.</param>
-        /// <param name="AppAccessLevel">App access level.</param>
-        /// <param name="HasAccessToAllStores">The user has access to all stores for the app (including new stores that added later).</param>
-        /// <param name="StoreIds">Store IDs the user has access to (if HasAccessToAllStores is false).</param>
-        public Teammate(string Name = default(string), DateTime? LastAcitivity = default(DateTime?), string AppId = default(string), string Email = default(string), AppAccessLevelEnum? AppAccessLevel = default(AppAccessLevelEnum?), bool? HasAccessToAllStores = default(bool?), List<int?> StoreIds = default(List<int?>))
+        /// <param name="name">Name.</param>
+        /// <param name="lastAcitivity">Last activity.</param>
+        /// <param name="appId">Access level is for this App.</param>
+        /// <param name="email">Email address.</param>
+        /// <param name="appAccessLevel">App access level.</param>
+        /// <param name="hasAccessToAllStores">The user has access to all stores for the app (including new stores that added later).</param>
+        /// <param name="storeIds">Store IDs the user has access to (if HasAccessToAllStores is false).</param>
+        public Teammate(string name = default(string), DateTime? lastAcitivity = default(DateTime?), string appId = default(string), string email = default(string), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), bool? hasAccessToAllStores = default(bool?), List<int?> storeIds = default(List<int?>))
         {
-            this.Name = Name;
-            this.LastAcitivity = LastAcitivity;
-            this.AppId = AppId;
-            this.Email = Email;
-            this.AppAccessLevel = AppAccessLevel;
-            this.HasAccessToAllStores = HasAccessToAllStores;
-            this.StoreIds = StoreIds;
+            this.Name = name;
+            this.LastAcitivity = lastAcitivity;
+            this.AppId = appId;
+            this.Email = email;
+            this.AppAccessLevel = appAccessLevel;
+            this.HasAccessToAllStores = hasAccessToAllStores;
+            this.StoreIds = storeIds;
         }
         
         /// <summary>
@@ -168,7 +168,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -720,12 +720,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreGroupBase" /> class.
         /// </summary>
-        /// <param name="Name">Store Group Name.</param>
-        /// <param name="Currency">Currency used by the stores in this group.</param>
-        public StoreGroupBase(string Name = default(string), CurrencyEnum? Currency = default(CurrencyEnum?))
+        /// <param name="name">Store Group Name.</param>
+        /// <param name="currency">Currency used by the stores in this group.</param>
+        public StoreGroupBase(string name = default(string), CurrencyEnum? currency = default(CurrencyEnum?))
         {
-            this.Name = Name;
-            this.Currency = Currency;
+            this.Name = name;
+            this.Currency = currency;
         }
         
         /// <summary>
@@ -754,7 +754,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

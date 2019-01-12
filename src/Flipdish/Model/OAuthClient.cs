@@ -33,16 +33,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthClient" /> class.
         /// </summary>
-        /// <param name="ClientId">Oauth client identifier.</param>
-        /// <param name="ClientName">Oauth client name.</param>
-        /// <param name="OwnerUserId">Oauth client owner user identifier.</param>
-        /// <param name="LogoUri">Oauth client logo uri.</param>
-        public OAuthClient(string ClientId = default(string), string ClientName = default(string), int? OwnerUserId = default(int?), string LogoUri = default(string))
+        /// <param name="clientId">Oauth client identifier.</param>
+        /// <param name="clientName">Oauth client name.</param>
+        /// <param name="ownerUserId">Oauth client owner user identifier.</param>
+        /// <param name="logoUri">Oauth client logo uri.</param>
+        public OAuthClient(string clientId = default(string), string clientName = default(string), int? ownerUserId = default(int?), string logoUri = default(string))
         {
-            this.ClientId = ClientId;
-            this.ClientName = ClientName;
-            this.OwnerUserId = OwnerUserId;
-            this.LogoUri = LogoUri;
+            this.ClientId = clientId;
+            this.ClientName = clientName;
+            this.OwnerUserId = ownerUserId;
+            this.LogoUri = logoUri;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,16 +33,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApmStatistics" /> class.
         /// </summary>
-        /// <param name="TotalUsers">Total users that were created because of APM.</param>
-        /// <param name="TotalOrders">Total Orders created by users created because of APM.</param>
-        /// <param name="TotalOrderValue">Total Order Value by users created because of APM.</param>
-        /// <param name="EstimatedMinutesSaved">Total amount of time spent with APM.</param>
-        public ApmStatistics(int? TotalUsers = default(int?), int? TotalOrders = default(int?), double? TotalOrderValue = default(double?), int? EstimatedMinutesSaved = default(int?))
+        /// <param name="totalUsers">Total users that were created because of APM.</param>
+        /// <param name="totalOrders">Total Orders created by users created because of APM.</param>
+        /// <param name="totalOrderValue">Total Order Value by users created because of APM.</param>
+        /// <param name="estimatedMinutesSaved">Total amount of time spent with APM.</param>
+        public ApmStatistics(int? totalUsers = default(int?), int? totalOrders = default(int?), double? totalOrderValue = default(double?), int? estimatedMinutesSaved = default(int?))
         {
-            this.TotalUsers = TotalUsers;
-            this.TotalOrders = TotalOrders;
-            this.TotalOrderValue = TotalOrderValue;
-            this.EstimatedMinutesSaved = EstimatedMinutesSaved;
+            this.TotalUsers = totalUsers;
+            this.TotalOrders = totalOrders;
+            this.TotalOrderValue = totalOrderValue;
+            this.EstimatedMinutesSaved = estimatedMinutesSaved;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

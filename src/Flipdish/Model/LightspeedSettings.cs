@@ -66,30 +66,30 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LightspeedSettings" /> class.
         /// </summary>
-        /// <param name="CompanyId">Company Id.</param>
-        /// <param name="Enabled">Enabled.</param>
-        /// <param name="EstimatedMinutesForDelivery">Estimated minutes for delivery.</param>
-        /// <param name="EstimatedMinutesForCollection">Estimated minutes for collection.</param>
-        /// <param name="GeographicLocation">Geographic location (euc1, nae1, euw2, ....)).</param>
-        /// <param name="Establishment">Is the CompanyId an establishment (kind of the store of a group of store).</param>
-        /// <param name="VoucherId">The Lightspeed voucher identifier to map with our.</param>
-        /// <param name="DeliveryFeeId">The Lightspeed delivery fee identifier to map with our.</param>
-        /// <param name="ProcessingFeeId">The Lightspeed processing fee identifier to map with our.</param>
-        /// <param name="PriceType">Which price to choose from Lightspeed menu.</param>
-        /// <param name="MenuId">The menu id of the store.</param>
-        public LightspeedSettings(string CompanyId = default(string), bool? Enabled = default(bool?), int? EstimatedMinutesForDelivery = default(int?), int? EstimatedMinutesForCollection = default(int?), string GeographicLocation = default(string), bool? Establishment = default(bool?), string VoucherId = default(string), string DeliveryFeeId = default(string), string ProcessingFeeId = default(string), PriceTypeEnum? PriceType = default(PriceTypeEnum?), int? MenuId = default(int?))
+        /// <param name="companyId">Company Id.</param>
+        /// <param name="enabled">Enabled.</param>
+        /// <param name="estimatedMinutesForDelivery">Estimated minutes for delivery.</param>
+        /// <param name="estimatedMinutesForCollection">Estimated minutes for collection.</param>
+        /// <param name="geographicLocation">Geographic location (euc1, nae1, euw2, ....)).</param>
+        /// <param name="establishment">Is the CompanyId an establishment (kind of the store of a group of store).</param>
+        /// <param name="voucherId">The Lightspeed voucher identifier to map with our.</param>
+        /// <param name="deliveryFeeId">The Lightspeed delivery fee identifier to map with our.</param>
+        /// <param name="processingFeeId">The Lightspeed processing fee identifier to map with our.</param>
+        /// <param name="priceType">Which price to choose from Lightspeed menu.</param>
+        /// <param name="menuId">The menu id of the store.</param>
+        public LightspeedSettings(string companyId = default(string), bool? enabled = default(bool?), int? estimatedMinutesForDelivery = default(int?), int? estimatedMinutesForCollection = default(int?), string geographicLocation = default(string), bool? establishment = default(bool?), string voucherId = default(string), string deliveryFeeId = default(string), string processingFeeId = default(string), PriceTypeEnum? priceType = default(PriceTypeEnum?), int? menuId = default(int?))
         {
-            this.CompanyId = CompanyId;
-            this.Enabled = Enabled;
-            this.EstimatedMinutesForDelivery = EstimatedMinutesForDelivery;
-            this.EstimatedMinutesForCollection = EstimatedMinutesForCollection;
-            this.GeographicLocation = GeographicLocation;
-            this.Establishment = Establishment;
-            this.VoucherId = VoucherId;
-            this.DeliveryFeeId = DeliveryFeeId;
-            this.ProcessingFeeId = ProcessingFeeId;
-            this.PriceType = PriceType;
-            this.MenuId = MenuId;
+            this.CompanyId = companyId;
+            this.Enabled = enabled;
+            this.EstimatedMinutesForDelivery = estimatedMinutesForDelivery;
+            this.EstimatedMinutesForCollection = estimatedMinutesForCollection;
+            this.GeographicLocation = geographicLocation;
+            this.Establishment = establishment;
+            this.VoucherId = voucherId;
+            this.DeliveryFeeId = deliveryFeeId;
+            this.ProcessingFeeId = processingFeeId;
+            this.PriceType = priceType;
+            this.MenuId = menuId;
         }
         
         /// <summary>
@@ -190,7 +190,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

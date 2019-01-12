@@ -272,7 +272,7 @@ namespace Flipdish.Api
         /// <returns></returns>
         public StoreGroupsApi(String basePath)
         {
-            this.Configuration = new Configuration { BasePath = basePath };
+            this.Configuration = new Flipdish.Client.Configuration { BasePath = basePath };
 
             ExceptionFactory = Flipdish.Client.Configuration.DefaultExceptionFactory;
         }
@@ -283,10 +283,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public StoreGroupsApi(Configuration configuration = null)
+        public StoreGroupsApi(Flipdish.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default;
+                this.Configuration = Flipdish.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
@@ -316,7 +316,7 @@ namespace Flipdish.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Configuration Configuration {get; set;}
+        public Flipdish.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
@@ -388,7 +388,7 @@ namespace Flipdish.Api
             var localVarPath = "/api/v1.0/{appNameId}/storegroups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -401,7 +401,7 @@ namespace Flipdish.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -410,14 +410,14 @@ namespace Flipdish.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (appNameId != null) localVarPathParams.Add("appNameId", Configuration.ApiClient.ParameterToString(appNameId)); // path parameter
+            if (appNameId != null) localVarPathParams.Add("appNameId", this.Configuration.ApiClient.ParameterToString(appNameId)); // path parameter
             if (storeGroup != null && storeGroup.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(storeGroup); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(storeGroup); // http body (model) parameter
             }
             else
             {
@@ -426,13 +426,13 @@ namespace Flipdish.Api
 
             // authentication (oauth2) required
             // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -446,7 +446,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<RestApiResultStoreGroup>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultStoreGroup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreGroup)));
+                (RestApiResultStoreGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreGroup)));
         }
 
         /// <summary>
@@ -482,7 +482,7 @@ namespace Flipdish.Api
             var localVarPath = "/api/v1.0/{appNameId}/storegroups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -495,7 +495,7 @@ namespace Flipdish.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -504,14 +504,14 @@ namespace Flipdish.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (appNameId != null) localVarPathParams.Add("appNameId", Configuration.ApiClient.ParameterToString(appNameId)); // path parameter
+            if (appNameId != null) localVarPathParams.Add("appNameId", this.Configuration.ApiClient.ParameterToString(appNameId)); // path parameter
             if (storeGroup != null && storeGroup.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(storeGroup); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(storeGroup); // http body (model) parameter
             }
             else
             {
@@ -520,13 +520,13 @@ namespace Flipdish.Api
 
             // authentication (oauth2) required
             // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -540,7 +540,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<RestApiResultStoreGroup>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultStoreGroup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreGroup)));
+                (RestApiResultStoreGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreGroup)));
         }
 
         /// <summary>
@@ -570,7 +570,7 @@ namespace Flipdish.Api
             var localVarPath = "/api/v1.0/storegroups/{storeGroupId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -578,7 +578,7 @@ namespace Flipdish.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -587,21 +587,21 @@ namespace Flipdish.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (storeGroupId != null) localVarPathParams.Add("storeGroupId", Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
+            if (storeGroupId != null) localVarPathParams.Add("storeGroupId", this.Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -615,7 +615,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<RestApiResultStoreGroup>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultStoreGroup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreGroup)));
+                (RestApiResultStoreGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreGroup)));
         }
 
         /// <summary>
@@ -646,7 +646,7 @@ namespace Flipdish.Api
             var localVarPath = "/api/v1.0/storegroups/{storeGroupId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -654,7 +654,7 @@ namespace Flipdish.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -663,21 +663,21 @@ namespace Flipdish.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (storeGroupId != null) localVarPathParams.Add("storeGroupId", Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
+            if (storeGroupId != null) localVarPathParams.Add("storeGroupId", this.Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -691,7 +691,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<RestApiResultStoreGroup>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultStoreGroup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreGroup)));
+                (RestApiResultStoreGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreGroup)));
         }
 
         /// <summary>
@@ -727,7 +727,7 @@ namespace Flipdish.Api
             var localVarPath = "/api/v1.0/{appNameId}/storegroups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -735,7 +735,7 @@ namespace Flipdish.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -744,24 +744,24 @@ namespace Flipdish.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (appNameId != null) localVarPathParams.Add("appNameId", Configuration.ApiClient.ParameterToString(appNameId)); // path parameter
-            if (searchQuery != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
-            if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
-            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (appNameId != null) localVarPathParams.Add("appNameId", this.Configuration.ApiClient.ParameterToString(appNameId)); // path parameter
+            if (searchQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -775,7 +775,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<RestApiPaginationResultStoreGroup>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultStoreGroup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultStoreGroup)));
+                (RestApiPaginationResultStoreGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultStoreGroup)));
         }
 
         /// <summary>
@@ -812,7 +812,7 @@ namespace Flipdish.Api
             var localVarPath = "/api/v1.0/{appNameId}/storegroups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -820,7 +820,7 @@ namespace Flipdish.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -829,24 +829,24 @@ namespace Flipdish.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (appNameId != null) localVarPathParams.Add("appNameId", Configuration.ApiClient.ParameterToString(appNameId)); // path parameter
-            if (searchQuery != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
-            if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
-            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (appNameId != null) localVarPathParams.Add("appNameId", this.Configuration.ApiClient.ParameterToString(appNameId)); // path parameter
+            if (searchQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -860,7 +860,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<RestApiPaginationResultStoreGroup>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultStoreGroup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultStoreGroup)));
+                (RestApiPaginationResultStoreGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultStoreGroup)));
         }
 
         /// <summary>
@@ -890,7 +890,7 @@ namespace Flipdish.Api
             var localVarPath = "/api/v1.0/storegroups/{storeGroupId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -898,7 +898,7 @@ namespace Flipdish.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -907,21 +907,21 @@ namespace Flipdish.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (storeGroupId != null) localVarPathParams.Add("storeGroupId", Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
+            if (storeGroupId != null) localVarPathParams.Add("storeGroupId", this.Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -935,7 +935,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -966,7 +966,7 @@ namespace Flipdish.Api
             var localVarPath = "/api/v1.0/storegroups/{storeGroupId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -974,7 +974,7 @@ namespace Flipdish.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -983,21 +983,21 @@ namespace Flipdish.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (storeGroupId != null) localVarPathParams.Add("storeGroupId", Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
+            if (storeGroupId != null) localVarPathParams.Add("storeGroupId", this.Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1011,7 +1011,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1046,7 +1046,7 @@ namespace Flipdish.Api
             var localVarPath = "/api/v1.0/storegroups/{storeGroupId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -1059,7 +1059,7 @@ namespace Flipdish.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -1068,14 +1068,14 @@ namespace Flipdish.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (storeGroupId != null) localVarPathParams.Add("storeGroupId", Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
+            if (storeGroupId != null) localVarPathParams.Add("storeGroupId", this.Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
             if (storeGroup != null && storeGroup.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(storeGroup); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(storeGroup); // http body (model) parameter
             }
             else
             {
@@ -1084,13 +1084,13 @@ namespace Flipdish.Api
 
             // authentication (oauth2) required
             // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1104,7 +1104,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<RestApiResultStoreGroupBase>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultStoreGroupBase) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreGroupBase)));
+                (RestApiResultStoreGroupBase) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreGroupBase)));
         }
 
         /// <summary>
@@ -1140,7 +1140,7 @@ namespace Flipdish.Api
             var localVarPath = "/api/v1.0/storegroups/{storeGroupId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -1153,7 +1153,7 @@ namespace Flipdish.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -1162,14 +1162,14 @@ namespace Flipdish.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (storeGroupId != null) localVarPathParams.Add("storeGroupId", Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
+            if (storeGroupId != null) localVarPathParams.Add("storeGroupId", this.Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
             if (storeGroup != null && storeGroup.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(storeGroup); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(storeGroup); // http body (model) parameter
             }
             else
             {
@@ -1178,13 +1178,13 @@ namespace Flipdish.Api
 
             // authentication (oauth2) required
             // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1198,7 +1198,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<RestApiResultStoreGroupBase>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultStoreGroupBase) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreGroupBase)));
+                (RestApiResultStoreGroupBase) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreGroupBase)));
         }
 
     }

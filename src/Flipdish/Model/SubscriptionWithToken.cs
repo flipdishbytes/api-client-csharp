@@ -38,60 +38,60 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriptionWithToken" /> class.
         /// </summary>
-        /// <param name="Token">Token (required).</param>
-        /// <param name="Quantity">Number of physical restaurants (required).</param>
-        /// <param name="SubscriptionPlanId">Subscription plan identifier (required).</param>
-        /// <param name="AppId">App name Id of the subscription (required).</param>
-        /// <param name="VatNumber">Last 4 digits of the card.</param>
-        /// <param name="VatCountryCode">Expiry date of the card (required).</param>
-        public SubscriptionWithToken(string Token = default(string), int? Quantity = default(int?), int? SubscriptionPlanId = default(int?), string AppId = default(string), string VatNumber = default(string), string VatCountryCode = default(string))
+        /// <param name="token">Token (required).</param>
+        /// <param name="quantity">Number of physical restaurants (required).</param>
+        /// <param name="subscriptionPlanId">Subscription plan identifier (required).</param>
+        /// <param name="appId">App name Id of the subscription (required).</param>
+        /// <param name="vatNumber">Last 4 digits of the card.</param>
+        /// <param name="vatCountryCode">Expiry date of the card (required).</param>
+        public SubscriptionWithToken(string token = default(string), int? quantity = default(int?), int? subscriptionPlanId = default(int?), string appId = default(string), string vatNumber = default(string), string vatCountryCode = default(string))
         {
-            // to ensure "Token" is required (not null)
-            if (Token == null)
+            // to ensure "token" is required (not null)
+            if (token == null)
             {
-                throw new InvalidDataException("Token is a required property for SubscriptionWithToken and cannot be null");
+                throw new InvalidDataException("token is a required property for SubscriptionWithToken and cannot be null");
             }
             else
             {
-                this.Token = Token;
+                this.Token = token;
             }
-            // to ensure "Quantity" is required (not null)
-            if (Quantity == null)
+            // to ensure "quantity" is required (not null)
+            if (quantity == null)
             {
-                throw new InvalidDataException("Quantity is a required property for SubscriptionWithToken and cannot be null");
+                throw new InvalidDataException("quantity is a required property for SubscriptionWithToken and cannot be null");
             }
             else
             {
-                this.Quantity = Quantity;
+                this.Quantity = quantity;
             }
-            // to ensure "SubscriptionPlanId" is required (not null)
-            if (SubscriptionPlanId == null)
+            // to ensure "subscriptionPlanId" is required (not null)
+            if (subscriptionPlanId == null)
             {
-                throw new InvalidDataException("SubscriptionPlanId is a required property for SubscriptionWithToken and cannot be null");
+                throw new InvalidDataException("subscriptionPlanId is a required property for SubscriptionWithToken and cannot be null");
             }
             else
             {
-                this.SubscriptionPlanId = SubscriptionPlanId;
+                this.SubscriptionPlanId = subscriptionPlanId;
             }
-            // to ensure "AppId" is required (not null)
-            if (AppId == null)
+            // to ensure "appId" is required (not null)
+            if (appId == null)
             {
-                throw new InvalidDataException("AppId is a required property for SubscriptionWithToken and cannot be null");
+                throw new InvalidDataException("appId is a required property for SubscriptionWithToken and cannot be null");
             }
             else
             {
-                this.AppId = AppId;
+                this.AppId = appId;
             }
-            // to ensure "VatCountryCode" is required (not null)
-            if (VatCountryCode == null)
+            // to ensure "vatCountryCode" is required (not null)
+            if (vatCountryCode == null)
             {
-                throw new InvalidDataException("VatCountryCode is a required property for SubscriptionWithToken and cannot be null");
+                throw new InvalidDataException("vatCountryCode is a required property for SubscriptionWithToken and cannot be null");
             }
             else
             {
-                this.VatCountryCode = VatCountryCode;
+                this.VatCountryCode = vatCountryCode;
             }
-            this.VatNumber = VatNumber;
+            this.VatNumber = vatNumber;
         }
         
         /// <summary>
@@ -158,7 +158,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

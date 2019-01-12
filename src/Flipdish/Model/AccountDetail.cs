@@ -33,16 +33,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountDetail" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Email">Email.</param>
-        /// <param name="Language">Language Id.</param>
-        /// <param name="SignupSteps">Signup steps.</param>
-        public AccountDetail(string Name = default(string), string Email = default(string), string Language = default(string), List<SignupStep> SignupSteps = default(List<SignupStep>))
+        /// <param name="name">Name.</param>
+        /// <param name="email">Email.</param>
+        /// <param name="language">Language Id.</param>
+        /// <param name="signupSteps">Signup steps.</param>
+        public AccountDetail(string name = default(string), string email = default(string), string language = default(string), List<SignupStep> signupSteps = default(List<SignupStep>))
         {
-            this.Name = Name;
-            this.Email = Email;
-            this.Language = Language;
-            this.SignupSteps = SignupSteps;
+            this.Name = name;
+            this.Email = email;
+            this.Language = language;
+            this.SignupSteps = signupSteps;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

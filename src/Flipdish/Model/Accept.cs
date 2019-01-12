@@ -33,10 +33,10 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Accept" /> class.
         /// </summary>
-        /// <param name="EstimatedMinutesForDelivery">Estimated minutes for delivery.</param>
-        public Accept(int? EstimatedMinutesForDelivery = default(int?))
+        /// <param name="estimatedMinutesForDelivery">Estimated minutes for delivery.</param>
+        public Accept(int? estimatedMinutesForDelivery = default(int?))
         {
-            this.EstimatedMinutesForDelivery = EstimatedMinutesForDelivery;
+            this.EstimatedMinutesForDelivery = estimatedMinutesForDelivery;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

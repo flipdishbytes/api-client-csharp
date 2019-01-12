@@ -33,12 +33,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidationErrorResult" /> class.
         /// </summary>
-        /// <param name="FieldName">Field name.</param>
-        /// <param name="Errors">List of errors relates to field.</param>
-        public ValidationErrorResult(string FieldName = default(string), List<string> Errors = default(List<string>))
+        /// <param name="fieldName">Field name.</param>
+        /// <param name="errors">List of errors relates to field.</param>
+        public ValidationErrorResult(string fieldName = default(string), List<string> errors = default(List<string>))
         {
-            this.FieldName = FieldName;
-            this.Errors = Errors;
+            this.FieldName = fieldName;
+            this.Errors = errors;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

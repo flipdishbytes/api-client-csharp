@@ -33,14 +33,14 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreNote" /> class.
         /// </summary>
-        /// <param name="UserId">User identifier.</param>
-        /// <param name="CreateTime">Create time.</param>
-        /// <param name="Note">Note.</param>
-        public StoreNote(int? UserId = default(int?), DateTime? CreateTime = default(DateTime?), string Note = default(string))
+        /// <param name="userId">User identifier.</param>
+        /// <param name="createTime">Create time.</param>
+        /// <param name="note">Note.</param>
+        public StoreNote(int? userId = default(int?), DateTime? createTime = default(DateTime?), string note = default(string))
         {
-            this.UserId = UserId;
-            this.CreateTime = CreateTime;
-            this.Note = Note;
+            this.UserId = userId;
+            this.CreateTime = createTime;
+            this.Note = note;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

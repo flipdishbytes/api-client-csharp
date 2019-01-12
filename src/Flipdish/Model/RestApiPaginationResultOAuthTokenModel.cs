@@ -38,47 +38,47 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiPaginationResultOAuthTokenModel" /> class.
         /// </summary>
-        /// <param name="Page">Current page index (required).</param>
-        /// <param name="Limit">Current page size (required).</param>
-        /// <param name="TotalRecordCount">Total record count (required).</param>
-        /// <param name="Data">Generic data object. (required).</param>
-        public RestApiPaginationResultOAuthTokenModel(int? Page = default(int?), int? Limit = default(int?), int? TotalRecordCount = default(int?), List<OAuthTokenModel> Data = default(List<OAuthTokenModel>))
+        /// <param name="page">Current page index (required).</param>
+        /// <param name="limit">Current page size (required).</param>
+        /// <param name="totalRecordCount">Total record count (required).</param>
+        /// <param name="data">Generic data object. (required).</param>
+        public RestApiPaginationResultOAuthTokenModel(int? page = default(int?), int? limit = default(int?), int? totalRecordCount = default(int?), List<OAuthTokenModel> data = default(List<OAuthTokenModel>))
         {
-            // to ensure "Page" is required (not null)
-            if (Page == null)
+            // to ensure "page" is required (not null)
+            if (page == null)
             {
-                throw new InvalidDataException("Page is a required property for RestApiPaginationResultOAuthTokenModel and cannot be null");
+                throw new InvalidDataException("page is a required property for RestApiPaginationResultOAuthTokenModel and cannot be null");
             }
             else
             {
-                this.Page = Page;
+                this.Page = page;
             }
-            // to ensure "Limit" is required (not null)
-            if (Limit == null)
+            // to ensure "limit" is required (not null)
+            if (limit == null)
             {
-                throw new InvalidDataException("Limit is a required property for RestApiPaginationResultOAuthTokenModel and cannot be null");
-            }
-            else
-            {
-                this.Limit = Limit;
-            }
-            // to ensure "TotalRecordCount" is required (not null)
-            if (TotalRecordCount == null)
-            {
-                throw new InvalidDataException("TotalRecordCount is a required property for RestApiPaginationResultOAuthTokenModel and cannot be null");
+                throw new InvalidDataException("limit is a required property for RestApiPaginationResultOAuthTokenModel and cannot be null");
             }
             else
             {
-                this.TotalRecordCount = TotalRecordCount;
+                this.Limit = limit;
             }
-            // to ensure "Data" is required (not null)
-            if (Data == null)
+            // to ensure "totalRecordCount" is required (not null)
+            if (totalRecordCount == null)
             {
-                throw new InvalidDataException("Data is a required property for RestApiPaginationResultOAuthTokenModel and cannot be null");
+                throw new InvalidDataException("totalRecordCount is a required property for RestApiPaginationResultOAuthTokenModel and cannot be null");
             }
             else
             {
-                this.Data = Data;
+                this.TotalRecordCount = totalRecordCount;
+            }
+            // to ensure "data" is required (not null)
+            if (data == null)
+            {
+                throw new InvalidDataException("data is a required property for RestApiPaginationResultOAuthTokenModel and cannot be null");
+            }
+            else
+            {
+                this.Data = data;
             }
         }
         
@@ -130,7 +130,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

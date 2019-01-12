@@ -33,20 +33,20 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JobContact" /> class.
         /// </summary>
-        /// <param name="Firstname">Firstname.</param>
-        /// <param name="Lastname">Lastname.</param>
-        /// <param name="Phone">Phone.</param>
-        /// <param name="Email">Email.</param>
-        /// <param name="Company">Company.</param>
-        /// <param name="CompanyName">Company Name.</param>
-        public JobContact(string Firstname = default(string), string Lastname = default(string), string Phone = default(string), string Email = default(string), string Company = default(string), string CompanyName = default(string))
+        /// <param name="firstname">Firstname.</param>
+        /// <param name="lastname">Lastname.</param>
+        /// <param name="phone">Phone.</param>
+        /// <param name="email">Email.</param>
+        /// <param name="company">Company.</param>
+        /// <param name="companyName">Company Name.</param>
+        public JobContact(string firstname = default(string), string lastname = default(string), string phone = default(string), string email = default(string), string company = default(string), string companyName = default(string))
         {
-            this.Firstname = Firstname;
-            this.Lastname = Lastname;
-            this.Phone = Phone;
-            this.Email = Email;
-            this.Company = Company;
-            this.CompanyName = CompanyName;
+            this.Firstname = firstname;
+            this.Lastname = lastname;
+            this.Phone = phone;
+            this.Email = email;
+            this.Company = company;
+            this.CompanyName = companyName;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

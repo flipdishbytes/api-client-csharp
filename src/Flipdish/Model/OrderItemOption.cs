@@ -33,22 +33,22 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderItemOption" /> class.
         /// </summary>
-        /// <param name="Metadata">Metadata.</param>
-        /// <param name="MenuItemOptionId">Menu item option identifier.</param>
-        /// <param name="IsMasterOptionSetItem">Is master option set item.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Price">Price.</param>
-        /// <param name="MenuItemOptionDisplayOrder">Menu item option display order.</param>
-        /// <param name="MenuItemOptionSetDisplayOrder">Menu item option set display order.</param>
-        public OrderItemOption(Dictionary<string, string> Metadata = default(Dictionary<string, string>), int? MenuItemOptionId = default(int?), bool? IsMasterOptionSetItem = default(bool?), string Name = default(string), double? Price = default(double?), int? MenuItemOptionDisplayOrder = default(int?), int? MenuItemOptionSetDisplayOrder = default(int?))
+        /// <param name="metadata">Metadata.</param>
+        /// <param name="menuItemOptionId">Menu item option identifier.</param>
+        /// <param name="isMasterOptionSetItem">Is master option set item.</param>
+        /// <param name="name">Name.</param>
+        /// <param name="price">Price.</param>
+        /// <param name="menuItemOptionDisplayOrder">Menu item option display order.</param>
+        /// <param name="menuItemOptionSetDisplayOrder">Menu item option set display order.</param>
+        public OrderItemOption(Dictionary<string, string> metadata = default(Dictionary<string, string>), int? menuItemOptionId = default(int?), bool? isMasterOptionSetItem = default(bool?), string name = default(string), double? price = default(double?), int? menuItemOptionDisplayOrder = default(int?), int? menuItemOptionSetDisplayOrder = default(int?))
         {
-            this.Metadata = Metadata;
-            this.MenuItemOptionId = MenuItemOptionId;
-            this.IsMasterOptionSetItem = IsMasterOptionSetItem;
-            this.Name = Name;
-            this.Price = Price;
-            this.MenuItemOptionDisplayOrder = MenuItemOptionDisplayOrder;
-            this.MenuItemOptionSetDisplayOrder = MenuItemOptionSetDisplayOrder;
+            this.Metadata = metadata;
+            this.MenuItemOptionId = menuItemOptionId;
+            this.IsMasterOptionSetItem = isMasterOptionSetItem;
+            this.Name = name;
+            this.Price = price;
+            this.MenuItemOptionDisplayOrder = menuItemOptionDisplayOrder;
+            this.MenuItemOptionSetDisplayOrder = menuItemOptionSetDisplayOrder;
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

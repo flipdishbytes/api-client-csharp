@@ -155,6 +155,38 @@ namespace Flipdish.Test
             // TODO unit test for the property 'StartDate'
         }
         /// <summary>
+        /// Test the property 'AddItemDetails'
+        /// </summary>
+        [Test]
+        public void AddItemDetailsTest()
+        {
+            // TODO unit test for the property 'AddItemDetails'
+        }
+        /// <summary>
+        /// Test the property 'CreditNoteDetails'
+        /// </summary>
+        [Test]
+        public void CreditNoteDetailsTest()
+        {
+            // TODO unit test for the property 'CreditNoteDetails'
+        }
+        /// <summary>
+        /// Test the property 'LumpDiscountDetails'
+        /// </summary>
+        [Test]
+        public void LumpDiscountDetailsTest()
+        {
+            // TODO unit test for the property 'LumpDiscountDetails'
+        }
+        /// <summary>
+        /// Test the property 'PercentDiscountDetails'
+        /// </summary>
+        [Test]
+        public void PercentDiscountDetailsTest()
+        {
+            // TODO unit test for the property 'PercentDiscountDetails'
+        }
+        /// <summary>
         /// Test the property 'Description'
         /// </summary>
         [Test]

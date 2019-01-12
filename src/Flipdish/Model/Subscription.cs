@@ -77,46 +77,46 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Subscription" /> class.
         /// </summary>
-        /// <param name="SubscriptionId">The subscription identifier.</param>
-        /// <param name="StartDate">Starting date of the subscription.</param>
-        /// <param name="Status">Status of the subscription (TrialPeriod, Ongoing, Unpaid, Canceled).</param>
-        /// <param name="UserId">Flipdish user identifier.</param>
-        /// <param name="SubscriptionPlan">Subscription Plan.</param>
-        /// <param name="Card">Card.</param>
-        /// <param name="AppId">App name Id of the subscription (required).</param>
-        /// <param name="VatNumber">Last 4 digits of the card.</param>
-        /// <param name="VatCountryCode">Expiry date of the card (required).</param>
-        /// <param name="Quantity">Number of physical restaurants.</param>
-        /// <param name="SubscriptionPlanId">Subscription plan identifier.</param>
-        public Subscription(int? SubscriptionId = default(int?), DateTime? StartDate = default(DateTime?), StatusEnum? Status = default(StatusEnum?), int? UserId = default(int?), SubscriptionPlan SubscriptionPlan = default(SubscriptionPlan), Card Card = default(Card), string AppId = default(string), string VatNumber = default(string), string VatCountryCode = default(string), int? Quantity = default(int?), int? SubscriptionPlanId = default(int?))
+        /// <param name="subscriptionId">The subscription identifier.</param>
+        /// <param name="startDate">Starting date of the subscription.</param>
+        /// <param name="status">Status of the subscription (TrialPeriod, Ongoing, Unpaid, Canceled).</param>
+        /// <param name="userId">Flipdish user identifier.</param>
+        /// <param name="subscriptionPlan">Subscription Plan.</param>
+        /// <param name="card">Card.</param>
+        /// <param name="appId">App name Id of the subscription (required).</param>
+        /// <param name="vatNumber">Last 4 digits of the card.</param>
+        /// <param name="vatCountryCode">Expiry date of the card (required).</param>
+        /// <param name="quantity">Number of physical restaurants.</param>
+        /// <param name="subscriptionPlanId">Subscription plan identifier.</param>
+        public Subscription(int? subscriptionId = default(int?), DateTime? startDate = default(DateTime?), StatusEnum? status = default(StatusEnum?), int? userId = default(int?), SubscriptionPlan subscriptionPlan = default(SubscriptionPlan), Card card = default(Card), string appId = default(string), string vatNumber = default(string), string vatCountryCode = default(string), int? quantity = default(int?), int? subscriptionPlanId = default(int?))
         {
-            // to ensure "AppId" is required (not null)
-            if (AppId == null)
+            // to ensure "appId" is required (not null)
+            if (appId == null)
             {
-                throw new InvalidDataException("AppId is a required property for Subscription and cannot be null");
+                throw new InvalidDataException("appId is a required property for Subscription and cannot be null");
             }
             else
             {
-                this.AppId = AppId;
+                this.AppId = appId;
             }
-            // to ensure "VatCountryCode" is required (not null)
-            if (VatCountryCode == null)
+            // to ensure "vatCountryCode" is required (not null)
+            if (vatCountryCode == null)
             {
-                throw new InvalidDataException("VatCountryCode is a required property for Subscription and cannot be null");
+                throw new InvalidDataException("vatCountryCode is a required property for Subscription and cannot be null");
             }
             else
             {
-                this.VatCountryCode = VatCountryCode;
+                this.VatCountryCode = vatCountryCode;
             }
-            this.SubscriptionId = SubscriptionId;
-            this.StartDate = StartDate;
-            this.Status = Status;
-            this.UserId = UserId;
-            this.SubscriptionPlan = SubscriptionPlan;
-            this.Card = Card;
-            this.VatNumber = VatNumber;
-            this.Quantity = Quantity;
-            this.SubscriptionPlanId = SubscriptionPlanId;
+            this.SubscriptionId = subscriptionId;
+            this.StartDate = startDate;
+            this.Status = status;
+            this.UserId = userId;
+            this.SubscriptionPlan = subscriptionPlan;
+            this.Card = card;
+            this.VatNumber = vatNumber;
+            this.Quantity = quantity;
+            this.SubscriptionPlanId = subscriptionPlanId;
         }
         
         /// <summary>
@@ -217,7 +217,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

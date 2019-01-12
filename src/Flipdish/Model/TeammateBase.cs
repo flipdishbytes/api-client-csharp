@@ -84,14 +84,14 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TeammateBase" /> class.
         /// </summary>
-        /// <param name="AppAccessLevel">App access level.</param>
-        /// <param name="HasAccessToAllStores">The user has access to all stores for the app (including new stores that added later).</param>
-        /// <param name="StoreIds">Store IDs the user has access to (if HasAccessToAllStores is false).</param>
-        public TeammateBase(AppAccessLevelEnum? AppAccessLevel = default(AppAccessLevelEnum?), bool? HasAccessToAllStores = default(bool?), List<int?> StoreIds = default(List<int?>))
+        /// <param name="appAccessLevel">App access level.</param>
+        /// <param name="hasAccessToAllStores">The user has access to all stores for the app (including new stores that added later).</param>
+        /// <param name="storeIds">Store IDs the user has access to (if HasAccessToAllStores is false).</param>
+        public TeammateBase(AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), bool? hasAccessToAllStores = default(bool?), List<int?> storeIds = default(List<int?>))
         {
-            this.AppAccessLevel = AppAccessLevel;
-            this.HasAccessToAllStores = HasAccessToAllStores;
-            this.StoreIds = StoreIds;
+            this.AppAccessLevel = appAccessLevel;
+            this.HasAccessToAllStores = hasAccessToAllStores;
+            this.StoreIds = storeIds;
         }
         
 
@@ -128,7 +128,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

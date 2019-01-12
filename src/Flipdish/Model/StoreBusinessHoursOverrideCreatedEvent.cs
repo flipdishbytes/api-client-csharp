@@ -33,24 +33,24 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreBusinessHoursOverrideCreatedEvent" /> class.
         /// </summary>
-        /// <param name="EventName">The event name.</param>
-        /// <param name="StoreId">Store Id.</param>
-        /// <param name="User">User which deleted delivery zone for this store.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="BusinessHoursOverride">Business Hours Override.</param>
-        /// <param name="FlipdishEventId">The identitfier of the event.</param>
-        /// <param name="CreateTime">The time of creation of the event.</param>
-        /// <param name="Position">Position.</param>
-        public StoreBusinessHoursOverrideCreatedEvent(string EventName = default(string), int? StoreId = default(int?), UserEventInfo User = default(UserEventInfo), string Description = default(string), BusinessHoursOverride BusinessHoursOverride = default(BusinessHoursOverride), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        /// <param name="eventName">The event name.</param>
+        /// <param name="storeId">Store Id.</param>
+        /// <param name="user">User which deleted delivery zone for this store.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="businessHoursOverride">Business Hours Override.</param>
+        /// <param name="flipdishEventId">The identitfier of the event.</param>
+        /// <param name="createTime">The time of creation of the event.</param>
+        /// <param name="position">Position.</param>
+        public StoreBusinessHoursOverrideCreatedEvent(string eventName = default(string), int? storeId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), BusinessHoursOverride businessHoursOverride = default(BusinessHoursOverride), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?))
         {
-            this.EventName = EventName;
-            this.StoreId = StoreId;
-            this.User = User;
-            this.Description = Description;
-            this.BusinessHoursOverride = BusinessHoursOverride;
-            this.FlipdishEventId = FlipdishEventId;
-            this.CreateTime = CreateTime;
-            this.Position = Position;
+            this.EventName = eventName;
+            this.StoreId = storeId;
+            this.User = user;
+            this.Description = description;
+            this.BusinessHoursOverride = businessHoursOverride;
+            this.FlipdishEventId = flipdishEventId;
+            this.CreateTime = createTime;
+            this.Position = position;
         }
         
         /// <summary>
@@ -133,7 +133,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

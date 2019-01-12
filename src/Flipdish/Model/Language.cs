@@ -33,12 +33,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Language" /> class.
         /// </summary>
-        /// <param name="LanguageId">ISO 639-1 Language Code.</param>
-        /// <param name="DisplayOrder">Display Order.</param>
-        public Language(string LanguageId = default(string), int? DisplayOrder = default(int?))
+        /// <param name="languageId">ISO 639-1 Language Code.</param>
+        /// <param name="displayOrder">Display Order.</param>
+        public Language(string languageId = default(string), int? displayOrder = default(int?))
         {
-            this.LanguageId = LanguageId;
-            this.DisplayOrder = DisplayOrder;
+            this.LanguageId = languageId;
+            this.DisplayOrder = displayOrder;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

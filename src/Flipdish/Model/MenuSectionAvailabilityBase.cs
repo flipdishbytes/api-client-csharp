@@ -72,10 +72,10 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuSectionAvailabilityBase" /> class.
         /// </summary>
-        /// <param name="AvailabilityMode">Availability mode.</param>
-        public MenuSectionAvailabilityBase(AvailabilityModeEnum? AvailabilityMode = default(AvailabilityModeEnum?))
+        /// <param name="availabilityMode">Availability mode.</param>
+        public MenuSectionAvailabilityBase(AvailabilityModeEnum? availabilityMode = default(AvailabilityModeEnum?))
         {
-            this.AvailabilityMode = AvailabilityMode;
+            this.AvailabilityMode = availabilityMode;
         }
         
 
@@ -96,7 +96,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

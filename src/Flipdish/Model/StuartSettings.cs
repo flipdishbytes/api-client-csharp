@@ -78,20 +78,20 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StuartSettings" /> class.
         /// </summary>
-        /// <param name="ClientId">Client Id.</param>
-        /// <param name="ClientSecret">Client Secret.</param>
-        /// <param name="Enabled">Enabled.</param>
-        /// <param name="WebhookUrlBasicAuthentication">Webhook url to settle in the Stuart portal.</param>
-        /// <param name="MinutesToPickupBeforeThanDeliveryTime">MinutesToPickupBeforeThanDeliveryTime.</param>
-        /// <param name="PackageType">PackageType.</param>
-        public StuartSettings(string ClientId = default(string), string ClientSecret = default(string), bool? Enabled = default(bool?), string WebhookUrlBasicAuthentication = default(string), int? MinutesToPickupBeforeThanDeliveryTime = default(int?), PackageTypeEnum? PackageType = default(PackageTypeEnum?))
+        /// <param name="clientId">Client Id.</param>
+        /// <param name="clientSecret">Client Secret.</param>
+        /// <param name="enabled">Enabled.</param>
+        /// <param name="webhookUrlBasicAuthentication">Webhook url to settle in the Stuart portal.</param>
+        /// <param name="minutesToPickupBeforeThanDeliveryTime">MinutesToPickupBeforeThanDeliveryTime.</param>
+        /// <param name="packageType">PackageType.</param>
+        public StuartSettings(string clientId = default(string), string clientSecret = default(string), bool? enabled = default(bool?), string webhookUrlBasicAuthentication = default(string), int? minutesToPickupBeforeThanDeliveryTime = default(int?), PackageTypeEnum? packageType = default(PackageTypeEnum?))
         {
-            this.ClientId = ClientId;
-            this.ClientSecret = ClientSecret;
-            this.Enabled = Enabled;
-            this.WebhookUrlBasicAuthentication = WebhookUrlBasicAuthentication;
-            this.MinutesToPickupBeforeThanDeliveryTime = MinutesToPickupBeforeThanDeliveryTime;
-            this.PackageType = PackageType;
+            this.ClientId = clientId;
+            this.ClientSecret = clientSecret;
+            this.Enabled = enabled;
+            this.WebhookUrlBasicAuthentication = webhookUrlBasicAuthentication;
+            this.MinutesToPickupBeforeThanDeliveryTime = minutesToPickupBeforeThanDeliveryTime;
+            this.PackageType = packageType;
         }
         
         /// <summary>
@@ -152,7 +152,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

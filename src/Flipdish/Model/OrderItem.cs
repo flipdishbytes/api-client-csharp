@@ -33,30 +33,30 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderItem" /> class.
         /// </summary>
-        /// <param name="OrderItemOptions">Option list.</param>
-        /// <param name="Metadata">Metadata.</param>
-        /// <param name="MenuSectionName">Menu section name.</param>
-        /// <param name="MenuSectionDisplayOrder">Menu section display order.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Price">Price.</param>
-        /// <param name="PriceIncludingOptionSetItems">Price including option set items.</param>
-        /// <param name="MenuItemId">Menu item identifier.</param>
-        /// <param name="MenuItemDisplayOrder">Menu item display order.</param>
-        /// <param name="IsAvailable">Is available.</param>
-        public OrderItem(List<OrderItemOption> OrderItemOptions = default(List<OrderItemOption>), Dictionary<string, string> Metadata = default(Dictionary<string, string>), string MenuSectionName = default(string), int? MenuSectionDisplayOrder = default(int?), string Name = default(string), string Description = default(string), double? Price = default(double?), double? PriceIncludingOptionSetItems = default(double?), int? MenuItemId = default(int?), int? MenuItemDisplayOrder = default(int?), bool? IsAvailable = default(bool?))
+        /// <param name="orderItemOptions">Option list.</param>
+        /// <param name="metadata">Metadata.</param>
+        /// <param name="menuSectionName">Menu section name.</param>
+        /// <param name="menuSectionDisplayOrder">Menu section display order.</param>
+        /// <param name="name">Name.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="price">Price.</param>
+        /// <param name="priceIncludingOptionSetItems">Price including option set items.</param>
+        /// <param name="menuItemId">Menu item identifier.</param>
+        /// <param name="menuItemDisplayOrder">Menu item display order.</param>
+        /// <param name="isAvailable">Is available.</param>
+        public OrderItem(List<OrderItemOption> orderItemOptions = default(List<OrderItemOption>), Dictionary<string, string> metadata = default(Dictionary<string, string>), string menuSectionName = default(string), int? menuSectionDisplayOrder = default(int?), string name = default(string), string description = default(string), double? price = default(double?), double? priceIncludingOptionSetItems = default(double?), int? menuItemId = default(int?), int? menuItemDisplayOrder = default(int?), bool? isAvailable = default(bool?))
         {
-            this.OrderItemOptions = OrderItemOptions;
-            this.Metadata = Metadata;
-            this.MenuSectionName = MenuSectionName;
-            this.MenuSectionDisplayOrder = MenuSectionDisplayOrder;
-            this.Name = Name;
-            this.Description = Description;
-            this.Price = Price;
-            this.PriceIncludingOptionSetItems = PriceIncludingOptionSetItems;
-            this.MenuItemId = MenuItemId;
-            this.MenuItemDisplayOrder = MenuItemDisplayOrder;
-            this.IsAvailable = IsAvailable;
+            this.OrderItemOptions = orderItemOptions;
+            this.Metadata = metadata;
+            this.MenuSectionName = menuSectionName;
+            this.MenuSectionDisplayOrder = menuSectionDisplayOrder;
+            this.Name = name;
+            this.Description = description;
+            this.Price = price;
+            this.PriceIncludingOptionSetItems = priceIncludingOptionSetItems;
+            this.MenuItemId = menuItemId;
+            this.MenuItemDisplayOrder = menuItemDisplayOrder;
+            this.IsAvailable = isAvailable;
         }
         
         /// <summary>
@@ -163,7 +163,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

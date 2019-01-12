@@ -33,14 +33,14 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreCreateBase" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="EmailAddress">Email address (visible to customers).</param>
-        /// <param name="StaffLanguage">Staff Language (used for communcation with the staff)  Emails, Printouts etc.</param>
-        public StoreCreateBase(string Name = default(string), string EmailAddress = default(string), string StaffLanguage = default(string))
+        /// <param name="name">Name.</param>
+        /// <param name="emailAddress">Email address (visible to customers).</param>
+        /// <param name="staffLanguage">Staff Language (used for communcation with the staff)  Emails, Printouts etc.</param>
+        public StoreCreateBase(string name = default(string), string emailAddress = default(string), string staffLanguage = default(string))
         {
-            this.Name = Name;
-            this.EmailAddress = EmailAddress;
-            this.StaffLanguage = StaffLanguage;
+            this.Name = name;
+            this.EmailAddress = emailAddress;
+            this.StaffLanguage = staffLanguage;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

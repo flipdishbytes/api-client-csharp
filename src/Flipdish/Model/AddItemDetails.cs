@@ -25,39 +25,35 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Rest api result
+    /// Add item details
     /// </summary>
     [DataContract]
-    public partial class RestApiResultVoucher :  IEquatable<RestApiResultVoucher>, IValidatableObject
+    public partial class AddItemDetails :  IEquatable<AddItemDetails>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiResultVoucher" /> class.
+        /// Initializes a new instance of the <see cref="AddItemDetails" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected RestApiResultVoucher() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiResultVoucher" /> class.
-        /// </summary>
-        /// <param name="Data">Generic data object. (required).</param>
-        public RestApiResultVoucher(Voucher Data = default(Voucher))
+        /// <param name="promotionalItemId">Promotional Item Id.</param>
+        /// <param name="promotionalItemName">Promotional Item Name.</param>
+        public AddItemDetails(int? promotionalItemId = default(int?), string promotionalItemName = default(string))
         {
-            // to ensure "Data" is required (not null)
-            if (Data == null)
-            {
-                throw new InvalidDataException("Data is a required property for RestApiResultVoucher and cannot be null");
-            }
-            else
-            {
-                this.Data = Data;
-            }
+            this.PromotionalItemId = promotionalItemId;
+            this.PromotionalItemName = promotionalItemName;
         }
         
         /// <summary>
-        /// Generic data object.
+        /// Promotional Item Id
         /// </summary>
-        /// <value>Generic data object.</value>
-        [DataMember(Name="Data", EmitDefaultValue=false)]
-        public Voucher Data { get; set; }
+        /// <value>Promotional Item Id</value>
+        [DataMember(Name="PromotionalItemId", EmitDefaultValue=false)]
+        public int? PromotionalItemId { get; set; }
+
+        /// <summary>
+        /// Promotional Item Name
+        /// </summary>
+        /// <value>Promotional Item Name</value>
+        [DataMember(Name="PromotionalItemName", EmitDefaultValue=false)]
+        public string PromotionalItemName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -66,8 +62,9 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RestApiResultVoucher {\n");
-            sb.Append("  Data: ").Append(Data).Append("\n");
+            sb.Append("class AddItemDetails {\n");
+            sb.Append("  PromotionalItemId: ").Append(PromotionalItemId).Append("\n");
+            sb.Append("  PromotionalItemName: ").Append(PromotionalItemName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -76,7 +73,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -88,24 +85,29 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RestApiResultVoucher);
+            return this.Equals(input as AddItemDetails);
         }
 
         /// <summary>
-        /// Returns true if RestApiResultVoucher instances are equal
+        /// Returns true if AddItemDetails instances are equal
         /// </summary>
-        /// <param name="input">Instance of RestApiResultVoucher to be compared</param>
+        /// <param name="input">Instance of AddItemDetails to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RestApiResultVoucher input)
+        public bool Equals(AddItemDetails input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Data == input.Data ||
-                    (this.Data != null &&
-                    this.Data.Equals(input.Data))
+                    this.PromotionalItemId == input.PromotionalItemId ||
+                    (this.PromotionalItemId != null &&
+                    this.PromotionalItemId.Equals(input.PromotionalItemId))
+                ) && 
+                (
+                    this.PromotionalItemName == input.PromotionalItemName ||
+                    (this.PromotionalItemName != null &&
+                    this.PromotionalItemName.Equals(input.PromotionalItemName))
                 );
         }
 
@@ -118,8 +120,10 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Data != null)
-                    hashCode = hashCode * 59 + this.Data.GetHashCode();
+                if (this.PromotionalItemId != null)
+                    hashCode = hashCode * 59 + this.PromotionalItemId.GetHashCode();
+                if (this.PromotionalItemName != null)
+                    hashCode = hashCode * 59 + this.PromotionalItemName.GetHashCode();
                 return hashCode;
             }
         }

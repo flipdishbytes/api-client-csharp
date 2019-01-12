@@ -77,6 +77,20 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test GetVoucherStatsById
+        /// </summary>
+        [Test]
+        public void GetVoucherStatsByIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? voucherId = null;
+            //string aggregateDataBy = null;
+            //int? dataPointLimit = null;
+            //var response = instance.GetVoucherStatsById(voucherId, aggregateDataBy, dataPointLimit);
+            //Assert.IsInstanceOf<RestApiArrayResultVoucherDataPoint> (response, "response is RestApiArrayResultVoucherDataPoint");
+        }
+        
+        /// <summary>
         /// Test GetVouchers
         /// </summary>
         [Test]
@@ -104,7 +118,7 @@ namespace Flipdish.Test
             //int? voucherId = null;
             //VoucherBase voucher = null;
             //var response = instance.UpdateVoucher(voucherId, voucher);
-            //Assert.IsInstanceOf<RestApiResultVoucher> (response, "response is RestApiResultVoucher");
+            //Assert.IsInstanceOf<RestApiResultVoucherWithStats> (response, "response is RestApiResultVoucherWithStats");
         }
         
     }

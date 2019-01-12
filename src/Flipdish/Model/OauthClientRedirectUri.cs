@@ -33,12 +33,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OauthClientRedirectUri" /> class.
         /// </summary>
-        /// <param name="Id">Redirect uri identifier.</param>
-        /// <param name="Uri">Redirect uri.</param>
-        public OauthClientRedirectUri(int? Id = default(int?), string Uri = default(string))
+        /// <param name="id">Redirect uri identifier.</param>
+        /// <param name="uri">Redirect uri.</param>
+        public OauthClientRedirectUri(int? id = default(int?), string uri = default(string))
         {
-            this.Id = Id;
-            this.Uri = Uri;
+            this.Id = id;
+            this.Uri = uri;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

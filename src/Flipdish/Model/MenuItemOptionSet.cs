@@ -72,28 +72,28 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuItemOptionSet" /> class.
         /// </summary>
-        /// <param name="MenuItemOptionSetId">Menu item option set identifier.</param>
-        /// <param name="ImageUrl">Image url.</param>
-        /// <param name="MenuItemOptionSetItems">Option set items.</param>
-        /// <param name="PublicId">Permanent reference to the item..</param>
-        /// <param name="Name">Menu item option set name.</param>
-        /// <param name="IsMasterOptionSet">Is master option set. This can affect the layout of the options in the menu displayed to the customer. Usually it is true if the option could be considerd a standalone item as opposed to an addition (\&quot;with ketchup\&quot;) or modifier (\&quot;large\&quot;)..</param>
-        /// <param name="DisplayOrder">Display order. Displayed in ascending order..</param>
-        /// <param name="MinSelectCount">Minimum items must be selected.</param>
-        /// <param name="MaxSelectCount">Maximum number of items can be selected.</param>
-        /// <param name="CellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
-        public MenuItemOptionSet(int? MenuItemOptionSetId = default(int?), string ImageUrl = default(string), List<MenuItemOptionSetItem> MenuItemOptionSetItems = default(List<MenuItemOptionSetItem>), Guid? PublicId = default(Guid?), string Name = default(string), bool? IsMasterOptionSet = default(bool?), int? DisplayOrder = default(int?), int? MinSelectCount = default(int?), int? MaxSelectCount = default(int?), CellLayoutTypeEnum? CellLayoutType = default(CellLayoutTypeEnum?))
+        /// <param name="menuItemOptionSetId">Menu item option set identifier.</param>
+        /// <param name="imageUrl">Image url.</param>
+        /// <param name="menuItemOptionSetItems">Option set items.</param>
+        /// <param name="publicId">Permanent reference to the item..</param>
+        /// <param name="name">Menu item option set name.</param>
+        /// <param name="isMasterOptionSet">Is master option set. This can affect the layout of the options in the menu displayed to the customer. Usually it is true if the option could be considerd a standalone item as opposed to an addition (\&quot;with ketchup\&quot;) or modifier (\&quot;large\&quot;)..</param>
+        /// <param name="displayOrder">Display order. Displayed in ascending order..</param>
+        /// <param name="minSelectCount">Minimum items must be selected.</param>
+        /// <param name="maxSelectCount">Maximum number of items can be selected.</param>
+        /// <param name="cellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
+        public MenuItemOptionSet(int? menuItemOptionSetId = default(int?), string imageUrl = default(string), List<MenuItemOptionSetItem> menuItemOptionSetItems = default(List<MenuItemOptionSetItem>), Guid? publicId = default(Guid?), string name = default(string), bool? isMasterOptionSet = default(bool?), int? displayOrder = default(int?), int? minSelectCount = default(int?), int? maxSelectCount = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?))
         {
-            this.MenuItemOptionSetId = MenuItemOptionSetId;
-            this.ImageUrl = ImageUrl;
-            this.MenuItemOptionSetItems = MenuItemOptionSetItems;
-            this.PublicId = PublicId;
-            this.Name = Name;
-            this.IsMasterOptionSet = IsMasterOptionSet;
-            this.DisplayOrder = DisplayOrder;
-            this.MinSelectCount = MinSelectCount;
-            this.MaxSelectCount = MaxSelectCount;
-            this.CellLayoutType = CellLayoutType;
+            this.MenuItemOptionSetId = menuItemOptionSetId;
+            this.ImageUrl = imageUrl;
+            this.MenuItemOptionSetItems = menuItemOptionSetItems;
+            this.PublicId = publicId;
+            this.Name = name;
+            this.IsMasterOptionSet = isMasterOptionSet;
+            this.DisplayOrder = displayOrder;
+            this.MinSelectCount = minSelectCount;
+            this.MaxSelectCount = maxSelectCount;
+            this.CellLayoutType = cellLayoutType;
         }
         
         /// <summary>
@@ -186,7 +186,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,14 +33,14 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Card" /> class.
         /// </summary>
-        /// <param name="Last4Digit">Last four digits.</param>
-        /// <param name="ExpiryMonth">Expiry month.</param>
-        /// <param name="ExpiryYear">Expiry yaer.</param>
-        public Card(string Last4Digit = default(string), int? ExpiryMonth = default(int?), int? ExpiryYear = default(int?))
+        /// <param name="last4Digit">Last four digits.</param>
+        /// <param name="expiryMonth">Expiry month.</param>
+        /// <param name="expiryYear">Expiry yaer.</param>
+        public Card(string last4Digit = default(string), int? expiryMonth = default(int?), int? expiryYear = default(int?))
         {
-            this.Last4Digit = Last4Digit;
-            this.ExpiryMonth = ExpiryMonth;
-            this.ExpiryYear = ExpiryYear;
+            this.Last4Digit = last4Digit;
+            this.ExpiryMonth = expiryMonth;
+            this.ExpiryYear = expiryYear;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

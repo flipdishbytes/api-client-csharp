@@ -33,18 +33,18 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuSectionBase" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="DisplayOrder">Display order.</param>
-        /// <param name="IsAvailable">Is available.</param>
-        /// <param name="IsHiddenFromCustomers">Is hidden from customer. Perhaps when the item is out of stock..</param>
-        public MenuSectionBase(string Name = default(string), string Description = default(string), int? DisplayOrder = default(int?), bool? IsAvailable = default(bool?), bool? IsHiddenFromCustomers = default(bool?))
+        /// <param name="name">Name.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="displayOrder">Display order.</param>
+        /// <param name="isAvailable">Is available.</param>
+        /// <param name="isHiddenFromCustomers">Is hidden from customer. Perhaps when the item is out of stock..</param>
+        public MenuSectionBase(string name = default(string), string description = default(string), int? displayOrder = default(int?), bool? isAvailable = default(bool?), bool? isHiddenFromCustomers = default(bool?))
         {
-            this.Name = Name;
-            this.Description = Description;
-            this.DisplayOrder = DisplayOrder;
-            this.IsAvailable = IsAvailable;
-            this.IsHiddenFromCustomers = IsHiddenFromCustomers;
+            this.Name = name;
+            this.Description = description;
+            this.DisplayOrder = displayOrder;
+            this.IsAvailable = isAvailable;
+            this.IsHiddenFromCustomers = isHiddenFromCustomers;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

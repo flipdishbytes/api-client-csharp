@@ -33,36 +33,36 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HttpRequestAndResponseLog" /> class.
         /// </summary>
-        /// <param name="Verb">Verb associated with the HTTP call..</param>
-        /// <param name="RequestUri">Http request URI..</param>
-        /// <param name="StatusCode">Http response status code..</param>
-        /// <param name="ReasonPhrase">Http response status line..</param>
-        /// <param name="CallDurationInMilliseconds">Call duration representing the duration of the HTTP call in milliseconds..</param>
-        /// <param name="UserId">Identity of the caller..</param>
-        /// <param name="IpAddress">Ip address of the caller.</param>
-        /// <param name="CreatedDateTime">Timestamp at which the HTTP call took place..</param>
-        /// <param name="RequestHeaders">Http request headers..</param>
-        /// <param name="RequestBody">Http request body, if any..</param>
-        /// <param name="RequestLength">Http request content-length.</param>
-        /// <param name="ResponseHeaders">Http response headers..</param>
-        /// <param name="ResponseBody">Http response body..</param>
-        /// <param name="ResponseLength">Http response content-length.</param>
-        public HttpRequestAndResponseLog(string Verb = default(string), string RequestUri = default(string), int? StatusCode = default(int?), string ReasonPhrase = default(string), long? CallDurationInMilliseconds = default(long?), string UserId = default(string), string IpAddress = default(string), string CreatedDateTime = default(string), Dictionary<string, string> RequestHeaders = default(Dictionary<string, string>), string RequestBody = default(string), long? RequestLength = default(long?), Dictionary<string, string> ResponseHeaders = default(Dictionary<string, string>), string ResponseBody = default(string), long? ResponseLength = default(long?))
+        /// <param name="verb">Verb associated with the HTTP call..</param>
+        /// <param name="requestUri">Http request URI..</param>
+        /// <param name="statusCode">Http response status code..</param>
+        /// <param name="reasonPhrase">Http response status line..</param>
+        /// <param name="callDurationInMilliseconds">Call duration representing the duration of the HTTP call in milliseconds..</param>
+        /// <param name="userId">Identity of the caller..</param>
+        /// <param name="ipAddress">Ip address of the caller.</param>
+        /// <param name="createdDateTime">Timestamp at which the HTTP call took place..</param>
+        /// <param name="requestHeaders">Http request headers..</param>
+        /// <param name="requestBody">Http request body, if any..</param>
+        /// <param name="requestLength">Http request content-length.</param>
+        /// <param name="responseHeaders">Http response headers..</param>
+        /// <param name="responseBody">Http response body..</param>
+        /// <param name="responseLength">Http response content-length.</param>
+        public HttpRequestAndResponseLog(string verb = default(string), string requestUri = default(string), int? statusCode = default(int?), string reasonPhrase = default(string), long? callDurationInMilliseconds = default(long?), string userId = default(string), string ipAddress = default(string), string createdDateTime = default(string), Dictionary<string, string> requestHeaders = default(Dictionary<string, string>), string requestBody = default(string), long? requestLength = default(long?), Dictionary<string, string> responseHeaders = default(Dictionary<string, string>), string responseBody = default(string), long? responseLength = default(long?))
         {
-            this.Verb = Verb;
-            this.RequestUri = RequestUri;
-            this.StatusCode = StatusCode;
-            this.ReasonPhrase = ReasonPhrase;
-            this.CallDurationInMilliseconds = CallDurationInMilliseconds;
-            this.UserId = UserId;
-            this.IpAddress = IpAddress;
-            this.CreatedDateTime = CreatedDateTime;
-            this.RequestHeaders = RequestHeaders;
-            this.RequestBody = RequestBody;
-            this.RequestLength = RequestLength;
-            this.ResponseHeaders = ResponseHeaders;
-            this.ResponseBody = ResponseBody;
-            this.ResponseLength = ResponseLength;
+            this.Verb = verb;
+            this.RequestUri = requestUri;
+            this.StatusCode = statusCode;
+            this.ReasonPhrase = reasonPhrase;
+            this.CallDurationInMilliseconds = callDurationInMilliseconds;
+            this.UserId = userId;
+            this.IpAddress = ipAddress;
+            this.CreatedDateTime = createdDateTime;
+            this.RequestHeaders = requestHeaders;
+            this.RequestBody = requestBody;
+            this.RequestLength = requestLength;
+            this.ResponseHeaders = responseHeaders;
+            this.ResponseBody = responseBody;
+            this.ResponseLength = responseLength;
         }
         
         /// <summary>
@@ -193,7 +193,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

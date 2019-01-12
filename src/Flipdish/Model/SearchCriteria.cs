@@ -33,18 +33,18 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchCriteria" /> class.
         /// </summary>
-        /// <param name="Limit">The maximum elements to return.</param>
-        /// <param name="Page">The index of the page to return, starting by 1.</param>
-        /// <param name="Start">Start date.</param>
-        /// <param name="End">End date.</param>
-        /// <param name="Name">Event names to filter in.</param>
-        public SearchCriteria(int? Limit = default(int?), int? Page = default(int?), DateTime? Start = default(DateTime?), DateTime? End = default(DateTime?), List<string> Name = default(List<string>))
+        /// <param name="limit">The maximum elements to return.</param>
+        /// <param name="page">The index of the page to return, starting by 1.</param>
+        /// <param name="start">Start date.</param>
+        /// <param name="end">End date.</param>
+        /// <param name="name">Event names to filter in.</param>
+        public SearchCriteria(int? limit = default(int?), int? page = default(int?), DateTime? start = default(DateTime?), DateTime? end = default(DateTime?), List<string> name = default(List<string>))
         {
-            this.Limit = Limit;
-            this.Page = Page;
-            this.Start = Start;
-            this.End = End;
-            this.Name = Name;
+            this.Limit = limit;
+            this.Page = page;
+            this.Start = start;
+            this.End = end;
+            this.Name = name;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

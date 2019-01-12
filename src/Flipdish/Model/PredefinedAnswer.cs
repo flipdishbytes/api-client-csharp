@@ -33,12 +33,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PredefinedAnswer" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="Text">Text.</param>
-        public PredefinedAnswer(int? Id = default(int?), string Text = default(string))
+        /// <param name="id">Identifier.</param>
+        /// <param name="text">Text.</param>
+        public PredefinedAnswer(int? id = default(int?), string text = default(string))
         {
-            this.Id = Id;
-            this.Text = Text;
+            this.Id = id;
+            this.Text = text;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

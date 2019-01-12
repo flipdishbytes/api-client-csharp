@@ -33,12 +33,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneCall" /> class.
         /// </summary>
-        /// <param name="From">Phone number which initiated the phone call.</param>
-        /// <param name="To">Phone number which received the phone call.</param>
-        public PhoneCall(string From = default(string), string To = default(string))
+        /// <param name="from">Phone number which initiated the phone call.</param>
+        /// <param name="to">Phone number which received the phone call.</param>
+        public PhoneCall(string from = default(string), string to = default(string))
         {
-            this.From = From;
-            this.To = To;
+            this.From = from;
+            this.To = to;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

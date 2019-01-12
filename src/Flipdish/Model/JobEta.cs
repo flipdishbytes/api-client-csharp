@@ -33,12 +33,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JobEta" /> class.
         /// </summary>
-        /// <param name="Pickup">Pickup.</param>
-        /// <param name="Dropoff">Dropoff.</param>
-        public JobEta(string Pickup = default(string), string Dropoff = default(string))
+        /// <param name="pickup">Pickup.</param>
+        /// <param name="dropoff">Dropoff.</param>
+        public JobEta(string pickup = default(string), string dropoff = default(string))
         {
-            this.Pickup = Pickup;
-            this.Dropoff = Dropoff;
+            this.Pickup = pickup;
+            this.Dropoff = dropoff;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

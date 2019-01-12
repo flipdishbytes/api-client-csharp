@@ -38,27 +38,27 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAccountModel" /> class.
         /// </summary>
-        /// <param name="Email">Email addres (required).</param>
-        /// <param name="StoreName">Store name (required).</param>
-        public CreateAccountModel(string Email = default(string), string StoreName = default(string))
+        /// <param name="email">Email addres (required).</param>
+        /// <param name="storeName">Store name (required).</param>
+        public CreateAccountModel(string email = default(string), string storeName = default(string))
         {
-            // to ensure "Email" is required (not null)
-            if (Email == null)
+            // to ensure "email" is required (not null)
+            if (email == null)
             {
-                throw new InvalidDataException("Email is a required property for CreateAccountModel and cannot be null");
+                throw new InvalidDataException("email is a required property for CreateAccountModel and cannot be null");
             }
             else
             {
-                this.Email = Email;
+                this.Email = email;
             }
-            // to ensure "StoreName" is required (not null)
-            if (StoreName == null)
+            // to ensure "storeName" is required (not null)
+            if (storeName == null)
             {
-                throw new InvalidDataException("StoreName is a required property for CreateAccountModel and cannot be null");
+                throw new InvalidDataException("storeName is a required property for CreateAccountModel and cannot be null");
             }
             else
             {
-                this.StoreName = StoreName;
+                this.StoreName = storeName;
             }
         }
         
@@ -94,7 +94,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

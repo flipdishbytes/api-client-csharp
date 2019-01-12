@@ -33,16 +33,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriptionPlansResponse" /> class.
         /// </summary>
-        /// <param name="PublishableApiKey">Stripe publishable api key.</param>
-        /// <param name="Email">User email.</param>
-        /// <param name="SubscriptionPlans">Available plans.</param>
-        /// <param name="AppIds">App ids (string name) to which the user belongs.</param>
-        public SubscriptionPlansResponse(string PublishableApiKey = default(string), string Email = default(string), List<SubscriptionPlan> SubscriptionPlans = default(List<SubscriptionPlan>), List<string> AppIds = default(List<string>))
+        /// <param name="publishableApiKey">Stripe publishable api key.</param>
+        /// <param name="email">User email.</param>
+        /// <param name="subscriptionPlans">Available plans.</param>
+        /// <param name="appIds">App ids (string name) to which the user belongs.</param>
+        public SubscriptionPlansResponse(string publishableApiKey = default(string), string email = default(string), List<SubscriptionPlan> subscriptionPlans = default(List<SubscriptionPlan>), List<string> appIds = default(List<string>))
         {
-            this.PublishableApiKey = PublishableApiKey;
-            this.Email = Email;
-            this.SubscriptionPlans = SubscriptionPlans;
-            this.AppIds = AppIds;
+            this.PublishableApiKey = publishableApiKey;
+            this.Email = email;
+            this.SubscriptionPlans = subscriptionPlans;
+            this.AppIds = appIds;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

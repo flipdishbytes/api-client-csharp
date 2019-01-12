@@ -66,14 +66,14 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignupStep" /> class.
         /// </summary>
-        /// <param name="Action">Action needs to take.</param>
-        /// <param name="Question">Question in case Action &#x3D;&#x3D; Question.</param>
-        /// <param name="PredefinedAnswers">Predefined answer in case Action &#x3D;&#x3D; Question.</param>
-        public SignupStep(ActionEnum? Action = default(ActionEnum?), string Question = default(string), List<PredefinedAnswer> PredefinedAnswers = default(List<PredefinedAnswer>))
+        /// <param name="action">Action needs to take.</param>
+        /// <param name="question">Question in case Action &#x3D;&#x3D; Question.</param>
+        /// <param name="predefinedAnswers">Predefined answer in case Action &#x3D;&#x3D; Question.</param>
+        public SignupStep(ActionEnum? action = default(ActionEnum?), string question = default(string), List<PredefinedAnswer> predefinedAnswers = default(List<PredefinedAnswer>))
         {
-            this.Action = Action;
-            this.Question = Question;
-            this.PredefinedAnswers = PredefinedAnswers;
+            this.Action = action;
+            this.Question = question;
+            this.PredefinedAnswers = predefinedAnswers;
         }
         
 
@@ -110,7 +110,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

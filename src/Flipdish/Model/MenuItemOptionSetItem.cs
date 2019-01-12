@@ -72,24 +72,24 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuItemOptionSetItem" /> class.
         /// </summary>
-        /// <param name="MenuItemOptionSetItemId">Menu item option set item identifier.</param>
-        /// <param name="ImageUrl">Image url.</param>
-        /// <param name="PublicId">Permanent reference to the item..</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Price">Price.</param>
-        /// <param name="IsAvailable">Is available.</param>
-        /// <param name="DisplayOrder">Display order. Displayed in ascending order..</param>
-        /// <param name="CellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
-        public MenuItemOptionSetItem(int? MenuItemOptionSetItemId = default(int?), string ImageUrl = default(string), Guid? PublicId = default(Guid?), string Name = default(string), double? Price = default(double?), bool? IsAvailable = default(bool?), int? DisplayOrder = default(int?), CellLayoutTypeEnum? CellLayoutType = default(CellLayoutTypeEnum?))
+        /// <param name="menuItemOptionSetItemId">Menu item option set item identifier.</param>
+        /// <param name="imageUrl">Image url.</param>
+        /// <param name="publicId">Permanent reference to the item..</param>
+        /// <param name="name">Name.</param>
+        /// <param name="price">Price.</param>
+        /// <param name="isAvailable">Is available.</param>
+        /// <param name="displayOrder">Display order. Displayed in ascending order..</param>
+        /// <param name="cellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
+        public MenuItemOptionSetItem(int? menuItemOptionSetItemId = default(int?), string imageUrl = default(string), Guid? publicId = default(Guid?), string name = default(string), double? price = default(double?), bool? isAvailable = default(bool?), int? displayOrder = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?))
         {
-            this.MenuItemOptionSetItemId = MenuItemOptionSetItemId;
-            this.ImageUrl = ImageUrl;
-            this.PublicId = PublicId;
-            this.Name = Name;
-            this.Price = Price;
-            this.IsAvailable = IsAvailable;
-            this.DisplayOrder = DisplayOrder;
-            this.CellLayoutType = CellLayoutType;
+            this.MenuItemOptionSetItemId = menuItemOptionSetItemId;
+            this.ImageUrl = imageUrl;
+            this.PublicId = publicId;
+            this.Name = name;
+            this.Price = price;
+            this.IsAvailable = isAvailable;
+            this.DisplayOrder = displayOrder;
+            this.CellLayoutType = cellLayoutType;
         }
         
         /// <summary>
@@ -166,7 +166,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

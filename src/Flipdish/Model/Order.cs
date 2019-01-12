@@ -312,56 +312,56 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Order" /> class.
         /// </summary>
-        /// <param name="Store">Store summary.</param>
-        /// <param name="Customer">Customer summary.</param>
-        /// <param name="Voucher">Voucher summary.</param>
-        /// <param name="Fees">Fee summary.</param>
-        /// <param name="OrderItems">Ordered items.</param>
-        /// <param name="DeliveryLocation">Delivery location for delivery orders.</param>
-        /// <param name="CustomerLocation">Customer location.</param>
-        /// <param name="OrderId">Order identifier.</param>
-        /// <param name="DeliveryType">Delivery type.</param>
-        /// <param name="PickupLocationType">Pickup location type.</param>
-        /// <param name="TipAmount">Tip amount.</param>
-        /// <param name="DeliveryAmount">Delivery amount.</param>
-        /// <param name="OrderItemsAmount">Ordered items amount.</param>
-        /// <param name="Amount">This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer..</param>
-        /// <param name="ProcessingFee">This contains the online ordering processing fee. For card payments this is charged directly to the customer and for cash orders it is paid by the customer to the store. It is tax inclusive..</param>
-        /// <param name="PaymentAccountType">Payment account type.</param>
-        /// <param name="PaymentAccountDescription">Payment account description (like Visa ****2371 or Apple Pay. or Cash).</param>
-        /// <param name="OrderState">Order state.</param>
-        /// <param name="IsPreOrder">Is pre-order.</param>
-        /// <param name="PlacedTime">Order placed time.</param>
-        /// <param name="RequestedForTime">Order requested for.</param>
-        /// <param name="ChefNote">Chef note.</param>
-        /// <param name="AppType">Used app type.</param>
-        /// <param name="UserRating">User rating.</param>
-        public Order(StoreSummary Store = default(StoreSummary), CustomerSummary Customer = default(CustomerSummary), VoucherSummary Voucher = default(VoucherSummary), FeeSummary Fees = default(FeeSummary), List<OrderItem> OrderItems = default(List<OrderItem>), DeliveryLocation DeliveryLocation = default(DeliveryLocation), Coordinates CustomerLocation = default(Coordinates), int? OrderId = default(int?), DeliveryTypeEnum? DeliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? PickupLocationType = default(PickupLocationTypeEnum?), double? TipAmount = default(double?), double? DeliveryAmount = default(double?), double? OrderItemsAmount = default(double?), double? Amount = default(double?), double? ProcessingFee = default(double?), PaymentAccountTypeEnum? PaymentAccountType = default(PaymentAccountTypeEnum?), string PaymentAccountDescription = default(string), OrderStateEnum? OrderState = default(OrderStateEnum?), bool? IsPreOrder = default(bool?), DateTime? PlacedTime = default(DateTime?), DateTime? RequestedForTime = default(DateTime?), string ChefNote = default(string), AppTypeEnum? AppType = default(AppTypeEnum?), int? UserRating = default(int?))
+        /// <param name="store">Store summary.</param>
+        /// <param name="customer">Customer summary.</param>
+        /// <param name="voucher">Voucher summary.</param>
+        /// <param name="fees">Fee summary.</param>
+        /// <param name="orderItems">Ordered items.</param>
+        /// <param name="deliveryLocation">Delivery location for delivery orders.</param>
+        /// <param name="customerLocation">Customer location.</param>
+        /// <param name="orderId">Order identifier.</param>
+        /// <param name="deliveryType">Delivery type.</param>
+        /// <param name="pickupLocationType">Pickup location type.</param>
+        /// <param name="tipAmount">Tip amount.</param>
+        /// <param name="deliveryAmount">Delivery amount.</param>
+        /// <param name="orderItemsAmount">Ordered items amount.</param>
+        /// <param name="amount">This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer..</param>
+        /// <param name="processingFee">This contains the online ordering processing fee. For card payments this is charged directly to the customer and for cash orders it is paid by the customer to the store. It is tax inclusive..</param>
+        /// <param name="paymentAccountType">Payment account type.</param>
+        /// <param name="paymentAccountDescription">Payment account description (like Visa ****2371 or Apple Pay. or Cash).</param>
+        /// <param name="orderState">Order state.</param>
+        /// <param name="isPreOrder">Is pre-order.</param>
+        /// <param name="placedTime">Order placed time.</param>
+        /// <param name="requestedForTime">Order requested for.</param>
+        /// <param name="chefNote">Chef note.</param>
+        /// <param name="appType">Used app type.</param>
+        /// <param name="userRating">User rating.</param>
+        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), VoucherSummary voucher = default(VoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?))
         {
-            this.Store = Store;
-            this.Customer = Customer;
-            this.Voucher = Voucher;
-            this.Fees = Fees;
-            this.OrderItems = OrderItems;
-            this.DeliveryLocation = DeliveryLocation;
-            this.CustomerLocation = CustomerLocation;
-            this.OrderId = OrderId;
-            this.DeliveryType = DeliveryType;
-            this.PickupLocationType = PickupLocationType;
-            this.TipAmount = TipAmount;
-            this.DeliveryAmount = DeliveryAmount;
-            this.OrderItemsAmount = OrderItemsAmount;
-            this.Amount = Amount;
-            this.ProcessingFee = ProcessingFee;
-            this.PaymentAccountType = PaymentAccountType;
-            this.PaymentAccountDescription = PaymentAccountDescription;
-            this.OrderState = OrderState;
-            this.IsPreOrder = IsPreOrder;
-            this.PlacedTime = PlacedTime;
-            this.RequestedForTime = RequestedForTime;
-            this.ChefNote = ChefNote;
-            this.AppType = AppType;
-            this.UserRating = UserRating;
+            this.Store = store;
+            this.Customer = customer;
+            this.Voucher = voucher;
+            this.Fees = fees;
+            this.OrderItems = orderItems;
+            this.DeliveryLocation = deliveryLocation;
+            this.CustomerLocation = customerLocation;
+            this.OrderId = orderId;
+            this.DeliveryType = deliveryType;
+            this.PickupLocationType = pickupLocationType;
+            this.TipAmount = tipAmount;
+            this.DeliveryAmount = deliveryAmount;
+            this.OrderItemsAmount = orderItemsAmount;
+            this.Amount = amount;
+            this.ProcessingFee = processingFee;
+            this.PaymentAccountType = paymentAccountType;
+            this.PaymentAccountDescription = paymentAccountDescription;
+            this.OrderState = orderState;
+            this.IsPreOrder = isPreOrder;
+            this.PlacedTime = placedTime;
+            this.RequestedForTime = requestedForTime;
+            this.ChefNote = chefNote;
+            this.AppType = appType;
+            this.UserRating = userRating;
         }
         
         /// <summary>
@@ -542,7 +542,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

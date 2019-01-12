@@ -33,16 +33,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserEventInfo" /> class.
         /// </summary>
-        /// <param name="UserId">User Id.</param>
-        /// <param name="UserName">User Name.</param>
-        /// <param name="UserPhoneNumber">User Phone Number.</param>
-        /// <param name="UserEmail">User Email.</param>
-        public UserEventInfo(int? UserId = default(int?), string UserName = default(string), string UserPhoneNumber = default(string), string UserEmail = default(string))
+        /// <param name="userId">User Id.</param>
+        /// <param name="userName">User Name.</param>
+        /// <param name="userPhoneNumber">User Phone Number.</param>
+        /// <param name="userEmail">User Email.</param>
+        public UserEventInfo(int? userId = default(int?), string userName = default(string), string userPhoneNumber = default(string), string userEmail = default(string))
         {
-            this.UserId = UserId;
-            this.UserName = UserName;
-            this.UserPhoneNumber = UserPhoneNumber;
-            this.UserEmail = UserEmail;
+            this.UserId = userId;
+            this.UserName = userName;
+            this.UserPhoneNumber = userPhoneNumber;
+            this.UserEmail = userEmail;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

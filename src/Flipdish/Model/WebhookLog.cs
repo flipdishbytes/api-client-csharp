@@ -33,38 +33,38 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookLog" /> class.
         /// </summary>
-        /// <param name="WebhookSubscriptionOwnerUserId">Webhook subscription owner user identifier.</param>
-        /// <param name="EventCreated">Event created.</param>
-        /// <param name="WebhookTriggered">Webhook triggered.</param>
-        /// <param name="WebhookEventName">Webhook event name.</param>
-        /// <param name="WebhookSubscriptionCallbackUrl">Webhook subscription callback url.</param>
-        /// <param name="HttpResponseStatusCode">Received HTTP repsonse status HTTP code.</param>
-        /// <param name="HttpResponseStatus">Received HTTP repsonse status.</param>
-        /// <param name="RequestHeaders">Request headers.</param>
-        /// <param name="RequestBody">Request body.</param>
-        /// <param name="ResponseHeaders">Received response headers.</param>
-        /// <param name="ResponseBody">Received response body.</param>
-        /// <param name="Duration">Duration of HTTP request.</param>
-        /// <param name="RetryCount">Retry count.</param>
-        /// <param name="FlipdishWebhookId">Flipdish webhook identifier.</param>
-        /// <param name="Version">Flipdish webhook version.</param>
-        public WebhookLog(int? WebhookSubscriptionOwnerUserId = default(int?), string EventCreated = default(string), string WebhookTriggered = default(string), string WebhookEventName = default(string), string WebhookSubscriptionCallbackUrl = default(string), string HttpResponseStatusCode = default(string), string HttpResponseStatus = default(string), string RequestHeaders = default(string), string RequestBody = default(string), string ResponseHeaders = default(string), string ResponseBody = default(string), string Duration = default(string), int? RetryCount = default(int?), Guid? FlipdishWebhookId = default(Guid?), string Version = default(string))
+        /// <param name="webhookSubscriptionOwnerUserId">Webhook subscription owner user identifier.</param>
+        /// <param name="eventCreated">Event created.</param>
+        /// <param name="webhookTriggered">Webhook triggered.</param>
+        /// <param name="webhookEventName">Webhook event name.</param>
+        /// <param name="webhookSubscriptionCallbackUrl">Webhook subscription callback url.</param>
+        /// <param name="httpResponseStatusCode">Received HTTP repsonse status HTTP code.</param>
+        /// <param name="httpResponseStatus">Received HTTP repsonse status.</param>
+        /// <param name="requestHeaders">Request headers.</param>
+        /// <param name="requestBody">Request body.</param>
+        /// <param name="responseHeaders">Received response headers.</param>
+        /// <param name="responseBody">Received response body.</param>
+        /// <param name="duration">Duration of HTTP request.</param>
+        /// <param name="retryCount">Retry count.</param>
+        /// <param name="flipdishWebhookId">Flipdish webhook identifier.</param>
+        /// <param name="version">Flipdish webhook version.</param>
+        public WebhookLog(int? webhookSubscriptionOwnerUserId = default(int?), string eventCreated = default(string), string webhookTriggered = default(string), string webhookEventName = default(string), string webhookSubscriptionCallbackUrl = default(string), string httpResponseStatusCode = default(string), string httpResponseStatus = default(string), string requestHeaders = default(string), string requestBody = default(string), string responseHeaders = default(string), string responseBody = default(string), string duration = default(string), int? retryCount = default(int?), Guid? flipdishWebhookId = default(Guid?), string version = default(string))
         {
-            this.WebhookSubscriptionOwnerUserId = WebhookSubscriptionOwnerUserId;
-            this.EventCreated = EventCreated;
-            this.WebhookTriggered = WebhookTriggered;
-            this.WebhookEventName = WebhookEventName;
-            this.WebhookSubscriptionCallbackUrl = WebhookSubscriptionCallbackUrl;
-            this.HttpResponseStatusCode = HttpResponseStatusCode;
-            this.HttpResponseStatus = HttpResponseStatus;
-            this.RequestHeaders = RequestHeaders;
-            this.RequestBody = RequestBody;
-            this.ResponseHeaders = ResponseHeaders;
-            this.ResponseBody = ResponseBody;
-            this.Duration = Duration;
-            this.RetryCount = RetryCount;
-            this.FlipdishWebhookId = FlipdishWebhookId;
-            this.Version = Version;
+            this.WebhookSubscriptionOwnerUserId = webhookSubscriptionOwnerUserId;
+            this.EventCreated = eventCreated;
+            this.WebhookTriggered = webhookTriggered;
+            this.WebhookEventName = webhookEventName;
+            this.WebhookSubscriptionCallbackUrl = webhookSubscriptionCallbackUrl;
+            this.HttpResponseStatusCode = httpResponseStatusCode;
+            this.HttpResponseStatus = httpResponseStatus;
+            this.RequestHeaders = requestHeaders;
+            this.RequestBody = requestBody;
+            this.ResponseHeaders = responseHeaders;
+            this.ResponseBody = responseBody;
+            this.Duration = duration;
+            this.RetryCount = retryCount;
+            this.FlipdishWebhookId = flipdishWebhookId;
+            this.Version = version;
         }
         
         /// <summary>
@@ -203,7 +203,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

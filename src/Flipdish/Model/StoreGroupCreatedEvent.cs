@@ -33,24 +33,24 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreGroupCreatedEvent" /> class.
         /// </summary>
-        /// <param name="StoreGroupId">Store Group Id.</param>
-        /// <param name="User">User which created this store group.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="StoreGroup">Created store group.</param>
-        /// <param name="EventName">The event name.</param>
-        /// <param name="FlipdishEventId">The identitfier of the event.</param>
-        /// <param name="CreateTime">The time of creation of the event.</param>
-        /// <param name="Position">Position.</param>
-        public StoreGroupCreatedEvent(int? StoreGroupId = default(int?), UserEventInfo User = default(UserEventInfo), string Description = default(string), StoreGroup StoreGroup = default(StoreGroup), string EventName = default(string), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        /// <param name="storeGroupId">Store Group Id.</param>
+        /// <param name="user">User which created this store group.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="storeGroup">Created store group.</param>
+        /// <param name="eventName">The event name.</param>
+        /// <param name="flipdishEventId">The identitfier of the event.</param>
+        /// <param name="createTime">The time of creation of the event.</param>
+        /// <param name="position">Position.</param>
+        public StoreGroupCreatedEvent(int? storeGroupId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), StoreGroup storeGroup = default(StoreGroup), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?))
         {
-            this.StoreGroupId = StoreGroupId;
-            this.User = User;
-            this.Description = Description;
-            this.StoreGroup = StoreGroup;
-            this.EventName = EventName;
-            this.FlipdishEventId = FlipdishEventId;
-            this.CreateTime = CreateTime;
-            this.Position = Position;
+            this.StoreGroupId = storeGroupId;
+            this.User = user;
+            this.Description = description;
+            this.StoreGroup = storeGroup;
+            this.EventName = eventName;
+            this.FlipdishEventId = flipdishEventId;
+            this.CreateTime = createTime;
+            this.Position = position;
         }
         
         /// <summary>
@@ -133,7 +133,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

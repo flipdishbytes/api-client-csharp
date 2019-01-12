@@ -60,6 +60,9 @@ Name | Type | Description | Notes
 **UserCreatedEvent** | [**List&lt;UserCreatedEvent&gt;**](UserCreatedEvent.md) | User created event | [optional] 
 **UserUpdatedEvent** | [**List&lt;UserUpdatedEvent&gt;**](UserUpdatedEvent.md) | User updated event | [optional] 
 **UserDeletedEvent** | [**List&lt;UserDeletedEvent&gt;**](UserDeletedEvent.md) | User deleted event | [optional] 
+**VoucherCreatedEvent** | [**List&lt;VoucherCreatedEvent&gt;**](VoucherCreatedEvent.md) | Voucher created event | [optional] 
+**VoucherUpdatedEvent** | [**List&lt;VoucherUpdatedEvent&gt;**](VoucherUpdatedEvent.md) | Voucher updated event | [optional] 
+**VoucherDeletedEvent** | [**List&lt;VoucherDeletedEvent&gt;**](VoucherDeletedEvent.md) | Voucher deleted event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

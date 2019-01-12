@@ -72,12 +72,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuSectionAvailability" /> class.
         /// </summary>
-        /// <param name="AvailableTimes">Available times.</param>
-        /// <param name="AvailabilityMode">Availability mode.</param>
-        public MenuSectionAvailability(List<BusinessHoursPeriod> AvailableTimes = default(List<BusinessHoursPeriod>), AvailabilityModeEnum? AvailabilityMode = default(AvailabilityModeEnum?))
+        /// <param name="availableTimes">Available times.</param>
+        /// <param name="availabilityMode">Availability mode.</param>
+        public MenuSectionAvailability(List<BusinessHoursPeriod> availableTimes = default(List<BusinessHoursPeriod>), AvailabilityModeEnum? availabilityMode = default(AvailabilityModeEnum?))
         {
-            this.AvailableTimes = AvailableTimes;
-            this.AvailabilityMode = AvailabilityMode;
+            this.AvailableTimes = availableTimes;
+            this.AvailabilityMode = availabilityMode;
         }
         
         /// <summary>
@@ -106,7 +106,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -84,16 +84,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProcessingFeeConfig" /> class.
         /// </summary>
-        /// <param name="StoreId">Store Id.</param>
-        /// <param name="PaymentAccountType">Payment account type.</param>
-        /// <param name="PercentFee">Percent fee to customer, including VAT.</param>
-        /// <param name="FixedFee">Fixed fee to customer, including VAT.</param>
-        public ProcessingFeeConfig(int? StoreId = default(int?), PaymentAccountTypeEnum? PaymentAccountType = default(PaymentAccountTypeEnum?), double? PercentFee = default(double?), double? FixedFee = default(double?))
+        /// <param name="storeId">Store Id.</param>
+        /// <param name="paymentAccountType">Payment account type.</param>
+        /// <param name="percentFee">Percent fee to customer, including VAT.</param>
+        /// <param name="fixedFee">Fixed fee to customer, including VAT.</param>
+        public ProcessingFeeConfig(int? storeId = default(int?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), double? percentFee = default(double?), double? fixedFee = default(double?))
         {
-            this.StoreId = StoreId;
-            this.PaymentAccountType = PaymentAccountType;
-            this.PercentFee = PercentFee;
-            this.FixedFee = FixedFee;
+            this.StoreId = storeId;
+            this.PaymentAccountType = paymentAccountType;
+            this.PercentFee = percentFee;
+            this.FixedFee = fixedFee;
         }
         
         /// <summary>
@@ -138,7 +138,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

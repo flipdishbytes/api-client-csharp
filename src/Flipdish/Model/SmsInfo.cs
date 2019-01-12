@@ -33,14 +33,14 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsInfo" /> class.
         /// </summary>
-        /// <param name="From">Origin phone number.</param>
-        /// <param name="To">Destination phone number.</param>
-        /// <param name="Text">Text message.</param>
-        public SmsInfo(string From = default(string), string To = default(string), string Text = default(string))
+        /// <param name="from">Origin phone number.</param>
+        /// <param name="to">Destination phone number.</param>
+        /// <param name="text">Text message.</param>
+        public SmsInfo(string from = default(string), string to = default(string), string text = default(string))
         {
-            this.From = From;
-            this.To = To;
-            this.Text = Text;
+            this.From = from;
+            this.To = to;
+            this.Text = text;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

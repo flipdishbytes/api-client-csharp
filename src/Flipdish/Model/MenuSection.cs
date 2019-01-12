@@ -33,28 +33,28 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuSection" /> class.
         /// </summary>
-        /// <param name="MenuSectionId">Menu section identifier.</param>
-        /// <param name="ImageUrl">Image url.</param>
-        /// <param name="MenuItems">Menu items.</param>
-        /// <param name="MenuSectionAvailability">Menu section availability.</param>
-        /// <param name="PublicId">Permanent reference to the item..</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="DisplayOrder">Display order.</param>
-        /// <param name="IsAvailable">Is available.</param>
-        /// <param name="IsHiddenFromCustomers">Is hidden from customer. Perhaps when the item is out of stock..</param>
-        public MenuSection(int? MenuSectionId = default(int?), string ImageUrl = default(string), List<MenuSectionItem> MenuItems = default(List<MenuSectionItem>), MenuSectionAvailability MenuSectionAvailability = default(MenuSectionAvailability), Guid? PublicId = default(Guid?), string Name = default(string), string Description = default(string), int? DisplayOrder = default(int?), bool? IsAvailable = default(bool?), bool? IsHiddenFromCustomers = default(bool?))
+        /// <param name="menuSectionId">Menu section identifier.</param>
+        /// <param name="imageUrl">Image url.</param>
+        /// <param name="menuItems">Menu items.</param>
+        /// <param name="menuSectionAvailability">Menu section availability.</param>
+        /// <param name="publicId">Permanent reference to the item..</param>
+        /// <param name="name">Name.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="displayOrder">Display order.</param>
+        /// <param name="isAvailable">Is available.</param>
+        /// <param name="isHiddenFromCustomers">Is hidden from customer. Perhaps when the item is out of stock..</param>
+        public MenuSection(int? menuSectionId = default(int?), string imageUrl = default(string), List<MenuSectionItem> menuItems = default(List<MenuSectionItem>), MenuSectionAvailability menuSectionAvailability = default(MenuSectionAvailability), Guid? publicId = default(Guid?), string name = default(string), string description = default(string), int? displayOrder = default(int?), bool? isAvailable = default(bool?), bool? isHiddenFromCustomers = default(bool?))
         {
-            this.MenuSectionId = MenuSectionId;
-            this.ImageUrl = ImageUrl;
-            this.MenuItems = MenuItems;
-            this.MenuSectionAvailability = MenuSectionAvailability;
-            this.PublicId = PublicId;
-            this.Name = Name;
-            this.Description = Description;
-            this.DisplayOrder = DisplayOrder;
-            this.IsAvailable = IsAvailable;
-            this.IsHiddenFromCustomers = IsHiddenFromCustomers;
+            this.MenuSectionId = menuSectionId;
+            this.ImageUrl = imageUrl;
+            this.MenuItems = menuItems;
+            this.MenuSectionAvailability = menuSectionAvailability;
+            this.PublicId = publicId;
+            this.Name = name;
+            this.Description = description;
+            this.DisplayOrder = displayOrder;
+            this.IsAvailable = isAvailable;
+            this.IsHiddenFromCustomers = isHiddenFromCustomers;
         }
         
         /// <summary>
@@ -153,7 +153,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

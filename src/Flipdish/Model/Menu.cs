@@ -60,22 +60,22 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Menu" /> class.
         /// </summary>
-        /// <param name="MenuId">Menu identifier.</param>
-        /// <param name="ModifiedTime">Last modified time.</param>
-        /// <param name="VersionNumber">Menu version.</param>
-        /// <param name="ImageUrl">Image url.</param>
-        /// <param name="MenuSections">Menu sections (startes, main etc).</param>
-        /// <param name="DisplaySectionLinks">Display menu section link on UI.</param>
-        /// <param name="MenuSectionBehaviour">Menu section behaviour.</param>
-        public Menu(int? MenuId = default(int?), DateTime? ModifiedTime = default(DateTime?), int? VersionNumber = default(int?), string ImageUrl = default(string), List<MenuSection> MenuSections = default(List<MenuSection>), bool? DisplaySectionLinks = default(bool?), MenuSectionBehaviourEnum? MenuSectionBehaviour = default(MenuSectionBehaviourEnum?))
+        /// <param name="menuId">Menu identifier.</param>
+        /// <param name="modifiedTime">Last modified time.</param>
+        /// <param name="versionNumber">Menu version.</param>
+        /// <param name="imageUrl">Image url.</param>
+        /// <param name="menuSections">Menu sections (startes, main etc).</param>
+        /// <param name="displaySectionLinks">Display menu section link on UI.</param>
+        /// <param name="menuSectionBehaviour">Menu section behaviour.</param>
+        public Menu(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string imageUrl = default(string), List<MenuSection> menuSections = default(List<MenuSection>), bool? displaySectionLinks = default(bool?), MenuSectionBehaviourEnum? menuSectionBehaviour = default(MenuSectionBehaviourEnum?))
         {
-            this.MenuId = MenuId;
-            this.ModifiedTime = ModifiedTime;
-            this.VersionNumber = VersionNumber;
-            this.ImageUrl = ImageUrl;
-            this.MenuSections = MenuSections;
-            this.DisplaySectionLinks = DisplaySectionLinks;
-            this.MenuSectionBehaviour = MenuSectionBehaviour;
+            this.MenuId = menuId;
+            this.ModifiedTime = modifiedTime;
+            this.VersionNumber = versionNumber;
+            this.ImageUrl = imageUrl;
+            this.MenuSections = menuSections;
+            this.DisplaySectionLinks = displaySectionLinks;
+            this.MenuSectionBehaviour = menuSectionBehaviour;
         }
         
         /// <summary>
@@ -144,7 +144,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

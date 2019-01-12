@@ -33,12 +33,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Metadata" /> class.
         /// </summary>
-        /// <param name="Key">Metadata key (Unique identifier).</param>
-        /// <param name="Value">Metadata value.</param>
-        public Metadata(string Key = default(string), string Value = default(string))
+        /// <param name="key">Metadata key (Unique identifier).</param>
+        /// <param name="value">Metadata value.</param>
+        public Metadata(string key = default(string), string value = default(string))
         {
-            this.Key = Key;
-            this.Value = Value;
+            this.Key = key;
+            this.Value = value;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

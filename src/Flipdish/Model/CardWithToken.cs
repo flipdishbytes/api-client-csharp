@@ -38,17 +38,17 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CardWithToken" /> class.
         /// </summary>
-        /// <param name="Token">Token (required).</param>
-        public CardWithToken(string Token = default(string))
+        /// <param name="token">Token (required).</param>
+        public CardWithToken(string token = default(string))
         {
-            // to ensure "Token" is required (not null)
-            if (Token == null)
+            // to ensure "token" is required (not null)
+            if (token == null)
             {
-                throw new InvalidDataException("Token is a required property for CardWithToken and cannot be null");
+                throw new InvalidDataException("token is a required property for CardWithToken and cannot be null");
             }
             else
             {
-                this.Token = Token;
+                this.Token = token;
             }
         }
         
@@ -76,7 +76,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

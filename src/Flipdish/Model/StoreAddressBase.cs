@@ -33,18 +33,18 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreAddressBase" /> class.
         /// </summary>
-        /// <param name="Line1">Address line 1.</param>
-        /// <param name="Postcode">Postcode.</param>
-        /// <param name="City">City.</param>
-        /// <param name="CountryCode">Country code (ISO-alpha2).</param>
-        /// <param name="DisplayForCustomer">Display for customer.</param>
-        public StoreAddressBase(string Line1 = default(string), string Postcode = default(string), string City = default(string), string CountryCode = default(string), string DisplayForCustomer = default(string))
+        /// <param name="line1">Address line 1.</param>
+        /// <param name="postcode">Postcode.</param>
+        /// <param name="city">City.</param>
+        /// <param name="countryCode">Country code (ISO-alpha2).</param>
+        /// <param name="displayForCustomer">Display for customer.</param>
+        public StoreAddressBase(string line1 = default(string), string postcode = default(string), string city = default(string), string countryCode = default(string), string displayForCustomer = default(string))
         {
-            this.Line1 = Line1;
-            this.Postcode = Postcode;
-            this.City = City;
-            this.CountryCode = CountryCode;
-            this.DisplayForCustomer = DisplayForCustomer;
+            this.Line1 = line1;
+            this.Postcode = postcode;
+            this.City = city;
+            this.CountryCode = countryCode;
+            this.DisplayForCustomer = displayForCustomer;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

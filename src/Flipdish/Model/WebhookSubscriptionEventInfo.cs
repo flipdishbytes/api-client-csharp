@@ -33,16 +33,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookSubscriptionEventInfo" /> class.
         /// </summary>
-        /// <param name="OwnerUserId">Webhook subscription owner user identifier.</param>
-        /// <param name="WebhookSubscriptionId">Webhook subscription identifier.</param>
-        /// <param name="ClientId">Oauth client identifier.</param>
-        /// <param name="CallbackUrl">Webhook callback url.</param>
-        public WebhookSubscriptionEventInfo(int? OwnerUserId = default(int?), int? WebhookSubscriptionId = default(int?), string ClientId = default(string), string CallbackUrl = default(string))
+        /// <param name="ownerUserId">Webhook subscription owner user identifier.</param>
+        /// <param name="webhookSubscriptionId">Webhook subscription identifier.</param>
+        /// <param name="clientId">Oauth client identifier.</param>
+        /// <param name="callbackUrl">Webhook callback url.</param>
+        public WebhookSubscriptionEventInfo(int? ownerUserId = default(int?), int? webhookSubscriptionId = default(int?), string clientId = default(string), string callbackUrl = default(string))
         {
-            this.OwnerUserId = OwnerUserId;
-            this.WebhookSubscriptionId = WebhookSubscriptionId;
-            this.ClientId = ClientId;
-            this.CallbackUrl = CallbackUrl;
+            this.OwnerUserId = ownerUserId;
+            this.WebhookSubscriptionId = webhookSubscriptionId;
+            this.ClientId = clientId;
+            this.CallbackUrl = callbackUrl;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeliveryFee** | **double?** | Delivery fee | [optional] 
-**MinimumDeliveryOrderAmount** | **double?** | Minimum delivery order amount | [optional] 
+**DeliveryFee** | **double?** | Delivery fee (will not be set below 0) | [optional] 
+**MinimumDeliveryOrderAmount** | **double?** | Minimum delivery order amount (will not be set below 0) | [optional] 
 **WellKnownText** | **string** | Spatial data in Well Known Text format  We also support CIRCLE((0 0, 200)) - (centerLong centerLat, radius in m) | [optional] 
 **IsEnabled** | **bool?** | Is delivery zone enabled | [optional] 
 

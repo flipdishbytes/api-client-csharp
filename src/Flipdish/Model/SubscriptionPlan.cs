@@ -60,18 +60,18 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriptionPlan" /> class.
         /// </summary>
-        /// <param name="SubscriptionPlanId">Subscription plan identifier.</param>
-        /// <param name="Name">Name of the plan.</param>
-        /// <param name="Currency">ISO Currency.</param>
-        /// <param name="Price">Price for single unit.</param>
-        /// <param name="Interval">Interval billing for the subscription.</param>
-        public SubscriptionPlan(int? SubscriptionPlanId = default(int?), string Name = default(string), string Currency = default(string), double? Price = default(double?), IntervalEnum? Interval = default(IntervalEnum?))
+        /// <param name="subscriptionPlanId">Subscription plan identifier.</param>
+        /// <param name="name">Name of the plan.</param>
+        /// <param name="currency">ISO Currency.</param>
+        /// <param name="price">Price for single unit.</param>
+        /// <param name="interval">Interval billing for the subscription.</param>
+        public SubscriptionPlan(int? subscriptionPlanId = default(int?), string name = default(string), string currency = default(string), double? price = default(double?), IntervalEnum? interval = default(IntervalEnum?))
         {
-            this.SubscriptionPlanId = SubscriptionPlanId;
-            this.Name = Name;
-            this.Currency = Currency;
-            this.Price = Price;
-            this.Interval = Interval;
+            this.SubscriptionPlanId = subscriptionPlanId;
+            this.Name = name;
+            this.Currency = currency;
+            this.Price = price;
+            this.Interval = interval;
         }
         
         /// <summary>
@@ -124,7 +124,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

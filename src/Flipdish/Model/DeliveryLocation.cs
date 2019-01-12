@@ -33,22 +33,22 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DeliveryLocation" /> class.
         /// </summary>
-        /// <param name="Coordinates">Geo cordinate.</param>
-        /// <param name="Building">Building.</param>
-        /// <param name="Street">Street.</param>
-        /// <param name="Town">Town.</param>
-        /// <param name="PostCode">Post code.</param>
-        /// <param name="DeliveryInstructions">Delivery instructions.</param>
-        /// <param name="PrettyAddressString">Formatted, pretty address string.</param>
-        public DeliveryLocation(Coordinates Coordinates = default(Coordinates), string Building = default(string), string Street = default(string), string Town = default(string), string PostCode = default(string), string DeliveryInstructions = default(string), string PrettyAddressString = default(string))
+        /// <param name="coordinates">Geo cordinate.</param>
+        /// <param name="building">Building.</param>
+        /// <param name="street">Street.</param>
+        /// <param name="town">Town.</param>
+        /// <param name="postCode">Post code.</param>
+        /// <param name="deliveryInstructions">Delivery instructions.</param>
+        /// <param name="prettyAddressString">Formatted, pretty address string.</param>
+        public DeliveryLocation(Coordinates coordinates = default(Coordinates), string building = default(string), string street = default(string), string town = default(string), string postCode = default(string), string deliveryInstructions = default(string), string prettyAddressString = default(string))
         {
-            this.Coordinates = Coordinates;
-            this.Building = Building;
-            this.Street = Street;
-            this.Town = Town;
-            this.PostCode = PostCode;
-            this.DeliveryInstructions = DeliveryInstructions;
-            this.PrettyAddressString = PrettyAddressString;
+            this.Coordinates = coordinates;
+            this.Building = building;
+            this.Street = street;
+            this.Town = town;
+            this.PostCode = postCode;
+            this.DeliveryInstructions = deliveryInstructions;
+            this.PrettyAddressString = prettyAddressString;
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

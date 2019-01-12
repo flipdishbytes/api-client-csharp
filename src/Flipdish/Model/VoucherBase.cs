@@ -33,14 +33,14 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoucherBase" /> class.
         /// </summary>
-        /// <param name="Description">Voucher Description (Visible on printout).</param>
-        /// <param name="IsEnabled">Is voucher enabled.</param>
-        /// <param name="ExpiryDate">Voucher Expires On (Time in UTC).</param>
-        public VoucherBase(string Description = default(string), bool? IsEnabled = default(bool?), DateTime? ExpiryDate = default(DateTime?))
+        /// <param name="description">Voucher Description (Visible on printout).</param>
+        /// <param name="isEnabled">Is voucher enabled.</param>
+        /// <param name="expiryDate">Voucher Expires On (Time in UTC).</param>
+        public VoucherBase(string description = default(string), bool? isEnabled = default(bool?), DateTime? expiryDate = default(DateTime?))
         {
-            this.Description = Description;
-            this.IsEnabled = IsEnabled;
-            this.ExpiryDate = ExpiryDate;
+            this.Description = description;
+            this.IsEnabled = isEnabled;
+            this.ExpiryDate = expiryDate;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

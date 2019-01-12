@@ -33,22 +33,22 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuUpdatedEvent" /> class.
         /// </summary>
-        /// <param name="EventName">The event name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="User">User who has updated the menu.</param>
-        /// <param name="Menu">The menu.</param>
-        /// <param name="FlipdishEventId">The identitfier of the event.</param>
-        /// <param name="CreateTime">The time of creation of the event.</param>
-        /// <param name="Position">Position.</param>
-        public MenuUpdatedEvent(string EventName = default(string), string Description = default(string), UserEventInfo User = default(UserEventInfo), Menu Menu = default(Menu), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        /// <param name="eventName">The event name.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="user">User who has updated the menu.</param>
+        /// <param name="menu">The menu.</param>
+        /// <param name="flipdishEventId">The identitfier of the event.</param>
+        /// <param name="createTime">The time of creation of the event.</param>
+        /// <param name="position">Position.</param>
+        public MenuUpdatedEvent(string eventName = default(string), string description = default(string), UserEventInfo user = default(UserEventInfo), Menu menu = default(Menu), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?))
         {
-            this.EventName = EventName;
-            this.Description = Description;
-            this.User = User;
-            this.Menu = Menu;
-            this.FlipdishEventId = FlipdishEventId;
-            this.CreateTime = CreateTime;
-            this.Position = Position;
+            this.EventName = eventName;
+            this.Description = description;
+            this.User = user;
+            this.Menu = menu;
+            this.FlipdishEventId = flipdishEventId;
+            this.CreateTime = createTime;
+            this.Position = position;
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

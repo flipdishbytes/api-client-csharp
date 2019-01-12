@@ -720,18 +720,18 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreGroup" /> class.
         /// </summary>
-        /// <param name="StoreGroupId">Unique Store Group Identifier.</param>
-        /// <param name="GeneralRating">Store Group rating.</param>
-        /// <param name="GeneralRatingCount">Store Group rating count.</param>
-        /// <param name="Name">Store Group Name.</param>
-        /// <param name="Currency">Currency used by the stores in this group.</param>
-        public StoreGroup(int? StoreGroupId = default(int?), double? GeneralRating = default(double?), int? GeneralRatingCount = default(int?), string Name = default(string), CurrencyEnum? Currency = default(CurrencyEnum?))
+        /// <param name="storeGroupId">Unique Store Group Identifier.</param>
+        /// <param name="generalRating">Store Group rating.</param>
+        /// <param name="generalRatingCount">Store Group rating count.</param>
+        /// <param name="name">Store Group Name.</param>
+        /// <param name="currency">Currency used by the stores in this group.</param>
+        public StoreGroup(int? storeGroupId = default(int?), double? generalRating = default(double?), int? generalRatingCount = default(int?), string name = default(string), CurrencyEnum? currency = default(CurrencyEnum?))
         {
-            this.StoreGroupId = StoreGroupId;
-            this.GeneralRating = GeneralRating;
-            this.GeneralRatingCount = GeneralRatingCount;
-            this.Name = Name;
-            this.Currency = Currency;
+            this.StoreGroupId = storeGroupId;
+            this.GeneralRating = generalRating;
+            this.GeneralRatingCount = generalRatingCount;
+            this.Name = name;
+            this.Currency = currency;
         }
         
         /// <summary>
@@ -784,7 +784,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -90,18 +90,18 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessHoursPeriodBase" /> class.
         /// </summary>
-        /// <param name="DayOfWeek">Day of week.</param>
-        /// <param name="StartTime">Start time.</param>
-        /// <param name="Period">Period.</param>
-        /// <param name="StartTimeEarly">Start time early.</param>
-        /// <param name="PeriodEarly">Period early.</param>
-        public BusinessHoursPeriodBase(DayOfWeekEnum? DayOfWeek = default(DayOfWeekEnum?), string StartTime = default(string), string Period = default(string), string StartTimeEarly = default(string), string PeriodEarly = default(string))
+        /// <param name="dayOfWeek">Day of week.</param>
+        /// <param name="startTime">Start time.</param>
+        /// <param name="period">Period.</param>
+        /// <param name="startTimeEarly">Start time early.</param>
+        /// <param name="periodEarly">Period early.</param>
+        public BusinessHoursPeriodBase(DayOfWeekEnum? dayOfWeek = default(DayOfWeekEnum?), string startTime = default(string), string period = default(string), string startTimeEarly = default(string), string periodEarly = default(string))
         {
-            this.DayOfWeek = DayOfWeek;
-            this.StartTime = StartTime;
-            this.Period = Period;
-            this.StartTimeEarly = StartTimeEarly;
-            this.PeriodEarly = PeriodEarly;
+            this.DayOfWeek = dayOfWeek;
+            this.StartTime = startTime;
+            this.Period = period;
+            this.StartTimeEarly = startTimeEarly;
+            this.PeriodEarly = periodEarly;
         }
         
 
@@ -154,7 +154,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,12 +33,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriptionBase" /> class.
         /// </summary>
-        /// <param name="Quantity">Number of physical restaurants.</param>
-        /// <param name="SubscriptionPlanId">Subscription plan identifier.</param>
-        public SubscriptionBase(int? Quantity = default(int?), int? SubscriptionPlanId = default(int?))
+        /// <param name="quantity">Number of physical restaurants.</param>
+        /// <param name="subscriptionPlanId">Subscription plan identifier.</param>
+        public SubscriptionBase(int? quantity = default(int?), int? subscriptionPlanId = default(int?))
         {
-            this.Quantity = Quantity;
-            this.SubscriptionPlanId = SubscriptionPlanId;
+            this.Quantity = quantity;
+            this.SubscriptionPlanId = subscriptionPlanId;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

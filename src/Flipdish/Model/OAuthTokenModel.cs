@@ -33,18 +33,18 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthTokenModel" /> class.
         /// </summary>
-        /// <param name="Key">Identitifier key.</param>
-        /// <param name="TokenType">Token type.</param>
-        /// <param name="SubjectId">Oauth subject identifier.</param>
-        /// <param name="ClientId">Oauth client identifier.</param>
-        /// <param name="Expiry">Token expiry.</param>
-        public OAuthTokenModel(string Key = default(string), string TokenType = default(string), string SubjectId = default(string), string ClientId = default(string), DateTime? Expiry = default(DateTime?))
+        /// <param name="key">Identitifier key.</param>
+        /// <param name="tokenType">Token type.</param>
+        /// <param name="subjectId">Oauth subject identifier.</param>
+        /// <param name="clientId">Oauth client identifier.</param>
+        /// <param name="expiry">Token expiry.</param>
+        public OAuthTokenModel(string key = default(string), string tokenType = default(string), string subjectId = default(string), string clientId = default(string), DateTime? expiry = default(DateTime?))
         {
-            this.Key = Key;
-            this.TokenType = TokenType;
-            this.SubjectId = SubjectId;
-            this.ClientId = ClientId;
-            this.Expiry = Expiry;
+            this.Key = key;
+            this.TokenType = tokenType;
+            this.SubjectId = subjectId;
+            this.ClientId = clientId;
+            this.Expiry = expiry;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,12 +33,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Printer" /> class.
         /// </summary>
-        /// <param name="SerialNumber">Unique serial number of the printer.</param>
-        /// <param name="LastPollTime">Date and time when the printer last polled Flipdish for new orders..</param>
-        public Printer(string SerialNumber = default(string), DateTime? LastPollTime = default(DateTime?))
+        /// <param name="serialNumber">Unique serial number of the printer.</param>
+        /// <param name="lastPollTime">Date and time when the printer last polled Flipdish for new orders..</param>
+        public Printer(string serialNumber = default(string), DateTime? lastPollTime = default(DateTime?))
         {
-            this.SerialNumber = SerialNumber;
-            this.LastPollTime = LastPollTime;
+            this.SerialNumber = serialNumber;
+            this.LastPollTime = lastPollTime;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

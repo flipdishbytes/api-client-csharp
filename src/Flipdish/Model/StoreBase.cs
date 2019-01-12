@@ -33,56 +33,56 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreBase" /> class.
         /// </summary>
-        /// <param name="PhoneNumber">Phone number.</param>
-        /// <param name="PreOrderEnabled">True if the store accepts pre-orders.</param>
-        /// <param name="TakeOutEnabled">True if the store accepts take-out orders.</param>
-        /// <param name="TableServiceEnabled">True if the store has table service.</param>
-        /// <param name="DineInEnabled">True if the store accepts dine-in orders.</param>
-        /// <param name="AllowPreOrdersAndTableService">True if both pre-orders and talbe service can be enabled.</param>
-        /// <param name="PickupEnabled">True if the store accepts pickup orders.</param>
-        /// <param name="DeliveryEnabled">True if the store accepts delivery orders.</param>
-        /// <param name="CardOrderDeliveryEnabled">True if the store accepts card payment for delivery orders.</param>
-        /// <param name="CashOrdersDeliveryEnabled">True if the store accepts cash payment for delivery orders.</param>
-        /// <param name="CardOrdersPickupEnabled">True if the store accepts card payment for pickup orders.</param>
-        /// <param name="CashOrdersPickupEnabled">True if the store accepts cash payment for pickup orders.</param>
-        /// <param name="TipsEnabled">True if the store accepts tips.</param>
-        /// <param name="AutomaticallyAcceptOrders">True if the stores orders are automatically accepted in Flipdish.</param>
-        /// <param name="OpenForDelivery">True if the store is open for delivery.</param>
-        /// <param name="OpenForPickup">True if the store is open for pickup.</param>
-        /// <param name="MinimumPickupOrderAmount">Minimum pickup order amount.</param>
-        /// <param name="RequireCustomerNameForPickup">True if customer name required for pickup orders.</param>
-        /// <param name="RequireCustomerNameForDelivery">True if customer name required for delivery orders.</param>
-        /// <param name="MicrosoftTimeZone">Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391).</param>
-        /// <param name="IanaTimeZone">IANA Time Zone (https://www.iana.org/time-zones).</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="EmailAddress">Email address (visible to customers).</param>
-        /// <param name="StaffLanguage">Staff Language (used for communcation with the staff)  Emails, Printouts etc.</param>
-        public StoreBase(string PhoneNumber = default(string), bool? PreOrderEnabled = default(bool?), bool? TakeOutEnabled = default(bool?), bool? TableServiceEnabled = default(bool?), bool? DineInEnabled = default(bool?), bool? AllowPreOrdersAndTableService = default(bool?), bool? PickupEnabled = default(bool?), bool? DeliveryEnabled = default(bool?), bool? CardOrderDeliveryEnabled = default(bool?), bool? CashOrdersDeliveryEnabled = default(bool?), bool? CardOrdersPickupEnabled = default(bool?), bool? CashOrdersPickupEnabled = default(bool?), bool? TipsEnabled = default(bool?), bool? AutomaticallyAcceptOrders = default(bool?), bool? OpenForDelivery = default(bool?), bool? OpenForPickup = default(bool?), double? MinimumPickupOrderAmount = default(double?), bool? RequireCustomerNameForPickup = default(bool?), bool? RequireCustomerNameForDelivery = default(bool?), string MicrosoftTimeZone = default(string), string IanaTimeZone = default(string), string Name = default(string), string EmailAddress = default(string), string StaffLanguage = default(string))
+        /// <param name="phoneNumber">Phone number.</param>
+        /// <param name="preOrderEnabled">True if the store accepts pre-orders.</param>
+        /// <param name="takeOutEnabled">True if the store accepts take-out orders.</param>
+        /// <param name="tableServiceEnabled">True if the store has table service.</param>
+        /// <param name="dineInEnabled">True if the store accepts dine-in orders.</param>
+        /// <param name="allowPreOrdersAndTableService">True if both pre-orders and talbe service can be enabled.</param>
+        /// <param name="pickupEnabled">True if the store accepts pickup orders.</param>
+        /// <param name="deliveryEnabled">True if the store accepts delivery orders.</param>
+        /// <param name="cardOrderDeliveryEnabled">True if the store accepts card payment for delivery orders.</param>
+        /// <param name="cashOrdersDeliveryEnabled">True if the store accepts cash payment for delivery orders.</param>
+        /// <param name="cardOrdersPickupEnabled">True if the store accepts card payment for pickup orders.</param>
+        /// <param name="cashOrdersPickupEnabled">True if the store accepts cash payment for pickup orders.</param>
+        /// <param name="tipsEnabled">True if the store accepts tips.</param>
+        /// <param name="automaticallyAcceptOrders">True if the stores orders are automatically accepted in Flipdish.</param>
+        /// <param name="openForDelivery">True if the store is open for delivery.</param>
+        /// <param name="openForPickup">True if the store is open for pickup.</param>
+        /// <param name="minimumPickupOrderAmount">Minimum pickup order amount.</param>
+        /// <param name="requireCustomerNameForPickup">True if customer name required for pickup orders.</param>
+        /// <param name="requireCustomerNameForDelivery">True if customer name required for delivery orders.</param>
+        /// <param name="microsoftTimeZone">Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391).</param>
+        /// <param name="ianaTimeZone">IANA Time Zone (https://www.iana.org/time-zones).</param>
+        /// <param name="name">Name.</param>
+        /// <param name="emailAddress">Email address (visible to customers).</param>
+        /// <param name="staffLanguage">Staff Language (used for communcation with the staff)  Emails, Printouts etc.</param>
+        public StoreBase(string phoneNumber = default(string), bool? preOrderEnabled = default(bool?), bool? takeOutEnabled = default(bool?), bool? tableServiceEnabled = default(bool?), bool? dineInEnabled = default(bool?), bool? allowPreOrdersAndTableService = default(bool?), bool? pickupEnabled = default(bool?), bool? deliveryEnabled = default(bool?), bool? cardOrderDeliveryEnabled = default(bool?), bool? cashOrdersDeliveryEnabled = default(bool?), bool? cardOrdersPickupEnabled = default(bool?), bool? cashOrdersPickupEnabled = default(bool?), bool? tipsEnabled = default(bool?), bool? automaticallyAcceptOrders = default(bool?), bool? openForDelivery = default(bool?), bool? openForPickup = default(bool?), double? minimumPickupOrderAmount = default(double?), bool? requireCustomerNameForPickup = default(bool?), bool? requireCustomerNameForDelivery = default(bool?), string microsoftTimeZone = default(string), string ianaTimeZone = default(string), string name = default(string), string emailAddress = default(string), string staffLanguage = default(string))
         {
-            this.PhoneNumber = PhoneNumber;
-            this.PreOrderEnabled = PreOrderEnabled;
-            this.TakeOutEnabled = TakeOutEnabled;
-            this.TableServiceEnabled = TableServiceEnabled;
-            this.DineInEnabled = DineInEnabled;
-            this.AllowPreOrdersAndTableService = AllowPreOrdersAndTableService;
-            this.PickupEnabled = PickupEnabled;
-            this.DeliveryEnabled = DeliveryEnabled;
-            this.CardOrderDeliveryEnabled = CardOrderDeliveryEnabled;
-            this.CashOrdersDeliveryEnabled = CashOrdersDeliveryEnabled;
-            this.CardOrdersPickupEnabled = CardOrdersPickupEnabled;
-            this.CashOrdersPickupEnabled = CashOrdersPickupEnabled;
-            this.TipsEnabled = TipsEnabled;
-            this.AutomaticallyAcceptOrders = AutomaticallyAcceptOrders;
-            this.OpenForDelivery = OpenForDelivery;
-            this.OpenForPickup = OpenForPickup;
-            this.MinimumPickupOrderAmount = MinimumPickupOrderAmount;
-            this.RequireCustomerNameForPickup = RequireCustomerNameForPickup;
-            this.RequireCustomerNameForDelivery = RequireCustomerNameForDelivery;
-            this.MicrosoftTimeZone = MicrosoftTimeZone;
-            this.IanaTimeZone = IanaTimeZone;
-            this.Name = Name;
-            this.EmailAddress = EmailAddress;
-            this.StaffLanguage = StaffLanguage;
+            this.PhoneNumber = phoneNumber;
+            this.PreOrderEnabled = preOrderEnabled;
+            this.TakeOutEnabled = takeOutEnabled;
+            this.TableServiceEnabled = tableServiceEnabled;
+            this.DineInEnabled = dineInEnabled;
+            this.AllowPreOrdersAndTableService = allowPreOrdersAndTableService;
+            this.PickupEnabled = pickupEnabled;
+            this.DeliveryEnabled = deliveryEnabled;
+            this.CardOrderDeliveryEnabled = cardOrderDeliveryEnabled;
+            this.CashOrdersDeliveryEnabled = cashOrdersDeliveryEnabled;
+            this.CardOrdersPickupEnabled = cardOrdersPickupEnabled;
+            this.CashOrdersPickupEnabled = cashOrdersPickupEnabled;
+            this.TipsEnabled = tipsEnabled;
+            this.AutomaticallyAcceptOrders = automaticallyAcceptOrders;
+            this.OpenForDelivery = openForDelivery;
+            this.OpenForPickup = openForPickup;
+            this.MinimumPickupOrderAmount = minimumPickupOrderAmount;
+            this.RequireCustomerNameForPickup = requireCustomerNameForPickup;
+            this.RequireCustomerNameForDelivery = requireCustomerNameForDelivery;
+            this.MicrosoftTimeZone = microsoftTimeZone;
+            this.IanaTimeZone = ianaTimeZone;
+            this.Name = name;
+            this.EmailAddress = emailAddress;
+            this.StaffLanguage = staffLanguage;
         }
         
         /// <summary>
@@ -293,7 +293,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

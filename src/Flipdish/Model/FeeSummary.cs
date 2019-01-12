@@ -33,14 +33,14 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FeeSummary" /> class.
         /// </summary>
-        /// <param name="FeeAmount">Fee amount.</param>
-        /// <param name="PercentageRate">Percentage rate.</param>
-        /// <param name="PerTransactionFee">Per transaction fee.</param>
-        public FeeSummary(double? FeeAmount = default(double?), double? PercentageRate = default(double?), double? PerTransactionFee = default(double?))
+        /// <param name="feeAmount">Fee amount.</param>
+        /// <param name="percentageRate">Percentage rate.</param>
+        /// <param name="perTransactionFee">Per transaction fee.</param>
+        public FeeSummary(double? feeAmount = default(double?), double? percentageRate = default(double?), double? perTransactionFee = default(double?))
         {
-            this.FeeAmount = FeeAmount;
-            this.PercentageRate = PercentageRate;
-            this.PerTransactionFee = PerTransactionFee;
+            this.FeeAmount = feeAmount;
+            this.PercentageRate = percentageRate;
+            this.PerTransactionFee = perTransactionFee;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

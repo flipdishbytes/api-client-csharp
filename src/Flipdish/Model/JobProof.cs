@@ -33,10 +33,10 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JobProof" /> class.
         /// </summary>
-        /// <param name="SignatureUrl">Signature Url.</param>
-        public JobProof(string SignatureUrl = default(string))
+        /// <param name="signatureUrl">Signature Url.</param>
+        public JobProof(string signatureUrl = default(string))
         {
-            this.SignatureUrl = SignatureUrl;
+            this.SignatureUrl = signatureUrl;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

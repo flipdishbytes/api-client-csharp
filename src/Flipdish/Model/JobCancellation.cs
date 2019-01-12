@@ -33,14 +33,14 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JobCancellation" /> class.
         /// </summary>
-        /// <param name="CanceledBy">Canceled By.</param>
-        /// <param name="ReasonKey">Reason Key.</param>
-        /// <param name="Comment">Comment.</param>
-        public JobCancellation(string CanceledBy = default(string), string ReasonKey = default(string), string Comment = default(string))
+        /// <param name="canceledBy">Canceled By.</param>
+        /// <param name="reasonKey">Reason Key.</param>
+        /// <param name="comment">Comment.</param>
+        public JobCancellation(string canceledBy = default(string), string reasonKey = default(string), string comment = default(string))
         {
-            this.CanceledBy = CanceledBy;
-            this.ReasonKey = ReasonKey;
-            this.Comment = Comment;
+            this.CanceledBy = canceledBy;
+            this.ReasonKey = reasonKey;
+            this.Comment = comment;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

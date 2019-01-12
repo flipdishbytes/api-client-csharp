@@ -111,26 +111,26 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuSectionItemBase" /> class.
         /// </summary>
-        /// <param name="Name">Menu item name (like \&quot;Korma\&quot;).</param>
-        /// <param name="Description">Description (like \&quot;A lovely dish from the east\&quot;).</param>
-        /// <param name="SpicinessRating">Spiciness rating.</param>
-        /// <param name="Price">Price - this is only used when there is no master option set and should be set to 0 if a master option set exists..</param>
-        /// <param name="DisplayOrder">Display order.</param>
-        /// <param name="Alcohol">To be set true if the item or an option of the item contains an alcoholic drink..</param>
-        /// <param name="IsAvailable">True if we accept orders for this item still.</param>
-        /// <param name="CellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
-        /// <param name="DisableVouchers">If true, then vouchers won&#39;t be applied for this item.</param>
-        public MenuSectionItemBase(string Name = default(string), string Description = default(string), SpicinessRatingEnum? SpicinessRating = default(SpicinessRatingEnum?), double? Price = default(double?), int? DisplayOrder = default(int?), bool? Alcohol = default(bool?), bool? IsAvailable = default(bool?), CellLayoutTypeEnum? CellLayoutType = default(CellLayoutTypeEnum?), bool? DisableVouchers = default(bool?))
+        /// <param name="name">Menu item name (like \&quot;Korma\&quot;).</param>
+        /// <param name="description">Description (like \&quot;A lovely dish from the east\&quot;).</param>
+        /// <param name="spicinessRating">Spiciness rating.</param>
+        /// <param name="price">Price - this is only used when there is no master option set and should be set to 0 if a master option set exists..</param>
+        /// <param name="displayOrder">Display order.</param>
+        /// <param name="alcohol">To be set true if the item or an option of the item contains an alcoholic drink..</param>
+        /// <param name="isAvailable">True if we accept orders for this item still.</param>
+        /// <param name="cellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
+        /// <param name="disableVouchers">If true, then vouchers won&#39;t be applied for this item.</param>
+        public MenuSectionItemBase(string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?))
         {
-            this.Name = Name;
-            this.Description = Description;
-            this.SpicinessRating = SpicinessRating;
-            this.Price = Price;
-            this.DisplayOrder = DisplayOrder;
-            this.Alcohol = Alcohol;
-            this.IsAvailable = IsAvailable;
-            this.CellLayoutType = CellLayoutType;
-            this.DisableVouchers = DisableVouchers;
+            this.Name = name;
+            this.Description = description;
+            this.SpicinessRating = spicinessRating;
+            this.Price = price;
+            this.DisplayOrder = displayOrder;
+            this.Alcohol = alcohol;
+            this.IsAvailable = isAvailable;
+            this.CellLayoutType = cellLayoutType;
+            this.DisableVouchers = disableVouchers;
         }
         
         /// <summary>
@@ -209,7 +209,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

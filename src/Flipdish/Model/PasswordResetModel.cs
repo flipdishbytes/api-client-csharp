@@ -38,32 +38,32 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PasswordResetModel" /> class.
         /// </summary>
-        /// <param name="Email">Email address.</param>
-        /// <param name="Password">Password (required).</param>
-        /// <param name="PasswordConfirmation">Password confirmation (required).</param>
-        /// <param name="Token">Password reset token.</param>
-        public PasswordResetModel(string Email = default(string), string Password = default(string), string PasswordConfirmation = default(string), string Token = default(string))
+        /// <param name="email">Email address.</param>
+        /// <param name="password">Password (required).</param>
+        /// <param name="passwordConfirmation">Password confirmation (required).</param>
+        /// <param name="token">Password reset token.</param>
+        public PasswordResetModel(string email = default(string), string password = default(string), string passwordConfirmation = default(string), string token = default(string))
         {
-            // to ensure "Password" is required (not null)
-            if (Password == null)
+            // to ensure "password" is required (not null)
+            if (password == null)
             {
-                throw new InvalidDataException("Password is a required property for PasswordResetModel and cannot be null");
+                throw new InvalidDataException("password is a required property for PasswordResetModel and cannot be null");
             }
             else
             {
-                this.Password = Password;
+                this.Password = password;
             }
-            // to ensure "PasswordConfirmation" is required (not null)
-            if (PasswordConfirmation == null)
+            // to ensure "passwordConfirmation" is required (not null)
+            if (passwordConfirmation == null)
             {
-                throw new InvalidDataException("PasswordConfirmation is a required property for PasswordResetModel and cannot be null");
+                throw new InvalidDataException("passwordConfirmation is a required property for PasswordResetModel and cannot be null");
             }
             else
             {
-                this.PasswordConfirmation = PasswordConfirmation;
+                this.PasswordConfirmation = passwordConfirmation;
             }
-            this.Email = Email;
-            this.Token = Token;
+            this.Email = email;
+            this.Token = token;
         }
         
         /// <summary>
@@ -114,7 +114,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

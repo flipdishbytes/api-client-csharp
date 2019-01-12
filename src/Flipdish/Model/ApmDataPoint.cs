@@ -33,14 +33,14 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApmDataPoint" /> class.
         /// </summary>
-        /// <param name="PeriodStart">Date from which the data point starts.</param>
-        /// <param name="PeriodLengthInDays">The length in days that this data point covers.</param>
-        /// <param name="Value">The value of this data point.</param>
-        public ApmDataPoint(DateTime? PeriodStart = default(DateTime?), int? PeriodLengthInDays = default(int?), int? Value = default(int?))
+        /// <param name="periodStart">Date from which the data point starts.</param>
+        /// <param name="periodLengthInDays">The length in days that this data point covers.</param>
+        /// <param name="value">The value of this data point.</param>
+        public ApmDataPoint(DateTime? periodStart = default(DateTime?), int? periodLengthInDays = default(int?), int? value = default(int?))
         {
-            this.PeriodStart = PeriodStart;
-            this.PeriodLengthInDays = PeriodLengthInDays;
-            this.Value = Value;
+            this.PeriodStart = periodStart;
+            this.PeriodLengthInDays = periodLengthInDays;
+            this.Value = value;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

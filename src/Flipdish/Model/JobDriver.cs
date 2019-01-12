@@ -33,22 +33,22 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JobDriver" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="DisplayName">Display Name.</param>
-        /// <param name="Phone">Phone.</param>
-        /// <param name="PictureUrl">Picture Url.</param>
-        /// <param name="TransportType">Transport Type.</param>
-        /// <param name="Latitude">Latitude.</param>
-        /// <param name="Longitude">Longitude.</param>
-        public JobDriver(int? Id = default(int?), string DisplayName = default(string), string Phone = default(string), string PictureUrl = default(string), string TransportType = default(string), double? Latitude = default(double?), double? Longitude = default(double?))
+        /// <param name="id">Id.</param>
+        /// <param name="displayName">Display Name.</param>
+        /// <param name="phone">Phone.</param>
+        /// <param name="pictureUrl">Picture Url.</param>
+        /// <param name="transportType">Transport Type.</param>
+        /// <param name="latitude">Latitude.</param>
+        /// <param name="longitude">Longitude.</param>
+        public JobDriver(int? id = default(int?), string displayName = default(string), string phone = default(string), string pictureUrl = default(string), string transportType = default(string), double? latitude = default(double?), double? longitude = default(double?))
         {
-            this.Id = Id;
-            this.DisplayName = DisplayName;
-            this.Phone = Phone;
-            this.PictureUrl = PictureUrl;
-            this.TransportType = TransportType;
-            this.Latitude = Latitude;
-            this.Longitude = Longitude;
+            this.Id = id;
+            this.DisplayName = displayName;
+            this.Phone = phone;
+            this.PictureUrl = pictureUrl;
+            this.TransportType = transportType;
+            this.Latitude = latitude;
+            this.Longitude = longitude;
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

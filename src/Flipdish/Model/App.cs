@@ -33,26 +33,26 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="App" /> class.
         /// </summary>
-        /// <param name="AppId">App Identifier.</param>
-        /// <param name="Name">App name.</param>
-        /// <param name="MapCenter">Center of the map coordinates.</param>
-        /// <param name="MapNorthEast">North East(Top Right) Corner of the map coordinates.</param>
-        /// <param name="MapSouthWest">South West (Bottom Left) Corner of the map coordinates.</param>
-        /// <param name="IconUrl">Icon url.</param>
-        /// <param name="IconThumbnailUrl">Icon thumbnail url.</param>
-        /// <param name="CountryId">Country identifier.</param>
-        /// <param name="AvailableAppLanguages">Available Languages for Apps\\Staff.</param>
-        public App(string AppId = default(string), string Name = default(string), Coordinates MapCenter = default(Coordinates), Coordinates MapNorthEast = default(Coordinates), Coordinates MapSouthWest = default(Coordinates), string IconUrl = default(string), string IconThumbnailUrl = default(string), string CountryId = default(string), List<Language> AvailableAppLanguages = default(List<Language>))
+        /// <param name="appId">App Identifier.</param>
+        /// <param name="name">App name.</param>
+        /// <param name="mapCenter">Center of the map coordinates.</param>
+        /// <param name="mapNorthEast">North East(Top Right) Corner of the map coordinates.</param>
+        /// <param name="mapSouthWest">South West (Bottom Left) Corner of the map coordinates.</param>
+        /// <param name="iconUrl">Icon url.</param>
+        /// <param name="iconThumbnailUrl">Icon thumbnail url.</param>
+        /// <param name="countryId">Country identifier.</param>
+        /// <param name="availableAppLanguages">Available Languages for Apps\\Staff.</param>
+        public App(string appId = default(string), string name = default(string), Coordinates mapCenter = default(Coordinates), Coordinates mapNorthEast = default(Coordinates), Coordinates mapSouthWest = default(Coordinates), string iconUrl = default(string), string iconThumbnailUrl = default(string), string countryId = default(string), List<Language> availableAppLanguages = default(List<Language>))
         {
-            this.AppId = AppId;
-            this.Name = Name;
-            this.MapCenter = MapCenter;
-            this.MapNorthEast = MapNorthEast;
-            this.MapSouthWest = MapSouthWest;
-            this.IconUrl = IconUrl;
-            this.IconThumbnailUrl = IconThumbnailUrl;
-            this.CountryId = CountryId;
-            this.AvailableAppLanguages = AvailableAppLanguages;
+            this.AppId = appId;
+            this.Name = name;
+            this.MapCenter = mapCenter;
+            this.MapNorthEast = mapNorthEast;
+            this.MapSouthWest = mapSouthWest;
+            this.IconUrl = iconUrl;
+            this.IconThumbnailUrl = iconThumbnailUrl;
+            this.CountryId = countryId;
+            this.AvailableAppLanguages = availableAppLanguages;
         }
         
         /// <summary>
@@ -143,7 +143,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

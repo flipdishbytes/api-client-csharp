@@ -98,34 +98,34 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessHoursOverride" /> class.
         /// </summary>
-        /// <param name="BusinessHoursOverrideId">Unique identifier.</param>
-        /// <param name="DeliveryType">Delivery or Pickup.</param>
-        /// <param name="StartTime">Date and time in ISO 8601 format. (required).</param>
-        /// <param name="EndTime">Date and time in ISO 8601 format. (required).</param>
-        /// <param name="Type">Open, Closed or ClosedAllowPreOrders.</param>
-        public BusinessHoursOverride(int? BusinessHoursOverrideId = default(int?), DeliveryTypeEnum? DeliveryType = default(DeliveryTypeEnum?), DateTime? StartTime = default(DateTime?), DateTime? EndTime = default(DateTime?), TypeEnum? Type = default(TypeEnum?))
+        /// <param name="businessHoursOverrideId">Unique identifier.</param>
+        /// <param name="deliveryType">Delivery or Pickup.</param>
+        /// <param name="startTime">Date and time in ISO 8601 format. (required).</param>
+        /// <param name="endTime">Date and time in ISO 8601 format. (required).</param>
+        /// <param name="type">Open, Closed or ClosedAllowPreOrders.</param>
+        public BusinessHoursOverride(int? businessHoursOverrideId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), DateTime? startTime = default(DateTime?), DateTime? endTime = default(DateTime?), TypeEnum? type = default(TypeEnum?))
         {
-            // to ensure "StartTime" is required (not null)
-            if (StartTime == null)
+            // to ensure "startTime" is required (not null)
+            if (startTime == null)
             {
-                throw new InvalidDataException("StartTime is a required property for BusinessHoursOverride and cannot be null");
+                throw new InvalidDataException("startTime is a required property for BusinessHoursOverride and cannot be null");
             }
             else
             {
-                this.StartTime = StartTime;
+                this.StartTime = startTime;
             }
-            // to ensure "EndTime" is required (not null)
-            if (EndTime == null)
+            // to ensure "endTime" is required (not null)
+            if (endTime == null)
             {
-                throw new InvalidDataException("EndTime is a required property for BusinessHoursOverride and cannot be null");
+                throw new InvalidDataException("endTime is a required property for BusinessHoursOverride and cannot be null");
             }
             else
             {
-                this.EndTime = EndTime;
+                this.EndTime = endTime;
             }
-            this.BusinessHoursOverrideId = BusinessHoursOverrideId;
-            this.DeliveryType = DeliveryType;
-            this.Type = Type;
+            this.BusinessHoursOverrideId = businessHoursOverrideId;
+            this.DeliveryType = deliveryType;
+            this.Type = type;
         }
         
         /// <summary>
@@ -172,7 +172,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

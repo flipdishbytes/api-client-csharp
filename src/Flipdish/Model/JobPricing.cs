@@ -33,20 +33,20 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JobPricing" /> class.
         /// </summary>
-        /// <param name="Currency">Currency.</param>
-        /// <param name="TaxPercentage">Tax Percentage.</param>
-        /// <param name="PriceTaxIncluded">Price Tax Included.</param>
-        /// <param name="PriceTaxExcluded">Price Tax Excluded.</param>
-        /// <param name="TaxAmount">Tax Amount.</param>
-        /// <param name="InvoiceUrl">Invoice Url.</param>
-        public JobPricing(string Currency = default(string), double? TaxPercentage = default(double?), double? PriceTaxIncluded = default(double?), double? PriceTaxExcluded = default(double?), double? TaxAmount = default(double?), string InvoiceUrl = default(string))
+        /// <param name="currency">Currency.</param>
+        /// <param name="taxPercentage">Tax Percentage.</param>
+        /// <param name="priceTaxIncluded">Price Tax Included.</param>
+        /// <param name="priceTaxExcluded">Price Tax Excluded.</param>
+        /// <param name="taxAmount">Tax Amount.</param>
+        /// <param name="invoiceUrl">Invoice Url.</param>
+        public JobPricing(string currency = default(string), double? taxPercentage = default(double?), double? priceTaxIncluded = default(double?), double? priceTaxExcluded = default(double?), double? taxAmount = default(double?), string invoiceUrl = default(string))
         {
-            this.Currency = Currency;
-            this.TaxPercentage = TaxPercentage;
-            this.PriceTaxIncluded = PriceTaxIncluded;
-            this.PriceTaxExcluded = PriceTaxExcluded;
-            this.TaxAmount = TaxAmount;
-            this.InvoiceUrl = InvoiceUrl;
+            this.Currency = currency;
+            this.TaxPercentage = taxPercentage;
+            this.PriceTaxIncluded = priceTaxIncluded;
+            this.PriceTaxExcluded = priceTaxExcluded;
+            this.TaxAmount = taxAmount;
+            this.InvoiceUrl = invoiceUrl;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

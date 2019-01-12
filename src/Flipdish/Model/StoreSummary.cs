@@ -720,20 +720,20 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreSummary" /> class.
         /// </summary>
-        /// <param name="Id">Store identifier.</param>
-        /// <param name="Name">Store name.</param>
-        /// <param name="MenuId">Stores menu identifier.</param>
-        /// <param name="Metadata">Store metadata.</param>
-        /// <param name="Currency">Currency which used by the Store.</param>
-        /// <param name="Coordinates">Latitude and longitude of the store.</param>
-        public StoreSummary(int? Id = default(int?), string Name = default(string), int? MenuId = default(int?), Dictionary<string, string> Metadata = default(Dictionary<string, string>), CurrencyEnum? Currency = default(CurrencyEnum?), Coordinates Coordinates = default(Coordinates))
+        /// <param name="id">Store identifier.</param>
+        /// <param name="name">Store name.</param>
+        /// <param name="menuId">Stores menu identifier.</param>
+        /// <param name="metadata">Store metadata.</param>
+        /// <param name="currency">Currency which used by the Store.</param>
+        /// <param name="coordinates">Latitude and longitude of the store.</param>
+        public StoreSummary(int? id = default(int?), string name = default(string), int? menuId = default(int?), Dictionary<string, string> metadata = default(Dictionary<string, string>), CurrencyEnum? currency = default(CurrencyEnum?), Coordinates coordinates = default(Coordinates))
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.MenuId = MenuId;
-            this.Metadata = Metadata;
-            this.Currency = Currency;
-            this.Coordinates = Coordinates;
+            this.Id = id;
+            this.Name = name;
+            this.MenuId = menuId;
+            this.Metadata = metadata;
+            this.Currency = currency;
+            this.Coordinates = coordinates;
         }
         
         /// <summary>
@@ -794,7 +794,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

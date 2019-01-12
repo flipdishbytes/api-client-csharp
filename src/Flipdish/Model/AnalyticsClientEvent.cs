@@ -33,30 +33,30 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsClientEvent" /> class.
         /// </summary>
-        /// <param name="EventName">The event name.</param>
-        /// <param name="EventType">Type of the event.</param>
-        /// <param name="AppId">Application Id.</param>
-        /// <param name="AppType">Type of the app the event is coming from.</param>
-        /// <param name="Metadata">JSON Metadata.</param>
-        /// <param name="UserId">User Id.</param>
-        /// <param name="Latitude">Latitude of the event.</param>
-        /// <param name="Longitude">Longitude of the event.</param>
-        /// <param name="FlipdishEventId">The identitfier of the event.</param>
-        /// <param name="CreateTime">The time of creation of the event.</param>
-        /// <param name="Position">Position.</param>
-        public AnalyticsClientEvent(string EventName = default(string), string EventType = default(string), string AppId = default(string), string AppType = default(string), string Metadata = default(string), int? UserId = default(int?), double? Latitude = default(double?), double? Longitude = default(double?), Guid? FlipdishEventId = default(Guid?), DateTime? CreateTime = default(DateTime?), int? Position = default(int?))
+        /// <param name="eventName">The event name.</param>
+        /// <param name="eventType">Type of the event.</param>
+        /// <param name="appId">Application Id.</param>
+        /// <param name="appType">Type of the app the event is coming from.</param>
+        /// <param name="metadata">JSON Metadata.</param>
+        /// <param name="userId">User Id.</param>
+        /// <param name="latitude">Latitude of the event.</param>
+        /// <param name="longitude">Longitude of the event.</param>
+        /// <param name="flipdishEventId">The identitfier of the event.</param>
+        /// <param name="createTime">The time of creation of the event.</param>
+        /// <param name="position">Position.</param>
+        public AnalyticsClientEvent(string eventName = default(string), string eventType = default(string), string appId = default(string), string appType = default(string), string metadata = default(string), int? userId = default(int?), double? latitude = default(double?), double? longitude = default(double?), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?))
         {
-            this.EventName = EventName;
-            this.EventType = EventType;
-            this.AppId = AppId;
-            this.AppType = AppType;
-            this.Metadata = Metadata;
-            this.UserId = UserId;
-            this.Latitude = Latitude;
-            this.Longitude = Longitude;
-            this.FlipdishEventId = FlipdishEventId;
-            this.CreateTime = CreateTime;
-            this.Position = Position;
+            this.EventName = eventName;
+            this.EventType = eventType;
+            this.AppId = appId;
+            this.AppType = appType;
+            this.Metadata = metadata;
+            this.UserId = userId;
+            this.Latitude = latitude;
+            this.Longitude = longitude;
+            this.FlipdishEventId = flipdishEventId;
+            this.CreateTime = createTime;
+            this.Position = position;
         }
         
         /// <summary>
@@ -163,7 +163,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -90,14 +90,14 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApmAverageHourlyDataPoint" /> class.
         /// </summary>
-        /// <param name="Day">Day of the week.</param>
-        /// <param name="Hour">Hour in the day.</param>
-        /// <param name="AverageValue">Average Value.</param>
-        public ApmAverageHourlyDataPoint(DayEnum? Day = default(DayEnum?), int? Hour = default(int?), double? AverageValue = default(double?))
+        /// <param name="day">Day of the week.</param>
+        /// <param name="hour">Hour in the day.</param>
+        /// <param name="averageValue">Average Value.</param>
+        public ApmAverageHourlyDataPoint(DayEnum? day = default(DayEnum?), int? hour = default(int?), double? averageValue = default(double?))
         {
-            this.Day = Day;
-            this.Hour = Hour;
-            this.AverageValue = AverageValue;
+            this.Day = day;
+            this.Hour = hour;
+            this.AverageValue = averageValue;
         }
         
 
@@ -134,7 +134,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,12 +33,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateAccountModel" /> class.
         /// </summary>
-        /// <param name="Name">Name of the user.</param>
-        /// <param name="Language">Language of the user.</param>
-        public UpdateAccountModel(string Name = default(string), string Language = default(string))
+        /// <param name="name">Name of the user.</param>
+        /// <param name="language">Language of the user.</param>
+        public UpdateAccountModel(string name = default(string), string language = default(string))
         {
-            this.Name = Name;
-            this.Language = Language;
+            this.Name = name;
+            this.Language = language;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

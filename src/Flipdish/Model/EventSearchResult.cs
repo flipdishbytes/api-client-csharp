@@ -33,122 +33,128 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EventSearchResult" /> class.
         /// </summary>
-        /// <param name="AnalyticsClientEvent">Client Analytics events.</param>
-        /// <param name="OrderAcceptedEvent">Order accepted events.</param>
-        /// <param name="OrderCreatedEvent">Order created events.</param>
-        /// <param name="OrderRatingUpdatedEvent">Order rating updated events.</param>
-        /// <param name="OrderRefundedEvent">Order refunded events.</param>
-        /// <param name="OrderRejectedEvent">Order rejected events.</param>
-        /// <param name="OrderTipUpdatedEvent">Order tip updated events.</param>
-        /// <param name="StoreCreatedEvent">Store created events.</param>
-        /// <param name="StoreDeletedEvent">Store deleted events.</param>
-        /// <param name="StoreAddressUpdatedEvent">Store address updated events.</param>
-        /// <param name="DeliveryZoneCreatedEvent">Store delivery zone created events.</param>
-        /// <param name="DeliveryZoneUpdatedEvent">Store delivery zone updated events.</param>
-        /// <param name="DeliveryZoneDeletedEvent">Store delivery zone deleted events.</param>
-        /// <param name="StoreOpeningHoursUpdatedEvent">Store opening hours updated events.</param>
-        /// <param name="StoreBusinessHoursOverrideCreatedEvent">Store business hours override created events.</param>
-        /// <param name="StoreBusinessHoursOverrideDeletedEvent">Store business hours override deleted events.</param>
-        /// <param name="StoreUpdatedEvent">Store updated events.</param>
-        /// <param name="MenuCreatedEvent">Menu created events.</param>
-        /// <param name="MenuUpdatedEvent">Menu updated events.</param>
-        /// <param name="MenuSectionCreatedEvent">Menu section created events.</param>
-        /// <param name="MenuSectionUpdatedEvent">Menu section updated events.</param>
-        /// <param name="MenuSectionDeletedEvent">Menu section deleted events.</param>
-        /// <param name="MenuSectionItemCreatedEvent">Menu section item created events.</param>
-        /// <param name="MenuSectionItemUpdatedEvent">Menu section item updated events.</param>
-        /// <param name="MenuSectionItemDeletedEvent">Menu section item deleted events.</param>
-        /// <param name="MenuItemOptionSetCreatedEvent">Menu item option set created events.</param>
-        /// <param name="MenuItemOptionSetUpdatedEvent">Menu item option set  updated events.</param>
-        /// <param name="MenuItemOptionSetDeletedEvent">Menu item option set deleted events.</param>
-        /// <param name="MenuItemOptionSetItemCreatedEvent">Menu item option set item created events.</param>
-        /// <param name="MenuItemOptionSetItemUpdatedEvent">Menu item option set item updated events.</param>
-        /// <param name="MenuItemOptionSetItemDeletedEvent">Menu item option set item deleted events.</param>
-        /// <param name="StoreGroupCreatedEvent">Store group created events.</param>
-        /// <param name="StoreGroupUpdatedEvent">Store group updated events.</param>
-        /// <param name="StoreGroupDeletedEvent">Store group deleted events.</param>
-        /// <param name="CustomerCreatedEvent">Customer created events.</param>
-        /// <param name="CustomerUpdatedEvent">Customer updated events.</param>
-        /// <param name="CustomerConsentUpdatedEvent">Customer consent updated events.</param>
-        /// <param name="WebhookSubscriptionCreatedEvent">Webhook subscription created events.</param>
-        /// <param name="WebhookSubscriptionUpdatedEvent">Webhook subscription updated events.</param>
-        /// <param name="WebhookSubscriptionDeletedEvent">Webhook subscription deleted events.</param>
-        /// <param name="PrinterTurnedOnEvent">Printer turned ON event.</param>
-        /// <param name="PrinterTurnedOffEvent">Printer turned OFF event.</param>
-        /// <param name="PrinterAssignedToStoreEvent">Printer assigned to store event.</param>
-        /// <param name="PrinterUnassignedFromStoreEvent">Printer unassigned from store event.</param>
-        /// <param name="PhoneCallStartedEvent">Phone call started event.</param>
-        /// <param name="PhoneCallEndedEvent">Phone call ended event.</param>
-        /// <param name="LoyaltyCampaignCreatedEvent">Loyalty campaign created event.</param>
-        /// <param name="LoyaltyCampaignDeletedEvent">Loyalty campaign deleted event.</param>
-        /// <param name="LoyaltyCampaignUpdatedEvent">Loyalty campaign updated event.</param>
-        /// <param name="RetentionCampaignCreatedEvent">Retention campaign created event.</param>
-        /// <param name="RetentionCampaignDeletedEvent">Retention campaign deleted event.</param>
-        /// <param name="RetentionCampaignUpdatedEvent">Retention campaign updated event.</param>
-        /// <param name="SmsReceivedEvent">Sms received event.</param>
-        /// <param name="UserLoginEvent">User login event.</param>
-        /// <param name="UserCreatedEvent">User created event.</param>
-        /// <param name="UserUpdatedEvent">User updated event.</param>
-        /// <param name="UserDeletedEvent">User deleted event.</param>
-        public EventSearchResult(List<AnalyticsClientEvent> AnalyticsClientEvent = default(List<AnalyticsClientEvent>), List<OrderAcceptedEvent> OrderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderCreatedEvent> OrderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> OrderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> OrderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> OrderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> OrderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<StoreCreatedEvent> StoreCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> StoreDeletedEvent = default(List<StoreDeletedEvent>), List<StoreAddressUpdatedEvent> StoreAddressUpdatedEvent = default(List<StoreAddressUpdatedEvent>), List<DeliveryZoneCreatedEvent> DeliveryZoneCreatedEvent = default(List<DeliveryZoneCreatedEvent>), List<DeliveryZoneUpdatedEvent> DeliveryZoneUpdatedEvent = default(List<DeliveryZoneUpdatedEvent>), List<DeliveryZoneDeletedEvent> DeliveryZoneDeletedEvent = default(List<DeliveryZoneDeletedEvent>), List<StoreOpeningHoursUpdatedEvent> StoreOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreBusinessHoursOverrideCreatedEvent> StoreBusinessHoursOverrideCreatedEvent = default(List<StoreBusinessHoursOverrideCreatedEvent>), List<StoreBusinessHoursOverrideDeletedEvent> StoreBusinessHoursOverrideDeletedEvent = default(List<StoreBusinessHoursOverrideDeletedEvent>), List<StoreUpdatedEvent> StoreUpdatedEvent = default(List<StoreUpdatedEvent>), List<MenuCreatedEvent> MenuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> MenuUpdatedEvent = default(List<MenuUpdatedEvent>), List<MenuSectionCreatedEvent> MenuSectionCreatedEvent = default(List<MenuSectionCreatedEvent>), List<MenuSectionUpdatedEvent> MenuSectionUpdatedEvent = default(List<MenuSectionUpdatedEvent>), List<MenuSectionDeletedEvent> MenuSectionDeletedEvent = default(List<MenuSectionDeletedEvent>), List<MenuSectionItemCreatedEvent> MenuSectionItemCreatedEvent = default(List<MenuSectionItemCreatedEvent>), List<MenuSectionItemUpdatedEvent> MenuSectionItemUpdatedEvent = default(List<MenuSectionItemUpdatedEvent>), List<MenuSectionItemDeletedEvent> MenuSectionItemDeletedEvent = default(List<MenuSectionItemDeletedEvent>), List<MenuItemOptionSetCreatedEvent> MenuItemOptionSetCreatedEvent = default(List<MenuItemOptionSetCreatedEvent>), List<MenuItemOptionSetUpdatedEvent> MenuItemOptionSetUpdatedEvent = default(List<MenuItemOptionSetUpdatedEvent>), List<MenuItemOptionSetDeletedEvent> MenuItemOptionSetDeletedEvent = default(List<MenuItemOptionSetDeletedEvent>), List<MenuItemOptionSetItemCreatedEvent> MenuItemOptionSetItemCreatedEvent = default(List<MenuItemOptionSetItemCreatedEvent>), List<MenuItemOptionSetItemUpdatedEvent> MenuItemOptionSetItemUpdatedEvent = default(List<MenuItemOptionSetItemUpdatedEvent>), List<MenuItemOptionSetItemDeletedEvent> MenuItemOptionSetItemDeletedEvent = default(List<MenuItemOptionSetItemDeletedEvent>), List<StoreGroupCreatedEvent> StoreGroupCreatedEvent = default(List<StoreGroupCreatedEvent>), List<StoreGroupUpdatedEvent> StoreGroupUpdatedEvent = default(List<StoreGroupUpdatedEvent>), List<StoreGroupDeletedEvent> StoreGroupDeletedEvent = default(List<StoreGroupDeletedEvent>), List<CustomerCreatedEvent> CustomerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> CustomerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> CustomerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<WebhookSubscriptionCreatedEvent> WebhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> WebhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> WebhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>), List<PrinterTurnedOnEvent> PrinterTurnedOnEvent = default(List<PrinterTurnedOnEvent>), List<PrinterTurnedOffEvent> PrinterTurnedOffEvent = default(List<PrinterTurnedOffEvent>), List<PrinterAssignedToStoreEvent> PrinterAssignedToStoreEvent = default(List<PrinterAssignedToStoreEvent>), List<PrinterUnassignedFromStoreEvent> PrinterUnassignedFromStoreEvent = default(List<PrinterUnassignedFromStoreEvent>), List<PhoneCallStartedEvent> PhoneCallStartedEvent = default(List<PhoneCallStartedEvent>), List<PhoneCallEndedEvent> PhoneCallEndedEvent = default(List<PhoneCallEndedEvent>), List<LoyaltyCampaignCreatedEvent> LoyaltyCampaignCreatedEvent = default(List<LoyaltyCampaignCreatedEvent>), List<LoyaltyCampaignDeletedEvent> LoyaltyCampaignDeletedEvent = default(List<LoyaltyCampaignDeletedEvent>), List<LoyaltyCampaignUpdatedEvent> LoyaltyCampaignUpdatedEvent = default(List<LoyaltyCampaignUpdatedEvent>), List<RetentionCampaignCreatedEvent> RetentionCampaignCreatedEvent = default(List<RetentionCampaignCreatedEvent>), List<RetentionCampaignDeletedEvent> RetentionCampaignDeletedEvent = default(List<RetentionCampaignDeletedEvent>), List<RetentionCampaignUpdatedEvent> RetentionCampaignUpdatedEvent = default(List<RetentionCampaignUpdatedEvent>), List<SmsReceivedEvent> SmsReceivedEvent = default(List<SmsReceivedEvent>), List<UserLoginEvent> UserLoginEvent = default(List<UserLoginEvent>), List<UserCreatedEvent> UserCreatedEvent = default(List<UserCreatedEvent>), List<UserUpdatedEvent> UserUpdatedEvent = default(List<UserUpdatedEvent>), List<UserDeletedEvent> UserDeletedEvent = default(List<UserDeletedEvent>))
+        /// <param name="analyticsClientEvent">Client Analytics events.</param>
+        /// <param name="orderAcceptedEvent">Order accepted events.</param>
+        /// <param name="orderCreatedEvent">Order created events.</param>
+        /// <param name="orderRatingUpdatedEvent">Order rating updated events.</param>
+        /// <param name="orderRefundedEvent">Order refunded events.</param>
+        /// <param name="orderRejectedEvent">Order rejected events.</param>
+        /// <param name="orderTipUpdatedEvent">Order tip updated events.</param>
+        /// <param name="storeCreatedEvent">Store created events.</param>
+        /// <param name="storeDeletedEvent">Store deleted events.</param>
+        /// <param name="storeAddressUpdatedEvent">Store address updated events.</param>
+        /// <param name="deliveryZoneCreatedEvent">Store delivery zone created events.</param>
+        /// <param name="deliveryZoneUpdatedEvent">Store delivery zone updated events.</param>
+        /// <param name="deliveryZoneDeletedEvent">Store delivery zone deleted events.</param>
+        /// <param name="storeOpeningHoursUpdatedEvent">Store opening hours updated events.</param>
+        /// <param name="storeBusinessHoursOverrideCreatedEvent">Store business hours override created events.</param>
+        /// <param name="storeBusinessHoursOverrideDeletedEvent">Store business hours override deleted events.</param>
+        /// <param name="storeUpdatedEvent">Store updated events.</param>
+        /// <param name="menuCreatedEvent">Menu created events.</param>
+        /// <param name="menuUpdatedEvent">Menu updated events.</param>
+        /// <param name="menuSectionCreatedEvent">Menu section created events.</param>
+        /// <param name="menuSectionUpdatedEvent">Menu section updated events.</param>
+        /// <param name="menuSectionDeletedEvent">Menu section deleted events.</param>
+        /// <param name="menuSectionItemCreatedEvent">Menu section item created events.</param>
+        /// <param name="menuSectionItemUpdatedEvent">Menu section item updated events.</param>
+        /// <param name="menuSectionItemDeletedEvent">Menu section item deleted events.</param>
+        /// <param name="menuItemOptionSetCreatedEvent">Menu item option set created events.</param>
+        /// <param name="menuItemOptionSetUpdatedEvent">Menu item option set  updated events.</param>
+        /// <param name="menuItemOptionSetDeletedEvent">Menu item option set deleted events.</param>
+        /// <param name="menuItemOptionSetItemCreatedEvent">Menu item option set item created events.</param>
+        /// <param name="menuItemOptionSetItemUpdatedEvent">Menu item option set item updated events.</param>
+        /// <param name="menuItemOptionSetItemDeletedEvent">Menu item option set item deleted events.</param>
+        /// <param name="storeGroupCreatedEvent">Store group created events.</param>
+        /// <param name="storeGroupUpdatedEvent">Store group updated events.</param>
+        /// <param name="storeGroupDeletedEvent">Store group deleted events.</param>
+        /// <param name="customerCreatedEvent">Customer created events.</param>
+        /// <param name="customerUpdatedEvent">Customer updated events.</param>
+        /// <param name="customerConsentUpdatedEvent">Customer consent updated events.</param>
+        /// <param name="webhookSubscriptionCreatedEvent">Webhook subscription created events.</param>
+        /// <param name="webhookSubscriptionUpdatedEvent">Webhook subscription updated events.</param>
+        /// <param name="webhookSubscriptionDeletedEvent">Webhook subscription deleted events.</param>
+        /// <param name="printerTurnedOnEvent">Printer turned ON event.</param>
+        /// <param name="printerTurnedOffEvent">Printer turned OFF event.</param>
+        /// <param name="printerAssignedToStoreEvent">Printer assigned to store event.</param>
+        /// <param name="printerUnassignedFromStoreEvent">Printer unassigned from store event.</param>
+        /// <param name="phoneCallStartedEvent">Phone call started event.</param>
+        /// <param name="phoneCallEndedEvent">Phone call ended event.</param>
+        /// <param name="loyaltyCampaignCreatedEvent">Loyalty campaign created event.</param>
+        /// <param name="loyaltyCampaignDeletedEvent">Loyalty campaign deleted event.</param>
+        /// <param name="loyaltyCampaignUpdatedEvent">Loyalty campaign updated event.</param>
+        /// <param name="retentionCampaignCreatedEvent">Retention campaign created event.</param>
+        /// <param name="retentionCampaignDeletedEvent">Retention campaign deleted event.</param>
+        /// <param name="retentionCampaignUpdatedEvent">Retention campaign updated event.</param>
+        /// <param name="smsReceivedEvent">Sms received event.</param>
+        /// <param name="userLoginEvent">User login event.</param>
+        /// <param name="userCreatedEvent">User created event.</param>
+        /// <param name="userUpdatedEvent">User updated event.</param>
+        /// <param name="userDeletedEvent">User deleted event.</param>
+        /// <param name="voucherCreatedEvent">Voucher created event.</param>
+        /// <param name="voucherUpdatedEvent">Voucher updated event.</param>
+        /// <param name="voucherDeletedEvent">Voucher deleted event.</param>
+        public EventSearchResult(List<AnalyticsClientEvent> analyticsClientEvent = default(List<AnalyticsClientEvent>), List<OrderAcceptedEvent> orderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderCreatedEvent> orderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> orderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> orderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> orderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> orderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<StoreCreatedEvent> storeCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> storeDeletedEvent = default(List<StoreDeletedEvent>), List<StoreAddressUpdatedEvent> storeAddressUpdatedEvent = default(List<StoreAddressUpdatedEvent>), List<DeliveryZoneCreatedEvent> deliveryZoneCreatedEvent = default(List<DeliveryZoneCreatedEvent>), List<DeliveryZoneUpdatedEvent> deliveryZoneUpdatedEvent = default(List<DeliveryZoneUpdatedEvent>), List<DeliveryZoneDeletedEvent> deliveryZoneDeletedEvent = default(List<DeliveryZoneDeletedEvent>), List<StoreOpeningHoursUpdatedEvent> storeOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreBusinessHoursOverrideCreatedEvent> storeBusinessHoursOverrideCreatedEvent = default(List<StoreBusinessHoursOverrideCreatedEvent>), List<StoreBusinessHoursOverrideDeletedEvent> storeBusinessHoursOverrideDeletedEvent = default(List<StoreBusinessHoursOverrideDeletedEvent>), List<StoreUpdatedEvent> storeUpdatedEvent = default(List<StoreUpdatedEvent>), List<MenuCreatedEvent> menuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> menuUpdatedEvent = default(List<MenuUpdatedEvent>), List<MenuSectionCreatedEvent> menuSectionCreatedEvent = default(List<MenuSectionCreatedEvent>), List<MenuSectionUpdatedEvent> menuSectionUpdatedEvent = default(List<MenuSectionUpdatedEvent>), List<MenuSectionDeletedEvent> menuSectionDeletedEvent = default(List<MenuSectionDeletedEvent>), List<MenuSectionItemCreatedEvent> menuSectionItemCreatedEvent = default(List<MenuSectionItemCreatedEvent>), List<MenuSectionItemUpdatedEvent> menuSectionItemUpdatedEvent = default(List<MenuSectionItemUpdatedEvent>), List<MenuSectionItemDeletedEvent> menuSectionItemDeletedEvent = default(List<MenuSectionItemDeletedEvent>), List<MenuItemOptionSetCreatedEvent> menuItemOptionSetCreatedEvent = default(List<MenuItemOptionSetCreatedEvent>), List<MenuItemOptionSetUpdatedEvent> menuItemOptionSetUpdatedEvent = default(List<MenuItemOptionSetUpdatedEvent>), List<MenuItemOptionSetDeletedEvent> menuItemOptionSetDeletedEvent = default(List<MenuItemOptionSetDeletedEvent>), List<MenuItemOptionSetItemCreatedEvent> menuItemOptionSetItemCreatedEvent = default(List<MenuItemOptionSetItemCreatedEvent>), List<MenuItemOptionSetItemUpdatedEvent> menuItemOptionSetItemUpdatedEvent = default(List<MenuItemOptionSetItemUpdatedEvent>), List<MenuItemOptionSetItemDeletedEvent> menuItemOptionSetItemDeletedEvent = default(List<MenuItemOptionSetItemDeletedEvent>), List<StoreGroupCreatedEvent> storeGroupCreatedEvent = default(List<StoreGroupCreatedEvent>), List<StoreGroupUpdatedEvent> storeGroupUpdatedEvent = default(List<StoreGroupUpdatedEvent>), List<StoreGroupDeletedEvent> storeGroupDeletedEvent = default(List<StoreGroupDeletedEvent>), List<CustomerCreatedEvent> customerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> customerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> customerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<WebhookSubscriptionCreatedEvent> webhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> webhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> webhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>), List<PrinterTurnedOnEvent> printerTurnedOnEvent = default(List<PrinterTurnedOnEvent>), List<PrinterTurnedOffEvent> printerTurnedOffEvent = default(List<PrinterTurnedOffEvent>), List<PrinterAssignedToStoreEvent> printerAssignedToStoreEvent = default(List<PrinterAssignedToStoreEvent>), List<PrinterUnassignedFromStoreEvent> printerUnassignedFromStoreEvent = default(List<PrinterUnassignedFromStoreEvent>), List<PhoneCallStartedEvent> phoneCallStartedEvent = default(List<PhoneCallStartedEvent>), List<PhoneCallEndedEvent> phoneCallEndedEvent = default(List<PhoneCallEndedEvent>), List<LoyaltyCampaignCreatedEvent> loyaltyCampaignCreatedEvent = default(List<LoyaltyCampaignCreatedEvent>), List<LoyaltyCampaignDeletedEvent> loyaltyCampaignDeletedEvent = default(List<LoyaltyCampaignDeletedEvent>), List<LoyaltyCampaignUpdatedEvent> loyaltyCampaignUpdatedEvent = default(List<LoyaltyCampaignUpdatedEvent>), List<RetentionCampaignCreatedEvent> retentionCampaignCreatedEvent = default(List<RetentionCampaignCreatedEvent>), List<RetentionCampaignDeletedEvent> retentionCampaignDeletedEvent = default(List<RetentionCampaignDeletedEvent>), List<RetentionCampaignUpdatedEvent> retentionCampaignUpdatedEvent = default(List<RetentionCampaignUpdatedEvent>), List<SmsReceivedEvent> smsReceivedEvent = default(List<SmsReceivedEvent>), List<UserLoginEvent> userLoginEvent = default(List<UserLoginEvent>), List<UserCreatedEvent> userCreatedEvent = default(List<UserCreatedEvent>), List<UserUpdatedEvent> userUpdatedEvent = default(List<UserUpdatedEvent>), List<UserDeletedEvent> userDeletedEvent = default(List<UserDeletedEvent>), List<VoucherCreatedEvent> voucherCreatedEvent = default(List<VoucherCreatedEvent>), List<VoucherUpdatedEvent> voucherUpdatedEvent = default(List<VoucherUpdatedEvent>), List<VoucherDeletedEvent> voucherDeletedEvent = default(List<VoucherDeletedEvent>))
         {
-            this.AnalyticsClientEvent = AnalyticsClientEvent;
-            this.OrderAcceptedEvent = OrderAcceptedEvent;
-            this.OrderCreatedEvent = OrderCreatedEvent;
-            this.OrderRatingUpdatedEvent = OrderRatingUpdatedEvent;
-            this.OrderRefundedEvent = OrderRefundedEvent;
-            this.OrderRejectedEvent = OrderRejectedEvent;
-            this.OrderTipUpdatedEvent = OrderTipUpdatedEvent;
-            this.StoreCreatedEvent = StoreCreatedEvent;
-            this.StoreDeletedEvent = StoreDeletedEvent;
-            this.StoreAddressUpdatedEvent = StoreAddressUpdatedEvent;
-            this.DeliveryZoneCreatedEvent = DeliveryZoneCreatedEvent;
-            this.DeliveryZoneUpdatedEvent = DeliveryZoneUpdatedEvent;
-            this.DeliveryZoneDeletedEvent = DeliveryZoneDeletedEvent;
-            this.StoreOpeningHoursUpdatedEvent = StoreOpeningHoursUpdatedEvent;
-            this.StoreBusinessHoursOverrideCreatedEvent = StoreBusinessHoursOverrideCreatedEvent;
-            this.StoreBusinessHoursOverrideDeletedEvent = StoreBusinessHoursOverrideDeletedEvent;
-            this.StoreUpdatedEvent = StoreUpdatedEvent;
-            this.MenuCreatedEvent = MenuCreatedEvent;
-            this.MenuUpdatedEvent = MenuUpdatedEvent;
-            this.MenuSectionCreatedEvent = MenuSectionCreatedEvent;
-            this.MenuSectionUpdatedEvent = MenuSectionUpdatedEvent;
-            this.MenuSectionDeletedEvent = MenuSectionDeletedEvent;
-            this.MenuSectionItemCreatedEvent = MenuSectionItemCreatedEvent;
-            this.MenuSectionItemUpdatedEvent = MenuSectionItemUpdatedEvent;
-            this.MenuSectionItemDeletedEvent = MenuSectionItemDeletedEvent;
-            this.MenuItemOptionSetCreatedEvent = MenuItemOptionSetCreatedEvent;
-            this.MenuItemOptionSetUpdatedEvent = MenuItemOptionSetUpdatedEvent;
-            this.MenuItemOptionSetDeletedEvent = MenuItemOptionSetDeletedEvent;
-            this.MenuItemOptionSetItemCreatedEvent = MenuItemOptionSetItemCreatedEvent;
-            this.MenuItemOptionSetItemUpdatedEvent = MenuItemOptionSetItemUpdatedEvent;
-            this.MenuItemOptionSetItemDeletedEvent = MenuItemOptionSetItemDeletedEvent;
-            this.StoreGroupCreatedEvent = StoreGroupCreatedEvent;
-            this.StoreGroupUpdatedEvent = StoreGroupUpdatedEvent;
-            this.StoreGroupDeletedEvent = StoreGroupDeletedEvent;
-            this.CustomerCreatedEvent = CustomerCreatedEvent;
-            this.CustomerUpdatedEvent = CustomerUpdatedEvent;
-            this.CustomerConsentUpdatedEvent = CustomerConsentUpdatedEvent;
-            this.WebhookSubscriptionCreatedEvent = WebhookSubscriptionCreatedEvent;
-            this.WebhookSubscriptionUpdatedEvent = WebhookSubscriptionUpdatedEvent;
-            this.WebhookSubscriptionDeletedEvent = WebhookSubscriptionDeletedEvent;
-            this.PrinterTurnedOnEvent = PrinterTurnedOnEvent;
-            this.PrinterTurnedOffEvent = PrinterTurnedOffEvent;
-            this.PrinterAssignedToStoreEvent = PrinterAssignedToStoreEvent;
-            this.PrinterUnassignedFromStoreEvent = PrinterUnassignedFromStoreEvent;
-            this.PhoneCallStartedEvent = PhoneCallStartedEvent;
-            this.PhoneCallEndedEvent = PhoneCallEndedEvent;
-            this.LoyaltyCampaignCreatedEvent = LoyaltyCampaignCreatedEvent;
-            this.LoyaltyCampaignDeletedEvent = LoyaltyCampaignDeletedEvent;
-            this.LoyaltyCampaignUpdatedEvent = LoyaltyCampaignUpdatedEvent;
-            this.RetentionCampaignCreatedEvent = RetentionCampaignCreatedEvent;
-            this.RetentionCampaignDeletedEvent = RetentionCampaignDeletedEvent;
-            this.RetentionCampaignUpdatedEvent = RetentionCampaignUpdatedEvent;
-            this.SmsReceivedEvent = SmsReceivedEvent;
-            this.UserLoginEvent = UserLoginEvent;
-            this.UserCreatedEvent = UserCreatedEvent;
-            this.UserUpdatedEvent = UserUpdatedEvent;
-            this.UserDeletedEvent = UserDeletedEvent;
+            this.AnalyticsClientEvent = analyticsClientEvent;
+            this.OrderAcceptedEvent = orderAcceptedEvent;
+            this.OrderCreatedEvent = orderCreatedEvent;
+            this.OrderRatingUpdatedEvent = orderRatingUpdatedEvent;
+            this.OrderRefundedEvent = orderRefundedEvent;
+            this.OrderRejectedEvent = orderRejectedEvent;
+            this.OrderTipUpdatedEvent = orderTipUpdatedEvent;
+            this.StoreCreatedEvent = storeCreatedEvent;
+            this.StoreDeletedEvent = storeDeletedEvent;
+            this.StoreAddressUpdatedEvent = storeAddressUpdatedEvent;
+            this.DeliveryZoneCreatedEvent = deliveryZoneCreatedEvent;
+            this.DeliveryZoneUpdatedEvent = deliveryZoneUpdatedEvent;
+            this.DeliveryZoneDeletedEvent = deliveryZoneDeletedEvent;
+            this.StoreOpeningHoursUpdatedEvent = storeOpeningHoursUpdatedEvent;
+            this.StoreBusinessHoursOverrideCreatedEvent = storeBusinessHoursOverrideCreatedEvent;
+            this.StoreBusinessHoursOverrideDeletedEvent = storeBusinessHoursOverrideDeletedEvent;
+            this.StoreUpdatedEvent = storeUpdatedEvent;
+            this.MenuCreatedEvent = menuCreatedEvent;
+            this.MenuUpdatedEvent = menuUpdatedEvent;
+            this.MenuSectionCreatedEvent = menuSectionCreatedEvent;
+            this.MenuSectionUpdatedEvent = menuSectionUpdatedEvent;
+            this.MenuSectionDeletedEvent = menuSectionDeletedEvent;
+            this.MenuSectionItemCreatedEvent = menuSectionItemCreatedEvent;
+            this.MenuSectionItemUpdatedEvent = menuSectionItemUpdatedEvent;
+            this.MenuSectionItemDeletedEvent = menuSectionItemDeletedEvent;
+            this.MenuItemOptionSetCreatedEvent = menuItemOptionSetCreatedEvent;
+            this.MenuItemOptionSetUpdatedEvent = menuItemOptionSetUpdatedEvent;
+            this.MenuItemOptionSetDeletedEvent = menuItemOptionSetDeletedEvent;
+            this.MenuItemOptionSetItemCreatedEvent = menuItemOptionSetItemCreatedEvent;
+            this.MenuItemOptionSetItemUpdatedEvent = menuItemOptionSetItemUpdatedEvent;
+            this.MenuItemOptionSetItemDeletedEvent = menuItemOptionSetItemDeletedEvent;
+            this.StoreGroupCreatedEvent = storeGroupCreatedEvent;
+            this.StoreGroupUpdatedEvent = storeGroupUpdatedEvent;
+            this.StoreGroupDeletedEvent = storeGroupDeletedEvent;
+            this.CustomerCreatedEvent = customerCreatedEvent;
+            this.CustomerUpdatedEvent = customerUpdatedEvent;
+            this.CustomerConsentUpdatedEvent = customerConsentUpdatedEvent;
+            this.WebhookSubscriptionCreatedEvent = webhookSubscriptionCreatedEvent;
+            this.WebhookSubscriptionUpdatedEvent = webhookSubscriptionUpdatedEvent;
+            this.WebhookSubscriptionDeletedEvent = webhookSubscriptionDeletedEvent;
+            this.PrinterTurnedOnEvent = printerTurnedOnEvent;
+            this.PrinterTurnedOffEvent = printerTurnedOffEvent;
+            this.PrinterAssignedToStoreEvent = printerAssignedToStoreEvent;
+            this.PrinterUnassignedFromStoreEvent = printerUnassignedFromStoreEvent;
+            this.PhoneCallStartedEvent = phoneCallStartedEvent;
+            this.PhoneCallEndedEvent = phoneCallEndedEvent;
+            this.LoyaltyCampaignCreatedEvent = loyaltyCampaignCreatedEvent;
+            this.LoyaltyCampaignDeletedEvent = loyaltyCampaignDeletedEvent;
+            this.LoyaltyCampaignUpdatedEvent = loyaltyCampaignUpdatedEvent;
+            this.RetentionCampaignCreatedEvent = retentionCampaignCreatedEvent;
+            this.RetentionCampaignDeletedEvent = retentionCampaignDeletedEvent;
+            this.RetentionCampaignUpdatedEvent = retentionCampaignUpdatedEvent;
+            this.SmsReceivedEvent = smsReceivedEvent;
+            this.UserLoginEvent = userLoginEvent;
+            this.UserCreatedEvent = userCreatedEvent;
+            this.UserUpdatedEvent = userUpdatedEvent;
+            this.UserDeletedEvent = userDeletedEvent;
+            this.VoucherCreatedEvent = voucherCreatedEvent;
+            this.VoucherUpdatedEvent = voucherUpdatedEvent;
+            this.VoucherDeletedEvent = voucherDeletedEvent;
         }
         
         /// <summary>
@@ -551,6 +557,27 @@ namespace Flipdish.Model
         public List<UserDeletedEvent> UserDeletedEvent { get; set; }
 
         /// <summary>
+        /// Voucher created event
+        /// </summary>
+        /// <value>Voucher created event</value>
+        [DataMember(Name="VoucherCreatedEvent", EmitDefaultValue=false)]
+        public List<VoucherCreatedEvent> VoucherCreatedEvent { get; set; }
+
+        /// <summary>
+        /// Voucher updated event
+        /// </summary>
+        /// <value>Voucher updated event</value>
+        [DataMember(Name="VoucherUpdatedEvent", EmitDefaultValue=false)]
+        public List<VoucherUpdatedEvent> VoucherUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// Voucher deleted event
+        /// </summary>
+        /// <value>Voucher deleted event</value>
+        [DataMember(Name="VoucherDeletedEvent", EmitDefaultValue=false)]
+        public List<VoucherDeletedEvent> VoucherDeletedEvent { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -615,6 +642,9 @@ namespace Flipdish.Model
             sb.Append("  UserCreatedEvent: ").Append(UserCreatedEvent).Append("\n");
             sb.Append("  UserUpdatedEvent: ").Append(UserUpdatedEvent).Append("\n");
             sb.Append("  UserDeletedEvent: ").Append(UserDeletedEvent).Append("\n");
+            sb.Append("  VoucherCreatedEvent: ").Append(VoucherCreatedEvent).Append("\n");
+            sb.Append("  VoucherUpdatedEvent: ").Append(VoucherUpdatedEvent).Append("\n");
+            sb.Append("  VoucherDeletedEvent: ").Append(VoucherDeletedEvent).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -623,7 +653,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -933,6 +963,21 @@ namespace Flipdish.Model
                     this.UserDeletedEvent == input.UserDeletedEvent ||
                     this.UserDeletedEvent != null &&
                     this.UserDeletedEvent.SequenceEqual(input.UserDeletedEvent)
+                ) && 
+                (
+                    this.VoucherCreatedEvent == input.VoucherCreatedEvent ||
+                    this.VoucherCreatedEvent != null &&
+                    this.VoucherCreatedEvent.SequenceEqual(input.VoucherCreatedEvent)
+                ) && 
+                (
+                    this.VoucherUpdatedEvent == input.VoucherUpdatedEvent ||
+                    this.VoucherUpdatedEvent != null &&
+                    this.VoucherUpdatedEvent.SequenceEqual(input.VoucherUpdatedEvent)
+                ) && 
+                (
+                    this.VoucherDeletedEvent == input.VoucherDeletedEvent ||
+                    this.VoucherDeletedEvent != null &&
+                    this.VoucherDeletedEvent.SequenceEqual(input.VoucherDeletedEvent)
                 );
         }
 
@@ -1059,6 +1104,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.UserUpdatedEvent.GetHashCode();
                 if (this.UserDeletedEvent != null)
                     hashCode = hashCode * 59 + this.UserDeletedEvent.GetHashCode();
+                if (this.VoucherCreatedEvent != null)
+                    hashCode = hashCode * 59 + this.VoucherCreatedEvent.GetHashCode();
+                if (this.VoucherUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.VoucherUpdatedEvent.GetHashCode();
+                if (this.VoucherDeletedEvent != null)
+                    hashCode = hashCode * 59 + this.VoucherDeletedEvent.GetHashCode();
                 return hashCode;
             }
         }

@@ -33,34 +33,34 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JobDelivery" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="PickedAt">Picked At.</param>
-        /// <param name="DeliveredAt">Delivered At.</param>
-        /// <param name="TrackingUrl">Tracking Url.</param>
-        /// <param name="ClientReference">Client Reference.</param>
-        /// <param name="PackageDescription">Package Description.</param>
-        /// <param name="PackageType">Package Type.</param>
-        /// <param name="Pickup">Pickup.</param>
-        /// <param name="Dropoff">Dropoff.</param>
-        /// <param name="Eta">Eta.</param>
-        /// <param name="Cancellation">Cancellation.</param>
-        /// <param name="Proof">Proof.</param>
-        public JobDelivery(int? Id = default(int?), string Status = default(string), string PickedAt = default(string), string DeliveredAt = default(string), string TrackingUrl = default(string), string ClientReference = default(string), string PackageDescription = default(string), string PackageType = default(string), JobDeliveryDetail Pickup = default(JobDeliveryDetail), JobDeliveryDetail Dropoff = default(JobDeliveryDetail), JobEta Eta = default(JobEta), JobCancellation Cancellation = default(JobCancellation), JobProof Proof = default(JobProof))
+        /// <param name="id">Id.</param>
+        /// <param name="status">Status.</param>
+        /// <param name="pickedAt">Picked At.</param>
+        /// <param name="deliveredAt">Delivered At.</param>
+        /// <param name="trackingUrl">Tracking Url.</param>
+        /// <param name="clientReference">Client Reference.</param>
+        /// <param name="packageDescription">Package Description.</param>
+        /// <param name="packageType">Package Type.</param>
+        /// <param name="pickup">Pickup.</param>
+        /// <param name="dropoff">Dropoff.</param>
+        /// <param name="eta">Eta.</param>
+        /// <param name="cancellation">Cancellation.</param>
+        /// <param name="proof">Proof.</param>
+        public JobDelivery(int? id = default(int?), string status = default(string), string pickedAt = default(string), string deliveredAt = default(string), string trackingUrl = default(string), string clientReference = default(string), string packageDescription = default(string), string packageType = default(string), JobDeliveryDetail pickup = default(JobDeliveryDetail), JobDeliveryDetail dropoff = default(JobDeliveryDetail), JobEta eta = default(JobEta), JobCancellation cancellation = default(JobCancellation), JobProof proof = default(JobProof))
         {
-            this.Id = Id;
-            this.Status = Status;
-            this.PickedAt = PickedAt;
-            this.DeliveredAt = DeliveredAt;
-            this.TrackingUrl = TrackingUrl;
-            this.ClientReference = ClientReference;
-            this.PackageDescription = PackageDescription;
-            this.PackageType = PackageType;
-            this.Pickup = Pickup;
-            this.Dropoff = Dropoff;
-            this.Eta = Eta;
-            this.Cancellation = Cancellation;
-            this.Proof = Proof;
+            this.Id = id;
+            this.Status = status;
+            this.PickedAt = pickedAt;
+            this.DeliveredAt = deliveredAt;
+            this.TrackingUrl = trackingUrl;
+            this.ClientReference = clientReference;
+            this.PackageDescription = packageDescription;
+            this.PackageType = packageType;
+            this.Pickup = pickup;
+            this.Dropoff = dropoff;
+            this.Eta = eta;
+            this.Cancellation = cancellation;
+            this.Proof = proof;
         }
         
         /// <summary>
@@ -183,7 +183,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

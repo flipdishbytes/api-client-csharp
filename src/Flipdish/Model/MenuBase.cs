@@ -60,12 +60,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuBase" /> class.
         /// </summary>
-        /// <param name="DisplaySectionLinks">Display menu section link on UI.</param>
-        /// <param name="MenuSectionBehaviour">Menu section behaviour.</param>
-        public MenuBase(bool? DisplaySectionLinks = default(bool?), MenuSectionBehaviourEnum? MenuSectionBehaviour = default(MenuSectionBehaviourEnum?))
+        /// <param name="displaySectionLinks">Display menu section link on UI.</param>
+        /// <param name="menuSectionBehaviour">Menu section behaviour.</param>
+        public MenuBase(bool? displaySectionLinks = default(bool?), MenuSectionBehaviourEnum? menuSectionBehaviour = default(MenuSectionBehaviourEnum?))
         {
-            this.DisplaySectionLinks = DisplaySectionLinks;
-            this.MenuSectionBehaviour = MenuSectionBehaviour;
+            this.DisplaySectionLinks = displaySectionLinks;
+            this.MenuSectionBehaviour = menuSectionBehaviour;
         }
         
         /// <summary>
@@ -94,7 +94,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

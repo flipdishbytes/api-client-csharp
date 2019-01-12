@@ -90,24 +90,24 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessHoursPeriod" /> class.
         /// </summary>
-        /// <param name="Early">Early.</param>
-        /// <param name="Late">Late.</param>
-        /// <param name="Ranges">Ranges.</param>
-        /// <param name="DayOfWeek">Day of week.</param>
-        /// <param name="StartTime">Start time.</param>
-        /// <param name="Period">Period.</param>
-        /// <param name="StartTimeEarly">Start time early.</param>
-        /// <param name="PeriodEarly">Period early.</param>
-        public BusinessHoursPeriod(Range Early = default(Range), Range Late = default(Range), List<Range> Ranges = default(List<Range>), DayOfWeekEnum? DayOfWeek = default(DayOfWeekEnum?), string StartTime = default(string), string Period = default(string), string StartTimeEarly = default(string), string PeriodEarly = default(string))
+        /// <param name="early">Early.</param>
+        /// <param name="late">Late.</param>
+        /// <param name="ranges">Ranges.</param>
+        /// <param name="dayOfWeek">Day of week.</param>
+        /// <param name="startTime">Start time.</param>
+        /// <param name="period">Period.</param>
+        /// <param name="startTimeEarly">Start time early.</param>
+        /// <param name="periodEarly">Period early.</param>
+        public BusinessHoursPeriod(Range early = default(Range), Range late = default(Range), List<Range> ranges = default(List<Range>), DayOfWeekEnum? dayOfWeek = default(DayOfWeekEnum?), string startTime = default(string), string period = default(string), string startTimeEarly = default(string), string periodEarly = default(string))
         {
-            this.Early = Early;
-            this.Late = Late;
-            this.Ranges = Ranges;
-            this.DayOfWeek = DayOfWeek;
-            this.StartTime = StartTime;
-            this.Period = Period;
-            this.StartTimeEarly = StartTimeEarly;
-            this.PeriodEarly = PeriodEarly;
+            this.Early = early;
+            this.Late = late;
+            this.Ranges = ranges;
+            this.DayOfWeek = dayOfWeek;
+            this.StartTime = startTime;
+            this.Period = period;
+            this.StartTimeEarly = startTimeEarly;
+            this.PeriodEarly = periodEarly;
         }
         
         /// <summary>
@@ -184,7 +184,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

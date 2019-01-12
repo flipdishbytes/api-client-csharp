@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **StoreId** | **int?** | Store identifier | [optional] 
+**StoreGroupId** | **int?** | Store group id to which this store belongs | [optional] 
 **Address** | [**StoreAddress**](StoreAddress.md) | Store address | [optional] 
 **DeliveryZones** | [**List&lt;DeliveryZone&gt;**](DeliveryZone.md) | Delivery zones | [optional] 
 **ApmPhoneNumber** | **string** | Automated Phone Marketing number | [optional] 

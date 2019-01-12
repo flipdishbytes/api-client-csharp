@@ -33,12 +33,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Coordinates" /> class.
         /// </summary>
-        /// <param name="Latitude">Latitude.</param>
-        /// <param name="Longitude">Longitude.</param>
-        public Coordinates(double? Latitude = default(double?), double? Longitude = default(double?))
+        /// <param name="latitude">Latitude.</param>
+        /// <param name="longitude">Longitude.</param>
+        public Coordinates(double? latitude = default(double?), double? longitude = default(double?))
         {
-            this.Latitude = Latitude;
-            this.Longitude = Longitude;
+            this.Latitude = latitude;
+            this.Longitude = longitude;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

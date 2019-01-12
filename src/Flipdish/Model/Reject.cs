@@ -107,17 +107,17 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Reject" /> class.
         /// </summary>
-        /// <param name="RejectReason">Reject reason (required).</param>
-        public Reject(RejectReasonEnum RejectReason = default(RejectReasonEnum))
+        /// <param name="rejectReason">Reject reason (required).</param>
+        public Reject(RejectReasonEnum rejectReason = default(RejectReasonEnum))
         {
-            // to ensure "RejectReason" is required (not null)
-            if (RejectReason == null)
+            // to ensure "rejectReason" is required (not null)
+            if (rejectReason == null)
             {
-                throw new InvalidDataException("RejectReason is a required property for Reject and cannot be null");
+                throw new InvalidDataException("rejectReason is a required property for Reject and cannot be null");
             }
             else
             {
-                this.RejectReason = RejectReason;
+                this.RejectReason = rejectReason;
             }
         }
         
@@ -139,7 +139,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -90,14 +90,14 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Range" /> class.
         /// </summary>
-        /// <param name="StartTime">Start time.</param>
-        /// <param name="Period">Period.</param>
-        /// <param name="DayOfWeek">Day of week.</param>
-        public Range(string StartTime = default(string), string Period = default(string), DayOfWeekEnum? DayOfWeek = default(DayOfWeekEnum?))
+        /// <param name="startTime">Start time.</param>
+        /// <param name="period">Period.</param>
+        /// <param name="dayOfWeek">Day of week.</param>
+        public Range(string startTime = default(string), string period = default(string), DayOfWeekEnum? dayOfWeek = default(DayOfWeekEnum?))
         {
-            this.StartTime = StartTime;
-            this.Period = Period;
-            this.DayOfWeek = DayOfWeek;
+            this.StartTime = startTime;
+            this.Period = period;
+            this.DayOfWeek = dayOfWeek;
         }
         
         /// <summary>
@@ -134,7 +134,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

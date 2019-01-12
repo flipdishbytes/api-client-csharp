@@ -31,20 +31,93 @@ namespace Flipdish.Model
     public partial class ApmCall :  IEquatable<ApmCall>, IValidatableObject
     {
         /// <summary>
+        /// The status of the call
+        /// </summary>
+        /// <value>The status of the call</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CallStatusEnum
+        {
+            
+            /// <summary>
+            /// Enum Queued for value: Queued
+            /// </summary>
+            [EnumMember(Value = "Queued")]
+            Queued = 1,
+            
+            /// <summary>
+            /// Enum Ringing for value: Ringing
+            /// </summary>
+            [EnumMember(Value = "Ringing")]
+            Ringing = 2,
+            
+            /// <summary>
+            /// Enum InProgress for value: InProgress
+            /// </summary>
+            [EnumMember(Value = "InProgress")]
+            InProgress = 3,
+            
+            /// <summary>
+            /// Enum Completed for value: Completed
+            /// </summary>
+            [EnumMember(Value = "Completed")]
+            Completed = 4,
+            
+            /// <summary>
+            /// Enum Failed for value: Failed
+            /// </summary>
+            [EnumMember(Value = "Failed")]
+            Failed = 5,
+            
+            /// <summary>
+            /// Enum Busy for value: Busy
+            /// </summary>
+            [EnumMember(Value = "Busy")]
+            Busy = 6,
+            
+            /// <summary>
+            /// Enum NoAnswer for value: NoAnswer
+            /// </summary>
+            [EnumMember(Value = "NoAnswer")]
+            NoAnswer = 7,
+            
+            /// <summary>
+            /// Enum Unknown for value: Unknown
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown = 8,
+            
+            /// <summary>
+            /// Enum Canceled for value: Canceled
+            /// </summary>
+            [EnumMember(Value = "Canceled")]
+            Canceled = 9
+        }
+
+        /// <summary>
+        /// The status of the call
+        /// </summary>
+        /// <value>The status of the call</value>
+        [DataMember(Name="CallStatus", EmitDefaultValue=false)]
+        public CallStatusEnum? CallStatus { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="ApmCall" /> class.
         /// </summary>
-        /// <param name="TimeOfCall">Time of the call.</param>
-        /// <param name="StoreName">Name of the store that the call was TO.</param>
-        /// <param name="CallerName">Name of the caller.</param>
-        /// <param name="CallerNumber">Phone number of the caller.</param>
-        /// <param name="CallLengthInSeconds">The amount of time the call took.</param>
-        public ApmCall(DateTime? TimeOfCall = default(DateTime?), string StoreName = default(string), string CallerName = default(string), string CallerNumber = default(string), int? CallLengthInSeconds = default(int?))
+        /// <param name="timeOfCall">Time of the call.</param>
+        /// <param name="timeOfCallLocal">Time of the call, local to the store to which the call was made.</param>
+        /// <param name="storeName">Name of the store that the call was TO.</param>
+        /// <param name="callerName">Name of the caller.</param>
+        /// <param name="callerNumber">Phone number of the caller.</param>
+        /// <param name="callLengthInSeconds">The amount of time the call took.</param>
+        /// <param name="callStatus">The status of the call.</param>
+        public ApmCall(DateTime? timeOfCall = default(DateTime?), DateTime? timeOfCallLocal = default(DateTime?), string storeName = default(string), string callerName = default(string), string callerNumber = default(string), int? callLengthInSeconds = default(int?), CallStatusEnum? callStatus = default(CallStatusEnum?))
         {
-            this.TimeOfCall = TimeOfCall;
-            this.StoreName = StoreName;
-            this.CallerName = CallerName;
-            this.CallerNumber = CallerNumber;
-            this.CallLengthInSeconds = CallLengthInSeconds;
+            this.TimeOfCall = timeOfCall;
+            this.TimeOfCallLocal = timeOfCallLocal;
+            this.StoreName = storeName;
+            this.CallerName = callerName;
+            this.CallerNumber = callerNumber;
+            this.CallLengthInSeconds = callLengthInSeconds;
+            this.CallStatus = callStatus;
         }
         
         /// <summary>
@@ -53,6 +126,13 @@ namespace Flipdish.Model
         /// <value>Time of the call</value>
         [DataMember(Name="TimeOfCall", EmitDefaultValue=false)]
         public DateTime? TimeOfCall { get; set; }
+
+        /// <summary>
+        /// Time of the call, local to the store to which the call was made
+        /// </summary>
+        /// <value>Time of the call, local to the store to which the call was made</value>
+        [DataMember(Name="TimeOfCallLocal", EmitDefaultValue=false)]
+        public DateTime? TimeOfCallLocal { get; set; }
 
         /// <summary>
         /// Name of the store that the call was TO
@@ -82,6 +162,7 @@ namespace Flipdish.Model
         [DataMember(Name="CallLengthInSeconds", EmitDefaultValue=false)]
         public int? CallLengthInSeconds { get; set; }
 
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -91,10 +172,12 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class ApmCall {\n");
             sb.Append("  TimeOfCall: ").Append(TimeOfCall).Append("\n");
+            sb.Append("  TimeOfCallLocal: ").Append(TimeOfCallLocal).Append("\n");
             sb.Append("  StoreName: ").Append(StoreName).Append("\n");
             sb.Append("  CallerName: ").Append(CallerName).Append("\n");
             sb.Append("  CallerNumber: ").Append(CallerNumber).Append("\n");
             sb.Append("  CallLengthInSeconds: ").Append(CallLengthInSeconds).Append("\n");
+            sb.Append("  CallStatus: ").Append(CallStatus).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -103,7 +186,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -135,6 +218,11 @@ namespace Flipdish.Model
                     this.TimeOfCall.Equals(input.TimeOfCall))
                 ) && 
                 (
+                    this.TimeOfCallLocal == input.TimeOfCallLocal ||
+                    (this.TimeOfCallLocal != null &&
+                    this.TimeOfCallLocal.Equals(input.TimeOfCallLocal))
+                ) && 
+                (
                     this.StoreName == input.StoreName ||
                     (this.StoreName != null &&
                     this.StoreName.Equals(input.StoreName))
@@ -153,6 +241,11 @@ namespace Flipdish.Model
                     this.CallLengthInSeconds == input.CallLengthInSeconds ||
                     (this.CallLengthInSeconds != null &&
                     this.CallLengthInSeconds.Equals(input.CallLengthInSeconds))
+                ) && 
+                (
+                    this.CallStatus == input.CallStatus ||
+                    (this.CallStatus != null &&
+                    this.CallStatus.Equals(input.CallStatus))
                 );
         }
 
@@ -167,6 +260,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.TimeOfCall != null)
                     hashCode = hashCode * 59 + this.TimeOfCall.GetHashCode();
+                if (this.TimeOfCallLocal != null)
+                    hashCode = hashCode * 59 + this.TimeOfCallLocal.GetHashCode();
                 if (this.StoreName != null)
                     hashCode = hashCode * 59 + this.StoreName.GetHashCode();
                 if (this.CallerName != null)
@@ -175,6 +270,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CallerNumber.GetHashCode();
                 if (this.CallLengthInSeconds != null)
                     hashCode = hashCode * 59 + this.CallLengthInSeconds.GetHashCode();
+                if (this.CallStatus != null)
+                    hashCode = hashCode * 59 + this.CallStatus.GetHashCode();
                 return hashCode;
             }
         }

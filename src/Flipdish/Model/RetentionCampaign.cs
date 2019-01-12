@@ -33,20 +33,20 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RetentionCampaign" /> class.
         /// </summary>
-        /// <param name="From">Date and time of campaign beginning.</param>
-        /// <param name="VoucherValidPeriodDays">Number of days for which the voucher will be valid..</param>
-        /// <param name="IncludeDeliveryFee">Discount will include delivery fee.</param>
-        /// <param name="NotifyCustomerAfterMinutes">Time in minutes, after which customer will receive retention voucher if he/she does not order.</param>
-        /// <param name="PercentDiscountAmount">Discount amount in percents.</param>
-        /// <param name="LumpDiscountAmount">Discount amount in sum of money.</param>
-        public RetentionCampaign(DateTime? From = default(DateTime?), int? VoucherValidPeriodDays = default(int?), bool? IncludeDeliveryFee = default(bool?), int? NotifyCustomerAfterMinutes = default(int?), int? PercentDiscountAmount = default(int?), int? LumpDiscountAmount = default(int?))
+        /// <param name="from">Date and time of campaign beginning.</param>
+        /// <param name="voucherValidPeriodDays">Number of days for which the voucher will be valid..</param>
+        /// <param name="includeDeliveryFee">Discount will include delivery fee.</param>
+        /// <param name="notifyCustomerAfterMinutes">Time in minutes, after which customer will receive retention voucher if he/she does not order.</param>
+        /// <param name="percentDiscountAmount">Discount amount in percents.</param>
+        /// <param name="lumpDiscountAmount">Discount amount in sum of money.</param>
+        public RetentionCampaign(DateTime? from = default(DateTime?), int? voucherValidPeriodDays = default(int?), bool? includeDeliveryFee = default(bool?), int? notifyCustomerAfterMinutes = default(int?), int? percentDiscountAmount = default(int?), int? lumpDiscountAmount = default(int?))
         {
-            this.From = From;
-            this.VoucherValidPeriodDays = VoucherValidPeriodDays;
-            this.IncludeDeliveryFee = IncludeDeliveryFee;
-            this.NotifyCustomerAfterMinutes = NotifyCustomerAfterMinutes;
-            this.PercentDiscountAmount = PercentDiscountAmount;
-            this.LumpDiscountAmount = LumpDiscountAmount;
+            this.From = from;
+            this.VoucherValidPeriodDays = voucherValidPeriodDays;
+            this.IncludeDeliveryFee = includeDeliveryFee;
+            this.NotifyCustomerAfterMinutes = notifyCustomerAfterMinutes;
+            this.PercentDiscountAmount = percentDiscountAmount;
+            this.LumpDiscountAmount = lumpDiscountAmount;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

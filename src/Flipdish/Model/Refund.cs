@@ -38,30 +38,30 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Refund" /> class.
         /// </summary>
-        /// <param name="RefundReason">Refund reason.</param>
-        /// <param name="RefundAmount">Refund amount (required).</param>
-        /// <param name="NotifyCustomer">If ture, the system sends notification to the customer about the refund (required).</param>
-        public Refund(string RefundReason = default(string), double? RefundAmount = default(double?), bool? NotifyCustomer = default(bool?))
+        /// <param name="refundReason">Refund reason.</param>
+        /// <param name="refundAmount">Refund amount (required).</param>
+        /// <param name="notifyCustomer">If ture, the system sends notification to the customer about the refund (required).</param>
+        public Refund(string refundReason = default(string), double? refundAmount = default(double?), bool? notifyCustomer = default(bool?))
         {
-            // to ensure "RefundAmount" is required (not null)
-            if (RefundAmount == null)
+            // to ensure "refundAmount" is required (not null)
+            if (refundAmount == null)
             {
-                throw new InvalidDataException("RefundAmount is a required property for Refund and cannot be null");
+                throw new InvalidDataException("refundAmount is a required property for Refund and cannot be null");
             }
             else
             {
-                this.RefundAmount = RefundAmount;
+                this.RefundAmount = refundAmount;
             }
-            // to ensure "NotifyCustomer" is required (not null)
-            if (NotifyCustomer == null)
+            // to ensure "notifyCustomer" is required (not null)
+            if (notifyCustomer == null)
             {
-                throw new InvalidDataException("NotifyCustomer is a required property for Refund and cannot be null");
+                throw new InvalidDataException("notifyCustomer is a required property for Refund and cannot be null");
             }
             else
             {
-                this.NotifyCustomer = NotifyCustomer;
+                this.NotifyCustomer = notifyCustomer;
             }
-            this.RefundReason = RefundReason;
+            this.RefundReason = refundReason;
         }
         
         /// <summary>
@@ -104,7 +104,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

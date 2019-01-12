@@ -33,18 +33,18 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DeliveryZone" /> class.
         /// </summary>
-        /// <param name="Id">Delivery Fee Area Id.</param>
-        /// <param name="DeliveryFee">Delivery fee.</param>
-        /// <param name="MinimumDeliveryOrderAmount">Minimum delivery order amount.</param>
-        /// <param name="WellKnownText">Spatial data in Well Known Text format  We also support CIRCLE((0 0, 200)) - (centerLong centerLat, radius in m).</param>
-        /// <param name="IsEnabled">Is delivery zone enabled.</param>
-        public DeliveryZone(int? Id = default(int?), double? DeliveryFee = default(double?), double? MinimumDeliveryOrderAmount = default(double?), string WellKnownText = default(string), bool? IsEnabled = default(bool?))
+        /// <param name="id">Delivery Fee Area Id.</param>
+        /// <param name="deliveryFee">Delivery fee (will not be set below 0).</param>
+        /// <param name="minimumDeliveryOrderAmount">Minimum delivery order amount (will not be set below 0).</param>
+        /// <param name="wellKnownText">Spatial data in Well Known Text format  We also support CIRCLE((0 0, 200)) - (centerLong centerLat, radius in m).</param>
+        /// <param name="isEnabled">Is delivery zone enabled.</param>
+        public DeliveryZone(int? id = default(int?), double? deliveryFee = default(double?), double? minimumDeliveryOrderAmount = default(double?), string wellKnownText = default(string), bool? isEnabled = default(bool?))
         {
-            this.Id = Id;
-            this.DeliveryFee = DeliveryFee;
-            this.MinimumDeliveryOrderAmount = MinimumDeliveryOrderAmount;
-            this.WellKnownText = WellKnownText;
-            this.IsEnabled = IsEnabled;
+            this.Id = id;
+            this.DeliveryFee = deliveryFee;
+            this.MinimumDeliveryOrderAmount = minimumDeliveryOrderAmount;
+            this.WellKnownText = wellKnownText;
+            this.IsEnabled = isEnabled;
         }
         
         /// <summary>
@@ -55,16 +55,16 @@ namespace Flipdish.Model
         public int? Id { get; set; }
 
         /// <summary>
-        /// Delivery fee
+        /// Delivery fee (will not be set below 0)
         /// </summary>
-        /// <value>Delivery fee</value>
+        /// <value>Delivery fee (will not be set below 0)</value>
         [DataMember(Name="DeliveryFee", EmitDefaultValue=false)]
         public double? DeliveryFee { get; set; }
 
         /// <summary>
-        /// Minimum delivery order amount
+        /// Minimum delivery order amount (will not be set below 0)
         /// </summary>
-        /// <value>Minimum delivery order amount</value>
+        /// <value>Minimum delivery order amount (will not be set below 0)</value>
         [DataMember(Name="MinimumDeliveryOrderAmount", EmitDefaultValue=false)]
         public double? MinimumDeliveryOrderAmount { get; set; }
 
@@ -103,7 +103,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,22 +33,22 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookSubscription" /> class.
         /// </summary>
-        /// <param name="Id">Webhook subscription identifier.</param>
-        /// <param name="OwnerUserId">Webhook subscription owner user identifier.</param>
-        /// <param name="Version">Webhook subscription owner user identifier.</param>
-        /// <param name="EventNames">Webhook subscription event names.</param>
-        /// <param name="CallbackUrl">Callback url. Flipdish system POST messages to this url..</param>
-        /// <param name="Enabled">Is webhook subscription enabled..</param>
-        /// <param name="VerifyToken">This is your token which will be in the Header of each POST request from Flipdish with name: X-Verify-Token..</param>
-        public WebhookSubscription(int? Id = default(int?), int? OwnerUserId = default(int?), string Version = default(string), List<string> EventNames = default(List<string>), string CallbackUrl = default(string), bool? Enabled = default(bool?), string VerifyToken = default(string))
+        /// <param name="id">Webhook subscription identifier.</param>
+        /// <param name="ownerUserId">Webhook subscription owner user identifier.</param>
+        /// <param name="version">Webhook subscription owner user identifier.</param>
+        /// <param name="eventNames">Webhook subscription event names.</param>
+        /// <param name="callbackUrl">Callback url. Flipdish system POST messages to this url..</param>
+        /// <param name="enabled">Is webhook subscription enabled..</param>
+        /// <param name="verifyToken">This is your token which will be in the Header of each POST request from Flipdish with name: X-Verify-Token..</param>
+        public WebhookSubscription(int? id = default(int?), int? ownerUserId = default(int?), string version = default(string), List<string> eventNames = default(List<string>), string callbackUrl = default(string), bool? enabled = default(bool?), string verifyToken = default(string))
         {
-            this.Id = Id;
-            this.OwnerUserId = OwnerUserId;
-            this.Version = Version;
-            this.EventNames = EventNames;
-            this.CallbackUrl = CallbackUrl;
-            this.Enabled = Enabled;
-            this.VerifyToken = VerifyToken;
+            this.Id = id;
+            this.OwnerUserId = ownerUserId;
+            this.Version = version;
+            this.EventNames = eventNames;
+            this.CallbackUrl = callbackUrl;
+            this.Enabled = enabled;
+            this.VerifyToken = verifyToken;
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

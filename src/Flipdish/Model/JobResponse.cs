@@ -33,36 +33,36 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JobResponse" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="CreatedAt">Created At.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="PackageType">Package Type.</param>
-        /// <param name="TransportType">Transport Type.</param>
-        /// <param name="AssignmentCode">Assignment Code.</param>
-        /// <param name="PickupAt">Pickup At.</param>
-        /// <param name="DropoffAt">Dropoff At.</param>
-        /// <param name="Comment">Comment.</param>
-        /// <param name="Distance">Distance.</param>
-        /// <param name="Duration">Duration.</param>
-        /// <param name="Deliveries">Deliveries.</param>
-        /// <param name="Pricing">Pricing.</param>
-        /// <param name="Driver">Driver.</param>
-        public JobResponse(int? Id = default(int?), DateTime? CreatedAt = default(DateTime?), string Status = default(string), string PackageType = default(string), string TransportType = default(string), string AssignmentCode = default(string), string PickupAt = default(string), string DropoffAt = default(string), string Comment = default(string), double? Distance = default(double?), int? Duration = default(int?), List<JobDelivery> Deliveries = default(List<JobDelivery>), JobPricing Pricing = default(JobPricing), JobDriver Driver = default(JobDriver))
+        /// <param name="id">Id.</param>
+        /// <param name="createdAt">Created At.</param>
+        /// <param name="status">Status.</param>
+        /// <param name="packageType">Package Type.</param>
+        /// <param name="transportType">Transport Type.</param>
+        /// <param name="assignmentCode">Assignment Code.</param>
+        /// <param name="pickupAt">Pickup At.</param>
+        /// <param name="dropoffAt">Dropoff At.</param>
+        /// <param name="comment">Comment.</param>
+        /// <param name="distance">Distance.</param>
+        /// <param name="duration">Duration.</param>
+        /// <param name="deliveries">Deliveries.</param>
+        /// <param name="pricing">Pricing.</param>
+        /// <param name="driver">Driver.</param>
+        public JobResponse(int? id = default(int?), DateTime? createdAt = default(DateTime?), string status = default(string), string packageType = default(string), string transportType = default(string), string assignmentCode = default(string), string pickupAt = default(string), string dropoffAt = default(string), string comment = default(string), double? distance = default(double?), int? duration = default(int?), List<JobDelivery> deliveries = default(List<JobDelivery>), JobPricing pricing = default(JobPricing), JobDriver driver = default(JobDriver))
         {
-            this.Id = Id;
-            this.CreatedAt = CreatedAt;
-            this.Status = Status;
-            this.PackageType = PackageType;
-            this.TransportType = TransportType;
-            this.AssignmentCode = AssignmentCode;
-            this.PickupAt = PickupAt;
-            this.DropoffAt = DropoffAt;
-            this.Comment = Comment;
-            this.Distance = Distance;
-            this.Duration = Duration;
-            this.Deliveries = Deliveries;
-            this.Pricing = Pricing;
-            this.Driver = Driver;
+            this.Id = id;
+            this.CreatedAt = createdAt;
+            this.Status = status;
+            this.PackageType = packageType;
+            this.TransportType = transportType;
+            this.AssignmentCode = assignmentCode;
+            this.PickupAt = pickupAt;
+            this.DropoffAt = dropoffAt;
+            this.Comment = comment;
+            this.Distance = distance;
+            this.Duration = duration;
+            this.Deliveries = deliveries;
+            this.Pricing = pricing;
+            this.Driver = driver;
         }
         
         /// <summary>
@@ -193,7 +193,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

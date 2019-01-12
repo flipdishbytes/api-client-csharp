@@ -33,12 +33,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CardBase" /> class.
         /// </summary>
-        /// <param name="ExpiryMonth">Expiry month.</param>
-        /// <param name="ExpiryYear">Expiry yaer.</param>
-        public CardBase(int? ExpiryMonth = default(int?), int? ExpiryYear = default(int?))
+        /// <param name="expiryMonth">Expiry month.</param>
+        /// <param name="expiryYear">Expiry yaer.</param>
+        public CardBase(int? expiryMonth = default(int?), int? expiryYear = default(int?))
         {
-            this.ExpiryMonth = ExpiryMonth;
-            this.ExpiryYear = ExpiryYear;
+            this.ExpiryMonth = expiryMonth;
+            this.ExpiryYear = expiryYear;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

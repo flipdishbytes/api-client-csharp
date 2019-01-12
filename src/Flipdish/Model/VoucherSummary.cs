@@ -129,20 +129,20 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoucherSummary" /> class.
         /// </summary>
-        /// <param name="Name">Voucher name.</param>
-        /// <param name="Description">Voucher description.</param>
-        /// <param name="Code">Voucher code.</param>
-        /// <param name="Amount">Voucher amount.</param>
-        /// <param name="Type">Voucher type.</param>
-        /// <param name="SubType">Voucher sub type.</param>
-        public VoucherSummary(string Name = default(string), string Description = default(string), string Code = default(string), double? Amount = default(double?), TypeEnum? Type = default(TypeEnum?), SubTypeEnum? SubType = default(SubTypeEnum?))
+        /// <param name="name">Voucher name.</param>
+        /// <param name="description">Voucher description.</param>
+        /// <param name="code">Voucher code.</param>
+        /// <param name="amount">Voucher amount.</param>
+        /// <param name="type">Voucher type.</param>
+        /// <param name="subType">Voucher sub type.</param>
+        public VoucherSummary(string name = default(string), string description = default(string), string code = default(string), double? amount = default(double?), TypeEnum? type = default(TypeEnum?), SubTypeEnum? subType = default(SubTypeEnum?))
         {
-            this.Name = Name;
-            this.Description = Description;
-            this.Code = Code;
-            this.Amount = Amount;
-            this.Type = Type;
-            this.SubType = SubType;
+            this.Name = name;
+            this.Description = description;
+            this.Code = code;
+            this.Amount = amount;
+            this.Type = type;
+            this.SubType = subType;
         }
         
         /// <summary>
@@ -197,7 +197,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

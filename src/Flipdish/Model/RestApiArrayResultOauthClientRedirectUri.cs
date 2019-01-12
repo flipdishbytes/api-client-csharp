@@ -38,17 +38,17 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiArrayResultOauthClientRedirectUri" /> class.
         /// </summary>
-        /// <param name="Data">Generic data object. (required).</param>
-        public RestApiArrayResultOauthClientRedirectUri(List<OauthClientRedirectUri> Data = default(List<OauthClientRedirectUri>))
+        /// <param name="data">Generic data object. (required).</param>
+        public RestApiArrayResultOauthClientRedirectUri(List<OauthClientRedirectUri> data = default(List<OauthClientRedirectUri>))
         {
-            // to ensure "Data" is required (not null)
-            if (Data == null)
+            // to ensure "data" is required (not null)
+            if (data == null)
             {
-                throw new InvalidDataException("Data is a required property for RestApiArrayResultOauthClientRedirectUri and cannot be null");
+                throw new InvalidDataException("data is a required property for RestApiArrayResultOauthClientRedirectUri and cannot be null");
             }
             else
             {
-                this.Data = Data;
+                this.Data = data;
             }
         }
         
@@ -76,7 +76,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

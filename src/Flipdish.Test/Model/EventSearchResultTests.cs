@@ -522,6 +522,30 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'UserDeletedEvent'
         }
+        /// <summary>
+        /// Test the property 'VoucherCreatedEvent'
+        /// </summary>
+        [Test]
+        public void VoucherCreatedEventTest()
+        {
+            // TODO unit test for the property 'VoucherCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'VoucherUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void VoucherUpdatedEventTest()
+        {
+            // TODO unit test for the property 'VoucherUpdatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'VoucherDeletedEvent'
+        /// </summary>
+        [Test]
+        public void VoucherDeletedEventTest()
+        {
+            // TODO unit test for the property 'VoucherDeletedEvent'
+        }
 
     }
 

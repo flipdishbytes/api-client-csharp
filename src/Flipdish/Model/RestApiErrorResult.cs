@@ -38,20 +38,20 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiErrorResult" /> class.
         /// </summary>
-        /// <param name="Message">Error message (required).</param>
-        /// <param name="Errors">List of errors grouped by field name.</param>
-        public RestApiErrorResult(string Message = default(string), List<ValidationErrorResult> Errors = default(List<ValidationErrorResult>))
+        /// <param name="message">Error message (required).</param>
+        /// <param name="errors">List of errors grouped by field name.</param>
+        public RestApiErrorResult(string message = default(string), List<ValidationErrorResult> errors = default(List<ValidationErrorResult>))
         {
-            // to ensure "Message" is required (not null)
-            if (Message == null)
+            // to ensure "message" is required (not null)
+            if (message == null)
             {
-                throw new InvalidDataException("Message is a required property for RestApiErrorResult and cannot be null");
+                throw new InvalidDataException("message is a required property for RestApiErrorResult and cannot be null");
             }
             else
             {
-                this.Message = Message;
+                this.Message = message;
             }
-            this.Errors = Errors;
+            this.Errors = errors;
         }
         
         /// <summary>
@@ -86,7 +86,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
