@@ -67,6 +67,14 @@ namespace Flipdish.Test
 
 
         /// <summary>
+        /// Test the property 'TeammateId'
+        /// </summary>
+        [Test]
+        public void TeammateIdTest()
+        {
+            // TODO unit test for the property 'TeammateId'
+        }
+        /// <summary>
         /// Test the property 'Name'
         /// </summary>
         [Test]
@@ -89,6 +97,14 @@ namespace Flipdish.Test
         public void AppIdTest()
         {
             // TODO unit test for the property 'AppId'
+        }
+        /// <summary>
+        /// Test the property 'InvitationStatus'
+        /// </summary>
+        [Test]
+        public void InvitationStatusTest()
+        {
+            // TODO unit test for the property 'InvitationStatus'
         }
         /// <summary>
         /// Test the property 'Email'

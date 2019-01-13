@@ -34,23 +34,23 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="CustomerConsentUpdatedEvent" /> class.
         /// </summary>
         /// <param name="eventName">The event name.</param>
-        /// <param name="appId">App name id.</param>
         /// <param name="enabled">Enabled.</param>
         /// <param name="description">Description.</param>
         /// <param name="user">Customer User info.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
-        public CustomerConsentUpdatedEvent(string eventName = default(string), string appId = default(string), bool? enabled = default(bool?), string description = default(string), UserEventInfo user = default(UserEventInfo), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?))
+        /// <param name="appId">App id.</param>
+        public CustomerConsentUpdatedEvent(string eventName = default(string), bool? enabled = default(bool?), string description = default(string), UserEventInfo user = default(UserEventInfo), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
         {
             this.EventName = eventName;
-            this.AppId = appId;
             this.Enabled = enabled;
             this.Description = description;
             this.User = user;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
             this.Position = position;
+            this.AppId = appId;
         }
         
         /// <summary>
@@ -59,13 +59,6 @@ namespace Flipdish.Model
         /// <value>The event name</value>
         [DataMember(Name="EventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
-
-        /// <summary>
-        /// App name id
-        /// </summary>
-        /// <value>App name id</value>
-        [DataMember(Name="AppId", EmitDefaultValue=false)]
-        public string AppId { get; set; }
 
         /// <summary>
         /// Enabled
@@ -110,6 +103,13 @@ namespace Flipdish.Model
         public int? Position { get; set; }
 
         /// <summary>
+        /// App id
+        /// </summary>
+        /// <value>App id</value>
+        [DataMember(Name="AppId", EmitDefaultValue=false)]
+        public string AppId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -118,13 +118,13 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class CustomerConsentUpdatedEvent {\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
-            sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
+            sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -165,11 +165,6 @@ namespace Flipdish.Model
                     this.EventName.Equals(input.EventName))
                 ) && 
                 (
-                    this.AppId == input.AppId ||
-                    (this.AppId != null &&
-                    this.AppId.Equals(input.AppId))
-                ) && 
-                (
                     this.Enabled == input.Enabled ||
                     (this.Enabled != null &&
                     this.Enabled.Equals(input.Enabled))
@@ -198,6 +193,11 @@ namespace Flipdish.Model
                     this.Position == input.Position ||
                     (this.Position != null &&
                     this.Position.Equals(input.Position))
+                ) && 
+                (
+                    this.AppId == input.AppId ||
+                    (this.AppId != null &&
+                    this.AppId.Equals(input.AppId))
                 );
         }
 
@@ -212,8 +212,6 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
-                if (this.AppId != null)
-                    hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 if (this.Enabled != null)
                     hashCode = hashCode * 59 + this.Enabled.GetHashCode();
                 if (this.Description != null)
@@ -226,6 +224,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CreateTime.GetHashCode();
                 if (this.Position != null)
                     hashCode = hashCode * 59 + this.Position.GetHashCode();
+                if (this.AppId != null)
+                    hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 return hashCode;
             }
         }

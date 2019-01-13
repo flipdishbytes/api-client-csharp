@@ -225,10 +225,11 @@ Class | Method | HTTP request | Description
 *SubscriptionsApi* | [**SubscriptionsUpdateCardExpiringDate**](docs/SubscriptionsApi.md#subscriptionsupdatecardexpiringdate) | **POST** /api/v1.0/subscriptions/{subscriptionId}/card | Update card expiring date
 *SubscriptionsApi* | [**SubscriptionsUpdateSubscription**](docs/SubscriptionsApi.md#subscriptionsupdatesubscription) | **POST** /api/v1.0/subscriptions/{subscriptionId} | Update the subscription
 *TeammatesApi* | [**CreateTeammate**](docs/TeammatesApi.md#createteammate) | **POST** /api/v1.0/{appId}/teammates | Create teammate and send an invite.
-*TeammatesApi* | [**DeleteTeammate**](docs/TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{email} | Delete teammate
-*TeammatesApi* | [**GetTeammateByAppIdAndEmail**](docs/TeammatesApi.md#getteammatebyappidandemail) | **GET** /api/v1.0/{appId}/teammates/{email} | Get a teammates by email address
+*TeammatesApi* | [**DeleteTeammate**](docs/TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | Delete teammate
+*TeammatesApi* | [**GetTeammateByAppIdAndTeammateId**](docs/TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | Get a teammates by email address
 *TeammatesApi* | [**GetTeammatesByAppId**](docs/TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
-*TeammatesApi* | [**UpdateTeammate**](docs/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{email} | Update teammates (this method does not support Deltas!)
+*TeammatesApi* | [**RedeemCode**](docs/TeammatesApi.md#redeemcode) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+*TeammatesApi* | [**UpdateTeammate**](docs/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | Update teammates (this method does not support Deltas!)
 *UsersApi* | [**GetRoles**](docs/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | Get role names
 *VouchersApi* | [**GetVoucherById**](docs/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Get voucher by identifier
 *VouchersApi* | [**GetVoucherStatsById**](docs/VouchersApi.md#getvoucherstatsbyid) | **GET** /api/v1.0/vouchers/stats/{voucherId} | [PRIVATE API] Get voucher stats by identifier
@@ -452,6 +453,10 @@ Class | Method | HTTP request | Description
  - [Model.SubscriptionWithToken](docs/SubscriptionWithToken.md)
  - [Model.Teammate](docs/Teammate.md)
  - [Model.TeammateBase](docs/TeammateBase.md)
+ - [Model.TeammateDeletedEvent](docs/TeammateDeletedEvent.md)
+ - [Model.TeammateInviteAcceptedEvent](docs/TeammateInviteAcceptedEvent.md)
+ - [Model.TeammateInviteSentEvent](docs/TeammateInviteSentEvent.md)
+ - [Model.TeammateUpdatedEvent](docs/TeammateUpdatedEvent.md)
  - [Model.UpdateAccountModel](docs/UpdateAccountModel.md)
  - [Model.UserCreatedEvent](docs/UserCreatedEvent.md)
  - [Model.UserDeletedEvent](docs/UserDeletedEvent.md)

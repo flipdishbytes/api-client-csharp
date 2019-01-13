@@ -31,6 +31,39 @@ namespace Flipdish.Model
     public partial class Teammate :  IEquatable<Teammate>, IValidatableObject
     {
         /// <summary>
+        /// Invitation status
+        /// </summary>
+        /// <value>Invitation status</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum InvitationStatusEnum
+        {
+            
+            /// <summary>
+            /// Enum Pending for value: Pending
+            /// </summary>
+            [EnumMember(Value = "Pending")]
+            Pending = 1,
+            
+            /// <summary>
+            /// Enum Accepted for value: Accepted
+            /// </summary>
+            [EnumMember(Value = "Accepted")]
+            Accepted = 2,
+            
+            /// <summary>
+            /// Enum Expired for value: Expired
+            /// </summary>
+            [EnumMember(Value = "Expired")]
+            Expired = 3
+        }
+
+        /// <summary>
+        /// Invitation status
+        /// </summary>
+        /// <value>Invitation status</value>
+        [DataMember(Name="InvitationStatus", EmitDefaultValue=false)]
+        public InvitationStatusEnum? InvitationStatus { get; set; }
+        /// <summary>
         /// App access level
         /// </summary>
         /// <value>App access level</value>
@@ -84,24 +117,35 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Teammate" /> class.
         /// </summary>
+        /// <param name="teammateId">Unique indentifier.</param>
         /// <param name="name">Name.</param>
         /// <param name="lastAcitivity">Last activity.</param>
         /// <param name="appId">Access level is for this App.</param>
+        /// <param name="invitationStatus">Invitation status.</param>
         /// <param name="email">Email address.</param>
         /// <param name="appAccessLevel">App access level.</param>
         /// <param name="hasAccessToAllStores">The user has access to all stores for the app (including new stores that added later).</param>
         /// <param name="storeIds">Store IDs the user has access to (if HasAccessToAllStores is false).</param>
-        public Teammate(string name = default(string), DateTime? lastAcitivity = default(DateTime?), string appId = default(string), string email = default(string), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), bool? hasAccessToAllStores = default(bool?), List<int?> storeIds = default(List<int?>))
+        public Teammate(string teammateId = default(string), string name = default(string), DateTime? lastAcitivity = default(DateTime?), string appId = default(string), InvitationStatusEnum? invitationStatus = default(InvitationStatusEnum?), string email = default(string), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), bool? hasAccessToAllStores = default(bool?), List<int?> storeIds = default(List<int?>))
         {
+            this.TeammateId = teammateId;
             this.Name = name;
             this.LastAcitivity = lastAcitivity;
             this.AppId = appId;
+            this.InvitationStatus = invitationStatus;
             this.Email = email;
             this.AppAccessLevel = appAccessLevel;
             this.HasAccessToAllStores = hasAccessToAllStores;
             this.StoreIds = storeIds;
         }
         
+        /// <summary>
+        /// Unique indentifier
+        /// </summary>
+        /// <value>Unique indentifier</value>
+        [DataMember(Name="TeammateId", EmitDefaultValue=false)]
+        public string TeammateId { get; set; }
+
         /// <summary>
         /// Name
         /// </summary>
@@ -122,6 +166,7 @@ namespace Flipdish.Model
         /// <value>Access level is for this App</value>
         [DataMember(Name="AppId", EmitDefaultValue=false)]
         public string AppId { get; set; }
+
 
         /// <summary>
         /// Email address
@@ -153,9 +198,11 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Teammate {\n");
+            sb.Append("  TeammateId: ").Append(TeammateId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  LastAcitivity: ").Append(LastAcitivity).Append("\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
+            sb.Append("  InvitationStatus: ").Append(InvitationStatus).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  AppAccessLevel: ").Append(AppAccessLevel).Append("\n");
             sb.Append("  HasAccessToAllStores: ").Append(HasAccessToAllStores).Append("\n");
@@ -195,6 +242,11 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.TeammateId == input.TeammateId ||
+                    (this.TeammateId != null &&
+                    this.TeammateId.Equals(input.TeammateId))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -208,6 +260,11 @@ namespace Flipdish.Model
                     this.AppId == input.AppId ||
                     (this.AppId != null &&
                     this.AppId.Equals(input.AppId))
+                ) && 
+                (
+                    this.InvitationStatus == input.InvitationStatus ||
+                    (this.InvitationStatus != null &&
+                    this.InvitationStatus.Equals(input.InvitationStatus))
                 ) && 
                 (
                     this.Email == input.Email ||
@@ -240,12 +297,16 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.TeammateId != null)
+                    hashCode = hashCode * 59 + this.TeammateId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.LastAcitivity != null)
                     hashCode = hashCode * 59 + this.LastAcitivity.GetHashCode();
                 if (this.AppId != null)
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
+                if (this.InvitationStatus != null)
+                    hashCode = hashCode * 59 + this.InvitationStatus.GetHashCode();
                 if (this.Email != null)
                     hashCode = hashCode * 59 + this.Email.GetHashCode();
                 if (this.AppAccessLevel != null)

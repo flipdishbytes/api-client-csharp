@@ -41,7 +41,8 @@ namespace Flipdish.Model
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
-        public StoreDeletedEvent(string eventName = default(string), int? storeId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), Store store = default(Store), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?))
+        /// <param name="appId">App id.</param>
+        public StoreDeletedEvent(string eventName = default(string), int? storeId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), Store store = default(Store), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
         {
             this.EventName = eventName;
             this.StoreId = storeId;
@@ -51,6 +52,7 @@ namespace Flipdish.Model
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
             this.Position = position;
+            this.AppId = appId;
         }
         
         /// <summary>
@@ -110,6 +112,13 @@ namespace Flipdish.Model
         public int? Position { get; set; }
 
         /// <summary>
+        /// App id
+        /// </summary>
+        /// <value>App id</value>
+        [DataMember(Name="AppId", EmitDefaultValue=false)]
+        public string AppId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -125,6 +134,7 @@ namespace Flipdish.Model
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
+            sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -198,6 +208,11 @@ namespace Flipdish.Model
                     this.Position == input.Position ||
                     (this.Position != null &&
                     this.Position.Equals(input.Position))
+                ) && 
+                (
+                    this.AppId == input.AppId ||
+                    (this.AppId != null &&
+                    this.AppId.Equals(input.AppId))
                 );
         }
 
@@ -226,6 +241,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CreateTime.GetHashCode();
                 if (this.Position != null)
                     hashCode = hashCode * 59 + this.Position.GetHashCode();
+                if (this.AppId != null)
+                    hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 return hashCode;
             }
         }

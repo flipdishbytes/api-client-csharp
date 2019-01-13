@@ -5,10 +5,11 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateTeammate**](TeammatesApi.md#createteammate) | **POST** /api/v1.0/{appId}/teammates | Create teammate and send an invite.
-[**DeleteTeammate**](TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{email} | Delete teammate
-[**GetTeammateByAppIdAndEmail**](TeammatesApi.md#getteammatebyappidandemail) | **GET** /api/v1.0/{appId}/teammates/{email} | Get a teammates by email address
+[**DeleteTeammate**](TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | Delete teammate
+[**GetTeammateByAppIdAndTeammateId**](TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | Get a teammates by email address
 [**GetTeammatesByAppId**](TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
-[**UpdateTeammate**](TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{email} | Update teammates (this method does not support Deltas!)
+[**RedeemCode**](TeammatesApi.md#redeemcode) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+[**UpdateTeammate**](TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | Update teammates (this method does not support Deltas!)
 
 
 <a name="createteammate"></a>
@@ -77,7 +78,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteteammate"></a>
 # **DeleteTeammate**
-> void DeleteTeammate (string appId, string email)
+> void DeleteTeammate (string appId, string id)
 
 Delete teammate
 
@@ -100,12 +101,12 @@ namespace Example
 
             var apiInstance = new TeammatesApi();
             var appId = appId_example;  // string | 
-            var email = email_example;  // string | 
+            var id = id_example;  // string | 
 
             try
             {
                 // Delete teammate
-                apiInstance.DeleteTeammate(appId, email);
+                apiInstance.DeleteTeammate(appId, id);
             }
             catch (Exception e)
             {
@@ -121,7 +122,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **email** | **string**|  | 
+ **id** | **string**|  | 
 
 ### Return type
 
@@ -138,9 +139,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getteammatebyappidandemail"></a>
-# **GetTeammateByAppIdAndEmail**
-> RestApiResultTeammate GetTeammateByAppIdAndEmail (string appId, string email)
+<a name="getteammatebyappidandteammateid"></a>
+# **GetTeammateByAppIdAndTeammateId**
+> RestApiResultTeammate GetTeammateByAppIdAndTeammateId (string appId, string id)
 
 Get a teammates by email address
 
@@ -154,7 +155,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GetTeammateByAppIdAndEmailExample
+    public class GetTeammateByAppIdAndTeammateIdExample
     {
         public void main()
         {
@@ -163,17 +164,17 @@ namespace Example
 
             var apiInstance = new TeammatesApi();
             var appId = appId_example;  // string | 
-            var email = email_example;  // string | 
+            var id = id_example;  // string | 
 
             try
             {
                 // Get a teammates by email address
-                RestApiResultTeammate result = apiInstance.GetTeammateByAppIdAndEmail(appId, email);
+                RestApiResultTeammate result = apiInstance.GetTeammateByAppIdAndTeammateId(appId, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TeammatesApi.GetTeammateByAppIdAndEmail: " + e.Message );
+                Debug.Print("Exception when calling TeammatesApi.GetTeammateByAppIdAndTeammateId: " + e.Message );
             }
         }
     }
@@ -185,7 +186,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **email** | **string**|  | 
+ **id** | **string**|  | 
 
 ### Return type
 
@@ -264,9 +265,71 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="redeemcode"></a>
+# **RedeemCode**
+> void RedeemCode (string otc, string appId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class RedeemCodeExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new TeammatesApi();
+            var otc = otc_example;  // string | 
+            var appId = appId_example;  // string | 
+
+            try
+            {
+                apiInstance.RedeemCode(otc, appId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TeammatesApi.RedeemCode: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **otc** | **string**|  | 
+ **appId** | **string**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="updateteammate"></a>
 # **UpdateTeammate**
-> RestApiResultTeammate UpdateTeammate (string appId, string email, TeammateBase teammate)
+> RestApiResultTeammate UpdateTeammate (string appId, string id, TeammateBase teammate)
 
 Update teammates (this method does not support Deltas!)
 
@@ -289,13 +352,13 @@ namespace Example
 
             var apiInstance = new TeammatesApi();
             var appId = appId_example;  // string | 
-            var email = email_example;  // string | 
+            var id = id_example;  // string | 
             var teammate = new TeammateBase(); // TeammateBase | 
 
             try
             {
                 // Update teammates (this method does not support Deltas!)
-                RestApiResultTeammate result = apiInstance.UpdateTeammate(appId, email, teammate);
+                RestApiResultTeammate result = apiInstance.UpdateTeammate(appId, id, teammate);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -312,7 +375,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **email** | **string**|  | 
+ **id** | **string**|  | 
  **teammate** | [**TeammateBase**](TeammateBase.md)|  | 
 
 ### Return type

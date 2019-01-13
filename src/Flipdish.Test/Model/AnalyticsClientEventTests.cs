@@ -83,14 +83,6 @@ namespace Flipdish.Test
             // TODO unit test for the property 'EventType'
         }
         /// <summary>
-        /// Test the property 'AppId'
-        /// </summary>
-        [Test]
-        public void AppIdTest()
-        {
-            // TODO unit test for the property 'AppId'
-        }
-        /// <summary>
         /// Test the property 'AppType'
         /// </summary>
         [Test]
@@ -153,6 +145,14 @@ namespace Flipdish.Test
         public void PositionTest()
         {
             // TODO unit test for the property 'Position'
+        }
+        /// <summary>
+        /// Test the property 'AppId'
+        /// </summary>
+        [Test]
+        public void AppIdTest()
+        {
+            // TODO unit test for the property 'AppId'
         }
 
     }

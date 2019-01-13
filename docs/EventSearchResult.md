@@ -63,6 +63,10 @@ Name | Type | Description | Notes
 **VoucherCreatedEvent** | [**List&lt;VoucherCreatedEvent&gt;**](VoucherCreatedEvent.md) | Voucher created event | [optional] 
 **VoucherUpdatedEvent** | [**List&lt;VoucherUpdatedEvent&gt;**](VoucherUpdatedEvent.md) | Voucher updated event | [optional] 
 **VoucherDeletedEvent** | [**List&lt;VoucherDeletedEvent&gt;**](VoucherDeletedEvent.md) | Voucher deleted event | [optional] 
+**TeammateInviteSentEvent** | [**List&lt;TeammateInviteSentEvent&gt;**](TeammateInviteSentEvent.md) | Teammate invite sent event | [optional] 
+**TeammateInviteAcceptedEvent** | [**List&lt;TeammateInviteAcceptedEvent&gt;**](TeammateInviteAcceptedEvent.md) | Teammate invite accepted event | [optional] 
+**TeammateUpdatedEvent** | [**List&lt;TeammateUpdatedEvent&gt;**](TeammateUpdatedEvent.md) | Teammate updated event | [optional] 
+**TeammateDeletedEvent** | [**List&lt;TeammateDeletedEvent&gt;**](TeammateDeletedEvent.md) | Teammate deleted event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

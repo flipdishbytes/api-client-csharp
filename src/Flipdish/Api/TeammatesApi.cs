@@ -55,9 +55,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
-        void DeleteTeammate (string appId, string email);
+        void DeleteTeammate (string appId, string id);
 
         /// <summary>
         /// Delete teammate
@@ -67,9 +67,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteTeammateWithHttpInfo (string appId, string email);
+        ApiResponse<Object> DeleteTeammateWithHttpInfo (string appId, string id);
         /// <summary>
         /// Get a teammates by email address
         /// </summary>
@@ -78,9 +78,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns>RestApiResultTeammate</returns>
-        RestApiResultTeammate GetTeammateByAppIdAndEmail (string appId, string email);
+        RestApiResultTeammate GetTeammateByAppIdAndTeammateId (string appId, string id);
 
         /// <summary>
         /// Get a teammates by email address
@@ -90,9 +90,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns>ApiResponse of RestApiResultTeammate</returns>
-        ApiResponse<RestApiResultTeammate> GetTeammateByAppIdAndEmailWithHttpInfo (string appId, string email);
+        ApiResponse<RestApiResultTeammate> GetTeammateByAppIdAndTeammateIdWithHttpInfo (string appId, string id);
         /// <summary>
         /// Get all teammates
         /// </summary>
@@ -115,6 +115,29 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultTeammate</returns>
         ApiResponse<RestApiArrayResultTeammate> GetTeammatesByAppIdWithHttpInfo (string appId);
         /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns></returns>
+        void RedeemCode (string otc, string appId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> RedeemCodeWithHttpInfo (string otc, string appId);
+        /// <summary>
         /// Update teammates (this method does not support Deltas!)
         /// </summary>
         /// <remarks>
@@ -122,10 +145,10 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <param name="teammate"></param>
         /// <returns>RestApiResultTeammate</returns>
-        RestApiResultTeammate UpdateTeammate (string appId, string email, TeammateBase teammate);
+        RestApiResultTeammate UpdateTeammate (string appId, string id, TeammateBase teammate);
 
         /// <summary>
         /// Update teammates (this method does not support Deltas!)
@@ -135,10 +158,10 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <param name="teammate"></param>
         /// <returns>ApiResponse of RestApiResultTeammate</returns>
-        ApiResponse<RestApiResultTeammate> UpdateTeammateWithHttpInfo (string appId, string email, TeammateBase teammate);
+        ApiResponse<RestApiResultTeammate> UpdateTeammateWithHttpInfo (string appId, string id, TeammateBase teammate);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -172,9 +195,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteTeammateAsync (string appId, string email);
+        System.Threading.Tasks.Task DeleteTeammateAsync (string appId, string id);
 
         /// <summary>
         /// Delete teammate
@@ -184,9 +207,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTeammateAsyncWithHttpInfo (string appId, string email);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTeammateAsyncWithHttpInfo (string appId, string id);
         /// <summary>
         /// Get a teammates by email address
         /// </summary>
@@ -195,9 +218,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns>Task of RestApiResultTeammate</returns>
-        System.Threading.Tasks.Task<RestApiResultTeammate> GetTeammateByAppIdAndEmailAsync (string appId, string email);
+        System.Threading.Tasks.Task<RestApiResultTeammate> GetTeammateByAppIdAndTeammateIdAsync (string appId, string id);
 
         /// <summary>
         /// Get a teammates by email address
@@ -207,9 +230,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns>Task of ApiResponse (RestApiResultTeammate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultTeammate>> GetTeammateByAppIdAndEmailAsyncWithHttpInfo (string appId, string email);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultTeammate>> GetTeammateByAppIdAndTeammateIdAsyncWithHttpInfo (string appId, string id);
         /// <summary>
         /// Get all teammates
         /// </summary>
@@ -232,6 +255,29 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultTeammate)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultTeammate>> GetTeammatesByAppIdAsyncWithHttpInfo (string appId);
         /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task RedeemCodeAsync (string otc, string appId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> RedeemCodeAsyncWithHttpInfo (string otc, string appId);
+        /// <summary>
         /// Update teammates (this method does not support Deltas!)
         /// </summary>
         /// <remarks>
@@ -239,10 +285,10 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <param name="teammate"></param>
         /// <returns>Task of RestApiResultTeammate</returns>
-        System.Threading.Tasks.Task<RestApiResultTeammate> UpdateTeammateAsync (string appId, string email, TeammateBase teammate);
+        System.Threading.Tasks.Task<RestApiResultTeammate> UpdateTeammateAsync (string appId, string id, TeammateBase teammate);
 
         /// <summary>
         /// Update teammates (this method does not support Deltas!)
@@ -252,10 +298,10 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <param name="teammate"></param>
         /// <returns>Task of ApiResponse (RestApiResultTeammate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultTeammate>> UpdateTeammateAsyncWithHttpInfo (string appId, string email, TeammateBase teammate);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultTeammate>> UpdateTeammateAsyncWithHttpInfo (string appId, string id, TeammateBase teammate);
         #endregion Asynchronous Operations
     }
 
@@ -548,11 +594,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
-        public void DeleteTeammate (string appId, string email)
+        public void DeleteTeammate (string appId, string id)
         {
-             DeleteTeammateWithHttpInfo(appId, email);
+             DeleteTeammateWithHttpInfo(appId, id);
         }
 
         /// <summary>
@@ -560,18 +606,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteTeammateWithHttpInfo (string appId, string email)
+        public ApiResponse<Object> DeleteTeammateWithHttpInfo (string appId, string id)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->DeleteTeammate");
-            // verify the required parameter 'email' is set
-            if (email == null)
-                throw new ApiException(400, "Missing required parameter 'email' when calling TeammatesApi->DeleteTeammate");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling TeammatesApi->DeleteTeammate");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates/{email}";
+            var localVarPath = "/api/v1.0/{appId}/teammates/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -596,7 +642,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (email != null) localVarPathParams.Add("email", this.Configuration.ApiClient.ParameterToString(email)); // path parameter
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -628,11 +674,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteTeammateAsync (string appId, string email)
+        public async System.Threading.Tasks.Task DeleteTeammateAsync (string appId, string id)
         {
-             await DeleteTeammateAsyncWithHttpInfo(appId, email);
+             await DeleteTeammateAsyncWithHttpInfo(appId, id);
 
         }
 
@@ -641,18 +687,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTeammateAsyncWithHttpInfo (string appId, string email)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTeammateAsyncWithHttpInfo (string appId, string id)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->DeleteTeammate");
-            // verify the required parameter 'email' is set
-            if (email == null)
-                throw new ApiException(400, "Missing required parameter 'email' when calling TeammatesApi->DeleteTeammate");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling TeammatesApi->DeleteTeammate");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates/{email}";
+            var localVarPath = "/api/v1.0/{appId}/teammates/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -677,7 +723,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (email != null) localVarPathParams.Add("email", this.Configuration.ApiClient.ParameterToString(email)); // path parameter
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -709,11 +755,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns>RestApiResultTeammate</returns>
-        public RestApiResultTeammate GetTeammateByAppIdAndEmail (string appId, string email)
+        public RestApiResultTeammate GetTeammateByAppIdAndTeammateId (string appId, string id)
         {
-             ApiResponse<RestApiResultTeammate> localVarResponse = GetTeammateByAppIdAndEmailWithHttpInfo(appId, email);
+             ApiResponse<RestApiResultTeammate> localVarResponse = GetTeammateByAppIdAndTeammateIdWithHttpInfo(appId, id);
              return localVarResponse.Data;
         }
 
@@ -722,18 +768,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns>ApiResponse of RestApiResultTeammate</returns>
-        public ApiResponse< RestApiResultTeammate > GetTeammateByAppIdAndEmailWithHttpInfo (string appId, string email)
+        public ApiResponse< RestApiResultTeammate > GetTeammateByAppIdAndTeammateIdWithHttpInfo (string appId, string id)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->GetTeammateByAppIdAndEmail");
-            // verify the required parameter 'email' is set
-            if (email == null)
-                throw new ApiException(400, "Missing required parameter 'email' when calling TeammatesApi->GetTeammateByAppIdAndEmail");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->GetTeammateByAppIdAndTeammateId");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling TeammatesApi->GetTeammateByAppIdAndTeammateId");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates/{email}";
+            var localVarPath = "/api/v1.0/{appId}/teammates/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -758,7 +804,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (email != null) localVarPathParams.Add("email", this.Configuration.ApiClient.ParameterToString(email)); // path parameter
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -776,7 +822,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetTeammateByAppIdAndEmail", localVarResponse);
+                Exception exception = ExceptionFactory("GetTeammateByAppIdAndTeammateId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -790,11 +836,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns>Task of RestApiResultTeammate</returns>
-        public async System.Threading.Tasks.Task<RestApiResultTeammate> GetTeammateByAppIdAndEmailAsync (string appId, string email)
+        public async System.Threading.Tasks.Task<RestApiResultTeammate> GetTeammateByAppIdAndTeammateIdAsync (string appId, string id)
         {
-             ApiResponse<RestApiResultTeammate> localVarResponse = await GetTeammateByAppIdAndEmailAsyncWithHttpInfo(appId, email);
+             ApiResponse<RestApiResultTeammate> localVarResponse = await GetTeammateByAppIdAndTeammateIdAsyncWithHttpInfo(appId, id);
              return localVarResponse.Data;
 
         }
@@ -804,18 +850,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <returns>Task of ApiResponse (RestApiResultTeammate)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultTeammate>> GetTeammateByAppIdAndEmailAsyncWithHttpInfo (string appId, string email)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultTeammate>> GetTeammateByAppIdAndTeammateIdAsyncWithHttpInfo (string appId, string id)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->GetTeammateByAppIdAndEmail");
-            // verify the required parameter 'email' is set
-            if (email == null)
-                throw new ApiException(400, "Missing required parameter 'email' when calling TeammatesApi->GetTeammateByAppIdAndEmail");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->GetTeammateByAppIdAndTeammateId");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling TeammatesApi->GetTeammateByAppIdAndTeammateId");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates/{email}";
+            var localVarPath = "/api/v1.0/{appId}/teammates/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -840,7 +886,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (email != null) localVarPathParams.Add("email", this.Configuration.ApiClient.ParameterToString(email)); // path parameter
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -858,7 +904,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetTeammateByAppIdAndEmail", localVarResponse);
+                Exception exception = ExceptionFactory("GetTeammateByAppIdAndTeammateId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1019,16 +1065,177 @@ namespace Flipdish.Api
         }
 
         /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns></returns>
+        public void RedeemCode (string otc, string appId)
+        {
+             RedeemCodeWithHttpInfo(otc, appId);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> RedeemCodeWithHttpInfo (string otc, string appId)
+        {
+            // verify the required parameter 'otc' is set
+            if (otc == null)
+                throw new ApiException(400, "Missing required parameter 'otc' when calling TeammatesApi->RedeemCode");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->RedeemCode");
+
+            var localVarPath = "/api/v1.0/{appId}/teammates/redeem/{otc}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (otc != null) localVarPathParams.Add("otc", this.Configuration.ApiClient.ParameterToString(otc)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RedeemCode", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task RedeemCodeAsync (string otc, string appId)
+        {
+             await RedeemCodeAsyncWithHttpInfo(otc, appId);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RedeemCodeAsyncWithHttpInfo (string otc, string appId)
+        {
+            // verify the required parameter 'otc' is set
+            if (otc == null)
+                throw new ApiException(400, "Missing required parameter 'otc' when calling TeammatesApi->RedeemCode");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->RedeemCode");
+
+            var localVarPath = "/api/v1.0/{appId}/teammates/redeem/{otc}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (otc != null) localVarPathParams.Add("otc", this.Configuration.ApiClient.ParameterToString(otc)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RedeemCode", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
         /// Update teammates (this method does not support Deltas!) 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <param name="teammate"></param>
         /// <returns>RestApiResultTeammate</returns>
-        public RestApiResultTeammate UpdateTeammate (string appId, string email, TeammateBase teammate)
+        public RestApiResultTeammate UpdateTeammate (string appId, string id, TeammateBase teammate)
         {
-             ApiResponse<RestApiResultTeammate> localVarResponse = UpdateTeammateWithHttpInfo(appId, email, teammate);
+             ApiResponse<RestApiResultTeammate> localVarResponse = UpdateTeammateWithHttpInfo(appId, id, teammate);
              return localVarResponse.Data;
         }
 
@@ -1037,22 +1244,22 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <param name="teammate"></param>
         /// <returns>ApiResponse of RestApiResultTeammate</returns>
-        public ApiResponse< RestApiResultTeammate > UpdateTeammateWithHttpInfo (string appId, string email, TeammateBase teammate)
+        public ApiResponse< RestApiResultTeammate > UpdateTeammateWithHttpInfo (string appId, string id, TeammateBase teammate)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->UpdateTeammate");
-            // verify the required parameter 'email' is set
-            if (email == null)
-                throw new ApiException(400, "Missing required parameter 'email' when calling TeammatesApi->UpdateTeammate");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling TeammatesApi->UpdateTeammate");
             // verify the required parameter 'teammate' is set
             if (teammate == null)
                 throw new ApiException(400, "Missing required parameter 'teammate' when calling TeammatesApi->UpdateTeammate");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates/{email}";
+            var localVarPath = "/api/v1.0/{appId}/teammates/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1082,7 +1289,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (email != null) localVarPathParams.Add("email", this.Configuration.ApiClient.ParameterToString(email)); // path parameter
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (teammate != null && teammate.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(teammate); // http body (model) parameter
@@ -1122,12 +1329,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <param name="teammate"></param>
         /// <returns>Task of RestApiResultTeammate</returns>
-        public async System.Threading.Tasks.Task<RestApiResultTeammate> UpdateTeammateAsync (string appId, string email, TeammateBase teammate)
+        public async System.Threading.Tasks.Task<RestApiResultTeammate> UpdateTeammateAsync (string appId, string id, TeammateBase teammate)
         {
-             ApiResponse<RestApiResultTeammate> localVarResponse = await UpdateTeammateAsyncWithHttpInfo(appId, email, teammate);
+             ApiResponse<RestApiResultTeammate> localVarResponse = await UpdateTeammateAsyncWithHttpInfo(appId, id, teammate);
              return localVarResponse.Data;
 
         }
@@ -1137,22 +1344,22 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="email"></param>
+        /// <param name="id"></param>
         /// <param name="teammate"></param>
         /// <returns>Task of ApiResponse (RestApiResultTeammate)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultTeammate>> UpdateTeammateAsyncWithHttpInfo (string appId, string email, TeammateBase teammate)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultTeammate>> UpdateTeammateAsyncWithHttpInfo (string appId, string id, TeammateBase teammate)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->UpdateTeammate");
-            // verify the required parameter 'email' is set
-            if (email == null)
-                throw new ApiException(400, "Missing required parameter 'email' when calling TeammatesApi->UpdateTeammate");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling TeammatesApi->UpdateTeammate");
             // verify the required parameter 'teammate' is set
             if (teammate == null)
                 throw new ApiException(400, "Missing required parameter 'teammate' when calling TeammatesApi->UpdateTeammate");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates/{email}";
+            var localVarPath = "/api/v1.0/{appId}/teammates/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1182,7 +1389,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (email != null) localVarPathParams.Add("email", this.Configuration.ApiClient.ParameterToString(email)); // path parameter
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (teammate != null && teammate.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(teammate); // http body (model) parameter

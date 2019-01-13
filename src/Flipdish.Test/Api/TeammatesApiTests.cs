@@ -85,21 +85,21 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string appId = null;
-            //string email = null;
-            //instance.DeleteTeammate(appId, email);
+            //string id = null;
+            //instance.DeleteTeammate(appId, id);
             
         }
         
         /// <summary>
-        /// Test GetTeammateByAppIdAndEmail
+        /// Test GetTeammateByAppIdAndTeammateId
         /// </summary>
         [Test]
-        public void GetTeammateByAppIdAndEmailTest()
+        public void GetTeammateByAppIdAndTeammateIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string appId = null;
-            //string email = null;
-            //var response = instance.GetTeammateByAppIdAndEmail(appId, email);
+            //string id = null;
+            //var response = instance.GetTeammateByAppIdAndTeammateId(appId, id);
             //Assert.IsInstanceOf<RestApiResultTeammate> (response, "response is RestApiResultTeammate");
         }
         
@@ -116,6 +116,19 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test RedeemCode
+        /// </summary>
+        [Test]
+        public void RedeemCodeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string otc = null;
+            //string appId = null;
+            //instance.RedeemCode(otc, appId);
+            
+        }
+        
+        /// <summary>
         /// Test UpdateTeammate
         /// </summary>
         [Test]
@@ -123,9 +136,9 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string appId = null;
-            //string email = null;
+            //string id = null;
             //TeammateBase teammate = null;
-            //var response = instance.UpdateTeammate(appId, email, teammate);
+            //var response = instance.UpdateTeammate(appId, id, teammate);
             //Assert.IsInstanceOf<RestApiResultTeammate> (response, "response is RestApiResultTeammate");
         }
         

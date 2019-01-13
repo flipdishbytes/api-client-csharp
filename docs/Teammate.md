@@ -3,9 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**TeammateId** | **string** | Unique indentifier | [optional] 
 **Name** | **string** | Name | [optional] 
 **LastAcitivity** | **DateTime?** | Last activity | [optional] 
 **AppId** | **string** | Access level is for this App | [optional] 
+**InvitationStatus** | **string** | Invitation status | [optional] 
 **Email** | **string** | Email address | [optional] 
 **AppAccessLevel** | **string** | App access level | [optional] 
 **HasAccessToAllStores** | **bool?** | The user has access to all stores for the app (including new stores that added later) | [optional] 

@@ -546,6 +546,38 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'VoucherDeletedEvent'
         }
+        /// <summary>
+        /// Test the property 'TeammateInviteSentEvent'
+        /// </summary>
+        [Test]
+        public void TeammateInviteSentEventTest()
+        {
+            // TODO unit test for the property 'TeammateInviteSentEvent'
+        }
+        /// <summary>
+        /// Test the property 'TeammateInviteAcceptedEvent'
+        /// </summary>
+        [Test]
+        public void TeammateInviteAcceptedEventTest()
+        {
+            // TODO unit test for the property 'TeammateInviteAcceptedEvent'
+        }
+        /// <summary>
+        /// Test the property 'TeammateUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void TeammateUpdatedEventTest()
+        {
+            // TODO unit test for the property 'TeammateUpdatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'TeammateDeletedEvent'
+        /// </summary>
+        [Test]
+        public void TeammateDeletedEventTest()
+        {
+            // TODO unit test for the property 'TeammateDeletedEvent'
+        }
 
     }
 
