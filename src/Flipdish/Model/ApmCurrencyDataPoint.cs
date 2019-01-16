@@ -25,35 +25,44 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// APM Statistics
+    /// A single data point in timeline graphs related to APM
     /// </summary>
     [DataContract]
-    public partial class ApmStatistics :  IEquatable<ApmStatistics>, IValidatableObject
+    public partial class ApmCurrencyDataPoint :  IEquatable<ApmCurrencyDataPoint>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApmStatistics" /> class.
+        /// Initializes a new instance of the <see cref="ApmCurrencyDataPoint" /> class.
         /// </summary>
-        /// <param name="estimatedMinutesSaved">Total amount of time spent with APM.</param>
-        /// <param name="currencyData">Currency based data.</param>
-        public ApmStatistics(int? estimatedMinutesSaved = default(int?), List<StatisticsCurrencyDataPoint> currencyData = default(List<StatisticsCurrencyDataPoint>))
+        /// <param name="periodStart">Date from which the data point starts.</param>
+        /// <param name="periodLengthInDays">The length in days that this data point covers.</param>
+        /// <param name="currencyData">The values of this data point.</param>
+        public ApmCurrencyDataPoint(DateTime? periodStart = default(DateTime?), int? periodLengthInDays = default(int?), List<CurrencyData> currencyData = default(List<CurrencyData>))
         {
-            this.EstimatedMinutesSaved = estimatedMinutesSaved;
+            this.PeriodStart = periodStart;
+            this.PeriodLengthInDays = periodLengthInDays;
             this.CurrencyData = currencyData;
         }
         
         /// <summary>
-        /// Total amount of time spent with APM
+        /// Date from which the data point starts
         /// </summary>
-        /// <value>Total amount of time spent with APM</value>
-        [DataMember(Name="EstimatedMinutesSaved", EmitDefaultValue=false)]
-        public int? EstimatedMinutesSaved { get; set; }
+        /// <value>Date from which the data point starts</value>
+        [DataMember(Name="PeriodStart", EmitDefaultValue=false)]
+        public DateTime? PeriodStart { get; set; }
 
         /// <summary>
-        /// Currency based data
+        /// The length in days that this data point covers
         /// </summary>
-        /// <value>Currency based data</value>
+        /// <value>The length in days that this data point covers</value>
+        [DataMember(Name="PeriodLengthInDays", EmitDefaultValue=false)]
+        public int? PeriodLengthInDays { get; set; }
+
+        /// <summary>
+        /// The values of this data point
+        /// </summary>
+        /// <value>The values of this data point</value>
         [DataMember(Name="CurrencyData", EmitDefaultValue=false)]
-        public List<StatisticsCurrencyDataPoint> CurrencyData { get; set; }
+        public List<CurrencyData> CurrencyData { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,8 +71,9 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ApmStatistics {\n");
-            sb.Append("  EstimatedMinutesSaved: ").Append(EstimatedMinutesSaved).Append("\n");
+            sb.Append("class ApmCurrencyDataPoint {\n");
+            sb.Append("  PeriodStart: ").Append(PeriodStart).Append("\n");
+            sb.Append("  PeriodLengthInDays: ").Append(PeriodLengthInDays).Append("\n");
             sb.Append("  CurrencyData: ").Append(CurrencyData).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -85,24 +95,29 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ApmStatistics);
+            return this.Equals(input as ApmCurrencyDataPoint);
         }
 
         /// <summary>
-        /// Returns true if ApmStatistics instances are equal
+        /// Returns true if ApmCurrencyDataPoint instances are equal
         /// </summary>
-        /// <param name="input">Instance of ApmStatistics to be compared</param>
+        /// <param name="input">Instance of ApmCurrencyDataPoint to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApmStatistics input)
+        public bool Equals(ApmCurrencyDataPoint input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.EstimatedMinutesSaved == input.EstimatedMinutesSaved ||
-                    (this.EstimatedMinutesSaved != null &&
-                    this.EstimatedMinutesSaved.Equals(input.EstimatedMinutesSaved))
+                    this.PeriodStart == input.PeriodStart ||
+                    (this.PeriodStart != null &&
+                    this.PeriodStart.Equals(input.PeriodStart))
+                ) && 
+                (
+                    this.PeriodLengthInDays == input.PeriodLengthInDays ||
+                    (this.PeriodLengthInDays != null &&
+                    this.PeriodLengthInDays.Equals(input.PeriodLengthInDays))
                 ) && 
                 (
                     this.CurrencyData == input.CurrencyData ||
@@ -120,8 +135,10 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.EstimatedMinutesSaved != null)
-                    hashCode = hashCode * 59 + this.EstimatedMinutesSaved.GetHashCode();
+                if (this.PeriodStart != null)
+                    hashCode = hashCode * 59 + this.PeriodStart.GetHashCode();
+                if (this.PeriodLengthInDays != null)
+                    hashCode = hashCode * 59 + this.PeriodLengthInDays.GetHashCode();
                 if (this.CurrencyData != null)
                     hashCode = hashCode * 59 + this.CurrencyData.GetHashCode();
                 return hashCode;

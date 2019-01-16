@@ -24,6 +24,8 @@ Name | Type | Description | Notes
 **RequireCustomerNameForDelivery** | **bool?** | True if customer name required for delivery orders | [optional] 
 **MicrosoftTimeZone** | **string** | Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391) | [optional] 
 **IanaTimeZone** | **string** | IANA Time Zone (https://www.iana.org/time-zones) | [optional] 
+**EtaInPickupConfirmationSmsEnabled** | **bool?** | True if order confirmation sms includes estimated time when order will be ready for collection | [optional] 
+**EtaInDeliveryConfirmationSmsEnabled** | **bool?** | True if order confirmation sms includes estimated time when order will delivered | [optional] 
 **Name** | **string** | Name | [optional] 
 **EmailAddress** | **string** | Email address (visible to customers) | [optional] 
 **StaffLanguage** | **string** | Staff Language (used for communcation with the staff)  Emails, Printouts etc | [optional] 

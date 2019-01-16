@@ -93,10 +93,12 @@ namespace Flipdish.Model
         /// <param name="requireCustomerNameForDelivery">True if customer name required for delivery orders.</param>
         /// <param name="microsoftTimeZone">Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391).</param>
         /// <param name="ianaTimeZone">IANA Time Zone (https://www.iana.org/time-zones).</param>
+        /// <param name="etaInPickupConfirmationSmsEnabled">True if order confirmation sms includes estimated time when order will be ready for collection.</param>
+        /// <param name="etaInDeliveryConfirmationSmsEnabled">True if order confirmation sms includes estimated time when order will delivered.</param>
         /// <param name="name">Name.</param>
         /// <param name="emailAddress">Email address (visible to customers).</param>
         /// <param name="staffLanguage">Staff Language (used for communcation with the staff)  Emails, Printouts etc.</param>
-        public Store(int? storeId = default(int?), int? storeGroupId = default(int?), StoreAddress address = default(StoreAddress), List<DeliveryZone> deliveryZones = default(List<DeliveryZone>), string apmPhoneNumber = default(string), List<BusinessHoursPeriod> pickupHours = default(List<BusinessHoursPeriod>), List<BusinessHoursPeriod> deliveryHours = default(List<BusinessHoursPeriod>), int? menuId = default(int?), string orderConfirmationMessageOverrideDelivery = default(string), string orderConfirmationMessageOverridePickup = default(string), PrintoutLayoutTypeEnum? printoutLayoutType = default(PrintoutLayoutTypeEnum?), List<StoreNote> storeNotes = default(List<StoreNote>), string phoneNumber = default(string), bool? preOrderEnabled = default(bool?), bool? takeOutEnabled = default(bool?), bool? tableServiceEnabled = default(bool?), bool? dineInEnabled = default(bool?), bool? allowPreOrdersAndTableService = default(bool?), bool? pickupEnabled = default(bool?), bool? deliveryEnabled = default(bool?), bool? cardOrderDeliveryEnabled = default(bool?), bool? cashOrdersDeliveryEnabled = default(bool?), bool? cardOrdersPickupEnabled = default(bool?), bool? cashOrdersPickupEnabled = default(bool?), bool? tipsEnabled = default(bool?), bool? automaticallyAcceptOrders = default(bool?), bool? openForDelivery = default(bool?), bool? openForPickup = default(bool?), double? minimumPickupOrderAmount = default(double?), bool? requireCustomerNameForPickup = default(bool?), bool? requireCustomerNameForDelivery = default(bool?), string microsoftTimeZone = default(string), string ianaTimeZone = default(string), string name = default(string), string emailAddress = default(string), string staffLanguage = default(string))
+        public Store(int? storeId = default(int?), int? storeGroupId = default(int?), StoreAddress address = default(StoreAddress), List<DeliveryZone> deliveryZones = default(List<DeliveryZone>), string apmPhoneNumber = default(string), List<BusinessHoursPeriod> pickupHours = default(List<BusinessHoursPeriod>), List<BusinessHoursPeriod> deliveryHours = default(List<BusinessHoursPeriod>), int? menuId = default(int?), string orderConfirmationMessageOverrideDelivery = default(string), string orderConfirmationMessageOverridePickup = default(string), PrintoutLayoutTypeEnum? printoutLayoutType = default(PrintoutLayoutTypeEnum?), List<StoreNote> storeNotes = default(List<StoreNote>), string phoneNumber = default(string), bool? preOrderEnabled = default(bool?), bool? takeOutEnabled = default(bool?), bool? tableServiceEnabled = default(bool?), bool? dineInEnabled = default(bool?), bool? allowPreOrdersAndTableService = default(bool?), bool? pickupEnabled = default(bool?), bool? deliveryEnabled = default(bool?), bool? cardOrderDeliveryEnabled = default(bool?), bool? cashOrdersDeliveryEnabled = default(bool?), bool? cardOrdersPickupEnabled = default(bool?), bool? cashOrdersPickupEnabled = default(bool?), bool? tipsEnabled = default(bool?), bool? automaticallyAcceptOrders = default(bool?), bool? openForDelivery = default(bool?), bool? openForPickup = default(bool?), double? minimumPickupOrderAmount = default(double?), bool? requireCustomerNameForPickup = default(bool?), bool? requireCustomerNameForDelivery = default(bool?), string microsoftTimeZone = default(string), string ianaTimeZone = default(string), bool? etaInPickupConfirmationSmsEnabled = default(bool?), bool? etaInDeliveryConfirmationSmsEnabled = default(bool?), string name = default(string), string emailAddress = default(string), string staffLanguage = default(string))
         {
             this.StoreId = storeId;
             this.StoreGroupId = storeGroupId;
@@ -131,6 +133,8 @@ namespace Flipdish.Model
             this.RequireCustomerNameForDelivery = requireCustomerNameForDelivery;
             this.MicrosoftTimeZone = microsoftTimeZone;
             this.IanaTimeZone = ianaTimeZone;
+            this.EtaInPickupConfirmationSmsEnabled = etaInPickupConfirmationSmsEnabled;
+            this.EtaInDeliveryConfirmationSmsEnabled = etaInDeliveryConfirmationSmsEnabled;
             this.Name = name;
             this.EmailAddress = emailAddress;
             this.StaffLanguage = staffLanguage;
@@ -362,6 +366,20 @@ namespace Flipdish.Model
         public string IanaTimeZone { get; set; }
 
         /// <summary>
+        /// True if order confirmation sms includes estimated time when order will be ready for collection
+        /// </summary>
+        /// <value>True if order confirmation sms includes estimated time when order will be ready for collection</value>
+        [DataMember(Name="EtaInPickupConfirmationSmsEnabled", EmitDefaultValue=false)]
+        public bool? EtaInPickupConfirmationSmsEnabled { get; set; }
+
+        /// <summary>
+        /// True if order confirmation sms includes estimated time when order will delivered
+        /// </summary>
+        /// <value>True if order confirmation sms includes estimated time when order will delivered</value>
+        [DataMember(Name="EtaInDeliveryConfirmationSmsEnabled", EmitDefaultValue=false)]
+        public bool? EtaInDeliveryConfirmationSmsEnabled { get; set; }
+
+        /// <summary>
         /// Name
         /// </summary>
         /// <value>Name</value>
@@ -423,6 +441,8 @@ namespace Flipdish.Model
             sb.Append("  RequireCustomerNameForDelivery: ").Append(RequireCustomerNameForDelivery).Append("\n");
             sb.Append("  MicrosoftTimeZone: ").Append(MicrosoftTimeZone).Append("\n");
             sb.Append("  IanaTimeZone: ").Append(IanaTimeZone).Append("\n");
+            sb.Append("  EtaInPickupConfirmationSmsEnabled: ").Append(EtaInPickupConfirmationSmsEnabled).Append("\n");
+            sb.Append("  EtaInDeliveryConfirmationSmsEnabled: ").Append(EtaInDeliveryConfirmationSmsEnabled).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  EmailAddress: ").Append(EmailAddress).Append("\n");
             sb.Append("  StaffLanguage: ").Append(StaffLanguage).Append("\n");
@@ -626,6 +646,16 @@ namespace Flipdish.Model
                     this.IanaTimeZone.Equals(input.IanaTimeZone))
                 ) && 
                 (
+                    this.EtaInPickupConfirmationSmsEnabled == input.EtaInPickupConfirmationSmsEnabled ||
+                    (this.EtaInPickupConfirmationSmsEnabled != null &&
+                    this.EtaInPickupConfirmationSmsEnabled.Equals(input.EtaInPickupConfirmationSmsEnabled))
+                ) && 
+                (
+                    this.EtaInDeliveryConfirmationSmsEnabled == input.EtaInDeliveryConfirmationSmsEnabled ||
+                    (this.EtaInDeliveryConfirmationSmsEnabled != null &&
+                    this.EtaInDeliveryConfirmationSmsEnabled.Equals(input.EtaInDeliveryConfirmationSmsEnabled))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -717,6 +747,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MicrosoftTimeZone.GetHashCode();
                 if (this.IanaTimeZone != null)
                     hashCode = hashCode * 59 + this.IanaTimeZone.GetHashCode();
+                if (this.EtaInPickupConfirmationSmsEnabled != null)
+                    hashCode = hashCode * 59 + this.EtaInPickupConfirmationSmsEnabled.GetHashCode();
+                if (this.EtaInDeliveryConfirmationSmsEnabled != null)
+                    hashCode = hashCode * 59 + this.EtaInDeliveryConfirmationSmsEnabled.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.EmailAddress != null)

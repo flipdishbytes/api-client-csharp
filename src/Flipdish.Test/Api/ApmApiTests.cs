@@ -117,7 +117,7 @@ namespace Flipdish.Test
             //int? dataPointLimit = null;
             //List<int?> storeId = null;
             //var response = instance.GetOrderStatistics(appId, aggregateDataBy, dataPointLimit, storeId);
-            //Assert.IsInstanceOf<RestApiArrayResultApmDataPoint> (response, "response is RestApiArrayResultApmDataPoint");
+            //Assert.IsInstanceOf<RestApiArrayResultApmCurrencyDataPoint> (response, "response is RestApiArrayResultApmCurrencyDataPoint");
         }
         
         /// <summary>
@@ -132,7 +132,7 @@ namespace Flipdish.Test
             //int? limit = null;
             //List<int?> storeId = null;
             //var response = instance.GetPaginatedCallList(appId, page, limit, storeId);
-            //Assert.IsInstanceOf<RestApiPaginationResultApmCall> (response, "response is RestApiPaginationResultApmCall");
+            //Assert.IsInstanceOf<RestApiPaginationResultPhoneCall> (response, "response is RestApiPaginationResultPhoneCall");
         }
         
     }

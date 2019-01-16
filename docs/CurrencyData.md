@@ -1,12 +1,10 @@
-# Flipdish.Model.RestApiPaginationResultApmCall
+# Flipdish.Model.CurrencyData
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Page** | **int?** | Current page index | 
-**Limit** | **int?** | Current page size | 
-**TotalRecordCount** | **int?** | Total record count | 
-**Data** | [**List&lt;ApmCall&gt;**](ApmCall.md) | Generic data object. | 
+**Currency** | **string** | Currency | [optional] 
+**Value** | **double?** | Value | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

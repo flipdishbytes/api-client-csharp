@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**GetBasicStatistics**](ApmApi.md#getbasicstatistics) | **GET** /api/v1.0/{appId}/apm/statistics | [PRIVATE API] Get Basic Statistics
 [**GetCalendarWeekStatistics**](ApmApi.md#getcalendarweekstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calendar | [PRIVATE API] Get Calendar statistics
 [**GetCallsStatistics**](ApmApi.md#getcallsstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy} | [PRIVATE API] Get Calls Statistics
-[**GetOrderStatistics**](ApmApi.md#getorderstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | [PRIVATE API] Get Order Statistics
+[**GetOrderStatistics**](ApmApi.md#getorderstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | [PRIVATE API] Get Order Statistics (Value of Orders)
 [**GetPaginatedCallList**](ApmApi.md#getpaginatedcalllist) | **GET** /api/v1.0/{appId}/apm/calls | [PRIVATE API] Get paginated APM call list
 
 
@@ -209,9 +209,9 @@ Name | Type | Description  | Notes
 
 <a name="getorderstatistics"></a>
 # **GetOrderStatistics**
-> RestApiArrayResultApmDataPoint GetOrderStatistics (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null)
+> RestApiArrayResultApmCurrencyDataPoint GetOrderStatistics (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null)
 
-[PRIVATE API] Get Order Statistics
+[PRIVATE API] Get Order Statistics (Value of Orders)
 
 ### Example
 ```csharp
@@ -238,8 +238,8 @@ namespace Example
 
             try
             {
-                // [PRIVATE API] Get Order Statistics
-                RestApiArrayResultApmDataPoint result = apiInstance.GetOrderStatistics(appId, aggregateDataBy, dataPointLimit, storeId);
+                // [PRIVATE API] Get Order Statistics (Value of Orders)
+                RestApiArrayResultApmCurrencyDataPoint result = apiInstance.GetOrderStatistics(appId, aggregateDataBy, dataPointLimit, storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiArrayResultApmDataPoint**](RestApiArrayResultApmDataPoint.md)
+[**RestApiArrayResultApmCurrencyDataPoint**](RestApiArrayResultApmCurrencyDataPoint.md)
 
 ### Authorization
 
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 
 <a name="getpaginatedcalllist"></a>
 # **GetPaginatedCallList**
-> RestApiPaginationResultApmCall GetPaginatedCallList (string appId, int? page = null, int? limit = null, List<int?> storeId = null)
+> RestApiPaginationResultPhoneCall GetPaginatedCallList (string appId, int? page = null, int? limit = null, List<int?> storeId = null)
 
 [PRIVATE API] Get paginated APM call list
 
@@ -307,7 +307,7 @@ namespace Example
             try
             {
                 // [PRIVATE API] Get paginated APM call list
-                RestApiPaginationResultApmCall result = apiInstance.GetPaginatedCallList(appId, page, limit, storeId);
+                RestApiPaginationResultPhoneCall result = apiInstance.GetPaginatedCallList(appId, page, limit, storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiPaginationResultApmCall**](RestApiPaginationResultApmCall.md)
+[**RestApiPaginationResultPhoneCall**](RestApiPaginationResultPhoneCall.md)
 
 ### Authorization
 

@@ -31,29 +31,137 @@ namespace Flipdish.Model
     public partial class PhoneCall :  IEquatable<PhoneCall>, IValidatableObject
     {
         /// <summary>
+        /// The status of the call
+        /// </summary>
+        /// <value>The status of the call</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CallStatusEnum
+        {
+            
+            /// <summary>
+            /// Enum Queued for value: Queued
+            /// </summary>
+            [EnumMember(Value = "Queued")]
+            Queued = 1,
+            
+            /// <summary>
+            /// Enum Ringing for value: Ringing
+            /// </summary>
+            [EnumMember(Value = "Ringing")]
+            Ringing = 2,
+            
+            /// <summary>
+            /// Enum InProgress for value: InProgress
+            /// </summary>
+            [EnumMember(Value = "InProgress")]
+            InProgress = 3,
+            
+            /// <summary>
+            /// Enum Completed for value: Completed
+            /// </summary>
+            [EnumMember(Value = "Completed")]
+            Completed = 4,
+            
+            /// <summary>
+            /// Enum Failed for value: Failed
+            /// </summary>
+            [EnumMember(Value = "Failed")]
+            Failed = 5,
+            
+            /// <summary>
+            /// Enum Busy for value: Busy
+            /// </summary>
+            [EnumMember(Value = "Busy")]
+            Busy = 6,
+            
+            /// <summary>
+            /// Enum NoAnswer for value: NoAnswer
+            /// </summary>
+            [EnumMember(Value = "NoAnswer")]
+            NoAnswer = 7,
+            
+            /// <summary>
+            /// Enum Unknown for value: Unknown
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown = 8,
+            
+            /// <summary>
+            /// Enum Canceled for value: Canceled
+            /// </summary>
+            [EnumMember(Value = "Canceled")]
+            Canceled = 9
+        }
+
+        /// <summary>
+        /// The status of the call
+        /// </summary>
+        /// <value>The status of the call</value>
+        [DataMember(Name="CallStatus", EmitDefaultValue=false)]
+        public CallStatusEnum? CallStatus { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="PhoneCall" /> class.
         /// </summary>
-        /// <param name="from">Phone number which initiated the phone call.</param>
-        /// <param name="to">Phone number which received the phone call.</param>
-        public PhoneCall(string from = default(string), string to = default(string))
+        /// <param name="timeOfCall">Time of the call.</param>
+        /// <param name="timeOfCallLocal">Time of the call, local to the store to which the call was made.</param>
+        /// <param name="storeName">Name of the store that the call was TO.</param>
+        /// <param name="callerName">Name of the caller.</param>
+        /// <param name="callerNumber">Phone number of the caller.</param>
+        /// <param name="callLengthInSeconds">The amount of time the call took.</param>
+        /// <param name="callStatus">The status of the call.</param>
+        public PhoneCall(DateTime? timeOfCall = default(DateTime?), DateTime? timeOfCallLocal = default(DateTime?), string storeName = default(string), string callerName = default(string), string callerNumber = default(string), int? callLengthInSeconds = default(int?), CallStatusEnum? callStatus = default(CallStatusEnum?))
         {
-            this.From = from;
-            this.To = to;
+            this.TimeOfCall = timeOfCall;
+            this.TimeOfCallLocal = timeOfCallLocal;
+            this.StoreName = storeName;
+            this.CallerName = callerName;
+            this.CallerNumber = callerNumber;
+            this.CallLengthInSeconds = callLengthInSeconds;
+            this.CallStatus = callStatus;
         }
         
         /// <summary>
-        /// Phone number which initiated the phone call
+        /// Time of the call
         /// </summary>
-        /// <value>Phone number which initiated the phone call</value>
-        [DataMember(Name="From", EmitDefaultValue=false)]
-        public string From { get; set; }
+        /// <value>Time of the call</value>
+        [DataMember(Name="TimeOfCall", EmitDefaultValue=false)]
+        public DateTime? TimeOfCall { get; set; }
 
         /// <summary>
-        /// Phone number which received the phone call
+        /// Time of the call, local to the store to which the call was made
         /// </summary>
-        /// <value>Phone number which received the phone call</value>
-        [DataMember(Name="To", EmitDefaultValue=false)]
-        public string To { get; set; }
+        /// <value>Time of the call, local to the store to which the call was made</value>
+        [DataMember(Name="TimeOfCallLocal", EmitDefaultValue=false)]
+        public DateTime? TimeOfCallLocal { get; set; }
+
+        /// <summary>
+        /// Name of the store that the call was TO
+        /// </summary>
+        /// <value>Name of the store that the call was TO</value>
+        [DataMember(Name="StoreName", EmitDefaultValue=false)]
+        public string StoreName { get; set; }
+
+        /// <summary>
+        /// Name of the caller
+        /// </summary>
+        /// <value>Name of the caller</value>
+        [DataMember(Name="CallerName", EmitDefaultValue=false)]
+        public string CallerName { get; set; }
+
+        /// <summary>
+        /// Phone number of the caller
+        /// </summary>
+        /// <value>Phone number of the caller</value>
+        [DataMember(Name="CallerNumber", EmitDefaultValue=false)]
+        public string CallerNumber { get; set; }
+
+        /// <summary>
+        /// The amount of time the call took
+        /// </summary>
+        /// <value>The amount of time the call took</value>
+        [DataMember(Name="CallLengthInSeconds", EmitDefaultValue=false)]
+        public int? CallLengthInSeconds { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -63,8 +171,13 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PhoneCall {\n");
-            sb.Append("  From: ").Append(From).Append("\n");
-            sb.Append("  To: ").Append(To).Append("\n");
+            sb.Append("  TimeOfCall: ").Append(TimeOfCall).Append("\n");
+            sb.Append("  TimeOfCallLocal: ").Append(TimeOfCallLocal).Append("\n");
+            sb.Append("  StoreName: ").Append(StoreName).Append("\n");
+            sb.Append("  CallerName: ").Append(CallerName).Append("\n");
+            sb.Append("  CallerNumber: ").Append(CallerNumber).Append("\n");
+            sb.Append("  CallLengthInSeconds: ").Append(CallLengthInSeconds).Append("\n");
+            sb.Append("  CallStatus: ").Append(CallStatus).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -100,14 +213,39 @@ namespace Flipdish.Model
 
             return 
                 (
-                    this.From == input.From ||
-                    (this.From != null &&
-                    this.From.Equals(input.From))
+                    this.TimeOfCall == input.TimeOfCall ||
+                    (this.TimeOfCall != null &&
+                    this.TimeOfCall.Equals(input.TimeOfCall))
                 ) && 
                 (
-                    this.To == input.To ||
-                    (this.To != null &&
-                    this.To.Equals(input.To))
+                    this.TimeOfCallLocal == input.TimeOfCallLocal ||
+                    (this.TimeOfCallLocal != null &&
+                    this.TimeOfCallLocal.Equals(input.TimeOfCallLocal))
+                ) && 
+                (
+                    this.StoreName == input.StoreName ||
+                    (this.StoreName != null &&
+                    this.StoreName.Equals(input.StoreName))
+                ) && 
+                (
+                    this.CallerName == input.CallerName ||
+                    (this.CallerName != null &&
+                    this.CallerName.Equals(input.CallerName))
+                ) && 
+                (
+                    this.CallerNumber == input.CallerNumber ||
+                    (this.CallerNumber != null &&
+                    this.CallerNumber.Equals(input.CallerNumber))
+                ) && 
+                (
+                    this.CallLengthInSeconds == input.CallLengthInSeconds ||
+                    (this.CallLengthInSeconds != null &&
+                    this.CallLengthInSeconds.Equals(input.CallLengthInSeconds))
+                ) && 
+                (
+                    this.CallStatus == input.CallStatus ||
+                    (this.CallStatus != null &&
+                    this.CallStatus.Equals(input.CallStatus))
                 );
         }
 
@@ -120,10 +258,20 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.From != null)
-                    hashCode = hashCode * 59 + this.From.GetHashCode();
-                if (this.To != null)
-                    hashCode = hashCode * 59 + this.To.GetHashCode();
+                if (this.TimeOfCall != null)
+                    hashCode = hashCode * 59 + this.TimeOfCall.GetHashCode();
+                if (this.TimeOfCallLocal != null)
+                    hashCode = hashCode * 59 + this.TimeOfCallLocal.GetHashCode();
+                if (this.StoreName != null)
+                    hashCode = hashCode * 59 + this.StoreName.GetHashCode();
+                if (this.CallerName != null)
+                    hashCode = hashCode * 59 + this.CallerName.GetHashCode();
+                if (this.CallerNumber != null)
+                    hashCode = hashCode * 59 + this.CallerNumber.GetHashCode();
+                if (this.CallLengthInSeconds != null)
+                    hashCode = hashCode * 59 + this.CallLengthInSeconds.GetHashCode();
+                if (this.CallStatus != null)
+                    hashCode = hashCode * 59 + this.CallStatus.GetHashCode();
                 return hashCode;
             }
         }

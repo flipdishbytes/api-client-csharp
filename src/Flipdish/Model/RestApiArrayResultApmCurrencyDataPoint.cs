@@ -25,35 +25,39 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// APM Statistics
+    /// Rest api array result
     /// </summary>
     [DataContract]
-    public partial class ApmStatistics :  IEquatable<ApmStatistics>, IValidatableObject
+    public partial class RestApiArrayResultApmCurrencyDataPoint :  IEquatable<RestApiArrayResultApmCurrencyDataPoint>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApmStatistics" /> class.
+        /// Initializes a new instance of the <see cref="RestApiArrayResultApmCurrencyDataPoint" /> class.
         /// </summary>
-        /// <param name="estimatedMinutesSaved">Total amount of time spent with APM.</param>
-        /// <param name="currencyData">Currency based data.</param>
-        public ApmStatistics(int? estimatedMinutesSaved = default(int?), List<StatisticsCurrencyDataPoint> currencyData = default(List<StatisticsCurrencyDataPoint>))
+        [JsonConstructorAttribute]
+        protected RestApiArrayResultApmCurrencyDataPoint() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RestApiArrayResultApmCurrencyDataPoint" /> class.
+        /// </summary>
+        /// <param name="data">Generic data object. (required).</param>
+        public RestApiArrayResultApmCurrencyDataPoint(List<ApmCurrencyDataPoint> data = default(List<ApmCurrencyDataPoint>))
         {
-            this.EstimatedMinutesSaved = estimatedMinutesSaved;
-            this.CurrencyData = currencyData;
+            // to ensure "data" is required (not null)
+            if (data == null)
+            {
+                throw new InvalidDataException("data is a required property for RestApiArrayResultApmCurrencyDataPoint and cannot be null");
+            }
+            else
+            {
+                this.Data = data;
+            }
         }
         
         /// <summary>
-        /// Total amount of time spent with APM
+        /// Generic data object.
         /// </summary>
-        /// <value>Total amount of time spent with APM</value>
-        [DataMember(Name="EstimatedMinutesSaved", EmitDefaultValue=false)]
-        public int? EstimatedMinutesSaved { get; set; }
-
-        /// <summary>
-        /// Currency based data
-        /// </summary>
-        /// <value>Currency based data</value>
-        [DataMember(Name="CurrencyData", EmitDefaultValue=false)]
-        public List<StatisticsCurrencyDataPoint> CurrencyData { get; set; }
+        /// <value>Generic data object.</value>
+        [DataMember(Name="Data", EmitDefaultValue=false)]
+        public List<ApmCurrencyDataPoint> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,9 +66,8 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ApmStatistics {\n");
-            sb.Append("  EstimatedMinutesSaved: ").Append(EstimatedMinutesSaved).Append("\n");
-            sb.Append("  CurrencyData: ").Append(CurrencyData).Append("\n");
+            sb.Append("class RestApiArrayResultApmCurrencyDataPoint {\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,29 +88,24 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ApmStatistics);
+            return this.Equals(input as RestApiArrayResultApmCurrencyDataPoint);
         }
 
         /// <summary>
-        /// Returns true if ApmStatistics instances are equal
+        /// Returns true if RestApiArrayResultApmCurrencyDataPoint instances are equal
         /// </summary>
-        /// <param name="input">Instance of ApmStatistics to be compared</param>
+        /// <param name="input">Instance of RestApiArrayResultApmCurrencyDataPoint to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApmStatistics input)
+        public bool Equals(RestApiArrayResultApmCurrencyDataPoint input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.EstimatedMinutesSaved == input.EstimatedMinutesSaved ||
-                    (this.EstimatedMinutesSaved != null &&
-                    this.EstimatedMinutesSaved.Equals(input.EstimatedMinutesSaved))
-                ) && 
-                (
-                    this.CurrencyData == input.CurrencyData ||
-                    this.CurrencyData != null &&
-                    this.CurrencyData.SequenceEqual(input.CurrencyData)
+                    this.Data == input.Data ||
+                    this.Data != null &&
+                    this.Data.SequenceEqual(input.Data)
                 );
         }
 
@@ -120,10 +118,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.EstimatedMinutesSaved != null)
-                    hashCode = hashCode * 59 + this.EstimatedMinutesSaved.GetHashCode();
-                if (this.CurrencyData != null)
-                    hashCode = hashCode * 59 + this.CurrencyData.GetHashCode();
+                if (this.Data != null)
+                    hashCode = hashCode * 59 + this.Data.GetHashCode();
                 return hashCode;
             }
         }

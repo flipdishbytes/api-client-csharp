@@ -28,26 +28,26 @@ namespace Flipdish.Model
     /// Rest api pagination result
     /// </summary>
     [DataContract]
-    public partial class RestApiPaginationResultApmCall :  IEquatable<RestApiPaginationResultApmCall>, IValidatableObject
+    public partial class RestApiPaginationResultPhoneCall :  IEquatable<RestApiPaginationResultPhoneCall>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiPaginationResultApmCall" /> class.
+        /// Initializes a new instance of the <see cref="RestApiPaginationResultPhoneCall" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected RestApiPaginationResultApmCall() { }
+        protected RestApiPaginationResultPhoneCall() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiPaginationResultApmCall" /> class.
+        /// Initializes a new instance of the <see cref="RestApiPaginationResultPhoneCall" /> class.
         /// </summary>
         /// <param name="page">Current page index (required).</param>
         /// <param name="limit">Current page size (required).</param>
         /// <param name="totalRecordCount">Total record count (required).</param>
         /// <param name="data">Generic data object. (required).</param>
-        public RestApiPaginationResultApmCall(int? page = default(int?), int? limit = default(int?), int? totalRecordCount = default(int?), List<ApmCall> data = default(List<ApmCall>))
+        public RestApiPaginationResultPhoneCall(int? page = default(int?), int? limit = default(int?), int? totalRecordCount = default(int?), List<PhoneCall> data = default(List<PhoneCall>))
         {
             // to ensure "page" is required (not null)
             if (page == null)
             {
-                throw new InvalidDataException("page is a required property for RestApiPaginationResultApmCall and cannot be null");
+                throw new InvalidDataException("page is a required property for RestApiPaginationResultPhoneCall and cannot be null");
             }
             else
             {
@@ -56,7 +56,7 @@ namespace Flipdish.Model
             // to ensure "limit" is required (not null)
             if (limit == null)
             {
-                throw new InvalidDataException("limit is a required property for RestApiPaginationResultApmCall and cannot be null");
+                throw new InvalidDataException("limit is a required property for RestApiPaginationResultPhoneCall and cannot be null");
             }
             else
             {
@@ -65,7 +65,7 @@ namespace Flipdish.Model
             // to ensure "totalRecordCount" is required (not null)
             if (totalRecordCount == null)
             {
-                throw new InvalidDataException("totalRecordCount is a required property for RestApiPaginationResultApmCall and cannot be null");
+                throw new InvalidDataException("totalRecordCount is a required property for RestApiPaginationResultPhoneCall and cannot be null");
             }
             else
             {
@@ -74,7 +74,7 @@ namespace Flipdish.Model
             // to ensure "data" is required (not null)
             if (data == null)
             {
-                throw new InvalidDataException("data is a required property for RestApiPaginationResultApmCall and cannot be null");
+                throw new InvalidDataException("data is a required property for RestApiPaginationResultPhoneCall and cannot be null");
             }
             else
             {
@@ -108,7 +108,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Generic data object.</value>
         [DataMember(Name="Data", EmitDefaultValue=false)]
-        public List<ApmCall> Data { get; set; }
+        public List<PhoneCall> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -117,7 +117,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RestApiPaginationResultApmCall {\n");
+            sb.Append("class RestApiPaginationResultPhoneCall {\n");
             sb.Append("  Page: ").Append(Page).Append("\n");
             sb.Append("  Limit: ").Append(Limit).Append("\n");
             sb.Append("  TotalRecordCount: ").Append(TotalRecordCount).Append("\n");
@@ -142,15 +142,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RestApiPaginationResultApmCall);
+            return this.Equals(input as RestApiPaginationResultPhoneCall);
         }
 
         /// <summary>
-        /// Returns true if RestApiPaginationResultApmCall instances are equal
+        /// Returns true if RestApiPaginationResultPhoneCall instances are equal
         /// </summary>
-        /// <param name="input">Instance of RestApiPaginationResultApmCall to be compared</param>
+        /// <param name="input">Instance of RestApiPaginationResultPhoneCall to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RestApiPaginationResultApmCall input)
+        public bool Equals(RestApiPaginationResultPhoneCall input)
         {
             if (input == null)
                 return false;

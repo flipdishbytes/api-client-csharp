@@ -98,7 +98,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultApmDataPoint</returns>
         ApiResponse<RestApiArrayResultApmDataPoint> GetCallsStatisticsWithHttpInfo (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null);
         /// <summary>
-        /// [PRIVATE API] Get Order Statistics
+        /// [PRIVATE API] Get Order Statistics (Value of Orders)
         /// </summary>
         /// <remarks>
         /// 
@@ -108,11 +108,11 @@ namespace Flipdish.Api
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>RestApiArrayResultApmDataPoint</returns>
-        RestApiArrayResultApmDataPoint GetOrderStatistics (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null);
+        /// <returns>RestApiArrayResultApmCurrencyDataPoint</returns>
+        RestApiArrayResultApmCurrencyDataPoint GetOrderStatistics (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null);
 
         /// <summary>
-        /// [PRIVATE API] Get Order Statistics
+        /// [PRIVATE API] Get Order Statistics (Value of Orders)
         /// </summary>
         /// <remarks>
         /// 
@@ -122,8 +122,8 @@ namespace Flipdish.Api
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>ApiResponse of RestApiArrayResultApmDataPoint</returns>
-        ApiResponse<RestApiArrayResultApmDataPoint> GetOrderStatisticsWithHttpInfo (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null);
+        /// <returns>ApiResponse of RestApiArrayResultApmCurrencyDataPoint</returns>
+        ApiResponse<RestApiArrayResultApmCurrencyDataPoint> GetOrderStatisticsWithHttpInfo (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null);
         /// <summary>
         /// [PRIVATE API] Get paginated APM call list
         /// </summary>
@@ -135,8 +135,8 @@ namespace Flipdish.Api
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>RestApiPaginationResultApmCall</returns>
-        RestApiPaginationResultApmCall GetPaginatedCallList (string appId, int? page = null, int? limit = null, List<int?> storeId = null);
+        /// <returns>RestApiPaginationResultPhoneCall</returns>
+        RestApiPaginationResultPhoneCall GetPaginatedCallList (string appId, int? page = null, int? limit = null, List<int?> storeId = null);
 
         /// <summary>
         /// [PRIVATE API] Get paginated APM call list
@@ -149,8 +149,8 @@ namespace Flipdish.Api
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>ApiResponse of RestApiPaginationResultApmCall</returns>
-        ApiResponse<RestApiPaginationResultApmCall> GetPaginatedCallListWithHttpInfo (string appId, int? page = null, int? limit = null, List<int?> storeId = null);
+        /// <returns>ApiResponse of RestApiPaginationResultPhoneCall</returns>
+        ApiResponse<RestApiPaginationResultPhoneCall> GetPaginatedCallListWithHttpInfo (string appId, int? page = null, int? limit = null, List<int?> storeId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -227,7 +227,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultApmDataPoint)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultApmDataPoint>> GetCallsStatisticsAsyncWithHttpInfo (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null);
         /// <summary>
-        /// [PRIVATE API] Get Order Statistics
+        /// [PRIVATE API] Get Order Statistics (Value of Orders)
         /// </summary>
         /// <remarks>
         /// 
@@ -237,11 +237,11 @@ namespace Flipdish.Api
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>Task of RestApiArrayResultApmDataPoint</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultApmDataPoint> GetOrderStatisticsAsync (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null);
+        /// <returns>Task of RestApiArrayResultApmCurrencyDataPoint</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultApmCurrencyDataPoint> GetOrderStatisticsAsync (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null);
 
         /// <summary>
-        /// [PRIVATE API] Get Order Statistics
+        /// [PRIVATE API] Get Order Statistics (Value of Orders)
         /// </summary>
         /// <remarks>
         /// 
@@ -251,8 +251,8 @@ namespace Flipdish.Api
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultApmDataPoint)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultApmDataPoint>> GetOrderStatisticsAsyncWithHttpInfo (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null);
+        /// <returns>Task of ApiResponse (RestApiArrayResultApmCurrencyDataPoint)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultApmCurrencyDataPoint>> GetOrderStatisticsAsyncWithHttpInfo (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null);
         /// <summary>
         /// [PRIVATE API] Get paginated APM call list
         /// </summary>
@@ -264,8 +264,8 @@ namespace Flipdish.Api
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>Task of RestApiPaginationResultApmCall</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultApmCall> GetPaginatedCallListAsync (string appId, int? page = null, int? limit = null, List<int?> storeId = null);
+        /// <returns>Task of RestApiPaginationResultPhoneCall</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultPhoneCall> GetPaginatedCallListAsync (string appId, int? page = null, int? limit = null, List<int?> storeId = null);
 
         /// <summary>
         /// [PRIVATE API] Get paginated APM call list
@@ -278,8 +278,8 @@ namespace Flipdish.Api
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultApmCall)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultApmCall>> GetPaginatedCallListAsyncWithHttpInfo (string appId, int? page = null, int? limit = null, List<int?> storeId = null);
+        /// <returns>Task of ApiResponse (RestApiPaginationResultPhoneCall)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPhoneCall>> GetPaginatedCallListAsyncWithHttpInfo (string appId, int? page = null, int? limit = null, List<int?> storeId = null);
         #endregion Asynchronous Operations
     }
 
@@ -870,30 +870,30 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Order Statistics 
+        /// [PRIVATE API] Get Order Statistics (Value of Orders) 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>RestApiArrayResultApmDataPoint</returns>
-        public RestApiArrayResultApmDataPoint GetOrderStatistics (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null)
+        /// <returns>RestApiArrayResultApmCurrencyDataPoint</returns>
+        public RestApiArrayResultApmCurrencyDataPoint GetOrderStatistics (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null)
         {
-             ApiResponse<RestApiArrayResultApmDataPoint> localVarResponse = GetOrderStatisticsWithHttpInfo(appId, aggregateDataBy, dataPointLimit, storeId);
+             ApiResponse<RestApiArrayResultApmCurrencyDataPoint> localVarResponse = GetOrderStatisticsWithHttpInfo(appId, aggregateDataBy, dataPointLimit, storeId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Order Statistics 
+        /// [PRIVATE API] Get Order Statistics (Value of Orders) 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>ApiResponse of RestApiArrayResultApmDataPoint</returns>
-        public ApiResponse< RestApiArrayResultApmDataPoint > GetOrderStatisticsWithHttpInfo (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null)
+        /// <returns>ApiResponse of RestApiArrayResultApmCurrencyDataPoint</returns>
+        public ApiResponse< RestApiArrayResultApmCurrencyDataPoint > GetOrderStatisticsWithHttpInfo (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -951,37 +951,37 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultApmDataPoint>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultApmCurrencyDataPoint>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultApmDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultApmDataPoint)));
+                (RestApiArrayResultApmCurrencyDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultApmCurrencyDataPoint)));
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Order Statistics 
+        /// [PRIVATE API] Get Order Statistics (Value of Orders) 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>Task of RestApiArrayResultApmDataPoint</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultApmDataPoint> GetOrderStatisticsAsync (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null)
+        /// <returns>Task of RestApiArrayResultApmCurrencyDataPoint</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultApmCurrencyDataPoint> GetOrderStatisticsAsync (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null)
         {
-             ApiResponse<RestApiArrayResultApmDataPoint> localVarResponse = await GetOrderStatisticsAsyncWithHttpInfo(appId, aggregateDataBy, dataPointLimit, storeId);
+             ApiResponse<RestApiArrayResultApmCurrencyDataPoint> localVarResponse = await GetOrderStatisticsAsyncWithHttpInfo(appId, aggregateDataBy, dataPointLimit, storeId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Order Statistics 
+        /// [PRIVATE API] Get Order Statistics (Value of Orders) 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultApmDataPoint)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultApmDataPoint>> GetOrderStatisticsAsyncWithHttpInfo (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null)
+        /// <returns>Task of ApiResponse (RestApiArrayResultApmCurrencyDataPoint)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultApmCurrencyDataPoint>> GetOrderStatisticsAsyncWithHttpInfo (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1039,9 +1039,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultApmDataPoint>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultApmCurrencyDataPoint>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultApmDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultApmDataPoint)));
+                (RestApiArrayResultApmCurrencyDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultApmCurrencyDataPoint)));
         }
 
         /// <summary>
@@ -1052,10 +1052,10 @@ namespace Flipdish.Api
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>RestApiPaginationResultApmCall</returns>
-        public RestApiPaginationResultApmCall GetPaginatedCallList (string appId, int? page = null, int? limit = null, List<int?> storeId = null)
+        /// <returns>RestApiPaginationResultPhoneCall</returns>
+        public RestApiPaginationResultPhoneCall GetPaginatedCallList (string appId, int? page = null, int? limit = null, List<int?> storeId = null)
         {
-             ApiResponse<RestApiPaginationResultApmCall> localVarResponse = GetPaginatedCallListWithHttpInfo(appId, page, limit, storeId);
+             ApiResponse<RestApiPaginationResultPhoneCall> localVarResponse = GetPaginatedCallListWithHttpInfo(appId, page, limit, storeId);
              return localVarResponse.Data;
         }
 
@@ -1067,8 +1067,8 @@ namespace Flipdish.Api
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>ApiResponse of RestApiPaginationResultApmCall</returns>
-        public ApiResponse< RestApiPaginationResultApmCall > GetPaginatedCallListWithHttpInfo (string appId, int? page = null, int? limit = null, List<int?> storeId = null)
+        /// <returns>ApiResponse of RestApiPaginationResultPhoneCall</returns>
+        public ApiResponse< RestApiPaginationResultPhoneCall > GetPaginatedCallListWithHttpInfo (string appId, int? page = null, int? limit = null, List<int?> storeId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1123,9 +1123,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultApmCall>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultPhoneCall>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultApmCall) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultApmCall)));
+                (RestApiPaginationResultPhoneCall) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPhoneCall)));
         }
 
         /// <summary>
@@ -1136,10 +1136,10 @@ namespace Flipdish.Api
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>Task of RestApiPaginationResultApmCall</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultApmCall> GetPaginatedCallListAsync (string appId, int? page = null, int? limit = null, List<int?> storeId = null)
+        /// <returns>Task of RestApiPaginationResultPhoneCall</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultPhoneCall> GetPaginatedCallListAsync (string appId, int? page = null, int? limit = null, List<int?> storeId = null)
         {
-             ApiResponse<RestApiPaginationResultApmCall> localVarResponse = await GetPaginatedCallListAsyncWithHttpInfo(appId, page, limit, storeId);
+             ApiResponse<RestApiPaginationResultPhoneCall> localVarResponse = await GetPaginatedCallListAsyncWithHttpInfo(appId, page, limit, storeId);
              return localVarResponse.Data;
 
         }
@@ -1152,8 +1152,8 @@ namespace Flipdish.Api
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultApmCall)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultApmCall>> GetPaginatedCallListAsyncWithHttpInfo (string appId, int? page = null, int? limit = null, List<int?> storeId = null)
+        /// <returns>Task of ApiResponse (RestApiPaginationResultPhoneCall)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPhoneCall>> GetPaginatedCallListAsyncWithHttpInfo (string appId, int? page = null, int? limit = null, List<int?> storeId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1208,9 +1208,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultApmCall>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultPhoneCall>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultApmCall) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultApmCall)));
+                (RestApiPaginationResultPhoneCall) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPhoneCall)));
         }
 
     }

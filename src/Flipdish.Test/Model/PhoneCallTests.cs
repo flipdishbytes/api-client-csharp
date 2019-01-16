@@ -67,20 +67,60 @@ namespace Flipdish.Test
 
 
         /// <summary>
-        /// Test the property 'From'
+        /// Test the property 'TimeOfCall'
         /// </summary>
         [Test]
-        public void FromTest()
+        public void TimeOfCallTest()
         {
-            // TODO unit test for the property 'From'
+            // TODO unit test for the property 'TimeOfCall'
         }
         /// <summary>
-        /// Test the property 'To'
+        /// Test the property 'TimeOfCallLocal'
         /// </summary>
         [Test]
-        public void ToTest()
+        public void TimeOfCallLocalTest()
         {
-            // TODO unit test for the property 'To'
+            // TODO unit test for the property 'TimeOfCallLocal'
+        }
+        /// <summary>
+        /// Test the property 'StoreName'
+        /// </summary>
+        [Test]
+        public void StoreNameTest()
+        {
+            // TODO unit test for the property 'StoreName'
+        }
+        /// <summary>
+        /// Test the property 'CallerName'
+        /// </summary>
+        [Test]
+        public void CallerNameTest()
+        {
+            // TODO unit test for the property 'CallerName'
+        }
+        /// <summary>
+        /// Test the property 'CallerNumber'
+        /// </summary>
+        [Test]
+        public void CallerNumberTest()
+        {
+            // TODO unit test for the property 'CallerNumber'
+        }
+        /// <summary>
+        /// Test the property 'CallLengthInSeconds'
+        /// </summary>
+        [Test]
+        public void CallLengthInSecondsTest()
+        {
+            // TODO unit test for the property 'CallLengthInSeconds'
+        }
+        /// <summary>
+        /// Test the property 'CallStatus'
+        /// </summary>
+        [Test]
+        public void CallStatusTest()
+        {
+            // TODO unit test for the property 'CallStatus'
         }
 
     }

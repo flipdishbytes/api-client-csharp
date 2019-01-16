@@ -235,6 +235,22 @@ namespace Flipdish.Test
             // TODO unit test for the property 'IanaTimeZone'
         }
         /// <summary>
+        /// Test the property 'EtaInPickupConfirmationSmsEnabled'
+        /// </summary>
+        [Test]
+        public void EtaInPickupConfirmationSmsEnabledTest()
+        {
+            // TODO unit test for the property 'EtaInPickupConfirmationSmsEnabled'
+        }
+        /// <summary>
+        /// Test the property 'EtaInDeliveryConfirmationSmsEnabled'
+        /// </summary>
+        [Test]
+        public void EtaInDeliveryConfirmationSmsEnabledTest()
+        {
+            // TODO unit test for the property 'EtaInDeliveryConfirmationSmsEnabled'
+        }
+        /// <summary>
         /// Test the property 'Name'
         /// </summary>
         [Test]

@@ -113,7 +113,7 @@ Class | Method | HTTP request | Description
 *ApmApi* | [**GetBasicStatistics**](docs/ApmApi.md#getbasicstatistics) | **GET** /api/v1.0/{appId}/apm/statistics | [PRIVATE API] Get Basic Statistics
 *ApmApi* | [**GetCalendarWeekStatistics**](docs/ApmApi.md#getcalendarweekstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calendar | [PRIVATE API] Get Calendar statistics
 *ApmApi* | [**GetCallsStatistics**](docs/ApmApi.md#getcallsstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy} | [PRIVATE API] Get Calls Statistics
-*ApmApi* | [**GetOrderStatistics**](docs/ApmApi.md#getorderstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | [PRIVATE API] Get Order Statistics
+*ApmApi* | [**GetOrderStatistics**](docs/ApmApi.md#getorderstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | [PRIVATE API] Get Order Statistics (Value of Orders)
 *ApmApi* | [**GetPaginatedCallList**](docs/ApmApi.md#getpaginatedcalllist) | **GET** /api/v1.0/{appId}/apm/calls | [PRIVATE API] Get paginated APM call list
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
@@ -254,7 +254,7 @@ Class | Method | HTTP request | Description
  - [Model.AddItemDetails](docs/AddItemDetails.md)
  - [Model.AnalyticsClientEvent](docs/AnalyticsClientEvent.md)
  - [Model.ApmAverageHourlyDataPoint](docs/ApmAverageHourlyDataPoint.md)
- - [Model.ApmCall](docs/ApmCall.md)
+ - [Model.ApmCurrencyDataPoint](docs/ApmCurrencyDataPoint.md)
  - [Model.ApmDataPoint](docs/ApmDataPoint.md)
  - [Model.ApmStatistics](docs/ApmStatistics.md)
  - [Model.App](docs/App.md)
@@ -270,6 +270,7 @@ Class | Method | HTTP request | Description
  - [Model.CreateAccountModel](docs/CreateAccountModel.md)
  - [Model.CreateTeammate](docs/CreateTeammate.md)
  - [Model.CreditNoteDetails](docs/CreditNoteDetails.md)
+ - [Model.CurrencyData](docs/CurrencyData.md)
  - [Model.CustomerConsentUpdatedEvent](docs/CustomerConsentUpdatedEvent.md)
  - [Model.CustomerCreatedEvent](docs/CustomerCreatedEvent.md)
  - [Model.CustomerSummary](docs/CustomerSummary.md)
@@ -356,6 +357,7 @@ Class | Method | HTTP request | Description
  - [Model.Refund](docs/Refund.md)
  - [Model.Reject](docs/Reject.md)
  - [Model.RestApiArrayResultApmAverageHourlyDataPoint](docs/RestApiArrayResultApmAverageHourlyDataPoint.md)
+ - [Model.RestApiArrayResultApmCurrencyDataPoint](docs/RestApiArrayResultApmCurrencyDataPoint.md)
  - [Model.RestApiArrayResultApmDataPoint](docs/RestApiArrayResultApmDataPoint.md)
  - [Model.RestApiArrayResultBusinessHoursPeriod](docs/RestApiArrayResultBusinessHoursPeriod.md)
  - [Model.RestApiArrayResultDeliveryZone](docs/RestApiArrayResultDeliveryZone.md)
@@ -376,12 +378,12 @@ Class | Method | HTTP request | Description
  - [Model.RestApiEventSearchPaginationResult](docs/RestApiEventSearchPaginationResult.md)
  - [Model.RestApiForbiddenResult](docs/RestApiForbiddenResult.md)
  - [Model.RestApiIntegerResult](docs/RestApiIntegerResult.md)
- - [Model.RestApiPaginationResultApmCall](docs/RestApiPaginationResultApmCall.md)
  - [Model.RestApiPaginationResultApp](docs/RestApiPaginationResultApp.md)
  - [Model.RestApiPaginationResultBusinessHoursOverride](docs/RestApiPaginationResultBusinessHoursOverride.md)
  - [Model.RestApiPaginationResultHttpRequestAndResponseLog](docs/RestApiPaginationResultHttpRequestAndResponseLog.md)
  - [Model.RestApiPaginationResultOAuthTokenModel](docs/RestApiPaginationResultOAuthTokenModel.md)
  - [Model.RestApiPaginationResultOrder](docs/RestApiPaginationResultOrder.md)
+ - [Model.RestApiPaginationResultPhoneCall](docs/RestApiPaginationResultPhoneCall.md)
  - [Model.RestApiPaginationResultStore](docs/RestApiPaginationResultStore.md)
  - [Model.RestApiPaginationResultStoreGroup](docs/RestApiPaginationResultStoreGroup.md)
  - [Model.RestApiPaginationResultVoucher](docs/RestApiPaginationResultVoucher.md)
@@ -426,6 +428,7 @@ Class | Method | HTTP request | Description
  - [Model.SignupStep](docs/SignupStep.md)
  - [Model.SmsInfo](docs/SmsInfo.md)
  - [Model.SmsReceivedEvent](docs/SmsReceivedEvent.md)
+ - [Model.StatisticsCurrencyDataPoint](docs/StatisticsCurrencyDataPoint.md)
  - [Model.Store](docs/Store.md)
  - [Model.StoreAddress](docs/StoreAddress.md)
  - [Model.StoreAddressBase](docs/StoreAddressBase.md)

@@ -1,10 +1,12 @@
-# Flipdish.Model.ApmStatistics
+# Flipdish.Model.RestApiPaginationResultPhoneCall
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EstimatedMinutesSaved** | **int?** | Total amount of time spent with APM | [optional] 
-**CurrencyData** | [**List&lt;StatisticsCurrencyDataPoint&gt;**](StatisticsCurrencyDataPoint.md) | Currency based data | [optional] 
+**Page** | **int?** | Current page index | 
+**Limit** | **int?** | Current page size | 
+**TotalRecordCount** | **int?** | Total record count | 
+**Data** | [**List&lt;PhoneCall&gt;**](PhoneCall.md) | Generic data object. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
