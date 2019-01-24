@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flipdish", "src\Flipdish\Flipdish.csproj", "{F3278017-1CDC-42A9-8C28-3FD6C20F99F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flipdish", "src\Flipdish\Flipdish.csproj", "{98314D35-A23C-49EF-9858-9AD5A8D83D4E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flipdish.Test", "src\Flipdish.Test\Flipdish.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F3278017-1CDC-42A9-8C28-3FD6C20F99F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3278017-1CDC-42A9-8C28-3FD6C20F99F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3278017-1CDC-42A9-8C28-3FD6C20F99F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3278017-1CDC-42A9-8C28-3FD6C20F99F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98314D35-A23C-49EF-9858-9AD5A8D83D4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98314D35-A23C-49EF-9858-9AD5A8D83D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98314D35-A23C-49EF-9858-9AD5A8D83D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98314D35-A23C-49EF-9858-9AD5A8D83D4E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU

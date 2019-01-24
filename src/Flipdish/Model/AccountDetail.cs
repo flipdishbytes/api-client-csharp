@@ -33,38 +33,28 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountDetail" /> class.
         /// </summary>
-        /// <param name="name">Name.</param>
         /// <param name="email">Email.</param>
-        /// <param name="language">Language Id.</param>
         /// <param name="signupSteps">Signup steps.</param>
-        public AccountDetail(string name = default(string), string email = default(string), string language = default(string), List<SignupStep> signupSteps = default(List<SignupStep>))
+        /// <param name="name">Name.</param>
+        /// <param name="language">Language Id.</param>
+        /// <param name="timeZoneInfoId">Time Zone Info Id.</param>
+        /// <param name="displayTimesInUserLocalTimeZone">Display the time in time zone local to the user.</param>
+        public AccountDetail(string email = default(string), List<SignupStep> signupSteps = default(List<SignupStep>), string name = default(string), string language = default(string), string timeZoneInfoId = default(string), bool? displayTimesInUserLocalTimeZone = default(bool?))
         {
-            this.Name = name;
             this.Email = email;
-            this.Language = language;
             this.SignupSteps = signupSteps;
+            this.Name = name;
+            this.Language = language;
+            this.TimeZoneInfoId = timeZoneInfoId;
+            this.DisplayTimesInUserLocalTimeZone = displayTimesInUserLocalTimeZone;
         }
         
-        /// <summary>
-        /// Name
-        /// </summary>
-        /// <value>Name</value>
-        [DataMember(Name="Name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-
         /// <summary>
         /// Email
         /// </summary>
         /// <value>Email</value>
         [DataMember(Name="Email", EmitDefaultValue=false)]
         public string Email { get; set; }
-
-        /// <summary>
-        /// Language Id
-        /// </summary>
-        /// <value>Language Id</value>
-        [DataMember(Name="Language", EmitDefaultValue=false)]
-        public string Language { get; set; }
 
         /// <summary>
         /// Signup steps
@@ -74,6 +64,34 @@ namespace Flipdish.Model
         public List<SignupStep> SignupSteps { get; set; }
 
         /// <summary>
+        /// Name
+        /// </summary>
+        /// <value>Name</value>
+        [DataMember(Name="Name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Language Id
+        /// </summary>
+        /// <value>Language Id</value>
+        [DataMember(Name="Language", EmitDefaultValue=false)]
+        public string Language { get; set; }
+
+        /// <summary>
+        /// Time Zone Info Id
+        /// </summary>
+        /// <value>Time Zone Info Id</value>
+        [DataMember(Name="TimeZoneInfoId", EmitDefaultValue=false)]
+        public string TimeZoneInfoId { get; set; }
+
+        /// <summary>
+        /// Display the time in time zone local to the user
+        /// </summary>
+        /// <value>Display the time in time zone local to the user</value>
+        [DataMember(Name="DisplayTimesInUserLocalTimeZone", EmitDefaultValue=false)]
+        public bool? DisplayTimesInUserLocalTimeZone { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -81,10 +99,12 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AccountDetail {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
-            sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  SignupSteps: ").Append(SignupSteps).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Language: ").Append(Language).Append("\n");
+            sb.Append("  TimeZoneInfoId: ").Append(TimeZoneInfoId).Append("\n");
+            sb.Append("  DisplayTimesInUserLocalTimeZone: ").Append(DisplayTimesInUserLocalTimeZone).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -120,14 +140,19 @@ namespace Flipdish.Model
 
             return 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
                     this.Email == input.Email ||
                     (this.Email != null &&
                     this.Email.Equals(input.Email))
+                ) && 
+                (
+                    this.SignupSteps == input.SignupSteps ||
+                    this.SignupSteps != null &&
+                    this.SignupSteps.SequenceEqual(input.SignupSteps)
+                ) && 
+                (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
                     this.Language == input.Language ||
@@ -135,9 +160,14 @@ namespace Flipdish.Model
                     this.Language.Equals(input.Language))
                 ) && 
                 (
-                    this.SignupSteps == input.SignupSteps ||
-                    this.SignupSteps != null &&
-                    this.SignupSteps.SequenceEqual(input.SignupSteps)
+                    this.TimeZoneInfoId == input.TimeZoneInfoId ||
+                    (this.TimeZoneInfoId != null &&
+                    this.TimeZoneInfoId.Equals(input.TimeZoneInfoId))
+                ) && 
+                (
+                    this.DisplayTimesInUserLocalTimeZone == input.DisplayTimesInUserLocalTimeZone ||
+                    (this.DisplayTimesInUserLocalTimeZone != null &&
+                    this.DisplayTimesInUserLocalTimeZone.Equals(input.DisplayTimesInUserLocalTimeZone))
                 );
         }
 
@@ -150,14 +180,18 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Email != null)
                     hashCode = hashCode * 59 + this.Email.GetHashCode();
-                if (this.Language != null)
-                    hashCode = hashCode * 59 + this.Language.GetHashCode();
                 if (this.SignupSteps != null)
                     hashCode = hashCode * 59 + this.SignupSteps.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Language != null)
+                    hashCode = hashCode * 59 + this.Language.GetHashCode();
+                if (this.TimeZoneInfoId != null)
+                    hashCode = hashCode * 59 + this.TimeZoneInfoId.GetHashCode();
+                if (this.DisplayTimesInUserLocalTimeZone != null)
+                    hashCode = hashCode * 59 + this.DisplayTimesInUserLocalTimeZone.GetHashCode();
                 return hashCode;
             }
         }

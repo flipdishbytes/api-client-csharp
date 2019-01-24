@@ -67,20 +67,28 @@ namespace Flipdish.Test
 
 
         /// <summary>
-        /// Test the property 'Name'
-        /// </summary>
-        [Test]
-        public void NameTest()
-        {
-            // TODO unit test for the property 'Name'
-        }
-        /// <summary>
         /// Test the property 'Email'
         /// </summary>
         [Test]
         public void EmailTest()
         {
             // TODO unit test for the property 'Email'
+        }
+        /// <summary>
+        /// Test the property 'SignupSteps'
+        /// </summary>
+        [Test]
+        public void SignupStepsTest()
+        {
+            // TODO unit test for the property 'SignupSteps'
+        }
+        /// <summary>
+        /// Test the property 'Name'
+        /// </summary>
+        [Test]
+        public void NameTest()
+        {
+            // TODO unit test for the property 'Name'
         }
         /// <summary>
         /// Test the property 'Language'
@@ -91,12 +99,20 @@ namespace Flipdish.Test
             // TODO unit test for the property 'Language'
         }
         /// <summary>
-        /// Test the property 'SignupSteps'
+        /// Test the property 'TimeZoneInfoId'
         /// </summary>
         [Test]
-        public void SignupStepsTest()
+        public void TimeZoneInfoIdTest()
         {
-            // TODO unit test for the property 'SignupSteps'
+            // TODO unit test for the property 'TimeZoneInfoId'
+        }
+        /// <summary>
+        /// Test the property 'DisplayTimesInUserLocalTimeZone'
+        /// </summary>
+        [Test]
+        public void DisplayTimesInUserLocalTimeZoneTest()
+        {
+            // TODO unit test for the property 'DisplayTimesInUserLocalTimeZone'
         }
 
     }

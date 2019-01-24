@@ -178,7 +178,7 @@ namespace Flipdish.Test
         public void UpdateAccountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //UpdateAccountModel updateAccountModel = null;
+            //AccountDetailBase updateAccountModel = null;
             //var response = instance.UpdateAccount(updateAccountModel);
             //Assert.IsInstanceOf<Object> (response, "response is Object");
         }

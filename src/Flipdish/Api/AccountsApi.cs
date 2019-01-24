@@ -220,7 +220,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
         /// <returns>Object</returns>
-        Object UpdateAccount (UpdateAccountModel updateAccountModel);
+        Object UpdateAccount (AccountDetailBase updateAccountModel);
 
         /// <summary>
         /// Update account with name and language
@@ -231,7 +231,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> UpdateAccountWithHttpInfo (UpdateAccountModel updateAccountModel);
+        ApiResponse<Object> UpdateAccountWithHttpInfo (AccountDetailBase updateAccountModel);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -430,7 +430,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> UpdateAccountAsync (UpdateAccountModel updateAccountModel);
+        System.Threading.Tasks.Task<Object> UpdateAccountAsync (AccountDetailBase updateAccountModel);
 
         /// <summary>
         /// Update account with name and language
@@ -441,7 +441,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAccountAsyncWithHttpInfo (UpdateAccountModel updateAccountModel);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAccountAsyncWithHttpInfo (AccountDetailBase updateAccountModel);
         #endregion Asynchronous Operations
     }
 
@@ -2013,7 +2013,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
         /// <returns>Object</returns>
-        public Object UpdateAccount (UpdateAccountModel updateAccountModel)
+        public Object UpdateAccount (AccountDetailBase updateAccountModel)
         {
              ApiResponse<Object> localVarResponse = UpdateAccountWithHttpInfo(updateAccountModel);
              return localVarResponse.Data;
@@ -2025,7 +2025,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > UpdateAccountWithHttpInfo (UpdateAccountModel updateAccountModel)
+        public ApiResponse< Object > UpdateAccountWithHttpInfo (AccountDetailBase updateAccountModel)
         {
             // verify the required parameter 'updateAccountModel' is set
             if (updateAccountModel == null)
@@ -2100,7 +2100,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> UpdateAccountAsync (UpdateAccountModel updateAccountModel)
+        public async System.Threading.Tasks.Task<Object> UpdateAccountAsync (AccountDetailBase updateAccountModel)
         {
              ApiResponse<Object> localVarResponse = await UpdateAccountAsyncWithHttpInfo(updateAccountModel);
              return localVarResponse.Data;
@@ -2113,7 +2113,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAccountAsyncWithHttpInfo (UpdateAccountModel updateAccountModel)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAccountAsyncWithHttpInfo (AccountDetailBase updateAccountModel)
         {
             // verify the required parameter 'updateAccountModel' is set
             if (updateAccountModel == null)

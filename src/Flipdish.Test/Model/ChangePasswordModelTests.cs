@@ -82,14 +82,6 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'NewPassword'
         }
-        /// <summary>
-        /// Test the property 'PasswordConfirmation'
-        /// </summary>
-        [Test]
-        public void PasswordConfirmationTest()
-        {
-            // TODO unit test for the property 'PasswordConfirmation'
-        }
 
     }
 

@@ -251,6 +251,7 @@ Class | Method | HTTP request | Description
 
  - [Model.Accept](docs/Accept.md)
  - [Model.AccountDetail](docs/AccountDetail.md)
+ - [Model.AccountDetailBase](docs/AccountDetailBase.md)
  - [Model.AddItemDetails](docs/AddItemDetails.md)
  - [Model.AnalyticsClientEvent](docs/AnalyticsClientEvent.md)
  - [Model.ApmAverageHourlyDataPoint](docs/ApmAverageHourlyDataPoint.md)
@@ -460,7 +461,6 @@ Class | Method | HTTP request | Description
  - [Model.TeammateInviteAcceptedEvent](docs/TeammateInviteAcceptedEvent.md)
  - [Model.TeammateInviteSentEvent](docs/TeammateInviteSentEvent.md)
  - [Model.TeammateUpdatedEvent](docs/TeammateUpdatedEvent.md)
- - [Model.UpdateAccountModel](docs/UpdateAccountModel.md)
  - [Model.UserCreatedEvent](docs/UserCreatedEvent.md)
  - [Model.UserDeletedEvent](docs/UserDeletedEvent.md)
  - [Model.UserEventInfo](docs/UserEventInfo.md)

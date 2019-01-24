@@ -569,7 +569,7 @@ Name | Type | Description  | Notes
 
 <a name="updateaccount"></a>
 # **UpdateAccount**
-> Object UpdateAccount (UpdateAccountModel updateAccountModel)
+> Object UpdateAccount (AccountDetailBase updateAccountModel)
 
 Update account with name and language
 
@@ -591,7 +591,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var updateAccountModel = new UpdateAccountModel(); // UpdateAccountModel | Update account model
+            var updateAccountModel = new AccountDetailBase(); // AccountDetailBase | Update account model
 
             try
             {
@@ -612,7 +612,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateAccountModel** | [**UpdateAccountModel**](UpdateAccountModel.md)| Update account model | 
+ **updateAccountModel** | [**AccountDetailBase**](AccountDetailBase.md)| Update account model | 
 
 ### Return type
 

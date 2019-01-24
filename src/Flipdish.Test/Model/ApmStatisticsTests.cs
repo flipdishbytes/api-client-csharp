@@ -75,6 +75,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'EstimatedMinutesSaved'
         }
         /// <summary>
+        /// Test the property 'EstimatedMinutesCouldSaved'
+        /// </summary>
+        [Test]
+        public void EstimatedMinutesCouldSavedTest()
+        {
+            // TODO unit test for the property 'EstimatedMinutesCouldSaved'
+        }
+        /// <summary>
         /// Test the property 'CurrencyData'
         /// </summary>
         [Test]

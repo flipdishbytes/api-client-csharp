@@ -34,10 +34,12 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="ApmStatistics" /> class.
         /// </summary>
         /// <param name="estimatedMinutesSaved">Total amount of time spent with APM.</param>
+        /// <param name="estimatedMinutesCouldSaved">Total amount of time that could be saved.</param>
         /// <param name="currencyData">Currency based data.</param>
-        public ApmStatistics(int? estimatedMinutesSaved = default(int?), List<StatisticsCurrencyDataPoint> currencyData = default(List<StatisticsCurrencyDataPoint>))
+        public ApmStatistics(int? estimatedMinutesSaved = default(int?), int? estimatedMinutesCouldSaved = default(int?), List<StatisticsCurrencyDataPoint> currencyData = default(List<StatisticsCurrencyDataPoint>))
         {
             this.EstimatedMinutesSaved = estimatedMinutesSaved;
+            this.EstimatedMinutesCouldSaved = estimatedMinutesCouldSaved;
             this.CurrencyData = currencyData;
         }
         
@@ -47,6 +49,13 @@ namespace Flipdish.Model
         /// <value>Total amount of time spent with APM</value>
         [DataMember(Name="EstimatedMinutesSaved", EmitDefaultValue=false)]
         public int? EstimatedMinutesSaved { get; set; }
+
+        /// <summary>
+        /// Total amount of time that could be saved
+        /// </summary>
+        /// <value>Total amount of time that could be saved</value>
+        [DataMember(Name="EstimatedMinutesCouldSaved", EmitDefaultValue=false)]
+        public int? EstimatedMinutesCouldSaved { get; set; }
 
         /// <summary>
         /// Currency based data
@@ -64,6 +73,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class ApmStatistics {\n");
             sb.Append("  EstimatedMinutesSaved: ").Append(EstimatedMinutesSaved).Append("\n");
+            sb.Append("  EstimatedMinutesCouldSaved: ").Append(EstimatedMinutesCouldSaved).Append("\n");
             sb.Append("  CurrencyData: ").Append(CurrencyData).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -105,6 +115,11 @@ namespace Flipdish.Model
                     this.EstimatedMinutesSaved.Equals(input.EstimatedMinutesSaved))
                 ) && 
                 (
+                    this.EstimatedMinutesCouldSaved == input.EstimatedMinutesCouldSaved ||
+                    (this.EstimatedMinutesCouldSaved != null &&
+                    this.EstimatedMinutesCouldSaved.Equals(input.EstimatedMinutesCouldSaved))
+                ) && 
+                (
                     this.CurrencyData == input.CurrencyData ||
                     this.CurrencyData != null &&
                     this.CurrencyData.SequenceEqual(input.CurrencyData)
@@ -122,6 +137,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.EstimatedMinutesSaved != null)
                     hashCode = hashCode * 59 + this.EstimatedMinutesSaved.GetHashCode();
+                if (this.EstimatedMinutesCouldSaved != null)
+                    hashCode = hashCode * 59 + this.EstimatedMinutesCouldSaved.GetHashCode();
                 if (this.CurrencyData != null)
                     hashCode = hashCode * 59 + this.CurrencyData.GetHashCode();
                 return hashCode;

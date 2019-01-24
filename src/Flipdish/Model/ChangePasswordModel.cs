@@ -40,8 +40,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="oldPassword">Old password (required).</param>
         /// <param name="newPassword">New password (required).</param>
-        /// <param name="passwordConfirmation">Password confirmation (required).</param>
-        public ChangePasswordModel(string oldPassword = default(string), string newPassword = default(string), string passwordConfirmation = default(string))
+        public ChangePasswordModel(string oldPassword = default(string), string newPassword = default(string))
         {
             // to ensure "oldPassword" is required (not null)
             if (oldPassword == null)
@@ -61,15 +60,6 @@ namespace Flipdish.Model
             {
                 this.NewPassword = newPassword;
             }
-            // to ensure "passwordConfirmation" is required (not null)
-            if (passwordConfirmation == null)
-            {
-                throw new InvalidDataException("passwordConfirmation is a required property for ChangePasswordModel and cannot be null");
-            }
-            else
-            {
-                this.PasswordConfirmation = passwordConfirmation;
-            }
         }
         
         /// <summary>
@@ -87,13 +77,6 @@ namespace Flipdish.Model
         public string NewPassword { get; set; }
 
         /// <summary>
-        /// Password confirmation
-        /// </summary>
-        /// <value>Password confirmation</value>
-        [DataMember(Name="PasswordConfirmation", EmitDefaultValue=false)]
-        public string PasswordConfirmation { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -103,7 +86,6 @@ namespace Flipdish.Model
             sb.Append("class ChangePasswordModel {\n");
             sb.Append("  OldPassword: ").Append(OldPassword).Append("\n");
             sb.Append("  NewPassword: ").Append(NewPassword).Append("\n");
-            sb.Append("  PasswordConfirmation: ").Append(PasswordConfirmation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -147,11 +129,6 @@ namespace Flipdish.Model
                     this.NewPassword == input.NewPassword ||
                     (this.NewPassword != null &&
                     this.NewPassword.Equals(input.NewPassword))
-                ) && 
-                (
-                    this.PasswordConfirmation == input.PasswordConfirmation ||
-                    (this.PasswordConfirmation != null &&
-                    this.PasswordConfirmation.Equals(input.PasswordConfirmation))
                 );
         }
 
@@ -168,8 +145,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OldPassword.GetHashCode();
                 if (this.NewPassword != null)
                     hashCode = hashCode * 59 + this.NewPassword.GetHashCode();
-                if (this.PasswordConfirmation != null)
-                    hashCode = hashCode * 59 + this.PasswordConfirmation.GetHashCode();
                 return hashCode;
             }
         }

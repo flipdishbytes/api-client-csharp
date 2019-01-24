@@ -25,35 +25,53 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Update account model
+    /// Account Details Base
     /// </summary>
     [DataContract]
-    public partial class UpdateAccountModel :  IEquatable<UpdateAccountModel>, IValidatableObject
+    public partial class AccountDetailBase :  IEquatable<AccountDetailBase>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UpdateAccountModel" /> class.
+        /// Initializes a new instance of the <see cref="AccountDetailBase" /> class.
         /// </summary>
-        /// <param name="name">Name of the user.</param>
-        /// <param name="language">Language of the user.</param>
-        public UpdateAccountModel(string name = default(string), string language = default(string))
+        /// <param name="name">Name.</param>
+        /// <param name="language">Language Id.</param>
+        /// <param name="timeZoneInfoId">Time Zone Info Id.</param>
+        /// <param name="displayTimesInUserLocalTimeZone">Display the time in time zone local to the user.</param>
+        public AccountDetailBase(string name = default(string), string language = default(string), string timeZoneInfoId = default(string), bool? displayTimesInUserLocalTimeZone = default(bool?))
         {
             this.Name = name;
             this.Language = language;
+            this.TimeZoneInfoId = timeZoneInfoId;
+            this.DisplayTimesInUserLocalTimeZone = displayTimesInUserLocalTimeZone;
         }
         
         /// <summary>
-        /// Name of the user
+        /// Name
         /// </summary>
-        /// <value>Name of the user</value>
+        /// <value>Name</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Language of the user
+        /// Language Id
         /// </summary>
-        /// <value>Language of the user</value>
+        /// <value>Language Id</value>
         [DataMember(Name="Language", EmitDefaultValue=false)]
         public string Language { get; set; }
+
+        /// <summary>
+        /// Time Zone Info Id
+        /// </summary>
+        /// <value>Time Zone Info Id</value>
+        [DataMember(Name="TimeZoneInfoId", EmitDefaultValue=false)]
+        public string TimeZoneInfoId { get; set; }
+
+        /// <summary>
+        /// Display the time in time zone local to the user
+        /// </summary>
+        /// <value>Display the time in time zone local to the user</value>
+        [DataMember(Name="DisplayTimesInUserLocalTimeZone", EmitDefaultValue=false)]
+        public bool? DisplayTimesInUserLocalTimeZone { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,9 +80,11 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UpdateAccountModel {\n");
+            sb.Append("class AccountDetailBase {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
+            sb.Append("  TimeZoneInfoId: ").Append(TimeZoneInfoId).Append("\n");
+            sb.Append("  DisplayTimesInUserLocalTimeZone: ").Append(DisplayTimesInUserLocalTimeZone).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,15 +105,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as UpdateAccountModel);
+            return this.Equals(input as AccountDetailBase);
         }
 
         /// <summary>
-        /// Returns true if UpdateAccountModel instances are equal
+        /// Returns true if AccountDetailBase instances are equal
         /// </summary>
-        /// <param name="input">Instance of UpdateAccountModel to be compared</param>
+        /// <param name="input">Instance of AccountDetailBase to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UpdateAccountModel input)
+        public bool Equals(AccountDetailBase input)
         {
             if (input == null)
                 return false;
@@ -108,6 +128,16 @@ namespace Flipdish.Model
                     this.Language == input.Language ||
                     (this.Language != null &&
                     this.Language.Equals(input.Language))
+                ) && 
+                (
+                    this.TimeZoneInfoId == input.TimeZoneInfoId ||
+                    (this.TimeZoneInfoId != null &&
+                    this.TimeZoneInfoId.Equals(input.TimeZoneInfoId))
+                ) && 
+                (
+                    this.DisplayTimesInUserLocalTimeZone == input.DisplayTimesInUserLocalTimeZone ||
+                    (this.DisplayTimesInUserLocalTimeZone != null &&
+                    this.DisplayTimesInUserLocalTimeZone.Equals(input.DisplayTimesInUserLocalTimeZone))
                 );
         }
 
@@ -124,6 +154,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Language != null)
                     hashCode = hashCode * 59 + this.Language.GetHashCode();
+                if (this.TimeZoneInfoId != null)
+                    hashCode = hashCode * 59 + this.TimeZoneInfoId.GetHashCode();
+                if (this.DisplayTimesInUserLocalTimeZone != null)
+                    hashCode = hashCode * 59 + this.DisplayTimesInUserLocalTimeZone.GetHashCode();
                 return hashCode;
             }
         }

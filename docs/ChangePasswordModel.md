@@ -5,7 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **OldPassword** | **string** | Old password | 
 **NewPassword** | **string** | New password | 
-**PasswordConfirmation** | **string** | Password confirmation | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

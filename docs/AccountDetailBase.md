@@ -1,10 +1,8 @@
-# Flipdish.Model.AccountDetail
+# Flipdish.Model.AccountDetailBase
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Email** | **string** | Email | [optional] 
-**SignupSteps** | [**List&lt;SignupStep&gt;**](SignupStep.md) | Signup steps | [optional] 
 **Name** | **string** | Name | [optional] 
 **Language** | **string** | Language Id | [optional] 
 **TimeZoneInfoId** | **string** | Time Zone Info Id | [optional] 
