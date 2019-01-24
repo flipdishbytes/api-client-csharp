@@ -113,6 +113,17 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test GetLocalisedTimeZones
+        /// </summary>
+        [Test]
+        public void GetLocalisedTimeZonesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.GetLocalisedTimeZones();
+            //Assert.IsInstanceOf<RestApiArrayResultLocalisedTimeZone> (response, "response is RestApiArrayResultLocalisedTimeZone");
+        }
+        
+        /// <summary>
         /// Test Login
         /// </summary>
         [Test]
@@ -121,6 +132,18 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //LoginModel loginModel = null;
             //var response = instance.Login(loginModel);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test LoginWithPin
+        /// </summary>
+        [Test]
+        public void LoginWithPinTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //LoginWithPinModel loginModel = null;
+            //var response = instance.LoginWithPin(loginModel);
             //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         
@@ -148,14 +171,26 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test RequestLoginPin
+        /// </summary>
+        [Test]
+        public void RequestLoginPinTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //RequestLoginPinModel requestLoginPinRequest = null;
+            //var response = instance.RequestLoginPin(requestLoginPinRequest);
+            //Assert.IsInstanceOf<RequestLoginPinResposne> (response, "response is RequestLoginPinResposne");
+        }
+        
+        /// <summary>
         /// Test RequestPasswordReset
         /// </summary>
         [Test]
         public void RequestPasswordResetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string email = null;
-            //instance.RequestPasswordReset(email);
+            //RequestPasswordResetModel requestPasswordResetModel = null;
+            //instance.RequestPasswordReset(requestPasswordResetModel);
             
         }
         

@@ -109,6 +109,25 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultAccountDetail</returns>
         ApiResponse<RestApiResultAccountDetail> GetAccountDetailsWithHttpInfo ();
         /// <summary>
+        /// Get timezones localised to users language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>RestApiArrayResultLocalisedTimeZone</returns>
+        RestApiArrayResultLocalisedTimeZone GetLocalisedTimeZones ();
+
+        /// <summary>
+        /// Get timezones localised to users language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of RestApiArrayResultLocalisedTimeZone</returns>
+        ApiResponse<RestApiArrayResultLocalisedTimeZone> GetLocalisedTimeZonesWithHttpInfo ();
+        /// <summary>
         /// Login with username and password
         /// </summary>
         /// <remarks>
@@ -129,6 +148,27 @@ namespace Flipdish.Api
         /// <param name="loginModel">Login model</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> LoginWithHttpInfo (LoginModel loginModel);
+        /// <summary>
+        /// Login with username and password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="loginModel">Login model</param>
+        /// <returns>Object</returns>
+        Object LoginWithPin (LoginWithPinModel loginModel);
+
+        /// <summary>
+        /// Login with username and password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="loginModel">Login model</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> LoginWithPinWithHttpInfo (LoginWithPinModel loginModel);
         /// <summary>
         /// Log out. It removes Flipdish authorization Cookie.
         /// </summary>
@@ -170,15 +210,36 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> PasswordResetWithTokenWithHttpInfo (PasswordResetModel passwordResetModel);
         /// <summary>
+        /// Request login PIN. The server sends the PIN to the email address.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestLoginPinRequest">Request login PIN request</param>
+        /// <returns>RequestLoginPinResposne</returns>
+        RequestLoginPinResposne RequestLoginPin (RequestLoginPinModel requestLoginPinRequest);
+
+        /// <summary>
+        /// Request login PIN. The server sends the PIN to the email address.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestLoginPinRequest">Request login PIN request</param>
+        /// <returns>ApiResponse of RequestLoginPinResposne</returns>
+        ApiResponse<RequestLoginPinResposne> RequestLoginPinWithHttpInfo (RequestLoginPinModel requestLoginPinRequest);
+        /// <summary>
         /// Request password reset. Flipdish system will send a token via email.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email address</param>
+        /// <param name="requestPasswordResetModel">Request password reset model</param>
         /// <returns></returns>
-        void RequestPasswordReset (string email);
+        void RequestPasswordReset (RequestPasswordResetModel requestPasswordResetModel);
 
         /// <summary>
         /// Request password reset. Flipdish system will send a token via email.
@@ -187,9 +248,9 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email address</param>
+        /// <param name="requestPasswordResetModel">Request password reset model</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RequestPasswordResetWithHttpInfo (string email);
+        ApiResponse<Object> RequestPasswordResetWithHttpInfo (RequestPasswordResetModel requestPasswordResetModel);
         /// <summary>
         /// Skip a signup question
         /// </summary>
@@ -319,6 +380,25 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultAccountDetail)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAccountDetail>> GetAccountDetailsAsyncWithHttpInfo ();
         /// <summary>
+        /// Get timezones localised to users language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of RestApiArrayResultLocalisedTimeZone</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultLocalisedTimeZone> GetLocalisedTimeZonesAsync ();
+
+        /// <summary>
+        /// Get timezones localised to users language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (RestApiArrayResultLocalisedTimeZone)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultLocalisedTimeZone>> GetLocalisedTimeZonesAsyncWithHttpInfo ();
+        /// <summary>
         /// Login with username and password
         /// </summary>
         /// <remarks>
@@ -339,6 +419,27 @@ namespace Flipdish.Api
         /// <param name="loginModel">Login model</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> LoginAsyncWithHttpInfo (LoginModel loginModel);
+        /// <summary>
+        /// Login with username and password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="loginModel">Login model</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> LoginWithPinAsync (LoginWithPinModel loginModel);
+
+        /// <summary>
+        /// Login with username and password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="loginModel">Login model</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> LoginWithPinAsyncWithHttpInfo (LoginWithPinModel loginModel);
         /// <summary>
         /// Log out. It removes Flipdish authorization Cookie.
         /// </summary>
@@ -380,15 +481,36 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PasswordResetWithTokenAsyncWithHttpInfo (PasswordResetModel passwordResetModel);
         /// <summary>
+        /// Request login PIN. The server sends the PIN to the email address.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestLoginPinRequest">Request login PIN request</param>
+        /// <returns>Task of RequestLoginPinResposne</returns>
+        System.Threading.Tasks.Task<RequestLoginPinResposne> RequestLoginPinAsync (RequestLoginPinModel requestLoginPinRequest);
+
+        /// <summary>
+        /// Request login PIN. The server sends the PIN to the email address.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestLoginPinRequest">Request login PIN request</param>
+        /// <returns>Task of ApiResponse (RequestLoginPinResposne)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RequestLoginPinResposne>> RequestLoginPinAsyncWithHttpInfo (RequestLoginPinModel requestLoginPinRequest);
+        /// <summary>
         /// Request password reset. Flipdish system will send a token via email.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email address</param>
+        /// <param name="requestPasswordResetModel">Request password reset model</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RequestPasswordResetAsync (string email);
+        System.Threading.Tasks.Task RequestPasswordResetAsync (RequestPasswordResetModel requestPasswordResetModel);
 
         /// <summary>
         /// Request password reset. Flipdish system will send a token via email.
@@ -397,9 +519,9 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email address</param>
+        /// <param name="requestPasswordResetModel">Request password reset model</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RequestPasswordResetAsyncWithHttpInfo (string email);
+        System.Threading.Tasks.Task<ApiResponse<Object>> RequestPasswordResetAsyncWithHttpInfo (RequestPasswordResetModel requestPasswordResetModel);
         /// <summary>
         /// Skip a signup question
         /// </summary>
@@ -1219,6 +1341,145 @@ namespace Flipdish.Api
         }
 
         /// <summary>
+        /// Get timezones localised to users language 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>RestApiArrayResultLocalisedTimeZone</returns>
+        public RestApiArrayResultLocalisedTimeZone GetLocalisedTimeZones ()
+        {
+             ApiResponse<RestApiArrayResultLocalisedTimeZone> localVarResponse = GetLocalisedTimeZonesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get timezones localised to users language 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of RestApiArrayResultLocalisedTimeZone</returns>
+        public ApiResponse< RestApiArrayResultLocalisedTimeZone > GetLocalisedTimeZonesWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v1.0/accounts/timezones";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetLocalisedTimeZones", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultLocalisedTimeZone>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultLocalisedTimeZone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultLocalisedTimeZone)));
+        }
+
+        /// <summary>
+        /// Get timezones localised to users language 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of RestApiArrayResultLocalisedTimeZone</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultLocalisedTimeZone> GetLocalisedTimeZonesAsync ()
+        {
+             ApiResponse<RestApiArrayResultLocalisedTimeZone> localVarResponse = await GetLocalisedTimeZonesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get timezones localised to users language 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (RestApiArrayResultLocalisedTimeZone)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultLocalisedTimeZone>> GetLocalisedTimeZonesAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v1.0/accounts/timezones";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetLocalisedTimeZones", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultLocalisedTimeZone>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultLocalisedTimeZone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultLocalisedTimeZone)));
+        }
+
+        /// <summary>
         /// Login with username and password 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1385,6 +1646,181 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("Login", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Login with username and password 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="loginModel">Login model</param>
+        /// <returns>Object</returns>
+        public Object LoginWithPin (LoginWithPinModel loginModel)
+        {
+             ApiResponse<Object> localVarResponse = LoginWithPinWithHttpInfo(loginModel);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Login with username and password 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="loginModel">Login model</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > LoginWithPinWithHttpInfo (LoginWithPinModel loginModel)
+        {
+            // verify the required parameter 'loginModel' is set
+            if (loginModel == null)
+                throw new ApiException(400, "Missing required parameter 'loginModel' when calling AccountsApi->LoginWithPin");
+
+            var localVarPath = "/api/v1.0/accounts/login/pin";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (loginModel != null && loginModel.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(loginModel); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = loginModel; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LoginWithPin", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Login with username and password 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="loginModel">Login model</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> LoginWithPinAsync (LoginWithPinModel loginModel)
+        {
+             ApiResponse<Object> localVarResponse = await LoginWithPinAsyncWithHttpInfo(loginModel);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Login with username and password 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="loginModel">Login model</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> LoginWithPinAsyncWithHttpInfo (LoginWithPinModel loginModel)
+        {
+            // verify the required parameter 'loginModel' is set
+            if (loginModel == null)
+                throw new ApiException(400, "Missing required parameter 'loginModel' when calling AccountsApi->LoginWithPin");
+
+            var localVarPath = "/api/v1.0/accounts/login/pin";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (loginModel != null && loginModel.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(loginModel); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = loginModel; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LoginWithPin", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1708,29 +2144,30 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Request password reset. Flipdish system will send a token via email. 
+        /// Request login PIN. The server sends the PIN to the email address. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email address</param>
-        /// <returns></returns>
-        public void RequestPasswordReset (string email)
+        /// <param name="requestLoginPinRequest">Request login PIN request</param>
+        /// <returns>RequestLoginPinResposne</returns>
+        public RequestLoginPinResposne RequestLoginPin (RequestLoginPinModel requestLoginPinRequest)
         {
-             RequestPasswordResetWithHttpInfo(email);
+             ApiResponse<RequestLoginPinResposne> localVarResponse = RequestLoginPinWithHttpInfo(requestLoginPinRequest);
+             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Request password reset. Flipdish system will send a token via email. 
+        /// Request login PIN. The server sends the PIN to the email address. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email address</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> RequestPasswordResetWithHttpInfo (string email)
+        /// <param name="requestLoginPinRequest">Request login PIN request</param>
+        /// <returns>ApiResponse of RequestLoginPinResposne</returns>
+        public ApiResponse< RequestLoginPinResposne > RequestLoginPinWithHttpInfo (RequestLoginPinModel requestLoginPinRequest)
         {
-            // verify the required parameter 'email' is set
-            if (email == null)
-                throw new ApiException(400, "Missing required parameter 'email' when calling AccountsApi->RequestPasswordReset");
+            // verify the required parameter 'requestLoginPinRequest' is set
+            if (requestLoginPinRequest == null)
+                throw new ApiException(400, "Missing required parameter 'requestLoginPinRequest' when calling AccountsApi->RequestLoginPin");
 
-            var localVarPath = "/api/v1.0/accounts/password";
+            var localVarPath = "/api/v1.0/accounts/pin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1740,6 +2177,11 @@ namespace Flipdish.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1754,7 +2196,14 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (email != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "email", email)); // query parameter
+            if (requestLoginPinRequest != null && requestLoginPinRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(requestLoginPinRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = requestLoginPinRequest; // byte array
+            }
 
             // authentication (oauth2) required
             // oauth required
@@ -1765,7 +2214,181 @@ namespace Flipdish.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RequestLoginPin", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RequestLoginPinResposne>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RequestLoginPinResposne) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestLoginPinResposne)));
+        }
+
+        /// <summary>
+        /// Request login PIN. The server sends the PIN to the email address. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestLoginPinRequest">Request login PIN request</param>
+        /// <returns>Task of RequestLoginPinResposne</returns>
+        public async System.Threading.Tasks.Task<RequestLoginPinResposne> RequestLoginPinAsync (RequestLoginPinModel requestLoginPinRequest)
+        {
+             ApiResponse<RequestLoginPinResposne> localVarResponse = await RequestLoginPinAsyncWithHttpInfo(requestLoginPinRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Request login PIN. The server sends the PIN to the email address. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestLoginPinRequest">Request login PIN request</param>
+        /// <returns>Task of ApiResponse (RequestLoginPinResposne)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RequestLoginPinResposne>> RequestLoginPinAsyncWithHttpInfo (RequestLoginPinModel requestLoginPinRequest)
+        {
+            // verify the required parameter 'requestLoginPinRequest' is set
+            if (requestLoginPinRequest == null)
+                throw new ApiException(400, "Missing required parameter 'requestLoginPinRequest' when calling AccountsApi->RequestLoginPin");
+
+            var localVarPath = "/api/v1.0/accounts/pin";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (requestLoginPinRequest != null && requestLoginPinRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(requestLoginPinRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = requestLoginPinRequest; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RequestLoginPin", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RequestLoginPinResposne>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RequestLoginPinResposne) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestLoginPinResposne)));
+        }
+
+        /// <summary>
+        /// Request password reset. Flipdish system will send a token via email. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestPasswordResetModel">Request password reset model</param>
+        /// <returns></returns>
+        public void RequestPasswordReset (RequestPasswordResetModel requestPasswordResetModel)
+        {
+             RequestPasswordResetWithHttpInfo(requestPasswordResetModel);
+        }
+
+        /// <summary>
+        /// Request password reset. Flipdish system will send a token via email. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestPasswordResetModel">Request password reset model</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> RequestPasswordResetWithHttpInfo (RequestPasswordResetModel requestPasswordResetModel)
+        {
+            // verify the required parameter 'requestPasswordResetModel' is set
+            if (requestPasswordResetModel == null)
+                throw new ApiException(400, "Missing required parameter 'requestPasswordResetModel' when calling AccountsApi->RequestPasswordReset");
+
+            var localVarPath = "/api/v1.0/accounts/passwordreset";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (requestPasswordResetModel != null && requestPasswordResetModel.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(requestPasswordResetModel); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = requestPasswordResetModel; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -1785,11 +2408,11 @@ namespace Flipdish.Api
         /// Request password reset. Flipdish system will send a token via email. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email address</param>
+        /// <param name="requestPasswordResetModel">Request password reset model</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RequestPasswordResetAsync (string email)
+        public async System.Threading.Tasks.Task RequestPasswordResetAsync (RequestPasswordResetModel requestPasswordResetModel)
         {
-             await RequestPasswordResetAsyncWithHttpInfo(email);
+             await RequestPasswordResetAsyncWithHttpInfo(requestPasswordResetModel);
 
         }
 
@@ -1797,15 +2420,15 @@ namespace Flipdish.Api
         /// Request password reset. Flipdish system will send a token via email. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email address</param>
+        /// <param name="requestPasswordResetModel">Request password reset model</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> RequestPasswordResetAsyncWithHttpInfo (string email)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RequestPasswordResetAsyncWithHttpInfo (RequestPasswordResetModel requestPasswordResetModel)
         {
-            // verify the required parameter 'email' is set
-            if (email == null)
-                throw new ApiException(400, "Missing required parameter 'email' when calling AccountsApi->RequestPasswordReset");
+            // verify the required parameter 'requestPasswordResetModel' is set
+            if (requestPasswordResetModel == null)
+                throw new ApiException(400, "Missing required parameter 'requestPasswordResetModel' when calling AccountsApi->RequestPasswordReset");
 
-            var localVarPath = "/api/v1.0/accounts/password";
+            var localVarPath = "/api/v1.0/accounts/passwordreset";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1815,6 +2438,11 @@ namespace Flipdish.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1829,7 +2457,14 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (email != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "email", email)); // query parameter
+            if (requestPasswordResetModel != null && requestPasswordResetModel.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(requestPasswordResetModel); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = requestPasswordResetModel; // byte array
+            }
 
             // authentication (oauth2) required
             // oauth required
@@ -1840,7 +2475,7 @@ namespace Flipdish.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;

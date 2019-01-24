@@ -25,56 +25,56 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Login model
+    /// Login with PIN model
     /// </summary>
     [DataContract]
-    public partial class LoginModel :  IEquatable<LoginModel>, IValidatableObject
+    public partial class LoginWithPinModel :  IEquatable<LoginWithPinModel>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LoginModel" /> class.
+        /// Initializes a new instance of the <see cref="LoginWithPinModel" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected LoginModel() { }
+        protected LoginWithPinModel() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="LoginModel" /> class.
+        /// Initializes a new instance of the <see cref="LoginWithPinModel" /> class.
         /// </summary>
-        /// <param name="email">Email address (required).</param>
-        /// <param name="password">Password (required).</param>
-        public LoginModel(string email = default(string), string password = default(string))
+        /// <param name="email">Email addres (required).</param>
+        /// <param name="pin">PIN code (received via email) (required).</param>
+        public LoginWithPinModel(string email = default(string), int? pin = default(int?))
         {
             // to ensure "email" is required (not null)
             if (email == null)
             {
-                throw new InvalidDataException("email is a required property for LoginModel and cannot be null");
+                throw new InvalidDataException("email is a required property for LoginWithPinModel and cannot be null");
             }
             else
             {
                 this.Email = email;
             }
-            // to ensure "password" is required (not null)
-            if (password == null)
+            // to ensure "pin" is required (not null)
+            if (pin == null)
             {
-                throw new InvalidDataException("password is a required property for LoginModel and cannot be null");
+                throw new InvalidDataException("pin is a required property for LoginWithPinModel and cannot be null");
             }
             else
             {
-                this.Password = password;
+                this.Pin = pin;
             }
         }
         
         /// <summary>
-        /// Email address
+        /// Email addres
         /// </summary>
-        /// <value>Email address</value>
+        /// <value>Email addres</value>
         [DataMember(Name="Email", EmitDefaultValue=false)]
         public string Email { get; set; }
 
         /// <summary>
-        /// Password
+        /// PIN code (received via email)
         /// </summary>
-        /// <value>Password</value>
-        [DataMember(Name="Password", EmitDefaultValue=false)]
-        public string Password { get; set; }
+        /// <value>PIN code (received via email)</value>
+        [DataMember(Name="Pin", EmitDefaultValue=false)]
+        public int? Pin { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -83,9 +83,9 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class LoginModel {\n");
+            sb.Append("class LoginWithPinModel {\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
-            sb.Append("  Password: ").Append(Password).Append("\n");
+            sb.Append("  Pin: ").Append(Pin).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,15 +106,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as LoginModel);
+            return this.Equals(input as LoginWithPinModel);
         }
 
         /// <summary>
-        /// Returns true if LoginModel instances are equal
+        /// Returns true if LoginWithPinModel instances are equal
         /// </summary>
-        /// <param name="input">Instance of LoginModel to be compared</param>
+        /// <param name="input">Instance of LoginWithPinModel to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LoginModel input)
+        public bool Equals(LoginWithPinModel input)
         {
             if (input == null)
                 return false;
@@ -126,9 +126,9 @@ namespace Flipdish.Model
                     this.Email.Equals(input.Email))
                 ) && 
                 (
-                    this.Password == input.Password ||
-                    (this.Password != null &&
-                    this.Password.Equals(input.Password))
+                    this.Pin == input.Pin ||
+                    (this.Pin != null &&
+                    this.Pin.Equals(input.Pin))
                 );
         }
 
@@ -143,8 +143,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.Email != null)
                     hashCode = hashCode * 59 + this.Email.GetHashCode();
-                if (this.Password != null)
-                    hashCode = hashCode * 59 + this.Password.GetHashCode();
+                if (this.Pin != null)
+                    hashCode = hashCode * 59 + this.Pin.GetHashCode();
                 return hashCode;
             }
         }

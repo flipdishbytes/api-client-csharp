@@ -25,56 +25,26 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Login model
+    /// Request login PIN response
     /// </summary>
     [DataContract]
-    public partial class LoginModel :  IEquatable<LoginModel>, IValidatableObject
+    public partial class RequestLoginPinResposne :  IEquatable<RequestLoginPinResposne>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LoginModel" /> class.
+        /// Initializes a new instance of the <see cref="RequestLoginPinResposne" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected LoginModel() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="LoginModel" /> class.
-        /// </summary>
-        /// <param name="email">Email address (required).</param>
-        /// <param name="password">Password (required).</param>
-        public LoginModel(string email = default(string), string password = default(string))
+        /// <param name="loginPinSentViaEmail">Login PIN sent via email to user.</param>
+        public RequestLoginPinResposne(bool? loginPinSentViaEmail = default(bool?))
         {
-            // to ensure "email" is required (not null)
-            if (email == null)
-            {
-                throw new InvalidDataException("email is a required property for LoginModel and cannot be null");
-            }
-            else
-            {
-                this.Email = email;
-            }
-            // to ensure "password" is required (not null)
-            if (password == null)
-            {
-                throw new InvalidDataException("password is a required property for LoginModel and cannot be null");
-            }
-            else
-            {
-                this.Password = password;
-            }
+            this.LoginPinSentViaEmail = loginPinSentViaEmail;
         }
         
         /// <summary>
-        /// Email address
+        /// Login PIN sent via email to user
         /// </summary>
-        /// <value>Email address</value>
-        [DataMember(Name="Email", EmitDefaultValue=false)]
-        public string Email { get; set; }
-
-        /// <summary>
-        /// Password
-        /// </summary>
-        /// <value>Password</value>
-        [DataMember(Name="Password", EmitDefaultValue=false)]
-        public string Password { get; set; }
+        /// <value>Login PIN sent via email to user</value>
+        [DataMember(Name="LoginPinSentViaEmail", EmitDefaultValue=false)]
+        public bool? LoginPinSentViaEmail { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -83,9 +53,8 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class LoginModel {\n");
-            sb.Append("  Email: ").Append(Email).Append("\n");
-            sb.Append("  Password: ").Append(Password).Append("\n");
+            sb.Append("class RequestLoginPinResposne {\n");
+            sb.Append("  LoginPinSentViaEmail: ").Append(LoginPinSentViaEmail).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,29 +75,24 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as LoginModel);
+            return this.Equals(input as RequestLoginPinResposne);
         }
 
         /// <summary>
-        /// Returns true if LoginModel instances are equal
+        /// Returns true if RequestLoginPinResposne instances are equal
         /// </summary>
-        /// <param name="input">Instance of LoginModel to be compared</param>
+        /// <param name="input">Instance of RequestLoginPinResposne to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LoginModel input)
+        public bool Equals(RequestLoginPinResposne input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Email == input.Email ||
-                    (this.Email != null &&
-                    this.Email.Equals(input.Email))
-                ) && 
-                (
-                    this.Password == input.Password ||
-                    (this.Password != null &&
-                    this.Password.Equals(input.Password))
+                    this.LoginPinSentViaEmail == input.LoginPinSentViaEmail ||
+                    (this.LoginPinSentViaEmail != null &&
+                    this.LoginPinSentViaEmail.Equals(input.LoginPinSentViaEmail))
                 );
         }
 
@@ -141,10 +105,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Email != null)
-                    hashCode = hashCode * 59 + this.Email.GetHashCode();
-                if (this.Password != null)
-                    hashCode = hashCode * 59 + this.Password.GetHashCode();
+                if (this.LoginPinSentViaEmail != null)
+                    hashCode = hashCode * 59 + this.LoginPinSentViaEmail.GetHashCode();
                 return hashCode;
             }
         }
