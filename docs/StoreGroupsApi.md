@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 <a name="removestoregroup"></a>
 # **RemoveStoreGroup**
-> Object RemoveStoreGroup (int? storeGroupId)
+> void RemoveStoreGroup (int? storeGroupId)
 
 Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
 
@@ -234,8 +234,7 @@ namespace Example
             try
             {
                 // Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
-                Object result = apiInstance.RemoveStoreGroup(storeGroupId);
-                Debug.WriteLine(result);
+                apiInstance.RemoveStoreGroup(storeGroupId);
             }
             catch (Exception e)
             {
@@ -254,7 +253,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 

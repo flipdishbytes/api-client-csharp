@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **ChefNote** | **string** | Chef note | [optional] 
 **AppType** | **string** | Used app type | [optional] 
 **UserRating** | **int?** | User rating | [optional] 
+**PaymentStatus** | **string** | Status of the payment | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

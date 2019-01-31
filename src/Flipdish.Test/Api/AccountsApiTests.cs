@@ -73,8 +73,8 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string signupStepAction = null;
             //int? answerId = null;
-            //var response = instance.AnswerSignUpQuestion(signupStepAction, answerId);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //instance.AnswerSignUpQuestion(signupStepAction, answerId);
+            
         }
         
         /// <summary>
@@ -85,8 +85,20 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //ChangePasswordModel changePasswordModel = null;
-            //var response = instance.ChangePassword(changePasswordModel);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //instance.ChangePassword(changePasswordModel);
+            
+        }
+        
+        /// <summary>
+        /// Test ChangePasswordWithPin
+        /// </summary>
+        [Test]
+        public void ChangePasswordWithPinTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //SetPasswordWithPinModel changePasswordModel = null;
+            //instance.ChangePasswordWithPin(changePasswordModel);
+            
         }
         
         /// <summary>
@@ -97,8 +109,8 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //CreateAccountModel createAccountModel = null;
-            //var response = instance.CreateAccount(createAccountModel);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //instance.CreateAccount(createAccountModel);
+            
         }
         
         /// <summary>
@@ -131,8 +143,8 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //LoginModel loginModel = null;
-            //var response = instance.Login(loginModel);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //instance.Login(loginModel);
+            
         }
         
         /// <summary>
@@ -143,8 +155,8 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //LoginWithPinModel loginModel = null;
-            //var response = instance.LoginWithPin(loginModel);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //instance.LoginWithPin(loginModel);
+            
         }
         
         /// <summary>
@@ -154,8 +166,8 @@ namespace Flipdish.Test
         public void LogoutTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.Logout();
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //instance.Logout();
+            
         }
         
         /// <summary>
@@ -166,8 +178,8 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //PasswordResetModel passwordResetModel = null;
-            //var response = instance.PasswordResetWithToken(passwordResetModel);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //instance.PasswordResetWithToken(passwordResetModel);
+            
         }
         
         /// <summary>
@@ -202,8 +214,8 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string signupStepAction = null;
-            //var response = instance.SkipSignupStep(signupStepAction);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //instance.SkipSignupStep(signupStepAction);
+            
         }
         
         /// <summary>
@@ -214,8 +226,8 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //AccountDetailBase updateAccountModel = null;
-            //var response = instance.UpdateAccount(updateAccountModel);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //instance.UpdateAccount(updateAccountModel);
+            
         }
         
     }

@@ -307,6 +307,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'RequireCustomerNameForPickup'
         }
         /// <summary>
+        /// Test the property 'GdprCustomerPhoneNumbers'
+        /// </summary>
+        [Test]
+        public void GdprCustomerPhoneNumbersTest()
+        {
+            // TODO unit test for the property 'GdprCustomerPhoneNumbers'
+        }
+        /// <summary>
         /// Test the property 'RequireCustomerNameForDelivery'
         /// </summary>
         [Test]

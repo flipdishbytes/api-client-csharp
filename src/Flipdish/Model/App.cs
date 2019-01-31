@@ -31,6 +31,57 @@ namespace Flipdish.Model
     public partial class App :  IEquatable<App>, IValidatableObject
     {
         /// <summary>
+        /// App access level for the logged in user
+        /// </summary>
+        /// <value>App access level for the logged in user</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AppAccessLevelEnum
+        {
+            
+            /// <summary>
+            /// Enum None for value: None
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None = 1,
+            
+            /// <summary>
+            /// Enum Owner for value: Owner
+            /// </summary>
+            [EnumMember(Value = "Owner")]
+            Owner = 2,
+            
+            /// <summary>
+            /// Enum ManagedOwner for value: ManagedOwner
+            /// </summary>
+            [EnumMember(Value = "ManagedOwner")]
+            ManagedOwner = 3,
+            
+            /// <summary>
+            /// Enum StoreManager for value: StoreManager
+            /// </summary>
+            [EnumMember(Value = "StoreManager")]
+            StoreManager = 4,
+            
+            /// <summary>
+            /// Enum StoreStaff for value: StoreStaff
+            /// </summary>
+            [EnumMember(Value = "StoreStaff")]
+            StoreStaff = 5,
+            
+            /// <summary>
+            /// Enum FinanceManger for value: FinanceManger
+            /// </summary>
+            [EnumMember(Value = "FinanceManger")]
+            FinanceManger = 6
+        }
+
+        /// <summary>
+        /// App access level for the logged in user
+        /// </summary>
+        /// <value>App access level for the logged in user</value>
+        [DataMember(Name="AppAccessLevel", EmitDefaultValue=false)]
+        public AppAccessLevelEnum? AppAccessLevel { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="App" /> class.
         /// </summary>
         /// <param name="appId">App Identifier.</param>
@@ -38,17 +89,19 @@ namespace Flipdish.Model
         /// <param name="mapCenter">Center of the map coordinates.</param>
         /// <param name="mapNorthEast">North East(Top Right) Corner of the map coordinates.</param>
         /// <param name="mapSouthWest">South West (Bottom Left) Corner of the map coordinates.</param>
+        /// <param name="appAccessLevel">App access level for the logged in user.</param>
         /// <param name="iconUrl">Icon url.</param>
         /// <param name="iconThumbnailUrl">Icon thumbnail url.</param>
         /// <param name="countryId">Country identifier.</param>
         /// <param name="availableAppLanguages">Available Languages for Apps\\Staff.</param>
-        public App(string appId = default(string), string name = default(string), Coordinates mapCenter = default(Coordinates), Coordinates mapNorthEast = default(Coordinates), Coordinates mapSouthWest = default(Coordinates), string iconUrl = default(string), string iconThumbnailUrl = default(string), string countryId = default(string), List<Language> availableAppLanguages = default(List<Language>))
+        public App(string appId = default(string), string name = default(string), Coordinates mapCenter = default(Coordinates), Coordinates mapNorthEast = default(Coordinates), Coordinates mapSouthWest = default(Coordinates), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), string iconUrl = default(string), string iconThumbnailUrl = default(string), string countryId = default(string), List<Language> availableAppLanguages = default(List<Language>))
         {
             this.AppId = appId;
             this.Name = name;
             this.MapCenter = mapCenter;
             this.MapNorthEast = mapNorthEast;
             this.MapSouthWest = mapSouthWest;
+            this.AppAccessLevel = appAccessLevel;
             this.IconUrl = iconUrl;
             this.IconThumbnailUrl = iconThumbnailUrl;
             this.CountryId = countryId;
@@ -89,6 +142,7 @@ namespace Flipdish.Model
         /// <value>South West (Bottom Left) Corner of the map coordinates</value>
         [DataMember(Name="MapSouthWest", EmitDefaultValue=false)]
         public Coordinates MapSouthWest { get; set; }
+
 
         /// <summary>
         /// Icon url
@@ -131,6 +185,7 @@ namespace Flipdish.Model
             sb.Append("  MapCenter: ").Append(MapCenter).Append("\n");
             sb.Append("  MapNorthEast: ").Append(MapNorthEast).Append("\n");
             sb.Append("  MapSouthWest: ").Append(MapSouthWest).Append("\n");
+            sb.Append("  AppAccessLevel: ").Append(AppAccessLevel).Append("\n");
             sb.Append("  IconUrl: ").Append(IconUrl).Append("\n");
             sb.Append("  IconThumbnailUrl: ").Append(IconThumbnailUrl).Append("\n");
             sb.Append("  CountryId: ").Append(CountryId).Append("\n");
@@ -195,6 +250,11 @@ namespace Flipdish.Model
                     this.MapSouthWest.Equals(input.MapSouthWest))
                 ) && 
                 (
+                    this.AppAccessLevel == input.AppAccessLevel ||
+                    (this.AppAccessLevel != null &&
+                    this.AppAccessLevel.Equals(input.AppAccessLevel))
+                ) && 
+                (
                     this.IconUrl == input.IconUrl ||
                     (this.IconUrl != null &&
                     this.IconUrl.Equals(input.IconUrl))
@@ -235,6 +295,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MapNorthEast.GetHashCode();
                 if (this.MapSouthWest != null)
                     hashCode = hashCode * 59 + this.MapSouthWest.GetHashCode();
+                if (this.AppAccessLevel != null)
+                    hashCode = hashCode * 59 + this.AppAccessLevel.GetHashCode();
                 if (this.IconUrl != null)
                     hashCode = hashCode * 59 + this.IconUrl.GetHashCode();
                 if (this.IconThumbnailUrl != null)

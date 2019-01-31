@@ -25,39 +25,56 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Rest api array result
+    /// Set password with PIN model
     /// </summary>
     [DataContract]
-    public partial class RestApiArrayResultApmAverageHourlyDataPoint :  IEquatable<RestApiArrayResultApmAverageHourlyDataPoint>, IValidatableObject
+    public partial class SetPasswordWithPinModel :  IEquatable<SetPasswordWithPinModel>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiArrayResultApmAverageHourlyDataPoint" /> class.
+        /// Initializes a new instance of the <see cref="SetPasswordWithPinModel" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected RestApiArrayResultApmAverageHourlyDataPoint() { }
+        protected SetPasswordWithPinModel() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiArrayResultApmAverageHourlyDataPoint" /> class.
+        /// Initializes a new instance of the <see cref="SetPasswordWithPinModel" /> class.
         /// </summary>
-        /// <param name="data">Generic data object. (required).</param>
-        public RestApiArrayResultApmAverageHourlyDataPoint(List<ApmAverageHourlyDataPoint> data = default(List<ApmAverageHourlyDataPoint>))
+        /// <param name="pin">PIN code (received via email) (required).</param>
+        /// <param name="newPassword">New Password (required).</param>
+        public SetPasswordWithPinModel(int? pin = default(int?), string newPassword = default(string))
         {
-            // to ensure "data" is required (not null)
-            if (data == null)
+            // to ensure "pin" is required (not null)
+            if (pin == null)
             {
-                throw new InvalidDataException("data is a required property for RestApiArrayResultApmAverageHourlyDataPoint and cannot be null");
+                throw new InvalidDataException("pin is a required property for SetPasswordWithPinModel and cannot be null");
             }
             else
             {
-                this.Data = data;
+                this.Pin = pin;
+            }
+            // to ensure "newPassword" is required (not null)
+            if (newPassword == null)
+            {
+                throw new InvalidDataException("newPassword is a required property for SetPasswordWithPinModel and cannot be null");
+            }
+            else
+            {
+                this.NewPassword = newPassword;
             }
         }
         
         /// <summary>
-        /// Generic data object.
+        /// PIN code (received via email)
         /// </summary>
-        /// <value>Generic data object.</value>
-        [DataMember(Name="Data", EmitDefaultValue=false)]
-        public List<ApmAverageHourlyDataPoint> Data { get; set; }
+        /// <value>PIN code (received via email)</value>
+        [DataMember(Name="Pin", EmitDefaultValue=false)]
+        public int? Pin { get; set; }
+
+        /// <summary>
+        /// New Password
+        /// </summary>
+        /// <value>New Password</value>
+        [DataMember(Name="NewPassword", EmitDefaultValue=false)]
+        public string NewPassword { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -66,8 +83,9 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RestApiArrayResultApmAverageHourlyDataPoint {\n");
-            sb.Append("  Data: ").Append(Data).Append("\n");
+            sb.Append("class SetPasswordWithPinModel {\n");
+            sb.Append("  Pin: ").Append(Pin).Append("\n");
+            sb.Append("  NewPassword: ").Append(NewPassword).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,24 +106,29 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RestApiArrayResultApmAverageHourlyDataPoint);
+            return this.Equals(input as SetPasswordWithPinModel);
         }
 
         /// <summary>
-        /// Returns true if RestApiArrayResultApmAverageHourlyDataPoint instances are equal
+        /// Returns true if SetPasswordWithPinModel instances are equal
         /// </summary>
-        /// <param name="input">Instance of RestApiArrayResultApmAverageHourlyDataPoint to be compared</param>
+        /// <param name="input">Instance of SetPasswordWithPinModel to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RestApiArrayResultApmAverageHourlyDataPoint input)
+        public bool Equals(SetPasswordWithPinModel input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Data == input.Data ||
-                    this.Data != null &&
-                    this.Data.SequenceEqual(input.Data)
+                    this.Pin == input.Pin ||
+                    (this.Pin != null &&
+                    this.Pin.Equals(input.Pin))
+                ) && 
+                (
+                    this.NewPassword == input.NewPassword ||
+                    (this.NewPassword != null &&
+                    this.NewPassword.Equals(input.NewPassword))
                 );
         }
 
@@ -118,8 +141,10 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Data != null)
-                    hashCode = hashCode * 59 + this.Data.GetHashCode();
+                if (this.Pin != null)
+                    hashCode = hashCode * 59 + this.Pin.GetHashCode();
+                if (this.NewPassword != null)
+                    hashCode = hashCode * 59 + this.NewPassword.GetHashCode();
                 return hashCode;
             }
         }

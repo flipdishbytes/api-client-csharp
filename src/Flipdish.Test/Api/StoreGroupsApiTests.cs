@@ -112,8 +112,8 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? storeGroupId = null;
-            //var response = instance.RemoveStoreGroup(storeGroupId);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //instance.RemoveStoreGroup(storeGroupId);
+            
         }
         
         /// <summary>

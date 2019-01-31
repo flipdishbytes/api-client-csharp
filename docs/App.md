@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **MapCenter** | [**Coordinates**](Coordinates.md) | Center of the map coordinates | [optional] 
 **MapNorthEast** | [**Coordinates**](Coordinates.md) | North East(Top Right) Corner of the map coordinates | [optional] 
 **MapSouthWest** | [**Coordinates**](Coordinates.md) | South West (Bottom Left) Corner of the map coordinates | [optional] 
+**AppAccessLevel** | **string** | App access level for the logged in user | [optional] 
 **IconUrl** | **string** | Icon url | [optional] 
 **IconThumbnailUrl** | **string** | Icon thumbnail url | [optional] 
 **CountryId** | **string** | Country identifier | [optional] 

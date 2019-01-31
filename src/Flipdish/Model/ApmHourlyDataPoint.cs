@@ -28,7 +28,7 @@ namespace Flipdish.Model
     /// Provides an average value for a single hour of day of the week
     /// </summary>
     [DataContract]
-    public partial class ApmAverageHourlyDataPoint :  IEquatable<ApmAverageHourlyDataPoint>, IValidatableObject
+    public partial class ApmHourlyDataPoint :  IEquatable<ApmHourlyDataPoint>, IValidatableObject
     {
         /// <summary>
         /// Day of the week
@@ -88,16 +88,16 @@ namespace Flipdish.Model
         [DataMember(Name="Day", EmitDefaultValue=false)]
         public DayEnum? Day { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApmAverageHourlyDataPoint" /> class.
+        /// Initializes a new instance of the <see cref="ApmHourlyDataPoint" /> class.
         /// </summary>
         /// <param name="day">Day of the week.</param>
         /// <param name="hour">Hour in the day.</param>
-        /// <param name="averageValue">Average Value.</param>
-        public ApmAverageHourlyDataPoint(DayEnum? day = default(DayEnum?), int? hour = default(int?), double? averageValue = default(double?))
+        /// <param name="totalValue">Total Value.</param>
+        public ApmHourlyDataPoint(DayEnum? day = default(DayEnum?), int? hour = default(int?), int? totalValue = default(int?))
         {
             this.Day = day;
             this.Hour = hour;
-            this.AverageValue = averageValue;
+            this.TotalValue = totalValue;
         }
         
 
@@ -109,11 +109,11 @@ namespace Flipdish.Model
         public int? Hour { get; set; }
 
         /// <summary>
-        /// Average Value
+        /// Total Value
         /// </summary>
-        /// <value>Average Value</value>
-        [DataMember(Name="AverageValue", EmitDefaultValue=false)]
-        public double? AverageValue { get; set; }
+        /// <value>Total Value</value>
+        [DataMember(Name="TotalValue", EmitDefaultValue=false)]
+        public int? TotalValue { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -122,10 +122,10 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ApmAverageHourlyDataPoint {\n");
+            sb.Append("class ApmHourlyDataPoint {\n");
             sb.Append("  Day: ").Append(Day).Append("\n");
             sb.Append("  Hour: ").Append(Hour).Append("\n");
-            sb.Append("  AverageValue: ").Append(AverageValue).Append("\n");
+            sb.Append("  TotalValue: ").Append(TotalValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -146,15 +146,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ApmAverageHourlyDataPoint);
+            return this.Equals(input as ApmHourlyDataPoint);
         }
 
         /// <summary>
-        /// Returns true if ApmAverageHourlyDataPoint instances are equal
+        /// Returns true if ApmHourlyDataPoint instances are equal
         /// </summary>
-        /// <param name="input">Instance of ApmAverageHourlyDataPoint to be compared</param>
+        /// <param name="input">Instance of ApmHourlyDataPoint to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApmAverageHourlyDataPoint input)
+        public bool Equals(ApmHourlyDataPoint input)
         {
             if (input == null)
                 return false;
@@ -171,9 +171,9 @@ namespace Flipdish.Model
                     this.Hour.Equals(input.Hour))
                 ) && 
                 (
-                    this.AverageValue == input.AverageValue ||
-                    (this.AverageValue != null &&
-                    this.AverageValue.Equals(input.AverageValue))
+                    this.TotalValue == input.TotalValue ||
+                    (this.TotalValue != null &&
+                    this.TotalValue.Equals(input.TotalValue))
                 );
         }
 
@@ -190,8 +190,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Day.GetHashCode();
                 if (this.Hour != null)
                     hashCode = hashCode * 59 + this.Hour.GetHashCode();
-                if (this.AverageValue != null)
-                    hashCode = hashCode * 59 + this.AverageValue.GetHashCode();
+                if (this.TotalValue != null)
+                    hashCode = hashCode * 59 + this.TotalValue.GetHashCode();
                 return hashCode;
             }
         }

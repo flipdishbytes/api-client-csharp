@@ -96,6 +96,37 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultOrder</returns>
         ApiResponse<RestApiPaginationResultOrder> GetOrdersWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
         /// <summary>
+        /// [PRIVATE API] Get summary of orders by filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Query string</param>
+        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
+        /// <param name="state">Order states (optional)</param>
+        /// <param name="page">Requested page number (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>RestApiPaginationResultOrderSummary</returns>
+        RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// [PRIVATE API] Get summary of orders by filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Query string</param>
+        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
+        /// <param name="state">Order states (optional)</param>
+        /// <param name="page">Requested page number (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultOrderSummary</returns>
+        ApiResponse<RestApiPaginationResultOrderSummary> GetOrdersSummaryWithHttpInfo (string appId, string searchQuery, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
+        /// <summary>
         /// Refund order
         /// </summary>
         /// <remarks>
@@ -214,6 +245,37 @@ namespace Flipdish.Api
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOrder)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrder>> GetOrdersAsyncWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
+        /// <summary>
+        /// [PRIVATE API] Get summary of orders by filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Query string</param>
+        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
+        /// <param name="state">Order states (optional)</param>
+        /// <param name="page">Requested page number (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>Task of RestApiPaginationResultOrderSummary</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultOrderSummary> GetOrdersSummaryAsync (string appId, string searchQuery, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// [PRIVATE API] Get summary of orders by filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Query string</param>
+        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
+        /// <param name="state">Order states (optional)</param>
+        /// <param name="page">Requested page number (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultOrderSummary)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrderSummary>> GetOrdersSummaryAsyncWithHttpInfo (string appId, string searchQuery, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
         /// <summary>
         /// Refund order
         /// </summary>
@@ -857,6 +919,193 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiPaginationResultOrder>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiPaginationResultOrder) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultOrder)));
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Get summary of orders by filter 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Query string</param>
+        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
+        /// <param name="state">Order states (optional)</param>
+        /// <param name="page">Requested page number (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>RestApiPaginationResultOrderSummary</returns>
+        public RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<RestApiPaginationResultOrderSummary> localVarResponse = GetOrdersSummaryWithHttpInfo(appId, searchQuery, physicalRestaurantId, state, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Get summary of orders by filter 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Query string</param>
+        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
+        /// <param name="state">Order states (optional)</param>
+        /// <param name="page">Requested page number (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultOrderSummary</returns>
+        public ApiResponse< RestApiPaginationResultOrderSummary > GetOrdersSummaryWithHttpInfo (string appId, string searchQuery, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OrdersApi->GetOrdersSummary");
+            // verify the required parameter 'searchQuery' is set
+            if (searchQuery == null)
+                throw new ApiException(400, "Missing required parameter 'searchQuery' when calling OrdersApi->GetOrdersSummary");
+
+            var localVarPath = "/api/v1.0/orders/summary";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "appId", appId)); // query parameter
+            if (searchQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
+            if (physicalRestaurantId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "physicalRestaurantId", physicalRestaurantId)); // query parameter
+            if (state != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "state", state)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOrdersSummary", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultOrderSummary>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiPaginationResultOrderSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultOrderSummary)));
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Get summary of orders by filter 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Query string</param>
+        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
+        /// <param name="state">Order states (optional)</param>
+        /// <param name="page">Requested page number (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>Task of RestApiPaginationResultOrderSummary</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultOrderSummary> GetOrdersSummaryAsync (string appId, string searchQuery, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<RestApiPaginationResultOrderSummary> localVarResponse = await GetOrdersSummaryAsyncWithHttpInfo(appId, searchQuery, physicalRestaurantId, state, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Get summary of orders by filter 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Query string</param>
+        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
+        /// <param name="state">Order states (optional)</param>
+        /// <param name="page">Requested page number (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultOrderSummary)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrderSummary>> GetOrdersSummaryAsyncWithHttpInfo (string appId, string searchQuery, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OrdersApi->GetOrdersSummary");
+            // verify the required parameter 'searchQuery' is set
+            if (searchQuery == null)
+                throw new ApiException(400, "Missing required parameter 'searchQuery' when calling OrdersApi->GetOrdersSummary");
+
+            var localVarPath = "/api/v1.0/orders/summary";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "appId", appId)); // query parameter
+            if (searchQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
+            if (physicalRestaurantId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "physicalRestaurantId", physicalRestaurantId)); // query parameter
+            if (state != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "state", state)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOrdersSummary", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultOrderSummary>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiPaginationResultOrderSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultOrderSummary)));
         }
 
         /// <summary>

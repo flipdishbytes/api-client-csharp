@@ -310,6 +310,51 @@ namespace Flipdish.Model
         [DataMember(Name="AppType", EmitDefaultValue=false)]
         public AppTypeEnum? AppType { get; set; }
         /// <summary>
+        /// Status of the payment
+        /// </summary>
+        /// <value>Status of the payment</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PaymentStatusEnum
+        {
+            
+            /// <summary>
+            /// Enum Paid for value: Paid
+            /// </summary>
+            [EnumMember(Value = "Paid")]
+            Paid = 1,
+            
+            /// <summary>
+            /// Enum Unpaid for value: Unpaid
+            /// </summary>
+            [EnumMember(Value = "Unpaid")]
+            Unpaid = 2,
+            
+            /// <summary>
+            /// Enum Refunded for value: Refunded
+            /// </summary>
+            [EnumMember(Value = "Refunded")]
+            Refunded = 3,
+            
+            /// <summary>
+            /// Enum PartiallyRefunded for value: PartiallyRefunded
+            /// </summary>
+            [EnumMember(Value = "PartiallyRefunded")]
+            PartiallyRefunded = 4,
+            
+            /// <summary>
+            /// Enum Disputed for value: Disputed
+            /// </summary>
+            [EnumMember(Value = "Disputed")]
+            Disputed = 5
+        }
+
+        /// <summary>
+        /// Status of the payment
+        /// </summary>
+        /// <value>Status of the payment</value>
+        [DataMember(Name="PaymentStatus", EmitDefaultValue=false)]
+        public PaymentStatusEnum? PaymentStatus { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Order" /> class.
         /// </summary>
         /// <param name="store">Store summary.</param>
@@ -336,7 +381,8 @@ namespace Flipdish.Model
         /// <param name="chefNote">Chef note.</param>
         /// <param name="appType">Used app type.</param>
         /// <param name="userRating">User rating.</param>
-        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), VoucherSummary voucher = default(VoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?))
+        /// <param name="paymentStatus">Status of the payment.</param>
+        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), VoucherSummary voucher = default(VoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?))
         {
             this.Store = store;
             this.Customer = customer;
@@ -362,6 +408,7 @@ namespace Flipdish.Model
             this.ChefNote = chefNote;
             this.AppType = appType;
             this.UserRating = userRating;
+            this.PaymentStatus = paymentStatus;
         }
         
         /// <summary>
@@ -502,6 +549,7 @@ namespace Flipdish.Model
         [DataMember(Name="UserRating", EmitDefaultValue=false)]
         public int? UserRating { get; set; }
 
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -534,6 +582,7 @@ namespace Flipdish.Model
             sb.Append("  ChefNote: ").Append(ChefNote).Append("\n");
             sb.Append("  AppType: ").Append(AppType).Append("\n");
             sb.Append("  UserRating: ").Append(UserRating).Append("\n");
+            sb.Append("  PaymentStatus: ").Append(PaymentStatus).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -687,6 +736,11 @@ namespace Flipdish.Model
                     this.UserRating == input.UserRating ||
                     (this.UserRating != null &&
                     this.UserRating.Equals(input.UserRating))
+                ) && 
+                (
+                    this.PaymentStatus == input.PaymentStatus ||
+                    (this.PaymentStatus != null &&
+                    this.PaymentStatus.Equals(input.PaymentStatus))
                 );
         }
 
@@ -747,6 +801,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.AppType.GetHashCode();
                 if (this.UserRating != null)
                     hashCode = hashCode * 59 + this.UserRating.GetHashCode();
+                if (this.PaymentStatus != null)
+                    hashCode = hashCode * 59 + this.PaymentStatus.GetHashCode();
                 return hashCode;
             }
         }

@@ -87,7 +87,7 @@ namespace Flipdish.Test
             //string appId = null;
             //List<int?> storeId = null;
             //var response = instance.GetCalendarWeekStatistics(appId, storeId);
-            //Assert.IsInstanceOf<RestApiArrayResultApmAverageHourlyDataPoint> (response, "response is RestApiArrayResultApmAverageHourlyDataPoint");
+            //Assert.IsInstanceOf<RestApiArrayResultApmHourlyDataPoint> (response, "response is RestApiArrayResultApmHourlyDataPoint");
         }
         
         /// <summary>

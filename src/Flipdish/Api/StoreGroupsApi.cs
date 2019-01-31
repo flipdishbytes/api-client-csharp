@@ -103,8 +103,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId">Store Group Id</param>
-        /// <returns>Object</returns>
-        Object RemoveStoreGroup (int? storeGroupId);
+        /// <returns></returns>
+        void RemoveStoreGroup (int? storeGroupId);
 
         /// <summary>
         /// Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
@@ -114,7 +114,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId">Store Group Id</param>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RemoveStoreGroupWithHttpInfo (int? storeGroupId);
         /// <summary>
         /// Updates Store Group
@@ -220,8 +220,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId">Store Group Id</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> RemoveStoreGroupAsync (int? storeGroupId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task RemoveStoreGroupAsync (int? storeGroupId);
 
         /// <summary>
         /// Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
@@ -231,7 +231,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId">Store Group Id</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RemoveStoreGroupAsyncWithHttpInfo (int? storeGroupId);
         /// <summary>
         /// Updates Store Group
@@ -868,11 +868,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId">Store Group Id</param>
-        /// <returns>Object</returns>
-        public Object RemoveStoreGroup (int? storeGroupId)
+        /// <returns></returns>
+        public void RemoveStoreGroup (int? storeGroupId)
         {
-             ApiResponse<Object> localVarResponse = RemoveStoreGroupWithHttpInfo(storeGroupId);
-             return localVarResponse.Data;
+             RemoveStoreGroupWithHttpInfo(storeGroupId);
         }
 
         /// <summary>
@@ -880,8 +879,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId">Store Group Id</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > RemoveStoreGroupWithHttpInfo (int? storeGroupId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> RemoveStoreGroupWithHttpInfo (int? storeGroupId)
         {
             // verify the required parameter 'storeGroupId' is set
             if (storeGroupId == null)
@@ -935,7 +934,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -943,11 +942,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId">Store Group Id</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> RemoveStoreGroupAsync (int? storeGroupId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task RemoveStoreGroupAsync (int? storeGroupId)
         {
-             ApiResponse<Object> localVarResponse = await RemoveStoreGroupAsyncWithHttpInfo(storeGroupId);
-             return localVarResponse.Data;
+             await RemoveStoreGroupAsyncWithHttpInfo(storeGroupId);
 
         }
 
@@ -956,7 +954,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId">Store Group Id</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> RemoveStoreGroupAsyncWithHttpInfo (int? storeGroupId)
         {
             // verify the required parameter 'storeGroupId' is set
@@ -1011,7 +1009,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>

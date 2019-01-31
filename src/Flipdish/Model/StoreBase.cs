@@ -51,6 +51,7 @@ namespace Flipdish.Model
         /// <param name="openForPickup">True if the store is open for pickup.</param>
         /// <param name="minimumPickupOrderAmount">Minimum pickup order amount.</param>
         /// <param name="requireCustomerNameForPickup">True if customer name required for pickup orders.</param>
+        /// <param name="gdprCustomerPhoneNumbers">Mask your customers phone numbers printed on receipts and reduce the amout of personally identifiable customer information that is exposed..</param>
         /// <param name="requireCustomerNameForDelivery">True if customer name required for delivery orders.</param>
         /// <param name="microsoftTimeZone">Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391).</param>
         /// <param name="ianaTimeZone">IANA Time Zone (https://www.iana.org/time-zones).</param>
@@ -59,7 +60,7 @@ namespace Flipdish.Model
         /// <param name="name">Name.</param>
         /// <param name="emailAddress">Email address (visible to customers).</param>
         /// <param name="staffLanguage">Staff Language (used for communcation with the staff)  Emails, Printouts etc.</param>
-        public StoreBase(string phoneNumber = default(string), bool? preOrderEnabled = default(bool?), bool? takeOutEnabled = default(bool?), bool? tableServiceEnabled = default(bool?), bool? dineInEnabled = default(bool?), bool? allowPreOrdersAndTableService = default(bool?), bool? pickupEnabled = default(bool?), bool? deliveryEnabled = default(bool?), bool? cardOrderDeliveryEnabled = default(bool?), bool? cashOrdersDeliveryEnabled = default(bool?), bool? cardOrdersPickupEnabled = default(bool?), bool? cashOrdersPickupEnabled = default(bool?), bool? tipsEnabled = default(bool?), bool? automaticallyAcceptOrders = default(bool?), bool? openForDelivery = default(bool?), bool? openForPickup = default(bool?), double? minimumPickupOrderAmount = default(double?), bool? requireCustomerNameForPickup = default(bool?), bool? requireCustomerNameForDelivery = default(bool?), string microsoftTimeZone = default(string), string ianaTimeZone = default(string), bool? etaInPickupConfirmationSmsEnabled = default(bool?), bool? etaInDeliveryConfirmationSmsEnabled = default(bool?), string name = default(string), string emailAddress = default(string), string staffLanguage = default(string))
+        public StoreBase(string phoneNumber = default(string), bool? preOrderEnabled = default(bool?), bool? takeOutEnabled = default(bool?), bool? tableServiceEnabled = default(bool?), bool? dineInEnabled = default(bool?), bool? allowPreOrdersAndTableService = default(bool?), bool? pickupEnabled = default(bool?), bool? deliveryEnabled = default(bool?), bool? cardOrderDeliveryEnabled = default(bool?), bool? cashOrdersDeliveryEnabled = default(bool?), bool? cardOrdersPickupEnabled = default(bool?), bool? cashOrdersPickupEnabled = default(bool?), bool? tipsEnabled = default(bool?), bool? automaticallyAcceptOrders = default(bool?), bool? openForDelivery = default(bool?), bool? openForPickup = default(bool?), double? minimumPickupOrderAmount = default(double?), bool? requireCustomerNameForPickup = default(bool?), bool? gdprCustomerPhoneNumbers = default(bool?), bool? requireCustomerNameForDelivery = default(bool?), string microsoftTimeZone = default(string), string ianaTimeZone = default(string), bool? etaInPickupConfirmationSmsEnabled = default(bool?), bool? etaInDeliveryConfirmationSmsEnabled = default(bool?), string name = default(string), string emailAddress = default(string), string staffLanguage = default(string))
         {
             this.PhoneNumber = phoneNumber;
             this.PreOrderEnabled = preOrderEnabled;
@@ -79,6 +80,7 @@ namespace Flipdish.Model
             this.OpenForPickup = openForPickup;
             this.MinimumPickupOrderAmount = minimumPickupOrderAmount;
             this.RequireCustomerNameForPickup = requireCustomerNameForPickup;
+            this.GdprCustomerPhoneNumbers = gdprCustomerPhoneNumbers;
             this.RequireCustomerNameForDelivery = requireCustomerNameForDelivery;
             this.MicrosoftTimeZone = microsoftTimeZone;
             this.IanaTimeZone = ianaTimeZone;
@@ -216,6 +218,13 @@ namespace Flipdish.Model
         public bool? RequireCustomerNameForPickup { get; set; }
 
         /// <summary>
+        /// Mask your customers phone numbers printed on receipts and reduce the amout of personally identifiable customer information that is exposed.
+        /// </summary>
+        /// <value>Mask your customers phone numbers printed on receipts and reduce the amout of personally identifiable customer information that is exposed.</value>
+        [DataMember(Name="GdprCustomerPhoneNumbers", EmitDefaultValue=false)]
+        public bool? GdprCustomerPhoneNumbers { get; set; }
+
+        /// <summary>
         /// True if customer name required for delivery orders
         /// </summary>
         /// <value>True if customer name required for delivery orders</value>
@@ -297,6 +306,7 @@ namespace Flipdish.Model
             sb.Append("  OpenForPickup: ").Append(OpenForPickup).Append("\n");
             sb.Append("  MinimumPickupOrderAmount: ").Append(MinimumPickupOrderAmount).Append("\n");
             sb.Append("  RequireCustomerNameForPickup: ").Append(RequireCustomerNameForPickup).Append("\n");
+            sb.Append("  GdprCustomerPhoneNumbers: ").Append(GdprCustomerPhoneNumbers).Append("\n");
             sb.Append("  RequireCustomerNameForDelivery: ").Append(RequireCustomerNameForDelivery).Append("\n");
             sb.Append("  MicrosoftTimeZone: ").Append(MicrosoftTimeZone).Append("\n");
             sb.Append("  IanaTimeZone: ").Append(IanaTimeZone).Append("\n");
@@ -430,6 +440,11 @@ namespace Flipdish.Model
                     this.RequireCustomerNameForPickup.Equals(input.RequireCustomerNameForPickup))
                 ) && 
                 (
+                    this.GdprCustomerPhoneNumbers == input.GdprCustomerPhoneNumbers ||
+                    (this.GdprCustomerPhoneNumbers != null &&
+                    this.GdprCustomerPhoneNumbers.Equals(input.GdprCustomerPhoneNumbers))
+                ) && 
+                (
                     this.RequireCustomerNameForDelivery == input.RequireCustomerNameForDelivery ||
                     (this.RequireCustomerNameForDelivery != null &&
                     this.RequireCustomerNameForDelivery.Equals(input.RequireCustomerNameForDelivery))
@@ -516,6 +531,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MinimumPickupOrderAmount.GetHashCode();
                 if (this.RequireCustomerNameForPickup != null)
                     hashCode = hashCode * 59 + this.RequireCustomerNameForPickup.GetHashCode();
+                if (this.GdprCustomerPhoneNumbers != null)
+                    hashCode = hashCode * 59 + this.GdprCustomerPhoneNumbers.GetHashCode();
                 if (this.RequireCustomerNameForDelivery != null)
                     hashCode = hashCode * 59 + this.RequireCustomerNameForDelivery.GetHashCode();
                 if (this.MicrosoftTimeZone != null)

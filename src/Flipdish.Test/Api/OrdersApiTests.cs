@@ -105,6 +105,23 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test GetOrdersSummary
+        /// </summary>
+        [Test]
+        public void GetOrdersSummaryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //string searchQuery = null;
+            //List<int?> physicalRestaurantId = null;
+            //List<string> state = null;
+            //int? page = null;
+            //int? limit = null;
+            //var response = instance.GetOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit);
+            //Assert.IsInstanceOf<RestApiPaginationResultOrderSummary> (response, "response is RestApiPaginationResultOrderSummary");
+        }
+        
+        /// <summary>
         /// Test RefundOrder
         /// </summary>
         [Test]

@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **CreditNoteDetails** | [**CreditNoteDetails**](CreditNoteDetails.md) | Credit note details | [optional] 
 **LumpDiscountDetails** | [**LumpDiscountDetails**](LumpDiscountDetails.md) | Lump discount details | [optional] 
 **PercentDiscountDetails** | [**PercentDiscountDetails**](PercentDiscountDetails.md) | Percent discount details | [optional] 
+**Currency** | **string** | Currency of the voucher | [optional] 
 **Description** | **string** | Voucher Description (Visible on printout) | [optional] 
 **IsEnabled** | **bool?** | Is voucher enabled | [optional] 
 **ExpiryDate** | **DateTime?** | Voucher Expires On (Time in UTC) | [optional] 

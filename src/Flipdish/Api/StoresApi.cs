@@ -240,6 +240,33 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultStore</returns>
         ApiResponse<RestApiPaginationResultStore> GetStoresWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null);
         /// <summary>
+        /// Get all stores by app name id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>RestApiPaginationResultStore</returns>
+        RestApiPaginationResultStore GetStoresByAppId (string appId, string searchQuery = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Get all stores by app name id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultStore</returns>
+        ApiResponse<RestApiPaginationResultStore> GetStoresByAppIdWithHttpInfo (string appId, string searchQuery = null, int? page = null, int? limit = null);
+        /// <summary>
         /// Set Bussiness hours
         /// </summary>
         /// <remarks>
@@ -552,6 +579,33 @@ namespace Flipdish.Api
         /// <param name="storeGroupId">Store Group Id (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStore)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresAsyncWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null);
+        /// <summary>
+        /// Get all stores by app name id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>Task of RestApiPaginationResultStore</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresByAppIdAsync (string appId, string searchQuery = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Get all stores by app name id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultStore)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresByAppIdAsyncWithHttpInfo (string appId, string searchQuery = null, int? page = null, int? limit = null);
         /// <summary>
         /// Set Bussiness hours
         /// </summary>
@@ -2249,6 +2303,175 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetStores", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultStore>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiPaginationResultStore) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultStore)));
+        }
+
+        /// <summary>
+        /// Get all stores by app name id 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>RestApiPaginationResultStore</returns>
+        public RestApiPaginationResultStore GetStoresByAppId (string appId, string searchQuery = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<RestApiPaginationResultStore> localVarResponse = GetStoresByAppIdWithHttpInfo(appId, searchQuery, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all stores by app name id 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultStore</returns>
+        public ApiResponse< RestApiPaginationResultStore > GetStoresByAppIdWithHttpInfo (string appId, string searchQuery = null, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StoresApi->GetStoresByAppId");
+
+            var localVarPath = "/api/v1.0/{appId}/stores";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (searchQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStoresByAppId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultStore>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiPaginationResultStore) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultStore)));
+        }
+
+        /// <summary>
+        /// Get all stores by app name id 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>Task of RestApiPaginationResultStore</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresByAppIdAsync (string appId, string searchQuery = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<RestApiPaginationResultStore> localVarResponse = await GetStoresByAppIdAsyncWithHttpInfo(appId, searchQuery, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all stores by app name id 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultStore)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresByAppIdAsyncWithHttpInfo (string appId, string searchQuery = null, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StoresApi->GetStoresByAppId");
+
+            var localVarPath = "/api/v1.0/{appId}/stores";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (searchQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStoresByAppId", localVarResponse);
                 if (exception != null) throw exception;
             }
 

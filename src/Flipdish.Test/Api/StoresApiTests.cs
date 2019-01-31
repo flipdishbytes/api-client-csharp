@@ -186,6 +186,21 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test GetStoresByAppId
+        /// </summary>
+        [Test]
+        public void GetStoresByAppIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //string searchQuery = null;
+            //int? page = null;
+            //int? limit = null;
+            //var response = instance.GetStoresByAppId(appId, searchQuery, page, limit);
+            //Assert.IsInstanceOf<RestApiPaginationResultStore> (response, "response is RestApiPaginationResultStore");
+        }
+        
+        /// <summary>
         /// Test SetBusinessHours
         /// </summary>
         [Test]

@@ -56,8 +56,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>RestApiArrayResultApmAverageHourlyDataPoint</returns>
-        RestApiArrayResultApmAverageHourlyDataPoint GetCalendarWeekStatistics (string appId, List<int?> storeId = null);
+        /// <returns>RestApiArrayResultApmHourlyDataPoint</returns>
+        RestApiArrayResultApmHourlyDataPoint GetCalendarWeekStatistics (string appId, List<int?> storeId = null);
 
         /// <summary>
         /// [PRIVATE API] Get Calendar statistics
@@ -68,8 +68,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>ApiResponse of RestApiArrayResultApmAverageHourlyDataPoint</returns>
-        ApiResponse<RestApiArrayResultApmAverageHourlyDataPoint> GetCalendarWeekStatisticsWithHttpInfo (string appId, List<int?> storeId = null);
+        /// <returns>ApiResponse of RestApiArrayResultApmHourlyDataPoint</returns>
+        ApiResponse<RestApiArrayResultApmHourlyDataPoint> GetCalendarWeekStatisticsWithHttpInfo (string appId, List<int?> storeId = null);
         /// <summary>
         /// [PRIVATE API] Get Calls Statistics
         /// </summary>
@@ -185,8 +185,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>Task of RestApiArrayResultApmAverageHourlyDataPoint</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultApmAverageHourlyDataPoint> GetCalendarWeekStatisticsAsync (string appId, List<int?> storeId = null);
+        /// <returns>Task of RestApiArrayResultApmHourlyDataPoint</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultApmHourlyDataPoint> GetCalendarWeekStatisticsAsync (string appId, List<int?> storeId = null);
 
         /// <summary>
         /// [PRIVATE API] Get Calendar statistics
@@ -197,8 +197,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultApmAverageHourlyDataPoint)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultApmAverageHourlyDataPoint>> GetCalendarWeekStatisticsAsyncWithHttpInfo (string appId, List<int?> storeId = null);
+        /// <returns>Task of ApiResponse (RestApiArrayResultApmHourlyDataPoint)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultApmHourlyDataPoint>> GetCalendarWeekStatisticsAsyncWithHttpInfo (string appId, List<int?> storeId = null);
         /// <summary>
         /// [PRIVATE API] Get Calls Statistics
         /// </summary>
@@ -543,10 +543,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>RestApiArrayResultApmAverageHourlyDataPoint</returns>
-        public RestApiArrayResultApmAverageHourlyDataPoint GetCalendarWeekStatistics (string appId, List<int?> storeId = null)
+        /// <returns>RestApiArrayResultApmHourlyDataPoint</returns>
+        public RestApiArrayResultApmHourlyDataPoint GetCalendarWeekStatistics (string appId, List<int?> storeId = null)
         {
-             ApiResponse<RestApiArrayResultApmAverageHourlyDataPoint> localVarResponse = GetCalendarWeekStatisticsWithHttpInfo(appId, storeId);
+             ApiResponse<RestApiArrayResultApmHourlyDataPoint> localVarResponse = GetCalendarWeekStatisticsWithHttpInfo(appId, storeId);
              return localVarResponse.Data;
         }
 
@@ -556,8 +556,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>ApiResponse of RestApiArrayResultApmAverageHourlyDataPoint</returns>
-        public ApiResponse< RestApiArrayResultApmAverageHourlyDataPoint > GetCalendarWeekStatisticsWithHttpInfo (string appId, List<int?> storeId = null)
+        /// <returns>ApiResponse of RestApiArrayResultApmHourlyDataPoint</returns>
+        public ApiResponse< RestApiArrayResultApmHourlyDataPoint > GetCalendarWeekStatisticsWithHttpInfo (string appId, List<int?> storeId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -610,9 +610,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultApmAverageHourlyDataPoint>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultApmHourlyDataPoint>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultApmAverageHourlyDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultApmAverageHourlyDataPoint)));
+                (RestApiArrayResultApmHourlyDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultApmHourlyDataPoint)));
         }
 
         /// <summary>
@@ -621,10 +621,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>Task of RestApiArrayResultApmAverageHourlyDataPoint</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultApmAverageHourlyDataPoint> GetCalendarWeekStatisticsAsync (string appId, List<int?> storeId = null)
+        /// <returns>Task of RestApiArrayResultApmHourlyDataPoint</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultApmHourlyDataPoint> GetCalendarWeekStatisticsAsync (string appId, List<int?> storeId = null)
         {
-             ApiResponse<RestApiArrayResultApmAverageHourlyDataPoint> localVarResponse = await GetCalendarWeekStatisticsAsyncWithHttpInfo(appId, storeId);
+             ApiResponse<RestApiArrayResultApmHourlyDataPoint> localVarResponse = await GetCalendarWeekStatisticsAsyncWithHttpInfo(appId, storeId);
              return localVarResponse.Data;
 
         }
@@ -635,8 +635,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultApmAverageHourlyDataPoint)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultApmAverageHourlyDataPoint>> GetCalendarWeekStatisticsAsyncWithHttpInfo (string appId, List<int?> storeId = null)
+        /// <returns>Task of ApiResponse (RestApiArrayResultApmHourlyDataPoint)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultApmHourlyDataPoint>> GetCalendarWeekStatisticsAsyncWithHttpInfo (string appId, List<int?> storeId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -689,9 +689,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultApmAverageHourlyDataPoint>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultApmHourlyDataPoint>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultApmAverageHourlyDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultApmAverageHourlyDataPoint)));
+                (RestApiArrayResultApmHourlyDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultApmHourlyDataPoint)));
         }
 
         /// <summary>

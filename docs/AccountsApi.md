@@ -6,9 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AnswerSignUpQuestion**](AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | Answer a signup question
 [**ChangePassword**](AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | Change password
+[**ChangePasswordWithPin**](AccountsApi.md#changepasswordwithpin) | **PUT** /api/v1.0/accounts/password/pin | Change password
 [**CreateAccount**](AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | Create account with email address and store name
 [**GetAccountDetails**](AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | Gets the current account detail
-[**GetLocalisedTimeZones**](AccountsApi.md#getlocalisedtimezones) | **GET** /api/v1.0/accounts/timezones | Get timezones localised to users language
+[**GetLocalisedTimeZones**](AccountsApi.md#getlocalisedtimezones) | **GET** /api/v1.0/accounts/timezones | [PRIVATE API] Get timezones localised to users language
 [**Login**](AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | Login with username and password
 [**LoginWithPin**](AccountsApi.md#loginwithpin) | **POST** /api/v1.0/accounts/login/pin | Login with username and password
 [**Logout**](AccountsApi.md#logout) | **POST** /api/v1.0/accounts/logout | Log out. It removes Flipdish authorization Cookie.
@@ -21,7 +22,7 @@ Method | HTTP request | Description
 
 <a name="answersignupquestion"></a>
 # **AnswerSignUpQuestion**
-> Object AnswerSignUpQuestion (string signupStepAction, int? answerId)
+> void AnswerSignUpQuestion (string signupStepAction, int? answerId)
 
 Answer a signup question
 
@@ -49,8 +50,7 @@ namespace Example
             try
             {
                 // Answer a signup question
-                Object result = apiInstance.AnswerSignUpQuestion(signupStepAction, answerId);
-                Debug.WriteLine(result);
+                apiInstance.AnswerSignUpQuestion(signupStepAction, answerId);
             }
             catch (Exception e)
             {
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 <a name="changepassword"></a>
 # **ChangePassword**
-> Object ChangePassword (ChangePasswordModel changePasswordModel)
+> void ChangePassword (ChangePasswordModel changePasswordModel)
 
 Change password
 
@@ -112,8 +112,7 @@ namespace Example
             try
             {
                 // Change password
-                Object result = apiInstance.ChangePassword(changePasswordModel);
-                Debug.WriteLine(result);
+                apiInstance.ChangePassword(changePasswordModel);
             }
             catch (Exception e)
             {
@@ -132,7 +131,68 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="changepasswordwithpin"></a>
+# **ChangePasswordWithPin**
+> void ChangePasswordWithPin (SetPasswordWithPinModel changePasswordModel)
+
+Change password
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class ChangePasswordWithPinExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AccountsApi();
+            var changePasswordModel = new SetPasswordWithPinModel(); // SetPasswordWithPinModel | Change password model
+
+            try
+            {
+                // Change password
+                apiInstance.ChangePasswordWithPin(changePasswordModel);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AccountsApi.ChangePasswordWithPin: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changePasswordModel** | [**SetPasswordWithPinModel**](SetPasswordWithPinModel.md)| Change password model | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
@@ -147,7 +207,7 @@ Name | Type | Description  | Notes
 
 <a name="createaccount"></a>
 # **CreateAccount**
-> Object CreateAccount (CreateAccountModel createAccountModel)
+> void CreateAccount (CreateAccountModel createAccountModel)
 
 Create account with email address and store name
 
@@ -174,8 +234,7 @@ namespace Example
             try
             {
                 // Create account with email address and store name
-                Object result = apiInstance.CreateAccount(createAccountModel);
-                Debug.WriteLine(result);
+                apiInstance.CreateAccount(createAccountModel);
             }
             catch (Exception e)
             {
@@ -194,7 +253,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 
@@ -269,7 +328,7 @@ This endpoint does not need any parameter.
 # **GetLocalisedTimeZones**
 > RestApiArrayResultLocalisedTimeZone GetLocalisedTimeZones ()
 
-Get timezones localised to users language
+[PRIVATE API] Get timezones localised to users language
 
 ### Example
 ```csharp
@@ -292,7 +351,7 @@ namespace Example
 
             try
             {
-                // Get timezones localised to users language
+                // [PRIVATE API] Get timezones localised to users language
                 RestApiArrayResultLocalisedTimeZone result = apiInstance.GetLocalisedTimeZones();
                 Debug.WriteLine(result);
             }
@@ -325,7 +384,7 @@ This endpoint does not need any parameter.
 
 <a name="login"></a>
 # **Login**
-> Object Login (LoginModel loginModel)
+> void Login (LoginModel loginModel)
 
 Login with username and password
 
@@ -352,8 +411,7 @@ namespace Example
             try
             {
                 // Login with username and password
-                Object result = apiInstance.Login(loginModel);
-                Debug.WriteLine(result);
+                apiInstance.Login(loginModel);
             }
             catch (Exception e)
             {
@@ -372,7 +430,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 
@@ -387,7 +445,7 @@ Name | Type | Description  | Notes
 
 <a name="loginwithpin"></a>
 # **LoginWithPin**
-> Object LoginWithPin (LoginWithPinModel loginModel)
+> void LoginWithPin (LoginWithPinModel loginModel)
 
 Login with username and password
 
@@ -414,8 +472,7 @@ namespace Example
             try
             {
                 // Login with username and password
-                Object result = apiInstance.LoginWithPin(loginModel);
-                Debug.WriteLine(result);
+                apiInstance.LoginWithPin(loginModel);
             }
             catch (Exception e)
             {
@@ -434,7 +491,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 
@@ -449,7 +506,7 @@ Name | Type | Description  | Notes
 
 <a name="logout"></a>
 # **Logout**
-> Object Logout ()
+> void Logout ()
 
 Log out. It removes Flipdish authorization Cookie.
 
@@ -475,8 +532,7 @@ namespace Example
             try
             {
                 // Log out. It removes Flipdish authorization Cookie.
-                Object result = apiInstance.Logout();
-                Debug.WriteLine(result);
+                apiInstance.Logout();
             }
             catch (Exception e)
             {
@@ -492,7 +548,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 
@@ -507,7 +563,7 @@ This endpoint does not need any parameter.
 
 <a name="passwordresetwithtoken"></a>
 # **PasswordResetWithToken**
-> Object PasswordResetWithToken (PasswordResetModel passwordResetModel)
+> void PasswordResetWithToken (PasswordResetModel passwordResetModel)
 
 Reset password with token.
 
@@ -534,8 +590,7 @@ namespace Example
             try
             {
                 // Reset password with token.
-                Object result = apiInstance.PasswordResetWithToken(passwordResetModel);
-                Debug.WriteLine(result);
+                apiInstance.PasswordResetWithToken(passwordResetModel);
             }
             catch (Exception e)
             {
@@ -554,7 +609,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 
@@ -692,7 +747,7 @@ void (empty response body)
 
 <a name="skipsignupstep"></a>
 # **SkipSignupStep**
-> Object SkipSignupStep (string signupStepAction)
+> void SkipSignupStep (string signupStepAction)
 
 Skip a signup question
 
@@ -719,8 +774,7 @@ namespace Example
             try
             {
                 // Skip a signup question
-                Object result = apiInstance.SkipSignupStep(signupStepAction);
-                Debug.WriteLine(result);
+                apiInstance.SkipSignupStep(signupStepAction);
             }
             catch (Exception e)
             {
@@ -739,7 +793,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 
@@ -754,7 +808,7 @@ Name | Type | Description  | Notes
 
 <a name="updateaccount"></a>
 # **UpdateAccount**
-> Object UpdateAccount (AccountDetailBase updateAccountModel)
+> void UpdateAccount (AccountDetailBase updateAccountModel)
 
 Update account with name and language
 
@@ -781,8 +835,7 @@ namespace Example
             try
             {
                 // Update account with name and language
-                Object result = apiInstance.UpdateAccount(updateAccountModel);
-                Debug.WriteLine(result);
+                apiInstance.UpdateAccount(updateAccountModel);
             }
             catch (Exception e)
             {
@@ -801,7 +854,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 

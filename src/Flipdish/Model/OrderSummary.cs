@@ -25,144 +25,180 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Voucher With Statistics
+    /// Order summary
     /// </summary>
     [DataContract]
-    public partial class VoucherWithStats :  IEquatable<VoucherWithStats>, IValidatableObject
+    public partial class OrderSummary :  IEquatable<OrderSummary>, IValidatableObject
     {
         /// <summary>
-        /// Voucher Status
+        /// Delivery type
         /// </summary>
-        /// <value>Voucher Status</value>
+        /// <value>Delivery type</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum
+        public enum DeliveryTypeEnum
         {
             
             /// <summary>
-            /// Enum Valid for value: Valid
+            /// Enum Delivery for value: Delivery
             /// </summary>
-            [EnumMember(Value = "Valid")]
-            Valid = 1,
+            [EnumMember(Value = "Delivery")]
+            Delivery = 1,
             
             /// <summary>
-            /// Enum Expired for value: Expired
+            /// Enum Pickup for value: Pickup
             /// </summary>
-            [EnumMember(Value = "Expired")]
-            Expired = 2,
-            
-            /// <summary>
-            /// Enum Used for value: Used
-            /// </summary>
-            [EnumMember(Value = "Used")]
-            Used = 3
+            [EnumMember(Value = "Pickup")]
+            Pickup = 2
         }
 
         /// <summary>
-        /// Voucher Status
+        /// Delivery type
         /// </summary>
-        /// <value>Voucher Status</value>
-        [DataMember(Name="Status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
+        /// <value>Delivery type</value>
+        [DataMember(Name="DeliveryType", EmitDefaultValue=false)]
+        public DeliveryTypeEnum? DeliveryType { get; set; }
         /// <summary>
-        /// Voucher Type
+        /// Order state
         /// </summary>
-        /// <value>Voucher Type</value>
+        /// <value>Order state</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum VoucherTypeEnum
+        public enum OrderStateEnum
         {
             
             /// <summary>
-            /// Enum PercentageDiscount for value: PercentageDiscount
+            /// Enum Created for value: Created
             /// </summary>
-            [EnumMember(Value = "PercentageDiscount")]
-            PercentageDiscount = 1,
+            [EnumMember(Value = "Created")]
+            Created = 1,
             
             /// <summary>
-            /// Enum LumpDiscount for value: LumpDiscount
+            /// Enum PlacedCanBeCancelled for value: PlacedCanBeCancelled
             /// </summary>
-            [EnumMember(Value = "LumpDiscount")]
-            LumpDiscount = 2,
+            [EnumMember(Value = "PlacedCanBeCancelled")]
+            PlacedCanBeCancelled = 2,
             
             /// <summary>
-            /// Enum AddItem for value: AddItem
+            /// Enum ReadyToProcess for value: ReadyToProcess
             /// </summary>
-            [EnumMember(Value = "AddItem")]
-            AddItem = 3,
+            [EnumMember(Value = "ReadyToProcess")]
+            ReadyToProcess = 3,
             
             /// <summary>
-            /// Enum CreditNote for value: CreditNote
+            /// Enum AcceptedByRestaurant for value: AcceptedByRestaurant
             /// </summary>
-            [EnumMember(Value = "CreditNote")]
-            CreditNote = 4
+            [EnumMember(Value = "AcceptedByRestaurant")]
+            AcceptedByRestaurant = 4,
+            
+            /// <summary>
+            /// Enum Dispatched for value: Dispatched
+            /// </summary>
+            [EnumMember(Value = "Dispatched")]
+            Dispatched = 5,
+            
+            /// <summary>
+            /// Enum Delivered for value: Delivered
+            /// </summary>
+            [EnumMember(Value = "Delivered")]
+            Delivered = 6,
+            
+            /// <summary>
+            /// Enum Cancelled for value: Cancelled
+            /// </summary>
+            [EnumMember(Value = "Cancelled")]
+            Cancelled = 7,
+            
+            /// <summary>
+            /// Enum ManualReview for value: ManualReview
+            /// </summary>
+            [EnumMember(Value = "ManualReview")]
+            ManualReview = 8,
+            
+            /// <summary>
+            /// Enum RejectedByStore for value: RejectedByStore
+            /// </summary>
+            [EnumMember(Value = "RejectedByStore")]
+            RejectedByStore = 9,
+            
+            /// <summary>
+            /// Enum RejectedByFlipdish for value: RejectedByFlipdish
+            /// </summary>
+            [EnumMember(Value = "RejectedByFlipdish")]
+            RejectedByFlipdish = 10,
+            
+            /// <summary>
+            /// Enum RejectedAutomatically for value: RejectedAutomatically
+            /// </summary>
+            [EnumMember(Value = "RejectedAutomatically")]
+            RejectedAutomatically = 11,
+            
+            /// <summary>
+            /// Enum RejectedAfterBeingAccepted for value: RejectedAfterBeingAccepted
+            /// </summary>
+            [EnumMember(Value = "RejectedAfterBeingAccepted")]
+            RejectedAfterBeingAccepted = 12,
+            
+            /// <summary>
+            /// Enum AcceptedAndRefunded for value: AcceptedAndRefunded
+            /// </summary>
+            [EnumMember(Value = "AcceptedAndRefunded")]
+            AcceptedAndRefunded = 13
         }
 
         /// <summary>
-        /// Voucher Type
+        /// Order state
         /// </summary>
-        /// <value>Voucher Type</value>
-        [DataMember(Name="VoucherType", EmitDefaultValue=false)]
-        public VoucherTypeEnum? VoucherType { get; set; }
+        /// <value>Order state</value>
+        [DataMember(Name="OrderState", EmitDefaultValue=false)]
+        public OrderStateEnum? OrderState { get; set; }
         /// <summary>
-        /// Voucher Sub Type
+        /// Status of the payment
         /// </summary>
-        /// <value>Voucher Sub Type</value>
+        /// <value>Status of the payment</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum VoucherSubTypeEnum
+        public enum PaymentStatusEnum
         {
             
             /// <summary>
-            /// Enum None for value: None
+            /// Enum Paid for value: Paid
             /// </summary>
-            [EnumMember(Value = "None")]
-            None = 1,
+            [EnumMember(Value = "Paid")]
+            Paid = 1,
             
             /// <summary>
-            /// Enum SignUp for value: SignUp
+            /// Enum Unpaid for value: Unpaid
             /// </summary>
-            [EnumMember(Value = "SignUp")]
-            SignUp = 2,
+            [EnumMember(Value = "Unpaid")]
+            Unpaid = 2,
             
             /// <summary>
-            /// Enum Loyalty for value: Loyalty
+            /// Enum Refunded for value: Refunded
             /// </summary>
-            [EnumMember(Value = "Loyalty")]
-            Loyalty = 3,
+            [EnumMember(Value = "Refunded")]
+            Refunded = 3,
             
             /// <summary>
-            /// Enum Loyalty25 for value: Loyalty25
+            /// Enum PartiallyRefunded for value: PartiallyRefunded
             /// </summary>
-            [EnumMember(Value = "Loyalty25")]
-            Loyalty25 = 4,
+            [EnumMember(Value = "PartiallyRefunded")]
+            PartiallyRefunded = 4,
             
             /// <summary>
-            /// Enum Retention for value: Retention
+            /// Enum Disputed for value: Disputed
             /// </summary>
-            [EnumMember(Value = "Retention")]
-            Retention = 5,
-            
-            /// <summary>
-            /// Enum SecondaryRetention for value: SecondaryRetention
-            /// </summary>
-            [EnumMember(Value = "SecondaryRetention")]
-            SecondaryRetention = 6,
-            
-            /// <summary>
-            /// Enum Custom for value: Custom
-            /// </summary>
-            [EnumMember(Value = "Custom")]
-            Custom = 7
+            [EnumMember(Value = "Disputed")]
+            Disputed = 5
         }
 
         /// <summary>
-        /// Voucher Sub Type
+        /// Status of the payment
         /// </summary>
-        /// <value>Voucher Sub Type</value>
-        [DataMember(Name="VoucherSubType", EmitDefaultValue=false)]
-        public VoucherSubTypeEnum? VoucherSubType { get; set; }
+        /// <value>Status of the payment</value>
+        [DataMember(Name="PaymentStatus", EmitDefaultValue=false)]
+        public PaymentStatusEnum? PaymentStatus { get; set; }
         /// <summary>
-        /// Currency of the voucher
+        /// Currency of payment
         /// </summary>
-        /// <value>Currency of the voucher</value>
+        /// <value>Currency of payment</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum CurrencyEnum
         {
@@ -841,164 +877,92 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Currency of the voucher
+        /// Currency of payment
         /// </summary>
-        /// <value>Currency of the voucher</value>
+        /// <value>Currency of payment</value>
         [DataMember(Name="Currency", EmitDefaultValue=false)]
         public CurrencyEnum? Currency { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="VoucherWithStats" /> class.
+        /// Initializes a new instance of the <see cref="OrderSummary" /> class.
         /// </summary>
-        /// <param name="totalUsed">Total times the voucher was used.</param>
-        /// <param name="totalCustomers">Total amount of customers who used this voucher.</param>
-        /// <param name="totalAmountFromOrders">Total amount of money from orders.</param>
-        /// <param name="totalDiscounted">Total amount of money given away.</param>
-        /// <param name="averageOrderSize">Average Order Size.</param>
-        /// <param name="voucherId">Voucher Id.</param>
-        /// <param name="code">Voucher Code.</param>
-        /// <param name="status">Voucher Status.</param>
-        /// <param name="voucherType">Voucher Type.</param>
-        /// <param name="voucherSubType">Voucher Sub Type.</param>
-        /// <param name="startDate">Voucher Expires On (Time in UTC).</param>
-        /// <param name="addItemDetails">Add item details.</param>
-        /// <param name="creditNoteDetails">Credit note details.</param>
-        /// <param name="lumpDiscountDetails">Lump discount details.</param>
-        /// <param name="percentDiscountDetails">Percent discount details.</param>
-        /// <param name="currency">Currency of the voucher.</param>
-        /// <param name="description">Voucher Description (Visible on printout).</param>
-        /// <param name="isEnabled">Is voucher enabled.</param>
-        /// <param name="expiryDate">Voucher Expires On (Time in UTC).</param>
-        public VoucherWithStats(int? totalUsed = default(int?), int? totalCustomers = default(int?), double? totalAmountFromOrders = default(double?), double? totalDiscounted = default(double?), double? averageOrderSize = default(double?), int? voucherId = default(int?), string code = default(string), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), DateTime? startDate = default(DateTime?), AddItemDetails addItemDetails = default(AddItemDetails), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), CurrencyEnum? currency = default(CurrencyEnum?), string description = default(string), bool? isEnabled = default(bool?), DateTime? expiryDate = default(DateTime?))
+        /// <param name="orderId">Order identifier.</param>
+        /// <param name="deliveryType">Delivery type.</param>
+        /// <param name="orderState">Order state.</param>
+        /// <param name="requestedForTime">Order requested for.</param>
+        /// <param name="storeName">Name of the store.</param>
+        /// <param name="storeIanaTimeZone">Store IANA time zone.</param>
+        /// <param name="customerName">Name of the customer.</param>
+        /// <param name="customerPhoneNumber">Phone number of customer.</param>
+        /// <param name="amount">This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer..</param>
+        /// <param name="paymentStatus">Status of the payment.</param>
+        /// <param name="currency">Currency of payment.</param>
+        public OrderSummary(int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), OrderStateEnum? orderState = default(OrderStateEnum?), DateTime? requestedForTime = default(DateTime?), string storeName = default(string), string storeIanaTimeZone = default(string), string customerName = default(string), string customerPhoneNumber = default(string), double? amount = default(double?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), CurrencyEnum? currency = default(CurrencyEnum?))
         {
-            this.TotalUsed = totalUsed;
-            this.TotalCustomers = totalCustomers;
-            this.TotalAmountFromOrders = totalAmountFromOrders;
-            this.TotalDiscounted = totalDiscounted;
-            this.AverageOrderSize = averageOrderSize;
-            this.VoucherId = voucherId;
-            this.Code = code;
-            this.Status = status;
-            this.VoucherType = voucherType;
-            this.VoucherSubType = voucherSubType;
-            this.StartDate = startDate;
-            this.AddItemDetails = addItemDetails;
-            this.CreditNoteDetails = creditNoteDetails;
-            this.LumpDiscountDetails = lumpDiscountDetails;
-            this.PercentDiscountDetails = percentDiscountDetails;
+            this.OrderId = orderId;
+            this.DeliveryType = deliveryType;
+            this.OrderState = orderState;
+            this.RequestedForTime = requestedForTime;
+            this.StoreName = storeName;
+            this.StoreIanaTimeZone = storeIanaTimeZone;
+            this.CustomerName = customerName;
+            this.CustomerPhoneNumber = customerPhoneNumber;
+            this.Amount = amount;
+            this.PaymentStatus = paymentStatus;
             this.Currency = currency;
-            this.Description = description;
-            this.IsEnabled = isEnabled;
-            this.ExpiryDate = expiryDate;
         }
         
         /// <summary>
-        /// Total times the voucher was used
+        /// Order identifier
         /// </summary>
-        /// <value>Total times the voucher was used</value>
-        [DataMember(Name="TotalUsed", EmitDefaultValue=false)]
-        public int? TotalUsed { get; set; }
-
-        /// <summary>
-        /// Total amount of customers who used this voucher
-        /// </summary>
-        /// <value>Total amount of customers who used this voucher</value>
-        [DataMember(Name="TotalCustomers", EmitDefaultValue=false)]
-        public int? TotalCustomers { get; set; }
-
-        /// <summary>
-        /// Total amount of money from orders
-        /// </summary>
-        /// <value>Total amount of money from orders</value>
-        [DataMember(Name="TotalAmountFromOrders", EmitDefaultValue=false)]
-        public double? TotalAmountFromOrders { get; set; }
-
-        /// <summary>
-        /// Total amount of money given away
-        /// </summary>
-        /// <value>Total amount of money given away</value>
-        [DataMember(Name="TotalDiscounted", EmitDefaultValue=false)]
-        public double? TotalDiscounted { get; set; }
-
-        /// <summary>
-        /// Average Order Size
-        /// </summary>
-        /// <value>Average Order Size</value>
-        [DataMember(Name="AverageOrderSize", EmitDefaultValue=false)]
-        public double? AverageOrderSize { get; set; }
-
-        /// <summary>
-        /// Voucher Id
-        /// </summary>
-        /// <value>Voucher Id</value>
-        [DataMember(Name="VoucherId", EmitDefaultValue=false)]
-        public int? VoucherId { get; set; }
-
-        /// <summary>
-        /// Voucher Code
-        /// </summary>
-        /// <value>Voucher Code</value>
-        [DataMember(Name="Code", EmitDefaultValue=false)]
-        public string Code { get; set; }
-
+        /// <value>Order identifier</value>
+        [DataMember(Name="OrderId", EmitDefaultValue=false)]
+        public int? OrderId { get; set; }
 
 
 
         /// <summary>
-        /// Voucher Expires On (Time in UTC)
+        /// Order requested for
         /// </summary>
-        /// <value>Voucher Expires On (Time in UTC)</value>
-        [DataMember(Name="StartDate", EmitDefaultValue=false)]
-        public DateTime? StartDate { get; set; }
+        /// <value>Order requested for</value>
+        [DataMember(Name="RequestedForTime", EmitDefaultValue=false)]
+        public DateTime? RequestedForTime { get; set; }
 
         /// <summary>
-        /// Add item details
+        /// Name of the store
         /// </summary>
-        /// <value>Add item details</value>
-        [DataMember(Name="AddItemDetails", EmitDefaultValue=false)]
-        public AddItemDetails AddItemDetails { get; set; }
+        /// <value>Name of the store</value>
+        [DataMember(Name="StoreName", EmitDefaultValue=false)]
+        public string StoreName { get; set; }
 
         /// <summary>
-        /// Credit note details
+        /// Store IANA time zone
         /// </summary>
-        /// <value>Credit note details</value>
-        [DataMember(Name="CreditNoteDetails", EmitDefaultValue=false)]
-        public CreditNoteDetails CreditNoteDetails { get; set; }
+        /// <value>Store IANA time zone</value>
+        [DataMember(Name="StoreIanaTimeZone", EmitDefaultValue=false)]
+        public string StoreIanaTimeZone { get; set; }
 
         /// <summary>
-        /// Lump discount details
+        /// Name of the customer
         /// </summary>
-        /// <value>Lump discount details</value>
-        [DataMember(Name="LumpDiscountDetails", EmitDefaultValue=false)]
-        public LumpDiscountDetails LumpDiscountDetails { get; set; }
+        /// <value>Name of the customer</value>
+        [DataMember(Name="CustomerName", EmitDefaultValue=false)]
+        public string CustomerName { get; set; }
 
         /// <summary>
-        /// Percent discount details
+        /// Phone number of customer
         /// </summary>
-        /// <value>Percent discount details</value>
-        [DataMember(Name="PercentDiscountDetails", EmitDefaultValue=false)]
-        public PercentDiscountDetails PercentDiscountDetails { get; set; }
-
-
-        /// <summary>
-        /// Voucher Description (Visible on printout)
-        /// </summary>
-        /// <value>Voucher Description (Visible on printout)</value>
-        [DataMember(Name="Description", EmitDefaultValue=false)]
-        public string Description { get; set; }
+        /// <value>Phone number of customer</value>
+        [DataMember(Name="CustomerPhoneNumber", EmitDefaultValue=false)]
+        public string CustomerPhoneNumber { get; set; }
 
         /// <summary>
-        /// Is voucher enabled
+        /// This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer.
         /// </summary>
-        /// <value>Is voucher enabled</value>
-        [DataMember(Name="IsEnabled", EmitDefaultValue=false)]
-        public bool? IsEnabled { get; set; }
+        /// <value>This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer.</value>
+        [DataMember(Name="Amount", EmitDefaultValue=false)]
+        public double? Amount { get; set; }
 
-        /// <summary>
-        /// Voucher Expires On (Time in UTC)
-        /// </summary>
-        /// <value>Voucher Expires On (Time in UTC)</value>
-        [DataMember(Name="ExpiryDate", EmitDefaultValue=false)]
-        public DateTime? ExpiryDate { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -1007,26 +971,18 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class VoucherWithStats {\n");
-            sb.Append("  TotalUsed: ").Append(TotalUsed).Append("\n");
-            sb.Append("  TotalCustomers: ").Append(TotalCustomers).Append("\n");
-            sb.Append("  TotalAmountFromOrders: ").Append(TotalAmountFromOrders).Append("\n");
-            sb.Append("  TotalDiscounted: ").Append(TotalDiscounted).Append("\n");
-            sb.Append("  AverageOrderSize: ").Append(AverageOrderSize).Append("\n");
-            sb.Append("  VoucherId: ").Append(VoucherId).Append("\n");
-            sb.Append("  Code: ").Append(Code).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  VoucherType: ").Append(VoucherType).Append("\n");
-            sb.Append("  VoucherSubType: ").Append(VoucherSubType).Append("\n");
-            sb.Append("  StartDate: ").Append(StartDate).Append("\n");
-            sb.Append("  AddItemDetails: ").Append(AddItemDetails).Append("\n");
-            sb.Append("  CreditNoteDetails: ").Append(CreditNoteDetails).Append("\n");
-            sb.Append("  LumpDiscountDetails: ").Append(LumpDiscountDetails).Append("\n");
-            sb.Append("  PercentDiscountDetails: ").Append(PercentDiscountDetails).Append("\n");
+            sb.Append("class OrderSummary {\n");
+            sb.Append("  OrderId: ").Append(OrderId).Append("\n");
+            sb.Append("  DeliveryType: ").Append(DeliveryType).Append("\n");
+            sb.Append("  OrderState: ").Append(OrderState).Append("\n");
+            sb.Append("  RequestedForTime: ").Append(RequestedForTime).Append("\n");
+            sb.Append("  StoreName: ").Append(StoreName).Append("\n");
+            sb.Append("  StoreIanaTimeZone: ").Append(StoreIanaTimeZone).Append("\n");
+            sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
+            sb.Append("  CustomerPhoneNumber: ").Append(CustomerPhoneNumber).Append("\n");
+            sb.Append("  Amount: ").Append(Amount).Append("\n");
+            sb.Append("  PaymentStatus: ").Append(PaymentStatus).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
-            sb.Append("  ExpiryDate: ").Append(ExpiryDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1047,114 +1003,74 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as VoucherWithStats);
+            return this.Equals(input as OrderSummary);
         }
 
         /// <summary>
-        /// Returns true if VoucherWithStats instances are equal
+        /// Returns true if OrderSummary instances are equal
         /// </summary>
-        /// <param name="input">Instance of VoucherWithStats to be compared</param>
+        /// <param name="input">Instance of OrderSummary to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(VoucherWithStats input)
+        public bool Equals(OrderSummary input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.TotalUsed == input.TotalUsed ||
-                    (this.TotalUsed != null &&
-                    this.TotalUsed.Equals(input.TotalUsed))
+                    this.OrderId == input.OrderId ||
+                    (this.OrderId != null &&
+                    this.OrderId.Equals(input.OrderId))
                 ) && 
                 (
-                    this.TotalCustomers == input.TotalCustomers ||
-                    (this.TotalCustomers != null &&
-                    this.TotalCustomers.Equals(input.TotalCustomers))
+                    this.DeliveryType == input.DeliveryType ||
+                    (this.DeliveryType != null &&
+                    this.DeliveryType.Equals(input.DeliveryType))
                 ) && 
                 (
-                    this.TotalAmountFromOrders == input.TotalAmountFromOrders ||
-                    (this.TotalAmountFromOrders != null &&
-                    this.TotalAmountFromOrders.Equals(input.TotalAmountFromOrders))
+                    this.OrderState == input.OrderState ||
+                    (this.OrderState != null &&
+                    this.OrderState.Equals(input.OrderState))
                 ) && 
                 (
-                    this.TotalDiscounted == input.TotalDiscounted ||
-                    (this.TotalDiscounted != null &&
-                    this.TotalDiscounted.Equals(input.TotalDiscounted))
+                    this.RequestedForTime == input.RequestedForTime ||
+                    (this.RequestedForTime != null &&
+                    this.RequestedForTime.Equals(input.RequestedForTime))
                 ) && 
                 (
-                    this.AverageOrderSize == input.AverageOrderSize ||
-                    (this.AverageOrderSize != null &&
-                    this.AverageOrderSize.Equals(input.AverageOrderSize))
+                    this.StoreName == input.StoreName ||
+                    (this.StoreName != null &&
+                    this.StoreName.Equals(input.StoreName))
                 ) && 
                 (
-                    this.VoucherId == input.VoucherId ||
-                    (this.VoucherId != null &&
-                    this.VoucherId.Equals(input.VoucherId))
+                    this.StoreIanaTimeZone == input.StoreIanaTimeZone ||
+                    (this.StoreIanaTimeZone != null &&
+                    this.StoreIanaTimeZone.Equals(input.StoreIanaTimeZone))
                 ) && 
                 (
-                    this.Code == input.Code ||
-                    (this.Code != null &&
-                    this.Code.Equals(input.Code))
+                    this.CustomerName == input.CustomerName ||
+                    (this.CustomerName != null &&
+                    this.CustomerName.Equals(input.CustomerName))
                 ) && 
                 (
-                    this.Status == input.Status ||
-                    (this.Status != null &&
-                    this.Status.Equals(input.Status))
+                    this.CustomerPhoneNumber == input.CustomerPhoneNumber ||
+                    (this.CustomerPhoneNumber != null &&
+                    this.CustomerPhoneNumber.Equals(input.CustomerPhoneNumber))
                 ) && 
                 (
-                    this.VoucherType == input.VoucherType ||
-                    (this.VoucherType != null &&
-                    this.VoucherType.Equals(input.VoucherType))
+                    this.Amount == input.Amount ||
+                    (this.Amount != null &&
+                    this.Amount.Equals(input.Amount))
                 ) && 
                 (
-                    this.VoucherSubType == input.VoucherSubType ||
-                    (this.VoucherSubType != null &&
-                    this.VoucherSubType.Equals(input.VoucherSubType))
-                ) && 
-                (
-                    this.StartDate == input.StartDate ||
-                    (this.StartDate != null &&
-                    this.StartDate.Equals(input.StartDate))
-                ) && 
-                (
-                    this.AddItemDetails == input.AddItemDetails ||
-                    (this.AddItemDetails != null &&
-                    this.AddItemDetails.Equals(input.AddItemDetails))
-                ) && 
-                (
-                    this.CreditNoteDetails == input.CreditNoteDetails ||
-                    (this.CreditNoteDetails != null &&
-                    this.CreditNoteDetails.Equals(input.CreditNoteDetails))
-                ) && 
-                (
-                    this.LumpDiscountDetails == input.LumpDiscountDetails ||
-                    (this.LumpDiscountDetails != null &&
-                    this.LumpDiscountDetails.Equals(input.LumpDiscountDetails))
-                ) && 
-                (
-                    this.PercentDiscountDetails == input.PercentDiscountDetails ||
-                    (this.PercentDiscountDetails != null &&
-                    this.PercentDiscountDetails.Equals(input.PercentDiscountDetails))
+                    this.PaymentStatus == input.PaymentStatus ||
+                    (this.PaymentStatus != null &&
+                    this.PaymentStatus.Equals(input.PaymentStatus))
                 ) && 
                 (
                     this.Currency == input.Currency ||
                     (this.Currency != null &&
                     this.Currency.Equals(input.Currency))
-                ) && 
-                (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
-                ) && 
-                (
-                    this.IsEnabled == input.IsEnabled ||
-                    (this.IsEnabled != null &&
-                    this.IsEnabled.Equals(input.IsEnabled))
-                ) && 
-                (
-                    this.ExpiryDate == input.ExpiryDate ||
-                    (this.ExpiryDate != null &&
-                    this.ExpiryDate.Equals(input.ExpiryDate))
                 );
         }
 
@@ -1167,44 +1083,28 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.TotalUsed != null)
-                    hashCode = hashCode * 59 + this.TotalUsed.GetHashCode();
-                if (this.TotalCustomers != null)
-                    hashCode = hashCode * 59 + this.TotalCustomers.GetHashCode();
-                if (this.TotalAmountFromOrders != null)
-                    hashCode = hashCode * 59 + this.TotalAmountFromOrders.GetHashCode();
-                if (this.TotalDiscounted != null)
-                    hashCode = hashCode * 59 + this.TotalDiscounted.GetHashCode();
-                if (this.AverageOrderSize != null)
-                    hashCode = hashCode * 59 + this.AverageOrderSize.GetHashCode();
-                if (this.VoucherId != null)
-                    hashCode = hashCode * 59 + this.VoucherId.GetHashCode();
-                if (this.Code != null)
-                    hashCode = hashCode * 59 + this.Code.GetHashCode();
-                if (this.Status != null)
-                    hashCode = hashCode * 59 + this.Status.GetHashCode();
-                if (this.VoucherType != null)
-                    hashCode = hashCode * 59 + this.VoucherType.GetHashCode();
-                if (this.VoucherSubType != null)
-                    hashCode = hashCode * 59 + this.VoucherSubType.GetHashCode();
-                if (this.StartDate != null)
-                    hashCode = hashCode * 59 + this.StartDate.GetHashCode();
-                if (this.AddItemDetails != null)
-                    hashCode = hashCode * 59 + this.AddItemDetails.GetHashCode();
-                if (this.CreditNoteDetails != null)
-                    hashCode = hashCode * 59 + this.CreditNoteDetails.GetHashCode();
-                if (this.LumpDiscountDetails != null)
-                    hashCode = hashCode * 59 + this.LumpDiscountDetails.GetHashCode();
-                if (this.PercentDiscountDetails != null)
-                    hashCode = hashCode * 59 + this.PercentDiscountDetails.GetHashCode();
+                if (this.OrderId != null)
+                    hashCode = hashCode * 59 + this.OrderId.GetHashCode();
+                if (this.DeliveryType != null)
+                    hashCode = hashCode * 59 + this.DeliveryType.GetHashCode();
+                if (this.OrderState != null)
+                    hashCode = hashCode * 59 + this.OrderState.GetHashCode();
+                if (this.RequestedForTime != null)
+                    hashCode = hashCode * 59 + this.RequestedForTime.GetHashCode();
+                if (this.StoreName != null)
+                    hashCode = hashCode * 59 + this.StoreName.GetHashCode();
+                if (this.StoreIanaTimeZone != null)
+                    hashCode = hashCode * 59 + this.StoreIanaTimeZone.GetHashCode();
+                if (this.CustomerName != null)
+                    hashCode = hashCode * 59 + this.CustomerName.GetHashCode();
+                if (this.CustomerPhoneNumber != null)
+                    hashCode = hashCode * 59 + this.CustomerPhoneNumber.GetHashCode();
+                if (this.Amount != null)
+                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                if (this.PaymentStatus != null)
+                    hashCode = hashCode * 59 + this.PaymentStatus.GetHashCode();
                 if (this.Currency != null)
                     hashCode = hashCode * 59 + this.Currency.GetHashCode();
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
-                if (this.IsEnabled != null)
-                    hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
-                if (this.ExpiryDate != null)
-                    hashCode = hashCode * 59 + this.ExpiryDate.GetHashCode();
                 return hashCode;
             }
         }

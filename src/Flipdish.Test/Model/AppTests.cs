@@ -107,6 +107,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'MapSouthWest'
         }
         /// <summary>
+        /// Test the property 'AppAccessLevel'
+        /// </summary>
+        [Test]
+        public void AppAccessLevelTest()
+        {
+            // TODO unit test for the property 'AppAccessLevel'
+        }
+        /// <summary>
         /// Test the property 'IconUrl'
         /// </summary>
         [Test]

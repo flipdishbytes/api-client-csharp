@@ -33,8 +33,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
         /// <param name="answerId">Identifier of the answer</param>
-        /// <returns>Object</returns>
-        Object AnswerSignUpQuestion (string signupStepAction, int? answerId);
+        /// <returns></returns>
+        void AnswerSignUpQuestion (string signupStepAction, int? answerId);
 
         /// <summary>
         /// Answer a signup question
@@ -45,7 +45,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
         /// <param name="answerId">Identifier of the answer</param>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AnswerSignUpQuestionWithHttpInfo (string signupStepAction, int? answerId);
         /// <summary>
         /// Change password
@@ -55,8 +55,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="changePasswordModel">Change password model</param>
-        /// <returns>Object</returns>
-        Object ChangePassword (ChangePasswordModel changePasswordModel);
+        /// <returns></returns>
+        void ChangePassword (ChangePasswordModel changePasswordModel);
 
         /// <summary>
         /// Change password
@@ -66,8 +66,29 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="changePasswordModel">Change password model</param>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ChangePasswordWithHttpInfo (ChangePasswordModel changePasswordModel);
+        /// <summary>
+        /// Change password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns></returns>
+        void ChangePasswordWithPin (SetPasswordWithPinModel changePasswordModel);
+
+        /// <summary>
+        /// Change password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ChangePasswordWithPinWithHttpInfo (SetPasswordWithPinModel changePasswordModel);
         /// <summary>
         /// Create account with email address and store name
         /// </summary>
@@ -76,8 +97,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAccountModel">Create account model</param>
-        /// <returns>Object</returns>
-        Object CreateAccount (CreateAccountModel createAccountModel);
+        /// <returns></returns>
+        void CreateAccount (CreateAccountModel createAccountModel);
 
         /// <summary>
         /// Create account with email address and store name
@@ -87,7 +108,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAccountModel">Create account model</param>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> CreateAccountWithHttpInfo (CreateAccountModel createAccountModel);
         /// <summary>
         /// Gets the current account detail
@@ -109,7 +130,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultAccountDetail</returns>
         ApiResponse<RestApiResultAccountDetail> GetAccountDetailsWithHttpInfo ();
         /// <summary>
-        /// Get timezones localised to users language
+        /// [PRIVATE API] Get timezones localised to users language
         /// </summary>
         /// <remarks>
         /// 
@@ -119,7 +140,7 @@ namespace Flipdish.Api
         RestApiArrayResultLocalisedTimeZone GetLocalisedTimeZones ();
 
         /// <summary>
-        /// Get timezones localised to users language
+        /// [PRIVATE API] Get timezones localised to users language
         /// </summary>
         /// <remarks>
         /// 
@@ -135,8 +156,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>Object</returns>
-        Object Login (LoginModel loginModel);
+        /// <returns></returns>
+        void Login (LoginModel loginModel);
 
         /// <summary>
         /// Login with username and password
@@ -146,7 +167,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> LoginWithHttpInfo (LoginModel loginModel);
         /// <summary>
         /// Login with username and password
@@ -156,8 +177,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>Object</returns>
-        Object LoginWithPin (LoginWithPinModel loginModel);
+        /// <returns></returns>
+        void LoginWithPin (LoginWithPinModel loginModel);
 
         /// <summary>
         /// Login with username and password
@@ -167,7 +188,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> LoginWithPinWithHttpInfo (LoginWithPinModel loginModel);
         /// <summary>
         /// Log out. It removes Flipdish authorization Cookie.
@@ -176,8 +197,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Object</returns>
-        Object Logout ();
+        /// <returns></returns>
+        void Logout ();
 
         /// <summary>
         /// Log out. It removes Flipdish authorization Cookie.
@@ -186,7 +207,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> LogoutWithHttpInfo ();
         /// <summary>
         /// Reset password with token.
@@ -196,8 +217,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="passwordResetModel">Password reset model</param>
-        /// <returns>Object</returns>
-        Object PasswordResetWithToken (PasswordResetModel passwordResetModel);
+        /// <returns></returns>
+        void PasswordResetWithToken (PasswordResetModel passwordResetModel);
 
         /// <summary>
         /// Reset password with token.
@@ -207,7 +228,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="passwordResetModel">Password reset model</param>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PasswordResetWithTokenWithHttpInfo (PasswordResetModel passwordResetModel);
         /// <summary>
         /// Request login PIN. The server sends the PIN to the email address.
@@ -259,8 +280,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
-        /// <returns>Object</returns>
-        Object SkipSignupStep (string signupStepAction);
+        /// <returns></returns>
+        void SkipSignupStep (string signupStepAction);
 
         /// <summary>
         /// Skip a signup question
@@ -270,7 +291,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SkipSignupStepWithHttpInfo (string signupStepAction);
         /// <summary>
         /// Update account with name and language
@@ -280,8 +301,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
-        /// <returns>Object</returns>
-        Object UpdateAccount (AccountDetailBase updateAccountModel);
+        /// <returns></returns>
+        void UpdateAccount (AccountDetailBase updateAccountModel);
 
         /// <summary>
         /// Update account with name and language
@@ -291,7 +312,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateAccountWithHttpInfo (AccountDetailBase updateAccountModel);
         #endregion Synchronous Operations
         #region Asynchronous Operations
@@ -304,8 +325,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
         /// <param name="answerId">Identifier of the answer</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> AnswerSignUpQuestionAsync (string signupStepAction, int? answerId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task AnswerSignUpQuestionAsync (string signupStepAction, int? answerId);
 
         /// <summary>
         /// Answer a signup question
@@ -316,7 +337,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
         /// <param name="answerId">Identifier of the answer</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AnswerSignUpQuestionAsyncWithHttpInfo (string signupStepAction, int? answerId);
         /// <summary>
         /// Change password
@@ -326,8 +347,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="changePasswordModel">Change password model</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ChangePasswordAsync (ChangePasswordModel changePasswordModel);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task ChangePasswordAsync (ChangePasswordModel changePasswordModel);
 
         /// <summary>
         /// Change password
@@ -337,8 +358,29 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="changePasswordModel">Change password model</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordAsyncWithHttpInfo (ChangePasswordModel changePasswordModel);
+        /// <summary>
+        /// Change password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task ChangePasswordWithPinAsync (SetPasswordWithPinModel changePasswordModel);
+
+        /// <summary>
+        /// Change password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordWithPinAsyncWithHttpInfo (SetPasswordWithPinModel changePasswordModel);
         /// <summary>
         /// Create account with email address and store name
         /// </summary>
@@ -347,8 +389,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAccountModel">Create account model</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> CreateAccountAsync (CreateAccountModel createAccountModel);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task CreateAccountAsync (CreateAccountModel createAccountModel);
 
         /// <summary>
         /// Create account with email address and store name
@@ -358,7 +400,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAccountModel">Create account model</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateAccountAsyncWithHttpInfo (CreateAccountModel createAccountModel);
         /// <summary>
         /// Gets the current account detail
@@ -380,7 +422,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultAccountDetail)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAccountDetail>> GetAccountDetailsAsyncWithHttpInfo ();
         /// <summary>
-        /// Get timezones localised to users language
+        /// [PRIVATE API] Get timezones localised to users language
         /// </summary>
         /// <remarks>
         /// 
@@ -390,7 +432,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultLocalisedTimeZone> GetLocalisedTimeZonesAsync ();
 
         /// <summary>
-        /// Get timezones localised to users language
+        /// [PRIVATE API] Get timezones localised to users language
         /// </summary>
         /// <remarks>
         /// 
@@ -406,8 +448,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> LoginAsync (LoginModel loginModel);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task LoginAsync (LoginModel loginModel);
 
         /// <summary>
         /// Login with username and password
@@ -417,7 +459,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> LoginAsyncWithHttpInfo (LoginModel loginModel);
         /// <summary>
         /// Login with username and password
@@ -427,8 +469,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> LoginWithPinAsync (LoginWithPinModel loginModel);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task LoginWithPinAsync (LoginWithPinModel loginModel);
 
         /// <summary>
         /// Login with username and password
@@ -438,7 +480,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> LoginWithPinAsyncWithHttpInfo (LoginWithPinModel loginModel);
         /// <summary>
         /// Log out. It removes Flipdish authorization Cookie.
@@ -447,8 +489,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> LogoutAsync ();
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task LogoutAsync ();
 
         /// <summary>
         /// Log out. It removes Flipdish authorization Cookie.
@@ -457,7 +499,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> LogoutAsyncWithHttpInfo ();
         /// <summary>
         /// Reset password with token.
@@ -467,8 +509,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="passwordResetModel">Password reset model</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> PasswordResetWithTokenAsync (PasswordResetModel passwordResetModel);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PasswordResetWithTokenAsync (PasswordResetModel passwordResetModel);
 
         /// <summary>
         /// Reset password with token.
@@ -478,7 +520,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="passwordResetModel">Password reset model</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PasswordResetWithTokenAsyncWithHttpInfo (PasswordResetModel passwordResetModel);
         /// <summary>
         /// Request login PIN. The server sends the PIN to the email address.
@@ -530,8 +572,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> SkipSignupStepAsync (string signupStepAction);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SkipSignupStepAsync (string signupStepAction);
 
         /// <summary>
         /// Skip a signup question
@@ -541,7 +583,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SkipSignupStepAsyncWithHttpInfo (string signupStepAction);
         /// <summary>
         /// Update account with name and language
@@ -551,8 +593,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> UpdateAccountAsync (AccountDetailBase updateAccountModel);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UpdateAccountAsync (AccountDetailBase updateAccountModel);
 
         /// <summary>
         /// Update account with name and language
@@ -562,7 +604,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAccountAsyncWithHttpInfo (AccountDetailBase updateAccountModel);
         #endregion Asynchronous Operations
     }
@@ -670,11 +712,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
         /// <param name="answerId">Identifier of the answer</param>
-        /// <returns>Object</returns>
-        public Object AnswerSignUpQuestion (string signupStepAction, int? answerId)
+        /// <returns></returns>
+        public void AnswerSignUpQuestion (string signupStepAction, int? answerId)
         {
-             ApiResponse<Object> localVarResponse = AnswerSignUpQuestionWithHttpInfo(signupStepAction, answerId);
-             return localVarResponse.Data;
+             AnswerSignUpQuestionWithHttpInfo(signupStepAction, answerId);
         }
 
         /// <summary>
@@ -683,8 +724,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
         /// <param name="answerId">Identifier of the answer</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > AnswerSignUpQuestionWithHttpInfo (string signupStepAction, int? answerId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> AnswerSignUpQuestionWithHttpInfo (string signupStepAction, int? answerId)
         {
             // verify the required parameter 'signupStepAction' is set
             if (signupStepAction == null)
@@ -754,7 +795,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -763,11 +804,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
         /// <param name="answerId">Identifier of the answer</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> AnswerSignUpQuestionAsync (string signupStepAction, int? answerId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task AnswerSignUpQuestionAsync (string signupStepAction, int? answerId)
         {
-             ApiResponse<Object> localVarResponse = await AnswerSignUpQuestionAsyncWithHttpInfo(signupStepAction, answerId);
-             return localVarResponse.Data;
+             await AnswerSignUpQuestionAsyncWithHttpInfo(signupStepAction, answerId);
 
         }
 
@@ -777,7 +817,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
         /// <param name="answerId">Identifier of the answer</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AnswerSignUpQuestionAsyncWithHttpInfo (string signupStepAction, int? answerId)
         {
             // verify the required parameter 'signupStepAction' is set
@@ -848,7 +888,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -856,11 +896,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="changePasswordModel">Change password model</param>
-        /// <returns>Object</returns>
-        public Object ChangePassword (ChangePasswordModel changePasswordModel)
+        /// <returns></returns>
+        public void ChangePassword (ChangePasswordModel changePasswordModel)
         {
-             ApiResponse<Object> localVarResponse = ChangePasswordWithHttpInfo(changePasswordModel);
-             return localVarResponse.Data;
+             ChangePasswordWithHttpInfo(changePasswordModel);
         }
 
         /// <summary>
@@ -868,8 +907,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="changePasswordModel">Change password model</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ChangePasswordWithHttpInfo (ChangePasswordModel changePasswordModel)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ChangePasswordWithHttpInfo (ChangePasswordModel changePasswordModel)
         {
             // verify the required parameter 'changePasswordModel' is set
             if (changePasswordModel == null)
@@ -935,7 +974,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -943,11 +982,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="changePasswordModel">Change password model</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ChangePasswordAsync (ChangePasswordModel changePasswordModel)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task ChangePasswordAsync (ChangePasswordModel changePasswordModel)
         {
-             ApiResponse<Object> localVarResponse = await ChangePasswordAsyncWithHttpInfo(changePasswordModel);
-             return localVarResponse.Data;
+             await ChangePasswordAsyncWithHttpInfo(changePasswordModel);
 
         }
 
@@ -956,7 +994,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="changePasswordModel">Change password model</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordAsyncWithHttpInfo (ChangePasswordModel changePasswordModel)
         {
             // verify the required parameter 'changePasswordModel' is set
@@ -1023,19 +1061,180 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
-        /// Create account with email address and store name 
+        /// Change password 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createAccountModel">Create account model</param>
-        /// <returns>Object</returns>
-        public Object CreateAccount (CreateAccountModel createAccountModel)
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns></returns>
+        public void ChangePasswordWithPin (SetPasswordWithPinModel changePasswordModel)
         {
-             ApiResponse<Object> localVarResponse = CreateAccountWithHttpInfo(createAccountModel);
-             return localVarResponse.Data;
+             ChangePasswordWithPinWithHttpInfo(changePasswordModel);
+        }
+
+        /// <summary>
+        /// Change password 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ChangePasswordWithPinWithHttpInfo (SetPasswordWithPinModel changePasswordModel)
+        {
+            // verify the required parameter 'changePasswordModel' is set
+            if (changePasswordModel == null)
+                throw new ApiException(400, "Missing required parameter 'changePasswordModel' when calling AccountsApi->ChangePasswordWithPin");
+
+            var localVarPath = "/api/v1.0/accounts/password/pin";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (changePasswordModel != null && changePasswordModel.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(changePasswordModel); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = changePasswordModel; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ChangePasswordWithPin", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Change password 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task ChangePasswordWithPinAsync (SetPasswordWithPinModel changePasswordModel)
+        {
+             await ChangePasswordWithPinAsyncWithHttpInfo(changePasswordModel);
+
+        }
+
+        /// <summary>
+        /// Change password 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="changePasswordModel">Change password model</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordWithPinAsyncWithHttpInfo (SetPasswordWithPinModel changePasswordModel)
+        {
+            // verify the required parameter 'changePasswordModel' is set
+            if (changePasswordModel == null)
+                throw new ApiException(400, "Missing required parameter 'changePasswordModel' when calling AccountsApi->ChangePasswordWithPin");
+
+            var localVarPath = "/api/v1.0/accounts/password/pin";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (changePasswordModel != null && changePasswordModel.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(changePasswordModel); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = changePasswordModel; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ChangePasswordWithPin", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
@@ -1043,8 +1242,19 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAccountModel">Create account model</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > CreateAccountWithHttpInfo (CreateAccountModel createAccountModel)
+        /// <returns></returns>
+        public void CreateAccount (CreateAccountModel createAccountModel)
+        {
+             CreateAccountWithHttpInfo(createAccountModel);
+        }
+
+        /// <summary>
+        /// Create account with email address and store name 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createAccountModel">Create account model</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> CreateAccountWithHttpInfo (CreateAccountModel createAccountModel)
         {
             // verify the required parameter 'createAccountModel' is set
             if (createAccountModel == null)
@@ -1110,7 +1320,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -1118,11 +1328,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAccountModel">Create account model</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> CreateAccountAsync (CreateAccountModel createAccountModel)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task CreateAccountAsync (CreateAccountModel createAccountModel)
         {
-             ApiResponse<Object> localVarResponse = await CreateAccountAsyncWithHttpInfo(createAccountModel);
-             return localVarResponse.Data;
+             await CreateAccountAsyncWithHttpInfo(createAccountModel);
 
         }
 
@@ -1131,7 +1340,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAccountModel">Create account model</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateAccountAsyncWithHttpInfo (CreateAccountModel createAccountModel)
         {
             // verify the required parameter 'createAccountModel' is set
@@ -1198,7 +1407,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -1341,7 +1550,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get timezones localised to users language 
+        /// [PRIVATE API] Get timezones localised to users language 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RestApiArrayResultLocalisedTimeZone</returns>
@@ -1352,7 +1561,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get timezones localised to users language 
+        /// [PRIVATE API] Get timezones localised to users language 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RestApiArrayResultLocalisedTimeZone</returns>
@@ -1410,7 +1619,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get timezones localised to users language 
+        /// [PRIVATE API] Get timezones localised to users language 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RestApiArrayResultLocalisedTimeZone</returns>
@@ -1422,7 +1631,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get timezones localised to users language 
+        /// [PRIVATE API] Get timezones localised to users language 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RestApiArrayResultLocalisedTimeZone)</returns>
@@ -1484,11 +1693,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>Object</returns>
-        public Object Login (LoginModel loginModel)
+        /// <returns></returns>
+        public void Login (LoginModel loginModel)
         {
-             ApiResponse<Object> localVarResponse = LoginWithHttpInfo(loginModel);
-             return localVarResponse.Data;
+             LoginWithHttpInfo(loginModel);
         }
 
         /// <summary>
@@ -1496,8 +1704,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > LoginWithHttpInfo (LoginModel loginModel)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> LoginWithHttpInfo (LoginModel loginModel)
         {
             // verify the required parameter 'loginModel' is set
             if (loginModel == null)
@@ -1563,7 +1771,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -1571,11 +1779,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> LoginAsync (LoginModel loginModel)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task LoginAsync (LoginModel loginModel)
         {
-             ApiResponse<Object> localVarResponse = await LoginAsyncWithHttpInfo(loginModel);
-             return localVarResponse.Data;
+             await LoginAsyncWithHttpInfo(loginModel);
 
         }
 
@@ -1584,7 +1791,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> LoginAsyncWithHttpInfo (LoginModel loginModel)
         {
             // verify the required parameter 'loginModel' is set
@@ -1651,7 +1858,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -1659,11 +1866,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>Object</returns>
-        public Object LoginWithPin (LoginWithPinModel loginModel)
+        /// <returns></returns>
+        public void LoginWithPin (LoginWithPinModel loginModel)
         {
-             ApiResponse<Object> localVarResponse = LoginWithPinWithHttpInfo(loginModel);
-             return localVarResponse.Data;
+             LoginWithPinWithHttpInfo(loginModel);
         }
 
         /// <summary>
@@ -1671,8 +1877,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > LoginWithPinWithHttpInfo (LoginWithPinModel loginModel)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> LoginWithPinWithHttpInfo (LoginWithPinModel loginModel)
         {
             // verify the required parameter 'loginModel' is set
             if (loginModel == null)
@@ -1738,7 +1944,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -1746,11 +1952,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> LoginWithPinAsync (LoginWithPinModel loginModel)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task LoginWithPinAsync (LoginWithPinModel loginModel)
         {
-             ApiResponse<Object> localVarResponse = await LoginWithPinAsyncWithHttpInfo(loginModel);
-             return localVarResponse.Data;
+             await LoginWithPinAsyncWithHttpInfo(loginModel);
 
         }
 
@@ -1759,7 +1964,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="loginModel">Login model</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> LoginWithPinAsyncWithHttpInfo (LoginWithPinModel loginModel)
         {
             // verify the required parameter 'loginModel' is set
@@ -1826,26 +2031,25 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
         /// Log out. It removes Flipdish authorization Cookie. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Object</returns>
-        public Object Logout ()
+        /// <returns></returns>
+        public void Logout ()
         {
-             ApiResponse<Object> localVarResponse = LogoutWithHttpInfo();
-             return localVarResponse.Data;
+             LogoutWithHttpInfo();
         }
 
         /// <summary>
         /// Log out. It removes Flipdish authorization Cookie. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > LogoutWithHttpInfo ()
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> LogoutWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1.0/accounts/logout";
@@ -1895,18 +2099,17 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
         /// Log out. It removes Flipdish authorization Cookie. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> LogoutAsync ()
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task LogoutAsync ()
         {
-             ApiResponse<Object> localVarResponse = await LogoutAsyncWithHttpInfo();
-             return localVarResponse.Data;
+             await LogoutAsyncWithHttpInfo();
 
         }
 
@@ -1914,7 +2117,7 @@ namespace Flipdish.Api
         /// Log out. It removes Flipdish authorization Cookie. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> LogoutAsyncWithHttpInfo ()
         {
 
@@ -1965,7 +2168,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -1973,11 +2176,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="passwordResetModel">Password reset model</param>
-        /// <returns>Object</returns>
-        public Object PasswordResetWithToken (PasswordResetModel passwordResetModel)
+        /// <returns></returns>
+        public void PasswordResetWithToken (PasswordResetModel passwordResetModel)
         {
-             ApiResponse<Object> localVarResponse = PasswordResetWithTokenWithHttpInfo(passwordResetModel);
-             return localVarResponse.Data;
+             PasswordResetWithTokenWithHttpInfo(passwordResetModel);
         }
 
         /// <summary>
@@ -1985,8 +2187,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="passwordResetModel">Password reset model</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > PasswordResetWithTokenWithHttpInfo (PasswordResetModel passwordResetModel)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PasswordResetWithTokenWithHttpInfo (PasswordResetModel passwordResetModel)
         {
             // verify the required parameter 'passwordResetModel' is set
             if (passwordResetModel == null)
@@ -2052,7 +2254,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -2060,11 +2262,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="passwordResetModel">Password reset model</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> PasswordResetWithTokenAsync (PasswordResetModel passwordResetModel)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PasswordResetWithTokenAsync (PasswordResetModel passwordResetModel)
         {
-             ApiResponse<Object> localVarResponse = await PasswordResetWithTokenAsyncWithHttpInfo(passwordResetModel);
-             return localVarResponse.Data;
+             await PasswordResetWithTokenAsyncWithHttpInfo(passwordResetModel);
 
         }
 
@@ -2073,7 +2274,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="passwordResetModel">Password reset model</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PasswordResetWithTokenAsyncWithHttpInfo (PasswordResetModel passwordResetModel)
         {
             // verify the required parameter 'passwordResetModel' is set
@@ -2140,7 +2341,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -2496,11 +2697,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
-        /// <returns>Object</returns>
-        public Object SkipSignupStep (string signupStepAction)
+        /// <returns></returns>
+        public void SkipSignupStep (string signupStepAction)
         {
-             ApiResponse<Object> localVarResponse = SkipSignupStepWithHttpInfo(signupStepAction);
-             return localVarResponse.Data;
+             SkipSignupStepWithHttpInfo(signupStepAction);
         }
 
         /// <summary>
@@ -2508,8 +2708,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > SkipSignupStepWithHttpInfo (string signupStepAction)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> SkipSignupStepWithHttpInfo (string signupStepAction)
         {
             // verify the required parameter 'signupStepAction' is set
             if (signupStepAction == null)
@@ -2563,7 +2763,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -2571,11 +2771,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> SkipSignupStepAsync (string signupStepAction)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SkipSignupStepAsync (string signupStepAction)
         {
-             ApiResponse<Object> localVarResponse = await SkipSignupStepAsyncWithHttpInfo(signupStepAction);
-             return localVarResponse.Data;
+             await SkipSignupStepAsyncWithHttpInfo(signupStepAction);
 
         }
 
@@ -2584,7 +2783,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="signupStepAction">Signup step action</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> SkipSignupStepAsyncWithHttpInfo (string signupStepAction)
         {
             // verify the required parameter 'signupStepAction' is set
@@ -2639,7 +2838,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -2647,11 +2846,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
-        /// <returns>Object</returns>
-        public Object UpdateAccount (AccountDetailBase updateAccountModel)
+        /// <returns></returns>
+        public void UpdateAccount (AccountDetailBase updateAccountModel)
         {
-             ApiResponse<Object> localVarResponse = UpdateAccountWithHttpInfo(updateAccountModel);
-             return localVarResponse.Data;
+             UpdateAccountWithHttpInfo(updateAccountModel);
         }
 
         /// <summary>
@@ -2659,8 +2857,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > UpdateAccountWithHttpInfo (AccountDetailBase updateAccountModel)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UpdateAccountWithHttpInfo (AccountDetailBase updateAccountModel)
         {
             // verify the required parameter 'updateAccountModel' is set
             if (updateAccountModel == null)
@@ -2726,7 +2924,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -2734,11 +2932,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> UpdateAccountAsync (AccountDetailBase updateAccountModel)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UpdateAccountAsync (AccountDetailBase updateAccountModel)
         {
-             ApiResponse<Object> localVarResponse = await UpdateAccountAsyncWithHttpInfo(updateAccountModel);
-             return localVarResponse.Data;
+             await UpdateAccountAsyncWithHttpInfo(updateAccountModel);
 
         }
 
@@ -2747,7 +2944,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateAccountModel">Update account model</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAccountAsyncWithHttpInfo (AccountDetailBase updateAccountModel)
         {
             // verify the required parameter 'updateAccountModel' is set
@@ -2814,7 +3011,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
     }

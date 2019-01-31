@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 <a name="getcalendarweekstatistics"></a>
 # **GetCalendarWeekStatistics**
-> RestApiArrayResultApmAverageHourlyDataPoint GetCalendarWeekStatistics (string appId, List<int?> storeId = null)
+> RestApiArrayResultApmHourlyDataPoint GetCalendarWeekStatistics (string appId, List<int?> storeId = null)
 
 [PRIVATE API] Get Calendar statistics
 
@@ -105,7 +105,7 @@ namespace Example
             try
             {
                 // [PRIVATE API] Get Calendar statistics
-                RestApiArrayResultApmAverageHourlyDataPoint result = apiInstance.GetCalendarWeekStatistics(appId, storeId);
+                RestApiArrayResultApmHourlyDataPoint result = apiInstance.GetCalendarWeekStatistics(appId, storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiArrayResultApmAverageHourlyDataPoint**](RestApiArrayResultApmAverageHourlyDataPoint.md)
+[**RestApiArrayResultApmHourlyDataPoint**](RestApiArrayResultApmHourlyDataPoint.md)
 
 ### Authorization
 

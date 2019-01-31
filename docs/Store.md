@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **OpenForPickup** | **bool?** | True if the store is open for pickup | [optional] 
 **MinimumPickupOrderAmount** | **double?** | Minimum pickup order amount | [optional] 
 **RequireCustomerNameForPickup** | **bool?** | True if customer name required for pickup orders | [optional] 
+**GdprCustomerPhoneNumbers** | **bool?** | Mask your customers phone numbers printed on receipts and reduce the amout of personally identifiable customer information that is exposed. | [optional] 
 **RequireCustomerNameForDelivery** | **bool?** | True if customer name required for delivery orders | [optional] 
 **MicrosoftTimeZone** | **string** | Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391) | [optional] 
 **IanaTimeZone** | **string** | IANA Time Zone (https://www.iana.org/time-zones) | [optional] 

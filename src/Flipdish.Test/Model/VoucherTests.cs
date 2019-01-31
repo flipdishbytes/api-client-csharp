@@ -147,6 +147,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'PercentDiscountDetails'
         }
         /// <summary>
+        /// Test the property 'Currency'
+        /// </summary>
+        [Test]
+        public void CurrencyTest()
+        {
+            // TODO unit test for the property 'Currency'
+        }
+        /// <summary>
         /// Test the property 'Description'
         /// </summary>
         [Test]
