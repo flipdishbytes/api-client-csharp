@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**AcceptOrder**](OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 [**GetOrderById**](OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | Get order by ID
 [**GetOrders**](OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
-[**GetOrdersSummary**](OrdersApi.md#getorderssummary) | **GET** /api/v1.0/orders/summary | [PRIVATE API] Get summary of orders by filter
+[**GetOrdersSummary**](OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
 [**RefundOrder**](OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
 [**RejectOrder**](OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 <a name="getorderssummary"></a>
 # **GetOrdersSummary**
-> RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+> RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
 
 [PRIVATE API] Get summary of orders by filter
 
@@ -232,7 +232,7 @@ namespace Example
 
             var apiInstance = new OrdersApi();
             var appId = appId_example;  // string | App Name Id
-            var searchQuery = searchQuery_example;  // string | Query string
+            var searchQuery = searchQuery_example;  // string | Query string (optional) 
             var physicalRestaurantId = new List<int?>(); // List<int?> | Physical restaurant identifiers (optional) 
             var state = state_example;  // List<string> | Order states (optional) 
             var page = 56;  // int? | Requested page number (optional) 
@@ -258,7 +258,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App Name Id | 
- **searchQuery** | **string**| Query string | 
+ **searchQuery** | **string**| Query string | [optional] 
  **physicalRestaurantId** | [**List&lt;int?&gt;**](int?.md)| Physical restaurant identifiers | [optional] 
  **state** | **List&lt;string&gt;**| Order states | [optional] 
  **page** | **int?**| Requested page number | [optional] 

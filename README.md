@@ -193,7 +193,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**AcceptOrder**](docs/OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 *OrdersApi* | [**GetOrderById**](docs/OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | Get order by ID
 *OrdersApi* | [**GetOrders**](docs/OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
-*OrdersApi* | [**GetOrdersSummary**](docs/OrdersApi.md#getorderssummary) | **GET** /api/v1.0/orders/summary | [PRIVATE API] Get summary of orders by filter
+*OrdersApi* | [**GetOrdersSummary**](docs/OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
 *OrdersApi* | [**RefundOrder**](docs/OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
 *OrdersApi* | [**RejectOrder**](docs/OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 *ProcessingFeeConfigsApi* | [**GetProcessingFeeConfigsByStoreIds**](docs/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
