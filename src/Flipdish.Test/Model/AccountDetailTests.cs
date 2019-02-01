@@ -83,6 +83,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'SignupSteps'
         }
         /// <summary>
+        /// Test the property 'IsVerified'
+        /// </summary>
+        [Test]
+        public void IsVerifiedTest()
+        {
+            // TODO unit test for the property 'IsVerified'
+        }
+        /// <summary>
         /// Test the property 'Name'
         /// </summary>
         [Test]

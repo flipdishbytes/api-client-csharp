@@ -35,14 +35,16 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="email">Email.</param>
         /// <param name="signupSteps">Signup steps.</param>
+        /// <param name="isVerified">Is account email verified.</param>
         /// <param name="name">Name.</param>
         /// <param name="language">Language Id.</param>
         /// <param name="timeZoneInfoId">Time Zone Info Id.</param>
         /// <param name="displayTimesInUserLocalTimeZone">Display the time in time zone local to the user.</param>
-        public AccountDetail(string email = default(string), List<SignupStep> signupSteps = default(List<SignupStep>), string name = default(string), string language = default(string), string timeZoneInfoId = default(string), bool? displayTimesInUserLocalTimeZone = default(bool?))
+        public AccountDetail(string email = default(string), List<SignupStep> signupSteps = default(List<SignupStep>), bool? isVerified = default(bool?), string name = default(string), string language = default(string), string timeZoneInfoId = default(string), bool? displayTimesInUserLocalTimeZone = default(bool?))
         {
             this.Email = email;
             this.SignupSteps = signupSteps;
+            this.IsVerified = isVerified;
             this.Name = name;
             this.Language = language;
             this.TimeZoneInfoId = timeZoneInfoId;
@@ -62,6 +64,13 @@ namespace Flipdish.Model
         /// <value>Signup steps</value>
         [DataMember(Name="SignupSteps", EmitDefaultValue=false)]
         public List<SignupStep> SignupSteps { get; set; }
+
+        /// <summary>
+        /// Is account email verified
+        /// </summary>
+        /// <value>Is account email verified</value>
+        [DataMember(Name="IsVerified", EmitDefaultValue=false)]
+        public bool? IsVerified { get; set; }
 
         /// <summary>
         /// Name
@@ -101,6 +110,7 @@ namespace Flipdish.Model
             sb.Append("class AccountDetail {\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  SignupSteps: ").Append(SignupSteps).Append("\n");
+            sb.Append("  IsVerified: ").Append(IsVerified).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  TimeZoneInfoId: ").Append(TimeZoneInfoId).Append("\n");
@@ -150,6 +160,11 @@ namespace Flipdish.Model
                     this.SignupSteps.SequenceEqual(input.SignupSteps)
                 ) && 
                 (
+                    this.IsVerified == input.IsVerified ||
+                    (this.IsVerified != null &&
+                    this.IsVerified.Equals(input.IsVerified))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -184,6 +199,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Email.GetHashCode();
                 if (this.SignupSteps != null)
                     hashCode = hashCode * 59 + this.SignupSteps.GetHashCode();
+                if (this.IsVerified != null)
+                    hashCode = hashCode * 59 + this.IsVerified.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Language != null)
