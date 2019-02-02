@@ -103,9 +103,11 @@ namespace Flipdish.Test
             //List<string> searchCodes = null;
             //List<string> statusSearch = null;
             //List<string> typeSearch = null;
+            //List<string> subTypeSearch = null;
             //List<int?> storeIds = null;
-            //var response = instance.GetVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, storeIds);
-            //Assert.IsInstanceOf<RestApiPaginationResultVoucher> (response, "response is RestApiPaginationResultVoucher");
+            //bool? isEnabled = null;
+            //var response = instance.GetVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, isEnabled);
+            //Assert.IsInstanceOf<RestApiPaginationResultVoucherSummary> (response, "response is RestApiPaginationResultVoucherSummary");
         }
         
         /// <summary>

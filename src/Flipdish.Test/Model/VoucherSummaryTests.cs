@@ -67,20 +67,12 @@ namespace Flipdish.Test
 
 
         /// <summary>
-        /// Test the property 'Name'
+        /// Test the property 'VoucherId'
         /// </summary>
         [Test]
-        public void NameTest()
+        public void VoucherIdTest()
         {
-            // TODO unit test for the property 'Name'
-        }
-        /// <summary>
-        /// Test the property 'Description'
-        /// </summary>
-        [Test]
-        public void DescriptionTest()
-        {
-            // TODO unit test for the property 'Description'
+            // TODO unit test for the property 'VoucherId'
         }
         /// <summary>
         /// Test the property 'Code'
@@ -91,28 +83,44 @@ namespace Flipdish.Test
             // TODO unit test for the property 'Code'
         }
         /// <summary>
-        /// Test the property 'Amount'
+        /// Test the property 'Status'
         /// </summary>
         [Test]
-        public void AmountTest()
+        public void StatusTest()
         {
-            // TODO unit test for the property 'Amount'
+            // TODO unit test for the property 'Status'
         }
         /// <summary>
-        /// Test the property 'Type'
+        /// Test the property 'VoucherType'
         /// </summary>
         [Test]
-        public void TypeTest()
+        public void VoucherTypeTest()
         {
-            // TODO unit test for the property 'Type'
+            // TODO unit test for the property 'VoucherType'
         }
         /// <summary>
-        /// Test the property 'SubType'
+        /// Test the property 'VoucherSubType'
         /// </summary>
         [Test]
-        public void SubTypeTest()
+        public void VoucherSubTypeTest()
         {
-            // TODO unit test for the property 'SubType'
+            // TODO unit test for the property 'VoucherSubType'
+        }
+        /// <summary>
+        /// Test the property 'Description'
+        /// </summary>
+        [Test]
+        public void DescriptionTest()
+        {
+            // TODO unit test for the property 'Description'
+        }
+        /// <summary>
+        /// Test the property 'IsEnabled'
+        /// </summary>
+        [Test]
+        public void IsEnabledTest()
+        {
+            // TODO unit test for the property 'IsEnabled'
         }
 
     }

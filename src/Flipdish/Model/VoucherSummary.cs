@@ -25,17 +25,50 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Voucher summary
+    /// Voucher Summary
     /// </summary>
     [DataContract]
     public partial class VoucherSummary :  IEquatable<VoucherSummary>, IValidatableObject
     {
         /// <summary>
-        /// Voucher type
+        /// Voucher Status
         /// </summary>
-        /// <value>Voucher type</value>
+        /// <value>Voucher Status</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum
+        public enum StatusEnum
+        {
+            
+            /// <summary>
+            /// Enum Valid for value: Valid
+            /// </summary>
+            [EnumMember(Value = "Valid")]
+            Valid = 1,
+            
+            /// <summary>
+            /// Enum Expired for value: Expired
+            /// </summary>
+            [EnumMember(Value = "Expired")]
+            Expired = 2,
+            
+            /// <summary>
+            /// Enum Used for value: Used
+            /// </summary>
+            [EnumMember(Value = "Used")]
+            Used = 3
+        }
+
+        /// <summary>
+        /// Voucher Status
+        /// </summary>
+        /// <value>Voucher Status</value>
+        [DataMember(Name="Status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+        /// <summary>
+        /// Voucher Type
+        /// </summary>
+        /// <value>Voucher Type</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum VoucherTypeEnum
         {
             
             /// <summary>
@@ -64,17 +97,17 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Voucher type
+        /// Voucher Type
         /// </summary>
-        /// <value>Voucher type</value>
-        [DataMember(Name="Type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
+        /// <value>Voucher Type</value>
+        [DataMember(Name="VoucherType", EmitDefaultValue=false)]
+        public VoucherTypeEnum? VoucherType { get; set; }
         /// <summary>
-        /// Voucher sub type
+        /// Voucher Sub Type
         /// </summary>
-        /// <value>Voucher sub type</value>
+        /// <value>Voucher Sub Type</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SubTypeEnum
+        public enum VoucherSubTypeEnum
         {
             
             /// <summary>
@@ -121,59 +154,62 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Voucher sub type
+        /// Voucher Sub Type
         /// </summary>
-        /// <value>Voucher sub type</value>
-        [DataMember(Name="SubType", EmitDefaultValue=false)]
-        public SubTypeEnum? SubType { get; set; }
+        /// <value>Voucher Sub Type</value>
+        [DataMember(Name="VoucherSubType", EmitDefaultValue=false)]
+        public VoucherSubTypeEnum? VoucherSubType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="VoucherSummary" /> class.
         /// </summary>
-        /// <param name="name">Voucher name.</param>
-        /// <param name="description">Voucher description.</param>
-        /// <param name="code">Voucher code.</param>
-        /// <param name="amount">Voucher amount.</param>
-        /// <param name="type">Voucher type.</param>
-        /// <param name="subType">Voucher sub type.</param>
-        public VoucherSummary(string name = default(string), string description = default(string), string code = default(string), double? amount = default(double?), TypeEnum? type = default(TypeEnum?), SubTypeEnum? subType = default(SubTypeEnum?))
+        /// <param name="voucherId">Voucher Id.</param>
+        /// <param name="code">Voucher Code.</param>
+        /// <param name="status">Voucher Status.</param>
+        /// <param name="voucherType">Voucher Type.</param>
+        /// <param name="voucherSubType">Voucher Sub Type.</param>
+        /// <param name="description">Voucher Description (Visible on printout).</param>
+        /// <param name="isEnabled">Is voucher enabled.</param>
+        public VoucherSummary(int? voucherId = default(int?), string code = default(string), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), string description = default(string), bool? isEnabled = default(bool?))
         {
-            this.Name = name;
-            this.Description = description;
+            this.VoucherId = voucherId;
             this.Code = code;
-            this.Amount = amount;
-            this.Type = type;
-            this.SubType = subType;
+            this.Status = status;
+            this.VoucherType = voucherType;
+            this.VoucherSubType = voucherSubType;
+            this.Description = description;
+            this.IsEnabled = isEnabled;
         }
         
         /// <summary>
-        /// Voucher name
+        /// Voucher Id
         /// </summary>
-        /// <value>Voucher name</value>
-        [DataMember(Name="Name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        /// <value>Voucher Id</value>
+        [DataMember(Name="VoucherId", EmitDefaultValue=false)]
+        public int? VoucherId { get; set; }
 
         /// <summary>
-        /// Voucher description
+        /// Voucher Code
         /// </summary>
-        /// <value>Voucher description</value>
+        /// <value>Voucher Code</value>
+        [DataMember(Name="Code", EmitDefaultValue=false)]
+        public string Code { get; set; }
+
+
+
+
+        /// <summary>
+        /// Voucher Description (Visible on printout)
+        /// </summary>
+        /// <value>Voucher Description (Visible on printout)</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Voucher code
+        /// Is voucher enabled
         /// </summary>
-        /// <value>Voucher code</value>
-        [DataMember(Name="Code", EmitDefaultValue=false)]
-        public string Code { get; set; }
-
-        /// <summary>
-        /// Voucher amount
-        /// </summary>
-        /// <value>Voucher amount</value>
-        [DataMember(Name="Amount", EmitDefaultValue=false)]
-        public double? Amount { get; set; }
-
-
+        /// <value>Is voucher enabled</value>
+        [DataMember(Name="IsEnabled", EmitDefaultValue=false)]
+        public bool? IsEnabled { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -183,12 +219,13 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class VoucherSummary {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  VoucherId: ").Append(VoucherId).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
-            sb.Append("  Amount: ").Append(Amount).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  SubType: ").Append(SubType).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  VoucherType: ").Append(VoucherType).Append("\n");
+            sb.Append("  VoucherSubType: ").Append(VoucherSubType).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -224,14 +261,9 @@ namespace Flipdish.Model
 
             return 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
+                    this.VoucherId == input.VoucherId ||
+                    (this.VoucherId != null &&
+                    this.VoucherId.Equals(input.VoucherId))
                 ) && 
                 (
                     this.Code == input.Code ||
@@ -239,19 +271,29 @@ namespace Flipdish.Model
                     this.Code.Equals(input.Code))
                 ) && 
                 (
-                    this.Amount == input.Amount ||
-                    (this.Amount != null &&
-                    this.Amount.Equals(input.Amount))
+                    this.Status == input.Status ||
+                    (this.Status != null &&
+                    this.Status.Equals(input.Status))
                 ) && 
                 (
-                    this.Type == input.Type ||
-                    (this.Type != null &&
-                    this.Type.Equals(input.Type))
+                    this.VoucherType == input.VoucherType ||
+                    (this.VoucherType != null &&
+                    this.VoucherType.Equals(input.VoucherType))
                 ) && 
                 (
-                    this.SubType == input.SubType ||
-                    (this.SubType != null &&
-                    this.SubType.Equals(input.SubType))
+                    this.VoucherSubType == input.VoucherSubType ||
+                    (this.VoucherSubType != null &&
+                    this.VoucherSubType.Equals(input.VoucherSubType))
+                ) && 
+                (
+                    this.Description == input.Description ||
+                    (this.Description != null &&
+                    this.Description.Equals(input.Description))
+                ) && 
+                (
+                    this.IsEnabled == input.IsEnabled ||
+                    (this.IsEnabled != null &&
+                    this.IsEnabled.Equals(input.IsEnabled))
                 );
         }
 
@@ -264,18 +306,20 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.VoucherId != null)
+                    hashCode = hashCode * 59 + this.VoucherId.GetHashCode();
                 if (this.Code != null)
                     hashCode = hashCode * 59 + this.Code.GetHashCode();
-                if (this.Amount != null)
-                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
-                if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
-                if (this.SubType != null)
-                    hashCode = hashCode * 59 + this.SubType.GetHashCode();
+                if (this.Status != null)
+                    hashCode = hashCode * 59 + this.Status.GetHashCode();
+                if (this.VoucherType != null)
+                    hashCode = hashCode * 59 + this.VoucherType.GetHashCode();
+                if (this.VoucherSubType != null)
+                    hashCode = hashCode * 59 + this.VoucherSubType.GetHashCode();
+                if (this.Description != null)
+                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.IsEnabled != null)
+                    hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
                 return hashCode;
             }
         }

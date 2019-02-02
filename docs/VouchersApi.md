@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetVoucherById**](VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Get voucher by identifier
 [**GetVoucherStatsById**](VouchersApi.md#getvoucherstatsbyid) | **GET** /api/v1.0/vouchers/stats/{voucherId} | [PRIVATE API] Get voucher stats by identifier
-[**GetVouchers**](VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appId}/vouchers | [PRIVATE API] Get vouchers for App Id
+[**GetVouchers**](VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appId}/vouchers/summaries | [PRIVATE API] Get vouchers summaries for App Id
 [**UpdateVoucher**](VouchersApi.md#updatevoucher) | **POST** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Updates voucher
 
 
@@ -140,9 +140,9 @@ Name | Type | Description  | Notes
 
 <a name="getvouchers"></a>
 # **GetVouchers**
-> RestApiPaginationResultVoucher GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<int?> storeIds = null)
+> RestApiPaginationResultVoucherSummary GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null, bool? isEnabled = null)
 
-[PRIVATE API] Get vouchers for App Id
+[PRIVATE API] Get vouchers summaries for App Id
 
 ### Example
 ```csharp
@@ -168,12 +168,14 @@ namespace Example
             var searchCodes = new List<string>(); // List<string> | Search by Voucher Code\\s (optional) 
             var statusSearch = statusSearch_example;  // List<string> | Search by Status (optional) 
             var typeSearch = typeSearch_example;  // List<string> | Search by Type (optional) 
+            var subTypeSearch = subTypeSearch_example;  // List<string> | Search by Sub Type (optional) 
             var storeIds = new List<int?>(); // List<int?> | Search by Store Ids (optional) 
+            var isEnabled = true;  // bool? | Is enabled (optional) 
 
             try
             {
-                // [PRIVATE API] Get vouchers for App Id
-                RestApiPaginationResultVoucher result = apiInstance.GetVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, storeIds);
+                // [PRIVATE API] Get vouchers summaries for App Id
+                RestApiPaginationResultVoucherSummary result = apiInstance.GetVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, isEnabled);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -195,11 +197,13 @@ Name | Type | Description  | Notes
  **searchCodes** | [**List&lt;string&gt;**](string.md)| Search by Voucher Code\\s | [optional] 
  **statusSearch** | **List&lt;string&gt;**| Search by Status | [optional] 
  **typeSearch** | **List&lt;string&gt;**| Search by Type | [optional] 
+ **subTypeSearch** | **List&lt;string&gt;**| Search by Sub Type | [optional] 
  **storeIds** | [**List&lt;int?&gt;**](int?.md)| Search by Store Ids | [optional] 
+ **isEnabled** | **bool?**| Is enabled | [optional] 
 
 ### Return type
 
-[**RestApiPaginationResultVoucher**](RestApiPaginationResultVoucher.md)
+[**RestApiPaginationResultVoucherSummary**](RestApiPaginationResultVoucherSummary.md)
 
 ### Authorization
 

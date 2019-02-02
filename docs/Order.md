@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Store** | [**StoreSummary**](StoreSummary.md) | Store summary | [optional] 
 **Customer** | [**CustomerSummary**](CustomerSummary.md) | Customer summary | [optional] 
-**Voucher** | [**VoucherSummary**](VoucherSummary.md) | Voucher summary | [optional] 
+**Voucher** | [**OrderVoucherSummary**](OrderVoucherSummary.md) | Voucher summary | [optional] 
 **Fees** | [**FeeSummary**](FeeSummary.md) | Fee summary | [optional] 
 **OrderItems** | [**List&lt;OrderItem&gt;**](OrderItem.md) | Ordered items | [optional] 
 **DeliveryLocation** | [**DeliveryLocation**](DeliveryLocation.md) | Delivery location for delivery orders | [optional] 
