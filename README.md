@@ -233,7 +233,8 @@ Class | Method | HTTP request | Description
 *TeammatesApi* | [**DeleteTeammate**](docs/TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | Delete teammate
 *TeammatesApi* | [**GetTeammateByAppIdAndTeammateId**](docs/TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | Get a teammates by email address
 *TeammatesApi* | [**GetTeammatesByAppId**](docs/TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
-*TeammatesApi* | [**RedeemCode**](docs/TeammatesApi.md#redeemcode) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+*TeammatesApi* | [**RedeemInvitation**](docs/TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+*TeammatesApi* | [**RedeemInvitation_0**](docs/TeammatesApi.md#redeeminvitation_0) | **GET** /api/v1.0/teammates/redeeminvitation/{otc} | 
 *TeammatesApi* | [**UpdateTeammate**](docs/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | Update teammates (this method does not support Deltas!)
 *UsersApi* | [**GetRoles**](docs/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | Get role names
 *VouchersApi* | [**GetVoucherById**](docs/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Get voucher by identifier
@@ -364,6 +365,7 @@ Class | Method | HTTP request | Description
  - [Model.PrinterUnassignedFromStoreEvent](docs/PrinterUnassignedFromStoreEvent.md)
  - [Model.ProcessingFeeConfig](docs/ProcessingFeeConfig.md)
  - [Model.Range](docs/Range.md)
+ - [Model.RedeemInvitationResult](docs/RedeemInvitationResult.md)
  - [Model.Refund](docs/Refund.md)
  - [Model.Reject](docs/Reject.md)
  - [Model.RequestLoginPinModel](docs/RequestLoginPinModel.md)
@@ -423,6 +425,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultOauthClientRedirectUri](docs/RestApiResultOauthClientRedirectUri.md)
  - [Model.RestApiResultOrder](docs/RestApiResultOrder.md)
  - [Model.RestApiResultProcessingFeeConfig](docs/RestApiResultProcessingFeeConfig.md)
+ - [Model.RestApiResultRedeemInvitationResult](docs/RestApiResultRedeemInvitationResult.md)
  - [Model.RestApiResultStore](docs/RestApiResultStore.md)
  - [Model.RestApiResultStoreAddress](docs/RestApiResultStoreAddress.md)
  - [Model.RestApiResultStoreGroup](docs/RestApiResultStoreGroup.md)

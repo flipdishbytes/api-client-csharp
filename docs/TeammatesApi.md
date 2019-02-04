@@ -8,7 +8,8 @@ Method | HTTP request | Description
 [**DeleteTeammate**](TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | Delete teammate
 [**GetTeammateByAppIdAndTeammateId**](TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | Get a teammates by email address
 [**GetTeammatesByAppId**](TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
-[**RedeemCode**](TeammatesApi.md#redeemcode) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+[**RedeemInvitation**](TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+[**RedeemInvitation_0**](TeammatesApi.md#redeeminvitation_0) | **GET** /api/v1.0/teammates/redeeminvitation/{otc} | 
 [**UpdateTeammate**](TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | Update teammates (this method does not support Deltas!)
 
 
@@ -265,9 +266,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="redeemcode"></a>
-# **RedeemCode**
-> void RedeemCode (string otc, string appId)
+<a name="redeeminvitation"></a>
+# **RedeemInvitation**
+> RestApiResultRedeemInvitationResult RedeemInvitation (string otc, string appId)
 
 
 
@@ -281,7 +282,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class RedeemCodeExample
+    public class RedeemInvitationExample
     {
         public void main()
         {
@@ -294,11 +295,12 @@ namespace Example
 
             try
             {
-                apiInstance.RedeemCode(otc, appId);
+                RestApiResultRedeemInvitationResult result = apiInstance.RedeemInvitation(otc, appId);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TeammatesApi.RedeemCode: " + e.Message );
+                Debug.Print("Exception when calling TeammatesApi.RedeemInvitation: " + e.Message );
             }
         }
     }
@@ -314,7 +316,68 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**RestApiResultRedeemInvitationResult**](RestApiResultRedeemInvitationResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="redeeminvitation_0"></a>
+# **RedeemInvitation_0**
+> RestApiResultRedeemInvitationResult RedeemInvitation_0 (string otc)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class RedeemInvitation_0Example
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new TeammatesApi();
+            var otc = otc_example;  // string | 
+
+            try
+            {
+                RestApiResultRedeemInvitationResult result = apiInstance.RedeemInvitation_0(otc);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TeammatesApi.RedeemInvitation_0: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **otc** | **string**|  | 
+
+### Return type
+
+[**RestApiResultRedeemInvitationResult**](RestApiResultRedeemInvitationResult.md)
 
 ### Authorization
 

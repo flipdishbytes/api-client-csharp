@@ -355,6 +355,75 @@ namespace Flipdish.Model
         [DataMember(Name="PaymentStatus", EmitDefaultValue=false)]
         public PaymentStatusEnum? PaymentStatus { get; set; }
         /// <summary>
+        /// Rejection reason. Can have value if the order is rejected.
+        /// </summary>
+        /// <value>Rejection reason. Can have value if the order is rejected.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum RejectionReasonEnum
+        {
+            
+            /// <summary>
+            /// Enum TooBusy for value: TooBusy
+            /// </summary>
+            [EnumMember(Value = "TooBusy")]
+            TooBusy = 1,
+            
+            /// <summary>
+            /// Enum FoodUnavailable for value: FoodUnavailable
+            /// </summary>
+            [EnumMember(Value = "FoodUnavailable")]
+            FoodUnavailable = 2,
+            
+            /// <summary>
+            /// Enum UnableToDeliver for value: UnableToDeliver
+            /// </summary>
+            [EnumMember(Value = "UnableToDeliver")]
+            UnableToDeliver = 3,
+            
+            /// <summary>
+            /// Enum UnknownAddress for value: UnknownAddress
+            /// </summary>
+            [EnumMember(Value = "UnknownAddress")]
+            UnknownAddress = 4,
+            
+            /// <summary>
+            /// Enum UnknownReason for value: UnknownReason
+            /// </summary>
+            [EnumMember(Value = "UnknownReason")]
+            UnknownReason = 5,
+            
+            /// <summary>
+            /// Enum TooSoon for value: TooSoon
+            /// </summary>
+            [EnumMember(Value = "TooSoon")]
+            TooSoon = 6,
+            
+            /// <summary>
+            /// Enum TimeUnavailable for value: TimeUnavailable
+            /// </summary>
+            [EnumMember(Value = "TimeUnavailable")]
+            TimeUnavailable = 7,
+            
+            /// <summary>
+            /// Enum DontDeliverToArea for value: DontDeliverToArea
+            /// </summary>
+            [EnumMember(Value = "DontDeliverToArea")]
+            DontDeliverToArea = 8,
+            
+            /// <summary>
+            /// Enum StoreUncontactable for value: StoreUncontactable
+            /// </summary>
+            [EnumMember(Value = "StoreUncontactable")]
+            StoreUncontactable = 9
+        }
+
+        /// <summary>
+        /// Rejection reason. Can have value if the order is rejected.
+        /// </summary>
+        /// <value>Rejection reason. Can have value if the order is rejected.</value>
+        [DataMember(Name="RejectionReason", EmitDefaultValue=false)]
+        public RejectionReasonEnum? RejectionReason { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Order" /> class.
         /// </summary>
         /// <param name="store">Store summary.</param>
@@ -382,7 +451,8 @@ namespace Flipdish.Model
         /// <param name="appType">Used app type.</param>
         /// <param name="userRating">User rating.</param>
         /// <param name="paymentStatus">Status of the payment.</param>
-        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?))
+        /// <param name="rejectionReason">Rejection reason. Can have value if the order is rejected..</param>
+        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), RejectionReasonEnum? rejectionReason = default(RejectionReasonEnum?))
         {
             this.Store = store;
             this.Customer = customer;
@@ -409,6 +479,7 @@ namespace Flipdish.Model
             this.AppType = appType;
             this.UserRating = userRating;
             this.PaymentStatus = paymentStatus;
+            this.RejectionReason = rejectionReason;
         }
         
         /// <summary>
@@ -550,6 +621,7 @@ namespace Flipdish.Model
         public int? UserRating { get; set; }
 
 
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -583,6 +655,7 @@ namespace Flipdish.Model
             sb.Append("  AppType: ").Append(AppType).Append("\n");
             sb.Append("  UserRating: ").Append(UserRating).Append("\n");
             sb.Append("  PaymentStatus: ").Append(PaymentStatus).Append("\n");
+            sb.Append("  RejectionReason: ").Append(RejectionReason).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -741,6 +814,11 @@ namespace Flipdish.Model
                     this.PaymentStatus == input.PaymentStatus ||
                     (this.PaymentStatus != null &&
                     this.PaymentStatus.Equals(input.PaymentStatus))
+                ) && 
+                (
+                    this.RejectionReason == input.RejectionReason ||
+                    (this.RejectionReason != null &&
+                    this.RejectionReason.Equals(input.RejectionReason))
                 );
         }
 
@@ -803,6 +881,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.UserRating.GetHashCode();
                 if (this.PaymentStatus != null)
                     hashCode = hashCode * 59 + this.PaymentStatus.GetHashCode();
+                if (this.RejectionReason != null)
+                    hashCode = hashCode * 59 + this.RejectionReason.GetHashCode();
                 return hashCode;
             }
         }

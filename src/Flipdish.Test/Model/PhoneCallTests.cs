@@ -67,6 +67,14 @@ namespace Flipdish.Test
 
 
         /// <summary>
+        /// Test the property 'PhoneCallId'
+        /// </summary>
+        [Test]
+        public void PhoneCallIdTest()
+        {
+            // TODO unit test for the property 'PhoneCallId'
+        }
+        /// <summary>
         /// Test the property 'TimeOfCall'
         /// </summary>
         [Test]

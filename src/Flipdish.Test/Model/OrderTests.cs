@@ -266,6 +266,14 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'PaymentStatus'
         }
+        /// <summary>
+        /// Test the property 'RejectionReason'
+        /// </summary>
+        [Test]
+        public void RejectionReasonTest()
+        {
+            // TODO unit test for the property 'RejectionReason'
+        }
 
     }
 

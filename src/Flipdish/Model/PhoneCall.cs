@@ -102,6 +102,7 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneCall" /> class.
         /// </summary>
+        /// <param name="phoneCallId">Phone call id.</param>
         /// <param name="timeOfCall">Time of the call.</param>
         /// <param name="timeOfCallLocal">Time of the call, local to the store to which the call was made.</param>
         /// <param name="storeName">Name of the store that the call was TO.</param>
@@ -109,8 +110,9 @@ namespace Flipdish.Model
         /// <param name="callerNumber">Phone number of the caller.</param>
         /// <param name="callLengthInSeconds">The amount of time the call took.</param>
         /// <param name="callStatus">The status of the call.</param>
-        public PhoneCall(DateTime? timeOfCall = default(DateTime?), DateTime? timeOfCallLocal = default(DateTime?), string storeName = default(string), string callerName = default(string), string callerNumber = default(string), int? callLengthInSeconds = default(int?), CallStatusEnum? callStatus = default(CallStatusEnum?))
+        public PhoneCall(int? phoneCallId = default(int?), DateTime? timeOfCall = default(DateTime?), DateTime? timeOfCallLocal = default(DateTime?), string storeName = default(string), string callerName = default(string), string callerNumber = default(string), int? callLengthInSeconds = default(int?), CallStatusEnum? callStatus = default(CallStatusEnum?))
         {
+            this.PhoneCallId = phoneCallId;
             this.TimeOfCall = timeOfCall;
             this.TimeOfCallLocal = timeOfCallLocal;
             this.StoreName = storeName;
@@ -120,6 +122,13 @@ namespace Flipdish.Model
             this.CallStatus = callStatus;
         }
         
+        /// <summary>
+        /// Phone call id
+        /// </summary>
+        /// <value>Phone call id</value>
+        [DataMember(Name="PhoneCallId", EmitDefaultValue=false)]
+        public int? PhoneCallId { get; set; }
+
         /// <summary>
         /// Time of the call
         /// </summary>
@@ -171,6 +180,7 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PhoneCall {\n");
+            sb.Append("  PhoneCallId: ").Append(PhoneCallId).Append("\n");
             sb.Append("  TimeOfCall: ").Append(TimeOfCall).Append("\n");
             sb.Append("  TimeOfCallLocal: ").Append(TimeOfCallLocal).Append("\n");
             sb.Append("  StoreName: ").Append(StoreName).Append("\n");
@@ -212,6 +222,11 @@ namespace Flipdish.Model
                 return false;
 
             return 
+                (
+                    this.PhoneCallId == input.PhoneCallId ||
+                    (this.PhoneCallId != null &&
+                    this.PhoneCallId.Equals(input.PhoneCallId))
+                ) && 
                 (
                     this.TimeOfCall == input.TimeOfCall ||
                     (this.TimeOfCall != null &&
@@ -258,6 +273,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.PhoneCallId != null)
+                    hashCode = hashCode * 59 + this.PhoneCallId.GetHashCode();
                 if (this.TimeOfCall != null)
                     hashCode = hashCode * 59 + this.TimeOfCall.GetHashCode();
                 if (this.TimeOfCallLocal != null)

@@ -116,16 +116,28 @@ namespace Flipdish.Test
         }
         
         /// <summary>
-        /// Test RedeemCode
+        /// Test RedeemInvitation
         /// </summary>
         [Test]
-        public void RedeemCodeTest()
+        public void RedeemInvitationTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string otc = null;
             //string appId = null;
-            //instance.RedeemCode(otc, appId);
-            
+            //var response = instance.RedeemInvitation(otc, appId);
+            //Assert.IsInstanceOf<RestApiResultRedeemInvitationResult> (response, "response is RestApiResultRedeemInvitationResult");
+        }
+        
+        /// <summary>
+        /// Test RedeemInvitation_0
+        /// </summary>
+        [Test]
+        public void RedeemInvitation_0Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string otc = null;
+            //var response = instance.RedeemInvitation_0(otc);
+            //Assert.IsInstanceOf<RestApiResultRedeemInvitationResult> (response, "response is RestApiResultRedeemInvitationResult");
         }
         
         /// <summary>
