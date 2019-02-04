@@ -45,16 +45,22 @@ namespace Flipdish.Model
             Valid = 1,
             
             /// <summary>
+            /// Enum NotYetValid for value: NotYetValid
+            /// </summary>
+            [EnumMember(Value = "NotYetValid")]
+            NotYetValid = 2,
+            
+            /// <summary>
             /// Enum Expired for value: Expired
             /// </summary>
             [EnumMember(Value = "Expired")]
-            Expired = 2,
+            Expired = 3,
             
             /// <summary>
             /// Enum Used for value: Used
             /// </summary>
             [EnumMember(Value = "Used")]
-            Used = 3
+            Used = 4
         }
 
         /// <summary>
