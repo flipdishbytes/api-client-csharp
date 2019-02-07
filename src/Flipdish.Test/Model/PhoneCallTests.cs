@@ -91,6 +91,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'TimeOfCallLocal'
         }
         /// <summary>
+        /// Test the property 'StoreId'
+        /// </summary>
+        [Test]
+        public void StoreIdTest()
+        {
+            // TODO unit test for the property 'StoreId'
+        }
+        /// <summary>
         /// Test the property 'StoreName'
         /// </summary>
         [Test]
@@ -105,6 +113,14 @@ namespace Flipdish.Test
         public void CallerNameTest()
         {
             // TODO unit test for the property 'CallerName'
+        }
+        /// <summary>
+        /// Test the property 'CallerUserId'
+        /// </summary>
+        [Test]
+        public void CallerUserIdTest()
+        {
+            // TODO unit test for the property 'CallerUserId'
         }
         /// <summary>
         /// Test the property 'CallerNumber'

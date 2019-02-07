@@ -105,18 +105,22 @@ namespace Flipdish.Model
         /// <param name="phoneCallId">Phone call id.</param>
         /// <param name="timeOfCall">Time of the call.</param>
         /// <param name="timeOfCallLocal">Time of the call, local to the store to which the call was made.</param>
+        /// <param name="storeId">ID of the store that the call was TO.</param>
         /// <param name="storeName">Name of the store that the call was TO.</param>
         /// <param name="callerName">Name of the caller.</param>
+        /// <param name="callerUserId">UserID of the caller.</param>
         /// <param name="callerNumber">Phone number of the caller.</param>
         /// <param name="callLengthInSeconds">The amount of time the call took.</param>
         /// <param name="callStatus">The status of the call.</param>
-        public PhoneCall(int? phoneCallId = default(int?), DateTime? timeOfCall = default(DateTime?), DateTime? timeOfCallLocal = default(DateTime?), string storeName = default(string), string callerName = default(string), string callerNumber = default(string), int? callLengthInSeconds = default(int?), CallStatusEnum? callStatus = default(CallStatusEnum?))
+        public PhoneCall(int? phoneCallId = default(int?), DateTime? timeOfCall = default(DateTime?), DateTime? timeOfCallLocal = default(DateTime?), int? storeId = default(int?), string storeName = default(string), string callerName = default(string), int? callerUserId = default(int?), string callerNumber = default(string), int? callLengthInSeconds = default(int?), CallStatusEnum? callStatus = default(CallStatusEnum?))
         {
             this.PhoneCallId = phoneCallId;
             this.TimeOfCall = timeOfCall;
             this.TimeOfCallLocal = timeOfCallLocal;
+            this.StoreId = storeId;
             this.StoreName = storeName;
             this.CallerName = callerName;
+            this.CallerUserId = callerUserId;
             this.CallerNumber = callerNumber;
             this.CallLengthInSeconds = callLengthInSeconds;
             this.CallStatus = callStatus;
@@ -144,6 +148,13 @@ namespace Flipdish.Model
         public DateTime? TimeOfCallLocal { get; set; }
 
         /// <summary>
+        /// ID of the store that the call was TO
+        /// </summary>
+        /// <value>ID of the store that the call was TO</value>
+        [DataMember(Name="StoreId", EmitDefaultValue=false)]
+        public int? StoreId { get; set; }
+
+        /// <summary>
         /// Name of the store that the call was TO
         /// </summary>
         /// <value>Name of the store that the call was TO</value>
@@ -156,6 +167,13 @@ namespace Flipdish.Model
         /// <value>Name of the caller</value>
         [DataMember(Name="CallerName", EmitDefaultValue=false)]
         public string CallerName { get; set; }
+
+        /// <summary>
+        /// UserID of the caller
+        /// </summary>
+        /// <value>UserID of the caller</value>
+        [DataMember(Name="CallerUserId", EmitDefaultValue=false)]
+        public int? CallerUserId { get; set; }
 
         /// <summary>
         /// Phone number of the caller
@@ -183,8 +201,10 @@ namespace Flipdish.Model
             sb.Append("  PhoneCallId: ").Append(PhoneCallId).Append("\n");
             sb.Append("  TimeOfCall: ").Append(TimeOfCall).Append("\n");
             sb.Append("  TimeOfCallLocal: ").Append(TimeOfCallLocal).Append("\n");
+            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  StoreName: ").Append(StoreName).Append("\n");
             sb.Append("  CallerName: ").Append(CallerName).Append("\n");
+            sb.Append("  CallerUserId: ").Append(CallerUserId).Append("\n");
             sb.Append("  CallerNumber: ").Append(CallerNumber).Append("\n");
             sb.Append("  CallLengthInSeconds: ").Append(CallLengthInSeconds).Append("\n");
             sb.Append("  CallStatus: ").Append(CallStatus).Append("\n");
@@ -238,6 +258,11 @@ namespace Flipdish.Model
                     this.TimeOfCallLocal.Equals(input.TimeOfCallLocal))
                 ) && 
                 (
+                    this.StoreId == input.StoreId ||
+                    (this.StoreId != null &&
+                    this.StoreId.Equals(input.StoreId))
+                ) && 
+                (
                     this.StoreName == input.StoreName ||
                     (this.StoreName != null &&
                     this.StoreName.Equals(input.StoreName))
@@ -246,6 +271,11 @@ namespace Flipdish.Model
                     this.CallerName == input.CallerName ||
                     (this.CallerName != null &&
                     this.CallerName.Equals(input.CallerName))
+                ) && 
+                (
+                    this.CallerUserId == input.CallerUserId ||
+                    (this.CallerUserId != null &&
+                    this.CallerUserId.Equals(input.CallerUserId))
                 ) && 
                 (
                     this.CallerNumber == input.CallerNumber ||
@@ -279,10 +309,14 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.TimeOfCall.GetHashCode();
                 if (this.TimeOfCallLocal != null)
                     hashCode = hashCode * 59 + this.TimeOfCallLocal.GetHashCode();
+                if (this.StoreId != null)
+                    hashCode = hashCode * 59 + this.StoreId.GetHashCode();
                 if (this.StoreName != null)
                     hashCode = hashCode * 59 + this.StoreName.GetHashCode();
                 if (this.CallerName != null)
                     hashCode = hashCode * 59 + this.CallerName.GetHashCode();
+                if (this.CallerUserId != null)
+                    hashCode = hashCode * 59 + this.CallerUserId.GetHashCode();
                 if (this.CallerNumber != null)
                     hashCode = hashCode * 59 + this.CallerNumber.GetHashCode();
                 if (this.CallLengthInSeconds != null)

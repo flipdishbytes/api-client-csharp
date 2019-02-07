@@ -25,7 +25,7 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get customer events
+        /// Get customer events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -41,7 +41,7 @@ namespace Flipdish.Api
         RestApiEventSearchPaginationResult GetCustomerEvents (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get customer events
+        /// Get customer events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -56,7 +56,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
         ApiResponse<RestApiEventSearchPaginationResult> GetCustomerEventsWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get events
+        /// Get events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -74,7 +74,7 @@ namespace Flipdish.Api
         RestApiEventSearchPaginationResult GetEvents (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get events
+        /// Get events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -91,7 +91,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
         ApiResponse<RestApiEventSearchPaginationResult> GetEventsWithHttpInfo (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get event by Id
+        /// Get event by Id  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -102,7 +102,7 @@ namespace Flipdish.Api
         EventSearchResult GetEventsById (Guid? eventId);
 
         /// <summary>
-        /// Get event by Id
+        /// Get event by Id  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -112,7 +112,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of EventSearchResult</returns>
         ApiResponse<EventSearchResult> GetEventsByIdWithHttpInfo (Guid? eventId);
         /// <summary>
-        /// Get menu events
+        /// Get menu events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -128,7 +128,7 @@ namespace Flipdish.Api
         RestApiEventSearchPaginationResult GetMenuEvents (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get menu events
+        /// Get menu events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -143,7 +143,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
         ApiResponse<RestApiEventSearchPaginationResult> GetMenuEventsWithHttpInfo (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get order events
+        /// Get order events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -159,7 +159,7 @@ namespace Flipdish.Api
         RestApiEventSearchPaginationResult GetOrderEvents (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get order events
+        /// Get order events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -174,7 +174,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
         ApiResponse<RestApiEventSearchPaginationResult> GetOrderEventsWithHttpInfo (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get order events by customer
+        /// Get order events by customer  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -190,7 +190,7 @@ namespace Flipdish.Api
         RestApiEventSearchPaginationResult GetOrderEventsByCustomer (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get order events by customer
+        /// Get order events by customer  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -205,7 +205,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
         ApiResponse<RestApiEventSearchPaginationResult> GetOrderEventsByCustomerWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get store events
+        /// Get store events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -221,7 +221,7 @@ namespace Flipdish.Api
         RestApiEventSearchPaginationResult GetStoreEvents (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get store events
+        /// Get store events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -236,7 +236,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
         ApiResponse<RestApiEventSearchPaginationResult> GetStoreEventsWithHttpInfo (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get user events
+        /// Get user events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -252,7 +252,7 @@ namespace Flipdish.Api
         RestApiEventSearchPaginationResult GetUserEvents (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get user events
+        /// Get user events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -267,7 +267,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
         ApiResponse<RestApiEventSearchPaginationResult> GetUserEventsWithHttpInfo (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get WhiteLabel events
+        /// Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -283,7 +283,7 @@ namespace Flipdish.Api
         RestApiEventSearchPaginationResult GetWhiteLabelEvents (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get WhiteLabel events
+        /// Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -300,7 +300,7 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get customer events
+        /// Get customer events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -316,7 +316,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetCustomerEventsAsync (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get customer events
+        /// Get customer events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -331,7 +331,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetCustomerEventsAsyncWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get events
+        /// Get events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -349,7 +349,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetEventsAsync (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get events
+        /// Get events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -366,7 +366,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetEventsAsyncWithHttpInfo (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get event by Id
+        /// Get event by Id  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -377,7 +377,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<EventSearchResult> GetEventsByIdAsync (Guid? eventId);
 
         /// <summary>
-        /// Get event by Id
+        /// Get event by Id  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -387,7 +387,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (EventSearchResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<EventSearchResult>> GetEventsByIdAsyncWithHttpInfo (Guid? eventId);
         /// <summary>
-        /// Get menu events
+        /// Get menu events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -403,7 +403,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetMenuEventsAsync (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get menu events
+        /// Get menu events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -418,7 +418,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetMenuEventsAsyncWithHttpInfo (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get order events
+        /// Get order events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -434,7 +434,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetOrderEventsAsync (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get order events
+        /// Get order events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -449,7 +449,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetOrderEventsAsyncWithHttpInfo (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get order events by customer
+        /// Get order events by customer  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -465,7 +465,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetOrderEventsByCustomerAsync (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get order events by customer
+        /// Get order events by customer  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -480,7 +480,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetOrderEventsByCustomerAsyncWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get store events
+        /// Get store events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -496,7 +496,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetStoreEventsAsync (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get store events
+        /// Get store events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -511,7 +511,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetStoreEventsAsyncWithHttpInfo (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get user events
+        /// Get user events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -527,7 +527,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetUserEventsAsync (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get user events
+        /// Get user events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -542,7 +542,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetUserEventsAsyncWithHttpInfo (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
         /// <summary>
-        /// Get WhiteLabel events
+        /// Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -558,7 +558,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetWhiteLabelEventsAsync (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null);
 
         /// <summary>
-        /// Get WhiteLabel events
+        /// Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
         /// <remarks>
         /// 
@@ -673,7 +673,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get customer events 
+        /// Get customer events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Customer identifier identifier</param>
@@ -690,7 +690,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get customer events 
+        /// Get customer events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Customer identifier identifier</param>
@@ -763,7 +763,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get customer events 
+        /// Get customer events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Customer identifier identifier</param>
@@ -781,7 +781,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get customer events 
+        /// Get customer events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Customer identifier identifier</param>
@@ -854,7 +854,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get events 
+        /// Get events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
@@ -873,7 +873,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get events 
+        /// Get events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
@@ -947,7 +947,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get events 
+        /// Get events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
@@ -967,7 +967,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get events 
+        /// Get events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
@@ -1041,7 +1041,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get event by Id 
+        /// Get event by Id  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventId">Event identifier (Guid)</param>
@@ -1053,7 +1053,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get event by Id 
+        /// Get event by Id  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventId">Event identifier (Guid)</param>
@@ -1116,7 +1116,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get event by Id 
+        /// Get event by Id  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventId">Event identifier (Guid)</param>
@@ -1129,7 +1129,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get event by Id 
+        /// Get event by Id  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventId">Event identifier (Guid)</param>
@@ -1192,7 +1192,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get menu events 
+        /// Get menu events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -1209,7 +1209,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get menu events 
+        /// Get menu events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -1282,7 +1282,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get menu events 
+        /// Get menu events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -1300,7 +1300,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get menu events 
+        /// Get menu events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -1373,7 +1373,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events 
+        /// Get order events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Order identifier</param>
@@ -1390,7 +1390,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events 
+        /// Get order events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Order identifier</param>
@@ -1463,7 +1463,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events 
+        /// Get order events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Order identifier</param>
@@ -1481,7 +1481,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events 
+        /// Get order events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Order identifier</param>
@@ -1554,7 +1554,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events by customer 
+        /// Get order events by customer  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Customer identifier</param>
@@ -1571,7 +1571,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events by customer 
+        /// Get order events by customer  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Customer identifier</param>
@@ -1644,7 +1644,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events by customer 
+        /// Get order events by customer  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Customer identifier</param>
@@ -1662,7 +1662,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order events by customer 
+        /// Get order events by customer  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Customer identifier</param>
@@ -1735,7 +1735,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store events 
+        /// Get store events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Id of the store</param>
@@ -1752,7 +1752,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store events 
+        /// Get store events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Id of the store</param>
@@ -1825,7 +1825,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store events 
+        /// Get store events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Id of the store</param>
@@ -1843,7 +1843,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store events 
+        /// Get store events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Id of the store</param>
@@ -1916,7 +1916,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get user events 
+        /// Get user events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User identifier</param>
@@ -1933,7 +1933,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get user events 
+        /// Get user events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User identifier</param>
@@ -2006,7 +2006,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get user events 
+        /// Get user events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User identifier</param>
@@ -2024,7 +2024,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get user events 
+        /// Get user events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User identifier</param>
@@ -2097,7 +2097,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get WhiteLabel events 
+        /// Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId">White Label Identifier</param>
@@ -2114,7 +2114,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get WhiteLabel events 
+        /// Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId">White Label Identifier</param>
@@ -2187,7 +2187,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get WhiteLabel events 
+        /// Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId">White Label Identifier</param>
@@ -2205,7 +2205,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get WhiteLabel events 
+        /// Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId">White Label Identifier</param>

@@ -4,22 +4,22 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetCustomerEvents**](EventsApi.md#getcustomerevents) | **GET** /api/v1.0/events/customer/{customerId} | Get customer events
-[**GetEvents**](EventsApi.md#getevents) | **GET** /api/v1.0/events | Get events
-[**GetEventsById**](EventsApi.md#geteventsbyid) | **GET** /api/v1.0/events/{eventId} | Get event by Id
-[**GetMenuEvents**](EventsApi.md#getmenuevents) | **GET** /api/v1.0/events/menu/{menuId} | Get menu events
-[**GetOrderEvents**](EventsApi.md#getorderevents) | **GET** /api/v1.0/events/order/{orderId} | Get order events
-[**GetOrderEventsByCustomer**](EventsApi.md#getordereventsbycustomer) | **GET** /api/v1.0/events/order | Get order events by customer
-[**GetStoreEvents**](EventsApi.md#getstoreevents) | **GET** /api/v1.0/events/store/{storeId} | Get store events
-[**GetUserEvents**](EventsApi.md#getuserevents) | **GET** /api/v1.0/events/user/{userId} | Get user events
-[**GetWhiteLabelEvents**](EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get WhiteLabel events
+[**GetCustomerEvents**](EventsApi.md#getcustomerevents) | **GET** /api/v1.0/events/customer/{customerId} | Get customer events  For technical reasons, the number of records returned is limited to 100.
+[**GetEvents**](EventsApi.md#getevents) | **GET** /api/v1.0/events | Get events  For technical reasons, the number of records returned is limited to 100.
+[**GetEventsById**](EventsApi.md#geteventsbyid) | **GET** /api/v1.0/events/{eventId} | Get event by Id  For technical reasons, the number of records returned is limited to 100.
+[**GetMenuEvents**](EventsApi.md#getmenuevents) | **GET** /api/v1.0/events/menu/{menuId} | Get menu events  For technical reasons, the number of records returned is limited to 100.
+[**GetOrderEvents**](EventsApi.md#getorderevents) | **GET** /api/v1.0/events/order/{orderId} | Get order events  For technical reasons, the number of records returned is limited to 100.
+[**GetOrderEventsByCustomer**](EventsApi.md#getordereventsbycustomer) | **GET** /api/v1.0/events/order | Get order events by customer  For technical reasons, the number of records returned is limited to 100.
+[**GetStoreEvents**](EventsApi.md#getstoreevents) | **GET** /api/v1.0/events/store/{storeId} | Get store events  For technical reasons, the number of records returned is limited to 100.
+[**GetUserEvents**](EventsApi.md#getuserevents) | **GET** /api/v1.0/events/user/{userId} | Get user events  For technical reasons, the number of records returned is limited to 100.
+[**GetWhiteLabelEvents**](EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 
 
 <a name="getcustomerevents"></a>
 # **GetCustomerEvents**
 > RestApiEventSearchPaginationResult GetCustomerEvents (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
 
-Get customer events
+Get customer events  For technical reasons, the number of records returned is limited to 100.
 
 ### Example
 ```csharp
@@ -48,7 +48,7 @@ namespace Example
 
             try
             {
-                // Get customer events
+                // Get customer events  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetCustomerEvents(customerId, limit, page, start, end, name);
                 Debug.WriteLine(result);
             }
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 # **GetEvents**
 > RestApiEventSearchPaginationResult GetEvents (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
 
-Get events
+Get events  For technical reasons, the number of records returned is limited to 100.
 
 ### Example
 ```csharp
@@ -122,7 +122,7 @@ namespace Example
 
             try
             {
-                // Get events
+                // Get events  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetEvents(storeId, whiteLabelId, customerId, limit, page, start, end, name);
                 Debug.WriteLine(result);
             }
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 # **GetEventsById**
 > EventSearchResult GetEventsById (Guid? eventId)
 
-Get event by Id
+Get event by Id  For technical reasons, the number of records returned is limited to 100.
 
 ### Example
 ```csharp
@@ -191,7 +191,7 @@ namespace Example
 
             try
             {
-                // Get event by Id
+                // Get event by Id  For technical reasons, the number of records returned is limited to 100.
                 EventSearchResult result = apiInstance.GetEventsById(eventId);
                 Debug.WriteLine(result);
             }
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 # **GetMenuEvents**
 > RestApiEventSearchPaginationResult GetMenuEvents (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
 
-Get menu events
+Get menu events  For technical reasons, the number of records returned is limited to 100.
 
 ### Example
 ```csharp
@@ -258,7 +258,7 @@ namespace Example
 
             try
             {
-                // Get menu events
+                // Get menu events  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetMenuEvents(menuId, limit, page, start, end, name);
                 Debug.WriteLine(result);
             }
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 # **GetOrderEvents**
 > RestApiEventSearchPaginationResult GetOrderEvents (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
 
-Get order events
+Get order events  For technical reasons, the number of records returned is limited to 100.
 
 ### Example
 ```csharp
@@ -330,7 +330,7 @@ namespace Example
 
             try
             {
-                // Get order events
+                // Get order events  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetOrderEvents(orderId, limit, page, start, end, name);
                 Debug.WriteLine(result);
             }
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 # **GetOrderEventsByCustomer**
 > RestApiEventSearchPaginationResult GetOrderEventsByCustomer (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
 
-Get order events by customer
+Get order events by customer  For technical reasons, the number of records returned is limited to 100.
 
 ### Example
 ```csharp
@@ -402,7 +402,7 @@ namespace Example
 
             try
             {
-                // Get order events by customer
+                // Get order events by customer  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetOrderEventsByCustomer(customerId, limit, page, start, end, name);
                 Debug.WriteLine(result);
             }
@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
 # **GetStoreEvents**
 > RestApiEventSearchPaginationResult GetStoreEvents (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
 
-Get store events
+Get store events  For technical reasons, the number of records returned is limited to 100.
 
 ### Example
 ```csharp
@@ -474,7 +474,7 @@ namespace Example
 
             try
             {
-                // Get store events
+                // Get store events  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetStoreEvents(storeId, limit, page, start, end, name);
                 Debug.WriteLine(result);
             }
@@ -517,7 +517,7 @@ Name | Type | Description  | Notes
 # **GetUserEvents**
 > RestApiEventSearchPaginationResult GetUserEvents (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
 
-Get user events
+Get user events  For technical reasons, the number of records returned is limited to 100.
 
 ### Example
 ```csharp
@@ -546,7 +546,7 @@ namespace Example
 
             try
             {
-                // Get user events
+                // Get user events  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetUserEvents(userId, limit, page, start, end, name);
                 Debug.WriteLine(result);
             }
@@ -589,7 +589,7 @@ Name | Type | Description  | Notes
 # **GetWhiteLabelEvents**
 > RestApiEventSearchPaginationResult GetWhiteLabelEvents (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
 
-Get WhiteLabel events
+Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 
 ### Example
 ```csharp
@@ -618,7 +618,7 @@ namespace Example
 
             try
             {
-                // Get WhiteLabel events
+                // Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetWhiteLabelEvents(whitelabelId, limit, page, start, end, name);
                 Debug.WriteLine(result);
             }
