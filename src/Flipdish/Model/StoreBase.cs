@@ -34,6 +34,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="StoreBase" /> class.
         /// </summary>
         /// <param name="phoneNumber">Phone number.</param>
+        /// <param name="alwaysAppearOpen">True if the store always appears open.</param>
         /// <param name="preOrderEnabled">True if the store accepts pre-orders.</param>
         /// <param name="takeOutEnabled">True if the store accepts take-out orders.</param>
         /// <param name="tableServiceEnabled">True if the store has table service.</param>
@@ -53,16 +54,15 @@ namespace Flipdish.Model
         /// <param name="requireCustomerNameForPickup">True if customer name required for pickup orders.</param>
         /// <param name="gdprCustomerPhoneNumbers">Mask your customers phone numbers printed on receipts and reduce the amout of personally identifiable customer information that is exposed..</param>
         /// <param name="requireCustomerNameForDelivery">True if customer name required for delivery orders.</param>
-        /// <param name="microsoftTimeZone">Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391).</param>
-        /// <param name="ianaTimeZone">IANA Time Zone (https://www.iana.org/time-zones).</param>
         /// <param name="etaInPickupConfirmationSmsEnabled">True if order confirmation sms includes estimated time when order will be ready for collection.</param>
         /// <param name="etaInDeliveryConfirmationSmsEnabled">True if order confirmation sms includes estimated time when order will delivered.</param>
         /// <param name="name">Name.</param>
         /// <param name="emailAddress">Email address (visible to customers).</param>
         /// <param name="staffLanguage">Staff Language (used for communcation with the staff)  Emails, Printouts etc.</param>
-        public StoreBase(string phoneNumber = default(string), bool? preOrderEnabled = default(bool?), bool? takeOutEnabled = default(bool?), bool? tableServiceEnabled = default(bool?), bool? dineInEnabled = default(bool?), bool? allowPreOrdersAndTableService = default(bool?), bool? pickupEnabled = default(bool?), bool? deliveryEnabled = default(bool?), bool? cardOrderDeliveryEnabled = default(bool?), bool? cashOrdersDeliveryEnabled = default(bool?), bool? cardOrdersPickupEnabled = default(bool?), bool? cashOrdersPickupEnabled = default(bool?), bool? tipsEnabled = default(bool?), bool? automaticallyAcceptOrders = default(bool?), bool? openForDelivery = default(bool?), bool? openForPickup = default(bool?), double? minimumPickupOrderAmount = default(double?), bool? requireCustomerNameForPickup = default(bool?), bool? gdprCustomerPhoneNumbers = default(bool?), bool? requireCustomerNameForDelivery = default(bool?), string microsoftTimeZone = default(string), string ianaTimeZone = default(string), bool? etaInPickupConfirmationSmsEnabled = default(bool?), bool? etaInDeliveryConfirmationSmsEnabled = default(bool?), string name = default(string), string emailAddress = default(string), string staffLanguage = default(string))
+        public StoreBase(string phoneNumber = default(string), bool? alwaysAppearOpen = default(bool?), bool? preOrderEnabled = default(bool?), bool? takeOutEnabled = default(bool?), bool? tableServiceEnabled = default(bool?), bool? dineInEnabled = default(bool?), bool? allowPreOrdersAndTableService = default(bool?), bool? pickupEnabled = default(bool?), bool? deliveryEnabled = default(bool?), bool? cardOrderDeliveryEnabled = default(bool?), bool? cashOrdersDeliveryEnabled = default(bool?), bool? cardOrdersPickupEnabled = default(bool?), bool? cashOrdersPickupEnabled = default(bool?), bool? tipsEnabled = default(bool?), bool? automaticallyAcceptOrders = default(bool?), bool? openForDelivery = default(bool?), bool? openForPickup = default(bool?), double? minimumPickupOrderAmount = default(double?), bool? requireCustomerNameForPickup = default(bool?), bool? gdprCustomerPhoneNumbers = default(bool?), bool? requireCustomerNameForDelivery = default(bool?), bool? etaInPickupConfirmationSmsEnabled = default(bool?), bool? etaInDeliveryConfirmationSmsEnabled = default(bool?), string name = default(string), string emailAddress = default(string), string staffLanguage = default(string))
         {
             this.PhoneNumber = phoneNumber;
+            this.AlwaysAppearOpen = alwaysAppearOpen;
             this.PreOrderEnabled = preOrderEnabled;
             this.TakeOutEnabled = takeOutEnabled;
             this.TableServiceEnabled = tableServiceEnabled;
@@ -82,8 +82,6 @@ namespace Flipdish.Model
             this.RequireCustomerNameForPickup = requireCustomerNameForPickup;
             this.GdprCustomerPhoneNumbers = gdprCustomerPhoneNumbers;
             this.RequireCustomerNameForDelivery = requireCustomerNameForDelivery;
-            this.MicrosoftTimeZone = microsoftTimeZone;
-            this.IanaTimeZone = ianaTimeZone;
             this.EtaInPickupConfirmationSmsEnabled = etaInPickupConfirmationSmsEnabled;
             this.EtaInDeliveryConfirmationSmsEnabled = etaInDeliveryConfirmationSmsEnabled;
             this.Name = name;
@@ -97,6 +95,13 @@ namespace Flipdish.Model
         /// <value>Phone number</value>
         [DataMember(Name="PhoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
+
+        /// <summary>
+        /// True if the store always appears open
+        /// </summary>
+        /// <value>True if the store always appears open</value>
+        [DataMember(Name="AlwaysAppearOpen", EmitDefaultValue=false)]
+        public bool? AlwaysAppearOpen { get; set; }
 
         /// <summary>
         /// True if the store accepts pre-orders
@@ -232,20 +237,6 @@ namespace Flipdish.Model
         public bool? RequireCustomerNameForDelivery { get; set; }
 
         /// <summary>
-        /// Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391)
-        /// </summary>
-        /// <value>Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391)</value>
-        [DataMember(Name="MicrosoftTimeZone", EmitDefaultValue=false)]
-        public string MicrosoftTimeZone { get; set; }
-
-        /// <summary>
-        /// IANA Time Zone (https://www.iana.org/time-zones)
-        /// </summary>
-        /// <value>IANA Time Zone (https://www.iana.org/time-zones)</value>
-        [DataMember(Name="IanaTimeZone", EmitDefaultValue=false)]
-        public string IanaTimeZone { get; set; }
-
-        /// <summary>
         /// True if order confirmation sms includes estimated time when order will be ready for collection
         /// </summary>
         /// <value>True if order confirmation sms includes estimated time when order will be ready for collection</value>
@@ -289,6 +280,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class StoreBase {\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
+            sb.Append("  AlwaysAppearOpen: ").Append(AlwaysAppearOpen).Append("\n");
             sb.Append("  PreOrderEnabled: ").Append(PreOrderEnabled).Append("\n");
             sb.Append("  TakeOutEnabled: ").Append(TakeOutEnabled).Append("\n");
             sb.Append("  TableServiceEnabled: ").Append(TableServiceEnabled).Append("\n");
@@ -308,8 +300,6 @@ namespace Flipdish.Model
             sb.Append("  RequireCustomerNameForPickup: ").Append(RequireCustomerNameForPickup).Append("\n");
             sb.Append("  GdprCustomerPhoneNumbers: ").Append(GdprCustomerPhoneNumbers).Append("\n");
             sb.Append("  RequireCustomerNameForDelivery: ").Append(RequireCustomerNameForDelivery).Append("\n");
-            sb.Append("  MicrosoftTimeZone: ").Append(MicrosoftTimeZone).Append("\n");
-            sb.Append("  IanaTimeZone: ").Append(IanaTimeZone).Append("\n");
             sb.Append("  EtaInPickupConfirmationSmsEnabled: ").Append(EtaInPickupConfirmationSmsEnabled).Append("\n");
             sb.Append("  EtaInDeliveryConfirmationSmsEnabled: ").Append(EtaInDeliveryConfirmationSmsEnabled).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -353,6 +343,11 @@ namespace Flipdish.Model
                     this.PhoneNumber == input.PhoneNumber ||
                     (this.PhoneNumber != null &&
                     this.PhoneNumber.Equals(input.PhoneNumber))
+                ) && 
+                (
+                    this.AlwaysAppearOpen == input.AlwaysAppearOpen ||
+                    (this.AlwaysAppearOpen != null &&
+                    this.AlwaysAppearOpen.Equals(input.AlwaysAppearOpen))
                 ) && 
                 (
                     this.PreOrderEnabled == input.PreOrderEnabled ||
@@ -450,16 +445,6 @@ namespace Flipdish.Model
                     this.RequireCustomerNameForDelivery.Equals(input.RequireCustomerNameForDelivery))
                 ) && 
                 (
-                    this.MicrosoftTimeZone == input.MicrosoftTimeZone ||
-                    (this.MicrosoftTimeZone != null &&
-                    this.MicrosoftTimeZone.Equals(input.MicrosoftTimeZone))
-                ) && 
-                (
-                    this.IanaTimeZone == input.IanaTimeZone ||
-                    (this.IanaTimeZone != null &&
-                    this.IanaTimeZone.Equals(input.IanaTimeZone))
-                ) && 
-                (
                     this.EtaInPickupConfirmationSmsEnabled == input.EtaInPickupConfirmationSmsEnabled ||
                     (this.EtaInPickupConfirmationSmsEnabled != null &&
                     this.EtaInPickupConfirmationSmsEnabled.Equals(input.EtaInPickupConfirmationSmsEnabled))
@@ -497,6 +482,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.PhoneNumber != null)
                     hashCode = hashCode * 59 + this.PhoneNumber.GetHashCode();
+                if (this.AlwaysAppearOpen != null)
+                    hashCode = hashCode * 59 + this.AlwaysAppearOpen.GetHashCode();
                 if (this.PreOrderEnabled != null)
                     hashCode = hashCode * 59 + this.PreOrderEnabled.GetHashCode();
                 if (this.TakeOutEnabled != null)
@@ -535,10 +522,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.GdprCustomerPhoneNumbers.GetHashCode();
                 if (this.RequireCustomerNameForDelivery != null)
                     hashCode = hashCode * 59 + this.RequireCustomerNameForDelivery.GetHashCode();
-                if (this.MicrosoftTimeZone != null)
-                    hashCode = hashCode * 59 + this.MicrosoftTimeZone.GetHashCode();
-                if (this.IanaTimeZone != null)
-                    hashCode = hashCode * 59 + this.IanaTimeZone.GetHashCode();
                 if (this.EtaInPickupConfirmationSmsEnabled != null)
                     hashCode = hashCode * 59 + this.EtaInPickupConfirmationSmsEnabled.GetHashCode();
                 if (this.EtaInDeliveryConfirmationSmsEnabled != null)

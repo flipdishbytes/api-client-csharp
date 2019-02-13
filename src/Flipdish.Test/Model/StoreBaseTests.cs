@@ -75,6 +75,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'PhoneNumber'
         }
         /// <summary>
+        /// Test the property 'AlwaysAppearOpen'
+        /// </summary>
+        [Test]
+        public void AlwaysAppearOpenTest()
+        {
+            // TODO unit test for the property 'AlwaysAppearOpen'
+        }
+        /// <summary>
         /// Test the property 'PreOrderEnabled'
         /// </summary>
         [Test]
@@ -225,22 +233,6 @@ namespace Flipdish.Test
         public void RequireCustomerNameForDeliveryTest()
         {
             // TODO unit test for the property 'RequireCustomerNameForDelivery'
-        }
-        /// <summary>
-        /// Test the property 'MicrosoftTimeZone'
-        /// </summary>
-        [Test]
-        public void MicrosoftTimeZoneTest()
-        {
-            // TODO unit test for the property 'MicrosoftTimeZone'
-        }
-        /// <summary>
-        /// Test the property 'IanaTimeZone'
-        /// </summary>
-        [Test]
-        public void IanaTimeZoneTest()
-        {
-            // TODO unit test for the property 'IanaTimeZone'
         }
         /// <summary>
         /// Test the property 'EtaInPickupConfirmationSmsEnabled'

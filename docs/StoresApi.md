@@ -369,7 +369,7 @@ namespace Example
 
             var apiInstance = new StoresApi();
             var storeId = 56;  // int? | Store identifier
-            var appNameId = appNameId_example;  // string | App Name Id (optional) 
+            var appNameId = appNameId_example;  // string | App Name Id(Not used, still here for compatability reasons) (optional) 
 
             try
             {
@@ -391,7 +391,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeId** | **int?**| Store identifier | 
- **appNameId** | **string**| App Name Id | [optional] 
+ **appNameId** | **string**| App Name Id(Not used, still here for compatability reasons) | [optional] 
 
 ### Return type
 
@@ -434,7 +434,7 @@ namespace Example
             var apiInstance = new StoresApi();
             var storeId = 56;  // int? | Store identifier
             var paymentAccountType = paymentAccountType_example;  // string | 
-            var appNameId = appNameId_example;  // string | App Name Id (optional) 
+            var appNameId = appNameId_example;  // string | App Name Id(Not used, still here for compatability reasons) (optional) 
 
             try
             {
@@ -457,7 +457,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeId** | **int?**| Store identifier | 
  **paymentAccountType** | **string**|  | 
- **appNameId** | **string**| App Name Id | [optional] 
+ **appNameId** | **string**| App Name Id(Not used, still here for compatability reasons) | [optional] 
 
 ### Return type
 
@@ -892,7 +892,7 @@ namespace Example
             var apiInstance = new StoresApi();
             var storeId = 56;  // int? | Store identifier
             var coordinates = new Coordinates(); // Coordinates | Store address coordinates
-            var appNameId = appNameId_example;  // string | App Name Id (optional) 
+            var appNameId = appNameId_example;  // string | App Name Id(Not used, still here for compatability reasons) (optional) 
 
             try
             {
@@ -915,7 +915,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeId** | **int?**| Store identifier | 
  **coordinates** | [**Coordinates**](Coordinates.md)| Store address coordinates | 
- **appNameId** | **string**| App Name Id | [optional] 
+ **appNameId** | **string**| App Name Id(Not used, still here for compatability reasons) | [optional] 
 
 ### Return type
 

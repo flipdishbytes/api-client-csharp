@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PhoneNumber** | **string** | Phone number | [optional] 
+**AlwaysAppearOpen** | **bool?** | True if the store always appears open | [optional] 
 **PreOrderEnabled** | **bool?** | True if the store accepts pre-orders | [optional] 
 **TakeOutEnabled** | **bool?** | True if the store accepts take-out orders | [optional] 
 **TableServiceEnabled** | **bool?** | True if the store has table service | [optional] 
@@ -23,8 +24,6 @@ Name | Type | Description | Notes
 **RequireCustomerNameForPickup** | **bool?** | True if customer name required for pickup orders | [optional] 
 **GdprCustomerPhoneNumbers** | **bool?** | Mask your customers phone numbers printed on receipts and reduce the amout of personally identifiable customer information that is exposed. | [optional] 
 **RequireCustomerNameForDelivery** | **bool?** | True if customer name required for delivery orders | [optional] 
-**MicrosoftTimeZone** | **string** | Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391) | [optional] 
-**IanaTimeZone** | **string** | IANA Time Zone (https://www.iana.org/time-zones) | [optional] 
 **EtaInPickupConfirmationSmsEnabled** | **bool?** | True if order confirmation sms includes estimated time when order will be ready for collection | [optional] 
 **EtaInDeliveryConfirmationSmsEnabled** | **bool?** | True if order confirmation sms includes estimated time when order will delivered | [optional] 
 **Name** | **string** | Name | [optional] 

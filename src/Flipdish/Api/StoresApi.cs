@@ -151,7 +151,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>RestApiArrayResultProcessingFeeConfig</returns>
         RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreId (int? storeId, string appNameId = null);
 
@@ -163,7 +163,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultProcessingFeeConfig</returns>
         ApiResponse<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdWithHttpInfo (int? storeId, string appNameId = null);
         /// <summary>
@@ -175,7 +175,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>RestApiResultProcessingFeeConfig</returns>
         RestApiResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIdAndPaymentAccountType (int? storeId, string paymentAccountType, string appNameId = null);
 
@@ -188,7 +188,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>ApiResponse of RestApiResultProcessingFeeConfig</returns>
         ApiResponse<RestApiResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo (int? storeId, string paymentAccountType, string appNameId = null);
         /// <summary>
@@ -346,7 +346,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>RestApiResultCoordinates</returns>
         RestApiResultCoordinates UpdateStoreAddressCoordinates (int? storeId, Coordinates coordinates, string appNameId = null);
 
@@ -359,7 +359,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>ApiResponse of RestApiResultCoordinates</returns>
         ApiResponse<RestApiResultCoordinates> UpdateStoreAddressCoordinatesWithHttpInfo (int? storeId, Coordinates coordinates, string appNameId = null);
         #endregion Synchronous Operations
@@ -491,7 +491,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>Task of RestApiArrayResultProcessingFeeConfig</returns>
         System.Threading.Tasks.Task<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAsync (int? storeId, string appNameId = null);
 
@@ -503,7 +503,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultProcessingFeeConfig)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAsyncWithHttpInfo (int? storeId, string appNameId = null);
         /// <summary>
@@ -515,7 +515,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>Task of RestApiResultProcessingFeeConfig</returns>
         System.Threading.Tasks.Task<RestApiResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsync (int? storeId, string paymentAccountType, string appNameId = null);
 
@@ -528,7 +528,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultProcessingFeeConfig)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo (int? storeId, string paymentAccountType, string appNameId = null);
         /// <summary>
@@ -686,7 +686,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>Task of RestApiResultCoordinates</returns>
         System.Threading.Tasks.Task<RestApiResultCoordinates> UpdateStoreAddressCoordinatesAsync (int? storeId, Coordinates coordinates, string appNameId = null);
 
@@ -699,7 +699,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultCoordinates)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultCoordinates>> UpdateStoreAddressCoordinatesAsyncWithHttpInfo (int? storeId, Coordinates coordinates, string appNameId = null);
         #endregion Asynchronous Operations
@@ -1676,7 +1676,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>RestApiArrayResultProcessingFeeConfig</returns>
         public RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreId (int? storeId, string appNameId = null)
         {
@@ -1689,7 +1689,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultProcessingFeeConfig</returns>
         public ApiResponse< RestApiArrayResultProcessingFeeConfig > GetProcessingFeeConfigsByStoreIdWithHttpInfo (int? storeId, string appNameId = null)
         {
@@ -1754,7 +1754,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>Task of RestApiArrayResultProcessingFeeConfig</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAsync (int? storeId, string appNameId = null)
         {
@@ -1768,7 +1768,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultProcessingFeeConfig)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAsyncWithHttpInfo (int? storeId, string appNameId = null)
         {
@@ -1834,7 +1834,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>RestApiResultProcessingFeeConfig</returns>
         public RestApiResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIdAndPaymentAccountType (int? storeId, string paymentAccountType, string appNameId = null)
         {
@@ -1848,7 +1848,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>ApiResponse of RestApiResultProcessingFeeConfig</returns>
         public ApiResponse< RestApiResultProcessingFeeConfig > GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo (int? storeId, string paymentAccountType, string appNameId = null)
         {
@@ -1918,7 +1918,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>Task of RestApiResultProcessingFeeConfig</returns>
         public async System.Threading.Tasks.Task<RestApiResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsync (int? storeId, string paymentAccountType, string appNameId = null)
         {
@@ -1933,7 +1933,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultProcessingFeeConfig)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo (int? storeId, string paymentAccountType, string appNameId = null)
         {
@@ -3059,7 +3059,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>RestApiResultCoordinates</returns>
         public RestApiResultCoordinates UpdateStoreAddressCoordinates (int? storeId, Coordinates coordinates, string appNameId = null)
         {
@@ -3073,7 +3073,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>ApiResponse of RestApiResultCoordinates</returns>
         public ApiResponse< RestApiResultCoordinates > UpdateStoreAddressCoordinatesWithHttpInfo (int? storeId, Coordinates coordinates, string appNameId = null)
         {
@@ -3155,7 +3155,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>Task of RestApiResultCoordinates</returns>
         public async System.Threading.Tasks.Task<RestApiResultCoordinates> UpdateStoreAddressCoordinatesAsync (int? storeId, Coordinates coordinates, string appNameId = null)
         {
@@ -3170,7 +3170,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id (optional)</param>
+        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultCoordinates)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCoordinates>> UpdateStoreAddressCoordinatesAsyncWithHttpInfo (int? storeId, Coordinates coordinates, string appNameId = null)
         {
