@@ -4,23 +4,84 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteMenuItemMetadata**](MenusApi.md#deletemenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
-[**DeleteMenuItemMetadata_0**](MenusApi.md#deletemenuitemmetadata_0) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
-[**DeleteMenuSectionImage**](MenusApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
+[**DeleteMenuImage**](MenusApi.md#deletemenuimage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
+[**DeleteMenuItemMetadata**](MenusApi.md#deletemenuitemmetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
 [**GetMenuById**](MenusApi.md#getmenubyid) | **GET** /api/v1.0/menus/{menuId} | Get menu by identifier
 [**GetMenuItemMetadata**](MenusApi.md#getmenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get menu item metadata
+[**GetMenuItemMetadata_0**](MenusApi.md#getmenuitemmetadata_0) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
 [**GetMenuItemOptionSetItemMetadata**](MenusApi.md#getmenuitemoptionsetitemmetadata) | **GET** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get menu item option set item metadata by key
 [**SetMenuItemMetadata**](MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update menu item metadata
 [**SetMenuItemOptionSetItemMetadata**](MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update menu item option set item metadata
 [**UpdateMenu**](MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
-[**UploadMenuSectionImage**](MenusApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
+[**UploadMenuImage**](MenusApi.md#uploadmenuimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
 
+
+<a name="deletemenuimage"></a>
+# **DeleteMenuImage**
+> void DeleteMenuImage (int? menuId)
+
+Delete menu image
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class DeleteMenuImageExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+
+            try
+            {
+                // Delete menu image
+                apiInstance.DeleteMenuImage(menuId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.DeleteMenuImage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="deletemenuitemmetadata"></a>
 # **DeleteMenuItemMetadata**
 > void DeleteMenuItemMetadata (int? menuId, int? storeId, int? menuItemId, string key)
 
-Get menu item metadata by key
+Delete menu item metadata
 
 ### Example
 ```csharp
@@ -47,7 +108,7 @@ namespace Example
 
             try
             {
-                // Get menu item metadata by key
+                // Delete menu item metadata
                 apiInstance.DeleteMenuItemMetadata(menuId, storeId, menuItemId, key);
             }
             catch (Exception e)
@@ -67,134 +128,6 @@ Name | Type | Description  | Notes
  **storeId** | **int?**| Store identifier | 
  **menuItemId** | **int?**| Menu item identifier | 
  **key** | **string**| Metadata key | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="deletemenuitemmetadata_0"></a>
-# **DeleteMenuItemMetadata_0**
-> void DeleteMenuItemMetadata_0 (int? menuId, int? storeId, int? menuItemId, string key)
-
-Delete menu item metadata
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class DeleteMenuItemMetadata_0Example
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | Menu identifier
-            var storeId = 56;  // int? | Store identifier
-            var menuItemId = 56;  // int? | Menu item identifier
-            var key = key_example;  // string | Metadata key
-
-            try
-            {
-                // Delete menu item metadata
-                apiInstance.DeleteMenuItemMetadata_0(menuId, storeId, menuItemId, key);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MenusApi.DeleteMenuItemMetadata_0: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **storeId** | **int?**| Store identifier | 
- **menuItemId** | **int?**| Menu item identifier | 
- **key** | **string**| Metadata key | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="deletemenusectionimage"></a>
-# **DeleteMenuSectionImage**
-> void DeleteMenuSectionImage (int? menuId)
-
-Delete menu image
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class DeleteMenuSectionImageExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | Menu identifier
-
-            try
-            {
-                // Delete menu image
-                apiInstance.DeleteMenuSectionImage(menuId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MenusApi.DeleteMenuSectionImage: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
 
 ### Return type
 
@@ -327,6 +260,73 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiArrayResultMetadata**](RestApiArrayResultMetadata.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getmenuitemmetadata_0"></a>
+# **GetMenuItemMetadata_0**
+> void GetMenuItemMetadata_0 (int? menuId, int? storeId, int? menuItemId, string key)
+
+Get menu item metadata by key
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetMenuItemMetadata_0Example
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var storeId = 56;  // int? | Store identifier
+            var menuItemId = 56;  // int? | Menu item identifier
+            var key = key_example;  // string | Metadata key
+
+            try
+            {
+                // Get menu item metadata by key
+                apiInstance.GetMenuItemMetadata_0(menuId, storeId, menuItemId, key);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.GetMenuItemMetadata_0: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **storeId** | **int?**| Store identifier | 
+ **menuItemId** | **int?**| Menu item identifier | 
+ **key** | **string**| Metadata key | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
@@ -602,9 +602,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uploadmenusectionimage"></a>
-# **UploadMenuSectionImage**
-> RestApiStringResult UploadMenuSectionImage (int? menuId, System.IO.Stream image)
+<a name="uploadmenuimage"></a>
+# **UploadMenuImage**
+> RestApiStringResult UploadMenuImage (int? menuId, System.IO.Stream image)
 
 Upload menu image
 
@@ -618,7 +618,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class UploadMenuSectionImageExample
+    public class UploadMenuImageExample
     {
         public void main()
         {
@@ -632,12 +632,12 @@ namespace Example
             try
             {
                 // Upload menu image
-                RestApiStringResult result = apiInstance.UploadMenuSectionImage(menuId, image);
+                RestApiStringResult result = apiInstance.UploadMenuImage(menuId, image);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MenusApi.UploadMenuSectionImage: " + e.Message );
+                Debug.Print("Exception when calling MenusApi.UploadMenuImage: " + e.Message );
             }
         }
     }

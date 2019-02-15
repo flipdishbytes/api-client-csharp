@@ -129,18 +129,6 @@ namespace Flipdish.Test
         }
         
         /// <summary>
-        /// Test RedeemInvitation_0
-        /// </summary>
-        [Test]
-        public void RedeemInvitation_0Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string otc = null;
-            //var response = instance.RedeemInvitation_0(otc);
-            //Assert.IsInstanceOf<RestApiResultRedeemInvitationResult> (response, "response is RestApiResultRedeemInvitationResult");
-        }
-        
-        /// <summary>
         /// Test UpdateTeammate
         /// </summary>
         [Test]

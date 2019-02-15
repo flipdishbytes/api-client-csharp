@@ -164,23 +164,23 @@ Class | Method | HTTP request | Description
 *MenuSectionsApi* | [**CloneMenuSection**](docs/MenuSectionsApi.md#clonemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/clone | Clone menu section
 *MenuSectionsApi* | [**CreateMenuAvailabilityForDay**](docs/MenuSectionsApi.md#createmenuavailabilityforday) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability/times/{dayOfWeek} | Create menu section
 *MenuSectionsApi* | [**CreateMenuSection**](docs/MenuSectionsApi.md#createmenusection) | **POST** /api/v1.0/menus/{menuId}/sections | Create menu section
-*MenuSectionsApi* | [**CreateMenuSection_0**](docs/MenuSectionsApi.md#createmenusection_0) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability | Create menu section
+*MenuSectionsApi* | [**CreateMenuSectionAvailability**](docs/MenuSectionsApi.md#createmenusectionavailability) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability | Create menu section
 *MenuSectionsApi* | [**DeleteMenuSection**](docs/MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Delete menu section
 *MenuSectionsApi* | [**DeleteMenuSectionImage**](docs/MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
 *MenuSectionsApi* | [**GetMenuSectionById**](docs/MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
 *MenuSectionsApi* | [**GetMenuSections**](docs/MenuSectionsApi.md#getmenusections) | **GET** /api/v1.0/menus/{menuId}/sections | Get menu sections
 *MenuSectionsApi* | [**UpdateMenuSection**](docs/MenuSectionsApi.md#updatemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Update menu section
 *MenuSectionsApi* | [**UploadMenuSectionImage**](docs/MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
-*MenusApi* | [**DeleteMenuItemMetadata**](docs/MenusApi.md#deletemenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
-*MenusApi* | [**DeleteMenuItemMetadata_0**](docs/MenusApi.md#deletemenuitemmetadata_0) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
-*MenusApi* | [**DeleteMenuSectionImage**](docs/MenusApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
+*MenusApi* | [**DeleteMenuImage**](docs/MenusApi.md#deletemenuimage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
+*MenusApi* | [**DeleteMenuItemMetadata**](docs/MenusApi.md#deletemenuitemmetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
 *MenusApi* | [**GetMenuById**](docs/MenusApi.md#getmenubyid) | **GET** /api/v1.0/menus/{menuId} | Get menu by identifier
 *MenusApi* | [**GetMenuItemMetadata**](docs/MenusApi.md#getmenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get menu item metadata
+*MenusApi* | [**GetMenuItemMetadata_0**](docs/MenusApi.md#getmenuitemmetadata_0) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
 *MenusApi* | [**GetMenuItemOptionSetItemMetadata**](docs/MenusApi.md#getmenuitemoptionsetitemmetadata) | **GET** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get menu item option set item metadata by key
 *MenusApi* | [**SetMenuItemMetadata**](docs/MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update menu item metadata
 *MenusApi* | [**SetMenuItemOptionSetItemMetadata**](docs/MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update menu item option set item metadata
 *MenusApi* | [**UpdateMenu**](docs/MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
-*MenusApi* | [**UploadMenuSectionImage**](docs/MenusApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
+*MenusApi* | [**UploadMenuImage**](docs/MenusApi.md#uploadmenuimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
 *OAuthClientsApi* | [**AddRedirectUri**](docs/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis | Create OAuth client redirect uri
 *OAuthClientsApi* | [**CreateOAuthClient**](docs/OAuthClientsApi.md#createoauthclient) | **POST** /api/v1.0/oauthclients | Create OAuth client
 *OAuthClientsApi* | [**DeleteOAuthClient**](docs/OAuthClientsApi.md#deleteoauthclient) | **DELETE** /api/v1.0/oauthclients/{oAuthClientId} | Delete OAuth client
@@ -234,7 +234,6 @@ Class | Method | HTTP request | Description
 *TeammatesApi* | [**GetTeammateByAppIdAndTeammateId**](docs/TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | Get a teammates by email address
 *TeammatesApi* | [**GetTeammatesByAppId**](docs/TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
 *TeammatesApi* | [**RedeemInvitation**](docs/TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
-*TeammatesApi* | [**RedeemInvitation_0**](docs/TeammatesApi.md#redeeminvitation_0) | **GET** /api/v1.0/teammates/redeeminvitation/{otc} | 
 *TeammatesApi* | [**UpdateTeammate**](docs/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | Update teammates (this method does not support Deltas!)
 *UsersApi* | [**GetRoles**](docs/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | Get role names
 *VouchersApi* | [**GetVoucherById**](docs/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Get voucher by identifier

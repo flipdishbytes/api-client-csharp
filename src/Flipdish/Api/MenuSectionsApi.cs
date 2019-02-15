@@ -108,7 +108,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionAvailability"></param>
         /// <returns>Object</returns>
-        Object CreateMenuSection_0 (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
+        Object CreateMenuSectionAvailability (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
 
         /// <summary>
         /// Create menu section
@@ -121,7 +121,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionAvailability"></param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> CreateMenuSection_0WithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
+        ApiResponse<Object> CreateMenuSectionAvailabilityWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
         /// <summary>
         /// Delete menu section
         /// </summary>
@@ -350,7 +350,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionAvailability"></param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> CreateMenuSection_0Async (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
+        System.Threading.Tasks.Task<Object> CreateMenuSectionAvailabilityAsync (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
 
         /// <summary>
         /// Create menu section
@@ -363,7 +363,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionAvailability"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSection_0AsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSectionAvailabilityAsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
         /// <summary>
         /// Delete menu section
         /// </summary>
@@ -1175,9 +1175,9 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionAvailability"></param>
         /// <returns>Object</returns>
-        public Object CreateMenuSection_0 (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
+        public Object CreateMenuSectionAvailability (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
         {
-             ApiResponse<Object> localVarResponse = CreateMenuSection_0WithHttpInfo(menuId, menuSectionId, menuSectionAvailability);
+             ApiResponse<Object> localVarResponse = CreateMenuSectionAvailabilityWithHttpInfo(menuId, menuSectionId, menuSectionAvailability);
              return localVarResponse.Data;
         }
 
@@ -1189,17 +1189,17 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionAvailability"></param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > CreateMenuSection_0WithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
+        public ApiResponse< Object > CreateMenuSectionAvailabilityWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuSectionsApi->CreateMenuSection_0");
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuSectionsApi->CreateMenuSectionAvailability");
             // verify the required parameter 'menuSectionId' is set
             if (menuSectionId == null)
-                throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->CreateMenuSection_0");
+                throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->CreateMenuSectionAvailability");
             // verify the required parameter 'menuSectionAvailability' is set
             if (menuSectionAvailability == null)
-                throw new ApiException(400, "Missing required parameter 'menuSectionAvailability' when calling MenuSectionsApi->CreateMenuSection_0");
+                throw new ApiException(400, "Missing required parameter 'menuSectionAvailability' when calling MenuSectionsApi->CreateMenuSectionAvailability");
 
             var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1257,7 +1257,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CreateMenuSection_0", localVarResponse);
+                Exception exception = ExceptionFactory("CreateMenuSectionAvailability", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1274,9 +1274,9 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionAvailability"></param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> CreateMenuSection_0Async (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
+        public async System.Threading.Tasks.Task<Object> CreateMenuSectionAvailabilityAsync (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
         {
-             ApiResponse<Object> localVarResponse = await CreateMenuSection_0AsyncWithHttpInfo(menuId, menuSectionId, menuSectionAvailability);
+             ApiResponse<Object> localVarResponse = await CreateMenuSectionAvailabilityAsyncWithHttpInfo(menuId, menuSectionId, menuSectionAvailability);
              return localVarResponse.Data;
 
         }
@@ -1289,17 +1289,17 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionAvailability"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSection_0AsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSectionAvailabilityAsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuSectionsApi->CreateMenuSection_0");
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuSectionsApi->CreateMenuSectionAvailability");
             // verify the required parameter 'menuSectionId' is set
             if (menuSectionId == null)
-                throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->CreateMenuSection_0");
+                throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionsApi->CreateMenuSectionAvailability");
             // verify the required parameter 'menuSectionAvailability' is set
             if (menuSectionAvailability == null)
-                throw new ApiException(400, "Missing required parameter 'menuSectionAvailability' when calling MenuSectionsApi->CreateMenuSection_0");
+                throw new ApiException(400, "Missing required parameter 'menuSectionAvailability' when calling MenuSectionsApi->CreateMenuSectionAvailability");
 
             var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1357,7 +1357,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CreateMenuSection_0", localVarResponse);
+                Exception exception = ExceptionFactory("CreateMenuSectionAvailability", localVarResponse);
                 if (exception != null) throw exception;
             }
 

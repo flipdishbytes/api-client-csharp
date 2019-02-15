@@ -106,16 +106,16 @@ namespace Flipdish.Test
         }
         
         /// <summary>
-        /// Test CreateMenuSection_0
+        /// Test CreateMenuSectionAvailability
         /// </summary>
         [Test]
-        public void CreateMenuSection_0Test()
+        public void CreateMenuSectionAvailabilityTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? menuId = null;
             //int? menuSectionId = null;
             //MenuSectionAvailabilityBase menuSectionAvailability = null;
-            //var response = instance.CreateMenuSection_0(menuId, menuSectionId, menuSectionAvailability);
+            //var response = instance.CreateMenuSectionAvailability(menuId, menuSectionId, menuSectionAvailability);
             //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         

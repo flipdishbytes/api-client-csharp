@@ -25,7 +25,28 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get menu item metadata by key
+        /// Delete menu image
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns></returns>
+        void DeleteMenuImage (int? menuId);
+
+        /// <summary>
+        /// Delete menu image
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteMenuImageWithHttpInfo (int? menuId);
+        /// <summary>
+        /// Delete menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -39,7 +60,7 @@ namespace Flipdish.Api
         void DeleteMenuItemMetadata (int? menuId, int? storeId, int? menuItemId, string key);
 
         /// <summary>
-        /// Get menu item metadata by key
+        /// Delete menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -51,54 +72,6 @@ namespace Flipdish.Api
         /// <param name="key">Metadata key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteMenuItemMetadataWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
-        /// <summary>
-        /// Delete menu item metadata
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuItemId">Menu item identifier</param>
-        /// <param name="key">Metadata key</param>
-        /// <returns></returns>
-        void DeleteMenuItemMetadata_0 (int? menuId, int? storeId, int? menuItemId, string key);
-
-        /// <summary>
-        /// Delete menu item metadata
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuItemId">Menu item identifier</param>
-        /// <param name="key">Metadata key</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteMenuItemMetadata_0WithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
-        /// <summary>
-        /// Delete menu image
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <returns></returns>
-        void DeleteMenuSectionImage (int? menuId);
-
-        /// <summary>
-        /// Delete menu image
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteMenuSectionImageWithHttpInfo (int? menuId);
         /// <summary>
         /// Get menu by identifier
         /// </summary>
@@ -145,6 +118,33 @@ namespace Flipdish.Api
         /// <param name="menuItemId">Menu item identifier</param>
         /// <returns>ApiResponse of RestApiArrayResultMetadata</returns>
         ApiResponse<RestApiArrayResultMetadata> GetMenuItemMetadataWithHttpInfo (int? menuId, int? storeId, int? menuItemId);
+        /// <summary>
+        /// Get menu item metadata by key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="menuItemId">Menu item identifier</param>
+        /// <param name="key">Metadata key</param>
+        /// <returns></returns>
+        void GetMenuItemMetadata_0 (int? menuId, int? storeId, int? menuItemId, string key);
+
+        /// <summary>
+        /// Get menu item metadata by key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="menuItemId">Menu item identifier</param>
+        /// <param name="key">Metadata key</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetMenuItemMetadata_0WithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
         /// <summary>
         /// Get menu item option set item metadata by key
         /// </summary>
@@ -257,7 +257,7 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="image">Menu image</param>
         /// <returns>RestApiStringResult</returns>
-        RestApiStringResult UploadMenuSectionImage (int? menuId, System.IO.Stream image);
+        RestApiStringResult UploadMenuImage (int? menuId, System.IO.Stream image);
 
         /// <summary>
         /// Upload menu image
@@ -269,11 +269,32 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="image">Menu image</param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
-        ApiResponse<RestApiStringResult> UploadMenuSectionImageWithHttpInfo (int? menuId, System.IO.Stream image);
+        ApiResponse<RestApiStringResult> UploadMenuImageWithHttpInfo (int? menuId, System.IO.Stream image);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get menu item metadata by key
+        /// Delete menu image
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteMenuImageAsync (int? menuId);
+
+        /// <summary>
+        /// Delete menu image
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuImageAsyncWithHttpInfo (int? menuId);
+        /// <summary>
+        /// Delete menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -287,7 +308,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task DeleteMenuItemMetadataAsync (int? menuId, int? storeId, int? menuItemId, string key);
 
         /// <summary>
-        /// Get menu item metadata by key
+        /// Delete menu item metadata
         /// </summary>
         /// <remarks>
         /// 
@@ -299,54 +320,6 @@ namespace Flipdish.Api
         /// <param name="key">Metadata key</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuItemMetadataAsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
-        /// <summary>
-        /// Delete menu item metadata
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuItemId">Menu item identifier</param>
-        /// <param name="key">Metadata key</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteMenuItemMetadata_0Async (int? menuId, int? storeId, int? menuItemId, string key);
-
-        /// <summary>
-        /// Delete menu item metadata
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuItemId">Menu item identifier</param>
-        /// <param name="key">Metadata key</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuItemMetadata_0AsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
-        /// <summary>
-        /// Delete menu image
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteMenuSectionImageAsync (int? menuId);
-
-        /// <summary>
-        /// Delete menu image
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuSectionImageAsyncWithHttpInfo (int? menuId);
         /// <summary>
         /// Get menu by identifier
         /// </summary>
@@ -393,6 +366,33 @@ namespace Flipdish.Api
         /// <param name="menuItemId">Menu item identifier</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultMetadata)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMetadata>> GetMenuItemMetadataAsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId);
+        /// <summary>
+        /// Get menu item metadata by key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="menuItemId">Menu item identifier</param>
+        /// <param name="key">Metadata key</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetMenuItemMetadata_0Async (int? menuId, int? storeId, int? menuItemId, string key);
+
+        /// <summary>
+        /// Get menu item metadata by key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="menuItemId">Menu item identifier</param>
+        /// <param name="key">Metadata key</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetMenuItemMetadata_0AsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
         /// <summary>
         /// Get menu item option set item metadata by key
         /// </summary>
@@ -505,7 +505,7 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="image">Menu image</param>
         /// <returns>Task of RestApiStringResult</returns>
-        System.Threading.Tasks.Task<RestApiStringResult> UploadMenuSectionImageAsync (int? menuId, System.IO.Stream image);
+        System.Threading.Tasks.Task<RestApiStringResult> UploadMenuImageAsync (int? menuId, System.IO.Stream image);
 
         /// <summary>
         /// Upload menu image
@@ -517,7 +517,7 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="image">Menu image</param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> UploadMenuSectionImageAsyncWithHttpInfo (int? menuId, System.IO.Stream image);
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> UploadMenuImageAsyncWithHttpInfo (int? menuId, System.IO.Stream image);
         #endregion Asynchronous Operations
     }
 
@@ -619,7 +619,156 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get menu item metadata by key 
+        /// Delete menu image 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns></returns>
+        public void DeleteMenuImage (int? menuId)
+        {
+             DeleteMenuImageWithHttpInfo(menuId);
+        }
+
+        /// <summary>
+        /// Delete menu image 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteMenuImageWithHttpInfo (int? menuId)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->DeleteMenuImage");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/image";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteMenuImage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Delete menu image 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteMenuImageAsync (int? menuId)
+        {
+             await DeleteMenuImageAsyncWithHttpInfo(menuId);
+
+        }
+
+        /// <summary>
+        /// Delete menu image 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuImageAsyncWithHttpInfo (int? menuId)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->DeleteMenuImage");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/image";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteMenuImage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Delete menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -633,7 +782,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get menu item metadata by key 
+        /// Delete menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -694,7 +843,7 @@ namespace Flipdish.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -711,7 +860,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get menu item metadata by key 
+        /// Delete menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -726,7 +875,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get menu item metadata by key 
+        /// Delete menu item metadata 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -787,7 +936,7 @@ namespace Flipdish.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -795,340 +944,6 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("DeleteMenuItemMetadata", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Delete menu item metadata 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuItemId">Menu item identifier</param>
-        /// <param name="key">Metadata key</param>
-        /// <returns></returns>
-        public void DeleteMenuItemMetadata_0 (int? menuId, int? storeId, int? menuItemId, string key)
-        {
-             DeleteMenuItemMetadata_0WithHttpInfo(menuId, storeId, menuItemId, key);
-        }
-
-        /// <summary>
-        /// Delete menu item metadata 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuItemId">Menu item identifier</param>
-        /// <param name="key">Metadata key</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteMenuItemMetadata_0WithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key)
-        {
-            // verify the required parameter 'menuId' is set
-            if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->DeleteMenuItemMetadata_0");
-            // verify the required parameter 'storeId' is set
-            if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling MenusApi->DeleteMenuItemMetadata_0");
-            // verify the required parameter 'menuItemId' is set
-            if (menuItemId == null)
-                throw new ApiException(400, "Missing required parameter 'menuItemId' when calling MenusApi->DeleteMenuItemMetadata_0");
-            // verify the required parameter 'key' is set
-            if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling MenusApi->DeleteMenuItemMetadata_0");
-
-            var localVarPath = "/api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
-            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
-            if (menuItemId != null) localVarPathParams.Add("menuItemId", this.Configuration.ApiClient.ParameterToString(menuItemId)); // path parameter
-            if (key != null) localVarPathParams.Add("key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("DeleteMenuItemMetadata_0", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Delete menu item metadata 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuItemId">Menu item identifier</param>
-        /// <param name="key">Metadata key</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteMenuItemMetadata_0Async (int? menuId, int? storeId, int? menuItemId, string key)
-        {
-             await DeleteMenuItemMetadata_0AsyncWithHttpInfo(menuId, storeId, menuItemId, key);
-
-        }
-
-        /// <summary>
-        /// Delete menu item metadata 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuItemId">Menu item identifier</param>
-        /// <param name="key">Metadata key</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuItemMetadata_0AsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key)
-        {
-            // verify the required parameter 'menuId' is set
-            if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->DeleteMenuItemMetadata_0");
-            // verify the required parameter 'storeId' is set
-            if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling MenusApi->DeleteMenuItemMetadata_0");
-            // verify the required parameter 'menuItemId' is set
-            if (menuItemId == null)
-                throw new ApiException(400, "Missing required parameter 'menuItemId' when calling MenusApi->DeleteMenuItemMetadata_0");
-            // verify the required parameter 'key' is set
-            if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling MenusApi->DeleteMenuItemMetadata_0");
-
-            var localVarPath = "/api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
-            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
-            if (menuItemId != null) localVarPathParams.Add("menuItemId", this.Configuration.ApiClient.ParameterToString(menuItemId)); // path parameter
-            if (key != null) localVarPathParams.Add("key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("DeleteMenuItemMetadata_0", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Delete menu image 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <returns></returns>
-        public void DeleteMenuSectionImage (int? menuId)
-        {
-             DeleteMenuSectionImageWithHttpInfo(menuId);
-        }
-
-        /// <summary>
-        /// Delete menu image 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteMenuSectionImageWithHttpInfo (int? menuId)
-        {
-            // verify the required parameter 'menuId' is set
-            if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->DeleteMenuSectionImage");
-
-            var localVarPath = "/api/v1.0/menus/{menuId}/image";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("DeleteMenuSectionImage", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Delete menu image 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteMenuSectionImageAsync (int? menuId)
-        {
-             await DeleteMenuSectionImageAsyncWithHttpInfo(menuId);
-
-        }
-
-        /// <summary>
-        /// Delete menu image 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuSectionImageAsyncWithHttpInfo (int? menuId)
-        {
-            // verify the required parameter 'menuId' is set
-            if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->DeleteMenuSectionImage");
-
-            var localVarPath = "/api/v1.0/menus/{menuId}/image";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("DeleteMenuSectionImage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1461,6 +1276,191 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiArrayResultMetadata>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiArrayResultMetadata) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMetadata)));
+        }
+
+        /// <summary>
+        /// Get menu item metadata by key 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="menuItemId">Menu item identifier</param>
+        /// <param name="key">Metadata key</param>
+        /// <returns></returns>
+        public void GetMenuItemMetadata_0 (int? menuId, int? storeId, int? menuItemId, string key)
+        {
+             GetMenuItemMetadata_0WithHttpInfo(menuId, storeId, menuItemId, key);
+        }
+
+        /// <summary>
+        /// Get menu item metadata by key 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="menuItemId">Menu item identifier</param>
+        /// <param name="key">Metadata key</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetMenuItemMetadata_0WithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->GetMenuItemMetadata_0");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling MenusApi->GetMenuItemMetadata_0");
+            // verify the required parameter 'menuItemId' is set
+            if (menuItemId == null)
+                throw new ApiException(400, "Missing required parameter 'menuItemId' when calling MenusApi->GetMenuItemMetadata_0");
+            // verify the required parameter 'key' is set
+            if (key == null)
+                throw new ApiException(400, "Missing required parameter 'key' when calling MenusApi->GetMenuItemMetadata_0");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (menuItemId != null) localVarPathParams.Add("menuItemId", this.Configuration.ApiClient.ParameterToString(menuItemId)); // path parameter
+            if (key != null) localVarPathParams.Add("key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetMenuItemMetadata_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Get menu item metadata by key 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="menuItemId">Menu item identifier</param>
+        /// <param name="key">Metadata key</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetMenuItemMetadata_0Async (int? menuId, int? storeId, int? menuItemId, string key)
+        {
+             await GetMenuItemMetadata_0AsyncWithHttpInfo(menuId, storeId, menuItemId, key);
+
+        }
+
+        /// <summary>
+        /// Get menu item metadata by key 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="menuItemId">Menu item identifier</param>
+        /// <param name="key">Metadata key</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetMenuItemMetadata_0AsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->GetMenuItemMetadata_0");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling MenusApi->GetMenuItemMetadata_0");
+            // verify the required parameter 'menuItemId' is set
+            if (menuItemId == null)
+                throw new ApiException(400, "Missing required parameter 'menuItemId' when calling MenusApi->GetMenuItemMetadata_0");
+            // verify the required parameter 'key' is set
+            if (key == null)
+                throw new ApiException(400, "Missing required parameter 'key' when calling MenusApi->GetMenuItemMetadata_0");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (menuItemId != null) localVarPathParams.Add("menuItemId", this.Configuration.ApiClient.ParameterToString(menuItemId)); // path parameter
+            if (key != null) localVarPathParams.Add("key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetMenuItemMetadata_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
@@ -2248,9 +2248,9 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="image">Menu image</param>
         /// <returns>RestApiStringResult</returns>
-        public RestApiStringResult UploadMenuSectionImage (int? menuId, System.IO.Stream image)
+        public RestApiStringResult UploadMenuImage (int? menuId, System.IO.Stream image)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = UploadMenuSectionImageWithHttpInfo(menuId, image);
+             ApiResponse<RestApiStringResult> localVarResponse = UploadMenuImageWithHttpInfo(menuId, image);
              return localVarResponse.Data;
         }
 
@@ -2261,14 +2261,14 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="image">Menu image</param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
-        public ApiResponse< RestApiStringResult > UploadMenuSectionImageWithHttpInfo (int? menuId, System.IO.Stream image)
+        public ApiResponse< RestApiStringResult > UploadMenuImageWithHttpInfo (int? menuId, System.IO.Stream image)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->UploadMenuSectionImage");
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->UploadMenuImage");
             // verify the required parameter 'image' is set
             if (image == null)
-                throw new ApiException(400, "Missing required parameter 'image' when calling MenusApi->UploadMenuSectionImage");
+                throw new ApiException(400, "Missing required parameter 'image' when calling MenusApi->UploadMenuImage");
 
             var localVarPath = "/api/v1.0/menus/{menuId}/image";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2314,7 +2314,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UploadMenuSectionImage", localVarResponse);
+                Exception exception = ExceptionFactory("UploadMenuImage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2330,9 +2330,9 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="image">Menu image</param>
         /// <returns>Task of RestApiStringResult</returns>
-        public async System.Threading.Tasks.Task<RestApiStringResult> UploadMenuSectionImageAsync (int? menuId, System.IO.Stream image)
+        public async System.Threading.Tasks.Task<RestApiStringResult> UploadMenuImageAsync (int? menuId, System.IO.Stream image)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = await UploadMenuSectionImageAsyncWithHttpInfo(menuId, image);
+             ApiResponse<RestApiStringResult> localVarResponse = await UploadMenuImageAsyncWithHttpInfo(menuId, image);
              return localVarResponse.Data;
 
         }
@@ -2344,14 +2344,14 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <param name="image">Menu image</param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> UploadMenuSectionImageAsyncWithHttpInfo (int? menuId, System.IO.Stream image)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> UploadMenuImageAsyncWithHttpInfo (int? menuId, System.IO.Stream image)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->UploadMenuSectionImage");
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->UploadMenuImage");
             // verify the required parameter 'image' is set
             if (image == null)
-                throw new ApiException(400, "Missing required parameter 'image' when calling MenusApi->UploadMenuSectionImage");
+                throw new ApiException(400, "Missing required parameter 'image' when calling MenusApi->UploadMenuImage");
 
             var localVarPath = "/api/v1.0/menus/{menuId}/image";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2397,7 +2397,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UploadMenuSectionImage", localVarResponse);
+                Exception exception = ExceptionFactory("UploadMenuImage", localVarResponse);
                 if (exception != null) throw exception;
             }
 

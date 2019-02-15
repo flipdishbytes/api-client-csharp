@@ -65,6 +65,18 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test DeleteMenuImage
+        /// </summary>
+        [Test]
+        public void DeleteMenuImageTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //instance.DeleteMenuImage(menuId);
+            
+        }
+        
+        /// <summary>
         /// Test DeleteMenuItemMetadata
         /// </summary>
         [Test]
@@ -76,33 +88,6 @@ namespace Flipdish.Test
             //int? menuItemId = null;
             //string key = null;
             //instance.DeleteMenuItemMetadata(menuId, storeId, menuItemId, key);
-            
-        }
-        
-        /// <summary>
-        /// Test DeleteMenuItemMetadata_0
-        /// </summary>
-        [Test]
-        public void DeleteMenuItemMetadata_0Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? menuId = null;
-            //int? storeId = null;
-            //int? menuItemId = null;
-            //string key = null;
-            //instance.DeleteMenuItemMetadata_0(menuId, storeId, menuItemId, key);
-            
-        }
-        
-        /// <summary>
-        /// Test DeleteMenuSectionImage
-        /// </summary>
-        [Test]
-        public void DeleteMenuSectionImageTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? menuId = null;
-            //instance.DeleteMenuSectionImage(menuId);
             
         }
         
@@ -130,6 +115,21 @@ namespace Flipdish.Test
             //int? menuItemId = null;
             //var response = instance.GetMenuItemMetadata(menuId, storeId, menuItemId);
             //Assert.IsInstanceOf<RestApiArrayResultMetadata> (response, "response is RestApiArrayResultMetadata");
+        }
+        
+        /// <summary>
+        /// Test GetMenuItemMetadata_0
+        /// </summary>
+        [Test]
+        public void GetMenuItemMetadata_0Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //int? storeId = null;
+            //int? menuItemId = null;
+            //string key = null;
+            //instance.GetMenuItemMetadata_0(menuId, storeId, menuItemId, key);
+            
         }
         
         /// <summary>
@@ -190,15 +190,15 @@ namespace Flipdish.Test
         }
         
         /// <summary>
-        /// Test UploadMenuSectionImage
+        /// Test UploadMenuImage
         /// </summary>
         [Test]
-        public void UploadMenuSectionImageTest()
+        public void UploadMenuImageTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? menuId = null;
             //System.IO.Stream image = null;
-            //var response = instance.UploadMenuSectionImage(menuId, image);
+            //var response = instance.UploadMenuImage(menuId, image);
             //Assert.IsInstanceOf<RestApiStringResult> (response, "response is RestApiStringResult");
         }
         

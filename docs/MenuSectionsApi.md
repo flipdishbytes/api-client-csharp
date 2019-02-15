@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**CloneMenuSection**](MenuSectionsApi.md#clonemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/clone | Clone menu section
 [**CreateMenuAvailabilityForDay**](MenuSectionsApi.md#createmenuavailabilityforday) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability/times/{dayOfWeek} | Create menu section
 [**CreateMenuSection**](MenuSectionsApi.md#createmenusection) | **POST** /api/v1.0/menus/{menuId}/sections | Create menu section
-[**CreateMenuSection_0**](MenuSectionsApi.md#createmenusection_0) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability | Create menu section
+[**CreateMenuSectionAvailability**](MenuSectionsApi.md#createmenusectionavailability) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability | Create menu section
 [**DeleteMenuSection**](MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Delete menu section
 [**DeleteMenuSectionImage**](MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
 [**GetMenuSectionById**](MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
@@ -212,9 +212,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createmenusection_0"></a>
-# **CreateMenuSection_0**
-> Object CreateMenuSection_0 (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
+<a name="createmenusectionavailability"></a>
+# **CreateMenuSectionAvailability**
+> Object CreateMenuSectionAvailability (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
 
 Create menu section
 
@@ -228,7 +228,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class CreateMenuSection_0Example
+    public class CreateMenuSectionAvailabilityExample
     {
         public void main()
         {
@@ -243,12 +243,12 @@ namespace Example
             try
             {
                 // Create menu section
-                Object result = apiInstance.CreateMenuSection_0(menuId, menuSectionId, menuSectionAvailability);
+                Object result = apiInstance.CreateMenuSectionAvailability(menuId, menuSectionId, menuSectionAvailability);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MenuSectionsApi.CreateMenuSection_0: " + e.Message );
+                Debug.Print("Exception when calling MenuSectionsApi.CreateMenuSectionAvailability: " + e.Message );
             }
         }
     }
