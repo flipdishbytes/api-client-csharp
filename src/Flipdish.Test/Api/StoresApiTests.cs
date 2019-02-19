@@ -65,6 +65,19 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test CloneStore
+        /// </summary>
+        [Test]
+        public void CloneStoreTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //StoreCloneSettings settings = null;
+            //var response = instance.CloneStore(storeId, settings);
+            //Assert.IsInstanceOf<RestApiResultStore> (response, "response is RestApiResultStore");
+        }
+        
+        /// <summary>
         /// Test CreateBusinessHoursOverrideByStoreId
         /// </summary>
         [Test]

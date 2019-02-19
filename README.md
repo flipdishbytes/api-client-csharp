@@ -202,6 +202,7 @@ Class | Method | HTTP request | Description
 *StoreGroupsApi* | [**GetStoreGroups**](docs/StoreGroupsApi.md#getstoregroups) | **GET** /api/v1.0/{appNameId}/storegroups | Returns a paginated list of Store Groups
 *StoreGroupsApi* | [**RemoveStoreGroup**](docs/StoreGroupsApi.md#removestoregroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
 *StoreGroupsApi* | [**UpdateStoreGroup**](docs/StoreGroupsApi.md#updatestoregroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | Updates Store Group
+*StoresApi* | [**CloneStore**](docs/StoresApi.md#clonestore) | **POST** /api/v1.0/stores/{storeId}/clone | Clone store with store clone settings
 *StoresApi* | [**CreateBusinessHoursOverrideByStoreId**](docs/StoresApi.md#createbusinesshoursoverridebystoreid) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | Create Business Hours Override for a store
 *StoresApi* | [**CreateStore**](docs/StoresApi.md#createstore) | **POST** /api/v1.0/stores | Create store with Store Group identifier
 *StoresApi* | [**DeleteBusinessHoursOverride**](docs/StoresApi.md#deletebusinesshoursoverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | Delete Business Hours Override for a store
@@ -454,6 +455,7 @@ Class | Method | HTTP request | Description
  - [Model.StoreBase](docs/StoreBase.md)
  - [Model.StoreBusinessHoursOverrideCreatedEvent](docs/StoreBusinessHoursOverrideCreatedEvent.md)
  - [Model.StoreBusinessHoursOverrideDeletedEvent](docs/StoreBusinessHoursOverrideDeletedEvent.md)
+ - [Model.StoreCloneSettings](docs/StoreCloneSettings.md)
  - [Model.StoreCreateBase](docs/StoreCreateBase.md)
  - [Model.StoreCreatedEvent](docs/StoreCreatedEvent.md)
  - [Model.StoreDeletedEvent](docs/StoreDeletedEvent.md)
