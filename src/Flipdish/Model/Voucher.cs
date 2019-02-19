@@ -60,7 +60,13 @@ namespace Flipdish.Model
             /// Enum Used for value: Used
             /// </summary>
             [EnumMember(Value = "Used")]
-            Used = 4
+            Used = 4,
+            
+            /// <summary>
+            /// Enum Disabled for value: Disabled
+            /// </summary>
+            [EnumMember(Value = "Disabled")]
+            Disabled = 5
         }
 
         /// <summary>
