@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 <a name="getvouchers"></a>
 # **GetVouchers**
-> RestApiPaginationResultVoucherSummary GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null, bool? isEnabled = null)
+> RestApiPaginationResultVoucherSummary GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null)
 
 [PRIVATE API] Get vouchers summaries for App Id
 
@@ -170,12 +170,11 @@ namespace Example
             var typeSearch = typeSearch_example;  // List<string> | Search by Type (optional) 
             var subTypeSearch = subTypeSearch_example;  // List<string> | Search by Sub Type (optional) 
             var storeIds = new List<int?>(); // List<int?> | Search by Store Ids (optional) 
-            var isEnabled = true;  // bool? | Is enabled (optional) 
 
             try
             {
                 // [PRIVATE API] Get vouchers summaries for App Id
-                RestApiPaginationResultVoucherSummary result = apiInstance.GetVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, isEnabled);
+                RestApiPaginationResultVoucherSummary result = apiInstance.GetVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -199,7 +198,6 @@ Name | Type | Description  | Notes
  **typeSearch** | **List&lt;string&gt;**| Search by Type | [optional] 
  **subTypeSearch** | **List&lt;string&gt;**| Search by Sub Type | [optional] 
  **storeIds** | [**List&lt;int?&gt;**](int?.md)| Search by Store Ids | [optional] 
- **isEnabled** | **bool?**| Is enabled | [optional] 
 
 ### Return type
 

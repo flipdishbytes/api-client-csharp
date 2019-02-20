@@ -105,8 +105,7 @@ namespace Flipdish.Test
             //List<string> typeSearch = null;
             //List<string> subTypeSearch = null;
             //List<int?> storeIds = null;
-            //bool? isEnabled = null;
-            //var response = instance.GetVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, isEnabled);
+            //var response = instance.GetVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds);
             //Assert.IsInstanceOf<RestApiPaginationResultVoucherSummary> (response, "response is RestApiPaginationResultVoucherSummary");
         }
         
