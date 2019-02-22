@@ -118,17 +118,17 @@ namespace Flipdish.Test
         }
         
         /// <summary>
-        /// Test GetMenuItemMetadata_0
+        /// Test GetMenuItemMetadataByKey
         /// </summary>
         [Test]
-        public void GetMenuItemMetadata_0Test()
+        public void GetMenuItemMetadataByKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? menuId = null;
             //int? storeId = null;
             //int? menuItemId = null;
             //string key = null;
-            //instance.GetMenuItemMetadata_0(menuId, storeId, menuItemId, key);
+            //instance.GetMenuItemMetadataByKey(menuId, storeId, menuItemId, key);
             
         }
         

@@ -175,7 +175,7 @@ Class | Method | HTTP request | Description
 *MenusApi* | [**DeleteMenuItemMetadata**](docs/MenusApi.md#deletemenuitemmetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
 *MenusApi* | [**GetMenuById**](docs/MenusApi.md#getmenubyid) | **GET** /api/v1.0/menus/{menuId} | Get menu by identifier
 *MenusApi* | [**GetMenuItemMetadata**](docs/MenusApi.md#getmenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get menu item metadata
-*MenusApi* | [**GetMenuItemMetadata_0**](docs/MenusApi.md#getmenuitemmetadata_0) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
+*MenusApi* | [**GetMenuItemMetadataByKey**](docs/MenusApi.md#getmenuitemmetadatabykey) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
 *MenusApi* | [**GetMenuItemOptionSetItemMetadata**](docs/MenusApi.md#getmenuitemoptionsetitemmetadata) | **GET** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get menu item option set item metadata by key
 *MenusApi* | [**SetMenuItemMetadata**](docs/MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update menu item metadata
 *MenusApi* | [**SetMenuItemOptionSetItemMetadata**](docs/MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update menu item option set item metadata

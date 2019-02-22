@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**DeleteMenuItemMetadata**](MenusApi.md#deletemenuitemmetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
 [**GetMenuById**](MenusApi.md#getmenubyid) | **GET** /api/v1.0/menus/{menuId} | Get menu by identifier
 [**GetMenuItemMetadata**](MenusApi.md#getmenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get menu item metadata
-[**GetMenuItemMetadata_0**](MenusApi.md#getmenuitemmetadata_0) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
+[**GetMenuItemMetadataByKey**](MenusApi.md#getmenuitemmetadatabykey) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
 [**GetMenuItemOptionSetItemMetadata**](MenusApi.md#getmenuitemoptionsetitemmetadata) | **GET** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get menu item option set item metadata by key
 [**SetMenuItemMetadata**](MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update menu item metadata
 [**SetMenuItemOptionSetItemMetadata**](MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update menu item option set item metadata
@@ -272,9 +272,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getmenuitemmetadata_0"></a>
-# **GetMenuItemMetadata_0**
-> void GetMenuItemMetadata_0 (int? menuId, int? storeId, int? menuItemId, string key)
+<a name="getmenuitemmetadatabykey"></a>
+# **GetMenuItemMetadataByKey**
+> void GetMenuItemMetadataByKey (int? menuId, int? storeId, int? menuItemId, string key)
 
 Get menu item metadata by key
 
@@ -288,7 +288,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GetMenuItemMetadata_0Example
+    public class GetMenuItemMetadataByKeyExample
     {
         public void main()
         {
@@ -304,11 +304,11 @@ namespace Example
             try
             {
                 // Get menu item metadata by key
-                apiInstance.GetMenuItemMetadata_0(menuId, storeId, menuItemId, key);
+                apiInstance.GetMenuItemMetadataByKey(menuId, storeId, menuItemId, key);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MenusApi.GetMenuItemMetadata_0: " + e.Message );
+                Debug.Print("Exception when calling MenusApi.GetMenuItemMetadataByKey: " + e.Message );
             }
         }
     }

@@ -130,7 +130,7 @@ namespace Flipdish.Api
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
         /// <returns></returns>
-        void GetMenuItemMetadata_0 (int? menuId, int? storeId, int? menuItemId, string key);
+        void GetMenuItemMetadataByKey (int? menuId, int? storeId, int? menuItemId, string key);
 
         /// <summary>
         /// Get menu item metadata by key
@@ -144,7 +144,7 @@ namespace Flipdish.Api
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetMenuItemMetadata_0WithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
+        ApiResponse<Object> GetMenuItemMetadataByKeyWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
         /// <summary>
         /// Get menu item option set item metadata by key
         /// </summary>
@@ -378,7 +378,7 @@ namespace Flipdish.Api
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetMenuItemMetadata_0Async (int? menuId, int? storeId, int? menuItemId, string key);
+        System.Threading.Tasks.Task GetMenuItemMetadataByKeyAsync (int? menuId, int? storeId, int? menuItemId, string key);
 
         /// <summary>
         /// Get menu item metadata by key
@@ -392,7 +392,7 @@ namespace Flipdish.Api
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetMenuItemMetadata_0AsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetMenuItemMetadataByKeyAsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
         /// <summary>
         /// Get menu item option set item metadata by key
         /// </summary>
@@ -1287,9 +1287,9 @@ namespace Flipdish.Api
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
         /// <returns></returns>
-        public void GetMenuItemMetadata_0 (int? menuId, int? storeId, int? menuItemId, string key)
+        public void GetMenuItemMetadataByKey (int? menuId, int? storeId, int? menuItemId, string key)
         {
-             GetMenuItemMetadata_0WithHttpInfo(menuId, storeId, menuItemId, key);
+             GetMenuItemMetadataByKeyWithHttpInfo(menuId, storeId, menuItemId, key);
         }
 
         /// <summary>
@@ -1301,20 +1301,20 @@ namespace Flipdish.Api
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetMenuItemMetadata_0WithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key)
+        public ApiResponse<Object> GetMenuItemMetadataByKeyWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->GetMenuItemMetadata_0");
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->GetMenuItemMetadataByKey");
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling MenusApi->GetMenuItemMetadata_0");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling MenusApi->GetMenuItemMetadataByKey");
             // verify the required parameter 'menuItemId' is set
             if (menuItemId == null)
-                throw new ApiException(400, "Missing required parameter 'menuItemId' when calling MenusApi->GetMenuItemMetadata_0");
+                throw new ApiException(400, "Missing required parameter 'menuItemId' when calling MenusApi->GetMenuItemMetadataByKey");
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling MenusApi->GetMenuItemMetadata_0");
+                throw new ApiException(400, "Missing required parameter 'key' when calling MenusApi->GetMenuItemMetadataByKey");
 
             var localVarPath = "/api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1361,7 +1361,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetMenuItemMetadata_0", localVarResponse);
+                Exception exception = ExceptionFactory("GetMenuItemMetadataByKey", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1379,9 +1379,9 @@ namespace Flipdish.Api
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetMenuItemMetadata_0Async (int? menuId, int? storeId, int? menuItemId, string key)
+        public async System.Threading.Tasks.Task GetMenuItemMetadataByKeyAsync (int? menuId, int? storeId, int? menuItemId, string key)
         {
-             await GetMenuItemMetadata_0AsyncWithHttpInfo(menuId, storeId, menuItemId, key);
+             await GetMenuItemMetadataByKeyAsyncWithHttpInfo(menuId, storeId, menuItemId, key);
 
         }
 
@@ -1394,20 +1394,20 @@ namespace Flipdish.Api
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetMenuItemMetadata_0AsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetMenuItemMetadataByKeyAsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->GetMenuItemMetadata_0");
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->GetMenuItemMetadataByKey");
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling MenusApi->GetMenuItemMetadata_0");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling MenusApi->GetMenuItemMetadataByKey");
             // verify the required parameter 'menuItemId' is set
             if (menuItemId == null)
-                throw new ApiException(400, "Missing required parameter 'menuItemId' when calling MenusApi->GetMenuItemMetadata_0");
+                throw new ApiException(400, "Missing required parameter 'menuItemId' when calling MenusApi->GetMenuItemMetadataByKey");
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling MenusApi->GetMenuItemMetadata_0");
+                throw new ApiException(400, "Missing required parameter 'key' when calling MenusApi->GetMenuItemMetadataByKey");
 
             var localVarPath = "/api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1454,7 +1454,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetMenuItemMetadata_0", localVarResponse);
+                Exception exception = ExceptionFactory("GetMenuItemMetadataByKey", localVarResponse);
                 if (exception != null) throw exception;
             }
 
