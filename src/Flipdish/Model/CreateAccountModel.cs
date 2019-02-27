@@ -40,7 +40,8 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="email">Email addres (required).</param>
         /// <param name="storeName">Store name (required).</param>
-        public CreateAccountModel(string email = default(string), string storeName = default(string))
+        /// <param name="languageId">LanguageId.</param>
+        public CreateAccountModel(string email = default(string), string storeName = default(string), string languageId = default(string))
         {
             // to ensure "email" is required (not null)
             if (email == null)
@@ -60,6 +61,7 @@ namespace Flipdish.Model
             {
                 this.StoreName = storeName;
             }
+            this.LanguageId = languageId;
         }
         
         /// <summary>
@@ -77,6 +79,13 @@ namespace Flipdish.Model
         public string StoreName { get; set; }
 
         /// <summary>
+        /// LanguageId
+        /// </summary>
+        /// <value>LanguageId</value>
+        [DataMember(Name="LanguageId", EmitDefaultValue=false)]
+        public string LanguageId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -86,6 +95,7 @@ namespace Flipdish.Model
             sb.Append("class CreateAccountModel {\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  StoreName: ").Append(StoreName).Append("\n");
+            sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -129,6 +139,11 @@ namespace Flipdish.Model
                     this.StoreName == input.StoreName ||
                     (this.StoreName != null &&
                     this.StoreName.Equals(input.StoreName))
+                ) && 
+                (
+                    this.LanguageId == input.LanguageId ||
+                    (this.LanguageId != null &&
+                    this.LanguageId.Equals(input.LanguageId))
                 );
         }
 
@@ -145,6 +160,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Email.GetHashCode();
                 if (this.StoreName != null)
                     hashCode = hashCode * 59 + this.StoreName.GetHashCode();
+                if (this.LanguageId != null)
+                    hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
                 return hashCode;
             }
         }
