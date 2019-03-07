@@ -107,6 +107,30 @@ namespace Flipdish.Test
             // TODO unit test for the property 'MenuSections'
         }
         /// <summary>
+        /// Test the property 'Name'
+        /// </summary>
+        [Test]
+        public void NameTest()
+        {
+            // TODO unit test for the property 'Name'
+        }
+        /// <summary>
+        /// Test the property 'Locked'
+        /// </summary>
+        [Test]
+        public void LockedTest()
+        {
+            // TODO unit test for the property 'Locked'
+        }
+        /// <summary>
+        /// Test the property 'StoreNames'
+        /// </summary>
+        [Test]
+        public void StoreNamesTest()
+        {
+            // TODO unit test for the property 'StoreNames'
+        }
+        /// <summary>
         /// Test the property 'DisplaySectionLinks'
         /// </summary>
         [Test]

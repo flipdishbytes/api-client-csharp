@@ -36,15 +36,17 @@ namespace Flipdish.Model
         /// <param name="email">Email.</param>
         /// <param name="signupSteps">Signup steps.</param>
         /// <param name="isVerified">Is account email verified.</param>
+        /// <param name="isSelfServeUser">is the account a Self Server.</param>
         /// <param name="name">Name.</param>
         /// <param name="language">Language Id.</param>
         /// <param name="timeZoneInfoId">Time Zone Info Id.</param>
         /// <param name="displayTimesInUserLocalTimeZone">Display the time in time zone local to the user.</param>
-        public AccountDetail(string email = default(string), List<SignupStep> signupSteps = default(List<SignupStep>), bool? isVerified = default(bool?), string name = default(string), string language = default(string), string timeZoneInfoId = default(string), bool? displayTimesInUserLocalTimeZone = default(bool?))
+        public AccountDetail(string email = default(string), List<SignupStep> signupSteps = default(List<SignupStep>), bool? isVerified = default(bool?), bool? isSelfServeUser = default(bool?), string name = default(string), string language = default(string), string timeZoneInfoId = default(string), bool? displayTimesInUserLocalTimeZone = default(bool?))
         {
             this.Email = email;
             this.SignupSteps = signupSteps;
             this.IsVerified = isVerified;
+            this.IsSelfServeUser = isSelfServeUser;
             this.Name = name;
             this.Language = language;
             this.TimeZoneInfoId = timeZoneInfoId;
@@ -71,6 +73,13 @@ namespace Flipdish.Model
         /// <value>Is account email verified</value>
         [DataMember(Name="IsVerified", EmitDefaultValue=false)]
         public bool? IsVerified { get; set; }
+
+        /// <summary>
+        /// is the account a Self Server
+        /// </summary>
+        /// <value>is the account a Self Server</value>
+        [DataMember(Name="IsSelfServeUser", EmitDefaultValue=false)]
+        public bool? IsSelfServeUser { get; set; }
 
         /// <summary>
         /// Name
@@ -111,6 +120,7 @@ namespace Flipdish.Model
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  SignupSteps: ").Append(SignupSteps).Append("\n");
             sb.Append("  IsVerified: ").Append(IsVerified).Append("\n");
+            sb.Append("  IsSelfServeUser: ").Append(IsSelfServeUser).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  TimeZoneInfoId: ").Append(TimeZoneInfoId).Append("\n");
@@ -165,6 +175,11 @@ namespace Flipdish.Model
                     this.IsVerified.Equals(input.IsVerified))
                 ) && 
                 (
+                    this.IsSelfServeUser == input.IsSelfServeUser ||
+                    (this.IsSelfServeUser != null &&
+                    this.IsSelfServeUser.Equals(input.IsSelfServeUser))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -201,6 +216,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.SignupSteps.GetHashCode();
                 if (this.IsVerified != null)
                     hashCode = hashCode * 59 + this.IsVerified.GetHashCode();
+                if (this.IsSelfServeUser != null)
+                    hashCode = hashCode * 59 + this.IsSelfServeUser.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Language != null)

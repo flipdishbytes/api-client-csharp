@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **Email** | **string** | Email | [optional] 
 **SignupSteps** | [**List&lt;SignupStep&gt;**](SignupStep.md) | Signup steps | [optional] 
 **IsVerified** | **bool?** | Is account email verified | [optional] 
+**IsSelfServeUser** | **bool?** | is the account a Self Server | [optional] 
 **Name** | **string** | Name | [optional] 
 **Language** | **string** | Language Id | [optional] 
 **TimeZoneInfoId** | **string** | Time Zone Info Id | [optional] 

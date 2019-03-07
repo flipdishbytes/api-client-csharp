@@ -65,6 +65,30 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test CreateDraftMenuFromExistingMenu
+        /// </summary>
+        [Test]
+        public void CreateDraftMenuFromExistingMenuTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //instance.CreateDraftMenuFromExistingMenu(menuId);
+            
+        }
+        
+        /// <summary>
+        /// Test DeleteMenu
+        /// </summary>
+        [Test]
+        public void DeleteMenuTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //instance.DeleteMenu(menuId);
+            
+        }
+        
+        /// <summary>
         /// Test DeleteMenuImage
         /// </summary>
         [Test]
@@ -147,6 +171,18 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test GetMenusByWhiteLabelConfigId
+        /// </summary>
+        [Test]
+        public void GetMenusByWhiteLabelConfigIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //var response = instance.GetMenusByWhiteLabelConfigId(appId);
+            //Assert.IsInstanceOf<RestApiArrayResultMenu> (response, "response is RestApiArrayResultMenu");
+        }
+        
+        /// <summary>
         /// Test SetMenuItemMetadata
         /// </summary>
         [Test]
@@ -173,6 +209,32 @@ namespace Flipdish.Test
             //int? optionSetItemId = null;
             //Metadata metadata = null;
             //instance.SetMenuItemOptionSetItemMetadata(menuId, storeId, optionSetItemId, metadata);
+            
+        }
+        
+        /// <summary>
+        /// Test SetMenuLock
+        /// </summary>
+        [Test]
+        public void SetMenuLockTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //bool? locked = null;
+            //instance.SetMenuLock(menuId, locked);
+            
+        }
+        
+        /// <summary>
+        /// Test SetMenuName
+        /// </summary>
+        [Test]
+        public void SetMenuNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //string name = null;
+            //instance.SetMenuName(menuId, name);
             
         }
         

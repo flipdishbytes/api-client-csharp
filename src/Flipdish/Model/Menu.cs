@@ -65,15 +65,21 @@ namespace Flipdish.Model
         /// <param name="versionNumber">Menu version.</param>
         /// <param name="imageUrl">Image url.</param>
         /// <param name="menuSections">Menu sections (startes, main etc).</param>
+        /// <param name="name">Name of Menu, only shown in portal.</param>
+        /// <param name="locked">Locked: is menu locked against modifcation.</param>
+        /// <param name="storeNames">List of stores names which are associated with this menu.</param>
         /// <param name="displaySectionLinks">Display menu section link on UI.</param>
         /// <param name="menuSectionBehaviour">Menu section behaviour.</param>
-        public Menu(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string imageUrl = default(string), List<MenuSection> menuSections = default(List<MenuSection>), bool? displaySectionLinks = default(bool?), MenuSectionBehaviourEnum? menuSectionBehaviour = default(MenuSectionBehaviourEnum?))
+        public Menu(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string imageUrl = default(string), List<MenuSection> menuSections = default(List<MenuSection>), string name = default(string), bool? locked = default(bool?), List<string> storeNames = default(List<string>), bool? displaySectionLinks = default(bool?), MenuSectionBehaviourEnum? menuSectionBehaviour = default(MenuSectionBehaviourEnum?))
         {
             this.MenuId = menuId;
             this.ModifiedTime = modifiedTime;
             this.VersionNumber = versionNumber;
             this.ImageUrl = imageUrl;
             this.MenuSections = menuSections;
+            this.Name = name;
+            this.Locked = locked;
+            this.StoreNames = storeNames;
             this.DisplaySectionLinks = displaySectionLinks;
             this.MenuSectionBehaviour = menuSectionBehaviour;
         }
@@ -114,6 +120,27 @@ namespace Flipdish.Model
         public List<MenuSection> MenuSections { get; set; }
 
         /// <summary>
+        /// Name of Menu, only shown in portal
+        /// </summary>
+        /// <value>Name of Menu, only shown in portal</value>
+        [DataMember(Name="Name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Locked: is menu locked against modifcation
+        /// </summary>
+        /// <value>Locked: is menu locked against modifcation</value>
+        [DataMember(Name="Locked", EmitDefaultValue=false)]
+        public bool? Locked { get; set; }
+
+        /// <summary>
+        /// List of stores names which are associated with this menu
+        /// </summary>
+        /// <value>List of stores names which are associated with this menu</value>
+        [DataMember(Name="StoreNames", EmitDefaultValue=false)]
+        public List<string> StoreNames { get; set; }
+
+        /// <summary>
         /// Display menu section link on UI
         /// </summary>
         /// <value>Display menu section link on UI</value>
@@ -134,6 +161,9 @@ namespace Flipdish.Model
             sb.Append("  VersionNumber: ").Append(VersionNumber).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  MenuSections: ").Append(MenuSections).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Locked: ").Append(Locked).Append("\n");
+            sb.Append("  StoreNames: ").Append(StoreNames).Append("\n");
             sb.Append("  DisplaySectionLinks: ").Append(DisplaySectionLinks).Append("\n");
             sb.Append("  MenuSectionBehaviour: ").Append(MenuSectionBehaviour).Append("\n");
             sb.Append("}\n");
@@ -196,6 +226,21 @@ namespace Flipdish.Model
                     this.MenuSections.SequenceEqual(input.MenuSections)
                 ) && 
                 (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.Locked == input.Locked ||
+                    (this.Locked != null &&
+                    this.Locked.Equals(input.Locked))
+                ) && 
+                (
+                    this.StoreNames == input.StoreNames ||
+                    this.StoreNames != null &&
+                    this.StoreNames.SequenceEqual(input.StoreNames)
+                ) && 
+                (
                     this.DisplaySectionLinks == input.DisplaySectionLinks ||
                     (this.DisplaySectionLinks != null &&
                     this.DisplaySectionLinks.Equals(input.DisplaySectionLinks))
@@ -226,6 +271,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 if (this.MenuSections != null)
                     hashCode = hashCode * 59 + this.MenuSections.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Locked != null)
+                    hashCode = hashCode * 59 + this.Locked.GetHashCode();
+                if (this.StoreNames != null)
+                    hashCode = hashCode * 59 + this.StoreNames.GetHashCode();
                 if (this.DisplaySectionLinks != null)
                     hashCode = hashCode * 59 + this.DisplaySectionLinks.GetHashCode();
                 if (this.MenuSectionBehaviour != null)
