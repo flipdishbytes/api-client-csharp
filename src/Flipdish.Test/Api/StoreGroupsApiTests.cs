@@ -105,6 +105,22 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test GetStoreGroupsExtended
+        /// </summary>
+        [Test]
+        public void GetStoreGroupsExtendedTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appNameId = null;
+            //string searchQuery = null;
+            //int? page = null;
+            //int? limit = null;
+            //int? groupingRadius = null;
+            //var response = instance.GetStoreGroupsExtended(appNameId, searchQuery, page, limit, groupingRadius);
+            //Assert.IsInstanceOf<RestApiPaginationResultStoreGroupExtended> (response, "response is RestApiPaginationResultStoreGroupExtended");
+        }
+        
+        /// <summary>
         /// Test RemoveStoreGroup
         /// </summary>
         [Test]

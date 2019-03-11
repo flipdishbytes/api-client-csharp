@@ -96,6 +96,35 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultStoreGroup</returns>
         ApiResponse<RestApiPaginationResultStoreGroup> GetStoreGroupsWithHttpInfo (string appNameId, string searchQuery = null, int? page = null, int? limit = null);
         /// <summary>
+        /// [PRIVATE API] Returns a paginated list of Extended Store Groups
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appNameId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="groupingRadius"> (optional)</param>
+        /// <returns>RestApiPaginationResultStoreGroupExtended</returns>
+        RestApiPaginationResultStoreGroupExtended GetStoreGroupsExtended (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null);
+
+        /// <summary>
+        /// [PRIVATE API] Returns a paginated list of Extended Store Groups
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appNameId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="groupingRadius"> (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultStoreGroupExtended</returns>
+        ApiResponse<RestApiPaginationResultStoreGroupExtended> GetStoreGroupsExtendedWithHttpInfo (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null);
+        /// <summary>
         /// Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
         /// </summary>
         /// <remarks>
@@ -212,6 +241,35 @@ namespace Flipdish.Api
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStoreGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStoreGroup>> GetStoreGroupsAsyncWithHttpInfo (string appNameId, string searchQuery = null, int? page = null, int? limit = null);
+        /// <summary>
+        /// [PRIVATE API] Returns a paginated list of Extended Store Groups
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appNameId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="groupingRadius"> (optional)</param>
+        /// <returns>Task of RestApiPaginationResultStoreGroupExtended</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultStoreGroupExtended> GetStoreGroupsExtendedAsync (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null);
+
+        /// <summary>
+        /// [PRIVATE API] Returns a paginated list of Extended Store Groups
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appNameId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="groupingRadius"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultStoreGroupExtended)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStoreGroupExtended>> GetStoreGroupsExtendedAsyncWithHttpInfo (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null);
         /// <summary>
         /// Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
         /// </summary>
@@ -861,6 +919,181 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiPaginationResultStoreGroup>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiPaginationResultStoreGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultStoreGroup)));
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Returns a paginated list of Extended Store Groups 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appNameId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="groupingRadius"> (optional)</param>
+        /// <returns>RestApiPaginationResultStoreGroupExtended</returns>
+        public RestApiPaginationResultStoreGroupExtended GetStoreGroupsExtended (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null)
+        {
+             ApiResponse<RestApiPaginationResultStoreGroupExtended> localVarResponse = GetStoreGroupsExtendedWithHttpInfo(appNameId, searchQuery, page, limit, groupingRadius);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Returns a paginated list of Extended Store Groups 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appNameId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="groupingRadius"> (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultStoreGroupExtended</returns>
+        public ApiResponse< RestApiPaginationResultStoreGroupExtended > GetStoreGroupsExtendedWithHttpInfo (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null)
+        {
+            // verify the required parameter 'appNameId' is set
+            if (appNameId == null)
+                throw new ApiException(400, "Missing required parameter 'appNameId' when calling StoreGroupsApi->GetStoreGroupsExtended");
+
+            var localVarPath = "/api/v1.0/{appNameId}/storegroups/extended";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appNameId != null) localVarPathParams.Add("appNameId", this.Configuration.ApiClient.ParameterToString(appNameId)); // path parameter
+            if (searchQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (groupingRadius != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "groupingRadius", groupingRadius)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStoreGroupsExtended", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultStoreGroupExtended>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiPaginationResultStoreGroupExtended) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultStoreGroupExtended)));
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Returns a paginated list of Extended Store Groups 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appNameId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="groupingRadius"> (optional)</param>
+        /// <returns>Task of RestApiPaginationResultStoreGroupExtended</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultStoreGroupExtended> GetStoreGroupsExtendedAsync (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null)
+        {
+             ApiResponse<RestApiPaginationResultStoreGroupExtended> localVarResponse = await GetStoreGroupsExtendedAsyncWithHttpInfo(appNameId, searchQuery, page, limit, groupingRadius);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Returns a paginated list of Extended Store Groups 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appNameId">App Name Id</param>
+        /// <param name="searchQuery">Search query (optional)</param>
+        /// <param name="page">Requested page index (optional)</param>
+        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="groupingRadius"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultStoreGroupExtended)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStoreGroupExtended>> GetStoreGroupsExtendedAsyncWithHttpInfo (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null)
+        {
+            // verify the required parameter 'appNameId' is set
+            if (appNameId == null)
+                throw new ApiException(400, "Missing required parameter 'appNameId' when calling StoreGroupsApi->GetStoreGroupsExtended");
+
+            var localVarPath = "/api/v1.0/{appNameId}/storegroups/extended";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appNameId != null) localVarPathParams.Add("appNameId", this.Configuration.ApiClient.ParameterToString(appNameId)); // path parameter
+            if (searchQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (groupingRadius != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "groupingRadius", groupingRadius)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStoreGroupsExtended", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultStoreGroupExtended>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiPaginationResultStoreGroupExtended) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultStoreGroupExtended)));
         }
 
         /// <summary>

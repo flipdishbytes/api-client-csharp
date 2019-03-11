@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**CreateStoreGroup**](StoreGroupsApi.md#createstoregroup) | **POST** /api/v1.0/{appNameId}/storegroups | Creates a Store Group  It will be attached to an existing App
 [**GetStoreGroup**](StoreGroupsApi.md#getstoregroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | Returns a Store Groups
 [**GetStoreGroups**](StoreGroupsApi.md#getstoregroups) | **GET** /api/v1.0/{appNameId}/storegroups | Returns a paginated list of Store Groups
+[**GetStoreGroupsExtended**](StoreGroupsApi.md#getstoregroupsextended) | **GET** /api/v1.0/{appNameId}/storegroups/extended | [PRIVATE API] Returns a paginated list of Extended Store Groups
 [**RemoveStoreGroup**](StoreGroupsApi.md#removestoregroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
 [**UpdateStoreGroup**](StoreGroupsApi.md#updatestoregroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | Updates Store Group
 
@@ -193,6 +194,76 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiPaginationResultStoreGroup**](RestApiPaginationResultStoreGroup.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getstoregroupsextended"></a>
+# **GetStoreGroupsExtended**
+> RestApiPaginationResultStoreGroupExtended GetStoreGroupsExtended (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null)
+
+[PRIVATE API] Returns a paginated list of Extended Store Groups
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetStoreGroupsExtendedExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoreGroupsApi();
+            var appNameId = appNameId_example;  // string | App Name Id
+            var searchQuery = searchQuery_example;  // string | Search query (optional) 
+            var page = 56;  // int? | Requested page index (optional) 
+            var limit = 56;  // int? | Requested page limit (optional) 
+            var groupingRadius = 56;  // int? |  (optional) 
+
+            try
+            {
+                // [PRIVATE API] Returns a paginated list of Extended Store Groups
+                RestApiPaginationResultStoreGroupExtended result = apiInstance.GetStoreGroupsExtended(appNameId, searchQuery, page, limit, groupingRadius);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoreGroupsApi.GetStoreGroupsExtended: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appNameId** | **string**| App Name Id | 
+ **searchQuery** | **string**| Search query | [optional] 
+ **page** | **int?**| Requested page index | [optional] 
+ **limit** | **int?**| Requested page limit | [optional] 
+ **groupingRadius** | **int?**|  | [optional] 
+
+### Return type
+
+[**RestApiPaginationResultStoreGroupExtended**](RestApiPaginationResultStoreGroupExtended.md)
 
 ### Authorization
 
