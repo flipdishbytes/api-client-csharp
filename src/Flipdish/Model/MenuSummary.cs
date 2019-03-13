@@ -25,40 +25,13 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Menu
+    /// Menu Summary
     /// </summary>
     [DataContract]
-    public partial class Menu :  IEquatable<Menu>, IValidatableObject
+    public partial class MenuSummary :  IEquatable<MenuSummary>, IValidatableObject
     {
         /// <summary>
-        /// Menu section behaviour
-        /// </summary>
-        /// <value>Menu section behaviour</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum MenuSectionBehaviourEnum
-        {
-            
-            /// <summary>
-            /// Enum ExpandSingle for value: ExpandSingle
-            /// </summary>
-            [EnumMember(Value = "ExpandSingle")]
-            ExpandSingle = 1,
-            
-            /// <summary>
-            /// Enum ExpandMultiple for value: ExpandMultiple
-            /// </summary>
-            [EnumMember(Value = "ExpandMultiple")]
-            ExpandMultiple = 2
-        }
-
-        /// <summary>
-        /// Menu section behaviour
-        /// </summary>
-        /// <value>Menu section behaviour</value>
-        [DataMember(Name="MenuSectionBehaviour", EmitDefaultValue=false)]
-        public MenuSectionBehaviourEnum? MenuSectionBehaviour { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Menu" /> class.
+        /// Initializes a new instance of the <see cref="MenuSummary" /> class.
         /// </summary>
         /// <param name="menuId">Menu identifier.</param>
         /// <param name="modifiedTime">Last modified time.</param>
@@ -66,10 +39,8 @@ namespace Flipdish.Model
         /// <param name="imageUrl">Image url.</param>
         /// <param name="name">Name of Menu, only shown in portal.</param>
         /// <param name="locked">Locked: is menu locked against modifcation.</param>
-        /// <param name="menuSections">Menu sections (startes, main etc).</param>
-        /// <param name="displaySectionLinks">Display menu section link on UI.</param>
-        /// <param name="menuSectionBehaviour">Menu section behaviour.</param>
-        public Menu(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string imageUrl = default(string), string name = default(string), bool? locked = default(bool?), List<MenuSection> menuSections = default(List<MenuSection>), bool? displaySectionLinks = default(bool?), MenuSectionBehaviourEnum? menuSectionBehaviour = default(MenuSectionBehaviourEnum?))
+        /// <param name="storeNames">List of stores names which are associated with this menu.</param>
+        public MenuSummary(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string imageUrl = default(string), string name = default(string), bool? locked = default(bool?), List<string> storeNames = default(List<string>))
         {
             this.MenuId = menuId;
             this.ModifiedTime = modifiedTime;
@@ -77,9 +48,7 @@ namespace Flipdish.Model
             this.ImageUrl = imageUrl;
             this.Name = name;
             this.Locked = locked;
-            this.MenuSections = menuSections;
-            this.DisplaySectionLinks = displaySectionLinks;
-            this.MenuSectionBehaviour = menuSectionBehaviour;
+            this.StoreNames = storeNames;
         }
         
         /// <summary>
@@ -125,19 +94,11 @@ namespace Flipdish.Model
         public bool? Locked { get; set; }
 
         /// <summary>
-        /// Menu sections (startes, main etc)
+        /// List of stores names which are associated with this menu
         /// </summary>
-        /// <value>Menu sections (startes, main etc)</value>
-        [DataMember(Name="MenuSections", EmitDefaultValue=false)]
-        public List<MenuSection> MenuSections { get; set; }
-
-        /// <summary>
-        /// Display menu section link on UI
-        /// </summary>
-        /// <value>Display menu section link on UI</value>
-        [DataMember(Name="DisplaySectionLinks", EmitDefaultValue=false)]
-        public bool? DisplaySectionLinks { get; set; }
-
+        /// <value>List of stores names which are associated with this menu</value>
+        [DataMember(Name="StoreNames", EmitDefaultValue=false)]
+        public List<string> StoreNames { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -146,16 +107,14 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Menu {\n");
+            sb.Append("class MenuSummary {\n");
             sb.Append("  MenuId: ").Append(MenuId).Append("\n");
             sb.Append("  ModifiedTime: ").Append(ModifiedTime).Append("\n");
             sb.Append("  VersionNumber: ").Append(VersionNumber).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Locked: ").Append(Locked).Append("\n");
-            sb.Append("  MenuSections: ").Append(MenuSections).Append("\n");
-            sb.Append("  DisplaySectionLinks: ").Append(DisplaySectionLinks).Append("\n");
-            sb.Append("  MenuSectionBehaviour: ").Append(MenuSectionBehaviour).Append("\n");
+            sb.Append("  StoreNames: ").Append(StoreNames).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -176,15 +135,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as Menu);
+            return this.Equals(input as MenuSummary);
         }
 
         /// <summary>
-        /// Returns true if Menu instances are equal
+        /// Returns true if MenuSummary instances are equal
         /// </summary>
-        /// <param name="input">Instance of Menu to be compared</param>
+        /// <param name="input">Instance of MenuSummary to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Menu input)
+        public bool Equals(MenuSummary input)
         {
             if (input == null)
                 return false;
@@ -221,19 +180,9 @@ namespace Flipdish.Model
                     this.Locked.Equals(input.Locked))
                 ) && 
                 (
-                    this.MenuSections == input.MenuSections ||
-                    this.MenuSections != null &&
-                    this.MenuSections.SequenceEqual(input.MenuSections)
-                ) && 
-                (
-                    this.DisplaySectionLinks == input.DisplaySectionLinks ||
-                    (this.DisplaySectionLinks != null &&
-                    this.DisplaySectionLinks.Equals(input.DisplaySectionLinks))
-                ) && 
-                (
-                    this.MenuSectionBehaviour == input.MenuSectionBehaviour ||
-                    (this.MenuSectionBehaviour != null &&
-                    this.MenuSectionBehaviour.Equals(input.MenuSectionBehaviour))
+                    this.StoreNames == input.StoreNames ||
+                    this.StoreNames != null &&
+                    this.StoreNames.SequenceEqual(input.StoreNames)
                 );
         }
 
@@ -258,12 +207,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Locked != null)
                     hashCode = hashCode * 59 + this.Locked.GetHashCode();
-                if (this.MenuSections != null)
-                    hashCode = hashCode * 59 + this.MenuSections.GetHashCode();
-                if (this.DisplaySectionLinks != null)
-                    hashCode = hashCode * 59 + this.DisplaySectionLinks.GetHashCode();
-                if (this.MenuSectionBehaviour != null)
-                    hashCode = hashCode * 59 + this.MenuSectionBehaviour.GetHashCode();
+                if (this.StoreNames != null)
+                    hashCode = hashCode * 59 + this.StoreNames.GetHashCode();
                 return hashCode;
             }
         }

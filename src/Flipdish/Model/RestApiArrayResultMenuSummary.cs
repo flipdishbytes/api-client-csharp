@@ -28,23 +28,23 @@ namespace Flipdish.Model
     /// Rest api array result
     /// </summary>
     [DataContract]
-    public partial class RestApiArrayResultMenu :  IEquatable<RestApiArrayResultMenu>, IValidatableObject
+    public partial class RestApiArrayResultMenuSummary :  IEquatable<RestApiArrayResultMenuSummary>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiArrayResultMenu" /> class.
+        /// Initializes a new instance of the <see cref="RestApiArrayResultMenuSummary" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected RestApiArrayResultMenu() { }
+        protected RestApiArrayResultMenuSummary() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiArrayResultMenu" /> class.
+        /// Initializes a new instance of the <see cref="RestApiArrayResultMenuSummary" /> class.
         /// </summary>
         /// <param name="data">Generic data object. (required).</param>
-        public RestApiArrayResultMenu(List<Menu> data = default(List<Menu>))
+        public RestApiArrayResultMenuSummary(List<MenuSummary> data = default(List<MenuSummary>))
         {
             // to ensure "data" is required (not null)
             if (data == null)
             {
-                throw new InvalidDataException("data is a required property for RestApiArrayResultMenu and cannot be null");
+                throw new InvalidDataException("data is a required property for RestApiArrayResultMenuSummary and cannot be null");
             }
             else
             {
@@ -57,7 +57,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Generic data object.</value>
         [DataMember(Name="Data", EmitDefaultValue=false)]
-        public List<Menu> Data { get; set; }
+        public List<MenuSummary> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -66,7 +66,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RestApiArrayResultMenu {\n");
+            sb.Append("class RestApiArrayResultMenuSummary {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -88,15 +88,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RestApiArrayResultMenu);
+            return this.Equals(input as RestApiArrayResultMenuSummary);
         }
 
         /// <summary>
-        /// Returns true if RestApiArrayResultMenu instances are equal
+        /// Returns true if RestApiArrayResultMenuSummary instances are equal
         /// </summary>
-        /// <param name="input">Instance of RestApiArrayResultMenu to be compared</param>
+        /// <param name="input">Instance of RestApiArrayResultMenuSummary to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RestApiArrayResultMenu input)
+        public bool Equals(RestApiArrayResultMenuSummary input)
         {
             if (input == null)
                 return false;

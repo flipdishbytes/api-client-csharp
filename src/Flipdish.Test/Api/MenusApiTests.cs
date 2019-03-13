@@ -77,6 +77,18 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test CreateNewMenuForApp
+        /// </summary>
+        [Test]
+        public void CreateNewMenuForAppTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //var response = instance.CreateNewMenuForApp(appId);
+            //Assert.IsInstanceOf<int?> (response, "response is int?");
+        }
+        
+        /// <summary>
         /// Test DeleteMenu
         /// </summary>
         [Test]
@@ -171,15 +183,15 @@ namespace Flipdish.Test
         }
         
         /// <summary>
-        /// Test GetMenusByWhiteLabelConfigId
+        /// Test GetMenusByAppId
         /// </summary>
         [Test]
-        public void GetMenusByWhiteLabelConfigIdTest()
+        public void GetMenusByAppIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string appId = null;
-            //var response = instance.GetMenusByWhiteLabelConfigId(appId);
-            //Assert.IsInstanceOf<RestApiArrayResultMenu> (response, "response is RestApiArrayResultMenu");
+            //var response = instance.GetMenusByAppId(appId);
+            //Assert.IsInstanceOf<RestApiArrayResultMenuSummary> (response, "response is RestApiArrayResultMenuSummary");
         }
         
         /// <summary>

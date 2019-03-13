@@ -146,6 +146,14 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'AvailableAppLanguages'
         }
+        /// <summary>
+        /// Test the property 'AppResourceSet'
+        /// </summary>
+        [Test]
+        public void AppResourceSetTest()
+        {
+            // TODO unit test for the property 'AppResourceSet'
+        }
 
     }
 

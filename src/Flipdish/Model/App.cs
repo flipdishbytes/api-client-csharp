@@ -100,6 +100,441 @@ namespace Flipdish.Model
         [DataMember(Name="AppAccessLevel", EmitDefaultValue=false)]
         public AppAccessLevelEnum? AppAccessLevel { get; set; }
         /// <summary>
+        /// Defines AppResourceSet
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AppResourceSetEnum
+        {
+            
+            /// <summary>
+            /// Enum ViewApp for value: ViewApp
+            /// </summary>
+            [EnumMember(Value = "ViewApp")]
+            ViewApp = 1,
+            
+            /// <summary>
+            /// Enum CreateApp for value: CreateApp
+            /// </summary>
+            [EnumMember(Value = "CreateApp")]
+            CreateApp = 2,
+            
+            /// <summary>
+            /// Enum UpdateApp for value: UpdateApp
+            /// </summary>
+            [EnumMember(Value = "UpdateApp")]
+            UpdateApp = 3,
+            
+            /// <summary>
+            /// Enum UpdateAppName for value: UpdateAppName
+            /// </summary>
+            [EnumMember(Value = "UpdateAppName")]
+            UpdateAppName = 4,
+            
+            /// <summary>
+            /// Enum EditAppAssets for value: EditAppAssets
+            /// </summary>
+            [EnumMember(Value = "EditAppAssets")]
+            EditAppAssets = 5,
+            
+            /// <summary>
+            /// Enum ViewTeammates for value: ViewTeammates
+            /// </summary>
+            [EnumMember(Value = "ViewTeammates")]
+            ViewTeammates = 6,
+            
+            /// <summary>
+            /// Enum EditTeammates for value: EditTeammates
+            /// </summary>
+            [EnumMember(Value = "EditTeammates")]
+            EditTeammates = 7,
+            
+            /// <summary>
+            /// Enum ViewApmConfigurations for value: ViewApmConfigurations
+            /// </summary>
+            [EnumMember(Value = "ViewApmConfigurations")]
+            ViewApmConfigurations = 8,
+            
+            /// <summary>
+            /// Enum EditApmConfigurations for value: EditApmConfigurations
+            /// </summary>
+            [EnumMember(Value = "EditApmConfigurations")]
+            EditApmConfigurations = 9,
+            
+            /// <summary>
+            /// Enum ViewCampaignsConfigurations for value: ViewCampaignsConfigurations
+            /// </summary>
+            [EnumMember(Value = "ViewCampaignsConfigurations")]
+            ViewCampaignsConfigurations = 10,
+            
+            /// <summary>
+            /// Enum CreateCampaignsConfigurations for value: CreateCampaignsConfigurations
+            /// </summary>
+            [EnumMember(Value = "CreateCampaignsConfigurations")]
+            CreateCampaignsConfigurations = 11,
+            
+            /// <summary>
+            /// Enum UpdateCampaignsConfigurations for value: UpdateCampaignsConfigurations
+            /// </summary>
+            [EnumMember(Value = "UpdateCampaignsConfigurations")]
+            UpdateCampaignsConfigurations = 12,
+            
+            /// <summary>
+            /// Enum ViewDevelopersSettings for value: ViewDevelopersSettings
+            /// </summary>
+            [EnumMember(Value = "ViewDevelopersSettings")]
+            ViewDevelopersSettings = 13,
+            
+            /// <summary>
+            /// Enum EditDevelopersSettings for value: EditDevelopersSettings
+            /// </summary>
+            [EnumMember(Value = "EditDevelopersSettings")]
+            EditDevelopersSettings = 14,
+            
+            /// <summary>
+            /// Enum ViewOrders for value: ViewOrders
+            /// </summary>
+            [EnumMember(Value = "ViewOrders")]
+            ViewOrders = 15,
+            
+            /// <summary>
+            /// Enum UpdateOrdersAccept for value: UpdateOrdersAccept
+            /// </summary>
+            [EnumMember(Value = "UpdateOrdersAccept")]
+            UpdateOrdersAccept = 16,
+            
+            /// <summary>
+            /// Enum UpdateOrdersReject for value: UpdateOrdersReject
+            /// </summary>
+            [EnumMember(Value = "UpdateOrdersReject")]
+            UpdateOrdersReject = 17,
+            
+            /// <summary>
+            /// Enum UpdateOrdersRefund for value: UpdateOrdersRefund
+            /// </summary>
+            [EnumMember(Value = "UpdateOrdersRefund")]
+            UpdateOrdersRefund = 18,
+            
+            /// <summary>
+            /// Enum UpdateOrdersDispatch for value: UpdateOrdersDispatch
+            /// </summary>
+            [EnumMember(Value = "UpdateOrdersDispatch")]
+            UpdateOrdersDispatch = 19,
+            
+            /// <summary>
+            /// Enum ViewStores for value: ViewStores
+            /// </summary>
+            [EnumMember(Value = "ViewStores")]
+            ViewStores = 20,
+            
+            /// <summary>
+            /// Enum EditStores for value: EditStores
+            /// </summary>
+            [EnumMember(Value = "EditStores")]
+            EditStores = 21,
+            
+            /// <summary>
+            /// Enum ViewStoresOpeningHours for value: ViewStoresOpeningHours
+            /// </summary>
+            [EnumMember(Value = "ViewStoresOpeningHours")]
+            ViewStoresOpeningHours = 22,
+            
+            /// <summary>
+            /// Enum UpdateStoresOpenForCollectionOrDelivery for value: UpdateStoresOpenForCollectionOrDelivery
+            /// </summary>
+            [EnumMember(Value = "UpdateStoresOpenForCollectionOrDelivery")]
+            UpdateStoresOpenForCollectionOrDelivery = 23,
+            
+            /// <summary>
+            /// Enum UpdateStoresOpeningHours for value: UpdateStoresOpeningHours
+            /// </summary>
+            [EnumMember(Value = "UpdateStoresOpeningHours")]
+            UpdateStoresOpeningHours = 24,
+            
+            /// <summary>
+            /// Enum UpdateStoresOpeningHoursOverride for value: UpdateStoresOpeningHoursOverride
+            /// </summary>
+            [EnumMember(Value = "UpdateStoresOpeningHoursOverride")]
+            UpdateStoresOpeningHoursOverride = 25,
+            
+            /// <summary>
+            /// Enum UpdateStoresOpeningHoursOverrideTemporary for value: UpdateStoresOpeningHoursOverrideTemporary
+            /// </summary>
+            [EnumMember(Value = "UpdateStoresOpeningHoursOverrideTemporary")]
+            UpdateStoresOpeningHoursOverrideTemporary = 26,
+            
+            /// <summary>
+            /// Enum UpdateStoresName for value: UpdateStoresName
+            /// </summary>
+            [EnumMember(Value = "UpdateStoresName")]
+            UpdateStoresName = 27,
+            
+            /// <summary>
+            /// Enum UpdatePrinterTerminalsAssign for value: UpdatePrinterTerminalsAssign
+            /// </summary>
+            [EnumMember(Value = "UpdatePrinterTerminalsAssign")]
+            UpdatePrinterTerminalsAssign = 28,
+            
+            /// <summary>
+            /// Enum UpdatePrinterTerminalsToggle for value: UpdatePrinterTerminalsToggle
+            /// </summary>
+            [EnumMember(Value = "UpdatePrinterTerminalsToggle")]
+            UpdatePrinterTerminalsToggle = 29,
+            
+            /// <summary>
+            /// Enum EditStoreNotifications for value: EditStoreNotifications
+            /// </summary>
+            [EnumMember(Value = "EditStoreNotifications")]
+            EditStoreNotifications = 30,
+            
+            /// <summary>
+            /// Enum ViewStoreGroups for value: ViewStoreGroups
+            /// </summary>
+            [EnumMember(Value = "ViewStoreGroups")]
+            ViewStoreGroups = 31,
+            
+            /// <summary>
+            /// Enum CreateStoreGroups for value: CreateStoreGroups
+            /// </summary>
+            [EnumMember(Value = "CreateStoreGroups")]
+            CreateStoreGroups = 32,
+            
+            /// <summary>
+            /// Enum UpdateStoreGroups for value: UpdateStoreGroups
+            /// </summary>
+            [EnumMember(Value = "UpdateStoreGroups")]
+            UpdateStoreGroups = 33,
+            
+            /// <summary>
+            /// Enum DeleteStoreGroups for value: DeleteStoreGroups
+            /// </summary>
+            [EnumMember(Value = "DeleteStoreGroups")]
+            DeleteStoreGroups = 34,
+            
+            /// <summary>
+            /// Enum ViewDeliveryZones for value: ViewDeliveryZones
+            /// </summary>
+            [EnumMember(Value = "ViewDeliveryZones")]
+            ViewDeliveryZones = 35,
+            
+            /// <summary>
+            /// Enum CreateDeliveryZones for value: CreateDeliveryZones
+            /// </summary>
+            [EnumMember(Value = "CreateDeliveryZones")]
+            CreateDeliveryZones = 36,
+            
+            /// <summary>
+            /// Enum UpdateDeliveryZones for value: UpdateDeliveryZones
+            /// </summary>
+            [EnumMember(Value = "UpdateDeliveryZones")]
+            UpdateDeliveryZones = 37,
+            
+            /// <summary>
+            /// Enum DeleteDeliveryZones for value: DeleteDeliveryZones
+            /// </summary>
+            [EnumMember(Value = "DeleteDeliveryZones")]
+            DeleteDeliveryZones = 38,
+            
+            /// <summary>
+            /// Enum CreateMenu for value: CreateMenu
+            /// </summary>
+            [EnumMember(Value = "CreateMenu")]
+            CreateMenu = 39,
+            
+            /// <summary>
+            /// Enum UpdateMenu for value: UpdateMenu
+            /// </summary>
+            [EnumMember(Value = "UpdateMenu")]
+            UpdateMenu = 40,
+            
+            /// <summary>
+            /// Enum DeleteMenu for value: DeleteMenu
+            /// </summary>
+            [EnumMember(Value = "DeleteMenu")]
+            DeleteMenu = 41,
+            
+            /// <summary>
+            /// Enum UpdateMenuLock for value: UpdateMenuLock
+            /// </summary>
+            [EnumMember(Value = "UpdateMenuLock")]
+            UpdateMenuLock = 42,
+            
+            /// <summary>
+            /// Enum UpdateMenuPrices for value: UpdateMenuPrices
+            /// </summary>
+            [EnumMember(Value = "UpdateMenuPrices")]
+            UpdateMenuPrices = 43,
+            
+            /// <summary>
+            /// Enum UpdateMenuItemsHideTemporarily for value: UpdateMenuItemsHideTemporarily
+            /// </summary>
+            [EnumMember(Value = "UpdateMenuItemsHideTemporarily")]
+            UpdateMenuItemsHideTemporarily = 44,
+            
+            /// <summary>
+            /// Enum ViewVouchers for value: ViewVouchers
+            /// </summary>
+            [EnumMember(Value = "ViewVouchers")]
+            ViewVouchers = 45,
+            
+            /// <summary>
+            /// Enum CreateVouchers for value: CreateVouchers
+            /// </summary>
+            [EnumMember(Value = "CreateVouchers")]
+            CreateVouchers = 46,
+            
+            /// <summary>
+            /// Enum UpdateVouchers for value: UpdateVouchers
+            /// </summary>
+            [EnumMember(Value = "UpdateVouchers")]
+            UpdateVouchers = 47,
+            
+            /// <summary>
+            /// Enum ViewWebsiteContent for value: ViewWebsiteContent
+            /// </summary>
+            [EnumMember(Value = "ViewWebsiteContent")]
+            ViewWebsiteContent = 48,
+            
+            /// <summary>
+            /// Enum EditWebsiteContent for value: EditWebsiteContent
+            /// </summary>
+            [EnumMember(Value = "EditWebsiteContent")]
+            EditWebsiteContent = 49,
+            
+            /// <summary>
+            /// Enum ViewBankAccounts for value: ViewBankAccounts
+            /// </summary>
+            [EnumMember(Value = "ViewBankAccounts")]
+            ViewBankAccounts = 50,
+            
+            /// <summary>
+            /// Enum CreateBankAccounts for value: CreateBankAccounts
+            /// </summary>
+            [EnumMember(Value = "CreateBankAccounts")]
+            CreateBankAccounts = 51,
+            
+            /// <summary>
+            /// Enum UpdateBankAccounts for value: UpdateBankAccounts
+            /// </summary>
+            [EnumMember(Value = "UpdateBankAccounts")]
+            UpdateBankAccounts = 52,
+            
+            /// <summary>
+            /// Enum UpdateBankAccountsAssign for value: UpdateBankAccountsAssign
+            /// </summary>
+            [EnumMember(Value = "UpdateBankAccountsAssign")]
+            UpdateBankAccountsAssign = 53,
+            
+            /// <summary>
+            /// Enum ViewFeesConfigurations for value: ViewFeesConfigurations
+            /// </summary>
+            [EnumMember(Value = "ViewFeesConfigurations")]
+            ViewFeesConfigurations = 54,
+            
+            /// <summary>
+            /// Enum EditFeesConfigurations for value: EditFeesConfigurations
+            /// </summary>
+            [EnumMember(Value = "EditFeesConfigurations")]
+            EditFeesConfigurations = 55,
+            
+            /// <summary>
+            /// Enum ViewAppStatistics for value: ViewAppStatistics
+            /// </summary>
+            [EnumMember(Value = "ViewAppStatistics")]
+            ViewAppStatistics = 56,
+            
+            /// <summary>
+            /// Enum ViewApmStatistics for value: ViewApmStatistics
+            /// </summary>
+            [EnumMember(Value = "ViewApmStatistics")]
+            ViewApmStatistics = 57,
+            
+            /// <summary>
+            /// Enum ViewCampaignsStatistics for value: ViewCampaignsStatistics
+            /// </summary>
+            [EnumMember(Value = "ViewCampaignsStatistics")]
+            ViewCampaignsStatistics = 58,
+            
+            /// <summary>
+            /// Enum ViewCustomerStatistics for value: ViewCustomerStatistics
+            /// </summary>
+            [EnumMember(Value = "ViewCustomerStatistics")]
+            ViewCustomerStatistics = 59,
+            
+            /// <summary>
+            /// Enum ViewLiveStatistics for value: ViewLiveStatistics
+            /// </summary>
+            [EnumMember(Value = "ViewLiveStatistics")]
+            ViewLiveStatistics = 60,
+            
+            /// <summary>
+            /// Enum ViewOrderStatistics for value: ViewOrderStatistics
+            /// </summary>
+            [EnumMember(Value = "ViewOrderStatistics")]
+            ViewOrderStatistics = 61,
+            
+            /// <summary>
+            /// Enum ViewSalesStatistics for value: ViewSalesStatistics
+            /// </summary>
+            [EnumMember(Value = "ViewSalesStatistics")]
+            ViewSalesStatistics = 62,
+            
+            /// <summary>
+            /// Enum ViewSalesEndOfDayStatistics for value: ViewSalesEndOfDayStatistics
+            /// </summary>
+            [EnumMember(Value = "ViewSalesEndOfDayStatistics")]
+            ViewSalesEndOfDayStatistics = 63,
+            
+            /// <summary>
+            /// Enum ViewVouchersStatistics for value: ViewVouchersStatistics
+            /// </summary>
+            [EnumMember(Value = "ViewVouchersStatistics")]
+            ViewVouchersStatistics = 64,
+            
+            /// <summary>
+            /// Enum ViewApmAuditLogs for value: ViewApmAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewApmAuditLogs")]
+            ViewApmAuditLogs = 65,
+            
+            /// <summary>
+            /// Enum ViewStoreAuditLogs for value: ViewStoreAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewStoreAuditLogs")]
+            ViewStoreAuditLogs = 66,
+            
+            /// <summary>
+            /// Enum ViewMenuAuditLogs for value: ViewMenuAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewMenuAuditLogs")]
+            ViewMenuAuditLogs = 67,
+            
+            /// <summary>
+            /// Enum ViewBankAccountAuditLogs for value: ViewBankAccountAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewBankAccountAuditLogs")]
+            ViewBankAccountAuditLogs = 68,
+            
+            /// <summary>
+            /// Enum ViewFeeConfigurationsAuditLogs for value: ViewFeeConfigurationsAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewFeeConfigurationsAuditLogs")]
+            ViewFeeConfigurationsAuditLogs = 69,
+            
+            /// <summary>
+            /// Enum SendPushNotificationToCustomer for value: SendPushNotificationToCustomer
+            /// </summary>
+            [EnumMember(Value = "SendPushNotificationToCustomer")]
+            SendPushNotificationToCustomer = 70
+        }
+
+
+        /// <summary>
+        /// Constitutes a list of available resources
+        /// </summary>
+        /// <value>Constitutes a list of available resources</value>
+        [DataMember(Name="AppResourceSet", EmitDefaultValue=false)]
+        public List<AppResourceSetEnum> AppResourceSet { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="App" /> class.
         /// </summary>
         /// <param name="appId">App Identifier.</param>
@@ -112,7 +547,8 @@ namespace Flipdish.Model
         /// <param name="iconThumbnailUrl">Icon thumbnail url.</param>
         /// <param name="countryId">Country identifier.</param>
         /// <param name="availableAppLanguages">Available Languages for Apps\\Staff.</param>
-        public App(string appId = default(string), string name = default(string), Coordinates mapCenter = default(Coordinates), Coordinates mapNorthEast = default(Coordinates), Coordinates mapSouthWest = default(Coordinates), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), string iconUrl = default(string), string iconThumbnailUrl = default(string), string countryId = default(string), List<Language> availableAppLanguages = default(List<Language>))
+        /// <param name="appResourceSet">Constitutes a list of available resources.</param>
+        public App(string appId = default(string), string name = default(string), Coordinates mapCenter = default(Coordinates), Coordinates mapNorthEast = default(Coordinates), Coordinates mapSouthWest = default(Coordinates), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), string iconUrl = default(string), string iconThumbnailUrl = default(string), string countryId = default(string), List<Language> availableAppLanguages = default(List<Language>), List<AppResourceSetEnum> appResourceSet = default(List<AppResourceSetEnum>))
         {
             this.AppId = appId;
             this.Name = name;
@@ -124,6 +560,7 @@ namespace Flipdish.Model
             this.IconThumbnailUrl = iconThumbnailUrl;
             this.CountryId = countryId;
             this.AvailableAppLanguages = availableAppLanguages;
+            this.AppResourceSet = appResourceSet;
         }
         
         /// <summary>
@@ -190,6 +627,7 @@ namespace Flipdish.Model
         [DataMember(Name="AvailableAppLanguages", EmitDefaultValue=false)]
         public List<Language> AvailableAppLanguages { get; set; }
 
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -208,6 +646,7 @@ namespace Flipdish.Model
             sb.Append("  IconThumbnailUrl: ").Append(IconThumbnailUrl).Append("\n");
             sb.Append("  CountryId: ").Append(CountryId).Append("\n");
             sb.Append("  AvailableAppLanguages: ").Append(AvailableAppLanguages).Append("\n");
+            sb.Append("  AppResourceSet: ").Append(AppResourceSet).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -291,6 +730,11 @@ namespace Flipdish.Model
                     this.AvailableAppLanguages == input.AvailableAppLanguages ||
                     this.AvailableAppLanguages != null &&
                     this.AvailableAppLanguages.SequenceEqual(input.AvailableAppLanguages)
+                ) && 
+                (
+                    this.AppResourceSet == input.AppResourceSet ||
+                    this.AppResourceSet != null &&
+                    this.AppResourceSet.SequenceEqual(input.AppResourceSet)
                 );
         }
 
@@ -323,6 +767,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CountryId.GetHashCode();
                 if (this.AvailableAppLanguages != null)
                     hashCode = hashCode * 59 + this.AvailableAppLanguages.GetHashCode();
+                if (this.AppResourceSet != null)
+                    hashCode = hashCode * 59 + this.AppResourceSet.GetHashCode();
                 return hashCode;
             }
         }
