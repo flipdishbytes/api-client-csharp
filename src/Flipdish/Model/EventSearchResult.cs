@@ -33,8 +33,11 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EventSearchResult" /> class.
         /// </summary>
+        /// <param name="appCreatedEvent">App Created Event.</param>
+        /// <param name="appUpdatedEvent">App Updated Event.</param>
         /// <param name="analyticsClientEvent">Client Analytics events.</param>
         /// <param name="orderAcceptedEvent">Order accepted events.</param>
+        /// <param name="orderDispatchedEvent">Order dispatched events.</param>
         /// <param name="orderCreatedEvent">Order created events.</param>
         /// <param name="orderRatingUpdatedEvent">Order rating updated events.</param>
         /// <param name="orderRefundedEvent">Order refunded events.</param>
@@ -97,10 +100,13 @@ namespace Flipdish.Model
         /// <param name="teammateInviteAcceptedEvent">Teammate invite accepted event.</param>
         /// <param name="teammateUpdatedEvent">Teammate updated event.</param>
         /// <param name="teammateDeletedEvent">Teammate deleted event.</param>
-        public EventSearchResult(List<AnalyticsClientEvent> analyticsClientEvent = default(List<AnalyticsClientEvent>), List<OrderAcceptedEvent> orderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderCreatedEvent> orderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> orderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> orderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> orderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> orderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<StoreCreatedEvent> storeCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> storeDeletedEvent = default(List<StoreDeletedEvent>), List<StoreAddressUpdatedEvent> storeAddressUpdatedEvent = default(List<StoreAddressUpdatedEvent>), List<DeliveryZoneCreatedEvent> deliveryZoneCreatedEvent = default(List<DeliveryZoneCreatedEvent>), List<DeliveryZoneUpdatedEvent> deliveryZoneUpdatedEvent = default(List<DeliveryZoneUpdatedEvent>), List<DeliveryZoneDeletedEvent> deliveryZoneDeletedEvent = default(List<DeliveryZoneDeletedEvent>), List<StoreOpeningHoursUpdatedEvent> storeOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreBusinessHoursOverrideCreatedEvent> storeBusinessHoursOverrideCreatedEvent = default(List<StoreBusinessHoursOverrideCreatedEvent>), List<StoreBusinessHoursOverrideDeletedEvent> storeBusinessHoursOverrideDeletedEvent = default(List<StoreBusinessHoursOverrideDeletedEvent>), List<StoreUpdatedEvent> storeUpdatedEvent = default(List<StoreUpdatedEvent>), List<MenuCreatedEvent> menuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> menuUpdatedEvent = default(List<MenuUpdatedEvent>), List<MenuSectionCreatedEvent> menuSectionCreatedEvent = default(List<MenuSectionCreatedEvent>), List<MenuSectionUpdatedEvent> menuSectionUpdatedEvent = default(List<MenuSectionUpdatedEvent>), List<MenuSectionDeletedEvent> menuSectionDeletedEvent = default(List<MenuSectionDeletedEvent>), List<MenuSectionItemCreatedEvent> menuSectionItemCreatedEvent = default(List<MenuSectionItemCreatedEvent>), List<MenuSectionItemUpdatedEvent> menuSectionItemUpdatedEvent = default(List<MenuSectionItemUpdatedEvent>), List<MenuSectionItemDeletedEvent> menuSectionItemDeletedEvent = default(List<MenuSectionItemDeletedEvent>), List<MenuItemOptionSetCreatedEvent> menuItemOptionSetCreatedEvent = default(List<MenuItemOptionSetCreatedEvent>), List<MenuItemOptionSetUpdatedEvent> menuItemOptionSetUpdatedEvent = default(List<MenuItemOptionSetUpdatedEvent>), List<MenuItemOptionSetDeletedEvent> menuItemOptionSetDeletedEvent = default(List<MenuItemOptionSetDeletedEvent>), List<MenuItemOptionSetItemCreatedEvent> menuItemOptionSetItemCreatedEvent = default(List<MenuItemOptionSetItemCreatedEvent>), List<MenuItemOptionSetItemUpdatedEvent> menuItemOptionSetItemUpdatedEvent = default(List<MenuItemOptionSetItemUpdatedEvent>), List<MenuItemOptionSetItemDeletedEvent> menuItemOptionSetItemDeletedEvent = default(List<MenuItemOptionSetItemDeletedEvent>), List<StoreGroupCreatedEvent> storeGroupCreatedEvent = default(List<StoreGroupCreatedEvent>), List<StoreGroupUpdatedEvent> storeGroupUpdatedEvent = default(List<StoreGroupUpdatedEvent>), List<StoreGroupDeletedEvent> storeGroupDeletedEvent = default(List<StoreGroupDeletedEvent>), List<CustomerCreatedEvent> customerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> customerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> customerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<WebhookSubscriptionCreatedEvent> webhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> webhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> webhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>), List<PrinterTurnedOnEvent> printerTurnedOnEvent = default(List<PrinterTurnedOnEvent>), List<PrinterTurnedOffEvent> printerTurnedOffEvent = default(List<PrinterTurnedOffEvent>), List<PrinterAssignedToStoreEvent> printerAssignedToStoreEvent = default(List<PrinterAssignedToStoreEvent>), List<PrinterUnassignedFromStoreEvent> printerUnassignedFromStoreEvent = default(List<PrinterUnassignedFromStoreEvent>), List<PhoneCallStartedEvent> phoneCallStartedEvent = default(List<PhoneCallStartedEvent>), List<PhoneCallEndedEvent> phoneCallEndedEvent = default(List<PhoneCallEndedEvent>), List<LoyaltyCampaignCreatedEvent> loyaltyCampaignCreatedEvent = default(List<LoyaltyCampaignCreatedEvent>), List<LoyaltyCampaignDeletedEvent> loyaltyCampaignDeletedEvent = default(List<LoyaltyCampaignDeletedEvent>), List<LoyaltyCampaignUpdatedEvent> loyaltyCampaignUpdatedEvent = default(List<LoyaltyCampaignUpdatedEvent>), List<RetentionCampaignCreatedEvent> retentionCampaignCreatedEvent = default(List<RetentionCampaignCreatedEvent>), List<RetentionCampaignDeletedEvent> retentionCampaignDeletedEvent = default(List<RetentionCampaignDeletedEvent>), List<RetentionCampaignUpdatedEvent> retentionCampaignUpdatedEvent = default(List<RetentionCampaignUpdatedEvent>), List<SmsReceivedEvent> smsReceivedEvent = default(List<SmsReceivedEvent>), List<UserLoginEvent> userLoginEvent = default(List<UserLoginEvent>), List<UserCreatedEvent> userCreatedEvent = default(List<UserCreatedEvent>), List<UserUpdatedEvent> userUpdatedEvent = default(List<UserUpdatedEvent>), List<UserDeletedEvent> userDeletedEvent = default(List<UserDeletedEvent>), List<VoucherCreatedEvent> voucherCreatedEvent = default(List<VoucherCreatedEvent>), List<VoucherUpdatedEvent> voucherUpdatedEvent = default(List<VoucherUpdatedEvent>), List<VoucherDeletedEvent> voucherDeletedEvent = default(List<VoucherDeletedEvent>), List<TeammateInviteSentEvent> teammateInviteSentEvent = default(List<TeammateInviteSentEvent>), List<TeammateInviteAcceptedEvent> teammateInviteAcceptedEvent = default(List<TeammateInviteAcceptedEvent>), List<TeammateUpdatedEvent> teammateUpdatedEvent = default(List<TeammateUpdatedEvent>), List<TeammateDeletedEvent> teammateDeletedEvent = default(List<TeammateDeletedEvent>))
+        public EventSearchResult(List<AppCreatedEvent> appCreatedEvent = default(List<AppCreatedEvent>), List<AppUpdatedEvent> appUpdatedEvent = default(List<AppUpdatedEvent>), List<AnalyticsClientEvent> analyticsClientEvent = default(List<AnalyticsClientEvent>), List<OrderAcceptedEvent> orderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderDispatchedEvent> orderDispatchedEvent = default(List<OrderDispatchedEvent>), List<OrderCreatedEvent> orderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> orderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> orderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> orderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> orderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<StoreCreatedEvent> storeCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> storeDeletedEvent = default(List<StoreDeletedEvent>), List<StoreAddressUpdatedEvent> storeAddressUpdatedEvent = default(List<StoreAddressUpdatedEvent>), List<DeliveryZoneCreatedEvent> deliveryZoneCreatedEvent = default(List<DeliveryZoneCreatedEvent>), List<DeliveryZoneUpdatedEvent> deliveryZoneUpdatedEvent = default(List<DeliveryZoneUpdatedEvent>), List<DeliveryZoneDeletedEvent> deliveryZoneDeletedEvent = default(List<DeliveryZoneDeletedEvent>), List<StoreOpeningHoursUpdatedEvent> storeOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreBusinessHoursOverrideCreatedEvent> storeBusinessHoursOverrideCreatedEvent = default(List<StoreBusinessHoursOverrideCreatedEvent>), List<StoreBusinessHoursOverrideDeletedEvent> storeBusinessHoursOverrideDeletedEvent = default(List<StoreBusinessHoursOverrideDeletedEvent>), List<StoreUpdatedEvent> storeUpdatedEvent = default(List<StoreUpdatedEvent>), List<MenuCreatedEvent> menuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> menuUpdatedEvent = default(List<MenuUpdatedEvent>), List<MenuSectionCreatedEvent> menuSectionCreatedEvent = default(List<MenuSectionCreatedEvent>), List<MenuSectionUpdatedEvent> menuSectionUpdatedEvent = default(List<MenuSectionUpdatedEvent>), List<MenuSectionDeletedEvent> menuSectionDeletedEvent = default(List<MenuSectionDeletedEvent>), List<MenuSectionItemCreatedEvent> menuSectionItemCreatedEvent = default(List<MenuSectionItemCreatedEvent>), List<MenuSectionItemUpdatedEvent> menuSectionItemUpdatedEvent = default(List<MenuSectionItemUpdatedEvent>), List<MenuSectionItemDeletedEvent> menuSectionItemDeletedEvent = default(List<MenuSectionItemDeletedEvent>), List<MenuItemOptionSetCreatedEvent> menuItemOptionSetCreatedEvent = default(List<MenuItemOptionSetCreatedEvent>), List<MenuItemOptionSetUpdatedEvent> menuItemOptionSetUpdatedEvent = default(List<MenuItemOptionSetUpdatedEvent>), List<MenuItemOptionSetDeletedEvent> menuItemOptionSetDeletedEvent = default(List<MenuItemOptionSetDeletedEvent>), List<MenuItemOptionSetItemCreatedEvent> menuItemOptionSetItemCreatedEvent = default(List<MenuItemOptionSetItemCreatedEvent>), List<MenuItemOptionSetItemUpdatedEvent> menuItemOptionSetItemUpdatedEvent = default(List<MenuItemOptionSetItemUpdatedEvent>), List<MenuItemOptionSetItemDeletedEvent> menuItemOptionSetItemDeletedEvent = default(List<MenuItemOptionSetItemDeletedEvent>), List<StoreGroupCreatedEvent> storeGroupCreatedEvent = default(List<StoreGroupCreatedEvent>), List<StoreGroupUpdatedEvent> storeGroupUpdatedEvent = default(List<StoreGroupUpdatedEvent>), List<StoreGroupDeletedEvent> storeGroupDeletedEvent = default(List<StoreGroupDeletedEvent>), List<CustomerCreatedEvent> customerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> customerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> customerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<WebhookSubscriptionCreatedEvent> webhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> webhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> webhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>), List<PrinterTurnedOnEvent> printerTurnedOnEvent = default(List<PrinterTurnedOnEvent>), List<PrinterTurnedOffEvent> printerTurnedOffEvent = default(List<PrinterTurnedOffEvent>), List<PrinterAssignedToStoreEvent> printerAssignedToStoreEvent = default(List<PrinterAssignedToStoreEvent>), List<PrinterUnassignedFromStoreEvent> printerUnassignedFromStoreEvent = default(List<PrinterUnassignedFromStoreEvent>), List<PhoneCallStartedEvent> phoneCallStartedEvent = default(List<PhoneCallStartedEvent>), List<PhoneCallEndedEvent> phoneCallEndedEvent = default(List<PhoneCallEndedEvent>), List<LoyaltyCampaignCreatedEvent> loyaltyCampaignCreatedEvent = default(List<LoyaltyCampaignCreatedEvent>), List<LoyaltyCampaignDeletedEvent> loyaltyCampaignDeletedEvent = default(List<LoyaltyCampaignDeletedEvent>), List<LoyaltyCampaignUpdatedEvent> loyaltyCampaignUpdatedEvent = default(List<LoyaltyCampaignUpdatedEvent>), List<RetentionCampaignCreatedEvent> retentionCampaignCreatedEvent = default(List<RetentionCampaignCreatedEvent>), List<RetentionCampaignDeletedEvent> retentionCampaignDeletedEvent = default(List<RetentionCampaignDeletedEvent>), List<RetentionCampaignUpdatedEvent> retentionCampaignUpdatedEvent = default(List<RetentionCampaignUpdatedEvent>), List<SmsReceivedEvent> smsReceivedEvent = default(List<SmsReceivedEvent>), List<UserLoginEvent> userLoginEvent = default(List<UserLoginEvent>), List<UserCreatedEvent> userCreatedEvent = default(List<UserCreatedEvent>), List<UserUpdatedEvent> userUpdatedEvent = default(List<UserUpdatedEvent>), List<UserDeletedEvent> userDeletedEvent = default(List<UserDeletedEvent>), List<VoucherCreatedEvent> voucherCreatedEvent = default(List<VoucherCreatedEvent>), List<VoucherUpdatedEvent> voucherUpdatedEvent = default(List<VoucherUpdatedEvent>), List<VoucherDeletedEvent> voucherDeletedEvent = default(List<VoucherDeletedEvent>), List<TeammateInviteSentEvent> teammateInviteSentEvent = default(List<TeammateInviteSentEvent>), List<TeammateInviteAcceptedEvent> teammateInviteAcceptedEvent = default(List<TeammateInviteAcceptedEvent>), List<TeammateUpdatedEvent> teammateUpdatedEvent = default(List<TeammateUpdatedEvent>), List<TeammateDeletedEvent> teammateDeletedEvent = default(List<TeammateDeletedEvent>))
         {
+            this.AppCreatedEvent = appCreatedEvent;
+            this.AppUpdatedEvent = appUpdatedEvent;
             this.AnalyticsClientEvent = analyticsClientEvent;
             this.OrderAcceptedEvent = orderAcceptedEvent;
+            this.OrderDispatchedEvent = orderDispatchedEvent;
             this.OrderCreatedEvent = orderCreatedEvent;
             this.OrderRatingUpdatedEvent = orderRatingUpdatedEvent;
             this.OrderRefundedEvent = orderRefundedEvent;
@@ -166,6 +172,20 @@ namespace Flipdish.Model
         }
         
         /// <summary>
+        /// App Created Event
+        /// </summary>
+        /// <value>App Created Event</value>
+        [DataMember(Name="AppCreatedEvent", EmitDefaultValue=false)]
+        public List<AppCreatedEvent> AppCreatedEvent { get; set; }
+
+        /// <summary>
+        /// App Updated Event
+        /// </summary>
+        /// <value>App Updated Event</value>
+        [DataMember(Name="AppUpdatedEvent", EmitDefaultValue=false)]
+        public List<AppUpdatedEvent> AppUpdatedEvent { get; set; }
+
+        /// <summary>
         /// Client Analytics events
         /// </summary>
         /// <value>Client Analytics events</value>
@@ -178,6 +198,13 @@ namespace Flipdish.Model
         /// <value>Order accepted events</value>
         [DataMember(Name="OrderAcceptedEvent", EmitDefaultValue=false)]
         public List<OrderAcceptedEvent> OrderAcceptedEvent { get; set; }
+
+        /// <summary>
+        /// Order dispatched events
+        /// </summary>
+        /// <value>Order dispatched events</value>
+        [DataMember(Name="OrderDispatchedEvent", EmitDefaultValue=false)]
+        public List<OrderDispatchedEvent> OrderDispatchedEvent { get; set; }
 
         /// <summary>
         /// Order created events
@@ -621,8 +648,11 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EventSearchResult {\n");
+            sb.Append("  AppCreatedEvent: ").Append(AppCreatedEvent).Append("\n");
+            sb.Append("  AppUpdatedEvent: ").Append(AppUpdatedEvent).Append("\n");
             sb.Append("  AnalyticsClientEvent: ").Append(AnalyticsClientEvent).Append("\n");
             sb.Append("  OrderAcceptedEvent: ").Append(OrderAcceptedEvent).Append("\n");
+            sb.Append("  OrderDispatchedEvent: ").Append(OrderDispatchedEvent).Append("\n");
             sb.Append("  OrderCreatedEvent: ").Append(OrderCreatedEvent).Append("\n");
             sb.Append("  OrderRatingUpdatedEvent: ").Append(OrderRatingUpdatedEvent).Append("\n");
             sb.Append("  OrderRefundedEvent: ").Append(OrderRefundedEvent).Append("\n");
@@ -720,6 +750,16 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.AppCreatedEvent == input.AppCreatedEvent ||
+                    this.AppCreatedEvent != null &&
+                    this.AppCreatedEvent.SequenceEqual(input.AppCreatedEvent)
+                ) && 
+                (
+                    this.AppUpdatedEvent == input.AppUpdatedEvent ||
+                    this.AppUpdatedEvent != null &&
+                    this.AppUpdatedEvent.SequenceEqual(input.AppUpdatedEvent)
+                ) && 
+                (
                     this.AnalyticsClientEvent == input.AnalyticsClientEvent ||
                     this.AnalyticsClientEvent != null &&
                     this.AnalyticsClientEvent.SequenceEqual(input.AnalyticsClientEvent)
@@ -728,6 +768,11 @@ namespace Flipdish.Model
                     this.OrderAcceptedEvent == input.OrderAcceptedEvent ||
                     this.OrderAcceptedEvent != null &&
                     this.OrderAcceptedEvent.SequenceEqual(input.OrderAcceptedEvent)
+                ) && 
+                (
+                    this.OrderDispatchedEvent == input.OrderDispatchedEvent ||
+                    this.OrderDispatchedEvent != null &&
+                    this.OrderDispatchedEvent.SequenceEqual(input.OrderDispatchedEvent)
                 ) && 
                 (
                     this.OrderCreatedEvent == input.OrderCreatedEvent ||
@@ -1050,10 +1095,16 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.AppCreatedEvent != null)
+                    hashCode = hashCode * 59 + this.AppCreatedEvent.GetHashCode();
+                if (this.AppUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.AppUpdatedEvent.GetHashCode();
                 if (this.AnalyticsClientEvent != null)
                     hashCode = hashCode * 59 + this.AnalyticsClientEvent.GetHashCode();
                 if (this.OrderAcceptedEvent != null)
                     hashCode = hashCode * 59 + this.OrderAcceptedEvent.GetHashCode();
+                if (this.OrderDispatchedEvent != null)
+                    hashCode = hashCode * 59 + this.OrderDispatchedEvent.GetHashCode();
                 if (this.OrderCreatedEvent != null)
                     hashCode = hashCode * 59 + this.OrderCreatedEvent.GetHashCode();
                 if (this.OrderRatingUpdatedEvent != null)

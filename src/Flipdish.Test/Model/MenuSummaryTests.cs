@@ -91,14 +91,6 @@ namespace Flipdish.Test
             // TODO unit test for the property 'VersionNumber'
         }
         /// <summary>
-        /// Test the property 'ImageUrl'
-        /// </summary>
-        [Test]
-        public void ImageUrlTest()
-        {
-            // TODO unit test for the property 'ImageUrl'
-        }
-        /// <summary>
         /// Test the property 'Name'
         /// </summary>
         [Test]

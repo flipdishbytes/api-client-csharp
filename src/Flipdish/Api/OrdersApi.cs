@@ -48,6 +48,27 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AcceptOrderWithHttpInfo (int? id, Accept acceptObject);
         /// <summary>
+        /// Dispatch order
+        /// </summary>
+        /// <remarks>
+        /// To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Order identifier</param>
+        /// <returns></returns>
+        void DispatchOrder (int? id);
+
+        /// <summary>
+        /// Dispatch order
+        /// </summary>
+        /// <remarks>
+        /// To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Order identifier</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DispatchOrderWithHttpInfo (int? id);
+        /// <summary>
         /// Get order by ID
         /// </summary>
         /// <remarks>
@@ -197,6 +218,27 @@ namespace Flipdish.Api
         /// <param name="acceptObject"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AcceptOrderAsyncWithHttpInfo (int? id, Accept acceptObject);
+        /// <summary>
+        /// Dispatch order
+        /// </summary>
+        /// <remarks>
+        /// To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Order identifier</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DispatchOrderAsync (int? id);
+
+        /// <summary>
+        /// Dispatch order
+        /// </summary>
+        /// <remarks>
+        /// To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Order identifier</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DispatchOrderAsyncWithHttpInfo (int? id);
         /// <summary>
         /// Get order by ID
         /// </summary>
@@ -599,6 +641,155 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("AcceptOrder", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Dispatch order To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Order identifier</param>
+        /// <returns></returns>
+        public void DispatchOrder (int? id)
+        {
+             DispatchOrderWithHttpInfo(id);
+        }
+
+        /// <summary>
+        /// Dispatch order To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Order identifier</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DispatchOrderWithHttpInfo (int? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling OrdersApi->DispatchOrder");
+
+            var localVarPath = "/api/v1.0/orders/{id}/dispatch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DispatchOrder", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Dispatch order To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Order identifier</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DispatchOrderAsync (int? id)
+        {
+             await DispatchOrderAsyncWithHttpInfo(id);
+
+        }
+
+        /// <summary>
+        /// Dispatch order To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Order identifier</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DispatchOrderAsyncWithHttpInfo (int? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling OrdersApi->DispatchOrder");
+
+            var localVarPath = "/api/v1.0/orders/{id}/dispatch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DispatchOrder", localVarResponse);
                 if (exception != null) throw exception;
             }
 

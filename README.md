@@ -197,6 +197,7 @@ Class | Method | HTTP request | Description
 *OAuthClientsApi* | [**GetRedirectUris**](docs/OAuthClientsApi.md#getredirecturis) | **GET** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis | Get OAuth client redirect uris
 *OAuthClientsApi* | [**RemoveRedirectUri**](docs/OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis/{uriId} | Delete OAuth client redirect uri
 *OrdersApi* | [**AcceptOrder**](docs/OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
+*OrdersApi* | [**DispatchOrder**](docs/OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 *OrdersApi* | [**GetOrderById**](docs/OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | Get order by ID
 *OrdersApi* | [**GetOrders**](docs/OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
 *OrdersApi* | [**GetOrdersSummary**](docs/OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
@@ -272,6 +273,8 @@ Class | Method | HTTP request | Description
  - [Model.ApmHourlyDataPoint](docs/ApmHourlyDataPoint.md)
  - [Model.ApmStatistics](docs/ApmStatistics.md)
  - [Model.App](docs/App.md)
+ - [Model.AppCreatedEvent](docs/AppCreatedEvent.md)
+ - [Model.AppUpdatedEvent](docs/AppUpdatedEvent.md)
  - [Model.BusinessHoursOverride](docs/BusinessHoursOverride.md)
  - [Model.BusinessHoursOverrideBase](docs/BusinessHoursOverrideBase.md)
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
@@ -353,6 +356,7 @@ Class | Method | HTTP request | Description
  - [Model.Order](docs/Order.md)
  - [Model.OrderAcceptedEvent](docs/OrderAcceptedEvent.md)
  - [Model.OrderCreatedEvent](docs/OrderCreatedEvent.md)
+ - [Model.OrderDispatchedEvent](docs/OrderDispatchedEvent.md)
  - [Model.OrderItem](docs/OrderItem.md)
  - [Model.OrderItemOption](docs/OrderItemOption.md)
  - [Model.OrderRatingUpdatedEvent](docs/OrderRatingUpdatedEvent.md)

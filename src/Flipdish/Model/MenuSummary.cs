@@ -36,16 +36,14 @@ namespace Flipdish.Model
         /// <param name="menuId">Menu identifier.</param>
         /// <param name="modifiedTime">Last modified time.</param>
         /// <param name="versionNumber">Menu version.</param>
-        /// <param name="imageUrl">Image url.</param>
         /// <param name="name">Name of Menu, only shown in portal.</param>
         /// <param name="locked">Locked: is menu locked against modifcation.</param>
         /// <param name="storeNames">List of stores names which are associated with this menu.</param>
-        public MenuSummary(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string imageUrl = default(string), string name = default(string), bool? locked = default(bool?), List<string> storeNames = default(List<string>))
+        public MenuSummary(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string name = default(string), bool? locked = default(bool?), List<string> storeNames = default(List<string>))
         {
             this.MenuId = menuId;
             this.ModifiedTime = modifiedTime;
             this.VersionNumber = versionNumber;
-            this.ImageUrl = imageUrl;
             this.Name = name;
             this.Locked = locked;
             this.StoreNames = storeNames;
@@ -71,13 +69,6 @@ namespace Flipdish.Model
         /// <value>Menu version</value>
         [DataMember(Name="VersionNumber", EmitDefaultValue=false)]
         public int? VersionNumber { get; set; }
-
-        /// <summary>
-        /// Image url
-        /// </summary>
-        /// <value>Image url</value>
-        [DataMember(Name="ImageUrl", EmitDefaultValue=false)]
-        public string ImageUrl { get; set; }
 
         /// <summary>
         /// Name of Menu, only shown in portal
@@ -111,7 +102,6 @@ namespace Flipdish.Model
             sb.Append("  MenuId: ").Append(MenuId).Append("\n");
             sb.Append("  ModifiedTime: ").Append(ModifiedTime).Append("\n");
             sb.Append("  VersionNumber: ").Append(VersionNumber).Append("\n");
-            sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Locked: ").Append(Locked).Append("\n");
             sb.Append("  StoreNames: ").Append(StoreNames).Append("\n");
@@ -165,11 +155,6 @@ namespace Flipdish.Model
                     this.VersionNumber.Equals(input.VersionNumber))
                 ) && 
                 (
-                    this.ImageUrl == input.ImageUrl ||
-                    (this.ImageUrl != null &&
-                    this.ImageUrl.Equals(input.ImageUrl))
-                ) && 
-                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -201,8 +186,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ModifiedTime.GetHashCode();
                 if (this.VersionNumber != null)
                     hashCode = hashCode * 59 + this.VersionNumber.GetHashCode();
-                if (this.ImageUrl != null)
-                    hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Locked != null)

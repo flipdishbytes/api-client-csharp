@@ -3,8 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AppCreatedEvent** | [**List&lt;AppCreatedEvent&gt;**](AppCreatedEvent.md) | App Created Event | [optional] 
+**AppUpdatedEvent** | [**List&lt;AppUpdatedEvent&gt;**](AppUpdatedEvent.md) | App Updated Event | [optional] 
 **AnalyticsClientEvent** | [**List&lt;AnalyticsClientEvent&gt;**](AnalyticsClientEvent.md) | Client Analytics events | [optional] 
 **OrderAcceptedEvent** | [**List&lt;OrderAcceptedEvent&gt;**](OrderAcceptedEvent.md) | Order accepted events | [optional] 
+**OrderDispatchedEvent** | [**List&lt;OrderDispatchedEvent&gt;**](OrderDispatchedEvent.md) | Order dispatched events | [optional] 
 **OrderCreatedEvent** | [**List&lt;OrderCreatedEvent&gt;**](OrderCreatedEvent.md) | Order created events | [optional] 
 **OrderRatingUpdatedEvent** | [**List&lt;OrderRatingUpdatedEvent&gt;**](OrderRatingUpdatedEvent.md) | Order rating updated events | [optional] 
 **OrderRefundedEvent** | [**List&lt;OrderRefundedEvent&gt;**](OrderRefundedEvent.md) | Order refunded events | [optional] 

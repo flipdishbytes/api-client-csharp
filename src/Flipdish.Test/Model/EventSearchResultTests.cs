@@ -67,6 +67,22 @@ namespace Flipdish.Test
 
 
         /// <summary>
+        /// Test the property 'AppCreatedEvent'
+        /// </summary>
+        [Test]
+        public void AppCreatedEventTest()
+        {
+            // TODO unit test for the property 'AppCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'AppUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void AppUpdatedEventTest()
+        {
+            // TODO unit test for the property 'AppUpdatedEvent'
+        }
+        /// <summary>
         /// Test the property 'AnalyticsClientEvent'
         /// </summary>
         [Test]
@@ -81,6 +97,14 @@ namespace Flipdish.Test
         public void OrderAcceptedEventTest()
         {
             // TODO unit test for the property 'OrderAcceptedEvent'
+        }
+        /// <summary>
+        /// Test the property 'OrderDispatchedEvent'
+        /// </summary>
+        [Test]
+        public void OrderDispatchedEventTest()
+        {
+            // TODO unit test for the property 'OrderDispatchedEvent'
         }
         /// <summary>
         /// Test the property 'OrderCreatedEvent'

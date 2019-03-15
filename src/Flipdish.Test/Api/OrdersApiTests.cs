@@ -78,6 +78,18 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test DispatchOrder
+        /// </summary>
+        [Test]
+        public void DispatchOrderTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? id = null;
+            //instance.DispatchOrder(id);
+            
+        }
+        
+        /// <summary>
         /// Test GetOrderById
         /// </summary>
         [Test]
