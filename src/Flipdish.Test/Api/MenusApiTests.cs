@@ -195,6 +195,31 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test GetMenusCheckpoints
+        /// </summary>
+        [Test]
+        public void GetMenusCheckpointsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //var response = instance.GetMenusCheckpoints(menuId);
+            //Assert.IsInstanceOf<RestApiArrayResultMenuCheckpoint> (response, "response is RestApiArrayResultMenuCheckpoint");
+        }
+        
+        /// <summary>
+        /// Test RestoreAMenuCheckpoint
+        /// </summary>
+        [Test]
+        public void RestoreAMenuCheckpointTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //int? checkpointId = null;
+            //instance.RestoreAMenuCheckpoint(menuId, checkpointId);
+            
+        }
+        
+        /// <summary>
         /// Test SetMenuItemMetadata
         /// </summary>
         [Test]

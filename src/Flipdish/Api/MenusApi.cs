@@ -255,6 +255,50 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultMenuSummary</returns>
         ApiResponse<RestApiArrayResultMenuSummary> GetMenusByAppIdWithHttpInfo (string appId);
         /// <summary>
+        /// [PRIVATE API]Get a Menus Checkpoints
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns>RestApiArrayResultMenuCheckpoint</returns>
+        RestApiArrayResultMenuCheckpoint GetMenusCheckpoints (int? menuId);
+
+        /// <summary>
+        /// [PRIVATE API]Get a Menus Checkpoints
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns>ApiResponse of RestApiArrayResultMenuCheckpoint</returns>
+        ApiResponse<RestApiArrayResultMenuCheckpoint> GetMenusCheckpointsWithHttpInfo (int? menuId);
+        /// <summary>
+        /// [PRIVATE API]Restore a Menu to a checkpoint
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="checkpointId">Checkpoint to restore menu to</param>
+        /// <returns></returns>
+        void RestoreAMenuCheckpoint (int? menuId, int? checkpointId);
+
+        /// <summary>
+        /// [PRIVATE API]Restore a Menu to a checkpoint
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="checkpointId">Checkpoint to restore menu to</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> RestoreAMenuCheckpointWithHttpInfo (int? menuId, int? checkpointId);
+        /// <summary>
         /// Update menu item metadata
         /// </summary>
         /// <remarks>
@@ -632,6 +676,50 @@ namespace Flipdish.Api
         /// <param name="appId">Get Menus for this appId</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuSummary)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuSummary>> GetMenusByAppIdAsyncWithHttpInfo (string appId);
+        /// <summary>
+        /// [PRIVATE API]Get a Menus Checkpoints
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns>Task of RestApiArrayResultMenuCheckpoint</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultMenuCheckpoint> GetMenusCheckpointsAsync (int? menuId);
+
+        /// <summary>
+        /// [PRIVATE API]Get a Menus Checkpoints
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultMenuCheckpoint)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuCheckpoint>> GetMenusCheckpointsAsyncWithHttpInfo (int? menuId);
+        /// <summary>
+        /// [PRIVATE API]Restore a Menu to a checkpoint
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="checkpointId">Checkpoint to restore menu to</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task RestoreAMenuCheckpointAsync (int? menuId, int? checkpointId);
+
+        /// <summary>
+        /// [PRIVATE API]Restore a Menu to a checkpoint
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="checkpointId">Checkpoint to restore menu to</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> RestoreAMenuCheckpointAsyncWithHttpInfo (int? menuId, int? checkpointId);
         /// <summary>
         /// Update menu item metadata
         /// </summary>
@@ -2496,6 +2584,318 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiArrayResultMenuSummary>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiArrayResultMenuSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMenuSummary)));
+        }
+
+        /// <summary>
+        /// [PRIVATE API]Get a Menus Checkpoints 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns>RestApiArrayResultMenuCheckpoint</returns>
+        public RestApiArrayResultMenuCheckpoint GetMenusCheckpoints (int? menuId)
+        {
+             ApiResponse<RestApiArrayResultMenuCheckpoint> localVarResponse = GetMenusCheckpointsWithHttpInfo(menuId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [PRIVATE API]Get a Menus Checkpoints 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns>ApiResponse of RestApiArrayResultMenuCheckpoint</returns>
+        public ApiResponse< RestApiArrayResultMenuCheckpoint > GetMenusCheckpointsWithHttpInfo (int? menuId)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->GetMenusCheckpoints");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/checkpoints";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetMenusCheckpoints", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultMenuCheckpoint>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultMenuCheckpoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMenuCheckpoint)));
+        }
+
+        /// <summary>
+        /// [PRIVATE API]Get a Menus Checkpoints 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns>Task of RestApiArrayResultMenuCheckpoint</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultMenuCheckpoint> GetMenusCheckpointsAsync (int? menuId)
+        {
+             ApiResponse<RestApiArrayResultMenuCheckpoint> localVarResponse = await GetMenusCheckpointsAsyncWithHttpInfo(menuId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// [PRIVATE API]Get a Menus Checkpoints 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultMenuCheckpoint)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuCheckpoint>> GetMenusCheckpointsAsyncWithHttpInfo (int? menuId)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->GetMenusCheckpoints");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/checkpoints";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetMenusCheckpoints", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultMenuCheckpoint>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultMenuCheckpoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMenuCheckpoint)));
+        }
+
+        /// <summary>
+        /// [PRIVATE API]Restore a Menu to a checkpoint 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="checkpointId">Checkpoint to restore menu to</param>
+        /// <returns></returns>
+        public void RestoreAMenuCheckpoint (int? menuId, int? checkpointId)
+        {
+             RestoreAMenuCheckpointWithHttpInfo(menuId, checkpointId);
+        }
+
+        /// <summary>
+        /// [PRIVATE API]Restore a Menu to a checkpoint 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="checkpointId">Checkpoint to restore menu to</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> RestoreAMenuCheckpointWithHttpInfo (int? menuId, int? checkpointId)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->RestoreAMenuCheckpoint");
+            // verify the required parameter 'checkpointId' is set
+            if (checkpointId == null)
+                throw new ApiException(400, "Missing required parameter 'checkpointId' when calling MenusApi->RestoreAMenuCheckpoint");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (checkpointId != null) localVarPathParams.Add("checkpointId", this.Configuration.ApiClient.ParameterToString(checkpointId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RestoreAMenuCheckpoint", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// [PRIVATE API]Restore a Menu to a checkpoint 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="checkpointId">Checkpoint to restore menu to</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task RestoreAMenuCheckpointAsync (int? menuId, int? checkpointId)
+        {
+             await RestoreAMenuCheckpointAsyncWithHttpInfo(menuId, checkpointId);
+
+        }
+
+        /// <summary>
+        /// [PRIVATE API]Restore a Menu to a checkpoint 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="checkpointId">Checkpoint to restore menu to</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RestoreAMenuCheckpointAsyncWithHttpInfo (int? menuId, int? checkpointId)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->RestoreAMenuCheckpoint");
+            // verify the required parameter 'checkpointId' is set
+            if (checkpointId == null)
+                throw new ApiException(400, "Missing required parameter 'checkpointId' when calling MenusApi->RestoreAMenuCheckpoint");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (checkpointId != null) localVarPathParams.Add("checkpointId", this.Configuration.ApiClient.ParameterToString(checkpointId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RestoreAMenuCheckpoint", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
