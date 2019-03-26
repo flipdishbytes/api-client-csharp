@@ -75,6 +75,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'Message'
         }
         /// <summary>
+        /// Test the property 'StackTrace'
+        /// </summary>
+        [Test]
+        public void StackTraceTest()
+        {
+            // TODO unit test for the property 'StackTrace'
+        }
+        /// <summary>
         /// Test the property 'Errors'
         /// </summary>
         [Test]

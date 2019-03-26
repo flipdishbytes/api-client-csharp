@@ -72,8 +72,8 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? menuId = null;
-            //instance.CreateDraftMenuFromExistingMenu(menuId);
-            
+            //var response = instance.CreateDraftMenuFromExistingMenu(menuId);
+            //Assert.IsInstanceOf<RestApiResultMenu> (response, "response is RestApiResultMenu");
         }
         
         /// <summary>
@@ -180,6 +180,18 @@ namespace Flipdish.Test
             //int? optionSetItemId = null;
             //var response = instance.GetMenuItemOptionSetItemMetadata(menuId, storeId, optionSetItemId);
             //Assert.IsInstanceOf<RestApiResultMetadata> (response, "response is RestApiResultMetadata");
+        }
+        
+        /// <summary>
+        /// Test GetMenuStoreNames
+        /// </summary>
+        [Test]
+        public void GetMenuStoreNamesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //var response = instance.GetMenuStoreNames(menuId);
+            //Assert.IsInstanceOf<RestApiArrayResultMenuStoreNames> (response, "response is RestApiArrayResultMenuStoreNames");
         }
         
         /// <summary>

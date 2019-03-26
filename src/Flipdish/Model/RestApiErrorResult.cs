@@ -39,8 +39,9 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="RestApiErrorResult" /> class.
         /// </summary>
         /// <param name="message">Error message (required).</param>
+        /// <param name="stackTrace">Stack trace.</param>
         /// <param name="errors">List of errors grouped by field name.</param>
-        public RestApiErrorResult(string message = default(string), List<ValidationErrorResult> errors = default(List<ValidationErrorResult>))
+        public RestApiErrorResult(string message = default(string), string stackTrace = default(string), List<ValidationErrorResult> errors = default(List<ValidationErrorResult>))
         {
             // to ensure "message" is required (not null)
             if (message == null)
@@ -51,6 +52,7 @@ namespace Flipdish.Model
             {
                 this.Message = message;
             }
+            this.StackTrace = stackTrace;
             this.Errors = errors;
         }
         
@@ -60,6 +62,13 @@ namespace Flipdish.Model
         /// <value>Error message</value>
         [DataMember(Name="Message", EmitDefaultValue=false)]
         public string Message { get; set; }
+
+        /// <summary>
+        /// Stack trace
+        /// </summary>
+        /// <value>Stack trace</value>
+        [DataMember(Name="StackTrace", EmitDefaultValue=false)]
+        public string StackTrace { get; set; }
 
         /// <summary>
         /// List of errors grouped by field name
@@ -77,6 +86,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class RestApiErrorResult {\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  StackTrace: ").Append(StackTrace).Append("\n");
             sb.Append("  Errors: ").Append(Errors).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -118,6 +128,11 @@ namespace Flipdish.Model
                     this.Message.Equals(input.Message))
                 ) && 
                 (
+                    this.StackTrace == input.StackTrace ||
+                    (this.StackTrace != null &&
+                    this.StackTrace.Equals(input.StackTrace))
+                ) && 
+                (
                     this.Errors == input.Errors ||
                     this.Errors != null &&
                     this.Errors.SequenceEqual(input.Errors)
@@ -135,6 +150,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.Message != null)
                     hashCode = hashCode * 59 + this.Message.GetHashCode();
+                if (this.StackTrace != null)
+                    hashCode = hashCode * 59 + this.StackTrace.GetHashCode();
                 if (this.Errors != null)
                     hashCode = hashCode * 59 + this.Errors.GetHashCode();
                 return hashCode;

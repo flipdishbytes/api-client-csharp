@@ -180,6 +180,7 @@ Class | Method | HTTP request | Description
 *MenusApi* | [**GetMenuItemMetadata**](docs/MenusApi.md#getmenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get menu item metadata
 *MenusApi* | [**GetMenuItemMetadataByKey**](docs/MenusApi.md#getmenuitemmetadatabykey) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
 *MenusApi* | [**GetMenuItemOptionSetItemMetadata**](docs/MenusApi.md#getmenuitemoptionsetitemmetadata) | **GET** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get menu item option set item metadata by key
+*MenusApi* | [**GetMenuStoreNames**](docs/MenusApi.md#getmenustorenames) | **GET** /api/v1.0/menus/{menuId}/stores | [PRIVATE API]Get menus store names
 *MenusApi* | [**GetMenusByAppId**](docs/MenusApi.md#getmenusbyappid) | **GET** /api/v1.0/{appId}/menus | [PRIVATE API]Get menus by appId
 *MenusApi* | [**GetMenusCheckpoints**](docs/MenusApi.md#getmenuscheckpoints) | **GET** /api/v1.0/menus/{menuId}/checkpoints | [PRIVATE API]Get a Menus Checkpoints
 *MenusApi* | [**RestoreAMenuCheckpoint**](docs/MenusApi.md#restoreamenucheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | [PRIVATE API]Restore a Menu to a checkpoint
@@ -350,6 +351,7 @@ Class | Method | HTTP request | Description
  - [Model.MenuSectionItemDeletedEvent](docs/MenuSectionItemDeletedEvent.md)
  - [Model.MenuSectionItemUpdatedEvent](docs/MenuSectionItemUpdatedEvent.md)
  - [Model.MenuSectionUpdatedEvent](docs/MenuSectionUpdatedEvent.md)
+ - [Model.MenuStoreNames](docs/MenuStoreNames.md)
  - [Model.MenuSummary](docs/MenuSummary.md)
  - [Model.MenuUpdatedEvent](docs/MenuUpdatedEvent.md)
  - [Model.Metadata](docs/Metadata.md)
@@ -398,6 +400,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultMenuItemOptionSetItem](docs/RestApiArrayResultMenuItemOptionSetItem.md)
  - [Model.RestApiArrayResultMenuSection](docs/RestApiArrayResultMenuSection.md)
  - [Model.RestApiArrayResultMenuSectionItem](docs/RestApiArrayResultMenuSectionItem.md)
+ - [Model.RestApiArrayResultMenuStoreNames](docs/RestApiArrayResultMenuStoreNames.md)
  - [Model.RestApiArrayResultMenuSummary](docs/RestApiArrayResultMenuSummary.md)
  - [Model.RestApiArrayResultMetadata](docs/RestApiArrayResultMetadata.md)
  - [Model.RestApiArrayResultOAuthClient](docs/RestApiArrayResultOAuthClient.md)

@@ -1,11 +1,9 @@
-# Flipdish.Model.RestApiErrorResult
+# Flipdish.Model.RestApiArrayResultMenuStoreNames
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Message** | **string** | Error message | 
-**StackTrace** | **string** | Stack trace | [optional] 
-**Errors** | [**List&lt;ValidationErrorResult&gt;**](ValidationErrorResult.md) | List of errors grouped by field name | [optional] 
+**Data** | [**List&lt;MenuStoreNames&gt;**](MenuStoreNames.md) | Generic data object. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
