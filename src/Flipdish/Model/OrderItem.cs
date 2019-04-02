@@ -35,6 +35,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="orderItemOptions">Option list.</param>
         /// <param name="metadata">Metadata.</param>
+        /// <param name="menuItemPublicId">Public id of the Menu Item.</param>
         /// <param name="menuSectionName">Menu section name.</param>
         /// <param name="menuSectionDisplayOrder">Menu section display order.</param>
         /// <param name="name">Name.</param>
@@ -44,10 +45,11 @@ namespace Flipdish.Model
         /// <param name="menuItemId">Menu item identifier.</param>
         /// <param name="menuItemDisplayOrder">Menu item display order.</param>
         /// <param name="isAvailable">Is available.</param>
-        public OrderItem(List<OrderItemOption> orderItemOptions = default(List<OrderItemOption>), Dictionary<string, string> metadata = default(Dictionary<string, string>), string menuSectionName = default(string), int? menuSectionDisplayOrder = default(int?), string name = default(string), string description = default(string), double? price = default(double?), double? priceIncludingOptionSetItems = default(double?), int? menuItemId = default(int?), int? menuItemDisplayOrder = default(int?), bool? isAvailable = default(bool?))
+        public OrderItem(List<OrderItemOption> orderItemOptions = default(List<OrderItemOption>), Dictionary<string, string> metadata = default(Dictionary<string, string>), Guid? menuItemPublicId = default(Guid?), string menuSectionName = default(string), int? menuSectionDisplayOrder = default(int?), string name = default(string), string description = default(string), double? price = default(double?), double? priceIncludingOptionSetItems = default(double?), int? menuItemId = default(int?), int? menuItemDisplayOrder = default(int?), bool? isAvailable = default(bool?))
         {
             this.OrderItemOptions = orderItemOptions;
             this.Metadata = metadata;
+            this.MenuItemPublicId = menuItemPublicId;
             this.MenuSectionName = menuSectionName;
             this.MenuSectionDisplayOrder = menuSectionDisplayOrder;
             this.Name = name;
@@ -72,6 +74,13 @@ namespace Flipdish.Model
         /// <value>Metadata</value>
         [DataMember(Name="Metadata", EmitDefaultValue=false)]
         public Dictionary<string, string> Metadata { get; set; }
+
+        /// <summary>
+        /// Public id of the Menu Item
+        /// </summary>
+        /// <value>Public id of the Menu Item</value>
+        [DataMember(Name="MenuItemPublicId", EmitDefaultValue=false)]
+        public Guid? MenuItemPublicId { get; set; }
 
         /// <summary>
         /// Menu section name
@@ -146,6 +155,7 @@ namespace Flipdish.Model
             sb.Append("class OrderItem {\n");
             sb.Append("  OrderItemOptions: ").Append(OrderItemOptions).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  MenuItemPublicId: ").Append(MenuItemPublicId).Append("\n");
             sb.Append("  MenuSectionName: ").Append(MenuSectionName).Append("\n");
             sb.Append("  MenuSectionDisplayOrder: ").Append(MenuSectionDisplayOrder).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -198,6 +208,11 @@ namespace Flipdish.Model
                     this.Metadata == input.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.SequenceEqual(input.Metadata)
+                ) && 
+                (
+                    this.MenuItemPublicId == input.MenuItemPublicId ||
+                    (this.MenuItemPublicId != null &&
+                    this.MenuItemPublicId.Equals(input.MenuItemPublicId))
                 ) && 
                 (
                     this.MenuSectionName == input.MenuSectionName ||
@@ -259,6 +274,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OrderItemOptions.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
+                if (this.MenuItemPublicId != null)
+                    hashCode = hashCode * 59 + this.MenuItemPublicId.GetHashCode();
                 if (this.MenuSectionName != null)
                     hashCode = hashCode * 59 + this.MenuSectionName.GetHashCode();
                 if (this.MenuSectionDisplayOrder != null)

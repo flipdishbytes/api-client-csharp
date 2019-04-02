@@ -34,15 +34,17 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="OrderItemOption" /> class.
         /// </summary>
         /// <param name="metadata">Metadata.</param>
+        /// <param name="menuItemOptionPublicId">Public id of the Menu Item Option.</param>
         /// <param name="menuItemOptionId">Menu item option identifier.</param>
         /// <param name="isMasterOptionSetItem">Is master option set item.</param>
         /// <param name="name">Name.</param>
         /// <param name="price">Price.</param>
         /// <param name="menuItemOptionDisplayOrder">Menu item option display order.</param>
         /// <param name="menuItemOptionSetDisplayOrder">Menu item option set display order.</param>
-        public OrderItemOption(Dictionary<string, string> metadata = default(Dictionary<string, string>), int? menuItemOptionId = default(int?), bool? isMasterOptionSetItem = default(bool?), string name = default(string), double? price = default(double?), int? menuItemOptionDisplayOrder = default(int?), int? menuItemOptionSetDisplayOrder = default(int?))
+        public OrderItemOption(Dictionary<string, string> metadata = default(Dictionary<string, string>), Guid? menuItemOptionPublicId = default(Guid?), int? menuItemOptionId = default(int?), bool? isMasterOptionSetItem = default(bool?), string name = default(string), double? price = default(double?), int? menuItemOptionDisplayOrder = default(int?), int? menuItemOptionSetDisplayOrder = default(int?))
         {
             this.Metadata = metadata;
+            this.MenuItemOptionPublicId = menuItemOptionPublicId;
             this.MenuItemOptionId = menuItemOptionId;
             this.IsMasterOptionSetItem = isMasterOptionSetItem;
             this.Name = name;
@@ -57,6 +59,13 @@ namespace Flipdish.Model
         /// <value>Metadata</value>
         [DataMember(Name="Metadata", EmitDefaultValue=false)]
         public Dictionary<string, string> Metadata { get; set; }
+
+        /// <summary>
+        /// Public id of the Menu Item Option
+        /// </summary>
+        /// <value>Public id of the Menu Item Option</value>
+        [DataMember(Name="MenuItemOptionPublicId", EmitDefaultValue=false)]
+        public Guid? MenuItemOptionPublicId { get; set; }
 
         /// <summary>
         /// Menu item option identifier
@@ -109,6 +118,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class OrderItemOption {\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  MenuItemOptionPublicId: ").Append(MenuItemOptionPublicId).Append("\n");
             sb.Append("  MenuItemOptionId: ").Append(MenuItemOptionId).Append("\n");
             sb.Append("  IsMasterOptionSetItem: ").Append(IsMasterOptionSetItem).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -155,6 +165,11 @@ namespace Flipdish.Model
                     this.Metadata.SequenceEqual(input.Metadata)
                 ) && 
                 (
+                    this.MenuItemOptionPublicId == input.MenuItemOptionPublicId ||
+                    (this.MenuItemOptionPublicId != null &&
+                    this.MenuItemOptionPublicId.Equals(input.MenuItemOptionPublicId))
+                ) && 
+                (
                     this.MenuItemOptionId == input.MenuItemOptionId ||
                     (this.MenuItemOptionId != null &&
                     this.MenuItemOptionId.Equals(input.MenuItemOptionId))
@@ -197,6 +212,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
+                if (this.MenuItemOptionPublicId != null)
+                    hashCode = hashCode * 59 + this.MenuItemOptionPublicId.GetHashCode();
                 if (this.MenuItemOptionId != null)
                     hashCode = hashCode * 59 + this.MenuItemOptionId.GetHashCode();
                 if (this.IsMasterOptionSetItem != null)

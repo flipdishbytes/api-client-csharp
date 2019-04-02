@@ -75,6 +75,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'Metadata'
         }
         /// <summary>
+        /// Test the property 'MenuItemOptionPublicId'
+        /// </summary>
+        [Test]
+        public void MenuItemOptionPublicIdTest()
+        {
+            // TODO unit test for the property 'MenuItemOptionPublicId'
+        }
+        /// <summary>
         /// Test the property 'MenuItemOptionId'
         /// </summary>
         [Test]

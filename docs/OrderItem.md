@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **OrderItemOptions** | [**List&lt;OrderItemOption&gt;**](OrderItemOption.md) | Option list | [optional] 
 **Metadata** | **Dictionary&lt;string, string&gt;** | Metadata | [optional] 
+**MenuItemPublicId** | **Guid?** | Public id of the Menu Item | [optional] 
 **MenuSectionName** | **string** | Menu section name | [optional] 
 **MenuSectionDisplayOrder** | **int?** | Menu section display order | [optional] 
 **Name** | **string** | Name | [optional] 

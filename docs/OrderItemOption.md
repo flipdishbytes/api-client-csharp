@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Metadata** | **Dictionary&lt;string, string&gt;** | Metadata | [optional] 
+**MenuItemOptionPublicId** | **Guid?** | Public id of the Menu Item Option | [optional] 
 **MenuItemOptionId** | **int?** | Menu item option identifier | [optional] 
 **IsMasterOptionSetItem** | **bool?** | Is master option set item | [optional] 
 **Name** | **string** | Name | [optional] 
