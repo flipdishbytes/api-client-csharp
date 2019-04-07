@@ -72,46 +72,46 @@ namespace Flipdish.Model
             Created = 1,
             
             /// <summary>
+            /// Enum PlacedCanBeCancelled for value: PlacedCanBeCancelled
+            /// </summary>
+            [EnumMember(Value = "PlacedCanBeCancelled")]
+            PlacedCanBeCancelled = 2,
+            
+            /// <summary>
             /// Enum ReadyToProcess for value: ReadyToProcess
             /// </summary>
             [EnumMember(Value = "ReadyToProcess")]
-            ReadyToProcess = 2,
+            ReadyToProcess = 3,
             
             /// <summary>
             /// Enum AcceptedByRestaurant for value: AcceptedByRestaurant
             /// </summary>
             [EnumMember(Value = "AcceptedByRestaurant")]
-            AcceptedByRestaurant = 3,
+            AcceptedByRestaurant = 4,
             
             /// <summary>
             /// Enum Dispatched for value: Dispatched
             /// </summary>
             [EnumMember(Value = "Dispatched")]
-            Dispatched = 4,
+            Dispatched = 5,
             
             /// <summary>
             /// Enum Delivered for value: Delivered
             /// </summary>
             [EnumMember(Value = "Delivered")]
-            Delivered = 5,
+            Delivered = 6,
             
             /// <summary>
             /// Enum Cancelled for value: Cancelled
             /// </summary>
             [EnumMember(Value = "Cancelled")]
-            Cancelled = 6,
+            Cancelled = 7,
             
             /// <summary>
             /// Enum ManualReview for value: ManualReview
             /// </summary>
             [EnumMember(Value = "ManualReview")]
-            ManualReview = 7,
-            
-            /// <summary>
-            /// Enum PlacedCanBeCancelled for value: PlacedCanBeCancelled
-            /// </summary>
-            [EnumMember(Value = "PlacedCanBeCancelled")]
-            PlacedCanBeCancelled = 8,
+            ManualReview = 8,
             
             /// <summary>
             /// Enum RejectedByStore for value: RejectedByStore
