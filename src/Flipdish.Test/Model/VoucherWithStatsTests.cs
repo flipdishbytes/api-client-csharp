@@ -115,6 +115,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'VoucherId'
         }
         /// <summary>
+        /// Test the property 'Code'
+        /// </summary>
+        [Test]
+        public void CodeTest()
+        {
+            // TODO unit test for the property 'Code'
+        }
+        /// <summary>
         /// Test the property 'Status'
         /// </summary>
         [Test]
@@ -139,12 +147,12 @@ namespace Flipdish.Test
             // TODO unit test for the property 'VoucherSubType'
         }
         /// <summary>
-        /// Test the property 'Currency'
+        /// Test the property 'StartDate'
         /// </summary>
         [Test]
-        public void CurrencyTest()
+        public void StartDateTest()
         {
-            // TODO unit test for the property 'Currency'
+            // TODO unit test for the property 'StartDate'
         }
         /// <summary>
         /// Test the property 'AddItemDetails'
@@ -179,12 +187,12 @@ namespace Flipdish.Test
             // TODO unit test for the property 'PercentDiscountDetails'
         }
         /// <summary>
-        /// Test the property 'Code'
+        /// Test the property 'Currency'
         /// </summary>
         [Test]
-        public void CodeTest()
+        public void CurrencyTest()
         {
-            // TODO unit test for the property 'Code'
+            // TODO unit test for the property 'Currency'
         }
         /// <summary>
         /// Test the property 'Description'
@@ -195,108 +203,12 @@ namespace Flipdish.Test
             // TODO unit test for the property 'Description'
         }
         /// <summary>
-        /// Test the property 'Stores'
-        /// </summary>
-        [Test]
-        public void StoresTest()
-        {
-            // TODO unit test for the property 'Stores'
-        }
-        /// <summary>
-        /// Test the property 'ValidOnOrdersOver'
-        /// </summary>
-        [Test]
-        public void ValidOnOrdersOverTest()
-        {
-            // TODO unit test for the property 'ValidOnOrdersOver'
-        }
-        /// <summary>
         /// Test the property 'IsEnabled'
         /// </summary>
         [Test]
         public void IsEnabledTest()
         {
             // TODO unit test for the property 'IsEnabled'
-        }
-        /// <summary>
-        /// Test the property 'IsAutomaticallyApplied'
-        /// </summary>
-        [Test]
-        public void IsAutomaticallyAppliedTest()
-        {
-            // TODO unit test for the property 'IsAutomaticallyApplied'
-        }
-        /// <summary>
-        /// Test the property 'IncludeDeliveryFee'
-        /// </summary>
-        [Test]
-        public void IncludeDeliveryFeeTest()
-        {
-            // TODO unit test for the property 'IncludeDeliveryFee'
-        }
-        /// <summary>
-        /// Test the property 'IsValidForDeliveryOrders'
-        /// </summary>
-        [Test]
-        public void IsValidForDeliveryOrdersTest()
-        {
-            // TODO unit test for the property 'IsValidForDeliveryOrders'
-        }
-        /// <summary>
-        /// Test the property 'IsValidForPickupOrders'
-        /// </summary>
-        [Test]
-        public void IsValidForPickupOrdersTest()
-        {
-            // TODO unit test for the property 'IsValidForPickupOrders'
-        }
-        /// <summary>
-        /// Test the property 'IsValidForOrdersPayedOnline'
-        /// </summary>
-        [Test]
-        public void IsValidForOrdersPayedOnlineTest()
-        {
-            // TODO unit test for the property 'IsValidForOrdersPayedOnline'
-        }
-        /// <summary>
-        /// Test the property 'IsValidForOrdersPayedByCash'
-        /// </summary>
-        [Test]
-        public void IsValidForOrdersPayedByCashTest()
-        {
-            // TODO unit test for the property 'IsValidForOrdersPayedByCash'
-        }
-        /// <summary>
-        /// Test the property 'IsValidForFirstOrderOnly'
-        /// </summary>
-        [Test]
-        public void IsValidForFirstOrderOnlyTest()
-        {
-            // TODO unit test for the property 'IsValidForFirstOrderOnly'
-        }
-        /// <summary>
-        /// Test the property 'IsValidOncePerCustomer'
-        /// </summary>
-        [Test]
-        public void IsValidOncePerCustomerTest()
-        {
-            // TODO unit test for the property 'IsValidOncePerCustomer'
-        }
-        /// <summary>
-        /// Test the property 'IsValidOnlyOnce'
-        /// </summary>
-        [Test]
-        public void IsValidOnlyOnceTest()
-        {
-            // TODO unit test for the property 'IsValidOnlyOnce'
-        }
-        /// <summary>
-        /// Test the property 'StartDate'
-        /// </summary>
-        [Test]
-        public void StartDateTest()
-        {
-            // TODO unit test for the property 'StartDate'
         }
         /// <summary>
         /// Test the property 'ExpiryDate'
