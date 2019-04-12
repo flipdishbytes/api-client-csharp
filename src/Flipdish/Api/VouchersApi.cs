@@ -25,6 +25,31 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// [PRIVATE API] Create voucher
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId">Store list</param>
+        /// <param name="voucher">Voucher Details</param>
+        /// <returns>RestApiResultVoucherWithStats</returns>
+        RestApiResultVoucherWithStats CreateVoucher (string appId, List<int?> storeId, CreateVoucher voucher);
+
+        /// <summary>
+        /// [PRIVATE API] Create voucher
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId">Store list</param>
+        /// <param name="voucher">Voucher Details</param>
+        /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
+        ApiResponse<RestApiResultVoucherWithStats> CreateVoucherWithHttpInfo (string appId, List<int?> storeId, CreateVoucher voucher);
+        /// <summary>
         /// [PRIVATE API] Get voucher by identifier
         /// </summary>
         /// <remarks>
@@ -114,8 +139,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>RestApiResultVoucherWithStats</returns>
-        RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher);
+        RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
 
         /// <summary>
         /// [PRIVATE API] Updates voucher
@@ -126,10 +154,38 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
-        ApiResponse<RestApiResultVoucherWithStats> UpdateVoucherWithHttpInfo (int? voucherId, VoucherBase voucher);
+        ApiResponse<RestApiResultVoucherWithStats> UpdateVoucherWithHttpInfo (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// [PRIVATE API] Create voucher
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId">Store list</param>
+        /// <param name="voucher">Voucher Details</param>
+        /// <returns>Task of RestApiResultVoucherWithStats</returns>
+        System.Threading.Tasks.Task<RestApiResultVoucherWithStats> CreateVoucherAsync (string appId, List<int?> storeId, CreateVoucher voucher);
+
+        /// <summary>
+        /// [PRIVATE API] Create voucher
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId">Store list</param>
+        /// <param name="voucher">Voucher Details</param>
+        /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> CreateVoucherAsyncWithHttpInfo (string appId, List<int?> storeId, CreateVoucher voucher);
         /// <summary>
         /// [PRIVATE API] Get voucher by identifier
         /// </summary>
@@ -220,8 +276,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>Task of RestApiResultVoucherWithStats</returns>
-        System.Threading.Tasks.Task<RestApiResultVoucherWithStats> UpdateVoucherAsync (int? voucherId, VoucherBase voucher);
+        System.Threading.Tasks.Task<RestApiResultVoucherWithStats> UpdateVoucherAsync (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
 
         /// <summary>
         /// [PRIVATE API] Updates voucher
@@ -232,8 +291,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> UpdateVoucherAsyncWithHttpInfo (int? voucherId, VoucherBase voucher);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> UpdateVoucherAsyncWithHttpInfo (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
         #endregion Asynchronous Operations
     }
 
@@ -332,6 +394,205 @@ namespace Flipdish.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Create voucher 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId">Store list</param>
+        /// <param name="voucher">Voucher Details</param>
+        /// <returns>RestApiResultVoucherWithStats</returns>
+        public RestApiResultVoucherWithStats CreateVoucher (string appId, List<int?> storeId, CreateVoucher voucher)
+        {
+             ApiResponse<RestApiResultVoucherWithStats> localVarResponse = CreateVoucherWithHttpInfo(appId, storeId, voucher);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Create voucher 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId">Store list</param>
+        /// <param name="voucher">Voucher Details</param>
+        /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
+        public ApiResponse< RestApiResultVoucherWithStats > CreateVoucherWithHttpInfo (string appId, List<int?> storeId, CreateVoucher voucher)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling VouchersApi->CreateVoucher");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling VouchersApi->CreateVoucher");
+            // verify the required parameter 'voucher' is set
+            if (voucher == null)
+                throw new ApiException(400, "Missing required parameter 'voucher' when calling VouchersApi->CreateVoucher");
+
+            var localVarPath = "/api/v1.0/vouchers/{appId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeId", storeId)); // query parameter
+            if (voucher != null && voucher.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(voucher); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = voucher; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateVoucher", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultVoucherWithStats>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultVoucherWithStats) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultVoucherWithStats)));
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Create voucher 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId">Store list</param>
+        /// <param name="voucher">Voucher Details</param>
+        /// <returns>Task of RestApiResultVoucherWithStats</returns>
+        public async System.Threading.Tasks.Task<RestApiResultVoucherWithStats> CreateVoucherAsync (string appId, List<int?> storeId, CreateVoucher voucher)
+        {
+             ApiResponse<RestApiResultVoucherWithStats> localVarResponse = await CreateVoucherAsyncWithHttpInfo(appId, storeId, voucher);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Create voucher 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId">Store list</param>
+        /// <param name="voucher">Voucher Details</param>
+        /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> CreateVoucherAsyncWithHttpInfo (string appId, List<int?> storeId, CreateVoucher voucher)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling VouchersApi->CreateVoucher");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling VouchersApi->CreateVoucher");
+            // verify the required parameter 'voucher' is set
+            if (voucher == null)
+                throw new ApiException(400, "Missing required parameter 'voucher' when calling VouchersApi->CreateVoucher");
+
+            var localVarPath = "/api/v1.0/vouchers/{appId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeId", storeId)); // query parameter
+            if (voucher != null && voucher.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(voucher); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = voucher; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateVoucher", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultVoucherWithStats>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultVoucherWithStats) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultVoucherWithStats)));
         }
 
         /// <summary>
@@ -853,10 +1114,13 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>RestApiResultVoucherWithStats</returns>
-        public RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher)
+        public RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
         {
-             ApiResponse<RestApiResultVoucherWithStats> localVarResponse = UpdateVoucherWithHttpInfo(voucherId, voucher);
+             ApiResponse<RestApiResultVoucherWithStats> localVarResponse = UpdateVoucherWithHttpInfo(voucherId, voucher, percentValue, lumpValue, freeItemId);
              return localVarResponse.Data;
         }
 
@@ -866,8 +1130,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
-        public ApiResponse< RestApiResultVoucherWithStats > UpdateVoucherWithHttpInfo (int? voucherId, VoucherBase voucher)
+        public ApiResponse< RestApiResultVoucherWithStats > UpdateVoucherWithHttpInfo (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
         {
             // verify the required parameter 'voucherId' is set
             if (voucherId == null)
@@ -906,6 +1173,9 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (voucherId != null) localVarPathParams.Add("voucherId", this.Configuration.ApiClient.ParameterToString(voucherId)); // path parameter
+            if (percentValue != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "percentValue", percentValue)); // query parameter
+            if (lumpValue != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "lumpValue", lumpValue)); // query parameter
+            if (freeItemId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "freeItemId", freeItemId)); // query parameter
             if (voucher != null && voucher.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(voucher); // http body (model) parameter
@@ -946,10 +1216,13 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>Task of RestApiResultVoucherWithStats</returns>
-        public async System.Threading.Tasks.Task<RestApiResultVoucherWithStats> UpdateVoucherAsync (int? voucherId, VoucherBase voucher)
+        public async System.Threading.Tasks.Task<RestApiResultVoucherWithStats> UpdateVoucherAsync (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
         {
-             ApiResponse<RestApiResultVoucherWithStats> localVarResponse = await UpdateVoucherAsyncWithHttpInfo(voucherId, voucher);
+             ApiResponse<RestApiResultVoucherWithStats> localVarResponse = await UpdateVoucherAsyncWithHttpInfo(voucherId, voucher, percentValue, lumpValue, freeItemId);
              return localVarResponse.Data;
 
         }
@@ -960,8 +1233,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
+        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> UpdateVoucherAsyncWithHttpInfo (int? voucherId, VoucherBase voucher)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> UpdateVoucherAsyncWithHttpInfo (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
         {
             // verify the required parameter 'voucherId' is set
             if (voucherId == null)
@@ -1000,6 +1276,9 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (voucherId != null) localVarPathParams.Add("voucherId", this.Configuration.ApiClient.ParameterToString(voucherId)); // path parameter
+            if (percentValue != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "percentValue", percentValue)); // query parameter
+            if (lumpValue != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "lumpValue", lumpValue)); // query parameter
+            if (freeItemId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "freeItemId", freeItemId)); // query parameter
             if (voucher != null && voucher.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(voucher); // http body (model) parameter

@@ -65,6 +65,20 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test CreateVoucher
+        /// </summary>
+        [Test]
+        public void CreateVoucherTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //List<int?> storeId = null;
+            //CreateVoucher voucher = null;
+            //var response = instance.CreateVoucher(appId, storeId, voucher);
+            //Assert.IsInstanceOf<RestApiResultVoucherWithStats> (response, "response is RestApiResultVoucherWithStats");
+        }
+        
+        /// <summary>
         /// Test GetVoucherById
         /// </summary>
         [Test]
@@ -118,7 +132,10 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? voucherId = null;
             //VoucherBase voucher = null;
-            //var response = instance.UpdateVoucher(voucherId, voucher);
+            //int? percentValue = null;
+            //double? lumpValue = null;
+            //int? freeItemId = null;
+            //var response = instance.UpdateVoucher(voucherId, voucher, percentValue, lumpValue, freeItemId);
             //Assert.IsInstanceOf<RestApiResultVoucherWithStats> (response, "response is RestApiResultVoucherWithStats");
         }
         
