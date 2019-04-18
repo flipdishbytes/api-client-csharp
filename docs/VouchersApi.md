@@ -4,11 +4,76 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**CreateVoucher**](VouchersApi.md#createvoucher) | **POST** /api/v1.0/vouchers/{appId} | [PRIVATE API] Create voucher
 [**GetVoucherById**](VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Get voucher by identifier
 [**GetVoucherStatsById**](VouchersApi.md#getvoucherstatsbyid) | **GET** /api/v1.0/vouchers/stats/{voucherId} | [PRIVATE API] Get voucher stats by identifier
 [**GetVouchers**](VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appId}/vouchers/summaries | [PRIVATE API] Get vouchers summaries for App Id
 [**UpdateVoucher**](VouchersApi.md#updatevoucher) | **POST** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Updates voucher
 
+
+<a name="createvoucher"></a>
+# **CreateVoucher**
+> RestApiResultVoucherWithStats CreateVoucher (string appId, CreateVoucher voucher)
+
+[PRIVATE API] Create voucher
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class CreateVoucherExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new VouchersApi();
+            var appId = appId_example;  // string | App Name Id
+            var voucher = new CreateVoucher(); // CreateVoucher | Voucher Details
+
+            try
+            {
+                // [PRIVATE API] Create voucher
+                RestApiResultVoucherWithStats result = apiInstance.CreateVoucher(appId, voucher);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VouchersApi.CreateVoucher: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**| App Name Id | 
+ **voucher** | [**CreateVoucher**](CreateVoucher.md)| Voucher Details | 
+
+### Return type
+
+[**RestApiResultVoucherWithStats**](RestApiResultVoucherWithStats.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getvoucherbyid"></a>
 # **GetVoucherById**
@@ -216,7 +281,7 @@ Name | Type | Description  | Notes
 
 <a name="updatevoucher"></a>
 # **UpdateVoucher**
-> RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher)
+> RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
 
 [PRIVATE API] Updates voucher
 
@@ -240,11 +305,14 @@ namespace Example
             var apiInstance = new VouchersApi();
             var voucherId = 56;  // int? | Id of the voucher
             var voucher = new VoucherBase(); // VoucherBase | Updated details for the voucher
+            var percentValue = 56;  // int? | Percent voucher value (can have 1 of 3) (optional) 
+            var lumpValue = 1.2;  // double? | Lump voucher value (can have 1 of 3) (optional) 
+            var freeItemId = 56;  // int? | Free Item Id (can have 1 of 3) (optional) 
 
             try
             {
                 // [PRIVATE API] Updates voucher
-                RestApiResultVoucherWithStats result = apiInstance.UpdateVoucher(voucherId, voucher);
+                RestApiResultVoucherWithStats result = apiInstance.UpdateVoucher(voucherId, voucher, percentValue, lumpValue, freeItemId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -262,6 +330,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **voucherId** | **int?**| Id of the voucher | 
  **voucher** | [**VoucherBase**](VoucherBase.md)| Updated details for the voucher | 
+ **percentValue** | **int?**| Percent voucher value (can have 1 of 3) | [optional] 
+ **lumpValue** | **double?**| Lump voucher value (can have 1 of 3) | [optional] 
+ **freeItemId** | **int?**| Free Item Id (can have 1 of 3) | [optional] 
 
 ### Return type
 

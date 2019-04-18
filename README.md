@@ -121,6 +121,13 @@ Class | Method | HTTP request | Description
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
+*BankAccountApi* | [**AttachBankAccountToStore**](docs/BankAccountApi.md#attachbankaccounttostore) | **POST** /api/v1.0/{appId}/bankaccounts/{accountId}/store/{storeId} | [PRIVATE API] Attach Bank Account to Store
+*BankAccountApi* | [**CreateBankAccount**](docs/BankAccountApi.md#createbankaccount) | **POST** /api/v1.0/{appId}/bankaccounts | [PRIVATE API] Create a new Bank Account and attach to this App
+*BankAccountApi* | [**DeleteBankAccount**](docs/BankAccountApi.md#deletebankaccount) | **DELETE** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Delete BankAccount
+*BankAccountApi* | [**GetBankAccount**](docs/BankAccountApi.md#getbankaccount) | **GET** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Get BankAccount Detail by Id
+*BankAccountApi* | [**GetBankAccounts**](docs/BankAccountApi.md#getbankaccounts) | **GET** /api/v1.0/{appId}/bankaccounts | [PRIVATE API] Get List of BankAccounts for WL
+*BankAccountApi* | [**UpdateBankAccount**](docs/BankAccountApi.md#updatebankaccount) | **POST** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Update BankAccount
+*BankAccountApi* | [**UpdateBankAccountState**](docs/BankAccountApi.md#updatebankaccountstate) | **POST** /api/v1.0/{appId}/bankaccounts/{accountId}/state/{state} | [PRIVATE API] Update State of Bank Account
 *DeliveryZoneApi* | [**AddDeliveryZone**](docs/DeliveryZoneApi.md#adddeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones | Adds a delivery zone to the store id
 *DeliveryZoneApi* | [**GetDeliveryZones**](docs/DeliveryZoneApi.md#getdeliveryzones) | **GET** /api/v1.0/stores/{storeId}/deliveryzones | Get all the delivery zones associated with a store
 *DeliveryZoneApi* | [**RemoveDeliveryZone**](docs/DeliveryZoneApi.md#removedeliveryzone) | **DELETE** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | Removes the existing delivery zone
@@ -135,6 +142,8 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**GetUserEvents**](docs/EventsApi.md#getuserevents) | **GET** /api/v1.0/events/user/{userId} | Get user events  For technical reasons, the number of records returned is limited to 100.
 *EventsApi* | [**GetWhiteLabelEvents**](docs/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 *HeartbeatApi* | [**Ping**](docs/HeartbeatApi.md#ping) | **GET** /api/v1.0/heartbeat | 
+*HomeApi* | [**DismissHomeAction**](docs/HomeApi.md#dismisshomeaction) | **POST** /api/v1.0/home/{homeActionId} | [PRIVATE API] Dismiss Home Action
+*HomeApi* | [**GetHomeActions**](docs/HomeApi.md#gethomeactions) | **GET** /api/v1.0/home | [PRIVATE API] Get Home Actions
 *HttpRequestResponseLogsApi* | [**GetLogs**](docs/HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/interactions/logs | Get API interaction logs
 *LightspeedApi* | [**LightspeedGenerateMenu**](docs/LightspeedApi.md#lightspeedgeneratemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
 *LightspeedApi* | [**LightspeedGetStoreSettings**](docs/LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
@@ -248,6 +257,7 @@ Class | Method | HTTP request | Description
 *TeammatesApi* | [**RedeemInvitation**](docs/TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
 *TeammatesApi* | [**UpdateTeammate**](docs/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | Update teammates (this method does not support Deltas!)
 *UsersApi* | [**GetRoles**](docs/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | Get role names
+*VouchersApi* | [**CreateVoucher**](docs/VouchersApi.md#createvoucher) | **POST** /api/v1.0/vouchers/{appId} | [PRIVATE API] Create voucher
 *VouchersApi* | [**GetVoucherById**](docs/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Get voucher by identifier
 *VouchersApi* | [**GetVoucherStatsById**](docs/VouchersApi.md#getvoucherstatsbyid) | **GET** /api/v1.0/vouchers/stats/{voucherId} | [PRIVATE API] Get voucher stats by identifier
 *VouchersApi* | [**GetVouchers**](docs/VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appId}/vouchers/summaries | [PRIVATE API] Get vouchers summaries for App Id
@@ -278,6 +288,9 @@ Class | Method | HTTP request | Description
  - [Model.App](docs/App.md)
  - [Model.AppCreatedEvent](docs/AppCreatedEvent.md)
  - [Model.AppUpdatedEvent](docs/AppUpdatedEvent.md)
+ - [Model.BankAccountCreate](docs/BankAccountCreate.md)
+ - [Model.BankAccountDetail](docs/BankAccountDetail.md)
+ - [Model.BankAccountSummary](docs/BankAccountSummary.md)
  - [Model.BusinessHoursOverride](docs/BusinessHoursOverride.md)
  - [Model.BusinessHoursOverrideBase](docs/BusinessHoursOverrideBase.md)
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
@@ -289,6 +302,7 @@ Class | Method | HTTP request | Description
  - [Model.Coordinates](docs/Coordinates.md)
  - [Model.CreateAccountModel](docs/CreateAccountModel.md)
  - [Model.CreateTeammate](docs/CreateTeammate.md)
+ - [Model.CreateVoucher](docs/CreateVoucher.md)
  - [Model.CreditNoteDetails](docs/CreditNoteDetails.md)
  - [Model.CurrencyData](docs/CurrencyData.md)
  - [Model.CustomerConsentUpdatedEvent](docs/CustomerConsentUpdatedEvent.md)
@@ -304,6 +318,7 @@ Class | Method | HTTP request | Description
  - [Model.EventSearchResult](docs/EventSearchResult.md)
  - [Model.FeeSummary](docs/FeeSummary.md)
  - [Model.GroupedCoordinates](docs/GroupedCoordinates.md)
+ - [Model.HomeAction](docs/HomeAction.md)
  - [Model.HttpRequestAndResponseLog](docs/HttpRequestAndResponseLog.md)
  - [Model.JobAddress](docs/JobAddress.md)
  - [Model.JobCancellation](docs/JobCancellation.md)
@@ -392,8 +407,10 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultApmCurrencyDataPoint](docs/RestApiArrayResultApmCurrencyDataPoint.md)
  - [Model.RestApiArrayResultApmDataPoint](docs/RestApiArrayResultApmDataPoint.md)
  - [Model.RestApiArrayResultApmHourlyDataPoint](docs/RestApiArrayResultApmHourlyDataPoint.md)
+ - [Model.RestApiArrayResultBankAccountSummary](docs/RestApiArrayResultBankAccountSummary.md)
  - [Model.RestApiArrayResultBusinessHoursPeriod](docs/RestApiArrayResultBusinessHoursPeriod.md)
  - [Model.RestApiArrayResultDeliveryZone](docs/RestApiArrayResultDeliveryZone.md)
+ - [Model.RestApiArrayResultHomeAction](docs/RestApiArrayResultHomeAction.md)
  - [Model.RestApiArrayResultLocalisedTimeZone](docs/RestApiArrayResultLocalisedTimeZone.md)
  - [Model.RestApiArrayResultMenuCheckpoint](docs/RestApiArrayResultMenuCheckpoint.md)
  - [Model.RestApiArrayResultMenuItemOptionSet](docs/RestApiArrayResultMenuItemOptionSet.md)
@@ -429,6 +446,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultWebhookLog](docs/RestApiPaginationResultWebhookLog.md)
  - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
  - [Model.RestApiResultApmStatistics](docs/RestApiResultApmStatistics.md)
+ - [Model.RestApiResultBankAccountDetail](docs/RestApiResultBankAccountDetail.md)
  - [Model.RestApiResultBusinessHoursOverride](docs/RestApiResultBusinessHoursOverride.md)
  - [Model.RestApiResultBusinessHoursPeriod](docs/RestApiResultBusinessHoursPeriod.md)
  - [Model.RestApiResultCard](docs/RestApiResultCard.md)

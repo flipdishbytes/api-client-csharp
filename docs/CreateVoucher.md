@@ -1,8 +1,13 @@
-# Flipdish.Model.VoucherBase
+# Flipdish.Model.CreateVoucher
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**VoucherType** | **string** | Voucher Type | [optional] 
+**AddItemDetails** | [**AddItemDetails**](AddItemDetails.md) | Add item details | [optional] 
+**CreditNoteDetails** | [**CreditNoteDetails**](CreditNoteDetails.md) | Credit note details | [optional] 
+**LumpDiscountDetails** | [**LumpDiscountDetails**](LumpDiscountDetails.md) | Lump discount details | [optional] 
+**PercentDiscountDetails** | [**PercentDiscountDetails**](PercentDiscountDetails.md) | Percent discount details | [optional] 
 **Code** | **string** | Voucher Code | [optional] 
 **Description** | **string** | Voucher Description (Visible on printout) | [optional] 
 **Stores** | **List&lt;int?&gt;** | Stores that this voucher applies to | [optional] 
