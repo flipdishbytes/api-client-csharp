@@ -74,6 +74,14 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'RejectReason'
         }
+        /// <summary>
+        /// Test the property 'DoNotNotifyCustomer'
+        /// </summary>
+        [Test]
+        public void DoNotNotifyCustomerTest()
+        {
+            // TODO unit test for the property 'DoNotNotifyCustomer'
+        }
 
     }
 

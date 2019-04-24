@@ -137,11 +137,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>RestApiResultVoucherWithStats</returns>
-        RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
+        RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
 
         /// <summary>
         /// [PRIVATE API] Updates voucher
@@ -152,11 +153,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
-        ApiResponse<RestApiResultVoucherWithStats> UpdateVoucherWithHttpInfo (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
+        ApiResponse<RestApiResultVoucherWithStats> UpdateVoucherWithHttpInfo (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -272,11 +274,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>Task of RestApiResultVoucherWithStats</returns>
-        System.Threading.Tasks.Task<RestApiResultVoucherWithStats> UpdateVoucherAsync (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
+        System.Threading.Tasks.Task<RestApiResultVoucherWithStats> UpdateVoucherAsync (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
 
         /// <summary>
         /// [PRIVATE API] Updates voucher
@@ -287,11 +290,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> UpdateVoucherAsyncWithHttpInfo (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> UpdateVoucherAsyncWithHttpInfo (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
         #endregion Asynchronous Operations
     }
 
@@ -1098,13 +1102,14 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>RestApiResultVoucherWithStats</returns>
-        public RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
+        public RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
         {
-             ApiResponse<RestApiResultVoucherWithStats> localVarResponse = UpdateVoucherWithHttpInfo(voucherId, voucher, percentValue, lumpValue, freeItemId);
+             ApiResponse<RestApiResultVoucherWithStats> localVarResponse = UpdateVoucherWithHttpInfo(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId);
              return localVarResponse.Data;
         }
 
@@ -1114,11 +1119,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
-        public ApiResponse< RestApiResultVoucherWithStats > UpdateVoucherWithHttpInfo (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
+        public ApiResponse< RestApiResultVoucherWithStats > UpdateVoucherWithHttpInfo (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
         {
             // verify the required parameter 'voucherId' is set
             if (voucherId == null)
@@ -1157,6 +1163,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (voucherId != null) localVarPathParams.Add("voucherId", this.Configuration.ApiClient.ParameterToString(voucherId)); // path parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeId", storeId)); // query parameter
             if (percentValue != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "percentValue", percentValue)); // query parameter
             if (lumpValue != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "lumpValue", lumpValue)); // query parameter
             if (freeItemId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "freeItemId", freeItemId)); // query parameter
@@ -1200,13 +1207,14 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>Task of RestApiResultVoucherWithStats</returns>
-        public async System.Threading.Tasks.Task<RestApiResultVoucherWithStats> UpdateVoucherAsync (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
+        public async System.Threading.Tasks.Task<RestApiResultVoucherWithStats> UpdateVoucherAsync (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
         {
-             ApiResponse<RestApiResultVoucherWithStats> localVarResponse = await UpdateVoucherAsyncWithHttpInfo(voucherId, voucher, percentValue, lumpValue, freeItemId);
+             ApiResponse<RestApiResultVoucherWithStats> localVarResponse = await UpdateVoucherAsyncWithHttpInfo(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId);
              return localVarResponse.Data;
 
         }
@@ -1217,11 +1225,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
+        /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> UpdateVoucherAsyncWithHttpInfo (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> UpdateVoucherAsyncWithHttpInfo (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
         {
             // verify the required parameter 'voucherId' is set
             if (voucherId == null)
@@ -1260,6 +1269,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (voucherId != null) localVarPathParams.Add("voucherId", this.Configuration.ApiClient.ParameterToString(voucherId)); // path parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeId", storeId)); // query parameter
             if (percentValue != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "percentValue", percentValue)); // query parameter
             if (lumpValue != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "lumpValue", lumpValue)); // query parameter
             if (freeItemId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "freeItemId", freeItemId)); // query parameter

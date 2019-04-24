@@ -452,7 +452,8 @@ namespace Flipdish.Model
         /// <param name="userRating">User rating.</param>
         /// <param name="paymentStatus">Status of the payment.</param>
         /// <param name="rejectionReason">Rejection reason. Can have value if the order is rejected..</param>
-        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), RejectionReasonEnum? rejectionReason = default(RejectionReasonEnum?))
+        /// <param name="refundedAmount">Amount refunded to customer..</param>
+        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), RejectionReasonEnum? rejectionReason = default(RejectionReasonEnum?), double? refundedAmount = default(double?))
         {
             this.Store = store;
             this.Customer = customer;
@@ -480,6 +481,7 @@ namespace Flipdish.Model
             this.UserRating = userRating;
             this.PaymentStatus = paymentStatus;
             this.RejectionReason = rejectionReason;
+            this.RefundedAmount = refundedAmount;
         }
         
         /// <summary>
@@ -623,6 +625,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Amount refunded to customer.
+        /// </summary>
+        /// <value>Amount refunded to customer.</value>
+        [DataMember(Name="RefundedAmount", EmitDefaultValue=false)]
+        public double? RefundedAmount { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -656,6 +665,7 @@ namespace Flipdish.Model
             sb.Append("  UserRating: ").Append(UserRating).Append("\n");
             sb.Append("  PaymentStatus: ").Append(PaymentStatus).Append("\n");
             sb.Append("  RejectionReason: ").Append(RejectionReason).Append("\n");
+            sb.Append("  RefundedAmount: ").Append(RefundedAmount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -819,6 +829,11 @@ namespace Flipdish.Model
                     this.RejectionReason == input.RejectionReason ||
                     (this.RejectionReason != null &&
                     this.RejectionReason.Equals(input.RejectionReason))
+                ) && 
+                (
+                    this.RefundedAmount == input.RefundedAmount ||
+                    (this.RefundedAmount != null &&
+                    this.RefundedAmount.Equals(input.RefundedAmount))
                 );
         }
 
@@ -883,6 +898,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PaymentStatus.GetHashCode();
                 if (this.RejectionReason != null)
                     hashCode = hashCode * 59 + this.RejectionReason.GetHashCode();
+                if (this.RefundedAmount != null)
+                    hashCode = hashCode * 59 + this.RefundedAmount.GetHashCode();
                 return hashCode;
             }
         }

@@ -143,7 +143,8 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**GetWhiteLabelEvents**](docs/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 *HeartbeatApi* | [**Ping**](docs/HeartbeatApi.md#ping) | **GET** /api/v1.0/heartbeat | 
 *HomeApi* | [**DismissHomeAction**](docs/HomeApi.md#dismisshomeaction) | **POST** /api/v1.0/home/{homeActionId} | [PRIVATE API] Dismiss Home Action
-*HomeApi* | [**GetHomeActions**](docs/HomeApi.md#gethomeactions) | **GET** /api/v1.0/home | [PRIVATE API] Get Home Actions
+*HomeApi* | [**GetHomeActions**](docs/HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | [PRIVATE API] Get Home Actions
+*HomeApi* | [**GetHomeStatistics**](docs/HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
 *HttpRequestResponseLogsApi* | [**GetLogs**](docs/HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/interactions/logs | Get API interaction logs
 *LightspeedApi* | [**LightspeedGenerateMenu**](docs/LightspeedApi.md#lightspeedgeneratemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
 *LightspeedApi* | [**LightspeedGetStoreSettings**](docs/LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
@@ -231,6 +232,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**GetProcessingFeeConfigsByStoreId**](docs/StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
 *StoresApi* | [**GetProcessingFeeConfigsByStoreIdAndPaymentAccountType**](docs/StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
 *StoresApi* | [**GetStoreById**](docs/StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
+*StoresApi* | [**GetStoreNetSales**](docs/StoresApi.md#getstorenetsales) | **GET** /api/v1.0/{appId}/stores/stats | 
 *StoresApi* | [**GetStores**](docs/StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores
 *StoresApi* | [**GetStoresByAppId**](docs/StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
 *StoresApi* | [**SetBusinessHours**](docs/StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Set Bussiness hours
@@ -288,9 +290,12 @@ Class | Method | HTTP request | Description
  - [Model.App](docs/App.md)
  - [Model.AppCreatedEvent](docs/AppCreatedEvent.md)
  - [Model.AppUpdatedEvent](docs/AppUpdatedEvent.md)
+ - [Model.BankAccount](docs/BankAccount.md)
  - [Model.BankAccountCreate](docs/BankAccountCreate.md)
+ - [Model.BankAccountCreatedEvent](docs/BankAccountCreatedEvent.md)
  - [Model.BankAccountDetail](docs/BankAccountDetail.md)
  - [Model.BankAccountSummary](docs/BankAccountSummary.md)
+ - [Model.BankAccountUpdatedEvent](docs/BankAccountUpdatedEvent.md)
  - [Model.BusinessHoursOverride](docs/BusinessHoursOverride.md)
  - [Model.BusinessHoursOverrideBase](docs/BusinessHoursOverrideBase.md)
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
@@ -319,6 +324,7 @@ Class | Method | HTTP request | Description
  - [Model.FeeSummary](docs/FeeSummary.md)
  - [Model.GroupedCoordinates](docs/GroupedCoordinates.md)
  - [Model.HomeAction](docs/HomeAction.md)
+ - [Model.HomeStatistics](docs/HomeStatistics.md)
  - [Model.HttpRequestAndResponseLog](docs/HttpRequestAndResponseLog.md)
  - [Model.JobAddress](docs/JobAddress.md)
  - [Model.JobCancellation](docs/JobCancellation.md)
@@ -424,6 +430,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultOauthClientRedirectUri](docs/RestApiArrayResultOauthClientRedirectUri.md)
  - [Model.RestApiArrayResultProcessingFeeConfig](docs/RestApiArrayResultProcessingFeeConfig.md)
  - [Model.RestApiArrayResultRestApiDefaultResponse](docs/RestApiArrayResultRestApiDefaultResponse.md)
+ - [Model.RestApiArrayResultStoreStatistics](docs/RestApiArrayResultStoreStatistics.md)
  - [Model.RestApiArrayResultTeammate](docs/RestApiArrayResultTeammate.md)
  - [Model.RestApiArrayResultVoucherDataPoint](docs/RestApiArrayResultVoucherDataPoint.md)
  - [Model.RestApiArrayResultWebhookSubscription](docs/RestApiArrayResultWebhookSubscription.md)
@@ -452,6 +459,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultCard](docs/RestApiResultCard.md)
  - [Model.RestApiResultCoordinates](docs/RestApiResultCoordinates.md)
  - [Model.RestApiResultDeliveryZone](docs/RestApiResultDeliveryZone.md)
+ - [Model.RestApiResultHomeStatistics](docs/RestApiResultHomeStatistics.md)
  - [Model.RestApiResultJobResponse](docs/RestApiResultJobResponse.md)
  - [Model.RestApiResultLightspeedSettings](docs/RestApiResultLightspeedSettings.md)
  - [Model.RestApiResultMenu](docs/RestApiResultMenu.md)
@@ -498,6 +506,7 @@ Class | Method | HTTP request | Description
  - [Model.StoreCloneSettings](docs/StoreCloneSettings.md)
  - [Model.StoreCreateBase](docs/StoreCreateBase.md)
  - [Model.StoreCreatedEvent](docs/StoreCreatedEvent.md)
+ - [Model.StoreDataPoint](docs/StoreDataPoint.md)
  - [Model.StoreDeletedEvent](docs/StoreDeletedEvent.md)
  - [Model.StoreGroup](docs/StoreGroup.md)
  - [Model.StoreGroupBase](docs/StoreGroupBase.md)
@@ -507,6 +516,7 @@ Class | Method | HTTP request | Description
  - [Model.StoreGroupUpdatedEvent](docs/StoreGroupUpdatedEvent.md)
  - [Model.StoreNote](docs/StoreNote.md)
  - [Model.StoreOpeningHoursUpdatedEvent](docs/StoreOpeningHoursUpdatedEvent.md)
+ - [Model.StoreStatistics](docs/StoreStatistics.md)
  - [Model.StoreSummary](docs/StoreSummary.md)
  - [Model.StoreUpdatedEvent](docs/StoreUpdatedEvent.md)
  - [Model.StuartSettings](docs/StuartSettings.md)

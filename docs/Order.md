@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **UserRating** | **int?** | User rating | [optional] 
 **PaymentStatus** | **string** | Status of the payment | [optional] 
 **RejectionReason** | **string** | Rejection reason. Can have value if the order is rejected. | [optional] 
+**RefundedAmount** | **double?** | Amount refunded to customer. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

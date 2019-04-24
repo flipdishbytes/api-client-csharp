@@ -70,6 +70,8 @@ Name | Type | Description | Notes
 **TeammateInviteAcceptedEvent** | [**List&lt;TeammateInviteAcceptedEvent&gt;**](TeammateInviteAcceptedEvent.md) | Teammate invite accepted event | [optional] 
 **TeammateUpdatedEvent** | [**List&lt;TeammateUpdatedEvent&gt;**](TeammateUpdatedEvent.md) | Teammate updated event | [optional] 
 **TeammateDeletedEvent** | [**List&lt;TeammateDeletedEvent&gt;**](TeammateDeletedEvent.md) | Teammate deleted event | [optional] 
+**BankAccountCreatedEvent** | [**List&lt;BankAccountCreatedEvent&gt;**](BankAccountCreatedEvent.md) | Bank account created event | [optional] 
+**BankAccountUpdatedEvent** | [**List&lt;BankAccountUpdatedEvent&gt;**](BankAccountUpdatedEvent.md) | Bank account updated event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

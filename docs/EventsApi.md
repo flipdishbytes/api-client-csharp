@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="getcustomerevents"></a>
 # **GetCustomerEvents**
-> RestApiEventSearchPaginationResult GetCustomerEvents (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
+> RestApiEventSearchPaginationResult GetCustomerEvents (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
 
 Get customer events  For technical reasons, the number of records returned is limited to 100.
 
@@ -45,11 +45,17 @@ namespace Example
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
             var name = new List<string>(); // List<string> | Event names to filter in (optional) 
+            var orderId = 56;  // int? |  (optional) 
+            var storeId = 56;  // int? |  (optional) 
+            var storeGroupId = 56;  // int? |  (optional) 
+            var userId = 56;  // int? |  (optional) 
+            var voucherCode = voucherCode_example;  // string |  (optional) 
+            var eventType = eventType_example;  // string |  (optional) 
 
             try
             {
                 // Get customer events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetCustomerEvents(customerId, limit, page, start, end, name);
+                RestApiEventSearchPaginationResult result = apiInstance.GetCustomerEvents(customerId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -71,6 +77,12 @@ Name | Type | Description  | Notes
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
  **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
+ **orderId** | **int?**|  | [optional] 
+ **storeId** | **int?**|  | [optional] 
+ **storeGroupId** | **int?**|  | [optional] 
+ **userId** | **int?**|  | [optional] 
+ **voucherCode** | **string**|  | [optional] 
+ **eventType** | **string**|  | [optional] 
 
 ### Return type
 
@@ -89,7 +101,7 @@ Name | Type | Description  | Notes
 
 <a name="getevents"></a>
 # **GetEvents**
-> RestApiEventSearchPaginationResult GetEvents (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
+> RestApiEventSearchPaginationResult GetEvents (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
 
 Get events  For technical reasons, the number of records returned is limited to 100.
 
@@ -119,11 +131,17 @@ namespace Example
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
             var name = new List<string>(); // List<string> | Event names to filter in (optional) 
+            var orderId = 56;  // int? |  (optional) 
+            var storeId2 = 56;  // int? |  (optional) 
+            var storeGroupId = 56;  // int? |  (optional) 
+            var userId = 56;  // int? |  (optional) 
+            var voucherCode = voucherCode_example;  // string |  (optional) 
+            var eventType = eventType_example;  // string |  (optional) 
 
             try
             {
                 // Get events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetEvents(storeId, whiteLabelId, customerId, limit, page, start, end, name);
+                RestApiEventSearchPaginationResult result = apiInstance.GetEvents(storeId, whiteLabelId, customerId, limit, page, start, end, name, orderId, storeId2, storeGroupId, userId, voucherCode, eventType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -147,6 +165,12 @@ Name | Type | Description  | Notes
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
  **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
+ **orderId** | **int?**|  | [optional] 
+ **storeId2** | **int?**|  | [optional] 
+ **storeGroupId** | **int?**|  | [optional] 
+ **userId** | **int?**|  | [optional] 
+ **voucherCode** | **string**|  | [optional] 
+ **eventType** | **string**|  | [optional] 
 
 ### Return type
 
@@ -227,7 +251,7 @@ Name | Type | Description  | Notes
 
 <a name="getmenuevents"></a>
 # **GetMenuEvents**
-> RestApiEventSearchPaginationResult GetMenuEvents (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
+> RestApiEventSearchPaginationResult GetMenuEvents (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
 
 Get menu events  For technical reasons, the number of records returned is limited to 100.
 
@@ -255,11 +279,17 @@ namespace Example
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
             var name = new List<string>(); // List<string> | Event names to filter in (optional) 
+            var orderId = 56;  // int? |  (optional) 
+            var storeId = 56;  // int? |  (optional) 
+            var storeGroupId = 56;  // int? |  (optional) 
+            var userId = 56;  // int? |  (optional) 
+            var voucherCode = voucherCode_example;  // string |  (optional) 
+            var eventType = eventType_example;  // string |  (optional) 
 
             try
             {
                 // Get menu events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetMenuEvents(menuId, limit, page, start, end, name);
+                RestApiEventSearchPaginationResult result = apiInstance.GetMenuEvents(menuId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -281,6 +311,12 @@ Name | Type | Description  | Notes
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
  **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
+ **orderId** | **int?**|  | [optional] 
+ **storeId** | **int?**|  | [optional] 
+ **storeGroupId** | **int?**|  | [optional] 
+ **userId** | **int?**|  | [optional] 
+ **voucherCode** | **string**|  | [optional] 
+ **eventType** | **string**|  | [optional] 
 
 ### Return type
 
@@ -299,7 +335,7 @@ Name | Type | Description  | Notes
 
 <a name="getorderevents"></a>
 # **GetOrderEvents**
-> RestApiEventSearchPaginationResult GetOrderEvents (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
+> RestApiEventSearchPaginationResult GetOrderEvents (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
 
 Get order events  For technical reasons, the number of records returned is limited to 100.
 
@@ -327,11 +363,17 @@ namespace Example
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
             var name = new List<string>(); // List<string> | Event names to filter in (optional) 
+            var orderId2 = 56;  // int? |  (optional) 
+            var storeId = 56;  // int? |  (optional) 
+            var storeGroupId = 56;  // int? |  (optional) 
+            var userId = 56;  // int? |  (optional) 
+            var voucherCode = voucherCode_example;  // string |  (optional) 
+            var eventType = eventType_example;  // string |  (optional) 
 
             try
             {
                 // Get order events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetOrderEvents(orderId, limit, page, start, end, name);
+                RestApiEventSearchPaginationResult result = apiInstance.GetOrderEvents(orderId, limit, page, start, end, name, orderId2, storeId, storeGroupId, userId, voucherCode, eventType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -353,6 +395,12 @@ Name | Type | Description  | Notes
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
  **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
+ **orderId2** | **int?**|  | [optional] 
+ **storeId** | **int?**|  | [optional] 
+ **storeGroupId** | **int?**|  | [optional] 
+ **userId** | **int?**|  | [optional] 
+ **voucherCode** | **string**|  | [optional] 
+ **eventType** | **string**|  | [optional] 
 
 ### Return type
 
@@ -371,7 +419,7 @@ Name | Type | Description  | Notes
 
 <a name="getordereventsbycustomer"></a>
 # **GetOrderEventsByCustomer**
-> RestApiEventSearchPaginationResult GetOrderEventsByCustomer (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
+> RestApiEventSearchPaginationResult GetOrderEventsByCustomer (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
 
 Get order events by customer  For technical reasons, the number of records returned is limited to 100.
 
@@ -399,11 +447,17 @@ namespace Example
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
             var name = new List<string>(); // List<string> | Event names to filter in (optional) 
+            var orderId = 56;  // int? |  (optional) 
+            var storeId = 56;  // int? |  (optional) 
+            var storeGroupId = 56;  // int? |  (optional) 
+            var userId = 56;  // int? |  (optional) 
+            var voucherCode = voucherCode_example;  // string |  (optional) 
+            var eventType = eventType_example;  // string |  (optional) 
 
             try
             {
                 // Get order events by customer  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetOrderEventsByCustomer(customerId, limit, page, start, end, name);
+                RestApiEventSearchPaginationResult result = apiInstance.GetOrderEventsByCustomer(customerId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -425,6 +479,12 @@ Name | Type | Description  | Notes
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
  **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
+ **orderId** | **int?**|  | [optional] 
+ **storeId** | **int?**|  | [optional] 
+ **storeGroupId** | **int?**|  | [optional] 
+ **userId** | **int?**|  | [optional] 
+ **voucherCode** | **string**|  | [optional] 
+ **eventType** | **string**|  | [optional] 
 
 ### Return type
 
@@ -443,7 +503,7 @@ Name | Type | Description  | Notes
 
 <a name="getstoreevents"></a>
 # **GetStoreEvents**
-> RestApiEventSearchPaginationResult GetStoreEvents (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
+> RestApiEventSearchPaginationResult GetStoreEvents (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
 
 Get store events  For technical reasons, the number of records returned is limited to 100.
 
@@ -471,11 +531,17 @@ namespace Example
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
             var name = new List<string>(); // List<string> | Event names to filter in (optional) 
+            var orderId = 56;  // int? |  (optional) 
+            var storeId2 = 56;  // int? |  (optional) 
+            var storeGroupId = 56;  // int? |  (optional) 
+            var userId = 56;  // int? |  (optional) 
+            var voucherCode = voucherCode_example;  // string |  (optional) 
+            var eventType = eventType_example;  // string |  (optional) 
 
             try
             {
                 // Get store events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetStoreEvents(storeId, limit, page, start, end, name);
+                RestApiEventSearchPaginationResult result = apiInstance.GetStoreEvents(storeId, limit, page, start, end, name, orderId, storeId2, storeGroupId, userId, voucherCode, eventType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -497,6 +563,12 @@ Name | Type | Description  | Notes
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
  **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
+ **orderId** | **int?**|  | [optional] 
+ **storeId2** | **int?**|  | [optional] 
+ **storeGroupId** | **int?**|  | [optional] 
+ **userId** | **int?**|  | [optional] 
+ **voucherCode** | **string**|  | [optional] 
+ **eventType** | **string**|  | [optional] 
 
 ### Return type
 
@@ -515,7 +587,7 @@ Name | Type | Description  | Notes
 
 <a name="getuserevents"></a>
 # **GetUserEvents**
-> RestApiEventSearchPaginationResult GetUserEvents (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
+> RestApiEventSearchPaginationResult GetUserEvents (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string voucherCode = null, string eventType = null)
 
 Get user events  For technical reasons, the number of records returned is limited to 100.
 
@@ -543,11 +615,17 @@ namespace Example
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
             var name = new List<string>(); // List<string> | Event names to filter in (optional) 
+            var orderId = 56;  // int? |  (optional) 
+            var storeId = 56;  // int? |  (optional) 
+            var storeGroupId = 56;  // int? |  (optional) 
+            var userId2 = 56;  // int? |  (optional) 
+            var voucherCode = voucherCode_example;  // string |  (optional) 
+            var eventType = eventType_example;  // string |  (optional) 
 
             try
             {
                 // Get user events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetUserEvents(userId, limit, page, start, end, name);
+                RestApiEventSearchPaginationResult result = apiInstance.GetUserEvents(userId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId2, voucherCode, eventType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -569,6 +647,12 @@ Name | Type | Description  | Notes
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
  **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
+ **orderId** | **int?**|  | [optional] 
+ **storeId** | **int?**|  | [optional] 
+ **storeGroupId** | **int?**|  | [optional] 
+ **userId2** | **int?**|  | [optional] 
+ **voucherCode** | **string**|  | [optional] 
+ **eventType** | **string**|  | [optional] 
 
 ### Return type
 
@@ -587,7 +671,7 @@ Name | Type | Description  | Notes
 
 <a name="getwhitelabelevents"></a>
 # **GetWhiteLabelEvents**
-> RestApiEventSearchPaginationResult GetWhiteLabelEvents (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null)
+> RestApiEventSearchPaginationResult GetWhiteLabelEvents (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
 
 Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 
@@ -615,11 +699,17 @@ namespace Example
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
             var name = new List<string>(); // List<string> | Event names to filter in (optional) 
+            var orderId = 56;  // int? |  (optional) 
+            var storeId = 56;  // int? |  (optional) 
+            var storeGroupId = 56;  // int? |  (optional) 
+            var userId = 56;  // int? |  (optional) 
+            var voucherCode = voucherCode_example;  // string |  (optional) 
+            var eventType = eventType_example;  // string |  (optional) 
 
             try
             {
                 // Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetWhiteLabelEvents(whitelabelId, limit, page, start, end, name);
+                RestApiEventSearchPaginationResult result = apiInstance.GetWhiteLabelEvents(whitelabelId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -641,6 +731,12 @@ Name | Type | Description  | Notes
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
  **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
+ **orderId** | **int?**|  | [optional] 
+ **storeId** | **int?**|  | [optional] 
+ **storeGroupId** | **int?**|  | [optional] 
+ **userId** | **int?**|  | [optional] 
+ **voucherCode** | **string**|  | [optional] 
+ **eventType** | **string**|  | [optional] 
 
 ### Return type
 

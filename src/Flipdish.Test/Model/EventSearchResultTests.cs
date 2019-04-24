@@ -602,6 +602,22 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'TeammateDeletedEvent'
         }
+        /// <summary>
+        /// Test the property 'BankAccountCreatedEvent'
+        /// </summary>
+        [Test]
+        public void BankAccountCreatedEventTest()
+        {
+            // TODO unit test for the property 'BankAccountCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'BankAccountUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void BankAccountUpdatedEventTest()
+        {
+            // TODO unit test for the property 'BankAccountUpdatedEvent'
+        }
 
     }
 

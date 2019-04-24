@@ -31,9 +31,9 @@ namespace Flipdish.Model
     public partial class Reject :  IEquatable<Reject>, IValidatableObject
     {
         /// <summary>
-        /// Reject reason
+        /// Reject reason.
         /// </summary>
-        /// <value>Reject reason</value>
+        /// <value>Reject reason.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum RejectReasonEnum
         {
@@ -94,9 +94,9 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Reject reason
+        /// Reject reason.
         /// </summary>
-        /// <value>Reject reason</value>
+        /// <value>Reject reason.</value>
         [DataMember(Name="RejectReason", EmitDefaultValue=false)]
         public RejectReasonEnum RejectReason { get; set; }
         /// <summary>
@@ -107,8 +107,9 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Reject" /> class.
         /// </summary>
-        /// <param name="rejectReason">Reject reason (required).</param>
-        public Reject(RejectReasonEnum rejectReason = default(RejectReasonEnum))
+        /// <param name="rejectReason">Reject reason. (required).</param>
+        /// <param name="doNotNotifyCustomer">Notify customer. The server will not send and SMS to the customer if the value is true..</param>
+        public Reject(RejectReasonEnum rejectReason = default(RejectReasonEnum), bool? doNotNotifyCustomer = default(bool?))
         {
             // to ensure "rejectReason" is required (not null)
             if (rejectReason == null)
@@ -119,8 +120,16 @@ namespace Flipdish.Model
             {
                 this.RejectReason = rejectReason;
             }
+            this.DoNotNotifyCustomer = doNotNotifyCustomer;
         }
         
+
+        /// <summary>
+        /// Notify customer. The server will not send and SMS to the customer if the value is true.
+        /// </summary>
+        /// <value>Notify customer. The server will not send and SMS to the customer if the value is true.</value>
+        [DataMember(Name="DoNotNotifyCustomer", EmitDefaultValue=false)]
+        public bool? DoNotNotifyCustomer { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -131,6 +140,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class Reject {\n");
             sb.Append("  RejectReason: ").Append(RejectReason).Append("\n");
+            sb.Append("  DoNotNotifyCustomer: ").Append(DoNotNotifyCustomer).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -169,6 +179,11 @@ namespace Flipdish.Model
                     this.RejectReason == input.RejectReason ||
                     (this.RejectReason != null &&
                     this.RejectReason.Equals(input.RejectReason))
+                ) && 
+                (
+                    this.DoNotNotifyCustomer == input.DoNotNotifyCustomer ||
+                    (this.DoNotNotifyCustomer != null &&
+                    this.DoNotNotifyCustomer.Equals(input.DoNotNotifyCustomer))
                 );
         }
 
@@ -183,6 +198,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.RejectReason != null)
                     hashCode = hashCode * 59 + this.RejectReason.GetHashCode();
+                if (this.DoNotNotifyCustomer != null)
+                    hashCode = hashCode * 59 + this.DoNotNotifyCustomer.GetHashCode();
                 return hashCode;
             }
         }

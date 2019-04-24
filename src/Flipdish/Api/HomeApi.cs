@@ -66,6 +66,27 @@ namespace Flipdish.Api
         /// <param name="appId">App Name Id</param>
         /// <returns>ApiResponse of RestApiArrayResultHomeAction</returns>
         ApiResponse<RestApiArrayResultHomeAction> GetHomeActionsWithHttpInfo (string appId);
+        /// <summary>
+        /// [PRIVATE API] Get Home Statistics
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <returns>RestApiResultHomeStatistics</returns>
+        RestApiResultHomeStatistics GetHomeStatistics (string appId);
+
+        /// <summary>
+        /// [PRIVATE API] Get Home Statistics
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <returns>ApiResponse of RestApiResultHomeStatistics</returns>
+        ApiResponse<RestApiResultHomeStatistics> GetHomeStatisticsWithHttpInfo (string appId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -110,6 +131,27 @@ namespace Flipdish.Api
         /// <param name="appId">App Name Id</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultHomeAction)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultHomeAction>> GetHomeActionsAsyncWithHttpInfo (string appId);
+        /// <summary>
+        /// [PRIVATE API] Get Home Statistics
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <returns>Task of RestApiResultHomeStatistics</returns>
+        System.Threading.Tasks.Task<RestApiResultHomeStatistics> GetHomeStatisticsAsync (string appId);
+
+        /// <summary>
+        /// [PRIVATE API] Get Home Statistics
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <returns>Task of ApiResponse (RestApiResultHomeStatistics)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultHomeStatistics>> GetHomeStatisticsAsyncWithHttpInfo (string appId);
         #endregion Asynchronous Operations
     }
 
@@ -385,7 +427,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling HomeApi->GetHomeActions");
 
-            var localVarPath = "/api/v1.0/home";
+            var localVarPath = "/api/v1.0/{appId}/home";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -409,7 +451,7 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (appId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "appId", appId)); // query parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -461,7 +503,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling HomeApi->GetHomeActions");
 
-            var localVarPath = "/api/v1.0/home";
+            var localVarPath = "/api/v1.0/{appId}/home";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -485,7 +527,7 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (appId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "appId", appId)); // query parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -510,6 +552,157 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiArrayResultHomeAction>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiArrayResultHomeAction) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultHomeAction)));
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Get Home Statistics 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <returns>RestApiResultHomeStatistics</returns>
+        public RestApiResultHomeStatistics GetHomeStatistics (string appId)
+        {
+             ApiResponse<RestApiResultHomeStatistics> localVarResponse = GetHomeStatisticsWithHttpInfo(appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Get Home Statistics 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <returns>ApiResponse of RestApiResultHomeStatistics</returns>
+        public ApiResponse< RestApiResultHomeStatistics > GetHomeStatisticsWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling HomeApi->GetHomeStatistics");
+
+            var localVarPath = "/api/v1.0/{appId}/home/stats";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetHomeStatistics", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultHomeStatistics>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultHomeStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHomeStatistics)));
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Get Home Statistics 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <returns>Task of RestApiResultHomeStatistics</returns>
+        public async System.Threading.Tasks.Task<RestApiResultHomeStatistics> GetHomeStatisticsAsync (string appId)
+        {
+             ApiResponse<RestApiResultHomeStatistics> localVarResponse = await GetHomeStatisticsAsyncWithHttpInfo(appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Get Home Statistics 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <returns>Task of ApiResponse (RestApiResultHomeStatistics)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultHomeStatistics>> GetHomeStatisticsAsyncWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling HomeApi->GetHomeStatistics");
+
+            var localVarPath = "/api/v1.0/{appId}/home/stats";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetHomeStatistics", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultHomeStatistics>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultHomeStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHomeStatistics)));
         }
 
     }

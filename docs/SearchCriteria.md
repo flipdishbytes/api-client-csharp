@@ -8,6 +8,12 @@ Name | Type | Description | Notes
 **Start** | **DateTime?** | Start date | [optional] 
 **End** | **DateTime?** | End date | [optional] 
 **Name** | **List&lt;string&gt;** | Event names to filter in | [optional] 
+**OrderId** | **int?** |  | [optional] 
+**StoreId** | **int?** |  | [optional] 
+**StoreGroupId** | **int?** |  | [optional] 
+**UserId** | **int?** |  | [optional] 
+**VoucherCode** | **string** |  | [optional] 
+**EventType** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

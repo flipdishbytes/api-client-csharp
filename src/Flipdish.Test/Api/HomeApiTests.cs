@@ -88,6 +88,18 @@ namespace Flipdish.Test
             //Assert.IsInstanceOf<RestApiArrayResultHomeAction> (response, "response is RestApiArrayResultHomeAction");
         }
         
+        /// <summary>
+        /// Test GetHomeStatistics
+        /// </summary>
+        [Test]
+        public void GetHomeStatisticsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //var response = instance.GetHomeStatistics(appId);
+            //Assert.IsInstanceOf<RestApiResultHomeStatistics> (response, "response is RestApiResultHomeStatistics");
+        }
+        
     }
 
 }

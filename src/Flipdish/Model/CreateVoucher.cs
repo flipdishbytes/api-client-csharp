@@ -73,13 +73,13 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="CreateVoucher" /> class.
         /// </summary>
         /// <param name="voucherType">Voucher Type.</param>
+        /// <param name="stores">Stores that this voucher applies to.</param>
         /// <param name="addItemDetails">Add item details.</param>
         /// <param name="creditNoteDetails">Credit note details.</param>
         /// <param name="lumpDiscountDetails">Lump discount details.</param>
         /// <param name="percentDiscountDetails">Percent discount details.</param>
         /// <param name="code">Voucher Code.</param>
         /// <param name="description">Voucher Description (Visible on printout).</param>
-        /// <param name="stores">Stores that this voucher applies to.</param>
         /// <param name="validOnOrdersOver">Valid on orders on or above.</param>
         /// <param name="takesPriority">Takes priority.</param>
         /// <param name="isEnabled">Is voucher enabled.</param>
@@ -94,16 +94,16 @@ namespace Flipdish.Model
         /// <param name="isValidOnlyOnce">Valid only once, by any customer (once used cannot be used again by any other customer).</param>
         /// <param name="startDate">Voucher Starts On (Time in UTC).</param>
         /// <param name="expiryDate">Voucher Expires On (Time in UTC).</param>
-        public CreateVoucher(VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), AddItemDetails addItemDetails = default(AddItemDetails), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), List<int?> stores = default(List<int?>), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?))
+        public CreateVoucher(VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), List<int?> stores = default(List<int?>), AddItemDetails addItemDetails = default(AddItemDetails), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?))
         {
             this.VoucherType = voucherType;
+            this.Stores = stores;
             this.AddItemDetails = addItemDetails;
             this.CreditNoteDetails = creditNoteDetails;
             this.LumpDiscountDetails = lumpDiscountDetails;
             this.PercentDiscountDetails = percentDiscountDetails;
             this.Code = code;
             this.Description = description;
-            this.Stores = stores;
             this.ValidOnOrdersOver = validOnOrdersOver;
             this.TakesPriority = takesPriority;
             this.IsEnabled = isEnabled;
@@ -120,6 +120,13 @@ namespace Flipdish.Model
             this.ExpiryDate = expiryDate;
         }
         
+
+        /// <summary>
+        /// Stores that this voucher applies to
+        /// </summary>
+        /// <value>Stores that this voucher applies to</value>
+        [DataMember(Name="Stores", EmitDefaultValue=false)]
+        public List<int?> Stores { get; set; }
 
         /// <summary>
         /// Add item details
@@ -162,13 +169,6 @@ namespace Flipdish.Model
         /// <value>Voucher Description (Visible on printout)</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
-
-        /// <summary>
-        /// Stores that this voucher applies to
-        /// </summary>
-        /// <value>Stores that this voucher applies to</value>
-        [DataMember(Name="Stores", EmitDefaultValue=false)]
-        public List<int?> Stores { get; set; }
 
         /// <summary>
         /// Valid on orders on or above
@@ -277,13 +277,13 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class CreateVoucher {\n");
             sb.Append("  VoucherType: ").Append(VoucherType).Append("\n");
+            sb.Append("  Stores: ").Append(Stores).Append("\n");
             sb.Append("  AddItemDetails: ").Append(AddItemDetails).Append("\n");
             sb.Append("  CreditNoteDetails: ").Append(CreditNoteDetails).Append("\n");
             sb.Append("  LumpDiscountDetails: ").Append(LumpDiscountDetails).Append("\n");
             sb.Append("  PercentDiscountDetails: ").Append(PercentDiscountDetails).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  Stores: ").Append(Stores).Append("\n");
             sb.Append("  ValidOnOrdersOver: ").Append(ValidOnOrdersOver).Append("\n");
             sb.Append("  TakesPriority: ").Append(TakesPriority).Append("\n");
             sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
@@ -338,6 +338,11 @@ namespace Flipdish.Model
                     this.VoucherType.Equals(input.VoucherType))
                 ) && 
                 (
+                    this.Stores == input.Stores ||
+                    this.Stores != null &&
+                    this.Stores.SequenceEqual(input.Stores)
+                ) && 
+                (
                     this.AddItemDetails == input.AddItemDetails ||
                     (this.AddItemDetails != null &&
                     this.AddItemDetails.Equals(input.AddItemDetails))
@@ -366,11 +371,6 @@ namespace Flipdish.Model
                     this.Description == input.Description ||
                     (this.Description != null &&
                     this.Description.Equals(input.Description))
-                ) && 
-                (
-                    this.Stores == input.Stores ||
-                    this.Stores != null &&
-                    this.Stores.SequenceEqual(input.Stores)
                 ) && 
                 (
                     this.ValidOnOrdersOver == input.ValidOnOrdersOver ||
@@ -455,6 +455,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.VoucherType != null)
                     hashCode = hashCode * 59 + this.VoucherType.GetHashCode();
+                if (this.Stores != null)
+                    hashCode = hashCode * 59 + this.Stores.GetHashCode();
                 if (this.AddItemDetails != null)
                     hashCode = hashCode * 59 + this.AddItemDetails.GetHashCode();
                 if (this.CreditNoteDetails != null)
@@ -467,8 +469,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Code.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
-                if (this.Stores != null)
-                    hashCode = hashCode * 59 + this.Stores.GetHashCode();
                 if (this.ValidOnOrdersOver != null)
                     hashCode = hashCode * 59 + this.ValidOnOrdersOver.GetHashCode();
                 if (this.TakesPriority != null)

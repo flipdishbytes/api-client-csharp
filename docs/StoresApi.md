@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**GetProcessingFeeConfigsByStoreId**](StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
 [**GetProcessingFeeConfigsByStoreIdAndPaymentAccountType**](StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
 [**GetStoreById**](StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
+[**GetStoreNetSales**](StoresApi.md#getstorenetsales) | **GET** /api/v1.0/{appId}/stores/stats | 
 [**GetStores**](StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores
 [**GetStoresByAppId**](StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
 [**SetBusinessHours**](StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Set Bussiness hours
@@ -597,6 +598,69 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getstorenetsales"></a>
+# **GetStoreNetSales**
+> RestApiArrayResultStoreStatistics GetStoreNetSales (string appId, List<int?> storeId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetStoreNetSalesExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var appId = appId_example;  // string | 
+            var storeId = new List<int?>(); // List<int?> | 
+
+            try
+            {
+                RestApiArrayResultStoreStatistics result = apiInstance.GetStoreNetSales(appId, storeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.GetStoreNetSales: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)|  | 
+
+### Return type
+
+[**RestApiArrayResultStoreStatistics**](RestApiArrayResultStoreStatistics.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

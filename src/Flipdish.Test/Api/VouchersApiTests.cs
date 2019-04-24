@@ -131,10 +131,11 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? voucherId = null;
             //VoucherBase voucher = null;
+            //List<int?> storeId = null;
             //int? percentValue = null;
             //double? lumpValue = null;
             //int? freeItemId = null;
-            //var response = instance.UpdateVoucher(voucherId, voucher, percentValue, lumpValue, freeItemId);
+            //var response = instance.UpdateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId);
             //Assert.IsInstanceOf<RestApiResultVoucherWithStats> (response, "response is RestApiResultVoucherWithStats");
         }
         

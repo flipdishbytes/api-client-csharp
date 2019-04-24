@@ -184,6 +184,19 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test GetStoreNetSales
+        /// </summary>
+        [Test]
+        public void GetStoreNetSalesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //List<int?> storeId = null;
+            //var response = instance.GetStoreNetSales(appId, storeId);
+            //Assert.IsInstanceOf<RestApiArrayResultStoreStatistics> (response, "response is RestApiArrayResultStoreStatistics");
+        }
+        
+        /// <summary>
         /// Test GetStores
         /// </summary>
         [Test]

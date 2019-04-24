@@ -75,22 +75,16 @@ namespace Flipdish.Model
             StoreStaff = 6,
             
             /// <summary>
-            /// Enum StoreReadWriteAccess for value: StoreReadWriteAccess
-            /// </summary>
-            [EnumMember(Value = "StoreReadWriteAccess")]
-            StoreReadWriteAccess = 7,
-            
-            /// <summary>
             /// Enum StoreReadOnlyAccess for value: StoreReadOnlyAccess
             /// </summary>
             [EnumMember(Value = "StoreReadOnlyAccess")]
-            StoreReadOnlyAccess = 8,
+            StoreReadOnlyAccess = 7,
             
             /// <summary>
             /// Enum FinanceManger for value: FinanceManger
             /// </summary>
             [EnumMember(Value = "FinanceManger")]
-            FinanceManger = 9
+            FinanceManger = 8
         }
 
         /// <summary>

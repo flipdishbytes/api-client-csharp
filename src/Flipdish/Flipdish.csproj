@@ -12,7 +12,7 @@ OpenAPI spec version: v1.0
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{29228120-490D-4FA2-95C2-7693B7CC1B35}</ProjectGuid>
+    <ProjectGuid>{0748EA17-D8BE-4206-8A5F-BE90150FF86C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Flipdish</RootNamespace>

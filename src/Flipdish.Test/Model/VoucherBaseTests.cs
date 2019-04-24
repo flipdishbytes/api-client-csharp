@@ -83,14 +83,6 @@ namespace Flipdish.Test
             // TODO unit test for the property 'Description'
         }
         /// <summary>
-        /// Test the property 'Stores'
-        /// </summary>
-        [Test]
-        public void StoresTest()
-        {
-            // TODO unit test for the property 'Stores'
-        }
-        /// <summary>
         /// Test the property 'ValidOnOrdersOver'
         /// </summary>
         [Test]

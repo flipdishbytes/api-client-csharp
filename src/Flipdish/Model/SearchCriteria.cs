@@ -38,13 +38,25 @@ namespace Flipdish.Model
         /// <param name="start">Start date.</param>
         /// <param name="end">End date.</param>
         /// <param name="name">Event names to filter in.</param>
-        public SearchCriteria(int? limit = default(int?), int? page = default(int?), DateTime? start = default(DateTime?), DateTime? end = default(DateTime?), List<string> name = default(List<string>))
+        /// <param name="orderId">orderId.</param>
+        /// <param name="storeId">storeId.</param>
+        /// <param name="storeGroupId">storeGroupId.</param>
+        /// <param name="userId">userId.</param>
+        /// <param name="voucherCode">voucherCode.</param>
+        /// <param name="eventType">eventType.</param>
+        public SearchCriteria(int? limit = default(int?), int? page = default(int?), DateTime? start = default(DateTime?), DateTime? end = default(DateTime?), List<string> name = default(List<string>), int? orderId = default(int?), int? storeId = default(int?), int? storeGroupId = default(int?), int? userId = default(int?), string voucherCode = default(string), string eventType = default(string))
         {
             this.Limit = limit;
             this.Page = page;
             this.Start = start;
             this.End = end;
             this.Name = name;
+            this.OrderId = orderId;
+            this.StoreId = storeId;
+            this.StoreGroupId = storeGroupId;
+            this.UserId = userId;
+            this.VoucherCode = voucherCode;
+            this.EventType = eventType;
         }
         
         /// <summary>
@@ -83,6 +95,42 @@ namespace Flipdish.Model
         public List<string> Name { get; set; }
 
         /// <summary>
+        /// Gets or Sets OrderId
+        /// </summary>
+        [DataMember(Name="OrderId", EmitDefaultValue=false)]
+        public int? OrderId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets StoreId
+        /// </summary>
+        [DataMember(Name="StoreId", EmitDefaultValue=false)]
+        public int? StoreId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets StoreGroupId
+        /// </summary>
+        [DataMember(Name="StoreGroupId", EmitDefaultValue=false)]
+        public int? StoreGroupId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets UserId
+        /// </summary>
+        [DataMember(Name="UserId", EmitDefaultValue=false)]
+        public int? UserId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets VoucherCode
+        /// </summary>
+        [DataMember(Name="VoucherCode", EmitDefaultValue=false)]
+        public string VoucherCode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EventType
+        /// </summary>
+        [DataMember(Name="EventType", EmitDefaultValue=false)]
+        public string EventType { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -95,6 +143,12 @@ namespace Flipdish.Model
             sb.Append("  Start: ").Append(Start).Append("\n");
             sb.Append("  End: ").Append(End).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  OrderId: ").Append(OrderId).Append("\n");
+            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
+            sb.Append("  UserId: ").Append(UserId).Append("\n");
+            sb.Append("  VoucherCode: ").Append(VoucherCode).Append("\n");
+            sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -153,6 +207,36 @@ namespace Flipdish.Model
                     this.Name == input.Name ||
                     this.Name != null &&
                     this.Name.SequenceEqual(input.Name)
+                ) && 
+                (
+                    this.OrderId == input.OrderId ||
+                    (this.OrderId != null &&
+                    this.OrderId.Equals(input.OrderId))
+                ) && 
+                (
+                    this.StoreId == input.StoreId ||
+                    (this.StoreId != null &&
+                    this.StoreId.Equals(input.StoreId))
+                ) && 
+                (
+                    this.StoreGroupId == input.StoreGroupId ||
+                    (this.StoreGroupId != null &&
+                    this.StoreGroupId.Equals(input.StoreGroupId))
+                ) && 
+                (
+                    this.UserId == input.UserId ||
+                    (this.UserId != null &&
+                    this.UserId.Equals(input.UserId))
+                ) && 
+                (
+                    this.VoucherCode == input.VoucherCode ||
+                    (this.VoucherCode != null &&
+                    this.VoucherCode.Equals(input.VoucherCode))
+                ) && 
+                (
+                    this.EventType == input.EventType ||
+                    (this.EventType != null &&
+                    this.EventType.Equals(input.EventType))
                 );
         }
 
@@ -175,6 +259,18 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.End.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.OrderId != null)
+                    hashCode = hashCode * 59 + this.OrderId.GetHashCode();
+                if (this.StoreId != null)
+                    hashCode = hashCode * 59 + this.StoreId.GetHashCode();
+                if (this.StoreGroupId != null)
+                    hashCode = hashCode * 59 + this.StoreGroupId.GetHashCode();
+                if (this.UserId != null)
+                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
+                if (this.VoucherCode != null)
+                    hashCode = hashCode * 59 + this.VoucherCode.GetHashCode();
+                if (this.EventType != null)
+                    hashCode = hashCode * 59 + this.EventType.GetHashCode();
                 return hashCode;
             }
         }

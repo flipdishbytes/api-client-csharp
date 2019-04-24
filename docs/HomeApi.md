@@ -5,7 +5,8 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**DismissHomeAction**](HomeApi.md#dismisshomeaction) | **POST** /api/v1.0/home/{homeActionId} | [PRIVATE API] Dismiss Home Action
-[**GetHomeActions**](HomeApi.md#gethomeactions) | **GET** /api/v1.0/home | [PRIVATE API] Get Home Actions
+[**GetHomeActions**](HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | [PRIVATE API] Get Home Actions
+[**GetHomeStatistics**](HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
 
 
 <a name="dismisshomeaction"></a>
@@ -120,6 +121,68 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiArrayResultHomeAction**](RestApiArrayResultHomeAction.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="gethomestatistics"></a>
+# **GetHomeStatistics**
+> RestApiResultHomeStatistics GetHomeStatistics (string appId)
+
+[PRIVATE API] Get Home Statistics
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetHomeStatisticsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new HomeApi();
+            var appId = appId_example;  // string | App Name Id
+
+            try
+            {
+                // [PRIVATE API] Get Home Statistics
+                RestApiResultHomeStatistics result = apiInstance.GetHomeStatistics(appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling HomeApi.GetHomeStatistics: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**| App Name Id | 
+
+### Return type
+
+[**RestApiResultHomeStatistics**](RestApiResultHomeStatistics.md)
 
 ### Authorization
 

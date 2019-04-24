@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 
 <a name="updatevoucher"></a>
 # **UpdateVoucher**
-> RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
+> RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
 
 [PRIVATE API] Updates voucher
 
@@ -305,6 +305,7 @@ namespace Example
             var apiInstance = new VouchersApi();
             var voucherId = 56;  // int? | Id of the voucher
             var voucher = new VoucherBase(); // VoucherBase | Updated details for the voucher
+            var storeId = new List<int?>(); // List<int?> |  (optional) 
             var percentValue = 56;  // int? | Percent voucher value (can have 1 of 3) (optional) 
             var lumpValue = 1.2;  // double? | Lump voucher value (can have 1 of 3) (optional) 
             var freeItemId = 56;  // int? | Free Item Id (can have 1 of 3) (optional) 
@@ -312,7 +313,7 @@ namespace Example
             try
             {
                 // [PRIVATE API] Updates voucher
-                RestApiResultVoucherWithStats result = apiInstance.UpdateVoucher(voucherId, voucher, percentValue, lumpValue, freeItemId);
+                RestApiResultVoucherWithStats result = apiInstance.UpdateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -330,6 +331,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **voucherId** | **int?**| Id of the voucher | 
  **voucher** | [**VoucherBase**](VoucherBase.md)| Updated details for the voucher | 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
  **percentValue** | **int?**| Percent voucher value (can have 1 of 3) | [optional] 
  **lumpValue** | **double?**| Lump voucher value (can have 1 of 3) | [optional] 
  **freeItemId** | **int?**| Free Item Id (can have 1 of 3) | [optional] 
