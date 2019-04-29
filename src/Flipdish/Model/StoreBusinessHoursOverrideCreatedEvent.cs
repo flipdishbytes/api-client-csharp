@@ -35,6 +35,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="eventName">The event name.</param>
         /// <param name="storeId">Store Id.</param>
+        /// <param name="storeGroupId">Store group Id.</param>
         /// <param name="user">User which deleted delivery zone for this store.</param>
         /// <param name="description">Description.</param>
         /// <param name="businessHoursOverride">Business Hours Override.</param>
@@ -42,10 +43,11 @@ namespace Flipdish.Model
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
-        public StoreBusinessHoursOverrideCreatedEvent(string eventName = default(string), int? storeId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), BusinessHoursOverride businessHoursOverride = default(BusinessHoursOverride), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
+        public StoreBusinessHoursOverrideCreatedEvent(string eventName = default(string), int? storeId = default(int?), int? storeGroupId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), BusinessHoursOverride businessHoursOverride = default(BusinessHoursOverride), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
         {
             this.EventName = eventName;
             this.StoreId = storeId;
+            this.StoreGroupId = storeGroupId;
             this.User = user;
             this.Description = description;
             this.BusinessHoursOverride = businessHoursOverride;
@@ -68,6 +70,13 @@ namespace Flipdish.Model
         /// <value>Store Id</value>
         [DataMember(Name="StoreId", EmitDefaultValue=false)]
         public int? StoreId { get; set; }
+
+        /// <summary>
+        /// Store group Id
+        /// </summary>
+        /// <value>Store group Id</value>
+        [DataMember(Name="StoreGroupId", EmitDefaultValue=false)]
+        public int? StoreGroupId { get; set; }
 
         /// <summary>
         /// User which deleted delivery zone for this store
@@ -128,6 +137,7 @@ namespace Flipdish.Model
             sb.Append("class StoreBusinessHoursOverrideCreatedEvent {\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  BusinessHoursOverride: ").Append(BusinessHoursOverride).Append("\n");
@@ -180,6 +190,11 @@ namespace Flipdish.Model
                     this.StoreId.Equals(input.StoreId))
                 ) && 
                 (
+                    this.StoreGroupId == input.StoreGroupId ||
+                    (this.StoreGroupId != null &&
+                    this.StoreGroupId.Equals(input.StoreGroupId))
+                ) && 
+                (
                     this.User == input.User ||
                     (this.User != null &&
                     this.User.Equals(input.User))
@@ -229,6 +244,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.StoreId != null)
                     hashCode = hashCode * 59 + this.StoreId.GetHashCode();
+                if (this.StoreGroupId != null)
+                    hashCode = hashCode * 59 + this.StoreGroupId.GetHashCode();
                 if (this.User != null)
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.Description != null)

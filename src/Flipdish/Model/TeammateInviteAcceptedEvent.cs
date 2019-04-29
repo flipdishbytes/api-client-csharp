@@ -34,14 +34,16 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="TeammateInviteAcceptedEvent" /> class.
         /// </summary>
         /// <param name="teammate">The deleted teammate.</param>
+        /// <param name="user">User who accepted the invitation.</param>
         /// <param name="eventName">The event name.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
-        public TeammateInviteAcceptedEvent(Teammate teammate = default(Teammate), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
+        public TeammateInviteAcceptedEvent(Teammate teammate = default(Teammate), UserEventInfo user = default(UserEventInfo), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
         {
             this.Teammate = teammate;
+            this.User = user;
             this.EventName = eventName;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
@@ -55,6 +57,13 @@ namespace Flipdish.Model
         /// <value>The deleted teammate</value>
         [DataMember(Name="Teammate", EmitDefaultValue=false)]
         public Teammate Teammate { get; set; }
+
+        /// <summary>
+        /// User who accepted the invitation
+        /// </summary>
+        /// <value>User who accepted the invitation</value>
+        [DataMember(Name="User", EmitDefaultValue=false)]
+        public UserEventInfo User { get; set; }
 
         /// <summary>
         /// The event name
@@ -100,6 +109,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class TeammateInviteAcceptedEvent {\n");
             sb.Append("  Teammate: ").Append(Teammate).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
@@ -145,6 +155,11 @@ namespace Flipdish.Model
                     this.Teammate.Equals(input.Teammate))
                 ) && 
                 (
+                    this.User == input.User ||
+                    (this.User != null &&
+                    this.User.Equals(input.User))
+                ) && 
+                (
                     this.EventName == input.EventName ||
                     (this.EventName != null &&
                     this.EventName.Equals(input.EventName))
@@ -182,6 +197,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.Teammate != null)
                     hashCode = hashCode * 59 + this.Teammate.GetHashCode();
+                if (this.User != null)
+                    hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.FlipdishEventId != null)

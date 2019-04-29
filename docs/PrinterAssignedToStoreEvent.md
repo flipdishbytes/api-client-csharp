@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **EventName** | **string** | The event name | [optional] 
 **Description** | **string** | Description | [optional] 
 **StoreId** | **int?** | Store Id | [optional] 
+**StoreGroupId** | **int?** | Store group Id | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | Info User | [optional] 
 **Printer** | [**Printer**](Printer.md) | The printer | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 

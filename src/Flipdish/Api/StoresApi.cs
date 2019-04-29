@@ -117,6 +117,27 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
         ApiResponse<RestApiArrayResultRestApiDefaultResponse> DeleteBusinessHoursOverrideWithHttpInfo (int? storeId, int? businessHoursOverrideId);
         /// <summary>
+        /// Get Stores Bank Account Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>RestApiIntegerResult</returns>
+        RestApiIntegerResult GetBankAccount (int? storeId);
+
+        /// <summary>
+        /// Get Stores Bank Account Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>ApiResponse of RestApiIntegerResult</returns>
+        ApiResponse<RestApiIntegerResult> GetBankAccountWithHttpInfo (int? storeId);
+        /// <summary>
         /// Get Bussiness hours
         /// </summary>
         /// <remarks>
@@ -502,6 +523,27 @@ namespace Flipdish.Api
         /// <param name="businessHoursOverrideId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> DeleteBusinessHoursOverrideAsyncWithHttpInfo (int? storeId, int? businessHoursOverrideId);
+        /// <summary>
+        /// Get Stores Bank Account Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>Task of RestApiIntegerResult</returns>
+        System.Threading.Tasks.Task<RestApiIntegerResult> GetBankAccountAsync (int? storeId);
+
+        /// <summary>
+        /// Get Stores Bank Account Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>Task of ApiResponse (RestApiIntegerResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> GetBankAccountAsyncWithHttpInfo (int? storeId);
         /// <summary>
         /// Get Bussiness hours
         /// </summary>
@@ -1616,6 +1658,157 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiArrayResultRestApiDefaultResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiArrayResultRestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultRestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        /// Get Stores Bank Account Id 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>RestApiIntegerResult</returns>
+        public RestApiIntegerResult GetBankAccount (int? storeId)
+        {
+             ApiResponse<RestApiIntegerResult> localVarResponse = GetBankAccountWithHttpInfo(storeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Stores Bank Account Id 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>ApiResponse of RestApiIntegerResult</returns>
+        public ApiResponse< RestApiIntegerResult > GetBankAccountWithHttpInfo (int? storeId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetBankAccount");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/bankaccount";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetBankAccount", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiIntegerResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiIntegerResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiIntegerResult)));
+        }
+
+        /// <summary>
+        /// Get Stores Bank Account Id 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>Task of RestApiIntegerResult</returns>
+        public async System.Threading.Tasks.Task<RestApiIntegerResult> GetBankAccountAsync (int? storeId)
+        {
+             ApiResponse<RestApiIntegerResult> localVarResponse = await GetBankAccountAsyncWithHttpInfo(storeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Stores Bank Account Id 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>Task of ApiResponse (RestApiIntegerResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> GetBankAccountAsyncWithHttpInfo (int? storeId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetBankAccount");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/bankaccount";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetBankAccount", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiIntegerResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiIntegerResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiIntegerResult)));
         }
 
         /// <summary>

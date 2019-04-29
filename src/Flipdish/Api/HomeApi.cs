@@ -25,26 +25,28 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [PRIVATE API] Dismiss Home Action
+        /// [PRIVATE API] Complete Home Action
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="homeActionId">Id of the action</param>
+        /// <param name="isDismissed"></param>
         /// <returns>Object</returns>
-        Object DismissHomeAction (int? homeActionId);
+        Object CompleteHomeAction (int? homeActionId, bool? isDismissed);
 
         /// <summary>
-        /// [PRIVATE API] Dismiss Home Action
+        /// [PRIVATE API] Complete Home Action
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="homeActionId">Id of the action</param>
+        /// <param name="isDismissed"></param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> DismissHomeActionWithHttpInfo (int? homeActionId);
+        ApiResponse<Object> CompleteHomeActionWithHttpInfo (int? homeActionId, bool? isDismissed);
         /// <summary>
         /// [PRIVATE API] Get Home Actions
         /// </summary>
@@ -90,26 +92,28 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// [PRIVATE API] Dismiss Home Action
+        /// [PRIVATE API] Complete Home Action
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="homeActionId">Id of the action</param>
+        /// <param name="isDismissed"></param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> DismissHomeActionAsync (int? homeActionId);
+        System.Threading.Tasks.Task<Object> CompleteHomeActionAsync (int? homeActionId, bool? isDismissed);
 
         /// <summary>
-        /// [PRIVATE API] Dismiss Home Action
+        /// [PRIVATE API] Complete Home Action
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="homeActionId">Id of the action</param>
+        /// <param name="isDismissed"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DismissHomeActionAsyncWithHttpInfo (int? homeActionId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CompleteHomeActionAsyncWithHttpInfo (int? homeActionId, bool? isDismissed);
         /// <summary>
         /// [PRIVATE API] Get Home Actions
         /// </summary>
@@ -253,28 +257,33 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Dismiss Home Action 
+        /// [PRIVATE API] Complete Home Action 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="homeActionId">Id of the action</param>
+        /// <param name="isDismissed"></param>
         /// <returns>Object</returns>
-        public Object DismissHomeAction (int? homeActionId)
+        public Object CompleteHomeAction (int? homeActionId, bool? isDismissed)
         {
-             ApiResponse<Object> localVarResponse = DismissHomeActionWithHttpInfo(homeActionId);
+             ApiResponse<Object> localVarResponse = CompleteHomeActionWithHttpInfo(homeActionId, isDismissed);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// [PRIVATE API] Dismiss Home Action 
+        /// [PRIVATE API] Complete Home Action 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="homeActionId">Id of the action</param>
+        /// <param name="isDismissed"></param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > DismissHomeActionWithHttpInfo (int? homeActionId)
+        public ApiResponse< Object > CompleteHomeActionWithHttpInfo (int? homeActionId, bool? isDismissed)
         {
             // verify the required parameter 'homeActionId' is set
             if (homeActionId == null)
-                throw new ApiException(400, "Missing required parameter 'homeActionId' when calling HomeApi->DismissHomeAction");
+                throw new ApiException(400, "Missing required parameter 'homeActionId' when calling HomeApi->CompleteHomeAction");
+            // verify the required parameter 'isDismissed' is set
+            if (isDismissed == null)
+                throw new ApiException(400, "Missing required parameter 'isDismissed' when calling HomeApi->CompleteHomeAction");
 
             var localVarPath = "/api/v1.0/home/{homeActionId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -301,6 +310,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (homeActionId != null) localVarPathParams.Add("homeActionId", this.Configuration.ApiClient.ParameterToString(homeActionId)); // path parameter
+            if (isDismissed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isDismissed", isDismissed)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -318,7 +328,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DismissHomeAction", localVarResponse);
+                Exception exception = ExceptionFactory("CompleteHomeAction", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -328,29 +338,34 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Dismiss Home Action 
+        /// [PRIVATE API] Complete Home Action 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="homeActionId">Id of the action</param>
+        /// <param name="isDismissed"></param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> DismissHomeActionAsync (int? homeActionId)
+        public async System.Threading.Tasks.Task<Object> CompleteHomeActionAsync (int? homeActionId, bool? isDismissed)
         {
-             ApiResponse<Object> localVarResponse = await DismissHomeActionAsyncWithHttpInfo(homeActionId);
+             ApiResponse<Object> localVarResponse = await CompleteHomeActionAsyncWithHttpInfo(homeActionId, isDismissed);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// [PRIVATE API] Dismiss Home Action 
+        /// [PRIVATE API] Complete Home Action 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="homeActionId">Id of the action</param>
+        /// <param name="isDismissed"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DismissHomeActionAsyncWithHttpInfo (int? homeActionId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CompleteHomeActionAsyncWithHttpInfo (int? homeActionId, bool? isDismissed)
         {
             // verify the required parameter 'homeActionId' is set
             if (homeActionId == null)
-                throw new ApiException(400, "Missing required parameter 'homeActionId' when calling HomeApi->DismissHomeAction");
+                throw new ApiException(400, "Missing required parameter 'homeActionId' when calling HomeApi->CompleteHomeAction");
+            // verify the required parameter 'isDismissed' is set
+            if (isDismissed == null)
+                throw new ApiException(400, "Missing required parameter 'isDismissed' when calling HomeApi->CompleteHomeAction");
 
             var localVarPath = "/api/v1.0/home/{homeActionId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -377,6 +392,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (homeActionId != null) localVarPathParams.Add("homeActionId", this.Configuration.ApiClient.ParameterToString(homeActionId)); // path parameter
+            if (isDismissed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isDismissed", isDismissed)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -394,7 +410,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DismissHomeAction", localVarResponse);
+                Exception exception = ExceptionFactory("CompleteHomeAction", localVarResponse);
                 if (exception != null) throw exception;
             }
 

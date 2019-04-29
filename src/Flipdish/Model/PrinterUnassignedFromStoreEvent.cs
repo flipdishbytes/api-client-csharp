@@ -36,17 +36,19 @@ namespace Flipdish.Model
         /// <param name="eventName">The event name.</param>
         /// <param name="description">Description.</param>
         /// <param name="storeId">Store Id.</param>
+        /// <param name="storeGroupId">Store group Id.</param>
         /// <param name="user">Info User.</param>
         /// <param name="printer">The printer.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
-        public PrinterUnassignedFromStoreEvent(string eventName = default(string), string description = default(string), int? storeId = default(int?), UserEventInfo user = default(UserEventInfo), Printer printer = default(Printer), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
+        public PrinterUnassignedFromStoreEvent(string eventName = default(string), string description = default(string), int? storeId = default(int?), int? storeGroupId = default(int?), UserEventInfo user = default(UserEventInfo), Printer printer = default(Printer), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
         {
             this.EventName = eventName;
             this.Description = description;
             this.StoreId = storeId;
+            this.StoreGroupId = storeGroupId;
             this.User = user;
             this.Printer = printer;
             this.FlipdishEventId = flipdishEventId;
@@ -75,6 +77,13 @@ namespace Flipdish.Model
         /// <value>Store Id</value>
         [DataMember(Name="StoreId", EmitDefaultValue=false)]
         public int? StoreId { get; set; }
+
+        /// <summary>
+        /// Store group Id
+        /// </summary>
+        /// <value>Store group Id</value>
+        [DataMember(Name="StoreGroupId", EmitDefaultValue=false)]
+        public int? StoreGroupId { get; set; }
 
         /// <summary>
         /// Info User
@@ -129,6 +138,7 @@ namespace Flipdish.Model
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Printer: ").Append(Printer).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
@@ -185,6 +195,11 @@ namespace Flipdish.Model
                     this.StoreId.Equals(input.StoreId))
                 ) && 
                 (
+                    this.StoreGroupId == input.StoreGroupId ||
+                    (this.StoreGroupId != null &&
+                    this.StoreGroupId.Equals(input.StoreGroupId))
+                ) && 
+                (
                     this.User == input.User ||
                     (this.User != null &&
                     this.User.Equals(input.User))
@@ -231,6 +246,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.StoreId != null)
                     hashCode = hashCode * 59 + this.StoreId.GetHashCode();
+                if (this.StoreGroupId != null)
+                    hashCode = hashCode * 59 + this.StoreGroupId.GetHashCode();
                 if (this.User != null)
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.Printer != null)

@@ -4,16 +4,16 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DismissHomeAction**](HomeApi.md#dismisshomeaction) | **POST** /api/v1.0/home/{homeActionId} | [PRIVATE API] Dismiss Home Action
+[**CompleteHomeAction**](HomeApi.md#completehomeaction) | **POST** /api/v1.0/home/{homeActionId} | [PRIVATE API] Complete Home Action
 [**GetHomeActions**](HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | [PRIVATE API] Get Home Actions
 [**GetHomeStatistics**](HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
 
 
-<a name="dismisshomeaction"></a>
-# **DismissHomeAction**
-> Object DismissHomeAction (int? homeActionId)
+<a name="completehomeaction"></a>
+# **CompleteHomeAction**
+> Object CompleteHomeAction (int? homeActionId, bool? isDismissed)
 
-[PRIVATE API] Dismiss Home Action
+[PRIVATE API] Complete Home Action
 
 ### Example
 ```csharp
@@ -25,7 +25,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class DismissHomeActionExample
+    public class CompleteHomeActionExample
     {
         public void main()
         {
@@ -34,16 +34,17 @@ namespace Example
 
             var apiInstance = new HomeApi();
             var homeActionId = 56;  // int? | Id of the action
+            var isDismissed = true;  // bool? | 
 
             try
             {
-                // [PRIVATE API] Dismiss Home Action
-                Object result = apiInstance.DismissHomeAction(homeActionId);
+                // [PRIVATE API] Complete Home Action
+                Object result = apiInstance.CompleteHomeAction(homeActionId, isDismissed);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling HomeApi.DismissHomeAction: " + e.Message );
+                Debug.Print("Exception when calling HomeApi.CompleteHomeAction: " + e.Message );
             }
         }
     }
@@ -55,6 +56,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **homeActionId** | **int?**| Id of the action | 
+ **isDismissed** | **bool?**|  | 
 
 ### Return type
 

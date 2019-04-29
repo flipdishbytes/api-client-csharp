@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **StoreId** | **int?** | Store Id | [optional] 
+**StoreGroupId** | **int?** | Store group Id | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | User which updated this store address | [optional] 
 **Description** | **string** | Description | [optional] 
 **StoreAddress** | [**StoreAddress**](StoreAddress.md) | Updated store address | [optional] 

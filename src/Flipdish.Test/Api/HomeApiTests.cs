@@ -65,14 +65,15 @@ namespace Flipdish.Test
 
         
         /// <summary>
-        /// Test DismissHomeAction
+        /// Test CompleteHomeAction
         /// </summary>
         [Test]
-        public void DismissHomeActionTest()
+        public void CompleteHomeActionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? homeActionId = null;
-            //var response = instance.DismissHomeAction(homeActionId);
+            //bool? isDismissed = null;
+            //var response = instance.CompleteHomeAction(homeActionId, isDismissed);
             //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Teammate** | [**Teammate**](Teammate.md) | The deleted teammate | [optional] 
+**User** | [**UserEventInfo**](UserEventInfo.md) | User who sent the invitation | [optional] 
 **EventName** | **string** | The event name | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 

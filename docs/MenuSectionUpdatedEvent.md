@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **MenuId** | **int?** | Menu identifier | [optional] 
+**MenuName** | **string** | Menu name | [optional] 
 **Description** | **string** | Event description | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | Updated by user | [optional] 
 **MenuSection** | [**MenuSection**](MenuSection.md) | Updated menu section | [optional] 

@@ -142,10 +142,15 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**GetUserEvents**](docs/EventsApi.md#getuserevents) | **GET** /api/v1.0/events/user/{userId} | Get user events  For technical reasons, the number of records returned is limited to 100.
 *EventsApi* | [**GetWhiteLabelEvents**](docs/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 *HeartbeatApi* | [**Ping**](docs/HeartbeatApi.md#ping) | **GET** /api/v1.0/heartbeat | 
-*HomeApi* | [**DismissHomeAction**](docs/HomeApi.md#dismisshomeaction) | **POST** /api/v1.0/home/{homeActionId} | [PRIVATE API] Dismiss Home Action
+*HomeApi* | [**CompleteHomeAction**](docs/HomeApi.md#completehomeaction) | **POST** /api/v1.0/home/{homeActionId} | [PRIVATE API] Complete Home Action
 *HomeApi* | [**GetHomeActions**](docs/HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | [PRIVATE API] Get Home Actions
 *HomeApi* | [**GetHomeStatistics**](docs/HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
 *HttpRequestResponseLogsApi* | [**GetLogs**](docs/HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/interactions/logs | Get API interaction logs
+*HydraApi* | [**GetRegistration**](docs/HydraApi.md#getregistration) | **GET** /api/v1.0/hydra/registration | 
+*HydraApi* | [**GetSettings**](docs/HydraApi.md#getsettings) | **GET** /api/v1.0/hydra/settings | [Private]
+*HydraApi* | [**Login**](docs/HydraApi.md#login) | **POST** /api/v1.0/hydra/{deviceId}/login | [Private]
+*HydraApi* | [**PayOrder**](docs/HydraApi.md#payorder) | **POST** /api/v1.0/hydra/payorder/{orderId} | [Private]
+*HydraApi* | [**Register**](docs/HydraApi.md#register) | **POST** /api/v1.0/hydra/registration | [Private]
 *LightspeedApi* | [**LightspeedGenerateMenu**](docs/LightspeedApi.md#lightspeedgeneratemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
 *LightspeedApi* | [**LightspeedGetStoreSettings**](docs/LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
 *LightspeedApi* | [**LightspeedSaveStoreSettings**](docs/LightspeedApi.md#lightspeedsavestoresettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
@@ -227,6 +232,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**CreateBusinessHoursOverrideByStoreId**](docs/StoresApi.md#createbusinesshoursoverridebystoreid) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | Create Business Hours Override for a store
 *StoresApi* | [**CreateStore**](docs/StoresApi.md#createstore) | **POST** /api/v1.0/stores | Create store with Store Group identifier
 *StoresApi* | [**DeleteBusinessHoursOverride**](docs/StoresApi.md#deletebusinesshoursoverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | Delete Business Hours Override for a store
+*StoresApi* | [**GetBankAccount**](docs/StoresApi.md#getbankaccount) | **GET** /api/v1.0/stores/{storeId}/bankaccount | Get Stores Bank Account Id
 *StoresApi* | [**GetBusinessHours**](docs/StoresApi.md#getbusinesshours) | **GET** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Get Bussiness hours
 *StoresApi* | [**GetBusinessHoursOverrideByStoreId**](docs/StoresApi.md#getbusinesshoursoverridebystoreid) | **GET** /api/v1.0/stores/{storeId}/businesshoursoverrides | Get business hours overrides by store identifier
 *StoresApi* | [**GetProcessingFeeConfigsByStoreId**](docs/StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
@@ -320,12 +326,16 @@ Class | Method | HTTP request | Description
  - [Model.DeliveryZoneCreatedEvent](docs/DeliveryZoneCreatedEvent.md)
  - [Model.DeliveryZoneDeletedEvent](docs/DeliveryZoneDeletedEvent.md)
  - [Model.DeliveryZoneUpdatedEvent](docs/DeliveryZoneUpdatedEvent.md)
+ - [Model.DeviceSettings](docs/DeviceSettings.md)
  - [Model.EventSearchResult](docs/EventSearchResult.md)
  - [Model.FeeSummary](docs/FeeSummary.md)
  - [Model.GroupedCoordinates](docs/GroupedCoordinates.md)
  - [Model.HomeAction](docs/HomeAction.md)
  - [Model.HomeStatistics](docs/HomeStatistics.md)
  - [Model.HttpRequestAndResponseLog](docs/HttpRequestAndResponseLog.md)
+ - [Model.HydraConfig](docs/HydraConfig.md)
+ - [Model.HydraRegistration](docs/HydraRegistration.md)
+ - [Model.HydraStatus](docs/HydraStatus.md)
  - [Model.JobAddress](docs/JobAddress.md)
  - [Model.JobCancellation](docs/JobCancellation.md)
  - [Model.JobContact](docs/JobContact.md)
@@ -392,6 +402,7 @@ Class | Method | HTTP request | Description
  - [Model.OrderTipUpdatedEvent](docs/OrderTipUpdatedEvent.md)
  - [Model.OrderVoucherSummary](docs/OrderVoucherSummary.md)
  - [Model.PasswordResetModel](docs/PasswordResetModel.md)
+ - [Model.PayOrder](docs/PayOrder.md)
  - [Model.PercentDiscountDetails](docs/PercentDiscountDetails.md)
  - [Model.PhoneCall](docs/PhoneCall.md)
  - [Model.PhoneCallEndedEvent](docs/PhoneCallEndedEvent.md)
@@ -460,6 +471,8 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultCoordinates](docs/RestApiResultCoordinates.md)
  - [Model.RestApiResultDeliveryZone](docs/RestApiResultDeliveryZone.md)
  - [Model.RestApiResultHomeStatistics](docs/RestApiResultHomeStatistics.md)
+ - [Model.RestApiResultHydraConfig](docs/RestApiResultHydraConfig.md)
+ - [Model.RestApiResultHydraStatus](docs/RestApiResultHydraStatus.md)
  - [Model.RestApiResultJobResponse](docs/RestApiResultJobResponse.md)
  - [Model.RestApiResultLightspeedSettings](docs/RestApiResultLightspeedSettings.md)
  - [Model.RestApiResultMenu](docs/RestApiResultMenu.md)

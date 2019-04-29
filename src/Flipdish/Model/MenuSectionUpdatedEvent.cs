@@ -34,6 +34,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="MenuSectionUpdatedEvent" /> class.
         /// </summary>
         /// <param name="menuId">Menu identifier.</param>
+        /// <param name="menuName">Menu name.</param>
         /// <param name="description">Event description.</param>
         /// <param name="user">Updated by user.</param>
         /// <param name="menuSection">Updated menu section.</param>
@@ -42,9 +43,10 @@ namespace Flipdish.Model
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
-        public MenuSectionUpdatedEvent(int? menuId = default(int?), string description = default(string), UserEventInfo user = default(UserEventInfo), MenuSection menuSection = default(MenuSection), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
+        public MenuSectionUpdatedEvent(int? menuId = default(int?), string menuName = default(string), string description = default(string), UserEventInfo user = default(UserEventInfo), MenuSection menuSection = default(MenuSection), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
         {
             this.MenuId = menuId;
+            this.MenuName = menuName;
             this.Description = description;
             this.User = user;
             this.MenuSection = menuSection;
@@ -61,6 +63,13 @@ namespace Flipdish.Model
         /// <value>Menu identifier</value>
         [DataMember(Name="MenuId", EmitDefaultValue=false)]
         public int? MenuId { get; set; }
+
+        /// <summary>
+        /// Menu name
+        /// </summary>
+        /// <value>Menu name</value>
+        [DataMember(Name="MenuName", EmitDefaultValue=false)]
+        public string MenuName { get; set; }
 
         /// <summary>
         /// Event description
@@ -127,6 +136,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class MenuSectionUpdatedEvent {\n");
             sb.Append("  MenuId: ").Append(MenuId).Append("\n");
+            sb.Append("  MenuName: ").Append(MenuName).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  MenuSection: ").Append(MenuSection).Append("\n");
@@ -173,6 +183,11 @@ namespace Flipdish.Model
                     this.MenuId == input.MenuId ||
                     (this.MenuId != null &&
                     this.MenuId.Equals(input.MenuId))
+                ) && 
+                (
+                    this.MenuName == input.MenuName ||
+                    (this.MenuName != null &&
+                    this.MenuName.Equals(input.MenuName))
                 ) && 
                 (
                     this.Description == input.Description ||
@@ -227,6 +242,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.MenuId != null)
                     hashCode = hashCode * 59 + this.MenuId.GetHashCode();
+                if (this.MenuName != null)
+                    hashCode = hashCode * 59 + this.MenuName.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.User != null)

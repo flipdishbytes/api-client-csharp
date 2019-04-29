@@ -70,6 +70,13 @@ namespace Flipdish.Model
         public int? StoreId { get; set; }
 
         /// <summary>
+        /// Store group Id
+        /// </summary>
+        /// <value>Store group Id</value>
+        [DataMember(Name="StoreGroupId", EmitDefaultValue=false)]
+        public int? StoreGroupId { get; private set; }
+
+        /// <summary>
         /// User which updated this store
         /// </summary>
         /// <value>User which updated this store</value>
@@ -128,6 +135,7 @@ namespace Flipdish.Model
             sb.Append("class StoreUpdatedEvent {\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Store: ").Append(Store).Append("\n");
@@ -180,6 +188,11 @@ namespace Flipdish.Model
                     this.StoreId.Equals(input.StoreId))
                 ) && 
                 (
+                    this.StoreGroupId == input.StoreGroupId ||
+                    (this.StoreGroupId != null &&
+                    this.StoreGroupId.Equals(input.StoreGroupId))
+                ) && 
+                (
                     this.User == input.User ||
                     (this.User != null &&
                     this.User.Equals(input.User))
@@ -229,6 +242,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.StoreId != null)
                     hashCode = hashCode * 59 + this.StoreId.GetHashCode();
+                if (this.StoreGroupId != null)
+                    hashCode = hashCode * 59 + this.StoreGroupId.GetHashCode();
                 if (this.User != null)
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.Description != null)

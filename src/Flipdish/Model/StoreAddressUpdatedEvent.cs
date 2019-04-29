@@ -34,6 +34,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="StoreAddressUpdatedEvent" /> class.
         /// </summary>
         /// <param name="storeId">Store Id.</param>
+        /// <param name="storeGroupId">Store group Id.</param>
         /// <param name="user">User which updated this store address.</param>
         /// <param name="description">Description.</param>
         /// <param name="storeAddress">Updated store address.</param>
@@ -42,9 +43,10 @@ namespace Flipdish.Model
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
-        public StoreAddressUpdatedEvent(int? storeId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), StoreAddress storeAddress = default(StoreAddress), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
+        public StoreAddressUpdatedEvent(int? storeId = default(int?), int? storeGroupId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), StoreAddress storeAddress = default(StoreAddress), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
         {
             this.StoreId = storeId;
+            this.StoreGroupId = storeGroupId;
             this.User = user;
             this.Description = description;
             this.StoreAddress = storeAddress;
@@ -61,6 +63,13 @@ namespace Flipdish.Model
         /// <value>Store Id</value>
         [DataMember(Name="StoreId", EmitDefaultValue=false)]
         public int? StoreId { get; set; }
+
+        /// <summary>
+        /// Store group Id
+        /// </summary>
+        /// <value>Store group Id</value>
+        [DataMember(Name="StoreGroupId", EmitDefaultValue=false)]
+        public int? StoreGroupId { get; set; }
 
         /// <summary>
         /// User which updated this store address
@@ -127,6 +136,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class StoreAddressUpdatedEvent {\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  StoreAddress: ").Append(StoreAddress).Append("\n");
@@ -173,6 +183,11 @@ namespace Flipdish.Model
                     this.StoreId == input.StoreId ||
                     (this.StoreId != null &&
                     this.StoreId.Equals(input.StoreId))
+                ) && 
+                (
+                    this.StoreGroupId == input.StoreGroupId ||
+                    (this.StoreGroupId != null &&
+                    this.StoreGroupId.Equals(input.StoreGroupId))
                 ) && 
                 (
                     this.User == input.User ||
@@ -227,6 +242,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.StoreId != null)
                     hashCode = hashCode * 59 + this.StoreId.GetHashCode();
+                if (this.StoreGroupId != null)
+                    hashCode = hashCode * 59 + this.StoreGroupId.GetHashCode();
                 if (this.User != null)
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.Description != null)
