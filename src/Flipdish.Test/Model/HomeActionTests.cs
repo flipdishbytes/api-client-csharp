@@ -67,12 +67,12 @@ namespace Flipdish.Test
 
 
         /// <summary>
-        /// Test the property 'HomeActionCardId'
+        /// Test the property 'HomeActionId'
         /// </summary>
         [Test]
-        public void HomeActionCardIdTest()
+        public void HomeActionIdTest()
         {
-            // TODO unit test for the property 'HomeActionCardId'
+            // TODO unit test for the property 'HomeActionId'
         }
         /// <summary>
         /// Test the property 'HomeActionType'

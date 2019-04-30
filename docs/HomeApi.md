@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CompleteHomeAction**](HomeApi.md#completehomeaction) | **POST** /api/v1.0/home/{homeActionId} | [PRIVATE API] Complete Home Action
+[**CompleteHomeAction**](HomeApi.md#completehomeaction) | **POST** /api/v1.0/{appId}/home/{homeActionId} | [PRIVATE API] Complete Home Action
 [**GetHomeActions**](HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | [PRIVATE API] Get Home Actions
 [**GetHomeStatistics**](HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
 
 
 <a name="completehomeaction"></a>
 # **CompleteHomeAction**
-> Object CompleteHomeAction (int? homeActionId, bool? isDismissed)
+> Object CompleteHomeAction (string appId, int? homeActionId, bool? isDismissed)
 
 [PRIVATE API] Complete Home Action
 
@@ -33,13 +33,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new HomeApi();
+            var appId = appId_example;  // string | App Name Id
             var homeActionId = 56;  // int? | Id of the action
             var isDismissed = true;  // bool? | 
 
             try
             {
                 // [PRIVATE API] Complete Home Action
-                Object result = apiInstance.CompleteHomeAction(homeActionId, isDismissed);
+                Object result = apiInstance.CompleteHomeAction(appId, homeActionId, isDismissed);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -55,6 +56,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **appId** | **string**| App Name Id | 
  **homeActionId** | **int?**| Id of the action | 
  **isDismissed** | **bool?**|  | 
 

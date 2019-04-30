@@ -60,7 +60,7 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HomeAction" /> class.
         /// </summary>
-        /// <param name="homeActionCardId">homeActionCardId.</param>
+        /// <param name="homeActionId">homeActionId.</param>
         /// <param name="homeActionType">Type of Action.</param>
         /// <param name="order">order.</param>
         /// <param name="titleKey">titleKey.</param>
@@ -68,9 +68,9 @@ namespace Flipdish.Model
         /// <param name="descriptionKey">descriptionKey.</param>
         /// <param name="action">action.</param>
         /// <param name="dismissible">dismissible.</param>
-        public HomeAction(int? homeActionCardId = default(int?), HomeActionTypeEnum? homeActionType = default(HomeActionTypeEnum?), int? order = default(int?), string titleKey = default(string), string actionKey = default(string), string descriptionKey = default(string), string action = default(string), bool? dismissible = default(bool?))
+        public HomeAction(int? homeActionId = default(int?), HomeActionTypeEnum? homeActionType = default(HomeActionTypeEnum?), int? order = default(int?), string titleKey = default(string), string actionKey = default(string), string descriptionKey = default(string), string action = default(string), bool? dismissible = default(bool?))
         {
-            this.HomeActionCardId = homeActionCardId;
+            this.HomeActionId = homeActionId;
             this.HomeActionType = homeActionType;
             this.Order = order;
             this.TitleKey = titleKey;
@@ -81,10 +81,10 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets HomeActionCardId
+        /// Gets or Sets HomeActionId
         /// </summary>
-        [DataMember(Name="HomeActionCardId", EmitDefaultValue=false)]
-        public int? HomeActionCardId { get; set; }
+        [DataMember(Name="HomeActionId", EmitDefaultValue=false)]
+        public int? HomeActionId { get; set; }
 
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class HomeAction {\n");
-            sb.Append("  HomeActionCardId: ").Append(HomeActionCardId).Append("\n");
+            sb.Append("  HomeActionId: ").Append(HomeActionId).Append("\n");
             sb.Append("  HomeActionType: ").Append(HomeActionType).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  TitleKey: ").Append(TitleKey).Append("\n");
@@ -174,9 +174,9 @@ namespace Flipdish.Model
 
             return 
                 (
-                    this.HomeActionCardId == input.HomeActionCardId ||
-                    (this.HomeActionCardId != null &&
-                    this.HomeActionCardId.Equals(input.HomeActionCardId))
+                    this.HomeActionId == input.HomeActionId ||
+                    (this.HomeActionId != null &&
+                    this.HomeActionId.Equals(input.HomeActionId))
                 ) && 
                 (
                     this.HomeActionType == input.HomeActionType ||
@@ -224,8 +224,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.HomeActionCardId != null)
-                    hashCode = hashCode * 59 + this.HomeActionCardId.GetHashCode();
+                if (this.HomeActionId != null)
+                    hashCode = hashCode * 59 + this.HomeActionId.GetHashCode();
                 if (this.HomeActionType != null)
                     hashCode = hashCode * 59 + this.HomeActionType.GetHashCode();
                 if (this.Order != null)

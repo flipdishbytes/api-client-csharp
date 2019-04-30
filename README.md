@@ -142,7 +142,7 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**GetUserEvents**](docs/EventsApi.md#getuserevents) | **GET** /api/v1.0/events/user/{userId} | Get user events  For technical reasons, the number of records returned is limited to 100.
 *EventsApi* | [**GetWhiteLabelEvents**](docs/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 *HeartbeatApi* | [**Ping**](docs/HeartbeatApi.md#ping) | **GET** /api/v1.0/heartbeat | 
-*HomeApi* | [**CompleteHomeAction**](docs/HomeApi.md#completehomeaction) | **POST** /api/v1.0/home/{homeActionId} | [PRIVATE API] Complete Home Action
+*HomeApi* | [**CompleteHomeAction**](docs/HomeApi.md#completehomeaction) | **POST** /api/v1.0/{appId}/home/{homeActionId} | [PRIVATE API] Complete Home Action
 *HomeApi* | [**GetHomeActions**](docs/HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | [PRIVATE API] Get Home Actions
 *HomeApi* | [**GetHomeStatistics**](docs/HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
 *HttpRequestResponseLogsApi* | [**GetLogs**](docs/HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/interactions/logs | Get API interaction logs

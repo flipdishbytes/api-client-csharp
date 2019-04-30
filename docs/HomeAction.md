@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**HomeActionCardId** | **int?** |  | [optional] 
+**HomeActionId** | **int?** |  | [optional] 
 **HomeActionType** | **string** | Type of Action | [optional] 
 **Order** | **int?** |  | [optional] 
 **TitleKey** | **string** |  | [optional] 
