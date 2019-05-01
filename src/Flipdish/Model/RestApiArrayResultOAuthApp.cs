@@ -28,23 +28,23 @@ namespace Flipdish.Model
     /// Rest api array result
     /// </summary>
     [DataContract]
-    public partial class RestApiArrayResultOAuthClient :  IEquatable<RestApiArrayResultOAuthClient>, IValidatableObject
+    public partial class RestApiArrayResultOAuthApp :  IEquatable<RestApiArrayResultOAuthApp>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiArrayResultOAuthClient" /> class.
+        /// Initializes a new instance of the <see cref="RestApiArrayResultOAuthApp" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected RestApiArrayResultOAuthClient() { }
+        protected RestApiArrayResultOAuthApp() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiArrayResultOAuthClient" /> class.
+        /// Initializes a new instance of the <see cref="RestApiArrayResultOAuthApp" /> class.
         /// </summary>
         /// <param name="data">Generic data object. (required).</param>
-        public RestApiArrayResultOAuthClient(List<OAuthClient> data = default(List<OAuthClient>))
+        public RestApiArrayResultOAuthApp(List<OAuthApp> data = default(List<OAuthApp>))
         {
             // to ensure "data" is required (not null)
             if (data == null)
             {
-                throw new InvalidDataException("data is a required property for RestApiArrayResultOAuthClient and cannot be null");
+                throw new InvalidDataException("data is a required property for RestApiArrayResultOAuthApp and cannot be null");
             }
             else
             {
@@ -57,7 +57,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Generic data object.</value>
         [DataMember(Name="Data", EmitDefaultValue=false)]
-        public List<OAuthClient> Data { get; set; }
+        public List<OAuthApp> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -66,7 +66,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RestApiArrayResultOAuthClient {\n");
+            sb.Append("class RestApiArrayResultOAuthApp {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -88,15 +88,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RestApiArrayResultOAuthClient);
+            return this.Equals(input as RestApiArrayResultOAuthApp);
         }
 
         /// <summary>
-        /// Returns true if RestApiArrayResultOAuthClient instances are equal
+        /// Returns true if RestApiArrayResultOAuthApp instances are equal
         /// </summary>
-        /// <param name="input">Instance of RestApiArrayResultOAuthClient to be compared</param>
+        /// <param name="input">Instance of RestApiArrayResultOAuthApp to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RestApiArrayResultOAuthClient input)
+        public bool Equals(RestApiArrayResultOAuthApp input)
         {
             if (input == null)
                 return false;

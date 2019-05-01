@@ -4,13 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAuthorizationTokens**](AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
-[**RevokeToken**](AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
+[**GetAuthorizationTokens**](AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/{appId}/authorizationtokens/{oauthAppId} | Get authorization tokens
+[**RevokeToken**](AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/{appId}/authorizationtokens/{key} | Revoke token
 
 
 <a name="getauthorizationtokens"></a>
 # **GetAuthorizationTokens**
-> RestApiPaginationResultOAuthTokenModel GetAuthorizationTokens (string clientId, int? page = null, int? limit = null)
+> RestApiPaginationResultOAuthTokenModel GetAuthorizationTokens (string oauthAppId, string appId, int? page = null, int? limit = null)
 
 Get authorization tokens
 
@@ -32,14 +32,15 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationTokensApi();
-            var clientId = clientId_example;  // string | Client identifier
+            var oauthAppId = oauthAppId_example;  // string | Client identifier
+            var appId = appId_example;  // string | 
             var page = 56;  // int? | Requested page number (optional) 
             var limit = 56;  // int? | Requested page limit (optional) 
 
             try
             {
                 // Get authorization tokens
-                RestApiPaginationResultOAuthTokenModel result = apiInstance.GetAuthorizationTokens(clientId, page, limit);
+                RestApiPaginationResultOAuthTokenModel result = apiInstance.GetAuthorizationTokens(oauthAppId, appId, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -55,7 +56,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **string**| Client identifier | 
+ **oauthAppId** | **string**| Client identifier | 
+ **appId** | **string**|  | 
  **page** | **int?**| Requested page number | [optional] 
  **limit** | **int?**| Requested page limit | [optional] 
 
@@ -76,7 +78,7 @@ Name | Type | Description  | Notes
 
 <a name="revoketoken"></a>
 # **RevokeToken**
-> void RevokeToken (string key)
+> void RevokeToken (string key, string appId)
 
 Revoke token
 
@@ -99,11 +101,12 @@ namespace Example
 
             var apiInstance = new AuthorizationTokensApi();
             var key = key_example;  // string | Token identifier key
+            var appId = appId_example;  // string | 
 
             try
             {
                 // Revoke token
-                apiInstance.RevokeToken(key);
+                apiInstance.RevokeToken(key, appId);
             }
             catch (Exception e)
             {
@@ -119,6 +122,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| Token identifier key | 
+ **appId** | **string**|  | 
 
 ### Return type
 

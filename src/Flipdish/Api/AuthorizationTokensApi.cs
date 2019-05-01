@@ -31,11 +31,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client identifier</param>
+        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="appId"></param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>RestApiPaginationResultOAuthTokenModel</returns>
-        RestApiPaginationResultOAuthTokenModel GetAuthorizationTokens (string clientId, int? page = null, int? limit = null);
+        RestApiPaginationResultOAuthTokenModel GetAuthorizationTokens (string oauthAppId, string appId, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get authorization tokens
@@ -44,11 +45,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client identifier</param>
+        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="appId"></param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultOAuthTokenModel</returns>
-        ApiResponse<RestApiPaginationResultOAuthTokenModel> GetAuthorizationTokensWithHttpInfo (string clientId, int? page = null, int? limit = null);
+        ApiResponse<RestApiPaginationResultOAuthTokenModel> GetAuthorizationTokensWithHttpInfo (string oauthAppId, string appId, int? page = null, int? limit = null);
         /// <summary>
         /// Revoke token
         /// </summary>
@@ -57,8 +59,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Token identifier key</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        void RevokeToken (string key);
+        void RevokeToken (string key, string appId);
 
         /// <summary>
         /// Revoke token
@@ -68,8 +71,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Token identifier key</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RevokeTokenWithHttpInfo (string key);
+        ApiResponse<Object> RevokeTokenWithHttpInfo (string key, string appId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -79,11 +83,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client identifier</param>
+        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="appId"></param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>Task of RestApiPaginationResultOAuthTokenModel</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultOAuthTokenModel> GetAuthorizationTokensAsync (string clientId, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultOAuthTokenModel> GetAuthorizationTokensAsync (string oauthAppId, string appId, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get authorization tokens
@@ -92,11 +97,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client identifier</param>
+        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="appId"></param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOAuthTokenModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOAuthTokenModel>> GetAuthorizationTokensAsyncWithHttpInfo (string clientId, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOAuthTokenModel>> GetAuthorizationTokensAsyncWithHttpInfo (string oauthAppId, string appId, int? page = null, int? limit = null);
         /// <summary>
         /// Revoke token
         /// </summary>
@@ -105,8 +111,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Token identifier key</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RevokeTokenAsync (string key);
+        System.Threading.Tasks.Task RevokeTokenAsync (string key, string appId);
 
         /// <summary>
         /// Revoke token
@@ -116,8 +123,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Token identifier key</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RevokeTokenAsyncWithHttpInfo (string key);
+        System.Threading.Tasks.Task<ApiResponse<Object>> RevokeTokenAsyncWithHttpInfo (string key, string appId);
         #endregion Asynchronous Operations
     }
 
@@ -222,13 +230,14 @@ namespace Flipdish.Api
         /// Get authorization tokens 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client identifier</param>
+        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="appId"></param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>RestApiPaginationResultOAuthTokenModel</returns>
-        public RestApiPaginationResultOAuthTokenModel GetAuthorizationTokens (string clientId, int? page = null, int? limit = null)
+        public RestApiPaginationResultOAuthTokenModel GetAuthorizationTokens (string oauthAppId, string appId, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultOAuthTokenModel> localVarResponse = GetAuthorizationTokensWithHttpInfo(clientId, page, limit);
+             ApiResponse<RestApiPaginationResultOAuthTokenModel> localVarResponse = GetAuthorizationTokensWithHttpInfo(oauthAppId, appId, page, limit);
              return localVarResponse.Data;
         }
 
@@ -236,17 +245,21 @@ namespace Flipdish.Api
         /// Get authorization tokens 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client identifier</param>
+        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="appId"></param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultOAuthTokenModel</returns>
-        public ApiResponse< RestApiPaginationResultOAuthTokenModel > GetAuthorizationTokensWithHttpInfo (string clientId, int? page = null, int? limit = null)
+        public ApiResponse< RestApiPaginationResultOAuthTokenModel > GetAuthorizationTokensWithHttpInfo (string oauthAppId, string appId, int? page = null, int? limit = null)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling AuthorizationTokensApi->GetAuthorizationTokens");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling AuthorizationTokensApi->GetAuthorizationTokens");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AuthorizationTokensApi->GetAuthorizationTokens");
 
-            var localVarPath = "/api/v1.0/authorizationtokens/{clientId}";
+            var localVarPath = "/api/v1.0/{appId}/authorizationtokens/{oauthAppId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -270,7 +283,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -303,13 +317,14 @@ namespace Flipdish.Api
         /// Get authorization tokens 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client identifier</param>
+        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="appId"></param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>Task of RestApiPaginationResultOAuthTokenModel</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultOAuthTokenModel> GetAuthorizationTokensAsync (string clientId, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultOAuthTokenModel> GetAuthorizationTokensAsync (string oauthAppId, string appId, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultOAuthTokenModel> localVarResponse = await GetAuthorizationTokensAsyncWithHttpInfo(clientId, page, limit);
+             ApiResponse<RestApiPaginationResultOAuthTokenModel> localVarResponse = await GetAuthorizationTokensAsyncWithHttpInfo(oauthAppId, appId, page, limit);
              return localVarResponse.Data;
 
         }
@@ -318,17 +333,21 @@ namespace Flipdish.Api
         /// Get authorization tokens 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client identifier</param>
+        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="appId"></param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOAuthTokenModel)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOAuthTokenModel>> GetAuthorizationTokensAsyncWithHttpInfo (string clientId, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOAuthTokenModel>> GetAuthorizationTokensAsyncWithHttpInfo (string oauthAppId, string appId, int? page = null, int? limit = null)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling AuthorizationTokensApi->GetAuthorizationTokens");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling AuthorizationTokensApi->GetAuthorizationTokens");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AuthorizationTokensApi->GetAuthorizationTokens");
 
-            var localVarPath = "/api/v1.0/authorizationtokens/{clientId}";
+            var localVarPath = "/api/v1.0/{appId}/authorizationtokens/{oauthAppId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -352,7 +371,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -386,10 +406,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Token identifier key</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        public void RevokeToken (string key)
+        public void RevokeToken (string key, string appId)
         {
-             RevokeTokenWithHttpInfo(key);
+             RevokeTokenWithHttpInfo(key, appId);
         }
 
         /// <summary>
@@ -397,14 +418,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Token identifier key</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> RevokeTokenWithHttpInfo (string key)
+        public ApiResponse<Object> RevokeTokenWithHttpInfo (string key, string appId)
         {
             // verify the required parameter 'key' is set
             if (key == null)
                 throw new ApiException(400, "Missing required parameter 'key' when calling AuthorizationTokensApi->RevokeToken");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AuthorizationTokensApi->RevokeToken");
 
-            var localVarPath = "/api/v1.0/authorizationtokens/{key}";
+            var localVarPath = "/api/v1.0/{appId}/authorizationtokens/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -429,6 +454,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (key != null) localVarPathParams.Add("key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -460,10 +486,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Token identifier key</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RevokeTokenAsync (string key)
+        public async System.Threading.Tasks.Task RevokeTokenAsync (string key, string appId)
         {
-             await RevokeTokenAsyncWithHttpInfo(key);
+             await RevokeTokenAsyncWithHttpInfo(key, appId);
 
         }
 
@@ -472,14 +499,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Token identifier key</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> RevokeTokenAsyncWithHttpInfo (string key)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RevokeTokenAsyncWithHttpInfo (string key, string appId)
         {
             // verify the required parameter 'key' is set
             if (key == null)
                 throw new ApiException(400, "Missing required parameter 'key' when calling AuthorizationTokensApi->RevokeToken");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AuthorizationTokensApi->RevokeToken");
 
-            var localVarPath = "/api/v1.0/authorizationtokens/{key}";
+            var localVarPath = "/api/v1.0/{appId}/authorizationtokens/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -504,6 +535,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (key != null) localVarPathParams.Add("key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required

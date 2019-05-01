@@ -71,10 +71,11 @@ namespace Flipdish.Test
         public void GetAuthorizationTokensTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string clientId = null;
+            //string oauthAppId = null;
+            //string appId = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.GetAuthorizationTokens(clientId, page, limit);
+            //var response = instance.GetAuthorizationTokens(oauthAppId, appId, page, limit);
             //Assert.IsInstanceOf<RestApiPaginationResultOAuthTokenModel> (response, "response is RestApiPaginationResultOAuthTokenModel");
         }
         
@@ -86,7 +87,8 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string key = null;
-            //instance.RevokeToken(key);
+            //string appId = null;
+            //instance.RevokeToken(key, appId);
             
         }
         

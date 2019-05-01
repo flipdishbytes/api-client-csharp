@@ -37,12 +37,14 @@ namespace Flipdish.Model
         /// <param name="language">Language Id.</param>
         /// <param name="timeZoneInfoId">Time Zone Info Id.</param>
         /// <param name="displayTimesInUserLocalTimeZone">Display the time in time zone local to the user.</param>
-        public AccountDetailBase(string name = default(string), string language = default(string), string timeZoneInfoId = default(string), bool? displayTimesInUserLocalTimeZone = default(bool?))
+        /// <param name="showHiddenFeatures">Show hidden features.</param>
+        public AccountDetailBase(string name = default(string), string language = default(string), string timeZoneInfoId = default(string), bool? displayTimesInUserLocalTimeZone = default(bool?), bool? showHiddenFeatures = default(bool?))
         {
             this.Name = name;
             this.Language = language;
             this.TimeZoneInfoId = timeZoneInfoId;
             this.DisplayTimesInUserLocalTimeZone = displayTimesInUserLocalTimeZone;
+            this.ShowHiddenFeatures = showHiddenFeatures;
         }
         
         /// <summary>
@@ -74,6 +76,13 @@ namespace Flipdish.Model
         public bool? DisplayTimesInUserLocalTimeZone { get; set; }
 
         /// <summary>
+        /// Show hidden features
+        /// </summary>
+        /// <value>Show hidden features</value>
+        [DataMember(Name="ShowHiddenFeatures", EmitDefaultValue=false)]
+        public bool? ShowHiddenFeatures { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -85,6 +94,7 @@ namespace Flipdish.Model
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  TimeZoneInfoId: ").Append(TimeZoneInfoId).Append("\n");
             sb.Append("  DisplayTimesInUserLocalTimeZone: ").Append(DisplayTimesInUserLocalTimeZone).Append("\n");
+            sb.Append("  ShowHiddenFeatures: ").Append(ShowHiddenFeatures).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,6 +148,11 @@ namespace Flipdish.Model
                     this.DisplayTimesInUserLocalTimeZone == input.DisplayTimesInUserLocalTimeZone ||
                     (this.DisplayTimesInUserLocalTimeZone != null &&
                     this.DisplayTimesInUserLocalTimeZone.Equals(input.DisplayTimesInUserLocalTimeZone))
+                ) && 
+                (
+                    this.ShowHiddenFeatures == input.ShowHiddenFeatures ||
+                    (this.ShowHiddenFeatures != null &&
+                    this.ShowHiddenFeatures.Equals(input.ShowHiddenFeatures))
                 );
         }
 
@@ -158,6 +173,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.TimeZoneInfoId.GetHashCode();
                 if (this.DisplayTimesInUserLocalTimeZone != null)
                     hashCode = hashCode * 59 + this.DisplayTimesInUserLocalTimeZone.GetHashCode();
+                if (this.ShowHiddenFeatures != null)
+                    hashCode = hashCode * 59 + this.ShowHiddenFeatures.GetHashCode();
                 return hashCode;
             }
         }

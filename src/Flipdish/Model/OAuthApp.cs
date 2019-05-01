@@ -28,48 +28,48 @@ namespace Flipdish.Model
     /// Oauth client (also knowns as &#39;app&#39;)
     /// </summary>
     [DataContract]
-    public partial class OAuthClient :  IEquatable<OAuthClient>, IValidatableObject
+    public partial class OAuthApp :  IEquatable<OAuthApp>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="OAuthClient" /> class.
+        /// Initializes a new instance of the <see cref="OAuthApp" /> class.
         /// </summary>
-        /// <param name="clientId">Oauth client identifier.</param>
-        /// <param name="clientName">Oauth client name.</param>
-        /// <param name="ownerUserId">Oauth client owner user identifier.</param>
-        /// <param name="logoUri">Oauth client logo uri.</param>
-        public OAuthClient(string clientId = default(string), string clientName = default(string), int? ownerUserId = default(int?), string logoUri = default(string))
+        /// <param name="oauthAppId">OAuth App Identifier.</param>
+        /// <param name="oauthAppName">OAuth App Name.</param>
+        /// <param name="ownerUserId">OAuth App owner user identifier.</param>
+        /// <param name="logoUri">OAuth App logo uri.</param>
+        public OAuthApp(string oauthAppId = default(string), string oauthAppName = default(string), int? ownerUserId = default(int?), string logoUri = default(string))
         {
-            this.ClientId = clientId;
-            this.ClientName = clientName;
+            this.OauthAppId = oauthAppId;
+            this.OauthAppName = oauthAppName;
             this.OwnerUserId = ownerUserId;
             this.LogoUri = logoUri;
         }
         
         /// <summary>
-        /// Oauth client identifier
+        /// OAuth App Identifier
         /// </summary>
-        /// <value>Oauth client identifier</value>
-        [DataMember(Name="ClientId", EmitDefaultValue=false)]
-        public string ClientId { get; set; }
+        /// <value>OAuth App Identifier</value>
+        [DataMember(Name="OauthAppId", EmitDefaultValue=false)]
+        public string OauthAppId { get; set; }
 
         /// <summary>
-        /// Oauth client name
+        /// OAuth App Name
         /// </summary>
-        /// <value>Oauth client name</value>
-        [DataMember(Name="ClientName", EmitDefaultValue=false)]
-        public string ClientName { get; set; }
+        /// <value>OAuth App Name</value>
+        [DataMember(Name="OauthAppName", EmitDefaultValue=false)]
+        public string OauthAppName { get; set; }
 
         /// <summary>
-        /// Oauth client owner user identifier
+        /// OAuth App owner user identifier
         /// </summary>
-        /// <value>Oauth client owner user identifier</value>
+        /// <value>OAuth App owner user identifier</value>
         [DataMember(Name="OwnerUserId", EmitDefaultValue=false)]
         public int? OwnerUserId { get; set; }
 
         /// <summary>
-        /// Oauth client logo uri
+        /// OAuth App logo uri
         /// </summary>
-        /// <value>Oauth client logo uri</value>
+        /// <value>OAuth App logo uri</value>
         [DataMember(Name="LogoUri", EmitDefaultValue=false)]
         public string LogoUri { get; set; }
 
@@ -80,9 +80,9 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class OAuthClient {\n");
-            sb.Append("  ClientId: ").Append(ClientId).Append("\n");
-            sb.Append("  ClientName: ").Append(ClientName).Append("\n");
+            sb.Append("class OAuthApp {\n");
+            sb.Append("  OauthAppId: ").Append(OauthAppId).Append("\n");
+            sb.Append("  OauthAppName: ").Append(OauthAppName).Append("\n");
             sb.Append("  OwnerUserId: ").Append(OwnerUserId).Append("\n");
             sb.Append("  LogoUri: ").Append(LogoUri).Append("\n");
             sb.Append("}\n");
@@ -105,29 +105,29 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as OAuthClient);
+            return this.Equals(input as OAuthApp);
         }
 
         /// <summary>
-        /// Returns true if OAuthClient instances are equal
+        /// Returns true if OAuthApp instances are equal
         /// </summary>
-        /// <param name="input">Instance of OAuthClient to be compared</param>
+        /// <param name="input">Instance of OAuthApp to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OAuthClient input)
+        public bool Equals(OAuthApp input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.ClientId == input.ClientId ||
-                    (this.ClientId != null &&
-                    this.ClientId.Equals(input.ClientId))
+                    this.OauthAppId == input.OauthAppId ||
+                    (this.OauthAppId != null &&
+                    this.OauthAppId.Equals(input.OauthAppId))
                 ) && 
                 (
-                    this.ClientName == input.ClientName ||
-                    (this.ClientName != null &&
-                    this.ClientName.Equals(input.ClientName))
+                    this.OauthAppName == input.OauthAppName ||
+                    (this.OauthAppName != null &&
+                    this.OauthAppName.Equals(input.OauthAppName))
                 ) && 
                 (
                     this.OwnerUserId == input.OwnerUserId ||
@@ -150,10 +150,10 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ClientId != null)
-                    hashCode = hashCode * 59 + this.ClientId.GetHashCode();
-                if (this.ClientName != null)
-                    hashCode = hashCode * 59 + this.ClientName.GetHashCode();
+                if (this.OauthAppId != null)
+                    hashCode = hashCode * 59 + this.OauthAppId.GetHashCode();
+                if (this.OauthAppName != null)
+                    hashCode = hashCode * 59 + this.OauthAppName.GetHashCode();
                 if (this.OwnerUserId != null)
                     hashCode = hashCode * 59 + this.OwnerUserId.GetHashCode();
                 if (this.LogoUri != null)

@@ -4,22 +4,22 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddRedirectUri**](OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis | Create OAuth client redirect uri
-[**CreateOAuthClient**](OAuthClientsApi.md#createoauthclient) | **POST** /api/v1.0/oauthclients | Create OAuth client
-[**DeleteOAuthClient**](OAuthClientsApi.md#deleteoauthclient) | **DELETE** /api/v1.0/oauthclients/{oAuthClientId} | Delete OAuth client
-[**GetOAuthClientByClientId**](OAuthClientsApi.md#getoauthclientbyclientid) | **GET** /api/v1.0/oauthclients/{clientId} | Get OAuth client by identifier
-[**GetOAuthClientSecret**](OAuthClientsApi.md#getoauthclientsecret) | **GET** /api/v1.0/oauthclients/{clientId}/secret | Get OAuth client secret key
-[**GetOAuthClients**](OAuthClientsApi.md#getoauthclients) | **GET** /api/v1.0/oauthclients | Get all OAuth client
-[**GetOauthAccessToken**](OAuthClientsApi.md#getoauthaccesstoken) | **GET** /api/v1.0/oauthclients/{oAuthClientId}/accesstoken | Get OAuth access token for client
-[**GetRedirectUris**](OAuthClientsApi.md#getredirecturis) | **GET** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis | Get OAuth client redirect uris
-[**RemoveRedirectUri**](OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis/{uriId} | Delete OAuth client redirect uri
+[**AddRedirectUri**](OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
+[**CreateOAuthApp**](OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
+[**DeleteOAuthApp**](OAuthClientsApi.md#deleteoauthapp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Delete OAuth App
+[**GetOAuthApps**](OAuthClientsApi.md#getoauthapps) | **GET** /api/v1.0/{appId}/oauthclients | Get all OAuth Apps
+[**GetOAuthClientByClientId**](OAuthClientsApi.md#getoauthclientbyclientid) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Get OAuth App by identifier
+[**GetOAuthClientSecret**](OAuthClientsApi.md#getoauthclientsecret) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/secret | Get OAuth App secret key
+[**GetOauthAccessToken**](OAuthClientsApi.md#getoauthaccesstoken) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/accesstoken | Get OAuth access token for App
+[**GetRedirectUris**](OAuthClientsApi.md#getredirecturis) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Get OAuth App redirect uris
+[**RemoveRedirectUri**](OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis/{uriId} | Delete OAuth App redirect uri
 
 
 <a name="addredirecturi"></a>
 # **AddRedirectUri**
-> RestApiResultOauthClientRedirectUri AddRedirectUri (string oAuthClientId, string uri)
+> RestApiResultOauthClientRedirectUri AddRedirectUri (string oauthAppId, string uri, string appId)
 
-Create OAuth client redirect uri
+Create OAuth App redirect uri
 
 ### Example
 ```csharp
@@ -39,13 +39,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthClientsApi();
-            var oAuthClientId = oAuthClientId_example;  // string | OAuth client identifier
+            var oauthAppId = oauthAppId_example;  // string | OAuth App identifier
             var uri = uri_example;  // string | Redirect uri
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Create OAuth client redirect uri
-                RestApiResultOauthClientRedirectUri result = apiInstance.AddRedirectUri(oAuthClientId, uri);
+                // Create OAuth App redirect uri
+                RestApiResultOauthClientRedirectUri result = apiInstance.AddRedirectUri(oauthAppId, uri, appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -61,8 +62,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oAuthClientId** | **string**| OAuth client identifier | 
+ **oauthAppId** | **string**| OAuth App identifier | 
  **uri** | **string**| Redirect uri | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -79,11 +81,11 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createoauthclient"></a>
-# **CreateOAuthClient**
-> void CreateOAuthClient (OAuthClient oAuthClient)
+<a name="createoauthapp"></a>
+# **CreateOAuthApp**
+> void CreateOAuthApp (OAuthApp oAuthApp, string appId)
 
-Create OAuth client
+Create OAuth App
 
 ### Example
 ```csharp
@@ -95,7 +97,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class CreateOAuthClientExample
+    public class CreateOAuthAppExample
     {
         public void main()
         {
@@ -103,16 +105,17 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthClientsApi();
-            var oAuthClient = new OAuthClient(); // OAuthClient | OAuth client
+            var oAuthApp = new OAuthApp(); // OAuthApp | OAuth App
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Create OAuth client
-                apiInstance.CreateOAuthClient(oAuthClient);
+                // Create OAuth App
+                apiInstance.CreateOAuthApp(oAuthApp, appId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OAuthClientsApi.CreateOAuthClient: " + e.Message );
+                Debug.Print("Exception when calling OAuthClientsApi.CreateOAuthApp: " + e.Message );
             }
         }
     }
@@ -123,7 +126,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oAuthClient** | [**OAuthClient**](OAuthClient.md)| OAuth client | 
+ **oAuthApp** | [**OAuthApp**](OAuthApp.md)| OAuth App | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -140,11 +144,11 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteoauthclient"></a>
-# **DeleteOAuthClient**
-> void DeleteOAuthClient (string oAuthClientId)
+<a name="deleteoauthapp"></a>
+# **DeleteOAuthApp**
+> void DeleteOAuthApp (string oauthAppId, string appId)
 
-Delete OAuth client
+Delete OAuth App
 
 ### Example
 ```csharp
@@ -156,7 +160,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class DeleteOAuthClientExample
+    public class DeleteOAuthAppExample
     {
         public void main()
         {
@@ -164,16 +168,17 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthClientsApi();
-            var oAuthClientId = oAuthClientId_example;  // string | OAuth client identifier
+            var oauthAppId = oauthAppId_example;  // string | OAuth App identifier
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Delete OAuth client
-                apiInstance.DeleteOAuthClient(oAuthClientId);
+                // Delete OAuth App
+                apiInstance.DeleteOAuthApp(oauthAppId, appId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OAuthClientsApi.DeleteOAuthClient: " + e.Message );
+                Debug.Print("Exception when calling OAuthClientsApi.DeleteOAuthApp: " + e.Message );
             }
         }
     }
@@ -184,7 +189,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oAuthClientId** | **string**| OAuth client identifier | 
+ **oauthAppId** | **string**| OAuth App identifier | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -201,11 +207,75 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getoauthapps"></a>
+# **GetOAuthApps**
+> RestApiArrayResultOAuthApp GetOAuthApps (string appId, string oauthAppName = null)
+
+Get all OAuth Apps
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetOAuthAppsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OAuthClientsApi();
+            var appId = appId_example;  // string | 
+            var oauthAppName = oauthAppName_example;  // string |  (optional) 
+
+            try
+            {
+                // Get all OAuth Apps
+                RestApiArrayResultOAuthApp result = apiInstance.GetOAuthApps(appId, oauthAppName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OAuthClientsApi.GetOAuthApps: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **oauthAppName** | **string**|  | [optional] 
+
+### Return type
+
+[**RestApiArrayResultOAuthApp**](RestApiArrayResultOAuthApp.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getoauthclientbyclientid"></a>
 # **GetOAuthClientByClientId**
-> RestApiResultOAuthClient GetOAuthClientByClientId (string clientId)
+> RestApiResultOAuthApp GetOAuthClientByClientId (string oauthAppId, string appId)
 
-Get OAuth client by identifier
+Get OAuth App by identifier
 
 ### Example
 ```csharp
@@ -225,12 +295,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthClientsApi();
-            var clientId = clientId_example;  // string | OAuth client identifier
+            var oauthAppId = oauthAppId_example;  // string | OAuth App identifier
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Get OAuth client by identifier
-                RestApiResultOAuthClient result = apiInstance.GetOAuthClientByClientId(clientId);
+                // Get OAuth App by identifier
+                RestApiResultOAuthApp result = apiInstance.GetOAuthClientByClientId(oauthAppId, appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -246,11 +317,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **string**| OAuth client identifier | 
+ **oauthAppId** | **string**| OAuth App identifier | 
+ **appId** | **string**|  | 
 
 ### Return type
 
-[**RestApiResultOAuthClient**](RestApiResultOAuthClient.md)
+[**RestApiResultOAuthApp**](RestApiResultOAuthApp.md)
 
 ### Authorization
 
@@ -265,9 +337,9 @@ Name | Type | Description  | Notes
 
 <a name="getoauthclientsecret"></a>
 # **GetOAuthClientSecret**
-> RestApiStringResult GetOAuthClientSecret (string clientId)
+> RestApiStringResult GetOAuthClientSecret (string oauthAppId, string appId)
 
-Get OAuth client secret key
+Get OAuth App secret key
 
 ### Example
 ```csharp
@@ -287,12 +359,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthClientsApi();
-            var clientId = clientId_example;  // string | OAuth client identifier
+            var oauthAppId = oauthAppId_example;  // string | OAuth App identifier
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Get OAuth client secret key
-                RestApiStringResult result = apiInstance.GetOAuthClientSecret(clientId);
+                // Get OAuth App secret key
+                RestApiStringResult result = apiInstance.GetOAuthClientSecret(oauthAppId, appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -308,7 +381,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **string**| OAuth client identifier | 
+ **oauthAppId** | **string**| OAuth App identifier | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -325,69 +399,11 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getoauthclients"></a>
-# **GetOAuthClients**
-> RestApiArrayResultOAuthClient GetOAuthClients ()
-
-Get all OAuth client
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class GetOAuthClientsExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new OAuthClientsApi();
-
-            try
-            {
-                // Get all OAuth client
-                RestApiArrayResultOAuthClient result = apiInstance.GetOAuthClients();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OAuthClientsApi.GetOAuthClients: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**RestApiArrayResultOAuthClient**](RestApiArrayResultOAuthClient.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="getoauthaccesstoken"></a>
 # **GetOauthAccessToken**
-> RestApiStringResult GetOauthAccessToken (string oAuthClientId)
+> RestApiStringResult GetOauthAccessToken (string oauthAppId, string appId)
 
-Get OAuth access token for client
+Get OAuth access token for App
 
 ### Example
 ```csharp
@@ -407,12 +423,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthClientsApi();
-            var oAuthClientId = oAuthClientId_example;  // string | OAuth client identifier
+            var oauthAppId = oauthAppId_example;  // string | OAuth App identifier
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Get OAuth access token for client
-                RestApiStringResult result = apiInstance.GetOauthAccessToken(oAuthClientId);
+                // Get OAuth access token for App
+                RestApiStringResult result = apiInstance.GetOauthAccessToken(oauthAppId, appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -428,7 +445,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oAuthClientId** | **string**| OAuth client identifier | 
+ **oauthAppId** | **string**| OAuth App identifier | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -447,9 +465,9 @@ Name | Type | Description  | Notes
 
 <a name="getredirecturis"></a>
 # **GetRedirectUris**
-> RestApiArrayResultOauthClientRedirectUri GetRedirectUris (string oAuthClientId)
+> RestApiArrayResultOauthClientRedirectUri GetRedirectUris (string oauthAppId, string appId)
 
-Get OAuth client redirect uris
+Get OAuth App redirect uris
 
 ### Example
 ```csharp
@@ -469,12 +487,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthClientsApi();
-            var oAuthClientId = oAuthClientId_example;  // string | OAuth client identifier
+            var oauthAppId = oauthAppId_example;  // string | OAuth App identifier
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Get OAuth client redirect uris
-                RestApiArrayResultOauthClientRedirectUri result = apiInstance.GetRedirectUris(oAuthClientId);
+                // Get OAuth App redirect uris
+                RestApiArrayResultOauthClientRedirectUri result = apiInstance.GetRedirectUris(oauthAppId, appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -490,7 +509,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oAuthClientId** | **string**| OAuth client identifier | 
+ **oauthAppId** | **string**| OAuth App identifier | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -509,9 +529,9 @@ Name | Type | Description  | Notes
 
 <a name="removeredirecturi"></a>
 # **RemoveRedirectUri**
-> void RemoveRedirectUri (string oAuthClientId, int? uriId)
+> void RemoveRedirectUri (string oauthAppId, int? uriId, string appId)
 
-Delete OAuth client redirect uri
+Delete OAuth App redirect uri
 
 ### Example
 ```csharp
@@ -531,13 +551,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthClientsApi();
-            var oAuthClientId = oAuthClientId_example;  // string | OAuth client identifier
+            var oauthAppId = oauthAppId_example;  // string | OAuth App identifier
             var uriId = 56;  // int? | Redirect uri identifier
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Delete OAuth client redirect uri
-                apiInstance.RemoveRedirectUri(oAuthClientId, uriId);
+                // Delete OAuth App redirect uri
+                apiInstance.RemoveRedirectUri(oauthAppId, uriId, appId);
             }
             catch (Exception e)
             {
@@ -552,8 +573,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oAuthClientId** | **string**| OAuth client identifier | 
+ **oauthAppId** | **string**| OAuth App identifier | 
  **uriId** | **int?**| Redirect uri identifier | 
+ **appId** | **string**|  | 
 
 ### Return type
 

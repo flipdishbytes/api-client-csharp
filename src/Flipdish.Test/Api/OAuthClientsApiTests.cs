@@ -71,34 +71,50 @@ namespace Flipdish.Test
         public void AddRedirectUriTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string oAuthClientId = null;
+            //string oauthAppId = null;
             //string uri = null;
-            //var response = instance.AddRedirectUri(oAuthClientId, uri);
+            //string appId = null;
+            //var response = instance.AddRedirectUri(oauthAppId, uri, appId);
             //Assert.IsInstanceOf<RestApiResultOauthClientRedirectUri> (response, "response is RestApiResultOauthClientRedirectUri");
         }
         
         /// <summary>
-        /// Test CreateOAuthClient
+        /// Test CreateOAuthApp
         /// </summary>
         [Test]
-        public void CreateOAuthClientTest()
+        public void CreateOAuthAppTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //OAuthClient oAuthClient = null;
-            //instance.CreateOAuthClient(oAuthClient);
+            //OAuthApp oAuthApp = null;
+            //string appId = null;
+            //instance.CreateOAuthApp(oAuthApp, appId);
             
         }
         
         /// <summary>
-        /// Test DeleteOAuthClient
+        /// Test DeleteOAuthApp
         /// </summary>
         [Test]
-        public void DeleteOAuthClientTest()
+        public void DeleteOAuthAppTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string oAuthClientId = null;
-            //instance.DeleteOAuthClient(oAuthClientId);
+            //string oauthAppId = null;
+            //string appId = null;
+            //instance.DeleteOAuthApp(oauthAppId, appId);
             
+        }
+        
+        /// <summary>
+        /// Test GetOAuthApps
+        /// </summary>
+        [Test]
+        public void GetOAuthAppsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //string oauthAppName = null;
+            //var response = instance.GetOAuthApps(appId, oauthAppName);
+            //Assert.IsInstanceOf<RestApiArrayResultOAuthApp> (response, "response is RestApiArrayResultOAuthApp");
         }
         
         /// <summary>
@@ -108,9 +124,10 @@ namespace Flipdish.Test
         public void GetOAuthClientByClientIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string clientId = null;
-            //var response = instance.GetOAuthClientByClientId(clientId);
-            //Assert.IsInstanceOf<RestApiResultOAuthClient> (response, "response is RestApiResultOAuthClient");
+            //string oauthAppId = null;
+            //string appId = null;
+            //var response = instance.GetOAuthClientByClientId(oauthAppId, appId);
+            //Assert.IsInstanceOf<RestApiResultOAuthApp> (response, "response is RestApiResultOAuthApp");
         }
         
         /// <summary>
@@ -120,20 +137,10 @@ namespace Flipdish.Test
         public void GetOAuthClientSecretTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string clientId = null;
-            //var response = instance.GetOAuthClientSecret(clientId);
+            //string oauthAppId = null;
+            //string appId = null;
+            //var response = instance.GetOAuthClientSecret(oauthAppId, appId);
             //Assert.IsInstanceOf<RestApiStringResult> (response, "response is RestApiStringResult");
-        }
-        
-        /// <summary>
-        /// Test GetOAuthClients
-        /// </summary>
-        [Test]
-        public void GetOAuthClientsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.GetOAuthClients();
-            //Assert.IsInstanceOf<RestApiArrayResultOAuthClient> (response, "response is RestApiArrayResultOAuthClient");
         }
         
         /// <summary>
@@ -143,8 +150,9 @@ namespace Flipdish.Test
         public void GetOauthAccessTokenTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string oAuthClientId = null;
-            //var response = instance.GetOauthAccessToken(oAuthClientId);
+            //string oauthAppId = null;
+            //string appId = null;
+            //var response = instance.GetOauthAccessToken(oauthAppId, appId);
             //Assert.IsInstanceOf<RestApiStringResult> (response, "response is RestApiStringResult");
         }
         
@@ -155,8 +163,9 @@ namespace Flipdish.Test
         public void GetRedirectUrisTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string oAuthClientId = null;
-            //var response = instance.GetRedirectUris(oAuthClientId);
+            //string oauthAppId = null;
+            //string appId = null;
+            //var response = instance.GetRedirectUris(oauthAppId, appId);
             //Assert.IsInstanceOf<RestApiArrayResultOauthClientRedirectUri> (response, "response is RestApiArrayResultOauthClientRedirectUri");
         }
         
@@ -167,9 +176,10 @@ namespace Flipdish.Test
         public void RemoveRedirectUriTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string oAuthClientId = null;
+            //string oauthAppId = null;
             //int? uriId = null;
-            //instance.RemoveRedirectUri(oAuthClientId, uriId);
+            //string appId = null;
+            //instance.RemoveRedirectUri(oauthAppId, uriId, appId);
             
         }
         

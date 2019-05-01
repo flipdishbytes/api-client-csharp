@@ -25,28 +25,30 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a webhook subscription for you Oauth client
+        /// Create a webhook subscription for you Oauth App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiIntegerResult</returns>
-        RestApiIntegerResult CraeteWebhookSubscription (string clientId, WebhookSubscription webhookSubscription);
+        RestApiIntegerResult CraeteWebhookSubscription (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
 
         /// <summary>
-        /// Create a webhook subscription for you Oauth client
+        /// Create a webhook subscription for you Oauth App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiIntegerResult</returns>
-        ApiResponse<RestApiIntegerResult> CraeteWebhookSubscriptionWithHttpInfo (string clientId, WebhookSubscription webhookSubscription);
+        ApiResponse<RestApiIntegerResult> CraeteWebhookSubscriptionWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
         /// <summary>
         /// Add event name to your webhook subscription
         /// </summary>
@@ -54,11 +56,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        void CreateWebhookSubscriptionEventNames (string clientId, int? webhookSubscriptionId, string eventName);
+        void CreateWebhookSubscriptionEventNames (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
 
         /// <summary>
         /// Add event name to your webhook subscription
@@ -67,11 +70,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateWebhookSubscriptionEventNamesWithHttpInfo (string clientId, int? webhookSubscriptionId, string eventName);
+        ApiResponse<Object> CreateWebhookSubscriptionEventNamesWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
         /// <summary>
         /// Delete you webhook subscription
         /// </summary>
@@ -79,10 +83,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        void DeleteWebhookSubscription (string clientId, int? webhookSubscriptionId);
+        void DeleteWebhookSubscription (string oauthAppId, int? webhookSubscriptionId, string appId);
 
         /// <summary>
         /// Delete you webhook subscription
@@ -91,10 +96,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteWebhookSubscriptionWithHttpInfo (string clientId, int? webhookSubscriptionId);
+        ApiResponse<Object> DeleteWebhookSubscriptionWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId);
         /// <summary>
         /// Remove event name to your webhook subscription
         /// </summary>
@@ -102,11 +108,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        void DeleteWebhookSubscriptionEventName (string clientId, int? webhookSubscriptionId, string eventName);
+        void DeleteWebhookSubscriptionEventName (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
 
         /// <summary>
         /// Remove event name to your webhook subscription
@@ -115,11 +122,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteWebhookSubscriptionEventNameWithHttpInfo (string clientId, int? webhookSubscriptionId, string eventName);
+        ApiResponse<Object> DeleteWebhookSubscriptionEventNameWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
         /// <summary>
         /// Get all webhook subscription event names
         /// </summary>
@@ -127,8 +135,9 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <returns>RestApiStringArrayResult</returns>
-        RestApiStringArrayResult GetWebhookEventNames ();
+        RestApiStringArrayResult GetWebhookEventNames (string appId);
 
         /// <summary>
         /// Get all webhook subscription event names
@@ -137,8 +146,9 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiStringArrayResult</returns>
-        ApiResponse<RestApiStringArrayResult> GetWebhookEventNamesWithHttpInfo ();
+        ApiResponse<RestApiStringArrayResult> GetWebhookEventNamesWithHttpInfo (string appId);
         /// <summary>
         /// Get your webhook subscriptions selected event names
         /// </summary>
@@ -146,10 +156,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiStringArrayResult</returns>
-        RestApiStringArrayResult GetWebhookEventNamesBySubscriptionId (string clientId, int? webhookSubscriptionId);
+        RestApiStringArrayResult GetWebhookEventNamesBySubscriptionId (string oauthAppId, int? webhookSubscriptionId, string appId);
 
         /// <summary>
         /// Get your webhook subscriptions selected event names
@@ -158,10 +169,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiStringArrayResult</returns>
-        ApiResponse<RestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdWithHttpInfo (string clientId, int? webhookSubscriptionId);
+        ApiResponse<RestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId);
         /// <summary>
         /// Get logs for your webhook subscription
         /// </summary>
@@ -169,14 +181,15 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
+        /// <param name="appId"></param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>RestApiPaginationResultWebhookLog</returns>
-        RestApiPaginationResultWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null);
+        RestApiPaginationResultWebhookLog GetWebhookLogs (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get logs for your webhook subscription
@@ -185,35 +198,38 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
+        /// <param name="appId"></param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultWebhookLog</returns>
-        ApiResponse<RestApiPaginationResultWebhookLog> GetWebhookLogsWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null);
+        ApiResponse<RestApiPaginationResultWebhookLog> GetWebhookLogsWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null);
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth client id
+        /// Get all webhook subscriptions by your Oauth App id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultWebhookSubscription</returns>
-        RestApiArrayResultWebhookSubscription GetWebhookSubscriptions (string clientId);
+        RestApiArrayResultWebhookSubscription GetWebhookSubscriptions (string oauthAppId, string appId);
 
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth client id
+        /// Get all webhook subscriptions by your Oauth App id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultWebhookSubscription</returns>
-        ApiResponse<RestApiArrayResultWebhookSubscription> GetWebhookSubscriptionsWithHttpInfo (string clientId);
+        ApiResponse<RestApiArrayResultWebhookSubscription> GetWebhookSubscriptionsWithHttpInfo (string oauthAppId, string appId);
         /// <summary>
         /// Update a webhook subscription object
         /// </summary>
@@ -221,11 +237,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        void UpdateWebhookSubscription (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription);
+        void UpdateWebhookSubscription (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId);
 
         /// <summary>
         /// Update a webhook subscription object
@@ -234,36 +251,39 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateWebhookSubscriptionWithHttpInfo (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription);
+        ApiResponse<Object> UpdateWebhookSubscriptionWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a webhook subscription for you Oauth client
+        /// Create a webhook subscription for you Oauth App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiIntegerResult</returns>
-        System.Threading.Tasks.Task<RestApiIntegerResult> CraeteWebhookSubscriptionAsync (string clientId, WebhookSubscription webhookSubscription);
+        System.Threading.Tasks.Task<RestApiIntegerResult> CraeteWebhookSubscriptionAsync (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
 
         /// <summary>
-        /// Create a webhook subscription for you Oauth client
+        /// Create a webhook subscription for you Oauth App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiIntegerResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> CraeteWebhookSubscriptionAsyncWithHttpInfo (string clientId, WebhookSubscription webhookSubscription);
+        System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> CraeteWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
         /// <summary>
         /// Add event name to your webhook subscription
         /// </summary>
@@ -271,11 +291,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateWebhookSubscriptionEventNamesAsync (string clientId, int? webhookSubscriptionId, string eventName);
+        System.Threading.Tasks.Task CreateWebhookSubscriptionEventNamesAsync (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
 
         /// <summary>
         /// Add event name to your webhook subscription
@@ -284,11 +305,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateWebhookSubscriptionEventNamesAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, string eventName);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateWebhookSubscriptionEventNamesAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
         /// <summary>
         /// Delete you webhook subscription
         /// </summary>
@@ -296,10 +318,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteWebhookSubscriptionAsync (string clientId, int? webhookSubscriptionId);
+        System.Threading.Tasks.Task DeleteWebhookSubscriptionAsync (string oauthAppId, int? webhookSubscriptionId, string appId);
 
         /// <summary>
         /// Delete you webhook subscription
@@ -308,10 +331,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebhookSubscriptionAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId);
         /// <summary>
         /// Remove event name to your webhook subscription
         /// </summary>
@@ -319,11 +343,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteWebhookSubscriptionEventNameAsync (string clientId, int? webhookSubscriptionId, string eventName);
+        System.Threading.Tasks.Task DeleteWebhookSubscriptionEventNameAsync (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
 
         /// <summary>
         /// Remove event name to your webhook subscription
@@ -332,11 +357,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebhookSubscriptionEventNameAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, string eventName);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebhookSubscriptionEventNameAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
         /// <summary>
         /// Get all webhook subscription event names
         /// </summary>
@@ -344,8 +370,9 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiStringArrayResult</returns>
-        System.Threading.Tasks.Task<RestApiStringArrayResult> GetWebhookEventNamesAsync ();
+        System.Threading.Tasks.Task<RestApiStringArrayResult> GetWebhookEventNamesAsync (string appId);
 
         /// <summary>
         /// Get all webhook subscription event names
@@ -354,8 +381,9 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringArrayResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesAsyncWithHttpInfo (string appId);
         /// <summary>
         /// Get your webhook subscriptions selected event names
         /// </summary>
@@ -363,10 +391,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiStringArrayResult</returns>
-        System.Threading.Tasks.Task<RestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdAsync (string clientId, int? webhookSubscriptionId);
+        System.Threading.Tasks.Task<RestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdAsync (string oauthAppId, int? webhookSubscriptionId, string appId);
 
         /// <summary>
         /// Get your webhook subscriptions selected event names
@@ -375,10 +404,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringArrayResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId);
         /// <summary>
         /// Get logs for your webhook subscription
         /// </summary>
@@ -386,14 +416,15 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
+        /// <param name="appId"></param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>Task of RestApiPaginationResultWebhookLog</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultWebhookLog> GetWebhookLogsAsync (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultWebhookLog> GetWebhookLogsAsync (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get logs for your webhook subscription
@@ -402,35 +433,38 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
+        /// <param name="appId"></param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultWebhookLog)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultWebhookLog>> GetWebhookLogsAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultWebhookLog>> GetWebhookLogsAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null);
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth client id
+        /// Get all webhook subscriptions by your Oauth App id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultWebhookSubscription</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultWebhookSubscription> GetWebhookSubscriptionsAsync (string clientId);
+        System.Threading.Tasks.Task<RestApiArrayResultWebhookSubscription> GetWebhookSubscriptionsAsync (string oauthAppId, string appId);
 
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth client id
+        /// Get all webhook subscriptions by your Oauth App id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultWebhookSubscription)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultWebhookSubscription>> GetWebhookSubscriptionsAsyncWithHttpInfo (string clientId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultWebhookSubscription>> GetWebhookSubscriptionsAsyncWithHttpInfo (string oauthAppId, string appId);
         /// <summary>
         /// Update a webhook subscription object
         /// </summary>
@@ -438,11 +472,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateWebhookSubscriptionAsync (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription);
+        System.Threading.Tasks.Task UpdateWebhookSubscriptionAsync (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId);
 
         /// <summary>
         /// Update a webhook subscription object
@@ -451,11 +486,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWebhookSubscriptionAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId);
         #endregion Asynchronous Operations
     }
 
@@ -557,35 +593,40 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a webhook subscription for you Oauth client 
+        /// Create a webhook subscription for you Oauth App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiIntegerResult</returns>
-        public RestApiIntegerResult CraeteWebhookSubscription (string clientId, WebhookSubscription webhookSubscription)
+        public RestApiIntegerResult CraeteWebhookSubscription (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
         {
-             ApiResponse<RestApiIntegerResult> localVarResponse = CraeteWebhookSubscriptionWithHttpInfo(clientId, webhookSubscription);
+             ApiResponse<RestApiIntegerResult> localVarResponse = CraeteWebhookSubscriptionWithHttpInfo(oauthAppId, webhookSubscription, appId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create a webhook subscription for you Oauth client 
+        /// Create a webhook subscription for you Oauth App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiIntegerResult</returns>
-        public ApiResponse< RestApiIntegerResult > CraeteWebhookSubscriptionWithHttpInfo (string clientId, WebhookSubscription webhookSubscription)
+        public ApiResponse< RestApiIntegerResult > CraeteWebhookSubscriptionWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->CraeteWebhookSubscription");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->CraeteWebhookSubscription");
             // verify the required parameter 'webhookSubscription' is set
             if (webhookSubscription == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscription' when calling WebhooksApi->CraeteWebhookSubscription");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->CraeteWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -614,7 +655,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (webhookSubscription != null && webhookSubscription.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(webhookSubscription); // http body (model) parameter
@@ -650,36 +692,41 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a webhook subscription for you Oauth client 
+        /// Create a webhook subscription for you Oauth App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiIntegerResult</returns>
-        public async System.Threading.Tasks.Task<RestApiIntegerResult> CraeteWebhookSubscriptionAsync (string clientId, WebhookSubscription webhookSubscription)
+        public async System.Threading.Tasks.Task<RestApiIntegerResult> CraeteWebhookSubscriptionAsync (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
         {
-             ApiResponse<RestApiIntegerResult> localVarResponse = await CraeteWebhookSubscriptionAsyncWithHttpInfo(clientId, webhookSubscription);
+             ApiResponse<RestApiIntegerResult> localVarResponse = await CraeteWebhookSubscriptionAsyncWithHttpInfo(oauthAppId, webhookSubscription, appId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Create a webhook subscription for you Oauth client 
+        /// Create a webhook subscription for you Oauth App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiIntegerResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> CraeteWebhookSubscriptionAsyncWithHttpInfo (string clientId, WebhookSubscription webhookSubscription)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> CraeteWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->CraeteWebhookSubscription");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->CraeteWebhookSubscription");
             // verify the required parameter 'webhookSubscription' is set
             if (webhookSubscription == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscription' when calling WebhooksApi->CraeteWebhookSubscription");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->CraeteWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -708,7 +755,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (webhookSubscription != null && webhookSubscription.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(webhookSubscription); // http body (model) parameter
@@ -747,36 +795,41 @@ namespace Flipdish.Api
         /// Add event name to your webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        public void CreateWebhookSubscriptionEventNames (string clientId, int? webhookSubscriptionId, string eventName)
+        public void CreateWebhookSubscriptionEventNames (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
         {
-             CreateWebhookSubscriptionEventNamesWithHttpInfo(clientId, webhookSubscriptionId, eventName);
+             CreateWebhookSubscriptionEventNamesWithHttpInfo(oauthAppId, webhookSubscriptionId, eventName, appId);
         }
 
         /// <summary>
         /// Add event name to your webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CreateWebhookSubscriptionEventNamesWithHttpInfo (string clientId, int? webhookSubscriptionId, string eventName)
+        public ApiResponse<Object> CreateWebhookSubscriptionEventNamesWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->CreateWebhookSubscriptionEventNames");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->CreateWebhookSubscriptionEventNames");
             // verify the required parameter 'webhookSubscriptionId' is set
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->CreateWebhookSubscriptionEventNames");
             // verify the required parameter 'eventName' is set
             if (eventName == null)
                 throw new ApiException(400, "Missing required parameter 'eventName' when calling WebhooksApi->CreateWebhookSubscriptionEventNames");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->CreateWebhookSubscriptionEventNames");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -800,9 +853,10 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", this.Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
             if (eventName != null) localVarPathParams.Add("eventName", this.Configuration.ApiClient.ParameterToString(eventName)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -833,13 +887,14 @@ namespace Flipdish.Api
         /// Add event name to your webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreateWebhookSubscriptionEventNamesAsync (string clientId, int? webhookSubscriptionId, string eventName)
+        public async System.Threading.Tasks.Task CreateWebhookSubscriptionEventNamesAsync (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
         {
-             await CreateWebhookSubscriptionEventNamesAsyncWithHttpInfo(clientId, webhookSubscriptionId, eventName);
+             await CreateWebhookSubscriptionEventNamesAsyncWithHttpInfo(oauthAppId, webhookSubscriptionId, eventName, appId);
 
         }
 
@@ -847,23 +902,27 @@ namespace Flipdish.Api
         /// Add event name to your webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateWebhookSubscriptionEventNamesAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, string eventName)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateWebhookSubscriptionEventNamesAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->CreateWebhookSubscriptionEventNames");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->CreateWebhookSubscriptionEventNames");
             // verify the required parameter 'webhookSubscriptionId' is set
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->CreateWebhookSubscriptionEventNames");
             // verify the required parameter 'eventName' is set
             if (eventName == null)
                 throw new ApiException(400, "Missing required parameter 'eventName' when calling WebhooksApi->CreateWebhookSubscriptionEventNames");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->CreateWebhookSubscriptionEventNames");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -887,9 +946,10 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", this.Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
             if (eventName != null) localVarPathParams.Add("eventName", this.Configuration.ApiClient.ParameterToString(eventName)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -920,31 +980,36 @@ namespace Flipdish.Api
         /// Delete you webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        public void DeleteWebhookSubscription (string clientId, int? webhookSubscriptionId)
+        public void DeleteWebhookSubscription (string oauthAppId, int? webhookSubscriptionId, string appId)
         {
-             DeleteWebhookSubscriptionWithHttpInfo(clientId, webhookSubscriptionId);
+             DeleteWebhookSubscriptionWithHttpInfo(oauthAppId, webhookSubscriptionId, appId);
         }
 
         /// <summary>
         /// Delete you webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteWebhookSubscriptionWithHttpInfo (string clientId, int? webhookSubscriptionId)
+        public ApiResponse<Object> DeleteWebhookSubscriptionWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->DeleteWebhookSubscription");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->DeleteWebhookSubscription");
             // verify the required parameter 'webhookSubscriptionId' is set
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->DeleteWebhookSubscription");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->DeleteWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -968,8 +1033,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", this.Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1000,12 +1066,13 @@ namespace Flipdish.Api
         /// Delete you webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteWebhookSubscriptionAsync (string clientId, int? webhookSubscriptionId)
+        public async System.Threading.Tasks.Task DeleteWebhookSubscriptionAsync (string oauthAppId, int? webhookSubscriptionId, string appId)
         {
-             await DeleteWebhookSubscriptionAsyncWithHttpInfo(clientId, webhookSubscriptionId);
+             await DeleteWebhookSubscriptionAsyncWithHttpInfo(oauthAppId, webhookSubscriptionId, appId);
 
         }
 
@@ -1013,19 +1080,23 @@ namespace Flipdish.Api
         /// Delete you webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebhookSubscriptionAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->DeleteWebhookSubscription");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->DeleteWebhookSubscription");
             // verify the required parameter 'webhookSubscriptionId' is set
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->DeleteWebhookSubscription");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->DeleteWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1049,8 +1120,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", this.Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1081,36 +1153,41 @@ namespace Flipdish.Api
         /// Remove event name to your webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        public void DeleteWebhookSubscriptionEventName (string clientId, int? webhookSubscriptionId, string eventName)
+        public void DeleteWebhookSubscriptionEventName (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
         {
-             DeleteWebhookSubscriptionEventNameWithHttpInfo(clientId, webhookSubscriptionId, eventName);
+             DeleteWebhookSubscriptionEventNameWithHttpInfo(oauthAppId, webhookSubscriptionId, eventName, appId);
         }
 
         /// <summary>
         /// Remove event name to your webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteWebhookSubscriptionEventNameWithHttpInfo (string clientId, int? webhookSubscriptionId, string eventName)
+        public ApiResponse<Object> DeleteWebhookSubscriptionEventNameWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->DeleteWebhookSubscriptionEventName");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->DeleteWebhookSubscriptionEventName");
             // verify the required parameter 'webhookSubscriptionId' is set
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->DeleteWebhookSubscriptionEventName");
             // verify the required parameter 'eventName' is set
             if (eventName == null)
                 throw new ApiException(400, "Missing required parameter 'eventName' when calling WebhooksApi->DeleteWebhookSubscriptionEventName");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->DeleteWebhookSubscriptionEventName");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1134,9 +1211,10 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", this.Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
             if (eventName != null) localVarPathParams.Add("eventName", this.Configuration.ApiClient.ParameterToString(eventName)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1167,13 +1245,14 @@ namespace Flipdish.Api
         /// Remove event name to your webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteWebhookSubscriptionEventNameAsync (string clientId, int? webhookSubscriptionId, string eventName)
+        public async System.Threading.Tasks.Task DeleteWebhookSubscriptionEventNameAsync (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
         {
-             await DeleteWebhookSubscriptionEventNameAsyncWithHttpInfo(clientId, webhookSubscriptionId, eventName);
+             await DeleteWebhookSubscriptionEventNameAsyncWithHttpInfo(oauthAppId, webhookSubscriptionId, eventName, appId);
 
         }
 
@@ -1181,23 +1260,27 @@ namespace Flipdish.Api
         /// Remove event name to your webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebhookSubscriptionEventNameAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, string eventName)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebhookSubscriptionEventNameAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->DeleteWebhookSubscriptionEventName");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->DeleteWebhookSubscriptionEventName");
             // verify the required parameter 'webhookSubscriptionId' is set
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->DeleteWebhookSubscriptionEventName");
             // verify the required parameter 'eventName' is set
             if (eventName == null)
                 throw new ApiException(400, "Missing required parameter 'eventName' when calling WebhooksApi->DeleteWebhookSubscriptionEventName");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->DeleteWebhookSubscriptionEventName");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1221,9 +1304,10 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", this.Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
             if (eventName != null) localVarPathParams.Add("eventName", this.Configuration.ApiClient.ParameterToString(eventName)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1254,10 +1338,11 @@ namespace Flipdish.Api
         /// Get all webhook subscription event names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <returns>RestApiStringArrayResult</returns>
-        public RestApiStringArrayResult GetWebhookEventNames ()
+        public RestApiStringArrayResult GetWebhookEventNames (string appId)
         {
-             ApiResponse<RestApiStringArrayResult> localVarResponse = GetWebhookEventNamesWithHttpInfo();
+             ApiResponse<RestApiStringArrayResult> localVarResponse = GetWebhookEventNamesWithHttpInfo(appId);
              return localVarResponse.Data;
         }
 
@@ -1265,11 +1350,15 @@ namespace Flipdish.Api
         /// Get all webhook subscription event names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiStringArrayResult</returns>
-        public ApiResponse< RestApiStringArrayResult > GetWebhookEventNamesWithHttpInfo ()
+        public ApiResponse< RestApiStringArrayResult > GetWebhookEventNamesWithHttpInfo (string appId)
         {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookEventNames");
 
-            var localVarPath = "/api/v1.0/webhooks/events";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/events";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1293,6 +1382,7 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1323,10 +1413,11 @@ namespace Flipdish.Api
         /// Get all webhook subscription event names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiStringArrayResult</returns>
-        public async System.Threading.Tasks.Task<RestApiStringArrayResult> GetWebhookEventNamesAsync ()
+        public async System.Threading.Tasks.Task<RestApiStringArrayResult> GetWebhookEventNamesAsync (string appId)
         {
-             ApiResponse<RestApiStringArrayResult> localVarResponse = await GetWebhookEventNamesAsyncWithHttpInfo();
+             ApiResponse<RestApiStringArrayResult> localVarResponse = await GetWebhookEventNamesAsyncWithHttpInfo(appId);
              return localVarResponse.Data;
 
         }
@@ -1335,11 +1426,15 @@ namespace Flipdish.Api
         /// Get all webhook subscription event names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringArrayResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesAsyncWithHttpInfo (string appId)
         {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookEventNames");
 
-            var localVarPath = "/api/v1.0/webhooks/events";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/events";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1363,6 +1458,7 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1393,12 +1489,13 @@ namespace Flipdish.Api
         /// Get your webhook subscriptions selected event names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiStringArrayResult</returns>
-        public RestApiStringArrayResult GetWebhookEventNamesBySubscriptionId (string clientId, int? webhookSubscriptionId)
+        public RestApiStringArrayResult GetWebhookEventNamesBySubscriptionId (string oauthAppId, int? webhookSubscriptionId, string appId)
         {
-             ApiResponse<RestApiStringArrayResult> localVarResponse = GetWebhookEventNamesBySubscriptionIdWithHttpInfo(clientId, webhookSubscriptionId);
+             ApiResponse<RestApiStringArrayResult> localVarResponse = GetWebhookEventNamesBySubscriptionIdWithHttpInfo(oauthAppId, webhookSubscriptionId, appId);
              return localVarResponse.Data;
         }
 
@@ -1406,19 +1503,23 @@ namespace Flipdish.Api
         /// Get your webhook subscriptions selected event names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiStringArrayResult</returns>
-        public ApiResponse< RestApiStringArrayResult > GetWebhookEventNamesBySubscriptionIdWithHttpInfo (string clientId, int? webhookSubscriptionId)
+        public ApiResponse< RestApiStringArrayResult > GetWebhookEventNamesBySubscriptionIdWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->GetWebhookEventNamesBySubscriptionId");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->GetWebhookEventNamesBySubscriptionId");
             // verify the required parameter 'webhookSubscriptionId' is set
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->GetWebhookEventNamesBySubscriptionId");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookEventNamesBySubscriptionId");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1442,8 +1543,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", this.Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1474,12 +1576,13 @@ namespace Flipdish.Api
         /// Get your webhook subscriptions selected event names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiStringArrayResult</returns>
-        public async System.Threading.Tasks.Task<RestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdAsync (string clientId, int? webhookSubscriptionId)
+        public async System.Threading.Tasks.Task<RestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdAsync (string oauthAppId, int? webhookSubscriptionId, string appId)
         {
-             ApiResponse<RestApiStringArrayResult> localVarResponse = await GetWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo(clientId, webhookSubscriptionId);
+             ApiResponse<RestApiStringArrayResult> localVarResponse = await GetWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo(oauthAppId, webhookSubscriptionId, appId);
              return localVarResponse.Data;
 
         }
@@ -1488,19 +1591,23 @@ namespace Flipdish.Api
         /// Get your webhook subscriptions selected event names 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringArrayResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->GetWebhookEventNamesBySubscriptionId");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->GetWebhookEventNamesBySubscriptionId");
             // verify the required parameter 'webhookSubscriptionId' is set
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->GetWebhookEventNamesBySubscriptionId");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookEventNamesBySubscriptionId");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1524,8 +1631,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", this.Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1556,16 +1664,17 @@ namespace Flipdish.Api
         /// Get logs for your webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
+        /// <param name="appId"></param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>RestApiPaginationResultWebhookLog</returns>
-        public RestApiPaginationResultWebhookLog GetWebhookLogs (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null)
+        public RestApiPaginationResultWebhookLog GetWebhookLogs (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultWebhookLog> localVarResponse = GetWebhookLogsWithHttpInfo(clientId, webhookSubscriptionId, start, end, page, limit);
+             ApiResponse<RestApiPaginationResultWebhookLog> localVarResponse = GetWebhookLogsWithHttpInfo(oauthAppId, webhookSubscriptionId, start, end, appId, page, limit);
              return localVarResponse.Data;
         }
 
@@ -1573,18 +1682,19 @@ namespace Flipdish.Api
         /// Get logs for your webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
+        /// <param name="appId"></param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultWebhookLog</returns>
-        public ApiResponse< RestApiPaginationResultWebhookLog > GetWebhookLogsWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null)
+        public ApiResponse< RestApiPaginationResultWebhookLog > GetWebhookLogsWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->GetWebhookLogs");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->GetWebhookLogs");
             // verify the required parameter 'webhookSubscriptionId' is set
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->GetWebhookLogs");
@@ -1594,8 +1704,11 @@ namespace Flipdish.Api
             // verify the required parameter 'end' is set
             if (end == null)
                 throw new ApiException(400, "Missing required parameter 'end' when calling WebhooksApi->GetWebhookLogs");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookLogs");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/logs";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1619,8 +1732,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", this.Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
@@ -1655,16 +1769,17 @@ namespace Flipdish.Api
         /// Get logs for your webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
+        /// <param name="appId"></param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>Task of RestApiPaginationResultWebhookLog</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultWebhookLog> GetWebhookLogsAsync (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultWebhookLog> GetWebhookLogsAsync (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultWebhookLog> localVarResponse = await GetWebhookLogsAsyncWithHttpInfo(clientId, webhookSubscriptionId, start, end, page, limit);
+             ApiResponse<RestApiPaginationResultWebhookLog> localVarResponse = await GetWebhookLogsAsyncWithHttpInfo(oauthAppId, webhookSubscriptionId, start, end, appId, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1673,18 +1788,19 @@ namespace Flipdish.Api
         /// Get logs for your webhook subscription 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="start">Start time</param>
         /// <param name="end">End time</param>
+        /// <param name="appId"></param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultWebhookLog)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultWebhookLog>> GetWebhookLogsAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, DateTime? start, DateTime? end, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultWebhookLog>> GetWebhookLogsAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->GetWebhookLogs");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->GetWebhookLogs");
             // verify the required parameter 'webhookSubscriptionId' is set
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->GetWebhookLogs");
@@ -1694,8 +1810,11 @@ namespace Flipdish.Api
             // verify the required parameter 'end' is set
             if (end == null)
                 throw new ApiException(400, "Missing required parameter 'end' when calling WebhooksApi->GetWebhookLogs");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookLogs");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/logs";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1719,8 +1838,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", this.Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
@@ -1752,30 +1872,35 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth client id 
+        /// Get all webhook subscriptions by your Oauth App id 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultWebhookSubscription</returns>
-        public RestApiArrayResultWebhookSubscription GetWebhookSubscriptions (string clientId)
+        public RestApiArrayResultWebhookSubscription GetWebhookSubscriptions (string oauthAppId, string appId)
         {
-             ApiResponse<RestApiArrayResultWebhookSubscription> localVarResponse = GetWebhookSubscriptionsWithHttpInfo(clientId);
+             ApiResponse<RestApiArrayResultWebhookSubscription> localVarResponse = GetWebhookSubscriptionsWithHttpInfo(oauthAppId, appId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth client id 
+        /// Get all webhook subscriptions by your Oauth App id 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultWebhookSubscription</returns>
-        public ApiResponse< RestApiArrayResultWebhookSubscription > GetWebhookSubscriptionsWithHttpInfo (string clientId)
+        public ApiResponse< RestApiArrayResultWebhookSubscription > GetWebhookSubscriptionsWithHttpInfo (string oauthAppId, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->GetWebhookSubscriptions");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->GetWebhookSubscriptions");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookSubscriptions");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1799,7 +1924,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1827,31 +1953,36 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth client id 
+        /// Get all webhook subscriptions by your Oauth App id 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultWebhookSubscription</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultWebhookSubscription> GetWebhookSubscriptionsAsync (string clientId)
+        public async System.Threading.Tasks.Task<RestApiArrayResultWebhookSubscription> GetWebhookSubscriptionsAsync (string oauthAppId, string appId)
         {
-             ApiResponse<RestApiArrayResultWebhookSubscription> localVarResponse = await GetWebhookSubscriptionsAsyncWithHttpInfo(clientId);
+             ApiResponse<RestApiArrayResultWebhookSubscription> localVarResponse = await GetWebhookSubscriptionsAsyncWithHttpInfo(oauthAppId, appId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth client id 
+        /// Get all webhook subscriptions by your Oauth App id 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultWebhookSubscription)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultWebhookSubscription>> GetWebhookSubscriptionsAsyncWithHttpInfo (string clientId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultWebhookSubscription>> GetWebhookSubscriptionsAsyncWithHttpInfo (string oauthAppId, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->GetWebhookSubscriptions");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->GetWebhookSubscriptions");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookSubscriptions");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1875,7 +2006,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1906,36 +2038,41 @@ namespace Flipdish.Api
         /// Update a webhook subscription object 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        public void UpdateWebhookSubscription (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription)
+        public void UpdateWebhookSubscription (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId)
         {
-             UpdateWebhookSubscriptionWithHttpInfo(clientId, webhookSubscriptionId, webhookSubscription);
+             UpdateWebhookSubscriptionWithHttpInfo(oauthAppId, webhookSubscriptionId, webhookSubscription, appId);
         }
 
         /// <summary>
         /// Update a webhook subscription object 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateWebhookSubscriptionWithHttpInfo (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription)
+        public ApiResponse<Object> UpdateWebhookSubscriptionWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->UpdateWebhookSubscription");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->UpdateWebhookSubscription");
             // verify the required parameter 'webhookSubscriptionId' is set
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->UpdateWebhookSubscription");
             // verify the required parameter 'webhookSubscription' is set
             if (webhookSubscription == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscription' when calling WebhooksApi->UpdateWebhookSubscription");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->UpdateWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1964,8 +2101,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", this.Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (webhookSubscription != null && webhookSubscription.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(webhookSubscription); // http body (model) parameter
@@ -2004,13 +2142,14 @@ namespace Flipdish.Api
         /// Update a webhook subscription object 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateWebhookSubscriptionAsync (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription)
+        public async System.Threading.Tasks.Task UpdateWebhookSubscriptionAsync (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId)
         {
-             await UpdateWebhookSubscriptionAsyncWithHttpInfo(clientId, webhookSubscriptionId, webhookSubscription);
+             await UpdateWebhookSubscriptionAsyncWithHttpInfo(oauthAppId, webhookSubscriptionId, webhookSubscription, appId);
 
         }
 
@@ -2018,23 +2157,27 @@ namespace Flipdish.Api
         /// Update a webhook subscription object 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Oauth client identifier</param>
+        /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
         /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWebhookSubscriptionAsyncWithHttpInfo (string clientId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling WebhooksApi->UpdateWebhookSubscription");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->UpdateWebhookSubscription");
             // verify the required parameter 'webhookSubscriptionId' is set
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->UpdateWebhookSubscription");
             // verify the required parameter 'webhookSubscription' is set
             if (webhookSubscription == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscription' when calling WebhooksApi->UpdateWebhookSubscription");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->UpdateWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}";
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2063,8 +2206,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", this.Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (webhookSubscription != null && webhookSubscription.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(webhookSubscription); // http body (model) parameter

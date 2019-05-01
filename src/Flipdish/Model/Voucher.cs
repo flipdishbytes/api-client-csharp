@@ -867,6 +867,7 @@ namespace Flipdish.Model
         /// <param name="voucherSubType">Voucher Sub Type.</param>
         /// <param name="currency">Currency of the voucher.</param>
         /// <param name="stores">Stores that this voucher applies to.</param>
+        /// <param name="storeNames">Stores that this voucher applies to.</param>
         /// <param name="addItemDetails">Add item details.</param>
         /// <param name="creditNoteDetails">Credit note details.</param>
         /// <param name="lumpDiscountDetails">Lump discount details.</param>
@@ -887,7 +888,7 @@ namespace Flipdish.Model
         /// <param name="isValidOnlyOnce">Valid only once, by any customer (once used cannot be used again by any other customer).</param>
         /// <param name="startDate">Voucher Starts On (Time in UTC).</param>
         /// <param name="expiryDate">Voucher Expires On (Time in UTC).</param>
-        public Voucher(int? voucherId = default(int?), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), List<int?> stores = default(List<int?>), AddItemDetails addItemDetails = default(AddItemDetails), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?))
+        public Voucher(int? voucherId = default(int?), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), List<int?> stores = default(List<int?>), List<string> storeNames = default(List<string>), AddItemDetails addItemDetails = default(AddItemDetails), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?))
         {
             this.VoucherId = voucherId;
             this.Status = status;
@@ -895,6 +896,7 @@ namespace Flipdish.Model
             this.VoucherSubType = voucherSubType;
             this.Currency = currency;
             this.Stores = stores;
+            this.StoreNames = storeNames;
             this.AddItemDetails = addItemDetails;
             this.CreditNoteDetails = creditNoteDetails;
             this.LumpDiscountDetails = lumpDiscountDetails;
@@ -934,6 +936,13 @@ namespace Flipdish.Model
         /// <value>Stores that this voucher applies to</value>
         [DataMember(Name="Stores", EmitDefaultValue=false)]
         public List<int?> Stores { get; set; }
+
+        /// <summary>
+        /// Stores that this voucher applies to
+        /// </summary>
+        /// <value>Stores that this voucher applies to</value>
+        [DataMember(Name="StoreNames", EmitDefaultValue=false)]
+        public List<string> StoreNames { get; set; }
 
         /// <summary>
         /// Add item details
@@ -1089,6 +1098,7 @@ namespace Flipdish.Model
             sb.Append("  VoucherSubType: ").Append(VoucherSubType).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  Stores: ").Append(Stores).Append("\n");
+            sb.Append("  StoreNames: ").Append(StoreNames).Append("\n");
             sb.Append("  AddItemDetails: ").Append(AddItemDetails).Append("\n");
             sb.Append("  CreditNoteDetails: ").Append(CreditNoteDetails).Append("\n");
             sb.Append("  LumpDiscountDetails: ").Append(LumpDiscountDetails).Append("\n");
@@ -1172,6 +1182,11 @@ namespace Flipdish.Model
                     this.Stores == input.Stores ||
                     this.Stores != null &&
                     this.Stores.SequenceEqual(input.Stores)
+                ) && 
+                (
+                    this.StoreNames == input.StoreNames ||
+                    this.StoreNames != null &&
+                    this.StoreNames.SequenceEqual(input.StoreNames)
                 ) && 
                 (
                     this.AddItemDetails == input.AddItemDetails ||
@@ -1296,6 +1311,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Currency.GetHashCode();
                 if (this.Stores != null)
                     hashCode = hashCode * 59 + this.Stores.GetHashCode();
+                if (this.StoreNames != null)
+                    hashCode = hashCode * 59 + this.StoreNames.GetHashCode();
                 if (this.AddItemDetails != null)
                     hashCode = hashCode * 59 + this.AddItemDetails.GetHashCode();
                 if (this.CreditNoteDetails != null)

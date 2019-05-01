@@ -130,6 +130,14 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'DisplayTimesInUserLocalTimeZone'
         }
+        /// <summary>
+        /// Test the property 'ShowHiddenFeatures'
+        /// </summary>
+        [Test]
+        public void ShowHiddenFeaturesTest()
+        {
+            // TODO unit test for the property 'ShowHiddenFeatures'
+        }
 
     }
 

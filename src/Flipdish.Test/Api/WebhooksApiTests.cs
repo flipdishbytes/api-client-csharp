@@ -71,9 +71,10 @@ namespace Flipdish.Test
         public void CraeteWebhookSubscriptionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string clientId = null;
+            //string oauthAppId = null;
             //WebhookSubscription webhookSubscription = null;
-            //var response = instance.CraeteWebhookSubscription(clientId, webhookSubscription);
+            //string appId = null;
+            //var response = instance.CraeteWebhookSubscription(oauthAppId, webhookSubscription, appId);
             //Assert.IsInstanceOf<RestApiIntegerResult> (response, "response is RestApiIntegerResult");
         }
         
@@ -84,10 +85,11 @@ namespace Flipdish.Test
         public void CreateWebhookSubscriptionEventNamesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string clientId = null;
+            //string oauthAppId = null;
             //int? webhookSubscriptionId = null;
             //string eventName = null;
-            //instance.CreateWebhookSubscriptionEventNames(clientId, webhookSubscriptionId, eventName);
+            //string appId = null;
+            //instance.CreateWebhookSubscriptionEventNames(oauthAppId, webhookSubscriptionId, eventName, appId);
             
         }
         
@@ -98,9 +100,10 @@ namespace Flipdish.Test
         public void DeleteWebhookSubscriptionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string clientId = null;
+            //string oauthAppId = null;
             //int? webhookSubscriptionId = null;
-            //instance.DeleteWebhookSubscription(clientId, webhookSubscriptionId);
+            //string appId = null;
+            //instance.DeleteWebhookSubscription(oauthAppId, webhookSubscriptionId, appId);
             
         }
         
@@ -111,10 +114,11 @@ namespace Flipdish.Test
         public void DeleteWebhookSubscriptionEventNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string clientId = null;
+            //string oauthAppId = null;
             //int? webhookSubscriptionId = null;
             //string eventName = null;
-            //instance.DeleteWebhookSubscriptionEventName(clientId, webhookSubscriptionId, eventName);
+            //string appId = null;
+            //instance.DeleteWebhookSubscriptionEventName(oauthAppId, webhookSubscriptionId, eventName, appId);
             
         }
         
@@ -125,7 +129,8 @@ namespace Flipdish.Test
         public void GetWebhookEventNamesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.GetWebhookEventNames();
+            //string appId = null;
+            //var response = instance.GetWebhookEventNames(appId);
             //Assert.IsInstanceOf<RestApiStringArrayResult> (response, "response is RestApiStringArrayResult");
         }
         
@@ -136,9 +141,10 @@ namespace Flipdish.Test
         public void GetWebhookEventNamesBySubscriptionIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string clientId = null;
+            //string oauthAppId = null;
             //int? webhookSubscriptionId = null;
-            //var response = instance.GetWebhookEventNamesBySubscriptionId(clientId, webhookSubscriptionId);
+            //string appId = null;
+            //var response = instance.GetWebhookEventNamesBySubscriptionId(oauthAppId, webhookSubscriptionId, appId);
             //Assert.IsInstanceOf<RestApiStringArrayResult> (response, "response is RestApiStringArrayResult");
         }
         
@@ -149,13 +155,14 @@ namespace Flipdish.Test
         public void GetWebhookLogsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string clientId = null;
+            //string oauthAppId = null;
             //int? webhookSubscriptionId = null;
             //DateTime? start = null;
             //DateTime? end = null;
+            //string appId = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.GetWebhookLogs(clientId, webhookSubscriptionId, start, end, page, limit);
+            //var response = instance.GetWebhookLogs(oauthAppId, webhookSubscriptionId, start, end, appId, page, limit);
             //Assert.IsInstanceOf<RestApiPaginationResultWebhookLog> (response, "response is RestApiPaginationResultWebhookLog");
         }
         
@@ -166,8 +173,9 @@ namespace Flipdish.Test
         public void GetWebhookSubscriptionsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string clientId = null;
-            //var response = instance.GetWebhookSubscriptions(clientId);
+            //string oauthAppId = null;
+            //string appId = null;
+            //var response = instance.GetWebhookSubscriptions(oauthAppId, appId);
             //Assert.IsInstanceOf<RestApiArrayResultWebhookSubscription> (response, "response is RestApiArrayResultWebhookSubscription");
         }
         
@@ -178,10 +186,11 @@ namespace Flipdish.Test
         public void UpdateWebhookSubscriptionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string clientId = null;
+            //string oauthAppId = null;
             //int? webhookSubscriptionId = null;
             //WebhookSubscription webhookSubscription = null;
-            //instance.UpdateWebhookSubscription(clientId, webhookSubscriptionId, webhookSubscription);
+            //string appId = null;
+            //instance.UpdateWebhookSubscription(oauthAppId, webhookSubscriptionId, webhookSubscription, appId);
             
         }
         

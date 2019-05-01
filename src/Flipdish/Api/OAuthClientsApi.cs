@@ -25,389 +25,429 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create OAuth client redirect uri
+        /// Create OAuth App redirect uri
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uri">Redirect uri</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultOauthClientRedirectUri</returns>
-        RestApiResultOauthClientRedirectUri AddRedirectUri (string oAuthClientId, string uri);
+        RestApiResultOauthClientRedirectUri AddRedirectUri (string oauthAppId, string uri, string appId);
 
         /// <summary>
-        /// Create OAuth client redirect uri
+        /// Create OAuth App redirect uri
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uri">Redirect uri</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultOauthClientRedirectUri</returns>
-        ApiResponse<RestApiResultOauthClientRedirectUri> AddRedirectUriWithHttpInfo (string oAuthClientId, string uri);
+        ApiResponse<RestApiResultOauthClientRedirectUri> AddRedirectUriWithHttpInfo (string oauthAppId, string uri, string appId);
         /// <summary>
-        /// Create OAuth client
+        /// Create OAuth App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClient">OAuth client</param>
+        /// <param name="oAuthApp">OAuth App</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        void CreateOAuthClient (OAuthClient oAuthClient);
+        void CreateOAuthApp (OAuthApp oAuthApp, string appId);
 
         /// <summary>
-        /// Create OAuth client
+        /// Create OAuth App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClient">OAuth client</param>
+        /// <param name="oAuthApp">OAuth App</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateOAuthClientWithHttpInfo (OAuthClient oAuthClient);
+        ApiResponse<Object> CreateOAuthAppWithHttpInfo (OAuthApp oAuthApp, string appId);
         /// <summary>
-        /// Delete OAuth client
+        /// Delete OAuth App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        void DeleteOAuthClient (string oAuthClientId);
+        void DeleteOAuthApp (string oauthAppId, string appId);
 
         /// <summary>
-        /// Delete OAuth client
+        /// Delete OAuth App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteOAuthClientWithHttpInfo (string oAuthClientId);
+        ApiResponse<Object> DeleteOAuthAppWithHttpInfo (string oauthAppId, string appId);
         /// <summary>
-        /// Get OAuth client by identifier
+        /// Get all OAuth Apps
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>RestApiResultOAuthClient</returns>
-        RestApiResultOAuthClient GetOAuthClientByClientId (string clientId);
+        /// <param name="appId"></param>
+        /// <param name="oauthAppName"> (optional)</param>
+        /// <returns>RestApiArrayResultOAuthApp</returns>
+        RestApiArrayResultOAuthApp GetOAuthApps (string appId, string oauthAppName = null);
 
         /// <summary>
-        /// Get OAuth client by identifier
+        /// Get all OAuth Apps
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>ApiResponse of RestApiResultOAuthClient</returns>
-        ApiResponse<RestApiResultOAuthClient> GetOAuthClientByClientIdWithHttpInfo (string clientId);
+        /// <param name="appId"></param>
+        /// <param name="oauthAppName"> (optional)</param>
+        /// <returns>ApiResponse of RestApiArrayResultOAuthApp</returns>
+        ApiResponse<RestApiArrayResultOAuthApp> GetOAuthAppsWithHttpInfo (string appId, string oauthAppName = null);
         /// <summary>
-        /// Get OAuth client secret key
+        /// Get OAuth App by identifier
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultOAuthApp</returns>
+        RestApiResultOAuthApp GetOAuthClientByClientId (string oauthAppId, string appId);
+
+        /// <summary>
+        /// Get OAuth App by identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultOAuthApp</returns>
+        ApiResponse<RestApiResultOAuthApp> GetOAuthClientByClientIdWithHttpInfo (string oauthAppId, string appId);
+        /// <summary>
+        /// Get OAuth App secret key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiStringResult</returns>
-        RestApiStringResult GetOAuthClientSecret (string clientId);
+        RestApiStringResult GetOAuthClientSecret (string oauthAppId, string appId);
 
         /// <summary>
-        /// Get OAuth client secret key
+        /// Get OAuth App secret key
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
-        ApiResponse<RestApiStringResult> GetOAuthClientSecretWithHttpInfo (string clientId);
+        ApiResponse<RestApiStringResult> GetOAuthClientSecretWithHttpInfo (string oauthAppId, string appId);
         /// <summary>
-        /// Get all OAuth client
+        /// Get OAuth access token for App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>RestApiArrayResultOAuthClient</returns>
-        RestApiArrayResultOAuthClient GetOAuthClients ();
-
-        /// <summary>
-        /// Get all OAuth client
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of RestApiArrayResultOAuthClient</returns>
-        ApiResponse<RestApiArrayResultOAuthClient> GetOAuthClientsWithHttpInfo ();
-        /// <summary>
-        /// Get OAuth access token for client
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiStringResult</returns>
-        RestApiStringResult GetOauthAccessToken (string oAuthClientId);
+        RestApiStringResult GetOauthAccessToken (string oauthAppId, string appId);
 
         /// <summary>
-        /// Get OAuth access token for client
+        /// Get OAuth access token for App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
-        ApiResponse<RestApiStringResult> GetOauthAccessTokenWithHttpInfo (string oAuthClientId);
+        ApiResponse<RestApiStringResult> GetOauthAccessTokenWithHttpInfo (string oauthAppId, string appId);
         /// <summary>
-        /// Get OAuth client redirect uris
+        /// Get OAuth App redirect uris
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultOauthClientRedirectUri</returns>
-        RestApiArrayResultOauthClientRedirectUri GetRedirectUris (string oAuthClientId);
+        RestApiArrayResultOauthClientRedirectUri GetRedirectUris (string oauthAppId, string appId);
 
         /// <summary>
-        /// Get OAuth client redirect uris
+        /// Get OAuth App redirect uris
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultOauthClientRedirectUri</returns>
-        ApiResponse<RestApiArrayResultOauthClientRedirectUri> GetRedirectUrisWithHttpInfo (string oAuthClientId);
+        ApiResponse<RestApiArrayResultOauthClientRedirectUri> GetRedirectUrisWithHttpInfo (string oauthAppId, string appId);
         /// <summary>
-        /// Delete OAuth client redirect uri
+        /// Delete OAuth App redirect uri
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uriId">Redirect uri identifier</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        void RemoveRedirectUri (string oAuthClientId, int? uriId);
+        void RemoveRedirectUri (string oauthAppId, int? uriId, string appId);
 
         /// <summary>
-        /// Delete OAuth client redirect uri
+        /// Delete OAuth App redirect uri
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uriId">Redirect uri identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RemoveRedirectUriWithHttpInfo (string oAuthClientId, int? uriId);
+        ApiResponse<Object> RemoveRedirectUriWithHttpInfo (string oauthAppId, int? uriId, string appId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create OAuth client redirect uri
+        /// Create OAuth App redirect uri
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uri">Redirect uri</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultOauthClientRedirectUri</returns>
-        System.Threading.Tasks.Task<RestApiResultOauthClientRedirectUri> AddRedirectUriAsync (string oAuthClientId, string uri);
+        System.Threading.Tasks.Task<RestApiResultOauthClientRedirectUri> AddRedirectUriAsync (string oauthAppId, string uri, string appId);
 
         /// <summary>
-        /// Create OAuth client redirect uri
+        /// Create OAuth App redirect uri
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uri">Redirect uri</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultOauthClientRedirectUri)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultOauthClientRedirectUri>> AddRedirectUriAsyncWithHttpInfo (string oAuthClientId, string uri);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultOauthClientRedirectUri>> AddRedirectUriAsyncWithHttpInfo (string oauthAppId, string uri, string appId);
         /// <summary>
-        /// Create OAuth client
+        /// Create OAuth App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClient">OAuth client</param>
+        /// <param name="oAuthApp">OAuth App</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateOAuthClientAsync (OAuthClient oAuthClient);
+        System.Threading.Tasks.Task CreateOAuthAppAsync (OAuthApp oAuthApp, string appId);
 
         /// <summary>
-        /// Create OAuth client
+        /// Create OAuth App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClient">OAuth client</param>
+        /// <param name="oAuthApp">OAuth App</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateOAuthClientAsyncWithHttpInfo (OAuthClient oAuthClient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateOAuthAppAsyncWithHttpInfo (OAuthApp oAuthApp, string appId);
         /// <summary>
-        /// Delete OAuth client
+        /// Delete OAuth App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteOAuthClientAsync (string oAuthClientId);
+        System.Threading.Tasks.Task DeleteOAuthAppAsync (string oauthAppId, string appId);
 
         /// <summary>
-        /// Delete OAuth client
+        /// Delete OAuth App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOAuthClientAsyncWithHttpInfo (string oAuthClientId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOAuthAppAsyncWithHttpInfo (string oauthAppId, string appId);
         /// <summary>
-        /// Get OAuth client by identifier
+        /// Get all OAuth Apps
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>Task of RestApiResultOAuthClient</returns>
-        System.Threading.Tasks.Task<RestApiResultOAuthClient> GetOAuthClientByClientIdAsync (string clientId);
+        /// <param name="appId"></param>
+        /// <param name="oauthAppName"> (optional)</param>
+        /// <returns>Task of RestApiArrayResultOAuthApp</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultOAuthApp> GetOAuthAppsAsync (string appId, string oauthAppName = null);
 
         /// <summary>
-        /// Get OAuth client by identifier
+        /// Get all OAuth Apps
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>Task of ApiResponse (RestApiResultOAuthClient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultOAuthClient>> GetOAuthClientByClientIdAsyncWithHttpInfo (string clientId);
+        /// <param name="appId"></param>
+        /// <param name="oauthAppName"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultOAuthApp)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOAuthApp>> GetOAuthAppsAsyncWithHttpInfo (string appId, string oauthAppName = null);
         /// <summary>
-        /// Get OAuth client secret key
+        /// Get OAuth App by identifier
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultOAuthApp</returns>
+        System.Threading.Tasks.Task<RestApiResultOAuthApp> GetOAuthClientByClientIdAsync (string oauthAppId, string appId);
+
+        /// <summary>
+        /// Get OAuth App by identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultOAuthApp)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultOAuthApp>> GetOAuthClientByClientIdAsyncWithHttpInfo (string oauthAppId, string appId);
+        /// <summary>
+        /// Get OAuth App secret key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiStringResult</returns>
-        System.Threading.Tasks.Task<RestApiStringResult> GetOAuthClientSecretAsync (string clientId);
+        System.Threading.Tasks.Task<RestApiStringResult> GetOAuthClientSecretAsync (string oauthAppId, string appId);
 
         /// <summary>
-        /// Get OAuth client secret key
+        /// Get OAuth App secret key
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetOAuthClientSecretAsyncWithHttpInfo (string clientId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetOAuthClientSecretAsyncWithHttpInfo (string oauthAppId, string appId);
         /// <summary>
-        /// Get all OAuth client
+        /// Get OAuth access token for App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of RestApiArrayResultOAuthClient</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultOAuthClient> GetOAuthClientsAsync ();
-
-        /// <summary>
-        /// Get all OAuth client
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (RestApiArrayResultOAuthClient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOAuthClient>> GetOAuthClientsAsyncWithHttpInfo ();
-        /// <summary>
-        /// Get OAuth access token for client
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiStringResult</returns>
-        System.Threading.Tasks.Task<RestApiStringResult> GetOauthAccessTokenAsync (string oAuthClientId);
+        System.Threading.Tasks.Task<RestApiStringResult> GetOauthAccessTokenAsync (string oauthAppId, string appId);
 
         /// <summary>
-        /// Get OAuth access token for client
+        /// Get OAuth access token for App
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetOauthAccessTokenAsyncWithHttpInfo (string oAuthClientId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetOauthAccessTokenAsyncWithHttpInfo (string oauthAppId, string appId);
         /// <summary>
-        /// Get OAuth client redirect uris
+        /// Get OAuth App redirect uris
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultOauthClientRedirectUri</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultOauthClientRedirectUri> GetRedirectUrisAsync (string oAuthClientId);
+        System.Threading.Tasks.Task<RestApiArrayResultOauthClientRedirectUri> GetRedirectUrisAsync (string oauthAppId, string appId);
 
         /// <summary>
-        /// Get OAuth client redirect uris
+        /// Get OAuth App redirect uris
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultOauthClientRedirectUri)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOauthClientRedirectUri>> GetRedirectUrisAsyncWithHttpInfo (string oAuthClientId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOauthClientRedirectUri>> GetRedirectUrisAsyncWithHttpInfo (string oauthAppId, string appId);
         /// <summary>
-        /// Delete OAuth client redirect uri
+        /// Delete OAuth App redirect uri
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uriId">Redirect uri identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RemoveRedirectUriAsync (string oAuthClientId, int? uriId);
+        System.Threading.Tasks.Task RemoveRedirectUriAsync (string oauthAppId, int? uriId, string appId);
 
         /// <summary>
-        /// Delete OAuth client redirect uri
+        /// Delete OAuth App redirect uri
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uriId">Redirect uri identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveRedirectUriAsyncWithHttpInfo (string oAuthClientId, int? uriId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveRedirectUriAsyncWithHttpInfo (string oauthAppId, int? uriId, string appId);
         #endregion Asynchronous Operations
     }
 
@@ -509,35 +549,40 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create OAuth client redirect uri 
+        /// Create OAuth App redirect uri 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uri">Redirect uri</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultOauthClientRedirectUri</returns>
-        public RestApiResultOauthClientRedirectUri AddRedirectUri (string oAuthClientId, string uri)
+        public RestApiResultOauthClientRedirectUri AddRedirectUri (string oauthAppId, string uri, string appId)
         {
-             ApiResponse<RestApiResultOauthClientRedirectUri> localVarResponse = AddRedirectUriWithHttpInfo(oAuthClientId, uri);
+             ApiResponse<RestApiResultOauthClientRedirectUri> localVarResponse = AddRedirectUriWithHttpInfo(oauthAppId, uri, appId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create OAuth client redirect uri 
+        /// Create OAuth App redirect uri 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uri">Redirect uri</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultOauthClientRedirectUri</returns>
-        public ApiResponse< RestApiResultOauthClientRedirectUri > AddRedirectUriWithHttpInfo (string oAuthClientId, string uri)
+        public ApiResponse< RestApiResultOauthClientRedirectUri > AddRedirectUriWithHttpInfo (string oauthAppId, string uri, string appId)
         {
-            // verify the required parameter 'oAuthClientId' is set
-            if (oAuthClientId == null)
-                throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->AddRedirectUri");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling OAuthClientsApi->AddRedirectUri");
             // verify the required parameter 'uri' is set
             if (uri == null)
                 throw new ApiException(400, "Missing required parameter 'uri' when calling OAuthClientsApi->AddRedirectUri");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->AddRedirectUri");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/redirecturis";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -566,7 +611,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (oAuthClientId != null) localVarPathParams.Add("oAuthClientId", this.Configuration.ApiClient.ParameterToString(oAuthClientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (uri != null && uri.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(uri); // http body (model) parameter
@@ -602,36 +648,41 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create OAuth client redirect uri 
+        /// Create OAuth App redirect uri 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uri">Redirect uri</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultOauthClientRedirectUri</returns>
-        public async System.Threading.Tasks.Task<RestApiResultOauthClientRedirectUri> AddRedirectUriAsync (string oAuthClientId, string uri)
+        public async System.Threading.Tasks.Task<RestApiResultOauthClientRedirectUri> AddRedirectUriAsync (string oauthAppId, string uri, string appId)
         {
-             ApiResponse<RestApiResultOauthClientRedirectUri> localVarResponse = await AddRedirectUriAsyncWithHttpInfo(oAuthClientId, uri);
+             ApiResponse<RestApiResultOauthClientRedirectUri> localVarResponse = await AddRedirectUriAsyncWithHttpInfo(oauthAppId, uri, appId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Create OAuth client redirect uri 
+        /// Create OAuth App redirect uri 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uri">Redirect uri</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultOauthClientRedirectUri)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOauthClientRedirectUri>> AddRedirectUriAsyncWithHttpInfo (string oAuthClientId, string uri)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOauthClientRedirectUri>> AddRedirectUriAsyncWithHttpInfo (string oauthAppId, string uri, string appId)
         {
-            // verify the required parameter 'oAuthClientId' is set
-            if (oAuthClientId == null)
-                throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->AddRedirectUri");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling OAuthClientsApi->AddRedirectUri");
             // verify the required parameter 'uri' is set
             if (uri == null)
                 throw new ApiException(400, "Missing required parameter 'uri' when calling OAuthClientsApi->AddRedirectUri");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->AddRedirectUri");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/redirecturis";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -660,7 +711,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (oAuthClientId != null) localVarPathParams.Add("oAuthClientId", this.Configuration.ApiClient.ParameterToString(oAuthClientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (uri != null && uri.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(uri); // http body (model) parameter
@@ -696,29 +748,34 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create OAuth client 
+        /// Create OAuth App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClient">OAuth client</param>
+        /// <param name="oAuthApp">OAuth App</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        public void CreateOAuthClient (OAuthClient oAuthClient)
+        public void CreateOAuthApp (OAuthApp oAuthApp, string appId)
         {
-             CreateOAuthClientWithHttpInfo(oAuthClient);
+             CreateOAuthAppWithHttpInfo(oAuthApp, appId);
         }
 
         /// <summary>
-        /// Create OAuth client 
+        /// Create OAuth App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClient">OAuth client</param>
+        /// <param name="oAuthApp">OAuth App</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CreateOAuthClientWithHttpInfo (OAuthClient oAuthClient)
+        public ApiResponse<Object> CreateOAuthAppWithHttpInfo (OAuthApp oAuthApp, string appId)
         {
-            // verify the required parameter 'oAuthClient' is set
-            if (oAuthClient == null)
-                throw new ApiException(400, "Missing required parameter 'oAuthClient' when calling OAuthClientsApi->CreateOAuthClient");
+            // verify the required parameter 'oAuthApp' is set
+            if (oAuthApp == null)
+                throw new ApiException(400, "Missing required parameter 'oAuthApp' when calling OAuthClientsApi->CreateOAuthApp");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->CreateOAuthApp");
 
-            var localVarPath = "/api/v1.0/oauthclients";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -747,13 +804,14 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (oAuthClient != null && oAuthClient.GetType() != typeof(byte[]))
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (oAuthApp != null && oAuthApp.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(oAuthClient); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(oAuthApp); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = oAuthClient; // byte array
+                localVarPostBody = oAuthApp; // byte array
             }
 
             // authentication (oauth2) required
@@ -772,7 +830,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CreateOAuthClient", localVarResponse);
+                Exception exception = ExceptionFactory("CreateOAuthApp", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -782,30 +840,35 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create OAuth client 
+        /// Create OAuth App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClient">OAuth client</param>
+        /// <param name="oAuthApp">OAuth App</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreateOAuthClientAsync (OAuthClient oAuthClient)
+        public async System.Threading.Tasks.Task CreateOAuthAppAsync (OAuthApp oAuthApp, string appId)
         {
-             await CreateOAuthClientAsyncWithHttpInfo(oAuthClient);
+             await CreateOAuthAppAsyncWithHttpInfo(oAuthApp, appId);
 
         }
 
         /// <summary>
-        /// Create OAuth client 
+        /// Create OAuth App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClient">OAuth client</param>
+        /// <param name="oAuthApp">OAuth App</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateOAuthClientAsyncWithHttpInfo (OAuthClient oAuthClient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateOAuthAppAsyncWithHttpInfo (OAuthApp oAuthApp, string appId)
         {
-            // verify the required parameter 'oAuthClient' is set
-            if (oAuthClient == null)
-                throw new ApiException(400, "Missing required parameter 'oAuthClient' when calling OAuthClientsApi->CreateOAuthClient");
+            // verify the required parameter 'oAuthApp' is set
+            if (oAuthApp == null)
+                throw new ApiException(400, "Missing required parameter 'oAuthApp' when calling OAuthClientsApi->CreateOAuthApp");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->CreateOAuthApp");
 
-            var localVarPath = "/api/v1.0/oauthclients";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -834,13 +897,14 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (oAuthClient != null && oAuthClient.GetType() != typeof(byte[]))
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (oAuthApp != null && oAuthApp.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(oAuthClient); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(oAuthApp); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = oAuthClient; // byte array
+                localVarPostBody = oAuthApp; // byte array
             }
 
             // authentication (oauth2) required
@@ -859,7 +923,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CreateOAuthClient", localVarResponse);
+                Exception exception = ExceptionFactory("CreateOAuthApp", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -869,29 +933,34 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete OAuth client 
+        /// Delete OAuth App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        public void DeleteOAuthClient (string oAuthClientId)
+        public void DeleteOAuthApp (string oauthAppId, string appId)
         {
-             DeleteOAuthClientWithHttpInfo(oAuthClientId);
+             DeleteOAuthAppWithHttpInfo(oauthAppId, appId);
         }
 
         /// <summary>
-        /// Delete OAuth client 
+        /// Delete OAuth App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteOAuthClientWithHttpInfo (string oAuthClientId)
+        public ApiResponse<Object> DeleteOAuthAppWithHttpInfo (string oauthAppId, string appId)
         {
-            // verify the required parameter 'oAuthClientId' is set
-            if (oAuthClientId == null)
-                throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->DeleteOAuthClient");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling OAuthClientsApi->DeleteOAuthApp");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->DeleteOAuthApp");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients/{oauthAppId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -915,7 +984,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (oAuthClientId != null) localVarPathParams.Add("oAuthClientId", this.Configuration.ApiClient.ParameterToString(oAuthClientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -933,7 +1003,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DeleteOAuthClient", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteOAuthApp", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -943,30 +1013,35 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete OAuth client 
+        /// Delete OAuth App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteOAuthClientAsync (string oAuthClientId)
+        public async System.Threading.Tasks.Task DeleteOAuthAppAsync (string oauthAppId, string appId)
         {
-             await DeleteOAuthClientAsyncWithHttpInfo(oAuthClientId);
+             await DeleteOAuthAppAsyncWithHttpInfo(oauthAppId, appId);
 
         }
 
         /// <summary>
-        /// Delete OAuth client 
+        /// Delete OAuth App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOAuthClientAsyncWithHttpInfo (string oAuthClientId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOAuthAppAsyncWithHttpInfo (string oauthAppId, string appId)
         {
-            // verify the required parameter 'oAuthClientId' is set
-            if (oAuthClientId == null)
-                throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->DeleteOAuthClient");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling OAuthClientsApi->DeleteOAuthApp");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->DeleteOAuthApp");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients/{oauthAppId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -990,7 +1065,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (oAuthClientId != null) localVarPathParams.Add("oAuthClientId", this.Configuration.ApiClient.ParameterToString(oAuthClientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1008,7 +1084,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DeleteOAuthClient", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteOAuthApp", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1018,30 +1094,32 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get OAuth client by identifier 
+        /// Get all OAuth Apps 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>RestApiResultOAuthClient</returns>
-        public RestApiResultOAuthClient GetOAuthClientByClientId (string clientId)
+        /// <param name="appId"></param>
+        /// <param name="oauthAppName"> (optional)</param>
+        /// <returns>RestApiArrayResultOAuthApp</returns>
+        public RestApiArrayResultOAuthApp GetOAuthApps (string appId, string oauthAppName = null)
         {
-             ApiResponse<RestApiResultOAuthClient> localVarResponse = GetOAuthClientByClientIdWithHttpInfo(clientId);
+             ApiResponse<RestApiArrayResultOAuthApp> localVarResponse = GetOAuthAppsWithHttpInfo(appId, oauthAppName);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get OAuth client by identifier 
+        /// Get all OAuth Apps 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>ApiResponse of RestApiResultOAuthClient</returns>
-        public ApiResponse< RestApiResultOAuthClient > GetOAuthClientByClientIdWithHttpInfo (string clientId)
+        /// <param name="appId"></param>
+        /// <param name="oauthAppName"> (optional)</param>
+        /// <returns>ApiResponse of RestApiArrayResultOAuthApp</returns>
+        public ApiResponse< RestApiArrayResultOAuthApp > GetOAuthAppsWithHttpInfo (string appId, string oauthAppName = null)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthClientsApi->GetOAuthClientByClientId");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->GetOAuthApps");
 
-            var localVarPath = "/api/v1.0/oauthclients/{clientId}";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1065,7 +1143,168 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (oauthAppName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "oauthAppName", oauthAppName)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOAuthApps", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultOAuthApp>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultOAuthApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultOAuthApp)));
+        }
+
+        /// <summary>
+        /// Get all OAuth Apps 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="oauthAppName"> (optional)</param>
+        /// <returns>Task of RestApiArrayResultOAuthApp</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultOAuthApp> GetOAuthAppsAsync (string appId, string oauthAppName = null)
+        {
+             ApiResponse<RestApiArrayResultOAuthApp> localVarResponse = await GetOAuthAppsAsyncWithHttpInfo(appId, oauthAppName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all OAuth Apps 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="oauthAppName"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultOAuthApp)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOAuthApp>> GetOAuthAppsAsyncWithHttpInfo (string appId, string oauthAppName = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->GetOAuthApps");
+
+            var localVarPath = "/api/v1.0/{appId}/oauthclients";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (oauthAppName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "oauthAppName", oauthAppName)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOAuthApps", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultOAuthApp>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultOAuthApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultOAuthApp)));
+        }
+
+        /// <summary>
+        /// Get OAuth App by identifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultOAuthApp</returns>
+        public RestApiResultOAuthApp GetOAuthClientByClientId (string oauthAppId, string appId)
+        {
+             ApiResponse<RestApiResultOAuthApp> localVarResponse = GetOAuthClientByClientIdWithHttpInfo(oauthAppId, appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get OAuth App by identifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultOAuthApp</returns>
+        public ApiResponse< RestApiResultOAuthApp > GetOAuthClientByClientIdWithHttpInfo (string oauthAppId, string appId)
+        {
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling OAuthClientsApi->GetOAuthClientByClientId");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->GetOAuthClientByClientId");
+
+            var localVarPath = "/api/v1.0/{appId}/oauthclients/{oauthAppId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1087,37 +1326,42 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultOAuthClient>(localVarStatusCode,
+            return new ApiResponse<RestApiResultOAuthApp>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultOAuthClient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOAuthClient)));
+                (RestApiResultOAuthApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOAuthApp)));
         }
 
         /// <summary>
-        /// Get OAuth client by identifier 
+        /// Get OAuth App by identifier 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>Task of RestApiResultOAuthClient</returns>
-        public async System.Threading.Tasks.Task<RestApiResultOAuthClient> GetOAuthClientByClientIdAsync (string clientId)
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultOAuthApp</returns>
+        public async System.Threading.Tasks.Task<RestApiResultOAuthApp> GetOAuthClientByClientIdAsync (string oauthAppId, string appId)
         {
-             ApiResponse<RestApiResultOAuthClient> localVarResponse = await GetOAuthClientByClientIdAsyncWithHttpInfo(clientId);
+             ApiResponse<RestApiResultOAuthApp> localVarResponse = await GetOAuthClientByClientIdAsyncWithHttpInfo(oauthAppId, appId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get OAuth client by identifier 
+        /// Get OAuth App by identifier 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
-        /// <returns>Task of ApiResponse (RestApiResultOAuthClient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOAuthClient>> GetOAuthClientByClientIdAsyncWithHttpInfo (string clientId)
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultOAuthApp)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOAuthApp>> GetOAuthClientByClientIdAsyncWithHttpInfo (string oauthAppId, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthClientsApi->GetOAuthClientByClientId");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling OAuthClientsApi->GetOAuthClientByClientId");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->GetOAuthClientByClientId");
 
-            var localVarPath = "/api/v1.0/oauthclients/{clientId}";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients/{oauthAppId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1141,7 +1385,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1163,36 +1408,41 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultOAuthClient>(localVarStatusCode,
+            return new ApiResponse<RestApiResultOAuthApp>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultOAuthClient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOAuthClient)));
+                (RestApiResultOAuthApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOAuthApp)));
         }
 
         /// <summary>
-        /// Get OAuth client secret key 
+        /// Get OAuth App secret key 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiStringResult</returns>
-        public RestApiStringResult GetOAuthClientSecret (string clientId)
+        public RestApiStringResult GetOAuthClientSecret (string oauthAppId, string appId)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = GetOAuthClientSecretWithHttpInfo(clientId);
+             ApiResponse<RestApiStringResult> localVarResponse = GetOAuthClientSecretWithHttpInfo(oauthAppId, appId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get OAuth client secret key 
+        /// Get OAuth App secret key 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
-        public ApiResponse< RestApiStringResult > GetOAuthClientSecretWithHttpInfo (string clientId)
+        public ApiResponse< RestApiStringResult > GetOAuthClientSecretWithHttpInfo (string oauthAppId, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthClientsApi->GetOAuthClientSecret");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling OAuthClientsApi->GetOAuthClientSecret");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->GetOAuthClientSecret");
 
-            var localVarPath = "/api/v1.0/oauthclients/{clientId}/secret";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients/{oauthAppId}/secret";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1216,7 +1466,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1244,31 +1495,36 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get OAuth client secret key 
+        /// Get OAuth App secret key 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiStringResult</returns>
-        public async System.Threading.Tasks.Task<RestApiStringResult> GetOAuthClientSecretAsync (string clientId)
+        public async System.Threading.Tasks.Task<RestApiStringResult> GetOAuthClientSecretAsync (string oauthAppId, string appId)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = await GetOAuthClientSecretAsyncWithHttpInfo(clientId);
+             ApiResponse<RestApiStringResult> localVarResponse = await GetOAuthClientSecretAsyncWithHttpInfo(oauthAppId, appId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get OAuth client secret key 
+        /// Get OAuth App secret key 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetOAuthClientSecretAsyncWithHttpInfo (string clientId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetOAuthClientSecretAsyncWithHttpInfo (string oauthAppId, string appId)
         {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthClientsApi->GetOAuthClientSecret");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling OAuthClientsApi->GetOAuthClientSecret");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->GetOAuthClientSecret");
 
-            var localVarPath = "/api/v1.0/oauthclients/{clientId}/secret";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients/{oauthAppId}/secret";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1292,7 +1548,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1320,169 +1577,35 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all OAuth client 
+        /// Get OAuth access token for App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>RestApiArrayResultOAuthClient</returns>
-        public RestApiArrayResultOAuthClient GetOAuthClients ()
-        {
-             ApiResponse<RestApiArrayResultOAuthClient> localVarResponse = GetOAuthClientsWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get all OAuth client 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of RestApiArrayResultOAuthClient</returns>
-        public ApiResponse< RestApiArrayResultOAuthClient > GetOAuthClientsWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v1.0/oauthclients";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetOAuthClients", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiArrayResultOAuthClient>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultOAuthClient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultOAuthClient)));
-        }
-
-        /// <summary>
-        /// Get all OAuth client 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of RestApiArrayResultOAuthClient</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultOAuthClient> GetOAuthClientsAsync ()
-        {
-             ApiResponse<RestApiArrayResultOAuthClient> localVarResponse = await GetOAuthClientsAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get all OAuth client 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (RestApiArrayResultOAuthClient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOAuthClient>> GetOAuthClientsAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v1.0/oauthclients";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetOAuthClients", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiArrayResultOAuthClient>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultOAuthClient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultOAuthClient)));
-        }
-
-        /// <summary>
-        /// Get OAuth access token for client 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiStringResult</returns>
-        public RestApiStringResult GetOauthAccessToken (string oAuthClientId)
+        public RestApiStringResult GetOauthAccessToken (string oauthAppId, string appId)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = GetOauthAccessTokenWithHttpInfo(oAuthClientId);
+             ApiResponse<RestApiStringResult> localVarResponse = GetOauthAccessTokenWithHttpInfo(oauthAppId, appId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get OAuth access token for client 
+        /// Get OAuth access token for App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
-        public ApiResponse< RestApiStringResult > GetOauthAccessTokenWithHttpInfo (string oAuthClientId)
+        public ApiResponse< RestApiStringResult > GetOauthAccessTokenWithHttpInfo (string oauthAppId, string appId)
         {
-            // verify the required parameter 'oAuthClientId' is set
-            if (oAuthClientId == null)
-                throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->GetOauthAccessToken");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling OAuthClientsApi->GetOauthAccessToken");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->GetOauthAccessToken");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/accesstoken";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients/{oauthAppId}/accesstoken";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1506,7 +1629,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (oAuthClientId != null) localVarPathParams.Add("oAuthClientId", this.Configuration.ApiClient.ParameterToString(oAuthClientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1534,31 +1658,36 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get OAuth access token for client 
+        /// Get OAuth access token for App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiStringResult</returns>
-        public async System.Threading.Tasks.Task<RestApiStringResult> GetOauthAccessTokenAsync (string oAuthClientId)
+        public async System.Threading.Tasks.Task<RestApiStringResult> GetOauthAccessTokenAsync (string oauthAppId, string appId)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = await GetOauthAccessTokenAsyncWithHttpInfo(oAuthClientId);
+             ApiResponse<RestApiStringResult> localVarResponse = await GetOauthAccessTokenAsyncWithHttpInfo(oauthAppId, appId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get OAuth access token for client 
+        /// Get OAuth access token for App 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetOauthAccessTokenAsyncWithHttpInfo (string oAuthClientId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetOauthAccessTokenAsyncWithHttpInfo (string oauthAppId, string appId)
         {
-            // verify the required parameter 'oAuthClientId' is set
-            if (oAuthClientId == null)
-                throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->GetOauthAccessToken");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling OAuthClientsApi->GetOauthAccessToken");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->GetOauthAccessToken");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/accesstoken";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients/{oauthAppId}/accesstoken";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1582,7 +1711,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (oAuthClientId != null) localVarPathParams.Add("oAuthClientId", this.Configuration.ApiClient.ParameterToString(oAuthClientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1610,30 +1740,35 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get OAuth client redirect uris 
+        /// Get OAuth App redirect uris 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultOauthClientRedirectUri</returns>
-        public RestApiArrayResultOauthClientRedirectUri GetRedirectUris (string oAuthClientId)
+        public RestApiArrayResultOauthClientRedirectUri GetRedirectUris (string oauthAppId, string appId)
         {
-             ApiResponse<RestApiArrayResultOauthClientRedirectUri> localVarResponse = GetRedirectUrisWithHttpInfo(oAuthClientId);
+             ApiResponse<RestApiArrayResultOauthClientRedirectUri> localVarResponse = GetRedirectUrisWithHttpInfo(oauthAppId, appId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get OAuth client redirect uris 
+        /// Get OAuth App redirect uris 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultOauthClientRedirectUri</returns>
-        public ApiResponse< RestApiArrayResultOauthClientRedirectUri > GetRedirectUrisWithHttpInfo (string oAuthClientId)
+        public ApiResponse< RestApiArrayResultOauthClientRedirectUri > GetRedirectUrisWithHttpInfo (string oauthAppId, string appId)
         {
-            // verify the required parameter 'oAuthClientId' is set
-            if (oAuthClientId == null)
-                throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->GetRedirectUris");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling OAuthClientsApi->GetRedirectUris");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->GetRedirectUris");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/redirecturis";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1657,7 +1792,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (oAuthClientId != null) localVarPathParams.Add("oAuthClientId", this.Configuration.ApiClient.ParameterToString(oAuthClientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1685,31 +1821,36 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get OAuth client redirect uris 
+        /// Get OAuth App redirect uris 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultOauthClientRedirectUri</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultOauthClientRedirectUri> GetRedirectUrisAsync (string oAuthClientId)
+        public async System.Threading.Tasks.Task<RestApiArrayResultOauthClientRedirectUri> GetRedirectUrisAsync (string oauthAppId, string appId)
         {
-             ApiResponse<RestApiArrayResultOauthClientRedirectUri> localVarResponse = await GetRedirectUrisAsyncWithHttpInfo(oAuthClientId);
+             ApiResponse<RestApiArrayResultOauthClientRedirectUri> localVarResponse = await GetRedirectUrisAsyncWithHttpInfo(oauthAppId, appId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get OAuth client redirect uris 
+        /// Get OAuth App redirect uris 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultOauthClientRedirectUri)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOauthClientRedirectUri>> GetRedirectUrisAsyncWithHttpInfo (string oAuthClientId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOauthClientRedirectUri>> GetRedirectUrisAsyncWithHttpInfo (string oauthAppId, string appId)
         {
-            // verify the required parameter 'oAuthClientId' is set
-            if (oAuthClientId == null)
-                throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->GetRedirectUris");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling OAuthClientsApi->GetRedirectUris");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->GetRedirectUris");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/redirecturis";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1733,7 +1874,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (oAuthClientId != null) localVarPathParams.Add("oAuthClientId", this.Configuration.ApiClient.ParameterToString(oAuthClientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1761,34 +1903,39 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete OAuth client redirect uri 
+        /// Delete OAuth App redirect uri 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uriId">Redirect uri identifier</param>
+        /// <param name="appId"></param>
         /// <returns></returns>
-        public void RemoveRedirectUri (string oAuthClientId, int? uriId)
+        public void RemoveRedirectUri (string oauthAppId, int? uriId, string appId)
         {
-             RemoveRedirectUriWithHttpInfo(oAuthClientId, uriId);
+             RemoveRedirectUriWithHttpInfo(oauthAppId, uriId, appId);
         }
 
         /// <summary>
-        /// Delete OAuth client redirect uri 
+        /// Delete OAuth App redirect uri 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uriId">Redirect uri identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> RemoveRedirectUriWithHttpInfo (string oAuthClientId, int? uriId)
+        public ApiResponse<Object> RemoveRedirectUriWithHttpInfo (string oauthAppId, int? uriId, string appId)
         {
-            // verify the required parameter 'oAuthClientId' is set
-            if (oAuthClientId == null)
-                throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->RemoveRedirectUri");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling OAuthClientsApi->RemoveRedirectUri");
             // verify the required parameter 'uriId' is set
             if (uriId == null)
                 throw new ApiException(400, "Missing required parameter 'uriId' when calling OAuthClientsApi->RemoveRedirectUri");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->RemoveRedirectUri");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/redirecturis/{uriId}";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis/{uriId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1812,8 +1959,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (oAuthClientId != null) localVarPathParams.Add("oAuthClientId", this.Configuration.ApiClient.ParameterToString(oAuthClientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (uriId != null) localVarPathParams.Add("uriId", this.Configuration.ApiClient.ParameterToString(uriId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1841,35 +1989,40 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete OAuth client redirect uri 
+        /// Delete OAuth App redirect uri 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uriId">Redirect uri identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RemoveRedirectUriAsync (string oAuthClientId, int? uriId)
+        public async System.Threading.Tasks.Task RemoveRedirectUriAsync (string oauthAppId, int? uriId, string appId)
         {
-             await RemoveRedirectUriAsyncWithHttpInfo(oAuthClientId, uriId);
+             await RemoveRedirectUriAsyncWithHttpInfo(oauthAppId, uriId, appId);
 
         }
 
         /// <summary>
-        /// Delete OAuth client redirect uri 
+        /// Delete OAuth App redirect uri 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oAuthClientId">OAuth client identifier</param>
+        /// <param name="oauthAppId">OAuth App identifier</param>
         /// <param name="uriId">Redirect uri identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> RemoveRedirectUriAsyncWithHttpInfo (string oAuthClientId, int? uriId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RemoveRedirectUriAsyncWithHttpInfo (string oauthAppId, int? uriId, string appId)
         {
-            // verify the required parameter 'oAuthClientId' is set
-            if (oAuthClientId == null)
-                throw new ApiException(400, "Missing required parameter 'oAuthClientId' when calling OAuthClientsApi->RemoveRedirectUri");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling OAuthClientsApi->RemoveRedirectUri");
             // verify the required parameter 'uriId' is set
             if (uriId == null)
                 throw new ApiException(400, "Missing required parameter 'uriId' when calling OAuthClientsApi->RemoveRedirectUri");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthClientsApi->RemoveRedirectUri");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oAuthClientId}/redirecturis/{uriId}";
+            var localVarPath = "/api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis/{uriId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1893,8 +2046,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (oAuthClientId != null) localVarPathParams.Add("oAuthClientId", this.Configuration.ApiClient.ParameterToString(oAuthClientId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (uriId != null) localVarPathParams.Add("uriId", this.Configuration.ApiClient.ParameterToString(uriId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required

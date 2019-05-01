@@ -28,23 +28,23 @@ namespace Flipdish.Model
     /// Rest api result
     /// </summary>
     [DataContract]
-    public partial class RestApiResultOAuthClient :  IEquatable<RestApiResultOAuthClient>, IValidatableObject
+    public partial class RestApiResultOAuthApp :  IEquatable<RestApiResultOAuthApp>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiResultOAuthClient" /> class.
+        /// Initializes a new instance of the <see cref="RestApiResultOAuthApp" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected RestApiResultOAuthClient() { }
+        protected RestApiResultOAuthApp() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiResultOAuthClient" /> class.
+        /// Initializes a new instance of the <see cref="RestApiResultOAuthApp" /> class.
         /// </summary>
         /// <param name="data">Generic data object. (required).</param>
-        public RestApiResultOAuthClient(OAuthClient data = default(OAuthClient))
+        public RestApiResultOAuthApp(OAuthApp data = default(OAuthApp))
         {
             // to ensure "data" is required (not null)
             if (data == null)
             {
-                throw new InvalidDataException("data is a required property for RestApiResultOAuthClient and cannot be null");
+                throw new InvalidDataException("data is a required property for RestApiResultOAuthApp and cannot be null");
             }
             else
             {
@@ -57,7 +57,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Generic data object.</value>
         [DataMember(Name="Data", EmitDefaultValue=false)]
-        public OAuthClient Data { get; set; }
+        public OAuthApp Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -66,7 +66,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RestApiResultOAuthClient {\n");
+            sb.Append("class RestApiResultOAuthApp {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -88,15 +88,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RestApiResultOAuthClient);
+            return this.Equals(input as RestApiResultOAuthApp);
         }
 
         /// <summary>
-        /// Returns true if RestApiResultOAuthClient instances are equal
+        /// Returns true if RestApiResultOAuthApp instances are equal
         /// </summary>
-        /// <param name="input">Instance of RestApiResultOAuthClient to be compared</param>
+        /// <param name="input">Instance of RestApiResultOAuthApp to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RestApiResultOAuthClient input)
+        public bool Equals(RestApiResultOAuthApp input)
         {
             if (input == null)
                 return false;
