@@ -124,8 +124,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>RestApiIntegerResult</returns>
-        RestApiIntegerResult GetBankAccount (int? storeId);
+        /// <returns>RestApiResultAssignedBankAccount</returns>
+        RestApiResultAssignedBankAccount GetBankAccount (int? storeId);
 
         /// <summary>
         /// Get Stores Bank Account Id
@@ -135,8 +135,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>ApiResponse of RestApiIntegerResult</returns>
-        ApiResponse<RestApiIntegerResult> GetBankAccountWithHttpInfo (int? storeId);
+        /// <returns>ApiResponse of RestApiResultAssignedBankAccount</returns>
+        ApiResponse<RestApiResultAssignedBankAccount> GetBankAccountWithHttpInfo (int? storeId);
         /// <summary>
         /// Get Bussiness hours
         /// </summary>
@@ -531,8 +531,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>Task of RestApiIntegerResult</returns>
-        System.Threading.Tasks.Task<RestApiIntegerResult> GetBankAccountAsync (int? storeId);
+        /// <returns>Task of RestApiResultAssignedBankAccount</returns>
+        System.Threading.Tasks.Task<RestApiResultAssignedBankAccount> GetBankAccountAsync (int? storeId);
 
         /// <summary>
         /// Get Stores Bank Account Id
@@ -542,8 +542,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>Task of ApiResponse (RestApiIntegerResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> GetBankAccountAsyncWithHttpInfo (int? storeId);
+        /// <returns>Task of ApiResponse (RestApiResultAssignedBankAccount)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAssignedBankAccount>> GetBankAccountAsyncWithHttpInfo (int? storeId);
         /// <summary>
         /// Get Bussiness hours
         /// </summary>
@@ -1665,10 +1665,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>RestApiIntegerResult</returns>
-        public RestApiIntegerResult GetBankAccount (int? storeId)
+        /// <returns>RestApiResultAssignedBankAccount</returns>
+        public RestApiResultAssignedBankAccount GetBankAccount (int? storeId)
         {
-             ApiResponse<RestApiIntegerResult> localVarResponse = GetBankAccountWithHttpInfo(storeId);
+             ApiResponse<RestApiResultAssignedBankAccount> localVarResponse = GetBankAccountWithHttpInfo(storeId);
              return localVarResponse.Data;
         }
 
@@ -1677,8 +1677,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>ApiResponse of RestApiIntegerResult</returns>
-        public ApiResponse< RestApiIntegerResult > GetBankAccountWithHttpInfo (int? storeId)
+        /// <returns>ApiResponse of RestApiResultAssignedBankAccount</returns>
+        public ApiResponse< RestApiResultAssignedBankAccount > GetBankAccountWithHttpInfo (int? storeId)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -1730,9 +1730,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiIntegerResult>(localVarStatusCode,
+            return new ApiResponse<RestApiResultAssignedBankAccount>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiIntegerResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiIntegerResult)));
+                (RestApiResultAssignedBankAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAssignedBankAccount)));
         }
 
         /// <summary>
@@ -1740,10 +1740,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>Task of RestApiIntegerResult</returns>
-        public async System.Threading.Tasks.Task<RestApiIntegerResult> GetBankAccountAsync (int? storeId)
+        /// <returns>Task of RestApiResultAssignedBankAccount</returns>
+        public async System.Threading.Tasks.Task<RestApiResultAssignedBankAccount> GetBankAccountAsync (int? storeId)
         {
-             ApiResponse<RestApiIntegerResult> localVarResponse = await GetBankAccountAsyncWithHttpInfo(storeId);
+             ApiResponse<RestApiResultAssignedBankAccount> localVarResponse = await GetBankAccountAsyncWithHttpInfo(storeId);
              return localVarResponse.Data;
 
         }
@@ -1753,8 +1753,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
-        /// <returns>Task of ApiResponse (RestApiIntegerResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> GetBankAccountAsyncWithHttpInfo (int? storeId)
+        /// <returns>Task of ApiResponse (RestApiResultAssignedBankAccount)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAssignedBankAccount>> GetBankAccountAsyncWithHttpInfo (int? storeId)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -1806,9 +1806,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiIntegerResult>(localVarStatusCode,
+            return new ApiResponse<RestApiResultAssignedBankAccount>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiIntegerResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiIntegerResult)));
+                (RestApiResultAssignedBankAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAssignedBankAccount)));
         }
 
         /// <summary>
@@ -2659,11 +2659,6 @@ namespace Flipdish.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2746,11 +2741,6 @@ namespace Flipdish.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 

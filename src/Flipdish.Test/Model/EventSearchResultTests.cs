@@ -618,6 +618,14 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'BankAccountUpdatedEvent'
         }
+        /// <summary>
+        /// Test the property 'BankAccountDeletedEvent'
+        /// </summary>
+        [Test]
+        public void BankAccountDeletedEventTest()
+        {
+            // TODO unit test for the property 'BankAccountDeletedEvent'
+        }
 
     }
 

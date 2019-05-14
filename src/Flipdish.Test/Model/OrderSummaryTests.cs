@@ -139,6 +139,22 @@ namespace Flipdish.Test
             // TODO unit test for the property 'Amount'
         }
         /// <summary>
+        /// Test the property 'RefundedAmount'
+        /// </summary>
+        [Test]
+        public void RefundedAmountTest()
+        {
+            // TODO unit test for the property 'RefundedAmount'
+        }
+        /// <summary>
+        /// Test the property 'PaymentAccountType'
+        /// </summary>
+        [Test]
+        public void PaymentAccountTypeTest()
+        {
+            // TODO unit test for the property 'PaymentAccountType'
+        }
+        /// <summary>
         /// Test the property 'PaymentStatus'
         /// </summary>
         [Test]

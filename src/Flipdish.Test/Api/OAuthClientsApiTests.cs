@@ -170,6 +170,18 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test OAuthClientsGetApplications
+        /// </summary>
+        [Test]
+        public void OAuthClientsGetApplicationsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //var response = instance.OAuthClientsGetApplications(appId);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
         /// Test RemoveRedirectUri
         /// </summary>
         [Test]

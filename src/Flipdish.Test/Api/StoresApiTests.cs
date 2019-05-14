@@ -125,7 +125,7 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? storeId = null;
             //var response = instance.GetBankAccount(storeId);
-            //Assert.IsInstanceOf<RestApiIntegerResult> (response, "response is RestApiIntegerResult");
+            //Assert.IsInstanceOf<RestApiResultAssignedBankAccount> (response, "response is RestApiResultAssignedBankAccount");
         }
         
         /// <summary>

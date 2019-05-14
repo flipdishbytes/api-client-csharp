@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 
 <a name="getbankaccount"></a>
 # **GetBankAccount**
-> RestApiIntegerResult GetBankAccount (int? storeId)
+> RestApiResultAssignedBankAccount GetBankAccount (int? storeId)
 
 Get Stores Bank Account Id
 
@@ -308,7 +308,7 @@ namespace Example
             try
             {
                 // Get Stores Bank Account Id
-                RestApiIntegerResult result = apiInstance.GetBankAccount(storeId);
+                RestApiResultAssignedBankAccount result = apiInstance.GetBankAccount(storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiIntegerResult**](RestApiIntegerResult.md)
+[**RestApiResultAssignedBankAccount**](RestApiResultAssignedBankAccount.md)
 
 ### Authorization
 
@@ -723,7 +723,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

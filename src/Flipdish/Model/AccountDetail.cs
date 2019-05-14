@@ -37,17 +37,19 @@ namespace Flipdish.Model
         /// <param name="signupSteps">Signup steps.</param>
         /// <param name="isVerified">Is account email verified.</param>
         /// <param name="isSelfServeUser">is the account a Self Server.</param>
+        /// <param name="accountId">Accounts Id.</param>
         /// <param name="name">Name.</param>
         /// <param name="language">Language Id.</param>
         /// <param name="timeZoneInfoId">Time Zone Info Id.</param>
         /// <param name="displayTimesInUserLocalTimeZone">Display the time in time zone local to the user.</param>
         /// <param name="showHiddenFeatures">Show hidden features.</param>
-        public AccountDetail(string email = default(string), List<SignupStep> signupSteps = default(List<SignupStep>), bool? isVerified = default(bool?), bool? isSelfServeUser = default(bool?), string name = default(string), string language = default(string), string timeZoneInfoId = default(string), bool? displayTimesInUserLocalTimeZone = default(bool?), bool? showHiddenFeatures = default(bool?))
+        public AccountDetail(string email = default(string), List<SignupStep> signupSteps = default(List<SignupStep>), bool? isVerified = default(bool?), bool? isSelfServeUser = default(bool?), int? accountId = default(int?), string name = default(string), string language = default(string), string timeZoneInfoId = default(string), bool? displayTimesInUserLocalTimeZone = default(bool?), bool? showHiddenFeatures = default(bool?))
         {
             this.Email = email;
             this.SignupSteps = signupSteps;
             this.IsVerified = isVerified;
             this.IsSelfServeUser = isSelfServeUser;
+            this.AccountId = accountId;
             this.Name = name;
             this.Language = language;
             this.TimeZoneInfoId = timeZoneInfoId;
@@ -82,6 +84,13 @@ namespace Flipdish.Model
         /// <value>is the account a Self Server</value>
         [DataMember(Name="IsSelfServeUser", EmitDefaultValue=false)]
         public bool? IsSelfServeUser { get; set; }
+
+        /// <summary>
+        /// Accounts Id
+        /// </summary>
+        /// <value>Accounts Id</value>
+        [DataMember(Name="AccountId", EmitDefaultValue=false)]
+        public int? AccountId { get; set; }
 
         /// <summary>
         /// Name
@@ -130,6 +139,7 @@ namespace Flipdish.Model
             sb.Append("  SignupSteps: ").Append(SignupSteps).Append("\n");
             sb.Append("  IsVerified: ").Append(IsVerified).Append("\n");
             sb.Append("  IsSelfServeUser: ").Append(IsSelfServeUser).Append("\n");
+            sb.Append("  AccountId: ").Append(AccountId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  TimeZoneInfoId: ").Append(TimeZoneInfoId).Append("\n");
@@ -190,6 +200,11 @@ namespace Flipdish.Model
                     this.IsSelfServeUser.Equals(input.IsSelfServeUser))
                 ) && 
                 (
+                    this.AccountId == input.AccountId ||
+                    (this.AccountId != null &&
+                    this.AccountId.Equals(input.AccountId))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -233,6 +248,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.IsVerified.GetHashCode();
                 if (this.IsSelfServeUser != null)
                     hashCode = hashCode * 59 + this.IsSelfServeUser.GetHashCode();
+                if (this.AccountId != null)
+                    hashCode = hashCode * 59 + this.AccountId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Language != null)

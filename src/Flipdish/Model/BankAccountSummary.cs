@@ -75,14 +75,16 @@ namespace Flipdish.Model
         /// <param name="id">Id of this account.</param>
         /// <param name="storeNames">Store Names that are attached to this account.</param>
         /// <param name="accountState">Status of Account.</param>
+        /// <param name="currencyCode">Currency of Account.</param>
         /// <param name="accountName">Name of this account.</param>
         /// <param name="iban">IBAN of this account.</param>
         /// <param name="swift">SWIFT of this bank account.</param>
-        public BankAccountSummary(int? id = default(int?), List<string> storeNames = default(List<string>), AccountStateEnum? accountState = default(AccountStateEnum?), string accountName = default(string), string iban = default(string), string swift = default(string))
+        public BankAccountSummary(int? id = default(int?), List<string> storeNames = default(List<string>), AccountStateEnum? accountState = default(AccountStateEnum?), string currencyCode = default(string), string accountName = default(string), string iban = default(string), string swift = default(string))
         {
             this.Id = id;
             this.StoreNames = storeNames;
             this.AccountState = accountState;
+            this.CurrencyCode = currencyCode;
             this.AccountName = accountName;
             this.Iban = iban;
             this.Swift = swift;
@@ -102,6 +104,13 @@ namespace Flipdish.Model
         [DataMember(Name="StoreNames", EmitDefaultValue=false)]
         public List<string> StoreNames { get; set; }
 
+
+        /// <summary>
+        /// Currency of Account
+        /// </summary>
+        /// <value>Currency of Account</value>
+        [DataMember(Name="CurrencyCode", EmitDefaultValue=false)]
+        public string CurrencyCode { get; set; }
 
         /// <summary>
         /// Name of this account
@@ -135,6 +144,7 @@ namespace Flipdish.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  StoreNames: ").Append(StoreNames).Append("\n");
             sb.Append("  AccountState: ").Append(AccountState).Append("\n");
+            sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
             sb.Append("  AccountName: ").Append(AccountName).Append("\n");
             sb.Append("  Iban: ").Append(Iban).Append("\n");
             sb.Append("  Swift: ").Append(Swift).Append("\n");
@@ -188,6 +198,11 @@ namespace Flipdish.Model
                     this.AccountState.Equals(input.AccountState))
                 ) && 
                 (
+                    this.CurrencyCode == input.CurrencyCode ||
+                    (this.CurrencyCode != null &&
+                    this.CurrencyCode.Equals(input.CurrencyCode))
+                ) && 
+                (
                     this.AccountName == input.AccountName ||
                     (this.AccountName != null &&
                     this.AccountName.Equals(input.AccountName))
@@ -219,6 +234,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreNames.GetHashCode();
                 if (this.AccountState != null)
                     hashCode = hashCode * 59 + this.AccountState.GetHashCode();
+                if (this.CurrencyCode != null)
+                    hashCode = hashCode * 59 + this.CurrencyCode.GetHashCode();
                 if (this.AccountName != null)
                     hashCode = hashCode * 59 + this.AccountName.GetHashCode();
                 if (this.Iban != null)

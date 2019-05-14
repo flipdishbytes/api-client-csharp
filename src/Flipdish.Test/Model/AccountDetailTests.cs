@@ -99,6 +99,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'IsSelfServeUser'
         }
         /// <summary>
+        /// Test the property 'AccountId'
+        /// </summary>
+        [Test]
+        public void AccountIdTest()
+        {
+            // TODO unit test for the property 'AccountId'
+        }
+        /// <summary>
         /// Test the property 'Name'
         /// </summary>
         [Test]

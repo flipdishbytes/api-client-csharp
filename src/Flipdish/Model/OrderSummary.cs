@@ -151,6 +151,57 @@ namespace Flipdish.Model
         [DataMember(Name="OrderState", EmitDefaultValue=false)]
         public OrderStateEnum? OrderState { get; set; }
         /// <summary>
+        /// Payment Account
+        /// </summary>
+        /// <value>Payment Account</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PaymentAccountTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Card for value: Card
+            /// </summary>
+            [EnumMember(Value = "Card")]
+            Card = 1,
+            
+            /// <summary>
+            /// Enum Cash for value: Cash
+            /// </summary>
+            [EnumMember(Value = "Cash")]
+            Cash = 2,
+            
+            /// <summary>
+            /// Enum Ideal for value: Ideal
+            /// </summary>
+            [EnumMember(Value = "Ideal")]
+            Ideal = 3,
+            
+            /// <summary>
+            /// Enum Bancontact for value: Bancontact
+            /// </summary>
+            [EnumMember(Value = "Bancontact")]
+            Bancontact = 4,
+            
+            /// <summary>
+            /// Enum Giropay for value: Giropay
+            /// </summary>
+            [EnumMember(Value = "Giropay")]
+            Giropay = 5,
+            
+            /// <summary>
+            /// Enum Eps for value: Eps
+            /// </summary>
+            [EnumMember(Value = "Eps")]
+            Eps = 6
+        }
+
+        /// <summary>
+        /// Payment Account
+        /// </summary>
+        /// <value>Payment Account</value>
+        [DataMember(Name="PaymentAccountType", EmitDefaultValue=false)]
+        public PaymentAccountTypeEnum? PaymentAccountType { get; set; }
+        /// <summary>
         /// Status of the payment
         /// </summary>
         /// <value>Status of the payment</value>
@@ -893,10 +944,12 @@ namespace Flipdish.Model
         /// <param name="storeIanaTimeZone">Store IANA time zone.</param>
         /// <param name="customerName">Name of the customer.</param>
         /// <param name="customerPhoneNumber">Phone number of customer.</param>
-        /// <param name="amount">This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer..</param>
+        /// <param name="amount">This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee  It does include the OnlineOrderingFee.</param>
+        /// <param name="refundedAmount">Refunded amount.</param>
+        /// <param name="paymentAccountType">Payment Account.</param>
         /// <param name="paymentStatus">Status of the payment.</param>
         /// <param name="currency">Currency of payment.</param>
-        public OrderSummary(int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), OrderStateEnum? orderState = default(OrderStateEnum?), DateTime? requestedForTime = default(DateTime?), string storeName = default(string), string storeIanaTimeZone = default(string), string customerName = default(string), string customerPhoneNumber = default(string), double? amount = default(double?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), CurrencyEnum? currency = default(CurrencyEnum?))
+        public OrderSummary(int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), OrderStateEnum? orderState = default(OrderStateEnum?), DateTime? requestedForTime = default(DateTime?), string storeName = default(string), string storeIanaTimeZone = default(string), string customerName = default(string), string customerPhoneNumber = default(string), double? amount = default(double?), double? refundedAmount = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), CurrencyEnum? currency = default(CurrencyEnum?))
         {
             this.OrderId = orderId;
             this.DeliveryType = deliveryType;
@@ -907,6 +960,8 @@ namespace Flipdish.Model
             this.CustomerName = customerName;
             this.CustomerPhoneNumber = customerPhoneNumber;
             this.Amount = amount;
+            this.RefundedAmount = refundedAmount;
+            this.PaymentAccountType = paymentAccountType;
             this.PaymentStatus = paymentStatus;
             this.Currency = currency;
         }
@@ -956,11 +1011,19 @@ namespace Flipdish.Model
         public string CustomerPhoneNumber { get; set; }
 
         /// <summary>
-        /// This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer.
+        /// This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee  It does include the OnlineOrderingFee
         /// </summary>
-        /// <value>This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer.</value>
+        /// <value>This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee  It does include the OnlineOrderingFee</value>
         [DataMember(Name="Amount", EmitDefaultValue=false)]
         public double? Amount { get; set; }
+
+        /// <summary>
+        /// Refunded amount
+        /// </summary>
+        /// <value>Refunded amount</value>
+        [DataMember(Name="RefundedAmount", EmitDefaultValue=false)]
+        public double? RefundedAmount { get; set; }
+
 
 
 
@@ -981,6 +1044,8 @@ namespace Flipdish.Model
             sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
             sb.Append("  CustomerPhoneNumber: ").Append(CustomerPhoneNumber).Append("\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
+            sb.Append("  RefundedAmount: ").Append(RefundedAmount).Append("\n");
+            sb.Append("  PaymentAccountType: ").Append(PaymentAccountType).Append("\n");
             sb.Append("  PaymentStatus: ").Append(PaymentStatus).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("}\n");
@@ -1063,6 +1128,16 @@ namespace Flipdish.Model
                     this.Amount.Equals(input.Amount))
                 ) && 
                 (
+                    this.RefundedAmount == input.RefundedAmount ||
+                    (this.RefundedAmount != null &&
+                    this.RefundedAmount.Equals(input.RefundedAmount))
+                ) && 
+                (
+                    this.PaymentAccountType == input.PaymentAccountType ||
+                    (this.PaymentAccountType != null &&
+                    this.PaymentAccountType.Equals(input.PaymentAccountType))
+                ) && 
+                (
                     this.PaymentStatus == input.PaymentStatus ||
                     (this.PaymentStatus != null &&
                     this.PaymentStatus.Equals(input.PaymentStatus))
@@ -1101,6 +1176,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CustomerPhoneNumber.GetHashCode();
                 if (this.Amount != null)
                     hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                if (this.RefundedAmount != null)
+                    hashCode = hashCode * 59 + this.RefundedAmount.GetHashCode();
+                if (this.PaymentAccountType != null)
+                    hashCode = hashCode * 59 + this.PaymentAccountType.GetHashCode();
                 if (this.PaymentStatus != null)
                     hashCode = hashCode * 59 + this.PaymentStatus.GetHashCode();
                 if (this.Currency != null)

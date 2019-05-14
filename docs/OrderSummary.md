@@ -11,7 +11,9 @@ Name | Type | Description | Notes
 **StoreIanaTimeZone** | **string** | Store IANA time zone | [optional] 
 **CustomerName** | **string** | Name of the customer | [optional] 
 **CustomerPhoneNumber** | **string** | Phone number of customer | [optional] 
-**Amount** | **double?** | This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer. | [optional] 
+**Amount** | **double?** | This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee  It does include the OnlineOrderingFee | [optional] 
+**RefundedAmount** | **double?** | Refunded amount | [optional] 
+**PaymentAccountType** | **string** | Payment Account | [optional] 
 **PaymentStatus** | **string** | Status of the payment | [optional] 
 **Currency** | **string** | Currency of payment | [optional] 
 

@@ -91,6 +91,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'AccountState'
         }
         /// <summary>
+        /// Test the property 'CurrencyCode'
+        /// </summary>
+        [Test]
+        public void CurrencyCodeTest()
+        {
+            // TODO unit test for the property 'CurrencyCode'
+        }
+        /// <summary>
         /// Test the property 'AccountName'
         /// </summary>
         [Test]

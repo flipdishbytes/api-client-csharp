@@ -213,6 +213,7 @@ Class | Method | HTTP request | Description
 *OAuthClientsApi* | [**GetOAuthClientSecret**](docs/OAuthClientsApi.md#getoauthclientsecret) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/secret | Get OAuth App secret key
 *OAuthClientsApi* | [**GetOauthAccessToken**](docs/OAuthClientsApi.md#getoauthaccesstoken) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/accesstoken | Get OAuth access token for App
 *OAuthClientsApi* | [**GetRedirectUris**](docs/OAuthClientsApi.md#getredirecturis) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Get OAuth App redirect uris
+*OAuthClientsApi* | [**OAuthClientsGetApplications**](docs/OAuthClientsApi.md#oauthclientsgetapplications) | **GET** /api/v1.0/{appId}/oauthclients/appnames | 
 *OAuthClientsApi* | [**RemoveRedirectUri**](docs/OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis/{uriId} | Delete OAuth App redirect uri
 *OrdersApi* | [**AcceptOrder**](docs/OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 *OrdersApi* | [**DispatchOrder**](docs/OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
@@ -296,9 +297,11 @@ Class | Method | HTTP request | Description
  - [Model.App](docs/App.md)
  - [Model.AppCreatedEvent](docs/AppCreatedEvent.md)
  - [Model.AppUpdatedEvent](docs/AppUpdatedEvent.md)
+ - [Model.AssignedBankAccount](docs/AssignedBankAccount.md)
  - [Model.BankAccount](docs/BankAccount.md)
  - [Model.BankAccountCreate](docs/BankAccountCreate.md)
  - [Model.BankAccountCreatedEvent](docs/BankAccountCreatedEvent.md)
+ - [Model.BankAccountDeletedEvent](docs/BankAccountDeletedEvent.md)
  - [Model.BankAccountDetail](docs/BankAccountDetail.md)
  - [Model.BankAccountSummary](docs/BankAccountSummary.md)
  - [Model.BankAccountUpdatedEvent](docs/BankAccountUpdatedEvent.md)
@@ -464,6 +467,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultWebhookLog](docs/RestApiPaginationResultWebhookLog.md)
  - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
  - [Model.RestApiResultApmStatistics](docs/RestApiResultApmStatistics.md)
+ - [Model.RestApiResultAssignedBankAccount](docs/RestApiResultAssignedBankAccount.md)
  - [Model.RestApiResultBankAccountDetail](docs/RestApiResultBankAccountDetail.md)
  - [Model.RestApiResultBusinessHoursOverride](docs/RestApiResultBusinessHoursOverride.md)
  - [Model.RestApiResultBusinessHoursPeriod](docs/RestApiResultBusinessHoursPeriod.md)
@@ -574,7 +578,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: implicit
-- **Authorization URL**: https://app.flipdish.com/identity/connect/authorize
+- **Authorization URL**: https://api.flipdish.co/identity/connect/authorize
 - **Scopes**: 
   - api: Access to Flipdish API
 

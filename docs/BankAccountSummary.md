@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **Id** | **int?** | Id of this account | [optional] 
 **StoreNames** | **List&lt;string&gt;** | Store Names that are attached to this account | [optional] 
 **AccountState** | **string** | Status of Account | [optional] 
+**CurrencyCode** | **string** | Currency of Account | [optional] 
 **AccountName** | **string** | Name of this account | [optional] 
 **Iban** | **string** | IBAN of this account | [optional] 
 **Swift** | **string** | SWIFT of this bank account | [optional] 

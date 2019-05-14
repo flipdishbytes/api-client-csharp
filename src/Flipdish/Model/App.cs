@@ -425,16 +425,16 @@ namespace Flipdish.Model
             ViewVouchers = 54,
             
             /// <summary>
-            /// Enum CreateVouchers for value: CreateVouchers
+            /// Enum EditVouchers for value: EditVouchers
             /// </summary>
-            [EnumMember(Value = "CreateVouchers")]
-            CreateVouchers = 55,
+            [EnumMember(Value = "EditVouchers")]
+            EditVouchers = 55,
             
             /// <summary>
-            /// Enum UpdateVouchers for value: UpdateVouchers
+            /// Enum UpdateVouchersExtendDisable for value: UpdateVouchersExtendDisable
             /// </summary>
-            [EnumMember(Value = "UpdateVouchers")]
-            UpdateVouchers = 56,
+            [EnumMember(Value = "UpdateVouchersExtendDisable")]
+            UpdateVouchersExtendDisable = 56,
             
             /// <summary>
             /// Enum ViewWebsiteContent for value: ViewWebsiteContent
