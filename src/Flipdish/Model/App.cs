@@ -575,10 +575,58 @@ namespace Flipdish.Model
             ViewFeeConfigurationsAuditLogs = 79,
             
             /// <summary>
+            /// Enum ViewOrdersAuditLogs for value: ViewOrdersAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewOrdersAuditLogs")]
+            ViewOrdersAuditLogs = 80,
+            
+            /// <summary>
+            /// Enum ViewVouchersAuditLogs for value: ViewVouchersAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewVouchersAuditLogs")]
+            ViewVouchersAuditLogs = 81,
+            
+            /// <summary>
+            /// Enum ViewUserEventsAuditLogs for value: ViewUserEventsAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewUserEventsAuditLogs")]
+            ViewUserEventsAuditLogs = 82,
+            
+            /// <summary>
+            /// Enum ViewCampaignsAuditLogs for value: ViewCampaignsAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewCampaignsAuditLogs")]
+            ViewCampaignsAuditLogs = 83,
+            
+            /// <summary>
+            /// Enum ViewTeammatesAuditLogs for value: ViewTeammatesAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewTeammatesAuditLogs")]
+            ViewTeammatesAuditLogs = 84,
+            
+            /// <summary>
+            /// Enum ViewAppAuditLogs for value: ViewAppAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewAppAuditLogs")]
+            ViewAppAuditLogs = 85,
+            
+            /// <summary>
+            /// Enum ViewCustomerAuditLogs for value: ViewCustomerAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewCustomerAuditLogs")]
+            ViewCustomerAuditLogs = 86,
+            
+            /// <summary>
+            /// Enum ViewPrinterAuditLogs for value: ViewPrinterAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewPrinterAuditLogs")]
+            ViewPrinterAuditLogs = 87,
+            
+            /// <summary>
             /// Enum SendPushNotificationToCustomer for value: SendPushNotificationToCustomer
             /// </summary>
             [EnumMember(Value = "SendPushNotificationToCustomer")]
-            SendPushNotificationToCustomer = 80
+            SendPushNotificationToCustomer = 88
         }
 
 

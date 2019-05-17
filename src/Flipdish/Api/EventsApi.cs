@@ -36,15 +36,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        RestApiEventSearchPaginationResult GetCustomerEvents (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        RestApiEventSearchPaginationResult GetCustomerEvents (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get customer events  For technical reasons, the number of records returned is limited to 100.
@@ -58,15 +60,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        ApiResponse<RestApiEventSearchPaginationResult> GetCustomerEventsWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        ApiResponse<RestApiEventSearchPaginationResult> GetCustomerEventsWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -81,15 +85,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        RestApiEventSearchPaginationResult GetEvents (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        RestApiEventSearchPaginationResult GetEvents (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get events  For technical reasons, the number of records returned is limited to 100.
@@ -105,15 +111,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        ApiResponse<RestApiEventSearchPaginationResult> GetEventsWithHttpInfo (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        ApiResponse<RestApiEventSearchPaginationResult> GetEventsWithHttpInfo (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get event by Id  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -147,15 +155,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        RestApiEventSearchPaginationResult GetMenuEvents (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        RestApiEventSearchPaginationResult GetMenuEvents (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get menu events  For technical reasons, the number of records returned is limited to 100.
@@ -169,15 +179,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        ApiResponse<RestApiEventSearchPaginationResult> GetMenuEventsWithHttpInfo (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        ApiResponse<RestApiEventSearchPaginationResult> GetMenuEventsWithHttpInfo (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get order events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -190,15 +202,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId2"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId2">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        RestApiEventSearchPaginationResult GetOrderEvents (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        RestApiEventSearchPaginationResult GetOrderEvents (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get order events  For technical reasons, the number of records returned is limited to 100.
@@ -212,15 +226,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId2"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId2">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        ApiResponse<RestApiEventSearchPaginationResult> GetOrderEventsWithHttpInfo (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        ApiResponse<RestApiEventSearchPaginationResult> GetOrderEventsWithHttpInfo (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get order events by customer  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -233,15 +249,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        RestApiEventSearchPaginationResult GetOrderEventsByCustomer (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        RestApiEventSearchPaginationResult GetOrderEventsByCustomer (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get order events by customer  For technical reasons, the number of records returned is limited to 100.
@@ -255,15 +273,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        ApiResponse<RestApiEventSearchPaginationResult> GetOrderEventsByCustomerWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        ApiResponse<RestApiEventSearchPaginationResult> GetOrderEventsByCustomerWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get store events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -276,15 +296,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        RestApiEventSearchPaginationResult GetStoreEvents (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        RestApiEventSearchPaginationResult GetStoreEvents (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get store events  For technical reasons, the number of records returned is limited to 100.
@@ -298,15 +320,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        ApiResponse<RestApiEventSearchPaginationResult> GetStoreEventsWithHttpInfo (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        ApiResponse<RestApiEventSearchPaginationResult> GetStoreEventsWithHttpInfo (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get user events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -319,15 +343,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId2"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId2">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        RestApiEventSearchPaginationResult GetUserEvents (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string voucherCode = null, string eventType = null);
+        RestApiEventSearchPaginationResult GetUserEvents (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get user events  For technical reasons, the number of records returned is limited to 100.
@@ -341,15 +367,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId2"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId2">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        ApiResponse<RestApiEventSearchPaginationResult> GetUserEventsWithHttpInfo (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string voucherCode = null, string eventType = null);
+        ApiResponse<RestApiEventSearchPaginationResult> GetUserEventsWithHttpInfo (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -362,15 +390,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        RestApiEventSearchPaginationResult GetWhiteLabelEvents (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        RestApiEventSearchPaginationResult GetWhiteLabelEvents (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
@@ -384,15 +414,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        ApiResponse<RestApiEventSearchPaginationResult> GetWhiteLabelEventsWithHttpInfo (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        ApiResponse<RestApiEventSearchPaginationResult> GetWhiteLabelEventsWithHttpInfo (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -407,15 +439,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetCustomerEventsAsync (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetCustomerEventsAsync (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get customer events  For technical reasons, the number of records returned is limited to 100.
@@ -429,15 +463,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetCustomerEventsAsyncWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetCustomerEventsAsyncWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -452,15 +488,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetEventsAsync (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetEventsAsync (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get events  For technical reasons, the number of records returned is limited to 100.
@@ -476,15 +514,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetEventsAsyncWithHttpInfo (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetEventsAsyncWithHttpInfo (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get event by Id  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -518,15 +558,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetMenuEventsAsync (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetMenuEventsAsync (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get menu events  For technical reasons, the number of records returned is limited to 100.
@@ -540,15 +582,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetMenuEventsAsyncWithHttpInfo (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetMenuEventsAsyncWithHttpInfo (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get order events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -561,15 +605,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId2"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId2">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetOrderEventsAsync (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetOrderEventsAsync (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get order events  For technical reasons, the number of records returned is limited to 100.
@@ -583,15 +629,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId2"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId2">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetOrderEventsAsyncWithHttpInfo (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetOrderEventsAsyncWithHttpInfo (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get order events by customer  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -604,15 +652,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetOrderEventsByCustomerAsync (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetOrderEventsByCustomerAsync (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get order events by customer  For technical reasons, the number of records returned is limited to 100.
@@ -626,15 +676,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetOrderEventsByCustomerAsyncWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetOrderEventsByCustomerAsyncWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get store events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -647,15 +699,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetStoreEventsAsync (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetStoreEventsAsync (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get store events  For technical reasons, the number of records returned is limited to 100.
@@ -669,15 +723,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetStoreEventsAsyncWithHttpInfo (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetStoreEventsAsyncWithHttpInfo (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get user events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -690,15 +746,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId2"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId2">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetUserEventsAsync (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetUserEventsAsync (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get user events  For technical reasons, the number of records returned is limited to 100.
@@ -712,15 +770,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId2"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId2">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetUserEventsAsyncWithHttpInfo (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetUserEventsAsyncWithHttpInfo (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -733,15 +793,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetWhiteLabelEventsAsync (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetWhiteLabelEventsAsync (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
@@ -755,15 +817,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetWhiteLabelEventsAsyncWithHttpInfo (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetWhiteLabelEventsAsyncWithHttpInfo (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         #endregion Asynchronous Operations
     }
 
@@ -873,17 +937,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        public RestApiEventSearchPaginationResult GetCustomerEvents (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public RestApiEventSearchPaginationResult GetCustomerEvents (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetCustomerEventsWithHttpInfo(customerId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetCustomerEventsWithHttpInfo(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
         }
 
@@ -896,15 +962,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        public ApiResponse< RestApiEventSearchPaginationResult > GetCustomerEventsWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public ApiResponse< RestApiEventSearchPaginationResult > GetCustomerEventsWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
             // verify the required parameter 'customerId' is set
             if (customerId == null)
@@ -939,13 +1007,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -981,17 +1051,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetCustomerEventsAsync (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetCustomerEventsAsync (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetCustomerEventsAsyncWithHttpInfo(customerId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetCustomerEventsAsyncWithHttpInfo(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
 
         }
@@ -1005,15 +1077,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetCustomerEventsAsyncWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetCustomerEventsAsyncWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
             // verify the required parameter 'customerId' is set
             if (customerId == null)
@@ -1048,13 +1122,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1092,17 +1168,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        public RestApiEventSearchPaginationResult GetEvents (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public RestApiEventSearchPaginationResult GetEvents (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetEventsWithHttpInfo(storeId, whiteLabelId, customerId, limit, page, start, end, name, orderId, storeId2, storeGroupId, userId, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetEventsWithHttpInfo(storeId, whiteLabelId, customerId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
         }
 
@@ -1117,15 +1195,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        public ApiResponse< RestApiEventSearchPaginationResult > GetEventsWithHttpInfo (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public ApiResponse< RestApiEventSearchPaginationResult > GetEventsWithHttpInfo (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
 
             var localVarPath = "/api/v1.0/events";
@@ -1159,13 +1239,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
             if (storeId2 != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId2)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1203,17 +1285,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetEventsAsync (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetEventsAsync (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetEventsAsyncWithHttpInfo(storeId, whiteLabelId, customerId, limit, page, start, end, name, orderId, storeId2, storeGroupId, userId, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetEventsAsyncWithHttpInfo(storeId, whiteLabelId, customerId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
 
         }
@@ -1229,15 +1313,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetEventsAsyncWithHttpInfo (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetEventsAsyncWithHttpInfo (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
 
             var localVarPath = "/api/v1.0/events";
@@ -1271,13 +1357,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
             if (storeId2 != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId2)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1464,17 +1552,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        public RestApiEventSearchPaginationResult GetMenuEvents (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public RestApiEventSearchPaginationResult GetMenuEvents (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetMenuEventsWithHttpInfo(menuId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetMenuEventsWithHttpInfo(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
         }
 
@@ -1487,15 +1577,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        public ApiResponse< RestApiEventSearchPaginationResult > GetMenuEventsWithHttpInfo (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public ApiResponse< RestApiEventSearchPaginationResult > GetMenuEventsWithHttpInfo (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -1530,13 +1622,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1572,17 +1666,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetMenuEventsAsync (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetMenuEventsAsync (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetMenuEventsAsyncWithHttpInfo(menuId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetMenuEventsAsyncWithHttpInfo(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
 
         }
@@ -1596,15 +1692,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetMenuEventsAsyncWithHttpInfo (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetMenuEventsAsyncWithHttpInfo (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -1639,13 +1737,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1681,17 +1781,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId2"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId2">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        public RestApiEventSearchPaginationResult GetOrderEvents (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public RestApiEventSearchPaginationResult GetOrderEvents (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetOrderEventsWithHttpInfo(orderId, limit, page, start, end, name, orderId2, storeId, storeGroupId, userId, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetOrderEventsWithHttpInfo(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
         }
 
@@ -1704,15 +1806,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId2"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId2">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        public ApiResponse< RestApiEventSearchPaginationResult > GetOrderEventsWithHttpInfo (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public ApiResponse< RestApiEventSearchPaginationResult > GetOrderEventsWithHttpInfo (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
@@ -1747,13 +1851,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId2 != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId2)); // query parameter
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1789,17 +1895,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId2"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId2">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetOrderEventsAsync (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetOrderEventsAsync (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetOrderEventsAsyncWithHttpInfo(orderId, limit, page, start, end, name, orderId2, storeId, storeGroupId, userId, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetOrderEventsAsyncWithHttpInfo(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
 
         }
@@ -1813,15 +1921,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId2"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId2">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetOrderEventsAsyncWithHttpInfo (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetOrderEventsAsyncWithHttpInfo (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
@@ -1856,13 +1966,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId2 != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId2)); // query parameter
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1898,17 +2010,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        public RestApiEventSearchPaginationResult GetOrderEventsByCustomer (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public RestApiEventSearchPaginationResult GetOrderEventsByCustomer (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetOrderEventsByCustomerWithHttpInfo(customerId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetOrderEventsByCustomerWithHttpInfo(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
         }
 
@@ -1921,15 +2035,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        public ApiResponse< RestApiEventSearchPaginationResult > GetOrderEventsByCustomerWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public ApiResponse< RestApiEventSearchPaginationResult > GetOrderEventsByCustomerWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
             // verify the required parameter 'customerId' is set
             if (customerId == null)
@@ -1964,13 +2080,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2006,17 +2124,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetOrderEventsByCustomerAsync (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetOrderEventsByCustomerAsync (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetOrderEventsByCustomerAsyncWithHttpInfo(customerId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetOrderEventsByCustomerAsyncWithHttpInfo(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
 
         }
@@ -2030,15 +2150,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetOrderEventsByCustomerAsyncWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetOrderEventsByCustomerAsyncWithHttpInfo (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
             // verify the required parameter 'customerId' is set
             if (customerId == null)
@@ -2073,13 +2195,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2115,17 +2239,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        public RestApiEventSearchPaginationResult GetStoreEvents (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public RestApiEventSearchPaginationResult GetStoreEvents (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetStoreEventsWithHttpInfo(storeId, limit, page, start, end, name, orderId, storeId2, storeGroupId, userId, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetStoreEventsWithHttpInfo(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
         }
 
@@ -2138,15 +2264,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        public ApiResponse< RestApiEventSearchPaginationResult > GetStoreEventsWithHttpInfo (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public ApiResponse< RestApiEventSearchPaginationResult > GetStoreEventsWithHttpInfo (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -2181,13 +2309,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
             if (storeId2 != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId2)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2223,17 +2353,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetStoreEventsAsync (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetStoreEventsAsync (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetStoreEventsAsyncWithHttpInfo(storeId, limit, page, start, end, name, orderId, storeId2, storeGroupId, userId, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetStoreEventsAsyncWithHttpInfo(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
 
         }
@@ -2247,15 +2379,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId2"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetStoreEventsAsyncWithHttpInfo (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetStoreEventsAsyncWithHttpInfo (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -2290,13 +2424,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
             if (storeId2 != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId2)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2332,17 +2468,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId2"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId2">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        public RestApiEventSearchPaginationResult GetUserEvents (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string voucherCode = null, string eventType = null)
+        public RestApiEventSearchPaginationResult GetUserEvents (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetUserEventsWithHttpInfo(userId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId2, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetUserEventsWithHttpInfo(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
         }
 
@@ -2355,15 +2493,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId2"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId2">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        public ApiResponse< RestApiEventSearchPaginationResult > GetUserEventsWithHttpInfo (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string voucherCode = null, string eventType = null)
+        public ApiResponse< RestApiEventSearchPaginationResult > GetUserEventsWithHttpInfo (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -2398,13 +2538,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId2 != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId2)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2440,17 +2582,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId2"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId2">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetUserEventsAsync (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetUserEventsAsync (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetUserEventsAsyncWithHttpInfo(userId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId2, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetUserEventsAsyncWithHttpInfo(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
 
         }
@@ -2464,15 +2608,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId2"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId2">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetUserEventsAsyncWithHttpInfo (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetUserEventsAsyncWithHttpInfo (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -2507,13 +2653,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId2 != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId2)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2549,17 +2697,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        public RestApiEventSearchPaginationResult GetWhiteLabelEvents (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public RestApiEventSearchPaginationResult GetWhiteLabelEvents (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetWhiteLabelEventsWithHttpInfo(whitelabelId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetWhiteLabelEventsWithHttpInfo(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
         }
 
@@ -2572,15 +2722,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        public ApiResponse< RestApiEventSearchPaginationResult > GetWhiteLabelEventsWithHttpInfo (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public ApiResponse< RestApiEventSearchPaginationResult > GetWhiteLabelEventsWithHttpInfo (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
             // verify the required parameter 'whitelabelId' is set
             if (whitelabelId == null)
@@ -2615,13 +2767,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2657,17 +2811,19 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetWhiteLabelEventsAsync (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetWhiteLabelEventsAsync (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetWhiteLabelEventsAsyncWithHttpInfo(whitelabelId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetWhiteLabelEventsAsyncWithHttpInfo(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
 
         }
@@ -2681,15 +2837,17 @@ namespace Flipdish.Api
         /// <param name="page">The index of the page to return, starting by 1 (optional)</param>
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
-        /// <param name="name">Event names to filter in (optional)</param>
-        /// <param name="orderId"> (optional)</param>
-        /// <param name="storeId"> (optional)</param>
-        /// <param name="storeGroupId"> (optional)</param>
-        /// <param name="userId"> (optional)</param>
-        /// <param name="voucherCode"> (optional)</param>
-        /// <param name="eventType"> (optional)</param>
+        /// <param name="orderId">Events that have Order Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
+        /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
+        /// <param name="userId">Events that have User Id (optional)</param>
+        /// <param name="userEmail">Events that have User Email (optional)</param>
+        /// <param name="userName">Events that have User Name (optional)</param>
+        /// <param name="voucherCode">Events that have voucher code (optional)</param>
+        /// <param name="eventType">Events that have event type\\s (optional)</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetWhiteLabelEventsAsyncWithHttpInfo (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetWhiteLabelEventsAsyncWithHttpInfo (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
             // verify the required parameter 'whitelabelId' is set
             if (whitelabelId == null)
@@ -2724,13 +2882,15 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "name", name)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
+            if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
+            if (userName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userName", userName)); // query parameter
             if (voucherCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "voucherCode", voucherCode)); // query parameter
-            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eventType", eventType)); // query parameter
+            if (eventType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "eventType", eventType)); // query parameter
+            if (flipdishEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "flipdishEventId", flipdishEventId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required

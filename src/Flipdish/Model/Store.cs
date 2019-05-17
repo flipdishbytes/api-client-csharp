@@ -48,7 +48,19 @@ namespace Flipdish.Model
             /// Enum Centra for value: Centra
             /// </summary>
             [EnumMember(Value = "Centra")]
-            Centra = 2
+            Centra = 2,
+            
+            /// <summary>
+            /// Enum SmallChefNotes for value: SmallChefNotes
+            /// </summary>
+            [EnumMember(Value = "SmallChefNotes")]
+            SmallChefNotes = 3,
+            
+            /// <summary>
+            /// Enum SmallChefNotesAndCentra for value: SmallChefNotesAndCentra
+            /// </summary>
+            [EnumMember(Value = "SmallChefNotesAndCentra")]
+            SmallChefNotesAndCentra = 4
         }
 
         /// <summary>

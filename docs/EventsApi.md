@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="getcustomerevents"></a>
 # **GetCustomerEvents**
-> RestApiEventSearchPaginationResult GetCustomerEvents (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+> RestApiEventSearchPaginationResult GetCustomerEvents (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get customer events  For technical reasons, the number of records returned is limited to 100.
 
@@ -44,18 +44,20 @@ namespace Example
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
-            var name = new List<string>(); // List<string> | Event names to filter in (optional) 
-            var orderId = 56;  // int? |  (optional) 
-            var storeId = 56;  // int? |  (optional) 
-            var storeGroupId = 56;  // int? |  (optional) 
-            var userId = 56;  // int? |  (optional) 
-            var voucherCode = voucherCode_example;  // string |  (optional) 
-            var eventType = eventType_example;  // string |  (optional) 
+            var orderId = 56;  // int? | Events that have Order Id (optional) 
+            var storeId = 56;  // int? | Events that have Store Id (optional) 
+            var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
+            var userId = 56;  // int? | Events that have User Id (optional) 
+            var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
+            var userName = userName_example;  // string | Events that have User Name (optional) 
+            var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
+            var eventType = new List<string>(); // List<string> | Events that have event type\\s (optional) 
+            var flipdishEventId = flipdishEventId_example;  // string | Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional) 
 
             try
             {
                 // Get customer events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetCustomerEvents(customerId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+                RestApiEventSearchPaginationResult result = apiInstance.GetCustomerEvents(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -76,13 +78,15 @@ Name | Type | Description  | Notes
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
- **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
- **orderId** | **int?**|  | [optional] 
- **storeId** | **int?**|  | [optional] 
- **storeGroupId** | **int?**|  | [optional] 
- **userId** | **int?**|  | [optional] 
- **voucherCode** | **string**|  | [optional] 
- **eventType** | **string**|  | [optional] 
+ **orderId** | **int?**| Events that have Order Id | [optional] 
+ **storeId** | **int?**| Events that have Store Id | [optional] 
+ **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
+ **userId** | **int?**| Events that have User Id | [optional] 
+ **userEmail** | **string**| Events that have User Email | [optional] 
+ **userName** | **string**| Events that have User Name | [optional] 
+ **voucherCode** | **string**| Events that have voucher code | [optional] 
+ **eventType** | [**List&lt;string&gt;**](string.md)| Events that have event type\\s | [optional] 
+ **flipdishEventId** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional] 
 
 ### Return type
 
@@ -101,7 +105,7 @@ Name | Type | Description  | Notes
 
 <a name="getevents"></a>
 # **GetEvents**
-> RestApiEventSearchPaginationResult GetEvents (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+> RestApiEventSearchPaginationResult GetEvents (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get events  For technical reasons, the number of records returned is limited to 100.
 
@@ -130,18 +134,20 @@ namespace Example
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
-            var name = new List<string>(); // List<string> | Event names to filter in (optional) 
-            var orderId = 56;  // int? |  (optional) 
-            var storeId2 = 56;  // int? |  (optional) 
-            var storeGroupId = 56;  // int? |  (optional) 
-            var userId = 56;  // int? |  (optional) 
-            var voucherCode = voucherCode_example;  // string |  (optional) 
-            var eventType = eventType_example;  // string |  (optional) 
+            var orderId = 56;  // int? | Events that have Order Id (optional) 
+            var storeId2 = 56;  // int? | Events that have Store Id (optional) 
+            var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
+            var userId = 56;  // int? | Events that have User Id (optional) 
+            var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
+            var userName = userName_example;  // string | Events that have User Name (optional) 
+            var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
+            var eventType = new List<string>(); // List<string> | Events that have event type\\s (optional) 
+            var flipdishEventId = flipdishEventId_example;  // string | Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional) 
 
             try
             {
                 // Get events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetEvents(storeId, whiteLabelId, customerId, limit, page, start, end, name, orderId, storeId2, storeGroupId, userId, voucherCode, eventType);
+                RestApiEventSearchPaginationResult result = apiInstance.GetEvents(storeId, whiteLabelId, customerId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -164,13 +170,15 @@ Name | Type | Description  | Notes
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
- **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
- **orderId** | **int?**|  | [optional] 
- **storeId2** | **int?**|  | [optional] 
- **storeGroupId** | **int?**|  | [optional] 
- **userId** | **int?**|  | [optional] 
- **voucherCode** | **string**|  | [optional] 
- **eventType** | **string**|  | [optional] 
+ **orderId** | **int?**| Events that have Order Id | [optional] 
+ **storeId2** | **int?**| Events that have Store Id | [optional] 
+ **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
+ **userId** | **int?**| Events that have User Id | [optional] 
+ **userEmail** | **string**| Events that have User Email | [optional] 
+ **userName** | **string**| Events that have User Name | [optional] 
+ **voucherCode** | **string**| Events that have voucher code | [optional] 
+ **eventType** | [**List&lt;string&gt;**](string.md)| Events that have event type\\s | [optional] 
+ **flipdishEventId** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional] 
 
 ### Return type
 
@@ -251,7 +259,7 @@ Name | Type | Description  | Notes
 
 <a name="getmenuevents"></a>
 # **GetMenuEvents**
-> RestApiEventSearchPaginationResult GetMenuEvents (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+> RestApiEventSearchPaginationResult GetMenuEvents (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get menu events  For technical reasons, the number of records returned is limited to 100.
 
@@ -278,18 +286,20 @@ namespace Example
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
-            var name = new List<string>(); // List<string> | Event names to filter in (optional) 
-            var orderId = 56;  // int? |  (optional) 
-            var storeId = 56;  // int? |  (optional) 
-            var storeGroupId = 56;  // int? |  (optional) 
-            var userId = 56;  // int? |  (optional) 
-            var voucherCode = voucherCode_example;  // string |  (optional) 
-            var eventType = eventType_example;  // string |  (optional) 
+            var orderId = 56;  // int? | Events that have Order Id (optional) 
+            var storeId = 56;  // int? | Events that have Store Id (optional) 
+            var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
+            var userId = 56;  // int? | Events that have User Id (optional) 
+            var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
+            var userName = userName_example;  // string | Events that have User Name (optional) 
+            var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
+            var eventType = new List<string>(); // List<string> | Events that have event type\\s (optional) 
+            var flipdishEventId = flipdishEventId_example;  // string | Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional) 
 
             try
             {
                 // Get menu events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetMenuEvents(menuId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+                RestApiEventSearchPaginationResult result = apiInstance.GetMenuEvents(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -310,13 +320,15 @@ Name | Type | Description  | Notes
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
- **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
- **orderId** | **int?**|  | [optional] 
- **storeId** | **int?**|  | [optional] 
- **storeGroupId** | **int?**|  | [optional] 
- **userId** | **int?**|  | [optional] 
- **voucherCode** | **string**|  | [optional] 
- **eventType** | **string**|  | [optional] 
+ **orderId** | **int?**| Events that have Order Id | [optional] 
+ **storeId** | **int?**| Events that have Store Id | [optional] 
+ **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
+ **userId** | **int?**| Events that have User Id | [optional] 
+ **userEmail** | **string**| Events that have User Email | [optional] 
+ **userName** | **string**| Events that have User Name | [optional] 
+ **voucherCode** | **string**| Events that have voucher code | [optional] 
+ **eventType** | [**List&lt;string&gt;**](string.md)| Events that have event type\\s | [optional] 
+ **flipdishEventId** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional] 
 
 ### Return type
 
@@ -335,7 +347,7 @@ Name | Type | Description  | Notes
 
 <a name="getorderevents"></a>
 # **GetOrderEvents**
-> RestApiEventSearchPaginationResult GetOrderEvents (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+> RestApiEventSearchPaginationResult GetOrderEvents (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get order events  For technical reasons, the number of records returned is limited to 100.
 
@@ -362,18 +374,20 @@ namespace Example
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
-            var name = new List<string>(); // List<string> | Event names to filter in (optional) 
-            var orderId2 = 56;  // int? |  (optional) 
-            var storeId = 56;  // int? |  (optional) 
-            var storeGroupId = 56;  // int? |  (optional) 
-            var userId = 56;  // int? |  (optional) 
-            var voucherCode = voucherCode_example;  // string |  (optional) 
-            var eventType = eventType_example;  // string |  (optional) 
+            var orderId2 = 56;  // int? | Events that have Order Id (optional) 
+            var storeId = 56;  // int? | Events that have Store Id (optional) 
+            var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
+            var userId = 56;  // int? | Events that have User Id (optional) 
+            var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
+            var userName = userName_example;  // string | Events that have User Name (optional) 
+            var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
+            var eventType = new List<string>(); // List<string> | Events that have event type\\s (optional) 
+            var flipdishEventId = flipdishEventId_example;  // string | Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional) 
 
             try
             {
                 // Get order events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetOrderEvents(orderId, limit, page, start, end, name, orderId2, storeId, storeGroupId, userId, voucherCode, eventType);
+                RestApiEventSearchPaginationResult result = apiInstance.GetOrderEvents(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -394,13 +408,15 @@ Name | Type | Description  | Notes
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
- **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
- **orderId2** | **int?**|  | [optional] 
- **storeId** | **int?**|  | [optional] 
- **storeGroupId** | **int?**|  | [optional] 
- **userId** | **int?**|  | [optional] 
- **voucherCode** | **string**|  | [optional] 
- **eventType** | **string**|  | [optional] 
+ **orderId2** | **int?**| Events that have Order Id | [optional] 
+ **storeId** | **int?**| Events that have Store Id | [optional] 
+ **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
+ **userId** | **int?**| Events that have User Id | [optional] 
+ **userEmail** | **string**| Events that have User Email | [optional] 
+ **userName** | **string**| Events that have User Name | [optional] 
+ **voucherCode** | **string**| Events that have voucher code | [optional] 
+ **eventType** | [**List&lt;string&gt;**](string.md)| Events that have event type\\s | [optional] 
+ **flipdishEventId** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional] 
 
 ### Return type
 
@@ -419,7 +435,7 @@ Name | Type | Description  | Notes
 
 <a name="getordereventsbycustomer"></a>
 # **GetOrderEventsByCustomer**
-> RestApiEventSearchPaginationResult GetOrderEventsByCustomer (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+> RestApiEventSearchPaginationResult GetOrderEventsByCustomer (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get order events by customer  For technical reasons, the number of records returned is limited to 100.
 
@@ -446,18 +462,20 @@ namespace Example
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
-            var name = new List<string>(); // List<string> | Event names to filter in (optional) 
-            var orderId = 56;  // int? |  (optional) 
-            var storeId = 56;  // int? |  (optional) 
-            var storeGroupId = 56;  // int? |  (optional) 
-            var userId = 56;  // int? |  (optional) 
-            var voucherCode = voucherCode_example;  // string |  (optional) 
-            var eventType = eventType_example;  // string |  (optional) 
+            var orderId = 56;  // int? | Events that have Order Id (optional) 
+            var storeId = 56;  // int? | Events that have Store Id (optional) 
+            var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
+            var userId = 56;  // int? | Events that have User Id (optional) 
+            var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
+            var userName = userName_example;  // string | Events that have User Name (optional) 
+            var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
+            var eventType = new List<string>(); // List<string> | Events that have event type\\s (optional) 
+            var flipdishEventId = flipdishEventId_example;  // string | Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional) 
 
             try
             {
                 // Get order events by customer  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetOrderEventsByCustomer(customerId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+                RestApiEventSearchPaginationResult result = apiInstance.GetOrderEventsByCustomer(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -478,13 +496,15 @@ Name | Type | Description  | Notes
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
- **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
- **orderId** | **int?**|  | [optional] 
- **storeId** | **int?**|  | [optional] 
- **storeGroupId** | **int?**|  | [optional] 
- **userId** | **int?**|  | [optional] 
- **voucherCode** | **string**|  | [optional] 
- **eventType** | **string**|  | [optional] 
+ **orderId** | **int?**| Events that have Order Id | [optional] 
+ **storeId** | **int?**| Events that have Store Id | [optional] 
+ **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
+ **userId** | **int?**| Events that have User Id | [optional] 
+ **userEmail** | **string**| Events that have User Email | [optional] 
+ **userName** | **string**| Events that have User Name | [optional] 
+ **voucherCode** | **string**| Events that have voucher code | [optional] 
+ **eventType** | [**List&lt;string&gt;**](string.md)| Events that have event type\\s | [optional] 
+ **flipdishEventId** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional] 
 
 ### Return type
 
@@ -503,7 +523,7 @@ Name | Type | Description  | Notes
 
 <a name="getstoreevents"></a>
 # **GetStoreEvents**
-> RestApiEventSearchPaginationResult GetStoreEvents (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+> RestApiEventSearchPaginationResult GetStoreEvents (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get store events  For technical reasons, the number of records returned is limited to 100.
 
@@ -530,18 +550,20 @@ namespace Example
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
-            var name = new List<string>(); // List<string> | Event names to filter in (optional) 
-            var orderId = 56;  // int? |  (optional) 
-            var storeId2 = 56;  // int? |  (optional) 
-            var storeGroupId = 56;  // int? |  (optional) 
-            var userId = 56;  // int? |  (optional) 
-            var voucherCode = voucherCode_example;  // string |  (optional) 
-            var eventType = eventType_example;  // string |  (optional) 
+            var orderId = 56;  // int? | Events that have Order Id (optional) 
+            var storeId2 = 56;  // int? | Events that have Store Id (optional) 
+            var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
+            var userId = 56;  // int? | Events that have User Id (optional) 
+            var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
+            var userName = userName_example;  // string | Events that have User Name (optional) 
+            var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
+            var eventType = new List<string>(); // List<string> | Events that have event type\\s (optional) 
+            var flipdishEventId = flipdishEventId_example;  // string | Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional) 
 
             try
             {
                 // Get store events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetStoreEvents(storeId, limit, page, start, end, name, orderId, storeId2, storeGroupId, userId, voucherCode, eventType);
+                RestApiEventSearchPaginationResult result = apiInstance.GetStoreEvents(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -562,13 +584,15 @@ Name | Type | Description  | Notes
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
- **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
- **orderId** | **int?**|  | [optional] 
- **storeId2** | **int?**|  | [optional] 
- **storeGroupId** | **int?**|  | [optional] 
- **userId** | **int?**|  | [optional] 
- **voucherCode** | **string**|  | [optional] 
- **eventType** | **string**|  | [optional] 
+ **orderId** | **int?**| Events that have Order Id | [optional] 
+ **storeId2** | **int?**| Events that have Store Id | [optional] 
+ **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
+ **userId** | **int?**| Events that have User Id | [optional] 
+ **userEmail** | **string**| Events that have User Email | [optional] 
+ **userName** | **string**| Events that have User Name | [optional] 
+ **voucherCode** | **string**| Events that have voucher code | [optional] 
+ **eventType** | [**List&lt;string&gt;**](string.md)| Events that have event type\\s | [optional] 
+ **flipdishEventId** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional] 
 
 ### Return type
 
@@ -587,7 +611,7 @@ Name | Type | Description  | Notes
 
 <a name="getuserevents"></a>
 # **GetUserEvents**
-> RestApiEventSearchPaginationResult GetUserEvents (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string voucherCode = null, string eventType = null)
+> RestApiEventSearchPaginationResult GetUserEvents (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get user events  For technical reasons, the number of records returned is limited to 100.
 
@@ -614,18 +638,20 @@ namespace Example
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
-            var name = new List<string>(); // List<string> | Event names to filter in (optional) 
-            var orderId = 56;  // int? |  (optional) 
-            var storeId = 56;  // int? |  (optional) 
-            var storeGroupId = 56;  // int? |  (optional) 
-            var userId2 = 56;  // int? |  (optional) 
-            var voucherCode = voucherCode_example;  // string |  (optional) 
-            var eventType = eventType_example;  // string |  (optional) 
+            var orderId = 56;  // int? | Events that have Order Id (optional) 
+            var storeId = 56;  // int? | Events that have Store Id (optional) 
+            var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
+            var userId2 = 56;  // int? | Events that have User Id (optional) 
+            var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
+            var userName = userName_example;  // string | Events that have User Name (optional) 
+            var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
+            var eventType = new List<string>(); // List<string> | Events that have event type\\s (optional) 
+            var flipdishEventId = flipdishEventId_example;  // string | Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional) 
 
             try
             {
                 // Get user events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetUserEvents(userId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId2, voucherCode, eventType);
+                RestApiEventSearchPaginationResult result = apiInstance.GetUserEvents(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -646,13 +672,15 @@ Name | Type | Description  | Notes
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
- **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
- **orderId** | **int?**|  | [optional] 
- **storeId** | **int?**|  | [optional] 
- **storeGroupId** | **int?**|  | [optional] 
- **userId2** | **int?**|  | [optional] 
- **voucherCode** | **string**|  | [optional] 
- **eventType** | **string**|  | [optional] 
+ **orderId** | **int?**| Events that have Order Id | [optional] 
+ **storeId** | **int?**| Events that have Store Id | [optional] 
+ **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
+ **userId2** | **int?**| Events that have User Id | [optional] 
+ **userEmail** | **string**| Events that have User Email | [optional] 
+ **userName** | **string**| Events that have User Name | [optional] 
+ **voucherCode** | **string**| Events that have voucher code | [optional] 
+ **eventType** | [**List&lt;string&gt;**](string.md)| Events that have event type\\s | [optional] 
+ **flipdishEventId** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional] 
 
 ### Return type
 
@@ -671,7 +699,7 @@ Name | Type | Description  | Notes
 
 <a name="getwhitelabelevents"></a>
 # **GetWhiteLabelEvents**
-> RestApiEventSearchPaginationResult GetWhiteLabelEvents (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, List<string> name = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string voucherCode = null, string eventType = null)
+> RestApiEventSearchPaginationResult GetWhiteLabelEvents (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 
@@ -698,18 +726,20 @@ namespace Example
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date (optional) 
-            var name = new List<string>(); // List<string> | Event names to filter in (optional) 
-            var orderId = 56;  // int? |  (optional) 
-            var storeId = 56;  // int? |  (optional) 
-            var storeGroupId = 56;  // int? |  (optional) 
-            var userId = 56;  // int? |  (optional) 
-            var voucherCode = voucherCode_example;  // string |  (optional) 
-            var eventType = eventType_example;  // string |  (optional) 
+            var orderId = 56;  // int? | Events that have Order Id (optional) 
+            var storeId = 56;  // int? | Events that have Store Id (optional) 
+            var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
+            var userId = 56;  // int? | Events that have User Id (optional) 
+            var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
+            var userName = userName_example;  // string | Events that have User Name (optional) 
+            var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
+            var eventType = new List<string>(); // List<string> | Events that have event type\\s (optional) 
+            var flipdishEventId = flipdishEventId_example;  // string | Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional) 
 
             try
             {
                 // Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetWhiteLabelEvents(whitelabelId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+                RestApiEventSearchPaginationResult result = apiInstance.GetWhiteLabelEvents(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -730,13 +760,15 @@ Name | Type | Description  | Notes
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 
  **end** | **DateTime?**| End date | [optional] 
- **name** | [**List&lt;string&gt;**](string.md)| Event names to filter in | [optional] 
- **orderId** | **int?**|  | [optional] 
- **storeId** | **int?**|  | [optional] 
- **storeGroupId** | **int?**|  | [optional] 
- **userId** | **int?**|  | [optional] 
- **voucherCode** | **string**|  | [optional] 
- **eventType** | **string**|  | [optional] 
+ **orderId** | **int?**| Events that have Order Id | [optional] 
+ **storeId** | **int?**| Events that have Store Id | [optional] 
+ **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
+ **userId** | **int?**| Events that have User Id | [optional] 
+ **userEmail** | **string**| Events that have User Email | [optional] 
+ **userName** | **string**| Events that have User Name | [optional] 
+ **voucherCode** | **string**| Events that have voucher code | [optional] 
+ **eventType** | [**List&lt;string&gt;**](string.md)| Events that have event type\\s | [optional] 
+ **flipdishEventId** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional] 
 
 ### Return type
 

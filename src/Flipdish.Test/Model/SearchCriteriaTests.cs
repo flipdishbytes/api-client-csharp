@@ -99,14 +99,6 @@ namespace Flipdish.Test
             // TODO unit test for the property 'End'
         }
         /// <summary>
-        /// Test the property 'Name'
-        /// </summary>
-        [Test]
-        public void NameTest()
-        {
-            // TODO unit test for the property 'Name'
-        }
-        /// <summary>
         /// Test the property 'OrderId'
         /// </summary>
         [Test]
@@ -139,6 +131,22 @@ namespace Flipdish.Test
             // TODO unit test for the property 'UserId'
         }
         /// <summary>
+        /// Test the property 'UserEmail'
+        /// </summary>
+        [Test]
+        public void UserEmailTest()
+        {
+            // TODO unit test for the property 'UserEmail'
+        }
+        /// <summary>
+        /// Test the property 'UserName'
+        /// </summary>
+        [Test]
+        public void UserNameTest()
+        {
+            // TODO unit test for the property 'UserName'
+        }
+        /// <summary>
         /// Test the property 'VoucherCode'
         /// </summary>
         [Test]
@@ -153,6 +161,14 @@ namespace Flipdish.Test
         public void EventTypeTest()
         {
             // TODO unit test for the property 'EventType'
+        }
+        /// <summary>
+        /// Test the property 'FlipdishEventId'
+        /// </summary>
+        [Test]
+        public void FlipdishEventIdTest()
+        {
+            // TODO unit test for the property 'FlipdishEventId'
         }
 
     }

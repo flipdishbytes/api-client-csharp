@@ -76,14 +76,16 @@ namespace Flipdish.Test
             //int? page = null;
             //DateTime? start = null;
             //DateTime? end = null;
-            //List<string> name = null;
             //int? orderId = null;
             //int? storeId = null;
             //int? storeGroupId = null;
             //int? userId = null;
+            //string userEmail = null;
+            //string userName = null;
             //string voucherCode = null;
-            //string eventType = null;
-            //var response = instance.GetCustomerEvents(customerId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+            //List<string> eventType = null;
+            //string flipdishEventId = null;
+            //var response = instance.GetCustomerEvents(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
             //Assert.IsInstanceOf<RestApiEventSearchPaginationResult> (response, "response is RestApiEventSearchPaginationResult");
         }
         
@@ -101,14 +103,16 @@ namespace Flipdish.Test
             //int? page = null;
             //DateTime? start = null;
             //DateTime? end = null;
-            //List<string> name = null;
             //int? orderId = null;
             //int? storeId2 = null;
             //int? storeGroupId = null;
             //int? userId = null;
+            //string userEmail = null;
+            //string userName = null;
             //string voucherCode = null;
-            //string eventType = null;
-            //var response = instance.GetEvents(storeId, whiteLabelId, customerId, limit, page, start, end, name, orderId, storeId2, storeGroupId, userId, voucherCode, eventType);
+            //List<string> eventType = null;
+            //string flipdishEventId = null;
+            //var response = instance.GetEvents(storeId, whiteLabelId, customerId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
             //Assert.IsInstanceOf<RestApiEventSearchPaginationResult> (response, "response is RestApiEventSearchPaginationResult");
         }
         
@@ -136,14 +140,16 @@ namespace Flipdish.Test
             //int? page = null;
             //DateTime? start = null;
             //DateTime? end = null;
-            //List<string> name = null;
             //int? orderId = null;
             //int? storeId = null;
             //int? storeGroupId = null;
             //int? userId = null;
+            //string userEmail = null;
+            //string userName = null;
             //string voucherCode = null;
-            //string eventType = null;
-            //var response = instance.GetMenuEvents(menuId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+            //List<string> eventType = null;
+            //string flipdishEventId = null;
+            //var response = instance.GetMenuEvents(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
             //Assert.IsInstanceOf<RestApiEventSearchPaginationResult> (response, "response is RestApiEventSearchPaginationResult");
         }
         
@@ -159,14 +165,16 @@ namespace Flipdish.Test
             //int? page = null;
             //DateTime? start = null;
             //DateTime? end = null;
-            //List<string> name = null;
             //int? orderId2 = null;
             //int? storeId = null;
             //int? storeGroupId = null;
             //int? userId = null;
+            //string userEmail = null;
+            //string userName = null;
             //string voucherCode = null;
-            //string eventType = null;
-            //var response = instance.GetOrderEvents(orderId, limit, page, start, end, name, orderId2, storeId, storeGroupId, userId, voucherCode, eventType);
+            //List<string> eventType = null;
+            //string flipdishEventId = null;
+            //var response = instance.GetOrderEvents(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
             //Assert.IsInstanceOf<RestApiEventSearchPaginationResult> (response, "response is RestApiEventSearchPaginationResult");
         }
         
@@ -182,14 +190,16 @@ namespace Flipdish.Test
             //int? page = null;
             //DateTime? start = null;
             //DateTime? end = null;
-            //List<string> name = null;
             //int? orderId = null;
             //int? storeId = null;
             //int? storeGroupId = null;
             //int? userId = null;
+            //string userEmail = null;
+            //string userName = null;
             //string voucherCode = null;
-            //string eventType = null;
-            //var response = instance.GetOrderEventsByCustomer(customerId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+            //List<string> eventType = null;
+            //string flipdishEventId = null;
+            //var response = instance.GetOrderEventsByCustomer(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
             //Assert.IsInstanceOf<RestApiEventSearchPaginationResult> (response, "response is RestApiEventSearchPaginationResult");
         }
         
@@ -205,14 +215,16 @@ namespace Flipdish.Test
             //int? page = null;
             //DateTime? start = null;
             //DateTime? end = null;
-            //List<string> name = null;
             //int? orderId = null;
             //int? storeId2 = null;
             //int? storeGroupId = null;
             //int? userId = null;
+            //string userEmail = null;
+            //string userName = null;
             //string voucherCode = null;
-            //string eventType = null;
-            //var response = instance.GetStoreEvents(storeId, limit, page, start, end, name, orderId, storeId2, storeGroupId, userId, voucherCode, eventType);
+            //List<string> eventType = null;
+            //string flipdishEventId = null;
+            //var response = instance.GetStoreEvents(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
             //Assert.IsInstanceOf<RestApiEventSearchPaginationResult> (response, "response is RestApiEventSearchPaginationResult");
         }
         
@@ -228,14 +240,16 @@ namespace Flipdish.Test
             //int? page = null;
             //DateTime? start = null;
             //DateTime? end = null;
-            //List<string> name = null;
             //int? orderId = null;
             //int? storeId = null;
             //int? storeGroupId = null;
             //int? userId2 = null;
+            //string userEmail = null;
+            //string userName = null;
             //string voucherCode = null;
-            //string eventType = null;
-            //var response = instance.GetUserEvents(userId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId2, voucherCode, eventType);
+            //List<string> eventType = null;
+            //string flipdishEventId = null;
+            //var response = instance.GetUserEvents(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, userEmail, userName, voucherCode, eventType, flipdishEventId);
             //Assert.IsInstanceOf<RestApiEventSearchPaginationResult> (response, "response is RestApiEventSearchPaginationResult");
         }
         
@@ -251,14 +265,16 @@ namespace Flipdish.Test
             //int? page = null;
             //DateTime? start = null;
             //DateTime? end = null;
-            //List<string> name = null;
             //int? orderId = null;
             //int? storeId = null;
             //int? storeGroupId = null;
             //int? userId = null;
+            //string userEmail = null;
+            //string userName = null;
             //string voucherCode = null;
-            //string eventType = null;
-            //var response = instance.GetWhiteLabelEvents(whitelabelId, limit, page, start, end, name, orderId, storeId, storeGroupId, userId, voucherCode, eventType);
+            //List<string> eventType = null;
+            //string flipdishEventId = null;
+            //var response = instance.GetWhiteLabelEvents(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
             //Assert.IsInstanceOf<RestApiEventSearchPaginationResult> (response, "response is RestApiEventSearchPaginationResult");
         }
         

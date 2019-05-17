@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Search Criteria
+    /// Search Criteria for Audit Logs
     /// </summary>
     [DataContract]
     public partial class SearchCriteria :  IEquatable<SearchCriteria>, IValidatableObject
@@ -37,26 +37,30 @@ namespace Flipdish.Model
         /// <param name="page">The index of the page to return, starting by 1.</param>
         /// <param name="start">Start date.</param>
         /// <param name="end">End date.</param>
-        /// <param name="name">Event names to filter in.</param>
-        /// <param name="orderId">orderId.</param>
-        /// <param name="storeId">storeId.</param>
-        /// <param name="storeGroupId">storeGroupId.</param>
-        /// <param name="userId">userId.</param>
-        /// <param name="voucherCode">voucherCode.</param>
-        /// <param name="eventType">eventType.</param>
-        public SearchCriteria(int? limit = default(int?), int? page = default(int?), DateTime? start = default(DateTime?), DateTime? end = default(DateTime?), List<string> name = default(List<string>), int? orderId = default(int?), int? storeId = default(int?), int? storeGroupId = default(int?), int? userId = default(int?), string voucherCode = default(string), string eventType = default(string))
+        /// <param name="orderId">Events that have Order Id.</param>
+        /// <param name="storeId">Events that have Store Id.</param>
+        /// <param name="storeGroupId">Events that have Store Group Id.</param>
+        /// <param name="userId">Events that have User Id.</param>
+        /// <param name="userEmail">Events that have User Email.</param>
+        /// <param name="userName">Events that have User Name.</param>
+        /// <param name="voucherCode">Events that have voucher code.</param>
+        /// <param name="eventType">Events that have event type\\s.</param>
+        /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored..</param>
+        public SearchCriteria(int? limit = default(int?), int? page = default(int?), DateTime? start = default(DateTime?), DateTime? end = default(DateTime?), int? orderId = default(int?), int? storeId = default(int?), int? storeGroupId = default(int?), int? userId = default(int?), string userEmail = default(string), string userName = default(string), string voucherCode = default(string), List<string> eventType = default(List<string>), string flipdishEventId = default(string))
         {
             this.Limit = limit;
             this.Page = page;
             this.Start = start;
             this.End = end;
-            this.Name = name;
             this.OrderId = orderId;
             this.StoreId = storeId;
             this.StoreGroupId = storeGroupId;
             this.UserId = userId;
+            this.UserEmail = userEmail;
+            this.UserName = userName;
             this.VoucherCode = voucherCode;
             this.EventType = eventType;
+            this.FlipdishEventId = flipdishEventId;
         }
         
         /// <summary>
@@ -88,47 +92,67 @@ namespace Flipdish.Model
         public DateTime? End { get; set; }
 
         /// <summary>
-        /// Event names to filter in
+        /// Events that have Order Id
         /// </summary>
-        /// <value>Event names to filter in</value>
-        [DataMember(Name="Name", EmitDefaultValue=false)]
-        public List<string> Name { get; set; }
-
-        /// <summary>
-        /// Gets or Sets OrderId
-        /// </summary>
+        /// <value>Events that have Order Id</value>
         [DataMember(Name="OrderId", EmitDefaultValue=false)]
         public int? OrderId { get; set; }
 
         /// <summary>
-        /// Gets or Sets StoreId
+        /// Events that have Store Id
         /// </summary>
+        /// <value>Events that have Store Id</value>
         [DataMember(Name="StoreId", EmitDefaultValue=false)]
         public int? StoreId { get; set; }
 
         /// <summary>
-        /// Gets or Sets StoreGroupId
+        /// Events that have Store Group Id
         /// </summary>
+        /// <value>Events that have Store Group Id</value>
         [DataMember(Name="StoreGroupId", EmitDefaultValue=false)]
         public int? StoreGroupId { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserId
+        /// Events that have User Id
         /// </summary>
+        /// <value>Events that have User Id</value>
         [DataMember(Name="UserId", EmitDefaultValue=false)]
         public int? UserId { get; set; }
 
         /// <summary>
-        /// Gets or Sets VoucherCode
+        /// Events that have User Email
         /// </summary>
+        /// <value>Events that have User Email</value>
+        [DataMember(Name="UserEmail", EmitDefaultValue=false)]
+        public string UserEmail { get; set; }
+
+        /// <summary>
+        /// Events that have User Name
+        /// </summary>
+        /// <value>Events that have User Name</value>
+        [DataMember(Name="UserName", EmitDefaultValue=false)]
+        public string UserName { get; set; }
+
+        /// <summary>
+        /// Events that have voucher code
+        /// </summary>
+        /// <value>Events that have voucher code</value>
         [DataMember(Name="VoucherCode", EmitDefaultValue=false)]
         public string VoucherCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets EventType
+        /// Events that have event type\\s
         /// </summary>
+        /// <value>Events that have event type\\s</value>
         [DataMember(Name="EventType", EmitDefaultValue=false)]
-        public string EventType { get; set; }
+        public List<string> EventType { get; set; }
+
+        /// <summary>
+        /// Unique Identifier of Event, if this is specified, all other criteria are ignored.
+        /// </summary>
+        /// <value>Unique Identifier of Event, if this is specified, all other criteria are ignored.</value>
+        [DataMember(Name="FlipdishEventId", EmitDefaultValue=false)]
+        public string FlipdishEventId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -142,13 +166,15 @@ namespace Flipdish.Model
             sb.Append("  Page: ").Append(Page).Append("\n");
             sb.Append("  Start: ").Append(Start).Append("\n");
             sb.Append("  End: ").Append(End).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
+            sb.Append("  UserEmail: ").Append(UserEmail).Append("\n");
+            sb.Append("  UserName: ").Append(UserName).Append("\n");
             sb.Append("  VoucherCode: ").Append(VoucherCode).Append("\n");
             sb.Append("  EventType: ").Append(EventType).Append("\n");
+            sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -204,11 +230,6 @@ namespace Flipdish.Model
                     this.End.Equals(input.End))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    this.Name != null &&
-                    this.Name.SequenceEqual(input.Name)
-                ) && 
-                (
                     this.OrderId == input.OrderId ||
                     (this.OrderId != null &&
                     this.OrderId.Equals(input.OrderId))
@@ -229,14 +250,29 @@ namespace Flipdish.Model
                     this.UserId.Equals(input.UserId))
                 ) && 
                 (
+                    this.UserEmail == input.UserEmail ||
+                    (this.UserEmail != null &&
+                    this.UserEmail.Equals(input.UserEmail))
+                ) && 
+                (
+                    this.UserName == input.UserName ||
+                    (this.UserName != null &&
+                    this.UserName.Equals(input.UserName))
+                ) && 
+                (
                     this.VoucherCode == input.VoucherCode ||
                     (this.VoucherCode != null &&
                     this.VoucherCode.Equals(input.VoucherCode))
                 ) && 
                 (
                     this.EventType == input.EventType ||
-                    (this.EventType != null &&
-                    this.EventType.Equals(input.EventType))
+                    this.EventType != null &&
+                    this.EventType.SequenceEqual(input.EventType)
+                ) && 
+                (
+                    this.FlipdishEventId == input.FlipdishEventId ||
+                    (this.FlipdishEventId != null &&
+                    this.FlipdishEventId.Equals(input.FlipdishEventId))
                 );
         }
 
@@ -257,8 +293,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Start.GetHashCode();
                 if (this.End != null)
                     hashCode = hashCode * 59 + this.End.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.OrderId != null)
                     hashCode = hashCode * 59 + this.OrderId.GetHashCode();
                 if (this.StoreId != null)
@@ -267,10 +301,16 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreGroupId.GetHashCode();
                 if (this.UserId != null)
                     hashCode = hashCode * 59 + this.UserId.GetHashCode();
+                if (this.UserEmail != null)
+                    hashCode = hashCode * 59 + this.UserEmail.GetHashCode();
+                if (this.UserName != null)
+                    hashCode = hashCode * 59 + this.UserName.GetHashCode();
                 if (this.VoucherCode != null)
                     hashCode = hashCode * 59 + this.VoucherCode.GetHashCode();
                 if (this.EventType != null)
                     hashCode = hashCode * 59 + this.EventType.GetHashCode();
+                if (this.FlipdishEventId != null)
+                    hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 return hashCode;
             }
         }
