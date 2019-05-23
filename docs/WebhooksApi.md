@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 
 <a name="getwebhooksubscriptions"></a>
 # **GetWebhookSubscriptions**
-> RestApiArrayResultWebhookSubscription GetWebhookSubscriptions (string oauthAppId, string appId)
+> RestApiPaginationResultWebhookSubscription GetWebhookSubscriptions (string oauthAppId, string appId, int? page = null, int? limit = null)
 
 Get all webhook subscriptions by your Oauth App id
 
@@ -508,11 +508,13 @@ namespace Example
             var apiInstance = new WebhooksApi();
             var oauthAppId = oauthAppId_example;  // string | Oauth App identifier
             var appId = appId_example;  // string | 
+            var page = 56;  // int? |  (optional) 
+            var limit = 56;  // int? |  (optional) 
 
             try
             {
                 // Get all webhook subscriptions by your Oauth App id
-                RestApiArrayResultWebhookSubscription result = apiInstance.GetWebhookSubscriptions(oauthAppId, appId);
+                RestApiPaginationResultWebhookSubscription result = apiInstance.GetWebhookSubscriptions(oauthAppId, appId, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -530,10 +532,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **oauthAppId** | **string**| Oauth App identifier | 
  **appId** | **string**|  | 
+ **page** | **int?**|  | [optional] 
+ **limit** | **int?**|  | [optional] 
 
 ### Return type
 
-[**RestApiArrayResultWebhookSubscription**](RestApiArrayResultWebhookSubscription.md)
+[**RestApiPaginationResultWebhookSubscription**](RestApiPaginationResultWebhookSubscription.md)
 
 ### Authorization
 

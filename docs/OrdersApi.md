@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 <a name="getorders"></a>
 # **GetOrders**
-> RestApiPaginationResultOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+> RestApiPaginationResultOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null)
 
 Get orders by filter
 
@@ -229,13 +229,15 @@ namespace Example
             var apiInstance = new OrdersApi();
             var physicalRestaurantId = new List<int?>(); // List<int?> | Physical restaurant identifiers (optional) 
             var state = state_example;  // List<string> | Order states (optional) 
+            var from = 2013-10-20T19:20:30+01:00;  // DateTime? | Order has been placed after this parameter value (optional) 
+            var to = 2013-10-20T19:20:30+01:00;  // DateTime? | Order has been placed before this parameter value (optional) 
             var page = 56;  // int? | Requested page number (optional) 
             var limit = 56;  // int? | Requested page limit (optional) 
 
             try
             {
                 // Get orders by filter
-                RestApiPaginationResultOrder result = apiInstance.GetOrders(physicalRestaurantId, state, page, limit);
+                RestApiPaginationResultOrder result = apiInstance.GetOrders(physicalRestaurantId, state, from, to, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -253,6 +255,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **physicalRestaurantId** | [**List&lt;int?&gt;**](int?.md)| Physical restaurant identifiers | [optional] 
  **state** | **List&lt;string&gt;**| Order states | [optional] 
+ **from** | **DateTime?**| Order has been placed after this parameter value | [optional] 
+ **to** | **DateTime?**| Order has been placed before this parameter value | [optional] 
  **page** | **int?**| Requested page number | [optional] 
  **limit** | **int?**| Requested page limit | [optional] 
 

@@ -110,9 +110,11 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //List<int?> physicalRestaurantId = null;
             //List<string> state = null;
+            //DateTime? from = null;
+            //DateTime? to = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.GetOrders(physicalRestaurantId, state, page, limit);
+            //var response = instance.GetOrders(physicalRestaurantId, state, from, to, page, limit);
             //Assert.IsInstanceOf<RestApiPaginationResultOrder> (response, "response is RestApiPaginationResultOrder");
         }
         

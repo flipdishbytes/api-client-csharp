@@ -98,10 +98,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
         /// <param name="state">Order states (optional)</param>
+        /// <param name="from">Order has been placed after this parameter value (optional)</param>
+        /// <param name="to">Order has been placed before this parameter value (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>RestApiPaginationResultOrder</returns>
-        RestApiPaginationResultOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
+        RestApiPaginationResultOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get orders by filter
@@ -112,10 +114,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
         /// <param name="state">Order states (optional)</param>
+        /// <param name="from">Order has been placed after this parameter value (optional)</param>
+        /// <param name="to">Order has been placed before this parameter value (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultOrder</returns>
-        ApiResponse<RestApiPaginationResultOrder> GetOrdersWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
+        ApiResponse<RestApiPaginationResultOrder> GetOrdersWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null);
         /// <summary>
         /// [PRIVATE API] Get summary of orders by filter
         /// </summary>
@@ -269,10 +273,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
         /// <param name="state">Order states (optional)</param>
+        /// <param name="from">Order has been placed after this parameter value (optional)</param>
+        /// <param name="to">Order has been placed before this parameter value (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>Task of RestApiPaginationResultOrder</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultOrder> GetOrdersAsync (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultOrder> GetOrdersAsync (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get orders by filter
@@ -283,10 +289,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
         /// <param name="state">Order states (optional)</param>
+        /// <param name="from">Order has been placed after this parameter value (optional)</param>
+        /// <param name="to">Order has been placed before this parameter value (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOrder)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrder>> GetOrdersAsyncWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrder>> GetOrdersAsyncWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null);
         /// <summary>
         /// [PRIVATE API] Get summary of orders by filter
         /// </summary>
@@ -955,12 +963,14 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
         /// <param name="state">Order states (optional)</param>
+        /// <param name="from">Order has been placed after this parameter value (optional)</param>
+        /// <param name="to">Order has been placed before this parameter value (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>RestApiPaginationResultOrder</returns>
-        public RestApiPaginationResultOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+        public RestApiPaginationResultOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultOrder> localVarResponse = GetOrdersWithHttpInfo(physicalRestaurantId, state, page, limit);
+             ApiResponse<RestApiPaginationResultOrder> localVarResponse = GetOrdersWithHttpInfo(physicalRestaurantId, state, from, to, page, limit);
              return localVarResponse.Data;
         }
 
@@ -970,10 +980,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
         /// <param name="state">Order states (optional)</param>
+        /// <param name="from">Order has been placed after this parameter value (optional)</param>
+        /// <param name="to">Order has been placed before this parameter value (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultOrder</returns>
-        public ApiResponse< RestApiPaginationResultOrder > GetOrdersWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+        public ApiResponse< RestApiPaginationResultOrder > GetOrdersWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v1.0/orders";
@@ -1002,6 +1014,8 @@ namespace Flipdish.Api
 
             if (physicalRestaurantId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "physicalRestaurantId", physicalRestaurantId)); // query parameter
             if (state != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "state", state)); // query parameter
+            if (from != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "from", from)); // query parameter
+            if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -1036,12 +1050,14 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
         /// <param name="state">Order states (optional)</param>
+        /// <param name="from">Order has been placed after this parameter value (optional)</param>
+        /// <param name="to">Order has been placed before this parameter value (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>Task of RestApiPaginationResultOrder</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultOrder> GetOrdersAsync (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultOrder> GetOrdersAsync (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultOrder> localVarResponse = await GetOrdersAsyncWithHttpInfo(physicalRestaurantId, state, page, limit);
+             ApiResponse<RestApiPaginationResultOrder> localVarResponse = await GetOrdersAsyncWithHttpInfo(physicalRestaurantId, state, from, to, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1052,10 +1068,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
         /// <param name="state">Order states (optional)</param>
+        /// <param name="from">Order has been placed after this parameter value (optional)</param>
+        /// <param name="to">Order has been placed before this parameter value (optional)</param>
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOrder)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrder>> GetOrdersAsyncWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrder>> GetOrdersAsyncWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v1.0/orders";
@@ -1084,6 +1102,8 @@ namespace Flipdish.Api
 
             if (physicalRestaurantId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "physicalRestaurantId", physicalRestaurantId)); // query parameter
             if (state != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "state", state)); // query parameter
+            if (from != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "from", from)); // query parameter
+            if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 

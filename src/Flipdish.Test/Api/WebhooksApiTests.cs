@@ -175,8 +175,10 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string oauthAppId = null;
             //string appId = null;
-            //var response = instance.GetWebhookSubscriptions(oauthAppId, appId);
-            //Assert.IsInstanceOf<RestApiArrayResultWebhookSubscription> (response, "response is RestApiArrayResultWebhookSubscription");
+            //int? page = null;
+            //int? limit = null;
+            //var response = instance.GetWebhookSubscriptions(oauthAppId, appId, page, limit);
+            //Assert.IsInstanceOf<RestApiPaginationResultWebhookSubscription> (response, "response is RestApiPaginationResultWebhookSubscription");
         }
         
         /// <summary>

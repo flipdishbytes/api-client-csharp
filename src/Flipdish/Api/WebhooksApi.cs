@@ -216,8 +216,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="appId"></param>
-        /// <returns>RestApiArrayResultWebhookSubscription</returns>
-        RestApiArrayResultWebhookSubscription GetWebhookSubscriptions (string oauthAppId, string appId);
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>RestApiPaginationResultWebhookSubscription</returns>
+        RestApiPaginationResultWebhookSubscription GetWebhookSubscriptions (string oauthAppId, string appId, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all webhook subscriptions by your Oauth App id
@@ -228,8 +230,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="appId"></param>
-        /// <returns>ApiResponse of RestApiArrayResultWebhookSubscription</returns>
-        ApiResponse<RestApiArrayResultWebhookSubscription> GetWebhookSubscriptionsWithHttpInfo (string oauthAppId, string appId);
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultWebhookSubscription</returns>
+        ApiResponse<RestApiPaginationResultWebhookSubscription> GetWebhookSubscriptionsWithHttpInfo (string oauthAppId, string appId, int? page = null, int? limit = null);
         /// <summary>
         /// Update a webhook subscription object
         /// </summary>
@@ -451,8 +455,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="appId"></param>
-        /// <returns>Task of RestApiArrayResultWebhookSubscription</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultWebhookSubscription> GetWebhookSubscriptionsAsync (string oauthAppId, string appId);
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>Task of RestApiPaginationResultWebhookSubscription</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultWebhookSubscription> GetWebhookSubscriptionsAsync (string oauthAppId, string appId, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all webhook subscriptions by your Oauth App id
@@ -463,8 +469,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="appId"></param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultWebhookSubscription)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultWebhookSubscription>> GetWebhookSubscriptionsAsyncWithHttpInfo (string oauthAppId, string appId);
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultWebhookSubscription)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultWebhookSubscription>> GetWebhookSubscriptionsAsyncWithHttpInfo (string oauthAppId, string appId, int? page = null, int? limit = null);
         /// <summary>
         /// Update a webhook subscription object
         /// </summary>
@@ -1877,10 +1885,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="appId"></param>
-        /// <returns>RestApiArrayResultWebhookSubscription</returns>
-        public RestApiArrayResultWebhookSubscription GetWebhookSubscriptions (string oauthAppId, string appId)
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>RestApiPaginationResultWebhookSubscription</returns>
+        public RestApiPaginationResultWebhookSubscription GetWebhookSubscriptions (string oauthAppId, string appId, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiArrayResultWebhookSubscription> localVarResponse = GetWebhookSubscriptionsWithHttpInfo(oauthAppId, appId);
+             ApiResponse<RestApiPaginationResultWebhookSubscription> localVarResponse = GetWebhookSubscriptionsWithHttpInfo(oauthAppId, appId, page, limit);
              return localVarResponse.Data;
         }
 
@@ -1890,8 +1900,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="appId"></param>
-        /// <returns>ApiResponse of RestApiArrayResultWebhookSubscription</returns>
-        public ApiResponse< RestApiArrayResultWebhookSubscription > GetWebhookSubscriptionsWithHttpInfo (string oauthAppId, string appId)
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultWebhookSubscription</returns>
+        public ApiResponse< RestApiPaginationResultWebhookSubscription > GetWebhookSubscriptionsWithHttpInfo (string oauthAppId, string appId, int? page = null, int? limit = null)
         {
             // verify the required parameter 'oauthAppId' is set
             if (oauthAppId == null)
@@ -1926,6 +1938,8 @@ namespace Flipdish.Api
 
             if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1947,9 +1961,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultWebhookSubscription>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultWebhookSubscription>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultWebhookSubscription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultWebhookSubscription)));
+                (RestApiPaginationResultWebhookSubscription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultWebhookSubscription)));
         }
 
         /// <summary>
@@ -1958,10 +1972,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="appId"></param>
-        /// <returns>Task of RestApiArrayResultWebhookSubscription</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultWebhookSubscription> GetWebhookSubscriptionsAsync (string oauthAppId, string appId)
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>Task of RestApiPaginationResultWebhookSubscription</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultWebhookSubscription> GetWebhookSubscriptionsAsync (string oauthAppId, string appId, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiArrayResultWebhookSubscription> localVarResponse = await GetWebhookSubscriptionsAsyncWithHttpInfo(oauthAppId, appId);
+             ApiResponse<RestApiPaginationResultWebhookSubscription> localVarResponse = await GetWebhookSubscriptionsAsyncWithHttpInfo(oauthAppId, appId, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1972,8 +1988,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId">Oauth App identifier</param>
         /// <param name="appId"></param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultWebhookSubscription)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultWebhookSubscription>> GetWebhookSubscriptionsAsyncWithHttpInfo (string oauthAppId, string appId)
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultWebhookSubscription)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultWebhookSubscription>> GetWebhookSubscriptionsAsyncWithHttpInfo (string oauthAppId, string appId, int? page = null, int? limit = null)
         {
             // verify the required parameter 'oauthAppId' is set
             if (oauthAppId == null)
@@ -2008,6 +2026,8 @@ namespace Flipdish.Api
 
             if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2029,9 +2049,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultWebhookSubscription>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultWebhookSubscription>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultWebhookSubscription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultWebhookSubscription)));
+                (RestApiPaginationResultWebhookSubscription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultWebhookSubscription)));
         }
 
         /// <summary>
