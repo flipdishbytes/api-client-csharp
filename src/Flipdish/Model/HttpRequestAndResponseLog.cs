@@ -33,6 +33,7 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HttpRequestAndResponseLog" /> class.
         /// </summary>
+        /// <param name="guid">Id of the log.</param>
         /// <param name="verb">Verb associated with the HTTP call..</param>
         /// <param name="requestUri">Http request URI..</param>
         /// <param name="statusCode">Http response status code..</param>
@@ -47,8 +48,9 @@ namespace Flipdish.Model
         /// <param name="responseHeaders">Http response headers..</param>
         /// <param name="responseBody">Http response body..</param>
         /// <param name="responseLength">Http response content-length.</param>
-        public HttpRequestAndResponseLog(string verb = default(string), string requestUri = default(string), int? statusCode = default(int?), string reasonPhrase = default(string), long? callDurationInMilliseconds = default(long?), string userId = default(string), string ipAddress = default(string), string createdDateTime = default(string), Dictionary<string, string> requestHeaders = default(Dictionary<string, string>), string requestBody = default(string), long? requestLength = default(long?), Dictionary<string, string> responseHeaders = default(Dictionary<string, string>), string responseBody = default(string), long? responseLength = default(long?))
+        public HttpRequestAndResponseLog(Guid? guid = default(Guid?), string verb = default(string), string requestUri = default(string), int? statusCode = default(int?), string reasonPhrase = default(string), long? callDurationInMilliseconds = default(long?), string userId = default(string), string ipAddress = default(string), string createdDateTime = default(string), Dictionary<string, string> requestHeaders = default(Dictionary<string, string>), string requestBody = default(string), long? requestLength = default(long?), Dictionary<string, string> responseHeaders = default(Dictionary<string, string>), string responseBody = default(string), long? responseLength = default(long?))
         {
+            this.Guid = guid;
             this.Verb = verb;
             this.RequestUri = requestUri;
             this.StatusCode = statusCode;
@@ -65,6 +67,13 @@ namespace Flipdish.Model
             this.ResponseLength = responseLength;
         }
         
+        /// <summary>
+        /// Id of the log
+        /// </summary>
+        /// <value>Id of the log</value>
+        [DataMember(Name="Guid", EmitDefaultValue=false)]
+        public Guid? Guid { get; set; }
+
         /// <summary>
         /// Verb associated with the HTTP call.
         /// </summary>
@@ -171,6 +180,7 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class HttpRequestAndResponseLog {\n");
+            sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  Verb: ").Append(Verb).Append("\n");
             sb.Append("  RequestUri: ").Append(RequestUri).Append("\n");
             sb.Append("  StatusCode: ").Append(StatusCode).Append("\n");
@@ -219,6 +229,11 @@ namespace Flipdish.Model
                 return false;
 
             return 
+                (
+                    this.Guid == input.Guid ||
+                    (this.Guid != null &&
+                    this.Guid.Equals(input.Guid))
+                ) && 
                 (
                     this.Verb == input.Verb ||
                     (this.Verb != null &&
@@ -300,6 +315,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.Guid != null)
+                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
                 if (this.Verb != null)
                     hashCode = hashCode * 59 + this.Verb.GetHashCode();
                 if (this.RequestUri != null)

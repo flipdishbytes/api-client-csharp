@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**GetBankAccount**](StoresApi.md#getbankaccount) | **GET** /api/v1.0/stores/{storeId}/bankaccount | Get Stores Bank Account Id
 [**GetBusinessHours**](StoresApi.md#getbusinesshours) | **GET** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Get Bussiness hours
 [**GetBusinessHoursOverrideByStoreId**](StoresApi.md#getbusinesshoursoverridebystoreid) | **GET** /api/v1.0/stores/{storeId}/businesshoursoverrides | Get business hours overrides by store identifier
+[**GetPreOrderConfig**](StoresApi.md#getpreorderconfig) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{preOrderType} | Get the pre order config for a store, by type
 [**GetProcessingFeeConfigsByStoreId**](StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
 [**GetProcessingFeeConfigsByStoreIdAndPaymentAccountType**](StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
 [**GetStoreById**](StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
@@ -18,6 +19,7 @@ Method | HTTP request | Description
 [**GetStores**](StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores
 [**GetStoresByAppId**](StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
 [**SetBusinessHours**](StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Set Bussiness hours
+[**UpdatePreOrderConfig**](StoresApi.md#updatepreorderconfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{preOrderType} | UPDATE pre order config for a store, by type
 [**UpdateStore**](StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | Update store by identifier
 [**UpdateStoreAddress**](StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
 [**UpdateStoreAddressCoordinates**](StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
@@ -461,6 +463,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiPaginationResultBusinessHoursOverride**](RestApiPaginationResultBusinessHoursOverride.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpreorderconfig"></a>
+# **GetPreOrderConfig**
+> RestApiResultPreOrderConfig GetPreOrderConfig (int? storeId, string preOrderType)
+
+Get the pre order config for a store, by type
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetPreOrderConfigExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | Store identifier
+            var preOrderType = preOrderType_example;  // string | \"delivery\" or \"pickup\"
+
+            try
+            {
+                // Get the pre order config for a store, by type
+                RestApiResultPreOrderConfig result = apiInstance.GetPreOrderConfig(storeId, preOrderType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.GetPreOrderConfig: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**| Store identifier | 
+ **preOrderType** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; | 
+
+### Return type
+
+[**RestApiResultPreOrderConfig**](RestApiResultPreOrderConfig.md)
 
 ### Authorization
 
@@ -918,6 +984,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultBusinessHoursPeriod**](RestApiResultBusinessHoursPeriod.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="updatepreorderconfig"></a>
+# **UpdatePreOrderConfig**
+> RestApiArrayResultRestApiDefaultResponse UpdatePreOrderConfig (int? storeId, string preOrderType, PreOrderConfig preOrderConfig)
+
+UPDATE pre order config for a store, by type
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UpdatePreOrderConfigExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | Store identifier
+            var preOrderType = preOrderType_example;  // string | \"delivery\" or \"pickup\"
+            var preOrderConfig = new PreOrderConfig(); // PreOrderConfig | Update pre order config values
+
+            try
+            {
+                // UPDATE pre order config for a store, by type
+                RestApiArrayResultRestApiDefaultResponse result = apiInstance.UpdatePreOrderConfig(storeId, preOrderType, preOrderConfig);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.UpdatePreOrderConfig: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**| Store identifier | 
+ **preOrderType** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; | 
+ **preOrderConfig** | [**PreOrderConfig**](PreOrderConfig.md)| Update pre order config values | 
+
+### Return type
+
+[**RestApiArrayResultRestApiDefaultResponse**](RestApiArrayResultRestApiDefaultResponse.md)
 
 ### Authorization
 

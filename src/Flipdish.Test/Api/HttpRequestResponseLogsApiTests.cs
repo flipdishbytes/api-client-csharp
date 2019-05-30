@@ -75,9 +75,10 @@ namespace Flipdish.Test
             //DateTime? end = null;
             //string appId = null;
             //int? filterByUserId = null;
+            //string guid = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.GetLogs(start, end, appId, filterByUserId, page, limit);
+            //var response = instance.GetLogs(start, end, appId, filterByUserId, guid, page, limit);
             //Assert.IsInstanceOf<RestApiPaginationResultHttpRequestAndResponseLog> (response, "response is RestApiPaginationResultHttpRequestAndResponseLog");
         }
         

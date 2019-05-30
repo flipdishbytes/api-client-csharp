@@ -188,6 +188,29 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultBusinessHoursOverride</returns>
         ApiResponse<RestApiPaginationResultBusinessHoursOverride> GetBusinessHoursOverrideByStoreIdWithHttpInfo (int? storeId, DateTime? after = null, int? page = null, int? limit = null);
         /// <summary>
+        /// Get the pre order config for a store, by type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <returns>RestApiResultPreOrderConfig</returns>
+        RestApiResultPreOrderConfig GetPreOrderConfig (int? storeId, string preOrderType);
+
+        /// <summary>
+        /// Get the pre order config for a store, by type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <returns>ApiResponse of RestApiResultPreOrderConfig</returns>
+        ApiResponse<RestApiResultPreOrderConfig> GetPreOrderConfigWithHttpInfo (int? storeId, string preOrderType);
+        /// <summary>
         /// Get processing fee configs by store identifier
         /// </summary>
         /// <remarks>
@@ -358,6 +381,31 @@ namespace Flipdish.Api
         /// <param name="businessHoursPeriod">Business Hours Period</param>
         /// <returns>ApiResponse of RestApiResultBusinessHoursPeriod</returns>
         ApiResponse<RestApiResultBusinessHoursPeriod> SetBusinessHoursWithHttpInfo (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod);
+        /// <summary>
+        /// UPDATE pre order config for a store, by type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <returns>RestApiArrayResultRestApiDefaultResponse</returns>
+        RestApiArrayResultRestApiDefaultResponse UpdatePreOrderConfig (int? storeId, string preOrderType, PreOrderConfig preOrderConfig);
+
+        /// <summary>
+        /// UPDATE pre order config for a store, by type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
+        ApiResponse<RestApiArrayResultRestApiDefaultResponse> UpdatePreOrderConfigWithHttpInfo (int? storeId, string preOrderType, PreOrderConfig preOrderConfig);
         /// <summary>
         /// Update store by identifier
         /// </summary>
@@ -595,6 +643,29 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiPaginationResultBusinessHoursOverride)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultBusinessHoursOverride>> GetBusinessHoursOverrideByStoreIdAsyncWithHttpInfo (int? storeId, DateTime? after = null, int? page = null, int? limit = null);
         /// <summary>
+        /// Get the pre order config for a store, by type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <returns>Task of RestApiResultPreOrderConfig</returns>
+        System.Threading.Tasks.Task<RestApiResultPreOrderConfig> GetPreOrderConfigAsync (int? storeId, string preOrderType);
+
+        /// <summary>
+        /// Get the pre order config for a store, by type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <returns>Task of ApiResponse (RestApiResultPreOrderConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultPreOrderConfig>> GetPreOrderConfigAsyncWithHttpInfo (int? storeId, string preOrderType);
+        /// <summary>
         /// Get processing fee configs by store identifier
         /// </summary>
         /// <remarks>
@@ -765,6 +836,31 @@ namespace Flipdish.Api
         /// <param name="businessHoursPeriod">Business Hours Period</param>
         /// <returns>Task of ApiResponse (RestApiResultBusinessHoursPeriod)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultBusinessHoursPeriod>> SetBusinessHoursAsyncWithHttpInfo (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod);
+        /// <summary>
+        /// UPDATE pre order config for a store, by type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <returns>Task of RestApiArrayResultRestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> UpdatePreOrderConfigAsync (int? storeId, string preOrderType, PreOrderConfig preOrderConfig);
+
+        /// <summary>
+        /// UPDATE pre order config for a store, by type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> UpdatePreOrderConfigAsyncWithHttpInfo (int? storeId, string preOrderType, PreOrderConfig preOrderConfig);
         /// <summary>
         /// Update store by identifier
         /// </summary>
@@ -2144,6 +2240,169 @@ namespace Flipdish.Api
         }
 
         /// <summary>
+        /// Get the pre order config for a store, by type 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <returns>RestApiResultPreOrderConfig</returns>
+        public RestApiResultPreOrderConfig GetPreOrderConfig (int? storeId, string preOrderType)
+        {
+             ApiResponse<RestApiResultPreOrderConfig> localVarResponse = GetPreOrderConfigWithHttpInfo(storeId, preOrderType);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the pre order config for a store, by type 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <returns>ApiResponse of RestApiResultPreOrderConfig</returns>
+        public ApiResponse< RestApiResultPreOrderConfig > GetPreOrderConfigWithHttpInfo (int? storeId, string preOrderType)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetPreOrderConfig");
+            // verify the required parameter 'preOrderType' is set
+            if (preOrderType == null)
+                throw new ApiException(400, "Missing required parameter 'preOrderType' when calling StoresApi->GetPreOrderConfig");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/preorderconfig/{preOrderType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (preOrderType != null) localVarPathParams.Add("preOrderType", this.Configuration.ApiClient.ParameterToString(preOrderType)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPreOrderConfig", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultPreOrderConfig>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultPreOrderConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPreOrderConfig)));
+        }
+
+        /// <summary>
+        /// Get the pre order config for a store, by type 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <returns>Task of RestApiResultPreOrderConfig</returns>
+        public async System.Threading.Tasks.Task<RestApiResultPreOrderConfig> GetPreOrderConfigAsync (int? storeId, string preOrderType)
+        {
+             ApiResponse<RestApiResultPreOrderConfig> localVarResponse = await GetPreOrderConfigAsyncWithHttpInfo(storeId, preOrderType);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the pre order config for a store, by type 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <returns>Task of ApiResponse (RestApiResultPreOrderConfig)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultPreOrderConfig>> GetPreOrderConfigAsyncWithHttpInfo (int? storeId, string preOrderType)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetPreOrderConfig");
+            // verify the required parameter 'preOrderType' is set
+            if (preOrderType == null)
+                throw new ApiException(400, "Missing required parameter 'preOrderType' when calling StoresApi->GetPreOrderConfig");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/preorderconfig/{preOrderType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (preOrderType != null) localVarPathParams.Add("preOrderType", this.Configuration.ApiClient.ParameterToString(preOrderType)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPreOrderConfig", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultPreOrderConfig>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultPreOrderConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPreOrderConfig)));
+        }
+
+        /// <summary>
         /// Get processing fee configs by store identifier 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3312,6 +3571,205 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultBusinessHoursPeriod>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiResultBusinessHoursPeriod) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBusinessHoursPeriod)));
+        }
+
+        /// <summary>
+        /// UPDATE pre order config for a store, by type 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <returns>RestApiArrayResultRestApiDefaultResponse</returns>
+        public RestApiArrayResultRestApiDefaultResponse UpdatePreOrderConfig (int? storeId, string preOrderType, PreOrderConfig preOrderConfig)
+        {
+             ApiResponse<RestApiArrayResultRestApiDefaultResponse> localVarResponse = UpdatePreOrderConfigWithHttpInfo(storeId, preOrderType, preOrderConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// UPDATE pre order config for a store, by type 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
+        public ApiResponse< RestApiArrayResultRestApiDefaultResponse > UpdatePreOrderConfigWithHttpInfo (int? storeId, string preOrderType, PreOrderConfig preOrderConfig)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->UpdatePreOrderConfig");
+            // verify the required parameter 'preOrderType' is set
+            if (preOrderType == null)
+                throw new ApiException(400, "Missing required parameter 'preOrderType' when calling StoresApi->UpdatePreOrderConfig");
+            // verify the required parameter 'preOrderConfig' is set
+            if (preOrderConfig == null)
+                throw new ApiException(400, "Missing required parameter 'preOrderConfig' when calling StoresApi->UpdatePreOrderConfig");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/preorderconfig/{preOrderType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (preOrderType != null) localVarPathParams.Add("preOrderType", this.Configuration.ApiClient.ParameterToString(preOrderType)); // path parameter
+            if (preOrderConfig != null && preOrderConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(preOrderConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = preOrderConfig; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdatePreOrderConfig", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultRestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultRestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultRestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        /// UPDATE pre order config for a store, by type 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <returns>Task of RestApiArrayResultRestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> UpdatePreOrderConfigAsync (int? storeId, string preOrderType, PreOrderConfig preOrderConfig)
+        {
+             ApiResponse<RestApiArrayResultRestApiDefaultResponse> localVarResponse = await UpdatePreOrderConfigAsyncWithHttpInfo(storeId, preOrderType, preOrderConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// UPDATE pre order config for a store, by type 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="preOrderType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> UpdatePreOrderConfigAsyncWithHttpInfo (int? storeId, string preOrderType, PreOrderConfig preOrderConfig)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->UpdatePreOrderConfig");
+            // verify the required parameter 'preOrderType' is set
+            if (preOrderType == null)
+                throw new ApiException(400, "Missing required parameter 'preOrderType' when calling StoresApi->UpdatePreOrderConfig");
+            // verify the required parameter 'preOrderConfig' is set
+            if (preOrderConfig == null)
+                throw new ApiException(400, "Missing required parameter 'preOrderConfig' when calling StoresApi->UpdatePreOrderConfig");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/preorderconfig/{preOrderType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (preOrderType != null) localVarPathParams.Add("preOrderType", this.Configuration.ApiClient.ParameterToString(preOrderType)); // path parameter
+            if (preOrderConfig != null && preOrderConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(preOrderConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = preOrderConfig; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdatePreOrderConfig", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultRestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultRestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultRestApiDefaultResponse)));
         }
 
         /// <summary>

@@ -157,6 +157,19 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test GetPreOrderConfig
+        /// </summary>
+        [Test]
+        public void GetPreOrderConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //string preOrderType = null;
+            //var response = instance.GetPreOrderConfig(storeId, preOrderType);
+            //Assert.IsInstanceOf<RestApiResultPreOrderConfig> (response, "response is RestApiResultPreOrderConfig");
+        }
+        
+        /// <summary>
         /// Test GetProcessingFeeConfigsByStoreId
         /// </summary>
         [Test]
@@ -250,6 +263,20 @@ namespace Flipdish.Test
             //BusinessHoursPeriodBase businessHoursPeriod = null;
             //var response = instance.SetBusinessHours(storeId, deliveryType, businessHoursPeriod);
             //Assert.IsInstanceOf<RestApiResultBusinessHoursPeriod> (response, "response is RestApiResultBusinessHoursPeriod");
+        }
+        
+        /// <summary>
+        /// Test UpdatePreOrderConfig
+        /// </summary>
+        [Test]
+        public void UpdatePreOrderConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //string preOrderType = null;
+            //PreOrderConfig preOrderConfig = null;
+            //var response = instance.UpdatePreOrderConfig(storeId, preOrderType, preOrderConfig);
+            //Assert.IsInstanceOf<RestApiArrayResultRestApiDefaultResponse> (response, "response is RestApiArrayResultRestApiDefaultResponse");
         }
         
         /// <summary>

@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Guid** | **Guid?** | Id of the log | [optional] 
 **Verb** | **string** | Verb associated with the HTTP call. | [optional] 
 **RequestUri** | **string** | Http request URI. | [optional] 
 **StatusCode** | **int?** | Http response status code. | [optional] 

@@ -35,10 +35,11 @@ namespace Flipdish.Api
         /// <param name="end">End date time</param>
         /// <param name="appId"></param>
         /// <param name="filterByUserId">User id (optional) (optional)</param>
+        /// <param name="guid">Id of the log (optional)</param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>RestApiPaginationResultHttpRequestAndResponseLog</returns>
-        RestApiPaginationResultHttpRequestAndResponseLog GetLogs (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, int? page = null, int? limit = null);
+        RestApiPaginationResultHttpRequestAndResponseLog GetLogs (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get API interaction logs
@@ -51,10 +52,11 @@ namespace Flipdish.Api
         /// <param name="end">End date time</param>
         /// <param name="appId"></param>
         /// <param name="filterByUserId">User id (optional) (optional)</param>
+        /// <param name="guid">Id of the log (optional)</param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultHttpRequestAndResponseLog</returns>
-        ApiResponse<RestApiPaginationResultHttpRequestAndResponseLog> GetLogsWithHttpInfo (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, int? page = null, int? limit = null);
+        ApiResponse<RestApiPaginationResultHttpRequestAndResponseLog> GetLogsWithHttpInfo (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -68,10 +70,11 @@ namespace Flipdish.Api
         /// <param name="end">End date time</param>
         /// <param name="appId"></param>
         /// <param name="filterByUserId">User id (optional) (optional)</param>
+        /// <param name="guid">Id of the log (optional)</param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>Task of RestApiPaginationResultHttpRequestAndResponseLog</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultHttpRequestAndResponseLog> GetLogsAsync (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultHttpRequestAndResponseLog> GetLogsAsync (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get API interaction logs
@@ -84,10 +87,11 @@ namespace Flipdish.Api
         /// <param name="end">End date time</param>
         /// <param name="appId"></param>
         /// <param name="filterByUserId">User id (optional) (optional)</param>
+        /// <param name="guid">Id of the log (optional)</param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultHttpRequestAndResponseLog)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultHttpRequestAndResponseLog>> GetLogsAsyncWithHttpInfo (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultHttpRequestAndResponseLog>> GetLogsAsyncWithHttpInfo (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null);
         #endregion Asynchronous Operations
     }
 
@@ -196,12 +200,13 @@ namespace Flipdish.Api
         /// <param name="end">End date time</param>
         /// <param name="appId"></param>
         /// <param name="filterByUserId">User id (optional) (optional)</param>
+        /// <param name="guid">Id of the log (optional)</param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>RestApiPaginationResultHttpRequestAndResponseLog</returns>
-        public RestApiPaginationResultHttpRequestAndResponseLog GetLogs (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, int? page = null, int? limit = null)
+        public RestApiPaginationResultHttpRequestAndResponseLog GetLogs (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultHttpRequestAndResponseLog> localVarResponse = GetLogsWithHttpInfo(start, end, appId, filterByUserId, page, limit);
+             ApiResponse<RestApiPaginationResultHttpRequestAndResponseLog> localVarResponse = GetLogsWithHttpInfo(start, end, appId, filterByUserId, guid, page, limit);
              return localVarResponse.Data;
         }
 
@@ -213,10 +218,11 @@ namespace Flipdish.Api
         /// <param name="end">End date time</param>
         /// <param name="appId"></param>
         /// <param name="filterByUserId">User id (optional) (optional)</param>
+        /// <param name="guid">Id of the log (optional)</param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultHttpRequestAndResponseLog</returns>
-        public ApiResponse< RestApiPaginationResultHttpRequestAndResponseLog > GetLogsWithHttpInfo (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, int? page = null, int? limit = null)
+        public ApiResponse< RestApiPaginationResultHttpRequestAndResponseLog > GetLogsWithHttpInfo (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'start' is set
             if (start == null)
@@ -256,6 +262,7 @@ namespace Flipdish.Api
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
             if (filterByUserId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "filterByUserId", filterByUserId)); // query parameter
+            if (guid != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "guid", guid)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -292,12 +299,13 @@ namespace Flipdish.Api
         /// <param name="end">End date time</param>
         /// <param name="appId"></param>
         /// <param name="filterByUserId">User id (optional) (optional)</param>
+        /// <param name="guid">Id of the log (optional)</param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>Task of RestApiPaginationResultHttpRequestAndResponseLog</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultHttpRequestAndResponseLog> GetLogsAsync (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultHttpRequestAndResponseLog> GetLogsAsync (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultHttpRequestAndResponseLog> localVarResponse = await GetLogsAsyncWithHttpInfo(start, end, appId, filterByUserId, page, limit);
+             ApiResponse<RestApiPaginationResultHttpRequestAndResponseLog> localVarResponse = await GetLogsAsyncWithHttpInfo(start, end, appId, filterByUserId, guid, page, limit);
              return localVarResponse.Data;
 
         }
@@ -310,10 +318,11 @@ namespace Flipdish.Api
         /// <param name="end">End date time</param>
         /// <param name="appId"></param>
         /// <param name="filterByUserId">User id (optional) (optional)</param>
+        /// <param name="guid">Id of the log (optional)</param>
         /// <param name="page">Page number (optional)</param>
         /// <param name="limit">Page size (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultHttpRequestAndResponseLog)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultHttpRequestAndResponseLog>> GetLogsAsyncWithHttpInfo (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultHttpRequestAndResponseLog>> GetLogsAsyncWithHttpInfo (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'start' is set
             if (start == null)
@@ -353,6 +362,7 @@ namespace Flipdish.Api
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
             if (filterByUserId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "filterByUserId", filterByUserId)); // query parameter
+            if (guid != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "guid", guid)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 

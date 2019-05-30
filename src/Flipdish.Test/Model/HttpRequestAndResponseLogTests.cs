@@ -67,6 +67,14 @@ namespace Flipdish.Test
 
 
         /// <summary>
+        /// Test the property 'Guid'
+        /// </summary>
+        [Test]
+        public void GuidTest()
+        {
+            // TODO unit test for the property 'Guid'
+        }
+        /// <summary>
         /// Test the property 'Verb'
         /// </summary>
         [Test]

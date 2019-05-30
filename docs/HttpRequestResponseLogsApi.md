@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getlogs"></a>
 # **GetLogs**
-> RestApiPaginationResultHttpRequestAndResponseLog GetLogs (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, int? page = null, int? limit = null)
+> RestApiPaginationResultHttpRequestAndResponseLog GetLogs (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null)
 
 Get API interaction logs
 
@@ -35,13 +35,14 @@ namespace Example
             var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date time
             var appId = appId_example;  // string | 
             var filterByUserId = 56;  // int? | User id (optional) (optional) 
+            var guid = guid_example;  // string | Id of the log (optional) 
             var page = 56;  // int? | Page number (optional) 
             var limit = 56;  // int? | Page size (optional) 
 
             try
             {
                 // Get API interaction logs
-                RestApiPaginationResultHttpRequestAndResponseLog result = apiInstance.GetLogs(start, end, appId, filterByUserId, page, limit);
+                RestApiPaginationResultHttpRequestAndResponseLog result = apiInstance.GetLogs(start, end, appId, filterByUserId, guid, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -61,6 +62,7 @@ Name | Type | Description  | Notes
  **end** | **DateTime?**| End date time | 
  **appId** | **string**|  | 
  **filterByUserId** | **int?**| User id (optional) | [optional] 
+ **guid** | **string**| Id of the log | [optional] 
  **page** | **int?**| Page number | [optional] 
  **limit** | **int?**| Page size | [optional] 
 
