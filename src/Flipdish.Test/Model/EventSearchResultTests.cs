@@ -147,6 +147,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'OrderTipUpdatedEvent'
         }
         /// <summary>
+        /// Test the property 'OrderTerminalNotifications'
+        /// </summary>
+        [Test]
+        public void OrderTerminalNotificationsTest()
+        {
+            // TODO unit test for the property 'OrderTerminalNotifications'
+        }
+        /// <summary>
         /// Test the property 'StoreCreatedEvent'
         /// </summary>
         [Test]
@@ -203,6 +211,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'StoreOpeningHoursUpdatedEvent'
         }
         /// <summary>
+        /// Test the property 'StoreMenuAssignedEvent'
+        /// </summary>
+        [Test]
+        public void StoreMenuAssignedEventTest()
+        {
+            // TODO unit test for the property 'StoreMenuAssignedEvent'
+        }
+        /// <summary>
         /// Test the property 'StoreBusinessHoursOverrideCreatedEvent'
         /// </summary>
         [Test]
@@ -225,6 +241,14 @@ namespace Flipdish.Test
         public void StoreUpdatedEventTest()
         {
             // TODO unit test for the property 'StoreUpdatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'StorePreOrderConfigUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void StorePreOrderConfigUpdatedEventTest()
+        {
+            // TODO unit test for the property 'StorePreOrderConfigUpdatedEvent'
         }
         /// <summary>
         /// Test the property 'MenuCreatedEvent'
@@ -625,6 +649,62 @@ namespace Flipdish.Test
         public void BankAccountDeletedEventTest()
         {
             // TODO unit test for the property 'BankAccountDeletedEvent'
+        }
+        /// <summary>
+        /// Test the property 'HydraAssignedEvent'
+        /// </summary>
+        [Test]
+        public void HydraAssignedEventTest()
+        {
+            // TODO unit test for the property 'HydraAssignedEvent'
+        }
+        /// <summary>
+        /// Test the property 'HydraRequestResetEvent'
+        /// </summary>
+        [Test]
+        public void HydraRequestResetEventTest()
+        {
+            // TODO unit test for the property 'HydraRequestResetEvent'
+        }
+        /// <summary>
+        /// Test the property 'HydraSettingChangedEvent'
+        /// </summary>
+        [Test]
+        public void HydraSettingChangedEventTest()
+        {
+            // TODO unit test for the property 'HydraSettingChangedEvent'
+        }
+        /// <summary>
+        /// Test the property 'HydraUnAssignedEvent'
+        /// </summary>
+        [Test]
+        public void HydraUnAssignedEventTest()
+        {
+            // TODO unit test for the property 'HydraUnAssignedEvent'
+        }
+        /// <summary>
+        /// Test the property 'PushNotificationScheduledEvent'
+        /// </summary>
+        [Test]
+        public void PushNotificationScheduledEventTest()
+        {
+            // TODO unit test for the property 'PushNotificationScheduledEvent'
+        }
+        /// <summary>
+        /// Test the property 'PushNotificationSentEvent'
+        /// </summary>
+        [Test]
+        public void PushNotificationSentEventTest()
+        {
+            // TODO unit test for the property 'PushNotificationSentEvent'
+        }
+        /// <summary>
+        /// Test the property 'PushNotificationDeletedEvent'
+        /// </summary>
+        [Test]
+        public void PushNotificationDeletedEventTest()
+        {
+            // TODO unit test for the property 'PushNotificationDeletedEvent'
         }
 
     }

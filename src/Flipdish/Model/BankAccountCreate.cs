@@ -726,10 +726,13 @@ namespace Flipdish.Model
         /// <param name="accountHolderCountryCode">Account Holders Country Code.</param>
         /// <param name="vatNumber">Account Holders Vat Number.</param>
         /// <param name="currencyCode">Currency of Account.</param>
+        /// <param name="storeIds">List of stores to attach to Account.</param>
+        /// <param name="bankName">Name of Bank.</param>
         /// <param name="accountName">Name of this account.</param>
         /// <param name="iban">IBAN of this account.</param>
         /// <param name="swift">SWIFT of this bank account.</param>
-        public BankAccountCreate(string bankAddress = default(string), string bankCountryCode = default(string), string accountHolderAddress = default(string), string accountHolderCountryCode = default(string), string vatNumber = default(string), CurrencyCodeEnum? currencyCode = default(CurrencyCodeEnum?), string accountName = default(string), string iban = default(string), string swift = default(string))
+        /// <param name="nationalClearingCode">National Clearing Code (BSB in Australia, Routing Number in USA/Canada, NCC in NZ).</param>
+        public BankAccountCreate(string bankAddress = default(string), string bankCountryCode = default(string), string accountHolderAddress = default(string), string accountHolderCountryCode = default(string), string vatNumber = default(string), CurrencyCodeEnum? currencyCode = default(CurrencyCodeEnum?), List<int?> storeIds = default(List<int?>), string bankName = default(string), string accountName = default(string), string iban = default(string), string swift = default(string), string nationalClearingCode = default(string))
         {
             this.BankAddress = bankAddress;
             this.BankCountryCode = bankCountryCode;
@@ -737,9 +740,12 @@ namespace Flipdish.Model
             this.AccountHolderCountryCode = accountHolderCountryCode;
             this.VatNumber = vatNumber;
             this.CurrencyCode = currencyCode;
+            this.StoreIds = storeIds;
+            this.BankName = bankName;
             this.AccountName = accountName;
             this.Iban = iban;
             this.Swift = swift;
+            this.NationalClearingCode = nationalClearingCode;
         }
         
         /// <summary>
@@ -779,6 +785,20 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// List of stores to attach to Account
+        /// </summary>
+        /// <value>List of stores to attach to Account</value>
+        [DataMember(Name="StoreIds", EmitDefaultValue=false)]
+        public List<int?> StoreIds { get; set; }
+
+        /// <summary>
+        /// Name of Bank
+        /// </summary>
+        /// <value>Name of Bank</value>
+        [DataMember(Name="BankName", EmitDefaultValue=false)]
+        public string BankName { get; set; }
+
+        /// <summary>
         /// Name of this account
         /// </summary>
         /// <value>Name of this account</value>
@@ -800,6 +820,13 @@ namespace Flipdish.Model
         public string Swift { get; set; }
 
         /// <summary>
+        /// National Clearing Code (BSB in Australia, Routing Number in USA/Canada, NCC in NZ)
+        /// </summary>
+        /// <value>National Clearing Code (BSB in Australia, Routing Number in USA/Canada, NCC in NZ)</value>
+        [DataMember(Name="NationalClearingCode", EmitDefaultValue=false)]
+        public string NationalClearingCode { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -813,9 +840,12 @@ namespace Flipdish.Model
             sb.Append("  AccountHolderCountryCode: ").Append(AccountHolderCountryCode).Append("\n");
             sb.Append("  VatNumber: ").Append(VatNumber).Append("\n");
             sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
+            sb.Append("  StoreIds: ").Append(StoreIds).Append("\n");
+            sb.Append("  BankName: ").Append(BankName).Append("\n");
             sb.Append("  AccountName: ").Append(AccountName).Append("\n");
             sb.Append("  Iban: ").Append(Iban).Append("\n");
             sb.Append("  Swift: ").Append(Swift).Append("\n");
+            sb.Append("  NationalClearingCode: ").Append(NationalClearingCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -881,6 +911,16 @@ namespace Flipdish.Model
                     this.CurrencyCode.Equals(input.CurrencyCode))
                 ) && 
                 (
+                    this.StoreIds == input.StoreIds ||
+                    this.StoreIds != null &&
+                    this.StoreIds.SequenceEqual(input.StoreIds)
+                ) && 
+                (
+                    this.BankName == input.BankName ||
+                    (this.BankName != null &&
+                    this.BankName.Equals(input.BankName))
+                ) && 
+                (
                     this.AccountName == input.AccountName ||
                     (this.AccountName != null &&
                     this.AccountName.Equals(input.AccountName))
@@ -894,6 +934,11 @@ namespace Flipdish.Model
                     this.Swift == input.Swift ||
                     (this.Swift != null &&
                     this.Swift.Equals(input.Swift))
+                ) && 
+                (
+                    this.NationalClearingCode == input.NationalClearingCode ||
+                    (this.NationalClearingCode != null &&
+                    this.NationalClearingCode.Equals(input.NationalClearingCode))
                 );
         }
 
@@ -918,12 +963,18 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.VatNumber.GetHashCode();
                 if (this.CurrencyCode != null)
                     hashCode = hashCode * 59 + this.CurrencyCode.GetHashCode();
+                if (this.StoreIds != null)
+                    hashCode = hashCode * 59 + this.StoreIds.GetHashCode();
+                if (this.BankName != null)
+                    hashCode = hashCode * 59 + this.BankName.GetHashCode();
                 if (this.AccountName != null)
                     hashCode = hashCode * 59 + this.AccountName.GetHashCode();
                 if (this.Iban != null)
                     hashCode = hashCode * 59 + this.Iban.GetHashCode();
                 if (this.Swift != null)
                     hashCode = hashCode * 59 + this.Swift.GetHashCode();
+                if (this.NationalClearingCode != null)
+                    hashCode = hashCode * 59 + this.NationalClearingCode.GetHashCode();
                 return hashCode;
             }
         }

@@ -115,6 +115,22 @@ namespace Flipdish.Test
             // TODO unit test for the property 'CurrencyCode'
         }
         /// <summary>
+        /// Test the property 'StoreIds'
+        /// </summary>
+        [Test]
+        public void StoreIdsTest()
+        {
+            // TODO unit test for the property 'StoreIds'
+        }
+        /// <summary>
+        /// Test the property 'BankName'
+        /// </summary>
+        [Test]
+        public void BankNameTest()
+        {
+            // TODO unit test for the property 'BankName'
+        }
+        /// <summary>
         /// Test the property 'AccountName'
         /// </summary>
         [Test]
@@ -137,6 +153,14 @@ namespace Flipdish.Test
         public void SwiftTest()
         {
             // TODO unit test for the property 'Swift'
+        }
+        /// <summary>
+        /// Test the property 'NationalClearingCode'
+        /// </summary>
+        [Test]
+        public void NationalClearingCodeTest()
+        {
+            // TODO unit test for the property 'NationalClearingCode'
         }
 
     }

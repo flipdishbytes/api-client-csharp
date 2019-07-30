@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **MenuId** | **int?** | Menu identifier | [optional] 
-**MenuName** | **string** | Menu name | [optional] 
 **Description** | **string** | Description | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | User who has created the menu | [optional] 
 **MenuItemOptionSet** | [**MenuItemOptionSet**](MenuItemOptionSet.md) | Updated menu item optionset | [optional] 

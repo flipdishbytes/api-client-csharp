@@ -722,15 +722,17 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="totalStores">Total Amount of Stores.</param>
         /// <param name="groupedCoordinates">Grouped store coordinates.</param>
+        /// <param name="storeIds">Store Ids associated with Store Group.</param>
         /// <param name="storeGroupId">Unique Store Group Identifier.</param>
         /// <param name="generalRating">Store Group rating.</param>
         /// <param name="generalRatingCount">Store Group rating count.</param>
         /// <param name="name">Store Group Name.</param>
         /// <param name="currency">Currency used by the stores in this group.</param>
-        public StoreGroupExtended(int? totalStores = default(int?), List<GroupedCoordinates> groupedCoordinates = default(List<GroupedCoordinates>), int? storeGroupId = default(int?), double? generalRating = default(double?), int? generalRatingCount = default(int?), string name = default(string), CurrencyEnum? currency = default(CurrencyEnum?))
+        public StoreGroupExtended(int? totalStores = default(int?), List<GroupedCoordinates> groupedCoordinates = default(List<GroupedCoordinates>), List<int?> storeIds = default(List<int?>), int? storeGroupId = default(int?), double? generalRating = default(double?), int? generalRatingCount = default(int?), string name = default(string), CurrencyEnum? currency = default(CurrencyEnum?))
         {
             this.TotalStores = totalStores;
             this.GroupedCoordinates = groupedCoordinates;
+            this.StoreIds = storeIds;
             this.StoreGroupId = storeGroupId;
             this.GeneralRating = generalRating;
             this.GeneralRatingCount = generalRatingCount;
@@ -751,6 +753,13 @@ namespace Flipdish.Model
         /// <value>Grouped store coordinates</value>
         [DataMember(Name="GroupedCoordinates", EmitDefaultValue=false)]
         public List<GroupedCoordinates> GroupedCoordinates { get; set; }
+
+        /// <summary>
+        /// Store Ids associated with Store Group
+        /// </summary>
+        /// <value>Store Ids associated with Store Group</value>
+        [DataMember(Name="StoreIds", EmitDefaultValue=false)]
+        public List<int?> StoreIds { get; set; }
 
         /// <summary>
         /// Unique Store Group Identifier
@@ -791,6 +800,7 @@ namespace Flipdish.Model
             sb.Append("class StoreGroupExtended {\n");
             sb.Append("  TotalStores: ").Append(TotalStores).Append("\n");
             sb.Append("  GroupedCoordinates: ").Append(GroupedCoordinates).Append("\n");
+            sb.Append("  StoreIds: ").Append(StoreIds).Append("\n");
             sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
             sb.Append("  GeneralRating: ").Append(GeneralRating).Append("\n");
             sb.Append("  GeneralRatingCount: ").Append(GeneralRatingCount).Append("\n");
@@ -841,6 +851,11 @@ namespace Flipdish.Model
                     this.GroupedCoordinates.SequenceEqual(input.GroupedCoordinates)
                 ) && 
                 (
+                    this.StoreIds == input.StoreIds ||
+                    this.StoreIds != null &&
+                    this.StoreIds.SequenceEqual(input.StoreIds)
+                ) && 
+                (
                     this.StoreGroupId == input.StoreGroupId ||
                     (this.StoreGroupId != null &&
                     this.StoreGroupId.Equals(input.StoreGroupId))
@@ -880,6 +895,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.TotalStores.GetHashCode();
                 if (this.GroupedCoordinates != null)
                     hashCode = hashCode * 59 + this.GroupedCoordinates.GetHashCode();
+                if (this.StoreIds != null)
+                    hashCode = hashCode * 59 + this.StoreIds.GetHashCode();
                 if (this.StoreGroupId != null)
                     hashCode = hashCode * 59 + this.StoreGroupId.GetHashCode();
                 if (this.GeneralRating != null)

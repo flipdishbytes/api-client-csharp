@@ -187,6 +187,22 @@ namespace Flipdish.Test
             // TODO unit test for the property 'Currency'
         }
         /// <summary>
+        /// Test the property 'PreOrderDeliveryEnabled'
+        /// </summary>
+        [Test]
+        public void PreOrderDeliveryEnabledTest()
+        {
+            // TODO unit test for the property 'PreOrderDeliveryEnabled'
+        }
+        /// <summary>
+        /// Test the property 'PreOrderPickupEnabled'
+        /// </summary>
+        [Test]
+        public void PreOrderPickupEnabledTest()
+        {
+            // TODO unit test for the property 'PreOrderPickupEnabled'
+        }
+        /// <summary>
         /// Test the property 'PhoneNumber'
         /// </summary>
         [Test]

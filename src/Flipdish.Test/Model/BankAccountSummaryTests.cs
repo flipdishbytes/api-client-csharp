@@ -122,6 +122,14 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'Swift'
         }
+        /// <summary>
+        /// Test the property 'NationalClearingCode'
+        /// </summary>
+        [Test]
+        public void NationalClearingCodeTest()
+        {
+            // TODO unit test for the property 'NationalClearingCode'
+        }
 
     }
 

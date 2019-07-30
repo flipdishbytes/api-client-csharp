@@ -35,10 +35,12 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="languageId">ISO 639-1 Language Code.</param>
         /// <param name="displayOrder">Display Order.</param>
-        public Language(string languageId = default(string), int? displayOrder = default(int?))
+        /// <param name="name">Language Name.</param>
+        public Language(string languageId = default(string), int? displayOrder = default(int?), string name = default(string))
         {
             this.LanguageId = languageId;
             this.DisplayOrder = displayOrder;
+            this.Name = name;
         }
         
         /// <summary>
@@ -56,6 +58,13 @@ namespace Flipdish.Model
         public int? DisplayOrder { get; set; }
 
         /// <summary>
+        /// Language Name
+        /// </summary>
+        /// <value>Language Name</value>
+        [DataMember(Name="Name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +74,7 @@ namespace Flipdish.Model
             sb.Append("class Language {\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,6 +118,11 @@ namespace Flipdish.Model
                     this.DisplayOrder == input.DisplayOrder ||
                     (this.DisplayOrder != null &&
                     this.DisplayOrder.Equals(input.DisplayOrder))
+                ) && 
+                (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 );
         }
 
@@ -124,6 +139,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
                 if (this.DisplayOrder != null)
                     hashCode = hashCode * 59 + this.DisplayOrder.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 return hashCode;
             }
         }

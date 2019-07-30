@@ -148,6 +148,21 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test MoveMenuItem
+        /// </summary>
+        [Test]
+        public void MoveMenuItemTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //int? menuSectionId = null;
+            //int? menuSectionItemId = null;
+            //int? destinationDisplayOrder = null;
+            //instance.MoveMenuItem(menuId, menuSectionId, menuSectionItemId, destinationDisplayOrder);
+            
+        }
+        
+        /// <summary>
         /// Test UpdateMenuSectionItem
         /// </summary>
         [Test]

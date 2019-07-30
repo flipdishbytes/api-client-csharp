@@ -65,6 +65,24 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test GetAttachedDevices
+        /// </summary>
+        [Test]
+        public void GetAttachedDevicesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //string deviceType = null;
+            //int? pageIndex = null;
+            //int? pageSize = null;
+            //int? storeId = null;
+            //string deviceName = null;
+            //string deviceSerial = null;
+            //var response = instance.GetAttachedDevices(appId, deviceType, pageIndex, pageSize, storeId, deviceName, deviceSerial);
+            //Assert.IsInstanceOf<RestApiPaginationResultHydraDeviceDetails> (response, "response is RestApiPaginationResultHydraDeviceDetails");
+        }
+        
+        /// <summary>
         /// Test GetRegistration
         /// </summary>
         [Test]
@@ -87,27 +105,27 @@ namespace Flipdish.Test
         }
         
         /// <summary>
-        /// Test Login
+        /// Test GetTerminalDetails
         /// </summary>
         [Test]
-        public void LoginTest()
+        public void GetTerminalDetailsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string deviceId = null;
-            //instance.Login(deviceId);
-            
+            //string appId = null;
+            //var response = instance.GetTerminalDetails(appId);
+            //Assert.IsInstanceOf<RestApiResultPaymentTerminalDetails> (response, "response is RestApiResultPaymentTerminalDetails");
         }
         
         /// <summary>
-        /// Test PayOrder
+        /// Test LoginWithDeviceId
         /// </summary>
         [Test]
-        public void PayOrderTest()
+        public void LoginWithDeviceIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //int? orderId = null;
-            //PayOrder payOrder = null;
-            //instance.PayOrder(orderId, payOrder);
+            //string deviceId = null;
+            //string hydraUserType = null;
+            //instance.LoginWithDeviceId(deviceId, hydraUserType);
             
         }
         
@@ -118,9 +136,23 @@ namespace Flipdish.Test
         public void RegisterTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //HydraRegistration hydraRegistration = null;
-            //var response = instance.Register(hydraRegistration);
+            //string appId = null;
+            //HydraRegistrationRequest hydraRegistration = null;
+            //var response = instance.Register(appId, hydraRegistration);
             //Assert.IsInstanceOf<RestApiResultHydraStatus> (response, "response is RestApiResultHydraStatus");
+        }
+        
+        /// <summary>
+        /// Test UnAssign
+        /// </summary>
+        [Test]
+        public void UnAssignTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //string deviceId = null;
+            //instance.UnAssign(appId, deviceId);
+            
         }
         
     }

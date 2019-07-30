@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **MicrosoftTimeZone** | **string** | Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391)  (Editable through store coordinate change) | [optional] 
 **IanaTimeZone** | **string** | IANA Time Zone (https://www.iana.org/time-zones)  (Editable through store coordinate change) | [optional] 
 **Currency** | **string** | Currency (derived from Store Group) | [optional] 
+**PreOrderDeliveryEnabled** | **bool?** | Is PerOrder Enabled for Delivery | [optional] 
+**PreOrderPickupEnabled** | **bool?** | Is PerOrder Enabled for Pickup | [optional] 
 **PhoneNumber** | **string** | Phone number | [optional] 
 **AlwaysAppearOpen** | **bool?** | True if the store always appears open | [optional] 
 **PreOrderEnabled** | **bool?** | True if the store accepts pre-orders | [optional] 

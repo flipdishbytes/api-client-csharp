@@ -4,26 +4,95 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**AssignMenu**](StoresApi.md#assignmenu) | **POST** /api/v1.0/stores/{storeId}/menu/{menuId} | Assign Menu to Store
 [**CloneStore**](StoresApi.md#clonestore) | **POST** /api/v1.0/stores/{storeId}/clone | Clone store with store clone settings
 [**CreateBusinessHoursOverrideByStoreId**](StoresApi.md#createbusinesshoursoverridebystoreid) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | Create Business Hours Override for a store
 [**CreateStore**](StoresApi.md#createstore) | **POST** /api/v1.0/stores | Create store with Store Group identifier
 [**DeleteBusinessHoursOverride**](StoresApi.md#deletebusinesshoursoverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | Delete Business Hours Override for a store
-[**GetBankAccount**](StoresApi.md#getbankaccount) | **GET** /api/v1.0/stores/{storeId}/bankaccount | Get Stores Bank Account Id
+[**GetBankAccountForStore**](StoresApi.md#getbankaccountforstore) | **GET** /api/v1.0/stores/{storeId}/bankaccount | Get Stores Bank Account Id
 [**GetBusinessHours**](StoresApi.md#getbusinesshours) | **GET** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Get Bussiness hours
 [**GetBusinessHoursOverrideByStoreId**](StoresApi.md#getbusinesshoursoverridebystoreid) | **GET** /api/v1.0/stores/{storeId}/businesshoursoverrides | Get business hours overrides by store identifier
-[**GetPreOrderConfig**](StoresApi.md#getpreorderconfig) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{preOrderType} | Get the pre order config for a store, by type
+[**GetEndOfDayReport**](StoresApi.md#getendofdayreport) | **GET** /api/v1.0/stores/{storeId}/endofdayreport | Get store end of day report
+[**GetPreOrderConfig**](StoresApi.md#getpreorderconfig) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | Get the pre order config for a store, by type
+[**GetPreOrderPreview**](StoresApi.md#getpreorderpreview) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/preview | Get the Preview times of the pre-order configuration
 [**GetProcessingFeeConfigsByStoreId**](StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
 [**GetProcessingFeeConfigsByStoreIdAndPaymentAccountType**](StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
 [**GetStoreById**](StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
+[**GetStoreHeadersByAppId**](StoresApi.md#getstoreheadersbyappid) | **GET** /api/v1.0/{appId}/stores/header | Get all stores by app name id
 [**GetStoreNetSales**](StoresApi.md#getstorenetsales) | **GET** /api/v1.0/{appId}/stores/stats | 
 [**GetStores**](StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores
 [**GetStoresByAppId**](StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
 [**SetBusinessHours**](StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Set Bussiness hours
-[**UpdatePreOrderConfig**](StoresApi.md#updatepreorderconfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{preOrderType} | UPDATE pre order config for a store, by type
+[**SetPreOrdeEnabled**](StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | UPDATE pre order config for a store, by type
+[**UpdatePreOrderConfig**](StoresApi.md#updatepreorderconfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | UPDATE pre order config for a store, by type
 [**UpdateStore**](StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | Update store by identifier
 [**UpdateStoreAddress**](StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
 [**UpdateStoreAddressCoordinates**](StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
 
+
+<a name="assignmenu"></a>
+# **AssignMenu**
+> RestApiArrayResultRestApiDefaultResponse AssignMenu (int? storeId, int? menuId)
+
+Assign Menu to Store
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class AssignMenuExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | Store identifier
+            var menuId = 56;  // int? | Id of Menu to assign to store
+
+            try
+            {
+                // Assign Menu to Store
+                RestApiArrayResultRestApiDefaultResponse result = apiInstance.AssignMenu(storeId, menuId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.AssignMenu: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**| Store identifier | 
+ **menuId** | **int?**| Id of Menu to assign to store | 
+
+### Return type
+
+[**RestApiArrayResultRestApiDefaultResponse**](RestApiArrayResultRestApiDefaultResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="clonestore"></a>
 # **CloneStore**
@@ -281,9 +350,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getbankaccount"></a>
-# **GetBankAccount**
-> RestApiResultAssignedBankAccount GetBankAccount (int? storeId)
+<a name="getbankaccountforstore"></a>
+# **GetBankAccountForStore**
+> RestApiResultAssignedBankAccount GetBankAccountForStore (int? storeId)
 
 Get Stores Bank Account Id
 
@@ -297,7 +366,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GetBankAccountExample
+    public class GetBankAccountForStoreExample
     {
         public void main()
         {
@@ -310,12 +379,12 @@ namespace Example
             try
             {
                 // Get Stores Bank Account Id
-                RestApiResultAssignedBankAccount result = apiInstance.GetBankAccount(storeId);
+                RestApiResultAssignedBankAccount result = apiInstance.GetBankAccountForStore(storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StoresApi.GetBankAccount: " + e.Message );
+                Debug.Print("Exception when calling StoresApi.GetBankAccountForStore: " + e.Message );
             }
         }
     }
@@ -475,9 +544,73 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getendofdayreport"></a>
+# **GetEndOfDayReport**
+> RestApiResultStoreEndOfDayReport GetEndOfDayReport (int? storeId, DateTime? date = null)
+
+Get store end of day report
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetEndOfDayReportExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | Store identifier
+            var date = 2013-10-20T19:20:30+01:00;  // DateTime? | Store identifier (optional) 
+
+            try
+            {
+                // Get store end of day report
+                RestApiResultStoreEndOfDayReport result = apiInstance.GetEndOfDayReport(storeId, date);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.GetEndOfDayReport: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**| Store identifier | 
+ **date** | **DateTime?**| Store identifier | [optional] 
+
+### Return type
+
+[**RestApiResultStoreEndOfDayReport**](RestApiResultStoreEndOfDayReport.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getpreorderconfig"></a>
 # **GetPreOrderConfig**
-> RestApiResultPreOrderConfig GetPreOrderConfig (int? storeId, string preOrderType)
+> RestApiResultPreOrderConfig GetPreOrderConfig (int? storeId, string deliveryType)
 
 Get the pre order config for a store, by type
 
@@ -500,12 +633,12 @@ namespace Example
 
             var apiInstance = new StoresApi();
             var storeId = 56;  // int? | Store identifier
-            var preOrderType = preOrderType_example;  // string | \"delivery\" or \"pickup\"
+            var deliveryType = deliveryType_example;  // string | \"delivery\" or \"pickup\"
 
             try
             {
                 // Get the pre order config for a store, by type
-                RestApiResultPreOrderConfig result = apiInstance.GetPreOrderConfig(storeId, preOrderType);
+                RestApiResultPreOrderConfig result = apiInstance.GetPreOrderConfig(storeId, deliveryType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -522,7 +655,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeId** | **int?**| Store identifier | 
- **preOrderType** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; | 
+ **deliveryType** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; | 
 
 ### Return type
 
@@ -535,6 +668,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpreorderpreview"></a>
+# **GetPreOrderPreview**
+> RestApiArrayResultPreOrderTime GetPreOrderPreview (int? storeId, string deliveryType, string date)
+
+Get the Preview times of the pre-order configuration
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetPreOrderPreviewExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | Store identifier
+            var deliveryType = deliveryType_example;  // string | \"delivery\" or \"pickup\"
+            var date = date_example;  // string | optional parameter to show results from
+
+            try
+            {
+                // Get the Preview times of the pre-order configuration
+                RestApiArrayResultPreOrderTime result = apiInstance.GetPreOrderPreview(storeId, deliveryType, date);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.GetPreOrderPreview: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**| Store identifier | 
+ **deliveryType** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; | 
+ **date** | **string**| optional parameter to show results from | 
+
+### Return type
+
+[**RestApiArrayResultPreOrderTime**](RestApiArrayResultPreOrderTime.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -719,6 +918,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultStore**](RestApiResultStore.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getstoreheadersbyappid"></a>
+# **GetStoreHeadersByAppId**
+> RestApiPaginationResultStoreHeader GetStoreHeadersByAppId (string appId, int? page = null, int? limit = null)
+
+Get all stores by app name id
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetStoreHeadersByAppIdExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var appId = appId_example;  // string | App Name Id
+            var page = 56;  // int? |  (optional) 
+            var limit = 56;  // int? |  (optional) 
+
+            try
+            {
+                // Get all stores by app name id
+                RestApiPaginationResultStoreHeader result = apiInstance.GetStoreHeadersByAppId(appId, page, limit);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.GetStoreHeadersByAppId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**| App Name Id | 
+ **page** | **int?**|  | [optional] 
+ **limit** | **int?**|  | [optional] 
+
+### Return type
+
+[**RestApiPaginationResultStoreHeader**](RestApiPaginationResultStoreHeader.md)
 
 ### Authorization
 
@@ -996,9 +1261,75 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="setpreordeenabled"></a>
+# **SetPreOrdeEnabled**
+> RestApiArrayResultRestApiDefaultResponse SetPreOrdeEnabled (int? storeId, string deliveryType, bool? enabled)
+
+UPDATE pre order config for a store, by type
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SetPreOrdeEnabledExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | Store identifier
+            var deliveryType = deliveryType_example;  // string | \"delivery\" or \"pickup\"
+            var enabled = true;  // bool? | Update pre order config values
+
+            try
+            {
+                // UPDATE pre order config for a store, by type
+                RestApiArrayResultRestApiDefaultResponse result = apiInstance.SetPreOrdeEnabled(storeId, deliveryType, enabled);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.SetPreOrdeEnabled: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**| Store identifier | 
+ **deliveryType** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; | 
+ **enabled** | **bool?**| Update pre order config values | 
+
+### Return type
+
+[**RestApiArrayResultRestApiDefaultResponse**](RestApiArrayResultRestApiDefaultResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="updatepreorderconfig"></a>
 # **UpdatePreOrderConfig**
-> RestApiArrayResultRestApiDefaultResponse UpdatePreOrderConfig (int? storeId, string preOrderType, PreOrderConfig preOrderConfig)
+> RestApiArrayResultRestApiDefaultResponse UpdatePreOrderConfig (int? storeId, string deliveryType, PreOrderConfig preOrderConfig)
 
 UPDATE pre order config for a store, by type
 
@@ -1021,13 +1352,13 @@ namespace Example
 
             var apiInstance = new StoresApi();
             var storeId = 56;  // int? | Store identifier
-            var preOrderType = preOrderType_example;  // string | \"delivery\" or \"pickup\"
+            var deliveryType = deliveryType_example;  // string | \"delivery\" or \"pickup\"
             var preOrderConfig = new PreOrderConfig(); // PreOrderConfig | Update pre order config values
 
             try
             {
                 // UPDATE pre order config for a store, by type
-                RestApiArrayResultRestApiDefaultResponse result = apiInstance.UpdatePreOrderConfig(storeId, preOrderType, preOrderConfig);
+                RestApiArrayResultRestApiDefaultResponse result = apiInstance.UpdatePreOrderConfig(storeId, deliveryType, preOrderConfig);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1044,7 +1375,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeId** | **int?**| Store identifier | 
- **preOrderType** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; | 
+ **deliveryType** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; | 
  **preOrderConfig** | [**PreOrderConfig**](PreOrderConfig.md)| Update pre order config values | 
 
 ### Return type

@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **TotalStores** | **int?** | Total Amount of Stores | [optional] 
 **GroupedCoordinates** | [**List&lt;GroupedCoordinates&gt;**](GroupedCoordinates.md) | Grouped store coordinates | [optional] 
+**StoreIds** | **List&lt;int?&gt;** | Store Ids associated with Store Group | [optional] 
 **StoreGroupId** | **int?** | Unique Store Group Identifier | [optional] 
 **GeneralRating** | **double?** | Store Group rating | [optional] 
 **GeneralRatingCount** | **int?** | Store Group rating count | [optional] 

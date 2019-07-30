@@ -171,6 +171,20 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test MenuSectionsSetItemDisplayOrders
+        /// </summary>
+        [Test]
+        public void MenuSectionsSetItemDisplayOrdersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //int? menuSectionId = null;
+            //MenuObjectDisplayOrders displayOrders = null;
+            //instance.MenuSectionsSetItemDisplayOrders(menuId, menuSectionId, displayOrders);
+            
+        }
+        
+        /// <summary>
         /// Test UpdateMenuSection
         /// </summary>
         [Test]

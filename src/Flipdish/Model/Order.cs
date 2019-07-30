@@ -433,6 +433,7 @@ namespace Flipdish.Model
         /// <param name="orderItems">Ordered items.</param>
         /// <param name="deliveryLocation">Delivery location for delivery orders.</param>
         /// <param name="customerLocation">Customer location.</param>
+        /// <param name="maskedPhoneNumber">Represents customers masked phone number.</param>
         /// <param name="orderId">Order identifier.</param>
         /// <param name="deliveryType">Delivery type.</param>
         /// <param name="pickupLocationType">Pickup location type.</param>
@@ -453,7 +454,7 @@ namespace Flipdish.Model
         /// <param name="paymentStatus">Status of the payment.</param>
         /// <param name="rejectionReason">Rejection reason. Can have value if the order is rejected..</param>
         /// <param name="refundedAmount">Amount refunded to customer..</param>
-        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), RejectionReasonEnum? rejectionReason = default(RejectionReasonEnum?), double? refundedAmount = default(double?))
+        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), MaskedPhoneNumber maskedPhoneNumber = default(MaskedPhoneNumber), int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), RejectionReasonEnum? rejectionReason = default(RejectionReasonEnum?), double? refundedAmount = default(double?))
         {
             this.Store = store;
             this.Customer = customer;
@@ -462,6 +463,7 @@ namespace Flipdish.Model
             this.OrderItems = orderItems;
             this.DeliveryLocation = deliveryLocation;
             this.CustomerLocation = customerLocation;
+            this.MaskedPhoneNumber = maskedPhoneNumber;
             this.OrderId = orderId;
             this.DeliveryType = deliveryType;
             this.PickupLocationType = pickupLocationType;
@@ -532,6 +534,13 @@ namespace Flipdish.Model
         /// <value>Customer location</value>
         [DataMember(Name="CustomerLocation", EmitDefaultValue=false)]
         public Coordinates CustomerLocation { get; set; }
+
+        /// <summary>
+        /// Represents customers masked phone number
+        /// </summary>
+        /// <value>Represents customers masked phone number</value>
+        [DataMember(Name="MaskedPhoneNumber", EmitDefaultValue=false)]
+        public MaskedPhoneNumber MaskedPhoneNumber { get; set; }
 
         /// <summary>
         /// Order identifier
@@ -646,6 +655,7 @@ namespace Flipdish.Model
             sb.Append("  OrderItems: ").Append(OrderItems).Append("\n");
             sb.Append("  DeliveryLocation: ").Append(DeliveryLocation).Append("\n");
             sb.Append("  CustomerLocation: ").Append(CustomerLocation).Append("\n");
+            sb.Append("  MaskedPhoneNumber: ").Append(MaskedPhoneNumber).Append("\n");
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
             sb.Append("  DeliveryType: ").Append(DeliveryType).Append("\n");
             sb.Append("  PickupLocationType: ").Append(PickupLocationType).Append("\n");
@@ -734,6 +744,11 @@ namespace Flipdish.Model
                     this.CustomerLocation == input.CustomerLocation ||
                     (this.CustomerLocation != null &&
                     this.CustomerLocation.Equals(input.CustomerLocation))
+                ) && 
+                (
+                    this.MaskedPhoneNumber == input.MaskedPhoneNumber ||
+                    (this.MaskedPhoneNumber != null &&
+                    this.MaskedPhoneNumber.Equals(input.MaskedPhoneNumber))
                 ) && 
                 (
                     this.OrderId == input.OrderId ||
@@ -860,6 +875,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DeliveryLocation.GetHashCode();
                 if (this.CustomerLocation != null)
                     hashCode = hashCode * 59 + this.CustomerLocation.GetHashCode();
+                if (this.MaskedPhoneNumber != null)
+                    hashCode = hashCode * 59 + this.MaskedPhoneNumber.GetHashCode();
                 if (this.OrderId != null)
                     hashCode = hashCode * 59 + this.OrderId.GetHashCode();
                 if (this.DeliveryType != null)

@@ -105,15 +105,15 @@ namespace Flipdish.Test
         }
         
         /// <summary>
-        /// Test GetBankAccount
+        /// Test GetBankAccountById
         /// </summary>
         [Test]
-        public void GetBankAccountTest()
+        public void GetBankAccountByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? id = null;
             //string appId = null;
-            //var response = instance.GetBankAccount(id, appId);
+            //var response = instance.GetBankAccountById(id, appId);
             //Assert.IsInstanceOf<RestApiResultBankAccountDetail> (response, "response is RestApiResultBankAccountDetail");
         }
         
@@ -153,7 +153,8 @@ namespace Flipdish.Test
             //string appId = null;
             //int? accountId = null;
             //string state = null;
-            //instance.UpdateBankAccountState(appId, accountId, state);
+            //string reason = null;
+            //instance.UpdateBankAccountState(appId, accountId, state, reason);
             
         }
         

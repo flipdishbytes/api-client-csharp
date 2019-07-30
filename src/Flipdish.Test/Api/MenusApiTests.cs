@@ -219,6 +219,19 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test MenusSetItemDisplayOrders
+        /// </summary>
+        [Test]
+        public void MenusSetItemDisplayOrdersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //MenuObjectDisplayOrders displayOrders = null;
+            //instance.MenusSetItemDisplayOrders(menuId, displayOrders);
+            
+        }
+        
+        /// <summary>
         /// Test RestoreAMenuCheckpoint
         /// </summary>
         [Test]

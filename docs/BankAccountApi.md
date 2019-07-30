@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**AttachBankAccountToStore**](BankAccountApi.md#attachbankaccounttostore) | **POST** /api/v1.0/{appId}/bankaccounts/{accountId}/store/{storeId} | [PRIVATE API] Attach Bank Account to Store
 [**CreateBankAccount**](BankAccountApi.md#createbankaccount) | **POST** /api/v1.0/{appId}/bankaccounts | [PRIVATE API] Create a new Bank Account and attach to this App
 [**DeleteBankAccount**](BankAccountApi.md#deletebankaccount) | **DELETE** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Delete BankAccount
-[**GetBankAccount**](BankAccountApi.md#getbankaccount) | **GET** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Get BankAccount Detail by Id
+[**GetBankAccountById**](BankAccountApi.md#getbankaccountbyid) | **GET** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Get BankAccount Detail by Id
 [**GetBankAccounts**](BankAccountApi.md#getbankaccounts) | **GET** /api/v1.0/{appId}/bankaccounts | [PRIVATE API] Get List of BankAccounts for WL
 [**UpdateBankAccount**](BankAccountApi.md#updatebankaccount) | **POST** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Update BankAccount
 [**UpdateBankAccountState**](BankAccountApi.md#updatebankaccountstate) | **POST** /api/v1.0/{appId}/bankaccounts/{accountId}/state/{state} | [PRIVATE API] Update State of Bank Account
@@ -205,9 +205,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getbankaccount"></a>
-# **GetBankAccount**
-> RestApiResultBankAccountDetail GetBankAccount (int? id, string appId)
+<a name="getbankaccountbyid"></a>
+# **GetBankAccountById**
+> RestApiResultBankAccountDetail GetBankAccountById (int? id, string appId)
 
 [PRIVATE API] Get BankAccount Detail by Id
 
@@ -221,7 +221,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GetBankAccountExample
+    public class GetBankAccountByIdExample
     {
         public void main()
         {
@@ -235,12 +235,12 @@ namespace Example
             try
             {
                 // [PRIVATE API] Get BankAccount Detail by Id
-                RestApiResultBankAccountDetail result = apiInstance.GetBankAccount(id, appId);
+                RestApiResultBankAccountDetail result = apiInstance.GetBankAccountById(id, appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling BankAccountApi.GetBankAccount: " + e.Message );
+                Debug.Print("Exception when calling BankAccountApi.GetBankAccountById: " + e.Message );
             }
         }
     }
@@ -398,7 +398,7 @@ void (empty response body)
 
 <a name="updatebankaccountstate"></a>
 # **UpdateBankAccountState**
-> void UpdateBankAccountState (string appId, int? accountId, string state)
+> void UpdateBankAccountState (string appId, int? accountId, string state, string reason)
 
 [PRIVATE API] Update State of Bank Account
 
@@ -423,11 +423,12 @@ namespace Example
             var appId = appId_example;  // string | App Name
             var accountId = 56;  // int? | Id of account to be updated
             var state = state_example;  // string | 
+            var reason = reason_example;  // string | Reason for state change, Manadatory for rejections
 
             try
             {
                 // [PRIVATE API] Update State of Bank Account
-                apiInstance.UpdateBankAccountState(appId, accountId, state);
+                apiInstance.UpdateBankAccountState(appId, accountId, state, reason);
             }
             catch (Exception e)
             {
@@ -445,6 +446,7 @@ Name | Type | Description  | Notes
  **appId** | **string**| App Name | 
  **accountId** | **int?**| Id of account to be updated | 
  **state** | **string**|  | 
+ **reason** | **string**| Reason for state change, Manadatory for rejections | 
 
 ### Return type
 
@@ -456,7 +458,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

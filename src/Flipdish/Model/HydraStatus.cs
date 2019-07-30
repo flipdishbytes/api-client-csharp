@@ -25,11 +25,44 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Hdyra status
+    /// Hydra status
     /// </summary>
     [DataContract]
     public partial class HydraStatus :  IEquatable<HydraStatus>, IValidatableObject
     {
+        /// <summary>
+        /// Hydra User Type
+        /// </summary>
+        /// <value>Hydra User Type</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum UserTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Kiosk for value: Kiosk
+            /// </summary>
+            [EnumMember(Value = "Kiosk")]
+            Kiosk = 1,
+            
+            /// <summary>
+            /// Enum Terminal for value: Terminal
+            /// </summary>
+            [EnumMember(Value = "Terminal")]
+            Terminal = 2,
+            
+            /// <summary>
+            /// Enum LegacyPrinter for value: LegacyPrinter
+            /// </summary>
+            [EnumMember(Value = "LegacyPrinter")]
+            LegacyPrinter = 3
+        }
+
+        /// <summary>
+        /// Hydra User Type
+        /// </summary>
+        /// <value>Hydra User Type</value>
+        [DataMember(Name="UserType", EmitDefaultValue=false)]
+        public UserTypeEnum? UserType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="HydraStatus" /> class.
         /// </summary>
@@ -42,7 +75,9 @@ namespace Flipdish.Model
         /// <param name="storeId">Store to assign the hydra.</param>
         /// <param name="isRegistered">The device has been already registered (required).</param>
         /// <param name="pinCode">6 digit PIN code (not starting with zero)..</param>
-        public HydraStatus(string appId = default(string), int? storeId = default(int?), bool? isRegistered = default(bool?), int? pinCode = default(int?))
+        /// <param name="images">Hydra images (covers).</param>
+        /// <param name="userType">Hydra User Type.</param>
+        public HydraStatus(string appId = default(string), int? storeId = default(int?), bool? isRegistered = default(bool?), int? pinCode = default(int?), List<string> images = default(List<string>), UserTypeEnum? userType = default(UserTypeEnum?))
         {
             // to ensure "appId" is required (not null)
             if (appId == null)
@@ -64,6 +99,8 @@ namespace Flipdish.Model
             }
             this.StoreId = storeId;
             this.PinCode = pinCode;
+            this.Images = images;
+            this.UserType = userType;
         }
         
         /// <summary>
@@ -94,6 +131,14 @@ namespace Flipdish.Model
         public int? PinCode { get; set; }
 
         /// <summary>
+        /// Hydra images (covers)
+        /// </summary>
+        /// <value>Hydra images (covers)</value>
+        [DataMember(Name="Images", EmitDefaultValue=false)]
+        public List<string> Images { get; set; }
+
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -105,6 +150,8 @@ namespace Flipdish.Model
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  IsRegistered: ").Append(IsRegistered).Append("\n");
             sb.Append("  PinCode: ").Append(PinCode).Append("\n");
+            sb.Append("  Images: ").Append(Images).Append("\n");
+            sb.Append("  UserType: ").Append(UserType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -158,6 +205,16 @@ namespace Flipdish.Model
                     this.PinCode == input.PinCode ||
                     (this.PinCode != null &&
                     this.PinCode.Equals(input.PinCode))
+                ) && 
+                (
+                    this.Images == input.Images ||
+                    this.Images != null &&
+                    this.Images.SequenceEqual(input.Images)
+                ) && 
+                (
+                    this.UserType == input.UserType ||
+                    (this.UserType != null &&
+                    this.UserType.Equals(input.UserType))
                 );
         }
 
@@ -178,6 +235,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.IsRegistered.GetHashCode();
                 if (this.PinCode != null)
                     hashCode = hashCode * 59 + this.PinCode.GetHashCode();
+                if (this.Images != null)
+                    hashCode = hashCode * 59 + this.Images.GetHashCode();
+                if (this.UserType != null)
+                    hashCode = hashCode * 59 + this.UserType.GetHashCode();
                 return hashCode;
             }
         }

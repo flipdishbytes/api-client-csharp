@@ -78,7 +78,6 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="whiteLabelId">White Label Id (optional)</param>
         /// <param name="customerId">Customer Id (optional)</param>
         /// <param name="limit">The maximum elements to return (optional)</param>
@@ -86,7 +85,7 @@ namespace Flipdish.Api
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
         /// <param name="orderId">Events that have Order Id (optional)</param>
-        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
         /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
         /// <param name="userId">Events that have User Id (optional)</param>
         /// <param name="userEmail">Events that have User Email (optional)</param>
@@ -95,7 +94,7 @@ namespace Flipdish.Api
         /// <param name="eventType">Events that have event type\\s (optional)</param>
         /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        RestApiEventSearchPaginationResult GetEvents (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
+        RestApiEventSearchPaginationResult GetEvents (int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get events  For technical reasons, the number of records returned is limited to 100.
@@ -104,7 +103,6 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="whiteLabelId">White Label Id (optional)</param>
         /// <param name="customerId">Customer Id (optional)</param>
         /// <param name="limit">The maximum elements to return (optional)</param>
@@ -112,7 +110,7 @@ namespace Flipdish.Api
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
         /// <param name="orderId">Events that have Order Id (optional)</param>
-        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
         /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
         /// <param name="userId">Events that have User Id (optional)</param>
         /// <param name="userEmail">Events that have User Email (optional)</param>
@@ -121,7 +119,7 @@ namespace Flipdish.Api
         /// <param name="eventType">Events that have event type\\s (optional)</param>
         /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        ApiResponse<RestApiEventSearchPaginationResult> GetEventsWithHttpInfo (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
+        ApiResponse<RestApiEventSearchPaginationResult> GetEventsWithHttpInfo (int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get event by Id  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -481,7 +479,6 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="whiteLabelId">White Label Id (optional)</param>
         /// <param name="customerId">Customer Id (optional)</param>
         /// <param name="limit">The maximum elements to return (optional)</param>
@@ -489,7 +486,7 @@ namespace Flipdish.Api
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
         /// <param name="orderId">Events that have Order Id (optional)</param>
-        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
         /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
         /// <param name="userId">Events that have User Id (optional)</param>
         /// <param name="userEmail">Events that have User Email (optional)</param>
@@ -498,7 +495,7 @@ namespace Flipdish.Api
         /// <param name="eventType">Events that have event type\\s (optional)</param>
         /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetEventsAsync (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
+        System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetEventsAsync (int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
 
         /// <summary>
         /// Get events  For technical reasons, the number of records returned is limited to 100.
@@ -507,7 +504,6 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="whiteLabelId">White Label Id (optional)</param>
         /// <param name="customerId">Customer Id (optional)</param>
         /// <param name="limit">The maximum elements to return (optional)</param>
@@ -515,7 +511,7 @@ namespace Flipdish.Api
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
         /// <param name="orderId">Events that have Order Id (optional)</param>
-        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
         /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
         /// <param name="userId">Events that have User Id (optional)</param>
         /// <param name="userEmail">Events that have User Email (optional)</param>
@@ -524,7 +520,7 @@ namespace Flipdish.Api
         /// <param name="eventType">Events that have event type\\s (optional)</param>
         /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetEventsAsyncWithHttpInfo (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetEventsAsyncWithHttpInfo (int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null);
         /// <summary>
         /// Get event by Id  For technical reasons, the number of records returned is limited to 100.
         /// </summary>
@@ -1161,7 +1157,6 @@ namespace Flipdish.Api
         /// Get events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="whiteLabelId">White Label Id (optional)</param>
         /// <param name="customerId">Customer Id (optional)</param>
         /// <param name="limit">The maximum elements to return (optional)</param>
@@ -1169,7 +1164,7 @@ namespace Flipdish.Api
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
         /// <param name="orderId">Events that have Order Id (optional)</param>
-        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
         /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
         /// <param name="userId">Events that have User Id (optional)</param>
         /// <param name="userEmail">Events that have User Email (optional)</param>
@@ -1178,9 +1173,9 @@ namespace Flipdish.Api
         /// <param name="eventType">Events that have event type\\s (optional)</param>
         /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>RestApiEventSearchPaginationResult</returns>
-        public RestApiEventSearchPaginationResult GetEvents (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
+        public RestApiEventSearchPaginationResult GetEvents (int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetEventsWithHttpInfo(storeId, whiteLabelId, customerId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = GetEventsWithHttpInfo(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
         }
 
@@ -1188,7 +1183,6 @@ namespace Flipdish.Api
         /// Get events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="whiteLabelId">White Label Id (optional)</param>
         /// <param name="customerId">Customer Id (optional)</param>
         /// <param name="limit">The maximum elements to return (optional)</param>
@@ -1196,7 +1190,7 @@ namespace Flipdish.Api
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
         /// <param name="orderId">Events that have Order Id (optional)</param>
-        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
         /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
         /// <param name="userId">Events that have User Id (optional)</param>
         /// <param name="userEmail">Events that have User Email (optional)</param>
@@ -1205,7 +1199,7 @@ namespace Flipdish.Api
         /// <param name="eventType">Events that have event type\\s (optional)</param>
         /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>ApiResponse of RestApiEventSearchPaginationResult</returns>
-        public ApiResponse< RestApiEventSearchPaginationResult > GetEventsWithHttpInfo (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
+        public ApiResponse< RestApiEventSearchPaginationResult > GetEventsWithHttpInfo (int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
 
             var localVarPath = "/api/v1.0/events";
@@ -1232,7 +1226,6 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (whiteLabelId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "whiteLabelId", whiteLabelId)); // query parameter
             if (customerId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "customerId", customerId)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
@@ -1240,7 +1233,7 @@ namespace Flipdish.Api
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
-            if (storeId2 != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId2)); // query parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
             if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter
@@ -1278,7 +1271,6 @@ namespace Flipdish.Api
         /// Get events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="whiteLabelId">White Label Id (optional)</param>
         /// <param name="customerId">Customer Id (optional)</param>
         /// <param name="limit">The maximum elements to return (optional)</param>
@@ -1286,7 +1278,7 @@ namespace Flipdish.Api
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
         /// <param name="orderId">Events that have Order Id (optional)</param>
-        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
         /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
         /// <param name="userId">Events that have User Id (optional)</param>
         /// <param name="userEmail">Events that have User Email (optional)</param>
@@ -1295,9 +1287,9 @@ namespace Flipdish.Api
         /// <param name="eventType">Events that have event type\\s (optional)</param>
         /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of RestApiEventSearchPaginationResult</returns>
-        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetEventsAsync (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
+        public async System.Threading.Tasks.Task<RestApiEventSearchPaginationResult> GetEventsAsync (int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
-             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetEventsAsyncWithHttpInfo(storeId, whiteLabelId, customerId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+             ApiResponse<RestApiEventSearchPaginationResult> localVarResponse = await GetEventsAsyncWithHttpInfo(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
              return localVarResponse.Data;
 
         }
@@ -1306,7 +1298,6 @@ namespace Flipdish.Api
         /// Get events  For technical reasons, the number of records returned is limited to 100. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="whiteLabelId">White Label Id (optional)</param>
         /// <param name="customerId">Customer Id (optional)</param>
         /// <param name="limit">The maximum elements to return (optional)</param>
@@ -1314,7 +1305,7 @@ namespace Flipdish.Api
         /// <param name="start">Start date (optional)</param>
         /// <param name="end">End date (optional)</param>
         /// <param name="orderId">Events that have Order Id (optional)</param>
-        /// <param name="storeId2">Events that have Store Id (optional)</param>
+        /// <param name="storeId">Events that have Store Id (optional)</param>
         /// <param name="storeGroupId">Events that have Store Group Id (optional)</param>
         /// <param name="userId">Events that have User Id (optional)</param>
         /// <param name="userEmail">Events that have User Email (optional)</param>
@@ -1323,7 +1314,7 @@ namespace Flipdish.Api
         /// <param name="eventType">Events that have event type\\s (optional)</param>
         /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiEventSearchPaginationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetEventsAsyncWithHttpInfo (int? storeId = null, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetEventsAsyncWithHttpInfo (int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
 
             var localVarPath = "/api/v1.0/events";
@@ -1350,7 +1341,6 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (whiteLabelId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "whiteLabelId", whiteLabelId)); // query parameter
             if (customerId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "customerId", customerId)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
@@ -1358,7 +1348,7 @@ namespace Flipdish.Api
             if (start != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "start", start)); // query parameter
             if (end != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "end", end)); // query parameter
             if (orderId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderId", orderId)); // query parameter
-            if (storeId2 != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId2)); // query parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userId", userId)); // query parameter
             if (userEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "userEmail", userEmail)); // query parameter

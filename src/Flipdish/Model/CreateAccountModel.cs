@@ -41,7 +41,9 @@ namespace Flipdish.Model
         /// <param name="email">Email addres (required).</param>
         /// <param name="storeName">Store name (required).</param>
         /// <param name="languageId">LanguageId.</param>
-        public CreateAccountModel(string email = default(string), string storeName = default(string), string languageId = default(string))
+        /// <param name="rid">Referral ID.</param>
+        /// <param name="cid">Campaign ID.</param>
+        public CreateAccountModel(string email = default(string), string storeName = default(string), string languageId = default(string), int? rid = default(int?), string cid = default(string))
         {
             // to ensure "email" is required (not null)
             if (email == null)
@@ -62,6 +64,8 @@ namespace Flipdish.Model
                 this.StoreName = storeName;
             }
             this.LanguageId = languageId;
+            this.Rid = rid;
+            this.Cid = cid;
         }
         
         /// <summary>
@@ -86,6 +90,20 @@ namespace Flipdish.Model
         public string LanguageId { get; set; }
 
         /// <summary>
+        /// Referral ID
+        /// </summary>
+        /// <value>Referral ID</value>
+        [DataMember(Name="Rid", EmitDefaultValue=false)]
+        public int? Rid { get; set; }
+
+        /// <summary>
+        /// Campaign ID
+        /// </summary>
+        /// <value>Campaign ID</value>
+        [DataMember(Name="Cid", EmitDefaultValue=false)]
+        public string Cid { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -96,6 +114,8 @@ namespace Flipdish.Model
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  StoreName: ").Append(StoreName).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
+            sb.Append("  Rid: ").Append(Rid).Append("\n");
+            sb.Append("  Cid: ").Append(Cid).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -144,6 +164,16 @@ namespace Flipdish.Model
                     this.LanguageId == input.LanguageId ||
                     (this.LanguageId != null &&
                     this.LanguageId.Equals(input.LanguageId))
+                ) && 
+                (
+                    this.Rid == input.Rid ||
+                    (this.Rid != null &&
+                    this.Rid.Equals(input.Rid))
+                ) && 
+                (
+                    this.Cid == input.Cid ||
+                    (this.Cid != null &&
+                    this.Cid.Equals(input.Cid))
                 );
         }
 
@@ -162,6 +192,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreName.GetHashCode();
                 if (this.LanguageId != null)
                     hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
+                if (this.Rid != null)
+                    hashCode = hashCode * 59 + this.Rid.GetHashCode();
+                if (this.Cid != null)
+                    hashCode = hashCode * 59 + this.Cid.GetHashCode();
                 return hashCode;
             }
         }

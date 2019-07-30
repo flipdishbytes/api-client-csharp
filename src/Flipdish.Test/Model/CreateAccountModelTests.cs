@@ -90,6 +90,22 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'LanguageId'
         }
+        /// <summary>
+        /// Test the property 'Rid'
+        /// </summary>
+        [Test]
+        public void RidTest()
+        {
+            // TODO unit test for the property 'Rid'
+        }
+        /// <summary>
+        /// Test the property 'Cid'
+        /// </summary>
+        [Test]
+        public void CidTest()
+        {
+            // TODO unit test for the property 'Cid'
+        }
 
     }
 

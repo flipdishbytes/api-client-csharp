@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**DeleteMenuSectionItemImage**](MenuSectionItemsApi.md#deletemenusectionitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
 [**GetMenuItemById**](MenuSectionItemsApi.md#getmenuitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Get menu item by identifier
 [**GetMenuItems**](MenuSectionItemsApi.md#getmenuitems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Get menu items
+[**MoveMenuItem**](MenuSectionItemsApi.md#movemenuitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder} | [PRIVATE API]Move an Item within a menu
 [**UpdateMenuSectionItem**](MenuSectionItemsApi.md#updatemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Update menu section item
 [**UploadMenuSectionItemImage**](MenuSectionItemsApi.md#uploadmenusectionitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Upload menu section item image
 
@@ -394,6 +395,73 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiArrayResultMenuSectionItem**](RestApiArrayResultMenuSectionItem.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="movemenuitem"></a>
+# **MoveMenuItem**
+> void MoveMenuItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder)
+
+[PRIVATE API]Move an Item within a menu
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class MoveMenuItemExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenuSectionItemsApi();
+            var menuId = 56;  // int? | Menu identifier
+            var menuSectionId = 56;  // int? | Section to put item in (will usually be original section)
+            var menuSectionItemId = 56;  // int? | ID of Item to be moved
+            var destinationDisplayOrder = 56;  // int? | New Display Order of item
+
+            try
+            {
+                // [PRIVATE API]Move an Item within a menu
+                apiInstance.MoveMenuItem(menuId, menuSectionId, menuSectionItemId, destinationDisplayOrder);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenuSectionItemsApi.MoveMenuItem: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **menuSectionId** | **int?**| Section to put item in (will usually be original section) | 
+ **menuSectionItemId** | **int?**| ID of Item to be moved | 
+ **destinationDisplayOrder** | **int?**| New Display Order of item | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

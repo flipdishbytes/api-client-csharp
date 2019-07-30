@@ -65,6 +65,18 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test GetApp
+        /// </summary>
+        [Test]
+        public void GetAppTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //var response = instance.GetApp(appId);
+            //Assert.IsInstanceOf<RestApiResultApp> (response, "response is RestApiResultApp");
+        }
+        
+        /// <summary>
         /// Test GetApps
         /// </summary>
         [Test]
@@ -76,6 +88,45 @@ namespace Flipdish.Test
             //int? limit = null;
             //var response = instance.GetApps(nameFilter, page, limit);
             //Assert.IsInstanceOf<RestApiPaginationResultApp> (response, "response is RestApiPaginationResultApp");
+        }
+        
+        /// <summary>
+        /// Test SetAppConfig
+        /// </summary>
+        [Test]
+        public void SetAppConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //AppConfigUpdateModel appConfigUpdate = null;
+            //var response = instance.SetAppConfig(appId, appConfigUpdate);
+            //Assert.IsInstanceOf<RestApiResultApp> (response, "response is RestApiResultApp");
+        }
+        
+        /// <summary>
+        /// Test SetAppLanguages
+        /// </summary>
+        [Test]
+        public void SetAppLanguagesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //List<Language> languages = null;
+            //var response = instance.SetAppLanguages(appId, languages);
+            //Assert.IsInstanceOf<RestApiResultApp> (response, "response is RestApiResultApp");
+        }
+        
+        /// <summary>
+        /// Test UploadAppLogo
+        /// </summary>
+        [Test]
+        public void UploadAppLogoTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //System.IO.Stream image = null;
+            //instance.UploadAppLogo(appId, image);
+            
         }
         
     }

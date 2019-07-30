@@ -82,6 +82,14 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'DisplayOrder'
         }
+        /// <summary>
+        /// Test the property 'Name'
+        /// </summary>
+        [Test]
+        public void NameTest()
+        {
+            // TODO unit test for the property 'Name'
+        }
 
     }
 

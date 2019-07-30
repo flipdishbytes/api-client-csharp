@@ -118,13 +118,17 @@ Class | Method | HTTP request | Description
 *ApmApi* | [**GetCallsStatistics**](docs/ApmApi.md#getcallsstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy} | [PRIVATE API] Get Calls Statistics
 *ApmApi* | [**GetOrderStatistics**](docs/ApmApi.md#getorderstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | [PRIVATE API] Get Order Statistics (Value of Orders)
 *ApmApi* | [**GetPaginatedCallList**](docs/ApmApi.md#getpaginatedcalllist) | **GET** /api/v1.0/{appId}/apm/calls | [PRIVATE API] Get paginated APM call list
+*AppsApi* | [**GetApp**](docs/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | Get the application configuration
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
+*AppsApi* | [**SetAppConfig**](docs/AppsApi.md#setappconfig) | **POST** /api/v1.0/apps/{appId}/config | Set the application configuration
+*AppsApi* | [**SetAppLanguages**](docs/AppsApi.md#setapplanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | Set the application languages
+*AppsApi* | [**UploadAppLogo**](docs/AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | Set the application logo \\ icon
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/{appId}/authorizationtokens/{oauthAppId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/{appId}/authorizationtokens/{key} | Revoke token
 *BankAccountApi* | [**AttachBankAccountToStore**](docs/BankAccountApi.md#attachbankaccounttostore) | **POST** /api/v1.0/{appId}/bankaccounts/{accountId}/store/{storeId} | [PRIVATE API] Attach Bank Account to Store
 *BankAccountApi* | [**CreateBankAccount**](docs/BankAccountApi.md#createbankaccount) | **POST** /api/v1.0/{appId}/bankaccounts | [PRIVATE API] Create a new Bank Account and attach to this App
 *BankAccountApi* | [**DeleteBankAccount**](docs/BankAccountApi.md#deletebankaccount) | **DELETE** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Delete BankAccount
-*BankAccountApi* | [**GetBankAccount**](docs/BankAccountApi.md#getbankaccount) | **GET** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Get BankAccount Detail by Id
+*BankAccountApi* | [**GetBankAccountById**](docs/BankAccountApi.md#getbankaccountbyid) | **GET** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Get BankAccount Detail by Id
 *BankAccountApi* | [**GetBankAccounts**](docs/BankAccountApi.md#getbankaccounts) | **GET** /api/v1.0/{appId}/bankaccounts | [PRIVATE API] Get List of BankAccounts for WL
 *BankAccountApi* | [**UpdateBankAccount**](docs/BankAccountApi.md#updatebankaccount) | **POST** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Update BankAccount
 *BankAccountApi* | [**UpdateBankAccountState**](docs/BankAccountApi.md#updatebankaccountstate) | **POST** /api/v1.0/{appId}/bankaccounts/{accountId}/state/{state} | [PRIVATE API] Update State of Bank Account
@@ -143,14 +147,17 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**GetWhiteLabelEvents**](docs/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 *HeartbeatApi* | [**Ping**](docs/HeartbeatApi.md#ping) | **GET** /api/v1.0/heartbeat | 
 *HomeApi* | [**CompleteHomeAction**](docs/HomeApi.md#completehomeaction) | **POST** /api/v1.0/{appId}/home/{homeActionId} | [PRIVATE API] Complete Home Action
+*HomeApi* | [**DismissOldPortalAction**](docs/HomeApi.md#dismissoldportalaction) | **POST** /api/v1.0/home/dismissoldportalaction | [PRIVATE API] Complete Home Action
 *HomeApi* | [**GetHomeActions**](docs/HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | [PRIVATE API] Get Home Actions
 *HomeApi* | [**GetHomeStatistics**](docs/HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
 *HttpRequestResponseLogsApi* | [**GetLogs**](docs/HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/{appId}/interactions/logs | Get API interaction logs
+*HydraApi* | [**GetAttachedDevices**](docs/HydraApi.md#getattacheddevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | [Private]
 *HydraApi* | [**GetRegistration**](docs/HydraApi.md#getregistration) | **GET** /api/v1.0/hydra/registration | 
 *HydraApi* | [**GetSettings**](docs/HydraApi.md#getsettings) | **GET** /api/v1.0/hydra/settings | [Private]
-*HydraApi* | [**Login**](docs/HydraApi.md#login) | **POST** /api/v1.0/hydra/{deviceId}/login | [Private]
-*HydraApi* | [**PayOrder**](docs/HydraApi.md#payorder) | **POST** /api/v1.0/hydra/payorder/{orderId} | [Private]
-*HydraApi* | [**Register**](docs/HydraApi.md#register) | **POST** /api/v1.0/hydra/registration | [Private]
+*HydraApi* | [**GetTerminalDetails**](docs/HydraApi.md#getterminaldetails) | **GET** /api/v1.0/{appId}/hydra/terminal | [Private]
+*HydraApi* | [**LoginWithDeviceId**](docs/HydraApi.md#loginwithdeviceid) | **POST** /api/v1.0/hydra/{deviceId}/login | [Private]
+*HydraApi* | [**Register**](docs/HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | [Private]
+*HydraApi* | [**UnAssign**](docs/HydraApi.md#unassign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | [Private]
 *LightspeedApi* | [**LightspeedGenerateMenu**](docs/LightspeedApi.md#lightspeedgeneratemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
 *LightspeedApi* | [**LightspeedGetStoreSettings**](docs/LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
 *LightspeedApi* | [**LightspeedSaveStoreSettings**](docs/LightspeedApi.md#lightspeedsavestoresettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
@@ -174,6 +181,7 @@ Class | Method | HTTP request | Description
 *MenuSectionItemsApi* | [**DeleteMenuSectionItemImage**](docs/MenuSectionItemsApi.md#deletemenusectionitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
 *MenuSectionItemsApi* | [**GetMenuItemById**](docs/MenuSectionItemsApi.md#getmenuitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Get menu item by identifier
 *MenuSectionItemsApi* | [**GetMenuItems**](docs/MenuSectionItemsApi.md#getmenuitems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Get menu items
+*MenuSectionItemsApi* | [**MoveMenuItem**](docs/MenuSectionItemsApi.md#movemenuitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder} | [PRIVATE API]Move an Item within a menu
 *MenuSectionItemsApi* | [**UpdateMenuSectionItem**](docs/MenuSectionItemsApi.md#updatemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Update menu section item
 *MenuSectionItemsApi* | [**UploadMenuSectionItemImage**](docs/MenuSectionItemsApi.md#uploadmenusectionitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Upload menu section item image
 *MenuSectionsApi* | [**CloneMenuSection**](docs/MenuSectionsApi.md#clonemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/clone | Clone menu section
@@ -184,6 +192,7 @@ Class | Method | HTTP request | Description
 *MenuSectionsApi* | [**DeleteMenuSectionImage**](docs/MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
 *MenuSectionsApi* | [**GetMenuSectionById**](docs/MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
 *MenuSectionsApi* | [**GetMenuSections**](docs/MenuSectionsApi.md#getmenusections) | **GET** /api/v1.0/menus/{menuId}/sections | Get menu sections
+*MenuSectionsApi* | [**MenuSectionsSetItemDisplayOrders**](docs/MenuSectionsApi.md#menusectionssetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | Re-arrange Items within a Section
 *MenuSectionsApi* | [**UpdateMenuSection**](docs/MenuSectionsApi.md#updatemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Update menu section
 *MenuSectionsApi* | [**UploadMenuSectionImage**](docs/MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
 *MenusApi* | [**CreateDraftMenuFromExistingMenu**](docs/MenusApi.md#createdraftmenufromexistingmenu) | **POST** /api/v1.0/menus/{menuId}/clone | [PRIVATE API]Clone a menu, (without attaching stores)
@@ -198,6 +207,7 @@ Class | Method | HTTP request | Description
 *MenusApi* | [**GetMenuStoreNames**](docs/MenusApi.md#getmenustorenames) | **GET** /api/v1.0/menus/{menuId}/stores | [PRIVATE API]Get menus store names
 *MenusApi* | [**GetMenusByAppId**](docs/MenusApi.md#getmenusbyappid) | **GET** /api/v1.0/{appId}/menus | [PRIVATE API]Get menus by appId
 *MenusApi* | [**GetMenusCheckpoints**](docs/MenusApi.md#getmenuscheckpoints) | **GET** /api/v1.0/menus/{menuId}/checkpoints | [PRIVATE API]Get a Menus Checkpoints
+*MenusApi* | [**MenusSetItemDisplayOrders**](docs/MenusApi.md#menussetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | Re-arrange Sections within a Menu
 *MenusApi* | [**RestoreAMenuCheckpoint**](docs/MenusApi.md#restoreamenucheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | [PRIVATE API]Restore a Menu to a checkpoint
 *MenusApi* | [**SetMenuItemMetadata**](docs/MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update menu item metadata
 *MenusApi* | [**SetMenuItemOptionSetItemMetadata**](docs/MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update menu item option set item metadata
@@ -223,28 +233,37 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**RefundOrder**](docs/OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
 *OrdersApi* | [**RejectOrder**](docs/OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 *ProcessingFeeConfigsApi* | [**GetProcessingFeeConfigsByStoreIds**](docs/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
+*PushNotificationsApi* | [**DeletePushNotification**](docs/PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Push notification to cutomers
+*PushNotificationsApi* | [**GetPushNotifications**](docs/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
+*PushNotificationsApi* | [**SchedulePushNotification**](docs/PushNotificationsApi.md#schedulepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
+*PushNotificationsApi* | [**UpdatePushNotification**](docs/PushNotificationsApi.md#updatepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Update the push notification
 *StoreGroupsApi* | [**CreateStoreGroup**](docs/StoreGroupsApi.md#createstoregroup) | **POST** /api/v1.0/{appNameId}/storegroups | Creates a Store Group  It will be attached to an existing App
 *StoreGroupsApi* | [**GetStoreGroup**](docs/StoreGroupsApi.md#getstoregroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | Returns a Store Groups
 *StoreGroupsApi* | [**GetStoreGroups**](docs/StoreGroupsApi.md#getstoregroups) | **GET** /api/v1.0/{appNameId}/storegroups | Returns a paginated list of Store Groups
 *StoreGroupsApi* | [**GetStoreGroupsExtended**](docs/StoreGroupsApi.md#getstoregroupsextended) | **GET** /api/v1.0/{appNameId}/storegroups/extended | [PRIVATE API] Returns a paginated list of Extended Store Groups
 *StoreGroupsApi* | [**RemoveStoreGroup**](docs/StoreGroupsApi.md#removestoregroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
 *StoreGroupsApi* | [**UpdateStoreGroup**](docs/StoreGroupsApi.md#updatestoregroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | Updates Store Group
+*StoresApi* | [**AssignMenu**](docs/StoresApi.md#assignmenu) | **POST** /api/v1.0/stores/{storeId}/menu/{menuId} | Assign Menu to Store
 *StoresApi* | [**CloneStore**](docs/StoresApi.md#clonestore) | **POST** /api/v1.0/stores/{storeId}/clone | Clone store with store clone settings
 *StoresApi* | [**CreateBusinessHoursOverrideByStoreId**](docs/StoresApi.md#createbusinesshoursoverridebystoreid) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | Create Business Hours Override for a store
 *StoresApi* | [**CreateStore**](docs/StoresApi.md#createstore) | **POST** /api/v1.0/stores | Create store with Store Group identifier
 *StoresApi* | [**DeleteBusinessHoursOverride**](docs/StoresApi.md#deletebusinesshoursoverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | Delete Business Hours Override for a store
-*StoresApi* | [**GetBankAccount**](docs/StoresApi.md#getbankaccount) | **GET** /api/v1.0/stores/{storeId}/bankaccount | Get Stores Bank Account Id
+*StoresApi* | [**GetBankAccountForStore**](docs/StoresApi.md#getbankaccountforstore) | **GET** /api/v1.0/stores/{storeId}/bankaccount | Get Stores Bank Account Id
 *StoresApi* | [**GetBusinessHours**](docs/StoresApi.md#getbusinesshours) | **GET** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Get Bussiness hours
 *StoresApi* | [**GetBusinessHoursOverrideByStoreId**](docs/StoresApi.md#getbusinesshoursoverridebystoreid) | **GET** /api/v1.0/stores/{storeId}/businesshoursoverrides | Get business hours overrides by store identifier
-*StoresApi* | [**GetPreOrderConfig**](docs/StoresApi.md#getpreorderconfig) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{preOrderType} | Get the pre order config for a store, by type
+*StoresApi* | [**GetEndOfDayReport**](docs/StoresApi.md#getendofdayreport) | **GET** /api/v1.0/stores/{storeId}/endofdayreport | Get store end of day report
+*StoresApi* | [**GetPreOrderConfig**](docs/StoresApi.md#getpreorderconfig) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | Get the pre order config for a store, by type
+*StoresApi* | [**GetPreOrderPreview**](docs/StoresApi.md#getpreorderpreview) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/preview | Get the Preview times of the pre-order configuration
 *StoresApi* | [**GetProcessingFeeConfigsByStoreId**](docs/StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
 *StoresApi* | [**GetProcessingFeeConfigsByStoreIdAndPaymentAccountType**](docs/StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
 *StoresApi* | [**GetStoreById**](docs/StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
+*StoresApi* | [**GetStoreHeadersByAppId**](docs/StoresApi.md#getstoreheadersbyappid) | **GET** /api/v1.0/{appId}/stores/header | Get all stores by app name id
 *StoresApi* | [**GetStoreNetSales**](docs/StoresApi.md#getstorenetsales) | **GET** /api/v1.0/{appId}/stores/stats | 
 *StoresApi* | [**GetStores**](docs/StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores
 *StoresApi* | [**GetStoresByAppId**](docs/StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
 *StoresApi* | [**SetBusinessHours**](docs/StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Set Bussiness hours
-*StoresApi* | [**UpdatePreOrderConfig**](docs/StoresApi.md#updatepreorderconfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{preOrderType} | UPDATE pre order config for a store, by type
+*StoresApi* | [**SetPreOrdeEnabled**](docs/StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | UPDATE pre order config for a store, by type
+*StoresApi* | [**UpdatePreOrderConfig**](docs/StoresApi.md#updatepreorderconfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | UPDATE pre order config for a store, by type
 *StoresApi* | [**UpdateStore**](docs/StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | Update store by identifier
 *StoresApi* | [**UpdateStoreAddress**](docs/StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
 *StoresApi* | [**UpdateStoreAddressCoordinates**](docs/StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
@@ -282,6 +301,13 @@ Class | Method | HTTP request | Description
 *WebhooksApi* | [**GetWebhookLogs**](docs/WebhooksApi.md#getwebhooklogs) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs | Get logs for your webhook subscription
 *WebhooksApi* | [**GetWebhookSubscriptions**](docs/WebhooksApi.md#getwebhooksubscriptions) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Get all webhook subscriptions by your Oauth App id
 *WebhooksApi* | [**UpdateWebhookSubscription**](docs/WebhooksApi.md#updatewebhooksubscription) | **PUT** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Update a webhook subscription object
+*WebsiteApi* | [**AddTestimonial**](docs/WebsiteApi.md#addtestimonial) | **POST** /api/v1.0/{appId}/website/testimonial | Add a testimonial
+*WebsiteApi* | [**DeleteTestimonial**](docs/WebsiteApi.md#deletetestimonial) | **DELETE** /api/v1.0/{appId}/website/testimonial/{testimonialId} | Delete a testimonial
+*WebsiteApi* | [**DeleteWebsiteImage**](docs/WebsiteApi.md#deletewebsiteimage) | **DELETE** /api/v1.0/{appId}/website/image/{imageId} | Delete Website Image
+*WebsiteApi* | [**EditTestimonial**](docs/WebsiteApi.md#edittestimonial) | **POST** /api/v1.0/{appId}/website/testimonial/{testimonialId} | Edit a testimonial
+*WebsiteApi* | [**GetIndexConfiguration**](docs/WebsiteApi.md#getindexconfiguration) | **GET** /api/v1.0/{appId}/website/index | Get Index Configuration
+*WebsiteApi* | [**SetIndexConfiguration**](docs/WebsiteApi.md#setindexconfiguration) | **POST** /api/v1.0/{appId}/website/index | Set Index Configuration
+*WebsiteApi* | [**UploadWebsiteImage**](docs/WebsiteApi.md#uploadwebsiteimage) | **POST** /api/v1.0/{appId}/website/image/{imageLocation} | Upload Website Image
 
 
 <a name="documentation-for-models"></a>
@@ -297,6 +323,7 @@ Class | Method | HTTP request | Description
  - [Model.ApmHourlyDataPoint](docs/ApmHourlyDataPoint.md)
  - [Model.ApmStatistics](docs/ApmStatistics.md)
  - [Model.App](docs/App.md)
+ - [Model.AppConfigUpdateModel](docs/AppConfigUpdateModel.md)
  - [Model.AppCreatedEvent](docs/AppCreatedEvent.md)
  - [Model.AppUpdatedEvent](docs/AppUpdatedEvent.md)
  - [Model.AssignedBankAccount](docs/AssignedBankAccount.md)
@@ -338,9 +365,17 @@ Class | Method | HTTP request | Description
  - [Model.HomeAction](docs/HomeAction.md)
  - [Model.HomeStatistics](docs/HomeStatistics.md)
  - [Model.HttpRequestAndResponseLog](docs/HttpRequestAndResponseLog.md)
+ - [Model.HydraAssignedEvent](docs/HydraAssignedEvent.md)
  - [Model.HydraConfig](docs/HydraConfig.md)
- - [Model.HydraRegistration](docs/HydraRegistration.md)
+ - [Model.HydraDeviceDetails](docs/HydraDeviceDetails.md)
+ - [Model.HydraRegistrationRequest](docs/HydraRegistrationRequest.md)
+ - [Model.HydraRequestResetEvent](docs/HydraRequestResetEvent.md)
+ - [Model.HydraSettingChangedEvent](docs/HydraSettingChangedEvent.md)
  - [Model.HydraStatus](docs/HydraStatus.md)
+ - [Model.HydraStoreData](docs/HydraStoreData.md)
+ - [Model.HydraUnAssignedEvent](docs/HydraUnAssignedEvent.md)
+ - [Model.IndexPage](docs/IndexPage.md)
+ - [Model.IndexPageBase](docs/IndexPageBase.md)
  - [Model.JobAddress](docs/JobAddress.md)
  - [Model.JobCancellation](docs/JobCancellation.md)
  - [Model.JobContact](docs/JobContact.md)
@@ -361,6 +396,7 @@ Class | Method | HTTP request | Description
  - [Model.LoyaltyCampaignDeletedEvent](docs/LoyaltyCampaignDeletedEvent.md)
  - [Model.LoyaltyCampaignUpdatedEvent](docs/LoyaltyCampaignUpdatedEvent.md)
  - [Model.LumpDiscountDetails](docs/LumpDiscountDetails.md)
+ - [Model.MaskedPhoneNumber](docs/MaskedPhoneNumber.md)
  - [Model.Menu](docs/Menu.md)
  - [Model.MenuBase](docs/MenuBase.md)
  - [Model.MenuCheckpoint](docs/MenuCheckpoint.md)
@@ -375,6 +411,7 @@ Class | Method | HTTP request | Description
  - [Model.MenuItemOptionSetItemDeletedEvent](docs/MenuItemOptionSetItemDeletedEvent.md)
  - [Model.MenuItemOptionSetItemUpdatedEvent](docs/MenuItemOptionSetItemUpdatedEvent.md)
  - [Model.MenuItemOptionSetUpdatedEvent](docs/MenuItemOptionSetUpdatedEvent.md)
+ - [Model.MenuObjectDisplayOrders](docs/MenuObjectDisplayOrders.md)
  - [Model.MenuSection](docs/MenuSection.md)
  - [Model.MenuSectionAvailability](docs/MenuSectionAvailability.md)
  - [Model.MenuSectionAvailabilityBase](docs/MenuSectionAvailabilityBase.md)
@@ -394,6 +431,7 @@ Class | Method | HTTP request | Description
  - [Model.OAuthApp](docs/OAuthApp.md)
  - [Model.OAuthTokenModel](docs/OAuthTokenModel.md)
  - [Model.OauthClientRedirectUri](docs/OauthClientRedirectUri.md)
+ - [Model.ObjectDisplayOrder](docs/ObjectDisplayOrder.md)
  - [Model.Order](docs/Order.md)
  - [Model.OrderAcceptedEvent](docs/OrderAcceptedEvent.md)
  - [Model.OrderCreatedEvent](docs/OrderCreatedEvent.md)
@@ -404,15 +442,17 @@ Class | Method | HTTP request | Description
  - [Model.OrderRefundedEvent](docs/OrderRefundedEvent.md)
  - [Model.OrderRejectedEvent](docs/OrderRejectedEvent.md)
  - [Model.OrderSummary](docs/OrderSummary.md)
+ - [Model.OrderTerminalNotification](docs/OrderTerminalNotification.md)
  - [Model.OrderTipUpdatedEvent](docs/OrderTipUpdatedEvent.md)
  - [Model.OrderVoucherSummary](docs/OrderVoucherSummary.md)
  - [Model.PasswordResetModel](docs/PasswordResetModel.md)
- - [Model.PayOrder](docs/PayOrder.md)
+ - [Model.PaymentTerminalDetails](docs/PaymentTerminalDetails.md)
  - [Model.PercentDiscountDetails](docs/PercentDiscountDetails.md)
  - [Model.PhoneCall](docs/PhoneCall.md)
  - [Model.PhoneCallEndedEvent](docs/PhoneCallEndedEvent.md)
  - [Model.PhoneCallStartedEvent](docs/PhoneCallStartedEvent.md)
  - [Model.PreOrderConfig](docs/PreOrderConfig.md)
+ - [Model.PreOrderTime](docs/PreOrderTime.md)
  - [Model.PredefinedAnswer](docs/PredefinedAnswer.md)
  - [Model.Printer](docs/Printer.md)
  - [Model.PrinterAssignedToStoreEvent](docs/PrinterAssignedToStoreEvent.md)
@@ -420,6 +460,11 @@ Class | Method | HTTP request | Description
  - [Model.PrinterTurnedOnEvent](docs/PrinterTurnedOnEvent.md)
  - [Model.PrinterUnassignedFromStoreEvent](docs/PrinterUnassignedFromStoreEvent.md)
  - [Model.ProcessingFeeConfig](docs/ProcessingFeeConfig.md)
+ - [Model.PushNotificationDeletedEvent](docs/PushNotificationDeletedEvent.md)
+ - [Model.PushNotificationRequest](docs/PushNotificationRequest.md)
+ - [Model.PushNotificationResponse](docs/PushNotificationResponse.md)
+ - [Model.PushNotificationScheduledEvent](docs/PushNotificationScheduledEvent.md)
+ - [Model.PushNotificationSentEvent](docs/PushNotificationSentEvent.md)
  - [Model.Range](docs/Range.md)
  - [Model.RedeemInvitationResult](docs/RedeemInvitationResult.md)
  - [Model.Refund](docs/Refund.md)
@@ -445,6 +490,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultMetadata](docs/RestApiArrayResultMetadata.md)
  - [Model.RestApiArrayResultOAuthApp](docs/RestApiArrayResultOAuthApp.md)
  - [Model.RestApiArrayResultOauthClientRedirectUri](docs/RestApiArrayResultOauthClientRedirectUri.md)
+ - [Model.RestApiArrayResultPreOrderTime](docs/RestApiArrayResultPreOrderTime.md)
  - [Model.RestApiArrayResultProcessingFeeConfig](docs/RestApiArrayResultProcessingFeeConfig.md)
  - [Model.RestApiArrayResultRestApiDefaultResponse](docs/RestApiArrayResultRestApiDefaultResponse.md)
  - [Model.RestApiArrayResultStoreStatistics](docs/RestApiArrayResultStoreStatistics.md)
@@ -458,18 +504,22 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultApp](docs/RestApiPaginationResultApp.md)
  - [Model.RestApiPaginationResultBusinessHoursOverride](docs/RestApiPaginationResultBusinessHoursOverride.md)
  - [Model.RestApiPaginationResultHttpRequestAndResponseLog](docs/RestApiPaginationResultHttpRequestAndResponseLog.md)
+ - [Model.RestApiPaginationResultHydraDeviceDetails](docs/RestApiPaginationResultHydraDeviceDetails.md)
  - [Model.RestApiPaginationResultOAuthTokenModel](docs/RestApiPaginationResultOAuthTokenModel.md)
  - [Model.RestApiPaginationResultOrder](docs/RestApiPaginationResultOrder.md)
  - [Model.RestApiPaginationResultOrderSummary](docs/RestApiPaginationResultOrderSummary.md)
  - [Model.RestApiPaginationResultPhoneCall](docs/RestApiPaginationResultPhoneCall.md)
+ - [Model.RestApiPaginationResultPushNotificationResponse](docs/RestApiPaginationResultPushNotificationResponse.md)
  - [Model.RestApiPaginationResultStore](docs/RestApiPaginationResultStore.md)
  - [Model.RestApiPaginationResultStoreGroup](docs/RestApiPaginationResultStoreGroup.md)
  - [Model.RestApiPaginationResultStoreGroupExtended](docs/RestApiPaginationResultStoreGroupExtended.md)
+ - [Model.RestApiPaginationResultStoreHeader](docs/RestApiPaginationResultStoreHeader.md)
  - [Model.RestApiPaginationResultVoucherSummary](docs/RestApiPaginationResultVoucherSummary.md)
  - [Model.RestApiPaginationResultWebhookLog](docs/RestApiPaginationResultWebhookLog.md)
  - [Model.RestApiPaginationResultWebhookSubscription](docs/RestApiPaginationResultWebhookSubscription.md)
  - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
  - [Model.RestApiResultApmStatistics](docs/RestApiResultApmStatistics.md)
+ - [Model.RestApiResultApp](docs/RestApiResultApp.md)
  - [Model.RestApiResultAssignedBankAccount](docs/RestApiResultAssignedBankAccount.md)
  - [Model.RestApiResultBankAccountDetail](docs/RestApiResultBankAccountDetail.md)
  - [Model.RestApiResultBusinessHoursOverride](docs/RestApiResultBusinessHoursOverride.md)
@@ -480,6 +530,8 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultHomeStatistics](docs/RestApiResultHomeStatistics.md)
  - [Model.RestApiResultHydraConfig](docs/RestApiResultHydraConfig.md)
  - [Model.RestApiResultHydraStatus](docs/RestApiResultHydraStatus.md)
+ - [Model.RestApiResultIndexPage](docs/RestApiResultIndexPage.md)
+ - [Model.RestApiResultIndexPageBase](docs/RestApiResultIndexPageBase.md)
  - [Model.RestApiResultJobResponse](docs/RestApiResultJobResponse.md)
  - [Model.RestApiResultLightspeedSettings](docs/RestApiResultLightspeedSettings.md)
  - [Model.RestApiResultMenu](docs/RestApiResultMenu.md)
@@ -492,11 +544,14 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultOAuthApp](docs/RestApiResultOAuthApp.md)
  - [Model.RestApiResultOauthClientRedirectUri](docs/RestApiResultOauthClientRedirectUri.md)
  - [Model.RestApiResultOrder](docs/RestApiResultOrder.md)
+ - [Model.RestApiResultPaymentTerminalDetails](docs/RestApiResultPaymentTerminalDetails.md)
  - [Model.RestApiResultPreOrderConfig](docs/RestApiResultPreOrderConfig.md)
  - [Model.RestApiResultProcessingFeeConfig](docs/RestApiResultProcessingFeeConfig.md)
+ - [Model.RestApiResultPushNotificationResponse](docs/RestApiResultPushNotificationResponse.md)
  - [Model.RestApiResultRedeemInvitationResult](docs/RestApiResultRedeemInvitationResult.md)
  - [Model.RestApiResultStore](docs/RestApiResultStore.md)
  - [Model.RestApiResultStoreAddress](docs/RestApiResultStoreAddress.md)
+ - [Model.RestApiResultStoreEndOfDayReport](docs/RestApiResultStoreEndOfDayReport.md)
  - [Model.RestApiResultStoreGroup](docs/RestApiResultStoreGroup.md)
  - [Model.RestApiResultStoreGroupBase](docs/RestApiResultStoreGroupBase.md)
  - [Model.RestApiResultStuartSettings](docs/RestApiResultStuartSettings.md)
@@ -504,6 +559,8 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultSubscriptionPlansResponse](docs/RestApiResultSubscriptionPlansResponse.md)
  - [Model.RestApiResultTeammate](docs/RestApiResultTeammate.md)
  - [Model.RestApiResultVoucherWithStats](docs/RestApiResultVoucherWithStats.md)
+ - [Model.RestApiResultWebsiteImage](docs/RestApiResultWebsiteImage.md)
+ - [Model.RestApiResultWebsiteTestimonial](docs/RestApiResultWebsiteTestimonial.md)
  - [Model.RestApiStringArrayResult](docs/RestApiStringArrayResult.md)
  - [Model.RestApiStringResult](docs/RestApiStringResult.md)
  - [Model.RestApiUnauthorizedResult](docs/RestApiUnauthorizedResult.md)
@@ -529,14 +586,18 @@ Class | Method | HTTP request | Description
  - [Model.StoreCreatedEvent](docs/StoreCreatedEvent.md)
  - [Model.StoreDataPoint](docs/StoreDataPoint.md)
  - [Model.StoreDeletedEvent](docs/StoreDeletedEvent.md)
+ - [Model.StoreEndOfDayReport](docs/StoreEndOfDayReport.md)
  - [Model.StoreGroup](docs/StoreGroup.md)
  - [Model.StoreGroupBase](docs/StoreGroupBase.md)
  - [Model.StoreGroupCreatedEvent](docs/StoreGroupCreatedEvent.md)
  - [Model.StoreGroupDeletedEvent](docs/StoreGroupDeletedEvent.md)
  - [Model.StoreGroupExtended](docs/StoreGroupExtended.md)
  - [Model.StoreGroupUpdatedEvent](docs/StoreGroupUpdatedEvent.md)
+ - [Model.StoreHeader](docs/StoreHeader.md)
+ - [Model.StoreMenuAssignedEvent](docs/StoreMenuAssignedEvent.md)
  - [Model.StoreNote](docs/StoreNote.md)
  - [Model.StoreOpeningHoursUpdatedEvent](docs/StoreOpeningHoursUpdatedEvent.md)
+ - [Model.StorePreOrderConfigUpdatedEvent](docs/StorePreOrderConfigUpdatedEvent.md)
  - [Model.StoreStatistics](docs/StoreStatistics.md)
  - [Model.StoreSummary](docs/StoreSummary.md)
  - [Model.StoreUpdatedEvent](docs/StoreUpdatedEvent.md)
@@ -572,6 +633,9 @@ Class | Method | HTTP request | Description
  - [Model.WebhookSubscriptionDeletedEvent](docs/WebhookSubscriptionDeletedEvent.md)
  - [Model.WebhookSubscriptionEventInfo](docs/WebhookSubscriptionEventInfo.md)
  - [Model.WebhookSubscriptionUpdatedEvent](docs/WebhookSubscriptionUpdatedEvent.md)
+ - [Model.WebsiteImage](docs/WebsiteImage.md)
+ - [Model.WebsiteTestimonial](docs/WebsiteTestimonial.md)
+ - [Model.WebsiteTestimonialBase](docs/WebsiteTestimonialBase.md)
 
 
 <a name="documentation-for-authorization"></a>

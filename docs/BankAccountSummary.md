@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **AccountName** | **string** | Name of this account | [optional] 
 **Iban** | **string** | IBAN of this account | [optional] 
 **Swift** | **string** | SWIFT of this bank account | [optional] 
+**NationalClearingCode** | **string** | National Clearing Code (BSB in Australia, Routing Number in USA/Canada, NCC in NZ) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

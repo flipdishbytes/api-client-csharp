@@ -123,6 +123,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'CustomerLocation'
         }
         /// <summary>
+        /// Test the property 'MaskedPhoneNumber'
+        /// </summary>
+        [Test]
+        public void MaskedPhoneNumberTest()
+        {
+            // TODO unit test for the property 'MaskedPhoneNumber'
+        }
+        /// <summary>
         /// Test the property 'OrderId'
         /// </summary>
         [Test]

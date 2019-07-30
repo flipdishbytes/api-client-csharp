@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **MenuId** | **int?** | Menu identifier | [optional] 
-**MenuName** | **string** | Menu name | [optional] 
 **Description** | **string** | Event description | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | Deleted by user | [optional] 
 **MenuSectionItem** | [**MenuSectionItem**](MenuSectionItem.md) | Deleted menu section item | [optional] 

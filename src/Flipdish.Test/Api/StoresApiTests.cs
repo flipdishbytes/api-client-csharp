@@ -65,6 +65,19 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test AssignMenu
+        /// </summary>
+        [Test]
+        public void AssignMenuTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //int? menuId = null;
+            //var response = instance.AssignMenu(storeId, menuId);
+            //Assert.IsInstanceOf<RestApiArrayResultRestApiDefaultResponse> (response, "response is RestApiArrayResultRestApiDefaultResponse");
+        }
+        
+        /// <summary>
         /// Test CloneStore
         /// </summary>
         [Test]
@@ -117,14 +130,14 @@ namespace Flipdish.Test
         }
         
         /// <summary>
-        /// Test GetBankAccount
+        /// Test GetBankAccountForStore
         /// </summary>
         [Test]
-        public void GetBankAccountTest()
+        public void GetBankAccountForStoreTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? storeId = null;
-            //var response = instance.GetBankAccount(storeId);
+            //var response = instance.GetBankAccountForStore(storeId);
             //Assert.IsInstanceOf<RestApiResultAssignedBankAccount> (response, "response is RestApiResultAssignedBankAccount");
         }
         
@@ -157,6 +170,19 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test GetEndOfDayReport
+        /// </summary>
+        [Test]
+        public void GetEndOfDayReportTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //DateTime? date = null;
+            //var response = instance.GetEndOfDayReport(storeId, date);
+            //Assert.IsInstanceOf<RestApiResultStoreEndOfDayReport> (response, "response is RestApiResultStoreEndOfDayReport");
+        }
+        
+        /// <summary>
         /// Test GetPreOrderConfig
         /// </summary>
         [Test]
@@ -164,9 +190,23 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? storeId = null;
-            //string preOrderType = null;
-            //var response = instance.GetPreOrderConfig(storeId, preOrderType);
+            //string deliveryType = null;
+            //var response = instance.GetPreOrderConfig(storeId, deliveryType);
             //Assert.IsInstanceOf<RestApiResultPreOrderConfig> (response, "response is RestApiResultPreOrderConfig");
+        }
+        
+        /// <summary>
+        /// Test GetPreOrderPreview
+        /// </summary>
+        [Test]
+        public void GetPreOrderPreviewTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //string deliveryType = null;
+            //string date = null;
+            //var response = instance.GetPreOrderPreview(storeId, deliveryType, date);
+            //Assert.IsInstanceOf<RestApiArrayResultPreOrderTime> (response, "response is RestApiArrayResultPreOrderTime");
         }
         
         /// <summary>
@@ -206,6 +246,20 @@ namespace Flipdish.Test
             //int? storeId = null;
             //var response = instance.GetStoreById(storeId);
             //Assert.IsInstanceOf<RestApiResultStore> (response, "response is RestApiResultStore");
+        }
+        
+        /// <summary>
+        /// Test GetStoreHeadersByAppId
+        /// </summary>
+        [Test]
+        public void GetStoreHeadersByAppIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //int? page = null;
+            //int? limit = null;
+            //var response = instance.GetStoreHeadersByAppId(appId, page, limit);
+            //Assert.IsInstanceOf<RestApiPaginationResultStoreHeader> (response, "response is RestApiPaginationResultStoreHeader");
         }
         
         /// <summary>
@@ -266,6 +320,20 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test SetPreOrdeEnabled
+        /// </summary>
+        [Test]
+        public void SetPreOrdeEnabledTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //string deliveryType = null;
+            //bool? enabled = null;
+            //var response = instance.SetPreOrdeEnabled(storeId, deliveryType, enabled);
+            //Assert.IsInstanceOf<RestApiArrayResultRestApiDefaultResponse> (response, "response is RestApiArrayResultRestApiDefaultResponse");
+        }
+        
+        /// <summary>
         /// Test UpdatePreOrderConfig
         /// </summary>
         [Test]
@@ -273,9 +341,9 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? storeId = null;
-            //string preOrderType = null;
+            //string deliveryType = null;
             //PreOrderConfig preOrderConfig = null;
-            //var response = instance.UpdatePreOrderConfig(storeId, preOrderType, preOrderConfig);
+            //var response = instance.UpdatePreOrderConfig(storeId, deliveryType, preOrderConfig);
             //Assert.IsInstanceOf<RestApiArrayResultRestApiDefaultResponse> (response, "response is RestApiArrayResultRestApiDefaultResponse");
         }
         

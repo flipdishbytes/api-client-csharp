@@ -297,6 +297,29 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultMenuCheckpoint</returns>
         ApiResponse<RestApiArrayResultMenuCheckpoint> GetMenusCheckpointsWithHttpInfo (int? menuId);
         /// <summary>
+        /// Re-arrange Sections within a Menu
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="displayOrders">Section Ids and their new display order</param>
+        /// <returns></returns>
+        void MenusSetItemDisplayOrders (int? menuId, MenuObjectDisplayOrders displayOrders);
+
+        /// <summary>
+        /// Re-arrange Sections within a Menu
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="displayOrders">Section Ids and their new display order</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> MenusSetItemDisplayOrdersWithHttpInfo (int? menuId, MenuObjectDisplayOrders displayOrders);
+        /// <summary>
         /// [PRIVATE API]Restore a Menu to a checkpoint
         /// </summary>
         /// <remarks>
@@ -739,6 +762,29 @@ namespace Flipdish.Api
         /// <param name="menuId">Menu identifier</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuCheckpoint)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuCheckpoint>> GetMenusCheckpointsAsyncWithHttpInfo (int? menuId);
+        /// <summary>
+        /// Re-arrange Sections within a Menu
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="displayOrders">Section Ids and their new display order</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task MenusSetItemDisplayOrdersAsync (int? menuId, MenuObjectDisplayOrders displayOrders);
+
+        /// <summary>
+        /// Re-arrange Sections within a Menu
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="displayOrders">Section Ids and their new display order</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> MenusSetItemDisplayOrdersAsyncWithHttpInfo (int? menuId, MenuObjectDisplayOrders displayOrders);
         /// <summary>
         /// [PRIVATE API]Restore a Menu to a checkpoint
         /// </summary>
@@ -2930,6 +2976,191 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiArrayResultMenuCheckpoint>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiArrayResultMenuCheckpoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMenuCheckpoint)));
+        }
+
+        /// <summary>
+        /// Re-arrange Sections within a Menu 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="displayOrders">Section Ids and their new display order</param>
+        /// <returns></returns>
+        public void MenusSetItemDisplayOrders (int? menuId, MenuObjectDisplayOrders displayOrders)
+        {
+             MenusSetItemDisplayOrdersWithHttpInfo(menuId, displayOrders);
+        }
+
+        /// <summary>
+        /// Re-arrange Sections within a Menu 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="displayOrders">Section Ids and their new display order</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> MenusSetItemDisplayOrdersWithHttpInfo (int? menuId, MenuObjectDisplayOrders displayOrders)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->MenusSetItemDisplayOrders");
+            // verify the required parameter 'displayOrders' is set
+            if (displayOrders == null)
+                throw new ApiException(400, "Missing required parameter 'displayOrders' when calling MenusApi->MenusSetItemDisplayOrders");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/sectiondisplayorders";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (displayOrders != null && displayOrders.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(displayOrders); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = displayOrders; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MenusSetItemDisplayOrders", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Re-arrange Sections within a Menu 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="displayOrders">Section Ids and their new display order</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task MenusSetItemDisplayOrdersAsync (int? menuId, MenuObjectDisplayOrders displayOrders)
+        {
+             await MenusSetItemDisplayOrdersAsyncWithHttpInfo(menuId, displayOrders);
+
+        }
+
+        /// <summary>
+        /// Re-arrange Sections within a Menu 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="displayOrders">Section Ids and their new display order</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> MenusSetItemDisplayOrdersAsyncWithHttpInfo (int? menuId, MenuObjectDisplayOrders displayOrders)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->MenusSetItemDisplayOrders");
+            // verify the required parameter 'displayOrders' is set
+            if (displayOrders == null)
+                throw new ApiException(400, "Missing required parameter 'displayOrders' when calling MenusApi->MenusSetItemDisplayOrders");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/sectiondisplayorders";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (displayOrders != null && displayOrders.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(displayOrders); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = displayOrders; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MenusSetItemDisplayOrders", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>

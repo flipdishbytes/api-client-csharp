@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **OrderItems** | [**List&lt;OrderItem&gt;**](OrderItem.md) | Ordered items | [optional] 
 **DeliveryLocation** | [**DeliveryLocation**](DeliveryLocation.md) | Delivery location for delivery orders | [optional] 
 **CustomerLocation** | [**Coordinates**](Coordinates.md) | Customer location | [optional] 
+**MaskedPhoneNumber** | [**MaskedPhoneNumber**](MaskedPhoneNumber.md) | Represents customers masked phone number | [optional] 
 **OrderId** | **int?** | Order identifier | [optional] 
 **DeliveryType** | **string** | Delivery type | [optional] 
 **PickupLocationType** | **string** | Pickup location type | [optional] 

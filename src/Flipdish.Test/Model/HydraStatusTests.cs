@@ -98,6 +98,22 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'PinCode'
         }
+        /// <summary>
+        /// Test the property 'Images'
+        /// </summary>
+        [Test]
+        public void ImagesTest()
+        {
+            // TODO unit test for the property 'Images'
+        }
+        /// <summary>
+        /// Test the property 'UserType'
+        /// </summary>
+        [Test]
+        public void UserTypeTest()
+        {
+            // TODO unit test for the property 'UserType'
+        }
 
     }
 

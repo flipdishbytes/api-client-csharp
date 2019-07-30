@@ -96,7 +96,6 @@ namespace Flipdish.Test
         public void GetEventsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //int? storeId = null;
             //int? whiteLabelId = null;
             //int? customerId = null;
             //int? limit = null;
@@ -104,7 +103,7 @@ namespace Flipdish.Test
             //DateTime? start = null;
             //DateTime? end = null;
             //int? orderId = null;
-            //int? storeId2 = null;
+            //int? storeId = null;
             //int? storeGroupId = null;
             //int? userId = null;
             //string userEmail = null;
@@ -112,7 +111,7 @@ namespace Flipdish.Test
             //string voucherCode = null;
             //List<string> eventType = null;
             //string flipdishEventId = null;
-            //var response = instance.GetEvents(storeId, whiteLabelId, customerId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+            //var response = instance.GetEvents(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
             //Assert.IsInstanceOf<RestApiEventSearchPaginationResult> (response, "response is RestApiEventSearchPaginationResult");
         }
         

@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **OrderRefundedEvent** | [**List&lt;OrderRefundedEvent&gt;**](OrderRefundedEvent.md) | Order refunded events | [optional] 
 **OrderRejectedEvent** | [**List&lt;OrderRejectedEvent&gt;**](OrderRejectedEvent.md) | Order rejected events | [optional] 
 **OrderTipUpdatedEvent** | [**List&lt;OrderTipUpdatedEvent&gt;**](OrderTipUpdatedEvent.md) | Order tip updated events | [optional] 
+**OrderTerminalNotifications** | [**List&lt;OrderTerminalNotification&gt;**](OrderTerminalNotification.md) | Order Terminal Notification events | [optional] 
 **StoreCreatedEvent** | [**List&lt;StoreCreatedEvent&gt;**](StoreCreatedEvent.md) | Store created events | [optional] 
 **StoreDeletedEvent** | [**List&lt;StoreDeletedEvent&gt;**](StoreDeletedEvent.md) | Store deleted events | [optional] 
 **StoreAddressUpdatedEvent** | [**List&lt;StoreAddressUpdatedEvent&gt;**](StoreAddressUpdatedEvent.md) | Store address updated events | [optional] 
@@ -20,9 +21,11 @@ Name | Type | Description | Notes
 **DeliveryZoneUpdatedEvent** | [**List&lt;DeliveryZoneUpdatedEvent&gt;**](DeliveryZoneUpdatedEvent.md) | Store delivery zone updated events | [optional] 
 **DeliveryZoneDeletedEvent** | [**List&lt;DeliveryZoneDeletedEvent&gt;**](DeliveryZoneDeletedEvent.md) | Store delivery zone deleted events | [optional] 
 **StoreOpeningHoursUpdatedEvent** | [**List&lt;StoreOpeningHoursUpdatedEvent&gt;**](StoreOpeningHoursUpdatedEvent.md) | Store opening hours updated events | [optional] 
+**StoreMenuAssignedEvent** | [**List&lt;StoreMenuAssignedEvent&gt;**](StoreMenuAssignedEvent.md) | Store opening hours updated events | [optional] 
 **StoreBusinessHoursOverrideCreatedEvent** | [**List&lt;StoreBusinessHoursOverrideCreatedEvent&gt;**](StoreBusinessHoursOverrideCreatedEvent.md) | Store business hours override created events | [optional] 
 **StoreBusinessHoursOverrideDeletedEvent** | [**List&lt;StoreBusinessHoursOverrideDeletedEvent&gt;**](StoreBusinessHoursOverrideDeletedEvent.md) | Store business hours override deleted events | [optional] 
 **StoreUpdatedEvent** | [**List&lt;StoreUpdatedEvent&gt;**](StoreUpdatedEvent.md) | Store updated events | [optional] 
+**StorePreOrderConfigUpdatedEvent** | [**List&lt;StorePreOrderConfigUpdatedEvent&gt;**](StorePreOrderConfigUpdatedEvent.md) | Store updated events | [optional] 
 **MenuCreatedEvent** | [**List&lt;MenuCreatedEvent&gt;**](MenuCreatedEvent.md) | Menu created events | [optional] 
 **MenuUpdatedEvent** | [**List&lt;MenuUpdatedEvent&gt;**](MenuUpdatedEvent.md) | Menu updated events | [optional] 
 **MenuSectionCreatedEvent** | [**List&lt;MenuSectionCreatedEvent&gt;**](MenuSectionCreatedEvent.md) | Menu section created events | [optional] 
@@ -73,6 +76,13 @@ Name | Type | Description | Notes
 **BankAccountCreatedEvent** | [**List&lt;BankAccountCreatedEvent&gt;**](BankAccountCreatedEvent.md) | Bank account created event | [optional] 
 **BankAccountUpdatedEvent** | [**List&lt;BankAccountUpdatedEvent&gt;**](BankAccountUpdatedEvent.md) | Bank account updated event | [optional] 
 **BankAccountDeletedEvent** | [**List&lt;BankAccountDeletedEvent&gt;**](BankAccountDeletedEvent.md) | Bank account updated event | [optional] 
+**HydraAssignedEvent** | [**List&lt;HydraAssignedEvent&gt;**](HydraAssignedEvent.md) | Hydra assigned event | [optional] 
+**HydraRequestResetEvent** | [**List&lt;HydraRequestResetEvent&gt;**](HydraRequestResetEvent.md) | Hydra reset requested event | [optional] 
+**HydraSettingChangedEvent** | [**List&lt;HydraSettingChangedEvent&gt;**](HydraSettingChangedEvent.md) | Hydra settings changed event | [optional] 
+**HydraUnAssignedEvent** | [**List&lt;HydraUnAssignedEvent&gt;**](HydraUnAssignedEvent.md) | Hydra un-assigned event | [optional] 
+**PushNotificationScheduledEvent** | [**List&lt;PushNotificationScheduledEvent&gt;**](PushNotificationScheduledEvent.md) | Push notification scheduled event | [optional] 
+**PushNotificationSentEvent** | [**List&lt;PushNotificationSentEvent&gt;**](PushNotificationSentEvent.md) | Push notification sent event | [optional] 
+**PushNotificationDeletedEvent** | [**List&lt;PushNotificationDeletedEvent&gt;**](PushNotificationDeletedEvent.md) | Push notification deleted event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

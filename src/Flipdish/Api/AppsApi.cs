@@ -25,6 +25,27 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Get the application configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>RestApiResultApp</returns>
+        RestApiResultApp GetApp (string appId);
+
+        /// <summary>
+        /// Get the application configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>ApiResponse of RestApiResultApp</returns>
+        ApiResponse<RestApiResultApp> GetAppWithHttpInfo (string appId);
+        /// <summary>
         /// Get Apps
         /// </summary>
         /// <remarks>
@@ -49,8 +70,98 @@ namespace Flipdish.Api
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultApp</returns>
         ApiResponse<RestApiPaginationResultApp> GetAppsWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null);
+        /// <summary>
+        /// Set the application configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <returns>RestApiResultApp</returns>
+        RestApiResultApp SetAppConfig (string appId, AppConfigUpdateModel appConfigUpdate);
+
+        /// <summary>
+        /// Set the application configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <returns>ApiResponse of RestApiResultApp</returns>
+        ApiResponse<RestApiResultApp> SetAppConfigWithHttpInfo (string appId, AppConfigUpdateModel appConfigUpdate);
+        /// <summary>
+        /// Set the application languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="languages">New list of languages</param>
+        /// <returns>RestApiResultApp</returns>
+        RestApiResultApp SetAppLanguages (string appId, List<Language> languages);
+
+        /// <summary>
+        /// Set the application languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="languages">New list of languages</param>
+        /// <returns>ApiResponse of RestApiResultApp</returns>
+        ApiResponse<RestApiResultApp> SetAppLanguagesWithHttpInfo (string appId, List<Language> languages);
+        /// <summary>
+        /// Set the application logo \\ icon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="image">App Logo</param>
+        /// <returns></returns>
+        void UploadAppLogo (string appId, System.IO.Stream image);
+
+        /// <summary>
+        /// Set the application logo \\ icon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="image">App Logo</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UploadAppLogoWithHttpInfo (string appId, System.IO.Stream image);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Get the application configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>Task of RestApiResultApp</returns>
+        System.Threading.Tasks.Task<RestApiResultApp> GetAppAsync (string appId);
+
+        /// <summary>
+        /// Get the application configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> GetAppAsyncWithHttpInfo (string appId);
         /// <summary>
         /// Get Apps
         /// </summary>
@@ -76,6 +187,75 @@ namespace Flipdish.Api
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultApp>> GetAppsAsyncWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null);
+        /// <summary>
+        /// Set the application configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <returns>Task of RestApiResultApp</returns>
+        System.Threading.Tasks.Task<RestApiResultApp> SetAppConfigAsync (string appId, AppConfigUpdateModel appConfigUpdate);
+
+        /// <summary>
+        /// Set the application configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> SetAppConfigAsyncWithHttpInfo (string appId, AppConfigUpdateModel appConfigUpdate);
+        /// <summary>
+        /// Set the application languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="languages">New list of languages</param>
+        /// <returns>Task of RestApiResultApp</returns>
+        System.Threading.Tasks.Task<RestApiResultApp> SetAppLanguagesAsync (string appId, List<Language> languages);
+
+        /// <summary>
+        /// Set the application languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="languages">New list of languages</param>
+        /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> SetAppLanguagesAsyncWithHttpInfo (string appId, List<Language> languages);
+        /// <summary>
+        /// Set the application logo \\ icon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="image">App Logo</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UploadAppLogoAsync (string appId, System.IO.Stream image);
+
+        /// <summary>
+        /// Set the application logo \\ icon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="image">App Logo</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UploadAppLogoAsyncWithHttpInfo (string appId, System.IO.Stream image);
         #endregion Asynchronous Operations
     }
 
@@ -174,6 +354,157 @@ namespace Flipdish.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Get the application configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>RestApiResultApp</returns>
+        public RestApiResultApp GetApp (string appId)
+        {
+             ApiResponse<RestApiResultApp> localVarResponse = GetAppWithHttpInfo(appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the application configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>ApiResponse of RestApiResultApp</returns>
+        public ApiResponse< RestApiResultApp > GetAppWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->GetApp");
+
+            var localVarPath = "/api/v1.0/apps/{appId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetApp", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultApp>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApp)));
+        }
+
+        /// <summary>
+        /// Get the application configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>Task of RestApiResultApp</returns>
+        public async System.Threading.Tasks.Task<RestApiResultApp> GetAppAsync (string appId)
+        {
+             ApiResponse<RestApiResultApp> localVarResponse = await GetAppAsyncWithHttpInfo(appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the application configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> GetAppAsyncWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->GetApp");
+
+            var localVarPath = "/api/v1.0/apps/{appId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetApp", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultApp>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApp)));
         }
 
         /// <summary>
@@ -331,6 +662,543 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiPaginationResultApp>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiPaginationResultApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultApp)));
+        }
+
+        /// <summary>
+        /// Set the application configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <returns>RestApiResultApp</returns>
+        public RestApiResultApp SetAppConfig (string appId, AppConfigUpdateModel appConfigUpdate)
+        {
+             ApiResponse<RestApiResultApp> localVarResponse = SetAppConfigWithHttpInfo(appId, appConfigUpdate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set the application configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <returns>ApiResponse of RestApiResultApp</returns>
+        public ApiResponse< RestApiResultApp > SetAppConfigWithHttpInfo (string appId, AppConfigUpdateModel appConfigUpdate)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->SetAppConfig");
+            // verify the required parameter 'appConfigUpdate' is set
+            if (appConfigUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'appConfigUpdate' when calling AppsApi->SetAppConfig");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/config";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (appConfigUpdate != null && appConfigUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(appConfigUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = appConfigUpdate; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetAppConfig", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultApp>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApp)));
+        }
+
+        /// <summary>
+        /// Set the application configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <returns>Task of RestApiResultApp</returns>
+        public async System.Threading.Tasks.Task<RestApiResultApp> SetAppConfigAsync (string appId, AppConfigUpdateModel appConfigUpdate)
+        {
+             ApiResponse<RestApiResultApp> localVarResponse = await SetAppConfigAsyncWithHttpInfo(appId, appConfigUpdate);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set the application configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> SetAppConfigAsyncWithHttpInfo (string appId, AppConfigUpdateModel appConfigUpdate)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->SetAppConfig");
+            // verify the required parameter 'appConfigUpdate' is set
+            if (appConfigUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'appConfigUpdate' when calling AppsApi->SetAppConfig");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/config";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (appConfigUpdate != null && appConfigUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(appConfigUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = appConfigUpdate; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetAppConfig", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultApp>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApp)));
+        }
+
+        /// <summary>
+        /// Set the application languages 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="languages">New list of languages</param>
+        /// <returns>RestApiResultApp</returns>
+        public RestApiResultApp SetAppLanguages (string appId, List<Language> languages)
+        {
+             ApiResponse<RestApiResultApp> localVarResponse = SetAppLanguagesWithHttpInfo(appId, languages);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set the application languages 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="languages">New list of languages</param>
+        /// <returns>ApiResponse of RestApiResultApp</returns>
+        public ApiResponse< RestApiResultApp > SetAppLanguagesWithHttpInfo (string appId, List<Language> languages)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->SetAppLanguages");
+            // verify the required parameter 'languages' is set
+            if (languages == null)
+                throw new ApiException(400, "Missing required parameter 'languages' when calling AppsApi->SetAppLanguages");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/config/languages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (languages != null && languages.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(languages); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = languages; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetAppLanguages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultApp>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApp)));
+        }
+
+        /// <summary>
+        /// Set the application languages 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="languages">New list of languages</param>
+        /// <returns>Task of RestApiResultApp</returns>
+        public async System.Threading.Tasks.Task<RestApiResultApp> SetAppLanguagesAsync (string appId, List<Language> languages)
+        {
+             ApiResponse<RestApiResultApp> localVarResponse = await SetAppLanguagesAsyncWithHttpInfo(appId, languages);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set the application languages 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="languages">New list of languages</param>
+        /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> SetAppLanguagesAsyncWithHttpInfo (string appId, List<Language> languages)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->SetAppLanguages");
+            // verify the required parameter 'languages' is set
+            if (languages == null)
+                throw new ApiException(400, "Missing required parameter 'languages' when calling AppsApi->SetAppLanguages");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/config/languages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (languages != null && languages.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(languages); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = languages; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetAppLanguages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultApp>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApp)));
+        }
+
+        /// <summary>
+        /// Set the application logo \\ icon 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="image">App Logo</param>
+        /// <returns></returns>
+        public void UploadAppLogo (string appId, System.IO.Stream image)
+        {
+             UploadAppLogoWithHttpInfo(appId, image);
+        }
+
+        /// <summary>
+        /// Set the application logo \\ icon 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="image">App Logo</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UploadAppLogoWithHttpInfo (string appId, System.IO.Stream image)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->UploadAppLogo");
+            // verify the required parameter 'image' is set
+            if (image == null)
+                throw new ApiException(400, "Missing required parameter 'image' when calling AppsApi->UploadAppLogo");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/logo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (image != null) localVarFileParams.Add("Image", this.Configuration.ApiClient.ParameterToFile("Image", image));
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UploadAppLogo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Set the application logo \\ icon 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="image">App Logo</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UploadAppLogoAsync (string appId, System.IO.Stream image)
+        {
+             await UploadAppLogoAsyncWithHttpInfo(appId, image);
+
+        }
+
+        /// <summary>
+        /// Set the application logo \\ icon 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="image">App Logo</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UploadAppLogoAsyncWithHttpInfo (string appId, System.IO.Stream image)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->UploadAppLogo");
+            // verify the required parameter 'image' is set
+            if (image == null)
+                throw new ApiException(400, "Missing required parameter 'image' when calling AppsApi->UploadAppLogo");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/logo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (image != null) localVarFileParams.Add("Image", this.Configuration.ApiClient.ParameterToFile("Image", image));
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UploadAppLogo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
     }

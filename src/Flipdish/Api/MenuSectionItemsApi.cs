@@ -173,6 +173,33 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultMenuSectionItem</returns>
         ApiResponse<RestApiArrayResultMenuSectionItem> GetMenuItemsWithHttpInfo (int? menuId, int? menuSectionId);
         /// <summary>
+        /// [PRIVATE API]Move an Item within a menu
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
+        /// <param name="menuSectionItemId">ID of Item to be moved</param>
+        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <returns></returns>
+        void MoveMenuItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder);
+
+        /// <summary>
+        /// [PRIVATE API]Move an Item within a menu
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
+        /// <param name="menuSectionItemId">ID of Item to be moved</param>
+        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> MoveMenuItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder);
+        /// <summary>
         /// Update menu section item
         /// </summary>
         /// <remarks>
@@ -378,6 +405,33 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuSectionItem)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuSectionItem>> GetMenuItemsAsyncWithHttpInfo (int? menuId, int? menuSectionId);
+        /// <summary>
+        /// [PRIVATE API]Move an Item within a menu
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
+        /// <param name="menuSectionItemId">ID of Item to be moved</param>
+        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task MoveMenuItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder);
+
+        /// <summary>
+        /// [PRIVATE API]Move an Item within a menu
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
+        /// <param name="menuSectionItemId">ID of Item to be moved</param>
+        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> MoveMenuItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder);
         /// <summary>
         /// Update menu section item
         /// </summary>
@@ -1590,6 +1644,191 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiArrayResultMenuSectionItem>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiArrayResultMenuSectionItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMenuSectionItem)));
+        }
+
+        /// <summary>
+        /// [PRIVATE API]Move an Item within a menu 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
+        /// <param name="menuSectionItemId">ID of Item to be moved</param>
+        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <returns></returns>
+        public void MoveMenuItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder)
+        {
+             MoveMenuItemWithHttpInfo(menuId, menuSectionId, menuSectionItemId, destinationDisplayOrder);
+        }
+
+        /// <summary>
+        /// [PRIVATE API]Move an Item within a menu 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
+        /// <param name="menuSectionItemId">ID of Item to be moved</param>
+        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> MoveMenuItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuSectionItemsApi->MoveMenuItem");
+            // verify the required parameter 'menuSectionId' is set
+            if (menuSectionId == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionItemsApi->MoveMenuItem");
+            // verify the required parameter 'menuSectionItemId' is set
+            if (menuSectionItemId == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionItemId' when calling MenuSectionItemsApi->MoveMenuItem");
+            // verify the required parameter 'destinationDisplayOrder' is set
+            if (destinationDisplayOrder == null)
+                throw new ApiException(400, "Missing required parameter 'destinationDisplayOrder' when calling MenuSectionItemsApi->MoveMenuItem");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuSectionId != null) localVarPathParams.Add("menuSectionId", this.Configuration.ApiClient.ParameterToString(menuSectionId)); // path parameter
+            if (menuSectionItemId != null) localVarPathParams.Add("menuSectionItemId", this.Configuration.ApiClient.ParameterToString(menuSectionItemId)); // path parameter
+            if (destinationDisplayOrder != null) localVarPathParams.Add("destinationDisplayOrder", this.Configuration.ApiClient.ParameterToString(destinationDisplayOrder)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MoveMenuItem", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// [PRIVATE API]Move an Item within a menu 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
+        /// <param name="menuSectionItemId">ID of Item to be moved</param>
+        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task MoveMenuItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder)
+        {
+             await MoveMenuItemAsyncWithHttpInfo(menuId, menuSectionId, menuSectionItemId, destinationDisplayOrder);
+
+        }
+
+        /// <summary>
+        /// [PRIVATE API]Move an Item within a menu 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
+        /// <param name="menuSectionItemId">ID of Item to be moved</param>
+        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> MoveMenuItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuSectionItemsApi->MoveMenuItem");
+            // verify the required parameter 'menuSectionId' is set
+            if (menuSectionId == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuSectionItemsApi->MoveMenuItem");
+            // verify the required parameter 'menuSectionItemId' is set
+            if (menuSectionItemId == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionItemId' when calling MenuSectionItemsApi->MoveMenuItem");
+            // verify the required parameter 'destinationDisplayOrder' is set
+            if (destinationDisplayOrder == null)
+                throw new ApiException(400, "Missing required parameter 'destinationDisplayOrder' when calling MenuSectionItemsApi->MoveMenuItem");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuSectionId != null) localVarPathParams.Add("menuSectionId", this.Configuration.ApiClient.ParameterToString(menuSectionId)); // path parameter
+            if (menuSectionItemId != null) localVarPathParams.Add("menuSectionItemId", this.Configuration.ApiClient.ParameterToString(menuSectionItemId)); // path parameter
+            if (destinationDisplayOrder != null) localVarPathParams.Add("destinationDisplayOrder", this.Configuration.ApiClient.ParameterToString(destinationDisplayOrder)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MoveMenuItem", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>

@@ -75,12 +75,76 @@ namespace Flipdish.Test
             // TODO unit test for the property 'AppId'
         }
         /// <summary>
-        /// Test the property 'Name'
+        /// Test the property 'HasIosApp'
         /// </summary>
         [Test]
-        public void NameTest()
+        public void HasIosAppTest()
         {
-            // TODO unit test for the property 'Name'
+            // TODO unit test for the property 'HasIosApp'
+        }
+        /// <summary>
+        /// Test the property 'HasAndroidApp'
+        /// </summary>
+        [Test]
+        public void HasAndroidAppTest()
+        {
+            // TODO unit test for the property 'HasAndroidApp'
+        }
+        /// <summary>
+        /// Test the property 'CountryId'
+        /// </summary>
+        [Test]
+        public void CountryIdTest()
+        {
+            // TODO unit test for the property 'CountryId'
+        }
+        /// <summary>
+        /// Test the property 'IconUrl'
+        /// </summary>
+        [Test]
+        public void IconUrlTest()
+        {
+            // TODO unit test for the property 'IconUrl'
+        }
+        /// <summary>
+        /// Test the property 'IconThumbnailUrl'
+        /// </summary>
+        [Test]
+        public void IconThumbnailUrlTest()
+        {
+            // TODO unit test for the property 'IconThumbnailUrl'
+        }
+        /// <summary>
+        /// Test the property 'Languages'
+        /// </summary>
+        [Test]
+        public void LanguagesTest()
+        {
+            // TODO unit test for the property 'Languages'
+        }
+        /// <summary>
+        /// Test the property 'AvailableAppLanguages'
+        /// </summary>
+        [Test]
+        public void AvailableAppLanguagesTest()
+        {
+            // TODO unit test for the property 'AvailableAppLanguages'
+        }
+        /// <summary>
+        /// Test the property 'AppAccessLevel'
+        /// </summary>
+        [Test]
+        public void AppAccessLevelTest()
+        {
+            // TODO unit test for the property 'AppAccessLevel'
+        }
+        /// <summary>
+        /// Test the property 'AppResourceSet'
+        /// </summary>
+        [Test]
+        public void AppResourceSetTest()
+        {
+            // TODO unit test for the property 'AppResourceSet'
         }
         /// <summary>
         /// Test the property 'MapCenter'
@@ -107,52 +171,36 @@ namespace Flipdish.Test
             // TODO unit test for the property 'MapSouthWest'
         }
         /// <summary>
-        /// Test the property 'AppAccessLevel'
+        /// Test the property 'Name'
         /// </summary>
         [Test]
-        public void AppAccessLevelTest()
+        public void NameTest()
         {
-            // TODO unit test for the property 'AppAccessLevel'
+            // TODO unit test for the property 'Name'
         }
         /// <summary>
-        /// Test the property 'IconUrl'
+        /// Test the property 'HostName'
         /// </summary>
         [Test]
-        public void IconUrlTest()
+        public void HostNameTest()
         {
-            // TODO unit test for the property 'IconUrl'
+            // TODO unit test for the property 'HostName'
         }
         /// <summary>
-        /// Test the property 'IconThumbnailUrl'
+        /// Test the property 'MainColor'
         /// </summary>
         [Test]
-        public void IconThumbnailUrlTest()
+        public void MainColorTest()
         {
-            // TODO unit test for the property 'IconThumbnailUrl'
+            // TODO unit test for the property 'MainColor'
         }
         /// <summary>
-        /// Test the property 'CountryId'
+        /// Test the property 'ApplicationCategory'
         /// </summary>
         [Test]
-        public void CountryIdTest()
+        public void ApplicationCategoryTest()
         {
-            // TODO unit test for the property 'CountryId'
-        }
-        /// <summary>
-        /// Test the property 'AvailableAppLanguages'
-        /// </summary>
-        [Test]
-        public void AvailableAppLanguagesTest()
-        {
-            // TODO unit test for the property 'AvailableAppLanguages'
-        }
-        /// <summary>
-        /// Test the property 'AppResourceSet'
-        /// </summary>
-        [Test]
-        public void AppResourceSetTest()
-        {
-            // TODO unit test for the property 'AppResourceSet'
+            // TODO unit test for the property 'ApplicationCategory'
         }
 
     }

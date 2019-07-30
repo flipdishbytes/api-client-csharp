@@ -75,14 +75,6 @@ namespace Flipdish.Test
             // TODO unit test for the property 'MenuId'
         }
         /// <summary>
-        /// Test the property 'MenuName'
-        /// </summary>
-        [Test]
-        public void MenuNameTest()
-        {
-            // TODO unit test for the property 'MenuName'
-        }
-        /// <summary>
         /// Test the property 'Description'
         /// </summary>
         [Test]

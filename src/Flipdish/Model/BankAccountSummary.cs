@@ -79,7 +79,8 @@ namespace Flipdish.Model
         /// <param name="accountName">Name of this account.</param>
         /// <param name="iban">IBAN of this account.</param>
         /// <param name="swift">SWIFT of this bank account.</param>
-        public BankAccountSummary(int? id = default(int?), List<string> storeNames = default(List<string>), AccountStateEnum? accountState = default(AccountStateEnum?), string currencyCode = default(string), string accountName = default(string), string iban = default(string), string swift = default(string))
+        /// <param name="nationalClearingCode">National Clearing Code (BSB in Australia, Routing Number in USA/Canada, NCC in NZ).</param>
+        public BankAccountSummary(int? id = default(int?), List<string> storeNames = default(List<string>), AccountStateEnum? accountState = default(AccountStateEnum?), string currencyCode = default(string), string accountName = default(string), string iban = default(string), string swift = default(string), string nationalClearingCode = default(string))
         {
             this.Id = id;
             this.StoreNames = storeNames;
@@ -88,6 +89,7 @@ namespace Flipdish.Model
             this.AccountName = accountName;
             this.Iban = iban;
             this.Swift = swift;
+            this.NationalClearingCode = nationalClearingCode;
         }
         
         /// <summary>
@@ -134,6 +136,13 @@ namespace Flipdish.Model
         public string Swift { get; set; }
 
         /// <summary>
+        /// National Clearing Code (BSB in Australia, Routing Number in USA/Canada, NCC in NZ)
+        /// </summary>
+        /// <value>National Clearing Code (BSB in Australia, Routing Number in USA/Canada, NCC in NZ)</value>
+        [DataMember(Name="NationalClearingCode", EmitDefaultValue=false)]
+        public string NationalClearingCode { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -148,6 +157,7 @@ namespace Flipdish.Model
             sb.Append("  AccountName: ").Append(AccountName).Append("\n");
             sb.Append("  Iban: ").Append(Iban).Append("\n");
             sb.Append("  Swift: ").Append(Swift).Append("\n");
+            sb.Append("  NationalClearingCode: ").Append(NationalClearingCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -216,6 +226,11 @@ namespace Flipdish.Model
                     this.Swift == input.Swift ||
                     (this.Swift != null &&
                     this.Swift.Equals(input.Swift))
+                ) && 
+                (
+                    this.NationalClearingCode == input.NationalClearingCode ||
+                    (this.NationalClearingCode != null &&
+                    this.NationalClearingCode.Equals(input.NationalClearingCode))
                 );
         }
 
@@ -242,6 +257,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Iban.GetHashCode();
                 if (this.Swift != null)
                     hashCode = hashCode * 59 + this.Swift.GetHashCode();
+                if (this.NationalClearingCode != null)
+                    hashCode = hashCode * 59 + this.NationalClearingCode.GetHashCode();
                 return hashCode;
             }
         }

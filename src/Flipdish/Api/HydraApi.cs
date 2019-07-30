@@ -25,6 +25,39 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// [Private]
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceType"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceName"> (optional)</param>
+        /// <param name="deviceSerial"> (optional)</param>
+        /// <returns>RestApiPaginationResultHydraDeviceDetails</returns>
+        RestApiPaginationResultHydraDeviceDetails GetAttachedDevices (string appId, string deviceType, int? pageIndex = null, int? pageSize = null, int? storeId = null, string deviceName = null, string deviceSerial = null);
+
+        /// <summary>
+        /// [Private]
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceType"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceName"> (optional)</param>
+        /// <param name="deviceSerial"> (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultHydraDeviceDetails</returns>
+        ApiResponse<RestApiPaginationResultHydraDeviceDetails> GetAttachedDevicesWithHttpInfo (string appId, string deviceType, int? pageIndex = null, int? pageSize = null, int? storeId = null, string deviceName = null, string deviceSerial = null);
+        /// <summary>
         /// 
         /// </summary>
         /// <remarks>
@@ -69,9 +102,31 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultPaymentTerminalDetails</returns>
+        RestApiResultPaymentTerminalDetails GetTerminalDetails (string appId);
+
+        /// <summary>
+        /// [Private]
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultPaymentTerminalDetails</returns>
+        ApiResponse<RestApiResultPaymentTerminalDetails> GetTerminalDetailsWithHttpInfo (string appId);
+        /// <summary>
+        /// [Private]
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId"></param>
+        /// <param name="hydraUserType"> (optional)</param>
         /// <returns></returns>
-        void Login (string deviceId);
+        void LoginWithDeviceId (string deviceId, string hydraUserType = null);
 
         /// <summary>
         /// [Private]
@@ -81,8 +136,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId"></param>
+        /// <param name="hydraUserType"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> LoginWithHttpInfo (string deviceId);
+        ApiResponse<Object> LoginWithDeviceIdWithHttpInfo (string deviceId, string hydraUserType = null);
         /// <summary>
         /// [Private]
         /// </summary>
@@ -90,32 +146,10 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="payOrder"></param>
-        /// <returns></returns>
-        void PayOrder (int? orderId, PayOrder payOrder);
-
-        /// <summary>
-        /// [Private]
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="payOrder"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PayOrderWithHttpInfo (int? orderId, PayOrder payOrder);
-        /// <summary>
-        /// [Private]
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <param name="hydraRegistration"></param>
         /// <returns>RestApiResultHydraStatus</returns>
-        RestApiResultHydraStatus Register (HydraRegistration hydraRegistration);
+        RestApiResultHydraStatus Register (string appId, HydraRegistrationRequest hydraRegistration);
 
         /// <summary>
         /// [Private]
@@ -124,11 +158,68 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <param name="hydraRegistration"></param>
         /// <returns>ApiResponse of RestApiResultHydraStatus</returns>
-        ApiResponse<RestApiResultHydraStatus> RegisterWithHttpInfo (HydraRegistration hydraRegistration);
+        ApiResponse<RestApiResultHydraStatus> RegisterWithHttpInfo (string appId, HydraRegistrationRequest hydraRegistration);
+        /// <summary>
+        /// [Private]
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns></returns>
+        void UnAssign (string appId, string deviceId);
+
+        /// <summary>
+        /// [Private]
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UnAssignWithHttpInfo (string appId, string deviceId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// [Private]
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceType"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceName"> (optional)</param>
+        /// <param name="deviceSerial"> (optional)</param>
+        /// <returns>Task of RestApiPaginationResultHydraDeviceDetails</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultHydraDeviceDetails> GetAttachedDevicesAsync (string appId, string deviceType, int? pageIndex = null, int? pageSize = null, int? storeId = null, string deviceName = null, string deviceSerial = null);
+
+        /// <summary>
+        /// [Private]
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceType"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceName"> (optional)</param>
+        /// <param name="deviceSerial"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultHydraDeviceDetails)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultHydraDeviceDetails>> GetAttachedDevicesAsyncWithHttpInfo (string appId, string deviceType, int? pageIndex = null, int? pageSize = null, int? storeId = null, string deviceName = null, string deviceSerial = null);
         /// <summary>
         /// 
         /// </summary>
@@ -174,9 +265,31 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultPaymentTerminalDetails</returns>
+        System.Threading.Tasks.Task<RestApiResultPaymentTerminalDetails> GetTerminalDetailsAsync (string appId);
+
+        /// <summary>
+        /// [Private]
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultPaymentTerminalDetails)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultPaymentTerminalDetails>> GetTerminalDetailsAsyncWithHttpInfo (string appId);
+        /// <summary>
+        /// [Private]
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId"></param>
+        /// <param name="hydraUserType"> (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task LoginAsync (string deviceId);
+        System.Threading.Tasks.Task LoginWithDeviceIdAsync (string deviceId, string hydraUserType = null);
 
         /// <summary>
         /// [Private]
@@ -186,8 +299,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId"></param>
+        /// <param name="hydraUserType"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> LoginAsyncWithHttpInfo (string deviceId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> LoginWithDeviceIdAsyncWithHttpInfo (string deviceId, string hydraUserType = null);
         /// <summary>
         /// [Private]
         /// </summary>
@@ -195,32 +309,10 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="payOrder"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PayOrderAsync (int? orderId, PayOrder payOrder);
-
-        /// <summary>
-        /// [Private]
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="payOrder"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PayOrderAsyncWithHttpInfo (int? orderId, PayOrder payOrder);
-        /// <summary>
-        /// [Private]
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <param name="hydraRegistration"></param>
         /// <returns>Task of RestApiResultHydraStatus</returns>
-        System.Threading.Tasks.Task<RestApiResultHydraStatus> RegisterAsync (HydraRegistration hydraRegistration);
+        System.Threading.Tasks.Task<RestApiResultHydraStatus> RegisterAsync (string appId, HydraRegistrationRequest hydraRegistration);
 
         /// <summary>
         /// [Private]
@@ -229,9 +321,33 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <param name="hydraRegistration"></param>
         /// <returns>Task of ApiResponse (RestApiResultHydraStatus)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultHydraStatus>> RegisterAsyncWithHttpInfo (HydraRegistration hydraRegistration);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultHydraStatus>> RegisterAsyncWithHttpInfo (string appId, HydraRegistrationRequest hydraRegistration);
+        /// <summary>
+        /// [Private]
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UnAssignAsync (string appId, string deviceId);
+
+        /// <summary>
+        /// [Private]
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UnAssignAsyncWithHttpInfo (string appId, string deviceId);
         #endregion Asynchronous Operations
     }
 
@@ -330,6 +446,199 @@ namespace Flipdish.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// [Private] 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceType"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceName"> (optional)</param>
+        /// <param name="deviceSerial"> (optional)</param>
+        /// <returns>RestApiPaginationResultHydraDeviceDetails</returns>
+        public RestApiPaginationResultHydraDeviceDetails GetAttachedDevices (string appId, string deviceType, int? pageIndex = null, int? pageSize = null, int? storeId = null, string deviceName = null, string deviceSerial = null)
+        {
+             ApiResponse<RestApiPaginationResultHydraDeviceDetails> localVarResponse = GetAttachedDevicesWithHttpInfo(appId, deviceType, pageIndex, pageSize, storeId, deviceName, deviceSerial);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [Private] 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceType"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceName"> (optional)</param>
+        /// <param name="deviceSerial"> (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultHydraDeviceDetails</returns>
+        public ApiResponse< RestApiPaginationResultHydraDeviceDetails > GetAttachedDevicesWithHttpInfo (string appId, string deviceType, int? pageIndex = null, int? pageSize = null, int? storeId = null, string deviceName = null, string deviceSerial = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->GetAttachedDevices");
+            // verify the required parameter 'deviceType' is set
+            if (deviceType == null)
+                throw new ApiException(400, "Missing required parameter 'deviceType' when calling HydraApi->GetAttachedDevices");
+
+            var localVarPath = "/api/v1.0/{appId}/hydra/{deviceType}/list";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (deviceType != null) localVarPathParams.Add("deviceType", this.Configuration.ApiClient.ParameterToString(deviceType)); // path parameter
+            if (pageIndex != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pageIndex", pageIndex)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pageSize", pageSize)); // query parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
+            if (deviceName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "deviceName", deviceName)); // query parameter
+            if (deviceSerial != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "deviceSerial", deviceSerial)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAttachedDevices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultHydraDeviceDetails>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiPaginationResultHydraDeviceDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultHydraDeviceDetails)));
+        }
+
+        /// <summary>
+        /// [Private] 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceType"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceName"> (optional)</param>
+        /// <param name="deviceSerial"> (optional)</param>
+        /// <returns>Task of RestApiPaginationResultHydraDeviceDetails</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultHydraDeviceDetails> GetAttachedDevicesAsync (string appId, string deviceType, int? pageIndex = null, int? pageSize = null, int? storeId = null, string deviceName = null, string deviceSerial = null)
+        {
+             ApiResponse<RestApiPaginationResultHydraDeviceDetails> localVarResponse = await GetAttachedDevicesAsyncWithHttpInfo(appId, deviceType, pageIndex, pageSize, storeId, deviceName, deviceSerial);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// [Private] 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceType"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceName"> (optional)</param>
+        /// <param name="deviceSerial"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultHydraDeviceDetails)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultHydraDeviceDetails>> GetAttachedDevicesAsyncWithHttpInfo (string appId, string deviceType, int? pageIndex = null, int? pageSize = null, int? storeId = null, string deviceName = null, string deviceSerial = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->GetAttachedDevices");
+            // verify the required parameter 'deviceType' is set
+            if (deviceType == null)
+                throw new ApiException(400, "Missing required parameter 'deviceType' when calling HydraApi->GetAttachedDevices");
+
+            var localVarPath = "/api/v1.0/{appId}/hydra/{deviceType}/list";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (deviceType != null) localVarPathParams.Add("deviceType", this.Configuration.ApiClient.ParameterToString(deviceType)); // path parameter
+            if (pageIndex != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pageIndex", pageIndex)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pageSize", pageSize)); // query parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
+            if (deviceName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "deviceName", deviceName)); // query parameter
+            if (deviceSerial != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "deviceSerial", deviceSerial)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAttachedDevices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultHydraDeviceDetails>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiPaginationResultHydraDeviceDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultHydraDeviceDetails)));
         }
 
         /// <summary>
@@ -614,11 +923,151 @@ namespace Flipdish.Api
         /// [Private] 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId"></param>
-        /// <returns></returns>
-        public void Login (string deviceId)
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultPaymentTerminalDetails</returns>
+        public RestApiResultPaymentTerminalDetails GetTerminalDetails (string appId)
         {
-             LoginWithHttpInfo(deviceId);
+             ApiResponse<RestApiResultPaymentTerminalDetails> localVarResponse = GetTerminalDetailsWithHttpInfo(appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [Private] 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultPaymentTerminalDetails</returns>
+        public ApiResponse< RestApiResultPaymentTerminalDetails > GetTerminalDetailsWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->GetTerminalDetails");
+
+            var localVarPath = "/api/v1.0/{appId}/hydra/terminal";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetTerminalDetails", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultPaymentTerminalDetails>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultPaymentTerminalDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPaymentTerminalDetails)));
+        }
+
+        /// <summary>
+        /// [Private] 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultPaymentTerminalDetails</returns>
+        public async System.Threading.Tasks.Task<RestApiResultPaymentTerminalDetails> GetTerminalDetailsAsync (string appId)
+        {
+             ApiResponse<RestApiResultPaymentTerminalDetails> localVarResponse = await GetTerminalDetailsAsyncWithHttpInfo(appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// [Private] 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultPaymentTerminalDetails)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultPaymentTerminalDetails>> GetTerminalDetailsAsyncWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->GetTerminalDetails");
+
+            var localVarPath = "/api/v1.0/{appId}/hydra/terminal";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetTerminalDetails", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultPaymentTerminalDetails>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultPaymentTerminalDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPaymentTerminalDetails)));
         }
 
         /// <summary>
@@ -626,12 +1075,25 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId"></param>
+        /// <param name="hydraUserType"> (optional)</param>
+        /// <returns></returns>
+        public void LoginWithDeviceId (string deviceId, string hydraUserType = null)
+        {
+             LoginWithDeviceIdWithHttpInfo(deviceId, hydraUserType);
+        }
+
+        /// <summary>
+        /// [Private] 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deviceId"></param>
+        /// <param name="hydraUserType"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> LoginWithHttpInfo (string deviceId)
+        public ApiResponse<Object> LoginWithDeviceIdWithHttpInfo (string deviceId, string hydraUserType = null)
         {
             // verify the required parameter 'deviceId' is set
             if (deviceId == null)
-                throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->Login");
+                throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->LoginWithDeviceId");
 
             var localVarPath = "/api/v1.0/hydra/{deviceId}/login";
             var localVarPathParams = new Dictionary<String, String>();
@@ -658,6 +1120,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (deviceId != null) localVarPathParams.Add("deviceId", this.Configuration.ApiClient.ParameterToString(deviceId)); // path parameter
+            if (hydraUserType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "hydraUserType", hydraUserType)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -675,7 +1138,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Login", localVarResponse);
+                Exception exception = ExceptionFactory("LoginWithDeviceId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -689,10 +1152,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId"></param>
+        /// <param name="hydraUserType"> (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task LoginAsync (string deviceId)
+        public async System.Threading.Tasks.Task LoginWithDeviceIdAsync (string deviceId, string hydraUserType = null)
         {
-             await LoginAsyncWithHttpInfo(deviceId);
+             await LoginWithDeviceIdAsyncWithHttpInfo(deviceId, hydraUserType);
 
         }
 
@@ -701,12 +1165,13 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId"></param>
+        /// <param name="hydraUserType"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> LoginAsyncWithHttpInfo (string deviceId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> LoginWithDeviceIdAsyncWithHttpInfo (string deviceId, string hydraUserType = null)
         {
             // verify the required parameter 'deviceId' is set
             if (deviceId == null)
-                throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->Login");
+                throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->LoginWithDeviceId");
 
             var localVarPath = "/api/v1.0/hydra/{deviceId}/login";
             var localVarPathParams = new Dictionary<String, String>();
@@ -733,6 +1198,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (deviceId != null) localVarPathParams.Add("deviceId", this.Configuration.ApiClient.ParameterToString(deviceId)); // path parameter
+            if (hydraUserType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "hydraUserType", hydraUserType)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -750,7 +1216,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Login", localVarResponse);
+                Exception exception = ExceptionFactory("LoginWithDeviceId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -763,196 +1229,12 @@ namespace Flipdish.Api
         /// [Private] 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="payOrder"></param>
-        /// <returns></returns>
-        public void PayOrder (int? orderId, PayOrder payOrder)
-        {
-             PayOrderWithHttpInfo(orderId, payOrder);
-        }
-
-        /// <summary>
-        /// [Private] 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="payOrder"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PayOrderWithHttpInfo (int? orderId, PayOrder payOrder)
-        {
-            // verify the required parameter 'orderId' is set
-            if (orderId == null)
-                throw new ApiException(400, "Missing required parameter 'orderId' when calling HydraApi->PayOrder");
-            // verify the required parameter 'payOrder' is set
-            if (payOrder == null)
-                throw new ApiException(400, "Missing required parameter 'payOrder' when calling HydraApi->PayOrder");
-
-            var localVarPath = "/api/v1.0/hydra/payorder/{orderId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (orderId != null) localVarPathParams.Add("orderId", this.Configuration.ApiClient.ParameterToString(orderId)); // path parameter
-            if (payOrder != null && payOrder.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(payOrder); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = payOrder; // byte array
-            }
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("PayOrder", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// [Private] 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="payOrder"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PayOrderAsync (int? orderId, PayOrder payOrder)
-        {
-             await PayOrderAsyncWithHttpInfo(orderId, payOrder);
-
-        }
-
-        /// <summary>
-        /// [Private] 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="payOrder"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PayOrderAsyncWithHttpInfo (int? orderId, PayOrder payOrder)
-        {
-            // verify the required parameter 'orderId' is set
-            if (orderId == null)
-                throw new ApiException(400, "Missing required parameter 'orderId' when calling HydraApi->PayOrder");
-            // verify the required parameter 'payOrder' is set
-            if (payOrder == null)
-                throw new ApiException(400, "Missing required parameter 'payOrder' when calling HydraApi->PayOrder");
-
-            var localVarPath = "/api/v1.0/hydra/payorder/{orderId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (orderId != null) localVarPathParams.Add("orderId", this.Configuration.ApiClient.ParameterToString(orderId)); // path parameter
-            if (payOrder != null && payOrder.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(payOrder); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = payOrder; // byte array
-            }
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("PayOrder", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// [Private] 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <param name="hydraRegistration"></param>
         /// <returns>RestApiResultHydraStatus</returns>
-        public RestApiResultHydraStatus Register (HydraRegistration hydraRegistration)
+        public RestApiResultHydraStatus Register (string appId, HydraRegistrationRequest hydraRegistration)
         {
-             ApiResponse<RestApiResultHydraStatus> localVarResponse = RegisterWithHttpInfo(hydraRegistration);
+             ApiResponse<RestApiResultHydraStatus> localVarResponse = RegisterWithHttpInfo(appId, hydraRegistration);
              return localVarResponse.Data;
         }
 
@@ -960,15 +1242,19 @@ namespace Flipdish.Api
         /// [Private] 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <param name="hydraRegistration"></param>
         /// <returns>ApiResponse of RestApiResultHydraStatus</returns>
-        public ApiResponse< RestApiResultHydraStatus > RegisterWithHttpInfo (HydraRegistration hydraRegistration)
+        public ApiResponse< RestApiResultHydraStatus > RegisterWithHttpInfo (string appId, HydraRegistrationRequest hydraRegistration)
         {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->Register");
             // verify the required parameter 'hydraRegistration' is set
             if (hydraRegistration == null)
                 throw new ApiException(400, "Missing required parameter 'hydraRegistration' when calling HydraApi->Register");
 
-            var localVarPath = "/api/v1.0/hydra/registration";
+            var localVarPath = "/api/v1.0/{appId}/hydra/registration";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -997,6 +1283,7 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (hydraRegistration != null && hydraRegistration.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(hydraRegistration); // http body (model) parameter
@@ -1035,11 +1322,12 @@ namespace Flipdish.Api
         /// [Private] 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <param name="hydraRegistration"></param>
         /// <returns>Task of RestApiResultHydraStatus</returns>
-        public async System.Threading.Tasks.Task<RestApiResultHydraStatus> RegisterAsync (HydraRegistration hydraRegistration)
+        public async System.Threading.Tasks.Task<RestApiResultHydraStatus> RegisterAsync (string appId, HydraRegistrationRequest hydraRegistration)
         {
-             ApiResponse<RestApiResultHydraStatus> localVarResponse = await RegisterAsyncWithHttpInfo(hydraRegistration);
+             ApiResponse<RestApiResultHydraStatus> localVarResponse = await RegisterAsyncWithHttpInfo(appId, hydraRegistration);
              return localVarResponse.Data;
 
         }
@@ -1048,15 +1336,19 @@ namespace Flipdish.Api
         /// [Private] 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <param name="hydraRegistration"></param>
         /// <returns>Task of ApiResponse (RestApiResultHydraStatus)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultHydraStatus>> RegisterAsyncWithHttpInfo (HydraRegistration hydraRegistration)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultHydraStatus>> RegisterAsyncWithHttpInfo (string appId, HydraRegistrationRequest hydraRegistration)
         {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->Register");
             // verify the required parameter 'hydraRegistration' is set
             if (hydraRegistration == null)
                 throw new ApiException(400, "Missing required parameter 'hydraRegistration' when calling HydraApi->Register");
 
-            var localVarPath = "/api/v1.0/hydra/registration";
+            var localVarPath = "/api/v1.0/{appId}/hydra/registration";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1085,6 +1377,7 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (hydraRegistration != null && hydraRegistration.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(hydraRegistration); // http body (model) parameter
@@ -1117,6 +1410,167 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultHydraStatus>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiResultHydraStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraStatus)));
+        }
+
+        /// <summary>
+        /// [Private] 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns></returns>
+        public void UnAssign (string appId, string deviceId)
+        {
+             UnAssignWithHttpInfo(appId, deviceId);
+        }
+
+        /// <summary>
+        /// [Private] 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UnAssignWithHttpInfo (string appId, string deviceId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->UnAssign");
+            // verify the required parameter 'deviceId' is set
+            if (deviceId == null)
+                throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->UnAssign");
+
+            var localVarPath = "/api/v1.0/{appId}/hydra/{deviceId}/registration";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (deviceId != null) localVarPathParams.Add("deviceId", this.Configuration.ApiClient.ParameterToString(deviceId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UnAssign", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// [Private] 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UnAssignAsync (string appId, string deviceId)
+        {
+             await UnAssignAsyncWithHttpInfo(appId, deviceId);
+
+        }
+
+        /// <summary>
+        /// [Private] 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UnAssignAsyncWithHttpInfo (string appId, string deviceId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->UnAssign");
+            // verify the required parameter 'deviceId' is set
+            if (deviceId == null)
+                throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->UnAssign");
+
+            var localVarPath = "/api/v1.0/{appId}/hydra/{deviceId}/registration";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (deviceId != null) localVarPathParams.Add("deviceId", this.Configuration.ApiClient.ParameterToString(deviceId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UnAssign", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
     }

@@ -83,6 +83,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'GroupedCoordinates'
         }
         /// <summary>
+        /// Test the property 'StoreIds'
+        /// </summary>
+        [Test]
+        public void StoreIdsTest()
+        {
+            // TODO unit test for the property 'StoreIds'
+        }
+        /// <summary>
         /// Test the property 'StoreGroupId'
         /// </summary>
         [Test]
