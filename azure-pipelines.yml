@@ -12,7 +12,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  nuspec: '**/*.csproj'
+  nuspec: '**/Flipdish.csproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
@@ -24,15 +24,18 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-
-
 - task: NuGetCommand@2
   inputs:
     command: 'pack'
     packagesToPack: '$(nuspec)'
     versioningScheme: 'byBuildNumber'
 
-
+- task: NuGetCommand@2
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'external'
+    publishFeedCredentials: 'Nuget service'
 
 - task: VSTest@2
   inputs:
