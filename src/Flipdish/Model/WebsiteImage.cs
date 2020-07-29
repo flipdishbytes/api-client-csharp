@@ -57,10 +57,10 @@ namespace Flipdish.Model
             IndexAboutSectionRight = 3,
             
             /// <summary>
-            /// Enum IndexGalleryHeader for value: IndexGalleryHeader
+            /// Enum IndexGallery for value: IndexGallery
             /// </summary>
-            [EnumMember(Value = "IndexGalleryHeader")]
-            IndexGalleryHeader = 4,
+            [EnumMember(Value = "IndexGallery")]
+            IndexGallery = 4,
             
             /// <summary>
             /// Enum IndexOpeningHoursHeader for value: IndexOpeningHoursHeader
@@ -72,13 +72,7 @@ namespace Flipdish.Model
             /// Enum IndexTestimonialsHeader for value: IndexTestimonialsHeader
             /// </summary>
             [EnumMember(Value = "IndexTestimonialsHeader")]
-            IndexTestimonialsHeader = 6,
-            
-            /// <summary>
-            /// Enum GalleryHeader for value: GalleryHeader
-            /// </summary>
-            [EnumMember(Value = "GalleryHeader")]
-            GalleryHeader = 7
+            IndexTestimonialsHeader = 6
         }
 
         /// <summary>

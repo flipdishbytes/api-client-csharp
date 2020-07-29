@@ -65,6 +65,39 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test HeadHostname
+        /// </summary>
+        [Test]
+        public void HeadHostnameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.HeadHostname();
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test HeadPing
+        /// </summary>
+        [Test]
+        public void HeadPingTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.HeadPing();
+            //Assert.IsInstanceOf<RestApiStringResult> (response, "response is RestApiStringResult");
+        }
+        
+        /// <summary>
+        /// Test Hostname
+        /// </summary>
+        [Test]
+        public void HostnameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.Hostname();
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
         /// Test Ping
         /// </summary>
         [Test]

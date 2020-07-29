@@ -35,6 +35,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="eventName">The event name.</param>
         /// <param name="description">Description.</param>
+        /// <param name="changes">A summary of changes made.</param>
         /// <param name="appName">App Name.</param>
         /// <param name="countryId">Country Id.</param>
         /// <param name="user">User information.</param>
@@ -42,10 +43,11 @@ namespace Flipdish.Model
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
-        public AppUpdatedEvent(string eventName = default(string), string description = default(string), string appName = default(string), string countryId = default(string), UserEventInfo user = default(UserEventInfo), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
+        public AppUpdatedEvent(string eventName = default(string), string description = default(string), string changes = default(string), string appName = default(string), string countryId = default(string), UserEventInfo user = default(UserEventInfo), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
         {
             this.EventName = eventName;
             this.Description = description;
+            this.Changes = changes;
             this.AppName = appName;
             this.CountryId = countryId;
             this.User = user;
@@ -68,6 +70,13 @@ namespace Flipdish.Model
         /// <value>Description</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
+
+        /// <summary>
+        /// A summary of changes made
+        /// </summary>
+        /// <value>A summary of changes made</value>
+        [DataMember(Name="Changes", EmitDefaultValue=false)]
+        public string Changes { get; set; }
 
         /// <summary>
         /// App Name
@@ -128,6 +137,7 @@ namespace Flipdish.Model
             sb.Append("class AppUpdatedEvent {\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Changes: ").Append(Changes).Append("\n");
             sb.Append("  AppName: ").Append(AppName).Append("\n");
             sb.Append("  CountryId: ").Append(CountryId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -180,6 +190,11 @@ namespace Flipdish.Model
                     this.Description.Equals(input.Description))
                 ) && 
                 (
+                    this.Changes == input.Changes ||
+                    (this.Changes != null &&
+                    this.Changes.Equals(input.Changes))
+                ) && 
+                (
                     this.AppName == input.AppName ||
                     (this.AppName != null &&
                     this.AppName.Equals(input.AppName))
@@ -229,6 +244,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.Changes != null)
+                    hashCode = hashCode * 59 + this.Changes.GetHashCode();
                 if (this.AppName != null)
                     hashCode = hashCode * 59 + this.AppName.GetHashCode();
                 if (this.CountryId != null)

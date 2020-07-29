@@ -83,6 +83,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'Description'
         }
         /// <summary>
+        /// Test the property 'Changes'
+        /// </summary>
+        [Test]
+        public void ChangesTest()
+        {
+            // TODO unit test for the property 'Changes'
+        }
+        /// <summary>
         /// Test the property 'AppName'
         /// </summary>
         [Test]

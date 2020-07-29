@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **TeammateId** | **string** | Unique indentifier | [optional] 
 **Name** | **string** | Name | [optional] 
-**LastAcitivity** | **DateTime?** | Last activity | [optional] 
+**LastActivity** | **DateTime?** | Last activity | [optional] 
 **AppId** | **string** | Access level is for this App | [optional] 
 **InvitationStatus** | **string** | Invitation status | [optional] 
 **Email** | **string** | Email address | [optional] 

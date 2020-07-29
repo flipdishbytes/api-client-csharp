@@ -38,19 +38,19 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HydraRegistrationRequest" /> class.
         /// </summary>
-        /// <param name="storeId">Store to assign the hydra (required).</param>
+        /// <param name="storeIds">Stores to assign the hydra (required).</param>
         /// <param name="deviceName">Hydra device name (required).</param>
         /// <param name="pinCode">6 digit PIN code (not starting with zero)..</param>
-        public HydraRegistrationRequest(int? storeId = default(int?), string deviceName = default(string), int? pinCode = default(int?))
+        public HydraRegistrationRequest(List<int?> storeIds = default(List<int?>), string deviceName = default(string), int? pinCode = default(int?))
         {
-            // to ensure "storeId" is required (not null)
-            if (storeId == null)
+            // to ensure "storeIds" is required (not null)
+            if (storeIds == null)
             {
-                throw new InvalidDataException("storeId is a required property for HydraRegistrationRequest and cannot be null");
+                throw new InvalidDataException("storeIds is a required property for HydraRegistrationRequest and cannot be null");
             }
             else
             {
-                this.StoreId = storeId;
+                this.StoreIds = storeIds;
             }
             // to ensure "deviceName" is required (not null)
             if (deviceName == null)
@@ -65,11 +65,11 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Store to assign the hydra
+        /// Stores to assign the hydra
         /// </summary>
-        /// <value>Store to assign the hydra</value>
-        [DataMember(Name="StoreId", EmitDefaultValue=false)]
-        public int? StoreId { get; set; }
+        /// <value>Stores to assign the hydra</value>
+        [DataMember(Name="StoreIds", EmitDefaultValue=false)]
+        public List<int?> StoreIds { get; set; }
 
         /// <summary>
         /// Hydra device name
@@ -93,7 +93,7 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class HydraRegistrationRequest {\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  StoreIds: ").Append(StoreIds).Append("\n");
             sb.Append("  DeviceName: ").Append(DeviceName).Append("\n");
             sb.Append("  PinCode: ").Append(PinCode).Append("\n");
             sb.Append("}\n");
@@ -131,9 +131,9 @@ namespace Flipdish.Model
 
             return 
                 (
-                    this.StoreId == input.StoreId ||
-                    (this.StoreId != null &&
-                    this.StoreId.Equals(input.StoreId))
+                    this.StoreIds == input.StoreIds ||
+                    this.StoreIds != null &&
+                    this.StoreIds.SequenceEqual(input.StoreIds)
                 ) && 
                 (
                     this.DeviceName == input.DeviceName ||
@@ -156,8 +156,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.StoreId != null)
-                    hashCode = hashCode * 59 + this.StoreId.GetHashCode();
+                if (this.StoreIds != null)
+                    hashCode = hashCode * 59 + this.StoreIds.GetHashCode();
                 if (this.DeviceName != null)
                     hashCode = hashCode * 59 + this.DeviceName.GetHashCode();
                 if (this.PinCode != null)

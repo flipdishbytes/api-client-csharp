@@ -131,18 +131,18 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="teammateId">Unique indentifier.</param>
         /// <param name="name">Name.</param>
-        /// <param name="lastAcitivity">Last activity.</param>
+        /// <param name="lastActivity">Last activity.</param>
         /// <param name="appId">Access level is for this App.</param>
         /// <param name="invitationStatus">Invitation status.</param>
         /// <param name="email">Email address.</param>
         /// <param name="appAccessLevel">App access level.</param>
         /// <param name="hasAccessToAllStores">The user has access to all stores for the app (including new stores that added later).</param>
         /// <param name="storeIds">Store IDs the user has access to (if HasAccessToAllStores is false).</param>
-        public Teammate(string teammateId = default(string), string name = default(string), DateTime? lastAcitivity = default(DateTime?), string appId = default(string), InvitationStatusEnum? invitationStatus = default(InvitationStatusEnum?), string email = default(string), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), bool? hasAccessToAllStores = default(bool?), List<int?> storeIds = default(List<int?>))
+        public Teammate(string teammateId = default(string), string name = default(string), DateTime? lastActivity = default(DateTime?), string appId = default(string), InvitationStatusEnum? invitationStatus = default(InvitationStatusEnum?), string email = default(string), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), bool? hasAccessToAllStores = default(bool?), List<int?> storeIds = default(List<int?>))
         {
             this.TeammateId = teammateId;
             this.Name = name;
-            this.LastAcitivity = lastAcitivity;
+            this.LastActivity = lastActivity;
             this.AppId = appId;
             this.InvitationStatus = invitationStatus;
             this.Email = email;
@@ -169,8 +169,8 @@ namespace Flipdish.Model
         /// Last activity
         /// </summary>
         /// <value>Last activity</value>
-        [DataMember(Name="LastAcitivity", EmitDefaultValue=false)]
-        public DateTime? LastAcitivity { get; set; }
+        [DataMember(Name="LastActivity", EmitDefaultValue=false)]
+        public DateTime? LastActivity { get; set; }
 
         /// <summary>
         /// Access level is for this App
@@ -212,7 +212,7 @@ namespace Flipdish.Model
             sb.Append("class Teammate {\n");
             sb.Append("  TeammateId: ").Append(TeammateId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  LastAcitivity: ").Append(LastAcitivity).Append("\n");
+            sb.Append("  LastActivity: ").Append(LastActivity).Append("\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  InvitationStatus: ").Append(InvitationStatus).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
@@ -264,9 +264,9 @@ namespace Flipdish.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.LastAcitivity == input.LastAcitivity ||
-                    (this.LastAcitivity != null &&
-                    this.LastAcitivity.Equals(input.LastAcitivity))
+                    this.LastActivity == input.LastActivity ||
+                    (this.LastActivity != null &&
+                    this.LastActivity.Equals(input.LastActivity))
                 ) && 
                 (
                     this.AppId == input.AppId ||
@@ -313,8 +313,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.TeammateId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.LastAcitivity != null)
-                    hashCode = hashCode * 59 + this.LastAcitivity.GetHashCode();
+                if (this.LastActivity != null)
+                    hashCode = hashCode * 59 + this.LastActivity.GetHashCode();
                 if (this.AppId != null)
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 if (this.InvitationStatus != null)

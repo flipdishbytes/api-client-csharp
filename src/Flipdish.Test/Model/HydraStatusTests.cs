@@ -75,12 +75,12 @@ namespace Flipdish.Test
             // TODO unit test for the property 'AppId'
         }
         /// <summary>
-        /// Test the property 'StoreId'
+        /// Test the property 'StoreIds'
         /// </summary>
         [Test]
-        public void StoreIdTest()
+        public void StoreIdsTest()
         {
-            // TODO unit test for the property 'StoreId'
+            // TODO unit test for the property 'StoreIds'
         }
         /// <summary>
         /// Test the property 'IsRegistered'

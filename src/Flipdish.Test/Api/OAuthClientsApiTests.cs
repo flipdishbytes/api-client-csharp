@@ -195,6 +195,20 @@ namespace Flipdish.Test
             
         }
         
+        /// <summary>
+        /// Test UpdateOAuthApp
+        /// </summary>
+        [Test]
+        public void UpdateOAuthAppTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string oauthAppId = null;
+            //OAuthApp oAuthApp = null;
+            //string appId = null;
+            //instance.UpdateOAuthApp(oauthAppId, oAuthApp, appId);
+            
+        }
+        
     }
 
 }

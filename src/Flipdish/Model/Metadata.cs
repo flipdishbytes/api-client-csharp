@@ -33,14 +33,23 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Metadata" /> class.
         /// </summary>
+        /// <param name="menuEntityId">Menu entity identifier (eg: MenuItemId, MenuItemOptionSetItemId).</param>
         /// <param name="key">Metadata key (Unique identifier).</param>
         /// <param name="value">Metadata value.</param>
-        public Metadata(string key = default(string), string value = default(string))
+        public Metadata(int? menuEntityId = default(int?), string key = default(string), string value = default(string))
         {
+            this.MenuEntityId = menuEntityId;
             this.Key = key;
             this.Value = value;
         }
         
+        /// <summary>
+        /// Menu entity identifier (eg: MenuItemId, MenuItemOptionSetItemId)
+        /// </summary>
+        /// <value>Menu entity identifier (eg: MenuItemId, MenuItemOptionSetItemId)</value>
+        [DataMember(Name="MenuEntityId", EmitDefaultValue=false)]
+        public int? MenuEntityId { get; set; }
+
         /// <summary>
         /// Metadata key (Unique identifier)
         /// </summary>
@@ -63,6 +72,7 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Metadata {\n");
+            sb.Append("  MenuEntityId: ").Append(MenuEntityId).Append("\n");
             sb.Append("  Key: ").Append(Key).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -100,6 +110,11 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.MenuEntityId == input.MenuEntityId ||
+                    (this.MenuEntityId != null &&
+                    this.MenuEntityId.Equals(input.MenuEntityId))
+                ) && 
+                (
                     this.Key == input.Key ||
                     (this.Key != null &&
                     this.Key.Equals(input.Key))
@@ -120,6 +135,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.MenuEntityId != null)
+                    hashCode = hashCode * 59 + this.MenuEntityId.GetHashCode();
                 if (this.Key != null)
                     hashCode = hashCode * 59 + this.Key.GetHashCode();
                 if (this.Value != null)

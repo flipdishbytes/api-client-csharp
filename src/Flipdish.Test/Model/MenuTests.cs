@@ -123,6 +123,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'MenuSections'
         }
         /// <summary>
+        /// Test the property 'TaxRates'
+        /// </summary>
+        [Test]
+        public void TaxRatesTest()
+        {
+            // TODO unit test for the property 'TaxRates'
+        }
+        /// <summary>
         /// Test the property 'DisplaySectionLinks'
         /// </summary>
         [Test]
@@ -137,6 +145,14 @@ namespace Flipdish.Test
         public void MenuSectionBehaviourTest()
         {
             // TODO unit test for the property 'MenuSectionBehaviour'
+        }
+        /// <summary>
+        /// Test the property 'TaxType'
+        /// </summary>
+        [Test]
+        public void TaxTypeTest()
+        {
+            // TODO unit test for the property 'TaxType'
         }
 
     }

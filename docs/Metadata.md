@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**MenuEntityId** | **int?** | Menu entity identifier (eg: MenuItemId, MenuItemOptionSetItemId) | [optional] 
 **Key** | **string** | Metadata key (Unique identifier) | [optional] 
 **Value** | **string** | Metadata value | [optional] 
 

@@ -65,6 +65,18 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test ArchiveStore
+        /// </summary>
+        [Test]
+        public void ArchiveStoreTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //instance.ArchiveStore(storeId);
+            
+        }
+        
+        /// <summary>
         /// Test AssignMenu
         /// </summary>
         [Test]
@@ -204,8 +216,17 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? storeId = null;
             //string deliveryType = null;
-            //string date = null;
-            //var response = instance.GetPreOrderPreview(storeId, deliveryType, date);
+            //int? preOrderConfigLeadTimeMinutes = null;
+            //int? preOrderConfigIntervalMinutes = null;
+            //int? preOrderConfigMaxOrderAheadDays = null;
+            //bool? preOrderConfigIncludeAsap = null;
+            //bool? preOrderConfigIncludeMoreGranularInitialTime = null;
+            //string preOrderConfigCutOffTimePreviousDayBasic = null;
+            //string preOrderConfigCutOffTimeCurrentDayBasic = null;
+            //string preOrderConfigPreOrderTimeDisplayType = null;
+            //bool? preOrderConfigAlwaysAppearOpen = null;
+            //bool? preOrderConfigRequireExplicitSelectAlways = null;
+            //var response = instance.GetPreOrderPreview(storeId, deliveryType, preOrderConfigLeadTimeMinutes, preOrderConfigIntervalMinutes, preOrderConfigMaxOrderAheadDays, preOrderConfigIncludeAsap, preOrderConfigIncludeMoreGranularInitialTime, preOrderConfigCutOffTimePreviousDayBasic, preOrderConfigCutOffTimeCurrentDayBasic, preOrderConfigPreOrderTimeDisplayType, preOrderConfigAlwaysAppearOpen, preOrderConfigRequireExplicitSelectAlways);
             //Assert.IsInstanceOf<RestApiArrayResultPreOrderTime> (response, "response is RestApiArrayResultPreOrderTime");
         }
         
@@ -256,9 +277,10 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string appId = null;
+            //string storeNameQuery = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.GetStoreHeadersByAppId(appId, page, limit);
+            //var response = instance.GetStoreHeadersByAppId(appId, storeNameQuery, page, limit);
             //Assert.IsInstanceOf<RestApiPaginationResultStoreHeader> (response, "response is RestApiPaginationResultStoreHeader");
         }
         
@@ -306,6 +328,18 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test PublishStore
+        /// </summary>
+        [Test]
+        public void PublishStoreTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //instance.PublishStore(storeId);
+            
+        }
+        
+        /// <summary>
         /// Test SetBusinessHours
         /// </summary>
         [Test]
@@ -331,6 +365,18 @@ namespace Flipdish.Test
             //bool? enabled = null;
             //var response = instance.SetPreOrdeEnabled(storeId, deliveryType, enabled);
             //Assert.IsInstanceOf<RestApiArrayResultRestApiDefaultResponse> (response, "response is RestApiArrayResultRestApiDefaultResponse");
+        }
+        
+        /// <summary>
+        /// Test UnpublishStore
+        /// </summary>
+        [Test]
+        public void UnpublishStoreTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? storeId = null;
+            //instance.UnpublishStore(storeId);
+            
         }
         
         /// <summary>

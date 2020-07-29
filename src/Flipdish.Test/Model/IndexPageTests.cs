@@ -99,6 +99,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'AboutSectionTitle'
         }
         /// <summary>
+        /// Test the property 'AboutSectionSubtitle'
+        /// </summary>
+        [Test]
+        public void AboutSectionSubtitleTest()
+        {
+            // TODO unit test for the property 'AboutSectionSubtitle'
+        }
+        /// <summary>
         /// Test the property 'AboutSectionLeftTitle'
         /// </summary>
         [Test]

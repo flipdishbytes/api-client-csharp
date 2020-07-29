@@ -31,9 +31,9 @@ namespace Flipdish.Model
     public partial class StuartSettings :  IEquatable<StuartSettings>, IValidatableObject
     {
         /// <summary>
-        /// PackageType
+        /// Package type
         /// </summary>
-        /// <value>PackageType</value>
+        /// <value>Package type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PackageTypeEnum
         {
@@ -70,11 +70,68 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// PackageType
+        /// Package type
         /// </summary>
-        /// <value>PackageType</value>
+        /// <value>Package type</value>
         [DataMember(Name="PackageType", EmitDefaultValue=false)]
         public PackageTypeEnum? PackageType { get; set; }
+        /// <summary>
+        /// Transport type
+        /// </summary>
+        /// <value>Transport type</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TransportTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Bike for value: Bike
+            /// </summary>
+            [EnumMember(Value = "Bike")]
+            Bike = 1,
+            
+            /// <summary>
+            /// Enum Cargobike for value: Cargobike
+            /// </summary>
+            [EnumMember(Value = "Cargobike")]
+            Cargobike = 2,
+            
+            /// <summary>
+            /// Enum Cargobikexl for value: Cargobikexl
+            /// </summary>
+            [EnumMember(Value = "Cargobikexl")]
+            Cargobikexl = 3,
+            
+            /// <summary>
+            /// Enum Motorbike for value: Motorbike
+            /// </summary>
+            [EnumMember(Value = "Motorbike")]
+            Motorbike = 4,
+            
+            /// <summary>
+            /// Enum Motorbikexl for value: Motorbikexl
+            /// </summary>
+            [EnumMember(Value = "Motorbikexl")]
+            Motorbikexl = 5,
+            
+            /// <summary>
+            /// Enum Car for value: Car
+            /// </summary>
+            [EnumMember(Value = "Car")]
+            Car = 6,
+            
+            /// <summary>
+            /// Enum Van for value: Van
+            /// </summary>
+            [EnumMember(Value = "Van")]
+            Van = 7
+        }
+
+        /// <summary>
+        /// Transport type
+        /// </summary>
+        /// <value>Transport type</value>
+        [DataMember(Name="TransportType", EmitDefaultValue=false)]
+        public TransportTypeEnum? TransportType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="StuartSettings" /> class.
         /// </summary>
@@ -83,8 +140,9 @@ namespace Flipdish.Model
         /// <param name="enabled">Enabled.</param>
         /// <param name="webhookUrlBasicAuthentication">Webhook url to settle in the Stuart portal.</param>
         /// <param name="minutesToPickupBeforeThanDeliveryTime">MinutesToPickupBeforeThanDeliveryTime.</param>
-        /// <param name="packageType">PackageType.</param>
-        public StuartSettings(string clientId = default(string), string clientSecret = default(string), bool? enabled = default(bool?), string webhookUrlBasicAuthentication = default(string), int? minutesToPickupBeforeThanDeliveryTime = default(int?), PackageTypeEnum? packageType = default(PackageTypeEnum?))
+        /// <param name="packageType">Package type.</param>
+        /// <param name="transportType">Transport type.</param>
+        public StuartSettings(string clientId = default(string), string clientSecret = default(string), bool? enabled = default(bool?), string webhookUrlBasicAuthentication = default(string), int? minutesToPickupBeforeThanDeliveryTime = default(int?), PackageTypeEnum? packageType = default(PackageTypeEnum?), TransportTypeEnum? transportType = default(TransportTypeEnum?))
         {
             this.ClientId = clientId;
             this.ClientSecret = clientSecret;
@@ -92,6 +150,7 @@ namespace Flipdish.Model
             this.WebhookUrlBasicAuthentication = webhookUrlBasicAuthentication;
             this.MinutesToPickupBeforeThanDeliveryTime = minutesToPickupBeforeThanDeliveryTime;
             this.PackageType = packageType;
+            this.TransportType = transportType;
         }
         
         /// <summary>
@@ -130,6 +189,7 @@ namespace Flipdish.Model
         public int? MinutesToPickupBeforeThanDeliveryTime { get; set; }
 
 
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -144,6 +204,7 @@ namespace Flipdish.Model
             sb.Append("  WebhookUrlBasicAuthentication: ").Append(WebhookUrlBasicAuthentication).Append("\n");
             sb.Append("  MinutesToPickupBeforeThanDeliveryTime: ").Append(MinutesToPickupBeforeThanDeliveryTime).Append("\n");
             sb.Append("  PackageType: ").Append(PackageType).Append("\n");
+            sb.Append("  TransportType: ").Append(TransportType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -207,6 +268,11 @@ namespace Flipdish.Model
                     this.PackageType == input.PackageType ||
                     (this.PackageType != null &&
                     this.PackageType.Equals(input.PackageType))
+                ) && 
+                (
+                    this.TransportType == input.TransportType ||
+                    (this.TransportType != null &&
+                    this.TransportType.Equals(input.TransportType))
                 );
         }
 
@@ -231,6 +297,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MinutesToPickupBeforeThanDeliveryTime.GetHashCode();
                 if (this.PackageType != null)
                     hashCode = hashCode * 59 + this.PackageType.GetHashCode();
+                if (this.TransportType != null)
+                    hashCode = hashCode * 59 + this.TransportType.GetHashCode();
                 return hashCode;
             }
         }

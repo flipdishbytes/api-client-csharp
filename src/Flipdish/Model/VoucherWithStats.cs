@@ -849,7 +849,13 @@ namespace Flipdish.Model
             /// Enum TWD for value: TWD
             /// </summary>
             [EnumMember(Value = "TWD")]
-            TWD = 112
+            TWD = 112,
+            
+            /// <summary>
+            /// Enum BMD for value: BMD
+            /// </summary>
+            [EnumMember(Value = "BMD")]
+            BMD = 113
         }
 
         /// <summary>

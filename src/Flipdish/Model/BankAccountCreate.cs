@@ -708,7 +708,13 @@ namespace Flipdish.Model
             /// Enum TWD for value: TWD
             /// </summary>
             [EnumMember(Value = "TWD")]
-            TWD = 112
+            TWD = 112,
+            
+            /// <summary>
+            /// Enum BMD for value: BMD
+            /// </summary>
+            [EnumMember(Value = "BMD")]
+            BMD = 113
         }
 
         /// <summary>
@@ -717,6 +723,45 @@ namespace Flipdish.Model
         /// <value>Currency of Account</value>
         [DataMember(Name="CurrencyCode", EmitDefaultValue=false)]
         public CurrencyCodeEnum? CurrencyCode { get; set; }
+        /// <summary>
+        /// Business Type
+        /// </summary>
+        /// <value>Business Type</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum BusinessTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Individual for value: Individual
+            /// </summary>
+            [EnumMember(Value = "Individual")]
+            Individual = 1,
+            
+            /// <summary>
+            /// Enum Company for value: Company
+            /// </summary>
+            [EnumMember(Value = "Company")]
+            Company = 2,
+            
+            /// <summary>
+            /// Enum NonProfit for value: NonProfit
+            /// </summary>
+            [EnumMember(Value = "NonProfit")]
+            NonProfit = 3,
+            
+            /// <summary>
+            /// Enum GovernmentEntity for value: GovernmentEntity
+            /// </summary>
+            [EnumMember(Value = "GovernmentEntity")]
+            GovernmentEntity = 4
+        }
+
+        /// <summary>
+        /// Business Type
+        /// </summary>
+        /// <value>Business Type</value>
+        [DataMember(Name="BusinessType", EmitDefaultValue=false)]
+        public BusinessTypeEnum? BusinessType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BankAccountCreate" /> class.
         /// </summary>
@@ -728,11 +773,13 @@ namespace Flipdish.Model
         /// <param name="currencyCode">Currency of Account.</param>
         /// <param name="storeIds">List of stores to attach to Account.</param>
         /// <param name="bankName">Name of Bank.</param>
+        /// <param name="businessType">Business Type.</param>
         /// <param name="accountName">Name of this account.</param>
         /// <param name="iban">IBAN of this account.</param>
         /// <param name="swift">SWIFT of this bank account.</param>
         /// <param name="nationalClearingCode">National Clearing Code (BSB in Australia, Routing Number in USA/Canada, NCC in NZ).</param>
-        public BankAccountCreate(string bankAddress = default(string), string bankCountryCode = default(string), string accountHolderAddress = default(string), string accountHolderCountryCode = default(string), string vatNumber = default(string), CurrencyCodeEnum? currencyCode = default(CurrencyCodeEnum?), List<int?> storeIds = default(List<int?>), string bankName = default(string), string accountName = default(string), string iban = default(string), string swift = default(string), string nationalClearingCode = default(string))
+        /// <param name="rejectionReason">Reason for Rejection.</param>
+        public BankAccountCreate(string bankAddress = default(string), string bankCountryCode = default(string), string accountHolderAddress = default(string), string accountHolderCountryCode = default(string), string vatNumber = default(string), CurrencyCodeEnum? currencyCode = default(CurrencyCodeEnum?), List<int?> storeIds = default(List<int?>), string bankName = default(string), BusinessTypeEnum? businessType = default(BusinessTypeEnum?), string accountName = default(string), string iban = default(string), string swift = default(string), string nationalClearingCode = default(string), string rejectionReason = default(string))
         {
             this.BankAddress = bankAddress;
             this.BankCountryCode = bankCountryCode;
@@ -742,10 +789,12 @@ namespace Flipdish.Model
             this.CurrencyCode = currencyCode;
             this.StoreIds = storeIds;
             this.BankName = bankName;
+            this.BusinessType = businessType;
             this.AccountName = accountName;
             this.Iban = iban;
             this.Swift = swift;
             this.NationalClearingCode = nationalClearingCode;
+            this.RejectionReason = rejectionReason;
         }
         
         /// <summary>
@@ -798,6 +847,7 @@ namespace Flipdish.Model
         [DataMember(Name="BankName", EmitDefaultValue=false)]
         public string BankName { get; set; }
 
+
         /// <summary>
         /// Name of this account
         /// </summary>
@@ -827,6 +877,13 @@ namespace Flipdish.Model
         public string NationalClearingCode { get; set; }
 
         /// <summary>
+        /// Reason for Rejection
+        /// </summary>
+        /// <value>Reason for Rejection</value>
+        [DataMember(Name="RejectionReason", EmitDefaultValue=false)]
+        public string RejectionReason { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -842,10 +899,12 @@ namespace Flipdish.Model
             sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
             sb.Append("  StoreIds: ").Append(StoreIds).Append("\n");
             sb.Append("  BankName: ").Append(BankName).Append("\n");
+            sb.Append("  BusinessType: ").Append(BusinessType).Append("\n");
             sb.Append("  AccountName: ").Append(AccountName).Append("\n");
             sb.Append("  Iban: ").Append(Iban).Append("\n");
             sb.Append("  Swift: ").Append(Swift).Append("\n");
             sb.Append("  NationalClearingCode: ").Append(NationalClearingCode).Append("\n");
+            sb.Append("  RejectionReason: ").Append(RejectionReason).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -921,6 +980,11 @@ namespace Flipdish.Model
                     this.BankName.Equals(input.BankName))
                 ) && 
                 (
+                    this.BusinessType == input.BusinessType ||
+                    (this.BusinessType != null &&
+                    this.BusinessType.Equals(input.BusinessType))
+                ) && 
+                (
                     this.AccountName == input.AccountName ||
                     (this.AccountName != null &&
                     this.AccountName.Equals(input.AccountName))
@@ -939,6 +1003,11 @@ namespace Flipdish.Model
                     this.NationalClearingCode == input.NationalClearingCode ||
                     (this.NationalClearingCode != null &&
                     this.NationalClearingCode.Equals(input.NationalClearingCode))
+                ) && 
+                (
+                    this.RejectionReason == input.RejectionReason ||
+                    (this.RejectionReason != null &&
+                    this.RejectionReason.Equals(input.RejectionReason))
                 );
         }
 
@@ -967,6 +1036,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreIds.GetHashCode();
                 if (this.BankName != null)
                     hashCode = hashCode * 59 + this.BankName.GetHashCode();
+                if (this.BusinessType != null)
+                    hashCode = hashCode * 59 + this.BusinessType.GetHashCode();
                 if (this.AccountName != null)
                     hashCode = hashCode * 59 + this.AccountName.GetHashCode();
                 if (this.Iban != null)
@@ -975,6 +1046,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Swift.GetHashCode();
                 if (this.NationalClearingCode != null)
                     hashCode = hashCode * 59 + this.NationalClearingCode.GetHashCode();
+                if (this.RejectionReason != null)
+                    hashCode = hashCode * 59 + this.RejectionReason.GetHashCode();
                 return hashCode;
             }
         }

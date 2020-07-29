@@ -83,14 +83,6 @@ namespace Flipdish.Test
             // TODO unit test for the property 'ActualPrice'
         }
         /// <summary>
-        /// Test the property 'ImageUrl'
-        /// </summary>
-        [Test]
-        public void ImageUrlTest()
-        {
-            // TODO unit test for the property 'ImageUrl'
-        }
-        /// <summary>
         /// Test the property 'MenuItemOptionSets'
         /// </summary>
         [Test]
@@ -113,6 +105,14 @@ namespace Flipdish.Test
         public void PublicIdTest()
         {
             // TODO unit test for the property 'PublicId'
+        }
+        /// <summary>
+        /// Test the property 'Metadata'
+        /// </summary>
+        [Test]
+        public void MetadataTest()
+        {
+            // TODO unit test for the property 'Metadata'
         }
         /// <summary>
         /// Test the property 'Name'
@@ -185,6 +185,14 @@ namespace Flipdish.Test
         public void DisableVouchersTest()
         {
             // TODO unit test for the property 'DisableVouchers'
+        }
+        /// <summary>
+        /// Test the property 'ImageUrl'
+        /// </summary>
+        [Test]
+        public void ImageUrlTest()
+        {
+            // TODO unit test for the property 'ImageUrl'
         }
 
     }

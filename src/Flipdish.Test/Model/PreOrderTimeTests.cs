@@ -67,12 +67,20 @@ namespace Flipdish.Test
 
 
         /// <summary>
-        /// Test the property 'Time'
+        /// Test the property 'StartTime'
         /// </summary>
         [Test]
-        public void TimeTest()
+        public void StartTimeTest()
         {
-            // TODO unit test for the property 'Time'
+            // TODO unit test for the property 'StartTime'
+        }
+        /// <summary>
+        /// Test the property 'EndTime'
+        /// </summary>
+        [Test]
+        public void EndTimeTest()
+        {
+            // TODO unit test for the property 'EndTime'
         }
 
     }

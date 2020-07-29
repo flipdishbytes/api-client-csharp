@@ -747,7 +747,13 @@ namespace Flipdish.Model
             /// Enum TWD for value: TWD
             /// </summary>
             [EnumMember(Value = "TWD")]
-            TWD = 112
+            TWD = 112,
+            
+            /// <summary>
+            /// Enum BMD for value: BMD
+            /// </summary>
+            [EnumMember(Value = "BMD")]
+            BMD = 113
         }
 
         /// <summary>
@@ -776,6 +782,7 @@ namespace Flipdish.Model
         /// <param name="currency">Currency (derived from Store Group).</param>
         /// <param name="preOrderDeliveryEnabled">Is PerOrder Enabled for Delivery.</param>
         /// <param name="preOrderPickupEnabled">Is PerOrder Enabled for Pickup.</param>
+        /// <param name="logoUrl">Url for logo image.</param>
         /// <param name="phoneNumber">Phone number.</param>
         /// <param name="alwaysAppearOpen">True if the store always appears open.</param>
         /// <param name="preOrderEnabled">True if the store accepts pre-orders.</param>
@@ -797,12 +804,15 @@ namespace Flipdish.Model
         /// <param name="requireCustomerNameForPickup">True if customer name required for pickup orders.</param>
         /// <param name="gdprCustomerPhoneNumbers">Mask your customers phone numbers printed on receipts and reduce the amout of personally identifiable customer information that is exposed..</param>
         /// <param name="requireCustomerNameForDelivery">True if customer name required for delivery orders.</param>
+        /// <param name="allowChefNotes">True if the customer is allowed enter custom notes with their orders.</param>
         /// <param name="etaInPickupConfirmationSmsEnabled">True if order confirmation sms includes estimated time when order will be ready for collection.</param>
         /// <param name="etaInDeliveryConfirmationSmsEnabled">True if order confirmation sms includes estimated time when order will delivered.</param>
+        /// <param name="isArchived">Is the Store Archived.</param>
+        /// <param name="isPublished">Is the Store Published.</param>
         /// <param name="name">Name.</param>
         /// <param name="emailAddress">Email address (visible to customers).</param>
-        /// <param name="staffLanguage">Staff Language (used for communcation with the staff)  Emails, Printouts etc.</param>
-        public Store(int? storeId = default(int?), int? storeGroupId = default(int?), StoreAddress address = default(StoreAddress), List<DeliveryZone> deliveryZones = default(List<DeliveryZone>), string apmPhoneNumber = default(string), List<BusinessHoursPeriod> pickupHours = default(List<BusinessHoursPeriod>), List<BusinessHoursPeriod> deliveryHours = default(List<BusinessHoursPeriod>), int? menuId = default(int?), string orderConfirmationMessageOverrideDelivery = default(string), string orderConfirmationMessageOverridePickup = default(string), PrintoutLayoutTypeEnum? printoutLayoutType = default(PrintoutLayoutTypeEnum?), List<StoreNote> storeNotes = default(List<StoreNote>), string microsoftTimeZone = default(string), string ianaTimeZone = default(string), CurrencyEnum? currency = default(CurrencyEnum?), bool? preOrderDeliveryEnabled = default(bool?), bool? preOrderPickupEnabled = default(bool?), string phoneNumber = default(string), bool? alwaysAppearOpen = default(bool?), bool? preOrderEnabled = default(bool?), bool? takeOutEnabled = default(bool?), bool? tableServiceEnabled = default(bool?), bool? dineInEnabled = default(bool?), bool? allowPreOrdersAndTableService = default(bool?), bool? pickupEnabled = default(bool?), bool? deliveryEnabled = default(bool?), bool? cardOrderDeliveryEnabled = default(bool?), bool? cashOrdersDeliveryEnabled = default(bool?), bool? cardOrdersPickupEnabled = default(bool?), bool? cashOrdersPickupEnabled = default(bool?), bool? tipsEnabled = default(bool?), bool? automaticallyAcceptOrders = default(bool?), bool? openForDelivery = default(bool?), bool? openForPickup = default(bool?), double? minimumPickupOrderAmount = default(double?), bool? requireCustomerNameForPickup = default(bool?), bool? gdprCustomerPhoneNumbers = default(bool?), bool? requireCustomerNameForDelivery = default(bool?), bool? etaInPickupConfirmationSmsEnabled = default(bool?), bool? etaInDeliveryConfirmationSmsEnabled = default(bool?), string name = default(string), string emailAddress = default(string), string staffLanguage = default(string))
+        /// <param name="staffLanguage">Staff Language (used for communication with the staff)  Emails, Printouts etc.</param>
+        public Store(int? storeId = default(int?), int? storeGroupId = default(int?), StoreAddress address = default(StoreAddress), List<DeliveryZone> deliveryZones = default(List<DeliveryZone>), string apmPhoneNumber = default(string), List<BusinessHoursPeriod> pickupHours = default(List<BusinessHoursPeriod>), List<BusinessHoursPeriod> deliveryHours = default(List<BusinessHoursPeriod>), int? menuId = default(int?), string orderConfirmationMessageOverrideDelivery = default(string), string orderConfirmationMessageOverridePickup = default(string), PrintoutLayoutTypeEnum? printoutLayoutType = default(PrintoutLayoutTypeEnum?), List<StoreNote> storeNotes = default(List<StoreNote>), string microsoftTimeZone = default(string), string ianaTimeZone = default(string), CurrencyEnum? currency = default(CurrencyEnum?), bool? preOrderDeliveryEnabled = default(bool?), bool? preOrderPickupEnabled = default(bool?), string logoUrl = default(string), string phoneNumber = default(string), bool? alwaysAppearOpen = default(bool?), bool? preOrderEnabled = default(bool?), bool? takeOutEnabled = default(bool?), bool? tableServiceEnabled = default(bool?), bool? dineInEnabled = default(bool?), bool? allowPreOrdersAndTableService = default(bool?), bool? pickupEnabled = default(bool?), bool? deliveryEnabled = default(bool?), bool? cardOrderDeliveryEnabled = default(bool?), bool? cashOrdersDeliveryEnabled = default(bool?), bool? cardOrdersPickupEnabled = default(bool?), bool? cashOrdersPickupEnabled = default(bool?), bool? tipsEnabled = default(bool?), bool? automaticallyAcceptOrders = default(bool?), bool? openForDelivery = default(bool?), bool? openForPickup = default(bool?), double? minimumPickupOrderAmount = default(double?), bool? requireCustomerNameForPickup = default(bool?), bool? gdprCustomerPhoneNumbers = default(bool?), bool? requireCustomerNameForDelivery = default(bool?), bool? allowChefNotes = default(bool?), bool? etaInPickupConfirmationSmsEnabled = default(bool?), bool? etaInDeliveryConfirmationSmsEnabled = default(bool?), bool? isArchived = default(bool?), bool? isPublished = default(bool?), string name = default(string), string emailAddress = default(string), string staffLanguage = default(string))
         {
             this.StoreId = storeId;
             this.StoreGroupId = storeGroupId;
@@ -821,6 +831,7 @@ namespace Flipdish.Model
             this.Currency = currency;
             this.PreOrderDeliveryEnabled = preOrderDeliveryEnabled;
             this.PreOrderPickupEnabled = preOrderPickupEnabled;
+            this.LogoUrl = logoUrl;
             this.PhoneNumber = phoneNumber;
             this.AlwaysAppearOpen = alwaysAppearOpen;
             this.PreOrderEnabled = preOrderEnabled;
@@ -842,8 +853,11 @@ namespace Flipdish.Model
             this.RequireCustomerNameForPickup = requireCustomerNameForPickup;
             this.GdprCustomerPhoneNumbers = gdprCustomerPhoneNumbers;
             this.RequireCustomerNameForDelivery = requireCustomerNameForDelivery;
+            this.AllowChefNotes = allowChefNotes;
             this.EtaInPickupConfirmationSmsEnabled = etaInPickupConfirmationSmsEnabled;
             this.EtaInDeliveryConfirmationSmsEnabled = etaInDeliveryConfirmationSmsEnabled;
+            this.IsArchived = isArchived;
+            this.IsPublished = isPublished;
             this.Name = name;
             this.EmailAddress = emailAddress;
             this.StaffLanguage = staffLanguage;
@@ -955,6 +969,13 @@ namespace Flipdish.Model
         /// <value>Is PerOrder Enabled for Pickup</value>
         [DataMember(Name="PreOrderPickupEnabled", EmitDefaultValue=false)]
         public bool? PreOrderPickupEnabled { get; set; }
+
+        /// <summary>
+        /// Url for logo image
+        /// </summary>
+        /// <value>Url for logo image</value>
+        [DataMember(Name="LogoUrl", EmitDefaultValue=false)]
+        public string LogoUrl { get; set; }
 
         /// <summary>
         /// Phone number
@@ -1104,6 +1125,13 @@ namespace Flipdish.Model
         public bool? RequireCustomerNameForDelivery { get; set; }
 
         /// <summary>
+        /// True if the customer is allowed enter custom notes with their orders
+        /// </summary>
+        /// <value>True if the customer is allowed enter custom notes with their orders</value>
+        [DataMember(Name="AllowChefNotes", EmitDefaultValue=false)]
+        public bool? AllowChefNotes { get; set; }
+
+        /// <summary>
         /// True if order confirmation sms includes estimated time when order will be ready for collection
         /// </summary>
         /// <value>True if order confirmation sms includes estimated time when order will be ready for collection</value>
@@ -1116,6 +1144,20 @@ namespace Flipdish.Model
         /// <value>True if order confirmation sms includes estimated time when order will delivered</value>
         [DataMember(Name="EtaInDeliveryConfirmationSmsEnabled", EmitDefaultValue=false)]
         public bool? EtaInDeliveryConfirmationSmsEnabled { get; set; }
+
+        /// <summary>
+        /// Is the Store Archived
+        /// </summary>
+        /// <value>Is the Store Archived</value>
+        [DataMember(Name="IsArchived", EmitDefaultValue=false)]
+        public bool? IsArchived { get; set; }
+
+        /// <summary>
+        /// Is the Store Published
+        /// </summary>
+        /// <value>Is the Store Published</value>
+        [DataMember(Name="IsPublished", EmitDefaultValue=false)]
+        public bool? IsPublished { get; set; }
 
         /// <summary>
         /// Name
@@ -1132,9 +1174,9 @@ namespace Flipdish.Model
         public string EmailAddress { get; set; }
 
         /// <summary>
-        /// Staff Language (used for communcation with the staff)  Emails, Printouts etc
+        /// Staff Language (used for communication with the staff)  Emails, Printouts etc
         /// </summary>
-        /// <value>Staff Language (used for communcation with the staff)  Emails, Printouts etc</value>
+        /// <value>Staff Language (used for communication with the staff)  Emails, Printouts etc</value>
         [DataMember(Name="StaffLanguage", EmitDefaultValue=false)]
         public string StaffLanguage { get; set; }
 
@@ -1163,6 +1205,7 @@ namespace Flipdish.Model
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  PreOrderDeliveryEnabled: ").Append(PreOrderDeliveryEnabled).Append("\n");
             sb.Append("  PreOrderPickupEnabled: ").Append(PreOrderPickupEnabled).Append("\n");
+            sb.Append("  LogoUrl: ").Append(LogoUrl).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  AlwaysAppearOpen: ").Append(AlwaysAppearOpen).Append("\n");
             sb.Append("  PreOrderEnabled: ").Append(PreOrderEnabled).Append("\n");
@@ -1184,8 +1227,11 @@ namespace Flipdish.Model
             sb.Append("  RequireCustomerNameForPickup: ").Append(RequireCustomerNameForPickup).Append("\n");
             sb.Append("  GdprCustomerPhoneNumbers: ").Append(GdprCustomerPhoneNumbers).Append("\n");
             sb.Append("  RequireCustomerNameForDelivery: ").Append(RequireCustomerNameForDelivery).Append("\n");
+            sb.Append("  AllowChefNotes: ").Append(AllowChefNotes).Append("\n");
             sb.Append("  EtaInPickupConfirmationSmsEnabled: ").Append(EtaInPickupConfirmationSmsEnabled).Append("\n");
             sb.Append("  EtaInDeliveryConfirmationSmsEnabled: ").Append(EtaInDeliveryConfirmationSmsEnabled).Append("\n");
+            sb.Append("  IsArchived: ").Append(IsArchived).Append("\n");
+            sb.Append("  IsPublished: ").Append(IsPublished).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  EmailAddress: ").Append(EmailAddress).Append("\n");
             sb.Append("  StaffLanguage: ").Append(StaffLanguage).Append("\n");
@@ -1309,6 +1355,11 @@ namespace Flipdish.Model
                     this.PreOrderPickupEnabled.Equals(input.PreOrderPickupEnabled))
                 ) && 
                 (
+                    this.LogoUrl == input.LogoUrl ||
+                    (this.LogoUrl != null &&
+                    this.LogoUrl.Equals(input.LogoUrl))
+                ) && 
+                (
                     this.PhoneNumber == input.PhoneNumber ||
                     (this.PhoneNumber != null &&
                     this.PhoneNumber.Equals(input.PhoneNumber))
@@ -1414,6 +1465,11 @@ namespace Flipdish.Model
                     this.RequireCustomerNameForDelivery.Equals(input.RequireCustomerNameForDelivery))
                 ) && 
                 (
+                    this.AllowChefNotes == input.AllowChefNotes ||
+                    (this.AllowChefNotes != null &&
+                    this.AllowChefNotes.Equals(input.AllowChefNotes))
+                ) && 
+                (
                     this.EtaInPickupConfirmationSmsEnabled == input.EtaInPickupConfirmationSmsEnabled ||
                     (this.EtaInPickupConfirmationSmsEnabled != null &&
                     this.EtaInPickupConfirmationSmsEnabled.Equals(input.EtaInPickupConfirmationSmsEnabled))
@@ -1422,6 +1478,16 @@ namespace Flipdish.Model
                     this.EtaInDeliveryConfirmationSmsEnabled == input.EtaInDeliveryConfirmationSmsEnabled ||
                     (this.EtaInDeliveryConfirmationSmsEnabled != null &&
                     this.EtaInDeliveryConfirmationSmsEnabled.Equals(input.EtaInDeliveryConfirmationSmsEnabled))
+                ) && 
+                (
+                    this.IsArchived == input.IsArchived ||
+                    (this.IsArchived != null &&
+                    this.IsArchived.Equals(input.IsArchived))
+                ) && 
+                (
+                    this.IsPublished == input.IsPublished ||
+                    (this.IsPublished != null &&
+                    this.IsPublished.Equals(input.IsPublished))
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -1483,6 +1549,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PreOrderDeliveryEnabled.GetHashCode();
                 if (this.PreOrderPickupEnabled != null)
                     hashCode = hashCode * 59 + this.PreOrderPickupEnabled.GetHashCode();
+                if (this.LogoUrl != null)
+                    hashCode = hashCode * 59 + this.LogoUrl.GetHashCode();
                 if (this.PhoneNumber != null)
                     hashCode = hashCode * 59 + this.PhoneNumber.GetHashCode();
                 if (this.AlwaysAppearOpen != null)
@@ -1525,10 +1593,16 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.GdprCustomerPhoneNumbers.GetHashCode();
                 if (this.RequireCustomerNameForDelivery != null)
                     hashCode = hashCode * 59 + this.RequireCustomerNameForDelivery.GetHashCode();
+                if (this.AllowChefNotes != null)
+                    hashCode = hashCode * 59 + this.AllowChefNotes.GetHashCode();
                 if (this.EtaInPickupConfirmationSmsEnabled != null)
                     hashCode = hashCode * 59 + this.EtaInPickupConfirmationSmsEnabled.GetHashCode();
                 if (this.EtaInDeliveryConfirmationSmsEnabled != null)
                     hashCode = hashCode * 59 + this.EtaInDeliveryConfirmationSmsEnabled.GetHashCode();
+                if (this.IsArchived != null)
+                    hashCode = hashCode * 59 + this.IsArchived.GetHashCode();
+                if (this.IsPublished != null)
+                    hashCode = hashCode * 59 + this.IsPublished.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.EmailAddress != null)

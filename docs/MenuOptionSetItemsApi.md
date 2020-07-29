@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**GetMenuItemOptionSetItemById**](MenuOptionSetItemsApi.md#getmenuitemoptionsetitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
 [**GetMenuItemOptionSetItems**](MenuOptionSetItemsApi.md#getmenuitemoptionsetitems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Get menu item option set items
 [**RemoveMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#removemenuitemoptionsetitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Delete menu item option set item
+[**SetOptionSetItemTax**](MenuOptionSetItemsApi.md#setoptionsetitemtax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId} | [Private API] Set Tax Rate on OptionSetItem
 [**UpdateMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#updatemenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Update menu item option set item
 [**UploadOptionSetItemImage**](MenuOptionSetItemsApi.md#uploadoptionsetitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Upload menu item option set item image
 
@@ -343,6 +344,77 @@ Name | Type | Description  | Notes
  **menuSectionItemId** | **int?**| Menu section item identifier | 
  **optionSetId** | **int?**| Option set identifier | 
  **menuItemOptionSetItemId** | **int?**| Option set item identifier | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="setoptionsetitemtax"></a>
+# **SetOptionSetItemTax**
+> void SetOptionSetItemTax (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, int? taxRateId)
+
+[Private API] Set Tax Rate on OptionSetItem
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SetOptionSetItemTaxExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenuOptionSetItemsApi();
+            var menuId = 56;  // int? | Menu identifier
+            var menuSectionId = 56;  // int? | 
+            var menuSectionItemId = 56;  // int? | 
+            var optionSetId = 56;  // int? | 
+            var menuItemOptionSetItemId = 56;  // int? | Option set item identifier
+            var taxRateId = 56;  // int? | Tax Rate to use
+
+            try
+            {
+                // [Private API] Set Tax Rate on OptionSetItem
+                apiInstance.SetOptionSetItemTax(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, taxRateId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenuOptionSetItemsApi.SetOptionSetItemTax: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **menuSectionId** | **int?**|  | 
+ **menuSectionItemId** | **int?**|  | 
+ **optionSetId** | **int?**|  | 
+ **menuItemOptionSetItemId** | **int?**| Option set item identifier | 
+ **taxRateId** | **int?**| Tax Rate to use | 
 
 ### Return type
 

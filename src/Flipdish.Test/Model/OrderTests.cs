@@ -131,12 +131,68 @@ namespace Flipdish.Test
             // TODO unit test for the property 'MaskedPhoneNumber'
         }
         /// <summary>
+        /// Test the property 'DropOffLocationId'
+        /// </summary>
+        [Test]
+        public void DropOffLocationIdTest()
+        {
+            // TODO unit test for the property 'DropOffLocationId'
+        }
+        /// <summary>
+        /// Test the property 'DropOffLocation'
+        /// </summary>
+        [Test]
+        public void DropOffLocationTest()
+        {
+            // TODO unit test for the property 'DropOffLocation'
+        }
+        /// <summary>
+        /// Test the property 'AcceptedFor'
+        /// </summary>
+        [Test]
+        public void AcceptedForTest()
+        {
+            // TODO unit test for the property 'AcceptedFor'
+        }
+        /// <summary>
+        /// Test the property 'InFraudZone'
+        /// </summary>
+        [Test]
+        public void InFraudZoneTest()
+        {
+            // TODO unit test for the property 'InFraudZone'
+        }
+        /// <summary>
+        /// Test the property 'UnusualHighValueOrder'
+        /// </summary>
+        [Test]
+        public void UnusualHighValueOrderTest()
+        {
+            // TODO unit test for the property 'UnusualHighValueOrder'
+        }
+        /// <summary>
+        /// Test the property 'RejectedByUserId'
+        /// </summary>
+        [Test]
+        public void RejectedByUserIdTest()
+        {
+            // TODO unit test for the property 'RejectedByUserId'
+        }
+        /// <summary>
         /// Test the property 'OrderId'
         /// </summary>
         [Test]
         public void OrderIdTest()
         {
             // TODO unit test for the property 'OrderId'
+        }
+        /// <summary>
+        /// Test the property 'LocalOrderId'
+        /// </summary>
+        [Test]
+        public void LocalOrderIdTest()
+        {
+            // TODO unit test for the property 'LocalOrderId'
         }
         /// <summary>
         /// Test the property 'DeliveryType'
@@ -153,6 +209,14 @@ namespace Flipdish.Test
         public void PickupLocationTypeTest()
         {
             // TODO unit test for the property 'PickupLocationType'
+        }
+        /// <summary>
+        /// Test the property 'TableServiceCatagory'
+        /// </summary>
+        [Test]
+        public void TableServiceCatagoryTest()
+        {
+            // TODO unit test for the property 'TableServiceCatagory'
         }
         /// <summary>
         /// Test the property 'TipAmount'
@@ -289,6 +353,38 @@ namespace Flipdish.Test
         public void RefundedAmountTest()
         {
             // TODO unit test for the property 'RefundedAmount'
+        }
+        /// <summary>
+        /// Test the property 'DeliveryTrackingStatus'
+        /// </summary>
+        [Test]
+        public void DeliveryTrackingStatusTest()
+        {
+            // TODO unit test for the property 'DeliveryTrackingStatus'
+        }
+        /// <summary>
+        /// Test the property 'DriverId'
+        /// </summary>
+        [Test]
+        public void DriverIdTest()
+        {
+            // TODO unit test for the property 'DriverId'
+        }
+        /// <summary>
+        /// Test the property 'TotalTax'
+        /// </summary>
+        [Test]
+        public void TotalTaxTest()
+        {
+            // TODO unit test for the property 'TotalTax'
+        }
+        /// <summary>
+        /// Test the property 'OrderTrackingCode'
+        /// </summary>
+        [Test]
+        public void OrderTrackingCodeTest()
+        {
+            // TODO unit test for the property 'OrderTrackingCode'
         }
 
     }

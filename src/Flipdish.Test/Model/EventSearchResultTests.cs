@@ -107,6 +107,22 @@ namespace Flipdish.Test
             // TODO unit test for the property 'OrderDispatchedEvent'
         }
         /// <summary>
+        /// Test the property 'OrderCustomerTrackingCreatedEvent'
+        /// </summary>
+        [Test]
+        public void OrderCustomerTrackingCreatedEventTest()
+        {
+            // TODO unit test for the property 'OrderCustomerTrackingCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'OrderDeliveryTrackingStatusUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void OrderDeliveryTrackingStatusUpdatedEventTest()
+        {
+            // TODO unit test for the property 'OrderDeliveryTrackingStatusUpdatedEvent'
+        }
+        /// <summary>
         /// Test the property 'OrderCreatedEvent'
         /// </summary>
         [Test]
@@ -179,6 +195,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'StoreAddressUpdatedEvent'
         }
         /// <summary>
+        /// Test the property 'StoreKioskSettingUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void StoreKioskSettingUpdatedEventTest()
+        {
+            // TODO unit test for the property 'StoreKioskSettingUpdatedEvent'
+        }
+        /// <summary>
         /// Test the property 'DeliveryZoneCreatedEvent'
         /// </summary>
         [Test]
@@ -235,6 +259,38 @@ namespace Flipdish.Test
             // TODO unit test for the property 'StoreBusinessHoursOverrideDeletedEvent'
         }
         /// <summary>
+        /// Test the property 'StoreArchivedEvent'
+        /// </summary>
+        [Test]
+        public void StoreArchivedEventTest()
+        {
+            // TODO unit test for the property 'StoreArchivedEvent'
+        }
+        /// <summary>
+        /// Test the property 'StoreUnarchivedEvent'
+        /// </summary>
+        [Test]
+        public void StoreUnarchivedEventTest()
+        {
+            // TODO unit test for the property 'StoreUnarchivedEvent'
+        }
+        /// <summary>
+        /// Test the property 'StorePublishedEvent'
+        /// </summary>
+        [Test]
+        public void StorePublishedEventTest()
+        {
+            // TODO unit test for the property 'StorePublishedEvent'
+        }
+        /// <summary>
+        /// Test the property 'StoreUnpublishedEvent'
+        /// </summary>
+        [Test]
+        public void StoreUnpublishedEventTest()
+        {
+            // TODO unit test for the property 'StoreUnpublishedEvent'
+        }
+        /// <summary>
         /// Test the property 'StoreUpdatedEvent'
         /// </summary>
         [Test]
@@ -251,6 +307,30 @@ namespace Flipdish.Test
             // TODO unit test for the property 'StorePreOrderConfigUpdatedEvent'
         }
         /// <summary>
+        /// Test the property 'StoreLogoCreatedEvent'
+        /// </summary>
+        [Test]
+        public void StoreLogoCreatedEventTest()
+        {
+            // TODO unit test for the property 'StoreLogoCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'StoreLogoUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void StoreLogoUpdatedEventTest()
+        {
+            // TODO unit test for the property 'StoreLogoUpdatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'StoreLogoDeletedEvent'
+        /// </summary>
+        [Test]
+        public void StoreLogoDeletedEventTest()
+        {
+            // TODO unit test for the property 'StoreLogoDeletedEvent'
+        }
+        /// <summary>
         /// Test the property 'MenuCreatedEvent'
         /// </summary>
         [Test]
@@ -265,6 +345,14 @@ namespace Flipdish.Test
         public void MenuUpdatedEventTest()
         {
             // TODO unit test for the property 'MenuUpdatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'MenuUploadedEvent'
+        /// </summary>
+        [Test]
+        public void MenuUploadedEventTest()
+        {
+            // TODO unit test for the property 'MenuUploadedEvent'
         }
         /// <summary>
         /// Test the property 'MenuSectionCreatedEvent'
@@ -361,6 +449,14 @@ namespace Flipdish.Test
         public void MenuItemOptionSetItemDeletedEventTest()
         {
             // TODO unit test for the property 'MenuItemOptionSetItemDeletedEvent'
+        }
+        /// <summary>
+        /// Test the property 'MenuCheckpointCreatedEvent'
+        /// </summary>
+        [Test]
+        public void MenuCheckpointCreatedEventTest()
+        {
+            // TODO unit test for the property 'MenuCheckpointCreatedEvent'
         }
         /// <summary>
         /// Test the property 'StoreGroupCreatedEvent'
@@ -571,6 +667,22 @@ namespace Flipdish.Test
             // TODO unit test for the property 'UserDeletedEvent'
         }
         /// <summary>
+        /// Test the property 'UserCreatedPasswordEvent'
+        /// </summary>
+        [Test]
+        public void UserCreatedPasswordEventTest()
+        {
+            // TODO unit test for the property 'UserCreatedPasswordEvent'
+        }
+        /// <summary>
+        /// Test the property 'UserAnsweredSignupQuestionsEvent'
+        /// </summary>
+        [Test]
+        public void UserAnsweredSignupQuestionsEventTest()
+        {
+            // TODO unit test for the property 'UserAnsweredSignupQuestionsEvent'
+        }
+        /// <summary>
         /// Test the property 'VoucherCreatedEvent'
         /// </summary>
         [Test]
@@ -683,6 +795,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'HydraUnAssignedEvent'
         }
         /// <summary>
+        /// Test the property 'HydraConnectionStatusChangedEvent'
+        /// </summary>
+        [Test]
+        public void HydraConnectionStatusChangedEventTest()
+        {
+            // TODO unit test for the property 'HydraConnectionStatusChangedEvent'
+        }
+        /// <summary>
         /// Test the property 'PushNotificationScheduledEvent'
         /// </summary>
         [Test]
@@ -705,6 +825,54 @@ namespace Flipdish.Test
         public void PushNotificationDeletedEventTest()
         {
             // TODO unit test for the property 'PushNotificationDeletedEvent'
+        }
+        /// <summary>
+        /// Test the property 'DnsVerifiedEvent'
+        /// </summary>
+        [Test]
+        public void DnsVerifiedEventTest()
+        {
+            // TODO unit test for the property 'DnsVerifiedEvent'
+        }
+        /// <summary>
+        /// Test the property 'CertificateCreatedEvent'
+        /// </summary>
+        [Test]
+        public void CertificateCreatedEventTest()
+        {
+            // TODO unit test for the property 'CertificateCreatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'CertificateRenewedEvent'
+        /// </summary>
+        [Test]
+        public void CertificateRenewedEventTest()
+        {
+            // TODO unit test for the property 'CertificateRenewedEvent'
+        }
+        /// <summary>
+        /// Test the property 'WebsiteVanityUrlUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void WebsiteVanityUrlUpdatedEventTest()
+        {
+            // TODO unit test for the property 'WebsiteVanityUrlUpdatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'WebsiteUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void WebsiteUpdatedEventTest()
+        {
+            // TODO unit test for the property 'WebsiteUpdatedEvent'
+        }
+        /// <summary>
+        /// Test the property 'StoreOrderCapacityUpdatedEvent'
+        /// </summary>
+        [Test]
+        public void StoreOrderCapacityUpdatedEventTest()
+        {
+            // TODO unit test for the property 'StoreOrderCapacityUpdatedEvent'
         }
 
     }

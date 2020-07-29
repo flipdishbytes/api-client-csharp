@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StoreId** | **int?** | Store to assign the hydra | 
+**StoreIds** | **List&lt;int?&gt;** | Stores to assign the hydra | 
 **DeviceName** | **string** | Hydra device name | 
 **PinCode** | **int?** | 6 digit PIN code (not starting with zero). | [optional] 
 

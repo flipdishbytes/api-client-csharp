@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**DeleteBankAccount**](BankAccountApi.md#deletebankaccount) | **DELETE** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Delete BankAccount
 [**GetBankAccountById**](BankAccountApi.md#getbankaccountbyid) | **GET** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Get BankAccount Detail by Id
 [**GetBankAccounts**](BankAccountApi.md#getbankaccounts) | **GET** /api/v1.0/{appId}/bankaccounts | [PRIVATE API] Get List of BankAccounts for WL
+[**GetFieldDefinitions**](BankAccountApi.md#getfielddefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/field-definitions | Get bank account fields definitions
 [**UpdateBankAccount**](BankAccountApi.md#updatebankaccount) | **POST** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Update BankAccount
 [**UpdateBankAccountState**](BankAccountApi.md#updatebankaccountstate) | **POST** /api/v1.0/{appId}/bankaccounts/{accountId}/state/{state} | [PRIVATE API] Update State of Bank Account
 
@@ -331,6 +332,68 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getfielddefinitions"></a>
+# **GetFieldDefinitions**
+> RestApiResultAccountFieldsDefinitions GetFieldDefinitions (string appId)
+
+Get bank account fields definitions
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetFieldDefinitionsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new BankAccountApi();
+            var appId = appId_example;  // string | 
+
+            try
+            {
+                // Get bank account fields definitions
+                RestApiResultAccountFieldsDefinitions result = apiInstance.GetFieldDefinitions(appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BankAccountApi.GetFieldDefinitions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+
+### Return type
+
+[**RestApiResultAccountFieldsDefinitions**](RestApiResultAccountFieldsDefinitions.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="updatebankaccount"></a>
 # **UpdateBankAccount**
 > void UpdateBankAccount (string appId, int? id, BankAccountCreate account)
@@ -422,8 +485,8 @@ namespace Example
             var apiInstance = new BankAccountApi();
             var appId = appId_example;  // string | App Name
             var accountId = 56;  // int? | Id of account to be updated
-            var state = state_example;  // string | 
-            var reason = reason_example;  // string | Reason for state change, Manadatory for rejections
+            var state = state_example;  // string | New state
+            var reason = reason_example;  // string | Reason for state change, Mandatory for rejections
 
             try
             {
@@ -445,8 +508,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App Name | 
  **accountId** | **int?**| Id of account to be updated | 
- **state** | **string**|  | 
- **reason** | **string**| Reason for state change, Manadatory for rejections | 
+ **state** | **string**| New state | 
+ **reason** | **string**| Reason for state change, Mandatory for rejections | 
 
 ### Return type
 

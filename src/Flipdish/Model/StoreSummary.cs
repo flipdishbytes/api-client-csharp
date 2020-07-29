@@ -708,7 +708,13 @@ namespace Flipdish.Model
             /// Enum TWD for value: TWD
             /// </summary>
             [EnumMember(Value = "TWD")]
-            TWD = 112
+            TWD = 112,
+            
+            /// <summary>
+            /// Enum BMD for value: BMD
+            /// </summary>
+            [EnumMember(Value = "BMD")]
+            BMD = 113
         }
 
         /// <summary>
@@ -726,7 +732,9 @@ namespace Flipdish.Model
         /// <param name="metadata">Store metadata.</param>
         /// <param name="currency">Currency which used by the Store.</param>
         /// <param name="coordinates">Latitude and longitude of the store.</param>
-        public StoreSummary(int? id = default(int?), string name = default(string), int? menuId = default(int?), Dictionary<string, string> metadata = default(Dictionary<string, string>), CurrencyEnum? currency = default(CurrencyEnum?), Coordinates coordinates = default(Coordinates))
+        /// <param name="storeTimezone">Timezone of store.</param>
+        /// <param name="storeGroupId">Store group id of store.</param>
+        public StoreSummary(int? id = default(int?), string name = default(string), int? menuId = default(int?), Dictionary<string, string> metadata = default(Dictionary<string, string>), CurrencyEnum? currency = default(CurrencyEnum?), Coordinates coordinates = default(Coordinates), string storeTimezone = default(string), int? storeGroupId = default(int?))
         {
             this.Id = id;
             this.Name = name;
@@ -734,6 +742,8 @@ namespace Flipdish.Model
             this.Metadata = metadata;
             this.Currency = currency;
             this.Coordinates = coordinates;
+            this.StoreTimezone = storeTimezone;
+            this.StoreGroupId = storeGroupId;
         }
         
         /// <summary>
@@ -773,6 +783,20 @@ namespace Flipdish.Model
         public Coordinates Coordinates { get; set; }
 
         /// <summary>
+        /// Timezone of store
+        /// </summary>
+        /// <value>Timezone of store</value>
+        [DataMember(Name="StoreTimezone", EmitDefaultValue=false)]
+        public string StoreTimezone { get; set; }
+
+        /// <summary>
+        /// Store group id of store
+        /// </summary>
+        /// <value>Store group id of store</value>
+        [DataMember(Name="StoreGroupId", EmitDefaultValue=false)]
+        public int? StoreGroupId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -786,6 +810,8 @@ namespace Flipdish.Model
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  Coordinates: ").Append(Coordinates).Append("\n");
+            sb.Append("  StoreTimezone: ").Append(StoreTimezone).Append("\n");
+            sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -849,6 +875,16 @@ namespace Flipdish.Model
                     this.Coordinates == input.Coordinates ||
                     (this.Coordinates != null &&
                     this.Coordinates.Equals(input.Coordinates))
+                ) && 
+                (
+                    this.StoreTimezone == input.StoreTimezone ||
+                    (this.StoreTimezone != null &&
+                    this.StoreTimezone.Equals(input.StoreTimezone))
+                ) && 
+                (
+                    this.StoreGroupId == input.StoreGroupId ||
+                    (this.StoreGroupId != null &&
+                    this.StoreGroupId.Equals(input.StoreGroupId))
                 );
         }
 
@@ -873,6 +909,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Currency.GetHashCode();
                 if (this.Coordinates != null)
                     hashCode = hashCode * 59 + this.Coordinates.GetHashCode();
+                if (this.StoreTimezone != null)
+                    hashCode = hashCode * 59 + this.StoreTimezone.GetHashCode();
+                if (this.StoreGroupId != null)
+                    hashCode = hashCode * 59 + this.StoreGroupId.GetHashCode();
                 return hashCode;
             }
         }

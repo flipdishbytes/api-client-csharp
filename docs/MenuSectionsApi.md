@@ -5,9 +5,9 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CloneMenuSection**](MenuSectionsApi.md#clonemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/clone | Clone menu section
-[**CreateMenuAvailabilityForDay**](MenuSectionsApi.md#createmenuavailabilityforday) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability/times/{dayOfWeek} | Create menu section
+[**CreateMenuAvailabilityForDay**](MenuSectionsApi.md#createmenuavailabilityforday) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability/times/{dayOfWeek} | Set/update menu section availability hours.
 [**CreateMenuSection**](MenuSectionsApi.md#createmenusection) | **POST** /api/v1.0/menus/{menuId}/sections | Create menu section
-[**CreateMenuSectionAvailability**](MenuSectionsApi.md#createmenusectionavailability) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability | Create menu section
+[**CreateMenuSectionAvailability**](MenuSectionsApi.md#createmenusectionavailability) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability | Create menu availability type
 [**DeleteMenuSection**](MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Delete menu section
 [**DeleteMenuSectionImage**](MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
 [**GetMenuSectionById**](MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 # **CreateMenuAvailabilityForDay**
 > Object CreateMenuAvailabilityForDay (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod)
 
-Create menu section
+Set/update menu section availability hours.
 
 ### Example
 ```csharp
@@ -107,12 +107,12 @@ namespace Example
             var apiInstance = new MenuSectionsApi();
             var menuId = 56;  // int? | Menu identifier
             var menuSectionId = 56;  // int? | Menu section identifier
-            var dayOfWeek = dayOfWeek_example;  // string | 
-            var businessHoursPeriod = new BusinessHoursPeriodBase(); // BusinessHoursPeriodBase | 
+            var dayOfWeek = dayOfWeek_example;  // string | Day of the  week
+            var businessHoursPeriod = new BusinessHoursPeriodBase(); // BusinessHoursPeriodBase | Menu section active hours, note: DayOfWeek property will be overriden by the path parameter.
 
             try
             {
-                // Create menu section
+                // Set/update menu section availability hours.
                 Object result = apiInstance.CreateMenuAvailabilityForDay(menuId, menuSectionId, dayOfWeek, businessHoursPeriod);
                 Debug.WriteLine(result);
             }
@@ -131,8 +131,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **int?**| Menu identifier | 
  **menuSectionId** | **int?**| Menu section identifier | 
- **dayOfWeek** | **string**|  | 
- **businessHoursPeriod** | [**BusinessHoursPeriodBase**](BusinessHoursPeriodBase.md)|  | 
+ **dayOfWeek** | **string**| Day of the  week | 
+ **businessHoursPeriod** | [**BusinessHoursPeriodBase**](BusinessHoursPeriodBase.md)| Menu section active hours, note: DayOfWeek property will be overriden by the path parameter. | 
 
 ### Return type
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 # **CreateMenuSectionAvailability**
 > Object CreateMenuSectionAvailability (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
 
-Create menu section
+Create menu availability type
 
 ### Example
 ```csharp
@@ -239,11 +239,11 @@ namespace Example
             var apiInstance = new MenuSectionsApi();
             var menuId = 56;  // int? | Menu identifier
             var menuSectionId = 56;  // int? | Menu section identifier
-            var menuSectionAvailability = new MenuSectionAvailabilityBase(); // MenuSectionAvailabilityBase | 
+            var menuSectionAvailability = new MenuSectionAvailabilityBase(); // MenuSectionAvailabilityBase | DisplayAlways, DisplayBasedOnTimes, DisplayAlwaysStartCollapsed, DisplayAlwaysStartCollapsedBasedOnTimes
 
             try
             {
-                // Create menu section
+                // Create menu availability type
                 Object result = apiInstance.CreateMenuSectionAvailability(menuId, menuSectionId, menuSectionAvailability);
                 Debug.WriteLine(result);
             }
@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **int?**| Menu identifier | 
  **menuSectionId** | **int?**| Menu section identifier | 
- **menuSectionAvailability** | [**MenuSectionAvailabilityBase**](MenuSectionAvailabilityBase.md)|  | 
+ **menuSectionAvailability** | [**MenuSectionAvailabilityBase**](MenuSectionAvailabilityBase.md)| DisplayAlways, DisplayBasedOnTimes, DisplayAlwaysStartCollapsed, DisplayAlwaysStartCollapsedBasedOnTimes | 
 
 ### Return type
 

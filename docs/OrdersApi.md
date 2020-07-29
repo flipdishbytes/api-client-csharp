@@ -40,7 +40,7 @@ namespace Example
 
             var apiInstance = new OrdersApi();
             var id = 56;  // int? | Order identifier
-            var acceptObject = new Accept(); // Accept | 
+            var acceptObject = new Accept(); // Accept | Order accept parameters (eg: EstimatedMinutesForDelivery)
 
             try
             {
@@ -61,7 +61,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**| Order identifier | 
- **acceptObject** | [**Accept**](Accept.md)|  | 
+ **acceptObject** | [**Accept**](Accept.md)| Order accept parameters (eg: EstimatedMinutesForDelivery) | 
 
 ### Return type
 
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 
 <a name="getorderssummary"></a>
 # **GetOrdersSummary**
-> RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null)
+> RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null)
 
 [PRIVATE API] Get summary of orders by filter
 
@@ -305,11 +305,12 @@ namespace Example
             var state = state_example;  // List<string> | Order states (optional) 
             var page = 56;  // int? | Requested page number (optional) 
             var limit = 56;  // int? | Requested page limit (optional) 
+            var orderByRequestedForTime = true;  // bool? |  (optional) 
 
             try
             {
                 // [PRIVATE API] Get summary of orders by filter
-                RestApiPaginationResultOrderSummary result = apiInstance.GetOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit);
+                RestApiPaginationResultOrderSummary result = apiInstance.GetOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -331,6 +332,7 @@ Name | Type | Description  | Notes
  **state** | **List&lt;string&gt;**| Order states | [optional] 
  **page** | **int?**| Requested page number | [optional] 
  **limit** | **int?**| Requested page limit | [optional] 
+ **orderByRequestedForTime** | **bool?**|  | [optional] 
 
 ### Return type
 

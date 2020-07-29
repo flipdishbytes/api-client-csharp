@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **EventName** | **string** | The event name | [optional] 
 **Description** | **string** | Description | [optional] 
 **OrderRejectedTime** | **DateTime?** | Order Rejected Time | [optional] 
+**Reason** | **string** | Reason for Rejection | [optional] 
 **Order** | [**Order**](Order.md) | Order | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 

@@ -35,6 +35,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="aboutSectionEnabled">About section enabled.</param>
         /// <param name="aboutSectionTitle">About section title.</param>
+        /// <param name="aboutSectionSubtitle">About section sub-title.</param>
         /// <param name="aboutSectionLeftTitle">About section title left.</param>
         /// <param name="aboutSectionLeftBody">About section text left.</param>
         /// <param name="aboutSectionRightTitle">About section title right.</param>
@@ -46,10 +47,11 @@ namespace Flipdish.Model
         /// <param name="contactFormEnabled">Contact Form section Enabled.</param>
         /// <param name="contactFormEmail">Contact Form Email.</param>
         /// <param name="mapEnabled">Map section Enabled.</param>
-        public IndexPageBase(bool? aboutSectionEnabled = default(bool?), string aboutSectionTitle = default(string), string aboutSectionLeftTitle = default(string), string aboutSectionLeftBody = default(string), string aboutSectionRightTitle = default(string), string aboutSectionRightBody = default(string), bool? openingHoursEnabled = default(bool?), bool? menuPreviewEnabled = default(bool?), bool? galleryEnabled = default(bool?), bool? testimonialsEnabled = default(bool?), bool? contactFormEnabled = default(bool?), string contactFormEmail = default(string), bool? mapEnabled = default(bool?))
+        public IndexPageBase(bool? aboutSectionEnabled = default(bool?), string aboutSectionTitle = default(string), string aboutSectionSubtitle = default(string), string aboutSectionLeftTitle = default(string), string aboutSectionLeftBody = default(string), string aboutSectionRightTitle = default(string), string aboutSectionRightBody = default(string), bool? openingHoursEnabled = default(bool?), bool? menuPreviewEnabled = default(bool?), bool? galleryEnabled = default(bool?), bool? testimonialsEnabled = default(bool?), bool? contactFormEnabled = default(bool?), string contactFormEmail = default(string), bool? mapEnabled = default(bool?))
         {
             this.AboutSectionEnabled = aboutSectionEnabled;
             this.AboutSectionTitle = aboutSectionTitle;
+            this.AboutSectionSubtitle = aboutSectionSubtitle;
             this.AboutSectionLeftTitle = aboutSectionLeftTitle;
             this.AboutSectionLeftBody = aboutSectionLeftBody;
             this.AboutSectionRightTitle = aboutSectionRightTitle;
@@ -76,6 +78,13 @@ namespace Flipdish.Model
         /// <value>About section title</value>
         [DataMember(Name="AboutSectionTitle", EmitDefaultValue=false)]
         public string AboutSectionTitle { get; set; }
+
+        /// <summary>
+        /// About section sub-title
+        /// </summary>
+        /// <value>About section sub-title</value>
+        [DataMember(Name="AboutSectionSubtitle", EmitDefaultValue=false)]
+        public string AboutSectionSubtitle { get; set; }
 
         /// <summary>
         /// About section title left
@@ -164,6 +173,7 @@ namespace Flipdish.Model
             sb.Append("class IndexPageBase {\n");
             sb.Append("  AboutSectionEnabled: ").Append(AboutSectionEnabled).Append("\n");
             sb.Append("  AboutSectionTitle: ").Append(AboutSectionTitle).Append("\n");
+            sb.Append("  AboutSectionSubtitle: ").Append(AboutSectionSubtitle).Append("\n");
             sb.Append("  AboutSectionLeftTitle: ").Append(AboutSectionLeftTitle).Append("\n");
             sb.Append("  AboutSectionLeftBody: ").Append(AboutSectionLeftBody).Append("\n");
             sb.Append("  AboutSectionRightTitle: ").Append(AboutSectionRightTitle).Append("\n");
@@ -218,6 +228,11 @@ namespace Flipdish.Model
                     this.AboutSectionTitle == input.AboutSectionTitle ||
                     (this.AboutSectionTitle != null &&
                     this.AboutSectionTitle.Equals(input.AboutSectionTitle))
+                ) && 
+                (
+                    this.AboutSectionSubtitle == input.AboutSectionSubtitle ||
+                    (this.AboutSectionSubtitle != null &&
+                    this.AboutSectionSubtitle.Equals(input.AboutSectionSubtitle))
                 ) && 
                 (
                     this.AboutSectionLeftTitle == input.AboutSectionLeftTitle ||
@@ -289,6 +304,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.AboutSectionEnabled.GetHashCode();
                 if (this.AboutSectionTitle != null)
                     hashCode = hashCode * 59 + this.AboutSectionTitle.GetHashCode();
+                if (this.AboutSectionSubtitle != null)
+                    hashCode = hashCode * 59 + this.AboutSectionSubtitle.GetHashCode();
                 if (this.AboutSectionLeftTitle != null)
                     hashCode = hashCode * 59 + this.AboutSectionLeftTitle.GetHashCode();
                 if (this.AboutSectionLeftBody != null)

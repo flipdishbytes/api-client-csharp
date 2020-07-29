@@ -31,23 +31,56 @@ namespace Flipdish.Model
     public partial class StoreOpeningHoursUpdatedEvent :  IEquatable<StoreOpeningHoursUpdatedEvent>, IValidatableObject
     {
         /// <summary>
+        /// Type of opening hours Delivery / Pickup
+        /// </summary>
+        /// <value>Type of opening hours Delivery / Pickup</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DeliveryTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Delivery for value: Delivery
+            /// </summary>
+            [EnumMember(Value = "Delivery")]
+            Delivery = 1,
+            
+            /// <summary>
+            /// Enum Pickup for value: Pickup
+            /// </summary>
+            [EnumMember(Value = "Pickup")]
+            Pickup = 2
+        }
+
+        /// <summary>
+        /// Type of opening hours Delivery / Pickup
+        /// </summary>
+        /// <value>Type of opening hours Delivery / Pickup</value>
+        [DataMember(Name="DeliveryType", EmitDefaultValue=false)]
+        public DeliveryTypeEnum? DeliveryType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="StoreOpeningHoursUpdatedEvent" /> class.
         /// </summary>
         /// <param name="eventName">The event name.</param>
         /// <param name="storeId">Store Id.</param>
         /// <param name="storeGroupId">Store group Id.</param>
         /// <param name="user">User which updated opening hours for this store.</param>
+        /// <param name="deliveryType">Type of opening hours Delivery / Pickup.</param>
+        /// <param name="businessHoursPeriodOld">The period that was updated.</param>
+        /// <param name="businessHoursPeriod">The new values of the period.</param>
         /// <param name="description">Description.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
-        public StoreOpeningHoursUpdatedEvent(string eventName = default(string), int? storeId = default(int?), int? storeGroupId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
+        public StoreOpeningHoursUpdatedEvent(string eventName = default(string), int? storeId = default(int?), int? storeGroupId = default(int?), UserEventInfo user = default(UserEventInfo), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), BusinessHoursPeriod businessHoursPeriodOld = default(BusinessHoursPeriod), BusinessHoursPeriod businessHoursPeriod = default(BusinessHoursPeriod), string description = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
         {
             this.EventName = eventName;
             this.StoreId = storeId;
             this.StoreGroupId = storeGroupId;
             this.User = user;
+            this.DeliveryType = deliveryType;
+            this.BusinessHoursPeriodOld = businessHoursPeriodOld;
+            this.BusinessHoursPeriod = businessHoursPeriod;
             this.Description = description;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
@@ -82,6 +115,21 @@ namespace Flipdish.Model
         /// <value>User which updated opening hours for this store</value>
         [DataMember(Name="User", EmitDefaultValue=false)]
         public UserEventInfo User { get; set; }
+
+
+        /// <summary>
+        /// The period that was updated
+        /// </summary>
+        /// <value>The period that was updated</value>
+        [DataMember(Name="BusinessHoursPeriodOld", EmitDefaultValue=false)]
+        public BusinessHoursPeriod BusinessHoursPeriodOld { get; set; }
+
+        /// <summary>
+        /// The new values of the period
+        /// </summary>
+        /// <value>The new values of the period</value>
+        [DataMember(Name="BusinessHoursPeriod", EmitDefaultValue=false)]
+        public BusinessHoursPeriod BusinessHoursPeriod { get; set; }
 
         /// <summary>
         /// Description
@@ -130,6 +178,9 @@ namespace Flipdish.Model
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  DeliveryType: ").Append(DeliveryType).Append("\n");
+            sb.Append("  BusinessHoursPeriodOld: ").Append(BusinessHoursPeriodOld).Append("\n");
+            sb.Append("  BusinessHoursPeriod: ").Append(BusinessHoursPeriod).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
@@ -190,6 +241,21 @@ namespace Flipdish.Model
                     this.User.Equals(input.User))
                 ) && 
                 (
+                    this.DeliveryType == input.DeliveryType ||
+                    (this.DeliveryType != null &&
+                    this.DeliveryType.Equals(input.DeliveryType))
+                ) && 
+                (
+                    this.BusinessHoursPeriodOld == input.BusinessHoursPeriodOld ||
+                    (this.BusinessHoursPeriodOld != null &&
+                    this.BusinessHoursPeriodOld.Equals(input.BusinessHoursPeriodOld))
+                ) && 
+                (
+                    this.BusinessHoursPeriod == input.BusinessHoursPeriod ||
+                    (this.BusinessHoursPeriod != null &&
+                    this.BusinessHoursPeriod.Equals(input.BusinessHoursPeriod))
+                ) && 
+                (
                     this.Description == input.Description ||
                     (this.Description != null &&
                     this.Description.Equals(input.Description))
@@ -233,6 +299,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreGroupId.GetHashCode();
                 if (this.User != null)
                     hashCode = hashCode * 59 + this.User.GetHashCode();
+                if (this.DeliveryType != null)
+                    hashCode = hashCode * 59 + this.DeliveryType.GetHashCode();
+                if (this.BusinessHoursPeriodOld != null)
+                    hashCode = hashCode * 59 + this.BusinessHoursPeriodOld.GetHashCode();
+                if (this.BusinessHoursPeriod != null)
+                    hashCode = hashCode * 59 + this.BusinessHoursPeriod.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.FlipdishEventId != null)

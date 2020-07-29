@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **Currency** | **string** | Currency (derived from Store Group) | [optional] 
 **PreOrderDeliveryEnabled** | **bool?** | Is PerOrder Enabled for Delivery | [optional] 
 **PreOrderPickupEnabled** | **bool?** | Is PerOrder Enabled for Pickup | [optional] 
+**LogoUrl** | **string** | Url for logo image | [optional] 
 **PhoneNumber** | **string** | Phone number | [optional] 
 **AlwaysAppearOpen** | **bool?** | True if the store always appears open | [optional] 
 **PreOrderEnabled** | **bool?** | True if the store accepts pre-orders | [optional] 
@@ -41,11 +42,14 @@ Name | Type | Description | Notes
 **RequireCustomerNameForPickup** | **bool?** | True if customer name required for pickup orders | [optional] 
 **GdprCustomerPhoneNumbers** | **bool?** | Mask your customers phone numbers printed on receipts and reduce the amout of personally identifiable customer information that is exposed. | [optional] 
 **RequireCustomerNameForDelivery** | **bool?** | True if customer name required for delivery orders | [optional] 
+**AllowChefNotes** | **bool?** | True if the customer is allowed enter custom notes with their orders | [optional] 
 **EtaInPickupConfirmationSmsEnabled** | **bool?** | True if order confirmation sms includes estimated time when order will be ready for collection | [optional] 
 **EtaInDeliveryConfirmationSmsEnabled** | **bool?** | True if order confirmation sms includes estimated time when order will delivered | [optional] 
+**IsArchived** | **bool?** | Is the Store Archived | [optional] 
+**IsPublished** | **bool?** | Is the Store Published | [optional] 
 **Name** | **string** | Name | [optional] 
 **EmailAddress** | **string** | Email address (visible to customers) | [optional] 
-**StaffLanguage** | **string** | Staff Language (used for communcation with the staff)  Emails, Printouts etc | [optional] 
+**StaffLanguage** | **string** | Staff Language (used for communication with the staff)  Emails, Printouts etc | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
