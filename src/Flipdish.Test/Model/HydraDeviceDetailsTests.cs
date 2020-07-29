@@ -67,6 +67,14 @@ namespace Flipdish.Test
 
 
         /// <summary>
+        /// Test the property 'HydraConfigId'
+        /// </summary>
+        [Test]
+        public void HydraConfigIdTest()
+        {
+            // TODO unit test for the property 'HydraConfigId'
+        }
+        /// <summary>
         /// Test the property 'DeviceId'
         /// </summary>
         [Test]
@@ -113,6 +121,38 @@ namespace Flipdish.Test
         public void LastPollUtcTest()
         {
             // TODO unit test for the property 'LastPollUtc'
+        }
+        /// <summary>
+        /// Test the property 'Version'
+        /// </summary>
+        [Test]
+        public void VersionTest()
+        {
+            // TODO unit test for the property 'Version'
+        }
+        /// <summary>
+        /// Test the property 'BuildNumber'
+        /// </summary>
+        [Test]
+        public void BuildNumberTest()
+        {
+            // TODO unit test for the property 'BuildNumber'
+        }
+        /// <summary>
+        /// Test the property 'GitSha'
+        /// </summary>
+        [Test]
+        public void GitShaTest()
+        {
+            // TODO unit test for the property 'GitSha'
+        }
+        /// <summary>
+        /// Test the property 'GitBranch'
+        /// </summary>
+        [Test]
+        public void GitBranchTest()
+        {
+            // TODO unit test for the property 'GitBranch'
         }
 
     }

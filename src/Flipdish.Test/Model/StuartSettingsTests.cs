@@ -114,6 +114,14 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'PackageType'
         }
+        /// <summary>
+        /// Test the property 'TransportType'
+        /// </summary>
+        [Test]
+        public void TransportTypeTest()
+        {
+            // TODO unit test for the property 'TransportType'
+        }
 
     }
 

@@ -34,7 +34,6 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="MenuSection" /> class.
         /// </summary>
         /// <param name="menuSectionId">Menu section identifier.</param>
-        /// <param name="imageUrl">Image url.</param>
         /// <param name="menuItems">Menu items.</param>
         /// <param name="menuSectionAvailability">Menu section availability.</param>
         /// <param name="publicId">Permanent reference to the item..</param>
@@ -43,10 +42,10 @@ namespace Flipdish.Model
         /// <param name="displayOrder">Display order.</param>
         /// <param name="isAvailable">Is available.</param>
         /// <param name="isHiddenFromCustomers">Is hidden from customer. Perhaps when the item is out of stock..</param>
-        public MenuSection(int? menuSectionId = default(int?), string imageUrl = default(string), List<MenuSectionItem> menuItems = default(List<MenuSectionItem>), MenuSectionAvailability menuSectionAvailability = default(MenuSectionAvailability), Guid? publicId = default(Guid?), string name = default(string), string description = default(string), int? displayOrder = default(int?), bool? isAvailable = default(bool?), bool? isHiddenFromCustomers = default(bool?))
+        /// <param name="imageUrl">Image url.</param>
+        public MenuSection(int? menuSectionId = default(int?), List<MenuSectionItem> menuItems = default(List<MenuSectionItem>), MenuSectionAvailability menuSectionAvailability = default(MenuSectionAvailability), Guid? publicId = default(Guid?), string name = default(string), string description = default(string), int? displayOrder = default(int?), bool? isAvailable = default(bool?), bool? isHiddenFromCustomers = default(bool?), string imageUrl = default(string))
         {
             this.MenuSectionId = menuSectionId;
-            this.ImageUrl = imageUrl;
             this.MenuItems = menuItems;
             this.MenuSectionAvailability = menuSectionAvailability;
             this.PublicId = publicId;
@@ -55,6 +54,7 @@ namespace Flipdish.Model
             this.DisplayOrder = displayOrder;
             this.IsAvailable = isAvailable;
             this.IsHiddenFromCustomers = isHiddenFromCustomers;
+            this.ImageUrl = imageUrl;
         }
         
         /// <summary>
@@ -63,13 +63,6 @@ namespace Flipdish.Model
         /// <value>Menu section identifier</value>
         [DataMember(Name="MenuSectionId", EmitDefaultValue=false)]
         public int? MenuSectionId { get; set; }
-
-        /// <summary>
-        /// Image url
-        /// </summary>
-        /// <value>Image url</value>
-        [DataMember(Name="ImageUrl", EmitDefaultValue=false)]
-        public string ImageUrl { get; set; }
 
         /// <summary>
         /// Menu items
@@ -128,6 +121,13 @@ namespace Flipdish.Model
         public bool? IsHiddenFromCustomers { get; set; }
 
         /// <summary>
+        /// Image url
+        /// </summary>
+        /// <value>Image url</value>
+        [DataMember(Name="ImageUrl", EmitDefaultValue=false)]
+        public string ImageUrl { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -136,7 +136,6 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class MenuSection {\n");
             sb.Append("  MenuSectionId: ").Append(MenuSectionId).Append("\n");
-            sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  MenuItems: ").Append(MenuItems).Append("\n");
             sb.Append("  MenuSectionAvailability: ").Append(MenuSectionAvailability).Append("\n");
             sb.Append("  PublicId: ").Append(PublicId).Append("\n");
@@ -145,6 +144,7 @@ namespace Flipdish.Model
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
             sb.Append("  IsAvailable: ").Append(IsAvailable).Append("\n");
             sb.Append("  IsHiddenFromCustomers: ").Append(IsHiddenFromCustomers).Append("\n");
+            sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -185,11 +185,6 @@ namespace Flipdish.Model
                     this.MenuSectionId.Equals(input.MenuSectionId))
                 ) && 
                 (
-                    this.ImageUrl == input.ImageUrl ||
-                    (this.ImageUrl != null &&
-                    this.ImageUrl.Equals(input.ImageUrl))
-                ) && 
-                (
                     this.MenuItems == input.MenuItems ||
                     this.MenuItems != null &&
                     this.MenuItems.SequenceEqual(input.MenuItems)
@@ -228,6 +223,11 @@ namespace Flipdish.Model
                     this.IsHiddenFromCustomers == input.IsHiddenFromCustomers ||
                     (this.IsHiddenFromCustomers != null &&
                     this.IsHiddenFromCustomers.Equals(input.IsHiddenFromCustomers))
+                ) && 
+                (
+                    this.ImageUrl == input.ImageUrl ||
+                    (this.ImageUrl != null &&
+                    this.ImageUrl.Equals(input.ImageUrl))
                 );
         }
 
@@ -242,8 +242,6 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.MenuSectionId != null)
                     hashCode = hashCode * 59 + this.MenuSectionId.GetHashCode();
-                if (this.ImageUrl != null)
-                    hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 if (this.MenuItems != null)
                     hashCode = hashCode * 59 + this.MenuItems.GetHashCode();
                 if (this.MenuSectionAvailability != null)
@@ -260,6 +258,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.IsAvailable.GetHashCode();
                 if (this.IsHiddenFromCustomers != null)
                     hashCode = hashCode * 59 + this.IsHiddenFromCustomers.GetHashCode();
+                if (this.ImageUrl != null)
+                    hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 return hashCode;
             }
         }

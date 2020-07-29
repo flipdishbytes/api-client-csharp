@@ -74,7 +74,11 @@ namespace Flipdish.Model
         /// <param name="minimumVersion">Minimum version (required).</param>
         /// <param name="paymentOptions">Payment options (required).</param>
         /// <param name="deviceSettings">Device settings (required).</param>
-        public HydraConfig(string minimumVersion = default(string), List<PaymentOptionsEnum> paymentOptions = default(List<PaymentOptionsEnum>), DeviceSettings deviceSettings = default(DeviceSettings))
+        /// <param name="version">Version of the device.</param>
+        /// <param name="buildNumber">Build number of the device.</param>
+        /// <param name="gitSha">SHA of the commit.</param>
+        /// <param name="gitBranch">Build branch.</param>
+        public HydraConfig(string minimumVersion = default(string), List<PaymentOptionsEnum> paymentOptions = default(List<PaymentOptionsEnum>), DeviceSettings deviceSettings = default(DeviceSettings), string version = default(string), string buildNumber = default(string), string gitSha = default(string), string gitBranch = default(string))
         {
             // to ensure "minimumVersion" is required (not null)
             if (minimumVersion == null)
@@ -103,6 +107,10 @@ namespace Flipdish.Model
             {
                 this.DeviceSettings = deviceSettings;
             }
+            this.Version = version;
+            this.BuildNumber = buildNumber;
+            this.GitSha = gitSha;
+            this.GitBranch = gitBranch;
         }
         
         /// <summary>
@@ -121,6 +129,34 @@ namespace Flipdish.Model
         public DeviceSettings DeviceSettings { get; set; }
 
         /// <summary>
+        /// Version of the device
+        /// </summary>
+        /// <value>Version of the device</value>
+        [DataMember(Name="Version", EmitDefaultValue=false)]
+        public string Version { get; set; }
+
+        /// <summary>
+        /// Build number of the device
+        /// </summary>
+        /// <value>Build number of the device</value>
+        [DataMember(Name="BuildNumber", EmitDefaultValue=false)]
+        public string BuildNumber { get; set; }
+
+        /// <summary>
+        /// SHA of the commit
+        /// </summary>
+        /// <value>SHA of the commit</value>
+        [DataMember(Name="GitSha", EmitDefaultValue=false)]
+        public string GitSha { get; set; }
+
+        /// <summary>
+        /// Build branch
+        /// </summary>
+        /// <value>Build branch</value>
+        [DataMember(Name="GitBranch", EmitDefaultValue=false)]
+        public string GitBranch { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -131,6 +167,10 @@ namespace Flipdish.Model
             sb.Append("  MinimumVersion: ").Append(MinimumVersion).Append("\n");
             sb.Append("  PaymentOptions: ").Append(PaymentOptions).Append("\n");
             sb.Append("  DeviceSettings: ").Append(DeviceSettings).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  BuildNumber: ").Append(BuildNumber).Append("\n");
+            sb.Append("  GitSha: ").Append(GitSha).Append("\n");
+            sb.Append("  GitBranch: ").Append(GitBranch).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -179,6 +219,26 @@ namespace Flipdish.Model
                     this.DeviceSettings == input.DeviceSettings ||
                     (this.DeviceSettings != null &&
                     this.DeviceSettings.Equals(input.DeviceSettings))
+                ) && 
+                (
+                    this.Version == input.Version ||
+                    (this.Version != null &&
+                    this.Version.Equals(input.Version))
+                ) && 
+                (
+                    this.BuildNumber == input.BuildNumber ||
+                    (this.BuildNumber != null &&
+                    this.BuildNumber.Equals(input.BuildNumber))
+                ) && 
+                (
+                    this.GitSha == input.GitSha ||
+                    (this.GitSha != null &&
+                    this.GitSha.Equals(input.GitSha))
+                ) && 
+                (
+                    this.GitBranch == input.GitBranch ||
+                    (this.GitBranch != null &&
+                    this.GitBranch.Equals(input.GitBranch))
                 );
         }
 
@@ -197,6 +257,14 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PaymentOptions.GetHashCode();
                 if (this.DeviceSettings != null)
                     hashCode = hashCode * 59 + this.DeviceSettings.GetHashCode();
+                if (this.Version != null)
+                    hashCode = hashCode * 59 + this.Version.GetHashCode();
+                if (this.BuildNumber != null)
+                    hashCode = hashCode * 59 + this.BuildNumber.GetHashCode();
+                if (this.GitSha != null)
+                    hashCode = hashCode * 59 + this.GitSha.GetHashCode();
+                if (this.GitBranch != null)
+                    hashCode = hashCode * 59 + this.GitBranch.GetHashCode();
                 return hashCode;
             }
         }

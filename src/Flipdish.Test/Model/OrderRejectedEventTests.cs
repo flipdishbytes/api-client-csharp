@@ -91,6 +91,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'OrderRejectedTime'
         }
         /// <summary>
+        /// Test the property 'Reason'
+        /// </summary>
+        [Test]
+        public void ReasonTest()
+        {
+            // TODO unit test for the property 'Reason'
+        }
+        /// <summary>
         /// Test the property 'Order'
         /// </summary>
         [Test]

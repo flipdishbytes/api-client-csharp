@@ -72,12 +72,12 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="HydraStatus" /> class.
         /// </summary>
         /// <param name="appId">appId (required).</param>
-        /// <param name="storeId">Store to assign the hydra.</param>
+        /// <param name="storeIds">Store to assign the hydra.</param>
         /// <param name="isRegistered">The device has been already registered (required).</param>
         /// <param name="pinCode">6 digit PIN code (not starting with zero)..</param>
         /// <param name="images">Hydra images (covers).</param>
         /// <param name="userType">Hydra User Type.</param>
-        public HydraStatus(string appId = default(string), int? storeId = default(int?), bool? isRegistered = default(bool?), int? pinCode = default(int?), List<string> images = default(List<string>), UserTypeEnum? userType = default(UserTypeEnum?))
+        public HydraStatus(string appId = default(string), List<int?> storeIds = default(List<int?>), bool? isRegistered = default(bool?), int? pinCode = default(int?), List<string> images = default(List<string>), UserTypeEnum? userType = default(UserTypeEnum?))
         {
             // to ensure "appId" is required (not null)
             if (appId == null)
@@ -97,7 +97,7 @@ namespace Flipdish.Model
             {
                 this.IsRegistered = isRegistered;
             }
-            this.StoreId = storeId;
+            this.StoreIds = storeIds;
             this.PinCode = pinCode;
             this.Images = images;
             this.UserType = userType;
@@ -113,8 +113,8 @@ namespace Flipdish.Model
         /// Store to assign the hydra
         /// </summary>
         /// <value>Store to assign the hydra</value>
-        [DataMember(Name="StoreId", EmitDefaultValue=false)]
-        public int? StoreId { get; set; }
+        [DataMember(Name="StoreIds", EmitDefaultValue=false)]
+        public List<int?> StoreIds { get; set; }
 
         /// <summary>
         /// The device has been already registered
@@ -147,7 +147,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class HydraStatus {\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  StoreIds: ").Append(StoreIds).Append("\n");
             sb.Append("  IsRegistered: ").Append(IsRegistered).Append("\n");
             sb.Append("  PinCode: ").Append(PinCode).Append("\n");
             sb.Append("  Images: ").Append(Images).Append("\n");
@@ -192,9 +192,9 @@ namespace Flipdish.Model
                     this.AppId.Equals(input.AppId))
                 ) && 
                 (
-                    this.StoreId == input.StoreId ||
-                    (this.StoreId != null &&
-                    this.StoreId.Equals(input.StoreId))
+                    this.StoreIds == input.StoreIds ||
+                    this.StoreIds != null &&
+                    this.StoreIds.SequenceEqual(input.StoreIds)
                 ) && 
                 (
                     this.IsRegistered == input.IsRegistered ||
@@ -229,8 +229,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.AppId != null)
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
-                if (this.StoreId != null)
-                    hashCode = hashCode * 59 + this.StoreId.GetHashCode();
+                if (this.StoreIds != null)
+                    hashCode = hashCode * 59 + this.StoreIds.GetHashCode();
                 if (this.IsRegistered != null)
                     hashCode = hashCode * 59 + this.IsRegistered.GetHashCode();
                 if (this.PinCode != null)

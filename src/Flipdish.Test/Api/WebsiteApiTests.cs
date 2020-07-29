@@ -156,6 +156,18 @@ namespace Flipdish.Test
             //Assert.IsInstanceOf<RestApiResultWebsiteImage> (response, "response is RestApiResultWebsiteImage");
         }
         
+        /// <summary>
+        /// Test WebsiteCheckNow
+        /// </summary>
+        [Test]
+        public void WebsiteCheckNowTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //instance.WebsiteCheckNow(appId);
+            
+        }
+        
     }
 
 }

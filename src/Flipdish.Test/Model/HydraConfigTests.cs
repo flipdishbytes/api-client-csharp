@@ -90,6 +90,38 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'DeviceSettings'
         }
+        /// <summary>
+        /// Test the property 'Version'
+        /// </summary>
+        [Test]
+        public void VersionTest()
+        {
+            // TODO unit test for the property 'Version'
+        }
+        /// <summary>
+        /// Test the property 'BuildNumber'
+        /// </summary>
+        [Test]
+        public void BuildNumberTest()
+        {
+            // TODO unit test for the property 'BuildNumber'
+        }
+        /// <summary>
+        /// Test the property 'GitSha'
+        /// </summary>
+        [Test]
+        public void GitShaTest()
+        {
+            // TODO unit test for the property 'GitSha'
+        }
+        /// <summary>
+        /// Test the property 'GitBranch'
+        /// </summary>
+        [Test]
+        public void GitBranchTest()
+        {
+            // TODO unit test for the property 'GitBranch'
+        }
 
     }
 

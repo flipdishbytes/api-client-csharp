@@ -131,7 +131,8 @@ namespace Flipdish.Test
             //List<string> state = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.GetOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit);
+            //bool? orderByRequestedForTime = null;
+            //var response = instance.GetOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime);
             //Assert.IsInstanceOf<RestApiPaginationResultOrderSummary> (response, "response is RestApiPaginationResultOrderSummary");
         }
         

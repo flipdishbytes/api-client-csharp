@@ -99,20 +99,12 @@ namespace Flipdish.Test
             // TODO unit test for the property 'CountryId'
         }
         /// <summary>
-        /// Test the property 'IconUrl'
+        /// Test the property 'LogoImageUrl'
         /// </summary>
         [Test]
-        public void IconUrlTest()
+        public void LogoImageUrlTest()
         {
-            // TODO unit test for the property 'IconUrl'
-        }
-        /// <summary>
-        /// Test the property 'IconThumbnailUrl'
-        /// </summary>
-        [Test]
-        public void IconThumbnailUrlTest()
-        {
-            // TODO unit test for the property 'IconThumbnailUrl'
+            // TODO unit test for the property 'LogoImageUrl'
         }
         /// <summary>
         /// Test the property 'Languages'
@@ -145,6 +137,14 @@ namespace Flipdish.Test
         public void AppResourceSetTest()
         {
             // TODO unit test for the property 'AppResourceSet'
+        }
+        /// <summary>
+        /// Test the property 'Features'
+        /// </summary>
+        [Test]
+        public void FeaturesTest()
+        {
+            // TODO unit test for the property 'Features'
         }
         /// <summary>
         /// Test the property 'MapCenter'
@@ -201,6 +201,22 @@ namespace Flipdish.Test
         public void ApplicationCategoryTest()
         {
             // TODO unit test for the property 'ApplicationCategory'
+        }
+        /// <summary>
+        /// Test the property 'IsPanaceaEnabled'
+        /// </summary>
+        [Test]
+        public void IsPanaceaEnabledTest()
+        {
+            // TODO unit test for the property 'IsPanaceaEnabled'
+        }
+        /// <summary>
+        /// Test the property 'CookieConsentPromptEnabled'
+        /// </summary>
+        [Test]
+        public void CookieConsentPromptEnabledTest()
+        {
+            // TODO unit test for the property 'CookieConsentPromptEnabled'
         }
 
     }

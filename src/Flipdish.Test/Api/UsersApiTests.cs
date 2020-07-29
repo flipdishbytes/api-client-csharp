@@ -65,6 +65,19 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test GetPreviousOrderCountForStore
+        /// </summary>
+        [Test]
+        public void GetPreviousOrderCountForStoreTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? userId = null;
+            //int? storeId = null;
+            //var response = instance.GetPreviousOrderCountForStore(userId, storeId);
+            //Assert.IsInstanceOf<RestApiStringResult> (response, "response is RestApiStringResult");
+        }
+        
+        /// <summary>
         /// Test GetRoles
         /// </summary>
         [Test]

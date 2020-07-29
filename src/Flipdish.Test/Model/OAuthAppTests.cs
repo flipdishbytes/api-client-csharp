@@ -98,6 +98,38 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'LogoUri'
         }
+        /// <summary>
+        /// Test the property 'Flow'
+        /// </summary>
+        [Test]
+        public void FlowTest()
+        {
+            // TODO unit test for the property 'Flow'
+        }
+        /// <summary>
+        /// Test the property 'RefreshTokenUsage'
+        /// </summary>
+        [Test]
+        public void RefreshTokenUsageTest()
+        {
+            // TODO unit test for the property 'RefreshTokenUsage'
+        }
+        /// <summary>
+        /// Test the property 'AccessTokenLifetime'
+        /// </summary>
+        [Test]
+        public void AccessTokenLifetimeTest()
+        {
+            // TODO unit test for the property 'AccessTokenLifetime'
+        }
+        /// <summary>
+        /// Test the property 'AbsoluteRefreshTokenLifetime'
+        /// </summary>
+        [Test]
+        public void AbsoluteRefreshTokenLifetimeTest()
+        {
+            // TODO unit test for the property 'AbsoluteRefreshTokenLifetime'
+        }
 
     }
 

@@ -91,6 +91,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'AccountState'
         }
         /// <summary>
+        /// Test the property 'StripeConnectedAccountInfo'
+        /// </summary>
+        [Test]
+        public void StripeConnectedAccountInfoTest()
+        {
+            // TODO unit test for the property 'StripeConnectedAccountInfo'
+        }
+        /// <summary>
         /// Test the property 'BankAddress'
         /// </summary>
         [Test]
@@ -155,6 +163,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'BankName'
         }
         /// <summary>
+        /// Test the property 'BusinessType'
+        /// </summary>
+        [Test]
+        public void BusinessTypeTest()
+        {
+            // TODO unit test for the property 'BusinessType'
+        }
+        /// <summary>
         /// Test the property 'AccountName'
         /// </summary>
         [Test]
@@ -185,6 +201,14 @@ namespace Flipdish.Test
         public void NationalClearingCodeTest()
         {
             // TODO unit test for the property 'NationalClearingCode'
+        }
+        /// <summary>
+        /// Test the property 'RejectionReason'
+        /// </summary>
+        [Test]
+        public void RejectionReasonTest()
+        {
+            // TODO unit test for the property 'RejectionReason'
         }
 
     }

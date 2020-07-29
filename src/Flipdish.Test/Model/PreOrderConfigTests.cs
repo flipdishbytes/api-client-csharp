@@ -130,6 +130,22 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'PreOrderTimeDisplayType'
         }
+        /// <summary>
+        /// Test the property 'AlwaysAppearOpen'
+        /// </summary>
+        [Test]
+        public void AlwaysAppearOpenTest()
+        {
+            // TODO unit test for the property 'AlwaysAppearOpen'
+        }
+        /// <summary>
+        /// Test the property 'RequireExplicitSelectAlways'
+        /// </summary>
+        [Test]
+        public void RequireExplicitSelectAlwaysTest()
+        {
+            // TODO unit test for the property 'RequireExplicitSelectAlways'
+        }
 
     }
 

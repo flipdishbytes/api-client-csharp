@@ -72,7 +72,19 @@ namespace Flipdish.Model
             /// Enum Eps for value: Eps
             /// </summary>
             [EnumMember(Value = "Eps")]
-            Eps = 6
+            Eps = 6,
+            
+            /// <summary>
+            /// Enum Emv for value: Emv
+            /// </summary>
+            [EnumMember(Value = "Emv")]
+            Emv = 7,
+            
+            /// <summary>
+            /// Enum PayPal for value: PayPal
+            /// </summary>
+            [EnumMember(Value = "PayPal")]
+            PayPal = 8
         }
 
         /// <summary>

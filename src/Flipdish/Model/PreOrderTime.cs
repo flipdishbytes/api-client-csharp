@@ -33,18 +33,27 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PreOrderTime" /> class.
         /// </summary>
-        /// <param name="time">Time.</param>
-        public PreOrderTime(string time = default(string))
+        /// <param name="startTime">Start Time.</param>
+        /// <param name="endTime">End Time.</param>
+        public PreOrderTime(DateTime? startTime = default(DateTime?), DateTime? endTime = default(DateTime?))
         {
-            this.Time = time;
+            this.StartTime = startTime;
+            this.EndTime = endTime;
         }
         
         /// <summary>
-        /// Time
+        /// Start Time
         /// </summary>
-        /// <value>Time</value>
-        [DataMember(Name="Time", EmitDefaultValue=false)]
-        public string Time { get; set; }
+        /// <value>Start Time</value>
+        [DataMember(Name="StartTime", EmitDefaultValue=false)]
+        public DateTime? StartTime { get; set; }
+
+        /// <summary>
+        /// End Time
+        /// </summary>
+        /// <value>End Time</value>
+        [DataMember(Name="EndTime", EmitDefaultValue=false)]
+        public DateTime? EndTime { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -54,7 +63,8 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PreOrderTime {\n");
-            sb.Append("  Time: ").Append(Time).Append("\n");
+            sb.Append("  StartTime: ").Append(StartTime).Append("\n");
+            sb.Append("  EndTime: ").Append(EndTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -90,9 +100,14 @@ namespace Flipdish.Model
 
             return 
                 (
-                    this.Time == input.Time ||
-                    (this.Time != null &&
-                    this.Time.Equals(input.Time))
+                    this.StartTime == input.StartTime ||
+                    (this.StartTime != null &&
+                    this.StartTime.Equals(input.StartTime))
+                ) && 
+                (
+                    this.EndTime == input.EndTime ||
+                    (this.EndTime != null &&
+                    this.EndTime.Equals(input.EndTime))
                 );
         }
 
@@ -105,8 +120,10 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Time != null)
-                    hashCode = hashCode * 59 + this.Time.GetHashCode();
+                if (this.StartTime != null)
+                    hashCode = hashCode * 59 + this.StartTime.GetHashCode();
+                if (this.EndTime != null)
+                    hashCode = hashCode * 59 + this.EndTime.GetHashCode();
                 return hashCode;
             }
         }

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AppId** | **string** |  | 
-**StoreId** | **int?** | Store to assign the hydra | [optional] 
+**StoreIds** | **List&lt;int?&gt;** | Store to assign the hydra | [optional] 
 **IsRegistered** | **bool?** | The device has been already registered | 
 **PinCode** | **int?** | 6 digit PIN code (not starting with zero). | [optional] 
 **Images** | **List&lt;string&gt;** | Hydra images (covers) | [optional] 

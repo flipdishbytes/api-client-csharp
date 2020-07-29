@@ -31,18 +31,92 @@ namespace Flipdish.Model
     public partial class OAuthApp :  IEquatable<OAuthApp>, IValidatableObject
     {
         /// <summary>
+        /// Supported OpenID Connect flows
+        /// </summary>
+        /// <value>Supported OpenID Connect flows</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FlowEnum
+        {
+            
+            /// <summary>
+            /// Enum AuthorizationCode for value: AuthorizationCode
+            /// </summary>
+            [EnumMember(Value = "AuthorizationCode")]
+            AuthorizationCode = 1,
+            
+            /// <summary>
+            /// Enum Implicit for value: Implicit
+            /// </summary>
+            [EnumMember(Value = "Implicit")]
+            Implicit = 2,
+            
+            /// <summary>
+            /// Enum Hybrid for value: Hybrid
+            /// </summary>
+            [EnumMember(Value = "Hybrid")]
+            Hybrid = 3,
+            
+            /// <summary>
+            /// Enum ClientCredentials for value: ClientCredentials
+            /// </summary>
+            [EnumMember(Value = "ClientCredentials")]
+            ClientCredentials = 4
+        }
+
+        /// <summary>
+        /// Supported OpenID Connect flows
+        /// </summary>
+        /// <value>Supported OpenID Connect flows</value>
+        [DataMember(Name="Flow", EmitDefaultValue=false)]
+        public FlowEnum? Flow { get; set; }
+        /// <summary>
+        /// ReUse: the refresh token handle will stay the same when refreshing tokens   OneTime: the refresh token handle will be updated when refreshing tokens
+        /// </summary>
+        /// <value>ReUse: the refresh token handle will stay the same when refreshing tokens   OneTime: the refresh token handle will be updated when refreshing tokens</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum RefreshTokenUsageEnum
+        {
+            
+            /// <summary>
+            /// Enum ReUse for value: ReUse
+            /// </summary>
+            [EnumMember(Value = "ReUse")]
+            ReUse = 1,
+            
+            /// <summary>
+            /// Enum OneTimeOnly for value: OneTimeOnly
+            /// </summary>
+            [EnumMember(Value = "OneTimeOnly")]
+            OneTimeOnly = 2
+        }
+
+        /// <summary>
+        /// ReUse: the refresh token handle will stay the same when refreshing tokens   OneTime: the refresh token handle will be updated when refreshing tokens
+        /// </summary>
+        /// <value>ReUse: the refresh token handle will stay the same when refreshing tokens   OneTime: the refresh token handle will be updated when refreshing tokens</value>
+        [DataMember(Name="RefreshTokenUsage", EmitDefaultValue=false)]
+        public RefreshTokenUsageEnum? RefreshTokenUsage { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="OAuthApp" /> class.
         /// </summary>
         /// <param name="oauthAppId">OAuth App Identifier.</param>
         /// <param name="oauthAppName">OAuth App Name.</param>
         /// <param name="ownerUserId">OAuth App owner user identifier.</param>
         /// <param name="logoUri">OAuth App logo uri.</param>
-        public OAuthApp(string oauthAppId = default(string), string oauthAppName = default(string), int? ownerUserId = default(int?), string logoUri = default(string))
+        /// <param name="flow">Supported OpenID Connect flows.</param>
+        /// <param name="refreshTokenUsage">ReUse: the refresh token handle will stay the same when refreshing tokens   OneTime: the refresh token handle will be updated when refreshing tokens.</param>
+        /// <param name="accessTokenLifetime">Timem it takes for the IdentityToken to expire in seconds.</param>
+        /// <param name="absoluteRefreshTokenLifetime">Maximum lifetime of a refresh token in seconds.</param>
+        public OAuthApp(string oauthAppId = default(string), string oauthAppName = default(string), int? ownerUserId = default(int?), string logoUri = default(string), FlowEnum? flow = default(FlowEnum?), RefreshTokenUsageEnum? refreshTokenUsage = default(RefreshTokenUsageEnum?), int? accessTokenLifetime = default(int?), int? absoluteRefreshTokenLifetime = default(int?))
         {
             this.OauthAppId = oauthAppId;
             this.OauthAppName = oauthAppName;
             this.OwnerUserId = ownerUserId;
             this.LogoUri = logoUri;
+            this.Flow = flow;
+            this.RefreshTokenUsage = refreshTokenUsage;
+            this.AccessTokenLifetime = accessTokenLifetime;
+            this.AbsoluteRefreshTokenLifetime = absoluteRefreshTokenLifetime;
         }
         
         /// <summary>
@@ -73,6 +147,22 @@ namespace Flipdish.Model
         [DataMember(Name="LogoUri", EmitDefaultValue=false)]
         public string LogoUri { get; set; }
 
+
+
+        /// <summary>
+        /// Timem it takes for the IdentityToken to expire in seconds
+        /// </summary>
+        /// <value>Timem it takes for the IdentityToken to expire in seconds</value>
+        [DataMember(Name="AccessTokenLifetime", EmitDefaultValue=false)]
+        public int? AccessTokenLifetime { get; set; }
+
+        /// <summary>
+        /// Maximum lifetime of a refresh token in seconds
+        /// </summary>
+        /// <value>Maximum lifetime of a refresh token in seconds</value>
+        [DataMember(Name="AbsoluteRefreshTokenLifetime", EmitDefaultValue=false)]
+        public int? AbsoluteRefreshTokenLifetime { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -85,6 +175,10 @@ namespace Flipdish.Model
             sb.Append("  OauthAppName: ").Append(OauthAppName).Append("\n");
             sb.Append("  OwnerUserId: ").Append(OwnerUserId).Append("\n");
             sb.Append("  LogoUri: ").Append(LogoUri).Append("\n");
+            sb.Append("  Flow: ").Append(Flow).Append("\n");
+            sb.Append("  RefreshTokenUsage: ").Append(RefreshTokenUsage).Append("\n");
+            sb.Append("  AccessTokenLifetime: ").Append(AccessTokenLifetime).Append("\n");
+            sb.Append("  AbsoluteRefreshTokenLifetime: ").Append(AbsoluteRefreshTokenLifetime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,6 +232,26 @@ namespace Flipdish.Model
                     this.LogoUri == input.LogoUri ||
                     (this.LogoUri != null &&
                     this.LogoUri.Equals(input.LogoUri))
+                ) && 
+                (
+                    this.Flow == input.Flow ||
+                    (this.Flow != null &&
+                    this.Flow.Equals(input.Flow))
+                ) && 
+                (
+                    this.RefreshTokenUsage == input.RefreshTokenUsage ||
+                    (this.RefreshTokenUsage != null &&
+                    this.RefreshTokenUsage.Equals(input.RefreshTokenUsage))
+                ) && 
+                (
+                    this.AccessTokenLifetime == input.AccessTokenLifetime ||
+                    (this.AccessTokenLifetime != null &&
+                    this.AccessTokenLifetime.Equals(input.AccessTokenLifetime))
+                ) && 
+                (
+                    this.AbsoluteRefreshTokenLifetime == input.AbsoluteRefreshTokenLifetime ||
+                    (this.AbsoluteRefreshTokenLifetime != null &&
+                    this.AbsoluteRefreshTokenLifetime.Equals(input.AbsoluteRefreshTokenLifetime))
                 );
         }
 
@@ -158,6 +272,14 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OwnerUserId.GetHashCode();
                 if (this.LogoUri != null)
                     hashCode = hashCode * 59 + this.LogoUri.GetHashCode();
+                if (this.Flow != null)
+                    hashCode = hashCode * 59 + this.Flow.GetHashCode();
+                if (this.RefreshTokenUsage != null)
+                    hashCode = hashCode * 59 + this.RefreshTokenUsage.GetHashCode();
+                if (this.AccessTokenLifetime != null)
+                    hashCode = hashCode * 59 + this.AccessTokenLifetime.GetHashCode();
+                if (this.AbsoluteRefreshTokenLifetime != null)
+                    hashCode = hashCode * 59 + this.AbsoluteRefreshTokenLifetime.GetHashCode();
                 return hashCode;
             }
         }

@@ -235,6 +235,14 @@ namespace Flipdish.Test
             // TODO unit test for the property 'RequireCustomerNameForDelivery'
         }
         /// <summary>
+        /// Test the property 'AllowChefNotes'
+        /// </summary>
+        [Test]
+        public void AllowChefNotesTest()
+        {
+            // TODO unit test for the property 'AllowChefNotes'
+        }
+        /// <summary>
         /// Test the property 'EtaInPickupConfirmationSmsEnabled'
         /// </summary>
         [Test]
@@ -249,6 +257,22 @@ namespace Flipdish.Test
         public void EtaInDeliveryConfirmationSmsEnabledTest()
         {
             // TODO unit test for the property 'EtaInDeliveryConfirmationSmsEnabled'
+        }
+        /// <summary>
+        /// Test the property 'IsArchived'
+        /// </summary>
+        [Test]
+        public void IsArchivedTest()
+        {
+            // TODO unit test for the property 'IsArchived'
+        }
+        /// <summary>
+        /// Test the property 'IsPublished'
+        /// </summary>
+        [Test]
+        public void IsPublishedTest()
+        {
+            // TODO unit test for the property 'IsPublished'
         }
         /// <summary>
         /// Test the property 'Name'

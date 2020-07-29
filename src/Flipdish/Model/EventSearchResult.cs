@@ -38,6 +38,8 @@ namespace Flipdish.Model
         /// <param name="analyticsClientEvent">Client Analytics events.</param>
         /// <param name="orderAcceptedEvent">Order accepted events.</param>
         /// <param name="orderDispatchedEvent">Order dispatched events.</param>
+        /// <param name="orderCustomerTrackingCreatedEvent">Order delivery tracking created events.</param>
+        /// <param name="orderDeliveryTrackingStatusUpdatedEvent">Order delivery tracking updated events.</param>
         /// <param name="orderCreatedEvent">Order created events.</param>
         /// <param name="orderRatingUpdatedEvent">Order rating updated events.</param>
         /// <param name="orderRefundedEvent">Order refunded events.</param>
@@ -47,6 +49,7 @@ namespace Flipdish.Model
         /// <param name="storeCreatedEvent">Store created events.</param>
         /// <param name="storeDeletedEvent">Store deleted events.</param>
         /// <param name="storeAddressUpdatedEvent">Store address updated events.</param>
+        /// <param name="storeKioskSettingUpdatedEvent">Store kiosk setting updated events.</param>
         /// <param name="deliveryZoneCreatedEvent">Store delivery zone created events.</param>
         /// <param name="deliveryZoneUpdatedEvent">Store delivery zone updated events.</param>
         /// <param name="deliveryZoneDeletedEvent">Store delivery zone deleted events.</param>
@@ -54,10 +57,18 @@ namespace Flipdish.Model
         /// <param name="storeMenuAssignedEvent">Store opening hours updated events.</param>
         /// <param name="storeBusinessHoursOverrideCreatedEvent">Store business hours override created events.</param>
         /// <param name="storeBusinessHoursOverrideDeletedEvent">Store business hours override deleted events.</param>
+        /// <param name="storeArchivedEvent">Store archived events.</param>
+        /// <param name="storeUnarchivedEvent">Store unarchived events.</param>
+        /// <param name="storePublishedEvent">Store published events.</param>
+        /// <param name="storeUnpublishedEvent">Store unpublished events.</param>
         /// <param name="storeUpdatedEvent">Store updated events.</param>
         /// <param name="storePreOrderConfigUpdatedEvent">Store updated events.</param>
+        /// <param name="storeLogoCreatedEvent">Store logo created events.</param>
+        /// <param name="storeLogoUpdatedEvent">Store logo updated events.</param>
+        /// <param name="storeLogoDeletedEvent">Store logo deleted events.</param>
         /// <param name="menuCreatedEvent">Menu created events.</param>
         /// <param name="menuUpdatedEvent">Menu updated events.</param>
+        /// <param name="menuUploadedEvent">Menu uploaded events.</param>
         /// <param name="menuSectionCreatedEvent">Menu section created events.</param>
         /// <param name="menuSectionUpdatedEvent">Menu section updated events.</param>
         /// <param name="menuSectionDeletedEvent">Menu section deleted events.</param>
@@ -70,6 +81,7 @@ namespace Flipdish.Model
         /// <param name="menuItemOptionSetItemCreatedEvent">Menu item option set item created events.</param>
         /// <param name="menuItemOptionSetItemUpdatedEvent">Menu item option set item updated events.</param>
         /// <param name="menuItemOptionSetItemDeletedEvent">Menu item option set item deleted events.</param>
+        /// <param name="menuCheckpointCreatedEvent">Menu checkpoint created event.</param>
         /// <param name="storeGroupCreatedEvent">Store group created events.</param>
         /// <param name="storeGroupUpdatedEvent">Store group updated events.</param>
         /// <param name="storeGroupDeletedEvent">Store group deleted events.</param>
@@ -96,6 +108,8 @@ namespace Flipdish.Model
         /// <param name="userCreatedEvent">User created event.</param>
         /// <param name="userUpdatedEvent">User updated event.</param>
         /// <param name="userDeletedEvent">User deleted event.</param>
+        /// <param name="userCreatedPasswordEvent">User password created event.</param>
+        /// <param name="userAnsweredSignupQuestionsEvent">User answered signup questions event.</param>
         /// <param name="voucherCreatedEvent">Voucher created event.</param>
         /// <param name="voucherUpdatedEvent">Voucher updated event.</param>
         /// <param name="voucherDeletedEvent">Voucher deleted event.</param>
@@ -110,16 +124,25 @@ namespace Flipdish.Model
         /// <param name="hydraRequestResetEvent">Hydra reset requested event.</param>
         /// <param name="hydraSettingChangedEvent">Hydra settings changed event.</param>
         /// <param name="hydraUnAssignedEvent">Hydra un-assigned event.</param>
+        /// <param name="hydraConnectionStatusChangedEvent">Hydra connection state change.</param>
         /// <param name="pushNotificationScheduledEvent">Push notification scheduled event.</param>
         /// <param name="pushNotificationSentEvent">Push notification sent event.</param>
         /// <param name="pushNotificationDeletedEvent">Push notification deleted event.</param>
-        public EventSearchResult(List<AppCreatedEvent> appCreatedEvent = default(List<AppCreatedEvent>), List<AppUpdatedEvent> appUpdatedEvent = default(List<AppUpdatedEvent>), List<AnalyticsClientEvent> analyticsClientEvent = default(List<AnalyticsClientEvent>), List<OrderAcceptedEvent> orderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderDispatchedEvent> orderDispatchedEvent = default(List<OrderDispatchedEvent>), List<OrderCreatedEvent> orderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> orderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> orderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> orderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> orderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<OrderTerminalNotification> orderTerminalNotifications = default(List<OrderTerminalNotification>), List<StoreCreatedEvent> storeCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> storeDeletedEvent = default(List<StoreDeletedEvent>), List<StoreAddressUpdatedEvent> storeAddressUpdatedEvent = default(List<StoreAddressUpdatedEvent>), List<DeliveryZoneCreatedEvent> deliveryZoneCreatedEvent = default(List<DeliveryZoneCreatedEvent>), List<DeliveryZoneUpdatedEvent> deliveryZoneUpdatedEvent = default(List<DeliveryZoneUpdatedEvent>), List<DeliveryZoneDeletedEvent> deliveryZoneDeletedEvent = default(List<DeliveryZoneDeletedEvent>), List<StoreOpeningHoursUpdatedEvent> storeOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreMenuAssignedEvent> storeMenuAssignedEvent = default(List<StoreMenuAssignedEvent>), List<StoreBusinessHoursOverrideCreatedEvent> storeBusinessHoursOverrideCreatedEvent = default(List<StoreBusinessHoursOverrideCreatedEvent>), List<StoreBusinessHoursOverrideDeletedEvent> storeBusinessHoursOverrideDeletedEvent = default(List<StoreBusinessHoursOverrideDeletedEvent>), List<StoreUpdatedEvent> storeUpdatedEvent = default(List<StoreUpdatedEvent>), List<StorePreOrderConfigUpdatedEvent> storePreOrderConfigUpdatedEvent = default(List<StorePreOrderConfigUpdatedEvent>), List<MenuCreatedEvent> menuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> menuUpdatedEvent = default(List<MenuUpdatedEvent>), List<MenuSectionCreatedEvent> menuSectionCreatedEvent = default(List<MenuSectionCreatedEvent>), List<MenuSectionUpdatedEvent> menuSectionUpdatedEvent = default(List<MenuSectionUpdatedEvent>), List<MenuSectionDeletedEvent> menuSectionDeletedEvent = default(List<MenuSectionDeletedEvent>), List<MenuSectionItemCreatedEvent> menuSectionItemCreatedEvent = default(List<MenuSectionItemCreatedEvent>), List<MenuSectionItemUpdatedEvent> menuSectionItemUpdatedEvent = default(List<MenuSectionItemUpdatedEvent>), List<MenuSectionItemDeletedEvent> menuSectionItemDeletedEvent = default(List<MenuSectionItemDeletedEvent>), List<MenuItemOptionSetCreatedEvent> menuItemOptionSetCreatedEvent = default(List<MenuItemOptionSetCreatedEvent>), List<MenuItemOptionSetUpdatedEvent> menuItemOptionSetUpdatedEvent = default(List<MenuItemOptionSetUpdatedEvent>), List<MenuItemOptionSetDeletedEvent> menuItemOptionSetDeletedEvent = default(List<MenuItemOptionSetDeletedEvent>), List<MenuItemOptionSetItemCreatedEvent> menuItemOptionSetItemCreatedEvent = default(List<MenuItemOptionSetItemCreatedEvent>), List<MenuItemOptionSetItemUpdatedEvent> menuItemOptionSetItemUpdatedEvent = default(List<MenuItemOptionSetItemUpdatedEvent>), List<MenuItemOptionSetItemDeletedEvent> menuItemOptionSetItemDeletedEvent = default(List<MenuItemOptionSetItemDeletedEvent>), List<StoreGroupCreatedEvent> storeGroupCreatedEvent = default(List<StoreGroupCreatedEvent>), List<StoreGroupUpdatedEvent> storeGroupUpdatedEvent = default(List<StoreGroupUpdatedEvent>), List<StoreGroupDeletedEvent> storeGroupDeletedEvent = default(List<StoreGroupDeletedEvent>), List<CustomerCreatedEvent> customerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> customerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> customerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<WebhookSubscriptionCreatedEvent> webhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> webhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> webhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>), List<PrinterTurnedOnEvent> printerTurnedOnEvent = default(List<PrinterTurnedOnEvent>), List<PrinterTurnedOffEvent> printerTurnedOffEvent = default(List<PrinterTurnedOffEvent>), List<PrinterAssignedToStoreEvent> printerAssignedToStoreEvent = default(List<PrinterAssignedToStoreEvent>), List<PrinterUnassignedFromStoreEvent> printerUnassignedFromStoreEvent = default(List<PrinterUnassignedFromStoreEvent>), List<PhoneCallStartedEvent> phoneCallStartedEvent = default(List<PhoneCallStartedEvent>), List<PhoneCallEndedEvent> phoneCallEndedEvent = default(List<PhoneCallEndedEvent>), List<LoyaltyCampaignCreatedEvent> loyaltyCampaignCreatedEvent = default(List<LoyaltyCampaignCreatedEvent>), List<LoyaltyCampaignDeletedEvent> loyaltyCampaignDeletedEvent = default(List<LoyaltyCampaignDeletedEvent>), List<LoyaltyCampaignUpdatedEvent> loyaltyCampaignUpdatedEvent = default(List<LoyaltyCampaignUpdatedEvent>), List<RetentionCampaignCreatedEvent> retentionCampaignCreatedEvent = default(List<RetentionCampaignCreatedEvent>), List<RetentionCampaignDeletedEvent> retentionCampaignDeletedEvent = default(List<RetentionCampaignDeletedEvent>), List<RetentionCampaignUpdatedEvent> retentionCampaignUpdatedEvent = default(List<RetentionCampaignUpdatedEvent>), List<SmsReceivedEvent> smsReceivedEvent = default(List<SmsReceivedEvent>), List<UserLoginEvent> userLoginEvent = default(List<UserLoginEvent>), List<UserCreatedEvent> userCreatedEvent = default(List<UserCreatedEvent>), List<UserUpdatedEvent> userUpdatedEvent = default(List<UserUpdatedEvent>), List<UserDeletedEvent> userDeletedEvent = default(List<UserDeletedEvent>), List<VoucherCreatedEvent> voucherCreatedEvent = default(List<VoucherCreatedEvent>), List<VoucherUpdatedEvent> voucherUpdatedEvent = default(List<VoucherUpdatedEvent>), List<VoucherDeletedEvent> voucherDeletedEvent = default(List<VoucherDeletedEvent>), List<TeammateInviteSentEvent> teammateInviteSentEvent = default(List<TeammateInviteSentEvent>), List<TeammateInviteAcceptedEvent> teammateInviteAcceptedEvent = default(List<TeammateInviteAcceptedEvent>), List<TeammateUpdatedEvent> teammateUpdatedEvent = default(List<TeammateUpdatedEvent>), List<TeammateDeletedEvent> teammateDeletedEvent = default(List<TeammateDeletedEvent>), List<BankAccountCreatedEvent> bankAccountCreatedEvent = default(List<BankAccountCreatedEvent>), List<BankAccountUpdatedEvent> bankAccountUpdatedEvent = default(List<BankAccountUpdatedEvent>), List<BankAccountDeletedEvent> bankAccountDeletedEvent = default(List<BankAccountDeletedEvent>), List<HydraAssignedEvent> hydraAssignedEvent = default(List<HydraAssignedEvent>), List<HydraRequestResetEvent> hydraRequestResetEvent = default(List<HydraRequestResetEvent>), List<HydraSettingChangedEvent> hydraSettingChangedEvent = default(List<HydraSettingChangedEvent>), List<HydraUnAssignedEvent> hydraUnAssignedEvent = default(List<HydraUnAssignedEvent>), List<PushNotificationScheduledEvent> pushNotificationScheduledEvent = default(List<PushNotificationScheduledEvent>), List<PushNotificationSentEvent> pushNotificationSentEvent = default(List<PushNotificationSentEvent>), List<PushNotificationDeletedEvent> pushNotificationDeletedEvent = default(List<PushNotificationDeletedEvent>))
+        /// <param name="dnsVerifiedEvent">DNS Verified.</param>
+        /// <param name="certificateCreatedEvent">Certificate created.</param>
+        /// <param name="certificateRenewedEvent">Certificate renewed.</param>
+        /// <param name="websiteVanityUrlUpdatedEvent">Panacea vanity url updated.</param>
+        /// <param name="websiteUpdatedEvent">Website updated.</param>
+        /// <param name="storeOrderCapacityUpdatedEvent">Order capacity config updated.</param>
+        public EventSearchResult(List<AppCreatedEvent> appCreatedEvent = default(List<AppCreatedEvent>), List<AppUpdatedEvent> appUpdatedEvent = default(List<AppUpdatedEvent>), List<AnalyticsClientEvent> analyticsClientEvent = default(List<AnalyticsClientEvent>), List<OrderAcceptedEvent> orderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderDispatchedEvent> orderDispatchedEvent = default(List<OrderDispatchedEvent>), List<OrderCustomerTrackingCreatedEvent> orderCustomerTrackingCreatedEvent = default(List<OrderCustomerTrackingCreatedEvent>), List<OrderDeliveryTrackingStatusUpdatedEvent> orderDeliveryTrackingStatusUpdatedEvent = default(List<OrderDeliveryTrackingStatusUpdatedEvent>), List<OrderCreatedEvent> orderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> orderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> orderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> orderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> orderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<EmvNotificationEvent> orderTerminalNotifications = default(List<EmvNotificationEvent>), List<StoreCreatedEvent> storeCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> storeDeletedEvent = default(List<StoreDeletedEvent>), List<StoreAddressUpdatedEvent> storeAddressUpdatedEvent = default(List<StoreAddressUpdatedEvent>), List<StoreKioskSettingUpdatedEvent> storeKioskSettingUpdatedEvent = default(List<StoreKioskSettingUpdatedEvent>), List<DeliveryZoneCreatedEvent> deliveryZoneCreatedEvent = default(List<DeliveryZoneCreatedEvent>), List<DeliveryZoneUpdatedEvent> deliveryZoneUpdatedEvent = default(List<DeliveryZoneUpdatedEvent>), List<DeliveryZoneDeletedEvent> deliveryZoneDeletedEvent = default(List<DeliveryZoneDeletedEvent>), List<StoreOpeningHoursUpdatedEvent> storeOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreMenuAssignedEvent> storeMenuAssignedEvent = default(List<StoreMenuAssignedEvent>), List<StoreBusinessHoursOverrideCreatedEvent> storeBusinessHoursOverrideCreatedEvent = default(List<StoreBusinessHoursOverrideCreatedEvent>), List<StoreBusinessHoursOverrideDeletedEvent> storeBusinessHoursOverrideDeletedEvent = default(List<StoreBusinessHoursOverrideDeletedEvent>), List<StoreArchivedEvent> storeArchivedEvent = default(List<StoreArchivedEvent>), List<StoreUnarchivedEvent> storeUnarchivedEvent = default(List<StoreUnarchivedEvent>), List<StorePublishedEvent> storePublishedEvent = default(List<StorePublishedEvent>), List<StoreUnpublishedEvent> storeUnpublishedEvent = default(List<StoreUnpublishedEvent>), List<StoreUpdatedEvent> storeUpdatedEvent = default(List<StoreUpdatedEvent>), List<StorePreOrderConfigUpdatedEvent> storePreOrderConfigUpdatedEvent = default(List<StorePreOrderConfigUpdatedEvent>), List<StoreLogoCreatedEvent> storeLogoCreatedEvent = default(List<StoreLogoCreatedEvent>), List<StoreLogoUpdatedEvent> storeLogoUpdatedEvent = default(List<StoreLogoUpdatedEvent>), List<StoreLogoDeletedEvent> storeLogoDeletedEvent = default(List<StoreLogoDeletedEvent>), List<MenuCreatedEvent> menuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> menuUpdatedEvent = default(List<MenuUpdatedEvent>), List<MenuUploadedEvent> menuUploadedEvent = default(List<MenuUploadedEvent>), List<MenuSectionCreatedEvent> menuSectionCreatedEvent = default(List<MenuSectionCreatedEvent>), List<MenuSectionUpdatedEvent> menuSectionUpdatedEvent = default(List<MenuSectionUpdatedEvent>), List<MenuSectionDeletedEvent> menuSectionDeletedEvent = default(List<MenuSectionDeletedEvent>), List<MenuSectionItemCreatedEvent> menuSectionItemCreatedEvent = default(List<MenuSectionItemCreatedEvent>), List<MenuSectionItemUpdatedEvent> menuSectionItemUpdatedEvent = default(List<MenuSectionItemUpdatedEvent>), List<MenuSectionItemDeletedEvent> menuSectionItemDeletedEvent = default(List<MenuSectionItemDeletedEvent>), List<MenuItemOptionSetCreatedEvent> menuItemOptionSetCreatedEvent = default(List<MenuItemOptionSetCreatedEvent>), List<MenuItemOptionSetUpdatedEvent> menuItemOptionSetUpdatedEvent = default(List<MenuItemOptionSetUpdatedEvent>), List<MenuItemOptionSetDeletedEvent> menuItemOptionSetDeletedEvent = default(List<MenuItemOptionSetDeletedEvent>), List<MenuItemOptionSetItemCreatedEvent> menuItemOptionSetItemCreatedEvent = default(List<MenuItemOptionSetItemCreatedEvent>), List<MenuItemOptionSetItemUpdatedEvent> menuItemOptionSetItemUpdatedEvent = default(List<MenuItemOptionSetItemUpdatedEvent>), List<MenuItemOptionSetItemDeletedEvent> menuItemOptionSetItemDeletedEvent = default(List<MenuItemOptionSetItemDeletedEvent>), List<MenuCheckpointCreatedEvent> menuCheckpointCreatedEvent = default(List<MenuCheckpointCreatedEvent>), List<StoreGroupCreatedEvent> storeGroupCreatedEvent = default(List<StoreGroupCreatedEvent>), List<StoreGroupUpdatedEvent> storeGroupUpdatedEvent = default(List<StoreGroupUpdatedEvent>), List<StoreGroupDeletedEvent> storeGroupDeletedEvent = default(List<StoreGroupDeletedEvent>), List<CustomerCreatedEvent> customerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> customerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> customerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<WebhookSubscriptionCreatedEvent> webhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> webhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> webhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>), List<PrinterTurnedOnEvent> printerTurnedOnEvent = default(List<PrinterTurnedOnEvent>), List<PrinterTurnedOffEvent> printerTurnedOffEvent = default(List<PrinterTurnedOffEvent>), List<PrinterAssignedToStoreEvent> printerAssignedToStoreEvent = default(List<PrinterAssignedToStoreEvent>), List<PrinterUnassignedFromStoreEvent> printerUnassignedFromStoreEvent = default(List<PrinterUnassignedFromStoreEvent>), List<PhoneCallStartedEvent> phoneCallStartedEvent = default(List<PhoneCallStartedEvent>), List<PhoneCallEndedEvent> phoneCallEndedEvent = default(List<PhoneCallEndedEvent>), List<LoyaltyCampaignCreatedEvent> loyaltyCampaignCreatedEvent = default(List<LoyaltyCampaignCreatedEvent>), List<LoyaltyCampaignDeletedEvent> loyaltyCampaignDeletedEvent = default(List<LoyaltyCampaignDeletedEvent>), List<LoyaltyCampaignUpdatedEvent> loyaltyCampaignUpdatedEvent = default(List<LoyaltyCampaignUpdatedEvent>), List<RetentionCampaignCreatedEvent> retentionCampaignCreatedEvent = default(List<RetentionCampaignCreatedEvent>), List<RetentionCampaignDeletedEvent> retentionCampaignDeletedEvent = default(List<RetentionCampaignDeletedEvent>), List<RetentionCampaignUpdatedEvent> retentionCampaignUpdatedEvent = default(List<RetentionCampaignUpdatedEvent>), List<SmsReceivedEvent> smsReceivedEvent = default(List<SmsReceivedEvent>), List<UserLoginEvent> userLoginEvent = default(List<UserLoginEvent>), List<UserCreatedEvent> userCreatedEvent = default(List<UserCreatedEvent>), List<UserUpdatedEvent> userUpdatedEvent = default(List<UserUpdatedEvent>), List<UserDeletedEvent> userDeletedEvent = default(List<UserDeletedEvent>), List<UserPasswordCreatedEvent> userCreatedPasswordEvent = default(List<UserPasswordCreatedEvent>), List<UserAnsweredSignupQuestionsEvent> userAnsweredSignupQuestionsEvent = default(List<UserAnsweredSignupQuestionsEvent>), List<VoucherCreatedEvent> voucherCreatedEvent = default(List<VoucherCreatedEvent>), List<VoucherUpdatedEvent> voucherUpdatedEvent = default(List<VoucherUpdatedEvent>), List<VoucherDeletedEvent> voucherDeletedEvent = default(List<VoucherDeletedEvent>), List<TeammateInviteSentEvent> teammateInviteSentEvent = default(List<TeammateInviteSentEvent>), List<TeammateInviteAcceptedEvent> teammateInviteAcceptedEvent = default(List<TeammateInviteAcceptedEvent>), List<TeammateUpdatedEvent> teammateUpdatedEvent = default(List<TeammateUpdatedEvent>), List<TeammateDeletedEvent> teammateDeletedEvent = default(List<TeammateDeletedEvent>), List<BankAccountCreatedEvent> bankAccountCreatedEvent = default(List<BankAccountCreatedEvent>), List<BankAccountUpdatedEvent> bankAccountUpdatedEvent = default(List<BankAccountUpdatedEvent>), List<BankAccountDeletedEvent> bankAccountDeletedEvent = default(List<BankAccountDeletedEvent>), List<HydraAssignedEvent> hydraAssignedEvent = default(List<HydraAssignedEvent>), List<HydraRequestResetEvent> hydraRequestResetEvent = default(List<HydraRequestResetEvent>), List<HydraSettingChangedEvent> hydraSettingChangedEvent = default(List<HydraSettingChangedEvent>), List<HydraUnAssignedEvent> hydraUnAssignedEvent = default(List<HydraUnAssignedEvent>), List<HydraConnectionStatusChangedEvent> hydraConnectionStatusChangedEvent = default(List<HydraConnectionStatusChangedEvent>), List<PushNotificationScheduledEvent> pushNotificationScheduledEvent = default(List<PushNotificationScheduledEvent>), List<PushNotificationSentEvent> pushNotificationSentEvent = default(List<PushNotificationSentEvent>), List<PushNotificationDeletedEvent> pushNotificationDeletedEvent = default(List<PushNotificationDeletedEvent>), List<DnsVerifiedEvent> dnsVerifiedEvent = default(List<DnsVerifiedEvent>), List<CertificateCreatedEvent> certificateCreatedEvent = default(List<CertificateCreatedEvent>), List<CertificateRenewedEvent> certificateRenewedEvent = default(List<CertificateRenewedEvent>), List<WebsiteVanityUrlUpdatedEvent> websiteVanityUrlUpdatedEvent = default(List<WebsiteVanityUrlUpdatedEvent>), List<WebsiteUpdatedEvent> websiteUpdatedEvent = default(List<WebsiteUpdatedEvent>), List<StoreOrderCapacityUpdatedEvent> storeOrderCapacityUpdatedEvent = default(List<StoreOrderCapacityUpdatedEvent>))
         {
             this.AppCreatedEvent = appCreatedEvent;
             this.AppUpdatedEvent = appUpdatedEvent;
             this.AnalyticsClientEvent = analyticsClientEvent;
             this.OrderAcceptedEvent = orderAcceptedEvent;
             this.OrderDispatchedEvent = orderDispatchedEvent;
+            this.OrderCustomerTrackingCreatedEvent = orderCustomerTrackingCreatedEvent;
+            this.OrderDeliveryTrackingStatusUpdatedEvent = orderDeliveryTrackingStatusUpdatedEvent;
             this.OrderCreatedEvent = orderCreatedEvent;
             this.OrderRatingUpdatedEvent = orderRatingUpdatedEvent;
             this.OrderRefundedEvent = orderRefundedEvent;
@@ -129,6 +152,7 @@ namespace Flipdish.Model
             this.StoreCreatedEvent = storeCreatedEvent;
             this.StoreDeletedEvent = storeDeletedEvent;
             this.StoreAddressUpdatedEvent = storeAddressUpdatedEvent;
+            this.StoreKioskSettingUpdatedEvent = storeKioskSettingUpdatedEvent;
             this.DeliveryZoneCreatedEvent = deliveryZoneCreatedEvent;
             this.DeliveryZoneUpdatedEvent = deliveryZoneUpdatedEvent;
             this.DeliveryZoneDeletedEvent = deliveryZoneDeletedEvent;
@@ -136,10 +160,18 @@ namespace Flipdish.Model
             this.StoreMenuAssignedEvent = storeMenuAssignedEvent;
             this.StoreBusinessHoursOverrideCreatedEvent = storeBusinessHoursOverrideCreatedEvent;
             this.StoreBusinessHoursOverrideDeletedEvent = storeBusinessHoursOverrideDeletedEvent;
+            this.StoreArchivedEvent = storeArchivedEvent;
+            this.StoreUnarchivedEvent = storeUnarchivedEvent;
+            this.StorePublishedEvent = storePublishedEvent;
+            this.StoreUnpublishedEvent = storeUnpublishedEvent;
             this.StoreUpdatedEvent = storeUpdatedEvent;
             this.StorePreOrderConfigUpdatedEvent = storePreOrderConfigUpdatedEvent;
+            this.StoreLogoCreatedEvent = storeLogoCreatedEvent;
+            this.StoreLogoUpdatedEvent = storeLogoUpdatedEvent;
+            this.StoreLogoDeletedEvent = storeLogoDeletedEvent;
             this.MenuCreatedEvent = menuCreatedEvent;
             this.MenuUpdatedEvent = menuUpdatedEvent;
+            this.MenuUploadedEvent = menuUploadedEvent;
             this.MenuSectionCreatedEvent = menuSectionCreatedEvent;
             this.MenuSectionUpdatedEvent = menuSectionUpdatedEvent;
             this.MenuSectionDeletedEvent = menuSectionDeletedEvent;
@@ -152,6 +184,7 @@ namespace Flipdish.Model
             this.MenuItemOptionSetItemCreatedEvent = menuItemOptionSetItemCreatedEvent;
             this.MenuItemOptionSetItemUpdatedEvent = menuItemOptionSetItemUpdatedEvent;
             this.MenuItemOptionSetItemDeletedEvent = menuItemOptionSetItemDeletedEvent;
+            this.MenuCheckpointCreatedEvent = menuCheckpointCreatedEvent;
             this.StoreGroupCreatedEvent = storeGroupCreatedEvent;
             this.StoreGroupUpdatedEvent = storeGroupUpdatedEvent;
             this.StoreGroupDeletedEvent = storeGroupDeletedEvent;
@@ -178,6 +211,8 @@ namespace Flipdish.Model
             this.UserCreatedEvent = userCreatedEvent;
             this.UserUpdatedEvent = userUpdatedEvent;
             this.UserDeletedEvent = userDeletedEvent;
+            this.UserCreatedPasswordEvent = userCreatedPasswordEvent;
+            this.UserAnsweredSignupQuestionsEvent = userAnsweredSignupQuestionsEvent;
             this.VoucherCreatedEvent = voucherCreatedEvent;
             this.VoucherUpdatedEvent = voucherUpdatedEvent;
             this.VoucherDeletedEvent = voucherDeletedEvent;
@@ -192,9 +227,16 @@ namespace Flipdish.Model
             this.HydraRequestResetEvent = hydraRequestResetEvent;
             this.HydraSettingChangedEvent = hydraSettingChangedEvent;
             this.HydraUnAssignedEvent = hydraUnAssignedEvent;
+            this.HydraConnectionStatusChangedEvent = hydraConnectionStatusChangedEvent;
             this.PushNotificationScheduledEvent = pushNotificationScheduledEvent;
             this.PushNotificationSentEvent = pushNotificationSentEvent;
             this.PushNotificationDeletedEvent = pushNotificationDeletedEvent;
+            this.DnsVerifiedEvent = dnsVerifiedEvent;
+            this.CertificateCreatedEvent = certificateCreatedEvent;
+            this.CertificateRenewedEvent = certificateRenewedEvent;
+            this.WebsiteVanityUrlUpdatedEvent = websiteVanityUrlUpdatedEvent;
+            this.WebsiteUpdatedEvent = websiteUpdatedEvent;
+            this.StoreOrderCapacityUpdatedEvent = storeOrderCapacityUpdatedEvent;
         }
         
         /// <summary>
@@ -231,6 +273,20 @@ namespace Flipdish.Model
         /// <value>Order dispatched events</value>
         [DataMember(Name="OrderDispatchedEvent", EmitDefaultValue=false)]
         public List<OrderDispatchedEvent> OrderDispatchedEvent { get; set; }
+
+        /// <summary>
+        /// Order delivery tracking created events
+        /// </summary>
+        /// <value>Order delivery tracking created events</value>
+        [DataMember(Name="OrderCustomerTrackingCreatedEvent", EmitDefaultValue=false)]
+        public List<OrderCustomerTrackingCreatedEvent> OrderCustomerTrackingCreatedEvent { get; set; }
+
+        /// <summary>
+        /// Order delivery tracking updated events
+        /// </summary>
+        /// <value>Order delivery tracking updated events</value>
+        [DataMember(Name="OrderDeliveryTrackingStatusUpdatedEvent", EmitDefaultValue=false)]
+        public List<OrderDeliveryTrackingStatusUpdatedEvent> OrderDeliveryTrackingStatusUpdatedEvent { get; set; }
 
         /// <summary>
         /// Order created events
@@ -272,7 +328,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Order Terminal Notification events</value>
         [DataMember(Name="OrderTerminalNotifications", EmitDefaultValue=false)]
-        public List<OrderTerminalNotification> OrderTerminalNotifications { get; set; }
+        public List<EmvNotificationEvent> OrderTerminalNotifications { get; set; }
 
         /// <summary>
         /// Store created events
@@ -294,6 +350,13 @@ namespace Flipdish.Model
         /// <value>Store address updated events</value>
         [DataMember(Name="StoreAddressUpdatedEvent", EmitDefaultValue=false)]
         public List<StoreAddressUpdatedEvent> StoreAddressUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// Store kiosk setting updated events
+        /// </summary>
+        /// <value>Store kiosk setting updated events</value>
+        [DataMember(Name="StoreKioskSettingUpdatedEvent", EmitDefaultValue=false)]
+        public List<StoreKioskSettingUpdatedEvent> StoreKioskSettingUpdatedEvent { get; set; }
 
         /// <summary>
         /// Store delivery zone created events
@@ -345,6 +408,34 @@ namespace Flipdish.Model
         public List<StoreBusinessHoursOverrideDeletedEvent> StoreBusinessHoursOverrideDeletedEvent { get; set; }
 
         /// <summary>
+        /// Store archived events
+        /// </summary>
+        /// <value>Store archived events</value>
+        [DataMember(Name="StoreArchivedEvent", EmitDefaultValue=false)]
+        public List<StoreArchivedEvent> StoreArchivedEvent { get; set; }
+
+        /// <summary>
+        /// Store unarchived events
+        /// </summary>
+        /// <value>Store unarchived events</value>
+        [DataMember(Name="StoreUnarchivedEvent", EmitDefaultValue=false)]
+        public List<StoreUnarchivedEvent> StoreUnarchivedEvent { get; set; }
+
+        /// <summary>
+        /// Store published events
+        /// </summary>
+        /// <value>Store published events</value>
+        [DataMember(Name="StorePublishedEvent", EmitDefaultValue=false)]
+        public List<StorePublishedEvent> StorePublishedEvent { get; set; }
+
+        /// <summary>
+        /// Store unpublished events
+        /// </summary>
+        /// <value>Store unpublished events</value>
+        [DataMember(Name="StoreUnpublishedEvent", EmitDefaultValue=false)]
+        public List<StoreUnpublishedEvent> StoreUnpublishedEvent { get; set; }
+
+        /// <summary>
         /// Store updated events
         /// </summary>
         /// <value>Store updated events</value>
@@ -359,6 +450,27 @@ namespace Flipdish.Model
         public List<StorePreOrderConfigUpdatedEvent> StorePreOrderConfigUpdatedEvent { get; set; }
 
         /// <summary>
+        /// Store logo created events
+        /// </summary>
+        /// <value>Store logo created events</value>
+        [DataMember(Name="StoreLogoCreatedEvent", EmitDefaultValue=false)]
+        public List<StoreLogoCreatedEvent> StoreLogoCreatedEvent { get; set; }
+
+        /// <summary>
+        /// Store logo updated events
+        /// </summary>
+        /// <value>Store logo updated events</value>
+        [DataMember(Name="StoreLogoUpdatedEvent", EmitDefaultValue=false)]
+        public List<StoreLogoUpdatedEvent> StoreLogoUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// Store logo deleted events
+        /// </summary>
+        /// <value>Store logo deleted events</value>
+        [DataMember(Name="StoreLogoDeletedEvent", EmitDefaultValue=false)]
+        public List<StoreLogoDeletedEvent> StoreLogoDeletedEvent { get; set; }
+
+        /// <summary>
         /// Menu created events
         /// </summary>
         /// <value>Menu created events</value>
@@ -371,6 +483,13 @@ namespace Flipdish.Model
         /// <value>Menu updated events</value>
         [DataMember(Name="MenuUpdatedEvent", EmitDefaultValue=false)]
         public List<MenuUpdatedEvent> MenuUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// Menu uploaded events
+        /// </summary>
+        /// <value>Menu uploaded events</value>
+        [DataMember(Name="MenuUploadedEvent", EmitDefaultValue=false)]
+        public List<MenuUploadedEvent> MenuUploadedEvent { get; set; }
 
         /// <summary>
         /// Menu section created events
@@ -455,6 +574,13 @@ namespace Flipdish.Model
         /// <value>Menu item option set item deleted events</value>
         [DataMember(Name="MenuItemOptionSetItemDeletedEvent", EmitDefaultValue=false)]
         public List<MenuItemOptionSetItemDeletedEvent> MenuItemOptionSetItemDeletedEvent { get; set; }
+
+        /// <summary>
+        /// Menu checkpoint created event
+        /// </summary>
+        /// <value>Menu checkpoint created event</value>
+        [DataMember(Name="MenuCheckpointCreatedEvent", EmitDefaultValue=false)]
+        public List<MenuCheckpointCreatedEvent> MenuCheckpointCreatedEvent { get; set; }
 
         /// <summary>
         /// Store group created events
@@ -639,6 +765,20 @@ namespace Flipdish.Model
         public List<UserDeletedEvent> UserDeletedEvent { get; set; }
 
         /// <summary>
+        /// User password created event
+        /// </summary>
+        /// <value>User password created event</value>
+        [DataMember(Name="UserCreatedPasswordEvent", EmitDefaultValue=false)]
+        public List<UserPasswordCreatedEvent> UserCreatedPasswordEvent { get; set; }
+
+        /// <summary>
+        /// User answered signup questions event
+        /// </summary>
+        /// <value>User answered signup questions event</value>
+        [DataMember(Name="UserAnsweredSignupQuestionsEvent", EmitDefaultValue=false)]
+        public List<UserAnsweredSignupQuestionsEvent> UserAnsweredSignupQuestionsEvent { get; set; }
+
+        /// <summary>
         /// Voucher created event
         /// </summary>
         /// <value>Voucher created event</value>
@@ -737,6 +877,13 @@ namespace Flipdish.Model
         public List<HydraUnAssignedEvent> HydraUnAssignedEvent { get; set; }
 
         /// <summary>
+        /// Hydra connection state change
+        /// </summary>
+        /// <value>Hydra connection state change</value>
+        [DataMember(Name="HydraConnectionStatusChangedEvent", EmitDefaultValue=false)]
+        public List<HydraConnectionStatusChangedEvent> HydraConnectionStatusChangedEvent { get; set; }
+
+        /// <summary>
         /// Push notification scheduled event
         /// </summary>
         /// <value>Push notification scheduled event</value>
@@ -758,6 +905,48 @@ namespace Flipdish.Model
         public List<PushNotificationDeletedEvent> PushNotificationDeletedEvent { get; set; }
 
         /// <summary>
+        /// DNS Verified
+        /// </summary>
+        /// <value>DNS Verified</value>
+        [DataMember(Name="DnsVerifiedEvent", EmitDefaultValue=false)]
+        public List<DnsVerifiedEvent> DnsVerifiedEvent { get; set; }
+
+        /// <summary>
+        /// Certificate created
+        /// </summary>
+        /// <value>Certificate created</value>
+        [DataMember(Name="CertificateCreatedEvent", EmitDefaultValue=false)]
+        public List<CertificateCreatedEvent> CertificateCreatedEvent { get; set; }
+
+        /// <summary>
+        /// Certificate renewed
+        /// </summary>
+        /// <value>Certificate renewed</value>
+        [DataMember(Name="CertificateRenewedEvent", EmitDefaultValue=false)]
+        public List<CertificateRenewedEvent> CertificateRenewedEvent { get; set; }
+
+        /// <summary>
+        /// Panacea vanity url updated
+        /// </summary>
+        /// <value>Panacea vanity url updated</value>
+        [DataMember(Name="WebsiteVanityUrlUpdatedEvent", EmitDefaultValue=false)]
+        public List<WebsiteVanityUrlUpdatedEvent> WebsiteVanityUrlUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// Website updated
+        /// </summary>
+        /// <value>Website updated</value>
+        [DataMember(Name="WebsiteUpdatedEvent", EmitDefaultValue=false)]
+        public List<WebsiteUpdatedEvent> WebsiteUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// Order capacity config updated
+        /// </summary>
+        /// <value>Order capacity config updated</value>
+        [DataMember(Name="StoreOrderCapacityUpdatedEvent", EmitDefaultValue=false)]
+        public List<StoreOrderCapacityUpdatedEvent> StoreOrderCapacityUpdatedEvent { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -770,6 +959,8 @@ namespace Flipdish.Model
             sb.Append("  AnalyticsClientEvent: ").Append(AnalyticsClientEvent).Append("\n");
             sb.Append("  OrderAcceptedEvent: ").Append(OrderAcceptedEvent).Append("\n");
             sb.Append("  OrderDispatchedEvent: ").Append(OrderDispatchedEvent).Append("\n");
+            sb.Append("  OrderCustomerTrackingCreatedEvent: ").Append(OrderCustomerTrackingCreatedEvent).Append("\n");
+            sb.Append("  OrderDeliveryTrackingStatusUpdatedEvent: ").Append(OrderDeliveryTrackingStatusUpdatedEvent).Append("\n");
             sb.Append("  OrderCreatedEvent: ").Append(OrderCreatedEvent).Append("\n");
             sb.Append("  OrderRatingUpdatedEvent: ").Append(OrderRatingUpdatedEvent).Append("\n");
             sb.Append("  OrderRefundedEvent: ").Append(OrderRefundedEvent).Append("\n");
@@ -779,6 +970,7 @@ namespace Flipdish.Model
             sb.Append("  StoreCreatedEvent: ").Append(StoreCreatedEvent).Append("\n");
             sb.Append("  StoreDeletedEvent: ").Append(StoreDeletedEvent).Append("\n");
             sb.Append("  StoreAddressUpdatedEvent: ").Append(StoreAddressUpdatedEvent).Append("\n");
+            sb.Append("  StoreKioskSettingUpdatedEvent: ").Append(StoreKioskSettingUpdatedEvent).Append("\n");
             sb.Append("  DeliveryZoneCreatedEvent: ").Append(DeliveryZoneCreatedEvent).Append("\n");
             sb.Append("  DeliveryZoneUpdatedEvent: ").Append(DeliveryZoneUpdatedEvent).Append("\n");
             sb.Append("  DeliveryZoneDeletedEvent: ").Append(DeliveryZoneDeletedEvent).Append("\n");
@@ -786,10 +978,18 @@ namespace Flipdish.Model
             sb.Append("  StoreMenuAssignedEvent: ").Append(StoreMenuAssignedEvent).Append("\n");
             sb.Append("  StoreBusinessHoursOverrideCreatedEvent: ").Append(StoreBusinessHoursOverrideCreatedEvent).Append("\n");
             sb.Append("  StoreBusinessHoursOverrideDeletedEvent: ").Append(StoreBusinessHoursOverrideDeletedEvent).Append("\n");
+            sb.Append("  StoreArchivedEvent: ").Append(StoreArchivedEvent).Append("\n");
+            sb.Append("  StoreUnarchivedEvent: ").Append(StoreUnarchivedEvent).Append("\n");
+            sb.Append("  StorePublishedEvent: ").Append(StorePublishedEvent).Append("\n");
+            sb.Append("  StoreUnpublishedEvent: ").Append(StoreUnpublishedEvent).Append("\n");
             sb.Append("  StoreUpdatedEvent: ").Append(StoreUpdatedEvent).Append("\n");
             sb.Append("  StorePreOrderConfigUpdatedEvent: ").Append(StorePreOrderConfigUpdatedEvent).Append("\n");
+            sb.Append("  StoreLogoCreatedEvent: ").Append(StoreLogoCreatedEvent).Append("\n");
+            sb.Append("  StoreLogoUpdatedEvent: ").Append(StoreLogoUpdatedEvent).Append("\n");
+            sb.Append("  StoreLogoDeletedEvent: ").Append(StoreLogoDeletedEvent).Append("\n");
             sb.Append("  MenuCreatedEvent: ").Append(MenuCreatedEvent).Append("\n");
             sb.Append("  MenuUpdatedEvent: ").Append(MenuUpdatedEvent).Append("\n");
+            sb.Append("  MenuUploadedEvent: ").Append(MenuUploadedEvent).Append("\n");
             sb.Append("  MenuSectionCreatedEvent: ").Append(MenuSectionCreatedEvent).Append("\n");
             sb.Append("  MenuSectionUpdatedEvent: ").Append(MenuSectionUpdatedEvent).Append("\n");
             sb.Append("  MenuSectionDeletedEvent: ").Append(MenuSectionDeletedEvent).Append("\n");
@@ -802,6 +1002,7 @@ namespace Flipdish.Model
             sb.Append("  MenuItemOptionSetItemCreatedEvent: ").Append(MenuItemOptionSetItemCreatedEvent).Append("\n");
             sb.Append("  MenuItemOptionSetItemUpdatedEvent: ").Append(MenuItemOptionSetItemUpdatedEvent).Append("\n");
             sb.Append("  MenuItemOptionSetItemDeletedEvent: ").Append(MenuItemOptionSetItemDeletedEvent).Append("\n");
+            sb.Append("  MenuCheckpointCreatedEvent: ").Append(MenuCheckpointCreatedEvent).Append("\n");
             sb.Append("  StoreGroupCreatedEvent: ").Append(StoreGroupCreatedEvent).Append("\n");
             sb.Append("  StoreGroupUpdatedEvent: ").Append(StoreGroupUpdatedEvent).Append("\n");
             sb.Append("  StoreGroupDeletedEvent: ").Append(StoreGroupDeletedEvent).Append("\n");
@@ -828,6 +1029,8 @@ namespace Flipdish.Model
             sb.Append("  UserCreatedEvent: ").Append(UserCreatedEvent).Append("\n");
             sb.Append("  UserUpdatedEvent: ").Append(UserUpdatedEvent).Append("\n");
             sb.Append("  UserDeletedEvent: ").Append(UserDeletedEvent).Append("\n");
+            sb.Append("  UserCreatedPasswordEvent: ").Append(UserCreatedPasswordEvent).Append("\n");
+            sb.Append("  UserAnsweredSignupQuestionsEvent: ").Append(UserAnsweredSignupQuestionsEvent).Append("\n");
             sb.Append("  VoucherCreatedEvent: ").Append(VoucherCreatedEvent).Append("\n");
             sb.Append("  VoucherUpdatedEvent: ").Append(VoucherUpdatedEvent).Append("\n");
             sb.Append("  VoucherDeletedEvent: ").Append(VoucherDeletedEvent).Append("\n");
@@ -842,9 +1045,16 @@ namespace Flipdish.Model
             sb.Append("  HydraRequestResetEvent: ").Append(HydraRequestResetEvent).Append("\n");
             sb.Append("  HydraSettingChangedEvent: ").Append(HydraSettingChangedEvent).Append("\n");
             sb.Append("  HydraUnAssignedEvent: ").Append(HydraUnAssignedEvent).Append("\n");
+            sb.Append("  HydraConnectionStatusChangedEvent: ").Append(HydraConnectionStatusChangedEvent).Append("\n");
             sb.Append("  PushNotificationScheduledEvent: ").Append(PushNotificationScheduledEvent).Append("\n");
             sb.Append("  PushNotificationSentEvent: ").Append(PushNotificationSentEvent).Append("\n");
             sb.Append("  PushNotificationDeletedEvent: ").Append(PushNotificationDeletedEvent).Append("\n");
+            sb.Append("  DnsVerifiedEvent: ").Append(DnsVerifiedEvent).Append("\n");
+            sb.Append("  CertificateCreatedEvent: ").Append(CertificateCreatedEvent).Append("\n");
+            sb.Append("  CertificateRenewedEvent: ").Append(CertificateRenewedEvent).Append("\n");
+            sb.Append("  WebsiteVanityUrlUpdatedEvent: ").Append(WebsiteVanityUrlUpdatedEvent).Append("\n");
+            sb.Append("  WebsiteUpdatedEvent: ").Append(WebsiteUpdatedEvent).Append("\n");
+            sb.Append("  StoreOrderCapacityUpdatedEvent: ").Append(StoreOrderCapacityUpdatedEvent).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -905,6 +1115,16 @@ namespace Flipdish.Model
                     this.OrderDispatchedEvent.SequenceEqual(input.OrderDispatchedEvent)
                 ) && 
                 (
+                    this.OrderCustomerTrackingCreatedEvent == input.OrderCustomerTrackingCreatedEvent ||
+                    this.OrderCustomerTrackingCreatedEvent != null &&
+                    this.OrderCustomerTrackingCreatedEvent.SequenceEqual(input.OrderCustomerTrackingCreatedEvent)
+                ) && 
+                (
+                    this.OrderDeliveryTrackingStatusUpdatedEvent == input.OrderDeliveryTrackingStatusUpdatedEvent ||
+                    this.OrderDeliveryTrackingStatusUpdatedEvent != null &&
+                    this.OrderDeliveryTrackingStatusUpdatedEvent.SequenceEqual(input.OrderDeliveryTrackingStatusUpdatedEvent)
+                ) && 
+                (
                     this.OrderCreatedEvent == input.OrderCreatedEvent ||
                     this.OrderCreatedEvent != null &&
                     this.OrderCreatedEvent.SequenceEqual(input.OrderCreatedEvent)
@@ -950,6 +1170,11 @@ namespace Flipdish.Model
                     this.StoreAddressUpdatedEvent.SequenceEqual(input.StoreAddressUpdatedEvent)
                 ) && 
                 (
+                    this.StoreKioskSettingUpdatedEvent == input.StoreKioskSettingUpdatedEvent ||
+                    this.StoreKioskSettingUpdatedEvent != null &&
+                    this.StoreKioskSettingUpdatedEvent.SequenceEqual(input.StoreKioskSettingUpdatedEvent)
+                ) && 
+                (
                     this.DeliveryZoneCreatedEvent == input.DeliveryZoneCreatedEvent ||
                     this.DeliveryZoneCreatedEvent != null &&
                     this.DeliveryZoneCreatedEvent.SequenceEqual(input.DeliveryZoneCreatedEvent)
@@ -985,6 +1210,26 @@ namespace Flipdish.Model
                     this.StoreBusinessHoursOverrideDeletedEvent.SequenceEqual(input.StoreBusinessHoursOverrideDeletedEvent)
                 ) && 
                 (
+                    this.StoreArchivedEvent == input.StoreArchivedEvent ||
+                    this.StoreArchivedEvent != null &&
+                    this.StoreArchivedEvent.SequenceEqual(input.StoreArchivedEvent)
+                ) && 
+                (
+                    this.StoreUnarchivedEvent == input.StoreUnarchivedEvent ||
+                    this.StoreUnarchivedEvent != null &&
+                    this.StoreUnarchivedEvent.SequenceEqual(input.StoreUnarchivedEvent)
+                ) && 
+                (
+                    this.StorePublishedEvent == input.StorePublishedEvent ||
+                    this.StorePublishedEvent != null &&
+                    this.StorePublishedEvent.SequenceEqual(input.StorePublishedEvent)
+                ) && 
+                (
+                    this.StoreUnpublishedEvent == input.StoreUnpublishedEvent ||
+                    this.StoreUnpublishedEvent != null &&
+                    this.StoreUnpublishedEvent.SequenceEqual(input.StoreUnpublishedEvent)
+                ) && 
+                (
                     this.StoreUpdatedEvent == input.StoreUpdatedEvent ||
                     this.StoreUpdatedEvent != null &&
                     this.StoreUpdatedEvent.SequenceEqual(input.StoreUpdatedEvent)
@@ -995,6 +1240,21 @@ namespace Flipdish.Model
                     this.StorePreOrderConfigUpdatedEvent.SequenceEqual(input.StorePreOrderConfigUpdatedEvent)
                 ) && 
                 (
+                    this.StoreLogoCreatedEvent == input.StoreLogoCreatedEvent ||
+                    this.StoreLogoCreatedEvent != null &&
+                    this.StoreLogoCreatedEvent.SequenceEqual(input.StoreLogoCreatedEvent)
+                ) && 
+                (
+                    this.StoreLogoUpdatedEvent == input.StoreLogoUpdatedEvent ||
+                    this.StoreLogoUpdatedEvent != null &&
+                    this.StoreLogoUpdatedEvent.SequenceEqual(input.StoreLogoUpdatedEvent)
+                ) && 
+                (
+                    this.StoreLogoDeletedEvent == input.StoreLogoDeletedEvent ||
+                    this.StoreLogoDeletedEvent != null &&
+                    this.StoreLogoDeletedEvent.SequenceEqual(input.StoreLogoDeletedEvent)
+                ) && 
+                (
                     this.MenuCreatedEvent == input.MenuCreatedEvent ||
                     this.MenuCreatedEvent != null &&
                     this.MenuCreatedEvent.SequenceEqual(input.MenuCreatedEvent)
@@ -1003,6 +1263,11 @@ namespace Flipdish.Model
                     this.MenuUpdatedEvent == input.MenuUpdatedEvent ||
                     this.MenuUpdatedEvent != null &&
                     this.MenuUpdatedEvent.SequenceEqual(input.MenuUpdatedEvent)
+                ) && 
+                (
+                    this.MenuUploadedEvent == input.MenuUploadedEvent ||
+                    this.MenuUploadedEvent != null &&
+                    this.MenuUploadedEvent.SequenceEqual(input.MenuUploadedEvent)
                 ) && 
                 (
                     this.MenuSectionCreatedEvent == input.MenuSectionCreatedEvent ||
@@ -1063,6 +1328,11 @@ namespace Flipdish.Model
                     this.MenuItemOptionSetItemDeletedEvent == input.MenuItemOptionSetItemDeletedEvent ||
                     this.MenuItemOptionSetItemDeletedEvent != null &&
                     this.MenuItemOptionSetItemDeletedEvent.SequenceEqual(input.MenuItemOptionSetItemDeletedEvent)
+                ) && 
+                (
+                    this.MenuCheckpointCreatedEvent == input.MenuCheckpointCreatedEvent ||
+                    this.MenuCheckpointCreatedEvent != null &&
+                    this.MenuCheckpointCreatedEvent.SequenceEqual(input.MenuCheckpointCreatedEvent)
                 ) && 
                 (
                     this.StoreGroupCreatedEvent == input.StoreGroupCreatedEvent ||
@@ -1195,6 +1465,16 @@ namespace Flipdish.Model
                     this.UserDeletedEvent.SequenceEqual(input.UserDeletedEvent)
                 ) && 
                 (
+                    this.UserCreatedPasswordEvent == input.UserCreatedPasswordEvent ||
+                    this.UserCreatedPasswordEvent != null &&
+                    this.UserCreatedPasswordEvent.SequenceEqual(input.UserCreatedPasswordEvent)
+                ) && 
+                (
+                    this.UserAnsweredSignupQuestionsEvent == input.UserAnsweredSignupQuestionsEvent ||
+                    this.UserAnsweredSignupQuestionsEvent != null &&
+                    this.UserAnsweredSignupQuestionsEvent.SequenceEqual(input.UserAnsweredSignupQuestionsEvent)
+                ) && 
+                (
                     this.VoucherCreatedEvent == input.VoucherCreatedEvent ||
                     this.VoucherCreatedEvent != null &&
                     this.VoucherCreatedEvent.SequenceEqual(input.VoucherCreatedEvent)
@@ -1265,6 +1545,11 @@ namespace Flipdish.Model
                     this.HydraUnAssignedEvent.SequenceEqual(input.HydraUnAssignedEvent)
                 ) && 
                 (
+                    this.HydraConnectionStatusChangedEvent == input.HydraConnectionStatusChangedEvent ||
+                    this.HydraConnectionStatusChangedEvent != null &&
+                    this.HydraConnectionStatusChangedEvent.SequenceEqual(input.HydraConnectionStatusChangedEvent)
+                ) && 
+                (
                     this.PushNotificationScheduledEvent == input.PushNotificationScheduledEvent ||
                     this.PushNotificationScheduledEvent != null &&
                     this.PushNotificationScheduledEvent.SequenceEqual(input.PushNotificationScheduledEvent)
@@ -1278,6 +1563,36 @@ namespace Flipdish.Model
                     this.PushNotificationDeletedEvent == input.PushNotificationDeletedEvent ||
                     this.PushNotificationDeletedEvent != null &&
                     this.PushNotificationDeletedEvent.SequenceEqual(input.PushNotificationDeletedEvent)
+                ) && 
+                (
+                    this.DnsVerifiedEvent == input.DnsVerifiedEvent ||
+                    this.DnsVerifiedEvent != null &&
+                    this.DnsVerifiedEvent.SequenceEqual(input.DnsVerifiedEvent)
+                ) && 
+                (
+                    this.CertificateCreatedEvent == input.CertificateCreatedEvent ||
+                    this.CertificateCreatedEvent != null &&
+                    this.CertificateCreatedEvent.SequenceEqual(input.CertificateCreatedEvent)
+                ) && 
+                (
+                    this.CertificateRenewedEvent == input.CertificateRenewedEvent ||
+                    this.CertificateRenewedEvent != null &&
+                    this.CertificateRenewedEvent.SequenceEqual(input.CertificateRenewedEvent)
+                ) && 
+                (
+                    this.WebsiteVanityUrlUpdatedEvent == input.WebsiteVanityUrlUpdatedEvent ||
+                    this.WebsiteVanityUrlUpdatedEvent != null &&
+                    this.WebsiteVanityUrlUpdatedEvent.SequenceEqual(input.WebsiteVanityUrlUpdatedEvent)
+                ) && 
+                (
+                    this.WebsiteUpdatedEvent == input.WebsiteUpdatedEvent ||
+                    this.WebsiteUpdatedEvent != null &&
+                    this.WebsiteUpdatedEvent.SequenceEqual(input.WebsiteUpdatedEvent)
+                ) && 
+                (
+                    this.StoreOrderCapacityUpdatedEvent == input.StoreOrderCapacityUpdatedEvent ||
+                    this.StoreOrderCapacityUpdatedEvent != null &&
+                    this.StoreOrderCapacityUpdatedEvent.SequenceEqual(input.StoreOrderCapacityUpdatedEvent)
                 );
         }
 
@@ -1300,6 +1615,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OrderAcceptedEvent.GetHashCode();
                 if (this.OrderDispatchedEvent != null)
                     hashCode = hashCode * 59 + this.OrderDispatchedEvent.GetHashCode();
+                if (this.OrderCustomerTrackingCreatedEvent != null)
+                    hashCode = hashCode * 59 + this.OrderCustomerTrackingCreatedEvent.GetHashCode();
+                if (this.OrderDeliveryTrackingStatusUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.OrderDeliveryTrackingStatusUpdatedEvent.GetHashCode();
                 if (this.OrderCreatedEvent != null)
                     hashCode = hashCode * 59 + this.OrderCreatedEvent.GetHashCode();
                 if (this.OrderRatingUpdatedEvent != null)
@@ -1318,6 +1637,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreDeletedEvent.GetHashCode();
                 if (this.StoreAddressUpdatedEvent != null)
                     hashCode = hashCode * 59 + this.StoreAddressUpdatedEvent.GetHashCode();
+                if (this.StoreKioskSettingUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.StoreKioskSettingUpdatedEvent.GetHashCode();
                 if (this.DeliveryZoneCreatedEvent != null)
                     hashCode = hashCode * 59 + this.DeliveryZoneCreatedEvent.GetHashCode();
                 if (this.DeliveryZoneUpdatedEvent != null)
@@ -1332,14 +1653,30 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreBusinessHoursOverrideCreatedEvent.GetHashCode();
                 if (this.StoreBusinessHoursOverrideDeletedEvent != null)
                     hashCode = hashCode * 59 + this.StoreBusinessHoursOverrideDeletedEvent.GetHashCode();
+                if (this.StoreArchivedEvent != null)
+                    hashCode = hashCode * 59 + this.StoreArchivedEvent.GetHashCode();
+                if (this.StoreUnarchivedEvent != null)
+                    hashCode = hashCode * 59 + this.StoreUnarchivedEvent.GetHashCode();
+                if (this.StorePublishedEvent != null)
+                    hashCode = hashCode * 59 + this.StorePublishedEvent.GetHashCode();
+                if (this.StoreUnpublishedEvent != null)
+                    hashCode = hashCode * 59 + this.StoreUnpublishedEvent.GetHashCode();
                 if (this.StoreUpdatedEvent != null)
                     hashCode = hashCode * 59 + this.StoreUpdatedEvent.GetHashCode();
                 if (this.StorePreOrderConfigUpdatedEvent != null)
                     hashCode = hashCode * 59 + this.StorePreOrderConfigUpdatedEvent.GetHashCode();
+                if (this.StoreLogoCreatedEvent != null)
+                    hashCode = hashCode * 59 + this.StoreLogoCreatedEvent.GetHashCode();
+                if (this.StoreLogoUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.StoreLogoUpdatedEvent.GetHashCode();
+                if (this.StoreLogoDeletedEvent != null)
+                    hashCode = hashCode * 59 + this.StoreLogoDeletedEvent.GetHashCode();
                 if (this.MenuCreatedEvent != null)
                     hashCode = hashCode * 59 + this.MenuCreatedEvent.GetHashCode();
                 if (this.MenuUpdatedEvent != null)
                     hashCode = hashCode * 59 + this.MenuUpdatedEvent.GetHashCode();
+                if (this.MenuUploadedEvent != null)
+                    hashCode = hashCode * 59 + this.MenuUploadedEvent.GetHashCode();
                 if (this.MenuSectionCreatedEvent != null)
                     hashCode = hashCode * 59 + this.MenuSectionCreatedEvent.GetHashCode();
                 if (this.MenuSectionUpdatedEvent != null)
@@ -1364,6 +1701,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MenuItemOptionSetItemUpdatedEvent.GetHashCode();
                 if (this.MenuItemOptionSetItemDeletedEvent != null)
                     hashCode = hashCode * 59 + this.MenuItemOptionSetItemDeletedEvent.GetHashCode();
+                if (this.MenuCheckpointCreatedEvent != null)
+                    hashCode = hashCode * 59 + this.MenuCheckpointCreatedEvent.GetHashCode();
                 if (this.StoreGroupCreatedEvent != null)
                     hashCode = hashCode * 59 + this.StoreGroupCreatedEvent.GetHashCode();
                 if (this.StoreGroupUpdatedEvent != null)
@@ -1416,6 +1755,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.UserUpdatedEvent.GetHashCode();
                 if (this.UserDeletedEvent != null)
                     hashCode = hashCode * 59 + this.UserDeletedEvent.GetHashCode();
+                if (this.UserCreatedPasswordEvent != null)
+                    hashCode = hashCode * 59 + this.UserCreatedPasswordEvent.GetHashCode();
+                if (this.UserAnsweredSignupQuestionsEvent != null)
+                    hashCode = hashCode * 59 + this.UserAnsweredSignupQuestionsEvent.GetHashCode();
                 if (this.VoucherCreatedEvent != null)
                     hashCode = hashCode * 59 + this.VoucherCreatedEvent.GetHashCode();
                 if (this.VoucherUpdatedEvent != null)
@@ -1444,12 +1787,26 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.HydraSettingChangedEvent.GetHashCode();
                 if (this.HydraUnAssignedEvent != null)
                     hashCode = hashCode * 59 + this.HydraUnAssignedEvent.GetHashCode();
+                if (this.HydraConnectionStatusChangedEvent != null)
+                    hashCode = hashCode * 59 + this.HydraConnectionStatusChangedEvent.GetHashCode();
                 if (this.PushNotificationScheduledEvent != null)
                     hashCode = hashCode * 59 + this.PushNotificationScheduledEvent.GetHashCode();
                 if (this.PushNotificationSentEvent != null)
                     hashCode = hashCode * 59 + this.PushNotificationSentEvent.GetHashCode();
                 if (this.PushNotificationDeletedEvent != null)
                     hashCode = hashCode * 59 + this.PushNotificationDeletedEvent.GetHashCode();
+                if (this.DnsVerifiedEvent != null)
+                    hashCode = hashCode * 59 + this.DnsVerifiedEvent.GetHashCode();
+                if (this.CertificateCreatedEvent != null)
+                    hashCode = hashCode * 59 + this.CertificateCreatedEvent.GetHashCode();
+                if (this.CertificateRenewedEvent != null)
+                    hashCode = hashCode * 59 + this.CertificateRenewedEvent.GetHashCode();
+                if (this.WebsiteVanityUrlUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.WebsiteVanityUrlUpdatedEvent.GetHashCode();
+                if (this.WebsiteUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.WebsiteUpdatedEvent.GetHashCode();
+                if (this.StoreOrderCapacityUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.StoreOrderCapacityUpdatedEvent.GetHashCode();
                 return hashCode;
             }
         }

@@ -77,6 +77,18 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test GetAppHostnameStatus
+        /// </summary>
+        [Test]
+        public void GetAppHostnameStatusTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //var response = instance.GetAppHostnameStatus(appId);
+            //Assert.IsInstanceOf<RestApiResultDnsRecordInformation> (response, "response is RestApiResultDnsRecordInformation");
+        }
+        
+        /// <summary>
         /// Test GetApps
         /// </summary>
         [Test]
@@ -88,6 +100,42 @@ namespace Flipdish.Test
             //int? limit = null;
             //var response = instance.GetApps(nameFilter, page, limit);
             //Assert.IsInstanceOf<RestApiPaginationResultApp> (response, "response is RestApiPaginationResultApp");
+        }
+        
+        /// <summary>
+        /// Test GetPanaceaVanityUrl
+        /// </summary>
+        [Test]
+        public void GetPanaceaVanityUrlTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //var response = instance.GetPanaceaVanityUrl(appId);
+            //Assert.IsInstanceOf<RestApiStringResult> (response, "response is RestApiStringResult");
+        }
+        
+        /// <summary>
+        /// Test GetSupportedCountries
+        /// </summary>
+        [Test]
+        public void GetSupportedCountriesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.GetSupportedCountries();
+            //Assert.IsInstanceOf<RestApiArrayResultSupportedCountry> (response, "response is RestApiArrayResultSupportedCountry");
+        }
+        
+        /// <summary>
+        /// Test IsPanaceaVanityUrlAvailable
+        /// </summary>
+        [Test]
+        public void IsPanaceaVanityUrlAvailableTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string vanityUrl = null;
+            //string appId = null;
+            //var response = instance.IsPanaceaVanityUrlAvailable(vanityUrl, appId);
+            //Assert.IsInstanceOf<RestApiStringResult> (response, "response is RestApiStringResult");
         }
         
         /// <summary>
@@ -104,6 +152,20 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test SetAppHostname
+        /// </summary>
+        [Test]
+        public void SetAppHostnameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //string hostname = null;
+            //bool? isEmbed = null;
+            //var response = instance.SetAppHostname(appId, hostname, isEmbed);
+            //Assert.IsInstanceOf<RestApiStringResult> (response, "response is RestApiStringResult");
+        }
+        
+        /// <summary>
         /// Test SetAppLanguages
         /// </summary>
         [Test]
@@ -114,6 +176,19 @@ namespace Flipdish.Test
             //List<Language> languages = null;
             //var response = instance.SetAppLanguages(appId, languages);
             //Assert.IsInstanceOf<RestApiResultApp> (response, "response is RestApiResultApp");
+        }
+        
+        /// <summary>
+        /// Test SetPanaceaVanityUrl
+        /// </summary>
+        [Test]
+        public void SetPanaceaVanityUrlTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //string vanityUrl = null;
+            //var response = instance.SetPanaceaVanityUrl(appId, vanityUrl);
+            //Assert.IsInstanceOf<RestApiStringResult> (response, "response is RestApiStringResult");
         }
         
         /// <summary>

@@ -35,7 +35,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="name">Name.</param>
         /// <param name="emailAddress">Email address (visible to customers).</param>
-        /// <param name="staffLanguage">Staff Language (used for communcation with the staff)  Emails, Printouts etc.</param>
+        /// <param name="staffLanguage">Staff Language (used for communication with the staff)  Emails, Printouts etc.</param>
         public StoreCreateBase(string name = default(string), string emailAddress = default(string), string staffLanguage = default(string))
         {
             this.Name = name;
@@ -58,9 +58,9 @@ namespace Flipdish.Model
         public string EmailAddress { get; set; }
 
         /// <summary>
-        /// Staff Language (used for communcation with the staff)  Emails, Printouts etc
+        /// Staff Language (used for communication with the staff)  Emails, Printouts etc
         /// </summary>
-        /// <value>Staff Language (used for communcation with the staff)  Emails, Printouts etc</value>
+        /// <value>Staff Language (used for communication with the staff)  Emails, Printouts etc</value>
         [DataMember(Name="StaffLanguage", EmitDefaultValue=false)]
         public string StaffLanguage { get; set; }
 

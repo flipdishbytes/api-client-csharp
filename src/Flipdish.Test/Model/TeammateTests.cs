@@ -83,12 +83,12 @@ namespace Flipdish.Test
             // TODO unit test for the property 'Name'
         }
         /// <summary>
-        /// Test the property 'LastAcitivity'
+        /// Test the property 'LastActivity'
         /// </summary>
         [Test]
-        public void LastAcitivityTest()
+        public void LastActivityTest()
         {
-            // TODO unit test for the property 'LastAcitivity'
+            // TODO unit test for the property 'LastActivity'
         }
         /// <summary>
         /// Test the property 'AppId'

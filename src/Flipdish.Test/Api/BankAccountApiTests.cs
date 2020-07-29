@@ -130,6 +130,18 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test GetFieldDefinitions
+        /// </summary>
+        [Test]
+        public void GetFieldDefinitionsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //var response = instance.GetFieldDefinitions(appId);
+            //Assert.IsInstanceOf<RestApiResultAccountFieldsDefinitions> (response, "response is RestApiResultAccountFieldsDefinitions");
+        }
+        
+        /// <summary>
         /// Test UpdateBankAccount
         /// </summary>
         [Test]

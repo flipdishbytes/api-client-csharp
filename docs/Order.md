@@ -11,9 +11,17 @@ Name | Type | Description | Notes
 **DeliveryLocation** | [**DeliveryLocation**](DeliveryLocation.md) | Delivery location for delivery orders | [optional] 
 **CustomerLocation** | [**Coordinates**](Coordinates.md) | Customer location | [optional] 
 **MaskedPhoneNumber** | [**MaskedPhoneNumber**](MaskedPhoneNumber.md) | Represents customers masked phone number | [optional] 
+**DropOffLocationId** | **int?** | Represents table service drop off location | [optional] 
+**DropOffLocation** | **string** | Represents table service drop off location | [optional] 
+**AcceptedFor** | **DateTime?** | Time store has accepted the order for | [optional] 
+**InFraudZone** | **bool?** | Was order made within a fraud zone | [optional] 
+**UnusualHighValueOrder** | **bool?** | Is order of unusually high value | [optional] 
+**RejectedByUserId** | **int?** | Id of user who rejected order, if available | [optional] 
 **OrderId** | **int?** | Order identifier | [optional] 
+**LocalOrderId** | **string** | Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders) | [optional] 
 **DeliveryType** | **string** | Delivery type | [optional] 
 **PickupLocationType** | **string** | Pickup location type | [optional] 
+**TableServiceCatagory** | **string** | Pickup location type | [optional] 
 **TipAmount** | **double?** | Tip amount | [optional] 
 **DeliveryAmount** | **double?** | Delivery amount | [optional] 
 **OrderItemsAmount** | **double?** | Ordered items amount | [optional] 
@@ -31,6 +39,10 @@ Name | Type | Description | Notes
 **PaymentStatus** | **string** | Status of the payment | [optional] 
 **RejectionReason** | **string** | Rejection reason. Can have value if the order is rejected. | [optional] 
 **RefundedAmount** | **double?** | Amount refunded to customer. | [optional] 
+**DeliveryTrackingStatus** | **string** | Delivery tracking status | [optional] 
+**DriverId** | **int?** | Assigned driver identifier | [optional] 
+**TotalTax** | **double?** | Total tax applied to order | [optional] 
+**OrderTrackingCode** | **string** | Unique, 6 character long alpha numeric code for tracking. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

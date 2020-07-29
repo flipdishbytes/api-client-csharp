@@ -144,6 +144,23 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test SetOptionSetItemTax
+        /// </summary>
+        [Test]
+        public void SetOptionSetItemTaxTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //int? menuSectionId = null;
+            //int? menuSectionItemId = null;
+            //int? optionSetId = null;
+            //int? menuItemOptionSetItemId = null;
+            //int? taxRateId = null;
+            //instance.SetOptionSetItemTax(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, taxRateId);
+            
+        }
+        
+        /// <summary>
         /// Test UpdateMenuItemOptionSetItem
         /// </summary>
         [Test]

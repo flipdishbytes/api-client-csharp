@@ -77,7 +77,12 @@ namespace Flipdish.Model
         /// <param name="processingFeeId">The Lightspeed processing fee identifier to map with our.</param>
         /// <param name="priceType">Which price to choose from Lightspeed menu.</param>
         /// <param name="menuId">The menu id of the store.</param>
-        public LightspeedSettings(string companyId = default(string), bool? enabled = default(bool?), int? estimatedMinutesForDelivery = default(int?), int? estimatedMinutesForCollection = default(int?), string geographicLocation = default(string), bool? establishment = default(bool?), string voucherId = default(string), string deliveryFeeId = default(string), string processingFeeId = default(string), PriceTypeEnum? priceType = default(PriceTypeEnum?), int? menuId = default(int?))
+        /// <param name="collectionTableId">Collection Table ID to send orders.</param>
+        /// <param name="deliveryTableId">Delivery Table ID to send orders.</param>
+        /// <param name="collectionTableIds">Collection Table IDs to send orders to.</param>
+        /// <param name="deliveryTableIds">Delivery Table IDs to send orders to.</param>
+        /// <param name="useTaxInclusivePrices">Exclude tax.</param>
+        public LightspeedSettings(string companyId = default(string), bool? enabled = default(bool?), int? estimatedMinutesForDelivery = default(int?), int? estimatedMinutesForCollection = default(int?), string geographicLocation = default(string), bool? establishment = default(bool?), string voucherId = default(string), string deliveryFeeId = default(string), string processingFeeId = default(string), PriceTypeEnum? priceType = default(PriceTypeEnum?), int? menuId = default(int?), int? collectionTableId = default(int?), int? deliveryTableId = default(int?), Dictionary<string, string> collectionTableIds = default(Dictionary<string, string>), Dictionary<string, string> deliveryTableIds = default(Dictionary<string, string>), bool? useTaxInclusivePrices = default(bool?))
         {
             this.CompanyId = companyId;
             this.Enabled = enabled;
@@ -90,6 +95,11 @@ namespace Flipdish.Model
             this.ProcessingFeeId = processingFeeId;
             this.PriceType = priceType;
             this.MenuId = menuId;
+            this.CollectionTableId = collectionTableId;
+            this.DeliveryTableId = deliveryTableId;
+            this.CollectionTableIds = collectionTableIds;
+            this.DeliveryTableIds = deliveryTableIds;
+            this.UseTaxInclusivePrices = useTaxInclusivePrices;
         }
         
         /// <summary>
@@ -164,6 +174,41 @@ namespace Flipdish.Model
         public int? MenuId { get; set; }
 
         /// <summary>
+        /// Collection Table ID to send orders
+        /// </summary>
+        /// <value>Collection Table ID to send orders</value>
+        [DataMember(Name="CollectionTableId", EmitDefaultValue=false)]
+        public int? CollectionTableId { get; set; }
+
+        /// <summary>
+        /// Delivery Table ID to send orders
+        /// </summary>
+        /// <value>Delivery Table ID to send orders</value>
+        [DataMember(Name="DeliveryTableId", EmitDefaultValue=false)]
+        public int? DeliveryTableId { get; set; }
+
+        /// <summary>
+        /// Collection Table IDs to send orders to
+        /// </summary>
+        /// <value>Collection Table IDs to send orders to</value>
+        [DataMember(Name="CollectionTableIds", EmitDefaultValue=false)]
+        public Dictionary<string, string> CollectionTableIds { get; set; }
+
+        /// <summary>
+        /// Delivery Table IDs to send orders to
+        /// </summary>
+        /// <value>Delivery Table IDs to send orders to</value>
+        [DataMember(Name="DeliveryTableIds", EmitDefaultValue=false)]
+        public Dictionary<string, string> DeliveryTableIds { get; set; }
+
+        /// <summary>
+        /// Exclude tax
+        /// </summary>
+        /// <value>Exclude tax</value>
+        [DataMember(Name="UseTaxInclusivePrices", EmitDefaultValue=false)]
+        public bool? UseTaxInclusivePrices { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -182,6 +227,11 @@ namespace Flipdish.Model
             sb.Append("  ProcessingFeeId: ").Append(ProcessingFeeId).Append("\n");
             sb.Append("  PriceType: ").Append(PriceType).Append("\n");
             sb.Append("  MenuId: ").Append(MenuId).Append("\n");
+            sb.Append("  CollectionTableId: ").Append(CollectionTableId).Append("\n");
+            sb.Append("  DeliveryTableId: ").Append(DeliveryTableId).Append("\n");
+            sb.Append("  CollectionTableIds: ").Append(CollectionTableIds).Append("\n");
+            sb.Append("  DeliveryTableIds: ").Append(DeliveryTableIds).Append("\n");
+            sb.Append("  UseTaxInclusivePrices: ").Append(UseTaxInclusivePrices).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -270,6 +320,31 @@ namespace Flipdish.Model
                     this.MenuId == input.MenuId ||
                     (this.MenuId != null &&
                     this.MenuId.Equals(input.MenuId))
+                ) && 
+                (
+                    this.CollectionTableId == input.CollectionTableId ||
+                    (this.CollectionTableId != null &&
+                    this.CollectionTableId.Equals(input.CollectionTableId))
+                ) && 
+                (
+                    this.DeliveryTableId == input.DeliveryTableId ||
+                    (this.DeliveryTableId != null &&
+                    this.DeliveryTableId.Equals(input.DeliveryTableId))
+                ) && 
+                (
+                    this.CollectionTableIds == input.CollectionTableIds ||
+                    this.CollectionTableIds != null &&
+                    this.CollectionTableIds.SequenceEqual(input.CollectionTableIds)
+                ) && 
+                (
+                    this.DeliveryTableIds == input.DeliveryTableIds ||
+                    this.DeliveryTableIds != null &&
+                    this.DeliveryTableIds.SequenceEqual(input.DeliveryTableIds)
+                ) && 
+                (
+                    this.UseTaxInclusivePrices == input.UseTaxInclusivePrices ||
+                    (this.UseTaxInclusivePrices != null &&
+                    this.UseTaxInclusivePrices.Equals(input.UseTaxInclusivePrices))
                 );
         }
 
@@ -304,6 +379,16 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PriceType.GetHashCode();
                 if (this.MenuId != null)
                     hashCode = hashCode * 59 + this.MenuId.GetHashCode();
+                if (this.CollectionTableId != null)
+                    hashCode = hashCode * 59 + this.CollectionTableId.GetHashCode();
+                if (this.DeliveryTableId != null)
+                    hashCode = hashCode * 59 + this.DeliveryTableId.GetHashCode();
+                if (this.CollectionTableIds != null)
+                    hashCode = hashCode * 59 + this.CollectionTableIds.GetHashCode();
+                if (this.DeliveryTableIds != null)
+                    hashCode = hashCode * 59 + this.DeliveryTableIds.GetHashCode();
+                if (this.UseTaxInclusivePrices != null)
+                    hashCode = hashCode * 59 + this.UseTaxInclusivePrices.GetHashCode();
                 return hashCode;
             }
         }

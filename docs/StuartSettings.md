@@ -8,7 +8,8 @@ Name | Type | Description | Notes
 **Enabled** | **bool?** | Enabled | [optional] 
 **WebhookUrlBasicAuthentication** | **string** | Webhook url to settle in the Stuart portal | [optional] 
 **MinutesToPickupBeforeThanDeliveryTime** | **int?** | MinutesToPickupBeforeThanDeliveryTime | [optional] 
-**PackageType** | **string** | PackageType | [optional] 
+**PackageType** | **string** | Package type | [optional] 
+**TransportType** | **string** | Transport type | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

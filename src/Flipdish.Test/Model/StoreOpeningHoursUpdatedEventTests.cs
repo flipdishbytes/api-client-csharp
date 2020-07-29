@@ -99,6 +99,30 @@ namespace Flipdish.Test
             // TODO unit test for the property 'User'
         }
         /// <summary>
+        /// Test the property 'DeliveryType'
+        /// </summary>
+        [Test]
+        public void DeliveryTypeTest()
+        {
+            // TODO unit test for the property 'DeliveryType'
+        }
+        /// <summary>
+        /// Test the property 'BusinessHoursPeriodOld'
+        /// </summary>
+        [Test]
+        public void BusinessHoursPeriodOldTest()
+        {
+            // TODO unit test for the property 'BusinessHoursPeriodOld'
+        }
+        /// <summary>
+        /// Test the property 'BusinessHoursPeriod'
+        /// </summary>
+        [Test]
+        public void BusinessHoursPeriodTest()
+        {
+            // TODO unit test for the property 'BusinessHoursPeriod'
+        }
+        /// <summary>
         /// Test the property 'Description'
         /// </summary>
         [Test]

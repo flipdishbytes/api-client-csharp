@@ -38,13 +38,15 @@ namespace Flipdish.Model
         /// <param name="displayOrder">Display order.</param>
         /// <param name="isAvailable">Is available.</param>
         /// <param name="isHiddenFromCustomers">Is hidden from customer. Perhaps when the item is out of stock..</param>
-        public MenuSectionBase(string name = default(string), string description = default(string), int? displayOrder = default(int?), bool? isAvailable = default(bool?), bool? isHiddenFromCustomers = default(bool?))
+        /// <param name="imageUrl">Image url.</param>
+        public MenuSectionBase(string name = default(string), string description = default(string), int? displayOrder = default(int?), bool? isAvailable = default(bool?), bool? isHiddenFromCustomers = default(bool?), string imageUrl = default(string))
         {
             this.Name = name;
             this.Description = description;
             this.DisplayOrder = displayOrder;
             this.IsAvailable = isAvailable;
             this.IsHiddenFromCustomers = isHiddenFromCustomers;
+            this.ImageUrl = imageUrl;
         }
         
         /// <summary>
@@ -83,6 +85,13 @@ namespace Flipdish.Model
         public bool? IsHiddenFromCustomers { get; set; }
 
         /// <summary>
+        /// Image url
+        /// </summary>
+        /// <value>Image url</value>
+        [DataMember(Name="ImageUrl", EmitDefaultValue=false)]
+        public string ImageUrl { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -95,6 +104,7 @@ namespace Flipdish.Model
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
             sb.Append("  IsAvailable: ").Append(IsAvailable).Append("\n");
             sb.Append("  IsHiddenFromCustomers: ").Append(IsHiddenFromCustomers).Append("\n");
+            sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -153,6 +163,11 @@ namespace Flipdish.Model
                     this.IsHiddenFromCustomers == input.IsHiddenFromCustomers ||
                     (this.IsHiddenFromCustomers != null &&
                     this.IsHiddenFromCustomers.Equals(input.IsHiddenFromCustomers))
+                ) && 
+                (
+                    this.ImageUrl == input.ImageUrl ||
+                    (this.ImageUrl != null &&
+                    this.ImageUrl.Equals(input.ImageUrl))
                 );
         }
 
@@ -175,6 +190,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.IsAvailable.GetHashCode();
                 if (this.IsHiddenFromCustomers != null)
                     hashCode = hashCode * 59 + this.IsHiddenFromCustomers.GetHashCode();
+                if (this.ImageUrl != null)
+                    hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 return hashCode;
             }
         }

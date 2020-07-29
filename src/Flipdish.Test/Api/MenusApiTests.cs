@@ -72,7 +72,8 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? menuId = null;
-            //var response = instance.CreateDraftMenuFromExistingMenu(menuId);
+            //string newName = null;
+            //var response = instance.CreateDraftMenuFromExistingMenu(menuId, newName);
             //Assert.IsInstanceOf<RestApiResultMenu> (response, "response is RestApiResultMenu");
         }
         
@@ -84,7 +85,8 @@ namespace Flipdish.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string appId = null;
-            //var response = instance.CreateNewMenuForApp(appId);
+            //CreateFullMenu menu = null;
+            //var response = instance.CreateNewMenuForApp(appId, menu);
             //Assert.IsInstanceOf<int?> (response, "response is int?");
         }
         
@@ -125,6 +127,19 @@ namespace Flipdish.Test
             //string key = null;
             //instance.DeleteMenuItemMetadata(menuId, storeId, menuItemId, key);
             
+        }
+        
+        /// <summary>
+        /// Test GetAllMenuMetadataByMenuIdAndStoreId
+        /// </summary>
+        [Test]
+        public void GetAllMenuMetadataByMenuIdAndStoreIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //int? storeId = null;
+            //var response = instance.GetAllMenuMetadataByMenuIdAndStoreId(menuId, storeId);
+            //Assert.IsInstanceOf<RestApiArrayResultAllMetadataResult> (response, "response is RestApiArrayResultAllMetadataResult");
         }
         
         /// <summary>
@@ -195,6 +210,18 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test GetMenuTaxDetails
+        /// </summary>
+        [Test]
+        public void GetMenuTaxDetailsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //var response = instance.GetMenuTaxDetails(menuId);
+            //Assert.IsInstanceOf<RestApiArrayResultMenuTaxDetails> (response, "response is RestApiArrayResultMenuTaxDetails");
+        }
+        
+        /// <summary>
         /// Test GetMenusByAppId
         /// </summary>
         [Test]
@@ -219,6 +246,32 @@ namespace Flipdish.Test
         }
         
         /// <summary>
+        /// Test MenusDeleteTaxRate
+        /// </summary>
+        [Test]
+        public void MenusDeleteTaxRateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //int? taxId = null;
+            //instance.MenusDeleteTaxRate(menuId, taxId);
+            
+        }
+        
+        /// <summary>
+        /// Test MenusSetDisplayOnMenuTax
+        /// </summary>
+        [Test]
+        public void MenusSetDisplayOnMenuTaxTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //bool? show = null;
+            //instance.MenusSetDisplayOnMenuTax(menuId, show);
+            
+        }
+        
+        /// <summary>
         /// Test MenusSetItemDisplayOrders
         /// </summary>
         [Test]
@@ -229,6 +282,32 @@ namespace Flipdish.Test
             //MenuObjectDisplayOrders displayOrders = null;
             //instance.MenusSetItemDisplayOrders(menuId, displayOrders);
             
+        }
+        
+        /// <summary>
+        /// Test MenusUpdateTaxType
+        /// </summary>
+        [Test]
+        public void MenusUpdateTaxTypeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //string type = null;
+            //instance.MenusUpdateTaxType(menuId, type);
+            
+        }
+        
+        /// <summary>
+        /// Test MenusUpsertTaxRate
+        /// </summary>
+        [Test]
+        public void MenusUpsertTaxRateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? menuId = null;
+            //MenuTaxRate taxRate = null;
+            //var response = instance.MenusUpsertTaxRate(menuId, taxRate);
+            //Assert.IsInstanceOf<MenuTaxRate> (response, "response is MenuTaxRate");
         }
         
         /// <summary>
@@ -324,6 +403,19 @@ namespace Flipdish.Test
             //System.IO.Stream image = null;
             //var response = instance.UploadMenuImage(menuId, image);
             //Assert.IsInstanceOf<RestApiStringResult> (response, "response is RestApiStringResult");
+        }
+        
+        /// <summary>
+        /// Test UploadNewMenuForApp
+        /// </summary>
+        [Test]
+        public void UploadNewMenuForAppTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //System.IO.Stream menu = null;
+            //var response = instance.UploadNewMenuForApp(appId, menu);
+            //Assert.IsInstanceOf<int?> (response, "response is int?");
         }
         
     }

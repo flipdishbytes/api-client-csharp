@@ -83,6 +83,22 @@ namespace Flipdish.Test
             // TODO unit test for the property 'DeliveryType'
         }
         /// <summary>
+        /// Test the property 'PickupLocationType'
+        /// </summary>
+        [Test]
+        public void PickupLocationTypeTest()
+        {
+            // TODO unit test for the property 'PickupLocationType'
+        }
+        /// <summary>
+        /// Test the property 'TableServiceCatagory'
+        /// </summary>
+        [Test]
+        public void TableServiceCatagoryTest()
+        {
+            // TODO unit test for the property 'TableServiceCatagory'
+        }
+        /// <summary>
         /// Test the property 'OrderState'
         /// </summary>
         [Test]
@@ -169,6 +185,62 @@ namespace Flipdish.Test
         public void CurrencyTest()
         {
             // TODO unit test for the property 'Currency'
+        }
+        /// <summary>
+        /// Test the property 'AppType'
+        /// </summary>
+        [Test]
+        public void AppTypeTest()
+        {
+            // TODO unit test for the property 'AppType'
+        }
+        /// <summary>
+        /// Test the property 'LocalOrderId'
+        /// </summary>
+        [Test]
+        public void LocalOrderIdTest()
+        {
+            // TODO unit test for the property 'LocalOrderId'
+        }
+        /// <summary>
+        /// Test the property 'DropOffLocationId'
+        /// </summary>
+        [Test]
+        public void DropOffLocationIdTest()
+        {
+            // TODO unit test for the property 'DropOffLocationId'
+        }
+        /// <summary>
+        /// Test the property 'DropOffLocation'
+        /// </summary>
+        [Test]
+        public void DropOffLocationTest()
+        {
+            // TODO unit test for the property 'DropOffLocation'
+        }
+        /// <summary>
+        /// Test the property 'AcceptedFor'
+        /// </summary>
+        [Test]
+        public void AcceptedForTest()
+        {
+            // TODO unit test for the property 'AcceptedFor'
+        }
+        /// <summary>
+        /// Test the property 'InFraudZone'
+        /// </summary>
+        [Test]
+        public void InFraudZoneTest()
+        {
+            // TODO unit test for the property 'InFraudZone'
+        }
+        /// <summary>
+        /// Test the property 'UnusualHighValueOrder'
+        /// </summary>
+        [Test]
+        public void UnusualHighValueOrderTest()
+        {
+            // TODO unit test for the property 'UnusualHighValueOrder'
         }
 
     }

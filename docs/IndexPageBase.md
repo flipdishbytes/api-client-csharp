@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AboutSectionEnabled** | **bool?** | About section enabled | [optional] 
 **AboutSectionTitle** | **string** | About section title | [optional] 
+**AboutSectionSubtitle** | **string** | About section sub-title | [optional] 
 **AboutSectionLeftTitle** | **string** | About section title left | [optional] 
 **AboutSectionLeftBody** | **string** | About section text left | [optional] 
 **AboutSectionRightTitle** | **string** | About section title right | [optional] 

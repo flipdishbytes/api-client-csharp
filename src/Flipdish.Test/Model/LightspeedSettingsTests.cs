@@ -154,6 +154,46 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'MenuId'
         }
+        /// <summary>
+        /// Test the property 'CollectionTableId'
+        /// </summary>
+        [Test]
+        public void CollectionTableIdTest()
+        {
+            // TODO unit test for the property 'CollectionTableId'
+        }
+        /// <summary>
+        /// Test the property 'DeliveryTableId'
+        /// </summary>
+        [Test]
+        public void DeliveryTableIdTest()
+        {
+            // TODO unit test for the property 'DeliveryTableId'
+        }
+        /// <summary>
+        /// Test the property 'CollectionTableIds'
+        /// </summary>
+        [Test]
+        public void CollectionTableIdsTest()
+        {
+            // TODO unit test for the property 'CollectionTableIds'
+        }
+        /// <summary>
+        /// Test the property 'DeliveryTableIds'
+        /// </summary>
+        [Test]
+        public void DeliveryTableIdsTest()
+        {
+            // TODO unit test for the property 'DeliveryTableIds'
+        }
+        /// <summary>
+        /// Test the property 'UseTaxInclusivePrices'
+        /// </summary>
+        [Test]
+        public void UseTaxInclusivePricesTest()
+        {
+            // TODO unit test for the property 'UseTaxInclusivePrices'
+        }
 
     }
 

@@ -74,7 +74,9 @@ namespace Flipdish.Model
         /// <param name="cutOffTimePreviousDayBasic">Cut off time previous day.</param>
         /// <param name="cutOffTimeCurrentDayBasic">Cut off time current day.</param>
         /// <param name="preOrderTimeDisplayType">Type of time displayed..</param>
-        public PreOrderConfig(int? leadTimeMinutes = default(int?), int? intervalMinutes = default(int?), int? maxOrderAheadDays = default(int?), bool? includeAsap = default(bool?), bool? includeMoreGranularInitialTime = default(bool?), string cutOffTimePreviousDayBasic = default(string), string cutOffTimeCurrentDayBasic = default(string), PreOrderTimeDisplayTypeEnum? preOrderTimeDisplayType = default(PreOrderTimeDisplayTypeEnum?))
+        /// <param name="alwaysAppearOpen">Specifies whether a customer can pre-order outside the store opening hours or not..</param>
+        /// <param name="requireExplicitSelectAlways">Force customer to select collection time..</param>
+        public PreOrderConfig(int? leadTimeMinutes = default(int?), int? intervalMinutes = default(int?), int? maxOrderAheadDays = default(int?), bool? includeAsap = default(bool?), bool? includeMoreGranularInitialTime = default(bool?), string cutOffTimePreviousDayBasic = default(string), string cutOffTimeCurrentDayBasic = default(string), PreOrderTimeDisplayTypeEnum? preOrderTimeDisplayType = default(PreOrderTimeDisplayTypeEnum?), bool? alwaysAppearOpen = default(bool?), bool? requireExplicitSelectAlways = default(bool?))
         {
             this.LeadTimeMinutes = leadTimeMinutes;
             this.IntervalMinutes = intervalMinutes;
@@ -84,6 +86,8 @@ namespace Flipdish.Model
             this.CutOffTimePreviousDayBasic = cutOffTimePreviousDayBasic;
             this.CutOffTimeCurrentDayBasic = cutOffTimeCurrentDayBasic;
             this.PreOrderTimeDisplayType = preOrderTimeDisplayType;
+            this.AlwaysAppearOpen = alwaysAppearOpen;
+            this.RequireExplicitSelectAlways = requireExplicitSelectAlways;
         }
         
         /// <summary>
@@ -137,6 +141,20 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Specifies whether a customer can pre-order outside the store opening hours or not.
+        /// </summary>
+        /// <value>Specifies whether a customer can pre-order outside the store opening hours or not.</value>
+        [DataMember(Name="AlwaysAppearOpen", EmitDefaultValue=false)]
+        public bool? AlwaysAppearOpen { get; set; }
+
+        /// <summary>
+        /// Force customer to select collection time.
+        /// </summary>
+        /// <value>Force customer to select collection time.</value>
+        [DataMember(Name="RequireExplicitSelectAlways", EmitDefaultValue=false)]
+        public bool? RequireExplicitSelectAlways { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -152,6 +170,8 @@ namespace Flipdish.Model
             sb.Append("  CutOffTimePreviousDayBasic: ").Append(CutOffTimePreviousDayBasic).Append("\n");
             sb.Append("  CutOffTimeCurrentDayBasic: ").Append(CutOffTimeCurrentDayBasic).Append("\n");
             sb.Append("  PreOrderTimeDisplayType: ").Append(PreOrderTimeDisplayType).Append("\n");
+            sb.Append("  AlwaysAppearOpen: ").Append(AlwaysAppearOpen).Append("\n");
+            sb.Append("  RequireExplicitSelectAlways: ").Append(RequireExplicitSelectAlways).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -225,6 +245,16 @@ namespace Flipdish.Model
                     this.PreOrderTimeDisplayType == input.PreOrderTimeDisplayType ||
                     (this.PreOrderTimeDisplayType != null &&
                     this.PreOrderTimeDisplayType.Equals(input.PreOrderTimeDisplayType))
+                ) && 
+                (
+                    this.AlwaysAppearOpen == input.AlwaysAppearOpen ||
+                    (this.AlwaysAppearOpen != null &&
+                    this.AlwaysAppearOpen.Equals(input.AlwaysAppearOpen))
+                ) && 
+                (
+                    this.RequireExplicitSelectAlways == input.RequireExplicitSelectAlways ||
+                    (this.RequireExplicitSelectAlways != null &&
+                    this.RequireExplicitSelectAlways.Equals(input.RequireExplicitSelectAlways))
                 );
         }
 
@@ -253,6 +283,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CutOffTimeCurrentDayBasic.GetHashCode();
                 if (this.PreOrderTimeDisplayType != null)
                     hashCode = hashCode * 59 + this.PreOrderTimeDisplayType.GetHashCode();
+                if (this.AlwaysAppearOpen != null)
+                    hashCode = hashCode * 59 + this.AlwaysAppearOpen.GetHashCode();
+                if (this.RequireExplicitSelectAlways != null)
+                    hashCode = hashCode * 59 + this.RequireExplicitSelectAlways.GetHashCode();
                 return hashCode;
             }
         }

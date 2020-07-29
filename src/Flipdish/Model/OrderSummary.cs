@@ -58,6 +58,102 @@ namespace Flipdish.Model
         [DataMember(Name="DeliveryType", EmitDefaultValue=false)]
         public DeliveryTypeEnum? DeliveryType { get; set; }
         /// <summary>
+        /// Pickup location type
+        /// </summary>
+        /// <value>Pickup location type</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PickupLocationTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum TakeOut for value: TakeOut
+            /// </summary>
+            [EnumMember(Value = "TakeOut")]
+            TakeOut = 1,
+            
+            /// <summary>
+            /// Enum TableService for value: TableService
+            /// </summary>
+            [EnumMember(Value = "TableService")]
+            TableService = 2,
+            
+            /// <summary>
+            /// Enum DineIn for value: DineIn
+            /// </summary>
+            [EnumMember(Value = "DineIn")]
+            DineIn = 3
+        }
+
+        /// <summary>
+        /// Pickup location type
+        /// </summary>
+        /// <value>Pickup location type</value>
+        [DataMember(Name="PickupLocationType", EmitDefaultValue=false)]
+        public PickupLocationTypeEnum? PickupLocationType { get; set; }
+        /// <summary>
+        /// Table service category
+        /// </summary>
+        /// <value>Table service category</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TableServiceCatagoryEnum
+        {
+            
+            /// <summary>
+            /// Enum Generic for value: Generic
+            /// </summary>
+            [EnumMember(Value = "Generic")]
+            Generic = 1,
+            
+            /// <summary>
+            /// Enum Villa for value: Villa
+            /// </summary>
+            [EnumMember(Value = "Villa")]
+            Villa = 2,
+            
+            /// <summary>
+            /// Enum House for value: House
+            /// </summary>
+            [EnumMember(Value = "House")]
+            House = 3,
+            
+            /// <summary>
+            /// Enum Room for value: Room
+            /// </summary>
+            [EnumMember(Value = "Room")]
+            Room = 4,
+            
+            /// <summary>
+            /// Enum Area for value: Area
+            /// </summary>
+            [EnumMember(Value = "Area")]
+            Area = 5,
+            
+            /// <summary>
+            /// Enum Table for value: Table
+            /// </summary>
+            [EnumMember(Value = "Table")]
+            Table = 6,
+            
+            /// <summary>
+            /// Enum ParkingBay for value: ParkingBay
+            /// </summary>
+            [EnumMember(Value = "ParkingBay")]
+            ParkingBay = 7,
+            
+            /// <summary>
+            /// Enum Gate for value: Gate
+            /// </summary>
+            [EnumMember(Value = "Gate")]
+            Gate = 8
+        }
+
+        /// <summary>
+        /// Table service category
+        /// </summary>
+        /// <value>Table service category</value>
+        [DataMember(Name="TableServiceCatagory", EmitDefaultValue=false)]
+        public TableServiceCatagoryEnum? TableServiceCatagory { get; set; }
+        /// <summary>
         /// Order state
         /// </summary>
         /// <value>Order state</value>
@@ -192,7 +288,19 @@ namespace Flipdish.Model
             /// Enum Eps for value: Eps
             /// </summary>
             [EnumMember(Value = "Eps")]
-            Eps = 6
+            Eps = 6,
+            
+            /// <summary>
+            /// Enum Emv for value: Emv
+            /// </summary>
+            [EnumMember(Value = "Emv")]
+            Emv = 7,
+            
+            /// <summary>
+            /// Enum PayPal for value: PayPal
+            /// </summary>
+            [EnumMember(Value = "PayPal")]
+            PayPal = 8
         }
 
         /// <summary>
@@ -924,7 +1032,13 @@ namespace Flipdish.Model
             /// Enum TWD for value: TWD
             /// </summary>
             [EnumMember(Value = "TWD")]
-            TWD = 112
+            TWD = 112,
+            
+            /// <summary>
+            /// Enum BMD for value: BMD
+            /// </summary>
+            [EnumMember(Value = "BMD")]
+            BMD = 113
         }
 
         /// <summary>
@@ -934,10 +1048,87 @@ namespace Flipdish.Model
         [DataMember(Name="Currency", EmitDefaultValue=false)]
         public CurrencyEnum? Currency { get; set; }
         /// <summary>
+        /// Type of app end user is on
+        /// </summary>
+        /// <value>Type of app end user is on</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AppTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Unknown for value: Unknown
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown = 1,
+            
+            /// <summary>
+            /// Enum Ios for value: Ios
+            /// </summary>
+            [EnumMember(Value = "Ios")]
+            Ios = 2,
+            
+            /// <summary>
+            /// Enum Android for value: Android
+            /// </summary>
+            [EnumMember(Value = "Android")]
+            Android = 3,
+            
+            /// <summary>
+            /// Enum Web for value: Web
+            /// </summary>
+            [EnumMember(Value = "Web")]
+            Web = 4,
+            
+            /// <summary>
+            /// Enum Kiosk for value: Kiosk
+            /// </summary>
+            [EnumMember(Value = "Kiosk")]
+            Kiosk = 5,
+            
+            /// <summary>
+            /// Enum Pos for value: Pos
+            /// </summary>
+            [EnumMember(Value = "Pos")]
+            Pos = 6,
+            
+            /// <summary>
+            /// Enum TelephoneCall for value: TelephoneCall
+            /// </summary>
+            [EnumMember(Value = "TelephoneCall")]
+            TelephoneCall = 7,
+            
+            /// <summary>
+            /// Enum Sms for value: Sms
+            /// </summary>
+            [EnumMember(Value = "Sms")]
+            Sms = 8,
+            
+            /// <summary>
+            /// Enum PwaAndroid for value: PwaAndroid
+            /// </summary>
+            [EnumMember(Value = "PwaAndroid")]
+            PwaAndroid = 9,
+            
+            /// <summary>
+            /// Enum PwaIos for value: PwaIos
+            /// </summary>
+            [EnumMember(Value = "PwaIos")]
+            PwaIos = 10
+        }
+
+        /// <summary>
+        /// Type of app end user is on
+        /// </summary>
+        /// <value>Type of app end user is on</value>
+        [DataMember(Name="AppType", EmitDefaultValue=false)]
+        public AppTypeEnum? AppType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="OrderSummary" /> class.
         /// </summary>
         /// <param name="orderId">Order identifier.</param>
         /// <param name="deliveryType">Delivery type.</param>
+        /// <param name="pickupLocationType">Pickup location type.</param>
+        /// <param name="tableServiceCatagory">Table service category.</param>
         /// <param name="orderState">Order state.</param>
         /// <param name="requestedForTime">Order requested for.</param>
         /// <param name="storeName">Name of the store.</param>
@@ -949,10 +1140,19 @@ namespace Flipdish.Model
         /// <param name="paymentAccountType">Payment Account.</param>
         /// <param name="paymentStatus">Status of the payment.</param>
         /// <param name="currency">Currency of payment.</param>
-        public OrderSummary(int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), OrderStateEnum? orderState = default(OrderStateEnum?), DateTime? requestedForTime = default(DateTime?), string storeName = default(string), string storeIanaTimeZone = default(string), string customerName = default(string), string customerPhoneNumber = default(string), double? amount = default(double?), double? refundedAmount = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), CurrencyEnum? currency = default(CurrencyEnum?))
+        /// <param name="appType">Type of app end user is on.</param>
+        /// <param name="localOrderId">Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders).</param>
+        /// <param name="dropOffLocationId">id of the collection/drop off location.</param>
+        /// <param name="dropOffLocation">Represents table service drop off location.</param>
+        /// <param name="acceptedFor">Time store has accepted the order for.</param>
+        /// <param name="inFraudZone">Was order made within a fraud zone.</param>
+        /// <param name="unusualHighValueOrder">Is order of unusually high value.</param>
+        public OrderSummary(int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), TableServiceCatagoryEnum? tableServiceCatagory = default(TableServiceCatagoryEnum?), OrderStateEnum? orderState = default(OrderStateEnum?), DateTime? requestedForTime = default(DateTime?), string storeName = default(string), string storeIanaTimeZone = default(string), string customerName = default(string), string customerPhoneNumber = default(string), double? amount = default(double?), double? refundedAmount = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), CurrencyEnum? currency = default(CurrencyEnum?), AppTypeEnum? appType = default(AppTypeEnum?), string localOrderId = default(string), int? dropOffLocationId = default(int?), string dropOffLocation = default(string), DateTime? acceptedFor = default(DateTime?), bool? inFraudZone = default(bool?), bool? unusualHighValueOrder = default(bool?))
         {
             this.OrderId = orderId;
             this.DeliveryType = deliveryType;
+            this.PickupLocationType = pickupLocationType;
+            this.TableServiceCatagory = tableServiceCatagory;
             this.OrderState = orderState;
             this.RequestedForTime = requestedForTime;
             this.StoreName = storeName;
@@ -964,6 +1164,13 @@ namespace Flipdish.Model
             this.PaymentAccountType = paymentAccountType;
             this.PaymentStatus = paymentStatus;
             this.Currency = currency;
+            this.AppType = appType;
+            this.LocalOrderId = localOrderId;
+            this.DropOffLocationId = dropOffLocationId;
+            this.DropOffLocation = dropOffLocation;
+            this.AcceptedFor = acceptedFor;
+            this.InFraudZone = inFraudZone;
+            this.UnusualHighValueOrder = unusualHighValueOrder;
         }
         
         /// <summary>
@@ -972,6 +1179,8 @@ namespace Flipdish.Model
         /// <value>Order identifier</value>
         [DataMember(Name="OrderId", EmitDefaultValue=false)]
         public int? OrderId { get; set; }
+
+
 
 
 
@@ -1027,6 +1236,49 @@ namespace Flipdish.Model
 
 
 
+
+        /// <summary>
+        /// Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders)
+        /// </summary>
+        /// <value>Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders)</value>
+        [DataMember(Name="LocalOrderId", EmitDefaultValue=false)]
+        public string LocalOrderId { get; set; }
+
+        /// <summary>
+        /// id of the collection/drop off location
+        /// </summary>
+        /// <value>id of the collection/drop off location</value>
+        [DataMember(Name="DropOffLocationId", EmitDefaultValue=false)]
+        public int? DropOffLocationId { get; set; }
+
+        /// <summary>
+        /// Represents table service drop off location
+        /// </summary>
+        /// <value>Represents table service drop off location</value>
+        [DataMember(Name="DropOffLocation", EmitDefaultValue=false)]
+        public string DropOffLocation { get; set; }
+
+        /// <summary>
+        /// Time store has accepted the order for
+        /// </summary>
+        /// <value>Time store has accepted the order for</value>
+        [DataMember(Name="AcceptedFor", EmitDefaultValue=false)]
+        public DateTime? AcceptedFor { get; set; }
+
+        /// <summary>
+        /// Was order made within a fraud zone
+        /// </summary>
+        /// <value>Was order made within a fraud zone</value>
+        [DataMember(Name="InFraudZone", EmitDefaultValue=false)]
+        public bool? InFraudZone { get; set; }
+
+        /// <summary>
+        /// Is order of unusually high value
+        /// </summary>
+        /// <value>Is order of unusually high value</value>
+        [DataMember(Name="UnusualHighValueOrder", EmitDefaultValue=false)]
+        public bool? UnusualHighValueOrder { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1037,6 +1289,8 @@ namespace Flipdish.Model
             sb.Append("class OrderSummary {\n");
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
             sb.Append("  DeliveryType: ").Append(DeliveryType).Append("\n");
+            sb.Append("  PickupLocationType: ").Append(PickupLocationType).Append("\n");
+            sb.Append("  TableServiceCatagory: ").Append(TableServiceCatagory).Append("\n");
             sb.Append("  OrderState: ").Append(OrderState).Append("\n");
             sb.Append("  RequestedForTime: ").Append(RequestedForTime).Append("\n");
             sb.Append("  StoreName: ").Append(StoreName).Append("\n");
@@ -1048,6 +1302,13 @@ namespace Flipdish.Model
             sb.Append("  PaymentAccountType: ").Append(PaymentAccountType).Append("\n");
             sb.Append("  PaymentStatus: ").Append(PaymentStatus).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
+            sb.Append("  AppType: ").Append(AppType).Append("\n");
+            sb.Append("  LocalOrderId: ").Append(LocalOrderId).Append("\n");
+            sb.Append("  DropOffLocationId: ").Append(DropOffLocationId).Append("\n");
+            sb.Append("  DropOffLocation: ").Append(DropOffLocation).Append("\n");
+            sb.Append("  AcceptedFor: ").Append(AcceptedFor).Append("\n");
+            sb.Append("  InFraudZone: ").Append(InFraudZone).Append("\n");
+            sb.Append("  UnusualHighValueOrder: ").Append(UnusualHighValueOrder).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1091,6 +1352,16 @@ namespace Flipdish.Model
                     this.DeliveryType == input.DeliveryType ||
                     (this.DeliveryType != null &&
                     this.DeliveryType.Equals(input.DeliveryType))
+                ) && 
+                (
+                    this.PickupLocationType == input.PickupLocationType ||
+                    (this.PickupLocationType != null &&
+                    this.PickupLocationType.Equals(input.PickupLocationType))
+                ) && 
+                (
+                    this.TableServiceCatagory == input.TableServiceCatagory ||
+                    (this.TableServiceCatagory != null &&
+                    this.TableServiceCatagory.Equals(input.TableServiceCatagory))
                 ) && 
                 (
                     this.OrderState == input.OrderState ||
@@ -1146,6 +1417,41 @@ namespace Flipdish.Model
                     this.Currency == input.Currency ||
                     (this.Currency != null &&
                     this.Currency.Equals(input.Currency))
+                ) && 
+                (
+                    this.AppType == input.AppType ||
+                    (this.AppType != null &&
+                    this.AppType.Equals(input.AppType))
+                ) && 
+                (
+                    this.LocalOrderId == input.LocalOrderId ||
+                    (this.LocalOrderId != null &&
+                    this.LocalOrderId.Equals(input.LocalOrderId))
+                ) && 
+                (
+                    this.DropOffLocationId == input.DropOffLocationId ||
+                    (this.DropOffLocationId != null &&
+                    this.DropOffLocationId.Equals(input.DropOffLocationId))
+                ) && 
+                (
+                    this.DropOffLocation == input.DropOffLocation ||
+                    (this.DropOffLocation != null &&
+                    this.DropOffLocation.Equals(input.DropOffLocation))
+                ) && 
+                (
+                    this.AcceptedFor == input.AcceptedFor ||
+                    (this.AcceptedFor != null &&
+                    this.AcceptedFor.Equals(input.AcceptedFor))
+                ) && 
+                (
+                    this.InFraudZone == input.InFraudZone ||
+                    (this.InFraudZone != null &&
+                    this.InFraudZone.Equals(input.InFraudZone))
+                ) && 
+                (
+                    this.UnusualHighValueOrder == input.UnusualHighValueOrder ||
+                    (this.UnusualHighValueOrder != null &&
+                    this.UnusualHighValueOrder.Equals(input.UnusualHighValueOrder))
                 );
         }
 
@@ -1162,6 +1468,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OrderId.GetHashCode();
                 if (this.DeliveryType != null)
                     hashCode = hashCode * 59 + this.DeliveryType.GetHashCode();
+                if (this.PickupLocationType != null)
+                    hashCode = hashCode * 59 + this.PickupLocationType.GetHashCode();
+                if (this.TableServiceCatagory != null)
+                    hashCode = hashCode * 59 + this.TableServiceCatagory.GetHashCode();
                 if (this.OrderState != null)
                     hashCode = hashCode * 59 + this.OrderState.GetHashCode();
                 if (this.RequestedForTime != null)
@@ -1184,6 +1494,20 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PaymentStatus.GetHashCode();
                 if (this.Currency != null)
                     hashCode = hashCode * 59 + this.Currency.GetHashCode();
+                if (this.AppType != null)
+                    hashCode = hashCode * 59 + this.AppType.GetHashCode();
+                if (this.LocalOrderId != null)
+                    hashCode = hashCode * 59 + this.LocalOrderId.GetHashCode();
+                if (this.DropOffLocationId != null)
+                    hashCode = hashCode * 59 + this.DropOffLocationId.GetHashCode();
+                if (this.DropOffLocation != null)
+                    hashCode = hashCode * 59 + this.DropOffLocation.GetHashCode();
+                if (this.AcceptedFor != null)
+                    hashCode = hashCode * 59 + this.AcceptedFor.GetHashCode();
+                if (this.InFraudZone != null)
+                    hashCode = hashCode * 59 + this.InFraudZone.GetHashCode();
+                if (this.UnusualHighValueOrder != null)
+                    hashCode = hashCode * 59 + this.UnusualHighValueOrder.GetHashCode();
                 return hashCode;
             }
         }

@@ -58,6 +58,33 @@ namespace Flipdish.Model
         [DataMember(Name="MenuSectionBehaviour", EmitDefaultValue=false)]
         public MenuSectionBehaviourEnum? MenuSectionBehaviour { get; set; }
         /// <summary>
+        /// Tax type
+        /// </summary>
+        /// <value>Tax type</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TaxTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum IncludedInBasePrice for value: IncludedInBasePrice
+            /// </summary>
+            [EnumMember(Value = "IncludedInBasePrice")]
+            IncludedInBasePrice = 1,
+            
+            /// <summary>
+            /// Enum ExcludedFromBasePrice for value: ExcludedFromBasePrice
+            /// </summary>
+            [EnumMember(Value = "ExcludedFromBasePrice")]
+            ExcludedFromBasePrice = 2
+        }
+
+        /// <summary>
+        /// Tax type
+        /// </summary>
+        /// <value>Tax type</value>
+        [DataMember(Name="TaxType", EmitDefaultValue=false)]
+        public TaxTypeEnum? TaxType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Menu" /> class.
         /// </summary>
         /// <param name="menuId">Menu identifier.</param>
@@ -67,9 +94,11 @@ namespace Flipdish.Model
         /// <param name="name">Name of Menu, only shown in portal.</param>
         /// <param name="locked">Locked: is menu locked against modifcation.</param>
         /// <param name="menuSections">Menu sections (startes, main etc).</param>
+        /// <param name="taxRates">Menu tax rates.</param>
         /// <param name="displaySectionLinks">Display menu section link on UI.</param>
         /// <param name="menuSectionBehaviour">Menu section behaviour.</param>
-        public Menu(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string imageUrl = default(string), string name = default(string), bool? locked = default(bool?), List<MenuSection> menuSections = default(List<MenuSection>), bool? displaySectionLinks = default(bool?), MenuSectionBehaviourEnum? menuSectionBehaviour = default(MenuSectionBehaviourEnum?))
+        /// <param name="taxType">Tax type.</param>
+        public Menu(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string imageUrl = default(string), string name = default(string), bool? locked = default(bool?), List<MenuSection> menuSections = default(List<MenuSection>), List<MenuTaxRate> taxRates = default(List<MenuTaxRate>), bool? displaySectionLinks = default(bool?), MenuSectionBehaviourEnum? menuSectionBehaviour = default(MenuSectionBehaviourEnum?), TaxTypeEnum? taxType = default(TaxTypeEnum?))
         {
             this.MenuId = menuId;
             this.ModifiedTime = modifiedTime;
@@ -78,8 +107,10 @@ namespace Flipdish.Model
             this.Name = name;
             this.Locked = locked;
             this.MenuSections = menuSections;
+            this.TaxRates = taxRates;
             this.DisplaySectionLinks = displaySectionLinks;
             this.MenuSectionBehaviour = menuSectionBehaviour;
+            this.TaxType = taxType;
         }
         
         /// <summary>
@@ -132,11 +163,19 @@ namespace Flipdish.Model
         public List<MenuSection> MenuSections { get; set; }
 
         /// <summary>
+        /// Menu tax rates
+        /// </summary>
+        /// <value>Menu tax rates</value>
+        [DataMember(Name="TaxRates", EmitDefaultValue=false)]
+        public List<MenuTaxRate> TaxRates { get; set; }
+
+        /// <summary>
         /// Display menu section link on UI
         /// </summary>
         /// <value>Display menu section link on UI</value>
         [DataMember(Name="DisplaySectionLinks", EmitDefaultValue=false)]
         public bool? DisplaySectionLinks { get; set; }
+
 
 
         /// <summary>
@@ -154,8 +193,10 @@ namespace Flipdish.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Locked: ").Append(Locked).Append("\n");
             sb.Append("  MenuSections: ").Append(MenuSections).Append("\n");
+            sb.Append("  TaxRates: ").Append(TaxRates).Append("\n");
             sb.Append("  DisplaySectionLinks: ").Append(DisplaySectionLinks).Append("\n");
             sb.Append("  MenuSectionBehaviour: ").Append(MenuSectionBehaviour).Append("\n");
+            sb.Append("  TaxType: ").Append(TaxType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -226,6 +267,11 @@ namespace Flipdish.Model
                     this.MenuSections.SequenceEqual(input.MenuSections)
                 ) && 
                 (
+                    this.TaxRates == input.TaxRates ||
+                    this.TaxRates != null &&
+                    this.TaxRates.SequenceEqual(input.TaxRates)
+                ) && 
+                (
                     this.DisplaySectionLinks == input.DisplaySectionLinks ||
                     (this.DisplaySectionLinks != null &&
                     this.DisplaySectionLinks.Equals(input.DisplaySectionLinks))
@@ -234,6 +280,11 @@ namespace Flipdish.Model
                     this.MenuSectionBehaviour == input.MenuSectionBehaviour ||
                     (this.MenuSectionBehaviour != null &&
                     this.MenuSectionBehaviour.Equals(input.MenuSectionBehaviour))
+                ) && 
+                (
+                    this.TaxType == input.TaxType ||
+                    (this.TaxType != null &&
+                    this.TaxType.Equals(input.TaxType))
                 );
         }
 
@@ -260,10 +311,14 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Locked.GetHashCode();
                 if (this.MenuSections != null)
                     hashCode = hashCode * 59 + this.MenuSections.GetHashCode();
+                if (this.TaxRates != null)
+                    hashCode = hashCode * 59 + this.TaxRates.GetHashCode();
                 if (this.DisplaySectionLinks != null)
                     hashCode = hashCode * 59 + this.DisplaySectionLinks.GetHashCode();
                 if (this.MenuSectionBehaviour != null)
                     hashCode = hashCode * 59 + this.MenuSectionBehaviour.GetHashCode();
+                if (this.TaxType != null)
+                    hashCode = hashCode * 59 + this.TaxType.GetHashCode();
                 return hashCode;
             }
         }

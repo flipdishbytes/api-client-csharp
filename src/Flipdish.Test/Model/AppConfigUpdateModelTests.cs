@@ -98,6 +98,22 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'ApplicationCategory'
         }
+        /// <summary>
+        /// Test the property 'IsPanaceaEnabled'
+        /// </summary>
+        [Test]
+        public void IsPanaceaEnabledTest()
+        {
+            // TODO unit test for the property 'IsPanaceaEnabled'
+        }
+        /// <summary>
+        /// Test the property 'CookieConsentPromptEnabled'
+        /// </summary>
+        [Test]
+        public void CookieConsentPromptEnabledTest()
+        {
+            // TODO unit test for the property 'CookieConsentPromptEnabled'
+        }
 
     }
 

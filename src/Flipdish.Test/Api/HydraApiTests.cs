@@ -65,6 +65,33 @@ namespace Flipdish.Test
 
         
         /// <summary>
+        /// Test AssignEmv
+        /// </summary>
+        [Test]
+        public void AssignEmvTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //int? hydraConfigId = null;
+            //int? emvTerminalId = null;
+            //instance.AssignEmv(appId, hydraConfigId, emvTerminalId);
+            
+        }
+        
+        /// <summary>
+        /// Test CancelEmvPayment
+        /// </summary>
+        [Test]
+        public void CancelEmvPaymentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? orderId = null;
+            //string appId = null;
+            //instance.CancelEmvPayment(orderId, appId);
+            
+        }
+        
+        /// <summary>
         /// Test GetAttachedDevices
         /// </summary>
         [Test]
@@ -80,6 +107,31 @@ namespace Flipdish.Test
             //string deviceSerial = null;
             //var response = instance.GetAttachedDevices(appId, deviceType, pageIndex, pageSize, storeId, deviceName, deviceSerial);
             //Assert.IsInstanceOf<RestApiPaginationResultHydraDeviceDetails> (response, "response is RestApiPaginationResultHydraDeviceDetails");
+        }
+        
+        /// <summary>
+        /// Test GetEMVTerminalDetails
+        /// </summary>
+        [Test]
+        public void GetEMVTerminalDetailsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //var response = instance.GetEMVTerminalDetails(appId);
+            //Assert.IsInstanceOf<RestApiResultPaymentTerminalDetails> (response, "response is RestApiResultPaymentTerminalDetails");
+        }
+        
+        /// <summary>
+        /// Test GetEmvOrderState
+        /// </summary>
+        [Test]
+        public void GetEmvOrderStateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? orderId = null;
+            //string appId = null;
+            //var response = instance.GetEmvOrderState(orderId, appId);
+            //Assert.IsInstanceOf<RestApiResultPaymentTerminalTransactionDetails> (response, "response is RestApiResultPaymentTerminalTransactionDetails");
         }
         
         /// <summary>
@@ -105,15 +157,41 @@ namespace Flipdish.Test
         }
         
         /// <summary>
-        /// Test GetTerminalDetails
+        /// Test HydraCreateEmv
         /// </summary>
         [Test]
-        public void GetTerminalDetailsTest()
+        public void HydraCreateEmvTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string appId = null;
-            //var response = instance.GetTerminalDetails(appId);
-            //Assert.IsInstanceOf<RestApiResultPaymentTerminalDetails> (response, "response is RestApiResultPaymentTerminalDetails");
+            //EmvTerminal emv = null;
+            //var response = instance.HydraCreateEmv(appId, emv);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test HydraDeleteEmv
+        /// </summary>
+        [Test]
+        public void HydraDeleteEmvTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //int? id = null;
+            //var response = instance.HydraDeleteEmv(appId, id);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test HydraGetEmvsForAppId
+        /// </summary>
+        [Test]
+        public void HydraGetEmvsForAppIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //var response = instance.HydraGetEmvsForAppId(appId);
+            //Assert.IsInstanceOf<RestApiArrayResultEmvTerminalWithAssignments> (response, "response is RestApiArrayResultEmvTerminalWithAssignments");
         }
         
         /// <summary>
@@ -125,7 +203,8 @@ namespace Flipdish.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string deviceId = null;
             //string hydraUserType = null;
-            //instance.LoginWithDeviceId(deviceId, hydraUserType);
+            //string serialNumber = null;
+            //instance.LoginWithDeviceId(deviceId, hydraUserType, serialNumber);
             
         }
         
@@ -152,6 +231,19 @@ namespace Flipdish.Test
             //string appId = null;
             //string deviceId = null;
             //instance.UnAssign(appId, deviceId);
+            
+        }
+        
+        /// <summary>
+        /// Test UnassignEmv
+        /// </summary>
+        [Test]
+        public void UnassignEmvTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string appId = null;
+            //int? hydraConfigId = null;
+            //instance.UnassignEmv(appId, hydraConfigId);
             
         }
         

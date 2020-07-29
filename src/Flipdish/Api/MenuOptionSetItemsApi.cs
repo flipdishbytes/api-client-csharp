@@ -168,6 +168,37 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RemoveMenuItemOptionSetItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId);
         /// <summary>
+        /// [Private API] Set Tax Rate on OptionSetItem
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
+        /// <param name="taxRateId">Tax Rate to use</param>
+        /// <returns></returns>
+        void SetOptionSetItemTax (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, int? taxRateId);
+
+        /// <summary>
+        /// [Private API] Set Tax Rate on OptionSetItem
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
+        /// <param name="taxRateId">Tax Rate to use</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SetOptionSetItemTaxWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, int? taxRateId);
+        /// <summary>
         /// Update menu item option set item
         /// </summary>
         /// <remarks>
@@ -376,6 +407,37 @@ namespace Flipdish.Api
         /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RemoveMenuItemOptionSetItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId);
+        /// <summary>
+        /// [Private API] Set Tax Rate on OptionSetItem
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
+        /// <param name="taxRateId">Tax Rate to use</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SetOptionSetItemTaxAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, int? taxRateId);
+
+        /// <summary>
+        /// [Private API] Set Tax Rate on OptionSetItem
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
+        /// <param name="taxRateId">Tax Rate to use</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SetOptionSetItemTaxAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, int? taxRateId);
         /// <summary>
         /// Update menu item option set item
         /// </summary>
@@ -1535,6 +1597,215 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("RemoveMenuItemOptionSetItem", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// [Private API] Set Tax Rate on OptionSetItem 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
+        /// <param name="taxRateId">Tax Rate to use</param>
+        /// <returns></returns>
+        public void SetOptionSetItemTax (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, int? taxRateId)
+        {
+             SetOptionSetItemTaxWithHttpInfo(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, taxRateId);
+        }
+
+        /// <summary>
+        /// [Private API] Set Tax Rate on OptionSetItem 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
+        /// <param name="taxRateId">Tax Rate to use</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> SetOptionSetItemTaxWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, int? taxRateId)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuOptionSetItemsApi->SetOptionSetItemTax");
+            // verify the required parameter 'menuSectionId' is set
+            if (menuSectionId == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuOptionSetItemsApi->SetOptionSetItemTax");
+            // verify the required parameter 'menuSectionItemId' is set
+            if (menuSectionItemId == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionItemId' when calling MenuOptionSetItemsApi->SetOptionSetItemTax");
+            // verify the required parameter 'optionSetId' is set
+            if (optionSetId == null)
+                throw new ApiException(400, "Missing required parameter 'optionSetId' when calling MenuOptionSetItemsApi->SetOptionSetItemTax");
+            // verify the required parameter 'menuItemOptionSetItemId' is set
+            if (menuItemOptionSetItemId == null)
+                throw new ApiException(400, "Missing required parameter 'menuItemOptionSetItemId' when calling MenuOptionSetItemsApi->SetOptionSetItemTax");
+            // verify the required parameter 'taxRateId' is set
+            if (taxRateId == null)
+                throw new ApiException(400, "Missing required parameter 'taxRateId' when calling MenuOptionSetItemsApi->SetOptionSetItemTax");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuSectionId != null) localVarPathParams.Add("menuSectionId", this.Configuration.ApiClient.ParameterToString(menuSectionId)); // path parameter
+            if (menuSectionItemId != null) localVarPathParams.Add("menuSectionItemId", this.Configuration.ApiClient.ParameterToString(menuSectionItemId)); // path parameter
+            if (optionSetId != null) localVarPathParams.Add("optionSetId", this.Configuration.ApiClient.ParameterToString(optionSetId)); // path parameter
+            if (menuItemOptionSetItemId != null) localVarPathParams.Add("menuItemOptionSetItemId", this.Configuration.ApiClient.ParameterToString(menuItemOptionSetItemId)); // path parameter
+            if (taxRateId != null) localVarPathParams.Add("taxRateId", this.Configuration.ApiClient.ParameterToString(taxRateId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetOptionSetItemTax", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// [Private API] Set Tax Rate on OptionSetItem 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
+        /// <param name="taxRateId">Tax Rate to use</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SetOptionSetItemTaxAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, int? taxRateId)
+        {
+             await SetOptionSetItemTaxAsyncWithHttpInfo(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, taxRateId);
+
+        }
+
+        /// <summary>
+        /// [Private API] Set Tax Rate on OptionSetItem 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
+        /// <param name="taxRateId">Tax Rate to use</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetOptionSetItemTaxAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, int? taxRateId)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuOptionSetItemsApi->SetOptionSetItemTax");
+            // verify the required parameter 'menuSectionId' is set
+            if (menuSectionId == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuOptionSetItemsApi->SetOptionSetItemTax");
+            // verify the required parameter 'menuSectionItemId' is set
+            if (menuSectionItemId == null)
+                throw new ApiException(400, "Missing required parameter 'menuSectionItemId' when calling MenuOptionSetItemsApi->SetOptionSetItemTax");
+            // verify the required parameter 'optionSetId' is set
+            if (optionSetId == null)
+                throw new ApiException(400, "Missing required parameter 'optionSetId' when calling MenuOptionSetItemsApi->SetOptionSetItemTax");
+            // verify the required parameter 'menuItemOptionSetItemId' is set
+            if (menuItemOptionSetItemId == null)
+                throw new ApiException(400, "Missing required parameter 'menuItemOptionSetItemId' when calling MenuOptionSetItemsApi->SetOptionSetItemTax");
+            // verify the required parameter 'taxRateId' is set
+            if (taxRateId == null)
+                throw new ApiException(400, "Missing required parameter 'taxRateId' when calling MenuOptionSetItemsApi->SetOptionSetItemTax");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuSectionId != null) localVarPathParams.Add("menuSectionId", this.Configuration.ApiClient.ParameterToString(menuSectionId)); // path parameter
+            if (menuSectionItemId != null) localVarPathParams.Add("menuSectionItemId", this.Configuration.ApiClient.ParameterToString(menuSectionItemId)); // path parameter
+            if (optionSetId != null) localVarPathParams.Add("optionSetId", this.Configuration.ApiClient.ParameterToString(optionSetId)); // path parameter
+            if (menuItemOptionSetItemId != null) localVarPathParams.Add("menuItemOptionSetItemId", this.Configuration.ApiClient.ParameterToString(menuItemOptionSetItemId)); // path parameter
+            if (taxRateId != null) localVarPathParams.Add("taxRateId", this.Configuration.ApiClient.ParameterToString(taxRateId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetOptionSetItemTax", localVarResponse);
                 if (exception != null) throw exception;
             }
 

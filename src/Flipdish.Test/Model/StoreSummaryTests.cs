@@ -114,6 +114,22 @@ namespace Flipdish.Test
         {
             // TODO unit test for the property 'Coordinates'
         }
+        /// <summary>
+        /// Test the property 'StoreTimezone'
+        /// </summary>
+        [Test]
+        public void StoreTimezoneTest()
+        {
+            // TODO unit test for the property 'StoreTimezone'
+        }
+        /// <summary>
+        /// Test the property 'StoreGroupId'
+        /// </summary>
+        [Test]
+        public void StoreGroupIdTest()
+        {
+            // TODO unit test for the property 'StoreGroupId'
+        }
 
     }
 

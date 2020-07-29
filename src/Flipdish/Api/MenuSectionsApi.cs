@@ -48,7 +48,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultMenuSection</returns>
         ApiResponse<RestApiResultMenuSection> CloneMenuSectionWithHttpInfo (int? menuId, int? menuSectionId);
         /// <summary>
-        /// Create menu section
+        /// Set/update menu section availability hours.
         /// </summary>
         /// <remarks>
         /// 
@@ -56,13 +56,13 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="dayOfWeek"></param>
-        /// <param name="businessHoursPeriod"></param>
+        /// <param name="dayOfWeek">Day of the  week</param>
+        /// <param name="businessHoursPeriod">Menu section active hours, note: DayOfWeek property will be overriden by the path parameter.</param>
         /// <returns>Object</returns>
         Object CreateMenuAvailabilityForDay (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod);
 
         /// <summary>
-        /// Create menu section
+        /// Set/update menu section availability hours.
         /// </summary>
         /// <remarks>
         /// 
@@ -70,8 +70,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="dayOfWeek"></param>
-        /// <param name="businessHoursPeriod"></param>
+        /// <param name="dayOfWeek">Day of the  week</param>
+        /// <param name="businessHoursPeriod">Menu section active hours, note: DayOfWeek property will be overriden by the path parameter.</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> CreateMenuAvailabilityForDayWithHttpInfo (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod);
         /// <summary>
@@ -98,7 +98,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> CreateMenuSectionWithHttpInfo (int? menuId, MenuSectionBase menuSection);
         /// <summary>
-        /// Create menu section
+        /// Create menu availability type
         /// </summary>
         /// <remarks>
         /// 
@@ -106,12 +106,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionAvailability"></param>
+        /// <param name="menuSectionAvailability">DisplayAlways, DisplayBasedOnTimes, DisplayAlwaysStartCollapsed, DisplayAlwaysStartCollapsedBasedOnTimes</param>
         /// <returns>Object</returns>
         Object CreateMenuSectionAvailability (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
 
         /// <summary>
-        /// Create menu section
+        /// Create menu availability type
         /// </summary>
         /// <remarks>
         /// 
@@ -119,7 +119,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionAvailability"></param>
+        /// <param name="menuSectionAvailability">DisplayAlways, DisplayBasedOnTimes, DisplayAlwaysStartCollapsed, DisplayAlwaysStartCollapsedBasedOnTimes</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> CreateMenuSectionAvailabilityWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
         /// <summary>
@@ -315,7 +315,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultMenuSection)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMenuSection>> CloneMenuSectionAsyncWithHttpInfo (int? menuId, int? menuSectionId);
         /// <summary>
-        /// Create menu section
+        /// Set/update menu section availability hours.
         /// </summary>
         /// <remarks>
         /// 
@@ -323,13 +323,13 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="dayOfWeek"></param>
-        /// <param name="businessHoursPeriod"></param>
+        /// <param name="dayOfWeek">Day of the  week</param>
+        /// <param name="businessHoursPeriod">Menu section active hours, note: DayOfWeek property will be overriden by the path parameter.</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> CreateMenuAvailabilityForDayAsync (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod);
 
         /// <summary>
-        /// Create menu section
+        /// Set/update menu section availability hours.
         /// </summary>
         /// <remarks>
         /// 
@@ -337,8 +337,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="dayOfWeek"></param>
-        /// <param name="businessHoursPeriod"></param>
+        /// <param name="dayOfWeek">Day of the  week</param>
+        /// <param name="businessHoursPeriod">Menu section active hours, note: DayOfWeek property will be overriden by the path parameter.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuAvailabilityForDayAsyncWithHttpInfo (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod);
         /// <summary>
@@ -365,7 +365,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSectionAsyncWithHttpInfo (int? menuId, MenuSectionBase menuSection);
         /// <summary>
-        /// Create menu section
+        /// Create menu availability type
         /// </summary>
         /// <remarks>
         /// 
@@ -373,12 +373,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionAvailability"></param>
+        /// <param name="menuSectionAvailability">DisplayAlways, DisplayBasedOnTimes, DisplayAlwaysStartCollapsed, DisplayAlwaysStartCollapsedBasedOnTimes</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> CreateMenuSectionAvailabilityAsync (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
 
         /// <summary>
-        /// Create menu section
+        /// Create menu availability type
         /// </summary>
         /// <remarks>
         /// 
@@ -386,7 +386,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionAvailability"></param>
+        /// <param name="menuSectionAvailability">DisplayAlways, DisplayBasedOnTimes, DisplayAlwaysStartCollapsed, DisplayAlwaysStartCollapsedBasedOnTimes</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSectionAvailabilityAsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability);
         /// <summary>
@@ -820,13 +820,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section 
+        /// Set/update menu section availability hours. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="dayOfWeek"></param>
-        /// <param name="businessHoursPeriod"></param>
+        /// <param name="dayOfWeek">Day of the  week</param>
+        /// <param name="businessHoursPeriod">Menu section active hours, note: DayOfWeek property will be overriden by the path parameter.</param>
         /// <returns>Object</returns>
         public Object CreateMenuAvailabilityForDay (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod)
         {
@@ -835,13 +835,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section 
+        /// Set/update menu section availability hours. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="dayOfWeek"></param>
-        /// <param name="businessHoursPeriod"></param>
+        /// <param name="dayOfWeek">Day of the  week</param>
+        /// <param name="businessHoursPeriod">Menu section active hours, note: DayOfWeek property will be overriden by the path parameter.</param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > CreateMenuAvailabilityForDayWithHttpInfo (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod)
         {
@@ -925,13 +925,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section 
+        /// Set/update menu section availability hours. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="dayOfWeek"></param>
-        /// <param name="businessHoursPeriod"></param>
+        /// <param name="dayOfWeek">Day of the  week</param>
+        /// <param name="businessHoursPeriod">Menu section active hours, note: DayOfWeek property will be overriden by the path parameter.</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> CreateMenuAvailabilityForDayAsync (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod)
         {
@@ -941,13 +941,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section 
+        /// Set/update menu section availability hours. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="dayOfWeek"></param>
-        /// <param name="businessHoursPeriod"></param>
+        /// <param name="dayOfWeek">Day of the  week</param>
+        /// <param name="businessHoursPeriod">Menu section active hours, note: DayOfWeek property will be overriden by the path parameter.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuAvailabilityForDayAsyncWithHttpInfo (int? menuId, int? menuSectionId, string dayOfWeek, BusinessHoursPeriodBase businessHoursPeriod)
         {
@@ -1218,12 +1218,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section 
+        /// Create menu availability type 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionAvailability"></param>
+        /// <param name="menuSectionAvailability">DisplayAlways, DisplayBasedOnTimes, DisplayAlwaysStartCollapsed, DisplayAlwaysStartCollapsedBasedOnTimes</param>
         /// <returns>Object</returns>
         public Object CreateMenuSectionAvailability (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
         {
@@ -1232,12 +1232,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section 
+        /// Create menu availability type 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionAvailability"></param>
+        /// <param name="menuSectionAvailability">DisplayAlways, DisplayBasedOnTimes, DisplayAlwaysStartCollapsed, DisplayAlwaysStartCollapsedBasedOnTimes</param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > CreateMenuSectionAvailabilityWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
         {
@@ -1317,12 +1317,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section 
+        /// Create menu availability type 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionAvailability"></param>
+        /// <param name="menuSectionAvailability">DisplayAlways, DisplayBasedOnTimes, DisplayAlwaysStartCollapsed, DisplayAlwaysStartCollapsedBasedOnTimes</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> CreateMenuSectionAvailabilityAsync (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
         {
@@ -1332,12 +1332,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section 
+        /// Create menu availability type 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionAvailability"></param>
+        /// <param name="menuSectionAvailability">DisplayAlways, DisplayBasedOnTimes, DisplayAlwaysStartCollapsed, DisplayAlwaysStartCollapsedBasedOnTimes</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSectionAvailabilityAsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionAvailabilityBase menuSectionAvailability)
         {

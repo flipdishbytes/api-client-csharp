@@ -70,12 +70,16 @@ namespace Flipdish.Model
         /// <param name="hostName">HostName on which the app is allowed to be hosted.</param>
         /// <param name="mainColor">Main color of the web \\ android \\ ios applications.</param>
         /// <param name="applicationCategory">Application Category.</param>
-        public AppConfigUpdateModel(string name = default(string), string hostName = default(string), string mainColor = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?))
+        /// <param name="isPanaceaEnabled">Is Panacea Enabled.</param>
+        /// <param name="cookieConsentPromptEnabled">Cookie Consent Prompt Enabled.</param>
+        public AppConfigUpdateModel(string name = default(string), string hostName = default(string), string mainColor = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), bool? cookieConsentPromptEnabled = default(bool?))
         {
             this.Name = name;
             this.HostName = hostName;
             this.MainColor = mainColor;
             this.ApplicationCategory = applicationCategory;
+            this.IsPanaceaEnabled = isPanaceaEnabled;
+            this.CookieConsentPromptEnabled = cookieConsentPromptEnabled;
         }
         
         /// <summary>
@@ -101,6 +105,20 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Is Panacea Enabled
+        /// </summary>
+        /// <value>Is Panacea Enabled</value>
+        [DataMember(Name="IsPanaceaEnabled", EmitDefaultValue=false)]
+        public bool? IsPanaceaEnabled { get; set; }
+
+        /// <summary>
+        /// Cookie Consent Prompt Enabled
+        /// </summary>
+        /// <value>Cookie Consent Prompt Enabled</value>
+        [DataMember(Name="CookieConsentPromptEnabled", EmitDefaultValue=false)]
+        public bool? CookieConsentPromptEnabled { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -112,6 +130,8 @@ namespace Flipdish.Model
             sb.Append("  HostName: ").Append(HostName).Append("\n");
             sb.Append("  MainColor: ").Append(MainColor).Append("\n");
             sb.Append("  ApplicationCategory: ").Append(ApplicationCategory).Append("\n");
+            sb.Append("  IsPanaceaEnabled: ").Append(IsPanaceaEnabled).Append("\n");
+            sb.Append("  CookieConsentPromptEnabled: ").Append(CookieConsentPromptEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -165,6 +185,16 @@ namespace Flipdish.Model
                     this.ApplicationCategory == input.ApplicationCategory ||
                     (this.ApplicationCategory != null &&
                     this.ApplicationCategory.Equals(input.ApplicationCategory))
+                ) && 
+                (
+                    this.IsPanaceaEnabled == input.IsPanaceaEnabled ||
+                    (this.IsPanaceaEnabled != null &&
+                    this.IsPanaceaEnabled.Equals(input.IsPanaceaEnabled))
+                ) && 
+                (
+                    this.CookieConsentPromptEnabled == input.CookieConsentPromptEnabled ||
+                    (this.CookieConsentPromptEnabled != null &&
+                    this.CookieConsentPromptEnabled.Equals(input.CookieConsentPromptEnabled))
                 );
         }
 
@@ -185,6 +215,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MainColor.GetHashCode();
                 if (this.ApplicationCategory != null)
                     hashCode = hashCode * 59 + this.ApplicationCategory.GetHashCode();
+                if (this.IsPanaceaEnabled != null)
+                    hashCode = hashCode * 59 + this.IsPanaceaEnabled.GetHashCode();
+                if (this.CookieConsentPromptEnabled != null)
+                    hashCode = hashCode * 59 + this.CookieConsentPromptEnabled.GetHashCode();
                 return hashCode;
             }
         }

@@ -91,6 +91,69 @@ namespace Flipdish.Model
         [DataMember(Name="PickupLocationType", EmitDefaultValue=false)]
         public PickupLocationTypeEnum? PickupLocationType { get; set; }
         /// <summary>
+        /// Pickup location type
+        /// </summary>
+        /// <value>Pickup location type</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TableServiceCatagoryEnum
+        {
+            
+            /// <summary>
+            /// Enum Generic for value: Generic
+            /// </summary>
+            [EnumMember(Value = "Generic")]
+            Generic = 1,
+            
+            /// <summary>
+            /// Enum Villa for value: Villa
+            /// </summary>
+            [EnumMember(Value = "Villa")]
+            Villa = 2,
+            
+            /// <summary>
+            /// Enum House for value: House
+            /// </summary>
+            [EnumMember(Value = "House")]
+            House = 3,
+            
+            /// <summary>
+            /// Enum Room for value: Room
+            /// </summary>
+            [EnumMember(Value = "Room")]
+            Room = 4,
+            
+            /// <summary>
+            /// Enum Area for value: Area
+            /// </summary>
+            [EnumMember(Value = "Area")]
+            Area = 5,
+            
+            /// <summary>
+            /// Enum Table for value: Table
+            /// </summary>
+            [EnumMember(Value = "Table")]
+            Table = 6,
+            
+            /// <summary>
+            /// Enum ParkingBay for value: ParkingBay
+            /// </summary>
+            [EnumMember(Value = "ParkingBay")]
+            ParkingBay = 7,
+            
+            /// <summary>
+            /// Enum Gate for value: Gate
+            /// </summary>
+            [EnumMember(Value = "Gate")]
+            Gate = 8
+        }
+
+        /// <summary>
+        /// Pickup location type
+        /// </summary>
+        /// <value>Pickup location type</value>
+        [DataMember(Name="TableServiceCatagory", EmitDefaultValue=false)]
+        public TableServiceCatagoryEnum? TableServiceCatagory { get; set; }
+        /// <summary>
         /// Payment account type
         /// </summary>
         /// <value>Payment account type</value>
@@ -132,7 +195,19 @@ namespace Flipdish.Model
             /// Enum Eps for value: Eps
             /// </summary>
             [EnumMember(Value = "Eps")]
-            Eps = 6
+            Eps = 6,
+            
+            /// <summary>
+            /// Enum Emv for value: Emv
+            /// </summary>
+            [EnumMember(Value = "Emv")]
+            Emv = 7,
+            
+            /// <summary>
+            /// Enum PayPal for value: PayPal
+            /// </summary>
+            [EnumMember(Value = "PayPal")]
+            PayPal = 8
         }
 
         /// <summary>
@@ -424,6 +499,69 @@ namespace Flipdish.Model
         [DataMember(Name="RejectionReason", EmitDefaultValue=false)]
         public RejectionReasonEnum? RejectionReason { get; set; }
         /// <summary>
+        /// Delivery tracking status
+        /// </summary>
+        /// <value>Delivery tracking status</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DeliveryTrackingStatusEnum
+        {
+            
+            /// <summary>
+            /// Enum Unassigned for value: Unassigned
+            /// </summary>
+            [EnumMember(Value = "Unassigned")]
+            Unassigned = 1,
+            
+            /// <summary>
+            /// Enum Unaccepted for value: Unaccepted
+            /// </summary>
+            [EnumMember(Value = "Unaccepted")]
+            Unaccepted = 2,
+            
+            /// <summary>
+            /// Enum Accepted for value: Accepted
+            /// </summary>
+            [EnumMember(Value = "Accepted")]
+            Accepted = 3,
+            
+            /// <summary>
+            /// Enum Carrying for value: Carrying
+            /// </summary>
+            [EnumMember(Value = "Carrying")]
+            Carrying = 4,
+            
+            /// <summary>
+            /// Enum OnTheWay for value: OnTheWay
+            /// </summary>
+            [EnumMember(Value = "OnTheWay")]
+            OnTheWay = 5,
+            
+            /// <summary>
+            /// Enum ArrivedAtLocation for value: ArrivedAtLocation
+            /// </summary>
+            [EnumMember(Value = "ArrivedAtLocation")]
+            ArrivedAtLocation = 6,
+            
+            /// <summary>
+            /// Enum Delivered for value: Delivered
+            /// </summary>
+            [EnumMember(Value = "Delivered")]
+            Delivered = 7,
+            
+            /// <summary>
+            /// Enum CannotDeliver for value: CannotDeliver
+            /// </summary>
+            [EnumMember(Value = "CannotDeliver")]
+            CannotDeliver = 8
+        }
+
+        /// <summary>
+        /// Delivery tracking status
+        /// </summary>
+        /// <value>Delivery tracking status</value>
+        [DataMember(Name="DeliveryTrackingStatus", EmitDefaultValue=false)]
+        public DeliveryTrackingStatusEnum? DeliveryTrackingStatus { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Order" /> class.
         /// </summary>
         /// <param name="store">Store summary.</param>
@@ -434,9 +572,17 @@ namespace Flipdish.Model
         /// <param name="deliveryLocation">Delivery location for delivery orders.</param>
         /// <param name="customerLocation">Customer location.</param>
         /// <param name="maskedPhoneNumber">Represents customers masked phone number.</param>
+        /// <param name="dropOffLocationId">Represents table service drop off location.</param>
+        /// <param name="dropOffLocation">Represents table service drop off location.</param>
+        /// <param name="acceptedFor">Time store has accepted the order for.</param>
+        /// <param name="inFraudZone">Was order made within a fraud zone.</param>
+        /// <param name="unusualHighValueOrder">Is order of unusually high value.</param>
+        /// <param name="rejectedByUserId">Id of user who rejected order, if available.</param>
         /// <param name="orderId">Order identifier.</param>
+        /// <param name="localOrderId">Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders).</param>
         /// <param name="deliveryType">Delivery type.</param>
         /// <param name="pickupLocationType">Pickup location type.</param>
+        /// <param name="tableServiceCatagory">Pickup location type.</param>
         /// <param name="tipAmount">Tip amount.</param>
         /// <param name="deliveryAmount">Delivery amount.</param>
         /// <param name="orderItemsAmount">Ordered items amount.</param>
@@ -454,7 +600,11 @@ namespace Flipdish.Model
         /// <param name="paymentStatus">Status of the payment.</param>
         /// <param name="rejectionReason">Rejection reason. Can have value if the order is rejected..</param>
         /// <param name="refundedAmount">Amount refunded to customer..</param>
-        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), MaskedPhoneNumber maskedPhoneNumber = default(MaskedPhoneNumber), int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), RejectionReasonEnum? rejectionReason = default(RejectionReasonEnum?), double? refundedAmount = default(double?))
+        /// <param name="deliveryTrackingStatus">Delivery tracking status.</param>
+        /// <param name="driverId">Assigned driver identifier.</param>
+        /// <param name="totalTax">Total tax applied to order.</param>
+        /// <param name="orderTrackingCode">Unique, 6 character long alpha numeric code for tracking..</param>
+        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), MaskedPhoneNumber maskedPhoneNumber = default(MaskedPhoneNumber), int? dropOffLocationId = default(int?), string dropOffLocation = default(string), DateTime? acceptedFor = default(DateTime?), bool? inFraudZone = default(bool?), bool? unusualHighValueOrder = default(bool?), int? rejectedByUserId = default(int?), int? orderId = default(int?), string localOrderId = default(string), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), TableServiceCatagoryEnum? tableServiceCatagory = default(TableServiceCatagoryEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), RejectionReasonEnum? rejectionReason = default(RejectionReasonEnum?), double? refundedAmount = default(double?), DeliveryTrackingStatusEnum? deliveryTrackingStatus = default(DeliveryTrackingStatusEnum?), int? driverId = default(int?), double? totalTax = default(double?), string orderTrackingCode = default(string))
         {
             this.Store = store;
             this.Customer = customer;
@@ -464,9 +614,17 @@ namespace Flipdish.Model
             this.DeliveryLocation = deliveryLocation;
             this.CustomerLocation = customerLocation;
             this.MaskedPhoneNumber = maskedPhoneNumber;
+            this.DropOffLocationId = dropOffLocationId;
+            this.DropOffLocation = dropOffLocation;
+            this.AcceptedFor = acceptedFor;
+            this.InFraudZone = inFraudZone;
+            this.UnusualHighValueOrder = unusualHighValueOrder;
+            this.RejectedByUserId = rejectedByUserId;
             this.OrderId = orderId;
+            this.LocalOrderId = localOrderId;
             this.DeliveryType = deliveryType;
             this.PickupLocationType = pickupLocationType;
+            this.TableServiceCatagory = tableServiceCatagory;
             this.TipAmount = tipAmount;
             this.DeliveryAmount = deliveryAmount;
             this.OrderItemsAmount = orderItemsAmount;
@@ -484,6 +642,10 @@ namespace Flipdish.Model
             this.PaymentStatus = paymentStatus;
             this.RejectionReason = rejectionReason;
             this.RefundedAmount = refundedAmount;
+            this.DeliveryTrackingStatus = deliveryTrackingStatus;
+            this.DriverId = driverId;
+            this.TotalTax = totalTax;
+            this.OrderTrackingCode = orderTrackingCode;
         }
         
         /// <summary>
@@ -543,11 +705,61 @@ namespace Flipdish.Model
         public MaskedPhoneNumber MaskedPhoneNumber { get; set; }
 
         /// <summary>
+        /// Represents table service drop off location
+        /// </summary>
+        /// <value>Represents table service drop off location</value>
+        [DataMember(Name="DropOffLocationId", EmitDefaultValue=false)]
+        public int? DropOffLocationId { get; set; }
+
+        /// <summary>
+        /// Represents table service drop off location
+        /// </summary>
+        /// <value>Represents table service drop off location</value>
+        [DataMember(Name="DropOffLocation", EmitDefaultValue=false)]
+        public string DropOffLocation { get; set; }
+
+        /// <summary>
+        /// Time store has accepted the order for
+        /// </summary>
+        /// <value>Time store has accepted the order for</value>
+        [DataMember(Name="AcceptedFor", EmitDefaultValue=false)]
+        public DateTime? AcceptedFor { get; set; }
+
+        /// <summary>
+        /// Was order made within a fraud zone
+        /// </summary>
+        /// <value>Was order made within a fraud zone</value>
+        [DataMember(Name="InFraudZone", EmitDefaultValue=false)]
+        public bool? InFraudZone { get; set; }
+
+        /// <summary>
+        /// Is order of unusually high value
+        /// </summary>
+        /// <value>Is order of unusually high value</value>
+        [DataMember(Name="UnusualHighValueOrder", EmitDefaultValue=false)]
+        public bool? UnusualHighValueOrder { get; set; }
+
+        /// <summary>
+        /// Id of user who rejected order, if available
+        /// </summary>
+        /// <value>Id of user who rejected order, if available</value>
+        [DataMember(Name="RejectedByUserId", EmitDefaultValue=false)]
+        public int? RejectedByUserId { get; set; }
+
+        /// <summary>
         /// Order identifier
         /// </summary>
         /// <value>Order identifier</value>
         [DataMember(Name="OrderId", EmitDefaultValue=false)]
         public int? OrderId { get; set; }
+
+        /// <summary>
+        /// Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders)
+        /// </summary>
+        /// <value>Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders)</value>
+        [DataMember(Name="LocalOrderId", EmitDefaultValue=false)]
+        public string LocalOrderId { get; set; }
+
 
 
 
@@ -640,6 +852,28 @@ namespace Flipdish.Model
         [DataMember(Name="RefundedAmount", EmitDefaultValue=false)]
         public double? RefundedAmount { get; set; }
 
+
+        /// <summary>
+        /// Assigned driver identifier
+        /// </summary>
+        /// <value>Assigned driver identifier</value>
+        [DataMember(Name="DriverId", EmitDefaultValue=false)]
+        public int? DriverId { get; set; }
+
+        /// <summary>
+        /// Total tax applied to order
+        /// </summary>
+        /// <value>Total tax applied to order</value>
+        [DataMember(Name="TotalTax", EmitDefaultValue=false)]
+        public double? TotalTax { get; set; }
+
+        /// <summary>
+        /// Unique, 6 character long alpha numeric code for tracking.
+        /// </summary>
+        /// <value>Unique, 6 character long alpha numeric code for tracking.</value>
+        [DataMember(Name="OrderTrackingCode", EmitDefaultValue=false)]
+        public string OrderTrackingCode { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -656,9 +890,17 @@ namespace Flipdish.Model
             sb.Append("  DeliveryLocation: ").Append(DeliveryLocation).Append("\n");
             sb.Append("  CustomerLocation: ").Append(CustomerLocation).Append("\n");
             sb.Append("  MaskedPhoneNumber: ").Append(MaskedPhoneNumber).Append("\n");
+            sb.Append("  DropOffLocationId: ").Append(DropOffLocationId).Append("\n");
+            sb.Append("  DropOffLocation: ").Append(DropOffLocation).Append("\n");
+            sb.Append("  AcceptedFor: ").Append(AcceptedFor).Append("\n");
+            sb.Append("  InFraudZone: ").Append(InFraudZone).Append("\n");
+            sb.Append("  UnusualHighValueOrder: ").Append(UnusualHighValueOrder).Append("\n");
+            sb.Append("  RejectedByUserId: ").Append(RejectedByUserId).Append("\n");
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
+            sb.Append("  LocalOrderId: ").Append(LocalOrderId).Append("\n");
             sb.Append("  DeliveryType: ").Append(DeliveryType).Append("\n");
             sb.Append("  PickupLocationType: ").Append(PickupLocationType).Append("\n");
+            sb.Append("  TableServiceCatagory: ").Append(TableServiceCatagory).Append("\n");
             sb.Append("  TipAmount: ").Append(TipAmount).Append("\n");
             sb.Append("  DeliveryAmount: ").Append(DeliveryAmount).Append("\n");
             sb.Append("  OrderItemsAmount: ").Append(OrderItemsAmount).Append("\n");
@@ -676,6 +918,10 @@ namespace Flipdish.Model
             sb.Append("  PaymentStatus: ").Append(PaymentStatus).Append("\n");
             sb.Append("  RejectionReason: ").Append(RejectionReason).Append("\n");
             sb.Append("  RefundedAmount: ").Append(RefundedAmount).Append("\n");
+            sb.Append("  DeliveryTrackingStatus: ").Append(DeliveryTrackingStatus).Append("\n");
+            sb.Append("  DriverId: ").Append(DriverId).Append("\n");
+            sb.Append("  TotalTax: ").Append(TotalTax).Append("\n");
+            sb.Append("  OrderTrackingCode: ").Append(OrderTrackingCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -751,9 +997,44 @@ namespace Flipdish.Model
                     this.MaskedPhoneNumber.Equals(input.MaskedPhoneNumber))
                 ) && 
                 (
+                    this.DropOffLocationId == input.DropOffLocationId ||
+                    (this.DropOffLocationId != null &&
+                    this.DropOffLocationId.Equals(input.DropOffLocationId))
+                ) && 
+                (
+                    this.DropOffLocation == input.DropOffLocation ||
+                    (this.DropOffLocation != null &&
+                    this.DropOffLocation.Equals(input.DropOffLocation))
+                ) && 
+                (
+                    this.AcceptedFor == input.AcceptedFor ||
+                    (this.AcceptedFor != null &&
+                    this.AcceptedFor.Equals(input.AcceptedFor))
+                ) && 
+                (
+                    this.InFraudZone == input.InFraudZone ||
+                    (this.InFraudZone != null &&
+                    this.InFraudZone.Equals(input.InFraudZone))
+                ) && 
+                (
+                    this.UnusualHighValueOrder == input.UnusualHighValueOrder ||
+                    (this.UnusualHighValueOrder != null &&
+                    this.UnusualHighValueOrder.Equals(input.UnusualHighValueOrder))
+                ) && 
+                (
+                    this.RejectedByUserId == input.RejectedByUserId ||
+                    (this.RejectedByUserId != null &&
+                    this.RejectedByUserId.Equals(input.RejectedByUserId))
+                ) && 
+                (
                     this.OrderId == input.OrderId ||
                     (this.OrderId != null &&
                     this.OrderId.Equals(input.OrderId))
+                ) && 
+                (
+                    this.LocalOrderId == input.LocalOrderId ||
+                    (this.LocalOrderId != null &&
+                    this.LocalOrderId.Equals(input.LocalOrderId))
                 ) && 
                 (
                     this.DeliveryType == input.DeliveryType ||
@@ -764,6 +1045,11 @@ namespace Flipdish.Model
                     this.PickupLocationType == input.PickupLocationType ||
                     (this.PickupLocationType != null &&
                     this.PickupLocationType.Equals(input.PickupLocationType))
+                ) && 
+                (
+                    this.TableServiceCatagory == input.TableServiceCatagory ||
+                    (this.TableServiceCatagory != null &&
+                    this.TableServiceCatagory.Equals(input.TableServiceCatagory))
                 ) && 
                 (
                     this.TipAmount == input.TipAmount ||
@@ -849,6 +1135,26 @@ namespace Flipdish.Model
                     this.RefundedAmount == input.RefundedAmount ||
                     (this.RefundedAmount != null &&
                     this.RefundedAmount.Equals(input.RefundedAmount))
+                ) && 
+                (
+                    this.DeliveryTrackingStatus == input.DeliveryTrackingStatus ||
+                    (this.DeliveryTrackingStatus != null &&
+                    this.DeliveryTrackingStatus.Equals(input.DeliveryTrackingStatus))
+                ) && 
+                (
+                    this.DriverId == input.DriverId ||
+                    (this.DriverId != null &&
+                    this.DriverId.Equals(input.DriverId))
+                ) && 
+                (
+                    this.TotalTax == input.TotalTax ||
+                    (this.TotalTax != null &&
+                    this.TotalTax.Equals(input.TotalTax))
+                ) && 
+                (
+                    this.OrderTrackingCode == input.OrderTrackingCode ||
+                    (this.OrderTrackingCode != null &&
+                    this.OrderTrackingCode.Equals(input.OrderTrackingCode))
                 );
         }
 
@@ -877,12 +1183,28 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CustomerLocation.GetHashCode();
                 if (this.MaskedPhoneNumber != null)
                     hashCode = hashCode * 59 + this.MaskedPhoneNumber.GetHashCode();
+                if (this.DropOffLocationId != null)
+                    hashCode = hashCode * 59 + this.DropOffLocationId.GetHashCode();
+                if (this.DropOffLocation != null)
+                    hashCode = hashCode * 59 + this.DropOffLocation.GetHashCode();
+                if (this.AcceptedFor != null)
+                    hashCode = hashCode * 59 + this.AcceptedFor.GetHashCode();
+                if (this.InFraudZone != null)
+                    hashCode = hashCode * 59 + this.InFraudZone.GetHashCode();
+                if (this.UnusualHighValueOrder != null)
+                    hashCode = hashCode * 59 + this.UnusualHighValueOrder.GetHashCode();
+                if (this.RejectedByUserId != null)
+                    hashCode = hashCode * 59 + this.RejectedByUserId.GetHashCode();
                 if (this.OrderId != null)
                     hashCode = hashCode * 59 + this.OrderId.GetHashCode();
+                if (this.LocalOrderId != null)
+                    hashCode = hashCode * 59 + this.LocalOrderId.GetHashCode();
                 if (this.DeliveryType != null)
                     hashCode = hashCode * 59 + this.DeliveryType.GetHashCode();
                 if (this.PickupLocationType != null)
                     hashCode = hashCode * 59 + this.PickupLocationType.GetHashCode();
+                if (this.TableServiceCatagory != null)
+                    hashCode = hashCode * 59 + this.TableServiceCatagory.GetHashCode();
                 if (this.TipAmount != null)
                     hashCode = hashCode * 59 + this.TipAmount.GetHashCode();
                 if (this.DeliveryAmount != null)
@@ -917,6 +1239,14 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.RejectionReason.GetHashCode();
                 if (this.RefundedAmount != null)
                     hashCode = hashCode * 59 + this.RefundedAmount.GetHashCode();
+                if (this.DeliveryTrackingStatus != null)
+                    hashCode = hashCode * 59 + this.DeliveryTrackingStatus.GetHashCode();
+                if (this.DriverId != null)
+                    hashCode = hashCode * 59 + this.DriverId.GetHashCode();
+                if (this.TotalTax != null)
+                    hashCode = hashCode * 59 + this.TotalTax.GetHashCode();
+                if (this.OrderTrackingCode != null)
+                    hashCode = hashCode * 59 + this.OrderTrackingCode.GetHashCode();
                 return hashCode;
             }
         }

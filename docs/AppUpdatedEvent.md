@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EventName** | **string** | The event name | [optional] 
 **Description** | **string** | Description | [optional] 
+**Changes** | **string** | A summary of changes made | [optional] 
 **AppName** | **string** | App Name | [optional] 
 **CountryId** | **string** | Country Id | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | User information | [optional] 

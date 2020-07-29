@@ -46,6 +46,27 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultApp</returns>
         ApiResponse<RestApiResultApp> GetAppWithHttpInfo (string appId);
         /// <summary>
+        /// Get the application hostname DNS delegation states for A and CNAME records.
+        /// </summary>
+        /// <remarks>
+        /// A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>RestApiResultDnsRecordInformation</returns>
+        RestApiResultDnsRecordInformation GetAppHostnameStatus (string appId);
+
+        /// <summary>
+        /// Get the application hostname DNS delegation states for A and CNAME records.
+        /// </summary>
+        /// <remarks>
+        /// A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>ApiResponse of RestApiResultDnsRecordInformation</returns>
+        ApiResponse<RestApiResultDnsRecordInformation> GetAppHostnameStatusWithHttpInfo (string appId);
+        /// <summary>
         /// Get Apps
         /// </summary>
         /// <remarks>
@@ -71,6 +92,69 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultApp</returns>
         ApiResponse<RestApiPaginationResultApp> GetAppsWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null);
         /// <summary>
+        /// Get panacea vanity url
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>RestApiStringResult</returns>
+        RestApiStringResult GetPanaceaVanityUrl (string appId);
+
+        /// <summary>
+        /// Get panacea vanity url
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        ApiResponse<RestApiStringResult> GetPanaceaVanityUrlWithHttpInfo (string appId);
+        /// <summary>
+        /// Get the application configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>RestApiArrayResultSupportedCountry</returns>
+        RestApiArrayResultSupportedCountry GetSupportedCountries ();
+
+        /// <summary>
+        /// Get the application configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of RestApiArrayResultSupportedCountry</returns>
+        ApiResponse<RestApiArrayResultSupportedCountry> GetSupportedCountriesWithHttpInfo ();
+        /// <summary>
+        /// Is panacea vanity url available
+        /// </summary>
+        /// <remarks>
+        /// Minimum length of 3 characters
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="appId"></param>
+        /// <returns>RestApiStringResult</returns>
+        RestApiStringResult IsPanaceaVanityUrlAvailable (string vanityUrl, string appId);
+
+        /// <summary>
+        /// Is panacea vanity url available
+        /// </summary>
+        /// <remarks>
+        /// Minimum length of 3 characters
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        ApiResponse<RestApiStringResult> IsPanaceaVanityUrlAvailableWithHttpInfo (string vanityUrl, string appId);
+        /// <summary>
         /// Set the application configuration
         /// </summary>
         /// <remarks>
@@ -94,6 +178,31 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultApp</returns>
         ApiResponse<RestApiResultApp> SetAppConfigWithHttpInfo (string appId, AppConfigUpdateModel appConfigUpdate);
         /// <summary>
+        /// Set the application hostname.
+        /// </summary>
+        /// <remarks>
+        /// If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="hostname">The new Hostname.</param>
+        /// <param name="isEmbed">Will the website be embedded (optional)</param>
+        /// <returns>RestApiStringResult</returns>
+        RestApiStringResult SetAppHostname (string appId, string hostname, bool? isEmbed = null);
+
+        /// <summary>
+        /// Set the application hostname.
+        /// </summary>
+        /// <remarks>
+        /// If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="hostname">The new Hostname.</param>
+        /// <param name="isEmbed">Will the website be embedded (optional)</param>
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        ApiResponse<RestApiStringResult> SetAppHostnameWithHttpInfo (string appId, string hostname, bool? isEmbed = null);
+        /// <summary>
         /// Set the application languages
         /// </summary>
         /// <remarks>
@@ -116,6 +225,29 @@ namespace Flipdish.Api
         /// <param name="languages">New list of languages</param>
         /// <returns>ApiResponse of RestApiResultApp</returns>
         ApiResponse<RestApiResultApp> SetAppLanguagesWithHttpInfo (string appId, List<Language> languages);
+        /// <summary>
+        /// Set panacea vanity url
+        /// </summary>
+        /// <remarks>
+        /// Minimum length of 3 characters
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="vanityUrl">Vanity url</param>
+        /// <returns>RestApiStringResult</returns>
+        RestApiStringResult SetPanaceaVanityUrl (string appId, string vanityUrl);
+
+        /// <summary>
+        /// Set panacea vanity url
+        /// </summary>
+        /// <remarks>
+        /// Minimum length of 3 characters
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="vanityUrl">Vanity url</param>
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        ApiResponse<RestApiStringResult> SetPanaceaVanityUrlWithHttpInfo (string appId, string vanityUrl);
         /// <summary>
         /// Set the application logo \\ icon
         /// </summary>
@@ -163,6 +295,27 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> GetAppAsyncWithHttpInfo (string appId);
         /// <summary>
+        /// Get the application hostname DNS delegation states for A and CNAME records.
+        /// </summary>
+        /// <remarks>
+        /// A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>Task of RestApiResultDnsRecordInformation</returns>
+        System.Threading.Tasks.Task<RestApiResultDnsRecordInformation> GetAppHostnameStatusAsync (string appId);
+
+        /// <summary>
+        /// Get the application hostname DNS delegation states for A and CNAME records.
+        /// </summary>
+        /// <remarks>
+        /// A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>Task of ApiResponse (RestApiResultDnsRecordInformation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultDnsRecordInformation>> GetAppHostnameStatusAsyncWithHttpInfo (string appId);
+        /// <summary>
         /// Get Apps
         /// </summary>
         /// <remarks>
@@ -188,6 +341,69 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiPaginationResultApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultApp>> GetAppsAsyncWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null);
         /// <summary>
+        /// Get panacea vanity url
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>Task of RestApiStringResult</returns>
+        System.Threading.Tasks.Task<RestApiStringResult> GetPanaceaVanityUrlAsync (string appId);
+
+        /// <summary>
+        /// Get panacea vanity url
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetPanaceaVanityUrlAsyncWithHttpInfo (string appId);
+        /// <summary>
+        /// Get the application configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of RestApiArrayResultSupportedCountry</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultSupportedCountry> GetSupportedCountriesAsync ();
+
+        /// <summary>
+        /// Get the application configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (RestApiArrayResultSupportedCountry)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultSupportedCountry>> GetSupportedCountriesAsyncWithHttpInfo ();
+        /// <summary>
+        /// Is panacea vanity url available
+        /// </summary>
+        /// <remarks>
+        /// Minimum length of 3 characters
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiStringResult</returns>
+        System.Threading.Tasks.Task<RestApiStringResult> IsPanaceaVanityUrlAvailableAsync (string vanityUrl, string appId);
+
+        /// <summary>
+        /// Is panacea vanity url available
+        /// </summary>
+        /// <remarks>
+        /// Minimum length of 3 characters
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> IsPanaceaVanityUrlAvailableAsyncWithHttpInfo (string vanityUrl, string appId);
+        /// <summary>
         /// Set the application configuration
         /// </summary>
         /// <remarks>
@@ -211,6 +427,31 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> SetAppConfigAsyncWithHttpInfo (string appId, AppConfigUpdateModel appConfigUpdate);
         /// <summary>
+        /// Set the application hostname.
+        /// </summary>
+        /// <remarks>
+        /// If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="hostname">The new Hostname.</param>
+        /// <param name="isEmbed">Will the website be embedded (optional)</param>
+        /// <returns>Task of RestApiStringResult</returns>
+        System.Threading.Tasks.Task<RestApiStringResult> SetAppHostnameAsync (string appId, string hostname, bool? isEmbed = null);
+
+        /// <summary>
+        /// Set the application hostname.
+        /// </summary>
+        /// <remarks>
+        /// If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="hostname">The new Hostname.</param>
+        /// <param name="isEmbed">Will the website be embedded (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetAppHostnameAsyncWithHttpInfo (string appId, string hostname, bool? isEmbed = null);
+        /// <summary>
         /// Set the application languages
         /// </summary>
         /// <remarks>
@@ -233,6 +474,29 @@ namespace Flipdish.Api
         /// <param name="languages">New list of languages</param>
         /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> SetAppLanguagesAsyncWithHttpInfo (string appId, List<Language> languages);
+        /// <summary>
+        /// Set panacea vanity url
+        /// </summary>
+        /// <remarks>
+        /// Minimum length of 3 characters
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="vanityUrl">Vanity url</param>
+        /// <returns>Task of RestApiStringResult</returns>
+        System.Threading.Tasks.Task<RestApiStringResult> SetPanaceaVanityUrlAsync (string appId, string vanityUrl);
+
+        /// <summary>
+        /// Set panacea vanity url
+        /// </summary>
+        /// <remarks>
+        /// Minimum length of 3 characters
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="vanityUrl">Vanity url</param>
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetPanaceaVanityUrlAsyncWithHttpInfo (string appId, string vanityUrl);
         /// <summary>
         /// Set the application logo \\ icon
         /// </summary>
@@ -508,6 +772,157 @@ namespace Flipdish.Api
         }
 
         /// <summary>
+        /// Get the application hostname DNS delegation states for A and CNAME records. A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>RestApiResultDnsRecordInformation</returns>
+        public RestApiResultDnsRecordInformation GetAppHostnameStatus (string appId)
+        {
+             ApiResponse<RestApiResultDnsRecordInformation> localVarResponse = GetAppHostnameStatusWithHttpInfo(appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the application hostname DNS delegation states for A and CNAME records. A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>ApiResponse of RestApiResultDnsRecordInformation</returns>
+        public ApiResponse< RestApiResultDnsRecordInformation > GetAppHostnameStatusWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->GetAppHostnameStatus");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/hostnamestatus";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAppHostnameStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultDnsRecordInformation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultDnsRecordInformation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultDnsRecordInformation)));
+        }
+
+        /// <summary>
+        /// Get the application hostname DNS delegation states for A and CNAME records. A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>Task of RestApiResultDnsRecordInformation</returns>
+        public async System.Threading.Tasks.Task<RestApiResultDnsRecordInformation> GetAppHostnameStatusAsync (string appId)
+        {
+             ApiResponse<RestApiResultDnsRecordInformation> localVarResponse = await GetAppHostnameStatusAsyncWithHttpInfo(appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the application hostname DNS delegation states for A and CNAME records. A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>Task of ApiResponse (RestApiResultDnsRecordInformation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultDnsRecordInformation>> GetAppHostnameStatusAsyncWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->GetAppHostnameStatus");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/hostnamestatus";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAppHostnameStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultDnsRecordInformation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultDnsRecordInformation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultDnsRecordInformation)));
+        }
+
+        /// <summary>
         /// Get Apps 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
@@ -662,6 +1077,459 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiPaginationResultApp>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiPaginationResultApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultApp)));
+        }
+
+        /// <summary>
+        /// Get panacea vanity url 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>RestApiStringResult</returns>
+        public RestApiStringResult GetPanaceaVanityUrl (string appId)
+        {
+             ApiResponse<RestApiStringResult> localVarResponse = GetPanaceaVanityUrlWithHttpInfo(appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get panacea vanity url 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        public ApiResponse< RestApiStringResult > GetPanaceaVanityUrlWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->GetPanaceaVanityUrl");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/panacea/url";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPanaceaVanityUrl", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+        }
+
+        /// <summary>
+        /// Get panacea vanity url 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>Task of RestApiStringResult</returns>
+        public async System.Threading.Tasks.Task<RestApiStringResult> GetPanaceaVanityUrlAsync (string appId)
+        {
+             ApiResponse<RestApiStringResult> localVarResponse = await GetPanaceaVanityUrlAsyncWithHttpInfo(appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get panacea vanity url 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetPanaceaVanityUrlAsyncWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->GetPanaceaVanityUrl");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/panacea/url";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPanaceaVanityUrl", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+        }
+
+        /// <summary>
+        /// Get the application configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>RestApiArrayResultSupportedCountry</returns>
+        public RestApiArrayResultSupportedCountry GetSupportedCountries ()
+        {
+             ApiResponse<RestApiArrayResultSupportedCountry> localVarResponse = GetSupportedCountriesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the application configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of RestApiArrayResultSupportedCountry</returns>
+        public ApiResponse< RestApiArrayResultSupportedCountry > GetSupportedCountriesWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v1.0/apps/supportedcountries";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSupportedCountries", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultSupportedCountry>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultSupportedCountry) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultSupportedCountry)));
+        }
+
+        /// <summary>
+        /// Get the application configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of RestApiArrayResultSupportedCountry</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultSupportedCountry> GetSupportedCountriesAsync ()
+        {
+             ApiResponse<RestApiArrayResultSupportedCountry> localVarResponse = await GetSupportedCountriesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the application configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (RestApiArrayResultSupportedCountry)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultSupportedCountry>> GetSupportedCountriesAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v1.0/apps/supportedcountries";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSupportedCountries", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultSupportedCountry>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultSupportedCountry) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultSupportedCountry)));
+        }
+
+        /// <summary>
+        /// Is panacea vanity url available Minimum length of 3 characters
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="appId"></param>
+        /// <returns>RestApiStringResult</returns>
+        public RestApiStringResult IsPanaceaVanityUrlAvailable (string vanityUrl, string appId)
+        {
+             ApiResponse<RestApiStringResult> localVarResponse = IsPanaceaVanityUrlAvailableWithHttpInfo(vanityUrl, appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Is panacea vanity url available Minimum length of 3 characters
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        public ApiResponse< RestApiStringResult > IsPanaceaVanityUrlAvailableWithHttpInfo (string vanityUrl, string appId)
+        {
+            // verify the required parameter 'vanityUrl' is set
+            if (vanityUrl == null)
+                throw new ApiException(400, "Missing required parameter 'vanityUrl' when calling AppsApi->IsPanaceaVanityUrlAvailable");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->IsPanaceaVanityUrlAvailable");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/panacea/url/available";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (vanityUrl != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "vanityUrl", vanityUrl)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("IsPanaceaVanityUrlAvailable", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+        }
+
+        /// <summary>
+        /// Is panacea vanity url available Minimum length of 3 characters
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiStringResult</returns>
+        public async System.Threading.Tasks.Task<RestApiStringResult> IsPanaceaVanityUrlAvailableAsync (string vanityUrl, string appId)
+        {
+             ApiResponse<RestApiStringResult> localVarResponse = await IsPanaceaVanityUrlAvailableAsyncWithHttpInfo(vanityUrl, appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Is panacea vanity url available Minimum length of 3 characters
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> IsPanaceaVanityUrlAvailableAsyncWithHttpInfo (string vanityUrl, string appId)
+        {
+            // verify the required parameter 'vanityUrl' is set
+            if (vanityUrl == null)
+                throw new ApiException(400, "Missing required parameter 'vanityUrl' when calling AppsApi->IsPanaceaVanityUrlAvailable");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->IsPanaceaVanityUrlAvailable");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/panacea/url/available";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (vanityUrl != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "vanityUrl", vanityUrl)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("IsPanaceaVanityUrlAvailable", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
         /// <summary>
@@ -852,6 +1720,175 @@ namespace Flipdish.Api
         }
 
         /// <summary>
+        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="hostname">The new Hostname.</param>
+        /// <param name="isEmbed">Will the website be embedded (optional)</param>
+        /// <returns>RestApiStringResult</returns>
+        public RestApiStringResult SetAppHostname (string appId, string hostname, bool? isEmbed = null)
+        {
+             ApiResponse<RestApiStringResult> localVarResponse = SetAppHostnameWithHttpInfo(appId, hostname, isEmbed);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="hostname">The new Hostname.</param>
+        /// <param name="isEmbed">Will the website be embedded (optional)</param>
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        public ApiResponse< RestApiStringResult > SetAppHostnameWithHttpInfo (string appId, string hostname, bool? isEmbed = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->SetAppHostname");
+            // verify the required parameter 'hostname' is set
+            if (hostname == null)
+                throw new ApiException(400, "Missing required parameter 'hostname' when calling AppsApi->SetAppHostname");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/hostname";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (hostname != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "hostname", hostname)); // query parameter
+            if (isEmbed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isEmbed", isEmbed)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetAppHostname", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+        }
+
+        /// <summary>
+        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="hostname">The new Hostname.</param>
+        /// <param name="isEmbed">Will the website be embedded (optional)</param>
+        /// <returns>Task of RestApiStringResult</returns>
+        public async System.Threading.Tasks.Task<RestApiStringResult> SetAppHostnameAsync (string appId, string hostname, bool? isEmbed = null)
+        {
+             ApiResponse<RestApiStringResult> localVarResponse = await SetAppHostnameAsyncWithHttpInfo(appId, hostname, isEmbed);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="hostname">The new Hostname.</param>
+        /// <param name="isEmbed">Will the website be embedded (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetAppHostnameAsyncWithHttpInfo (string appId, string hostname, bool? isEmbed = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->SetAppHostname");
+            // verify the required parameter 'hostname' is set
+            if (hostname == null)
+                throw new ApiException(400, "Missing required parameter 'hostname' when calling AppsApi->SetAppHostname");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/hostname";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (hostname != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "hostname", hostname)); // query parameter
+            if (isEmbed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isEmbed", isEmbed)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetAppHostname", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+        }
+
+        /// <summary>
         /// Set the application languages 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1036,6 +2073,169 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultApp>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiResultApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApp)));
+        }
+
+        /// <summary>
+        /// Set panacea vanity url Minimum length of 3 characters
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="vanityUrl">Vanity url</param>
+        /// <returns>RestApiStringResult</returns>
+        public RestApiStringResult SetPanaceaVanityUrl (string appId, string vanityUrl)
+        {
+             ApiResponse<RestApiStringResult> localVarResponse = SetPanaceaVanityUrlWithHttpInfo(appId, vanityUrl);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set panacea vanity url Minimum length of 3 characters
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="vanityUrl">Vanity url</param>
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        public ApiResponse< RestApiStringResult > SetPanaceaVanityUrlWithHttpInfo (string appId, string vanityUrl)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->SetPanaceaVanityUrl");
+            // verify the required parameter 'vanityUrl' is set
+            if (vanityUrl == null)
+                throw new ApiException(400, "Missing required parameter 'vanityUrl' when calling AppsApi->SetPanaceaVanityUrl");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/panacea/url";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (vanityUrl != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "vanityUrl", vanityUrl)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetPanaceaVanityUrl", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+        }
+
+        /// <summary>
+        /// Set panacea vanity url Minimum length of 3 characters
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="vanityUrl">Vanity url</param>
+        /// <returns>Task of RestApiStringResult</returns>
+        public async System.Threading.Tasks.Task<RestApiStringResult> SetPanaceaVanityUrlAsync (string appId, string vanityUrl)
+        {
+             ApiResponse<RestApiStringResult> localVarResponse = await SetPanaceaVanityUrlAsyncWithHttpInfo(appId, vanityUrl);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set panacea vanity url Minimum length of 3 characters
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier.</param>
+        /// <param name="vanityUrl">Vanity url</param>
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetPanaceaVanityUrlAsyncWithHttpInfo (string appId, string vanityUrl)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->SetPanaceaVanityUrl");
+            // verify the required parameter 'vanityUrl' is set
+            if (vanityUrl == null)
+                throw new ApiException(400, "Missing required parameter 'vanityUrl' when calling AppsApi->SetPanaceaVanityUrl");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/panacea/url";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (vanityUrl != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "vanityUrl", vanityUrl)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetPanaceaVanityUrl", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
         /// <summary>

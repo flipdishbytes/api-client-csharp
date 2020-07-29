@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**DeleteTeammate**](TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | Delete teammate
 [**GetTeammateByAppIdAndTeammateId**](TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | Get a teammates by email address
 [**GetTeammatesByAppId**](TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
-[**RedeemInvitation**](TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+[**RedeemInvitation**](TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | Redeem one-time code from invitation
 [**UpdateTeammate**](TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | Update teammates (this method does not support Deltas!)
 
 
@@ -36,8 +36,8 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new TeammatesApi();
-            var appId = appId_example;  // string | 
-            var teammate = new CreateTeammate(); // CreateTeammate | 
+            var appId = appId_example;  // string | Application identifier
+            var teammate = new CreateTeammate(); // CreateTeammate | teammate model
 
             try
             {
@@ -58,8 +58,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
- **teammate** | [**CreateTeammate**](CreateTeammate.md)|  | 
+ **appId** | **string**| Application identifier | 
+ **teammate** | [**CreateTeammate**](CreateTeammate.md)| teammate model | 
 
 ### Return type
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 # **RedeemInvitation**
 > RestApiResultRedeemInvitationResult RedeemInvitation (string otc, string appId)
 
-
+Redeem one-time code from invitation
 
 ### Example
 ```csharp
@@ -294,6 +294,7 @@ namespace Example
 
             try
             {
+                // Redeem one-time code from invitation
                 RestApiResultRedeemInvitationResult result = apiInstance.RedeemInvitation(otc, appId);
                 Debug.WriteLine(result);
             }
@@ -352,9 +353,9 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new TeammatesApi();
-            var appId = appId_example;  // string | 
-            var id = id_example;  // string | 
-            var teammate = new TeammateBase(); // TeammateBase | 
+            var appId = appId_example;  // string | Application identifier
+            var id = id_example;  // string | teammate identifier
+            var teammate = new TeammateBase(); // TeammateBase | teammate model
 
             try
             {
@@ -375,9 +376,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
- **id** | **string**|  | 
- **teammate** | [**TeammateBase**](TeammateBase.md)|  | 
+ **appId** | **string**| Application identifier | 
+ **id** | **string**| teammate identifier | 
+ **teammate** | [**TeammateBase**](TeammateBase.md)| teammate model | 
 
 ### Return type
 

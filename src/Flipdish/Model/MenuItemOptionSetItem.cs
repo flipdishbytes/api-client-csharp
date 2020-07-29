@@ -73,23 +73,25 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="MenuItemOptionSetItem" /> class.
         /// </summary>
         /// <param name="menuItemOptionSetItemId">Menu item option set item identifier.</param>
-        /// <param name="imageUrl">Image url.</param>
         /// <param name="publicId">Permanent reference to the item..</param>
+        /// <param name="metadata">List of metadata.</param>
         /// <param name="name">Name.</param>
         /// <param name="price">Price.</param>
         /// <param name="isAvailable">Is available.</param>
         /// <param name="displayOrder">Display order. Displayed in ascending order..</param>
         /// <param name="cellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
-        public MenuItemOptionSetItem(int? menuItemOptionSetItemId = default(int?), string imageUrl = default(string), Guid? publicId = default(Guid?), string name = default(string), double? price = default(double?), bool? isAvailable = default(bool?), int? displayOrder = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?))
+        /// <param name="imageUrl">Image url.</param>
+        public MenuItemOptionSetItem(int? menuItemOptionSetItemId = default(int?), Guid? publicId = default(Guid?), List<CreateMetadata> metadata = default(List<CreateMetadata>), string name = default(string), double? price = default(double?), bool? isAvailable = default(bool?), int? displayOrder = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), string imageUrl = default(string))
         {
             this.MenuItemOptionSetItemId = menuItemOptionSetItemId;
-            this.ImageUrl = imageUrl;
             this.PublicId = publicId;
+            this.Metadata = metadata;
             this.Name = name;
             this.Price = price;
             this.IsAvailable = isAvailable;
             this.DisplayOrder = displayOrder;
             this.CellLayoutType = cellLayoutType;
+            this.ImageUrl = imageUrl;
         }
         
         /// <summary>
@@ -100,18 +102,18 @@ namespace Flipdish.Model
         public int? MenuItemOptionSetItemId { get; set; }
 
         /// <summary>
-        /// Image url
-        /// </summary>
-        /// <value>Image url</value>
-        [DataMember(Name="ImageUrl", EmitDefaultValue=false)]
-        public string ImageUrl { get; set; }
-
-        /// <summary>
         /// Permanent reference to the item.
         /// </summary>
         /// <value>Permanent reference to the item.</value>
         [DataMember(Name="PublicId", EmitDefaultValue=false)]
         public Guid? PublicId { get; set; }
+
+        /// <summary>
+        /// List of metadata
+        /// </summary>
+        /// <value>List of metadata</value>
+        [DataMember(Name="Metadata", EmitDefaultValue=false)]
+        public List<CreateMetadata> Metadata { get; set; }
 
         /// <summary>
         /// Name
@@ -143,6 +145,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Image url
+        /// </summary>
+        /// <value>Image url</value>
+        [DataMember(Name="ImageUrl", EmitDefaultValue=false)]
+        public string ImageUrl { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -151,13 +160,14 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class MenuItemOptionSetItem {\n");
             sb.Append("  MenuItemOptionSetItemId: ").Append(MenuItemOptionSetItemId).Append("\n");
-            sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  PublicId: ").Append(PublicId).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("  IsAvailable: ").Append(IsAvailable).Append("\n");
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
             sb.Append("  CellLayoutType: ").Append(CellLayoutType).Append("\n");
+            sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -198,14 +208,14 @@ namespace Flipdish.Model
                     this.MenuItemOptionSetItemId.Equals(input.MenuItemOptionSetItemId))
                 ) && 
                 (
-                    this.ImageUrl == input.ImageUrl ||
-                    (this.ImageUrl != null &&
-                    this.ImageUrl.Equals(input.ImageUrl))
-                ) && 
-                (
                     this.PublicId == input.PublicId ||
                     (this.PublicId != null &&
                     this.PublicId.Equals(input.PublicId))
+                ) && 
+                (
+                    this.Metadata == input.Metadata ||
+                    this.Metadata != null &&
+                    this.Metadata.SequenceEqual(input.Metadata)
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -231,6 +241,11 @@ namespace Flipdish.Model
                     this.CellLayoutType == input.CellLayoutType ||
                     (this.CellLayoutType != null &&
                     this.CellLayoutType.Equals(input.CellLayoutType))
+                ) && 
+                (
+                    this.ImageUrl == input.ImageUrl ||
+                    (this.ImageUrl != null &&
+                    this.ImageUrl.Equals(input.ImageUrl))
                 );
         }
 
@@ -245,10 +260,10 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.MenuItemOptionSetItemId != null)
                     hashCode = hashCode * 59 + this.MenuItemOptionSetItemId.GetHashCode();
-                if (this.ImageUrl != null)
-                    hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 if (this.PublicId != null)
                     hashCode = hashCode * 59 + this.PublicId.GetHashCode();
+                if (this.Metadata != null)
+                    hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Price != null)
@@ -259,6 +274,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DisplayOrder.GetHashCode();
                 if (this.CellLayoutType != null)
                     hashCode = hashCode * 59 + this.CellLayoutType.GetHashCode();
+                if (this.ImageUrl != null)
+                    hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 return hashCode;
             }
         }
