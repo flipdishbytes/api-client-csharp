@@ -1,4 +1,4 @@
-# Flipdish.Model.Metadata
+# IO.Swagger.Model.Metadata
 ## Properties
 
 Name | Type | Description | Notes

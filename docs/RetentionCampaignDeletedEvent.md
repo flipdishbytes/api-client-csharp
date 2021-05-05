@@ -1,4 +1,4 @@
-# Flipdish.Model.RetentionCampaignDeletedEvent
+# IO.Swagger.Model.RetentionCampaignDeletedEvent
 ## Properties
 
 Name | Type | Description | Notes

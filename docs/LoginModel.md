@@ -1,4 +1,4 @@
-# Flipdish.Model.LoginModel
+# IO.Swagger.Model.LoginModel
 ## Properties
 
 Name | Type | Description | Notes

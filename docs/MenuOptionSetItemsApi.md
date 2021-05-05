@@ -1,4 +1,4 @@
-# Flipdish.Api.MenuOptionSetItemsApi
+# IO.Swagger.Api.MenuOptionSetItemsApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -24,9 +24,9 @@ Create menu item option set item
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -94,9 +94,9 @@ Delete menu item option set item image
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -163,9 +163,9 @@ Get menu item option set item by identifier
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -233,9 +233,9 @@ Get menu item option set items
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -301,9 +301,9 @@ Delete menu item option set item
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -370,9 +370,9 @@ void (empty response body)
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -441,9 +441,9 @@ Update menu item option set item
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -514,9 +514,9 @@ Upload menu item option set item image
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {

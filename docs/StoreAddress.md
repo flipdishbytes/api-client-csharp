@@ -1,4 +1,4 @@
-# Flipdish.Model.StoreAddress
+# IO.Swagger.Model.StoreAddress
 ## Properties
 
 Name | Type | Description | Notes

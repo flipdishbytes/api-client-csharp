@@ -1,4 +1,4 @@
-# Flipdish.Api.MenusApi
+# IO.Swagger.Api.MenusApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -43,9 +43,9 @@ Method | HTTP request | Description
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -107,9 +107,9 @@ Create a new menu. If request body is empty, the system will create a menu with 
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -171,9 +171,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -232,9 +232,9 @@ Delete menu image
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -293,9 +293,9 @@ Delete menu item metadata
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -360,9 +360,9 @@ Get all menu metadata by menu ID and store ID
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -424,9 +424,9 @@ Get menu by identifier
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -486,9 +486,9 @@ Get menu item metadata
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -552,9 +552,9 @@ Get menu item metadata by key
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -619,9 +619,9 @@ Get menu item option set item metadata by key
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -685,9 +685,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -747,9 +747,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -809,9 +809,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -871,9 +871,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -933,9 +933,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -996,9 +996,9 @@ void (empty response body)
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -1059,9 +1059,9 @@ void (empty response body)
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -1122,9 +1122,9 @@ void (empty response body)
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -1185,9 +1185,9 @@ void (empty response body)
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -1249,9 +1249,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -1312,9 +1312,9 @@ Update menu item metadata
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -1379,9 +1379,9 @@ Update menu item option set item metadata
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -1446,9 +1446,9 @@ void (empty response body)
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -1509,9 +1509,9 @@ void (empty response body)
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -1572,9 +1572,9 @@ Update menu
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -1635,9 +1635,9 @@ Upload menu image
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -1699,9 +1699,9 @@ Create a new menu from xlsx file.
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {

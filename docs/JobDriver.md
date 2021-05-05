@@ -1,4 +1,4 @@
-# Flipdish.Model.JobDriver
+# IO.Swagger.Model.JobDriver
 ## Properties
 
 Name | Type | Description | Notes

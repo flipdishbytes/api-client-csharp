@@ -1,4 +1,4 @@
-# Flipdish.Api.OAuthClientsApi
+# IO.Swagger.Api.OAuthClientsApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -27,9 +27,9 @@ Create OAuth App redirect uri
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -93,9 +93,9 @@ Create OAuth App
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -156,9 +156,9 @@ Delete OAuth App
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -219,9 +219,9 @@ Get all OAuth Apps
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -283,9 +283,9 @@ Get OAuth App by identifier
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -347,9 +347,9 @@ Get OAuth App secret key
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -411,9 +411,9 @@ Get OAuth access token for App
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -475,9 +475,9 @@ Get OAuth App redirect uris
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -539,9 +539,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -600,9 +600,9 @@ Delete OAuth App redirect uri
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -665,9 +665,9 @@ Update OAuth App
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {

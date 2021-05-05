@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultPushNotificationResponse
+# IO.Swagger.Model.RestApiResultPushNotificationResponse
 ## Properties
 
 Name | Type | Description | Notes

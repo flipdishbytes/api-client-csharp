@@ -1,4 +1,4 @@
-# Flipdish.Model.CreateVoucher
+# IO.Swagger.Model.CreateVoucher
 ## Properties
 
 Name | Type | Description | Notes

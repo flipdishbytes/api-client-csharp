@@ -1,4 +1,4 @@
-# Flipdish.Model.LoyaltyCampaignDeletedEvent
+# IO.Swagger.Model.LoyaltyCampaignDeletedEvent
 ## Properties
 
 Name | Type | Description | Notes

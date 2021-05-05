@@ -1,4 +1,4 @@
-# Flipdish.Api.MenuSectionsApi
+# IO.Swagger.Api.MenuSectionsApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -27,9 +27,9 @@ Clone menu section
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -91,9 +91,9 @@ Set/update menu section availability hours.
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -159,9 +159,9 @@ Create menu section
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -223,9 +223,9 @@ Create menu availability type
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -289,9 +289,9 @@ Delete menu section
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -352,9 +352,9 @@ Delete menu section image
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -415,9 +415,9 @@ Get menu section by identifier
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -479,9 +479,9 @@ Get menu sections
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -541,9 +541,9 @@ Re-arrange Items within a Section
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -606,9 +606,9 @@ Update menu section
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -623,7 +623,7 @@ namespace Example
             var menuId = 56;  // int? | Menu identifier
             var menuSectionId = 56;  // int? | Menu section identifier
             var menuSection = new MenuSectionBase(); // MenuSectionBase | Menu section changes (delta)
-            var undoAfter = 1.2;  // double? | An optional time period, in hours, after which the hide-section operaton will be undone. (optional) 
+            var undoAfter = 1.2;  // double? | An optional time period, in hours, after which the hide-section operation will be undone. (optional) 
 
             try
             {
@@ -646,7 +646,7 @@ Name | Type | Description  | Notes
  **menuId** | **int?**| Menu identifier | 
  **menuSectionId** | **int?**| Menu section identifier | 
  **menuSection** | [**MenuSectionBase**](MenuSectionBase.md)| Menu section changes (delta) | 
- **undoAfter** | **double?**| An optional time period, in hours, after which the hide-section operaton will be undone. | [optional] 
+ **undoAfter** | **double?**| An optional time period, in hours, after which the hide-section operation will be undone. | [optional] 
 
 ### Return type
 
@@ -673,9 +673,9 @@ Upload menu section image
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {

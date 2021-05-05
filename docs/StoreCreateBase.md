@@ -1,4 +1,4 @@
-# Flipdish.Model.StoreCreateBase
+# IO.Swagger.Model.StoreCreateBase
 ## Properties
 
 Name | Type | Description | Notes

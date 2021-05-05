@@ -1,4 +1,4 @@
-# Flipdish.Model.PreOrderTime
+# IO.Swagger.Model.PreOrderTime
 ## Properties
 
 Name | Type | Description | Notes

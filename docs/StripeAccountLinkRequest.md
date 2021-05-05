@@ -1,11 +1,10 @@
-# Flipdish.Model.StripeAccountLinkRequest
+# IO.Swagger.Model.StripeAccountLinkRequest
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **StripeId** | **string** | Stripe&#39;s own connected account identifier | [optional] 
-**SuccessUrl** | **string** | URL to be hit if link creation succeeds | [optional] 
-**FailureUrl** | **string** | URL to be hit if link creation fails | [optional] 
+**ReturnUrl** | **string** | URL to be hit if link creation succeeds | [optional] 
 **Collect** | **string** | Which information to collect from users at this stage | [optional] 
 **Type** | **string** | Either onboarding or edit user information | [optional] 
 

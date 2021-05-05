@@ -1,4 +1,4 @@
-# Flipdish.Api.AppsApi
+# IO.Swagger.Api.AppsApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -7,12 +7,14 @@ Method | HTTP request | Description
 [**GetApp**](AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | Get the application configuration
 [**GetAppHostnameStatus**](AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | Get the application hostname DNS delegation states for A and CNAME records.
 [**GetApps**](AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
-[**GetPanaceaVanityUrl**](AppsApi.md#getpanaceavanityurl) | **GET** /api/v1.0/apps/{appId}/panacea/url | Get panacea vanity url
-[**GetSupportedCountries**](AppsApi.md#getsupportedcountries) | **GET** /api/v1.0/apps/supportedcountries | Get the application configuration
+[**GetCompliance**](AppsApi.md#getcompliance) | **GET** /api/v1.0/apps/{appId}/compliance | Get the application compliance configuration
+[**GetPanaceaVanityUrl**](AppsApi.md#getpanaceavanityurl) | **GET** /api/v1.0/apps/{appId}/panacea/url | Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
+[**GetSupportedCountries**](AppsApi.md#getsupportedcountries) | **GET** /api/v1.0/apps/supportedcountries | Get all supported countries.
 [**IsPanaceaVanityUrlAvailable**](AppsApi.md#ispanaceavanityurlavailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | Is panacea vanity url available
 [**SetAppConfig**](AppsApi.md#setappconfig) | **POST** /api/v1.0/apps/{appId}/config | Set the application configuration
 [**SetAppHostname**](AppsApi.md#setapphostname) | **POST** /api/v1.0/apps/{appId}/hostname | Set the application hostname.
 [**SetAppLanguages**](AppsApi.md#setapplanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | Set the application languages
+[**SetCompliance**](AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | Set the application compliance configuration
 [**SetPanaceaVanityUrl**](AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | Set panacea vanity url
 [**UploadAppLogo**](AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | Set the application logo \\ icon
 
@@ -27,9 +29,9 @@ Get the application configuration
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -91,9 +93,9 @@ A domain might be ready but still need 10 minutes to work properly because of HA
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -153,9 +155,9 @@ Get Apps
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -209,19 +211,81 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getpanaceavanityurl"></a>
-# **GetPanaceaVanityUrl**
-> RestApiStringResult GetPanaceaVanityUrl (string appId)
+<a name="getcompliance"></a>
+# **GetCompliance**
+> RestApiResultAppCompliance GetCompliance (string appId)
 
-Get panacea vanity url
+Get the application compliance configuration
 
 ### Example
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetComplianceExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppsApi();
+            var appId = appId_example;  // string | Application identifier
+
+            try
+            {
+                // Get the application compliance configuration
+                RestApiResultAppCompliance result = apiInstance.GetCompliance(appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppsApi.GetCompliance: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**| Application identifier | 
+
+### Return type
+
+[**RestApiResultAppCompliance**](RestApiResultAppCompliance.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpanaceavanityurl"></a>
+# **GetPanaceaVanityUrl**
+> RestApiStringResult GetPanaceaVanityUrl (string appId)
+
+Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -237,7 +301,7 @@ namespace Example
 
             try
             {
-                // Get panacea vanity url
+                // Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
                 RestApiStringResult result = apiInstance.GetPanaceaVanityUrl(appId);
                 Debug.WriteLine(result);
             }
@@ -275,15 +339,15 @@ Name | Type | Description  | Notes
 # **GetSupportedCountries**
 > RestApiArrayResultSupportedCountry GetSupportedCountries ()
 
-Get the application configuration
+Get all supported countries.
 
 ### Example
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -298,7 +362,7 @@ namespace Example
 
             try
             {
-                // Get the application configuration
+                // Get all supported countries.
                 RestApiArrayResultSupportedCountry result = apiInstance.GetSupportedCountries();
                 Debug.WriteLine(result);
             }
@@ -341,9 +405,9 @@ Minimum length of 3 characters
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -405,9 +469,9 @@ Set the application configuration
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -465,15 +529,15 @@ Name | Type | Description  | Notes
 
 Set the application hostname.
 
-If no subdomain is specified in {hostname} 'www' will be appended.
+If no subdomain is specified in {hostname} 'www' will be prepended.
 
 ### Example
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -537,9 +601,9 @@ Set the application languages
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -591,6 +655,70 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="setcompliance"></a>
+# **SetCompliance**
+> RestApiResultAppCompliance SetCompliance (string appId, string complianceType)
+
+Set the application compliance configuration
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class SetComplianceExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppsApi();
+            var appId = appId_example;  // string | Application identifier
+            var complianceType = complianceType_example;  // string | Compliance type
+
+            try
+            {
+                // Set the application compliance configuration
+                RestApiResultAppCompliance result = apiInstance.SetCompliance(appId, complianceType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppsApi.SetCompliance: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**| Application identifier | 
+ **complianceType** | **string**| Compliance type | 
+
+### Return type
+
+[**RestApiResultAppCompliance**](RestApiResultAppCompliance.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="setpanaceavanityurl"></a>
 # **SetPanaceaVanityUrl**
 > RestApiStringResult SetPanaceaVanityUrl (string appId, string vanityUrl)
@@ -603,9 +731,9 @@ Minimum length of 3 characters
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -667,9 +795,9 @@ Set the application logo \\ icon
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {

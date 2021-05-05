@@ -1,11 +1,13 @@
-# Flipdish.Api.HydraApi
+# IO.Swagger.Api.HydraApi
 
 All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AssignEmv**](HydraApi.md#assignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId} | Assign an EMV terminal to a kiosk
+[**AttachStoreToTerminal**](HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | [Private]
 [**CancelEmvPayment**](HydraApi.md#cancelemvpayment) | **POST** /api/v1.0/{appId}/hydra/cancelemvpayment/{orderId} | 
+[**DetachStoreFromTerminal**](HydraApi.md#detachstorefromterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | [Private]
 [**GetAttachedDevices**](HydraApi.md#getattacheddevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | [Private]
 [**GetEMVTerminalDetails**](HydraApi.md#getemvterminaldetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | [Private]
 [**GetEmvOrderState**](HydraApi.md#getemvorderstate) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | [Private]
@@ -30,9 +32,9 @@ Assign an EMV terminal to a kiosk
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -85,6 +87,72 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="attachstoretoterminal"></a>
+# **AttachStoreToTerminal**
+> RestApiResultHydraStatus AttachStoreToTerminal (string appId, string deviceId, int? storeId)
+
+[Private]
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class AttachStoreToTerminalExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new HydraApi();
+            var appId = appId_example;  // string | 
+            var deviceId = deviceId_example;  // string | 
+            var storeId = 56;  // int? | 
+
+            try
+            {
+                // [Private]
+                RestApiResultHydraStatus result = apiInstance.AttachStoreToTerminal(appId, deviceId, storeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling HydraApi.AttachStoreToTerminal: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **deviceId** | **string**|  | 
+ **storeId** | **int?**|  | 
+
+### Return type
+
+[**RestApiResultHydraStatus**](RestApiResultHydraStatus.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="cancelemvpayment"></a>
 # **CancelEmvPayment**
 > void CancelEmvPayment (int? orderId, string appId)
@@ -95,9 +163,9 @@ void (empty response body)
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -147,6 +215,72 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="detachstorefromterminal"></a>
+# **DetachStoreFromTerminal**
+> RestApiResultHydraStatus DetachStoreFromTerminal (string appId, string deviceId, int? storeId)
+
+[Private]
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class DetachStoreFromTerminalExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new HydraApi();
+            var appId = appId_example;  // string | 
+            var deviceId = deviceId_example;  // string | 
+            var storeId = 56;  // int? | 
+
+            try
+            {
+                // [Private]
+                RestApiResultHydraStatus result = apiInstance.DetachStoreFromTerminal(appId, deviceId, storeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling HydraApi.DetachStoreFromTerminal: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **deviceId** | **string**|  | 
+ **storeId** | **int?**|  | 
+
+### Return type
+
+[**RestApiResultHydraStatus**](RestApiResultHydraStatus.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getattacheddevices"></a>
 # **GetAttachedDevices**
 > RestApiPaginationResultHydraDeviceDetails GetAttachedDevices (string appId, string deviceType, int? pageIndex = null, int? pageSize = null, int? storeId = null, string deviceName = null, string deviceSerial = null)
@@ -157,9 +291,9 @@ void (empty response body)
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -231,9 +365,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -293,9 +427,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -357,9 +491,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -414,9 +548,9 @@ This endpoint does not need any parameter.
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -472,9 +606,9 @@ This endpoint does not need any parameter.
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -536,9 +670,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -600,9 +734,9 @@ List EMV terminals belonging to the given AppNameId
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -662,9 +796,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -727,9 +861,9 @@ void (empty response body)
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -791,9 +925,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -854,9 +988,9 @@ Unassign the currently assigned EMV terminal from a kiosk
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {

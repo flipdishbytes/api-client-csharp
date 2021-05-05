@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultStoreGroup
+# IO.Swagger.Model.RestApiResultStoreGroup
 ## Properties
 
 Name | Type | Description | Notes

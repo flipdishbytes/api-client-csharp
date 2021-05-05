@@ -1,4 +1,4 @@
-# Flipdish.Model.HydraStoreData
+# IO.Swagger.Model.HydraStoreData
 ## Properties
 
 Name | Type | Description | Notes

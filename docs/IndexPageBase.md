@@ -1,4 +1,4 @@
-# Flipdish.Model.IndexPageBase
+# IO.Swagger.Model.IndexPageBase
 ## Properties
 
 Name | Type | Description | Notes

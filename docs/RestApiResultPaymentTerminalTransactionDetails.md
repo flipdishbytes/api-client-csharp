@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultPaymentTerminalTransactionDetails
+# IO.Swagger.Model.RestApiResultPaymentTerminalTransactionDetails
 ## Properties
 
 Name | Type | Description | Notes

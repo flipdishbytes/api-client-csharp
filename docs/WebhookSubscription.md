@@ -1,4 +1,4 @@
-# Flipdish.Model.WebhookSubscription
+# IO.Swagger.Model.WebhookSubscription
 ## Properties
 
 Name | Type | Description | Notes

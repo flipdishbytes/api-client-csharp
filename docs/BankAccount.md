@@ -1,4 +1,4 @@
-# Flipdish.Model.BankAccount
+# IO.Swagger.Model.BankAccount
 ## Properties
 
 Name | Type | Description | Notes
@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **AccountName** | **string** | Name of this account | [optional] 
 **Iban** | **string** | IBAN of this account | [optional] 
 **Swift** | **string** | SWIFT of this bank account | [optional] 
+**PopulatedAccountFields** | [**List&lt;AccountFieldKeyValuePair&gt;**](AccountFieldKeyValuePair.md) | A list of one or more populated account fields (field key-value pairs).  If this list contains at least one item, the Iban, Swift and NationalClearingCode fields should be ignored. | [optional] 
 **AccountState** | **string** | Status of Account | [optional] 
 **StoreNames** | **List&lt;string&gt;** | Store Names that are attached to this account | [optional] 
 **BankAddress** | **string** | Address lf the bank | [optional] 

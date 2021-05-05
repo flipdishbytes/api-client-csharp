@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultDeliveryZone
+# IO.Swagger.Model.RestApiResultDeliveryZone
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiArrayResultLocalisedTimeZone
+# IO.Swagger.Model.RestApiArrayResultLocalisedTimeZone
 ## Properties
 
 Name | Type | Description | Notes

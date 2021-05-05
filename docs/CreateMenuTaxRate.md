@@ -1,4 +1,4 @@
-# Flipdish.Model.CreateMenuTaxRate
+# IO.Swagger.Model.CreateMenuTaxRate
 ## Properties
 
 Name | Type | Description | Notes

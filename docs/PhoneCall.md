@@ -1,4 +1,4 @@
-# Flipdish.Model.PhoneCall
+# IO.Swagger.Model.PhoneCall
 ## Properties
 
 Name | Type | Description | Notes

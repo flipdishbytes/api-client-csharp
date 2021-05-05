@@ -1,4 +1,4 @@
-# Flipdish.Model.PaymentTerminalTransactionDetails
+# IO.Swagger.Model.PaymentTerminalTransactionDetails
 ## Properties
 
 Name | Type | Description | Notes

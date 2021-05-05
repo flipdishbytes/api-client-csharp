@@ -1,4 +1,4 @@
-# Flipdish.Model.DriverStore
+# IO.Swagger.Model.DriverStore
 ## Properties
 
 Name | Type | Description | Notes

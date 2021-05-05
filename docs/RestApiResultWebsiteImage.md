@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultWebsiteImage
+# IO.Swagger.Model.RestApiResultWebsiteImage
 ## Properties
 
 Name | Type | Description | Notes

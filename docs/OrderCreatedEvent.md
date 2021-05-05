@@ -1,4 +1,4 @@
-# Flipdish.Model.OrderCreatedEvent
+# IO.Swagger.Model.OrderCreatedEvent
 ## Properties
 
 Name | Type | Description | Notes

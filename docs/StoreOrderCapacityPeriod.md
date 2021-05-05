@@ -1,4 +1,4 @@
-# Flipdish.Model.StoreOrderCapacityPeriod
+# IO.Swagger.Model.StoreOrderCapacityPeriod
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.TeammateInviteAcceptedEvent
+# IO.Swagger.Model.TeammateInviteAcceptedEvent
 ## Properties
 
 Name | Type | Description | Notes

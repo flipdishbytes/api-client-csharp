@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiArrayResultOauthClientRedirectUri
+# IO.Swagger.Model.RestApiArrayResultOauthClientRedirectUri
 ## Properties
 
 Name | Type | Description | Notes

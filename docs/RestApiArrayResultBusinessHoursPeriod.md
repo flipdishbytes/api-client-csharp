@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiArrayResultBusinessHoursPeriod
+# IO.Swagger.Model.RestApiArrayResultBusinessHoursPeriod
 ## Properties
 
 Name | Type | Description | Notes

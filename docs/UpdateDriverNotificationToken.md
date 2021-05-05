@@ -1,4 +1,4 @@
-# Flipdish.Model.UpdateDriverNotificationToken
+# IO.Swagger.Model.UpdateDriverNotificationToken
 ## Properties
 
 Name | Type | Description | Notes

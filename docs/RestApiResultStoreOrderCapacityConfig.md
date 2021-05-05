@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultStoreOrderCapacityConfig
+# IO.Swagger.Model.RestApiResultStoreOrderCapacityConfig
 ## Properties
 
 Name | Type | Description | Notes

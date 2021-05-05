@@ -1,14 +1,14 @@
-# Flipdish.Model.StoreAddressUpdatedEvent
+# IO.Swagger.Model.StoreAddressUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**EventName** | **string** | The event name | [optional] 
 **StoreId** | **int?** | Store Id | [optional] 
 **StoreGroupId** | **int?** | Store group Id | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | User which updated this store address | [optional] 
 **Description** | **string** | Description | [optional] 
 **StoreAddress** | [**StoreAddress**](StoreAddress.md) | Updated store address | [optional] 
-**EventName** | **string** | The event name | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 
 **Position** | **int?** | Position | [optional] 

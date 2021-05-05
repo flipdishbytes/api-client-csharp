@@ -1,4 +1,4 @@
-# Flipdish.Model.TeammateDeletedEvent
+# IO.Swagger.Model.TeammateDeletedEvent
 ## Properties
 
 Name | Type | Description | Notes

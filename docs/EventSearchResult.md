@@ -1,4 +1,4 @@
-# Flipdish.Model.EventSearchResult
+# IO.Swagger.Model.EventSearchResult
 ## Properties
 
 Name | Type | Description | Notes
@@ -92,9 +92,15 @@ Name | Type | Description | Notes
 **BankAccountDeletedEvent** | [**List&lt;BankAccountDeletedEvent&gt;**](BankAccountDeletedEvent.md) | Bank account updated event | [optional] 
 **HydraAssignedEvent** | [**List&lt;HydraAssignedEvent&gt;**](HydraAssignedEvent.md) | Hydra assigned event | [optional] 
 **HydraRequestResetEvent** | [**List&lt;HydraRequestResetEvent&gt;**](HydraRequestResetEvent.md) | Hydra reset requested event | [optional] 
+**HydraStoreAssignedEvent** | [**List&lt;HydraStoreAssignedEvent&gt;**](HydraStoreAssignedEvent.md) | Hydra store assigned event | [optional] 
+**HydraStoreUnassignedEvent** | [**List&lt;HydraStoreUnassignedEvent&gt;**](HydraStoreUnassignedEvent.md) | Hydra store unassigned | [optional] 
 **HydraSettingChangedEvent** | [**List&lt;HydraSettingChangedEvent&gt;**](HydraSettingChangedEvent.md) | Hydra settings changed event | [optional] 
 **HydraUnAssignedEvent** | [**List&lt;HydraUnAssignedEvent&gt;**](HydraUnAssignedEvent.md) | Hydra un-assigned event | [optional] 
 **HydraConnectionStatusChangedEvent** | [**List&lt;HydraConnectionStatusChangedEvent&gt;**](HydraConnectionStatusChangedEvent.md) | Hydra connection state change | [optional] 
+**KioskBluetoothPairingModeEvent** | [**List&lt;KioskBluetoothPairingModeEvent&gt;**](KioskBluetoothPairingModeEvent.md) | Bluetooth Pairing Mode initiated | [optional] 
+**KioskBluetoothUnpairingModeEvent** | [**List&lt;KioskBluetoothUnpairingModeEvent&gt;**](KioskBluetoothUnpairingModeEvent.md) | Bluetooth Unpairing Mode initiated | [optional] 
+**KioskBluetoothTerminalUpdatedEvent** | [**List&lt;KioskBluetoothTerminalUpdatedEvent&gt;**](KioskBluetoothTerminalUpdatedEvent.md) | Bluetooth Terminal Updated | [optional] 
+**KioskBluetoothInstallUpdateInitiateEvent** | [**List&lt;KioskBluetoothInstallUpdateInitiateEvent&gt;**](KioskBluetoothInstallUpdateInitiateEvent.md) | Bluetooth Terminal Initiate Update | [optional] 
 **PushNotificationScheduledEvent** | [**List&lt;PushNotificationScheduledEvent&gt;**](PushNotificationScheduledEvent.md) | Push notification scheduled event | [optional] 
 **PushNotificationSentEvent** | [**List&lt;PushNotificationSentEvent&gt;**](PushNotificationSentEvent.md) | Push notification sent event | [optional] 
 **PushNotificationDeletedEvent** | [**List&lt;PushNotificationDeletedEvent&gt;**](PushNotificationDeletedEvent.md) | Push notification deleted event | [optional] 

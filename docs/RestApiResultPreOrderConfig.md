@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultPreOrderConfig
+# IO.Swagger.Model.RestApiResultPreOrderConfig
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.MenuObjectDisplayOrders
+# IO.Swagger.Model.MenuObjectDisplayOrders
 ## Properties
 
 Name | Type | Description | Notes

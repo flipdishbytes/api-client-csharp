@@ -1,4 +1,4 @@
-# Flipdish.Model.UserAnsweredSignupQuestionsEvent
+# IO.Swagger.Model.UserAnsweredSignupQuestionsEvent
 ## Properties
 
 Name | Type | Description | Notes

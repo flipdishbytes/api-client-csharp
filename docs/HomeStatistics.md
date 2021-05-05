@@ -1,4 +1,4 @@
-# Flipdish.Model.HomeStatistics
+# IO.Swagger.Model.HomeStatistics
 ## Properties
 
 Name | Type | Description | Notes

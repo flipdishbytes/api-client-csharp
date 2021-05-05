@@ -1,4 +1,4 @@
-# Flipdish.Model.JobProof
+# IO.Swagger.Model.JobProof
 ## Properties
 
 Name | Type | Description | Notes

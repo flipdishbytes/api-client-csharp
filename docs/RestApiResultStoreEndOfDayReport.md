@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultStoreEndOfDayReport
+# IO.Swagger.Model.RestApiResultStoreEndOfDayReport
 ## Properties
 
 Name | Type | Description | Notes

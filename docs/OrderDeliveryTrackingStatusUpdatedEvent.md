@@ -1,4 +1,4 @@
-# Flipdish.Model.OrderDeliveryTrackingStatusUpdatedEvent
+# IO.Swagger.Model.OrderDeliveryTrackingStatusUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

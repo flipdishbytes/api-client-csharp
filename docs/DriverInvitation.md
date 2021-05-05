@@ -1,4 +1,4 @@
-# Flipdish.Model.DriverInvitation
+# IO.Swagger.Model.DriverInvitation
 ## Properties
 
 Name | Type | Description | Notes

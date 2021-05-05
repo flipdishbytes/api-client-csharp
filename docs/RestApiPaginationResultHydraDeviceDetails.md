@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiPaginationResultHydraDeviceDetails
+# IO.Swagger.Model.RestApiPaginationResultHydraDeviceDetails
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.HydraRequestResetEvent
+# IO.Swagger.Model.HydraRequestResetEvent
 ## Properties
 
 Name | Type | Description | Notes

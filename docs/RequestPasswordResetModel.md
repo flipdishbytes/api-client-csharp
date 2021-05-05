@@ -1,4 +1,4 @@
-# Flipdish.Model.RequestPasswordResetModel
+# IO.Swagger.Model.RequestPasswordResetModel
 ## Properties
 
 Name | Type | Description | Notes

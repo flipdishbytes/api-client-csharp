@@ -1,4 +1,4 @@
-# Flipdish.Api.UsersApi
+# IO.Swagger.Api.UsersApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -18,9 +18,9 @@ Method | HTTP request | Description
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -81,9 +81,9 @@ Get role names
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {

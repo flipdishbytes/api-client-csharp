@@ -1,4 +1,4 @@
-# Flipdish.Model.HydraConnectionStatusChangedEvent
+# IO.Swagger.Model.HydraConnectionStatusChangedEvent
 ## Properties
 
 Name | Type | Description | Notes

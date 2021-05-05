@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultIndexPageBase
+# IO.Swagger.Model.RestApiResultIndexPageBase
 ## Properties
 
 Name | Type | Description | Notes

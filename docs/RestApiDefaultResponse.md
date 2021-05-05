@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiDefaultResponse
+# IO.Swagger.Model.RestApiDefaultResponse
 ## Properties
 
 Name | Type | Description | Notes

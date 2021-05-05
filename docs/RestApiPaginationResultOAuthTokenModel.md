@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiPaginationResultOAuthTokenModel
+# IO.Swagger.Model.RestApiPaginationResultOAuthTokenModel
 ## Properties
 
 Name | Type | Description | Notes

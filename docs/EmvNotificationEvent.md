@@ -1,4 +1,4 @@
-# Flipdish.Model.EmvNotificationEvent
+# IO.Swagger.Model.EmvNotificationEvent
 ## Properties
 
 Name | Type | Description | Notes

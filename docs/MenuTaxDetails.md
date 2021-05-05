@@ -1,4 +1,4 @@
-# Flipdish.Model.MenuTaxDetails
+# IO.Swagger.Model.MenuTaxDetails
 ## Properties
 
 Name | Type | Description | Notes

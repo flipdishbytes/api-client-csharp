@@ -1,4 +1,4 @@
-# Flipdish.Model.LoyaltyCampaignCreatedEvent
+# IO.Swagger.Model.LoyaltyCampaignCreatedEvent
 ## Properties
 
 Name | Type | Description | Notes
