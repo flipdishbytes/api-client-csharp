@@ -113,6 +113,7 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**RequestPasswordReset**](docs/AccountsApi.md#requestpasswordreset) | **POST** /api/v1.0/accounts/passwordreset | Request password reset. Flipdish system will send a token via email.
 *AccountsApi* | [**SkipSignupStep**](docs/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | Skip a signup question
 *AccountsApi* | [**UpdateAccount**](docs/AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | Update account with name and language
+*ApmApi* | [**GetApmStatus**](docs/ApmApi.md#getapmstatus) | **GET** /api/v1.0/{appId}/apm/status | [PRIVATE API] Returns true if APM is enabled on at least one store in an application
 *ApmApi* | [**GetBasicStatistics**](docs/ApmApi.md#getbasicstatistics) | **GET** /api/v1.0/{appId}/apm/statistics | [PRIVATE API] Get Basic Statistics
 *ApmApi* | [**GetCalendarWeekStatistics**](docs/ApmApi.md#getcalendarweekstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calendar | [PRIVATE API] Get Calendar statistics
 *ApmApi* | [**GetCallsStatistics**](docs/ApmApi.md#getcallsstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy} | [PRIVATE API] Get Calls Statistics
@@ -121,24 +122,47 @@ Class | Method | HTTP request | Description
 *AppsApi* | [**GetApp**](docs/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | Get the application configuration
 *AppsApi* | [**GetAppHostnameStatus**](docs/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | Get the application hostname DNS delegation states for A and CNAME records.
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
-*AppsApi* | [**GetPanaceaVanityUrl**](docs/AppsApi.md#getpanaceavanityurl) | **GET** /api/v1.0/apps/{appId}/panacea/url | Get panacea vanity url
-*AppsApi* | [**GetSupportedCountries**](docs/AppsApi.md#getsupportedcountries) | **GET** /api/v1.0/apps/supportedcountries | Get the application configuration
+*AppsApi* | [**GetCompliance**](docs/AppsApi.md#getcompliance) | **GET** /api/v1.0/apps/{appId}/compliance | Get the application compliance configuration
+*AppsApi* | [**GetPanaceaVanityUrl**](docs/AppsApi.md#getpanaceavanityurl) | **GET** /api/v1.0/apps/{appId}/panacea/url | Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
+*AppsApi* | [**GetSupportedCountries**](docs/AppsApi.md#getsupportedcountries) | **GET** /api/v1.0/apps/supportedcountries | Get all supported countries.
 *AppsApi* | [**IsPanaceaVanityUrlAvailable**](docs/AppsApi.md#ispanaceavanityurlavailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | Is panacea vanity url available
 *AppsApi* | [**SetAppConfig**](docs/AppsApi.md#setappconfig) | **POST** /api/v1.0/apps/{appId}/config | Set the application configuration
 *AppsApi* | [**SetAppHostname**](docs/AppsApi.md#setapphostname) | **POST** /api/v1.0/apps/{appId}/hostname | Set the application hostname.
 *AppsApi* | [**SetAppLanguages**](docs/AppsApi.md#setapplanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | Set the application languages
+*AppsApi* | [**SetCompliance**](docs/AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | Set the application compliance configuration
 *AppsApi* | [**SetPanaceaVanityUrl**](docs/AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | Set panacea vanity url
 *AppsApi* | [**UploadAppLogo**](docs/AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | Set the application logo \\ icon
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/{appId}/authorizationtokens/{oauthAppId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/{appId}/authorizationtokens/{key} | Revoke token
-*BankAccountApi* | [**AttachBankAccountToStore**](docs/BankAccountApi.md#attachbankaccounttostore) | **POST** /api/v1.0/{appId}/bankaccounts/{accountId}/store/{storeId} | [PRIVATE API] Attach Bank Account to Store
-*BankAccountApi* | [**CreateBankAccount**](docs/BankAccountApi.md#createbankaccount) | **POST** /api/v1.0/{appId}/bankaccounts | [PRIVATE API] Create a new Bank Account and attach to this App
-*BankAccountApi* | [**DeleteBankAccount**](docs/BankAccountApi.md#deletebankaccount) | **DELETE** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Delete BankAccount
-*BankAccountApi* | [**GetBankAccountById**](docs/BankAccountApi.md#getbankaccountbyid) | **GET** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Get BankAccount Detail by Id
-*BankAccountApi* | [**GetBankAccounts**](docs/BankAccountApi.md#getbankaccounts) | **GET** /api/v1.0/{appId}/bankaccounts | [PRIVATE API] Get List of BankAccounts for WL
+*BankAccountApi* | [**AttachBankAccountToStore**](docs/BankAccountApi.md#attachbankaccounttostore) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/store/{storeId} | [PRIVATE API] Attach Bank Account to Store
+*BankAccountApi* | [**CreateBankAccount**](docs/BankAccountApi.md#createbankaccount) | **POST** /api/v1.0/{appId}/bankaccounts | Create a new Bank Account and attach to this App
+*BankAccountApi* | [**DeleteBankAccount**](docs/BankAccountApi.md#deletebankaccount) | **DELETE** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | Delete BankAccount
+*BankAccountApi* | [**GetBankAccountById**](docs/BankAccountApi.md#getbankaccountbyid) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | Get BankAccount Detail by Id
+*BankAccountApi* | [**GetBankAccounts**](docs/BankAccountApi.md#getbankaccounts) | **GET** /api/v1.0/{appId}/bankaccounts | Get List of BankAccounts for WL
+*BankAccountApi* | [**GetCountriesWithFieldDefinitions**](docs/BankAccountApi.md#getcountrieswithfielddefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/countries-field-definitions | Get bank account fields definitions
 *BankAccountApi* | [**GetFieldDefinitions**](docs/BankAccountApi.md#getfielddefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/field-definitions | Get bank account fields definitions
-*BankAccountApi* | [**UpdateBankAccount**](docs/BankAccountApi.md#updatebankaccount) | **POST** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Update BankAccount
-*BankAccountApi* | [**UpdateBankAccountState**](docs/BankAccountApi.md#updatebankaccountstate) | **POST** /api/v1.0/{appId}/bankaccounts/{accountId}/state/{state} | [PRIVATE API] Update State of Bank Account
+*BankAccountApi* | [**UpdateBankAccount**](docs/BankAccountApi.md#updatebankaccount) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | Update BankAccount
+*BankAccountApi* | [**UpdateBankAccountState**](docs/BankAccountApi.md#updatebankaccountstate) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/state/{state} | [PRIVATE API] Update State of Bank Account
+*CampaignsApi* | [**CreateLoyaltyCampaign**](docs/CampaignsApi.md#createloyaltycampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty | Creates loyalty campaign
+*CampaignsApi* | [**CreateRetentionCampaign**](docs/CampaignsApi.md#createretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention | Creates retention campaign
+*CampaignsApi* | [**GetLoyaltyCampaignsForApp**](docs/CampaignsApi.md#getloyaltycampaignsforapp) | **GET** /api/v1.0/{appId}/campaigns/loyalty | Gets loyalty campaigns for app
+*CampaignsApi* | [**GetLoyaltyCampaignsForStore**](docs/CampaignsApi.md#getloyaltycampaignsforstore) | **GET** /api/v1.0/{appId}/campaigns/loyalty/{storeId} | Gets loyalty campaigns for store
+*CampaignsApi* | [**GetRetentionCampaignsForApp**](docs/CampaignsApi.md#getretentioncampaignsforapp) | **GET** /api/v1.0/{appId}/campaigns/retention | Gets retention campaigns for app
+*CampaignsApi* | [**GetRetentionCampaignsForStore**](docs/CampaignsApi.md#getretentioncampaignsforstore) | **GET** /api/v1.0/{appId}/campaigns/retention/{storeId} | Gets retention campaigns for store
+*CampaignsApi* | [**GetStoreList**](docs/CampaignsApi.md#getstorelist) | **GET** /api/v1.0/{appId}/campaigns/stores | Gets list of stores for app
+*CampaignsApi* | [**RemoveCampaign**](docs/CampaignsApi.md#removecampaign) | **DELETE** /api/v1.0/{appId}/campaigns/{campaignId} | Deletes a campaign
+*CampaignsApi* | [**UpdateLoyaltyCampaign**](docs/CampaignsApi.md#updateloyaltycampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty/{campaignId} | Updates loyalty campaign
+*CampaignsApi* | [**UpdateRetentionCampaign**](docs/CampaignsApi.md#updateretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention/{campaignId} | Updates retention campaign
+*CardReadersApi* | [**AuthorizeStripeTerminal**](docs/CardReadersApi.md#authorizestripeterminal) | **POST** /api/v1.0/cardreaders/authorize/stripe | Get Authorization Key for Stripe Terminal
+*CardReadersApi* | [**AuthorizeStripeTerminal_0**](docs/CardReadersApi.md#authorizestripeterminal_0) | **POST** /api/v1.0/{appId}/stripeterminal/authorize | Get Authorization Key for Stripe Terminal
+*CardReadersApi* | [**GetBluetoothTerminalStatus**](docs/CardReadersApi.md#getbluetoothterminalstatus) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | Get the status of the bluetooth terminal
+*CardReadersApi* | [**InitiateBluetoothTerminalDeviceUpdateCheck**](docs/CardReadersApi.md#initiatebluetoothterminaldeviceupdatecheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | Trigger check for Bluetooth device update on Kiosk
+*CardReadersApi* | [**InitiateKioskBluetoothPairingMode**](docs/CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
+*CardReadersApi* | [**InitiateKioskUpdateInstallForBluetoothTerminal**](docs/CardReadersApi.md#initiatekioskupdateinstallforbluetoothterminal) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | 
+*CardReadersApi* | [**UnpairCurrentlyPairedBluetoothDevice**](docs/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
+*ContentSecurityPolicyApi* | [**ContentSecurityPolicyReport**](docs/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
+*CustomersApi* | [**GetCustomerById**](docs/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | Get customer of an app by Id
+*CustomersApi* | [**UpdateCustomerById**](docs/CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | Update customer of an app by Id
 *DeliveryTrackingApi* | [**AssignDriverToOrder**](docs/DeliveryTrackingApi.md#assigndrivertoorder) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders/{orderId} | [PRIVATE] Assign driver to order
 *DeliveryTrackingApi* | [**AssignDriverToOrders**](docs/DeliveryTrackingApi.md#assigndrivertoorders) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders | Assign driver to multiple orders
 *DeliveryTrackingApi* | [**GetDrivers**](docs/DeliveryTrackingApi.md#getdrivers) | **GET** /api/v1.0/{appId}/drivers | [PRIVATE] Get drivers by App
@@ -169,6 +193,7 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**GetStoreEvents**](docs/EventsApi.md#getstoreevents) | **GET** /api/v1.0/events/store/{storeId} | Get store events  For technical reasons, the number of records returned is limited to 100.
 *EventsApi* | [**GetUserEvents**](docs/EventsApi.md#getuserevents) | **GET** /api/v1.0/events/user/{userId} | Get user events  For technical reasons, the number of records returned is limited to 100.
 *EventsApi* | [**GetWhiteLabelEvents**](docs/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
+*FilesApi* | [**DownloadFile**](docs/FilesApi.md#downloadfile) | **GET** /api/v1.0/{appId}/files/download/{fileId} | Get file from storage
 *HeartbeatApi* | [**HeadHostname**](docs/HeartbeatApi.md#headhostname) | **HEAD** /api/v1.0/heartbeat/Hostname | 
 *HeartbeatApi* | [**HeadPing**](docs/HeartbeatApi.md#headping) | **HEAD** /api/v1.0/heartbeat | 
 *HeartbeatApi* | [**Hostname**](docs/HeartbeatApi.md#hostname) | **GET** /api/v1.0/heartbeat/Hostname | 
@@ -179,7 +204,9 @@ Class | Method | HTTP request | Description
 *HomeApi* | [**GetHomeStatistics**](docs/HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
 *HttpRequestResponseLogsApi* | [**GetLogs**](docs/HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/{appId}/interactions/logs | Get API interaction logs
 *HydraApi* | [**AssignEmv**](docs/HydraApi.md#assignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId} | Assign an EMV terminal to a kiosk
+*HydraApi* | [**AttachStoreToTerminal**](docs/HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | [Private]
 *HydraApi* | [**CancelEmvPayment**](docs/HydraApi.md#cancelemvpayment) | **POST** /api/v1.0/{appId}/hydra/cancelemvpayment/{orderId} | 
+*HydraApi* | [**DetachStoreFromTerminal**](docs/HydraApi.md#detachstorefromterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | [Private]
 *HydraApi* | [**GetAttachedDevices**](docs/HydraApi.md#getattacheddevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | [Private]
 *HydraApi* | [**GetEMVTerminalDetails**](docs/HydraApi.md#getemvterminaldetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | [Private]
 *HydraApi* | [**GetEmvOrderState**](docs/HydraApi.md#getemvorderstate) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | [Private]
@@ -248,6 +275,7 @@ Class | Method | HTTP request | Description
 *MenusApi* | [**MenusDeleteTaxRate**](docs/MenusApi.md#menusdeletetaxrate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
 *MenusApi* | [**MenusSetDisplayOnMenuTax**](docs/MenusApi.md#menussetdisplayonmenutax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | [PRIVATE API]Set if tax shows for a Menu
 *MenusApi* | [**MenusSetItemDisplayOrders**](docs/MenusApi.md#menussetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | [PRIVATE API]Re-arrange Sections within a Menu
+*MenusApi* | [**MenusShowHideBulkItems**](docs/MenusApi.md#menusshowhidebulkitems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | 
 *MenusApi* | [**MenusUpdateTaxType**](docs/MenusApi.md#menusupdatetaxtype) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | [PRIVATE API]Set the type of Tax on a Menu
 *MenusApi* | [**MenusUpsertTaxRate**](docs/MenusApi.md#menusupserttaxrate) | **POST** /api/v1.0/menus/{menuId}/taxrate | [PRIVATE API]Add/Update a Tax Rate
 *MenusApi* | [**RestoreAMenuCheckpoint**](docs/MenusApi.md#restoreamenucheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | [PRIVATE API]Restore a Menu to a checkpoint
@@ -276,6 +304,19 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**GetOrdersSummary**](docs/OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
 *OrdersApi* | [**RefundOrder**](docs/OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
 *OrdersApi* | [**RejectOrder**](docs/OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
+*PaymentsApi* | [**GetOrderPaymentInformation**](docs/PaymentsApi.md#getorderpaymentinformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | Returns payment refund information related to the order with the order id
+*PayoutsApi* | [**ExportPayoutChargebacks**](docs/PayoutsApi.md#exportpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks/export | Export a list of payout's chargebacks as CSV
+*PayoutsApi* | [**ExportPayoutOrders**](docs/PayoutsApi.md#exportpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders/export | Export a list of payout's orders as CSV
+*PayoutsApi* | [**ExportPayoutOtherCharges**](docs/PayoutsApi.md#exportpayoutothercharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges/export | Export a list of payout's other charges as CSV
+*PayoutsApi* | [**ExportPayoutRefunds**](docs/PayoutsApi.md#exportpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export | Export a list of payout's refunds as CSV
+*PayoutsApi* | [**ExportPayoutStores**](docs/PayoutsApi.md#exportpayoutstores) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export | Export payout's details as CSV
+*PayoutsApi* | [**GetPayout**](docs/PayoutsApi.md#getpayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | Get Payout details broken down by Store
+*PayoutsApi* | [**GetPayoutChargebacks**](docs/PayoutsApi.md#getpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks | Get list of payout's chargebacks
+*PayoutsApi* | [**GetPayoutOrders**](docs/PayoutsApi.md#getpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders | Get list of payout's orders
+*PayoutsApi* | [**GetPayoutOtherCharges**](docs/PayoutsApi.md#getpayoutothercharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges | Get list of payout's other charges
+*PayoutsApi* | [**GetPayoutRefunds**](docs/PayoutsApi.md#getpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds | Get list of payout's refunds
+*PayoutsApi* | [**GetPayoutSummaries**](docs/PayoutsApi.md#getpayoutsummaries) | **GET** /api/v1.0/{appId}/payouts/summaries | Get list of payout summaries
+*PayoutsApi* | [**GetPayouts**](docs/PayoutsApi.md#getpayouts) | **GET** /api/v1.0/{appId}/payouts | Get list of payouts
 *ProcessingFeeConfigsApi* | [**GetProcessingFeeConfigsByStoreIds**](docs/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
 *PushNotificationsApi* | [**DeletePushNotification**](docs/PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**GetPushNotifications**](docs/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
@@ -316,10 +357,13 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**UpdateStore**](docs/StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | Update store by identifier
 *StoresApi* | [**UpdateStoreAddress**](docs/StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
 *StoresApi* | [**UpdateStoreAddressCoordinates**](docs/StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
-*StripeCustomConnectApi* | [**CreateStripeConnectedAccount**](docs/StripeCustomConnectApi.md#createstripeconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/create-account | Get the Stripe connected account associated with the bank account of bankAccountId, if any
-*StripeCustomConnectApi* | [**CreateStripeConnectedAccountLink**](docs/StripeCustomConnectApi.md#createstripeconnectedaccountlink) | **POST** /api/v1.0/{appId}/customconnect/create-account-link | Gets a single-use Stripe URL for the given account
-*StripeCustomConnectApi* | [**GetCustomConnectAccount**](docs/StripeCustomConnectApi.md#getcustomconnectaccount) | **GET** /api/v1.0/{appId}/customconnect/account | Get the Stripe connected account associated with the bank account of bankAccountId, if any
+*StripeCustomConnectApi* | [**CreateBankAccountAndConnectedAccount**](docs/StripeCustomConnectApi.md#createbankaccountandconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/bank-account | Create a new Bank Account and Stripe connected account
+*StripeCustomConnectApi* | [**CreateStripeConnectedAccount**](docs/StripeCustomConnectApi.md#createstripeconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account | Create or update a Stripe connected account associated with the bank account of bankAccountId
+*StripeCustomConnectApi* | [**CreateStripeConnectedAccountLink**](docs/StripeCustomConnectApi.md#createstripeconnectedaccountlink) | **POST** /api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link | Gets a single-use Stripe URL for the given account
 *StripeCustomConnectApi* | [**GetVerificationStatus**](docs/StripeCustomConnectApi.md#getverificationstatus) | **GET** /api/v1.0/{appId}/customconnect/verification-status | Gets the current verification status of the given connected account
+*StripeCustomConnectApi* | [**SetBankAccountBusinessType**](docs/StripeCustomConnectApi.md#setbankaccountbusinesstype) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | Update bank account's BusinessType and create a Stripe Connected Account
+*StripeCustomConnectApi* | [**StripeCustomConnectRefresh**](docs/StripeCustomConnectApi.md#stripecustomconnectrefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
+*StripeCustomConnectApi* | [**UpdateBankAccountDetails**](docs/StripeCustomConnectApi.md#updatebankaccountdetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | Update bank account details
 *StuartApi* | [**StuartCancelJob**](docs/StuartApi.md#stuartcanceljob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | Cancel a stuart job
 *StuartApi* | [**StuartGetJob**](docs/StuartApi.md#stuartgetjob) | **GET** /api/v1.0/stuart/jobs/{jobId} | Get start job details
 *StuartApi* | [**StuartGetStuartSettings**](docs/StuartApi.md#stuartgetstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | Get stuart settings for a store
@@ -343,6 +387,7 @@ Class | Method | HTTP request | Description
 *WebhooksApi* | [**DeleteWebhookSubscriptionEventName**](docs/WebhooksApi.md#deletewebhooksubscriptioneventname) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Remove event name to your webhook subscription
 *WebhooksApi* | [**GetWebhookEventNames**](docs/WebhooksApi.md#getwebhookeventnames) | **GET** /api/v1.0/{appId}/webhooks/events | Get all webhook subscription event names
 *WebhooksApi* | [**GetWebhookEventNamesBySubscriptionId**](docs/WebhooksApi.md#getwebhookeventnamesbysubscriptionid) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events | Get your webhook subscriptions selected event names
+*WebhooksApi* | [**GetWebhookEventSample**](docs/WebhooksApi.md#getwebhookeventsample) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}/test | Get a sample event from a webhook subscription
 *WebhooksApi* | [**GetWebhookLogs**](docs/WebhooksApi.md#getwebhooklogs) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs | Get logs for your webhook subscription
 *WebhooksApi* | [**GetWebhookSubscriptions**](docs/WebhooksApi.md#getwebhooksubscriptions) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Get all webhook subscriptions by your Oauth App id
 *WebhooksApi* | [**UpdateWebhookSubscription**](docs/WebhooksApi.md#updatewebhooksubscription) | **PUT** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Update a webhook subscription object
@@ -363,6 +408,7 @@ Class | Method | HTTP request | Description
  - [Model.AccountDetail](docs/AccountDetail.md)
  - [Model.AccountDetailBase](docs/AccountDetailBase.md)
  - [Model.AccountFieldDefinition](docs/AccountFieldDefinition.md)
+ - [Model.AccountFieldKeyValuePair](docs/AccountFieldKeyValuePair.md)
  - [Model.AccountFieldsDefinitions](docs/AccountFieldsDefinitions.md)
  - [Model.AddItemDetails](docs/AddItemDetails.md)
  - [Model.AllMetadataResult](docs/AllMetadataResult.md)
@@ -371,26 +417,34 @@ Class | Method | HTTP request | Description
  - [Model.ApmDataPoint](docs/ApmDataPoint.md)
  - [Model.ApmHourlyDataPoint](docs/ApmHourlyDataPoint.md)
  - [Model.ApmStatistics](docs/ApmStatistics.md)
+ - [Model.ApmStatus](docs/ApmStatus.md)
  - [Model.App](docs/App.md)
+ - [Model.AppCompliance](docs/AppCompliance.md)
  - [Model.AppConfigUpdateModel](docs/AppConfigUpdateModel.md)
  - [Model.AppCreatedEvent](docs/AppCreatedEvent.md)
  - [Model.AppUpdatedEvent](docs/AppUpdatedEvent.md)
  - [Model.AssignedBankAccount](docs/AssignedBankAccount.md)
+ - [Model.BalanceDetails](docs/BalanceDetails.md)
  - [Model.BankAccount](docs/BankAccount.md)
  - [Model.BankAccountCreate](docs/BankAccountCreate.md)
  - [Model.BankAccountCreatedEvent](docs/BankAccountCreatedEvent.md)
  - [Model.BankAccountDeletedEvent](docs/BankAccountDeletedEvent.md)
  - [Model.BankAccountDetail](docs/BankAccountDetail.md)
+ - [Model.BankAccountDetailsUpdateRequest](docs/BankAccountDetailsUpdateRequest.md)
  - [Model.BankAccountSummary](docs/BankAccountSummary.md)
  - [Model.BankAccountUpdatedEvent](docs/BankAccountUpdatedEvent.md)
+ - [Model.BluetoothTerminalStatus](docs/BluetoothTerminalStatus.md)
  - [Model.BusinessHoursOverride](docs/BusinessHoursOverride.md)
  - [Model.BusinessHoursOverrideBase](docs/BusinessHoursOverrideBase.md)
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
  - [Model.BusinessHoursPeriodBase](docs/BusinessHoursPeriodBase.md)
+ - [Model.CampaignStatistics](docs/CampaignStatistics.md)
  - [Model.CertificateCreatedEvent](docs/CertificateCreatedEvent.md)
  - [Model.CertificateRenewedEvent](docs/CertificateRenewedEvent.md)
  - [Model.ChangePasswordModel](docs/ChangePasswordModel.md)
+ - [Model.ChargebackDetails](docs/ChargebackDetails.md)
  - [Model.Coordinates](docs/Coordinates.md)
+ - [Model.CountryWithAccountFieldsDefinitions](docs/CountryWithAccountFieldsDefinitions.md)
  - [Model.CreateAccountModel](docs/CreateAccountModel.md)
  - [Model.CreateFullMenu](docs/CreateFullMenu.md)
  - [Model.CreateFullMenuItemOptionSet](docs/CreateFullMenuItemOptionSet.md)
@@ -402,12 +456,16 @@ Class | Method | HTTP request | Description
  - [Model.CreateTeammate](docs/CreateTeammate.md)
  - [Model.CreateVoucher](docs/CreateVoucher.md)
  - [Model.CreditNoteDetails](docs/CreditNoteDetails.md)
+ - [Model.CspReport](docs/CspReport.md)
+ - [Model.CspReportRequest](docs/CspReportRequest.md)
  - [Model.CurrencyData](docs/CurrencyData.md)
+ - [Model.Customer](docs/Customer.md)
  - [Model.CustomerConsentUpdatedEvent](docs/CustomerConsentUpdatedEvent.md)
  - [Model.CustomerCreatedEvent](docs/CustomerCreatedEvent.md)
  - [Model.CustomerDeliveryTrackingOrder](docs/CustomerDeliveryTrackingOrder.md)
  - [Model.CustomerDeliveryTrackingOrderLine](docs/CustomerDeliveryTrackingOrderLine.md)
  - [Model.CustomerSummary](docs/CustomerSummary.md)
+ - [Model.CustomerUpdateModel](docs/CustomerUpdateModel.md)
  - [Model.CustomerUpdatedEvent](docs/CustomerUpdatedEvent.md)
  - [Model.DeliveryLocation](docs/DeliveryLocation.md)
  - [Model.DeliveryZone](docs/DeliveryZone.md)
@@ -428,6 +486,8 @@ Class | Method | HTTP request | Description
  - [Model.EmvTerminalWithAssignments](docs/EmvTerminalWithAssignments.md)
  - [Model.EventSearchResult](docs/EventSearchResult.md)
  - [Model.FeeSummary](docs/FeeSummary.md)
+ - [Model.FlipdishEventBase](docs/FlipdishEventBase.md)
+ - [Model.FlipdishFeesDetails](docs/FlipdishFeesDetails.md)
  - [Model.GroupedCoordinates](docs/GroupedCoordinates.md)
  - [Model.HomeAction](docs/HomeAction.md)
  - [Model.HomeStatistics](docs/HomeStatistics.md)
@@ -440,7 +500,9 @@ Class | Method | HTTP request | Description
  - [Model.HydraRequestResetEvent](docs/HydraRequestResetEvent.md)
  - [Model.HydraSettingChangedEvent](docs/HydraSettingChangedEvent.md)
  - [Model.HydraStatus](docs/HydraStatus.md)
+ - [Model.HydraStoreAssignedEvent](docs/HydraStoreAssignedEvent.md)
  - [Model.HydraStoreData](docs/HydraStoreData.md)
+ - [Model.HydraStoreUnassignedEvent](docs/HydraStoreUnassignedEvent.md)
  - [Model.HydraUnAssignedEvent](docs/HydraUnAssignedEvent.md)
  - [Model.IndexPage](docs/IndexPage.md)
  - [Model.IndexPageBase](docs/IndexPageBase.md)
@@ -454,12 +516,18 @@ Class | Method | HTTP request | Description
  - [Model.JobPricing](docs/JobPricing.md)
  - [Model.JobProof](docs/JobProof.md)
  - [Model.JobResponse](docs/JobResponse.md)
+ - [Model.KioskBluetoothInstallUpdateInitiateEvent](docs/KioskBluetoothInstallUpdateInitiateEvent.md)
+ - [Model.KioskBluetoothPairingModeEvent](docs/KioskBluetoothPairingModeEvent.md)
+ - [Model.KioskBluetoothTerminalInitiateUpdateCheckEvent](docs/KioskBluetoothTerminalInitiateUpdateCheckEvent.md)
+ - [Model.KioskBluetoothTerminalUpdatedEvent](docs/KioskBluetoothTerminalUpdatedEvent.md)
+ - [Model.KioskBluetoothUnpairingModeEvent](docs/KioskBluetoothUnpairingModeEvent.md)
  - [Model.Language](docs/Language.md)
  - [Model.LightspeedSettings](docs/LightspeedSettings.md)
  - [Model.LocalisedTimeZone](docs/LocalisedTimeZone.md)
  - [Model.LoginModel](docs/LoginModel.md)
  - [Model.LoginWithPinModel](docs/LoginWithPinModel.md)
  - [Model.LoyaltyCampaign](docs/LoyaltyCampaign.md)
+ - [Model.LoyaltyCampaignBase](docs/LoyaltyCampaignBase.md)
  - [Model.LoyaltyCampaignCreatedEvent](docs/LoyaltyCampaignCreatedEvent.md)
  - [Model.LoyaltyCampaignDeletedEvent](docs/LoyaltyCampaignDeletedEvent.md)
  - [Model.LoyaltyCampaignUpdatedEvent](docs/LoyaltyCampaignUpdatedEvent.md)
@@ -470,6 +538,8 @@ Class | Method | HTTP request | Description
  - [Model.MenuCheckpoint](docs/MenuCheckpoint.md)
  - [Model.MenuCheckpointCreatedEvent](docs/MenuCheckpointCreatedEvent.md)
  - [Model.MenuCreatedEvent](docs/MenuCreatedEvent.md)
+ - [Model.MenuElementEditResponse](docs/MenuElementEditResponse.md)
+ - [Model.MenuElementHide](docs/MenuElementHide.md)
  - [Model.MenuItemOptionSet](docs/MenuItemOptionSet.md)
  - [Model.MenuItemOptionSetBase](docs/MenuItemOptionSetBase.md)
  - [Model.MenuItemOptionSetCreatedEvent](docs/MenuItemOptionSetCreatedEvent.md)
@@ -506,6 +576,7 @@ Class | Method | HTTP request | Description
  - [Model.ObjectDisplayOrder](docs/ObjectDisplayOrder.md)
  - [Model.Order](docs/Order.md)
  - [Model.OrderAcceptedEvent](docs/OrderAcceptedEvent.md)
+ - [Model.OrderCapacityConfigUpdatedEvent](docs/OrderCapacityConfigUpdatedEvent.md)
  - [Model.OrderCreatedEvent](docs/OrderCreatedEvent.md)
  - [Model.OrderCustomerTrackingCreatedEvent](docs/OrderCustomerTrackingCreatedEvent.md)
  - [Model.OrderDeliveryTrackingStatusUpdatedEvent](docs/OrderDeliveryTrackingStatusUpdatedEvent.md)
@@ -513,15 +584,25 @@ Class | Method | HTTP request | Description
  - [Model.OrderIdAndSequenceNumber](docs/OrderIdAndSequenceNumber.md)
  - [Model.OrderItem](docs/OrderItem.md)
  - [Model.OrderItemOption](docs/OrderItemOption.md)
+ - [Model.OrderPaymentInformation](docs/OrderPaymentInformation.md)
  - [Model.OrderRatingUpdatedEvent](docs/OrderRatingUpdatedEvent.md)
  - [Model.OrderRefundedEvent](docs/OrderRefundedEvent.md)
  - [Model.OrderRejectedEvent](docs/OrderRejectedEvent.md)
  - [Model.OrderSummary](docs/OrderSummary.md)
  - [Model.OrderTipUpdatedEvent](docs/OrderTipUpdatedEvent.md)
  - [Model.OrderVoucherSummary](docs/OrderVoucherSummary.md)
+ - [Model.OtherChargesDetails](docs/OtherChargesDetails.md)
  - [Model.PasswordResetModel](docs/PasswordResetModel.md)
  - [Model.PaymentTerminalDetails](docs/PaymentTerminalDetails.md)
  - [Model.PaymentTerminalTransactionDetails](docs/PaymentTerminalTransactionDetails.md)
+ - [Model.Payout](docs/Payout.md)
+ - [Model.PayoutChargeback](docs/PayoutChargeback.md)
+ - [Model.PayoutDetail](docs/PayoutDetail.md)
+ - [Model.PayoutOrder](docs/PayoutOrder.md)
+ - [Model.PayoutOtherCharge](docs/PayoutOtherCharge.md)
+ - [Model.PayoutRefund](docs/PayoutRefund.md)
+ - [Model.PayoutStore](docs/PayoutStore.md)
+ - [Model.PayoutSummary](docs/PayoutSummary.md)
  - [Model.PercentDiscountDetails](docs/PercentDiscountDetails.md)
  - [Model.PhoneCall](docs/PhoneCall.md)
  - [Model.PhoneCallEndedEvent](docs/PhoneCallEndedEvent.md)
@@ -553,13 +634,16 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultApmHourlyDataPoint](docs/RestApiArrayResultApmHourlyDataPoint.md)
  - [Model.RestApiArrayResultBankAccountSummary](docs/RestApiArrayResultBankAccountSummary.md)
  - [Model.RestApiArrayResultBusinessHoursPeriod](docs/RestApiArrayResultBusinessHoursPeriod.md)
+ - [Model.RestApiArrayResultCountryWithAccountFieldsDefinitions](docs/RestApiArrayResultCountryWithAccountFieldsDefinitions.md)
  - [Model.RestApiArrayResultDeliveryZone](docs/RestApiArrayResultDeliveryZone.md)
  - [Model.RestApiArrayResultDriver](docs/RestApiArrayResultDriver.md)
  - [Model.RestApiArrayResultDriverStore](docs/RestApiArrayResultDriverStore.md)
  - [Model.RestApiArrayResultEmvTerminalWithAssignments](docs/RestApiArrayResultEmvTerminalWithAssignments.md)
  - [Model.RestApiArrayResultHomeAction](docs/RestApiArrayResultHomeAction.md)
  - [Model.RestApiArrayResultLocalisedTimeZone](docs/RestApiArrayResultLocalisedTimeZone.md)
+ - [Model.RestApiArrayResultLoyaltyCampaign](docs/RestApiArrayResultLoyaltyCampaign.md)
  - [Model.RestApiArrayResultMenuCheckpoint](docs/RestApiArrayResultMenuCheckpoint.md)
+ - [Model.RestApiArrayResultMenuElementEditResponse](docs/RestApiArrayResultMenuElementEditResponse.md)
  - [Model.RestApiArrayResultMenuItemOptionSet](docs/RestApiArrayResultMenuItemOptionSet.md)
  - [Model.RestApiArrayResultMenuItemOptionSetItem](docs/RestApiArrayResultMenuItemOptionSetItem.md)
  - [Model.RestApiArrayResultMenuSection](docs/RestApiArrayResultMenuSection.md)
@@ -570,9 +654,12 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultMetadata](docs/RestApiArrayResultMetadata.md)
  - [Model.RestApiArrayResultOAuthApp](docs/RestApiArrayResultOAuthApp.md)
  - [Model.RestApiArrayResultOauthClientRedirectUri](docs/RestApiArrayResultOauthClientRedirectUri.md)
+ - [Model.RestApiArrayResultPayoutSummary](docs/RestApiArrayResultPayoutSummary.md)
  - [Model.RestApiArrayResultPreOrderTime](docs/RestApiArrayResultPreOrderTime.md)
  - [Model.RestApiArrayResultProcessingFeeConfig](docs/RestApiArrayResultProcessingFeeConfig.md)
  - [Model.RestApiArrayResultRestApiDefaultResponse](docs/RestApiArrayResultRestApiDefaultResponse.md)
+ - [Model.RestApiArrayResultRetentionCampaign](docs/RestApiArrayResultRetentionCampaign.md)
+ - [Model.RestApiArrayResultStoreListItem](docs/RestApiArrayResultStoreListItem.md)
  - [Model.RestApiArrayResultStoreStatistics](docs/RestApiArrayResultStoreStatistics.md)
  - [Model.RestApiArrayResultSupportedCountry](docs/RestApiArrayResultSupportedCountry.md)
  - [Model.RestApiArrayResultTeammate](docs/RestApiArrayResultTeammate.md)
@@ -589,6 +676,11 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultOAuthTokenModel](docs/RestApiPaginationResultOAuthTokenModel.md)
  - [Model.RestApiPaginationResultOrder](docs/RestApiPaginationResultOrder.md)
  - [Model.RestApiPaginationResultOrderSummary](docs/RestApiPaginationResultOrderSummary.md)
+ - [Model.RestApiPaginationResultPayout](docs/RestApiPaginationResultPayout.md)
+ - [Model.RestApiPaginationResultPayoutChargeback](docs/RestApiPaginationResultPayoutChargeback.md)
+ - [Model.RestApiPaginationResultPayoutOrder](docs/RestApiPaginationResultPayoutOrder.md)
+ - [Model.RestApiPaginationResultPayoutOtherCharge](docs/RestApiPaginationResultPayoutOtherCharge.md)
+ - [Model.RestApiPaginationResultPayoutRefund](docs/RestApiPaginationResultPayoutRefund.md)
  - [Model.RestApiPaginationResultPhoneCall](docs/RestApiPaginationResultPhoneCall.md)
  - [Model.RestApiPaginationResultPushNotificationResponse](docs/RestApiPaginationResultPushNotificationResponse.md)
  - [Model.RestApiPaginationResultStore](docs/RestApiPaginationResultStore.md)
@@ -601,12 +693,16 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
  - [Model.RestApiResultAccountFieldsDefinitions](docs/RestApiResultAccountFieldsDefinitions.md)
  - [Model.RestApiResultApmStatistics](docs/RestApiResultApmStatistics.md)
+ - [Model.RestApiResultApmStatus](docs/RestApiResultApmStatus.md)
  - [Model.RestApiResultApp](docs/RestApiResultApp.md)
+ - [Model.RestApiResultAppCompliance](docs/RestApiResultAppCompliance.md)
  - [Model.RestApiResultAssignedBankAccount](docs/RestApiResultAssignedBankAccount.md)
  - [Model.RestApiResultBankAccountDetail](docs/RestApiResultBankAccountDetail.md)
+ - [Model.RestApiResultBluetoothTerminalStatus](docs/RestApiResultBluetoothTerminalStatus.md)
  - [Model.RestApiResultBusinessHoursOverride](docs/RestApiResultBusinessHoursOverride.md)
  - [Model.RestApiResultBusinessHoursPeriod](docs/RestApiResultBusinessHoursPeriod.md)
  - [Model.RestApiResultCoordinates](docs/RestApiResultCoordinates.md)
+ - [Model.RestApiResultCustomer](docs/RestApiResultCustomer.md)
  - [Model.RestApiResultDeliveryZone](docs/RestApiResultDeliveryZone.md)
  - [Model.RestApiResultDnsRecordInformation](docs/RestApiResultDnsRecordInformation.md)
  - [Model.RestApiResultDriver](docs/RestApiResultDriver.md)
@@ -617,6 +713,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultIndexPageBase](docs/RestApiResultIndexPageBase.md)
  - [Model.RestApiResultJobResponse](docs/RestApiResultJobResponse.md)
  - [Model.RestApiResultLightspeedSettings](docs/RestApiResultLightspeedSettings.md)
+ - [Model.RestApiResultLoyaltyCampaign](docs/RestApiResultLoyaltyCampaign.md)
  - [Model.RestApiResultMenu](docs/RestApiResultMenu.md)
  - [Model.RestApiResultMenuItemOptionSet](docs/RestApiResultMenuItemOptionSet.md)
  - [Model.RestApiResultMenuItemOptionSetItem](docs/RestApiResultMenuItemOptionSetItem.md)
@@ -627,12 +724,14 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultOAuthApp](docs/RestApiResultOAuthApp.md)
  - [Model.RestApiResultOauthClientRedirectUri](docs/RestApiResultOauthClientRedirectUri.md)
  - [Model.RestApiResultOrder](docs/RestApiResultOrder.md)
+ - [Model.RestApiResultOrderPaymentInformation](docs/RestApiResultOrderPaymentInformation.md)
  - [Model.RestApiResultPaymentTerminalDetails](docs/RestApiResultPaymentTerminalDetails.md)
  - [Model.RestApiResultPaymentTerminalTransactionDetails](docs/RestApiResultPaymentTerminalTransactionDetails.md)
  - [Model.RestApiResultPreOrderConfig](docs/RestApiResultPreOrderConfig.md)
  - [Model.RestApiResultProcessingFeeConfig](docs/RestApiResultProcessingFeeConfig.md)
  - [Model.RestApiResultPushNotificationResponse](docs/RestApiResultPushNotificationResponse.md)
  - [Model.RestApiResultRedeemInvitationResult](docs/RestApiResultRedeemInvitationResult.md)
+ - [Model.RestApiResultRetentionCampaign](docs/RestApiResultRetentionCampaign.md)
  - [Model.RestApiResultStore](docs/RestApiResultStore.md)
  - [Model.RestApiResultStoreAddress](docs/RestApiResultStoreAddress.md)
  - [Model.RestApiResultStoreEndOfDayReport](docs/RestApiResultStoreEndOfDayReport.md)
@@ -640,6 +739,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultStoreGroupBase](docs/RestApiResultStoreGroupBase.md)
  - [Model.RestApiResultStoreOrderCapacityConfig](docs/RestApiResultStoreOrderCapacityConfig.md)
  - [Model.RestApiResultStripeConnectedAccount](docs/RestApiResultStripeConnectedAccount.md)
+ - [Model.RestApiResultStripeTerminalPrivateKey](docs/RestApiResultStripeTerminalPrivateKey.md)
  - [Model.RestApiResultStuartSettings](docs/RestApiResultStuartSettings.md)
  - [Model.RestApiResultTeammate](docs/RestApiResultTeammate.md)
  - [Model.RestApiResultVoucherWithStats](docs/RestApiResultVoucherWithStats.md)
@@ -649,9 +749,12 @@ Class | Method | HTTP request | Description
  - [Model.RestApiStringResult](docs/RestApiStringResult.md)
  - [Model.RestApiUnauthorizedResult](docs/RestApiUnauthorizedResult.md)
  - [Model.RetentionCampaign](docs/RetentionCampaign.md)
+ - [Model.RetentionCampaignBase](docs/RetentionCampaignBase.md)
  - [Model.RetentionCampaignCreatedEvent](docs/RetentionCampaignCreatedEvent.md)
  - [Model.RetentionCampaignDeletedEvent](docs/RetentionCampaignDeletedEvent.md)
  - [Model.RetentionCampaignUpdatedEvent](docs/RetentionCampaignUpdatedEvent.md)
+ - [Model.RevenueAdjustmentsDetails](docs/RevenueAdjustmentsDetails.md)
+ - [Model.RevenueDetail](docs/RevenueDetail.md)
  - [Model.SearchCriteria](docs/SearchCriteria.md)
  - [Model.SetPasswordWithPinModel](docs/SetPasswordWithPinModel.md)
  - [Model.SignupStep](docs/SignupStep.md)
@@ -666,6 +769,7 @@ Class | Method | HTTP request | Description
  - [Model.StoreBase](docs/StoreBase.md)
  - [Model.StoreBusinessHoursOverrideCreatedEvent](docs/StoreBusinessHoursOverrideCreatedEvent.md)
  - [Model.StoreBusinessHoursOverrideDeletedEvent](docs/StoreBusinessHoursOverrideDeletedEvent.md)
+ - [Model.StoreCampaignStartTime](docs/StoreCampaignStartTime.md)
  - [Model.StoreCloneSettings](docs/StoreCloneSettings.md)
  - [Model.StoreCreateBase](docs/StoreCreateBase.md)
  - [Model.StoreCreatedEvent](docs/StoreCreatedEvent.md)
@@ -681,6 +785,7 @@ Class | Method | HTTP request | Description
  - [Model.StoreHeader](docs/StoreHeader.md)
  - [Model.StoreKioskSetting](docs/StoreKioskSetting.md)
  - [Model.StoreKioskSettingUpdatedEvent](docs/StoreKioskSettingUpdatedEvent.md)
+ - [Model.StoreListItem](docs/StoreListItem.md)
  - [Model.StoreLogoCreatedEvent](docs/StoreLogoCreatedEvent.md)
  - [Model.StoreLogoDeletedEvent](docs/StoreLogoDeletedEvent.md)
  - [Model.StoreLogoUpdatedEvent](docs/StoreLogoUpdatedEvent.md)
@@ -690,7 +795,6 @@ Class | Method | HTTP request | Description
  - [Model.StoreOrderCapacityConfig](docs/StoreOrderCapacityConfig.md)
  - [Model.StoreOrderCapacityConfigEditModel](docs/StoreOrderCapacityConfigEditModel.md)
  - [Model.StoreOrderCapacityPeriod](docs/StoreOrderCapacityPeriod.md)
- - [Model.StoreOrderCapacityUpdatedEvent](docs/StoreOrderCapacityUpdatedEvent.md)
  - [Model.StorePreOrderConfigUpdatedEvent](docs/StorePreOrderConfigUpdatedEvent.md)
  - [Model.StorePublishedEvent](docs/StorePublishedEvent.md)
  - [Model.StoreStatistics](docs/StoreStatistics.md)
@@ -701,7 +805,9 @@ Class | Method | HTTP request | Description
  - [Model.StripeAccountLinkRequest](docs/StripeAccountLinkRequest.md)
  - [Model.StripeConnectedAccount](docs/StripeConnectedAccount.md)
  - [Model.StripeConnectedAccountInfo](docs/StripeConnectedAccountInfo.md)
+ - [Model.StripeTerminalPrivateKey](docs/StripeTerminalPrivateKey.md)
  - [Model.StuartSettings](docs/StuartSettings.md)
+ - [Model.StuartSettingsTransportPrices](docs/StuartSettingsTransportPrices.md)
  - [Model.SupportedCountry](docs/SupportedCountry.md)
  - [Model.Teammate](docs/Teammate.md)
  - [Model.TeammateBase](docs/TeammateBase.md)
@@ -727,6 +833,7 @@ Class | Method | HTTP request | Description
  - [Model.VoucherSummary](docs/VoucherSummary.md)
  - [Model.VoucherUpdatedEvent](docs/VoucherUpdatedEvent.md)
  - [Model.VoucherWithStats](docs/VoucherWithStats.md)
+ - [Model.WebhookEventSample](docs/WebhookEventSample.md)
  - [Model.WebhookLog](docs/WebhookLog.md)
  - [Model.WebhookSubscription](docs/WebhookSubscription.md)
  - [Model.WebhookSubscriptionCreatedEvent](docs/WebhookSubscriptionCreatedEvent.md)

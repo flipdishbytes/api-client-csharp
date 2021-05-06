@@ -31,9 +31,9 @@ namespace Flipdish.Model
     public partial class SupportedCountry :  IEquatable<SupportedCountry>, IValidatableObject
     {
         /// <summary>
-        /// Address layout
+        /// Address layout format. This changes the layout of address entry forms on the web app, iOS and Android app and should be set based on local custom.
         /// </summary>
-        /// <value>Address layout</value>
+        /// <value>Address layout format. This changes the layout of address entry forms on the web app, iOS and Android app and should be set based on local custom.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum AddressLayoutEnum
         {
@@ -58,9 +58,9 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Address layout
+        /// Address layout format. This changes the layout of address entry forms on the web app, iOS and Android app and should be set based on local custom.
         /// </summary>
-        /// <value>Address layout</value>
+        /// <value>Address layout format. This changes the layout of address entry forms on the web app, iOS and Android app and should be set based on local custom.</value>
         [DataMember(Name="AddressLayout", EmitDefaultValue=false)]
         public AddressLayoutEnum? AddressLayout { get; set; }
         /// <summary>
@@ -97,9 +97,9 @@ namespace Flipdish.Model
         [DataMember(Name="PostCodeType", EmitDefaultValue=false)]
         public PostCodeTypeEnum? PostCodeType { get; set; }
         /// <summary>
-        /// Supported region
+        /// Supported region. This is not used.
         /// </summary>
-        /// <value>Supported region</value>
+        /// <value>Supported region. This is not used.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SupportRegionEnum
         {
@@ -124,9 +124,9 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Supported region
+        /// Supported region. This is not used.
         /// </summary>
-        /// <value>Supported region</value>
+        /// <value>Supported region. This is not used.</value>
         [DataMember(Name="SupportRegion", EmitDefaultValue=false)]
         public SupportRegionEnum? SupportRegion { get; set; }
         /// <summary>
@@ -134,14 +134,14 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="countryCode">Country code.</param>
         /// <param name="name">Nice display name for a country.</param>
-        /// <param name="phoneCode">Country phone code.</param>
+        /// <param name="phoneCode">Country internatinoal phone code prefix.</param>
         /// <param name="languageCode">Language code.</param>
         /// <param name="languageName">Language name.</param>
-        /// <param name="otpNumber">One time phone number.</param>
-        /// <param name="supportNumber">Support phone number.</param>
-        /// <param name="addressLayout">Address layout.</param>
+        /// <param name="otpNumber">The phone number provided to Store staff which, in conjunction with a one-time-code, will connect them to the customer..</param>
+        /// <param name="supportNumber">The store&#39;s support phone number, displayed to customers..</param>
+        /// <param name="addressLayout">Address layout format. This changes the layout of address entry forms on the web app, iOS and Android app and should be set based on local custom..</param>
         /// <param name="postCodeType">Post code type.</param>
-        /// <param name="supportRegion">Supported region.</param>
+        /// <param name="supportRegion">Supported region. This is not used..</param>
         public SupportedCountry(string countryCode = default(string), string name = default(string), int? phoneCode = default(int?), string languageCode = default(string), string languageName = default(string), string otpNumber = default(string), string supportNumber = default(string), AddressLayoutEnum? addressLayout = default(AddressLayoutEnum?), PostCodeTypeEnum? postCodeType = default(PostCodeTypeEnum?), SupportRegionEnum? supportRegion = default(SupportRegionEnum?))
         {
             this.CountryCode = countryCode;
@@ -171,9 +171,9 @@ namespace Flipdish.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// Country phone code
+        /// Country internatinoal phone code prefix
         /// </summary>
-        /// <value>Country phone code</value>
+        /// <value>Country internatinoal phone code prefix</value>
         [DataMember(Name="PhoneCode", EmitDefaultValue=false)]
         public int? PhoneCode { get; set; }
 
@@ -192,16 +192,16 @@ namespace Flipdish.Model
         public string LanguageName { get; set; }
 
         /// <summary>
-        /// One time phone number
+        /// The phone number provided to Store staff which, in conjunction with a one-time-code, will connect them to the customer.
         /// </summary>
-        /// <value>One time phone number</value>
+        /// <value>The phone number provided to Store staff which, in conjunction with a one-time-code, will connect them to the customer.</value>
         [DataMember(Name="OtpNumber", EmitDefaultValue=false)]
         public string OtpNumber { get; set; }
 
         /// <summary>
-        /// Support phone number
+        /// The store&#39;s support phone number, displayed to customers.
         /// </summary>
-        /// <value>Support phone number</value>
+        /// <value>The store&#39;s support phone number, displayed to customers.</value>
         [DataMember(Name="SupportNumber", EmitDefaultValue=false)]
         public string SupportNumber { get; set; }
 

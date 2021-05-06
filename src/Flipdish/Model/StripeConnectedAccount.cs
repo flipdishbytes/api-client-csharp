@@ -144,7 +144,19 @@ namespace Flipdish.Model
             /// Enum Unverified for value: Unverified
             /// </summary>
             [EnumMember(Value = "Unverified")]
-            Unverified = 5
+            Unverified = 5,
+            
+            /// <summary>
+            /// Enum Rejected for value: Rejected
+            /// </summary>
+            [EnumMember(Value = "Rejected")]
+            Rejected = 6,
+            
+            /// <summary>
+            /// Enum UpdateExternalAccount for value: UpdateExternalAccount
+            /// </summary>
+            [EnumMember(Value = "UpdateExternalAccount")]
+            UpdateExternalAccount = 7
         }
 
         /// <summary>

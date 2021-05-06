@@ -209,514 +209,562 @@ namespace Flipdish.Model
             UpdateCampaignsConfigurations = 18,
             
             /// <summary>
+            /// Enum DeleteCampaignsConfigurations for value: DeleteCampaignsConfigurations
+            /// </summary>
+            [EnumMember(Value = "DeleteCampaignsConfigurations")]
+            DeleteCampaignsConfigurations = 19,
+            
+            /// <summary>
             /// Enum ViewDevelopersSettings for value: ViewDevelopersSettings
             /// </summary>
             [EnumMember(Value = "ViewDevelopersSettings")]
-            ViewDevelopersSettings = 19,
+            ViewDevelopersSettings = 20,
             
             /// <summary>
             /// Enum EditDevelopersSettings for value: EditDevelopersSettings
             /// </summary>
             [EnumMember(Value = "EditDevelopersSettings")]
-            EditDevelopersSettings = 20,
+            EditDevelopersSettings = 21,
             
             /// <summary>
             /// Enum ViewOrders for value: ViewOrders
             /// </summary>
             [EnumMember(Value = "ViewOrders")]
-            ViewOrders = 21,
+            ViewOrders = 22,
             
             /// <summary>
             /// Enum UpdateOrdersAccept for value: UpdateOrdersAccept
             /// </summary>
             [EnumMember(Value = "UpdateOrdersAccept")]
-            UpdateOrdersAccept = 22,
+            UpdateOrdersAccept = 23,
             
             /// <summary>
             /// Enum UpdateOrdersReject for value: UpdateOrdersReject
             /// </summary>
             [EnumMember(Value = "UpdateOrdersReject")]
-            UpdateOrdersReject = 23,
+            UpdateOrdersReject = 24,
             
             /// <summary>
             /// Enum UpdateOrdersRefund for value: UpdateOrdersRefund
             /// </summary>
             [EnumMember(Value = "UpdateOrdersRefund")]
-            UpdateOrdersRefund = 24,
+            UpdateOrdersRefund = 25,
             
             /// <summary>
             /// Enum UpdateOrdersDispatch for value: UpdateOrdersDispatch
             /// </summary>
             [EnumMember(Value = "UpdateOrdersDispatch")]
-            UpdateOrdersDispatch = 25,
+            UpdateOrdersDispatch = 26,
             
             /// <summary>
             /// Enum ViewStores for value: ViewStores
             /// </summary>
             [EnumMember(Value = "ViewStores")]
-            ViewStores = 26,
+            ViewStores = 27,
             
             /// <summary>
             /// Enum EditStores for value: EditStores
             /// </summary>
             [EnumMember(Value = "EditStores")]
-            EditStores = 27,
+            EditStores = 28,
             
             /// <summary>
             /// Enum ViewStoresOpeningHours for value: ViewStoresOpeningHours
             /// </summary>
             [EnumMember(Value = "ViewStoresOpeningHours")]
-            ViewStoresOpeningHours = 28,
+            ViewStoresOpeningHours = 29,
             
             /// <summary>
             /// Enum UpdateStoresOpenForCollectionOrDelivery for value: UpdateStoresOpenForCollectionOrDelivery
             /// </summary>
             [EnumMember(Value = "UpdateStoresOpenForCollectionOrDelivery")]
-            UpdateStoresOpenForCollectionOrDelivery = 29,
+            UpdateStoresOpenForCollectionOrDelivery = 30,
             
             /// <summary>
             /// Enum UpdateStoresOpeningHours for value: UpdateStoresOpeningHours
             /// </summary>
             [EnumMember(Value = "UpdateStoresOpeningHours")]
-            UpdateStoresOpeningHours = 30,
+            UpdateStoresOpeningHours = 31,
             
             /// <summary>
             /// Enum ViewStoresOpeningHoursOverride for value: ViewStoresOpeningHoursOverride
             /// </summary>
             [EnumMember(Value = "ViewStoresOpeningHoursOverride")]
-            ViewStoresOpeningHoursOverride = 31,
+            ViewStoresOpeningHoursOverride = 32,
             
             /// <summary>
             /// Enum EditStoresOpeningHoursOverride for value: EditStoresOpeningHoursOverride
             /// </summary>
             [EnumMember(Value = "EditStoresOpeningHoursOverride")]
-            EditStoresOpeningHoursOverride = 32,
+            EditStoresOpeningHoursOverride = 33,
             
             /// <summary>
             /// Enum EditStoresOpeningHoursOverrideTemporary for value: EditStoresOpeningHoursOverrideTemporary
             /// </summary>
             [EnumMember(Value = "EditStoresOpeningHoursOverrideTemporary")]
-            EditStoresOpeningHoursOverrideTemporary = 33,
+            EditStoresOpeningHoursOverrideTemporary = 34,
             
             /// <summary>
             /// Enum UpdateStoresName for value: UpdateStoresName
             /// </summary>
             [EnumMember(Value = "UpdateStoresName")]
-            UpdateStoresName = 34,
+            UpdateStoresName = 35,
             
             /// <summary>
             /// Enum EditStoreKioskSettings for value: EditStoreKioskSettings
             /// </summary>
             [EnumMember(Value = "EditStoreKioskSettings")]
-            EditStoreKioskSettings = 35,
+            EditStoreKioskSettings = 36,
             
             /// <summary>
             /// Enum EditStoreOrderCapacity for value: EditStoreOrderCapacity
             /// </summary>
             [EnumMember(Value = "EditStoreOrderCapacity")]
-            EditStoreOrderCapacity = 36,
+            EditStoreOrderCapacity = 37,
             
             /// <summary>
             /// Enum UpdatePrinterTerminalsAssign for value: UpdatePrinterTerminalsAssign
             /// </summary>
             [EnumMember(Value = "UpdatePrinterTerminalsAssign")]
-            UpdatePrinterTerminalsAssign = 37,
+            UpdatePrinterTerminalsAssign = 38,
             
             /// <summary>
             /// Enum UpdatePrinterTerminalsToggle for value: UpdatePrinterTerminalsToggle
             /// </summary>
             [EnumMember(Value = "UpdatePrinterTerminalsToggle")]
-            UpdatePrinterTerminalsToggle = 38,
+            UpdatePrinterTerminalsToggle = 39,
             
             /// <summary>
             /// Enum EditStoreNotifications for value: EditStoreNotifications
             /// </summary>
             [EnumMember(Value = "EditStoreNotifications")]
-            EditStoreNotifications = 39,
+            EditStoreNotifications = 40,
             
             /// <summary>
             /// Enum ViewStoreGroups for value: ViewStoreGroups
             /// </summary>
             [EnumMember(Value = "ViewStoreGroups")]
-            ViewStoreGroups = 40,
+            ViewStoreGroups = 41,
             
             /// <summary>
             /// Enum CreateStoreGroups for value: CreateStoreGroups
             /// </summary>
             [EnumMember(Value = "CreateStoreGroups")]
-            CreateStoreGroups = 41,
+            CreateStoreGroups = 42,
             
             /// <summary>
             /// Enum UpdateStoreGroups for value: UpdateStoreGroups
             /// </summary>
             [EnumMember(Value = "UpdateStoreGroups")]
-            UpdateStoreGroups = 42,
+            UpdateStoreGroups = 43,
             
             /// <summary>
             /// Enum DeleteStoreGroups for value: DeleteStoreGroups
             /// </summary>
             [EnumMember(Value = "DeleteStoreGroups")]
-            DeleteStoreGroups = 43,
+            DeleteStoreGroups = 44,
             
             /// <summary>
             /// Enum ViewDeliveryZones for value: ViewDeliveryZones
             /// </summary>
             [EnumMember(Value = "ViewDeliveryZones")]
-            ViewDeliveryZones = 44,
+            ViewDeliveryZones = 45,
             
             /// <summary>
             /// Enum CreateDeliveryZones for value: CreateDeliveryZones
             /// </summary>
             [EnumMember(Value = "CreateDeliveryZones")]
-            CreateDeliveryZones = 45,
+            CreateDeliveryZones = 46,
             
             /// <summary>
             /// Enum UpdateDeliveryZones for value: UpdateDeliveryZones
             /// </summary>
             [EnumMember(Value = "UpdateDeliveryZones")]
-            UpdateDeliveryZones = 46,
+            UpdateDeliveryZones = 47,
             
             /// <summary>
             /// Enum DeleteDeliveryZones for value: DeleteDeliveryZones
             /// </summary>
             [EnumMember(Value = "DeleteDeliveryZones")]
-            DeleteDeliveryZones = 47,
+            DeleteDeliveryZones = 48,
             
             /// <summary>
             /// Enum ViewMenu for value: ViewMenu
             /// </summary>
             [EnumMember(Value = "ViewMenu")]
-            ViewMenu = 48,
+            ViewMenu = 49,
             
             /// <summary>
             /// Enum CreateMenu for value: CreateMenu
             /// </summary>
             [EnumMember(Value = "CreateMenu")]
-            CreateMenu = 49,
+            CreateMenu = 50,
             
             /// <summary>
             /// Enum UpdateMenu for value: UpdateMenu
             /// </summary>
             [EnumMember(Value = "UpdateMenu")]
-            UpdateMenu = 50,
+            UpdateMenu = 51,
             
             /// <summary>
             /// Enum DeleteMenu for value: DeleteMenu
             /// </summary>
             [EnumMember(Value = "DeleteMenu")]
-            DeleteMenu = 51,
+            DeleteMenu = 52,
             
             /// <summary>
             /// Enum UpdateMenuLock for value: UpdateMenuLock
             /// </summary>
             [EnumMember(Value = "UpdateMenuLock")]
-            UpdateMenuLock = 52,
+            UpdateMenuLock = 53,
             
             /// <summary>
             /// Enum UpdateMenuItemsHideTemporarily for value: UpdateMenuItemsHideTemporarily
             /// </summary>
             [EnumMember(Value = "UpdateMenuItemsHideTemporarily")]
-            UpdateMenuItemsHideTemporarily = 53,
+            UpdateMenuItemsHideTemporarily = 54,
             
             /// <summary>
             /// Enum EditMenuImage for value: EditMenuImage
             /// </summary>
             [EnumMember(Value = "EditMenuImage")]
-            EditMenuImage = 54,
+            EditMenuImage = 55,
             
             /// <summary>
             /// Enum ViewVouchers for value: ViewVouchers
             /// </summary>
             [EnumMember(Value = "ViewVouchers")]
-            ViewVouchers = 55,
+            ViewVouchers = 56,
             
             /// <summary>
             /// Enum EditVouchers for value: EditVouchers
             /// </summary>
             [EnumMember(Value = "EditVouchers")]
-            EditVouchers = 56,
+            EditVouchers = 57,
             
             /// <summary>
             /// Enum UpdateVouchersExtendDisable for value: UpdateVouchersExtendDisable
             /// </summary>
             [EnumMember(Value = "UpdateVouchersExtendDisable")]
-            UpdateVouchersExtendDisable = 57,
+            UpdateVouchersExtendDisable = 58,
             
             /// <summary>
             /// Enum ViewWebsiteContent for value: ViewWebsiteContent
             /// </summary>
             [EnumMember(Value = "ViewWebsiteContent")]
-            ViewWebsiteContent = 58,
+            ViewWebsiteContent = 59,
             
             /// <summary>
             /// Enum EditWebsiteContent for value: EditWebsiteContent
             /// </summary>
             [EnumMember(Value = "EditWebsiteContent")]
-            EditWebsiteContent = 59,
+            EditWebsiteContent = 60,
             
             /// <summary>
             /// Enum ViewWebsiteDnsVerified for value: ViewWebsiteDnsVerified
             /// </summary>
             [EnumMember(Value = "ViewWebsiteDnsVerified")]
-            ViewWebsiteDnsVerified = 60,
+            ViewWebsiteDnsVerified = 61,
             
             /// <summary>
             /// Enum ViewWebsiteCertificateCreated for value: ViewWebsiteCertificateCreated
             /// </summary>
             [EnumMember(Value = "ViewWebsiteCertificateCreated")]
-            ViewWebsiteCertificateCreated = 61,
+            ViewWebsiteCertificateCreated = 62,
             
             /// <summary>
             /// Enum ViewWebsiteCertificateRenewed for value: ViewWebsiteCertificateRenewed
             /// </summary>
             [EnumMember(Value = "ViewWebsiteCertificateRenewed")]
-            ViewWebsiteCertificateRenewed = 62,
+            ViewWebsiteCertificateRenewed = 63,
             
             /// <summary>
             /// Enum ViewBankAccounts for value: ViewBankAccounts
             /// </summary>
             [EnumMember(Value = "ViewBankAccounts")]
-            ViewBankAccounts = 63,
+            ViewBankAccounts = 64,
             
             /// <summary>
             /// Enum CreateBankAccounts for value: CreateBankAccounts
             /// </summary>
             [EnumMember(Value = "CreateBankAccounts")]
-            CreateBankAccounts = 64,
+            CreateBankAccounts = 65,
             
             /// <summary>
             /// Enum UpdateBankAccounts for value: UpdateBankAccounts
             /// </summary>
             [EnumMember(Value = "UpdateBankAccounts")]
-            UpdateBankAccounts = 65,
+            UpdateBankAccounts = 66,
             
             /// <summary>
             /// Enum UpdateBankAccountsAssign for value: UpdateBankAccountsAssign
             /// </summary>
             [EnumMember(Value = "UpdateBankAccountsAssign")]
-            UpdateBankAccountsAssign = 66,
+            UpdateBankAccountsAssign = 67,
             
             /// <summary>
             /// Enum ViewAssignedBankAccount for value: ViewAssignedBankAccount
             /// </summary>
             [EnumMember(Value = "ViewAssignedBankAccount")]
-            ViewAssignedBankAccount = 67,
+            ViewAssignedBankAccount = 68,
             
             /// <summary>
             /// Enum VerifyBankAccounts for value: VerifyBankAccounts
             /// </summary>
             [EnumMember(Value = "VerifyBankAccounts")]
-            VerifyBankAccounts = 68,
+            VerifyBankAccounts = 69,
             
             /// <summary>
             /// Enum ViewFeesConfigurations for value: ViewFeesConfigurations
             /// </summary>
             [EnumMember(Value = "ViewFeesConfigurations")]
-            ViewFeesConfigurations = 69,
+            ViewFeesConfigurations = 70,
             
             /// <summary>
             /// Enum EditFeesConfigurations for value: EditFeesConfigurations
             /// </summary>
             [EnumMember(Value = "EditFeesConfigurations")]
-            EditFeesConfigurations = 70,
+            EditFeesConfigurations = 71,
             
             /// <summary>
             /// Enum ViewHydraConfig for value: ViewHydraConfig
             /// </summary>
             [EnumMember(Value = "ViewHydraConfig")]
-            ViewHydraConfig = 71,
+            ViewHydraConfig = 72,
             
             /// <summary>
             /// Enum UpdateHydraConfigManage for value: UpdateHydraConfigManage
             /// </summary>
             [EnumMember(Value = "UpdateHydraConfigManage")]
-            UpdateHydraConfigManage = 72,
+            UpdateHydraConfigManage = 73,
+            
+            /// <summary>
+            /// Enum InitiateBluetoothPairingMode for value: InitiateBluetoothPairingMode
+            /// </summary>
+            [EnumMember(Value = "InitiateBluetoothPairingMode")]
+            InitiateBluetoothPairingMode = 74,
+            
+            /// <summary>
+            /// Enum ViewCustomers for value: ViewCustomers
+            /// </summary>
+            [EnumMember(Value = "ViewCustomers")]
+            ViewCustomers = 75,
+            
+            /// <summary>
+            /// Enum EditCustomers for value: EditCustomers
+            /// </summary>
+            [EnumMember(Value = "EditCustomers")]
+            EditCustomers = 76,
             
             /// <summary>
             /// Enum ViewAppStatistics for value: ViewAppStatistics
             /// </summary>
             [EnumMember(Value = "ViewAppStatistics")]
-            ViewAppStatistics = 73,
+            ViewAppStatistics = 77,
             
             /// <summary>
             /// Enum ViewApmStatistics for value: ViewApmStatistics
             /// </summary>
             [EnumMember(Value = "ViewApmStatistics")]
-            ViewApmStatistics = 74,
+            ViewApmStatistics = 78,
             
             /// <summary>
             /// Enum ViewCampaignsStatistics for value: ViewCampaignsStatistics
             /// </summary>
             [EnumMember(Value = "ViewCampaignsStatistics")]
-            ViewCampaignsStatistics = 75,
+            ViewCampaignsStatistics = 79,
             
             /// <summary>
             /// Enum ViewCustomerStatistics for value: ViewCustomerStatistics
             /// </summary>
             [EnumMember(Value = "ViewCustomerStatistics")]
-            ViewCustomerStatistics = 76,
+            ViewCustomerStatistics = 80,
             
             /// <summary>
             /// Enum ViewLiveStatistics for value: ViewLiveStatistics
             /// </summary>
             [EnumMember(Value = "ViewLiveStatistics")]
-            ViewLiveStatistics = 77,
+            ViewLiveStatistics = 81,
             
             /// <summary>
             /// Enum ViewOrderStatistics for value: ViewOrderStatistics
             /// </summary>
             [EnumMember(Value = "ViewOrderStatistics")]
-            ViewOrderStatistics = 78,
+            ViewOrderStatistics = 82,
             
             /// <summary>
             /// Enum ViewSalesStatistics for value: ViewSalesStatistics
             /// </summary>
             [EnumMember(Value = "ViewSalesStatistics")]
-            ViewSalesStatistics = 79,
+            ViewSalesStatistics = 83,
             
             /// <summary>
             /// Enum ViewSalesEndOfDayStatistics for value: ViewSalesEndOfDayStatistics
             /// </summary>
             [EnumMember(Value = "ViewSalesEndOfDayStatistics")]
-            ViewSalesEndOfDayStatistics = 80,
+            ViewSalesEndOfDayStatistics = 84,
             
             /// <summary>
             /// Enum ViewVouchersStatistics for value: ViewVouchersStatistics
             /// </summary>
             [EnumMember(Value = "ViewVouchersStatistics")]
-            ViewVouchersStatistics = 81,
+            ViewVouchersStatistics = 85,
+            
+            /// <summary>
+            /// Enum DownloadCustomerCsvExport for value: DownloadCustomerCsvExport
+            /// </summary>
+            [EnumMember(Value = "DownloadCustomerCsvExport")]
+            DownloadCustomerCsvExport = 86,
             
             /// <summary>
             /// Enum ViewApmAuditLogs for value: ViewApmAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewApmAuditLogs")]
-            ViewApmAuditLogs = 82,
+            ViewApmAuditLogs = 87,
             
             /// <summary>
             /// Enum ViewStoreAuditLogs for value: ViewStoreAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewStoreAuditLogs")]
-            ViewStoreAuditLogs = 83,
+            ViewStoreAuditLogs = 88,
             
             /// <summary>
             /// Enum ViewMenuAuditLogs for value: ViewMenuAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewMenuAuditLogs")]
-            ViewMenuAuditLogs = 84,
+            ViewMenuAuditLogs = 89,
             
             /// <summary>
             /// Enum ViewBankAccountAuditLogs for value: ViewBankAccountAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewBankAccountAuditLogs")]
-            ViewBankAccountAuditLogs = 85,
+            ViewBankAccountAuditLogs = 90,
             
             /// <summary>
             /// Enum ViewFeeConfigurationsAuditLogs for value: ViewFeeConfigurationsAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewFeeConfigurationsAuditLogs")]
-            ViewFeeConfigurationsAuditLogs = 86,
+            ViewFeeConfigurationsAuditLogs = 91,
             
             /// <summary>
             /// Enum ViewOrdersAuditLogs for value: ViewOrdersAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewOrdersAuditLogs")]
-            ViewOrdersAuditLogs = 87,
+            ViewOrdersAuditLogs = 92,
             
             /// <summary>
             /// Enum ViewVouchersAuditLogs for value: ViewVouchersAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewVouchersAuditLogs")]
-            ViewVouchersAuditLogs = 88,
+            ViewVouchersAuditLogs = 93,
             
             /// <summary>
             /// Enum ViewUserEventsAuditLogs for value: ViewUserEventsAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewUserEventsAuditLogs")]
-            ViewUserEventsAuditLogs = 89,
+            ViewUserEventsAuditLogs = 94,
             
             /// <summary>
             /// Enum ViewCampaignsAuditLogs for value: ViewCampaignsAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewCampaignsAuditLogs")]
-            ViewCampaignsAuditLogs = 90,
+            ViewCampaignsAuditLogs = 95,
             
             /// <summary>
             /// Enum ViewTeammatesAuditLogs for value: ViewTeammatesAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewTeammatesAuditLogs")]
-            ViewTeammatesAuditLogs = 91,
+            ViewTeammatesAuditLogs = 96,
             
             /// <summary>
             /// Enum ViewAppAuditLogs for value: ViewAppAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewAppAuditLogs")]
-            ViewAppAuditLogs = 92,
+            ViewAppAuditLogs = 97,
             
             /// <summary>
             /// Enum ViewCustomerAuditLogs for value: ViewCustomerAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewCustomerAuditLogs")]
-            ViewCustomerAuditLogs = 93,
+            ViewCustomerAuditLogs = 98,
             
             /// <summary>
             /// Enum ViewPrinterAuditLogs for value: ViewPrinterAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewPrinterAuditLogs")]
-            ViewPrinterAuditLogs = 94,
+            ViewPrinterAuditLogs = 99,
             
             /// <summary>
             /// Enum ViewHydraAuditLogs for value: ViewHydraAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewHydraAuditLogs")]
-            ViewHydraAuditLogs = 95,
+            ViewHydraAuditLogs = 100,
             
             /// <summary>
             /// Enum ViewPushNotificationAuditLogs for value: ViewPushNotificationAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewPushNotificationAuditLogs")]
-            ViewPushNotificationAuditLogs = 96,
+            ViewPushNotificationAuditLogs = 101,
+            
+            /// <summary>
+            /// Enum ViewStripeCustomConnectedAccountAuditLogs for value: ViewStripeCustomConnectedAccountAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewStripeCustomConnectedAccountAuditLogs")]
+            ViewStripeCustomConnectedAccountAuditLogs = 102,
+            
+            /// <summary>
+            /// Enum ViewKioskBluetoothDeviceAuditLogs for value: ViewKioskBluetoothDeviceAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewKioskBluetoothDeviceAuditLogs")]
+            ViewKioskBluetoothDeviceAuditLogs = 103,
             
             /// <summary>
             /// Enum SendPushNotificationToCustomer for value: SendPushNotificationToCustomer
             /// </summary>
             [EnumMember(Value = "SendPushNotificationToCustomer")]
-            SendPushNotificationToCustomer = 97,
+            SendPushNotificationToCustomer = 104,
             
             /// <summary>
             /// Enum InviteDriverToApp for value: InviteDriverToApp
             /// </summary>
             [EnumMember(Value = "InviteDriverToApp")]
-            InviteDriverToApp = 98,
+            InviteDriverToApp = 105,
             
             /// <summary>
             /// Enum GetDriverForApp for value: GetDriverForApp
             /// </summary>
             [EnumMember(Value = "GetDriverForApp")]
-            GetDriverForApp = 99,
+            GetDriverForApp = 106,
             
             /// <summary>
             /// Enum RemoveDriverFromApp for value: RemoveDriverFromApp
             /// </summary>
             [EnumMember(Value = "RemoveDriverFromApp")]
-            RemoveDriverFromApp = 100,
+            RemoveDriverFromApp = 107,
             
             /// <summary>
             /// Enum AssignDriverToOrder for value: AssignDriverToOrder
             /// </summary>
             [EnumMember(Value = "AssignDriverToOrder")]
-            AssignDriverToOrder = 101,
+            AssignDriverToOrder = 108,
             
             /// <summary>
             /// Enum UnassignDriverFromOrder for value: UnassignDriverFromOrder
             /// </summary>
             [EnumMember(Value = "UnassignDriverFromOrder")]
-            UnassignDriverFromOrder = 102,
+            UnassignDriverFromOrder = 109,
             
             /// <summary>
             /// Enum UpdateOrdersDeliveryTrackingStatus for value: UpdateOrdersDeliveryTrackingStatus
             /// </summary>
             [EnumMember(Value = "UpdateOrdersDeliveryTrackingStatus")]
-            UpdateOrdersDeliveryTrackingStatus = 103
+            UpdateOrdersDeliveryTrackingStatus = 110,
+            
+            /// <summary>
+            /// Enum ViewPayouts for value: ViewPayouts
+            /// </summary>
+            [EnumMember(Value = "ViewPayouts")]
+            ViewPayouts = 111
         }
 
 
@@ -763,23 +811,23 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="App" /> class.
         /// </summary>
         /// <param name="appId">App Identifier.</param>
-        /// <param name="hasIosApp">Has iOS app in store.</param>
-        /// <param name="hasAndroidApp">Has Android app in play store.</param>
-        /// <param name="countryId">Country identifier.</param>
-        /// <param name="logoImageUrl">Application Logo.</param>
-        /// <param name="languages">Languages to be available in the application.</param>
-        /// <param name="availableAppLanguages">Available Languages for Apps\\Staff.</param>
+        /// <param name="hasIosApp">Has iOS app in Apple App Store. This is readonly..</param>
+        /// <param name="hasAndroidApp">Has Android app in Google Play Store. This is readonly..</param>
+        /// <param name="countryId">Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks.</param>
+        /// <param name="logoImageUrl">Application Logo..</param>
+        /// <param name="languages">Languages that have been selected to be available to customers..</param>
+        /// <param name="availableAppLanguages">Lists all languages that are supported by Flipdish..</param>
         /// <param name="appAccessLevel">App access level for the logged in user.</param>
         /// <param name="appResourceSet">Constitutes a list of available resources.</param>
-        /// <param name="features">Feature flags.</param>
-        /// <param name="mapCenter">Center of the map coordinates.</param>
-        /// <param name="mapNorthEast">North East(Top Right) Corner of the map coordinates.</param>
-        /// <param name="mapSouthWest">South West (Bottom Left) Corner of the map coordinates.</param>
-        /// <param name="name">App name.</param>
-        /// <param name="hostName">HostName on which the app is allowed to be hosted.</param>
-        /// <param name="mainColor">Main color of the web \\ android \\ ios applications.</param>
+        /// <param name="features">Feature flags. These cannot be set by 3rd parties..</param>
+        /// <param name="mapCenter">Center of the map coordinates. This is used to center the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App..</param>
+        /// <param name="mapNorthEast">North East(Top Right) Corner of the map coordinates. This is used to frame the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App..</param>
+        /// <param name="mapSouthWest">South West (Bottom Left) Corner of the map coordinates. This is used to frame the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App..</param>
+        /// <param name="name">App name.   This is used in various places on the Apple App Store, Google Play Store, mobile apps and websites..</param>
+        /// <param name="hostName">HostName on which the web-ordering system is allowed to be hosted or that a Flipdish website is hosted on..</param>
+        /// <param name="mainColor">Main color of the web / Android / iOS applications.</param>
         /// <param name="applicationCategory">Application Category.</param>
-        /// <param name="isPanaceaEnabled">Is Panacea Enabled.</param>
+        /// <param name="isPanaceaEnabled">Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain..</param>
         /// <param name="cookieConsentPromptEnabled">Cookie Consent Prompt Enabled.</param>
         public App(string appId = default(string), bool? hasIosApp = default(bool?), bool? hasAndroidApp = default(bool?), string countryId = default(string), string logoImageUrl = default(string), List<Language> languages = default(List<Language>), List<Language> availableAppLanguages = default(List<Language>), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), List<AppResourceSetEnum> appResourceSet = default(List<AppResourceSetEnum>), List<string> features = default(List<string>), Coordinates mapCenter = default(Coordinates), Coordinates mapNorthEast = default(Coordinates), Coordinates mapSouthWest = default(Coordinates), string name = default(string), string hostName = default(string), string mainColor = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), bool? cookieConsentPromptEnabled = default(bool?))
         {
@@ -812,103 +860,103 @@ namespace Flipdish.Model
         public string AppId { get; set; }
 
         /// <summary>
-        /// Has iOS app in store
+        /// Has iOS app in Apple App Store. This is readonly.
         /// </summary>
-        /// <value>Has iOS app in store</value>
+        /// <value>Has iOS app in Apple App Store. This is readonly.</value>
         [DataMember(Name="HasIosApp", EmitDefaultValue=false)]
         public bool? HasIosApp { get; set; }
 
         /// <summary>
-        /// Has Android app in play store
+        /// Has Android app in Google Play Store. This is readonly.
         /// </summary>
-        /// <value>Has Android app in play store</value>
+        /// <value>Has Android app in Google Play Store. This is readonly.</value>
         [DataMember(Name="HasAndroidApp", EmitDefaultValue=false)]
         public bool? HasAndroidApp { get; set; }
 
         /// <summary>
-        /// Country identifier
+        /// Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks
         /// </summary>
-        /// <value>Country identifier</value>
+        /// <value>Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks</value>
         [DataMember(Name="CountryId", EmitDefaultValue=false)]
         public string CountryId { get; set; }
 
         /// <summary>
-        /// Application Logo
+        /// Application Logo.
         /// </summary>
-        /// <value>Application Logo</value>
+        /// <value>Application Logo.</value>
         [DataMember(Name="LogoImageUrl", EmitDefaultValue=false)]
         public string LogoImageUrl { get; set; }
 
         /// <summary>
-        /// Languages to be available in the application
+        /// Languages that have been selected to be available to customers.
         /// </summary>
-        /// <value>Languages to be available in the application</value>
+        /// <value>Languages that have been selected to be available to customers.</value>
         [DataMember(Name="Languages", EmitDefaultValue=false)]
         public List<Language> Languages { get; set; }
 
         /// <summary>
-        /// Available Languages for Apps\\Staff
+        /// Lists all languages that are supported by Flipdish.
         /// </summary>
-        /// <value>Available Languages for Apps\\Staff</value>
+        /// <value>Lists all languages that are supported by Flipdish.</value>
         [DataMember(Name="AvailableAppLanguages", EmitDefaultValue=false)]
         public List<Language> AvailableAppLanguages { get; set; }
 
 
 
         /// <summary>
-        /// Feature flags
+        /// Feature flags. These cannot be set by 3rd parties.
         /// </summary>
-        /// <value>Feature flags</value>
+        /// <value>Feature flags. These cannot be set by 3rd parties.</value>
         [DataMember(Name="Features", EmitDefaultValue=false)]
         public List<string> Features { get; set; }
 
         /// <summary>
-        /// Center of the map coordinates
+        /// Center of the map coordinates. This is used to center the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App.
         /// </summary>
-        /// <value>Center of the map coordinates</value>
+        /// <value>Center of the map coordinates. This is used to center the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App.</value>
         [DataMember(Name="MapCenter", EmitDefaultValue=false)]
         public Coordinates MapCenter { get; set; }
 
         /// <summary>
-        /// North East(Top Right) Corner of the map coordinates
+        /// North East(Top Right) Corner of the map coordinates. This is used to frame the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App.
         /// </summary>
-        /// <value>North East(Top Right) Corner of the map coordinates</value>
+        /// <value>North East(Top Right) Corner of the map coordinates. This is used to frame the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App.</value>
         [DataMember(Name="MapNorthEast", EmitDefaultValue=false)]
         public Coordinates MapNorthEast { get; set; }
 
         /// <summary>
-        /// South West (Bottom Left) Corner of the map coordinates
+        /// South West (Bottom Left) Corner of the map coordinates. This is used to frame the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App.
         /// </summary>
-        /// <value>South West (Bottom Left) Corner of the map coordinates</value>
+        /// <value>South West (Bottom Left) Corner of the map coordinates. This is used to frame the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App.</value>
         [DataMember(Name="MapSouthWest", EmitDefaultValue=false)]
         public Coordinates MapSouthWest { get; set; }
 
         /// <summary>
-        /// App name
+        /// App name.   This is used in various places on the Apple App Store, Google Play Store, mobile apps and websites.
         /// </summary>
-        /// <value>App name</value>
+        /// <value>App name.   This is used in various places on the Apple App Store, Google Play Store, mobile apps and websites.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// HostName on which the app is allowed to be hosted
+        /// HostName on which the web-ordering system is allowed to be hosted or that a Flipdish website is hosted on.
         /// </summary>
-        /// <value>HostName on which the app is allowed to be hosted</value>
+        /// <value>HostName on which the web-ordering system is allowed to be hosted or that a Flipdish website is hosted on.</value>
         [DataMember(Name="HostName", EmitDefaultValue=false)]
         public string HostName { get; set; }
 
         /// <summary>
-        /// Main color of the web \\ android \\ ios applications
+        /// Main color of the web / Android / iOS applications
         /// </summary>
-        /// <value>Main color of the web \\ android \\ ios applications</value>
+        /// <value>Main color of the web / Android / iOS applications</value>
         [DataMember(Name="MainColor", EmitDefaultValue=false)]
         public string MainColor { get; set; }
 
 
         /// <summary>
-        /// Is Panacea Enabled
+        /// Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain.
         /// </summary>
-        /// <value>Is Panacea Enabled</value>
+        /// <value>Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain.</value>
         [DataMember(Name="IsPanaceaEnabled", EmitDefaultValue=false)]
         public bool? IsPanaceaEnabled { get; set; }
 

@@ -66,11 +66,11 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppConfigUpdateModel" /> class.
         /// </summary>
-        /// <param name="name">App name.</param>
-        /// <param name="hostName">HostName on which the app is allowed to be hosted.</param>
-        /// <param name="mainColor">Main color of the web \\ android \\ ios applications.</param>
+        /// <param name="name">App name.   This is used in various places on the Apple App Store, Google Play Store, mobile apps and websites..</param>
+        /// <param name="hostName">HostName on which the web-ordering system is allowed to be hosted or that a Flipdish website is hosted on..</param>
+        /// <param name="mainColor">Main color of the web / Android / iOS applications.</param>
         /// <param name="applicationCategory">Application Category.</param>
-        /// <param name="isPanaceaEnabled">Is Panacea Enabled.</param>
+        /// <param name="isPanaceaEnabled">Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain..</param>
         /// <param name="cookieConsentPromptEnabled">Cookie Consent Prompt Enabled.</param>
         public AppConfigUpdateModel(string name = default(string), string hostName = default(string), string mainColor = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), bool? cookieConsentPromptEnabled = default(bool?))
         {
@@ -83,31 +83,31 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// App name
+        /// App name.   This is used in various places on the Apple App Store, Google Play Store, mobile apps and websites.
         /// </summary>
-        /// <value>App name</value>
+        /// <value>App name.   This is used in various places on the Apple App Store, Google Play Store, mobile apps and websites.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// HostName on which the app is allowed to be hosted
+        /// HostName on which the web-ordering system is allowed to be hosted or that a Flipdish website is hosted on.
         /// </summary>
-        /// <value>HostName on which the app is allowed to be hosted</value>
+        /// <value>HostName on which the web-ordering system is allowed to be hosted or that a Flipdish website is hosted on.</value>
         [DataMember(Name="HostName", EmitDefaultValue=false)]
         public string HostName { get; set; }
 
         /// <summary>
-        /// Main color of the web \\ android \\ ios applications
+        /// Main color of the web / Android / iOS applications
         /// </summary>
-        /// <value>Main color of the web \\ android \\ ios applications</value>
+        /// <value>Main color of the web / Android / iOS applications</value>
         [DataMember(Name="MainColor", EmitDefaultValue=false)]
         public string MainColor { get; set; }
 
 
         /// <summary>
-        /// Is Panacea Enabled
+        /// Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain.
         /// </summary>
-        /// <value>Is Panacea Enabled</value>
+        /// <value>Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain.</value>
         [DataMember(Name="IsPanaceaEnabled", EmitDefaultValue=false)]
         public bool? IsPanaceaEnabled { get; set; }
 

@@ -4,19 +4,20 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AttachBankAccountToStore**](BankAccountApi.md#attachbankaccounttostore) | **POST** /api/v1.0/{appId}/bankaccounts/{accountId}/store/{storeId} | [PRIVATE API] Attach Bank Account to Store
-[**CreateBankAccount**](BankAccountApi.md#createbankaccount) | **POST** /api/v1.0/{appId}/bankaccounts | [PRIVATE API] Create a new Bank Account and attach to this App
-[**DeleteBankAccount**](BankAccountApi.md#deletebankaccount) | **DELETE** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Delete BankAccount
-[**GetBankAccountById**](BankAccountApi.md#getbankaccountbyid) | **GET** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Get BankAccount Detail by Id
-[**GetBankAccounts**](BankAccountApi.md#getbankaccounts) | **GET** /api/v1.0/{appId}/bankaccounts | [PRIVATE API] Get List of BankAccounts for WL
+[**AttachBankAccountToStore**](BankAccountApi.md#attachbankaccounttostore) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/store/{storeId} | [PRIVATE API] Attach Bank Account to Store
+[**CreateBankAccount**](BankAccountApi.md#createbankaccount) | **POST** /api/v1.0/{appId}/bankaccounts | Create a new Bank Account and attach to this App
+[**DeleteBankAccount**](BankAccountApi.md#deletebankaccount) | **DELETE** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | Delete BankAccount
+[**GetBankAccountById**](BankAccountApi.md#getbankaccountbyid) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | Get BankAccount Detail by Id
+[**GetBankAccounts**](BankAccountApi.md#getbankaccounts) | **GET** /api/v1.0/{appId}/bankaccounts | Get List of BankAccounts for WL
+[**GetCountriesWithFieldDefinitions**](BankAccountApi.md#getcountrieswithfielddefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/countries-field-definitions | Get bank account fields definitions
 [**GetFieldDefinitions**](BankAccountApi.md#getfielddefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/field-definitions | Get bank account fields definitions
-[**UpdateBankAccount**](BankAccountApi.md#updatebankaccount) | **POST** /api/v1.0/{appId}/bankaccounts/{id} | [PRIVATE API] Update BankAccount
-[**UpdateBankAccountState**](BankAccountApi.md#updatebankaccountstate) | **POST** /api/v1.0/{appId}/bankaccounts/{accountId}/state/{state} | [PRIVATE API] Update State of Bank Account
+[**UpdateBankAccount**](BankAccountApi.md#updatebankaccount) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | Update BankAccount
+[**UpdateBankAccountState**](BankAccountApi.md#updatebankaccountstate) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/state/{state} | [PRIVATE API] Update State of Bank Account
 
 
 <a name="attachbankaccounttostore"></a>
 # **AttachBankAccountToStore**
-> void AttachBankAccountToStore (string appId, int? accountId, int? storeId)
+> void AttachBankAccountToStore (string appId, int? bankAccountId, int? storeId)
 
 [PRIVATE API] Attach Bank Account to Store
 
@@ -39,13 +40,13 @@ namespace Example
 
             var apiInstance = new BankAccountApi();
             var appId = appId_example;  // string | App Name
-            var accountId = 56;  // int? | Id of account to be updated
+            var bankAccountId = 56;  // int? | Id of account to be updated
             var storeId = 56;  // int? | Store to be attached to Bank account
 
             try
             {
                 // [PRIVATE API] Attach Bank Account to Store
-                apiInstance.AttachBankAccountToStore(appId, accountId, storeId);
+                apiInstance.AttachBankAccountToStore(appId, bankAccountId, storeId);
             }
             catch (Exception e)
             {
@@ -61,7 +62,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App Name | 
- **accountId** | **int?**| Id of account to be updated | 
+ **bankAccountId** | **int?**| Id of account to be updated | 
  **storeId** | **int?**| Store to be attached to Bank account | 
 
 ### Return type
@@ -83,7 +84,7 @@ void (empty response body)
 # **CreateBankAccount**
 > RestApiResultBankAccountDetail CreateBankAccount (string appId, BankAccountCreate account)
 
-[PRIVATE API] Create a new Bank Account and attach to this App
+Create a new Bank Account and attach to this App
 
 ### Example
 ```csharp
@@ -108,7 +109,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API] Create a new Bank Account and attach to this App
+                // Create a new Bank Account and attach to this App
                 RestApiResultBankAccountDetail result = apiInstance.CreateBankAccount(appId, account);
                 Debug.WriteLine(result);
             }
@@ -145,9 +146,9 @@ Name | Type | Description  | Notes
 
 <a name="deletebankaccount"></a>
 # **DeleteBankAccount**
-> void DeleteBankAccount (string appId, int? id)
+> void DeleteBankAccount (string appId, int? bankAccountId)
 
-[PRIVATE API] Delete BankAccount
+Delete BankAccount
 
 ### Example
 ```csharp
@@ -168,12 +169,12 @@ namespace Example
 
             var apiInstance = new BankAccountApi();
             var appId = appId_example;  // string | App Name
-            var id = 56;  // int? | Id of account to be marked as deleted
+            var bankAccountId = 56;  // int? | Id of account to be marked as deleted
 
             try
             {
-                // [PRIVATE API] Delete BankAccount
-                apiInstance.DeleteBankAccount(appId, id);
+                // Delete BankAccount
+                apiInstance.DeleteBankAccount(appId, bankAccountId);
             }
             catch (Exception e)
             {
@@ -189,7 +190,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App Name | 
- **id** | **int?**| Id of account to be marked as deleted | 
+ **bankAccountId** | **int?**| Id of account to be marked as deleted | 
 
 ### Return type
 
@@ -208,9 +209,9 @@ void (empty response body)
 
 <a name="getbankaccountbyid"></a>
 # **GetBankAccountById**
-> RestApiResultBankAccountDetail GetBankAccountById (int? id, string appId)
+> RestApiResultBankAccountDetail GetBankAccountById (int? bankAccountId, string appId)
 
-[PRIVATE API] Get BankAccount Detail by Id
+Get BankAccount Detail by Id
 
 ### Example
 ```csharp
@@ -230,13 +231,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new BankAccountApi();
-            var id = 56;  // int? | Id of account
+            var bankAccountId = 56;  // int? | Id of account
             var appId = appId_example;  // string | 
 
             try
             {
-                // [PRIVATE API] Get BankAccount Detail by Id
-                RestApiResultBankAccountDetail result = apiInstance.GetBankAccountById(id, appId);
+                // Get BankAccount Detail by Id
+                RestApiResultBankAccountDetail result = apiInstance.GetBankAccountById(bankAccountId, appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -252,7 +253,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**| Id of account | 
+ **bankAccountId** | **int?**| Id of account | 
  **appId** | **string**|  | 
 
 ### Return type
@@ -274,7 +275,7 @@ Name | Type | Description  | Notes
 # **GetBankAccounts**
 > RestApiArrayResultBankAccountSummary GetBankAccounts (string appId)
 
-[PRIVATE API] Get List of BankAccounts for WL
+Get List of BankAccounts for WL
 
 ### Example
 ```csharp
@@ -298,7 +299,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API] Get List of BankAccounts for WL
+                // Get List of BankAccounts for WL
                 RestApiArrayResultBankAccountSummary result = apiInstance.GetBankAccounts(appId);
                 Debug.WriteLine(result);
             }
@@ -320,6 +321,68 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiArrayResultBankAccountSummary**](RestApiArrayResultBankAccountSummary.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getcountrieswithfielddefinitions"></a>
+# **GetCountriesWithFieldDefinitions**
+> RestApiArrayResultCountryWithAccountFieldsDefinitions GetCountriesWithFieldDefinitions (string appId)
+
+Get bank account fields definitions
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetCountriesWithFieldDefinitionsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new BankAccountApi();
+            var appId = appId_example;  // string | 
+
+            try
+            {
+                // Get bank account fields definitions
+                RestApiArrayResultCountryWithAccountFieldsDefinitions result = apiInstance.GetCountriesWithFieldDefinitions(appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BankAccountApi.GetCountriesWithFieldDefinitions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+
+### Return type
+
+[**RestApiArrayResultCountryWithAccountFieldsDefinitions**](RestApiArrayResultCountryWithAccountFieldsDefinitions.md)
 
 ### Authorization
 
@@ -396,9 +459,9 @@ Name | Type | Description  | Notes
 
 <a name="updatebankaccount"></a>
 # **UpdateBankAccount**
-> void UpdateBankAccount (string appId, int? id, BankAccountCreate account)
+> void UpdateBankAccount (string appId, int? bankAccountId, BankAccountCreate account)
 
-[PRIVATE API] Update BankAccount
+Update BankAccount
 
 ### Example
 ```csharp
@@ -419,13 +482,13 @@ namespace Example
 
             var apiInstance = new BankAccountApi();
             var appId = appId_example;  // string | App Name
-            var id = 56;  // int? | Id of account to be updated
+            var bankAccountId = 56;  // int? | Id of account to be updated
             var account = new BankAccountCreate(); // BankAccountCreate | Details to update account with
 
             try
             {
-                // [PRIVATE API] Update BankAccount
-                apiInstance.UpdateBankAccount(appId, id, account);
+                // Update BankAccount
+                apiInstance.UpdateBankAccount(appId, bankAccountId, account);
             }
             catch (Exception e)
             {
@@ -441,7 +504,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App Name | 
- **id** | **int?**| Id of account to be updated | 
+ **bankAccountId** | **int?**| Id of account to be updated | 
  **account** | [**BankAccountCreate**](BankAccountCreate.md)| Details to update account with | 
 
 ### Return type
@@ -461,7 +524,7 @@ void (empty response body)
 
 <a name="updatebankaccountstate"></a>
 # **UpdateBankAccountState**
-> void UpdateBankAccountState (string appId, int? accountId, string state, string reason)
+> void UpdateBankAccountState (string appId, int? bankAccountId, string state, string reason)
 
 [PRIVATE API] Update State of Bank Account
 
@@ -484,14 +547,14 @@ namespace Example
 
             var apiInstance = new BankAccountApi();
             var appId = appId_example;  // string | App Name
-            var accountId = 56;  // int? | Id of account to be updated
+            var bankAccountId = 56;  // int? | Id of account to be updated
             var state = state_example;  // string | New state
             var reason = reason_example;  // string | Reason for state change, Mandatory for rejections
 
             try
             {
                 // [PRIVATE API] Update State of Bank Account
-                apiInstance.UpdateBankAccountState(appId, accountId, state, reason);
+                apiInstance.UpdateBankAccountState(appId, bankAccountId, state, reason);
             }
             catch (Exception e)
             {
@@ -507,7 +570,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App Name | 
- **accountId** | **int?**| Id of account to be updated | 
+ **bankAccountId** | **int?**| Id of account to be updated | 
  **state** | **string**| New state | 
  **reason** | **string**| Reason for state change, Mandatory for rejections | 
 

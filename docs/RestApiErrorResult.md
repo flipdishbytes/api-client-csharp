@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Message** | **string** | Error message | 
+**ErrorCode** | **int?** | Error code | [optional] 
 **StackTrace** | **string** | Stack trace | [optional] 
 **Errors** | [**List&lt;ValidationErrorResult&gt;**](ValidationErrorResult.md) | List of errors grouped by field name | [optional] 
 

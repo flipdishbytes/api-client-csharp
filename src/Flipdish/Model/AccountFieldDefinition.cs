@@ -108,7 +108,13 @@ namespace Flipdish.Model
             /// Enum SortCode for value: SortCode
             /// </summary>
             [EnumMember(Value = "SortCode")]
-            SortCode = 12
+            SortCode = 12,
+            
+            /// <summary>
+            /// Enum Swift for value: Swift
+            /// </summary>
+            [EnumMember(Value = "Swift")]
+            Swift = 13
         }
 
         /// <summary>
@@ -135,13 +141,7 @@ namespace Flipdish.Model
             /// Enum Iban for value: Iban
             /// </summary>
             [EnumMember(Value = "Iban")]
-            Iban = 2,
-            
-            /// <summary>
-            /// Enum Swift for value: Swift
-            /// </summary>
-            [EnumMember(Value = "Swift")]
-            Swift = 3
+            Iban = 2
         }
 
         /// <summary>

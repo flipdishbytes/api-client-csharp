@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CompanyId** | **string** | Company Id | [optional] 
+**UseOAuth** | **bool?** | Use OAuth for authentication | [optional] 
 **Enabled** | **bool?** | Enabled | [optional] 
 **EstimatedMinutesForDelivery** | **int?** | Estimated minutes for delivery | [optional] 
 **EstimatedMinutesForCollection** | **int?** | Estimated minutes for collection | [optional] 
@@ -19,6 +20,7 @@ Name | Type | Description | Notes
 **CollectionTableIds** | **Dictionary&lt;string, string&gt;** | Collection Table IDs to send orders to | [optional] 
 **DeliveryTableIds** | **Dictionary&lt;string, string&gt;** | Delivery Table IDs to send orders to | [optional] 
 **UseTaxInclusivePrices** | **bool?** | Exclude tax | [optional] 
+**SkipStatusCheckAndAcceptOrderAfterSending** | **bool?** | WARNING: only use this option if the Liteserver is not synchronizing within max 5 minutes with Lightspeed cloud! | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

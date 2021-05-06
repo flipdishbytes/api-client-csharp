@@ -33,24 +33,31 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PushNotificationSentEvent" /> class.
         /// </summary>
+        /// <param name="eventName">The event name.</param>
         /// <param name="description">Description.</param>
         /// <param name="pushNotification">pushNotification.</param>
-        /// <param name="eventName">The event name.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
-        public PushNotificationSentEvent(string description = default(string), PushNotificationRequest pushNotification = default(PushNotificationRequest), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
+        public PushNotificationSentEvent(string eventName = default(string), string description = default(string), PushNotificationRequest pushNotification = default(PushNotificationRequest), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
         {
+            this.EventName = eventName;
             this.Description = description;
             this.PushNotification = pushNotification;
-            this.EventName = eventName;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
             this.Position = position;
             this.AppId = appId;
         }
         
+        /// <summary>
+        /// The event name
+        /// </summary>
+        /// <value>The event name</value>
+        [DataMember(Name="EventName", EmitDefaultValue=false)]
+        public string EventName { get; set; }
+
         /// <summary>
         /// Description
         /// </summary>
@@ -63,13 +70,6 @@ namespace Flipdish.Model
         /// </summary>
         [DataMember(Name="PushNotification", EmitDefaultValue=false)]
         public PushNotificationRequest PushNotification { get; set; }
-
-        /// <summary>
-        /// The event name
-        /// </summary>
-        /// <value>The event name</value>
-        [DataMember(Name="EventName", EmitDefaultValue=false)]
-        public string EventName { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -107,9 +107,9 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PushNotificationSentEvent {\n");
+            sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  PushNotification: ").Append(PushNotification).Append("\n");
-            sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -149,6 +149,11 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.EventName == input.EventName ||
+                    (this.EventName != null &&
+                    this.EventName.Equals(input.EventName))
+                ) && 
+                (
                     this.Description == input.Description ||
                     (this.Description != null &&
                     this.Description.Equals(input.Description))
@@ -157,11 +162,6 @@ namespace Flipdish.Model
                     this.PushNotification == input.PushNotification ||
                     (this.PushNotification != null &&
                     this.PushNotification.Equals(input.PushNotification))
-                ) && 
-                (
-                    this.EventName == input.EventName ||
-                    (this.EventName != null &&
-                    this.EventName.Equals(input.EventName))
                 ) && 
                 (
                     this.FlipdishEventId == input.FlipdishEventId ||
@@ -194,12 +194,12 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.EventName != null)
+                    hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.PushNotification != null)
                     hashCode = hashCode * 59 + this.PushNotification.GetHashCode();
-                if (this.EventName != null)
-                    hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)

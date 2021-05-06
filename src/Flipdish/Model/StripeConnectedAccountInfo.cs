@@ -66,7 +66,19 @@ namespace Flipdish.Model
             /// Enum Unverified for value: Unverified
             /// </summary>
             [EnumMember(Value = "Unverified")]
-            Unverified = 5
+            Unverified = 5,
+            
+            /// <summary>
+            /// Enum Rejected for value: Rejected
+            /// </summary>
+            [EnumMember(Value = "Rejected")]
+            Rejected = 6,
+            
+            /// <summary>
+            /// Enum UpdateExternalAccount for value: UpdateExternalAccount
+            /// </summary>
+            [EnumMember(Value = "UpdateExternalAccount")]
+            UpdateExternalAccount = 7
         }
 
         /// <summary>
@@ -76,14 +88,55 @@ namespace Flipdish.Model
         [DataMember(Name="AccountStatus", EmitDefaultValue=false)]
         public AccountStatusEnum? AccountStatus { get; set; }
         /// <summary>
+        /// Current status of the Card Payment capability of the account
+        /// </summary>
+        /// <value>Current status of the Card Payment capability of the account</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CardPaymentStatusEnum
+        {
+            
+            /// <summary>
+            /// Enum Inactive for value: Inactive
+            /// </summary>
+            [EnumMember(Value = "Inactive")]
+            Inactive = 1,
+            
+            /// <summary>
+            /// Enum Pending for value: Pending
+            /// </summary>
+            [EnumMember(Value = "Pending")]
+            Pending = 2,
+            
+            /// <summary>
+            /// Enum Active for value: Active
+            /// </summary>
+            [EnumMember(Value = "Active")]
+            Active = 3,
+            
+            /// <summary>
+            /// Enum Unrequested for value: Unrequested
+            /// </summary>
+            [EnumMember(Value = "Unrequested")]
+            Unrequested = 4
+        }
+
+        /// <summary>
+        /// Current status of the Card Payment capability of the account
+        /// </summary>
+        /// <value>Current status of the Card Payment capability of the account</value>
+        [DataMember(Name="CardPaymentStatus", EmitDefaultValue=false)]
+        public CardPaymentStatusEnum? CardPaymentStatus { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="StripeConnectedAccountInfo" /> class.
         /// </summary>
         /// <param name="accountStatus">Stripe connected account status.</param>
         /// <param name="stripeId">Stripe connected account id.</param>
-        public StripeConnectedAccountInfo(AccountStatusEnum? accountStatus = default(AccountStatusEnum?), string stripeId = default(string))
+        /// <param name="cardPaymentStatus">Current status of the Card Payment capability of the account.</param>
+        public StripeConnectedAccountInfo(AccountStatusEnum? accountStatus = default(AccountStatusEnum?), string stripeId = default(string), CardPaymentStatusEnum? cardPaymentStatus = default(CardPaymentStatusEnum?))
         {
             this.AccountStatus = accountStatus;
             this.StripeId = stripeId;
+            this.CardPaymentStatus = cardPaymentStatus;
         }
         
 
@@ -93,6 +146,7 @@ namespace Flipdish.Model
         /// <value>Stripe connected account id</value>
         [DataMember(Name="StripeId", EmitDefaultValue=false)]
         public string StripeId { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -104,6 +158,7 @@ namespace Flipdish.Model
             sb.Append("class StripeConnectedAccountInfo {\n");
             sb.Append("  AccountStatus: ").Append(AccountStatus).Append("\n");
             sb.Append("  StripeId: ").Append(StripeId).Append("\n");
+            sb.Append("  CardPaymentStatus: ").Append(CardPaymentStatus).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -147,6 +202,11 @@ namespace Flipdish.Model
                     this.StripeId == input.StripeId ||
                     (this.StripeId != null &&
                     this.StripeId.Equals(input.StripeId))
+                ) && 
+                (
+                    this.CardPaymentStatus == input.CardPaymentStatus ||
+                    (this.CardPaymentStatus != null &&
+                    this.CardPaymentStatus.Equals(input.CardPaymentStatus))
                 );
         }
 
@@ -163,6 +223,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.AccountStatus.GetHashCode();
                 if (this.StripeId != null)
                     hashCode = hashCode * 59 + this.StripeId.GetHashCode();
+                if (this.CardPaymentStatus != null)
+                    hashCode = hashCode * 59 + this.CardPaymentStatus.GetHashCode();
                 return hashCode;
             }
         }

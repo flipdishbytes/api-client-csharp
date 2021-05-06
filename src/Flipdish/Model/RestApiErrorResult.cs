@@ -39,9 +39,10 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="RestApiErrorResult" /> class.
         /// </summary>
         /// <param name="message">Error message (required).</param>
+        /// <param name="errorCode">Error code.</param>
         /// <param name="stackTrace">Stack trace.</param>
         /// <param name="errors">List of errors grouped by field name.</param>
-        public RestApiErrorResult(string message = default(string), string stackTrace = default(string), List<ValidationErrorResult> errors = default(List<ValidationErrorResult>))
+        public RestApiErrorResult(string message = default(string), int? errorCode = default(int?), string stackTrace = default(string), List<ValidationErrorResult> errors = default(List<ValidationErrorResult>))
         {
             // to ensure "message" is required (not null)
             if (message == null)
@@ -52,6 +53,7 @@ namespace Flipdish.Model
             {
                 this.Message = message;
             }
+            this.ErrorCode = errorCode;
             this.StackTrace = stackTrace;
             this.Errors = errors;
         }
@@ -62,6 +64,13 @@ namespace Flipdish.Model
         /// <value>Error message</value>
         [DataMember(Name="Message", EmitDefaultValue=false)]
         public string Message { get; set; }
+
+        /// <summary>
+        /// Error code
+        /// </summary>
+        /// <value>Error code</value>
+        [DataMember(Name="ErrorCode", EmitDefaultValue=false)]
+        public int? ErrorCode { get; set; }
 
         /// <summary>
         /// Stack trace
@@ -86,6 +95,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class RestApiErrorResult {\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  StackTrace: ").Append(StackTrace).Append("\n");
             sb.Append("  Errors: ").Append(Errors).Append("\n");
             sb.Append("}\n");
@@ -128,6 +138,11 @@ namespace Flipdish.Model
                     this.Message.Equals(input.Message))
                 ) && 
                 (
+                    this.ErrorCode == input.ErrorCode ||
+                    (this.ErrorCode != null &&
+                    this.ErrorCode.Equals(input.ErrorCode))
+                ) && 
+                (
                     this.StackTrace == input.StackTrace ||
                     (this.StackTrace != null &&
                     this.StackTrace.Equals(input.StackTrace))
@@ -150,6 +165,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.Message != null)
                     hashCode = hashCode * 59 + this.Message.GetHashCode();
+                if (this.ErrorCode != null)
+                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
                 if (this.StackTrace != null)
                     hashCode = hashCode * 59 + this.StackTrace.GetHashCode();
                 if (this.Errors != null)

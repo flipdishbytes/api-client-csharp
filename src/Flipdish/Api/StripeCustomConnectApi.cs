@@ -25,7 +25,30 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any
+        /// Create a new Bank Account and Stripe connected account
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="account">Account to be created</param>
+        /// <returns>RestApiResultBankAccountDetail</returns>
+        RestApiResultBankAccountDetail CreateBankAccountAndConnectedAccount (string appId, BankAccountCreate account);
+
+        /// <summary>
+        /// Create a new Bank Account and Stripe connected account
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="account">Account to be created</param>
+        /// <returns>ApiResponse of RestApiResultBankAccountDetail</returns>
+        ApiResponse<RestApiResultBankAccountDetail> CreateBankAccountAndConnectedAccountWithHttpInfo (string appId, BankAccountCreate account);
+        /// <summary>
+        /// Create or update a Stripe connected account associated with the bank account of bankAccountId
         /// </summary>
         /// <remarks>
         /// 
@@ -37,7 +60,7 @@ namespace Flipdish.Api
         RestApiResultStripeConnectedAccount CreateStripeConnectedAccount (string appId, int? bankAccountId);
 
         /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any
+        /// Create or update a Stripe connected account associated with the bank account of bankAccountId
         /// </summary>
         /// <remarks>
         /// 
@@ -54,10 +77,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
+        /// <param name="appId">App Name</param>
+        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>RestApiResultStripeConnectedAccount</returns>
-        RestApiResultStripeConnectedAccount CreateStripeConnectedAccountLink (string appId, StripeAccountLinkRequest stripeAccountLinkRequest);
+        RestApiResultStripeConnectedAccount CreateStripeConnectedAccountLink (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest);
 
         /// <summary>
         /// Gets a single-use Stripe URL for the given account
@@ -66,33 +90,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
+        /// <param name="appId">App Name</param>
+        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
-        ApiResponse<RestApiResultStripeConnectedAccount> CreateStripeConnectedAccountLinkWithHttpInfo (string appId, StripeAccountLinkRequest stripeAccountLinkRequest);
-        /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <returns>RestApiResultStripeConnectedAccount</returns>
-        RestApiResultStripeConnectedAccount GetCustomConnectAccount (string appId, int? bankAccountId);
-
-        /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
-        ApiResponse<RestApiResultStripeConnectedAccount> GetCustomConnectAccountWithHttpInfo (string appId, int? bankAccountId);
+        ApiResponse<RestApiResultStripeConnectedAccount> CreateStripeConnectedAccountLinkWithHttpInfo (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest);
         /// <summary>
         /// Gets the current verification status of the given connected account
         /// </summary>
@@ -101,9 +103,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="stripeId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <returns>RestApiResultStripeConnectedAccount</returns>
-        RestApiResultStripeConnectedAccount GetVerificationStatus (string appId, string stripeId);
+        RestApiResultStripeConnectedAccount GetVerificationStatus (string appId, string stripeConnectedAccountId);
 
         /// <summary>
         /// Gets the current verification status of the given connected account
@@ -113,13 +115,109 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="stripeId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
-        ApiResponse<RestApiResultStripeConnectedAccount> GetVerificationStatusWithHttpInfo (string appId, string stripeId);
+        ApiResponse<RestApiResultStripeConnectedAccount> GetVerificationStatusWithHttpInfo (string appId, string stripeConnectedAccountId);
+        /// <summary>
+        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="businessType">Bank Account business type</param>
+        /// <returns>RestApiResultBankAccountDetail</returns>
+        RestApiResultBankAccountDetail SetBankAccountBusinessType (string appId, int? bankAccountId, string businessType);
+
+        /// <summary>
+        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="businessType">Bank Account business type</param>
+        /// <returns>ApiResponse of RestApiResultBankAccountDetail</returns>
+        ApiResponse<RestApiResultBankAccountDetail> SetBankAccountBusinessTypeWithHttpInfo (string appId, int? bankAccountId, string businessType);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linkRequestId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Object</returns>
+        Object StripeCustomConnectRefresh (int? linkRequestId, string appId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linkRequestId"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> StripeCustomConnectRefreshWithHttpInfo (int? linkRequestId, string appId);
+        /// <summary>
+        /// Update bank account details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="updateRequest">fields to be updated</param>
+        /// <returns>RestApiResultStripeConnectedAccount</returns>
+        RestApiResultStripeConnectedAccount UpdateBankAccountDetails (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest);
+
+        /// <summary>
+        /// Update bank account details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="updateRequest">fields to be updated</param>
+        /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
+        ApiResponse<RestApiResultStripeConnectedAccount> UpdateBankAccountDetailsWithHttpInfo (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any
+        /// Create a new Bank Account and Stripe connected account
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="account">Account to be created</param>
+        /// <returns>Task of RestApiResultBankAccountDetail</returns>
+        System.Threading.Tasks.Task<RestApiResultBankAccountDetail> CreateBankAccountAndConnectedAccountAsync (string appId, BankAccountCreate account);
+
+        /// <summary>
+        /// Create a new Bank Account and Stripe connected account
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="account">Account to be created</param>
+        /// <returns>Task of ApiResponse (RestApiResultBankAccountDetail)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultBankAccountDetail>> CreateBankAccountAndConnectedAccountAsyncWithHttpInfo (string appId, BankAccountCreate account);
+        /// <summary>
+        /// Create or update a Stripe connected account associated with the bank account of bankAccountId
         /// </summary>
         /// <remarks>
         /// 
@@ -131,7 +229,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> CreateStripeConnectedAccountAsync (string appId, int? bankAccountId);
 
         /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any
+        /// Create or update a Stripe connected account associated with the bank account of bankAccountId
         /// </summary>
         /// <remarks>
         /// 
@@ -148,10 +246,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
+        /// <param name="appId">App Name</param>
+        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>Task of RestApiResultStripeConnectedAccount</returns>
-        System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> CreateStripeConnectedAccountLinkAsync (string appId, StripeAccountLinkRequest stripeAccountLinkRequest);
+        System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> CreateStripeConnectedAccountLinkAsync (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest);
 
         /// <summary>
         /// Gets a single-use Stripe URL for the given account
@@ -160,33 +259,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
+        /// <param name="appId">App Name</param>
+        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> CreateStripeConnectedAccountLinkAsyncWithHttpInfo (string appId, StripeAccountLinkRequest stripeAccountLinkRequest);
-        /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <returns>Task of RestApiResultStripeConnectedAccount</returns>
-        System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> GetCustomConnectAccountAsync (string appId, int? bankAccountId);
-
-        /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> GetCustomConnectAccountAsyncWithHttpInfo (string appId, int? bankAccountId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> CreateStripeConnectedAccountLinkAsyncWithHttpInfo (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest);
         /// <summary>
         /// Gets the current verification status of the given connected account
         /// </summary>
@@ -195,9 +272,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="stripeId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <returns>Task of RestApiResultStripeConnectedAccount</returns>
-        System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> GetVerificationStatusAsync (string appId, string stripeId);
+        System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> GetVerificationStatusAsync (string appId, string stripeConnectedAccountId);
 
         /// <summary>
         /// Gets the current verification status of the given connected account
@@ -207,9 +284,82 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="stripeId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> GetVerificationStatusAsyncWithHttpInfo (string appId, string stripeId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> GetVerificationStatusAsyncWithHttpInfo (string appId, string stripeConnectedAccountId);
+        /// <summary>
+        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="businessType">Bank Account business type</param>
+        /// <returns>Task of RestApiResultBankAccountDetail</returns>
+        System.Threading.Tasks.Task<RestApiResultBankAccountDetail> SetBankAccountBusinessTypeAsync (string appId, int? bankAccountId, string businessType);
+
+        /// <summary>
+        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="businessType">Bank Account business type</param>
+        /// <returns>Task of ApiResponse (RestApiResultBankAccountDetail)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultBankAccountDetail>> SetBankAccountBusinessTypeAsyncWithHttpInfo (string appId, int? bankAccountId, string businessType);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linkRequestId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> StripeCustomConnectRefreshAsync (int? linkRequestId, string appId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linkRequestId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> StripeCustomConnectRefreshAsyncWithHttpInfo (int? linkRequestId, string appId);
+        /// <summary>
+        /// Update bank account details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="updateRequest">fields to be updated</param>
+        /// <returns>Task of RestApiResultStripeConnectedAccount</returns>
+        System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> UpdateBankAccountDetailsAsync (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest);
+
+        /// <summary>
+        /// Update bank account details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="updateRequest">fields to be updated</param>
+        /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> UpdateBankAccountDetailsAsyncWithHttpInfo (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest);
         #endregion Asynchronous Operations
     }
 
@@ -311,7 +461,194 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any 
+        /// Create a new Bank Account and Stripe connected account 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="account">Account to be created</param>
+        /// <returns>RestApiResultBankAccountDetail</returns>
+        public RestApiResultBankAccountDetail CreateBankAccountAndConnectedAccount (string appId, BankAccountCreate account)
+        {
+             ApiResponse<RestApiResultBankAccountDetail> localVarResponse = CreateBankAccountAndConnectedAccountWithHttpInfo(appId, account);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new Bank Account and Stripe connected account 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="account">Account to be created</param>
+        /// <returns>ApiResponse of RestApiResultBankAccountDetail</returns>
+        public ApiResponse< RestApiResultBankAccountDetail > CreateBankAccountAndConnectedAccountWithHttpInfo (string appId, BankAccountCreate account)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->CreateBankAccountAndConnectedAccount");
+            // verify the required parameter 'account' is set
+            if (account == null)
+                throw new ApiException(400, "Missing required parameter 'account' when calling StripeCustomConnectApi->CreateBankAccountAndConnectedAccount");
+
+            var localVarPath = "/api/v1.0/{appId}/customconnect/bank-account";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (account != null && account.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(account); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = account; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateBankAccountAndConnectedAccount", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultBankAccountDetail>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultBankAccountDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBankAccountDetail)));
+        }
+
+        /// <summary>
+        /// Create a new Bank Account and Stripe connected account 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="account">Account to be created</param>
+        /// <returns>Task of RestApiResultBankAccountDetail</returns>
+        public async System.Threading.Tasks.Task<RestApiResultBankAccountDetail> CreateBankAccountAndConnectedAccountAsync (string appId, BankAccountCreate account)
+        {
+             ApiResponse<RestApiResultBankAccountDetail> localVarResponse = await CreateBankAccountAndConnectedAccountAsyncWithHttpInfo(appId, account);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a new Bank Account and Stripe connected account 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="account">Account to be created</param>
+        /// <returns>Task of ApiResponse (RestApiResultBankAccountDetail)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultBankAccountDetail>> CreateBankAccountAndConnectedAccountAsyncWithHttpInfo (string appId, BankAccountCreate account)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->CreateBankAccountAndConnectedAccount");
+            // verify the required parameter 'account' is set
+            if (account == null)
+                throw new ApiException(400, "Missing required parameter 'account' when calling StripeCustomConnectApi->CreateBankAccountAndConnectedAccount");
+
+            var localVarPath = "/api/v1.0/{appId}/customconnect/bank-account";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (account != null && account.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(account); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = account; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateBankAccountAndConnectedAccount", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultBankAccountDetail>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultBankAccountDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBankAccountDetail)));
+        }
+
+        /// <summary>
+        /// Create or update a Stripe connected account associated with the bank account of bankAccountId 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name Id</param>
@@ -324,7 +661,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any 
+        /// Create or update a Stripe connected account associated with the bank account of bankAccountId 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name Id</param>
@@ -339,7 +676,7 @@ namespace Flipdish.Api
             if (bankAccountId == null)
                 throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling StripeCustomConnectApi->CreateStripeConnectedAccount");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/create-account";
+            var localVarPath = "/api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -364,7 +701,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (bankAccountId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "bankAccountId", bankAccountId)); // query parameter
+            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -392,7 +729,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any 
+        /// Create or update a Stripe connected account associated with the bank account of bankAccountId 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name Id</param>
@@ -406,7 +743,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any 
+        /// Create or update a Stripe connected account associated with the bank account of bankAccountId 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name Id</param>
@@ -421,7 +758,7 @@ namespace Flipdish.Api
             if (bankAccountId == null)
                 throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling StripeCustomConnectApi->CreateStripeConnectedAccount");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/create-account";
+            var localVarPath = "/api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -446,7 +783,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (bankAccountId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "bankAccountId", bankAccountId)); // query parameter
+            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -477,12 +814,13 @@ namespace Flipdish.Api
         /// Gets a single-use Stripe URL for the given account 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
+        /// <param name="appId">App Name</param>
+        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>RestApiResultStripeConnectedAccount</returns>
-        public RestApiResultStripeConnectedAccount CreateStripeConnectedAccountLink (string appId, StripeAccountLinkRequest stripeAccountLinkRequest)
+        public RestApiResultStripeConnectedAccount CreateStripeConnectedAccountLink (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest)
         {
-             ApiResponse<RestApiResultStripeConnectedAccount> localVarResponse = CreateStripeConnectedAccountLinkWithHttpInfo(appId, stripeAccountLinkRequest);
+             ApiResponse<RestApiResultStripeConnectedAccount> localVarResponse = CreateStripeConnectedAccountLinkWithHttpInfo(appId, stripeConnectedAccountId, stripeAccountLinkRequest);
              return localVarResponse.Data;
         }
 
@@ -490,19 +828,23 @@ namespace Flipdish.Api
         /// Gets a single-use Stripe URL for the given account 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
+        /// <param name="appId">App Name</param>
+        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
-        public ApiResponse< RestApiResultStripeConnectedAccount > CreateStripeConnectedAccountLinkWithHttpInfo (string appId, StripeAccountLinkRequest stripeAccountLinkRequest)
+        public ApiResponse< RestApiResultStripeConnectedAccount > CreateStripeConnectedAccountLinkWithHttpInfo (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->CreateStripeConnectedAccountLink");
+            // verify the required parameter 'stripeConnectedAccountId' is set
+            if (stripeConnectedAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'stripeConnectedAccountId' when calling StripeCustomConnectApi->CreateStripeConnectedAccountLink");
             // verify the required parameter 'stripeAccountLinkRequest' is set
             if (stripeAccountLinkRequest == null)
                 throw new ApiException(400, "Missing required parameter 'stripeAccountLinkRequest' when calling StripeCustomConnectApi->CreateStripeConnectedAccountLink");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/create-account-link";
+            var localVarPath = "/api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -532,6 +874,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (stripeConnectedAccountId != null) localVarPathParams.Add("stripeConnectedAccountId", this.Configuration.ApiClient.ParameterToString(stripeConnectedAccountId)); // path parameter
             if (stripeAccountLinkRequest != null && stripeAccountLinkRequest.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(stripeAccountLinkRequest); // http body (model) parameter
@@ -570,12 +913,13 @@ namespace Flipdish.Api
         /// Gets a single-use Stripe URL for the given account 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
+        /// <param name="appId">App Name</param>
+        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>Task of RestApiResultStripeConnectedAccount</returns>
-        public async System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> CreateStripeConnectedAccountLinkAsync (string appId, StripeAccountLinkRequest stripeAccountLinkRequest)
+        public async System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> CreateStripeConnectedAccountLinkAsync (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest)
         {
-             ApiResponse<RestApiResultStripeConnectedAccount> localVarResponse = await CreateStripeConnectedAccountLinkAsyncWithHttpInfo(appId, stripeAccountLinkRequest);
+             ApiResponse<RestApiResultStripeConnectedAccount> localVarResponse = await CreateStripeConnectedAccountLinkAsyncWithHttpInfo(appId, stripeConnectedAccountId, stripeAccountLinkRequest);
              return localVarResponse.Data;
 
         }
@@ -584,19 +928,23 @@ namespace Flipdish.Api
         /// Gets a single-use Stripe URL for the given account 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
+        /// <param name="appId">App Name</param>
+        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> CreateStripeConnectedAccountLinkAsyncWithHttpInfo (string appId, StripeAccountLinkRequest stripeAccountLinkRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> CreateStripeConnectedAccountLinkAsyncWithHttpInfo (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->CreateStripeConnectedAccountLink");
+            // verify the required parameter 'stripeConnectedAccountId' is set
+            if (stripeConnectedAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'stripeConnectedAccountId' when calling StripeCustomConnectApi->CreateStripeConnectedAccountLink");
             // verify the required parameter 'stripeAccountLinkRequest' is set
             if (stripeAccountLinkRequest == null)
                 throw new ApiException(400, "Missing required parameter 'stripeAccountLinkRequest' when calling StripeCustomConnectApi->CreateStripeConnectedAccountLink");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/create-account-link";
+            var localVarPath = "/api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -626,6 +974,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (stripeConnectedAccountId != null) localVarPathParams.Add("stripeConnectedAccountId", this.Configuration.ApiClient.ParameterToString(stripeConnectedAccountId)); // path parameter
             if (stripeAccountLinkRequest != null && stripeAccountLinkRequest.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(stripeAccountLinkRequest); // http body (model) parameter
@@ -661,178 +1010,15 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <returns>RestApiResultStripeConnectedAccount</returns>
-        public RestApiResultStripeConnectedAccount GetCustomConnectAccount (string appId, int? bankAccountId)
-        {
-             ApiResponse<RestApiResultStripeConnectedAccount> localVarResponse = GetCustomConnectAccountWithHttpInfo(appId, bankAccountId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
-        public ApiResponse< RestApiResultStripeConnectedAccount > GetCustomConnectAccountWithHttpInfo (string appId, int? bankAccountId)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->GetCustomConnectAccount");
-            // verify the required parameter 'bankAccountId' is set
-            if (bankAccountId == null)
-                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling StripeCustomConnectApi->GetCustomConnectAccount");
-
-            var localVarPath = "/api/v1.0/{appId}/customconnect/account";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (bankAccountId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "bankAccountId", bankAccountId)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetCustomConnectAccount", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiResultStripeConnectedAccount>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultStripeConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeConnectedAccount)));
-        }
-
-        /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <returns>Task of RestApiResultStripeConnectedAccount</returns>
-        public async System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> GetCustomConnectAccountAsync (string appId, int? bankAccountId)
-        {
-             ApiResponse<RestApiResultStripeConnectedAccount> localVarResponse = await GetCustomConnectAccountAsyncWithHttpInfo(appId, bankAccountId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get the Stripe connected account associated with the bank account of bankAccountId, if any 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> GetCustomConnectAccountAsyncWithHttpInfo (string appId, int? bankAccountId)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->GetCustomConnectAccount");
-            // verify the required parameter 'bankAccountId' is set
-            if (bankAccountId == null)
-                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling StripeCustomConnectApi->GetCustomConnectAccount");
-
-            var localVarPath = "/api/v1.0/{appId}/customconnect/account";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (bankAccountId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "bankAccountId", bankAccountId)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetCustomConnectAccount", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiResultStripeConnectedAccount>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultStripeConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeConnectedAccount)));
-        }
-
-        /// <summary>
         /// Gets the current verification status of the given connected account 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="stripeId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <returns>RestApiResultStripeConnectedAccount</returns>
-        public RestApiResultStripeConnectedAccount GetVerificationStatus (string appId, string stripeId)
+        public RestApiResultStripeConnectedAccount GetVerificationStatus (string appId, string stripeConnectedAccountId)
         {
-             ApiResponse<RestApiResultStripeConnectedAccount> localVarResponse = GetVerificationStatusWithHttpInfo(appId, stripeId);
+             ApiResponse<RestApiResultStripeConnectedAccount> localVarResponse = GetVerificationStatusWithHttpInfo(appId, stripeConnectedAccountId);
              return localVarResponse.Data;
         }
 
@@ -841,16 +1027,16 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="stripeId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
-        public ApiResponse< RestApiResultStripeConnectedAccount > GetVerificationStatusWithHttpInfo (string appId, string stripeId)
+        public ApiResponse< RestApiResultStripeConnectedAccount > GetVerificationStatusWithHttpInfo (string appId, string stripeConnectedAccountId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->GetVerificationStatus");
-            // verify the required parameter 'stripeId' is set
-            if (stripeId == null)
-                throw new ApiException(400, "Missing required parameter 'stripeId' when calling StripeCustomConnectApi->GetVerificationStatus");
+            // verify the required parameter 'stripeConnectedAccountId' is set
+            if (stripeConnectedAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'stripeConnectedAccountId' when calling StripeCustomConnectApi->GetVerificationStatus");
 
             var localVarPath = "/api/v1.0/{appId}/customconnect/verification-status";
             var localVarPathParams = new Dictionary<String, String>();
@@ -877,7 +1063,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (stripeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "stripeId", stripeId)); // query parameter
+            if (stripeConnectedAccountId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "stripeConnectedAccountId", stripeConnectedAccountId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -909,11 +1095,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="stripeId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <returns>Task of RestApiResultStripeConnectedAccount</returns>
-        public async System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> GetVerificationStatusAsync (string appId, string stripeId)
+        public async System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> GetVerificationStatusAsync (string appId, string stripeConnectedAccountId)
         {
-             ApiResponse<RestApiResultStripeConnectedAccount> localVarResponse = await GetVerificationStatusAsyncWithHttpInfo(appId, stripeId);
+             ApiResponse<RestApiResultStripeConnectedAccount> localVarResponse = await GetVerificationStatusAsyncWithHttpInfo(appId, stripeConnectedAccountId);
              return localVarResponse.Data;
 
         }
@@ -923,16 +1109,16 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="stripeId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> GetVerificationStatusAsyncWithHttpInfo (string appId, string stripeId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> GetVerificationStatusAsyncWithHttpInfo (string appId, string stripeConnectedAccountId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->GetVerificationStatus");
-            // verify the required parameter 'stripeId' is set
-            if (stripeId == null)
-                throw new ApiException(400, "Missing required parameter 'stripeId' when calling StripeCustomConnectApi->GetVerificationStatus");
+            // verify the required parameter 'stripeConnectedAccountId' is set
+            if (stripeConnectedAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'stripeConnectedAccountId' when calling StripeCustomConnectApi->GetVerificationStatus");
 
             var localVarPath = "/api/v1.0/{appId}/customconnect/verification-status";
             var localVarPathParams = new Dictionary<String, String>();
@@ -959,7 +1145,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (stripeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "stripeId", stripeId)); // query parameter
+            if (stripeConnectedAccountId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "stripeConnectedAccountId", stripeConnectedAccountId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -978,6 +1164,567 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetVerificationStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultStripeConnectedAccount>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultStripeConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeConnectedAccount)));
+        }
+
+        /// <summary>
+        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="businessType">Bank Account business type</param>
+        /// <returns>RestApiResultBankAccountDetail</returns>
+        public RestApiResultBankAccountDetail SetBankAccountBusinessType (string appId, int? bankAccountId, string businessType)
+        {
+             ApiResponse<RestApiResultBankAccountDetail> localVarResponse = SetBankAccountBusinessTypeWithHttpInfo(appId, bankAccountId, businessType);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="businessType">Bank Account business type</param>
+        /// <returns>ApiResponse of RestApiResultBankAccountDetail</returns>
+        public ApiResponse< RestApiResultBankAccountDetail > SetBankAccountBusinessTypeWithHttpInfo (string appId, int? bankAccountId, string businessType)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->SetBankAccountBusinessType");
+            // verify the required parameter 'bankAccountId' is set
+            if (bankAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling StripeCustomConnectApi->SetBankAccountBusinessType");
+            // verify the required parameter 'businessType' is set
+            if (businessType == null)
+                throw new ApiException(400, "Missing required parameter 'businessType' when calling StripeCustomConnectApi->SetBankAccountBusinessType");
+
+            var localVarPath = "/api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
+            if (businessType != null && businessType.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(businessType); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = businessType; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetBankAccountBusinessType", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultBankAccountDetail>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultBankAccountDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBankAccountDetail)));
+        }
+
+        /// <summary>
+        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="businessType">Bank Account business type</param>
+        /// <returns>Task of RestApiResultBankAccountDetail</returns>
+        public async System.Threading.Tasks.Task<RestApiResultBankAccountDetail> SetBankAccountBusinessTypeAsync (string appId, int? bankAccountId, string businessType)
+        {
+             ApiResponse<RestApiResultBankAccountDetail> localVarResponse = await SetBankAccountBusinessTypeAsyncWithHttpInfo(appId, bankAccountId, businessType);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="businessType">Bank Account business type</param>
+        /// <returns>Task of ApiResponse (RestApiResultBankAccountDetail)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultBankAccountDetail>> SetBankAccountBusinessTypeAsyncWithHttpInfo (string appId, int? bankAccountId, string businessType)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->SetBankAccountBusinessType");
+            // verify the required parameter 'bankAccountId' is set
+            if (bankAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling StripeCustomConnectApi->SetBankAccountBusinessType");
+            // verify the required parameter 'businessType' is set
+            if (businessType == null)
+                throw new ApiException(400, "Missing required parameter 'businessType' when calling StripeCustomConnectApi->SetBankAccountBusinessType");
+
+            var localVarPath = "/api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
+            if (businessType != null && businessType.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(businessType); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = businessType; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetBankAccountBusinessType", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultBankAccountDetail>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultBankAccountDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBankAccountDetail)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linkRequestId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Object</returns>
+        public Object StripeCustomConnectRefresh (int? linkRequestId, string appId)
+        {
+             ApiResponse<Object> localVarResponse = StripeCustomConnectRefreshWithHttpInfo(linkRequestId, appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linkRequestId"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > StripeCustomConnectRefreshWithHttpInfo (int? linkRequestId, string appId)
+        {
+            // verify the required parameter 'linkRequestId' is set
+            if (linkRequestId == null)
+                throw new ApiException(400, "Missing required parameter 'linkRequestId' when calling StripeCustomConnectApi->StripeCustomConnectRefresh");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->StripeCustomConnectRefresh");
+
+            var localVarPath = "/api/v1.0/{appId}/customconnect/refresh-link";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (linkRequestId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "linkRequestId", linkRequestId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("StripeCustomConnectRefresh", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linkRequestId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> StripeCustomConnectRefreshAsync (int? linkRequestId, string appId)
+        {
+             ApiResponse<Object> localVarResponse = await StripeCustomConnectRefreshAsyncWithHttpInfo(linkRequestId, appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linkRequestId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> StripeCustomConnectRefreshAsyncWithHttpInfo (int? linkRequestId, string appId)
+        {
+            // verify the required parameter 'linkRequestId' is set
+            if (linkRequestId == null)
+                throw new ApiException(400, "Missing required parameter 'linkRequestId' when calling StripeCustomConnectApi->StripeCustomConnectRefresh");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->StripeCustomConnectRefresh");
+
+            var localVarPath = "/api/v1.0/{appId}/customconnect/refresh-link";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (linkRequestId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "linkRequestId", linkRequestId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("StripeCustomConnectRefresh", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Update bank account details 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="updateRequest">fields to be updated</param>
+        /// <returns>RestApiResultStripeConnectedAccount</returns>
+        public RestApiResultStripeConnectedAccount UpdateBankAccountDetails (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest)
+        {
+             ApiResponse<RestApiResultStripeConnectedAccount> localVarResponse = UpdateBankAccountDetailsWithHttpInfo(appId, bankAccountId, updateRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update bank account details 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="updateRequest">fields to be updated</param>
+        /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
+        public ApiResponse< RestApiResultStripeConnectedAccount > UpdateBankAccountDetailsWithHttpInfo (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->UpdateBankAccountDetails");
+            // verify the required parameter 'bankAccountId' is set
+            if (bankAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling StripeCustomConnectApi->UpdateBankAccountDetails");
+            // verify the required parameter 'updateRequest' is set
+            if (updateRequest == null)
+                throw new ApiException(400, "Missing required parameter 'updateRequest' when calling StripeCustomConnectApi->UpdateBankAccountDetails");
+
+            var localVarPath = "/api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
+            if (updateRequest != null && updateRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(updateRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = updateRequest; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateBankAccountDetails", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultStripeConnectedAccount>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultStripeConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeConnectedAccount)));
+        }
+
+        /// <summary>
+        /// Update bank account details 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="updateRequest">fields to be updated</param>
+        /// <returns>Task of RestApiResultStripeConnectedAccount</returns>
+        public async System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> UpdateBankAccountDetailsAsync (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest)
+        {
+             ApiResponse<RestApiResultStripeConnectedAccount> localVarResponse = await UpdateBankAccountDetailsAsyncWithHttpInfo(appId, bankAccountId, updateRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update bank account details 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Name Id</param>
+        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="updateRequest">fields to be updated</param>
+        /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> UpdateBankAccountDetailsAsyncWithHttpInfo (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->UpdateBankAccountDetails");
+            // verify the required parameter 'bankAccountId' is set
+            if (bankAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling StripeCustomConnectApi->UpdateBankAccountDetails");
+            // verify the required parameter 'updateRequest' is set
+            if (updateRequest == null)
+                throw new ApiException(400, "Missing required parameter 'updateRequest' when calling StripeCustomConnectApi->UpdateBankAccountDetails");
+
+            var localVarPath = "/api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
+            if (updateRequest != null && updateRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(updateRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = updateRequest; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateBankAccountDetails", localVarResponse);
                 if (exception != null) throw exception;
             }
 

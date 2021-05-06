@@ -816,13 +816,14 @@ namespace Flipdish.Model
         /// <param name="currencyCode">Currency of Account.</param>
         /// <param name="storeIds">List of stores to attach to Account.</param>
         /// <param name="bankName">Name of Bank.</param>
-        /// <param name="businessType">Business Type.</param>
         /// <param name="accountName">Name of this account.</param>
         /// <param name="iban">IBAN of this account.</param>
         /// <param name="swift">SWIFT of this bank account.</param>
         /// <param name="nationalClearingCode">National Clearing Code (BSB in Australia, Routing Number in USA/Canada, NCC in NZ).</param>
+        /// <param name="populatedAccountFields">A list of one or more populated account fields (field key-value pairs).  If this list contains at least one item, the Iban, Swift and NationalClearingCode fields will be ignored..</param>
         /// <param name="rejectionReason">Reason for Rejection.</param>
-        public BankAccountDetail(int? id = default(int?), List<string> storeNames = default(List<string>), AccountStateEnum? accountState = default(AccountStateEnum?), StripeConnectedAccountInfo stripeConnectedAccountInfo = default(StripeConnectedAccountInfo), string bankAddress = default(string), string bankCountryCode = default(string), string accountHolderAddress = default(string), string accountHolderCountryCode = default(string), string vatNumber = default(string), CurrencyCodeEnum? currencyCode = default(CurrencyCodeEnum?), List<int?> storeIds = default(List<int?>), string bankName = default(string), BusinessTypeEnum? businessType = default(BusinessTypeEnum?), string accountName = default(string), string iban = default(string), string swift = default(string), string nationalClearingCode = default(string), string rejectionReason = default(string))
+        /// <param name="businessType">Business Type.</param>
+        public BankAccountDetail(int? id = default(int?), List<string> storeNames = default(List<string>), AccountStateEnum? accountState = default(AccountStateEnum?), StripeConnectedAccountInfo stripeConnectedAccountInfo = default(StripeConnectedAccountInfo), string bankAddress = default(string), string bankCountryCode = default(string), string accountHolderAddress = default(string), string accountHolderCountryCode = default(string), string vatNumber = default(string), CurrencyCodeEnum? currencyCode = default(CurrencyCodeEnum?), List<int?> storeIds = default(List<int?>), string bankName = default(string), string accountName = default(string), string iban = default(string), string swift = default(string), string nationalClearingCode = default(string), List<AccountFieldKeyValuePair> populatedAccountFields = default(List<AccountFieldKeyValuePair>), string rejectionReason = default(string), BusinessTypeEnum? businessType = default(BusinessTypeEnum?))
         {
             this.Id = id;
             this.StoreNames = storeNames;
@@ -836,12 +837,13 @@ namespace Flipdish.Model
             this.CurrencyCode = currencyCode;
             this.StoreIds = storeIds;
             this.BankName = bankName;
-            this.BusinessType = businessType;
             this.AccountName = accountName;
             this.Iban = iban;
             this.Swift = swift;
             this.NationalClearingCode = nationalClearingCode;
+            this.PopulatedAccountFields = populatedAccountFields;
             this.RejectionReason = rejectionReason;
+            this.BusinessType = businessType;
         }
         
         /// <summary>
@@ -916,7 +918,6 @@ namespace Flipdish.Model
         [DataMember(Name="BankName", EmitDefaultValue=false)]
         public string BankName { get; set; }
 
-
         /// <summary>
         /// Name of this account
         /// </summary>
@@ -946,11 +947,19 @@ namespace Flipdish.Model
         public string NationalClearingCode { get; set; }
 
         /// <summary>
+        /// A list of one or more populated account fields (field key-value pairs).  If this list contains at least one item, the Iban, Swift and NationalClearingCode fields will be ignored.
+        /// </summary>
+        /// <value>A list of one or more populated account fields (field key-value pairs).  If this list contains at least one item, the Iban, Swift and NationalClearingCode fields will be ignored.</value>
+        [DataMember(Name="PopulatedAccountFields", EmitDefaultValue=false)]
+        public List<AccountFieldKeyValuePair> PopulatedAccountFields { get; set; }
+
+        /// <summary>
         /// Reason for Rejection
         /// </summary>
         /// <value>Reason for Rejection</value>
         [DataMember(Name="RejectionReason", EmitDefaultValue=false)]
         public string RejectionReason { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -972,12 +981,13 @@ namespace Flipdish.Model
             sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
             sb.Append("  StoreIds: ").Append(StoreIds).Append("\n");
             sb.Append("  BankName: ").Append(BankName).Append("\n");
-            sb.Append("  BusinessType: ").Append(BusinessType).Append("\n");
             sb.Append("  AccountName: ").Append(AccountName).Append("\n");
             sb.Append("  Iban: ").Append(Iban).Append("\n");
             sb.Append("  Swift: ").Append(Swift).Append("\n");
             sb.Append("  NationalClearingCode: ").Append(NationalClearingCode).Append("\n");
+            sb.Append("  PopulatedAccountFields: ").Append(PopulatedAccountFields).Append("\n");
             sb.Append("  RejectionReason: ").Append(RejectionReason).Append("\n");
+            sb.Append("  BusinessType: ").Append(BusinessType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1073,11 +1083,6 @@ namespace Flipdish.Model
                     this.BankName.Equals(input.BankName))
                 ) && 
                 (
-                    this.BusinessType == input.BusinessType ||
-                    (this.BusinessType != null &&
-                    this.BusinessType.Equals(input.BusinessType))
-                ) && 
-                (
                     this.AccountName == input.AccountName ||
                     (this.AccountName != null &&
                     this.AccountName.Equals(input.AccountName))
@@ -1098,9 +1103,19 @@ namespace Flipdish.Model
                     this.NationalClearingCode.Equals(input.NationalClearingCode))
                 ) && 
                 (
+                    this.PopulatedAccountFields == input.PopulatedAccountFields ||
+                    this.PopulatedAccountFields != null &&
+                    this.PopulatedAccountFields.SequenceEqual(input.PopulatedAccountFields)
+                ) && 
+                (
                     this.RejectionReason == input.RejectionReason ||
                     (this.RejectionReason != null &&
                     this.RejectionReason.Equals(input.RejectionReason))
+                ) && 
+                (
+                    this.BusinessType == input.BusinessType ||
+                    (this.BusinessType != null &&
+                    this.BusinessType.Equals(input.BusinessType))
                 );
         }
 
@@ -1137,8 +1152,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreIds.GetHashCode();
                 if (this.BankName != null)
                     hashCode = hashCode * 59 + this.BankName.GetHashCode();
-                if (this.BusinessType != null)
-                    hashCode = hashCode * 59 + this.BusinessType.GetHashCode();
                 if (this.AccountName != null)
                     hashCode = hashCode * 59 + this.AccountName.GetHashCode();
                 if (this.Iban != null)
@@ -1147,8 +1160,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Swift.GetHashCode();
                 if (this.NationalClearingCode != null)
                     hashCode = hashCode * 59 + this.NationalClearingCode.GetHashCode();
+                if (this.PopulatedAccountFields != null)
+                    hashCode = hashCode * 59 + this.PopulatedAccountFields.GetHashCode();
                 if (this.RejectionReason != null)
                     hashCode = hashCode * 59 + this.RejectionReason.GetHashCode();
+                if (this.BusinessType != null)
+                    hashCode = hashCode * 59 + this.BusinessType.GetHashCode();
                 return hashCode;
             }
         }

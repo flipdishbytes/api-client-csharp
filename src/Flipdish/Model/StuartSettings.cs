@@ -142,7 +142,9 @@ namespace Flipdish.Model
         /// <param name="minutesToPickupBeforeThanDeliveryTime">MinutesToPickupBeforeThanDeliveryTime.</param>
         /// <param name="packageType">Package type.</param>
         /// <param name="transportType">Transport type.</param>
-        public StuartSettings(string clientId = default(string), string clientSecret = default(string), bool? enabled = default(bool?), string webhookUrlBasicAuthentication = default(string), int? minutesToPickupBeforeThanDeliveryTime = default(int?), PackageTypeEnum? packageType = default(PackageTypeEnum?), TransportTypeEnum? transportType = default(TransportTypeEnum?))
+        /// <param name="cancelOrderIfStuartCancelDelivery">Determines if Flipdish order should be cancel when Stuart cancels delivery.</param>
+        /// <param name="transportPrices">transportPrices.</param>
+        public StuartSettings(string clientId = default(string), string clientSecret = default(string), bool? enabled = default(bool?), string webhookUrlBasicAuthentication = default(string), int? minutesToPickupBeforeThanDeliveryTime = default(int?), PackageTypeEnum? packageType = default(PackageTypeEnum?), TransportTypeEnum? transportType = default(TransportTypeEnum?), bool? cancelOrderIfStuartCancelDelivery = default(bool?), StuartSettingsTransportPrices transportPrices = default(StuartSettingsTransportPrices))
         {
             this.ClientId = clientId;
             this.ClientSecret = clientSecret;
@@ -151,6 +153,8 @@ namespace Flipdish.Model
             this.MinutesToPickupBeforeThanDeliveryTime = minutesToPickupBeforeThanDeliveryTime;
             this.PackageType = packageType;
             this.TransportType = transportType;
+            this.CancelOrderIfStuartCancelDelivery = cancelOrderIfStuartCancelDelivery;
+            this.TransportPrices = transportPrices;
         }
         
         /// <summary>
@@ -191,6 +195,19 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Determines if Flipdish order should be cancel when Stuart cancels delivery
+        /// </summary>
+        /// <value>Determines if Flipdish order should be cancel when Stuart cancels delivery</value>
+        [DataMember(Name="CancelOrderIfStuartCancelDelivery", EmitDefaultValue=false)]
+        public bool? CancelOrderIfStuartCancelDelivery { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TransportPrices
+        /// </summary>
+        [DataMember(Name="TransportPrices", EmitDefaultValue=false)]
+        public StuartSettingsTransportPrices TransportPrices { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -205,6 +222,8 @@ namespace Flipdish.Model
             sb.Append("  MinutesToPickupBeforeThanDeliveryTime: ").Append(MinutesToPickupBeforeThanDeliveryTime).Append("\n");
             sb.Append("  PackageType: ").Append(PackageType).Append("\n");
             sb.Append("  TransportType: ").Append(TransportType).Append("\n");
+            sb.Append("  CancelOrderIfStuartCancelDelivery: ").Append(CancelOrderIfStuartCancelDelivery).Append("\n");
+            sb.Append("  TransportPrices: ").Append(TransportPrices).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -273,6 +292,16 @@ namespace Flipdish.Model
                     this.TransportType == input.TransportType ||
                     (this.TransportType != null &&
                     this.TransportType.Equals(input.TransportType))
+                ) && 
+                (
+                    this.CancelOrderIfStuartCancelDelivery == input.CancelOrderIfStuartCancelDelivery ||
+                    (this.CancelOrderIfStuartCancelDelivery != null &&
+                    this.CancelOrderIfStuartCancelDelivery.Equals(input.CancelOrderIfStuartCancelDelivery))
+                ) && 
+                (
+                    this.TransportPrices == input.TransportPrices ||
+                    (this.TransportPrices != null &&
+                    this.TransportPrices.Equals(input.TransportPrices))
                 );
         }
 
@@ -299,6 +328,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PackageType.GetHashCode();
                 if (this.TransportType != null)
                     hashCode = hashCode * 59 + this.TransportType.GetHashCode();
+                if (this.CancelOrderIfStuartCancelDelivery != null)
+                    hashCode = hashCode * 59 + this.CancelOrderIfStuartCancelDelivery.GetHashCode();
+                if (this.TransportPrices != null)
+                    hashCode = hashCode * 59 + this.TransportPrices.GetHashCode();
                 return hashCode;
             }
         }

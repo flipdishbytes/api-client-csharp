@@ -25,13 +25,34 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// [PRIVATE API] Returns true if APM is enabled on at least one store in an application
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <returns>RestApiResultApmStatus</returns>
+        RestApiResultApmStatus GetApmStatus (string appId);
+
+        /// <summary>
+        /// [PRIVATE API] Returns true if APM is enabled on at least one store in an application
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <returns>ApiResponse of RestApiResultApmStatus</returns>
+        ApiResponse<RestApiResultApmStatus> GetApmStatusWithHttpInfo (string appId);
+        /// <summary>
         /// [PRIVATE API] Get Basic Statistics
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>RestApiResultApmStatistics</returns>
         RestApiResultApmStatistics GetBasicStatistics (string appId, List<int?> storeId = null);
@@ -43,7 +64,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>ApiResponse of RestApiResultApmStatistics</returns>
         ApiResponse<RestApiResultApmStatistics> GetBasicStatisticsWithHttpInfo (string appId, List<int?> storeId = null);
@@ -54,7 +75,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>RestApiArrayResultApmHourlyDataPoint</returns>
         RestApiArrayResultApmHourlyDataPoint GetCalendarWeekStatistics (string appId, List<int?> storeId = null);
@@ -66,7 +87,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultApmHourlyDataPoint</returns>
         ApiResponse<RestApiArrayResultApmHourlyDataPoint> GetCalendarWeekStatisticsWithHttpInfo (string appId, List<int?> storeId = null);
@@ -77,7 +98,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -91,7 +112,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -104,7 +125,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -118,7 +139,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -131,7 +152,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -145,7 +166,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -154,13 +175,34 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
+        /// [PRIVATE API] Returns true if APM is enabled on at least one store in an application
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <returns>Task of RestApiResultApmStatus</returns>
+        System.Threading.Tasks.Task<RestApiResultApmStatus> GetApmStatusAsync (string appId);
+
+        /// <summary>
+        /// [PRIVATE API] Returns true if APM is enabled on at least one store in an application
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <returns>Task of ApiResponse (RestApiResultApmStatus)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultApmStatus>> GetApmStatusAsyncWithHttpInfo (string appId);
+        /// <summary>
         /// [PRIVATE API] Get Basic Statistics
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>Task of RestApiResultApmStatistics</returns>
         System.Threading.Tasks.Task<RestApiResultApmStatistics> GetBasicStatisticsAsync (string appId, List<int?> storeId = null);
@@ -172,7 +214,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultApmStatistics)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultApmStatistics>> GetBasicStatisticsAsyncWithHttpInfo (string appId, List<int?> storeId = null);
@@ -183,7 +225,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>Task of RestApiArrayResultApmHourlyDataPoint</returns>
         System.Threading.Tasks.Task<RestApiArrayResultApmHourlyDataPoint> GetCalendarWeekStatisticsAsync (string appId, List<int?> storeId = null);
@@ -195,7 +237,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultApmHourlyDataPoint)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultApmHourlyDataPoint>> GetCalendarWeekStatisticsAsyncWithHttpInfo (string appId, List<int?> storeId = null);
@@ -206,7 +248,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -220,7 +262,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -233,7 +275,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -247,7 +289,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -260,7 +302,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -274,7 +316,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -381,10 +423,161 @@ namespace Flipdish.Api
         }
 
         /// <summary>
+        /// [PRIVATE API] Returns true if APM is enabled on at least one store in an application 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <returns>RestApiResultApmStatus</returns>
+        public RestApiResultApmStatus GetApmStatus (string appId)
+        {
+             ApiResponse<RestApiResultApmStatus> localVarResponse = GetApmStatusWithHttpInfo(appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Returns true if APM is enabled on at least one store in an application 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <returns>ApiResponse of RestApiResultApmStatus</returns>
+        public ApiResponse< RestApiResultApmStatus > GetApmStatusWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling ApmApi->GetApmStatus");
+
+            var localVarPath = "/api/v1.0/{appId}/apm/status";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetApmStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultApmStatus>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultApmStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApmStatus)));
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Returns true if APM is enabled on at least one store in an application 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <returns>Task of RestApiResultApmStatus</returns>
+        public async System.Threading.Tasks.Task<RestApiResultApmStatus> GetApmStatusAsync (string appId)
+        {
+             ApiResponse<RestApiResultApmStatus> localVarResponse = await GetApmStatusAsyncWithHttpInfo(appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Returns true if APM is enabled on at least one store in an application 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <returns>Task of ApiResponse (RestApiResultApmStatus)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultApmStatus>> GetApmStatusAsyncWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling ApmApi->GetApmStatus");
+
+            var localVarPath = "/api/v1.0/{appId}/apm/status";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetApmStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultApmStatus>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultApmStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApmStatus)));
+        }
+
+        /// <summary>
         /// [PRIVATE API] Get Basic Statistics 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>RestApiResultApmStatistics</returns>
         public RestApiResultApmStatistics GetBasicStatistics (string appId, List<int?> storeId = null)
@@ -397,7 +590,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get Basic Statistics 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>ApiResponse of RestApiResultApmStatistics</returns>
         public ApiResponse< RestApiResultApmStatistics > GetBasicStatisticsWithHttpInfo (string appId, List<int?> storeId = null)
@@ -462,7 +655,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get Basic Statistics 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>Task of RestApiResultApmStatistics</returns>
         public async System.Threading.Tasks.Task<RestApiResultApmStatistics> GetBasicStatisticsAsync (string appId, List<int?> storeId = null)
@@ -476,7 +669,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get Basic Statistics 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultApmStatistics)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultApmStatistics>> GetBasicStatisticsAsyncWithHttpInfo (string appId, List<int?> storeId = null)
@@ -541,7 +734,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get Calendar statistics 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>RestApiArrayResultApmHourlyDataPoint</returns>
         public RestApiArrayResultApmHourlyDataPoint GetCalendarWeekStatistics (string appId, List<int?> storeId = null)
@@ -554,7 +747,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get Calendar statistics 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultApmHourlyDataPoint</returns>
         public ApiResponse< RestApiArrayResultApmHourlyDataPoint > GetCalendarWeekStatisticsWithHttpInfo (string appId, List<int?> storeId = null)
@@ -619,7 +812,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get Calendar statistics 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>Task of RestApiArrayResultApmHourlyDataPoint</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultApmHourlyDataPoint> GetCalendarWeekStatisticsAsync (string appId, List<int?> storeId = null)
@@ -633,7 +826,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get Calendar statistics 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultApmHourlyDataPoint)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultApmHourlyDataPoint>> GetCalendarWeekStatisticsAsyncWithHttpInfo (string appId, List<int?> storeId = null)
@@ -698,7 +891,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get Calls Statistics 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -713,7 +906,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get Calls Statistics 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -785,7 +978,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get Calls Statistics 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -801,7 +994,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get Calls Statistics 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -873,7 +1066,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get Order Statistics (Value of Orders) 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -888,7 +1081,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get Order Statistics (Value of Orders) 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -960,7 +1153,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get Order Statistics (Value of Orders) 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -976,7 +1169,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get Order Statistics (Value of Orders) 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="aggregateDataBy">Aggregate data by day \\ week</param>
         /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -1048,7 +1241,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get paginated APM call list 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -1063,7 +1256,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get paginated APM call list 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -1132,7 +1325,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get paginated APM call list 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>
@@ -1148,7 +1341,7 @@ namespace Flipdish.Api
         /// [PRIVATE API] Get paginated APM call list 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
+        /// <param name="appId">App Id</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="storeId">List of stores to search by (optional)</param>

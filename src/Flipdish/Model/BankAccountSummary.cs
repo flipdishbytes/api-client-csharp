@@ -70,6 +70,45 @@ namespace Flipdish.Model
         [DataMember(Name="AccountState", EmitDefaultValue=false)]
         public AccountStateEnum? AccountState { get; set; }
         /// <summary>
+        /// Business Type
+        /// </summary>
+        /// <value>Business Type</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum BusinessTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Individual for value: Individual
+            /// </summary>
+            [EnumMember(Value = "Individual")]
+            Individual = 1,
+            
+            /// <summary>
+            /// Enum Company for value: Company
+            /// </summary>
+            [EnumMember(Value = "Company")]
+            Company = 2,
+            
+            /// <summary>
+            /// Enum NonProfit for value: NonProfit
+            /// </summary>
+            [EnumMember(Value = "NonProfit")]
+            NonProfit = 3,
+            
+            /// <summary>
+            /// Enum GovernmentEntity for value: GovernmentEntity
+            /// </summary>
+            [EnumMember(Value = "GovernmentEntity")]
+            GovernmentEntity = 4
+        }
+
+        /// <summary>
+        /// Business Type
+        /// </summary>
+        /// <value>Business Type</value>
+        [DataMember(Name="BusinessType", EmitDefaultValue=false)]
+        public BusinessTypeEnum? BusinessType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="BankAccountSummary" /> class.
         /// </summary>
         /// <param name="id">Id of this account.</param>
@@ -81,8 +120,10 @@ namespace Flipdish.Model
         /// <param name="iban">IBAN of this account.</param>
         /// <param name="swift">SWIFT of this bank account.</param>
         /// <param name="nationalClearingCode">National Clearing Code (BSB in Australia, Routing Number in USA/Canada, NCC in NZ).</param>
+        /// <param name="populatedAccountFields">A list of one or more populated account fields (field key-value pairs).  If this list contains at least one item, the Iban, Swift and NationalClearingCode fields will be ignored..</param>
         /// <param name="rejectionReason">Reason for Rejection.</param>
-        public BankAccountSummary(int? id = default(int?), List<string> storeNames = default(List<string>), AccountStateEnum? accountState = default(AccountStateEnum?), string currencyCode = default(string), StripeConnectedAccountInfo stripeConnectedAccountInfo = default(StripeConnectedAccountInfo), string accountName = default(string), string iban = default(string), string swift = default(string), string nationalClearingCode = default(string), string rejectionReason = default(string))
+        /// <param name="businessType">Business Type.</param>
+        public BankAccountSummary(int? id = default(int?), List<string> storeNames = default(List<string>), AccountStateEnum? accountState = default(AccountStateEnum?), string currencyCode = default(string), StripeConnectedAccountInfo stripeConnectedAccountInfo = default(StripeConnectedAccountInfo), string accountName = default(string), string iban = default(string), string swift = default(string), string nationalClearingCode = default(string), List<AccountFieldKeyValuePair> populatedAccountFields = default(List<AccountFieldKeyValuePair>), string rejectionReason = default(string), BusinessTypeEnum? businessType = default(BusinessTypeEnum?))
         {
             this.Id = id;
             this.StoreNames = storeNames;
@@ -93,7 +134,9 @@ namespace Flipdish.Model
             this.Iban = iban;
             this.Swift = swift;
             this.NationalClearingCode = nationalClearingCode;
+            this.PopulatedAccountFields = populatedAccountFields;
             this.RejectionReason = rejectionReason;
+            this.BusinessType = businessType;
         }
         
         /// <summary>
@@ -154,11 +197,19 @@ namespace Flipdish.Model
         public string NationalClearingCode { get; set; }
 
         /// <summary>
+        /// A list of one or more populated account fields (field key-value pairs).  If this list contains at least one item, the Iban, Swift and NationalClearingCode fields will be ignored.
+        /// </summary>
+        /// <value>A list of one or more populated account fields (field key-value pairs).  If this list contains at least one item, the Iban, Swift and NationalClearingCode fields will be ignored.</value>
+        [DataMember(Name="PopulatedAccountFields", EmitDefaultValue=false)]
+        public List<AccountFieldKeyValuePair> PopulatedAccountFields { get; set; }
+
+        /// <summary>
         /// Reason for Rejection
         /// </summary>
         /// <value>Reason for Rejection</value>
         [DataMember(Name="RejectionReason", EmitDefaultValue=false)]
         public string RejectionReason { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -177,7 +228,9 @@ namespace Flipdish.Model
             sb.Append("  Iban: ").Append(Iban).Append("\n");
             sb.Append("  Swift: ").Append(Swift).Append("\n");
             sb.Append("  NationalClearingCode: ").Append(NationalClearingCode).Append("\n");
+            sb.Append("  PopulatedAccountFields: ").Append(PopulatedAccountFields).Append("\n");
             sb.Append("  RejectionReason: ").Append(RejectionReason).Append("\n");
+            sb.Append("  BusinessType: ").Append(BusinessType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -258,9 +311,19 @@ namespace Flipdish.Model
                     this.NationalClearingCode.Equals(input.NationalClearingCode))
                 ) && 
                 (
+                    this.PopulatedAccountFields == input.PopulatedAccountFields ||
+                    this.PopulatedAccountFields != null &&
+                    this.PopulatedAccountFields.SequenceEqual(input.PopulatedAccountFields)
+                ) && 
+                (
                     this.RejectionReason == input.RejectionReason ||
                     (this.RejectionReason != null &&
                     this.RejectionReason.Equals(input.RejectionReason))
+                ) && 
+                (
+                    this.BusinessType == input.BusinessType ||
+                    (this.BusinessType != null &&
+                    this.BusinessType.Equals(input.BusinessType))
                 );
         }
 
@@ -291,8 +354,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Swift.GetHashCode();
                 if (this.NationalClearingCode != null)
                     hashCode = hashCode * 59 + this.NationalClearingCode.GetHashCode();
+                if (this.PopulatedAccountFields != null)
+                    hashCode = hashCode * 59 + this.PopulatedAccountFields.GetHashCode();
                 if (this.RejectionReason != null)
                     hashCode = hashCode * 59 + this.RejectionReason.GetHashCode();
+                if (this.BusinessType != null)
+                    hashCode = hashCode * 59 + this.BusinessType.GetHashCode();
                 return hashCode;
             }
         }
