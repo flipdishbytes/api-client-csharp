@@ -6,7 +6,11 @@
 name: 1.1$(Rev:.r)
 
 trigger:
-- master
+  branches:
+    include:
+      - master
+
+pr: none
 
 pool:
   vmImage: 'windows-latest'
