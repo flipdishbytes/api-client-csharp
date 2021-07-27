@@ -35,10 +35,12 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="storeId">Store identifier.</param>
         /// <param name="name">Name.</param>
-        public StoreHeader(int? storeId = default(int?), string name = default(string))
+        /// <param name="category">Name.</param>
+        public StoreHeader(int? storeId = default(int?), string name = default(string), string category = default(string))
         {
             this.StoreId = storeId;
             this.Name = name;
+            this.Category = category;
         }
         
         /// <summary>
@@ -56,6 +58,13 @@ namespace Flipdish.Model
         public string Name { get; set; }
 
         /// <summary>
+        /// Name
+        /// </summary>
+        /// <value>Name</value>
+        [DataMember(Name="Category", EmitDefaultValue=false)]
+        public string Category { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +74,7 @@ namespace Flipdish.Model
             sb.Append("class StoreHeader {\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,6 +118,11 @@ namespace Flipdish.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.Category == input.Category ||
+                    (this.Category != null &&
+                    this.Category.Equals(input.Category))
                 );
         }
 
@@ -124,6 +139,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Category != null)
+                    hashCode = hashCode * 59 + this.Category.GetHashCode();
                 return hashCode;
             }
         }

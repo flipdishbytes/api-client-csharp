@@ -33,30 +33,37 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreAddressUpdatedEvent" /> class.
         /// </summary>
+        /// <param name="eventName">The event name.</param>
         /// <param name="storeId">Store Id.</param>
         /// <param name="storeGroupId">Store group Id.</param>
         /// <param name="user">User which updated this store address.</param>
         /// <param name="description">Description.</param>
         /// <param name="storeAddress">Updated store address.</param>
-        /// <param name="eventName">The event name.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
-        public StoreAddressUpdatedEvent(int? storeId = default(int?), int? storeGroupId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), StoreAddress storeAddress = default(StoreAddress), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
+        public StoreAddressUpdatedEvent(string eventName = default(string), int? storeId = default(int?), int? storeGroupId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), StoreAddress storeAddress = default(StoreAddress), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
         {
+            this.EventName = eventName;
             this.StoreId = storeId;
             this.StoreGroupId = storeGroupId;
             this.User = user;
             this.Description = description;
             this.StoreAddress = storeAddress;
-            this.EventName = eventName;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
             this.Position = position;
             this.AppId = appId;
         }
         
+        /// <summary>
+        /// The event name
+        /// </summary>
+        /// <value>The event name</value>
+        [DataMember(Name="EventName", EmitDefaultValue=false)]
+        public string EventName { get; set; }
+
         /// <summary>
         /// Store Id
         /// </summary>
@@ -91,13 +98,6 @@ namespace Flipdish.Model
         /// <value>Updated store address</value>
         [DataMember(Name="StoreAddress", EmitDefaultValue=false)]
         public StoreAddress StoreAddress { get; set; }
-
-        /// <summary>
-        /// The event name
-        /// </summary>
-        /// <value>The event name</value>
-        [DataMember(Name="EventName", EmitDefaultValue=false)]
-        public string EventName { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -135,12 +135,12 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StoreAddressUpdatedEvent {\n");
+            sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  StoreAddress: ").Append(StoreAddress).Append("\n");
-            sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -180,6 +180,11 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.EventName == input.EventName ||
+                    (this.EventName != null &&
+                    this.EventName.Equals(input.EventName))
+                ) && 
+                (
                     this.StoreId == input.StoreId ||
                     (this.StoreId != null &&
                     this.StoreId.Equals(input.StoreId))
@@ -203,11 +208,6 @@ namespace Flipdish.Model
                     this.StoreAddress == input.StoreAddress ||
                     (this.StoreAddress != null &&
                     this.StoreAddress.Equals(input.StoreAddress))
-                ) && 
-                (
-                    this.EventName == input.EventName ||
-                    (this.EventName != null &&
-                    this.EventName.Equals(input.EventName))
                 ) && 
                 (
                     this.FlipdishEventId == input.FlipdishEventId ||
@@ -240,6 +240,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.EventName != null)
+                    hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.StoreId != null)
                     hashCode = hashCode * 59 + this.StoreId.GetHashCode();
                 if (this.StoreGroupId != null)
@@ -250,8 +252,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.StoreAddress != null)
                     hashCode = hashCode * 59 + this.StoreAddress.GetHashCode();
-                if (this.EventName != null)
-                    hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)

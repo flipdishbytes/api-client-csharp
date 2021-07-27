@@ -69,6 +69,27 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DispatchOrderWithHttpInfo (int? id);
         /// <summary>
+        /// Get order delivery information
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId">OrderId</param>
+        /// <returns></returns>
+        void GetDeliveryInformation (int? orderId);
+
+        /// <summary>
+        /// Get order delivery information
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId">OrderId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetDeliveryInformationWithHttpInfo (int? orderId);
+        /// <summary>
         /// Get order by ID
         /// </summary>
         /// <remarks>
@@ -199,6 +220,29 @@ namespace Flipdish.Api
         /// <param name="rejectObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RejectOrderWithHttpInfo (int? id, Reject rejectObject);
+        /// <summary>
+        /// Add/update delivery-related information to an order
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
+        /// <returns></returns>
+        void UpdateDeliveryInformation (int? orderId, OrderDeliveryInformation deliveryInformation);
+
+        /// <summary>
+        /// Add/update delivery-related information to an order
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UpdateDeliveryInformationWithHttpInfo (int? orderId, OrderDeliveryInformation deliveryInformation);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -245,6 +289,27 @@ namespace Flipdish.Api
         /// <param name="id">Order identifier</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DispatchOrderAsyncWithHttpInfo (int? id);
+        /// <summary>
+        /// Get order delivery information
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId">OrderId</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetDeliveryInformationAsync (int? orderId);
+
+        /// <summary>
+        /// Get order delivery information
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId">OrderId</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetDeliveryInformationAsyncWithHttpInfo (int? orderId);
         /// <summary>
         /// Get order by ID
         /// </summary>
@@ -376,6 +441,29 @@ namespace Flipdish.Api
         /// <param name="rejectObject"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RejectOrderAsyncWithHttpInfo (int? id, Reject rejectObject);
+        /// <summary>
+        /// Add/update delivery-related information to an order
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UpdateDeliveryInformationAsync (int? orderId, OrderDeliveryInformation deliveryInformation);
+
+        /// <summary>
+        /// Add/update delivery-related information to an order
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDeliveryInformationAsyncWithHttpInfo (int? orderId, OrderDeliveryInformation deliveryInformation);
         #endregion Asynchronous Operations
     }
 
@@ -802,6 +890,155 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("DispatchOrder", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Get order delivery information [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId">OrderId</param>
+        /// <returns></returns>
+        public void GetDeliveryInformation (int? orderId)
+        {
+             GetDeliveryInformationWithHttpInfo(orderId);
+        }
+
+        /// <summary>
+        /// Get order delivery information [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId">OrderId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetDeliveryInformationWithHttpInfo (int? orderId)
+        {
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->GetDeliveryInformation");
+
+            var localVarPath = "/api/v1.0/orders/{orderId}/deliveryinfo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (orderId != null) localVarPathParams.Add("orderId", this.Configuration.ApiClient.ParameterToString(orderId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDeliveryInformation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Get order delivery information [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId">OrderId</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetDeliveryInformationAsync (int? orderId)
+        {
+             await GetDeliveryInformationAsyncWithHttpInfo(orderId);
+
+        }
+
+        /// <summary>
+        /// Get order delivery information [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId">OrderId</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetDeliveryInformationAsyncWithHttpInfo (int? orderId)
+        {
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->GetDeliveryInformation");
+
+            var localVarPath = "/api/v1.0/orders/{orderId}/deliveryinfo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (orderId != null) localVarPathParams.Add("orderId", this.Configuration.ApiClient.ParameterToString(orderId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDeliveryInformation", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1685,6 +1922,191 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("RejectOrder", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Add/update delivery-related information to an order [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
+        /// <returns></returns>
+        public void UpdateDeliveryInformation (int? orderId, OrderDeliveryInformation deliveryInformation)
+        {
+             UpdateDeliveryInformationWithHttpInfo(orderId, deliveryInformation);
+        }
+
+        /// <summary>
+        /// Add/update delivery-related information to an order [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UpdateDeliveryInformationWithHttpInfo (int? orderId, OrderDeliveryInformation deliveryInformation)
+        {
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->UpdateDeliveryInformation");
+            // verify the required parameter 'deliveryInformation' is set
+            if (deliveryInformation == null)
+                throw new ApiException(400, "Missing required parameter 'deliveryInformation' when calling OrdersApi->UpdateDeliveryInformation");
+
+            var localVarPath = "/api/v1.0/orders/{orderId}/deliveryinfo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (orderId != null) localVarPathParams.Add("orderId", this.Configuration.ApiClient.ParameterToString(orderId)); // path parameter
+            if (deliveryInformation != null && deliveryInformation.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(deliveryInformation); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = deliveryInformation; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateDeliveryInformation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Add/update delivery-related information to an order [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UpdateDeliveryInformationAsync (int? orderId, OrderDeliveryInformation deliveryInformation)
+        {
+             await UpdateDeliveryInformationAsyncWithHttpInfo(orderId, deliveryInformation);
+
+        }
+
+        /// <summary>
+        /// Add/update delivery-related information to an order [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDeliveryInformationAsyncWithHttpInfo (int? orderId, OrderDeliveryInformation deliveryInformation)
+        {
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->UpdateDeliveryInformation");
+            // verify the required parameter 'deliveryInformation' is set
+            if (deliveryInformation == null)
+                throw new ApiException(400, "Missing required parameter 'deliveryInformation' when calling OrdersApi->UpdateDeliveryInformation");
+
+            var localVarPath = "/api/v1.0/orders/{orderId}/deliveryinfo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (orderId != null) localVarPathParams.Add("orderId", this.Configuration.ApiClient.ParameterToString(orderId)); // path parameter
+            if (deliveryInformation != null && deliveryInformation.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(deliveryInformation); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = deliveryInformation; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateDeliveryInformation", localVarResponse);
                 if (exception != null) throw exception;
             }
 

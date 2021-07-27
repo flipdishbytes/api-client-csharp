@@ -76,6 +76,7 @@ namespace Flipdish.Model
         /// <param name="accountName">Name of this account.</param>
         /// <param name="iban">IBAN of this account.</param>
         /// <param name="swift">SWIFT of this bank account.</param>
+        /// <param name="populatedAccountFields">A list of one or more populated account fields (field key-value pairs).  If this list contains at least one item, the Iban, Swift and NationalClearingCode fields should be ignored..</param>
         /// <param name="accountState">Status of Account.</param>
         /// <param name="storeNames">Store Names that are attached to this account.</param>
         /// <param name="bankAddress">Address lf the bank.</param>
@@ -83,12 +84,13 @@ namespace Flipdish.Model
         /// <param name="accountHolderAddress">Account Holders Address.</param>
         /// <param name="accountHolderCountryCode">Account Holders Country Code.</param>
         /// <param name="vatNumber">Account Holders Vat Number.</param>
-        public BankAccount(int? id = default(int?), string accountName = default(string), string iban = default(string), string swift = default(string), AccountStateEnum? accountState = default(AccountStateEnum?), List<string> storeNames = default(List<string>), string bankAddress = default(string), string bankCountryCode = default(string), string accountHolderAddress = default(string), string accountHolderCountryCode = default(string), string vatNumber = default(string))
+        public BankAccount(int? id = default(int?), string accountName = default(string), string iban = default(string), string swift = default(string), List<AccountFieldKeyValuePair> populatedAccountFields = default(List<AccountFieldKeyValuePair>), AccountStateEnum? accountState = default(AccountStateEnum?), List<string> storeNames = default(List<string>), string bankAddress = default(string), string bankCountryCode = default(string), string accountHolderAddress = default(string), string accountHolderCountryCode = default(string), string vatNumber = default(string))
         {
             this.Id = id;
             this.AccountName = accountName;
             this.Iban = iban;
             this.Swift = swift;
+            this.PopulatedAccountFields = populatedAccountFields;
             this.AccountState = accountState;
             this.StoreNames = storeNames;
             this.BankAddress = bankAddress;
@@ -125,6 +127,13 @@ namespace Flipdish.Model
         /// <value>SWIFT of this bank account</value>
         [DataMember(Name="Swift", EmitDefaultValue=false)]
         public string Swift { get; set; }
+
+        /// <summary>
+        /// A list of one or more populated account fields (field key-value pairs).  If this list contains at least one item, the Iban, Swift and NationalClearingCode fields should be ignored.
+        /// </summary>
+        /// <value>A list of one or more populated account fields (field key-value pairs).  If this list contains at least one item, the Iban, Swift and NationalClearingCode fields should be ignored.</value>
+        [DataMember(Name="PopulatedAccountFields", EmitDefaultValue=false)]
+        public List<AccountFieldKeyValuePair> PopulatedAccountFields { get; set; }
 
 
         /// <summary>
@@ -181,6 +190,7 @@ namespace Flipdish.Model
             sb.Append("  AccountName: ").Append(AccountName).Append("\n");
             sb.Append("  Iban: ").Append(Iban).Append("\n");
             sb.Append("  Swift: ").Append(Swift).Append("\n");
+            sb.Append("  PopulatedAccountFields: ").Append(PopulatedAccountFields).Append("\n");
             sb.Append("  AccountState: ").Append(AccountState).Append("\n");
             sb.Append("  StoreNames: ").Append(StoreNames).Append("\n");
             sb.Append("  BankAddress: ").Append(BankAddress).Append("\n");
@@ -243,6 +253,11 @@ namespace Flipdish.Model
                     this.Swift.Equals(input.Swift))
                 ) && 
                 (
+                    this.PopulatedAccountFields == input.PopulatedAccountFields ||
+                    this.PopulatedAccountFields != null &&
+                    this.PopulatedAccountFields.SequenceEqual(input.PopulatedAccountFields)
+                ) && 
+                (
                     this.AccountState == input.AccountState ||
                     (this.AccountState != null &&
                     this.AccountState.Equals(input.AccountState))
@@ -296,6 +311,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Iban.GetHashCode();
                 if (this.Swift != null)
                     hashCode = hashCode * 59 + this.Swift.GetHashCode();
+                if (this.PopulatedAccountFields != null)
+                    hashCode = hashCode * 59 + this.PopulatedAccountFields.GetHashCode();
                 if (this.AccountState != null)
                     hashCode = hashCode * 59 + this.AccountState.GetHashCode();
                 if (this.StoreNames != null)

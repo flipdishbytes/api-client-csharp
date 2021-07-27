@@ -19,8 +19,10 @@ Method | HTTP request | Description
 [**GetMenusByAppId**](MenusApi.md#getmenusbyappid) | **GET** /api/v1.0/{appId}/menus | [PRIVATE API]Get menus by appId
 [**GetMenusCheckpoints**](MenusApi.md#getmenuscheckpoints) | **GET** /api/v1.0/menus/{menuId}/checkpoints | [PRIVATE API]Get a Menus Checkpoints
 [**MenusDeleteTaxRate**](MenusApi.md#menusdeletetaxrate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+[**MenusGetMenuBulkShowHide**](MenusApi.md#menusgetmenubulkshowhide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | 
 [**MenusSetDisplayOnMenuTax**](MenusApi.md#menussetdisplayonmenutax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | [PRIVATE API]Set if tax shows for a Menu
 [**MenusSetItemDisplayOrders**](MenusApi.md#menussetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | [PRIVATE API]Re-arrange Sections within a Menu
+[**MenusShowHideBulkItems**](MenusApi.md#menusshowhidebulkitems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | 
 [**MenusUpdateTaxType**](MenusApi.md#menusupdatetaxtype) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | [PRIVATE API]Set the type of Tax on a Menu
 [**MenusUpsertTaxRate**](MenusApi.md#menusupserttaxrate) | **POST** /api/v1.0/menus/{menuId}/taxrate | [PRIVATE API]Add/Update a Tax Rate
 [**RestoreAMenuCheckpoint**](MenusApi.md#restoreamenucheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | [PRIVATE API]Restore a Menu to a checkpoint
@@ -986,6 +988,69 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="menusgetmenubulkshowhide"></a>
+# **MenusGetMenuBulkShowHide**
+> RestApiArrayResultMenuElementListResponse MenusGetMenuBulkShowHide (int? menuId, bool? isAvailable)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class MenusGetMenuBulkShowHideExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | 
+            var isAvailable = true;  // bool? | 
+
+            try
+            {
+                RestApiArrayResultMenuElementListResponse result = apiInstance.MenusGetMenuBulkShowHide(menuId, isAvailable);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.MenusGetMenuBulkShowHide: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**|  | 
+ **isAvailable** | **bool?**|  | 
+
+### Return type
+
+[**RestApiArrayResultMenuElementListResponse**](RestApiArrayResultMenuElementListResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="menussetdisplayonmenutax"></a>
 # **MenusSetDisplayOnMenuTax**
 > void MenusSetDisplayOnMenuTax (int? menuId, bool? show)
@@ -1100,6 +1165,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="menusshowhidebulkitems"></a>
+# **MenusShowHideBulkItems**
+> RestApiArrayResultMenuElementEditResponse MenusShowHideBulkItems (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class MenusShowHideBulkItemsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | 
+            var menuElements = new List<MenuElementHide>(); // List<MenuElementHide> | 
+            var isAvailable = true;  // bool? | 
+
+            try
+            {
+                RestApiArrayResultMenuElementEditResponse result = apiInstance.MenusShowHideBulkItems(menuId, menuElements, isAvailable);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.MenusShowHideBulkItems: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**|  | 
+ **menuElements** | [**List&lt;MenuElementHide&gt;**](MenuElementHide.md)|  | 
+ **isAvailable** | **bool?**|  | 
+
+### Return type
+
+[**RestApiArrayResultMenuElementEditResponse**](RestApiArrayResultMenuElementEditResponse.md)
 
 ### Authorization
 

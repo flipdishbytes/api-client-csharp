@@ -36,15 +36,17 @@ namespace Flipdish.Model
         /// <param name="kioskSettingId">Kiosk setting id.</param>
         /// <param name="kioskName">Store kiosk name.</param>
         /// <param name="requireCustomerName">Require customer name flag.</param>
+        /// <param name="requireCustomerPhoneNumber">Require customer phone number flag.</param>
         /// <param name="requestTableNumber">Request table number flag.</param>
         /// <param name="offerDineInOrTakeawayOption">Offer Dine-In/Takeaway option flag.</param>
         /// <param name="physicalRestaurantId">Physical restaurant id.</param>
         /// <param name="hydraConfigId">Hydra config id.</param>
-        public StoreKioskSetting(int? kioskSettingId = default(int?), string kioskName = default(string), bool? requireCustomerName = default(bool?), bool? requestTableNumber = default(bool?), bool? offerDineInOrTakeawayOption = default(bool?), int? physicalRestaurantId = default(int?), int? hydraConfigId = default(int?))
+        public StoreKioskSetting(int? kioskSettingId = default(int?), string kioskName = default(string), bool? requireCustomerName = default(bool?), bool? requireCustomerPhoneNumber = default(bool?), bool? requestTableNumber = default(bool?), bool? offerDineInOrTakeawayOption = default(bool?), int? physicalRestaurantId = default(int?), int? hydraConfigId = default(int?))
         {
             this.KioskSettingId = kioskSettingId;
             this.KioskName = kioskName;
             this.RequireCustomerName = requireCustomerName;
+            this.RequireCustomerPhoneNumber = requireCustomerPhoneNumber;
             this.RequestTableNumber = requestTableNumber;
             this.OfferDineInOrTakeawayOption = offerDineInOrTakeawayOption;
             this.PhysicalRestaurantId = physicalRestaurantId;
@@ -71,6 +73,13 @@ namespace Flipdish.Model
         /// <value>Require customer name flag</value>
         [DataMember(Name="RequireCustomerName", EmitDefaultValue=false)]
         public bool? RequireCustomerName { get; set; }
+
+        /// <summary>
+        /// Require customer phone number flag
+        /// </summary>
+        /// <value>Require customer phone number flag</value>
+        [DataMember(Name="RequireCustomerPhoneNumber", EmitDefaultValue=false)]
+        public bool? RequireCustomerPhoneNumber { get; set; }
 
         /// <summary>
         /// Request table number flag
@@ -111,6 +120,7 @@ namespace Flipdish.Model
             sb.Append("  KioskSettingId: ").Append(KioskSettingId).Append("\n");
             sb.Append("  KioskName: ").Append(KioskName).Append("\n");
             sb.Append("  RequireCustomerName: ").Append(RequireCustomerName).Append("\n");
+            sb.Append("  RequireCustomerPhoneNumber: ").Append(RequireCustomerPhoneNumber).Append("\n");
             sb.Append("  RequestTableNumber: ").Append(RequestTableNumber).Append("\n");
             sb.Append("  OfferDineInOrTakeawayOption: ").Append(OfferDineInOrTakeawayOption).Append("\n");
             sb.Append("  PhysicalRestaurantId: ").Append(PhysicalRestaurantId).Append("\n");
@@ -165,6 +175,11 @@ namespace Flipdish.Model
                     this.RequireCustomerName.Equals(input.RequireCustomerName))
                 ) && 
                 (
+                    this.RequireCustomerPhoneNumber == input.RequireCustomerPhoneNumber ||
+                    (this.RequireCustomerPhoneNumber != null &&
+                    this.RequireCustomerPhoneNumber.Equals(input.RequireCustomerPhoneNumber))
+                ) && 
+                (
                     this.RequestTableNumber == input.RequestTableNumber ||
                     (this.RequestTableNumber != null &&
                     this.RequestTableNumber.Equals(input.RequestTableNumber))
@@ -201,6 +216,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.KioskName.GetHashCode();
                 if (this.RequireCustomerName != null)
                     hashCode = hashCode * 59 + this.RequireCustomerName.GetHashCode();
+                if (this.RequireCustomerPhoneNumber != null)
+                    hashCode = hashCode * 59 + this.RequireCustomerPhoneNumber.GetHashCode();
                 if (this.RequestTableNumber != null)
                     hashCode = hashCode * 59 + this.RequestTableNumber.GetHashCode();
                 if (this.OfferDineInOrTakeawayOption != null)

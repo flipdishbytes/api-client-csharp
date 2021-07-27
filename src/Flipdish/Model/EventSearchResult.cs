@@ -69,6 +69,7 @@ namespace Flipdish.Model
         /// <param name="menuCreatedEvent">Menu created events.</param>
         /// <param name="menuUpdatedEvent">Menu updated events.</param>
         /// <param name="menuUploadedEvent">Menu uploaded events.</param>
+        /// <param name="menuBulkEditEvent">Menu bulk events.</param>
         /// <param name="menuSectionCreatedEvent">Menu section created events.</param>
         /// <param name="menuSectionUpdatedEvent">Menu section updated events.</param>
         /// <param name="menuSectionDeletedEvent">Menu section deleted events.</param>
@@ -122,9 +123,20 @@ namespace Flipdish.Model
         /// <param name="bankAccountDeletedEvent">Bank account updated event.</param>
         /// <param name="hydraAssignedEvent">Hydra assigned event.</param>
         /// <param name="hydraRequestResetEvent">Hydra reset requested event.</param>
+        /// <param name="hydraStoreAssignedEvent">Hydra store assigned event.</param>
+        /// <param name="hydraStoreUnassignedEvent">Hydra store unassigned.</param>
         /// <param name="hydraSettingChangedEvent">Hydra settings changed event.</param>
         /// <param name="hydraUnAssignedEvent">Hydra un-assigned event.</param>
         /// <param name="hydraConnectionStatusChangedEvent">Hydra connection state change.</param>
+        /// <param name="kioskBluetoothPairingModeEvent">Bluetooth Pairing Mode initiated.</param>
+        /// <param name="kioskBluetoothUnpairingModeEvent">Bluetooth Unpairing Mode initiated.</param>
+        /// <param name="kioskBluetoothTerminalUnpairedEvent">Bluetooth Terminal Unpaired with Kiosk.</param>
+        /// <param name="kioskBluetoothTerminalUpdatedEvent">Bluetooth Terminal Updated.</param>
+        /// <param name="kioskBluetoothTerminalInitiateUpdateCheckEvent">Trigger bluetooth payment terminal update checker.</param>
+        /// <param name="kioskBluetoothInstallUpdateInitiateEvent">Bluetooth Terminal Initiate Update.</param>
+        /// <param name="kioskBluetoothTerminalCancelUpdateEvent">Bluetooth Terminal Cancel Update Install.</param>
+        /// <param name="kioskBluetoothTerminalFirmwareVersionStatusEvent">Bluetooth Payment Terminal Firmware Version Status Info.</param>
+        /// <param name="kioskBluetoothTerminalInstallationStatusEvent">Bluetooth Terminal Update Installation Status.</param>
         /// <param name="pushNotificationScheduledEvent">Push notification scheduled event.</param>
         /// <param name="pushNotificationSentEvent">Push notification sent event.</param>
         /// <param name="pushNotificationDeletedEvent">Push notification deleted event.</param>
@@ -133,8 +145,9 @@ namespace Flipdish.Model
         /// <param name="certificateRenewedEvent">Certificate renewed.</param>
         /// <param name="websiteVanityUrlUpdatedEvent">Panacea vanity url updated.</param>
         /// <param name="websiteUpdatedEvent">Website updated.</param>
-        /// <param name="storeOrderCapacityUpdatedEvent">Order capacity config updated.</param>
-        public EventSearchResult(List<AppCreatedEvent> appCreatedEvent = default(List<AppCreatedEvent>), List<AppUpdatedEvent> appUpdatedEvent = default(List<AppUpdatedEvent>), List<AnalyticsClientEvent> analyticsClientEvent = default(List<AnalyticsClientEvent>), List<OrderAcceptedEvent> orderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderDispatchedEvent> orderDispatchedEvent = default(List<OrderDispatchedEvent>), List<OrderCustomerTrackingCreatedEvent> orderCustomerTrackingCreatedEvent = default(List<OrderCustomerTrackingCreatedEvent>), List<OrderDeliveryTrackingStatusUpdatedEvent> orderDeliveryTrackingStatusUpdatedEvent = default(List<OrderDeliveryTrackingStatusUpdatedEvent>), List<OrderCreatedEvent> orderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> orderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> orderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> orderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> orderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<EmvNotificationEvent> orderTerminalNotifications = default(List<EmvNotificationEvent>), List<StoreCreatedEvent> storeCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> storeDeletedEvent = default(List<StoreDeletedEvent>), List<StoreAddressUpdatedEvent> storeAddressUpdatedEvent = default(List<StoreAddressUpdatedEvent>), List<StoreKioskSettingUpdatedEvent> storeKioskSettingUpdatedEvent = default(List<StoreKioskSettingUpdatedEvent>), List<DeliveryZoneCreatedEvent> deliveryZoneCreatedEvent = default(List<DeliveryZoneCreatedEvent>), List<DeliveryZoneUpdatedEvent> deliveryZoneUpdatedEvent = default(List<DeliveryZoneUpdatedEvent>), List<DeliveryZoneDeletedEvent> deliveryZoneDeletedEvent = default(List<DeliveryZoneDeletedEvent>), List<StoreOpeningHoursUpdatedEvent> storeOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreMenuAssignedEvent> storeMenuAssignedEvent = default(List<StoreMenuAssignedEvent>), List<StoreBusinessHoursOverrideCreatedEvent> storeBusinessHoursOverrideCreatedEvent = default(List<StoreBusinessHoursOverrideCreatedEvent>), List<StoreBusinessHoursOverrideDeletedEvent> storeBusinessHoursOverrideDeletedEvent = default(List<StoreBusinessHoursOverrideDeletedEvent>), List<StoreArchivedEvent> storeArchivedEvent = default(List<StoreArchivedEvent>), List<StoreUnarchivedEvent> storeUnarchivedEvent = default(List<StoreUnarchivedEvent>), List<StorePublishedEvent> storePublishedEvent = default(List<StorePublishedEvent>), List<StoreUnpublishedEvent> storeUnpublishedEvent = default(List<StoreUnpublishedEvent>), List<StoreUpdatedEvent> storeUpdatedEvent = default(List<StoreUpdatedEvent>), List<StorePreOrderConfigUpdatedEvent> storePreOrderConfigUpdatedEvent = default(List<StorePreOrderConfigUpdatedEvent>), List<StoreLogoCreatedEvent> storeLogoCreatedEvent = default(List<StoreLogoCreatedEvent>), List<StoreLogoUpdatedEvent> storeLogoUpdatedEvent = default(List<StoreLogoUpdatedEvent>), List<StoreLogoDeletedEvent> storeLogoDeletedEvent = default(List<StoreLogoDeletedEvent>), List<MenuCreatedEvent> menuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> menuUpdatedEvent = default(List<MenuUpdatedEvent>), List<MenuUploadedEvent> menuUploadedEvent = default(List<MenuUploadedEvent>), List<MenuSectionCreatedEvent> menuSectionCreatedEvent = default(List<MenuSectionCreatedEvent>), List<MenuSectionUpdatedEvent> menuSectionUpdatedEvent = default(List<MenuSectionUpdatedEvent>), List<MenuSectionDeletedEvent> menuSectionDeletedEvent = default(List<MenuSectionDeletedEvent>), List<MenuSectionItemCreatedEvent> menuSectionItemCreatedEvent = default(List<MenuSectionItemCreatedEvent>), List<MenuSectionItemUpdatedEvent> menuSectionItemUpdatedEvent = default(List<MenuSectionItemUpdatedEvent>), List<MenuSectionItemDeletedEvent> menuSectionItemDeletedEvent = default(List<MenuSectionItemDeletedEvent>), List<MenuItemOptionSetCreatedEvent> menuItemOptionSetCreatedEvent = default(List<MenuItemOptionSetCreatedEvent>), List<MenuItemOptionSetUpdatedEvent> menuItemOptionSetUpdatedEvent = default(List<MenuItemOptionSetUpdatedEvent>), List<MenuItemOptionSetDeletedEvent> menuItemOptionSetDeletedEvent = default(List<MenuItemOptionSetDeletedEvent>), List<MenuItemOptionSetItemCreatedEvent> menuItemOptionSetItemCreatedEvent = default(List<MenuItemOptionSetItemCreatedEvent>), List<MenuItemOptionSetItemUpdatedEvent> menuItemOptionSetItemUpdatedEvent = default(List<MenuItemOptionSetItemUpdatedEvent>), List<MenuItemOptionSetItemDeletedEvent> menuItemOptionSetItemDeletedEvent = default(List<MenuItemOptionSetItemDeletedEvent>), List<MenuCheckpointCreatedEvent> menuCheckpointCreatedEvent = default(List<MenuCheckpointCreatedEvent>), List<StoreGroupCreatedEvent> storeGroupCreatedEvent = default(List<StoreGroupCreatedEvent>), List<StoreGroupUpdatedEvent> storeGroupUpdatedEvent = default(List<StoreGroupUpdatedEvent>), List<StoreGroupDeletedEvent> storeGroupDeletedEvent = default(List<StoreGroupDeletedEvent>), List<CustomerCreatedEvent> customerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> customerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> customerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<WebhookSubscriptionCreatedEvent> webhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> webhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> webhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>), List<PrinterTurnedOnEvent> printerTurnedOnEvent = default(List<PrinterTurnedOnEvent>), List<PrinterTurnedOffEvent> printerTurnedOffEvent = default(List<PrinterTurnedOffEvent>), List<PrinterAssignedToStoreEvent> printerAssignedToStoreEvent = default(List<PrinterAssignedToStoreEvent>), List<PrinterUnassignedFromStoreEvent> printerUnassignedFromStoreEvent = default(List<PrinterUnassignedFromStoreEvent>), List<PhoneCallStartedEvent> phoneCallStartedEvent = default(List<PhoneCallStartedEvent>), List<PhoneCallEndedEvent> phoneCallEndedEvent = default(List<PhoneCallEndedEvent>), List<LoyaltyCampaignCreatedEvent> loyaltyCampaignCreatedEvent = default(List<LoyaltyCampaignCreatedEvent>), List<LoyaltyCampaignDeletedEvent> loyaltyCampaignDeletedEvent = default(List<LoyaltyCampaignDeletedEvent>), List<LoyaltyCampaignUpdatedEvent> loyaltyCampaignUpdatedEvent = default(List<LoyaltyCampaignUpdatedEvent>), List<RetentionCampaignCreatedEvent> retentionCampaignCreatedEvent = default(List<RetentionCampaignCreatedEvent>), List<RetentionCampaignDeletedEvent> retentionCampaignDeletedEvent = default(List<RetentionCampaignDeletedEvent>), List<RetentionCampaignUpdatedEvent> retentionCampaignUpdatedEvent = default(List<RetentionCampaignUpdatedEvent>), List<SmsReceivedEvent> smsReceivedEvent = default(List<SmsReceivedEvent>), List<UserLoginEvent> userLoginEvent = default(List<UserLoginEvent>), List<UserCreatedEvent> userCreatedEvent = default(List<UserCreatedEvent>), List<UserUpdatedEvent> userUpdatedEvent = default(List<UserUpdatedEvent>), List<UserDeletedEvent> userDeletedEvent = default(List<UserDeletedEvent>), List<UserPasswordCreatedEvent> userCreatedPasswordEvent = default(List<UserPasswordCreatedEvent>), List<UserAnsweredSignupQuestionsEvent> userAnsweredSignupQuestionsEvent = default(List<UserAnsweredSignupQuestionsEvent>), List<VoucherCreatedEvent> voucherCreatedEvent = default(List<VoucherCreatedEvent>), List<VoucherUpdatedEvent> voucherUpdatedEvent = default(List<VoucherUpdatedEvent>), List<VoucherDeletedEvent> voucherDeletedEvent = default(List<VoucherDeletedEvent>), List<TeammateInviteSentEvent> teammateInviteSentEvent = default(List<TeammateInviteSentEvent>), List<TeammateInviteAcceptedEvent> teammateInviteAcceptedEvent = default(List<TeammateInviteAcceptedEvent>), List<TeammateUpdatedEvent> teammateUpdatedEvent = default(List<TeammateUpdatedEvent>), List<TeammateDeletedEvent> teammateDeletedEvent = default(List<TeammateDeletedEvent>), List<BankAccountCreatedEvent> bankAccountCreatedEvent = default(List<BankAccountCreatedEvent>), List<BankAccountUpdatedEvent> bankAccountUpdatedEvent = default(List<BankAccountUpdatedEvent>), List<BankAccountDeletedEvent> bankAccountDeletedEvent = default(List<BankAccountDeletedEvent>), List<HydraAssignedEvent> hydraAssignedEvent = default(List<HydraAssignedEvent>), List<HydraRequestResetEvent> hydraRequestResetEvent = default(List<HydraRequestResetEvent>), List<HydraSettingChangedEvent> hydraSettingChangedEvent = default(List<HydraSettingChangedEvent>), List<HydraUnAssignedEvent> hydraUnAssignedEvent = default(List<HydraUnAssignedEvent>), List<HydraConnectionStatusChangedEvent> hydraConnectionStatusChangedEvent = default(List<HydraConnectionStatusChangedEvent>), List<PushNotificationScheduledEvent> pushNotificationScheduledEvent = default(List<PushNotificationScheduledEvent>), List<PushNotificationSentEvent> pushNotificationSentEvent = default(List<PushNotificationSentEvent>), List<PushNotificationDeletedEvent> pushNotificationDeletedEvent = default(List<PushNotificationDeletedEvent>), List<DnsVerifiedEvent> dnsVerifiedEvent = default(List<DnsVerifiedEvent>), List<CertificateCreatedEvent> certificateCreatedEvent = default(List<CertificateCreatedEvent>), List<CertificateRenewedEvent> certificateRenewedEvent = default(List<CertificateRenewedEvent>), List<WebsiteVanityUrlUpdatedEvent> websiteVanityUrlUpdatedEvent = default(List<WebsiteVanityUrlUpdatedEvent>), List<WebsiteUpdatedEvent> websiteUpdatedEvent = default(List<WebsiteUpdatedEvent>), List<StoreOrderCapacityUpdatedEvent> storeOrderCapacityUpdatedEvent = default(List<StoreOrderCapacityUpdatedEvent>))
+        /// <param name="orderCapacityUpdatedEvent">Order capacity config updated.</param>
+        /// <param name="externalStoreEvent">External event.</param>
+        public EventSearchResult(List<AppCreatedEvent> appCreatedEvent = default(List<AppCreatedEvent>), List<AppUpdatedEvent> appUpdatedEvent = default(List<AppUpdatedEvent>), List<AnalyticsClientEvent> analyticsClientEvent = default(List<AnalyticsClientEvent>), List<OrderAcceptedEvent> orderAcceptedEvent = default(List<OrderAcceptedEvent>), List<OrderDispatchedEvent> orderDispatchedEvent = default(List<OrderDispatchedEvent>), List<OrderCustomerTrackingCreatedEvent> orderCustomerTrackingCreatedEvent = default(List<OrderCustomerTrackingCreatedEvent>), List<OrderDeliveryTrackingStatusUpdatedEvent> orderDeliveryTrackingStatusUpdatedEvent = default(List<OrderDeliveryTrackingStatusUpdatedEvent>), List<OrderCreatedEvent> orderCreatedEvent = default(List<OrderCreatedEvent>), List<OrderRatingUpdatedEvent> orderRatingUpdatedEvent = default(List<OrderRatingUpdatedEvent>), List<OrderRefundedEvent> orderRefundedEvent = default(List<OrderRefundedEvent>), List<OrderRejectedEvent> orderRejectedEvent = default(List<OrderRejectedEvent>), List<OrderTipUpdatedEvent> orderTipUpdatedEvent = default(List<OrderTipUpdatedEvent>), List<EmvNotificationEvent> orderTerminalNotifications = default(List<EmvNotificationEvent>), List<StoreCreatedEvent> storeCreatedEvent = default(List<StoreCreatedEvent>), List<StoreDeletedEvent> storeDeletedEvent = default(List<StoreDeletedEvent>), List<StoreAddressUpdatedEvent> storeAddressUpdatedEvent = default(List<StoreAddressUpdatedEvent>), List<StoreKioskSettingUpdatedEvent> storeKioskSettingUpdatedEvent = default(List<StoreKioskSettingUpdatedEvent>), List<DeliveryZoneCreatedEvent> deliveryZoneCreatedEvent = default(List<DeliveryZoneCreatedEvent>), List<DeliveryZoneUpdatedEvent> deliveryZoneUpdatedEvent = default(List<DeliveryZoneUpdatedEvent>), List<DeliveryZoneDeletedEvent> deliveryZoneDeletedEvent = default(List<DeliveryZoneDeletedEvent>), List<StoreOpeningHoursUpdatedEvent> storeOpeningHoursUpdatedEvent = default(List<StoreOpeningHoursUpdatedEvent>), List<StoreMenuAssignedEvent> storeMenuAssignedEvent = default(List<StoreMenuAssignedEvent>), List<StoreBusinessHoursOverrideCreatedEvent> storeBusinessHoursOverrideCreatedEvent = default(List<StoreBusinessHoursOverrideCreatedEvent>), List<StoreBusinessHoursOverrideDeletedEvent> storeBusinessHoursOverrideDeletedEvent = default(List<StoreBusinessHoursOverrideDeletedEvent>), List<StoreArchivedEvent> storeArchivedEvent = default(List<StoreArchivedEvent>), List<StoreUnarchivedEvent> storeUnarchivedEvent = default(List<StoreUnarchivedEvent>), List<StorePublishedEvent> storePublishedEvent = default(List<StorePublishedEvent>), List<StoreUnpublishedEvent> storeUnpublishedEvent = default(List<StoreUnpublishedEvent>), List<StoreUpdatedEvent> storeUpdatedEvent = default(List<StoreUpdatedEvent>), List<StorePreOrderConfigUpdatedEvent> storePreOrderConfigUpdatedEvent = default(List<StorePreOrderConfigUpdatedEvent>), List<StoreLogoCreatedEvent> storeLogoCreatedEvent = default(List<StoreLogoCreatedEvent>), List<StoreLogoUpdatedEvent> storeLogoUpdatedEvent = default(List<StoreLogoUpdatedEvent>), List<StoreLogoDeletedEvent> storeLogoDeletedEvent = default(List<StoreLogoDeletedEvent>), List<MenuCreatedEvent> menuCreatedEvent = default(List<MenuCreatedEvent>), List<MenuUpdatedEvent> menuUpdatedEvent = default(List<MenuUpdatedEvent>), List<MenuUploadedEvent> menuUploadedEvent = default(List<MenuUploadedEvent>), List<MenuBulkEditEvent> menuBulkEditEvent = default(List<MenuBulkEditEvent>), List<MenuSectionCreatedEvent> menuSectionCreatedEvent = default(List<MenuSectionCreatedEvent>), List<MenuSectionUpdatedEvent> menuSectionUpdatedEvent = default(List<MenuSectionUpdatedEvent>), List<MenuSectionDeletedEvent> menuSectionDeletedEvent = default(List<MenuSectionDeletedEvent>), List<MenuSectionItemCreatedEvent> menuSectionItemCreatedEvent = default(List<MenuSectionItemCreatedEvent>), List<MenuSectionItemUpdatedEvent> menuSectionItemUpdatedEvent = default(List<MenuSectionItemUpdatedEvent>), List<MenuSectionItemDeletedEvent> menuSectionItemDeletedEvent = default(List<MenuSectionItemDeletedEvent>), List<MenuItemOptionSetCreatedEvent> menuItemOptionSetCreatedEvent = default(List<MenuItemOptionSetCreatedEvent>), List<MenuItemOptionSetUpdatedEvent> menuItemOptionSetUpdatedEvent = default(List<MenuItemOptionSetUpdatedEvent>), List<MenuItemOptionSetDeletedEvent> menuItemOptionSetDeletedEvent = default(List<MenuItemOptionSetDeletedEvent>), List<MenuItemOptionSetItemCreatedEvent> menuItemOptionSetItemCreatedEvent = default(List<MenuItemOptionSetItemCreatedEvent>), List<MenuItemOptionSetItemUpdatedEvent> menuItemOptionSetItemUpdatedEvent = default(List<MenuItemOptionSetItemUpdatedEvent>), List<MenuItemOptionSetItemDeletedEvent> menuItemOptionSetItemDeletedEvent = default(List<MenuItemOptionSetItemDeletedEvent>), List<MenuCheckpointCreatedEvent> menuCheckpointCreatedEvent = default(List<MenuCheckpointCreatedEvent>), List<StoreGroupCreatedEvent> storeGroupCreatedEvent = default(List<StoreGroupCreatedEvent>), List<StoreGroupUpdatedEvent> storeGroupUpdatedEvent = default(List<StoreGroupUpdatedEvent>), List<StoreGroupDeletedEvent> storeGroupDeletedEvent = default(List<StoreGroupDeletedEvent>), List<CustomerCreatedEvent> customerCreatedEvent = default(List<CustomerCreatedEvent>), List<CustomerUpdatedEvent> customerUpdatedEvent = default(List<CustomerUpdatedEvent>), List<CustomerConsentUpdatedEvent> customerConsentUpdatedEvent = default(List<CustomerConsentUpdatedEvent>), List<WebhookSubscriptionCreatedEvent> webhookSubscriptionCreatedEvent = default(List<WebhookSubscriptionCreatedEvent>), List<WebhookSubscriptionUpdatedEvent> webhookSubscriptionUpdatedEvent = default(List<WebhookSubscriptionUpdatedEvent>), List<WebhookSubscriptionDeletedEvent> webhookSubscriptionDeletedEvent = default(List<WebhookSubscriptionDeletedEvent>), List<PrinterTurnedOnEvent> printerTurnedOnEvent = default(List<PrinterTurnedOnEvent>), List<PrinterTurnedOffEvent> printerTurnedOffEvent = default(List<PrinterTurnedOffEvent>), List<PrinterAssignedToStoreEvent> printerAssignedToStoreEvent = default(List<PrinterAssignedToStoreEvent>), List<PrinterUnassignedFromStoreEvent> printerUnassignedFromStoreEvent = default(List<PrinterUnassignedFromStoreEvent>), List<PhoneCallStartedEvent> phoneCallStartedEvent = default(List<PhoneCallStartedEvent>), List<PhoneCallEndedEvent> phoneCallEndedEvent = default(List<PhoneCallEndedEvent>), List<LoyaltyCampaignCreatedEvent> loyaltyCampaignCreatedEvent = default(List<LoyaltyCampaignCreatedEvent>), List<LoyaltyCampaignDeletedEvent> loyaltyCampaignDeletedEvent = default(List<LoyaltyCampaignDeletedEvent>), List<LoyaltyCampaignUpdatedEvent> loyaltyCampaignUpdatedEvent = default(List<LoyaltyCampaignUpdatedEvent>), List<RetentionCampaignCreatedEvent> retentionCampaignCreatedEvent = default(List<RetentionCampaignCreatedEvent>), List<RetentionCampaignDeletedEvent> retentionCampaignDeletedEvent = default(List<RetentionCampaignDeletedEvent>), List<RetentionCampaignUpdatedEvent> retentionCampaignUpdatedEvent = default(List<RetentionCampaignUpdatedEvent>), List<SmsReceivedEvent> smsReceivedEvent = default(List<SmsReceivedEvent>), List<UserLoginEvent> userLoginEvent = default(List<UserLoginEvent>), List<UserCreatedEvent> userCreatedEvent = default(List<UserCreatedEvent>), List<UserUpdatedEvent> userUpdatedEvent = default(List<UserUpdatedEvent>), List<UserDeletedEvent> userDeletedEvent = default(List<UserDeletedEvent>), List<UserPasswordCreatedEvent> userCreatedPasswordEvent = default(List<UserPasswordCreatedEvent>), List<UserAnsweredSignupQuestionsEvent> userAnsweredSignupQuestionsEvent = default(List<UserAnsweredSignupQuestionsEvent>), List<VoucherCreatedEvent> voucherCreatedEvent = default(List<VoucherCreatedEvent>), List<VoucherUpdatedEvent> voucherUpdatedEvent = default(List<VoucherUpdatedEvent>), List<VoucherDeletedEvent> voucherDeletedEvent = default(List<VoucherDeletedEvent>), List<TeammateInviteSentEvent> teammateInviteSentEvent = default(List<TeammateInviteSentEvent>), List<TeammateInviteAcceptedEvent> teammateInviteAcceptedEvent = default(List<TeammateInviteAcceptedEvent>), List<TeammateUpdatedEvent> teammateUpdatedEvent = default(List<TeammateUpdatedEvent>), List<TeammateDeletedEvent> teammateDeletedEvent = default(List<TeammateDeletedEvent>), List<BankAccountCreatedEvent> bankAccountCreatedEvent = default(List<BankAccountCreatedEvent>), List<BankAccountUpdatedEvent> bankAccountUpdatedEvent = default(List<BankAccountUpdatedEvent>), List<BankAccountDeletedEvent> bankAccountDeletedEvent = default(List<BankAccountDeletedEvent>), List<HydraAssignedEvent> hydraAssignedEvent = default(List<HydraAssignedEvent>), List<HydraRequestResetEvent> hydraRequestResetEvent = default(List<HydraRequestResetEvent>), List<HydraStoreAssignedEvent> hydraStoreAssignedEvent = default(List<HydraStoreAssignedEvent>), List<HydraStoreUnassignedEvent> hydraStoreUnassignedEvent = default(List<HydraStoreUnassignedEvent>), List<HydraSettingChangedEvent> hydraSettingChangedEvent = default(List<HydraSettingChangedEvent>), List<HydraUnAssignedEvent> hydraUnAssignedEvent = default(List<HydraUnAssignedEvent>), List<HydraConnectionStatusChangedEvent> hydraConnectionStatusChangedEvent = default(List<HydraConnectionStatusChangedEvent>), List<KioskBluetoothPairingModeEvent> kioskBluetoothPairingModeEvent = default(List<KioskBluetoothPairingModeEvent>), List<KioskBluetoothUnpairingModeEvent> kioskBluetoothUnpairingModeEvent = default(List<KioskBluetoothUnpairingModeEvent>), List<KioskBluetoothTerminalUnpairedEvent> kioskBluetoothTerminalUnpairedEvent = default(List<KioskBluetoothTerminalUnpairedEvent>), List<KioskBluetoothTerminalUpdatedEvent> kioskBluetoothTerminalUpdatedEvent = default(List<KioskBluetoothTerminalUpdatedEvent>), List<KioskBluetoothTerminalInitiateUpdateCheckEvent> kioskBluetoothTerminalInitiateUpdateCheckEvent = default(List<KioskBluetoothTerminalInitiateUpdateCheckEvent>), List<KioskBluetoothInstallUpdateInitiateEvent> kioskBluetoothInstallUpdateInitiateEvent = default(List<KioskBluetoothInstallUpdateInitiateEvent>), List<KioskBluetoothTerminalCancelUpdateEvent> kioskBluetoothTerminalCancelUpdateEvent = default(List<KioskBluetoothTerminalCancelUpdateEvent>), List<KioskBluetoothTerminalFirmwareVersionStatusEvent> kioskBluetoothTerminalFirmwareVersionStatusEvent = default(List<KioskBluetoothTerminalFirmwareVersionStatusEvent>), List<KioskBluetoothTerminalInstallationStatusEvent> kioskBluetoothTerminalInstallationStatusEvent = default(List<KioskBluetoothTerminalInstallationStatusEvent>), List<PushNotificationScheduledEvent> pushNotificationScheduledEvent = default(List<PushNotificationScheduledEvent>), List<PushNotificationSentEvent> pushNotificationSentEvent = default(List<PushNotificationSentEvent>), List<PushNotificationDeletedEvent> pushNotificationDeletedEvent = default(List<PushNotificationDeletedEvent>), List<DnsVerifiedEvent> dnsVerifiedEvent = default(List<DnsVerifiedEvent>), List<CertificateCreatedEvent> certificateCreatedEvent = default(List<CertificateCreatedEvent>), List<CertificateRenewedEvent> certificateRenewedEvent = default(List<CertificateRenewedEvent>), List<WebsiteVanityUrlUpdatedEvent> websiteVanityUrlUpdatedEvent = default(List<WebsiteVanityUrlUpdatedEvent>), List<WebsiteUpdatedEvent> websiteUpdatedEvent = default(List<WebsiteUpdatedEvent>), List<OrderCapacityConfigUpdatedEvent> orderCapacityUpdatedEvent = default(List<OrderCapacityConfigUpdatedEvent>), List<ExternalStoreEvent> externalStoreEvent = default(List<ExternalStoreEvent>))
         {
             this.AppCreatedEvent = appCreatedEvent;
             this.AppUpdatedEvent = appUpdatedEvent;
@@ -172,6 +185,7 @@ namespace Flipdish.Model
             this.MenuCreatedEvent = menuCreatedEvent;
             this.MenuUpdatedEvent = menuUpdatedEvent;
             this.MenuUploadedEvent = menuUploadedEvent;
+            this.MenuBulkEditEvent = menuBulkEditEvent;
             this.MenuSectionCreatedEvent = menuSectionCreatedEvent;
             this.MenuSectionUpdatedEvent = menuSectionUpdatedEvent;
             this.MenuSectionDeletedEvent = menuSectionDeletedEvent;
@@ -225,9 +239,20 @@ namespace Flipdish.Model
             this.BankAccountDeletedEvent = bankAccountDeletedEvent;
             this.HydraAssignedEvent = hydraAssignedEvent;
             this.HydraRequestResetEvent = hydraRequestResetEvent;
+            this.HydraStoreAssignedEvent = hydraStoreAssignedEvent;
+            this.HydraStoreUnassignedEvent = hydraStoreUnassignedEvent;
             this.HydraSettingChangedEvent = hydraSettingChangedEvent;
             this.HydraUnAssignedEvent = hydraUnAssignedEvent;
             this.HydraConnectionStatusChangedEvent = hydraConnectionStatusChangedEvent;
+            this.KioskBluetoothPairingModeEvent = kioskBluetoothPairingModeEvent;
+            this.KioskBluetoothUnpairingModeEvent = kioskBluetoothUnpairingModeEvent;
+            this.KioskBluetoothTerminalUnpairedEvent = kioskBluetoothTerminalUnpairedEvent;
+            this.KioskBluetoothTerminalUpdatedEvent = kioskBluetoothTerminalUpdatedEvent;
+            this.KioskBluetoothTerminalInitiateUpdateCheckEvent = kioskBluetoothTerminalInitiateUpdateCheckEvent;
+            this.KioskBluetoothInstallUpdateInitiateEvent = kioskBluetoothInstallUpdateInitiateEvent;
+            this.KioskBluetoothTerminalCancelUpdateEvent = kioskBluetoothTerminalCancelUpdateEvent;
+            this.KioskBluetoothTerminalFirmwareVersionStatusEvent = kioskBluetoothTerminalFirmwareVersionStatusEvent;
+            this.KioskBluetoothTerminalInstallationStatusEvent = kioskBluetoothTerminalInstallationStatusEvent;
             this.PushNotificationScheduledEvent = pushNotificationScheduledEvent;
             this.PushNotificationSentEvent = pushNotificationSentEvent;
             this.PushNotificationDeletedEvent = pushNotificationDeletedEvent;
@@ -236,7 +261,8 @@ namespace Flipdish.Model
             this.CertificateRenewedEvent = certificateRenewedEvent;
             this.WebsiteVanityUrlUpdatedEvent = websiteVanityUrlUpdatedEvent;
             this.WebsiteUpdatedEvent = websiteUpdatedEvent;
-            this.StoreOrderCapacityUpdatedEvent = storeOrderCapacityUpdatedEvent;
+            this.OrderCapacityUpdatedEvent = orderCapacityUpdatedEvent;
+            this.ExternalStoreEvent = externalStoreEvent;
         }
         
         /// <summary>
@@ -490,6 +516,13 @@ namespace Flipdish.Model
         /// <value>Menu uploaded events</value>
         [DataMember(Name="MenuUploadedEvent", EmitDefaultValue=false)]
         public List<MenuUploadedEvent> MenuUploadedEvent { get; set; }
+
+        /// <summary>
+        /// Menu bulk events
+        /// </summary>
+        /// <value>Menu bulk events</value>
+        [DataMember(Name="MenuBulkEditEvent", EmitDefaultValue=false)]
+        public List<MenuBulkEditEvent> MenuBulkEditEvent { get; set; }
 
         /// <summary>
         /// Menu section created events
@@ -863,6 +896,20 @@ namespace Flipdish.Model
         public List<HydraRequestResetEvent> HydraRequestResetEvent { get; set; }
 
         /// <summary>
+        /// Hydra store assigned event
+        /// </summary>
+        /// <value>Hydra store assigned event</value>
+        [DataMember(Name="HydraStoreAssignedEvent", EmitDefaultValue=false)]
+        public List<HydraStoreAssignedEvent> HydraStoreAssignedEvent { get; set; }
+
+        /// <summary>
+        /// Hydra store unassigned
+        /// </summary>
+        /// <value>Hydra store unassigned</value>
+        [DataMember(Name="HydraStoreUnassignedEvent", EmitDefaultValue=false)]
+        public List<HydraStoreUnassignedEvent> HydraStoreUnassignedEvent { get; set; }
+
+        /// <summary>
         /// Hydra settings changed event
         /// </summary>
         /// <value>Hydra settings changed event</value>
@@ -882,6 +929,69 @@ namespace Flipdish.Model
         /// <value>Hydra connection state change</value>
         [DataMember(Name="HydraConnectionStatusChangedEvent", EmitDefaultValue=false)]
         public List<HydraConnectionStatusChangedEvent> HydraConnectionStatusChangedEvent { get; set; }
+
+        /// <summary>
+        /// Bluetooth Pairing Mode initiated
+        /// </summary>
+        /// <value>Bluetooth Pairing Mode initiated</value>
+        [DataMember(Name="KioskBluetoothPairingModeEvent", EmitDefaultValue=false)]
+        public List<KioskBluetoothPairingModeEvent> KioskBluetoothPairingModeEvent { get; set; }
+
+        /// <summary>
+        /// Bluetooth Unpairing Mode initiated
+        /// </summary>
+        /// <value>Bluetooth Unpairing Mode initiated</value>
+        [DataMember(Name="KioskBluetoothUnpairingModeEvent", EmitDefaultValue=false)]
+        public List<KioskBluetoothUnpairingModeEvent> KioskBluetoothUnpairingModeEvent { get; set; }
+
+        /// <summary>
+        /// Bluetooth Terminal Unpaired with Kiosk
+        /// </summary>
+        /// <value>Bluetooth Terminal Unpaired with Kiosk</value>
+        [DataMember(Name="KioskBluetoothTerminalUnpairedEvent", EmitDefaultValue=false)]
+        public List<KioskBluetoothTerminalUnpairedEvent> KioskBluetoothTerminalUnpairedEvent { get; set; }
+
+        /// <summary>
+        /// Bluetooth Terminal Updated
+        /// </summary>
+        /// <value>Bluetooth Terminal Updated</value>
+        [DataMember(Name="KioskBluetoothTerminalUpdatedEvent", EmitDefaultValue=false)]
+        public List<KioskBluetoothTerminalUpdatedEvent> KioskBluetoothTerminalUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// Trigger bluetooth payment terminal update checker
+        /// </summary>
+        /// <value>Trigger bluetooth payment terminal update checker</value>
+        [DataMember(Name="KioskBluetoothTerminalInitiateUpdateCheckEvent", EmitDefaultValue=false)]
+        public List<KioskBluetoothTerminalInitiateUpdateCheckEvent> KioskBluetoothTerminalInitiateUpdateCheckEvent { get; set; }
+
+        /// <summary>
+        /// Bluetooth Terminal Initiate Update
+        /// </summary>
+        /// <value>Bluetooth Terminal Initiate Update</value>
+        [DataMember(Name="KioskBluetoothInstallUpdateInitiateEvent", EmitDefaultValue=false)]
+        public List<KioskBluetoothInstallUpdateInitiateEvent> KioskBluetoothInstallUpdateInitiateEvent { get; set; }
+
+        /// <summary>
+        /// Bluetooth Terminal Cancel Update Install
+        /// </summary>
+        /// <value>Bluetooth Terminal Cancel Update Install</value>
+        [DataMember(Name="KioskBluetoothTerminalCancelUpdateEvent", EmitDefaultValue=false)]
+        public List<KioskBluetoothTerminalCancelUpdateEvent> KioskBluetoothTerminalCancelUpdateEvent { get; set; }
+
+        /// <summary>
+        /// Bluetooth Payment Terminal Firmware Version Status Info
+        /// </summary>
+        /// <value>Bluetooth Payment Terminal Firmware Version Status Info</value>
+        [DataMember(Name="KioskBluetoothTerminalFirmwareVersionStatusEvent", EmitDefaultValue=false)]
+        public List<KioskBluetoothTerminalFirmwareVersionStatusEvent> KioskBluetoothTerminalFirmwareVersionStatusEvent { get; set; }
+
+        /// <summary>
+        /// Bluetooth Terminal Update Installation Status
+        /// </summary>
+        /// <value>Bluetooth Terminal Update Installation Status</value>
+        [DataMember(Name="KioskBluetoothTerminalInstallationStatusEvent", EmitDefaultValue=false)]
+        public List<KioskBluetoothTerminalInstallationStatusEvent> KioskBluetoothTerminalInstallationStatusEvent { get; set; }
 
         /// <summary>
         /// Push notification scheduled event
@@ -943,8 +1053,15 @@ namespace Flipdish.Model
         /// Order capacity config updated
         /// </summary>
         /// <value>Order capacity config updated</value>
-        [DataMember(Name="StoreOrderCapacityUpdatedEvent", EmitDefaultValue=false)]
-        public List<StoreOrderCapacityUpdatedEvent> StoreOrderCapacityUpdatedEvent { get; set; }
+        [DataMember(Name="OrderCapacityUpdatedEvent", EmitDefaultValue=false)]
+        public List<OrderCapacityConfigUpdatedEvent> OrderCapacityUpdatedEvent { get; set; }
+
+        /// <summary>
+        /// External event
+        /// </summary>
+        /// <value>External event</value>
+        [DataMember(Name="ExternalStoreEvent", EmitDefaultValue=false)]
+        public List<ExternalStoreEvent> ExternalStoreEvent { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -990,6 +1107,7 @@ namespace Flipdish.Model
             sb.Append("  MenuCreatedEvent: ").Append(MenuCreatedEvent).Append("\n");
             sb.Append("  MenuUpdatedEvent: ").Append(MenuUpdatedEvent).Append("\n");
             sb.Append("  MenuUploadedEvent: ").Append(MenuUploadedEvent).Append("\n");
+            sb.Append("  MenuBulkEditEvent: ").Append(MenuBulkEditEvent).Append("\n");
             sb.Append("  MenuSectionCreatedEvent: ").Append(MenuSectionCreatedEvent).Append("\n");
             sb.Append("  MenuSectionUpdatedEvent: ").Append(MenuSectionUpdatedEvent).Append("\n");
             sb.Append("  MenuSectionDeletedEvent: ").Append(MenuSectionDeletedEvent).Append("\n");
@@ -1043,9 +1161,20 @@ namespace Flipdish.Model
             sb.Append("  BankAccountDeletedEvent: ").Append(BankAccountDeletedEvent).Append("\n");
             sb.Append("  HydraAssignedEvent: ").Append(HydraAssignedEvent).Append("\n");
             sb.Append("  HydraRequestResetEvent: ").Append(HydraRequestResetEvent).Append("\n");
+            sb.Append("  HydraStoreAssignedEvent: ").Append(HydraStoreAssignedEvent).Append("\n");
+            sb.Append("  HydraStoreUnassignedEvent: ").Append(HydraStoreUnassignedEvent).Append("\n");
             sb.Append("  HydraSettingChangedEvent: ").Append(HydraSettingChangedEvent).Append("\n");
             sb.Append("  HydraUnAssignedEvent: ").Append(HydraUnAssignedEvent).Append("\n");
             sb.Append("  HydraConnectionStatusChangedEvent: ").Append(HydraConnectionStatusChangedEvent).Append("\n");
+            sb.Append("  KioskBluetoothPairingModeEvent: ").Append(KioskBluetoothPairingModeEvent).Append("\n");
+            sb.Append("  KioskBluetoothUnpairingModeEvent: ").Append(KioskBluetoothUnpairingModeEvent).Append("\n");
+            sb.Append("  KioskBluetoothTerminalUnpairedEvent: ").Append(KioskBluetoothTerminalUnpairedEvent).Append("\n");
+            sb.Append("  KioskBluetoothTerminalUpdatedEvent: ").Append(KioskBluetoothTerminalUpdatedEvent).Append("\n");
+            sb.Append("  KioskBluetoothTerminalInitiateUpdateCheckEvent: ").Append(KioskBluetoothTerminalInitiateUpdateCheckEvent).Append("\n");
+            sb.Append("  KioskBluetoothInstallUpdateInitiateEvent: ").Append(KioskBluetoothInstallUpdateInitiateEvent).Append("\n");
+            sb.Append("  KioskBluetoothTerminalCancelUpdateEvent: ").Append(KioskBluetoothTerminalCancelUpdateEvent).Append("\n");
+            sb.Append("  KioskBluetoothTerminalFirmwareVersionStatusEvent: ").Append(KioskBluetoothTerminalFirmwareVersionStatusEvent).Append("\n");
+            sb.Append("  KioskBluetoothTerminalInstallationStatusEvent: ").Append(KioskBluetoothTerminalInstallationStatusEvent).Append("\n");
             sb.Append("  PushNotificationScheduledEvent: ").Append(PushNotificationScheduledEvent).Append("\n");
             sb.Append("  PushNotificationSentEvent: ").Append(PushNotificationSentEvent).Append("\n");
             sb.Append("  PushNotificationDeletedEvent: ").Append(PushNotificationDeletedEvent).Append("\n");
@@ -1054,7 +1183,8 @@ namespace Flipdish.Model
             sb.Append("  CertificateRenewedEvent: ").Append(CertificateRenewedEvent).Append("\n");
             sb.Append("  WebsiteVanityUrlUpdatedEvent: ").Append(WebsiteVanityUrlUpdatedEvent).Append("\n");
             sb.Append("  WebsiteUpdatedEvent: ").Append(WebsiteUpdatedEvent).Append("\n");
-            sb.Append("  StoreOrderCapacityUpdatedEvent: ").Append(StoreOrderCapacityUpdatedEvent).Append("\n");
+            sb.Append("  OrderCapacityUpdatedEvent: ").Append(OrderCapacityUpdatedEvent).Append("\n");
+            sb.Append("  ExternalStoreEvent: ").Append(ExternalStoreEvent).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1268,6 +1398,11 @@ namespace Flipdish.Model
                     this.MenuUploadedEvent == input.MenuUploadedEvent ||
                     this.MenuUploadedEvent != null &&
                     this.MenuUploadedEvent.SequenceEqual(input.MenuUploadedEvent)
+                ) && 
+                (
+                    this.MenuBulkEditEvent == input.MenuBulkEditEvent ||
+                    this.MenuBulkEditEvent != null &&
+                    this.MenuBulkEditEvent.SequenceEqual(input.MenuBulkEditEvent)
                 ) && 
                 (
                     this.MenuSectionCreatedEvent == input.MenuSectionCreatedEvent ||
@@ -1535,6 +1670,16 @@ namespace Flipdish.Model
                     this.HydraRequestResetEvent.SequenceEqual(input.HydraRequestResetEvent)
                 ) && 
                 (
+                    this.HydraStoreAssignedEvent == input.HydraStoreAssignedEvent ||
+                    this.HydraStoreAssignedEvent != null &&
+                    this.HydraStoreAssignedEvent.SequenceEqual(input.HydraStoreAssignedEvent)
+                ) && 
+                (
+                    this.HydraStoreUnassignedEvent == input.HydraStoreUnassignedEvent ||
+                    this.HydraStoreUnassignedEvent != null &&
+                    this.HydraStoreUnassignedEvent.SequenceEqual(input.HydraStoreUnassignedEvent)
+                ) && 
+                (
                     this.HydraSettingChangedEvent == input.HydraSettingChangedEvent ||
                     this.HydraSettingChangedEvent != null &&
                     this.HydraSettingChangedEvent.SequenceEqual(input.HydraSettingChangedEvent)
@@ -1548,6 +1693,51 @@ namespace Flipdish.Model
                     this.HydraConnectionStatusChangedEvent == input.HydraConnectionStatusChangedEvent ||
                     this.HydraConnectionStatusChangedEvent != null &&
                     this.HydraConnectionStatusChangedEvent.SequenceEqual(input.HydraConnectionStatusChangedEvent)
+                ) && 
+                (
+                    this.KioskBluetoothPairingModeEvent == input.KioskBluetoothPairingModeEvent ||
+                    this.KioskBluetoothPairingModeEvent != null &&
+                    this.KioskBluetoothPairingModeEvent.SequenceEqual(input.KioskBluetoothPairingModeEvent)
+                ) && 
+                (
+                    this.KioskBluetoothUnpairingModeEvent == input.KioskBluetoothUnpairingModeEvent ||
+                    this.KioskBluetoothUnpairingModeEvent != null &&
+                    this.KioskBluetoothUnpairingModeEvent.SequenceEqual(input.KioskBluetoothUnpairingModeEvent)
+                ) && 
+                (
+                    this.KioskBluetoothTerminalUnpairedEvent == input.KioskBluetoothTerminalUnpairedEvent ||
+                    this.KioskBluetoothTerminalUnpairedEvent != null &&
+                    this.KioskBluetoothTerminalUnpairedEvent.SequenceEqual(input.KioskBluetoothTerminalUnpairedEvent)
+                ) && 
+                (
+                    this.KioskBluetoothTerminalUpdatedEvent == input.KioskBluetoothTerminalUpdatedEvent ||
+                    this.KioskBluetoothTerminalUpdatedEvent != null &&
+                    this.KioskBluetoothTerminalUpdatedEvent.SequenceEqual(input.KioskBluetoothTerminalUpdatedEvent)
+                ) && 
+                (
+                    this.KioskBluetoothTerminalInitiateUpdateCheckEvent == input.KioskBluetoothTerminalInitiateUpdateCheckEvent ||
+                    this.KioskBluetoothTerminalInitiateUpdateCheckEvent != null &&
+                    this.KioskBluetoothTerminalInitiateUpdateCheckEvent.SequenceEqual(input.KioskBluetoothTerminalInitiateUpdateCheckEvent)
+                ) && 
+                (
+                    this.KioskBluetoothInstallUpdateInitiateEvent == input.KioskBluetoothInstallUpdateInitiateEvent ||
+                    this.KioskBluetoothInstallUpdateInitiateEvent != null &&
+                    this.KioskBluetoothInstallUpdateInitiateEvent.SequenceEqual(input.KioskBluetoothInstallUpdateInitiateEvent)
+                ) && 
+                (
+                    this.KioskBluetoothTerminalCancelUpdateEvent == input.KioskBluetoothTerminalCancelUpdateEvent ||
+                    this.KioskBluetoothTerminalCancelUpdateEvent != null &&
+                    this.KioskBluetoothTerminalCancelUpdateEvent.SequenceEqual(input.KioskBluetoothTerminalCancelUpdateEvent)
+                ) && 
+                (
+                    this.KioskBluetoothTerminalFirmwareVersionStatusEvent == input.KioskBluetoothTerminalFirmwareVersionStatusEvent ||
+                    this.KioskBluetoothTerminalFirmwareVersionStatusEvent != null &&
+                    this.KioskBluetoothTerminalFirmwareVersionStatusEvent.SequenceEqual(input.KioskBluetoothTerminalFirmwareVersionStatusEvent)
+                ) && 
+                (
+                    this.KioskBluetoothTerminalInstallationStatusEvent == input.KioskBluetoothTerminalInstallationStatusEvent ||
+                    this.KioskBluetoothTerminalInstallationStatusEvent != null &&
+                    this.KioskBluetoothTerminalInstallationStatusEvent.SequenceEqual(input.KioskBluetoothTerminalInstallationStatusEvent)
                 ) && 
                 (
                     this.PushNotificationScheduledEvent == input.PushNotificationScheduledEvent ||
@@ -1590,9 +1780,14 @@ namespace Flipdish.Model
                     this.WebsiteUpdatedEvent.SequenceEqual(input.WebsiteUpdatedEvent)
                 ) && 
                 (
-                    this.StoreOrderCapacityUpdatedEvent == input.StoreOrderCapacityUpdatedEvent ||
-                    this.StoreOrderCapacityUpdatedEvent != null &&
-                    this.StoreOrderCapacityUpdatedEvent.SequenceEqual(input.StoreOrderCapacityUpdatedEvent)
+                    this.OrderCapacityUpdatedEvent == input.OrderCapacityUpdatedEvent ||
+                    this.OrderCapacityUpdatedEvent != null &&
+                    this.OrderCapacityUpdatedEvent.SequenceEqual(input.OrderCapacityUpdatedEvent)
+                ) && 
+                (
+                    this.ExternalStoreEvent == input.ExternalStoreEvent ||
+                    this.ExternalStoreEvent != null &&
+                    this.ExternalStoreEvent.SequenceEqual(input.ExternalStoreEvent)
                 );
         }
 
@@ -1677,6 +1872,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MenuUpdatedEvent.GetHashCode();
                 if (this.MenuUploadedEvent != null)
                     hashCode = hashCode * 59 + this.MenuUploadedEvent.GetHashCode();
+                if (this.MenuBulkEditEvent != null)
+                    hashCode = hashCode * 59 + this.MenuBulkEditEvent.GetHashCode();
                 if (this.MenuSectionCreatedEvent != null)
                     hashCode = hashCode * 59 + this.MenuSectionCreatedEvent.GetHashCode();
                 if (this.MenuSectionUpdatedEvent != null)
@@ -1783,12 +1980,34 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.HydraAssignedEvent.GetHashCode();
                 if (this.HydraRequestResetEvent != null)
                     hashCode = hashCode * 59 + this.HydraRequestResetEvent.GetHashCode();
+                if (this.HydraStoreAssignedEvent != null)
+                    hashCode = hashCode * 59 + this.HydraStoreAssignedEvent.GetHashCode();
+                if (this.HydraStoreUnassignedEvent != null)
+                    hashCode = hashCode * 59 + this.HydraStoreUnassignedEvent.GetHashCode();
                 if (this.HydraSettingChangedEvent != null)
                     hashCode = hashCode * 59 + this.HydraSettingChangedEvent.GetHashCode();
                 if (this.HydraUnAssignedEvent != null)
                     hashCode = hashCode * 59 + this.HydraUnAssignedEvent.GetHashCode();
                 if (this.HydraConnectionStatusChangedEvent != null)
                     hashCode = hashCode * 59 + this.HydraConnectionStatusChangedEvent.GetHashCode();
+                if (this.KioskBluetoothPairingModeEvent != null)
+                    hashCode = hashCode * 59 + this.KioskBluetoothPairingModeEvent.GetHashCode();
+                if (this.KioskBluetoothUnpairingModeEvent != null)
+                    hashCode = hashCode * 59 + this.KioskBluetoothUnpairingModeEvent.GetHashCode();
+                if (this.KioskBluetoothTerminalUnpairedEvent != null)
+                    hashCode = hashCode * 59 + this.KioskBluetoothTerminalUnpairedEvent.GetHashCode();
+                if (this.KioskBluetoothTerminalUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.KioskBluetoothTerminalUpdatedEvent.GetHashCode();
+                if (this.KioskBluetoothTerminalInitiateUpdateCheckEvent != null)
+                    hashCode = hashCode * 59 + this.KioskBluetoothTerminalInitiateUpdateCheckEvent.GetHashCode();
+                if (this.KioskBluetoothInstallUpdateInitiateEvent != null)
+                    hashCode = hashCode * 59 + this.KioskBluetoothInstallUpdateInitiateEvent.GetHashCode();
+                if (this.KioskBluetoothTerminalCancelUpdateEvent != null)
+                    hashCode = hashCode * 59 + this.KioskBluetoothTerminalCancelUpdateEvent.GetHashCode();
+                if (this.KioskBluetoothTerminalFirmwareVersionStatusEvent != null)
+                    hashCode = hashCode * 59 + this.KioskBluetoothTerminalFirmwareVersionStatusEvent.GetHashCode();
+                if (this.KioskBluetoothTerminalInstallationStatusEvent != null)
+                    hashCode = hashCode * 59 + this.KioskBluetoothTerminalInstallationStatusEvent.GetHashCode();
                 if (this.PushNotificationScheduledEvent != null)
                     hashCode = hashCode * 59 + this.PushNotificationScheduledEvent.GetHashCode();
                 if (this.PushNotificationSentEvent != null)
@@ -1805,8 +2024,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.WebsiteVanityUrlUpdatedEvent.GetHashCode();
                 if (this.WebsiteUpdatedEvent != null)
                     hashCode = hashCode * 59 + this.WebsiteUpdatedEvent.GetHashCode();
-                if (this.StoreOrderCapacityUpdatedEvent != null)
-                    hashCode = hashCode * 59 + this.StoreOrderCapacityUpdatedEvent.GetHashCode();
+                if (this.OrderCapacityUpdatedEvent != null)
+                    hashCode = hashCode * 59 + this.OrderCapacityUpdatedEvent.GetHashCode();
+                if (this.ExternalStoreEvent != null)
+                    hashCode = hashCode * 59 + this.ExternalStoreEvent.GetHashCode();
                 return hashCode;
             }
         }

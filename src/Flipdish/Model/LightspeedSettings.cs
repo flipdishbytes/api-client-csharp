@@ -67,6 +67,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="LightspeedSettings" /> class.
         /// </summary>
         /// <param name="companyId">Company Id.</param>
+        /// <param name="useOAuth">Use OAuth for authentication.</param>
         /// <param name="enabled">Enabled.</param>
         /// <param name="estimatedMinutesForDelivery">Estimated minutes for delivery.</param>
         /// <param name="estimatedMinutesForCollection">Estimated minutes for collection.</param>
@@ -82,9 +83,11 @@ namespace Flipdish.Model
         /// <param name="collectionTableIds">Collection Table IDs to send orders to.</param>
         /// <param name="deliveryTableIds">Delivery Table IDs to send orders to.</param>
         /// <param name="useTaxInclusivePrices">Exclude tax.</param>
-        public LightspeedSettings(string companyId = default(string), bool? enabled = default(bool?), int? estimatedMinutesForDelivery = default(int?), int? estimatedMinutesForCollection = default(int?), string geographicLocation = default(string), bool? establishment = default(bool?), string voucherId = default(string), string deliveryFeeId = default(string), string processingFeeId = default(string), PriceTypeEnum? priceType = default(PriceTypeEnum?), int? menuId = default(int?), int? collectionTableId = default(int?), int? deliveryTableId = default(int?), Dictionary<string, string> collectionTableIds = default(Dictionary<string, string>), Dictionary<string, string> deliveryTableIds = default(Dictionary<string, string>), bool? useTaxInclusivePrices = default(bool?))
+        /// <param name="skipStatusCheckAndAcceptOrderAfterSending">WARNING: only use this option if the Liteserver is not synchronizing within max 5 minutes with Lightspeed cloud!.</param>
+        public LightspeedSettings(string companyId = default(string), bool? useOAuth = default(bool?), bool? enabled = default(bool?), int? estimatedMinutesForDelivery = default(int?), int? estimatedMinutesForCollection = default(int?), string geographicLocation = default(string), bool? establishment = default(bool?), string voucherId = default(string), string deliveryFeeId = default(string), string processingFeeId = default(string), PriceTypeEnum? priceType = default(PriceTypeEnum?), int? menuId = default(int?), int? collectionTableId = default(int?), int? deliveryTableId = default(int?), Dictionary<string, string> collectionTableIds = default(Dictionary<string, string>), Dictionary<string, string> deliveryTableIds = default(Dictionary<string, string>), bool? useTaxInclusivePrices = default(bool?), bool? skipStatusCheckAndAcceptOrderAfterSending = default(bool?))
         {
             this.CompanyId = companyId;
+            this.UseOAuth = useOAuth;
             this.Enabled = enabled;
             this.EstimatedMinutesForDelivery = estimatedMinutesForDelivery;
             this.EstimatedMinutesForCollection = estimatedMinutesForCollection;
@@ -100,6 +103,7 @@ namespace Flipdish.Model
             this.CollectionTableIds = collectionTableIds;
             this.DeliveryTableIds = deliveryTableIds;
             this.UseTaxInclusivePrices = useTaxInclusivePrices;
+            this.SkipStatusCheckAndAcceptOrderAfterSending = skipStatusCheckAndAcceptOrderAfterSending;
         }
         
         /// <summary>
@@ -108,6 +112,13 @@ namespace Flipdish.Model
         /// <value>Company Id</value>
         [DataMember(Name="CompanyId", EmitDefaultValue=false)]
         public string CompanyId { get; set; }
+
+        /// <summary>
+        /// Use OAuth for authentication
+        /// </summary>
+        /// <value>Use OAuth for authentication</value>
+        [DataMember(Name="UseOAuth", EmitDefaultValue=false)]
+        public bool? UseOAuth { get; set; }
 
         /// <summary>
         /// Enabled
@@ -209,6 +220,13 @@ namespace Flipdish.Model
         public bool? UseTaxInclusivePrices { get; set; }
 
         /// <summary>
+        /// WARNING: only use this option if the Liteserver is not synchronizing within max 5 minutes with Lightspeed cloud!
+        /// </summary>
+        /// <value>WARNING: only use this option if the Liteserver is not synchronizing within max 5 minutes with Lightspeed cloud!</value>
+        [DataMember(Name="SkipStatusCheckAndAcceptOrderAfterSending", EmitDefaultValue=false)]
+        public bool? SkipStatusCheckAndAcceptOrderAfterSending { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -217,6 +235,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class LightspeedSettings {\n");
             sb.Append("  CompanyId: ").Append(CompanyId).Append("\n");
+            sb.Append("  UseOAuth: ").Append(UseOAuth).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  EstimatedMinutesForDelivery: ").Append(EstimatedMinutesForDelivery).Append("\n");
             sb.Append("  EstimatedMinutesForCollection: ").Append(EstimatedMinutesForCollection).Append("\n");
@@ -232,6 +251,7 @@ namespace Flipdish.Model
             sb.Append("  CollectionTableIds: ").Append(CollectionTableIds).Append("\n");
             sb.Append("  DeliveryTableIds: ").Append(DeliveryTableIds).Append("\n");
             sb.Append("  UseTaxInclusivePrices: ").Append(UseTaxInclusivePrices).Append("\n");
+            sb.Append("  SkipStatusCheckAndAcceptOrderAfterSending: ").Append(SkipStatusCheckAndAcceptOrderAfterSending).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -270,6 +290,11 @@ namespace Flipdish.Model
                     this.CompanyId == input.CompanyId ||
                     (this.CompanyId != null &&
                     this.CompanyId.Equals(input.CompanyId))
+                ) && 
+                (
+                    this.UseOAuth == input.UseOAuth ||
+                    (this.UseOAuth != null &&
+                    this.UseOAuth.Equals(input.UseOAuth))
                 ) && 
                 (
                     this.Enabled == input.Enabled ||
@@ -345,6 +370,11 @@ namespace Flipdish.Model
                     this.UseTaxInclusivePrices == input.UseTaxInclusivePrices ||
                     (this.UseTaxInclusivePrices != null &&
                     this.UseTaxInclusivePrices.Equals(input.UseTaxInclusivePrices))
+                ) && 
+                (
+                    this.SkipStatusCheckAndAcceptOrderAfterSending == input.SkipStatusCheckAndAcceptOrderAfterSending ||
+                    (this.SkipStatusCheckAndAcceptOrderAfterSending != null &&
+                    this.SkipStatusCheckAndAcceptOrderAfterSending.Equals(input.SkipStatusCheckAndAcceptOrderAfterSending))
                 );
         }
 
@@ -359,6 +389,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.CompanyId != null)
                     hashCode = hashCode * 59 + this.CompanyId.GetHashCode();
+                if (this.UseOAuth != null)
+                    hashCode = hashCode * 59 + this.UseOAuth.GetHashCode();
                 if (this.Enabled != null)
                     hashCode = hashCode * 59 + this.Enabled.GetHashCode();
                 if (this.EstimatedMinutesForDelivery != null)
@@ -389,6 +421,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DeliveryTableIds.GetHashCode();
                 if (this.UseTaxInclusivePrices != null)
                     hashCode = hashCode * 59 + this.UseTaxInclusivePrices.GetHashCode();
+                if (this.SkipStatusCheckAndAcceptOrderAfterSending != null)
+                    hashCode = hashCode * 59 + this.SkipStatusCheckAndAcceptOrderAfterSending.GetHashCode();
                 return hashCode;
             }
         }

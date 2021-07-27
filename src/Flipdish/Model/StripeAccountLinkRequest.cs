@@ -88,15 +88,13 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="StripeAccountLinkRequest" /> class.
         /// </summary>
         /// <param name="stripeId">Stripe&#39;s own connected account identifier.</param>
-        /// <param name="successUrl">URL to be hit if link creation succeeds.</param>
-        /// <param name="failureUrl">URL to be hit if link creation fails.</param>
+        /// <param name="returnUrl">URL to be hit if link creation succeeds.</param>
         /// <param name="collect">Which information to collect from users at this stage.</param>
         /// <param name="type">Either onboarding or edit user information.</param>
-        public StripeAccountLinkRequest(string stripeId = default(string), string successUrl = default(string), string failureUrl = default(string), CollectEnum? collect = default(CollectEnum?), TypeEnum? type = default(TypeEnum?))
+        public StripeAccountLinkRequest(string stripeId = default(string), string returnUrl = default(string), CollectEnum? collect = default(CollectEnum?), TypeEnum? type = default(TypeEnum?))
         {
             this.StripeId = stripeId;
-            this.SuccessUrl = successUrl;
-            this.FailureUrl = failureUrl;
+            this.ReturnUrl = returnUrl;
             this.Collect = collect;
             this.Type = type;
         }
@@ -112,15 +110,8 @@ namespace Flipdish.Model
         /// URL to be hit if link creation succeeds
         /// </summary>
         /// <value>URL to be hit if link creation succeeds</value>
-        [DataMember(Name="SuccessUrl", EmitDefaultValue=false)]
-        public string SuccessUrl { get; set; }
-
-        /// <summary>
-        /// URL to be hit if link creation fails
-        /// </summary>
-        /// <value>URL to be hit if link creation fails</value>
-        [DataMember(Name="FailureUrl", EmitDefaultValue=false)]
-        public string FailureUrl { get; set; }
+        [DataMember(Name="ReturnUrl", EmitDefaultValue=false)]
+        public string ReturnUrl { get; set; }
 
 
 
@@ -133,8 +124,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class StripeAccountLinkRequest {\n");
             sb.Append("  StripeId: ").Append(StripeId).Append("\n");
-            sb.Append("  SuccessUrl: ").Append(SuccessUrl).Append("\n");
-            sb.Append("  FailureUrl: ").Append(FailureUrl).Append("\n");
+            sb.Append("  ReturnUrl: ").Append(ReturnUrl).Append("\n");
             sb.Append("  Collect: ").Append(Collect).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
@@ -177,14 +167,9 @@ namespace Flipdish.Model
                     this.StripeId.Equals(input.StripeId))
                 ) && 
                 (
-                    this.SuccessUrl == input.SuccessUrl ||
-                    (this.SuccessUrl != null &&
-                    this.SuccessUrl.Equals(input.SuccessUrl))
-                ) && 
-                (
-                    this.FailureUrl == input.FailureUrl ||
-                    (this.FailureUrl != null &&
-                    this.FailureUrl.Equals(input.FailureUrl))
+                    this.ReturnUrl == input.ReturnUrl ||
+                    (this.ReturnUrl != null &&
+                    this.ReturnUrl.Equals(input.ReturnUrl))
                 ) && 
                 (
                     this.Collect == input.Collect ||
@@ -209,10 +194,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.StripeId != null)
                     hashCode = hashCode * 59 + this.StripeId.GetHashCode();
-                if (this.SuccessUrl != null)
-                    hashCode = hashCode * 59 + this.SuccessUrl.GetHashCode();
-                if (this.FailureUrl != null)
-                    hashCode = hashCode * 59 + this.FailureUrl.GetHashCode();
+                if (this.ReturnUrl != null)
+                    hashCode = hashCode * 59 + this.ReturnUrl.GetHashCode();
                 if (this.Collect != null)
                     hashCode = hashCode * 59 + this.Collect.GetHashCode();
                 if (this.Type != null)

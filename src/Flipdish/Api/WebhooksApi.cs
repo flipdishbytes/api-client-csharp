@@ -175,6 +175,35 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiStringArrayResult</returns>
         ApiResponse<RestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId);
         /// <summary>
+        /// Get a sample event from a webhook subscription
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventName"></param>
+        /// <param name="appId"></param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="version"> (optional)</param>
+        /// <returns>WebhookEventSample</returns>
+        WebhookEventSample GetWebhookEventSample (string eventName, string appId, string oauthAppId, string webhookSubscriptionId, string version = null);
+
+        /// <summary>
+        /// Get a sample event from a webhook subscription
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventName"></param>
+        /// <param name="appId"></param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="version"> (optional)</param>
+        /// <returns>ApiResponse of WebhookEventSample</returns>
+        ApiResponse<WebhookEventSample> GetWebhookEventSampleWithHttpInfo (string eventName, string appId, string oauthAppId, string webhookSubscriptionId, string version = null);
+        /// <summary>
         /// Get logs for your webhook subscription
         /// </summary>
         /// <remarks>
@@ -413,6 +442,35 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringArrayResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId);
+        /// <summary>
+        /// Get a sample event from a webhook subscription
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventName"></param>
+        /// <param name="appId"></param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="version"> (optional)</param>
+        /// <returns>Task of WebhookEventSample</returns>
+        System.Threading.Tasks.Task<WebhookEventSample> GetWebhookEventSampleAsync (string eventName, string appId, string oauthAppId, string webhookSubscriptionId, string version = null);
+
+        /// <summary>
+        /// Get a sample event from a webhook subscription
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventName"></param>
+        /// <param name="appId"></param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="version"> (optional)</param>
+        /// <returns>Task of ApiResponse (WebhookEventSample)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WebhookEventSample>> GetWebhookEventSampleAsyncWithHttpInfo (string eventName, string appId, string oauthAppId, string webhookSubscriptionId, string version = null);
         /// <summary>
         /// Get logs for your webhook subscription
         /// </summary>
@@ -1666,6 +1724,199 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiStringArrayResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiStringArrayResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringArrayResult)));
+        }
+
+        /// <summary>
+        /// Get a sample event from a webhook subscription 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventName"></param>
+        /// <param name="appId"></param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="version"> (optional)</param>
+        /// <returns>WebhookEventSample</returns>
+        public WebhookEventSample GetWebhookEventSample (string eventName, string appId, string oauthAppId, string webhookSubscriptionId, string version = null)
+        {
+             ApiResponse<WebhookEventSample> localVarResponse = GetWebhookEventSampleWithHttpInfo(eventName, appId, oauthAppId, webhookSubscriptionId, version);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a sample event from a webhook subscription 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventName"></param>
+        /// <param name="appId"></param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="version"> (optional)</param>
+        /// <returns>ApiResponse of WebhookEventSample</returns>
+        public ApiResponse< WebhookEventSample > GetWebhookEventSampleWithHttpInfo (string eventName, string appId, string oauthAppId, string webhookSubscriptionId, string version = null)
+        {
+            // verify the required parameter 'eventName' is set
+            if (eventName == null)
+                throw new ApiException(400, "Missing required parameter 'eventName' when calling WebhooksApi->GetWebhookEventSample");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookEventSample");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->GetWebhookEventSample");
+            // verify the required parameter 'webhookSubscriptionId' is set
+            if (webhookSubscriptionId == null)
+                throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->GetWebhookEventSample");
+
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}/test";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (eventName != null) localVarPathParams.Add("eventName", this.Configuration.ApiClient.ParameterToString(eventName)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", this.Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
+            if (version != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "version", version)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetWebhookEventSample", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<WebhookEventSample>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WebhookEventSample) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookEventSample)));
+        }
+
+        /// <summary>
+        /// Get a sample event from a webhook subscription 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventName"></param>
+        /// <param name="appId"></param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="version"> (optional)</param>
+        /// <returns>Task of WebhookEventSample</returns>
+        public async System.Threading.Tasks.Task<WebhookEventSample> GetWebhookEventSampleAsync (string eventName, string appId, string oauthAppId, string webhookSubscriptionId, string version = null)
+        {
+             ApiResponse<WebhookEventSample> localVarResponse = await GetWebhookEventSampleAsyncWithHttpInfo(eventName, appId, oauthAppId, webhookSubscriptionId, version);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a sample event from a webhook subscription 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventName"></param>
+        /// <param name="appId"></param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="version"> (optional)</param>
+        /// <returns>Task of ApiResponse (WebhookEventSample)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WebhookEventSample>> GetWebhookEventSampleAsyncWithHttpInfo (string eventName, string appId, string oauthAppId, string webhookSubscriptionId, string version = null)
+        {
+            // verify the required parameter 'eventName' is set
+            if (eventName == null)
+                throw new ApiException(400, "Missing required parameter 'eventName' when calling WebhooksApi->GetWebhookEventSample");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookEventSample");
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->GetWebhookEventSample");
+            // verify the required parameter 'webhookSubscriptionId' is set
+            if (webhookSubscriptionId == null)
+                throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->GetWebhookEventSample");
+
+            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}/test";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (eventName != null) localVarPathParams.Add("eventName", this.Configuration.ApiClient.ParameterToString(eventName)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (webhookSubscriptionId != null) localVarPathParams.Add("webhookSubscriptionId", this.Configuration.ApiClient.ParameterToString(webhookSubscriptionId)); // path parameter
+            if (version != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "version", version)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetWebhookEventSample", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<WebhookEventSample>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WebhookEventSample) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookEventSample)));
         }
 
         /// <summary>

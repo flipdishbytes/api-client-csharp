@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**DeleteWebhookSubscriptionEventName**](WebhooksApi.md#deletewebhooksubscriptioneventname) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Remove event name to your webhook subscription
 [**GetWebhookEventNames**](WebhooksApi.md#getwebhookeventnames) | **GET** /api/v1.0/{appId}/webhooks/events | Get all webhook subscription event names
 [**GetWebhookEventNamesBySubscriptionId**](WebhooksApi.md#getwebhookeventnamesbysubscriptionid) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events | Get your webhook subscriptions selected event names
+[**GetWebhookEventSample**](WebhooksApi.md#getwebhookeventsample) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}/test | Get a sample event from a webhook subscription
 [**GetWebhookLogs**](WebhooksApi.md#getwebhooklogs) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs | Get logs for your webhook subscription
 [**GetWebhookSubscriptions**](WebhooksApi.md#getwebhooksubscriptions) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Get all webhook subscriptions by your Oauth App id
 [**UpdateWebhookSubscription**](WebhooksApi.md#updatewebhooksubscription) | **PUT** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Update a webhook subscription object
@@ -396,6 +397,76 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiStringArrayResult**](RestApiStringArrayResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getwebhookeventsample"></a>
+# **GetWebhookEventSample**
+> WebhookEventSample GetWebhookEventSample (string eventName, string appId, string oauthAppId, string webhookSubscriptionId, string version = null)
+
+Get a sample event from a webhook subscription
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetWebhookEventSampleExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new WebhooksApi();
+            var eventName = eventName_example;  // string | 
+            var appId = appId_example;  // string | 
+            var oauthAppId = oauthAppId_example;  // string | 
+            var webhookSubscriptionId = webhookSubscriptionId_example;  // string | 
+            var version = version_example;  // string |  (optional) 
+
+            try
+            {
+                // Get a sample event from a webhook subscription
+                WebhookEventSample result = apiInstance.GetWebhookEventSample(eventName, appId, oauthAppId, webhookSubscriptionId, version);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WebhooksApi.GetWebhookEventSample: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eventName** | **string**|  | 
+ **appId** | **string**|  | 
+ **oauthAppId** | **string**|  | 
+ **webhookSubscriptionId** | **string**|  | 
+ **version** | **string**|  | [optional] 
+
+### Return type
+
+[**WebhookEventSample**](WebhookEventSample.md)
 
 ### Authorization
 

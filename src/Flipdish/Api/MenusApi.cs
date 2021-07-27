@@ -368,6 +368,29 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MenusDeleteTaxRateWithHttpInfo (int? menuId, int? taxId);
         /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>RestApiArrayResultMenuElementListResponse</returns>
+        RestApiArrayResultMenuElementListResponse MenusGetMenuBulkShowHide (int? menuId, bool? isAvailable);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>ApiResponse of RestApiArrayResultMenuElementListResponse</returns>
+        ApiResponse<RestApiArrayResultMenuElementListResponse> MenusGetMenuBulkShowHideWithHttpInfo (int? menuId, bool? isAvailable);
+        /// <summary>
         /// [PRIVATE API]Set if tax shows for a Menu
         /// </summary>
         /// <remarks>
@@ -413,6 +436,31 @@ namespace Flipdish.Api
         /// <param name="displayOrders">Section Ids and their new display order</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MenusSetItemDisplayOrdersWithHttpInfo (int? menuId, MenuObjectDisplayOrders displayOrders);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="menuElements"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>RestApiArrayResultMenuElementEditResponse</returns>
+        RestApiArrayResultMenuElementEditResponse MenusShowHideBulkItems (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="menuElements"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>ApiResponse of RestApiArrayResultMenuElementEditResponse</returns>
+        ApiResponse<RestApiArrayResultMenuElementEditResponse> MenusShowHideBulkItemsWithHttpInfo (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable);
         /// <summary>
         /// [PRIVATE API]Set the type of Tax on a Menu
         /// </summary>
@@ -997,6 +1045,29 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MenusDeleteTaxRateAsyncWithHttpInfo (int? menuId, int? taxId);
         /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>Task of RestApiArrayResultMenuElementListResponse</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultMenuElementListResponse> MenusGetMenuBulkShowHideAsync (int? menuId, bool? isAvailable);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultMenuElementListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuElementListResponse>> MenusGetMenuBulkShowHideAsyncWithHttpInfo (int? menuId, bool? isAvailable);
+        /// <summary>
         /// [PRIVATE API]Set if tax shows for a Menu
         /// </summary>
         /// <remarks>
@@ -1042,6 +1113,31 @@ namespace Flipdish.Api
         /// <param name="displayOrders">Section Ids and their new display order</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MenusSetItemDisplayOrdersAsyncWithHttpInfo (int? menuId, MenuObjectDisplayOrders displayOrders);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="menuElements"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>Task of RestApiArrayResultMenuElementEditResponse</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultMenuElementEditResponse> MenusShowHideBulkItemsAsync (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="menuElements"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultMenuElementEditResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuElementEditResponse>> MenusShowHideBulkItemsAsyncWithHttpInfo (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable);
         /// <summary>
         /// [PRIVATE API]Set the type of Tax on a Menu
         /// </summary>
@@ -3828,6 +3924,169 @@ namespace Flipdish.Api
         }
 
         /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>RestApiArrayResultMenuElementListResponse</returns>
+        public RestApiArrayResultMenuElementListResponse MenusGetMenuBulkShowHide (int? menuId, bool? isAvailable)
+        {
+             ApiResponse<RestApiArrayResultMenuElementListResponse> localVarResponse = MenusGetMenuBulkShowHideWithHttpInfo(menuId, isAvailable);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>ApiResponse of RestApiArrayResultMenuElementListResponse</returns>
+        public ApiResponse< RestApiArrayResultMenuElementListResponse > MenusGetMenuBulkShowHideWithHttpInfo (int? menuId, bool? isAvailable)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->MenusGetMenuBulkShowHide");
+            // verify the required parameter 'isAvailable' is set
+            if (isAvailable == null)
+                throw new ApiException(400, "Missing required parameter 'isAvailable' when calling MenusApi->MenusGetMenuBulkShowHide");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/bulkshowhide/list";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (isAvailable != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isAvailable", isAvailable)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MenusGetMenuBulkShowHide", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultMenuElementListResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultMenuElementListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMenuElementListResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>Task of RestApiArrayResultMenuElementListResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultMenuElementListResponse> MenusGetMenuBulkShowHideAsync (int? menuId, bool? isAvailable)
+        {
+             ApiResponse<RestApiArrayResultMenuElementListResponse> localVarResponse = await MenusGetMenuBulkShowHideAsyncWithHttpInfo(menuId, isAvailable);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultMenuElementListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuElementListResponse>> MenusGetMenuBulkShowHideAsyncWithHttpInfo (int? menuId, bool? isAvailable)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->MenusGetMenuBulkShowHide");
+            // verify the required parameter 'isAvailable' is set
+            if (isAvailable == null)
+                throw new ApiException(400, "Missing required parameter 'isAvailable' when calling MenusApi->MenusGetMenuBulkShowHide");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/bulkshowhide/list";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (isAvailable != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isAvailable", isAvailable)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MenusGetMenuBulkShowHide", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultMenuElementListResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultMenuElementListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMenuElementListResponse)));
+        }
+
+        /// <summary>
         /// [PRIVATE API]Set if tax shows for a Menu 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4171,6 +4430,205 @@ namespace Flipdish.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="menuElements"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>RestApiArrayResultMenuElementEditResponse</returns>
+        public RestApiArrayResultMenuElementEditResponse MenusShowHideBulkItems (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable)
+        {
+             ApiResponse<RestApiArrayResultMenuElementEditResponse> localVarResponse = MenusShowHideBulkItemsWithHttpInfo(menuId, menuElements, isAvailable);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="menuElements"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>ApiResponse of RestApiArrayResultMenuElementEditResponse</returns>
+        public ApiResponse< RestApiArrayResultMenuElementEditResponse > MenusShowHideBulkItemsWithHttpInfo (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->MenusShowHideBulkItems");
+            // verify the required parameter 'menuElements' is set
+            if (menuElements == null)
+                throw new ApiException(400, "Missing required parameter 'menuElements' when calling MenusApi->MenusShowHideBulkItems");
+            // verify the required parameter 'isAvailable' is set
+            if (isAvailable == null)
+                throw new ApiException(400, "Missing required parameter 'isAvailable' when calling MenusApi->MenusShowHideBulkItems");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/bulkshowhide";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (isAvailable != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isAvailable", isAvailable)); // query parameter
+            if (menuElements != null && menuElements.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(menuElements); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = menuElements; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MenusShowHideBulkItems", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultMenuElementEditResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultMenuElementEditResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMenuElementEditResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="menuElements"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>Task of RestApiArrayResultMenuElementEditResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultMenuElementEditResponse> MenusShowHideBulkItemsAsync (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable)
+        {
+             ApiResponse<RestApiArrayResultMenuElementEditResponse> localVarResponse = await MenusShowHideBulkItemsAsyncWithHttpInfo(menuId, menuElements, isAvailable);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="menuElements"></param>
+        /// <param name="isAvailable"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultMenuElementEditResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuElementEditResponse>> MenusShowHideBulkItemsAsyncWithHttpInfo (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable)
+        {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenusApi->MenusShowHideBulkItems");
+            // verify the required parameter 'menuElements' is set
+            if (menuElements == null)
+                throw new ApiException(400, "Missing required parameter 'menuElements' when calling MenusApi->MenusShowHideBulkItems");
+            // verify the required parameter 'isAvailable' is set
+            if (isAvailable == null)
+                throw new ApiException(400, "Missing required parameter 'isAvailable' when calling MenusApi->MenusShowHideBulkItems");
+
+            var localVarPath = "/api/v1.0/menus/{menuId}/bulkshowhide";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (isAvailable != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isAvailable", isAvailable)); // query parameter
+            if (menuElements != null && menuElements.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(menuElements); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = menuElements; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MenusShowHideBulkItems", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultMenuElementEditResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultMenuElementEditResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMenuElementEditResponse)));
         }
 
         /// <summary>

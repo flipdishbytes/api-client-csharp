@@ -4,12 +4,75 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**GetApmStatus**](ApmApi.md#getapmstatus) | **GET** /api/v1.0/{appId}/apm/status | [PRIVATE API] Returns true if APM is enabled on at least one store in an application
 [**GetBasicStatistics**](ApmApi.md#getbasicstatistics) | **GET** /api/v1.0/{appId}/apm/statistics | [PRIVATE API] Get Basic Statistics
 [**GetCalendarWeekStatistics**](ApmApi.md#getcalendarweekstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calendar | [PRIVATE API] Get Calendar statistics
 [**GetCallsStatistics**](ApmApi.md#getcallsstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy} | [PRIVATE API] Get Calls Statistics
 [**GetOrderStatistics**](ApmApi.md#getorderstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | [PRIVATE API] Get Order Statistics (Value of Orders)
 [**GetPaginatedCallList**](ApmApi.md#getpaginatedcalllist) | **GET** /api/v1.0/{appId}/apm/calls | [PRIVATE API] Get paginated APM call list
 
+
+<a name="getapmstatus"></a>
+# **GetApmStatus**
+> RestApiResultApmStatus GetApmStatus (string appId)
+
+[PRIVATE API] Returns true if APM is enabled on at least one store in an application
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetApmStatusExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ApmApi();
+            var appId = appId_example;  // string | App Id
+
+            try
+            {
+                // [PRIVATE API] Returns true if APM is enabled on at least one store in an application
+                RestApiResultApmStatus result = apiInstance.GetApmStatus(appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApmApi.GetApmStatus: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**| App Id | 
+
+### Return type
+
+[**RestApiResultApmStatus**](RestApiResultApmStatus.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getbasicstatistics"></a>
 # **GetBasicStatistics**
@@ -35,7 +98,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ApmApi();
-            var appId = appId_example;  // string | App Name
+            var appId = appId_example;  // string | App Id
             var storeId = new List<int?>(); // List<int?> | List of stores to search by (optional) 
 
             try
@@ -57,7 +120,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name | 
+ **appId** | **string**| App Id | 
  **storeId** | [**List&lt;int?&gt;**](int?.md)| List of stores to search by | [optional] 
 
 ### Return type
@@ -99,7 +162,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ApmApi();
-            var appId = appId_example;  // string | App Name
+            var appId = appId_example;  // string | App Id
             var storeId = new List<int?>(); // List<int?> | List of stores to search by (optional) 
 
             try
@@ -121,7 +184,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name | 
+ **appId** | **string**| App Id | 
  **storeId** | [**List&lt;int?&gt;**](int?.md)| List of stores to search by | [optional] 
 
 ### Return type
@@ -163,7 +226,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ApmApi();
-            var appId = appId_example;  // string | App Name
+            var appId = appId_example;  // string | App Id
             var aggregateDataBy = aggregateDataBy_example;  // string | Aggregate data by day \\ week
             var dataPointLimit = 56;  // int? | Amount of data points per request (optional) 
             var storeId = new List<int?>(); // List<int?> | List of stores to search by (optional) 
@@ -187,7 +250,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name | 
+ **appId** | **string**| App Id | 
  **aggregateDataBy** | **string**| Aggregate data by day \\ week | 
  **dataPointLimit** | **int?**| Amount of data points per request | [optional] 
  **storeId** | [**List&lt;int?&gt;**](int?.md)| List of stores to search by | [optional] 
@@ -231,7 +294,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ApmApi();
-            var appId = appId_example;  // string | App Name
+            var appId = appId_example;  // string | App Id
             var aggregateDataBy = aggregateDataBy_example;  // string | Aggregate data by day \\ week
             var dataPointLimit = 56;  // int? | Amount of data points per request (optional) 
             var storeId = new List<int?>(); // List<int?> | List of stores to search by (optional) 
@@ -255,7 +318,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name | 
+ **appId** | **string**| App Id | 
  **aggregateDataBy** | **string**| Aggregate data by day \\ week | 
  **dataPointLimit** | **int?**| Amount of data points per request | [optional] 
  **storeId** | [**List&lt;int?&gt;**](int?.md)| List of stores to search by | [optional] 
@@ -299,7 +362,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ApmApi();
-            var appId = appId_example;  // string | App Name
+            var appId = appId_example;  // string | App Id
             var page = 56;  // int? | Requested page index (optional) 
             var limit = 56;  // int? | Requested page limit (optional) 
             var storeId = new List<int?>(); // List<int?> | List of stores to search by (optional) 
@@ -323,7 +386,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name | 
+ **appId** | **string**| App Id | 
  **page** | **int?**| Requested page index | [optional] 
  **limit** | **int?**| Requested page limit | [optional] 
  **storeId** | [**List&lt;int?&gt;**](int?.md)| List of stores to search by | [optional] 

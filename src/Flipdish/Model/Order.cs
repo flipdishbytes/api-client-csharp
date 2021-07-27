@@ -144,7 +144,13 @@ namespace Flipdish.Model
             /// Enum Gate for value: Gate
             /// </summary>
             [EnumMember(Value = "Gate")]
-            Gate = 8
+            Gate = 8,
+            
+            /// <summary>
+            /// Enum DriveThrough for value: DriveThrough
+            /// </summary>
+            [EnumMember(Value = "DriveThrough")]
+            DriveThrough = 9
         }
 
         /// <summary>

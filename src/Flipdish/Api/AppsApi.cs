@@ -92,7 +92,28 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultApp</returns>
         ApiResponse<RestApiPaginationResultApp> GetAppsWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Get panacea vanity url
+        /// Get the application compliance configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>RestApiResultAppCompliance</returns>
+        RestApiResultAppCompliance GetCompliance (string appId);
+
+        /// <summary>
+        /// Get the application compliance configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>ApiResponse of RestApiResultAppCompliance</returns>
+        ApiResponse<RestApiResultAppCompliance> GetComplianceWithHttpInfo (string appId);
+        /// <summary>
+        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
         /// </summary>
         /// <remarks>
         /// 
@@ -103,7 +124,7 @@ namespace Flipdish.Api
         RestApiStringResult GetPanaceaVanityUrl (string appId);
 
         /// <summary>
-        /// Get panacea vanity url
+        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
         /// </summary>
         /// <remarks>
         /// 
@@ -113,7 +134,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiStringResult</returns>
         ApiResponse<RestApiStringResult> GetPanaceaVanityUrlWithHttpInfo (string appId);
         /// <summary>
-        /// Get the application configuration
+        /// Get all supported countries.
         /// </summary>
         /// <remarks>
         /// 
@@ -123,7 +144,7 @@ namespace Flipdish.Api
         RestApiArrayResultSupportedCountry GetSupportedCountries ();
 
         /// <summary>
-        /// Get the application configuration
+        /// Get all supported countries.
         /// </summary>
         /// <remarks>
         /// 
@@ -181,7 +202,7 @@ namespace Flipdish.Api
         /// Set the application hostname.
         /// </summary>
         /// <remarks>
-        /// If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application identifier.</param>
@@ -194,7 +215,7 @@ namespace Flipdish.Api
         /// Set the application hostname.
         /// </summary>
         /// <remarks>
-        /// If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application identifier.</param>
@@ -225,6 +246,29 @@ namespace Flipdish.Api
         /// <param name="languages">New list of languages</param>
         /// <returns>ApiResponse of RestApiResultApp</returns>
         ApiResponse<RestApiResultApp> SetAppLanguagesWithHttpInfo (string appId, List<Language> languages);
+        /// <summary>
+        /// Set the application compliance configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="complianceType">Compliance type</param>
+        /// <returns>RestApiResultAppCompliance</returns>
+        RestApiResultAppCompliance SetCompliance (string appId, string complianceType);
+
+        /// <summary>
+        /// Set the application compliance configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="complianceType">Compliance type</param>
+        /// <returns>ApiResponse of RestApiResultAppCompliance</returns>
+        ApiResponse<RestApiResultAppCompliance> SetComplianceWithHttpInfo (string appId, string complianceType);
         /// <summary>
         /// Set panacea vanity url
         /// </summary>
@@ -341,7 +385,28 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiPaginationResultApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultApp>> GetAppsAsyncWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Get panacea vanity url
+        /// Get the application compliance configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>Task of RestApiResultAppCompliance</returns>
+        System.Threading.Tasks.Task<RestApiResultAppCompliance> GetComplianceAsync (string appId);
+
+        /// <summary>
+        /// Get the application compliance configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>Task of ApiResponse (RestApiResultAppCompliance)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppCompliance>> GetComplianceAsyncWithHttpInfo (string appId);
+        /// <summary>
+        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
         /// </summary>
         /// <remarks>
         /// 
@@ -352,7 +417,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiStringResult> GetPanaceaVanityUrlAsync (string appId);
 
         /// <summary>
-        /// Get panacea vanity url
+        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
         /// </summary>
         /// <remarks>
         /// 
@@ -362,7 +427,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetPanaceaVanityUrlAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Get the application configuration
+        /// Get all supported countries.
         /// </summary>
         /// <remarks>
         /// 
@@ -372,7 +437,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultSupportedCountry> GetSupportedCountriesAsync ();
 
         /// <summary>
-        /// Get the application configuration
+        /// Get all supported countries.
         /// </summary>
         /// <remarks>
         /// 
@@ -430,7 +495,7 @@ namespace Flipdish.Api
         /// Set the application hostname.
         /// </summary>
         /// <remarks>
-        /// If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application identifier.</param>
@@ -443,7 +508,7 @@ namespace Flipdish.Api
         /// Set the application hostname.
         /// </summary>
         /// <remarks>
-        /// If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application identifier.</param>
@@ -474,6 +539,29 @@ namespace Flipdish.Api
         /// <param name="languages">New list of languages</param>
         /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> SetAppLanguagesAsyncWithHttpInfo (string appId, List<Language> languages);
+        /// <summary>
+        /// Set the application compliance configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="complianceType">Compliance type</param>
+        /// <returns>Task of RestApiResultAppCompliance</returns>
+        System.Threading.Tasks.Task<RestApiResultAppCompliance> SetComplianceAsync (string appId, string complianceType);
+
+        /// <summary>
+        /// Set the application compliance configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="complianceType">Compliance type</param>
+        /// <returns>Task of ApiResponse (RestApiResultAppCompliance)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppCompliance>> SetComplianceAsyncWithHttpInfo (string appId, string complianceType);
         /// <summary>
         /// Set panacea vanity url
         /// </summary>
@@ -1080,7 +1168,158 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get panacea vanity url 
+        /// Get the application compliance configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>RestApiResultAppCompliance</returns>
+        public RestApiResultAppCompliance GetCompliance (string appId)
+        {
+             ApiResponse<RestApiResultAppCompliance> localVarResponse = GetComplianceWithHttpInfo(appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the application compliance configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>ApiResponse of RestApiResultAppCompliance</returns>
+        public ApiResponse< RestApiResultAppCompliance > GetComplianceWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->GetCompliance");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/compliance";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCompliance", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAppCompliance>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultAppCompliance) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppCompliance)));
+        }
+
+        /// <summary>
+        /// Get the application compliance configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>Task of RestApiResultAppCompliance</returns>
+        public async System.Threading.Tasks.Task<RestApiResultAppCompliance> GetComplianceAsync (string appId)
+        {
+             ApiResponse<RestApiResultAppCompliance> localVarResponse = await GetComplianceAsyncWithHttpInfo(appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the application compliance configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <returns>Task of ApiResponse (RestApiResultAppCompliance)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppCompliance>> GetComplianceAsyncWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->GetCompliance");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/compliance";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCompliance", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAppCompliance>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultAppCompliance) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppCompliance)));
+        }
+
+        /// <summary>
+        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl] 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application identifier.</param>
@@ -1092,7 +1331,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get panacea vanity url 
+        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl] 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application identifier.</param>
@@ -1155,7 +1394,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get panacea vanity url 
+        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl] 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application identifier.</param>
@@ -1168,7 +1407,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get panacea vanity url 
+        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl] 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application identifier.</param>
@@ -1231,7 +1470,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application configuration 
+        /// Get all supported countries. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RestApiArrayResultSupportedCountry</returns>
@@ -1242,7 +1481,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application configuration 
+        /// Get all supported countries. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RestApiArrayResultSupportedCountry</returns>
@@ -1300,7 +1539,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application configuration 
+        /// Get all supported countries. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RestApiArrayResultSupportedCountry</returns>
@@ -1312,7 +1551,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application configuration 
+        /// Get all supported countries. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RestApiArrayResultSupportedCountry)</returns>
@@ -1720,7 +1959,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application identifier.</param>
@@ -1734,7 +1973,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application identifier.</param>
@@ -1804,7 +2043,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application identifier.</param>
@@ -1819,7 +2058,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be appended.
+        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application identifier.</param>
@@ -2073,6 +2312,169 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultApp>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiResultApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApp)));
+        }
+
+        /// <summary>
+        /// Set the application compliance configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="complianceType">Compliance type</param>
+        /// <returns>RestApiResultAppCompliance</returns>
+        public RestApiResultAppCompliance SetCompliance (string appId, string complianceType)
+        {
+             ApiResponse<RestApiResultAppCompliance> localVarResponse = SetComplianceWithHttpInfo(appId, complianceType);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set the application compliance configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="complianceType">Compliance type</param>
+        /// <returns>ApiResponse of RestApiResultAppCompliance</returns>
+        public ApiResponse< RestApiResultAppCompliance > SetComplianceWithHttpInfo (string appId, string complianceType)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->SetCompliance");
+            // verify the required parameter 'complianceType' is set
+            if (complianceType == null)
+                throw new ApiException(400, "Missing required parameter 'complianceType' when calling AppsApi->SetCompliance");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/compliance";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (complianceType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "complianceType", complianceType)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetCompliance", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAppCompliance>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultAppCompliance) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppCompliance)));
+        }
+
+        /// <summary>
+        /// Set the application compliance configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="complianceType">Compliance type</param>
+        /// <returns>Task of RestApiResultAppCompliance</returns>
+        public async System.Threading.Tasks.Task<RestApiResultAppCompliance> SetComplianceAsync (string appId, string complianceType)
+        {
+             ApiResponse<RestApiResultAppCompliance> localVarResponse = await SetComplianceAsyncWithHttpInfo(appId, complianceType);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set the application compliance configuration 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application identifier</param>
+        /// <param name="complianceType">Compliance type</param>
+        /// <returns>Task of ApiResponse (RestApiResultAppCompliance)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppCompliance>> SetComplianceAsyncWithHttpInfo (string appId, string complianceType)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->SetCompliance");
+            // verify the required parameter 'complianceType' is set
+            if (complianceType == null)
+                throw new ApiException(400, "Missing required parameter 'complianceType' when calling AppsApi->SetCompliance");
+
+            var localVarPath = "/api/v1.0/apps/{appId}/compliance";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (complianceType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "complianceType", complianceType)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetCompliance", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAppCompliance>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultAppCompliance) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppCompliance)));
         }
 
         /// <summary>

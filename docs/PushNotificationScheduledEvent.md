@@ -3,10 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**EventName** | **string** | The event name | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) |  | [optional] 
 **Description** | **string** |  | [optional] 
 **PushNotification** | [**PushNotificationRequest**](PushNotificationRequest.md) |  | [optional] 
-**EventName** | **string** | The event name | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 
 **Position** | **int?** | Position | [optional] 

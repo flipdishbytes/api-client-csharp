@@ -6,11 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AcceptOrder**](OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 [**DispatchOrder**](OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
+[**GetDeliveryInformation**](OrdersApi.md#getdeliveryinformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
 [**GetOrderById**](OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | Get order by ID
 [**GetOrders**](OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
 [**GetOrdersSummary**](OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
 [**RefundOrder**](OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
 [**RejectOrder**](OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
+[**UpdateDeliveryInformation**](OrdersApi.md#updatedeliveryinformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
 
 
 <a name="acceptorder"></a>
@@ -125,6 +127,69 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**| Order identifier | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdeliveryinformation"></a>
+# **GetDeliveryInformation**
+> void GetDeliveryInformation (int? orderId)
+
+Get order delivery information
+
+[BETA - this endpoint is under development, do not use it in your production system]
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetDeliveryInformationExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OrdersApi();
+            var orderId = 56;  // int? | OrderId
+
+            try
+            {
+                // Get order delivery information
+                apiInstance.GetDeliveryInformation(orderId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrdersApi.GetDeliveryInformation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **int?**| OrderId | 
 
 ### Return type
 
@@ -463,6 +528,71 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**| Order identifier | 
  **rejectObject** | [**Reject**](Reject.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="updatedeliveryinformation"></a>
+# **UpdateDeliveryInformation**
+> void UpdateDeliveryInformation (int? orderId, OrderDeliveryInformation deliveryInformation)
+
+Add/update delivery-related information to an order
+
+[BETA - this endpoint is under development, do not use it in your production system]
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UpdateDeliveryInformationExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OrdersApi();
+            var orderId = 56;  // int? | 
+            var deliveryInformation = new OrderDeliveryInformation(); // OrderDeliveryInformation | 
+
+            try
+            {
+                // Add/update delivery-related information to an order
+                apiInstance.UpdateDeliveryInformation(orderId, deliveryInformation);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrdersApi.UpdateDeliveryInformation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **int?**|  | 
+ **deliveryInformation** | [**OrderDeliveryInformation**](OrderDeliveryInformation.md)|  | 
 
 ### Return type
 
