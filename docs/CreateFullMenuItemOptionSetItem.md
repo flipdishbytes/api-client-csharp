@@ -3,8 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**MenuItemOptionSetItemId** | **int?** | Menu item option set item identifier | [optional] 
 **Metadata** | [**List&lt;CreateMetadata&gt;**](CreateMetadata.md) | List of metadata | [optional] 
 **TaxRateName** | **string** | Tax rate name | [optional] 
+**NextMenuItemOptionSetId** | **int?** | if null, next option set is next. if -1, this is the final option set | [optional] 
 **Name** | **string** | Name | [optional] 
 **Price** | **double?** | Price | [optional] 
 **IsAvailable** | **bool?** | Is available | [optional] 

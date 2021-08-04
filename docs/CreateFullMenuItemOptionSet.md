@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**MenuItemOptionSetId** | **int?** | Menu item option set identifier | [optional] 
 **MenuItemOptionSetItems** | [**List&lt;CreateFullMenuItemOptionSetItem&gt;**](CreateFullMenuItemOptionSetItem.md) | Option set items | [optional] 
 **Name** | **string** | Menu item option set name | [optional] 
 **IsMasterOptionSet** | **bool?** | Is master option set. This can affect the layout of the options in the menu displayed to the customer. Usually it is true if the option could be considerd a standalone item as opposed to an addition (\&quot;with ketchup\&quot;) or modifier (\&quot;large\&quot;). | [optional] 

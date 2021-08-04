@@ -72,6 +72,7 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateFullMenuItemOptionSet" /> class.
         /// </summary>
+        /// <param name="menuItemOptionSetId">Menu item option set identifier.</param>
         /// <param name="menuItemOptionSetItems">Option set items.</param>
         /// <param name="name">Menu item option set name.</param>
         /// <param name="isMasterOptionSet">Is master option set. This can affect the layout of the options in the menu displayed to the customer. Usually it is true if the option could be considerd a standalone item as opposed to an addition (\&quot;with ketchup\&quot;) or modifier (\&quot;large\&quot;)..</param>
@@ -79,8 +80,9 @@ namespace Flipdish.Model
         /// <param name="minSelectCount">Minimum items must be selected.</param>
         /// <param name="maxSelectCount">Maximum number of items can be selected.</param>
         /// <param name="cellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
-        public CreateFullMenuItemOptionSet(List<CreateFullMenuItemOptionSetItem> menuItemOptionSetItems = default(List<CreateFullMenuItemOptionSetItem>), string name = default(string), bool? isMasterOptionSet = default(bool?), int? displayOrder = default(int?), int? minSelectCount = default(int?), int? maxSelectCount = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?))
+        public CreateFullMenuItemOptionSet(int? menuItemOptionSetId = default(int?), List<CreateFullMenuItemOptionSetItem> menuItemOptionSetItems = default(List<CreateFullMenuItemOptionSetItem>), string name = default(string), bool? isMasterOptionSet = default(bool?), int? displayOrder = default(int?), int? minSelectCount = default(int?), int? maxSelectCount = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?))
         {
+            this.MenuItemOptionSetId = menuItemOptionSetId;
             this.MenuItemOptionSetItems = menuItemOptionSetItems;
             this.Name = name;
             this.IsMasterOptionSet = isMasterOptionSet;
@@ -90,6 +92,13 @@ namespace Flipdish.Model
             this.CellLayoutType = cellLayoutType;
         }
         
+        /// <summary>
+        /// Menu item option set identifier
+        /// </summary>
+        /// <value>Menu item option set identifier</value>
+        [DataMember(Name="MenuItemOptionSetId", EmitDefaultValue=false)]
+        public int? MenuItemOptionSetId { get; set; }
+
         /// <summary>
         /// Option set items
         /// </summary>
@@ -141,6 +150,7 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateFullMenuItemOptionSet {\n");
+            sb.Append("  MenuItemOptionSetId: ").Append(MenuItemOptionSetId).Append("\n");
             sb.Append("  MenuItemOptionSetItems: ").Append(MenuItemOptionSetItems).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  IsMasterOptionSet: ").Append(IsMasterOptionSet).Append("\n");
@@ -182,6 +192,11 @@ namespace Flipdish.Model
                 return false;
 
             return 
+                (
+                    this.MenuItemOptionSetId == input.MenuItemOptionSetId ||
+                    (this.MenuItemOptionSetId != null &&
+                    this.MenuItemOptionSetId.Equals(input.MenuItemOptionSetId))
+                ) && 
                 (
                     this.MenuItemOptionSetItems == input.MenuItemOptionSetItems ||
                     this.MenuItemOptionSetItems != null &&
@@ -228,6 +243,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.MenuItemOptionSetId != null)
+                    hashCode = hashCode * 59 + this.MenuItemOptionSetId.GetHashCode();
                 if (this.MenuItemOptionSetItems != null)
                     hashCode = hashCode * 59 + this.MenuItemOptionSetItems.GetHashCode();
                 if (this.Name != null)

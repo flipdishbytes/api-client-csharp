@@ -195,7 +195,6 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**GetWhiteLabelEvents**](docs/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 *FilesApi* | [**DownloadFile**](docs/FilesApi.md#downloadfile) | **GET** /api/v1.0/{appId}/files/download/{fileId} | Get file from storage
 *HealthApi* | [**HealthCheck**](docs/HealthApi.md#healthcheck) | **GET** /api/v1.0/health/HealthCheck | 
-*HeartbeatApi* | [**Database**](docs/HeartbeatApi.md#database) | **GET** /api/v1.0/heartbeat/Database | 
 *HeartbeatApi* | [**HeadHostname**](docs/HeartbeatApi.md#headhostname) | **HEAD** /api/v1.0/heartbeat/Hostname | 
 *HeartbeatApi* | [**HeadPing**](docs/HeartbeatApi.md#headping) | **HEAD** /api/v1.0/heartbeat | 
 *HeartbeatApi* | [**Hostname**](docs/HeartbeatApi.md#hostname) | **GET** /api/v1.0/heartbeat/Hostname | 
