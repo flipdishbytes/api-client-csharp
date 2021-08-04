@@ -63,34 +63,28 @@ namespace Flipdish.Model
             ManagedOwner = 4,
             
             /// <summary>
-            /// Enum Integrator for value: Integrator
-            /// </summary>
-            [EnumMember(Value = "Integrator")]
-            Integrator = 5,
-            
-            /// <summary>
             /// Enum StoreManager for value: StoreManager
             /// </summary>
             [EnumMember(Value = "StoreManager")]
-            StoreManager = 6,
+            StoreManager = 5,
             
             /// <summary>
             /// Enum StoreStaff for value: StoreStaff
             /// </summary>
             [EnumMember(Value = "StoreStaff")]
-            StoreStaff = 7,
+            StoreStaff = 6,
             
             /// <summary>
             /// Enum StoreReadOnlyAccess for value: StoreReadOnlyAccess
             /// </summary>
             [EnumMember(Value = "StoreReadOnlyAccess")]
-            StoreReadOnlyAccess = 8,
+            StoreReadOnlyAccess = 7,
             
             /// <summary>
             /// Enum FinanceManger for value: FinanceManger
             /// </summary>
             [EnumMember(Value = "FinanceManger")]
-            FinanceManger = 9
+            FinanceManger = 8
         }
 
         /// <summary>
