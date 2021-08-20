@@ -595,7 +595,7 @@ Class | Method | HTTP request | Description
  - [Model.OrderCapacityConfigUpdatedEvent](docs/OrderCapacityConfigUpdatedEvent.md)
  - [Model.OrderCreatedEvent](docs/OrderCreatedEvent.md)
  - [Model.OrderCustomerTrackingCreatedEvent](docs/OrderCustomerTrackingCreatedEvent.md)
- - [Model.OrderDeliveryInformation](docs/OrderDeliveryInformation.md)
+ - [Model.OrderDeliveryInformationBase](docs/OrderDeliveryInformationBase.md)
  - [Model.OrderDeliveryTrackingStatusUpdatedEvent](docs/OrderDeliveryTrackingStatusUpdatedEvent.md)
  - [Model.OrderDispatchedEvent](docs/OrderDispatchedEvent.md)
  - [Model.OrderIdAndSequenceNumber](docs/OrderIdAndSequenceNumber.md)

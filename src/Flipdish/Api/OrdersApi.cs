@@ -230,7 +230,7 @@ namespace Flipdish.Api
         /// <param name="orderId"></param>
         /// <param name="deliveryInformation"></param>
         /// <returns></returns>
-        void UpdateDeliveryInformation (int? orderId, OrderDeliveryInformation deliveryInformation);
+        void UpdateDeliveryInformation (int? orderId, OrderDeliveryInformationBase deliveryInformation);
 
         /// <summary>
         /// Add/update delivery-related information to an order
@@ -242,7 +242,7 @@ namespace Flipdish.Api
         /// <param name="orderId"></param>
         /// <param name="deliveryInformation"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateDeliveryInformationWithHttpInfo (int? orderId, OrderDeliveryInformation deliveryInformation);
+        ApiResponse<Object> UpdateDeliveryInformationWithHttpInfo (int? orderId, OrderDeliveryInformationBase deliveryInformation);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -451,7 +451,7 @@ namespace Flipdish.Api
         /// <param name="orderId"></param>
         /// <param name="deliveryInformation"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateDeliveryInformationAsync (int? orderId, OrderDeliveryInformation deliveryInformation);
+        System.Threading.Tasks.Task UpdateDeliveryInformationAsync (int? orderId, OrderDeliveryInformationBase deliveryInformation);
 
         /// <summary>
         /// Add/update delivery-related information to an order
@@ -463,7 +463,7 @@ namespace Flipdish.Api
         /// <param name="orderId"></param>
         /// <param name="deliveryInformation"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDeliveryInformationAsyncWithHttpInfo (int? orderId, OrderDeliveryInformation deliveryInformation);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDeliveryInformationAsyncWithHttpInfo (int? orderId, OrderDeliveryInformationBase deliveryInformation);
         #endregion Asynchronous Operations
     }
 
@@ -1937,7 +1937,7 @@ namespace Flipdish.Api
         /// <param name="orderId"></param>
         /// <param name="deliveryInformation"></param>
         /// <returns></returns>
-        public void UpdateDeliveryInformation (int? orderId, OrderDeliveryInformation deliveryInformation)
+        public void UpdateDeliveryInformation (int? orderId, OrderDeliveryInformationBase deliveryInformation)
         {
              UpdateDeliveryInformationWithHttpInfo(orderId, deliveryInformation);
         }
@@ -1949,7 +1949,7 @@ namespace Flipdish.Api
         /// <param name="orderId"></param>
         /// <param name="deliveryInformation"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateDeliveryInformationWithHttpInfo (int? orderId, OrderDeliveryInformation deliveryInformation)
+        public ApiResponse<Object> UpdateDeliveryInformationWithHttpInfo (int? orderId, OrderDeliveryInformationBase deliveryInformation)
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
@@ -2029,7 +2029,7 @@ namespace Flipdish.Api
         /// <param name="orderId"></param>
         /// <param name="deliveryInformation"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateDeliveryInformationAsync (int? orderId, OrderDeliveryInformation deliveryInformation)
+        public async System.Threading.Tasks.Task UpdateDeliveryInformationAsync (int? orderId, OrderDeliveryInformationBase deliveryInformation)
         {
              await UpdateDeliveryInformationAsyncWithHttpInfo(orderId, deliveryInformation);
 
@@ -2042,7 +2042,7 @@ namespace Flipdish.Api
         /// <param name="orderId"></param>
         /// <param name="deliveryInformation"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDeliveryInformationAsyncWithHttpInfo (int? orderId, OrderDeliveryInformation deliveryInformation)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDeliveryInformationAsyncWithHttpInfo (int? orderId, OrderDeliveryInformationBase deliveryInformation)
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)

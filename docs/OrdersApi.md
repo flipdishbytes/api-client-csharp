@@ -546,7 +546,7 @@ void (empty response body)
 
 <a name="updatedeliveryinformation"></a>
 # **UpdateDeliveryInformation**
-> void UpdateDeliveryInformation (int? orderId, OrderDeliveryInformation deliveryInformation)
+> void UpdateDeliveryInformation (int? orderId, OrderDeliveryInformationBase deliveryInformation)
 
 Add/update delivery-related information to an order
 
@@ -571,7 +571,7 @@ namespace Example
 
             var apiInstance = new OrdersApi();
             var orderId = 56;  // int? | 
-            var deliveryInformation = new OrderDeliveryInformation(); // OrderDeliveryInformation | 
+            var deliveryInformation = new OrderDeliveryInformationBase(); // OrderDeliveryInformationBase | 
 
             try
             {
@@ -592,7 +592,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orderId** | **int?**|  | 
- **deliveryInformation** | [**OrderDeliveryInformation**](OrderDeliveryInformation.md)|  | 
+ **deliveryInformation** | [**OrderDeliveryInformationBase**](OrderDeliveryInformationBase.md)|  | 
 
 ### Return type
 
