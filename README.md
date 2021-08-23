@@ -311,11 +311,6 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**RejectOrder**](docs/OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 *OrdersApi* | [**UpdateDeliveryInformation**](docs/OrdersApi.md#updatedeliveryinformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
 *PaymentsApi* | [**GetOrderPaymentInformation**](docs/PaymentsApi.md#getorderpaymentinformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | Returns payment refund information related to the order with the order id
-*PayoutsApi* | [**ExportPayoutChargebacks**](docs/PayoutsApi.md#exportpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks/export | Export a list of payout's chargebacks as CSV
-*PayoutsApi* | [**ExportPayoutOrders**](docs/PayoutsApi.md#exportpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders/export | Export a list of payout's orders as CSV
-*PayoutsApi* | [**ExportPayoutOtherCharges**](docs/PayoutsApi.md#exportpayoutothercharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges/export | Export a list of payout's other charges as CSV
-*PayoutsApi* | [**ExportPayoutRefunds**](docs/PayoutsApi.md#exportpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export | Export a list of payout's refunds as CSV
-*PayoutsApi* | [**ExportPayoutStores**](docs/PayoutsApi.md#exportpayoutstores) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export | Export payout's details as CSV
 *PayoutsApi* | [**GetPayout**](docs/PayoutsApi.md#getpayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | Get Payout details broken down by Store
 *PayoutsApi* | [**GetPayoutChargebacks**](docs/PayoutsApi.md#getpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks | Get list of payout's chargebacks
 *PayoutsApi* | [**GetPayoutOrders**](docs/PayoutsApi.md#getpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders | Get list of payout's orders
@@ -323,6 +318,12 @@ Class | Method | HTTP request | Description
 *PayoutsApi* | [**GetPayoutRefunds**](docs/PayoutsApi.md#getpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds | Get list of payout's refunds
 *PayoutsApi* | [**GetPayoutSummaries**](docs/PayoutsApi.md#getpayoutsummaries) | **GET** /api/v1.0/{appId}/payouts/summaries | Get list of payout summaries
 *PayoutsApi* | [**GetPayouts**](docs/PayoutsApi.md#getpayouts) | **GET** /api/v1.0/{appId}/payouts | Get list of payouts
+*PayoutsExportApi* | [**ExportPayoutChargebacks**](docs/PayoutsExportApi.md#exportpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks/export | Export a list of payout's chargebacks as CSV
+*PayoutsExportApi* | [**ExportPayoutOrders**](docs/PayoutsExportApi.md#exportpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders/export | Export a list of payout's orders as CSV
+*PayoutsExportApi* | [**ExportPayoutOtherCharges**](docs/PayoutsExportApi.md#exportpayoutothercharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges/export | Export a list of payout's other charges as CSV
+*PayoutsExportApi* | [**ExportPayoutRefunds**](docs/PayoutsExportApi.md#exportpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export | Export a list of payout's refunds as CSV
+*PayoutsExportApi* | [**ExportPayoutStores**](docs/PayoutsExportApi.md#exportpayoutstores) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export | Export payout's details as CSV
+*PayoutsExportApi* | [**ExportPayoutSummaries**](docs/PayoutsExportApi.md#exportpayoutsummaries) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/summaries/export | Export payout summaries as CSV
 *ProcessingFeeConfigsApi* | [**GetProcessingFeeConfigsByStoreIds**](docs/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
 *PushNotificationsApi* | [**DeletePushNotification**](docs/PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**GetPushNotifications**](docs/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
