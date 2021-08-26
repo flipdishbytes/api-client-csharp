@@ -208,6 +208,7 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**AttachStoreToTerminal**](docs/HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | [Private]
 *HydraApi* | [**CancelEmvPayment**](docs/HydraApi.md#cancelemvpayment) | **POST** /api/v1.0/{appId}/hydra/cancelemvpayment/{orderId} | 
 *HydraApi* | [**DetachStoreFromTerminal**](docs/HydraApi.md#detachstorefromterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | [Private]
+*HydraApi* | [**GetAttachedDevice**](docs/HydraApi.md#getattacheddevice) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/{deviceId} | [Private]
 *HydraApi* | [**GetAttachedDevices**](docs/HydraApi.md#getattacheddevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | [Private]
 *HydraApi* | [**GetEMVTerminalDetails**](docs/HydraApi.md#getemvterminaldetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | [Private]
 *HydraApi* | [**GetEmvOrderState**](docs/HydraApi.md#getemvorderstate) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | [Private]
@@ -732,6 +733,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultDriver](docs/RestApiResultDriver.md)
  - [Model.RestApiResultHomeStatistics](docs/RestApiResultHomeStatistics.md)
  - [Model.RestApiResultHydraConfig](docs/RestApiResultHydraConfig.md)
+ - [Model.RestApiResultHydraDeviceDetails](docs/RestApiResultHydraDeviceDetails.md)
  - [Model.RestApiResultHydraStatus](docs/RestApiResultHydraStatus.md)
  - [Model.RestApiResultIndexPage](docs/RestApiResultIndexPage.md)
  - [Model.RestApiResultIndexPageBase](docs/RestApiResultIndexPageBase.md)
