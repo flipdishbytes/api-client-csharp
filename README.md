@@ -325,7 +325,7 @@ Class | Method | HTTP request | Description
 *PayoutsExportApi* | [**ExportPayoutOtherCharges**](docs/PayoutsExportApi.md#exportpayoutothercharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges/export | Export a list of payout's other charges as CSV
 *PayoutsExportApi* | [**ExportPayoutRefunds**](docs/PayoutsExportApi.md#exportpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export | Export a list of payout's refunds as CSV
 *PayoutsExportApi* | [**ExportPayoutStores**](docs/PayoutsExportApi.md#exportpayoutstores) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export | Export payout's details as CSV
-*PayoutsExportApi* | [**ExportPayoutSummaries**](docs/PayoutsExportApi.md#exportpayoutsummaries) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/summaries/export | Export payout summaries as CSV
+*PayoutsExportApi* | [**ExportPayouts**](docs/PayoutsExportApi.md#exportpayouts) | **GET** /api/v1.0/{appId}/payouts/export | Export payouts as CSV
 *ProcessingFeeConfigsApi* | [**GetProcessingFeeConfigsByStoreIds**](docs/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
 *ProductsApi* | [**CreateProduct**](docs/ProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a new product
 *ProductsApi* | [**GetProducts**](docs/ProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get products by app name id

@@ -33,13 +33,26 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateProduct" /> class.
         /// </summary>
-        /// <param name="sku">Stock Keeping Unit (SKU).</param>
+        [JsonConstructorAttribute]
+        protected CreateProduct() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateProduct" /> class.
+        /// </summary>
+        /// <param name="sku">Stock Keeping Unit (SKU) (required).</param>
         /// <param name="name">Product name.</param>
         /// <param name="description">Product description.</param>
         /// <param name="price">Product price.</param>
         public CreateProduct(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?))
         {
-            this.Sku = sku;
+            // to ensure "sku" is required (not null)
+            if (sku == null)
+            {
+                throw new InvalidDataException("sku is a required property for CreateProduct and cannot be null");
+            }
+            else
+            {
+                this.Sku = sku;
+            }
             this.Name = name;
             this.Description = description;
             this.Price = price;
@@ -169,6 +182,48 @@ namespace Flipdish.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // Sku (string) maxLength
+            if(this.Sku != null && this.Sku.Length > 30)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Sku, length must be less than 30.", new [] { "Sku" });
+            }
+
+            // Sku (string) minLength
+            if(this.Sku != null && this.Sku.Length < 0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Sku, length must be greater than 0.", new [] { "Sku" });
+            }
+
+            // Name (string) maxLength
+            if(this.Name != null && this.Name.Length > 100)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be less than 100.", new [] { "Name" });
+            }
+
+            // Name (string) minLength
+            if(this.Name != null && this.Name.Length < 0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be greater than 0.", new [] { "Name" });
+            }
+
+            // Description (string) maxLength
+            if(this.Description != null && this.Description.Length > 256)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Description, length must be less than 256.", new [] { "Description" });
+            }
+
+            // Description (string) minLength
+            if(this.Description != null && this.Description.Length < 0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Description, length must be greater than 0.", new [] { "Description" });
+            }
+
+            // Price (double?) minimum
+            if(this.Price < (double?)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Price, must be a value greater than or equal to 0.", new [] { "Price" });
+            }
+
             yield break;
         }
     }

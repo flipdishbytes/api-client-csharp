@@ -35,9 +35,9 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="menuName">Menu Name.</param>
         /// <param name="menuElementName">Menu Item Name.</param>
-        /// <param name="instanceCount">instanceCount.</param>
+        /// <param name="instanceCount">Menu Item Count.</param>
         /// <param name="isAvailable">Menu Item is hide or unhide.</param>
-        /// <param name="items">items.</param>
+        /// <param name="items">List of Items.</param>
         public MenuElementListResponse(string menuName = default(string), string menuElementName = default(string), int? instanceCount = default(int?), bool? isAvailable = default(bool?), List<MenuElementListItemResponse> items = default(List<MenuElementListItemResponse>))
         {
             this.MenuName = menuName;
@@ -62,8 +62,9 @@ namespace Flipdish.Model
         public string MenuElementName { get; set; }
 
         /// <summary>
-        /// Gets or Sets InstanceCount
+        /// Menu Item Count
         /// </summary>
+        /// <value>Menu Item Count</value>
         [DataMember(Name="InstanceCount", EmitDefaultValue=false)]
         public int? InstanceCount { get; set; }
 
@@ -75,8 +76,9 @@ namespace Flipdish.Model
         public bool? IsAvailable { get; set; }
 
         /// <summary>
-        /// Gets or Sets Items
+        /// List of Items
         /// </summary>
+        /// <value>List of Items</value>
         [DataMember(Name="Items", EmitDefaultValue=false)]
         public List<MenuElementListItemResponse> Items { get; set; }
 
