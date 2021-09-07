@@ -3,12 +3,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MenuItemId** | **int?** | Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a perminant reference to the item. | [optional] 
+**MenuItemId** | **int?** | Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a permanent reference to the item. | [optional] 
 **ActualPrice** | **double?** | Actual price - the minimum price possible when all required option set items prices are included. | [optional] 
 **MenuItemOptionSets** | [**List&lt;MenuItemOptionSet&gt;**](MenuItemOptionSet.md) | Menu item option sets | [optional] 
 **DailySpecialHours** | [**List&lt;BusinessHoursPeriod&gt;**](BusinessHoursPeriod.md) | Daily special hours | [optional] 
 **PublicId** | **Guid?** | Permanent reference to the item. | [optional] 
 **Metadata** | [**List&lt;CreateMetadata&gt;**](CreateMetadata.md) | List of metadata | [optional] 
+**ProductId** | **string** | Product Id when the Item is associated to a Product | [optional] 
 **Name** | **string** | Menu item name (like \&quot;Korma\&quot;) | [optional] 
 **Description** | **string** | Description (like \&quot;A lovely dish from the east\&quot;) | [optional] 
 **SpicinessRating** | **string** | Spiciness rating | [optional] 

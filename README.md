@@ -243,6 +243,7 @@ Class | Method | HTTP request | Description
 *MenuOptionSetsApi* | [**UploadOptionSetImage**](docs/MenuOptionSetsApi.md#uploadoptionsetimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | Upload menu item option set image
 *MenuSectionItemsApi* | [**CloneMenuSectionItem**](docs/MenuSectionItemsApi.md#clonemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/clone | Clone menu section item
 *MenuSectionItemsApi* | [**CreateMenuSectionItem**](docs/MenuSectionItemsApi.md#createmenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Create menu section item
+*MenuSectionItemsApi* | [**CreateMenuSectionItemFromProducts**](docs/MenuSectionItemsApi.md#createmenusectionitemfromproducts) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/add-products | Create menu section items from a list of Products
 *MenuSectionItemsApi* | [**DeleteMenuSectionItem**](docs/MenuSectionItemsApi.md#deletemenusectionitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Delete menu section item
 *MenuSectionItemsApi* | [**DeleteMenuSectionItemImage**](docs/MenuSectionItemsApi.md#deletemenusectionitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
 *MenuSectionItemsApi* | [**GetMenuItemById**](docs/MenuSectionItemsApi.md#getmenuitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Get menu item by identifier
@@ -462,11 +463,13 @@ Class | Method | HTTP request | Description
  - [Model.CreateFullMenuItemOptionSetItem](docs/CreateFullMenuItemOptionSetItem.md)
  - [Model.CreateFullMenuSection](docs/CreateFullMenuSection.md)
  - [Model.CreateFullMenuSectionItem](docs/CreateFullMenuSectionItem.md)
+ - [Model.CreateMenuSectionItemFromProducts](docs/CreateMenuSectionItemFromProducts.md)
  - [Model.CreateMenuTaxRate](docs/CreateMenuTaxRate.md)
  - [Model.CreateMetadata](docs/CreateMetadata.md)
  - [Model.CreateProduct](docs/CreateProduct.md)
  - [Model.CreateTeammate](docs/CreateTeammate.md)
  - [Model.CreateVoucher](docs/CreateVoucher.md)
+ - [Model.CreatedMenuSectionItems](docs/CreatedMenuSectionItems.md)
  - [Model.CreditNoteDetails](docs/CreditNoteDetails.md)
  - [Model.CspReport](docs/CspReport.md)
  - [Model.CspReportRequest](docs/CspReportRequest.md)
@@ -641,6 +644,7 @@ Class | Method | HTTP request | Description
  - [Model.PrinterUnassignedFromStoreEvent](docs/PrinterUnassignedFromStoreEvent.md)
  - [Model.ProcessingFeeConfig](docs/ProcessingFeeConfig.md)
  - [Model.Product](docs/Product.md)
+ - [Model.ProductItem](docs/ProductItem.md)
  - [Model.PushNotificationDeletedEvent](docs/PushNotificationDeletedEvent.md)
  - [Model.PushNotificationRequest](docs/PushNotificationRequest.md)
  - [Model.PushNotificationResponse](docs/PushNotificationResponse.md)
@@ -730,6 +734,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultBusinessHoursOverride](docs/RestApiResultBusinessHoursOverride.md)
  - [Model.RestApiResultBusinessHoursPeriod](docs/RestApiResultBusinessHoursPeriod.md)
  - [Model.RestApiResultCoordinates](docs/RestApiResultCoordinates.md)
+ - [Model.RestApiResultCreatedMenuSectionItems](docs/RestApiResultCreatedMenuSectionItems.md)
  - [Model.RestApiResultCustomer](docs/RestApiResultCustomer.md)
  - [Model.RestApiResultDeliveryZone](docs/RestApiResultDeliveryZone.md)
  - [Model.RestApiResultDnsRecordInformation](docs/RestApiResultDnsRecordInformation.md)

@@ -111,12 +111,13 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuSectionItem" /> class.
         /// </summary>
-        /// <param name="menuItemId">Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a perminant reference to the item..</param>
+        /// <param name="menuItemId">Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a permanent reference to the item..</param>
         /// <param name="actualPrice">Actual price - the minimum price possible when all required option set items prices are included..</param>
         /// <param name="menuItemOptionSets">Menu item option sets.</param>
         /// <param name="dailySpecialHours">Daily special hours.</param>
         /// <param name="publicId">Permanent reference to the item..</param>
         /// <param name="metadata">List of metadata.</param>
+        /// <param name="productId">Product Id when the Item is associated to a Product.</param>
         /// <param name="name">Menu item name (like \&quot;Korma\&quot;).</param>
         /// <param name="description">Description (like \&quot;A lovely dish from the east\&quot;).</param>
         /// <param name="spicinessRating">Spiciness rating.</param>
@@ -127,7 +128,7 @@ namespace Flipdish.Model
         /// <param name="cellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
         /// <param name="disableVouchers">If true, then vouchers won&#39;t be applied for this item.</param>
         /// <param name="imageUrl">Image url.</param>
-        public MenuSectionItem(int? menuItemId = default(int?), double? actualPrice = default(double?), List<MenuItemOptionSet> menuItemOptionSets = default(List<MenuItemOptionSet>), List<BusinessHoursPeriod> dailySpecialHours = default(List<BusinessHoursPeriod>), Guid? publicId = default(Guid?), List<CreateMetadata> metadata = default(List<CreateMetadata>), string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageUrl = default(string))
+        public MenuSectionItem(int? menuItemId = default(int?), double? actualPrice = default(double?), List<MenuItemOptionSet> menuItemOptionSets = default(List<MenuItemOptionSet>), List<BusinessHoursPeriod> dailySpecialHours = default(List<BusinessHoursPeriod>), Guid? publicId = default(Guid?), List<CreateMetadata> metadata = default(List<CreateMetadata>), string productId = default(string), string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageUrl = default(string))
         {
             this.MenuItemId = menuItemId;
             this.ActualPrice = actualPrice;
@@ -135,6 +136,7 @@ namespace Flipdish.Model
             this.DailySpecialHours = dailySpecialHours;
             this.PublicId = publicId;
             this.Metadata = metadata;
+            this.ProductId = productId;
             this.Name = name;
             this.Description = description;
             this.SpicinessRating = spicinessRating;
@@ -148,9 +150,9 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a perminant reference to the item.
+        /// Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a permanent reference to the item.
         /// </summary>
-        /// <value>Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a perminant reference to the item.</value>
+        /// <value>Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a permanent reference to the item.</value>
         [DataMember(Name="MenuItemId", EmitDefaultValue=false)]
         public int? MenuItemId { get; set; }
 
@@ -188,6 +190,13 @@ namespace Flipdish.Model
         /// <value>List of metadata</value>
         [DataMember(Name="Metadata", EmitDefaultValue=false)]
         public List<CreateMetadata> Metadata { get; set; }
+
+        /// <summary>
+        /// Product Id when the Item is associated to a Product
+        /// </summary>
+        /// <value>Product Id when the Item is associated to a Product</value>
+        [DataMember(Name="ProductId", EmitDefaultValue=false)]
+        public string ProductId { get; set; }
 
         /// <summary>
         /// Menu item name (like \&quot;Korma\&quot;)
@@ -261,6 +270,7 @@ namespace Flipdish.Model
             sb.Append("  DailySpecialHours: ").Append(DailySpecialHours).Append("\n");
             sb.Append("  PublicId: ").Append(PublicId).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  ProductId: ").Append(ProductId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  SpicinessRating: ").Append(SpicinessRating).Append("\n");
@@ -336,6 +346,11 @@ namespace Flipdish.Model
                     this.Metadata.SequenceEqual(input.Metadata)
                 ) && 
                 (
+                    this.ProductId == input.ProductId ||
+                    (this.ProductId != null &&
+                    this.ProductId.Equals(input.ProductId))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -408,6 +423,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PublicId.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
+                if (this.ProductId != null)
+                    hashCode = hashCode * 59 + this.ProductId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
