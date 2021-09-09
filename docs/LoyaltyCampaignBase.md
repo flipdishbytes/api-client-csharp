@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **OrdersBeforeReceivingVoucher** | **int?** | Number of orders customer needs to make, before receiving voucher | [optional] 
 **PercentDiscountAmount** | **int?** | Discount amount in percents | [optional] 
+**RoundingStrategy** | **int?** | Controls how the loyalty voucher&#39;s amount is rounded | [optional] 
 **VoucherValidPeriodDays** | **int?** | Number of days for which the voucher will be valid. | [optional] 
 **IncludeDeliveryFee** | **bool?** | Discount will include delivery fee | [optional] 
 **AutoApplyResultingVouchers** | **bool?** | Automatically apply resulting vouchers | [optional] 

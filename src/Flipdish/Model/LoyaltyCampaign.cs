@@ -38,19 +38,21 @@ namespace Flipdish.Model
         /// <param name="stores">Stores this campaign applies to with campaign start time in Utc.</param>
         /// <param name="ordersBeforeReceivingVoucher">Number of orders customer needs to make, before receiving voucher.</param>
         /// <param name="percentDiscountAmount">Discount amount in percents.</param>
+        /// <param name="roundingStrategy">Controls how the loyalty voucher&#39;s amount is rounded.</param>
         /// <param name="voucherValidPeriodDays">Number of days for which the voucher will be valid..</param>
         /// <param name="includeDeliveryFee">Discount will include delivery fee.</param>
         /// <param name="autoApplyResultingVouchers">Automatically apply resulting vouchers.</param>
         /// <param name="includeExistingOrders">Campaign will apply to existing orders.</param>
         /// <param name="isEnabled">Is campaign enabled.</param>
         /// <param name="storeIds">Ids of stores this campaign applies to.</param>
-        public LoyaltyCampaign(int? campaignId = default(int?), CampaignStatistics statistics = default(CampaignStatistics), List<StoreCampaignStartTime> stores = default(List<StoreCampaignStartTime>), int? ordersBeforeReceivingVoucher = default(int?), int? percentDiscountAmount = default(int?), int? voucherValidPeriodDays = default(int?), bool? includeDeliveryFee = default(bool?), bool? autoApplyResultingVouchers = default(bool?), bool? includeExistingOrders = default(bool?), bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>))
+        public LoyaltyCampaign(int? campaignId = default(int?), CampaignStatistics statistics = default(CampaignStatistics), List<StoreCampaignStartTime> stores = default(List<StoreCampaignStartTime>), int? ordersBeforeReceivingVoucher = default(int?), int? percentDiscountAmount = default(int?), int? roundingStrategy = default(int?), int? voucherValidPeriodDays = default(int?), bool? includeDeliveryFee = default(bool?), bool? autoApplyResultingVouchers = default(bool?), bool? includeExistingOrders = default(bool?), bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>))
         {
             this.CampaignId = campaignId;
             this.Statistics = statistics;
             this.Stores = stores;
             this.OrdersBeforeReceivingVoucher = ordersBeforeReceivingVoucher;
             this.PercentDiscountAmount = percentDiscountAmount;
+            this.RoundingStrategy = roundingStrategy;
             this.VoucherValidPeriodDays = voucherValidPeriodDays;
             this.IncludeDeliveryFee = includeDeliveryFee;
             this.AutoApplyResultingVouchers = autoApplyResultingVouchers;
@@ -93,6 +95,13 @@ namespace Flipdish.Model
         /// <value>Discount amount in percents</value>
         [DataMember(Name="PercentDiscountAmount", EmitDefaultValue=false)]
         public int? PercentDiscountAmount { get; set; }
+
+        /// <summary>
+        /// Controls how the loyalty voucher&#39;s amount is rounded
+        /// </summary>
+        /// <value>Controls how the loyalty voucher&#39;s amount is rounded</value>
+        [DataMember(Name="RoundingStrategy", EmitDefaultValue=false)]
+        public int? RoundingStrategy { get; set; }
 
         /// <summary>
         /// Number of days for which the voucher will be valid.
@@ -149,6 +158,7 @@ namespace Flipdish.Model
             sb.Append("  Stores: ").Append(Stores).Append("\n");
             sb.Append("  OrdersBeforeReceivingVoucher: ").Append(OrdersBeforeReceivingVoucher).Append("\n");
             sb.Append("  PercentDiscountAmount: ").Append(PercentDiscountAmount).Append("\n");
+            sb.Append("  RoundingStrategy: ").Append(RoundingStrategy).Append("\n");
             sb.Append("  VoucherValidPeriodDays: ").Append(VoucherValidPeriodDays).Append("\n");
             sb.Append("  IncludeDeliveryFee: ").Append(IncludeDeliveryFee).Append("\n");
             sb.Append("  AutoApplyResultingVouchers: ").Append(AutoApplyResultingVouchers).Append("\n");
@@ -215,6 +225,11 @@ namespace Flipdish.Model
                     this.PercentDiscountAmount.Equals(input.PercentDiscountAmount))
                 ) && 
                 (
+                    this.RoundingStrategy == input.RoundingStrategy ||
+                    (this.RoundingStrategy != null &&
+                    this.RoundingStrategy.Equals(input.RoundingStrategy))
+                ) && 
+                (
                     this.VoucherValidPeriodDays == input.VoucherValidPeriodDays ||
                     (this.VoucherValidPeriodDays != null &&
                     this.VoucherValidPeriodDays.Equals(input.VoucherValidPeriodDays))
@@ -265,6 +280,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OrdersBeforeReceivingVoucher.GetHashCode();
                 if (this.PercentDiscountAmount != null)
                     hashCode = hashCode * 59 + this.PercentDiscountAmount.GetHashCode();
+                if (this.RoundingStrategy != null)
+                    hashCode = hashCode * 59 + this.RoundingStrategy.GetHashCode();
                 if (this.VoucherValidPeriodDays != null)
                     hashCode = hashCode * 59 + this.VoucherValidPeriodDays.GetHashCode();
                 if (this.IncludeDeliveryFee != null)
@@ -298,6 +315,18 @@ namespace Flipdish.Model
             if(this.PercentDiscountAmount < (int?)1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PercentDiscountAmount, must be a value greater than or equal to 1.", new [] { "PercentDiscountAmount" });
+            }
+
+            // RoundingStrategy (int?) maximum
+            if(this.RoundingStrategy > (int?)2)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RoundingStrategy, must be a value less than or equal to 2.", new [] { "RoundingStrategy" });
+            }
+
+            // RoundingStrategy (int?) minimum
+            if(this.RoundingStrategy < (int?)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RoundingStrategy, must be a value greater than or equal to 0.", new [] { "RoundingStrategy" });
             }
 
             // VoucherValidPeriodDays (int?) maximum
