@@ -329,7 +329,9 @@ Class | Method | HTTP request | Description
 *PayoutsExportApi* | [**ExportPayouts**](docs/PayoutsExportApi.md#exportpayouts) | **GET** /api/v1.0/{appId}/payouts/export | Export payouts as CSV
 *ProcessingFeeConfigsApi* | [**GetProcessingFeeConfigsByStoreIds**](docs/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
 *ProductsApi* | [**CreateProduct**](docs/ProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a new product
+*ProductsApi* | [**GetProductById**](docs/ProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/product/{productId} | Get products by productId
 *ProductsApi* | [**GetProducts**](docs/ProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get products by app name id
+*ProductsApi* | [**UpdateProduct**](docs/ProductsApi.md#updateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId} | Update a product
 *PushNotificationsApi* | [**DeletePushNotification**](docs/PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**GetPushNotifications**](docs/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**SchedulePushNotification**](docs/PushNotificationsApi.md#schedulepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
@@ -763,6 +765,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultPaymentTerminalTransactionDetails](docs/RestApiResultPaymentTerminalTransactionDetails.md)
  - [Model.RestApiResultPreOrderConfig](docs/RestApiResultPreOrderConfig.md)
  - [Model.RestApiResultProcessingFeeConfig](docs/RestApiResultProcessingFeeConfig.md)
+ - [Model.RestApiResultProduct](docs/RestApiResultProduct.md)
  - [Model.RestApiResultPushNotificationResponse](docs/RestApiResultPushNotificationResponse.md)
  - [Model.RestApiResultRedeemInvitationResult](docs/RestApiResultRedeemInvitationResult.md)
  - [Model.RestApiResultRetentionCampaign](docs/RestApiResultRetentionCampaign.md)
@@ -851,6 +854,7 @@ Class | Method | HTTP request | Description
  - [Model.TeammateUpdatedEvent](docs/TeammateUpdatedEvent.md)
  - [Model.UpdateDriverNotificationToken](docs/UpdateDriverNotificationToken.md)
  - [Model.UpdateDriverProfileModel](docs/UpdateDriverProfileModel.md)
+ - [Model.UpdateProduct](docs/UpdateProduct.md)
  - [Model.UserAnsweredSignupQuestionsEvent](docs/UserAnsweredSignupQuestionsEvent.md)
  - [Model.UserCreatedEvent](docs/UserCreatedEvent.md)
  - [Model.UserDeletedEvent](docs/UserDeletedEvent.md)

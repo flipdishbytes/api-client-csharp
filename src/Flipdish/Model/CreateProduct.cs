@@ -33,26 +33,13 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateProduct" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected CreateProduct() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CreateProduct" /> class.
-        /// </summary>
-        /// <param name="sku">Stock Keeping Unit (SKU) (required).</param>
+        /// <param name="sku">Stock Keeping Unit (SKU).</param>
         /// <param name="name">Product name.</param>
         /// <param name="description">Product description.</param>
         /// <param name="price">Product price.</param>
         public CreateProduct(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?))
         {
-            // to ensure "sku" is required (not null)
-            if (sku == null)
-            {
-                throw new InvalidDataException("sku is a required property for CreateProduct and cannot be null");
-            }
-            else
-            {
-                this.Sku = sku;
-            }
+            this.Sku = sku;
             this.Name = name;
             this.Description = description;
             this.Price = price;

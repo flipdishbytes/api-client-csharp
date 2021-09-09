@@ -1,4 +1,4 @@
-# Flipdish.Model.CreateProduct
+# Flipdish.Model.UpdateProduct
 ## Properties
 
 Name | Type | Description | Notes

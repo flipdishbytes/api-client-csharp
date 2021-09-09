@@ -25,35 +25,26 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Product Information
+    /// Update Product
     /// </summary>
     [DataContract]
-    public partial class Product :  IEquatable<Product>, IValidatableObject
+    public partial class UpdateProduct :  IEquatable<UpdateProduct>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Product" /> class.
+        /// Initializes a new instance of the <see cref="UpdateProduct" /> class.
         /// </summary>
-        /// <param name="productId">Unique product id.</param>
         /// <param name="sku">Stock Keeping Unit (SKU).</param>
         /// <param name="name">Product name.</param>
         /// <param name="description">Product description.</param>
         /// <param name="price">Product price.</param>
-        public Product(string productId = default(string), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?))
+        public UpdateProduct(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?))
         {
-            this.ProductId = productId;
             this.Sku = sku;
             this.Name = name;
             this.Description = description;
             this.Price = price;
         }
         
-        /// <summary>
-        /// Unique product id
-        /// </summary>
-        /// <value>Unique product id</value>
-        [DataMember(Name="ProductId", EmitDefaultValue=false)]
-        public string ProductId { get; set; }
-
         /// <summary>
         /// Stock Keeping Unit (SKU)
         /// </summary>
@@ -89,8 +80,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Product {\n");
-            sb.Append("  ProductId: ").Append(ProductId).Append("\n");
+            sb.Append("class UpdateProduct {\n");
             sb.Append("  Sku: ").Append(Sku).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -115,25 +105,20 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as Product);
+            return this.Equals(input as UpdateProduct);
         }
 
         /// <summary>
-        /// Returns true if Product instances are equal
+        /// Returns true if UpdateProduct instances are equal
         /// </summary>
-        /// <param name="input">Instance of Product to be compared</param>
+        /// <param name="input">Instance of UpdateProduct to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Product input)
+        public bool Equals(UpdateProduct input)
         {
             if (input == null)
                 return false;
 
             return 
-                (
-                    this.ProductId == input.ProductId ||
-                    (this.ProductId != null &&
-                    this.ProductId.Equals(input.ProductId))
-                ) && 
                 (
                     this.Sku == input.Sku ||
                     (this.Sku != null &&
@@ -165,8 +150,6 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ProductId != null)
-                    hashCode = hashCode * 59 + this.ProductId.GetHashCode();
                 if (this.Sku != null)
                     hashCode = hashCode * 59 + this.Sku.GetHashCode();
                 if (this.Name != null)
@@ -186,18 +169,6 @@ namespace Flipdish.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // ProductId (string) maxLength
-            if(this.ProductId != null && this.ProductId.Length > 30)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ProductId, length must be less than 30.", new [] { "ProductId" });
-            }
-
-            // ProductId (string) minLength
-            if(this.ProductId != null && this.ProductId.Length < 0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ProductId, length must be greater than 0.", new [] { "ProductId" });
-            }
-
             // Sku (string) maxLength
             if(this.Sku != null && this.Sku.Length > 30)
             {
