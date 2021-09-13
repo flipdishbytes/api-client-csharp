@@ -31,9 +31,9 @@ namespace Flipdish.Model
     public partial class ProductItem :  IEquatable<ProductItem>, IValidatableObject
     {
         /// <summary>
-        /// Small | Medium | Large  Affects the layout of the menu.
+        /// Small | Medium | Large | HiddenImage  Affects the layout of the menu.
         /// </summary>
-        /// <value>Small | Medium | Large  Affects the layout of the menu.</value>
+        /// <value>Small | Medium | Large | HiddenImage  Affects the layout of the menu.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum CellLayoutTypeEnum
         {
@@ -64,19 +64,32 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Small | Medium | Large  Affects the layout of the menu.
+        /// Small | Medium | Large | HiddenImage  Affects the layout of the menu.
         /// </summary>
-        /// <value>Small | Medium | Large  Affects the layout of the menu.</value>
+        /// <value>Small | Medium | Large | HiddenImage  Affects the layout of the menu.</value>
         [DataMember(Name="CellLayoutType", EmitDefaultValue=false)]
         public CellLayoutTypeEnum? CellLayoutType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ProductItem" /> class.
         /// </summary>
-        /// <param name="productId">Product Id to the product to add as Menu Item.</param>
-        /// <param name="cellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
+        [JsonConstructorAttribute]
+        protected ProductItem() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ProductItem" /> class.
+        /// </summary>
+        /// <param name="productId">Product Id to the product to add as Menu Item (required).</param>
+        /// <param name="cellLayoutType">Small | Medium | Large | HiddenImage  Affects the layout of the menu..</param>
         public ProductItem(string productId = default(string), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?))
         {
-            this.ProductId = productId;
+            // to ensure "productId" is required (not null)
+            if (productId == null)
+            {
+                throw new InvalidDataException("productId is a required property for ProductItem and cannot be null");
+            }
+            else
+            {
+                this.ProductId = productId;
+            }
             this.CellLayoutType = cellLayoutType;
         }
         
@@ -168,6 +181,18 @@ namespace Flipdish.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // ProductId (string) maxLength
+            if(this.ProductId != null && this.ProductId.Length > 30)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ProductId, length must be less than 30.", new [] { "ProductId" });
+            }
+
+            // ProductId (string) minLength
+            if(this.ProductId != null && this.ProductId.Length < 0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ProductId, length must be greater than 0.", new [] { "ProductId" });
+            }
+
             yield break;
         }
     }

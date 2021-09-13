@@ -33,10 +33,23 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateMenuSectionItemFromProducts" /> class.
         /// </summary>
-        /// <param name="productItems">List of Products to add to the section.</param>
+        [JsonConstructorAttribute]
+        protected CreateMenuSectionItemFromProducts() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateMenuSectionItemFromProducts" /> class.
+        /// </summary>
+        /// <param name="productItems">List of Products to add to the section (required).</param>
         public CreateMenuSectionItemFromProducts(List<ProductItem> productItems = default(List<ProductItem>))
         {
-            this.ProductItems = productItems;
+            // to ensure "productItems" is required (not null)
+            if (productItems == null)
+            {
+                throw new InvalidDataException("productItems is a required property for CreateMenuSectionItemFromProducts and cannot be null");
+            }
+            else
+            {
+                this.ProductItems = productItems;
+            }
         }
         
         /// <summary>
