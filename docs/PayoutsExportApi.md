@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 <a name="exportpayouts"></a>
 # **ExportPayouts**
-> string ExportPayouts (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+> string ExportPayouts (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
 
 Export payouts as CSV
 
@@ -377,20 +377,15 @@ namespace Example
 
             var apiInstance = new PayoutsExportApi();
             var appId = appId_example;  // string | 
-            var bankAccountId = 56;  // int? |  (optional) 
-            var payeeBankAccountDataId = 56;  // int? | Deprecated (optional) 
             var startDate = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
             var endDate = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
-            var status = status_example;  // string |  (optional) 
-            var page = 56;  // int? |  (optional) 
-            var limit = 56;  // int? |  (optional) 
             var payoutRequestIdsBankAccountIds = new List<int?>(); // List<int?> | List of bank account ids to search for (optional) 
             var payoutRequestIdsStates = payoutRequestIdsStates_example;  // List<string> | List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional) 
 
             try
             {
                 // Export payouts as CSV
-                string result = apiInstance.ExportPayouts(appId, bankAccountId, payeeBankAccountDataId, startDate, endDate, status, page, limit, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
+                string result = apiInstance.ExportPayouts(appId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -407,13 +402,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **bankAccountId** | **int?**|  | [optional] 
- **payeeBankAccountDataId** | **int?**| Deprecated | [optional] 
  **startDate** | **DateTime?**|  | [optional] 
  **endDate** | **DateTime?**|  | [optional] 
- **status** | **string**|  | [optional] 
- **page** | **int?**|  | [optional] 
- **limit** | **int?**|  | [optional] 
  **payoutRequestIdsBankAccountIds** | [**List&lt;int?&gt;**](int?.md)| List of bank account ids to search for | [optional] 
  **payoutRequestIdsStates** | **List&lt;string&gt;**| List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for | [optional] 
 

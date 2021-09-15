@@ -181,15 +181,12 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>RestApiArrayResultPayoutSummary</returns>
-        RestApiArrayResultPayoutSummary GetPayoutSummaries (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
+        RestApiArrayResultPayoutSummary GetPayoutSummaries (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
 
         /// <summary>
         /// Get list of payout summaries
@@ -199,15 +196,12 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultPayoutSummary</returns>
-        ApiResponse<RestApiArrayResultPayoutSummary> GetPayoutSummariesWithHttpInfo (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
+        ApiResponse<RestApiArrayResultPayoutSummary> GetPayoutSummariesWithHttpInfo (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
         /// <summary>
         /// Get list of payouts
         /// </summary>
@@ -216,17 +210,14 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>RestApiPaginationResultPayout</returns>
-        RestApiPaginationResultPayout GetPayouts (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
+        RestApiPaginationResultPayout GetPayouts (string appId, DateTime? startDate = null, DateTime? endDate = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
 
         /// <summary>
         /// Get list of payouts
@@ -236,17 +227,14 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultPayout</returns>
-        ApiResponse<RestApiPaginationResultPayout> GetPayoutsWithHttpInfo (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
+        ApiResponse<RestApiPaginationResultPayout> GetPayoutsWithHttpInfo (string appId, DateTime? startDate = null, DateTime? endDate = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -406,15 +394,12 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>Task of RestApiArrayResultPayoutSummary</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultPayoutSummary> GetPayoutSummariesAsync (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
+        System.Threading.Tasks.Task<RestApiArrayResultPayoutSummary> GetPayoutSummariesAsync (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
 
         /// <summary>
         /// Get list of payout summaries
@@ -424,15 +409,12 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultPayoutSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultPayoutSummary>> GetPayoutSummariesAsyncWithHttpInfo (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultPayoutSummary>> GetPayoutSummariesAsyncWithHttpInfo (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
         /// <summary>
         /// Get list of payouts
         /// </summary>
@@ -441,17 +423,14 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>Task of RestApiPaginationResultPayout</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultPayout> GetPayoutsAsync (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultPayout> GetPayoutsAsync (string appId, DateTime? startDate = null, DateTime? endDate = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
 
         /// <summary>
         /// Get list of payouts
@@ -461,17 +440,14 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultPayout)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPayout>> GetPayoutsAsyncWithHttpInfo (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPayout>> GetPayoutsAsyncWithHttpInfo (string appId, DateTime? startDate = null, DateTime? endDate = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
         #endregion Asynchronous Operations
     }
 
@@ -1524,17 +1500,14 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>RestApiArrayResultPayoutSummary</returns>
-        public RestApiArrayResultPayoutSummary GetPayoutSummaries (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+        public RestApiArrayResultPayoutSummary GetPayoutSummaries (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
         {
-             ApiResponse<RestApiArrayResultPayoutSummary> localVarResponse = GetPayoutSummariesWithHttpInfo(appId, bankAccountId, payeeBankAccountDataId, startDate, endDate, status, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
+             ApiResponse<RestApiArrayResultPayoutSummary> localVarResponse = GetPayoutSummariesWithHttpInfo(appId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
              return localVarResponse.Data;
         }
 
@@ -1543,15 +1516,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultPayoutSummary</returns>
-        public ApiResponse< RestApiArrayResultPayoutSummary > GetPayoutSummariesWithHttpInfo (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+        public ApiResponse< RestApiArrayResultPayoutSummary > GetPayoutSummariesWithHttpInfo (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1582,11 +1552,8 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (bankAccountId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "bankAccountId", bankAccountId)); // query parameter
-            if (payeeBankAccountDataId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "payeeBankAccountDataId", payeeBankAccountDataId)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startDate", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endDate", endDate)); // query parameter
-            if (status != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "status", status)); // query parameter
             if (payoutRequestIdsBankAccountIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "payoutRequestIds.bankAccountIds", payoutRequestIdsBankAccountIds)); // query parameter
             if (payoutRequestIdsStates != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "payoutRequestIds.states", payoutRequestIdsStates)); // query parameter
 
@@ -1620,17 +1587,14 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>Task of RestApiArrayResultPayoutSummary</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultPayoutSummary> GetPayoutSummariesAsync (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+        public async System.Threading.Tasks.Task<RestApiArrayResultPayoutSummary> GetPayoutSummariesAsync (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
         {
-             ApiResponse<RestApiArrayResultPayoutSummary> localVarResponse = await GetPayoutSummariesAsyncWithHttpInfo(appId, bankAccountId, payeeBankAccountDataId, startDate, endDate, status, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
+             ApiResponse<RestApiArrayResultPayoutSummary> localVarResponse = await GetPayoutSummariesAsyncWithHttpInfo(appId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
              return localVarResponse.Data;
 
         }
@@ -1640,15 +1604,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultPayoutSummary)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultPayoutSummary>> GetPayoutSummariesAsyncWithHttpInfo (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultPayoutSummary>> GetPayoutSummariesAsyncWithHttpInfo (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1679,11 +1640,8 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (bankAccountId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "bankAccountId", bankAccountId)); // query parameter
-            if (payeeBankAccountDataId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "payeeBankAccountDataId", payeeBankAccountDataId)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startDate", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endDate", endDate)); // query parameter
-            if (status != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "status", status)); // query parameter
             if (payoutRequestIdsBankAccountIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "payoutRequestIds.bankAccountIds", payoutRequestIdsBankAccountIds)); // query parameter
             if (payoutRequestIdsStates != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "payoutRequestIds.states", payoutRequestIdsStates)); // query parameter
 
@@ -1717,19 +1675,16 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>RestApiPaginationResultPayout</returns>
-        public RestApiPaginationResultPayout GetPayouts (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+        public RestApiPaginationResultPayout GetPayouts (string appId, DateTime? startDate = null, DateTime? endDate = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
         {
-             ApiResponse<RestApiPaginationResultPayout> localVarResponse = GetPayoutsWithHttpInfo(appId, bankAccountId, payeeBankAccountDataId, startDate, endDate, status, page, limit, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
+             ApiResponse<RestApiPaginationResultPayout> localVarResponse = GetPayoutsWithHttpInfo(appId, startDate, endDate, page, limit, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
              return localVarResponse.Data;
         }
 
@@ -1738,17 +1693,14 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultPayout</returns>
-        public ApiResponse< RestApiPaginationResultPayout > GetPayoutsWithHttpInfo (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+        public ApiResponse< RestApiPaginationResultPayout > GetPayoutsWithHttpInfo (string appId, DateTime? startDate = null, DateTime? endDate = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1779,11 +1731,8 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (bankAccountId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "bankAccountId", bankAccountId)); // query parameter
-            if (payeeBankAccountDataId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "payeeBankAccountDataId", payeeBankAccountDataId)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startDate", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endDate", endDate)); // query parameter
-            if (status != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "status", status)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
             if (payoutRequestIdsBankAccountIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "payoutRequestIds.bankAccountIds", payoutRequestIdsBankAccountIds)); // query parameter
@@ -1819,19 +1768,16 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>Task of RestApiPaginationResultPayout</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultPayout> GetPayoutsAsync (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultPayout> GetPayoutsAsync (string appId, DateTime? startDate = null, DateTime? endDate = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
         {
-             ApiResponse<RestApiPaginationResultPayout> localVarResponse = await GetPayoutsAsyncWithHttpInfo(appId, bankAccountId, payeeBankAccountDataId, startDate, endDate, status, page, limit, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
+             ApiResponse<RestApiPaginationResultPayout> localVarResponse = await GetPayoutsAsyncWithHttpInfo(appId, startDate, endDate, page, limit, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
              return localVarResponse.Data;
 
         }
@@ -1841,17 +1787,14 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="bankAccountId"> (optional)</param>
-        /// <param name="payeeBankAccountDataId">Deprecated (optional)</param>
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
-        /// <param name="status"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultPayout)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPayout>> GetPayoutsAsyncWithHttpInfo (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPayout>> GetPayoutsAsyncWithHttpInfo (string appId, DateTime? startDate = null, DateTime? endDate = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1882,11 +1825,8 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (bankAccountId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "bankAccountId", bankAccountId)); // query parameter
-            if (payeeBankAccountDataId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "payeeBankAccountDataId", payeeBankAccountDataId)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startDate", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endDate", endDate)); // query parameter
-            if (status != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "status", status)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
             if (payoutRequestIdsBankAccountIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "payoutRequestIds.bankAccountIds", payoutRequestIdsBankAccountIds)); // query parameter

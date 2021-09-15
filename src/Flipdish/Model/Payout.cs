@@ -812,34 +812,17 @@ namespace Flipdish.Model
         /// <param name="currency">Payout currency.</param>
         /// <param name="cutoffDate">Payouts before this date do not have a details breakdown.</param>
         /// <param name="onlineSalesAmount">onlineSalesAmount.</param>
-        /// <param name="onlineSalesTax">onlineSalesTax.</param>
-        /// <param name="onlineSalesIncludingTax">onlineSalesIncludingTax.</param>
-        /// <param name="onlineSalesFeesBaseAmount">onlineSalesFeesBaseAmount.</param>
-        /// <param name="cashSalesAmount">cashSalesAmount.</param>
-        /// <param name="cashSalesTax">cashSalesTax.</param>
-        /// <param name="cashSalesIncludingTax">cashSalesIncludingTax.</param>
-        /// <param name="cashSalesFeesBaseAmount">cashSalesFeesBaseAmount.</param>
-        /// <param name="totalSalesIncludingTax">totalSalesIncludingTax.</param>
         /// <param name="onlineSalesDeliveryCharges">onlineSalesDeliveryCharges.</param>
         /// <param name="onlineSalesTips">onlineSalesTips.</param>
         /// <param name="totalOnlineRevenue">totalOnlineRevenue.</param>
-        /// <param name="openingBalance">openingBalance.</param>
-        /// <param name="closingBalance">closingBalance.</param>
-        /// <param name="cashSalesFees">cashSalesFees.</param>
         /// <param name="onlineSalesFees">onlineSalesFees.</param>
-        /// <param name="totalSalesFees">totalSalesFees.</param>
         /// <param name="cashSalesRefundedFees">cashSalesRefundedFees.</param>
         /// <param name="onlineSalesRefundedFees">onlineSalesRefundedFees.</param>
         /// <param name="salesFeesVat">salesFeesVat.</param>
         /// <param name="totalFees">totalFees.</param>
-        /// <param name="chargesCount">chargesCount.</param>
-        /// <param name="totalOtherCharges">totalOtherCharges.</param>
-        /// <param name="cashSalesRefundedAmount">cashSalesRefundedAmount.</param>
         /// <param name="onlineSalesRefundedAmount">onlineSalesRefundedAmount.</param>
-        /// <param name="customerCashFees">customerCashFees.</param>
-        /// <param name="refundsCount">refundsCount.</param>
         /// <param name="totalOnlineRevenueAdjustments">totalOnlineRevenueAdjustments.</param>
-        public Payout(int? payoutId = default(int?), int? payeeBankAccountId = default(int?), string accountName = default(string), PayoutStatusEnum? payoutStatus = default(PayoutStatusEnum?), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), PayoutTypeEnum? payoutType = default(PayoutTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), DateTime? cutoffDate = default(DateTime?), double? onlineSalesAmount = default(double?), double? onlineSalesTax = default(double?), double? onlineSalesIncludingTax = default(double?), double? onlineSalesFeesBaseAmount = default(double?), double? cashSalesAmount = default(double?), double? cashSalesTax = default(double?), double? cashSalesIncludingTax = default(double?), double? cashSalesFeesBaseAmount = default(double?), double? totalSalesIncludingTax = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? totalOnlineRevenue = default(double?), double? openingBalance = default(double?), double? closingBalance = default(double?), double? cashSalesFees = default(double?), double? onlineSalesFees = default(double?), double? totalSalesFees = default(double?), double? cashSalesRefundedFees = default(double?), double? onlineSalesRefundedFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?), int? chargesCount = default(int?), double? totalOtherCharges = default(double?), double? cashSalesRefundedAmount = default(double?), double? onlineSalesRefundedAmount = default(double?), double? customerCashFees = default(double?), int? refundsCount = default(int?), double? totalOnlineRevenueAdjustments = default(double?))
+        public Payout(int? payoutId = default(int?), int? payeeBankAccountId = default(int?), string accountName = default(string), PayoutStatusEnum? payoutStatus = default(PayoutStatusEnum?), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), PayoutTypeEnum? payoutType = default(PayoutTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), DateTime? cutoffDate = default(DateTime?), double? onlineSalesAmount = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? totalOnlineRevenue = default(double?), double? onlineSalesFees = default(double?), double? cashSalesRefundedFees = default(double?), double? onlineSalesRefundedFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?), double? onlineSalesRefundedAmount = default(double?), double? totalOnlineRevenueAdjustments = default(double?))
         {
             this.PayoutId = payoutId;
             this.PayeeBankAccountId = payeeBankAccountId;
@@ -855,32 +838,15 @@ namespace Flipdish.Model
             this.Currency = currency;
             this.CutoffDate = cutoffDate;
             this.OnlineSalesAmount = onlineSalesAmount;
-            this.OnlineSalesTax = onlineSalesTax;
-            this.OnlineSalesIncludingTax = onlineSalesIncludingTax;
-            this.OnlineSalesFeesBaseAmount = onlineSalesFeesBaseAmount;
-            this.CashSalesAmount = cashSalesAmount;
-            this.CashSalesTax = cashSalesTax;
-            this.CashSalesIncludingTax = cashSalesIncludingTax;
-            this.CashSalesFeesBaseAmount = cashSalesFeesBaseAmount;
-            this.TotalSalesIncludingTax = totalSalesIncludingTax;
             this.OnlineSalesDeliveryCharges = onlineSalesDeliveryCharges;
             this.OnlineSalesTips = onlineSalesTips;
             this.TotalOnlineRevenue = totalOnlineRevenue;
-            this.OpeningBalance = openingBalance;
-            this.ClosingBalance = closingBalance;
-            this.CashSalesFees = cashSalesFees;
             this.OnlineSalesFees = onlineSalesFees;
-            this.TotalSalesFees = totalSalesFees;
             this.CashSalesRefundedFees = cashSalesRefundedFees;
             this.OnlineSalesRefundedFees = onlineSalesRefundedFees;
             this.SalesFeesVat = salesFeesVat;
             this.TotalFees = totalFees;
-            this.ChargesCount = chargesCount;
-            this.TotalOtherCharges = totalOtherCharges;
-            this.CashSalesRefundedAmount = cashSalesRefundedAmount;
             this.OnlineSalesRefundedAmount = onlineSalesRefundedAmount;
-            this.CustomerCashFees = customerCashFees;
-            this.RefundsCount = refundsCount;
             this.TotalOnlineRevenueAdjustments = totalOnlineRevenueAdjustments;
         }
         
@@ -964,54 +930,6 @@ namespace Flipdish.Model
         public double? OnlineSalesAmount { get; set; }
 
         /// <summary>
-        /// Gets or Sets OnlineSalesTax
-        /// </summary>
-        [DataMember(Name="OnlineSalesTax", EmitDefaultValue=false)]
-        public double? OnlineSalesTax { get; set; }
-
-        /// <summary>
-        /// Gets or Sets OnlineSalesIncludingTax
-        /// </summary>
-        [DataMember(Name="OnlineSalesIncludingTax", EmitDefaultValue=false)]
-        public double? OnlineSalesIncludingTax { get; set; }
-
-        /// <summary>
-        /// Gets or Sets OnlineSalesFeesBaseAmount
-        /// </summary>
-        [DataMember(Name="OnlineSalesFeesBaseAmount", EmitDefaultValue=false)]
-        public double? OnlineSalesFeesBaseAmount { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CashSalesAmount
-        /// </summary>
-        [DataMember(Name="CashSalesAmount", EmitDefaultValue=false)]
-        public double? CashSalesAmount { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CashSalesTax
-        /// </summary>
-        [DataMember(Name="CashSalesTax", EmitDefaultValue=false)]
-        public double? CashSalesTax { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CashSalesIncludingTax
-        /// </summary>
-        [DataMember(Name="CashSalesIncludingTax", EmitDefaultValue=false)]
-        public double? CashSalesIncludingTax { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CashSalesFeesBaseAmount
-        /// </summary>
-        [DataMember(Name="CashSalesFeesBaseAmount", EmitDefaultValue=false)]
-        public double? CashSalesFeesBaseAmount { get; set; }
-
-        /// <summary>
-        /// Gets or Sets TotalSalesIncludingTax
-        /// </summary>
-        [DataMember(Name="TotalSalesIncludingTax", EmitDefaultValue=false)]
-        public double? TotalSalesIncludingTax { get; set; }
-
-        /// <summary>
         /// Gets or Sets OnlineSalesDeliveryCharges
         /// </summary>
         [DataMember(Name="OnlineSalesDeliveryCharges", EmitDefaultValue=false)]
@@ -1030,34 +948,10 @@ namespace Flipdish.Model
         public double? TotalOnlineRevenue { get; set; }
 
         /// <summary>
-        /// Gets or Sets OpeningBalance
-        /// </summary>
-        [DataMember(Name="OpeningBalance", EmitDefaultValue=false)]
-        public double? OpeningBalance { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ClosingBalance
-        /// </summary>
-        [DataMember(Name="ClosingBalance", EmitDefaultValue=false)]
-        public double? ClosingBalance { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CashSalesFees
-        /// </summary>
-        [DataMember(Name="CashSalesFees", EmitDefaultValue=false)]
-        public double? CashSalesFees { get; set; }
-
-        /// <summary>
         /// Gets or Sets OnlineSalesFees
         /// </summary>
         [DataMember(Name="OnlineSalesFees", EmitDefaultValue=false)]
         public double? OnlineSalesFees { get; set; }
-
-        /// <summary>
-        /// Gets or Sets TotalSalesFees
-        /// </summary>
-        [DataMember(Name="TotalSalesFees", EmitDefaultValue=false)]
-        public double? TotalSalesFees { get; set; }
 
         /// <summary>
         /// Gets or Sets CashSalesRefundedFees
@@ -1084,40 +978,10 @@ namespace Flipdish.Model
         public double? TotalFees { get; set; }
 
         /// <summary>
-        /// Gets or Sets ChargesCount
-        /// </summary>
-        [DataMember(Name="ChargesCount", EmitDefaultValue=false)]
-        public int? ChargesCount { get; set; }
-
-        /// <summary>
-        /// Gets or Sets TotalOtherCharges
-        /// </summary>
-        [DataMember(Name="TotalOtherCharges", EmitDefaultValue=false)]
-        public double? TotalOtherCharges { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CashSalesRefundedAmount
-        /// </summary>
-        [DataMember(Name="CashSalesRefundedAmount", EmitDefaultValue=false)]
-        public double? CashSalesRefundedAmount { get; set; }
-
-        /// <summary>
         /// Gets or Sets OnlineSalesRefundedAmount
         /// </summary>
         [DataMember(Name="OnlineSalesRefundedAmount", EmitDefaultValue=false)]
         public double? OnlineSalesRefundedAmount { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CustomerCashFees
-        /// </summary>
-        [DataMember(Name="CustomerCashFees", EmitDefaultValue=false)]
-        public double? CustomerCashFees { get; set; }
-
-        /// <summary>
-        /// Gets or Sets RefundsCount
-        /// </summary>
-        [DataMember(Name="RefundsCount", EmitDefaultValue=false)]
-        public int? RefundsCount { get; set; }
 
         /// <summary>
         /// Gets or Sets TotalOnlineRevenueAdjustments
@@ -1147,32 +1011,15 @@ namespace Flipdish.Model
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  CutoffDate: ").Append(CutoffDate).Append("\n");
             sb.Append("  OnlineSalesAmount: ").Append(OnlineSalesAmount).Append("\n");
-            sb.Append("  OnlineSalesTax: ").Append(OnlineSalesTax).Append("\n");
-            sb.Append("  OnlineSalesIncludingTax: ").Append(OnlineSalesIncludingTax).Append("\n");
-            sb.Append("  OnlineSalesFeesBaseAmount: ").Append(OnlineSalesFeesBaseAmount).Append("\n");
-            sb.Append("  CashSalesAmount: ").Append(CashSalesAmount).Append("\n");
-            sb.Append("  CashSalesTax: ").Append(CashSalesTax).Append("\n");
-            sb.Append("  CashSalesIncludingTax: ").Append(CashSalesIncludingTax).Append("\n");
-            sb.Append("  CashSalesFeesBaseAmount: ").Append(CashSalesFeesBaseAmount).Append("\n");
-            sb.Append("  TotalSalesIncludingTax: ").Append(TotalSalesIncludingTax).Append("\n");
             sb.Append("  OnlineSalesDeliveryCharges: ").Append(OnlineSalesDeliveryCharges).Append("\n");
             sb.Append("  OnlineSalesTips: ").Append(OnlineSalesTips).Append("\n");
             sb.Append("  TotalOnlineRevenue: ").Append(TotalOnlineRevenue).Append("\n");
-            sb.Append("  OpeningBalance: ").Append(OpeningBalance).Append("\n");
-            sb.Append("  ClosingBalance: ").Append(ClosingBalance).Append("\n");
-            sb.Append("  CashSalesFees: ").Append(CashSalesFees).Append("\n");
             sb.Append("  OnlineSalesFees: ").Append(OnlineSalesFees).Append("\n");
-            sb.Append("  TotalSalesFees: ").Append(TotalSalesFees).Append("\n");
             sb.Append("  CashSalesRefundedFees: ").Append(CashSalesRefundedFees).Append("\n");
             sb.Append("  OnlineSalesRefundedFees: ").Append(OnlineSalesRefundedFees).Append("\n");
             sb.Append("  SalesFeesVat: ").Append(SalesFeesVat).Append("\n");
             sb.Append("  TotalFees: ").Append(TotalFees).Append("\n");
-            sb.Append("  ChargesCount: ").Append(ChargesCount).Append("\n");
-            sb.Append("  TotalOtherCharges: ").Append(TotalOtherCharges).Append("\n");
-            sb.Append("  CashSalesRefundedAmount: ").Append(CashSalesRefundedAmount).Append("\n");
             sb.Append("  OnlineSalesRefundedAmount: ").Append(OnlineSalesRefundedAmount).Append("\n");
-            sb.Append("  CustomerCashFees: ").Append(CustomerCashFees).Append("\n");
-            sb.Append("  RefundsCount: ").Append(RefundsCount).Append("\n");
             sb.Append("  TotalOnlineRevenueAdjustments: ").Append(TotalOnlineRevenueAdjustments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -1279,46 +1126,6 @@ namespace Flipdish.Model
                     this.OnlineSalesAmount.Equals(input.OnlineSalesAmount))
                 ) && 
                 (
-                    this.OnlineSalesTax == input.OnlineSalesTax ||
-                    (this.OnlineSalesTax != null &&
-                    this.OnlineSalesTax.Equals(input.OnlineSalesTax))
-                ) && 
-                (
-                    this.OnlineSalesIncludingTax == input.OnlineSalesIncludingTax ||
-                    (this.OnlineSalesIncludingTax != null &&
-                    this.OnlineSalesIncludingTax.Equals(input.OnlineSalesIncludingTax))
-                ) && 
-                (
-                    this.OnlineSalesFeesBaseAmount == input.OnlineSalesFeesBaseAmount ||
-                    (this.OnlineSalesFeesBaseAmount != null &&
-                    this.OnlineSalesFeesBaseAmount.Equals(input.OnlineSalesFeesBaseAmount))
-                ) && 
-                (
-                    this.CashSalesAmount == input.CashSalesAmount ||
-                    (this.CashSalesAmount != null &&
-                    this.CashSalesAmount.Equals(input.CashSalesAmount))
-                ) && 
-                (
-                    this.CashSalesTax == input.CashSalesTax ||
-                    (this.CashSalesTax != null &&
-                    this.CashSalesTax.Equals(input.CashSalesTax))
-                ) && 
-                (
-                    this.CashSalesIncludingTax == input.CashSalesIncludingTax ||
-                    (this.CashSalesIncludingTax != null &&
-                    this.CashSalesIncludingTax.Equals(input.CashSalesIncludingTax))
-                ) && 
-                (
-                    this.CashSalesFeesBaseAmount == input.CashSalesFeesBaseAmount ||
-                    (this.CashSalesFeesBaseAmount != null &&
-                    this.CashSalesFeesBaseAmount.Equals(input.CashSalesFeesBaseAmount))
-                ) && 
-                (
-                    this.TotalSalesIncludingTax == input.TotalSalesIncludingTax ||
-                    (this.TotalSalesIncludingTax != null &&
-                    this.TotalSalesIncludingTax.Equals(input.TotalSalesIncludingTax))
-                ) && 
-                (
                     this.OnlineSalesDeliveryCharges == input.OnlineSalesDeliveryCharges ||
                     (this.OnlineSalesDeliveryCharges != null &&
                     this.OnlineSalesDeliveryCharges.Equals(input.OnlineSalesDeliveryCharges))
@@ -1334,29 +1141,9 @@ namespace Flipdish.Model
                     this.TotalOnlineRevenue.Equals(input.TotalOnlineRevenue))
                 ) && 
                 (
-                    this.OpeningBalance == input.OpeningBalance ||
-                    (this.OpeningBalance != null &&
-                    this.OpeningBalance.Equals(input.OpeningBalance))
-                ) && 
-                (
-                    this.ClosingBalance == input.ClosingBalance ||
-                    (this.ClosingBalance != null &&
-                    this.ClosingBalance.Equals(input.ClosingBalance))
-                ) && 
-                (
-                    this.CashSalesFees == input.CashSalesFees ||
-                    (this.CashSalesFees != null &&
-                    this.CashSalesFees.Equals(input.CashSalesFees))
-                ) && 
-                (
                     this.OnlineSalesFees == input.OnlineSalesFees ||
                     (this.OnlineSalesFees != null &&
                     this.OnlineSalesFees.Equals(input.OnlineSalesFees))
-                ) && 
-                (
-                    this.TotalSalesFees == input.TotalSalesFees ||
-                    (this.TotalSalesFees != null &&
-                    this.TotalSalesFees.Equals(input.TotalSalesFees))
                 ) && 
                 (
                     this.CashSalesRefundedFees == input.CashSalesRefundedFees ||
@@ -1379,34 +1166,9 @@ namespace Flipdish.Model
                     this.TotalFees.Equals(input.TotalFees))
                 ) && 
                 (
-                    this.ChargesCount == input.ChargesCount ||
-                    (this.ChargesCount != null &&
-                    this.ChargesCount.Equals(input.ChargesCount))
-                ) && 
-                (
-                    this.TotalOtherCharges == input.TotalOtherCharges ||
-                    (this.TotalOtherCharges != null &&
-                    this.TotalOtherCharges.Equals(input.TotalOtherCharges))
-                ) && 
-                (
-                    this.CashSalesRefundedAmount == input.CashSalesRefundedAmount ||
-                    (this.CashSalesRefundedAmount != null &&
-                    this.CashSalesRefundedAmount.Equals(input.CashSalesRefundedAmount))
-                ) && 
-                (
                     this.OnlineSalesRefundedAmount == input.OnlineSalesRefundedAmount ||
                     (this.OnlineSalesRefundedAmount != null &&
                     this.OnlineSalesRefundedAmount.Equals(input.OnlineSalesRefundedAmount))
-                ) && 
-                (
-                    this.CustomerCashFees == input.CustomerCashFees ||
-                    (this.CustomerCashFees != null &&
-                    this.CustomerCashFees.Equals(input.CustomerCashFees))
-                ) && 
-                (
-                    this.RefundsCount == input.RefundsCount ||
-                    (this.RefundsCount != null &&
-                    this.RefundsCount.Equals(input.RefundsCount))
                 ) && 
                 (
                     this.TotalOnlineRevenueAdjustments == input.TotalOnlineRevenueAdjustments ||
@@ -1452,38 +1214,14 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CutoffDate.GetHashCode();
                 if (this.OnlineSalesAmount != null)
                     hashCode = hashCode * 59 + this.OnlineSalesAmount.GetHashCode();
-                if (this.OnlineSalesTax != null)
-                    hashCode = hashCode * 59 + this.OnlineSalesTax.GetHashCode();
-                if (this.OnlineSalesIncludingTax != null)
-                    hashCode = hashCode * 59 + this.OnlineSalesIncludingTax.GetHashCode();
-                if (this.OnlineSalesFeesBaseAmount != null)
-                    hashCode = hashCode * 59 + this.OnlineSalesFeesBaseAmount.GetHashCode();
-                if (this.CashSalesAmount != null)
-                    hashCode = hashCode * 59 + this.CashSalesAmount.GetHashCode();
-                if (this.CashSalesTax != null)
-                    hashCode = hashCode * 59 + this.CashSalesTax.GetHashCode();
-                if (this.CashSalesIncludingTax != null)
-                    hashCode = hashCode * 59 + this.CashSalesIncludingTax.GetHashCode();
-                if (this.CashSalesFeesBaseAmount != null)
-                    hashCode = hashCode * 59 + this.CashSalesFeesBaseAmount.GetHashCode();
-                if (this.TotalSalesIncludingTax != null)
-                    hashCode = hashCode * 59 + this.TotalSalesIncludingTax.GetHashCode();
                 if (this.OnlineSalesDeliveryCharges != null)
                     hashCode = hashCode * 59 + this.OnlineSalesDeliveryCharges.GetHashCode();
                 if (this.OnlineSalesTips != null)
                     hashCode = hashCode * 59 + this.OnlineSalesTips.GetHashCode();
                 if (this.TotalOnlineRevenue != null)
                     hashCode = hashCode * 59 + this.TotalOnlineRevenue.GetHashCode();
-                if (this.OpeningBalance != null)
-                    hashCode = hashCode * 59 + this.OpeningBalance.GetHashCode();
-                if (this.ClosingBalance != null)
-                    hashCode = hashCode * 59 + this.ClosingBalance.GetHashCode();
-                if (this.CashSalesFees != null)
-                    hashCode = hashCode * 59 + this.CashSalesFees.GetHashCode();
                 if (this.OnlineSalesFees != null)
                     hashCode = hashCode * 59 + this.OnlineSalesFees.GetHashCode();
-                if (this.TotalSalesFees != null)
-                    hashCode = hashCode * 59 + this.TotalSalesFees.GetHashCode();
                 if (this.CashSalesRefundedFees != null)
                     hashCode = hashCode * 59 + this.CashSalesRefundedFees.GetHashCode();
                 if (this.OnlineSalesRefundedFees != null)
@@ -1492,18 +1230,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.SalesFeesVat.GetHashCode();
                 if (this.TotalFees != null)
                     hashCode = hashCode * 59 + this.TotalFees.GetHashCode();
-                if (this.ChargesCount != null)
-                    hashCode = hashCode * 59 + this.ChargesCount.GetHashCode();
-                if (this.TotalOtherCharges != null)
-                    hashCode = hashCode * 59 + this.TotalOtherCharges.GetHashCode();
-                if (this.CashSalesRefundedAmount != null)
-                    hashCode = hashCode * 59 + this.CashSalesRefundedAmount.GetHashCode();
                 if (this.OnlineSalesRefundedAmount != null)
                     hashCode = hashCode * 59 + this.OnlineSalesRefundedAmount.GetHashCode();
-                if (this.CustomerCashFees != null)
-                    hashCode = hashCode * 59 + this.CustomerCashFees.GetHashCode();
-                if (this.RefundsCount != null)
-                    hashCode = hashCode * 59 + this.RefundsCount.GetHashCode();
                 if (this.TotalOnlineRevenueAdjustments != null)
                     hashCode = hashCode * 59 + this.TotalOnlineRevenueAdjustments.GetHashCode();
                 return hashCode;

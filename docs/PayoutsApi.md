@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 
 <a name="getpayoutsummaries"></a>
 # **GetPayoutSummaries**
-> RestApiArrayResultPayoutSummary GetPayoutSummaries (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+> RestApiArrayResultPayoutSummary GetPayoutSummaries (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
 
 Get list of payout summaries
 
@@ -394,18 +394,15 @@ namespace Example
 
             var apiInstance = new PayoutsApi();
             var appId = appId_example;  // string | 
-            var bankAccountId = 56;  // int? |  (optional) 
-            var payeeBankAccountDataId = 56;  // int? | Deprecated (optional) 
             var startDate = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
             var endDate = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
-            var status = status_example;  // string |  (optional) 
             var payoutRequestIdsBankAccountIds = new List<int?>(); // List<int?> | List of bank account ids to search for (optional) 
             var payoutRequestIdsStates = payoutRequestIdsStates_example;  // List<string> | List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional) 
 
             try
             {
                 // Get list of payout summaries
-                RestApiArrayResultPayoutSummary result = apiInstance.GetPayoutSummaries(appId, bankAccountId, payeeBankAccountDataId, startDate, endDate, status, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
+                RestApiArrayResultPayoutSummary result = apiInstance.GetPayoutSummaries(appId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -422,11 +419,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **bankAccountId** | **int?**|  | [optional] 
- **payeeBankAccountDataId** | **int?**| Deprecated | [optional] 
  **startDate** | **DateTime?**|  | [optional] 
  **endDate** | **DateTime?**|  | [optional] 
- **status** | **string**|  | [optional] 
  **payoutRequestIdsBankAccountIds** | [**List&lt;int?&gt;**](int?.md)| List of bank account ids to search for | [optional] 
  **payoutRequestIdsStates** | **List&lt;string&gt;**| List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for | [optional] 
 
@@ -447,7 +441,7 @@ Name | Type | Description  | Notes
 
 <a name="getpayouts"></a>
 # **GetPayouts**
-> RestApiPaginationResultPayout GetPayouts (string appId, int? bankAccountId = null, int? payeeBankAccountDataId = null, DateTime? startDate = null, DateTime? endDate = null, string status = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+> RestApiPaginationResultPayout GetPayouts (string appId, DateTime? startDate = null, DateTime? endDate = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
 
 Get list of payouts
 
@@ -472,11 +466,8 @@ namespace Example
 
             var apiInstance = new PayoutsApi();
             var appId = appId_example;  // string | 
-            var bankAccountId = 56;  // int? |  (optional) 
-            var payeeBankAccountDataId = 56;  // int? | Deprecated (optional) 
             var startDate = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
             var endDate = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
-            var status = status_example;  // string |  (optional) 
             var page = 56;  // int? |  (optional) 
             var limit = 56;  // int? |  (optional) 
             var payoutRequestIdsBankAccountIds = new List<int?>(); // List<int?> | List of bank account ids to search for (optional) 
@@ -485,7 +476,7 @@ namespace Example
             try
             {
                 // Get list of payouts
-                RestApiPaginationResultPayout result = apiInstance.GetPayouts(appId, bankAccountId, payeeBankAccountDataId, startDate, endDate, status, page, limit, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
+                RestApiPaginationResultPayout result = apiInstance.GetPayouts(appId, startDate, endDate, page, limit, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -502,11 +493,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **bankAccountId** | **int?**|  | [optional] 
- **payeeBankAccountDataId** | **int?**| Deprecated | [optional] 
  **startDate** | **DateTime?**|  | [optional] 
  **endDate** | **DateTime?**|  | [optional] 
- **status** | **string**|  | [optional] 
  **page** | **int?**|  | [optional] 
  **limit** | **int?**|  | [optional] 
  **payoutRequestIdsBankAccountIds** | [**List&lt;int?&gt;**](int?.md)| List of bank account ids to search for | [optional] 
