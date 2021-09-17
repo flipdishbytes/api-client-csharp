@@ -34,13 +34,15 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="Product" /> class.
         /// </summary>
         /// <param name="productId">Unique product id.</param>
+        /// <param name="imageFileName">Image File Name.</param>
         /// <param name="sku">Stock Keeping Unit (SKU).</param>
         /// <param name="name">Product name.</param>
         /// <param name="description">Product description.</param>
         /// <param name="price">Product price.</param>
-        public Product(string productId = default(string), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?))
+        public Product(string productId = default(string), string imageFileName = default(string), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?))
         {
             this.ProductId = productId;
+            this.ImageFileName = imageFileName;
             this.Sku = sku;
             this.Name = name;
             this.Description = description;
@@ -53,6 +55,13 @@ namespace Flipdish.Model
         /// <value>Unique product id</value>
         [DataMember(Name="ProductId", EmitDefaultValue=false)]
         public string ProductId { get; set; }
+
+        /// <summary>
+        /// Image File Name
+        /// </summary>
+        /// <value>Image File Name</value>
+        [DataMember(Name="ImageFileName", EmitDefaultValue=false)]
+        public string ImageFileName { get; set; }
 
         /// <summary>
         /// Stock Keeping Unit (SKU)
@@ -91,6 +100,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class Product {\n");
             sb.Append("  ProductId: ").Append(ProductId).Append("\n");
+            sb.Append("  ImageFileName: ").Append(ImageFileName).Append("\n");
             sb.Append("  Sku: ").Append(Sku).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -135,6 +145,11 @@ namespace Flipdish.Model
                     this.ProductId.Equals(input.ProductId))
                 ) && 
                 (
+                    this.ImageFileName == input.ImageFileName ||
+                    (this.ImageFileName != null &&
+                    this.ImageFileName.Equals(input.ImageFileName))
+                ) && 
+                (
                     this.Sku == input.Sku ||
                     (this.Sku != null &&
                     this.Sku.Equals(input.Sku))
@@ -167,6 +182,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.ProductId != null)
                     hashCode = hashCode * 59 + this.ProductId.GetHashCode();
+                if (this.ImageFileName != null)
+                    hashCode = hashCode * 59 + this.ImageFileName.GetHashCode();
                 if (this.Sku != null)
                     hashCode = hashCode * 59 + this.Sku.GetHashCode();
                 if (this.Name != null)
@@ -196,6 +213,18 @@ namespace Flipdish.Model
             if(this.ProductId != null && this.ProductId.Length < 0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ProductId, length must be greater than 0.", new [] { "ProductId" });
+            }
+
+            // ImageFileName (string) maxLength
+            if(this.ImageFileName != null && this.ImageFileName.Length > 512)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ImageFileName, length must be less than 512.", new [] { "ImageFileName" });
+            }
+
+            // ImageFileName (string) minLength
+            if(this.ImageFileName != null && this.ImageFileName.Length < 0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ImageFileName, length must be greater than 0.", new [] { "ImageFileName" });
             }
 
             // Sku (string) maxLength

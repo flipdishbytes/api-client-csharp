@@ -332,9 +332,12 @@ Class | Method | HTTP request | Description
 *PayoutsExportApi* | [**ExportPayouts**](docs/PayoutsExportApi.md#exportpayouts) | **GET** /api/v1.0/{appId}/payouts/export | Export payouts as CSV
 *ProcessingFeeConfigsApi* | [**GetProcessingFeeConfigsByStoreIds**](docs/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
 *ProductsApi* | [**CreateProduct**](docs/ProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a new product
+*ProductsApi* | [**DeleteProductImage**](docs/ProductsApi.md#deleteproductimage) | **DELETE** /api/v1.0/{appId}/catalog/products/{productId}/image | 
+*ProductsApi* | [**DuplicateProduct**](docs/ProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/product/{productId}/duplicate | Duplicate a product
 *ProductsApi* | [**GetProductById**](docs/ProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/product/{productId} | Get products by productId
 *ProductsApi* | [**GetProducts**](docs/ProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get products by app name id
 *ProductsApi* | [**UpdateProduct**](docs/ProductsApi.md#updateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId} | Update a product
+*ProductsApi* | [**UploadProductImage**](docs/ProductsApi.md#uploadproductimage) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/image | Upload a Product Image
 *PushNotificationsApi* | [**DeletePushNotification**](docs/PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**GetPushNotifications**](docs/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**SchedulePushNotification**](docs/PushNotificationsApi.md#schedulepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers

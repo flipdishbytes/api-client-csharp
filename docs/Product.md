@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ProductId** | **string** | Unique product id | [optional] 
+**ImageFileName** | **string** | Image File Name | [optional] 
 **Sku** | **string** | Stock Keeping Unit (SKU) | [optional] 
 **Name** | **string** | Product name | [optional] 
 **Description** | **string** | Product description | [optional] 
