@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAllKioskSettingsForStore**](KioskStoreSettingsApi.md#getallkiosksettingsforstore) | **GET** /api/v1.0/{appId}/kiosksettings/store/{storeId} | Get all kiosk settings associated with a store
 [**GetAllStoreSettingsForKioskHydra**](KioskStoreSettingsApi.md#getallstoresettingsforkioskhydra) | **GET** /api/v1.0/kioskstoresettings | [For Kiosk use only] Get all stores connected to a Kiosk
-[**UpdateCashSettingForKiosk**](KioskStoreSettingsApi.md#updatecashsettingforkiosk) | **POST** /api/v1.0/{appId}/kiosksettings/cash/{deviceId}/{enable} | 
+[**UpdateCashSettingForKiosk**](KioskStoreSettingsApi.md#updatecashsettingforkiosk) | **POST** /api/v1.0/{appId}/kiosksettings/cash | 
 
 
 <a name="getallkiosksettingsforstore"></a>
@@ -133,7 +133,7 @@ This endpoint does not need any parameter.
 
 <a name="updatecashsettingforkiosk"></a>
 # **UpdateCashSettingForKiosk**
-> RestApiResultKioskCashSetting UpdateCashSettingForKiosk (string appId, string deviceId, bool? enableCash, string enable)
+> RestApiResultKioskCashSetting UpdateCashSettingForKiosk (string appId, string deviceId, bool? isCashEnabled)
 
 
 
@@ -157,12 +157,11 @@ namespace Example
             var apiInstance = new KioskStoreSettingsApi();
             var appId = appId_example;  // string | 
             var deviceId = deviceId_example;  // string | 
-            var enableCash = true;  // bool? | 
-            var enable = enable_example;  // string | 
+            var isCashEnabled = true;  // bool? | 
 
             try
             {
-                RestApiResultKioskCashSetting result = apiInstance.UpdateCashSettingForKiosk(appId, deviceId, enableCash, enable);
+                RestApiResultKioskCashSetting result = apiInstance.UpdateCashSettingForKiosk(appId, deviceId, isCashEnabled);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -180,8 +179,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
  **deviceId** | **string**|  | 
- **enableCash** | **bool?**|  | 
- **enable** | **string**|  | 
+ **isCashEnabled** | **bool?**|  | 
 
 ### Return type
 

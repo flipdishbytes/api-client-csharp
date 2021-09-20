@@ -75,10 +75,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="deviceId"></param>
-        /// <param name="enableCash"></param>
-        /// <param name="enable"></param>
+        /// <param name="isCashEnabled"></param>
         /// <returns>RestApiResultKioskCashSetting</returns>
-        RestApiResultKioskCashSetting UpdateCashSettingForKiosk (string appId, string deviceId, bool? enableCash, string enable);
+        RestApiResultKioskCashSetting UpdateCashSettingForKiosk (string appId, string deviceId, bool? isCashEnabled);
 
         /// <summary>
         /// 
@@ -89,10 +88,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="deviceId"></param>
-        /// <param name="enableCash"></param>
-        /// <param name="enable"></param>
+        /// <param name="isCashEnabled"></param>
         /// <returns>ApiResponse of RestApiResultKioskCashSetting</returns>
-        ApiResponse<RestApiResultKioskCashSetting> UpdateCashSettingForKioskWithHttpInfo (string appId, string deviceId, bool? enableCash, string enable);
+        ApiResponse<RestApiResultKioskCashSetting> UpdateCashSettingForKioskWithHttpInfo (string appId, string deviceId, bool? isCashEnabled);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -146,10 +144,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="deviceId"></param>
-        /// <param name="enableCash"></param>
-        /// <param name="enable"></param>
+        /// <param name="isCashEnabled"></param>
         /// <returns>Task of RestApiResultKioskCashSetting</returns>
-        System.Threading.Tasks.Task<RestApiResultKioskCashSetting> UpdateCashSettingForKioskAsync (string appId, string deviceId, bool? enableCash, string enable);
+        System.Threading.Tasks.Task<RestApiResultKioskCashSetting> UpdateCashSettingForKioskAsync (string appId, string deviceId, bool? isCashEnabled);
 
         /// <summary>
         /// 
@@ -160,10 +157,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="deviceId"></param>
-        /// <param name="enableCash"></param>
-        /// <param name="enable"></param>
+        /// <param name="isCashEnabled"></param>
         /// <returns>Task of ApiResponse (RestApiResultKioskCashSetting)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultKioskCashSetting>> UpdateCashSettingForKioskAsyncWithHttpInfo (string appId, string deviceId, bool? enableCash, string enable);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultKioskCashSetting>> UpdateCashSettingForKioskAsyncWithHttpInfo (string appId, string deviceId, bool? isCashEnabled);
         #endregion Asynchronous Operations
     }
 
@@ -572,12 +568,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="deviceId"></param>
-        /// <param name="enableCash"></param>
-        /// <param name="enable"></param>
+        /// <param name="isCashEnabled"></param>
         /// <returns>RestApiResultKioskCashSetting</returns>
-        public RestApiResultKioskCashSetting UpdateCashSettingForKiosk (string appId, string deviceId, bool? enableCash, string enable)
+        public RestApiResultKioskCashSetting UpdateCashSettingForKiosk (string appId, string deviceId, bool? isCashEnabled)
         {
-             ApiResponse<RestApiResultKioskCashSetting> localVarResponse = UpdateCashSettingForKioskWithHttpInfo(appId, deviceId, enableCash, enable);
+             ApiResponse<RestApiResultKioskCashSetting> localVarResponse = UpdateCashSettingForKioskWithHttpInfo(appId, deviceId, isCashEnabled);
              return localVarResponse.Data;
         }
 
@@ -587,10 +582,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="deviceId"></param>
-        /// <param name="enableCash"></param>
-        /// <param name="enable"></param>
+        /// <param name="isCashEnabled"></param>
         /// <returns>ApiResponse of RestApiResultKioskCashSetting</returns>
-        public ApiResponse< RestApiResultKioskCashSetting > UpdateCashSettingForKioskWithHttpInfo (string appId, string deviceId, bool? enableCash, string enable)
+        public ApiResponse< RestApiResultKioskCashSetting > UpdateCashSettingForKioskWithHttpInfo (string appId, string deviceId, bool? isCashEnabled)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -598,14 +592,11 @@ namespace Flipdish.Api
             // verify the required parameter 'deviceId' is set
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling KioskStoreSettingsApi->UpdateCashSettingForKiosk");
-            // verify the required parameter 'enableCash' is set
-            if (enableCash == null)
-                throw new ApiException(400, "Missing required parameter 'enableCash' when calling KioskStoreSettingsApi->UpdateCashSettingForKiosk");
-            // verify the required parameter 'enable' is set
-            if (enable == null)
-                throw new ApiException(400, "Missing required parameter 'enable' when calling KioskStoreSettingsApi->UpdateCashSettingForKiosk");
+            // verify the required parameter 'isCashEnabled' is set
+            if (isCashEnabled == null)
+                throw new ApiException(400, "Missing required parameter 'isCashEnabled' when calling KioskStoreSettingsApi->UpdateCashSettingForKiosk");
 
-            var localVarPath = "/api/v1.0/{appId}/kiosksettings/cash/{deviceId}/{enable}";
+            var localVarPath = "/api/v1.0/{appId}/kiosksettings/cash";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -630,9 +621,8 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (deviceId != null) localVarPathParams.Add("deviceId", this.Configuration.ApiClient.ParameterToString(deviceId)); // path parameter
-            if (enable != null) localVarPathParams.Add("enable", this.Configuration.ApiClient.ParameterToString(enable)); // path parameter
-            if (enableCash != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "enableCash", enableCash)); // query parameter
+            if (deviceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "deviceId", deviceId)); // query parameter
+            if (isCashEnabled != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isCashEnabled", isCashEnabled)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -665,12 +655,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="deviceId"></param>
-        /// <param name="enableCash"></param>
-        /// <param name="enable"></param>
+        /// <param name="isCashEnabled"></param>
         /// <returns>Task of RestApiResultKioskCashSetting</returns>
-        public async System.Threading.Tasks.Task<RestApiResultKioskCashSetting> UpdateCashSettingForKioskAsync (string appId, string deviceId, bool? enableCash, string enable)
+        public async System.Threading.Tasks.Task<RestApiResultKioskCashSetting> UpdateCashSettingForKioskAsync (string appId, string deviceId, bool? isCashEnabled)
         {
-             ApiResponse<RestApiResultKioskCashSetting> localVarResponse = await UpdateCashSettingForKioskAsyncWithHttpInfo(appId, deviceId, enableCash, enable);
+             ApiResponse<RestApiResultKioskCashSetting> localVarResponse = await UpdateCashSettingForKioskAsyncWithHttpInfo(appId, deviceId, isCashEnabled);
              return localVarResponse.Data;
 
         }
@@ -681,10 +670,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="deviceId"></param>
-        /// <param name="enableCash"></param>
-        /// <param name="enable"></param>
+        /// <param name="isCashEnabled"></param>
         /// <returns>Task of ApiResponse (RestApiResultKioskCashSetting)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultKioskCashSetting>> UpdateCashSettingForKioskAsyncWithHttpInfo (string appId, string deviceId, bool? enableCash, string enable)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultKioskCashSetting>> UpdateCashSettingForKioskAsyncWithHttpInfo (string appId, string deviceId, bool? isCashEnabled)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -692,14 +680,11 @@ namespace Flipdish.Api
             // verify the required parameter 'deviceId' is set
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling KioskStoreSettingsApi->UpdateCashSettingForKiosk");
-            // verify the required parameter 'enableCash' is set
-            if (enableCash == null)
-                throw new ApiException(400, "Missing required parameter 'enableCash' when calling KioskStoreSettingsApi->UpdateCashSettingForKiosk");
-            // verify the required parameter 'enable' is set
-            if (enable == null)
-                throw new ApiException(400, "Missing required parameter 'enable' when calling KioskStoreSettingsApi->UpdateCashSettingForKiosk");
+            // verify the required parameter 'isCashEnabled' is set
+            if (isCashEnabled == null)
+                throw new ApiException(400, "Missing required parameter 'isCashEnabled' when calling KioskStoreSettingsApi->UpdateCashSettingForKiosk");
 
-            var localVarPath = "/api/v1.0/{appId}/kiosksettings/cash/{deviceId}/{enable}";
+            var localVarPath = "/api/v1.0/{appId}/kiosksettings/cash";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -724,9 +709,8 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (deviceId != null) localVarPathParams.Add("deviceId", this.Configuration.ApiClient.ParameterToString(deviceId)); // path parameter
-            if (enable != null) localVarPathParams.Add("enable", this.Configuration.ApiClient.ParameterToString(enable)); // path parameter
-            if (enableCash != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "enableCash", enableCash)); // query parameter
+            if (deviceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "deviceId", deviceId)); // query parameter
+            if (isCashEnabled != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isCashEnabled", isCashEnabled)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
