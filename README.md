@@ -119,6 +119,17 @@ Class | Method | HTTP request | Description
 *ApmApi* | [**GetCallsStatistics**](docs/ApmApi.md#getcallsstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy} | [PRIVATE API] Get Calls Statistics
 *ApmApi* | [**GetOrderStatistics**](docs/ApmApi.md#getorderstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | [PRIVATE API] Get Order Statistics (Value of Orders)
 *ApmApi* | [**GetPaginatedCallList**](docs/ApmApi.md#getpaginatedcalllist) | **GET** /api/v1.0/{appId}/apm/calls | [PRIVATE API] Get paginated APM call list
+*AppStoreApi* | [**CreateAppStoreApp**](docs/AppStoreApi.md#createappstoreapp) | **POST** /api/v1.0/appstore/apps | Create app store app
+*AppStoreApi* | [**DeleteAppStoreApp**](docs/AppStoreApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/appstore/apps/{appStoreAppId} | Delete app store app
+*AppStoreApi* | [**GetAppStoreApp**](docs/AppStoreApi.md#getappstoreapp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | Get app store app details
+*AppStoreApi* | [**GetAppStoreApps**](docs/AppStoreApi.md#getappstoreapps) | **GET** /api/v1.0/appstore/apps | Get list of app store app summaries
+*AppStoreApi* | [**UpdateAppStoreApp**](docs/AppStoreApi.md#updateappstoreapp) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId} | Update app store app
+*AppStoreConfigurationsApi* | [**CreateAppStoreConfig**](docs/AppStoreConfigurationsApi.md#createappstoreconfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | Create app store app configuration
+*AppStoreConfigurationsApi* | [**DeleteAppStoreConfig**](docs/AppStoreConfigurationsApi.md#deleteappstoreconfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Delete app store app configuration
+*AppStoreConfigurationsApi* | [**GetAppStoreConfig**](docs/AppStoreConfigurationsApi.md#getappstoreconfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Get app store app configuration
+*AppStoreConfigurationsApi* | [**GetConfiguredAppSingleApp**](docs/AppStoreConfigurationsApi.md#getconfiguredappsingleapp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of app store app configurations for one app store app
+*AppStoreConfigurationsApi* | [**GetConfiguredApps**](docs/AppStoreConfigurationsApi.md#getconfiguredapps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of app store apps which have been configured
+*AppStoreConfigurationsApi* | [**UpdateAppStoreConfig**](docs/AppStoreConfigurationsApi.md#updateappstoreconfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update app store app configuration
 *AppsApi* | [**GetApp**](docs/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | Get the application configuration
 *AppsApi* | [**GetAppHostnameStatus**](docs/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | Get the application hostname DNS delegation states for A and CNAME records.
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
@@ -441,7 +452,13 @@ Class | Method | HTTP request | Description
  - [Model.App](docs/App.md)
  - [Model.AppCompliance](docs/AppCompliance.md)
  - [Model.AppConfigUpdateModel](docs/AppConfigUpdateModel.md)
+ - [Model.AppConfigurationBase](docs/AppConfigurationBase.md)
+ - [Model.AppConfigurationDetail](docs/AppConfigurationDetail.md)
+ - [Model.AppConfigurationSummary](docs/AppConfigurationSummary.md)
  - [Model.AppCreatedEvent](docs/AppCreatedEvent.md)
+ - [Model.AppDetail](docs/AppDetail.md)
+ - [Model.AppDetailBase](docs/AppDetailBase.md)
+ - [Model.AppSummary](docs/AppSummary.md)
  - [Model.AppUpdatedEvent](docs/AppUpdatedEvent.md)
  - [Model.AssignedBankAccount](docs/AssignedBankAccount.md)
  - [Model.BalanceDetails](docs/BalanceDetails.md)
@@ -463,6 +480,8 @@ Class | Method | HTTP request | Description
  - [Model.CertificateRenewedEvent](docs/CertificateRenewedEvent.md)
  - [Model.ChangePasswordModel](docs/ChangePasswordModel.md)
  - [Model.ChargebackDetails](docs/ChargebackDetails.md)
+ - [Model.ConfiguredAppHeader](docs/ConfiguredAppHeader.md)
+ - [Model.ConfiguredPhysicalRestaurant](docs/ConfiguredPhysicalRestaurant.md)
  - [Model.Coordinates](docs/Coordinates.md)
  - [Model.CountryWithAccountFieldsDefinitions](docs/CountryWithAccountFieldsDefinitions.md)
  - [Model.CreateAccountModel](docs/CreateAccountModel.md)
@@ -510,7 +529,9 @@ Class | Method | HTTP request | Description
  - [Model.EventSearchResult](docs/EventSearchResult.md)
  - [Model.ExternalStoreEvent](docs/ExternalStoreEvent.md)
  - [Model.FeeSummary](docs/FeeSummary.md)
+ - [Model.Field](docs/Field.md)
  - [Model.FieldChangeInformation](docs/FieldChangeInformation.md)
+ - [Model.FieldGroup](docs/FieldGroup.md)
  - [Model.FlipdishEventBase](docs/FlipdishEventBase.md)
  - [Model.FlipdishFeesDetails](docs/FlipdishFeesDetails.md)
  - [Model.GroupedCoordinates](docs/GroupedCoordinates.md)
@@ -671,8 +692,10 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultApmCurrencyDataPoint](docs/RestApiArrayResultApmCurrencyDataPoint.md)
  - [Model.RestApiArrayResultApmDataPoint](docs/RestApiArrayResultApmDataPoint.md)
  - [Model.RestApiArrayResultApmHourlyDataPoint](docs/RestApiArrayResultApmHourlyDataPoint.md)
+ - [Model.RestApiArrayResultAppConfigurationSummary](docs/RestApiArrayResultAppConfigurationSummary.md)
  - [Model.RestApiArrayResultBankAccountSummary](docs/RestApiArrayResultBankAccountSummary.md)
  - [Model.RestApiArrayResultBusinessHoursPeriod](docs/RestApiArrayResultBusinessHoursPeriod.md)
+ - [Model.RestApiArrayResultConfiguredAppHeader](docs/RestApiArrayResultConfiguredAppHeader.md)
  - [Model.RestApiArrayResultCountryWithAccountFieldsDefinitions](docs/RestApiArrayResultCountryWithAccountFieldsDefinitions.md)
  - [Model.RestApiArrayResultDeliveryZone](docs/RestApiArrayResultDeliveryZone.md)
  - [Model.RestApiArrayResultDriver](docs/RestApiArrayResultDriver.md)
@@ -711,6 +734,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiForbiddenResult](docs/RestApiForbiddenResult.md)
  - [Model.RestApiIntegerResult](docs/RestApiIntegerResult.md)
  - [Model.RestApiPaginationResultApp](docs/RestApiPaginationResultApp.md)
+ - [Model.RestApiPaginationResultAppSummary](docs/RestApiPaginationResultAppSummary.md)
  - [Model.RestApiPaginationResultBusinessHoursOverride](docs/RestApiPaginationResultBusinessHoursOverride.md)
  - [Model.RestApiPaginationResultHttpRequestAndResponseLog](docs/RestApiPaginationResultHttpRequestAndResponseLog.md)
  - [Model.RestApiPaginationResultHydraDeviceDetails](docs/RestApiPaginationResultHydraDeviceDetails.md)
@@ -738,6 +762,8 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultApmStatus](docs/RestApiResultApmStatus.md)
  - [Model.RestApiResultApp](docs/RestApiResultApp.md)
  - [Model.RestApiResultAppCompliance](docs/RestApiResultAppCompliance.md)
+ - [Model.RestApiResultAppConfigurationSummary](docs/RestApiResultAppConfigurationSummary.md)
+ - [Model.RestApiResultAppDetail](docs/RestApiResultAppDetail.md)
  - [Model.RestApiResultAssignedBankAccount](docs/RestApiResultAssignedBankAccount.md)
  - [Model.RestApiResultBankAccountDetail](docs/RestApiResultBankAccountDetail.md)
  - [Model.RestApiResultBluetoothTerminalStatus](docs/RestApiResultBluetoothTerminalStatus.md)
@@ -805,6 +831,7 @@ Class | Method | HTTP request | Description
  - [Model.RevenueDetail](docs/RevenueDetail.md)
  - [Model.SearchCriteria](docs/SearchCriteria.md)
  - [Model.SetPasswordWithPinModel](docs/SetPasswordWithPinModel.md)
+ - [Model.Setting](docs/Setting.md)
  - [Model.SignupStep](docs/SignupStep.md)
  - [Model.SmsInfo](docs/SmsInfo.md)
  - [Model.SmsReceivedEvent](docs/SmsReceivedEvent.md)
@@ -875,6 +902,7 @@ Class | Method | HTTP request | Description
  - [Model.UserLoginEvent](docs/UserLoginEvent.md)
  - [Model.UserPasswordCreatedEvent](docs/UserPasswordCreatedEvent.md)
  - [Model.UserUpdatedEvent](docs/UserUpdatedEvent.md)
+ - [Model.ValidValue](docs/ValidValue.md)
  - [Model.ValidationErrorResult](docs/ValidationErrorResult.md)
  - [Model.Voucher](docs/Voucher.md)
  - [Model.VoucherBase](docs/VoucherBase.md)
