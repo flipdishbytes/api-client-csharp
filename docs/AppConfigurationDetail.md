@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **FieldGroups** | [**List&lt;FieldGroup&gt;**](FieldGroup.md) | Field Groups | [optional] 
 **Name** | **string** | Name | 
 **Description** | **string** | Description | 
+**Logo** | **string** | Logo | [optional] 
 **IsVerified** | **bool?** | Is application verified for use in the App Store | [optional] 
 **Tags** | **List&lt;string&gt;** | Tags | 
 **Regions** | **List&lt;string&gt;** | Regions | 

@@ -109,10 +109,11 @@ namespace Flipdish.Model
         /// <param name="fieldGroups">Field Groups.</param>
         /// <param name="name">Name (required).</param>
         /// <param name="description">Description (required).</param>
+        /// <param name="logo">Logo.</param>
         /// <param name="isVerified">Is application verified for use in the App Store.</param>
         /// <param name="tags">Tags (required).</param>
         /// <param name="regions">Regions (required).</param>
-        public AppConfigurationDetail(string id = default(string), string appId = default(string), string appStoreAppId = default(string), bool? isEnabled = default(bool?), List<int?> physicalRestaurants = default(List<int?>), List<Setting> settings = default(List<Setting>), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string name = default(string), string description = default(string), bool? isVerified = default(bool?), List<string> tags = default(List<string>), List<string> regions = default(List<string>))
+        public AppConfigurationDetail(string id = default(string), string appId = default(string), string appStoreAppId = default(string), bool? isEnabled = default(bool?), List<int?> physicalRestaurants = default(List<int?>), List<Setting> settings = default(List<Setting>), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string name = default(string), string description = default(string), string logo = default(string), bool? isVerified = default(bool?), List<string> tags = default(List<string>), List<string> regions = default(List<string>))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -207,6 +208,7 @@ namespace Flipdish.Model
             this.PhysicalRestaurants = physicalRestaurants;
             this.Settings = settings;
             this.FieldGroups = fieldGroups;
+            this.Logo = logo;
             this.IsVerified = isVerified;
         }
         
@@ -276,6 +278,13 @@ namespace Flipdish.Model
         public string Description { get; set; }
 
         /// <summary>
+        /// Logo
+        /// </summary>
+        /// <value>Logo</value>
+        [DataMember(Name="Logo", EmitDefaultValue=false)]
+        public string Logo { get; set; }
+
+        /// <summary>
         /// Is application verified for use in the App Store
         /// </summary>
         /// <value>Is application verified for use in the App Store</value>
@@ -315,6 +324,7 @@ namespace Flipdish.Model
             sb.Append("  FieldGroups: ").Append(FieldGroups).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Logo: ").Append(Logo).Append("\n");
             sb.Append("  IsVerified: ").Append(IsVerified).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  Regions: ").Append(Regions).Append("\n");
@@ -408,6 +418,11 @@ namespace Flipdish.Model
                     this.Description.Equals(input.Description))
                 ) && 
                 (
+                    this.Logo == input.Logo ||
+                    (this.Logo != null &&
+                    this.Logo.Equals(input.Logo))
+                ) && 
+                (
                     this.IsVerified == input.IsVerified ||
                     (this.IsVerified != null &&
                     this.IsVerified.Equals(input.IsVerified))
@@ -455,6 +470,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.Logo != null)
+                    hashCode = hashCode * 59 + this.Logo.GetHashCode();
                 if (this.IsVerified != null)
                     hashCode = hashCode * 59 + this.IsVerified.GetHashCode();
                 if (this.Tags != null)

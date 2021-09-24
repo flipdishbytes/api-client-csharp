@@ -103,11 +103,12 @@ namespace Flipdish.Model
         /// <param name="fieldGroups">Field Groups.</param>
         /// <param name="name">Name (required).</param>
         /// <param name="description">Description (required).</param>
+        /// <param name="logo">Logo.</param>
         /// <param name="isEnabled">Is application enabled.</param>
         /// <param name="isVerified">Is application verified for use in the App Store.</param>
         /// <param name="tags">Tags (required).</param>
         /// <param name="regions">Regions (required).</param>
-        public AppDetailBase(ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string name = default(string), string description = default(string), bool? isEnabled = default(bool?), bool? isVerified = default(bool?), List<string> tags = default(List<string>), List<string> regions = default(List<string>))
+        public AppDetailBase(ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string name = default(string), string description = default(string), string logo = default(string), bool? isEnabled = default(bool?), bool? isVerified = default(bool?), List<string> tags = default(List<string>), List<string> regions = default(List<string>))
         {
             // to ensure "configurationType" is required (not null)
             if (configurationType == null)
@@ -164,6 +165,7 @@ namespace Flipdish.Model
                 this.Regions = regions;
             }
             this.FieldGroups = fieldGroups;
+            this.Logo = logo;
             this.IsEnabled = isEnabled;
             this.IsVerified = isVerified;
         }
@@ -190,6 +192,13 @@ namespace Flipdish.Model
         /// <value>Description</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
+
+        /// <summary>
+        /// Logo
+        /// </summary>
+        /// <value>Logo</value>
+        [DataMember(Name="Logo", EmitDefaultValue=false)]
+        public string Logo { get; set; }
 
         /// <summary>
         /// Is application enabled
@@ -232,6 +241,7 @@ namespace Flipdish.Model
             sb.Append("  FieldGroups: ").Append(FieldGroups).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Logo: ").Append(Logo).Append("\n");
             sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
             sb.Append("  IsVerified: ").Append(IsVerified).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
@@ -296,6 +306,11 @@ namespace Flipdish.Model
                     this.Description.Equals(input.Description))
                 ) && 
                 (
+                    this.Logo == input.Logo ||
+                    (this.Logo != null &&
+                    this.Logo.Equals(input.Logo))
+                ) && 
+                (
                     this.IsEnabled == input.IsEnabled ||
                     (this.IsEnabled != null &&
                     this.IsEnabled.Equals(input.IsEnabled))
@@ -336,6 +351,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.Logo != null)
+                    hashCode = hashCode * 59 + this.Logo.GetHashCode();
                 if (this.IsEnabled != null)
                     hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
                 if (this.IsVerified != null)

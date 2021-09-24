@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**GetAppStoreApp**](AppStoreApi.md#getappstoreapp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | Get app store app details
 [**GetAppStoreApps**](AppStoreApi.md#getappstoreapps) | **GET** /api/v1.0/appstore/apps | Get list of app store app summaries
 [**UpdateAppStoreApp**](AppStoreApi.md#updateappstoreapp) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId} | Update app store app
+[**UploadAppStoreAppLogo**](AppStoreApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/appstore/apps/{appStoreAppId}/logo | Upload the app store app logo \\ icon
 
 
 <a name="createappstoreapp"></a>
@@ -333,6 +334,69 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uploadappstoreapplogo"></a>
+# **UploadAppStoreAppLogo**
+> void UploadAppStoreAppLogo (string appStoreAppId, System.IO.Stream image)
+
+Upload the app store app logo \\ icon
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UploadAppStoreAppLogoExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppStoreApi();
+            var appStoreAppId = appStoreAppId_example;  // string | App Store App Id
+            var image = new System.IO.Stream(); // System.IO.Stream | App Store App Logo
+
+            try
+            {
+                // Upload the app store app logo \\ icon
+                apiInstance.UploadAppStoreAppLogo(appStoreAppId, image);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppStoreApi.UploadAppStoreAppLogo: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appStoreAppId** | **string**| App Store App Id | 
+ **image** | **System.IO.Stream**| App Store App Logo | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

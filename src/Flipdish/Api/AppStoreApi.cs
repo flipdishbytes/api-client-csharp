@@ -135,6 +135,29 @@ namespace Flipdish.Api
         /// <param name="appDetail">App Store App Detail</param>
         /// <returns>ApiResponse of AppDetail</returns>
         ApiResponse<AppDetail> UpdateAppStoreAppWithHttpInfo (string appStoreAppId, AppDetail appDetail);
+        /// <summary>
+        /// Upload the app store app logo \\ icon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="image">App Store App Logo</param>
+        /// <returns></returns>
+        void UploadAppStoreAppLogo (string appStoreAppId, System.IO.Stream image);
+
+        /// <summary>
+        /// Upload the app store app logo \\ icon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="image">App Store App Logo</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UploadAppStoreAppLogoWithHttpInfo (string appStoreAppId, System.IO.Stream image);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -248,6 +271,29 @@ namespace Flipdish.Api
         /// <param name="appDetail">App Store App Detail</param>
         /// <returns>Task of ApiResponse (AppDetail)</returns>
         System.Threading.Tasks.Task<ApiResponse<AppDetail>> UpdateAppStoreAppAsyncWithHttpInfo (string appStoreAppId, AppDetail appDetail);
+        /// <summary>
+        /// Upload the app store app logo \\ icon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="image">App Store App Logo</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UploadAppStoreAppLogoAsync (string appStoreAppId, System.IO.Stream image);
+
+        /// <summary>
+        /// Upload the app store app logo \\ icon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="image">App Store App Logo</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UploadAppStoreAppLogoAsyncWithHttpInfo (string appStoreAppId, System.IO.Stream image);
         #endregion Asynchronous Operations
     }
 
@@ -1173,6 +1219,169 @@ namespace Flipdish.Api
             return new ApiResponse<AppDetail>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AppDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppDetail)));
+        }
+
+        /// <summary>
+        /// Upload the app store app logo \\ icon 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="image">App Store App Logo</param>
+        /// <returns></returns>
+        public void UploadAppStoreAppLogo (string appStoreAppId, System.IO.Stream image)
+        {
+             UploadAppStoreAppLogoWithHttpInfo(appStoreAppId, image);
+        }
+
+        /// <summary>
+        /// Upload the app store app logo \\ icon 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="image">App Store App Logo</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UploadAppStoreAppLogoWithHttpInfo (string appStoreAppId, System.IO.Stream image)
+        {
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreApi->UploadAppStoreAppLogo");
+            // verify the required parameter 'image' is set
+            if (image == null)
+                throw new ApiException(400, "Missing required parameter 'image' when calling AppStoreApi->UploadAppStoreAppLogo");
+
+            var localVarPath = "/api/v1.0/appstore/apps/{appStoreAppId}/logo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+            if (image != null) localVarFileParams.Add("Image", this.Configuration.ApiClient.ParameterToFile("Image", image));
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UploadAppStoreAppLogo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Upload the app store app logo \\ icon 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="image">App Store App Logo</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UploadAppStoreAppLogoAsync (string appStoreAppId, System.IO.Stream image)
+        {
+             await UploadAppStoreAppLogoAsyncWithHttpInfo(appStoreAppId, image);
+
+        }
+
+        /// <summary>
+        /// Upload the app store app logo \\ icon 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="image">App Store App Logo</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UploadAppStoreAppLogoAsyncWithHttpInfo (string appStoreAppId, System.IO.Stream image)
+        {
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreApi->UploadAppStoreAppLogo");
+            // verify the required parameter 'image' is set
+            if (image == null)
+                throw new ApiException(400, "Missing required parameter 'image' when calling AppStoreApi->UploadAppStoreAppLogo");
+
+            var localVarPath = "/api/v1.0/appstore/apps/{appStoreAppId}/logo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+            if (image != null) localVarFileParams.Add("Image", this.Configuration.ApiClient.ParameterToFile("Image", image));
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UploadAppStoreAppLogo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
     }
