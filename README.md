@@ -216,6 +216,7 @@ Class | Method | HTTP request | Description
 *HomeApi* | [**GetHomeStatistics**](docs/HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
 *HttpRequestResponseLogsApi* | [**GetLogs**](docs/HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/{appId}/interactions/logs | Get API interaction logs
 *HydraApi* | [**AssignEmv**](docs/HydraApi.md#assignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId} | Assign an EMV terminal to a kiosk
+*HydraApi* | [**AttachStoreToKiosk**](docs/HydraApi.md#attachstoretokiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | [Private]
 *HydraApi* | [**AttachStoreToTerminal**](docs/HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | [Private]
 *HydraApi* | [**CancelEmvPayment**](docs/HydraApi.md#cancelemvpayment) | **POST** /api/v1.0/{appId}/hydra/cancelemvpayment/{orderId} | 
 *HydraApi* | [**DetachStoreFromTerminal**](docs/HydraApi.md#detachstorefromterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | [Private]
@@ -228,6 +229,7 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**GetSettings**](docs/HydraApi.md#getsettings) | **GET** /api/v1.0/hydra/settings | [Private]
 *HydraApi* | [**HydraCreateEmv**](docs/HydraApi.md#hydracreateemv) | **POST** /api/v1.0/{appId}/emvterminals | [Private]
 *HydraApi* | [**HydraDeleteEmv**](docs/HydraApi.md#hydradeleteemv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | [Private]
+*HydraApi* | [**HydraDetachStoreFromKiosk**](docs/HydraApi.md#hydradetachstorefromkiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | [Private]
 *HydraApi* | [**HydraGetEmvsForAppId**](docs/HydraApi.md#hydragetemvsforappid) | **GET** /api/v1.0/{appId}/emvterminals | List EMV terminals belonging to the given AppNameId
 *HydraApi* | [**LoginWithDeviceId**](docs/HydraApi.md#loginwithdeviceid) | **POST** /api/v1.0/hydra/{deviceId}/login | [Private]
 *HydraApi* | [**Register**](docs/HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | [Private]

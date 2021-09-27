@@ -5,6 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AssignEmv**](HydraApi.md#assignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId} | Assign an EMV terminal to a kiosk
+[**AttachStoreToKiosk**](HydraApi.md#attachstoretokiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | [Private]
 [**AttachStoreToTerminal**](HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | [Private]
 [**CancelEmvPayment**](HydraApi.md#cancelemvpayment) | **POST** /api/v1.0/{appId}/hydra/cancelemvpayment/{orderId} | 
 [**DetachStoreFromTerminal**](HydraApi.md#detachstorefromterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | [Private]
@@ -17,6 +18,7 @@ Method | HTTP request | Description
 [**GetSettings**](HydraApi.md#getsettings) | **GET** /api/v1.0/hydra/settings | [Private]
 [**HydraCreateEmv**](HydraApi.md#hydracreateemv) | **POST** /api/v1.0/{appId}/emvterminals | [Private]
 [**HydraDeleteEmv**](HydraApi.md#hydradeleteemv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | [Private]
+[**HydraDetachStoreFromKiosk**](HydraApi.md#hydradetachstorefromkiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | [Private]
 [**HydraGetEmvsForAppId**](HydraApi.md#hydragetemvsforappid) | **GET** /api/v1.0/{appId}/emvterminals | List EMV terminals belonging to the given AppNameId
 [**LoginWithDeviceId**](HydraApi.md#loginwithdeviceid) | **POST** /api/v1.0/hydra/{deviceId}/login | [Private]
 [**Register**](HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | [Private]
@@ -78,6 +80,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="attachstoretokiosk"></a>
+# **AttachStoreToKiosk**
+> RestApiResultHydraStatus AttachStoreToKiosk (string appId, int? storeId, string deviceId)
+
+[Private]
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class AttachStoreToKioskExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new HydraApi();
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
+            var deviceId = deviceId_example;  // string | 
+
+            try
+            {
+                // [Private]
+                RestApiResultHydraStatus result = apiInstance.AttachStoreToKiosk(appId, storeId, deviceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling HydraApi.AttachStoreToKiosk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
+ **deviceId** | **string**|  | 
+
+### Return type
+
+[**RestApiResultHydraStatus**](RestApiResultHydraStatus.md)
 
 ### Authorization
 
@@ -847,6 +915,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="hydradetachstorefromkiosk"></a>
+# **HydraDetachStoreFromKiosk**
+> RestApiResultHydraStatus HydraDetachStoreFromKiosk (string appId, int? storeId, string deviceId)
+
+[Private]
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class HydraDetachStoreFromKioskExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new HydraApi();
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
+            var deviceId = deviceId_example;  // string | 
+
+            try
+            {
+                // [Private]
+                RestApiResultHydraStatus result = apiInstance.HydraDetachStoreFromKiosk(appId, storeId, deviceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling HydraApi.HydraDetachStoreFromKiosk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
+ **deviceId** | **string**|  | 
+
+### Return type
+
+[**RestApiResultHydraStatus**](RestApiResultHydraStatus.md)
 
 ### Authorization
 
