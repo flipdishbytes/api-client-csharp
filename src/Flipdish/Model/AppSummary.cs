@@ -46,7 +46,8 @@ namespace Flipdish.Model
         /// <param name="isVerified">Is application verified for use in the App Store.</param>
         /// <param name="tags">Tags (required).</param>
         /// <param name="regions">Regions (required).</param>
-        public AppSummary(string id = default(string), string name = default(string), string description = default(string), string logo = default(string), bool? isEnabled = default(bool?), bool? isVerified = default(bool?), List<string> tags = default(List<string>), List<string> regions = default(List<string>))
+        /// <param name="developerName">Developer Name.</param>
+        public AppSummary(string id = default(string), string name = default(string), string description = default(string), string logo = default(string), bool? isEnabled = default(bool?), bool? isVerified = default(bool?), List<string> tags = default(List<string>), List<string> regions = default(List<string>), string developerName = default(string))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -88,6 +89,7 @@ namespace Flipdish.Model
             this.Logo = logo;
             this.IsEnabled = isEnabled;
             this.IsVerified = isVerified;
+            this.DeveloperName = developerName;
         }
         
         /// <summary>
@@ -147,6 +149,13 @@ namespace Flipdish.Model
         public List<string> Regions { get; set; }
 
         /// <summary>
+        /// Developer Name
+        /// </summary>
+        /// <value>Developer Name</value>
+        [DataMember(Name="DeveloperName", EmitDefaultValue=false)]
+        public string DeveloperName { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -162,6 +171,7 @@ namespace Flipdish.Model
             sb.Append("  IsVerified: ").Append(IsVerified).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  Regions: ").Append(Regions).Append("\n");
+            sb.Append("  DeveloperName: ").Append(DeveloperName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -235,6 +245,11 @@ namespace Flipdish.Model
                     this.Regions == input.Regions ||
                     this.Regions != null &&
                     this.Regions.SequenceEqual(input.Regions)
+                ) && 
+                (
+                    this.DeveloperName == input.DeveloperName ||
+                    (this.DeveloperName != null &&
+                    this.DeveloperName.Equals(input.DeveloperName))
                 );
         }
 
@@ -263,6 +278,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Tags.GetHashCode();
                 if (this.Regions != null)
                     hashCode = hashCode * 59 + this.Regions.GetHashCode();
+                if (this.DeveloperName != null)
+                    hashCode = hashCode * 59 + this.DeveloperName.GetHashCode();
                 return hashCode;
             }
         }

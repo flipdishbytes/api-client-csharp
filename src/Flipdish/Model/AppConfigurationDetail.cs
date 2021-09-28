@@ -107,13 +107,16 @@ namespace Flipdish.Model
         /// <param name="configurationType">Configuration Type  &lt;example&gt;ExternalLink&lt;/example&gt;&lt;example&gt;FlipdishHosted&lt;/example&gt; (required).</param>
         /// <param name="storeSelectorType">Store Selector Type (required).</param>
         /// <param name="fieldGroups">Field Groups.</param>
+        /// <param name="setupInstructions">Setup Instructions.</param>
+        /// <param name="externalSetupLink">External Setup Link.</param>
         /// <param name="name">Name (required).</param>
         /// <param name="description">Description (required).</param>
         /// <param name="logo">Logo.</param>
         /// <param name="isVerified">Is application verified for use in the App Store.</param>
         /// <param name="tags">Tags (required).</param>
         /// <param name="regions">Regions (required).</param>
-        public AppConfigurationDetail(string id = default(string), string appId = default(string), string appStoreAppId = default(string), bool? isEnabled = default(bool?), List<int?> physicalRestaurants = default(List<int?>), List<Setting> settings = default(List<Setting>), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string name = default(string), string description = default(string), string logo = default(string), bool? isVerified = default(bool?), List<string> tags = default(List<string>), List<string> regions = default(List<string>))
+        /// <param name="developerName">Developer Name.</param>
+        public AppConfigurationDetail(string id = default(string), string appId = default(string), string appStoreAppId = default(string), bool? isEnabled = default(bool?), List<int?> physicalRestaurants = default(List<int?>), List<Setting> settings = default(List<Setting>), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string setupInstructions = default(string), string externalSetupLink = default(string), string name = default(string), string description = default(string), string logo = default(string), bool? isVerified = default(bool?), List<string> tags = default(List<string>), List<string> regions = default(List<string>), string developerName = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -208,8 +211,11 @@ namespace Flipdish.Model
             this.PhysicalRestaurants = physicalRestaurants;
             this.Settings = settings;
             this.FieldGroups = fieldGroups;
+            this.SetupInstructions = setupInstructions;
+            this.ExternalSetupLink = externalSetupLink;
             this.Logo = logo;
             this.IsVerified = isVerified;
+            this.DeveloperName = developerName;
         }
         
         /// <summary>
@@ -264,6 +270,20 @@ namespace Flipdish.Model
         public List<FieldGroup> FieldGroups { get; set; }
 
         /// <summary>
+        /// Setup Instructions
+        /// </summary>
+        /// <value>Setup Instructions</value>
+        [DataMember(Name="SetupInstructions", EmitDefaultValue=false)]
+        public string SetupInstructions { get; set; }
+
+        /// <summary>
+        /// External Setup Link
+        /// </summary>
+        /// <value>External Setup Link</value>
+        [DataMember(Name="ExternalSetupLink", EmitDefaultValue=false)]
+        public string ExternalSetupLink { get; set; }
+
+        /// <summary>
         /// Name
         /// </summary>
         /// <value>Name</value>
@@ -306,6 +326,13 @@ namespace Flipdish.Model
         public List<string> Regions { get; set; }
 
         /// <summary>
+        /// Developer Name
+        /// </summary>
+        /// <value>Developer Name</value>
+        [DataMember(Name="DeveloperName", EmitDefaultValue=false)]
+        public string DeveloperName { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -322,12 +349,15 @@ namespace Flipdish.Model
             sb.Append("  ConfigurationType: ").Append(ConfigurationType).Append("\n");
             sb.Append("  StoreSelectorType: ").Append(StoreSelectorType).Append("\n");
             sb.Append("  FieldGroups: ").Append(FieldGroups).Append("\n");
+            sb.Append("  SetupInstructions: ").Append(SetupInstructions).Append("\n");
+            sb.Append("  ExternalSetupLink: ").Append(ExternalSetupLink).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Logo: ").Append(Logo).Append("\n");
             sb.Append("  IsVerified: ").Append(IsVerified).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  Regions: ").Append(Regions).Append("\n");
+            sb.Append("  DeveloperName: ").Append(DeveloperName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -408,6 +438,16 @@ namespace Flipdish.Model
                     this.FieldGroups.SequenceEqual(input.FieldGroups)
                 ) && 
                 (
+                    this.SetupInstructions == input.SetupInstructions ||
+                    (this.SetupInstructions != null &&
+                    this.SetupInstructions.Equals(input.SetupInstructions))
+                ) && 
+                (
+                    this.ExternalSetupLink == input.ExternalSetupLink ||
+                    (this.ExternalSetupLink != null &&
+                    this.ExternalSetupLink.Equals(input.ExternalSetupLink))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -436,6 +476,11 @@ namespace Flipdish.Model
                     this.Regions == input.Regions ||
                     this.Regions != null &&
                     this.Regions.SequenceEqual(input.Regions)
+                ) && 
+                (
+                    this.DeveloperName == input.DeveloperName ||
+                    (this.DeveloperName != null &&
+                    this.DeveloperName.Equals(input.DeveloperName))
                 );
         }
 
@@ -466,6 +511,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreSelectorType.GetHashCode();
                 if (this.FieldGroups != null)
                     hashCode = hashCode * 59 + this.FieldGroups.GetHashCode();
+                if (this.SetupInstructions != null)
+                    hashCode = hashCode * 59 + this.SetupInstructions.GetHashCode();
+                if (this.ExternalSetupLink != null)
+                    hashCode = hashCode * 59 + this.ExternalSetupLink.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
@@ -478,6 +527,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Tags.GetHashCode();
                 if (this.Regions != null)
                     hashCode = hashCode * 59 + this.Regions.GetHashCode();
+                if (this.DeveloperName != null)
+                    hashCode = hashCode * 59 + this.DeveloperName.GetHashCode();
                 return hashCode;
             }
         }

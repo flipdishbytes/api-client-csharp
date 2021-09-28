@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **IsVerified** | **bool?** | Is application verified for use in the App Store | [optional] 
 **Tags** | **List&lt;string&gt;** | Tags | 
 **Regions** | **List&lt;string&gt;** | Regions | 
+**DeveloperName** | **string** | Developer Name | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
