@@ -25,23 +25,90 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Portal Driver Tracking Order
+    /// Order Delivery Status Information
     /// </summary>
     [DataContract]
     public partial class OrderDeliveryInformation :  IEquatable<OrderDeliveryInformation>, IValidatableObject
     {
+        /// <summary>
+        /// Defines Status
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatusEnum
+        {
+            
+            /// <summary>
+            /// Enum None for value: None
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None = 1,
+            
+            /// <summary>
+            /// Enum Unassigned for value: Unassigned
+            /// </summary>
+            [EnumMember(Value = "Unassigned")]
+            Unassigned = 2,
+            
+            /// <summary>
+            /// Enum Unaccepted for value: Unaccepted
+            /// </summary>
+            [EnumMember(Value = "Unaccepted")]
+            Unaccepted = 3,
+            
+            /// <summary>
+            /// Enum Accepted for value: Accepted
+            /// </summary>
+            [EnumMember(Value = "Accepted")]
+            Accepted = 4,
+            
+            /// <summary>
+            /// Enum Carrying for value: Carrying
+            /// </summary>
+            [EnumMember(Value = "Carrying")]
+            Carrying = 5,
+            
+            /// <summary>
+            /// Enum OnTheWay for value: OnTheWay
+            /// </summary>
+            [EnumMember(Value = "OnTheWay")]
+            OnTheWay = 6,
+            
+            /// <summary>
+            /// Enum ArrivedAtLocation for value: ArrivedAtLocation
+            /// </summary>
+            [EnumMember(Value = "ArrivedAtLocation")]
+            ArrivedAtLocation = 7,
+            
+            /// <summary>
+            /// Enum Delivered for value: Delivered
+            /// </summary>
+            [EnumMember(Value = "Delivered")]
+            Delivered = 8,
+            
+            /// <summary>
+            /// Enum CannotDeliver for value: CannotDeliver
+            /// </summary>
+            [EnumMember(Value = "CannotDeliver")]
+            CannotDeliver = 9
+        }
+
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name="Status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderDeliveryInformation" /> class.
         /// </summary>
         /// <param name="orderId">orderId.</param>
         /// <param name="externalReferenceId">externalReferenceId.</param>
         /// <param name="trackUrl">trackUrl.</param>
-        /// <param name="status">Status as string, value one of: Unassigned,Unaccepted,Accepted,Carrying,OnTheWay,ArrivedAtLocation,Delivered,CannotDeliver.</param>
+        /// <param name="status">status.</param>
         /// <param name="deliveryStatusNotes">deliveryStatusNotes.</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="integrationCode">integrationCode.</param>
         /// <param name="integrationName">integrationName.</param>
-        public OrderDeliveryInformation(int? orderId = default(int?), string externalReferenceId = default(string), string trackUrl = default(string), string status = default(string), string deliveryStatusNotes = default(string), string errorMessage = default(string), string integrationCode = default(string), string integrationName = default(string))
+        public OrderDeliveryInformation(int? orderId = default(int?), string externalReferenceId = default(string), string trackUrl = default(string), StatusEnum? status = default(StatusEnum?), string deliveryStatusNotes = default(string), string errorMessage = default(string), string integrationCode = default(string), string integrationName = default(string))
         {
             this.OrderId = orderId;
             this.ExternalReferenceId = externalReferenceId;
@@ -71,12 +138,6 @@ namespace Flipdish.Model
         [DataMember(Name="TrackUrl", EmitDefaultValue=false)]
         public string TrackUrl { get; set; }
 
-        /// <summary>
-        /// Status as string, value one of: Unassigned,Unaccepted,Accepted,Carrying,OnTheWay,ArrivedAtLocation,Delivered,CannotDeliver
-        /// </summary>
-        /// <value>Status as string, value one of: Unassigned,Unaccepted,Accepted,Carrying,OnTheWay,ArrivedAtLocation,Delivered,CannotDeliver</value>
-        [DataMember(Name="Status", EmitDefaultValue=false)]
-        public string Status { get; set; }
 
         /// <summary>
         /// Gets or Sets DeliveryStatusNotes

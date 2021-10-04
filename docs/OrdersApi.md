@@ -145,7 +145,7 @@ void (empty response body)
 
 <a name="getdeliveryinformation"></a>
 # **GetDeliveryInformation**
-> void GetDeliveryInformation (int? orderId)
+> RestApiResultOrderDeliveryInformation GetDeliveryInformation (int? orderId)
 
 Get order delivery information
 
@@ -174,7 +174,8 @@ namespace Example
             try
             {
                 // Get order delivery information
-                apiInstance.GetDeliveryInformation(orderId);
+                RestApiResultOrderDeliveryInformation result = apiInstance.GetDeliveryInformation(orderId);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -193,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**RestApiResultOrderDeliveryInformation**](RestApiResultOrderDeliveryInformation.md)
 
 ### Authorization
 

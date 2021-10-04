@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **OrderId** | **int?** |  | [optional] 
 **ExternalReferenceId** | **string** |  | [optional] 
 **TrackUrl** | **string** |  | [optional] 
-**Status** | **string** | Status as string, value one of: Unassigned,Unaccepted,Accepted,Carrying,OnTheWay,ArrivedAtLocation,Delivered,CannotDeliver | [optional] 
+**Status** | **string** |  | [optional] 
 **DeliveryStatusNotes** | **string** |  | [optional] 
 **ErrorMessage** | **string** |  | [optional] 
 **IntegrationCode** | **string** |  | [optional] 

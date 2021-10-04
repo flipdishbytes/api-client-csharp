@@ -128,8 +128,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <returns>RestApiArrayResultConfiguredAppHeader</returns>
-        RestApiArrayResultConfiguredAppHeader GetConfiguredApps (string appId);
+        /// <returns>RestApiArrayResultAppConfigurationHeader</returns>
+        RestApiArrayResultAppConfigurationHeader GetConfiguredApps (string appId);
 
         /// <summary>
         /// Get list of app store apps which have been configured
@@ -139,8 +139,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <returns>ApiResponse of RestApiArrayResultConfiguredAppHeader</returns>
-        ApiResponse<RestApiArrayResultConfiguredAppHeader> GetConfiguredAppsWithHttpInfo (string appId);
+        /// <returns>ApiResponse of RestApiArrayResultAppConfigurationHeader</returns>
+        ApiResponse<RestApiArrayResultAppConfigurationHeader> GetConfiguredAppsWithHttpInfo (string appId);
         /// <summary>
         /// Update app store app configuration
         /// </summary>
@@ -274,8 +274,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <returns>Task of RestApiArrayResultConfiguredAppHeader</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultConfiguredAppHeader> GetConfiguredAppsAsync (string appId);
+        /// <returns>Task of RestApiArrayResultAppConfigurationHeader</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultAppConfigurationHeader> GetConfiguredAppsAsync (string appId);
 
         /// <summary>
         /// Get list of app store apps which have been configured
@@ -285,8 +285,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultConfiguredAppHeader)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultConfiguredAppHeader>> GetConfiguredAppsAsyncWithHttpInfo (string appId);
+        /// <returns>Task of ApiResponse (RestApiArrayResultAppConfigurationHeader)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAppConfigurationHeader>> GetConfiguredAppsAsyncWithHttpInfo (string appId);
         /// <summary>
         /// Update app store app configuration
         /// </summary>
@@ -1095,10 +1095,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <returns>RestApiArrayResultConfiguredAppHeader</returns>
-        public RestApiArrayResultConfiguredAppHeader GetConfiguredApps (string appId)
+        /// <returns>RestApiArrayResultAppConfigurationHeader</returns>
+        public RestApiArrayResultAppConfigurationHeader GetConfiguredApps (string appId)
         {
-             ApiResponse<RestApiArrayResultConfiguredAppHeader> localVarResponse = GetConfiguredAppsWithHttpInfo(appId);
+             ApiResponse<RestApiArrayResultAppConfigurationHeader> localVarResponse = GetConfiguredAppsWithHttpInfo(appId);
              return localVarResponse.Data;
         }
 
@@ -1107,8 +1107,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <returns>ApiResponse of RestApiArrayResultConfiguredAppHeader</returns>
-        public ApiResponse< RestApiArrayResultConfiguredAppHeader > GetConfiguredAppsWithHttpInfo (string appId)
+        /// <returns>ApiResponse of RestApiArrayResultAppConfigurationHeader</returns>
+        public ApiResponse< RestApiArrayResultAppConfigurationHeader > GetConfiguredAppsWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1160,9 +1160,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultConfiguredAppHeader>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultAppConfigurationHeader>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultConfiguredAppHeader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultConfiguredAppHeader)));
+                (RestApiArrayResultAppConfigurationHeader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultAppConfigurationHeader)));
         }
 
         /// <summary>
@@ -1170,10 +1170,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <returns>Task of RestApiArrayResultConfiguredAppHeader</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultConfiguredAppHeader> GetConfiguredAppsAsync (string appId)
+        /// <returns>Task of RestApiArrayResultAppConfigurationHeader</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultAppConfigurationHeader> GetConfiguredAppsAsync (string appId)
         {
-             ApiResponse<RestApiArrayResultConfiguredAppHeader> localVarResponse = await GetConfiguredAppsAsyncWithHttpInfo(appId);
+             ApiResponse<RestApiArrayResultAppConfigurationHeader> localVarResponse = await GetConfiguredAppsAsyncWithHttpInfo(appId);
              return localVarResponse.Data;
 
         }
@@ -1183,8 +1183,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultConfiguredAppHeader)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultConfiguredAppHeader>> GetConfiguredAppsAsyncWithHttpInfo (string appId)
+        /// <returns>Task of ApiResponse (RestApiArrayResultAppConfigurationHeader)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAppConfigurationHeader>> GetConfiguredAppsAsyncWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1236,9 +1236,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultConfiguredAppHeader>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultAppConfigurationHeader>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultConfiguredAppHeader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultConfiguredAppHeader)));
+                (RestApiArrayResultAppConfigurationHeader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultAppConfigurationHeader)));
         }
 
         /// <summary>

@@ -76,8 +76,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">OrderId</param>
-        /// <returns></returns>
-        void GetDeliveryInformation (int? orderId);
+        /// <returns>RestApiResultOrderDeliveryInformation</returns>
+        RestApiResultOrderDeliveryInformation GetDeliveryInformation (int? orderId);
 
         /// <summary>
         /// Get order delivery information
@@ -87,8 +87,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">OrderId</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetDeliveryInformationWithHttpInfo (int? orderId);
+        /// <returns>ApiResponse of RestApiResultOrderDeliveryInformation</returns>
+        ApiResponse<RestApiResultOrderDeliveryInformation> GetDeliveryInformationWithHttpInfo (int? orderId);
         /// <summary>
         /// Get order by ID
         /// </summary>
@@ -297,8 +297,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">OrderId</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetDeliveryInformationAsync (int? orderId);
+        /// <returns>Task of RestApiResultOrderDeliveryInformation</returns>
+        System.Threading.Tasks.Task<RestApiResultOrderDeliveryInformation> GetDeliveryInformationAsync (int? orderId);
 
         /// <summary>
         /// Get order delivery information
@@ -308,8 +308,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">OrderId</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetDeliveryInformationAsyncWithHttpInfo (int? orderId);
+        /// <returns>Task of ApiResponse (RestApiResultOrderDeliveryInformation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderDeliveryInformation>> GetDeliveryInformationAsyncWithHttpInfo (int? orderId);
         /// <summary>
         /// Get order by ID
         /// </summary>
@@ -903,10 +903,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">OrderId</param>
-        /// <returns></returns>
-        public void GetDeliveryInformation (int? orderId)
+        /// <returns>RestApiResultOrderDeliveryInformation</returns>
+        public RestApiResultOrderDeliveryInformation GetDeliveryInformation (int? orderId)
         {
-             GetDeliveryInformationWithHttpInfo(orderId);
+             ApiResponse<RestApiResultOrderDeliveryInformation> localVarResponse = GetDeliveryInformationWithHttpInfo(orderId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -914,8 +915,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">OrderId</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetDeliveryInformationWithHttpInfo (int? orderId)
+        /// <returns>ApiResponse of RestApiResultOrderDeliveryInformation</returns>
+        public ApiResponse< RestApiResultOrderDeliveryInformation > GetDeliveryInformationWithHttpInfo (int? orderId)
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
@@ -967,9 +968,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiResultOrderDeliveryInformation>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (RestApiResultOrderDeliveryInformation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrderDeliveryInformation)));
         }
 
         /// <summary>
@@ -977,10 +978,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">OrderId</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetDeliveryInformationAsync (int? orderId)
+        /// <returns>Task of RestApiResultOrderDeliveryInformation</returns>
+        public async System.Threading.Tasks.Task<RestApiResultOrderDeliveryInformation> GetDeliveryInformationAsync (int? orderId)
         {
-             await GetDeliveryInformationAsyncWithHttpInfo(orderId);
+             ApiResponse<RestApiResultOrderDeliveryInformation> localVarResponse = await GetDeliveryInformationAsyncWithHttpInfo(orderId);
+             return localVarResponse.Data;
 
         }
 
@@ -989,8 +991,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">OrderId</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetDeliveryInformationAsyncWithHttpInfo (int? orderId)
+        /// <returns>Task of ApiResponse (RestApiResultOrderDeliveryInformation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderDeliveryInformation>> GetDeliveryInformationAsyncWithHttpInfo (int? orderId)
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
@@ -1042,9 +1044,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiResultOrderDeliveryInformation>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (RestApiResultOrderDeliveryInformation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrderDeliveryInformation)));
         }
 
         /// <summary>

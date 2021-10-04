@@ -1,14 +1,8 @@
-# Flipdish.Model.AppConfigurationSummary
+# Flipdish.Model.AppConfigurationHeader
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **string** | Application Configuration Public Id | 
-**AppId** | **string** | Whitelabel App Id | 
-**IsEnabled** | **bool?** | Is Enabled | 
-**PhysicalRestaurants** | [**List&lt;ConfiguredPhysicalRestaurant&gt;**](ConfiguredPhysicalRestaurant.md) | List of restaurants | 
-**ConfigurationType** | **string** | Configuration Type | [optional] 
-**StoreSelectorType** | **string** | Store Selector Type | [optional] 
 **AppStoreAppId** | **string** | AppStore App Id | 
 **Name** | **string** | Name | 
 **Description** | **string** | Description | 
