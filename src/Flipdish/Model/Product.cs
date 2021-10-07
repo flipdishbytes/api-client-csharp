@@ -36,15 +36,17 @@ namespace Flipdish.Model
         /// <param name="productId">Unique product id.</param>
         /// <param name="imageFileName">Image File Name.</param>
         /// <param name="isArchived">Returns true if the product is archived.</param>
+        /// <param name="alcohol">Product contains alcohol.</param>
         /// <param name="sku">Stock Keeping Unit (SKU).</param>
         /// <param name="name">Product name.</param>
         /// <param name="description">Product description.</param>
         /// <param name="price">Product price.</param>
-        public Product(string productId = default(string), string imageFileName = default(string), bool? isArchived = default(bool?), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?))
+        public Product(string productId = default(string), string imageFileName = default(string), bool? isArchived = default(bool?), bool? alcohol = default(bool?), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?))
         {
             this.ProductId = productId;
             this.ImageFileName = imageFileName;
             this.IsArchived = isArchived;
+            this.Alcohol = alcohol;
             this.Sku = sku;
             this.Name = name;
             this.Description = description;
@@ -71,6 +73,13 @@ namespace Flipdish.Model
         /// <value>Returns true if the product is archived</value>
         [DataMember(Name="IsArchived", EmitDefaultValue=false)]
         public bool? IsArchived { get; set; }
+
+        /// <summary>
+        /// Product contains alcohol
+        /// </summary>
+        /// <value>Product contains alcohol</value>
+        [DataMember(Name="Alcohol", EmitDefaultValue=false)]
+        public bool? Alcohol { get; set; }
 
         /// <summary>
         /// Stock Keeping Unit (SKU)
@@ -111,6 +120,7 @@ namespace Flipdish.Model
             sb.Append("  ProductId: ").Append(ProductId).Append("\n");
             sb.Append("  ImageFileName: ").Append(ImageFileName).Append("\n");
             sb.Append("  IsArchived: ").Append(IsArchived).Append("\n");
+            sb.Append("  Alcohol: ").Append(Alcohol).Append("\n");
             sb.Append("  Sku: ").Append(Sku).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -165,6 +175,11 @@ namespace Flipdish.Model
                     this.IsArchived.Equals(input.IsArchived))
                 ) && 
                 (
+                    this.Alcohol == input.Alcohol ||
+                    (this.Alcohol != null &&
+                    this.Alcohol.Equals(input.Alcohol))
+                ) && 
+                (
                     this.Sku == input.Sku ||
                     (this.Sku != null &&
                     this.Sku.Equals(input.Sku))
@@ -201,6 +216,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ImageFileName.GetHashCode();
                 if (this.IsArchived != null)
                     hashCode = hashCode * 59 + this.IsArchived.GetHashCode();
+                if (this.Alcohol != null)
+                    hashCode = hashCode * 59 + this.Alcohol.GetHashCode();
                 if (this.Sku != null)
                     hashCode = hashCode * 59 + this.Sku.GetHashCode();
                 if (this.Name != null)

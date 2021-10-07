@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **ProductId** | **string** | Unique product id | [optional] 
 **ImageFileName** | **string** | Image File Name | [optional] 
 **IsArchived** | **bool?** | Returns true if the product is archived | [optional] 
+**Alcohol** | **bool?** | Product contains alcohol | [optional] 
 **Sku** | **string** | Stock Keeping Unit (SKU) | [optional] 
 **Name** | **string** | Product name | [optional] 
 **Description** | **string** | Product description | [optional] 

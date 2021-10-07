@@ -37,12 +37,14 @@ namespace Flipdish.Model
         /// <param name="name">Product name.</param>
         /// <param name="description">Product description.</param>
         /// <param name="price">Product price.</param>
-        public UpdateProduct(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?))
+        /// <param name="alcohol">Product contains alcohol.</param>
+        public UpdateProduct(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), bool? alcohol = default(bool?))
         {
             this.Sku = sku;
             this.Name = name;
             this.Description = description;
             this.Price = price;
+            this.Alcohol = alcohol;
         }
         
         /// <summary>
@@ -74,6 +76,13 @@ namespace Flipdish.Model
         public double? Price { get; set; }
 
         /// <summary>
+        /// Product contains alcohol
+        /// </summary>
+        /// <value>Product contains alcohol</value>
+        [DataMember(Name="Alcohol", EmitDefaultValue=false)]
+        public bool? Alcohol { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -85,6 +94,7 @@ namespace Flipdish.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
+            sb.Append("  Alcohol: ").Append(Alcohol).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,6 +148,11 @@ namespace Flipdish.Model
                     this.Price == input.Price ||
                     (this.Price != null &&
                     this.Price.Equals(input.Price))
+                ) && 
+                (
+                    this.Alcohol == input.Alcohol ||
+                    (this.Alcohol != null &&
+                    this.Alcohol.Equals(input.Alcohol))
                 );
         }
 
@@ -158,6 +173,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Price != null)
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
+                if (this.Alcohol != null)
+                    hashCode = hashCode * 59 + this.Alcohol.GetHashCode();
                 return hashCode;
             }
         }
