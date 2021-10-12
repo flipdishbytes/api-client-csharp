@@ -4,14 +4,11 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ArchiveProduct**](ProductsApi.md#archiveproduct) | **POST** /api/v1.0/{appId}/catalog/product/{productId}/archive | Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-[**ArchiveProduct_0**](ProductsApi.md#archiveproduct_0) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/archive | Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
+[**ArchiveProduct**](ProductsApi.md#archiveproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/archive | Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
 [**CreateProduct**](ProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a new product
 [**DeleteProductImage**](ProductsApi.md#deleteproductimage) | **DELETE** /api/v1.0/{appId}/catalog/products/{productId}/image | 
-[**DuplicateProduct**](ProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/product/{productId}/duplicate | Duplicate a product
-[**DuplicateProduct_0**](ProductsApi.md#duplicateproduct_0) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/duplicate | Duplicate a product
-[**GetProductById**](ProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/product/{productId} | Get products by productId
-[**GetProductById_0**](ProductsApi.md#getproductbyid_0) | **GET** /api/v1.0/{appId}/catalog/products/{productId} | Get products by productId
+[**DuplicateProduct**](ProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/duplicate | Duplicate a product
+[**GetProductById**](ProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/products/{productId} | Get products by productId
 [**GetProducts**](ProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get products by app name id
 [**UpdateProduct**](ProductsApi.md#updateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId} | Update a product
 [**UploadProductImage**](ProductsApi.md#uploadproductimage) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/image | Upload a Product Image
@@ -52,69 +49,6 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling ProductsApi.ArchiveProduct: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
- **productId** | **string**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="archiveproduct_0"></a>
-# **ArchiveProduct_0**
-> void ArchiveProduct_0 (string appId, string productId)
-
-Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class ArchiveProduct_0Example
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new ProductsApi();
-            var appId = appId_example;  // string | 
-            var productId = productId_example;  // string | 
-
-            try
-            {
-                // Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-                apiInstance.ArchiveProduct_0(appId, productId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ProductsApi.ArchiveProduct_0: " + e.Message );
             }
         }
     }
@@ -333,70 +267,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="duplicateproduct_0"></a>
-# **DuplicateProduct_0**
-> RestApiResultProduct DuplicateProduct_0 (string appId, string productId)
-
-Duplicate a product
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class DuplicateProduct_0Example
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new ProductsApi();
-            var appId = appId_example;  // string | 
-            var productId = productId_example;  // string | 
-
-            try
-            {
-                // Duplicate a product
-                RestApiResultProduct result = apiInstance.DuplicateProduct_0(appId, productId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ProductsApi.DuplicateProduct_0: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
- **productId** | **string**|  | 
-
-### Return type
-
-[**RestApiResultProduct**](RestApiResultProduct.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="getproductbyid"></a>
 # **GetProductById**
 > Product GetProductById (string appId, string productId)
@@ -433,70 +303,6 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling ProductsApi.GetProductById: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
- **productId** | **string**|  | 
-
-### Return type
-
-[**Product**](Product.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getproductbyid_0"></a>
-# **GetProductById_0**
-> Product GetProductById_0 (string appId, string productId)
-
-Get products by productId
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class GetProductById_0Example
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new ProductsApi();
-            var appId = appId_example;  // string | 
-            var productId = productId_example;  // string | 
-
-            try
-            {
-                // Get products by productId
-                Product result = apiInstance.GetProductById_0(appId, productId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ProductsApi.GetProductById_0: " + e.Message );
             }
         }
     }

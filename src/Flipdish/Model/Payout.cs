@@ -811,18 +811,27 @@ namespace Flipdish.Model
         /// <param name="payoutType">Type of payout source.</param>
         /// <param name="currency">Payout currency.</param>
         /// <param name="cutoffDate">Payouts before this date do not have a details breakdown.</param>
-        /// <param name="onlineSalesAmount">onlineSalesAmount.</param>
-        /// <param name="onlineSalesDeliveryCharges">onlineSalesDeliveryCharges.</param>
-        /// <param name="onlineSalesTips">onlineSalesTips.</param>
-        /// <param name="totalOnlineRevenue">totalOnlineRevenue.</param>
-        /// <param name="onlineSalesFees">onlineSalesFees.</param>
-        /// <param name="cashSalesRefundedFees">cashSalesRefundedFees.</param>
-        /// <param name="onlineSalesRefundedFees">onlineSalesRefundedFees.</param>
-        /// <param name="salesFeesVat">salesFeesVat.</param>
-        /// <param name="totalFees">totalFees.</param>
-        /// <param name="onlineSalesRefundedAmount">onlineSalesRefundedAmount.</param>
-        /// <param name="totalOnlineRevenueAdjustments">totalOnlineRevenueAdjustments.</param>
-        public Payout(int? payoutId = default(int?), int? payeeBankAccountId = default(int?), string accountName = default(string), PayoutStatusEnum? payoutStatus = default(PayoutStatusEnum?), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), PayoutTypeEnum? payoutType = default(PayoutTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), DateTime? cutoffDate = default(DateTime?), double? onlineSalesAmount = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? totalOnlineRevenue = default(double?), double? onlineSalesFees = default(double?), double? cashSalesRefundedFees = default(double?), double? onlineSalesRefundedFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?), double? onlineSalesRefundedAmount = default(double?), double? totalOnlineRevenueAdjustments = default(double?))
+        /// <param name="onlineSalesAmount">Payout online sales amount.</param>
+        /// <param name="onlineSalesDeliveryCharges">Payout online sales delivery charges.</param>
+        /// <param name="onlineSalesTips">Payout online sales tips.</param>
+        /// <param name="onlineSalesRefundedFees">Payout online sales refunded fees.</param>
+        /// <param name="onlineSalesFees">Payout online sales fees.</param>
+        /// <param name="onlineSalesRefundedAmount">Payout online sales refunded amount.</param>
+        /// <param name="onlineSalesTax">Payout online sales tax.</param>
+        /// <param name="totalOnlineRevenue">Payout total online revenue.</param>
+        /// <param name="cashSalesFees">Payout cash sales fees.</param>
+        /// <param name="cashSalesRefundedFees">Payout cash sales refunded fees.</param>
+        /// <param name="customerCashFees">Payout cash fees charged to customer.</param>
+        /// <param name="salesFeesVat">Payout sales fees vat.</param>
+        /// <param name="totalFees">Payout total fees.</param>
+        /// <param name="totalOnlineRevenueAdjustments">Payout total online revenue adjustments.</param>
+        /// <param name="chargebackAmount">Payout chargeback amount.</param>
+        /// <param name="chargebackRefundedFees">Payout chargeback refunded fees.</param>
+        /// <param name="totalChargebackCost">Payout chargebacks total cost.</param>
+        /// <param name="totalOtherCharges">Payout other charges total.</param>
+        /// <param name="openingBalance">Payout opening balance.</param>
+        /// <param name="closingBalance">Payout closing balance.</param>
+        public Payout(int? payoutId = default(int?), int? payeeBankAccountId = default(int?), string accountName = default(string), PayoutStatusEnum? payoutStatus = default(PayoutStatusEnum?), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), PayoutTypeEnum? payoutType = default(PayoutTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), DateTime? cutoffDate = default(DateTime?), double? onlineSalesAmount = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? onlineSalesRefundedFees = default(double?), double? onlineSalesFees = default(double?), double? onlineSalesRefundedAmount = default(double?), double? onlineSalesTax = default(double?), double? totalOnlineRevenue = default(double?), double? cashSalesFees = default(double?), double? cashSalesRefundedFees = default(double?), double? customerCashFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?), double? totalOnlineRevenueAdjustments = default(double?), double? chargebackAmount = default(double?), double? chargebackRefundedFees = default(double?), double? totalChargebackCost = default(double?), double? totalOtherCharges = default(double?), double? openingBalance = default(double?), double? closingBalance = default(double?))
         {
             this.PayoutId = payoutId;
             this.PayeeBankAccountId = payeeBankAccountId;
@@ -840,14 +849,23 @@ namespace Flipdish.Model
             this.OnlineSalesAmount = onlineSalesAmount;
             this.OnlineSalesDeliveryCharges = onlineSalesDeliveryCharges;
             this.OnlineSalesTips = onlineSalesTips;
-            this.TotalOnlineRevenue = totalOnlineRevenue;
-            this.OnlineSalesFees = onlineSalesFees;
-            this.CashSalesRefundedFees = cashSalesRefundedFees;
             this.OnlineSalesRefundedFees = onlineSalesRefundedFees;
+            this.OnlineSalesFees = onlineSalesFees;
+            this.OnlineSalesRefundedAmount = onlineSalesRefundedAmount;
+            this.OnlineSalesTax = onlineSalesTax;
+            this.TotalOnlineRevenue = totalOnlineRevenue;
+            this.CashSalesFees = cashSalesFees;
+            this.CashSalesRefundedFees = cashSalesRefundedFees;
+            this.CustomerCashFees = customerCashFees;
             this.SalesFeesVat = salesFeesVat;
             this.TotalFees = totalFees;
-            this.OnlineSalesRefundedAmount = onlineSalesRefundedAmount;
             this.TotalOnlineRevenueAdjustments = totalOnlineRevenueAdjustments;
+            this.ChargebackAmount = chargebackAmount;
+            this.ChargebackRefundedFees = chargebackRefundedFees;
+            this.TotalChargebackCost = totalChargebackCost;
+            this.TotalOtherCharges = totalOtherCharges;
+            this.OpeningBalance = openingBalance;
+            this.ClosingBalance = closingBalance;
         }
         
         /// <summary>
@@ -924,70 +942,144 @@ namespace Flipdish.Model
         public DateTime? CutoffDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets OnlineSalesAmount
+        /// Payout online sales amount
         /// </summary>
+        /// <value>Payout online sales amount</value>
         [DataMember(Name="OnlineSalesAmount", EmitDefaultValue=false)]
         public double? OnlineSalesAmount { get; set; }
 
         /// <summary>
-        /// Gets or Sets OnlineSalesDeliveryCharges
+        /// Payout online sales delivery charges
         /// </summary>
+        /// <value>Payout online sales delivery charges</value>
         [DataMember(Name="OnlineSalesDeliveryCharges", EmitDefaultValue=false)]
         public double? OnlineSalesDeliveryCharges { get; set; }
 
         /// <summary>
-        /// Gets or Sets OnlineSalesTips
+        /// Payout online sales tips
         /// </summary>
+        /// <value>Payout online sales tips</value>
         [DataMember(Name="OnlineSalesTips", EmitDefaultValue=false)]
         public double? OnlineSalesTips { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalOnlineRevenue
+        /// Payout online sales refunded fees
         /// </summary>
-        [DataMember(Name="TotalOnlineRevenue", EmitDefaultValue=false)]
-        public double? TotalOnlineRevenue { get; set; }
-
-        /// <summary>
-        /// Gets or Sets OnlineSalesFees
-        /// </summary>
-        [DataMember(Name="OnlineSalesFees", EmitDefaultValue=false)]
-        public double? OnlineSalesFees { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CashSalesRefundedFees
-        /// </summary>
-        [DataMember(Name="CashSalesRefundedFees", EmitDefaultValue=false)]
-        public double? CashSalesRefundedFees { get; set; }
-
-        /// <summary>
-        /// Gets or Sets OnlineSalesRefundedFees
-        /// </summary>
+        /// <value>Payout online sales refunded fees</value>
         [DataMember(Name="OnlineSalesRefundedFees", EmitDefaultValue=false)]
         public double? OnlineSalesRefundedFees { get; set; }
 
         /// <summary>
-        /// Gets or Sets SalesFeesVat
+        /// Payout online sales fees
         /// </summary>
-        [DataMember(Name="SalesFeesVat", EmitDefaultValue=false)]
-        public double? SalesFeesVat { get; set; }
+        /// <value>Payout online sales fees</value>
+        [DataMember(Name="OnlineSalesFees", EmitDefaultValue=false)]
+        public double? OnlineSalesFees { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalFees
+        /// Payout online sales refunded amount
         /// </summary>
-        [DataMember(Name="TotalFees", EmitDefaultValue=false)]
-        public double? TotalFees { get; set; }
-
-        /// <summary>
-        /// Gets or Sets OnlineSalesRefundedAmount
-        /// </summary>
+        /// <value>Payout online sales refunded amount</value>
         [DataMember(Name="OnlineSalesRefundedAmount", EmitDefaultValue=false)]
         public double? OnlineSalesRefundedAmount { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalOnlineRevenueAdjustments
+        /// Payout online sales tax
         /// </summary>
+        /// <value>Payout online sales tax</value>
+        [DataMember(Name="OnlineSalesTax", EmitDefaultValue=false)]
+        public double? OnlineSalesTax { get; set; }
+
+        /// <summary>
+        /// Payout total online revenue
+        /// </summary>
+        /// <value>Payout total online revenue</value>
+        [DataMember(Name="TotalOnlineRevenue", EmitDefaultValue=false)]
+        public double? TotalOnlineRevenue { get; set; }
+
+        /// <summary>
+        /// Payout cash sales fees
+        /// </summary>
+        /// <value>Payout cash sales fees</value>
+        [DataMember(Name="CashSalesFees", EmitDefaultValue=false)]
+        public double? CashSalesFees { get; set; }
+
+        /// <summary>
+        /// Payout cash sales refunded fees
+        /// </summary>
+        /// <value>Payout cash sales refunded fees</value>
+        [DataMember(Name="CashSalesRefundedFees", EmitDefaultValue=false)]
+        public double? CashSalesRefundedFees { get; set; }
+
+        /// <summary>
+        /// Payout cash fees charged to customer
+        /// </summary>
+        /// <value>Payout cash fees charged to customer</value>
+        [DataMember(Name="CustomerCashFees", EmitDefaultValue=false)]
+        public double? CustomerCashFees { get; set; }
+
+        /// <summary>
+        /// Payout sales fees vat
+        /// </summary>
+        /// <value>Payout sales fees vat</value>
+        [DataMember(Name="SalesFeesVat", EmitDefaultValue=false)]
+        public double? SalesFeesVat { get; set; }
+
+        /// <summary>
+        /// Payout total fees
+        /// </summary>
+        /// <value>Payout total fees</value>
+        [DataMember(Name="TotalFees", EmitDefaultValue=false)]
+        public double? TotalFees { get; set; }
+
+        /// <summary>
+        /// Payout total online revenue adjustments
+        /// </summary>
+        /// <value>Payout total online revenue adjustments</value>
         [DataMember(Name="TotalOnlineRevenueAdjustments", EmitDefaultValue=false)]
         public double? TotalOnlineRevenueAdjustments { get; set; }
+
+        /// <summary>
+        /// Payout chargeback amount
+        /// </summary>
+        /// <value>Payout chargeback amount</value>
+        [DataMember(Name="ChargebackAmount", EmitDefaultValue=false)]
+        public double? ChargebackAmount { get; set; }
+
+        /// <summary>
+        /// Payout chargeback refunded fees
+        /// </summary>
+        /// <value>Payout chargeback refunded fees</value>
+        [DataMember(Name="ChargebackRefundedFees", EmitDefaultValue=false)]
+        public double? ChargebackRefundedFees { get; set; }
+
+        /// <summary>
+        /// Payout chargebacks total cost
+        /// </summary>
+        /// <value>Payout chargebacks total cost</value>
+        [DataMember(Name="TotalChargebackCost", EmitDefaultValue=false)]
+        public double? TotalChargebackCost { get; set; }
+
+        /// <summary>
+        /// Payout other charges total
+        /// </summary>
+        /// <value>Payout other charges total</value>
+        [DataMember(Name="TotalOtherCharges", EmitDefaultValue=false)]
+        public double? TotalOtherCharges { get; set; }
+
+        /// <summary>
+        /// Payout opening balance
+        /// </summary>
+        /// <value>Payout opening balance</value>
+        [DataMember(Name="OpeningBalance", EmitDefaultValue=false)]
+        public double? OpeningBalance { get; set; }
+
+        /// <summary>
+        /// Payout closing balance
+        /// </summary>
+        /// <value>Payout closing balance</value>
+        [DataMember(Name="ClosingBalance", EmitDefaultValue=false)]
+        public double? ClosingBalance { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -1013,14 +1105,23 @@ namespace Flipdish.Model
             sb.Append("  OnlineSalesAmount: ").Append(OnlineSalesAmount).Append("\n");
             sb.Append("  OnlineSalesDeliveryCharges: ").Append(OnlineSalesDeliveryCharges).Append("\n");
             sb.Append("  OnlineSalesTips: ").Append(OnlineSalesTips).Append("\n");
-            sb.Append("  TotalOnlineRevenue: ").Append(TotalOnlineRevenue).Append("\n");
-            sb.Append("  OnlineSalesFees: ").Append(OnlineSalesFees).Append("\n");
-            sb.Append("  CashSalesRefundedFees: ").Append(CashSalesRefundedFees).Append("\n");
             sb.Append("  OnlineSalesRefundedFees: ").Append(OnlineSalesRefundedFees).Append("\n");
+            sb.Append("  OnlineSalesFees: ").Append(OnlineSalesFees).Append("\n");
+            sb.Append("  OnlineSalesRefundedAmount: ").Append(OnlineSalesRefundedAmount).Append("\n");
+            sb.Append("  OnlineSalesTax: ").Append(OnlineSalesTax).Append("\n");
+            sb.Append("  TotalOnlineRevenue: ").Append(TotalOnlineRevenue).Append("\n");
+            sb.Append("  CashSalesFees: ").Append(CashSalesFees).Append("\n");
+            sb.Append("  CashSalesRefundedFees: ").Append(CashSalesRefundedFees).Append("\n");
+            sb.Append("  CustomerCashFees: ").Append(CustomerCashFees).Append("\n");
             sb.Append("  SalesFeesVat: ").Append(SalesFeesVat).Append("\n");
             sb.Append("  TotalFees: ").Append(TotalFees).Append("\n");
-            sb.Append("  OnlineSalesRefundedAmount: ").Append(OnlineSalesRefundedAmount).Append("\n");
             sb.Append("  TotalOnlineRevenueAdjustments: ").Append(TotalOnlineRevenueAdjustments).Append("\n");
+            sb.Append("  ChargebackAmount: ").Append(ChargebackAmount).Append("\n");
+            sb.Append("  ChargebackRefundedFees: ").Append(ChargebackRefundedFees).Append("\n");
+            sb.Append("  TotalChargebackCost: ").Append(TotalChargebackCost).Append("\n");
+            sb.Append("  TotalOtherCharges: ").Append(TotalOtherCharges).Append("\n");
+            sb.Append("  OpeningBalance: ").Append(OpeningBalance).Append("\n");
+            sb.Append("  ClosingBalance: ").Append(ClosingBalance).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1136,9 +1237,9 @@ namespace Flipdish.Model
                     this.OnlineSalesTips.Equals(input.OnlineSalesTips))
                 ) && 
                 (
-                    this.TotalOnlineRevenue == input.TotalOnlineRevenue ||
-                    (this.TotalOnlineRevenue != null &&
-                    this.TotalOnlineRevenue.Equals(input.TotalOnlineRevenue))
+                    this.OnlineSalesRefundedFees == input.OnlineSalesRefundedFees ||
+                    (this.OnlineSalesRefundedFees != null &&
+                    this.OnlineSalesRefundedFees.Equals(input.OnlineSalesRefundedFees))
                 ) && 
                 (
                     this.OnlineSalesFees == input.OnlineSalesFees ||
@@ -1146,14 +1247,34 @@ namespace Flipdish.Model
                     this.OnlineSalesFees.Equals(input.OnlineSalesFees))
                 ) && 
                 (
+                    this.OnlineSalesRefundedAmount == input.OnlineSalesRefundedAmount ||
+                    (this.OnlineSalesRefundedAmount != null &&
+                    this.OnlineSalesRefundedAmount.Equals(input.OnlineSalesRefundedAmount))
+                ) && 
+                (
+                    this.OnlineSalesTax == input.OnlineSalesTax ||
+                    (this.OnlineSalesTax != null &&
+                    this.OnlineSalesTax.Equals(input.OnlineSalesTax))
+                ) && 
+                (
+                    this.TotalOnlineRevenue == input.TotalOnlineRevenue ||
+                    (this.TotalOnlineRevenue != null &&
+                    this.TotalOnlineRevenue.Equals(input.TotalOnlineRevenue))
+                ) && 
+                (
+                    this.CashSalesFees == input.CashSalesFees ||
+                    (this.CashSalesFees != null &&
+                    this.CashSalesFees.Equals(input.CashSalesFees))
+                ) && 
+                (
                     this.CashSalesRefundedFees == input.CashSalesRefundedFees ||
                     (this.CashSalesRefundedFees != null &&
                     this.CashSalesRefundedFees.Equals(input.CashSalesRefundedFees))
                 ) && 
                 (
-                    this.OnlineSalesRefundedFees == input.OnlineSalesRefundedFees ||
-                    (this.OnlineSalesRefundedFees != null &&
-                    this.OnlineSalesRefundedFees.Equals(input.OnlineSalesRefundedFees))
+                    this.CustomerCashFees == input.CustomerCashFees ||
+                    (this.CustomerCashFees != null &&
+                    this.CustomerCashFees.Equals(input.CustomerCashFees))
                 ) && 
                 (
                     this.SalesFeesVat == input.SalesFeesVat ||
@@ -1166,14 +1287,39 @@ namespace Flipdish.Model
                     this.TotalFees.Equals(input.TotalFees))
                 ) && 
                 (
-                    this.OnlineSalesRefundedAmount == input.OnlineSalesRefundedAmount ||
-                    (this.OnlineSalesRefundedAmount != null &&
-                    this.OnlineSalesRefundedAmount.Equals(input.OnlineSalesRefundedAmount))
-                ) && 
-                (
                     this.TotalOnlineRevenueAdjustments == input.TotalOnlineRevenueAdjustments ||
                     (this.TotalOnlineRevenueAdjustments != null &&
                     this.TotalOnlineRevenueAdjustments.Equals(input.TotalOnlineRevenueAdjustments))
+                ) && 
+                (
+                    this.ChargebackAmount == input.ChargebackAmount ||
+                    (this.ChargebackAmount != null &&
+                    this.ChargebackAmount.Equals(input.ChargebackAmount))
+                ) && 
+                (
+                    this.ChargebackRefundedFees == input.ChargebackRefundedFees ||
+                    (this.ChargebackRefundedFees != null &&
+                    this.ChargebackRefundedFees.Equals(input.ChargebackRefundedFees))
+                ) && 
+                (
+                    this.TotalChargebackCost == input.TotalChargebackCost ||
+                    (this.TotalChargebackCost != null &&
+                    this.TotalChargebackCost.Equals(input.TotalChargebackCost))
+                ) && 
+                (
+                    this.TotalOtherCharges == input.TotalOtherCharges ||
+                    (this.TotalOtherCharges != null &&
+                    this.TotalOtherCharges.Equals(input.TotalOtherCharges))
+                ) && 
+                (
+                    this.OpeningBalance == input.OpeningBalance ||
+                    (this.OpeningBalance != null &&
+                    this.OpeningBalance.Equals(input.OpeningBalance))
+                ) && 
+                (
+                    this.ClosingBalance == input.ClosingBalance ||
+                    (this.ClosingBalance != null &&
+                    this.ClosingBalance.Equals(input.ClosingBalance))
                 );
         }
 
@@ -1218,22 +1364,40 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OnlineSalesDeliveryCharges.GetHashCode();
                 if (this.OnlineSalesTips != null)
                     hashCode = hashCode * 59 + this.OnlineSalesTips.GetHashCode();
-                if (this.TotalOnlineRevenue != null)
-                    hashCode = hashCode * 59 + this.TotalOnlineRevenue.GetHashCode();
-                if (this.OnlineSalesFees != null)
-                    hashCode = hashCode * 59 + this.OnlineSalesFees.GetHashCode();
-                if (this.CashSalesRefundedFees != null)
-                    hashCode = hashCode * 59 + this.CashSalesRefundedFees.GetHashCode();
                 if (this.OnlineSalesRefundedFees != null)
                     hashCode = hashCode * 59 + this.OnlineSalesRefundedFees.GetHashCode();
+                if (this.OnlineSalesFees != null)
+                    hashCode = hashCode * 59 + this.OnlineSalesFees.GetHashCode();
+                if (this.OnlineSalesRefundedAmount != null)
+                    hashCode = hashCode * 59 + this.OnlineSalesRefundedAmount.GetHashCode();
+                if (this.OnlineSalesTax != null)
+                    hashCode = hashCode * 59 + this.OnlineSalesTax.GetHashCode();
+                if (this.TotalOnlineRevenue != null)
+                    hashCode = hashCode * 59 + this.TotalOnlineRevenue.GetHashCode();
+                if (this.CashSalesFees != null)
+                    hashCode = hashCode * 59 + this.CashSalesFees.GetHashCode();
+                if (this.CashSalesRefundedFees != null)
+                    hashCode = hashCode * 59 + this.CashSalesRefundedFees.GetHashCode();
+                if (this.CustomerCashFees != null)
+                    hashCode = hashCode * 59 + this.CustomerCashFees.GetHashCode();
                 if (this.SalesFeesVat != null)
                     hashCode = hashCode * 59 + this.SalesFeesVat.GetHashCode();
                 if (this.TotalFees != null)
                     hashCode = hashCode * 59 + this.TotalFees.GetHashCode();
-                if (this.OnlineSalesRefundedAmount != null)
-                    hashCode = hashCode * 59 + this.OnlineSalesRefundedAmount.GetHashCode();
                 if (this.TotalOnlineRevenueAdjustments != null)
                     hashCode = hashCode * 59 + this.TotalOnlineRevenueAdjustments.GetHashCode();
+                if (this.ChargebackAmount != null)
+                    hashCode = hashCode * 59 + this.ChargebackAmount.GetHashCode();
+                if (this.ChargebackRefundedFees != null)
+                    hashCode = hashCode * 59 + this.ChargebackRefundedFees.GetHashCode();
+                if (this.TotalChargebackCost != null)
+                    hashCode = hashCode * 59 + this.TotalChargebackCost.GetHashCode();
+                if (this.TotalOtherCharges != null)
+                    hashCode = hashCode * 59 + this.TotalOtherCharges.GetHashCode();
+                if (this.OpeningBalance != null)
+                    hashCode = hashCode * 59 + this.OpeningBalance.GetHashCode();
+                if (this.ClosingBalance != null)
+                    hashCode = hashCode * 59 + this.ClosingBalance.GetHashCode();
                 return hashCode;
             }
         }

@@ -48,29 +48,6 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ArchiveProductWithHttpInfo (string appId, string productId);
         /// <summary>
-        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns></returns>
-        void ArchiveProduct_0 (string appId, string productId);
-
-        /// <summary>
-        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ArchiveProduct_0WithHttpInfo (string appId, string productId);
-        /// <summary>
         /// Create a new product
         /// </summary>
         /// <remarks>
@@ -140,29 +117,6 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultProduct</returns>
         ApiResponse<RestApiResultProduct> DuplicateProductWithHttpInfo (string appId, string productId);
         /// <summary>
-        /// Duplicate a product
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>RestApiResultProduct</returns>
-        RestApiResultProduct DuplicateProduct_0 (string appId, string productId);
-
-        /// <summary>
-        /// Duplicate a product
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>ApiResponse of RestApiResultProduct</returns>
-        ApiResponse<RestApiResultProduct> DuplicateProduct_0WithHttpInfo (string appId, string productId);
-        /// <summary>
         /// Get products by productId
         /// </summary>
         /// <remarks>
@@ -185,29 +139,6 @@ namespace Flipdish.Api
         /// <param name="productId"></param>
         /// <returns>ApiResponse of Product</returns>
         ApiResponse<Product> GetProductByIdWithHttpInfo (string appId, string productId);
-        /// <summary>
-        /// Get products by productId
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>Product</returns>
-        Product GetProductById_0 (string appId, string productId);
-
-        /// <summary>
-        /// Get products by productId
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>ApiResponse of Product</returns>
-        ApiResponse<Product> GetProductById_0WithHttpInfo (string appId, string productId);
         /// <summary>
         /// Get products by app name id
         /// </summary>
@@ -311,29 +242,6 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ArchiveProductAsyncWithHttpInfo (string appId, string productId);
         /// <summary>
-        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ArchiveProduct_0Async (string appId, string productId);
-
-        /// <summary>
-        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ArchiveProduct_0AsyncWithHttpInfo (string appId, string productId);
-        /// <summary>
         /// Create a new product
         /// </summary>
         /// <remarks>
@@ -403,29 +311,6 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultProduct)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultProduct>> DuplicateProductAsyncWithHttpInfo (string appId, string productId);
         /// <summary>
-        /// Duplicate a product
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>Task of RestApiResultProduct</returns>
-        System.Threading.Tasks.Task<RestApiResultProduct> DuplicateProduct_0Async (string appId, string productId);
-
-        /// <summary>
-        /// Duplicate a product
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>Task of ApiResponse (RestApiResultProduct)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultProduct>> DuplicateProduct_0AsyncWithHttpInfo (string appId, string productId);
-        /// <summary>
         /// Get products by productId
         /// </summary>
         /// <remarks>
@@ -448,29 +333,6 @@ namespace Flipdish.Api
         /// <param name="productId"></param>
         /// <returns>Task of ApiResponse (Product)</returns>
         System.Threading.Tasks.Task<ApiResponse<Product>> GetProductByIdAsyncWithHttpInfo (string appId, string productId);
-        /// <summary>
-        /// Get products by productId
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>Task of Product</returns>
-        System.Threading.Tasks.Task<Product> GetProductById_0Async (string appId, string productId);
-
-        /// <summary>
-        /// Get products by productId
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>Task of ApiResponse (Product)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Product>> GetProductById_0AsyncWithHttpInfo (string appId, string productId);
         /// <summary>
         /// Get products by app name id
         /// </summary>
@@ -676,7 +538,7 @@ namespace Flipdish.Api
             if (productId == null)
                 throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->ArchiveProduct");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/product/{productId}/archive";
+            var localVarPath = "/api/v1.0/{appId}/catalog/products/{productId}/archive";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -757,7 +619,7 @@ namespace Flipdish.Api
             if (productId == null)
                 throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->ArchiveProduct");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/product/{productId}/archive";
+            var localVarPath = "/api/v1.0/{appId}/catalog/products/{productId}/archive";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -801,167 +663,6 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("ArchiveProduct", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns></returns>
-        public void ArchiveProduct_0 (string appId, string productId)
-        {
-             ArchiveProduct_0WithHttpInfo(appId, productId);
-        }
-
-        /// <summary>
-        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ArchiveProduct_0WithHttpInfo (string appId, string productId)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling ProductsApi->ArchiveProduct_0");
-            // verify the required parameter 'productId' is set
-            if (productId == null)
-                throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->ArchiveProduct_0");
-
-            var localVarPath = "/api/v1.0/{appId}/catalog/products/{productId}/archive";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (productId != null) localVarPathParams.Add("productId", this.Configuration.ApiClient.ParameterToString(productId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ArchiveProduct_0", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ArchiveProduct_0Async (string appId, string productId)
-        {
-             await ArchiveProduct_0AsyncWithHttpInfo(appId, productId);
-
-        }
-
-        /// <summary>
-        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ArchiveProduct_0AsyncWithHttpInfo (string appId, string productId)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling ProductsApi->ArchiveProduct_0");
-            // verify the required parameter 'productId' is set
-            if (productId == null)
-                throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->ArchiveProduct_0");
-
-            var localVarPath = "/api/v1.0/{appId}/catalog/products/{productId}/archive";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (productId != null) localVarPathParams.Add("productId", this.Configuration.ApiClient.ParameterToString(productId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ArchiveProduct_0", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1347,7 +1048,7 @@ namespace Flipdish.Api
             if (productId == null)
                 throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->DuplicateProduct");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/product/{productId}/duplicate";
+            var localVarPath = "/api/v1.0/{appId}/catalog/products/{productId}/duplicate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1429,7 +1130,7 @@ namespace Flipdish.Api
             if (productId == null)
                 throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->DuplicateProduct");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/product/{productId}/duplicate";
+            var localVarPath = "/api/v1.0/{appId}/catalog/products/{productId}/duplicate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1482,169 +1183,6 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Duplicate a product 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>RestApiResultProduct</returns>
-        public RestApiResultProduct DuplicateProduct_0 (string appId, string productId)
-        {
-             ApiResponse<RestApiResultProduct> localVarResponse = DuplicateProduct_0WithHttpInfo(appId, productId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Duplicate a product 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>ApiResponse of RestApiResultProduct</returns>
-        public ApiResponse< RestApiResultProduct > DuplicateProduct_0WithHttpInfo (string appId, string productId)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling ProductsApi->DuplicateProduct_0");
-            // verify the required parameter 'productId' is set
-            if (productId == null)
-                throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->DuplicateProduct_0");
-
-            var localVarPath = "/api/v1.0/{appId}/catalog/products/{productId}/duplicate";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (productId != null) localVarPathParams.Add("productId", this.Configuration.ApiClient.ParameterToString(productId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("DuplicateProduct_0", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiResultProduct>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultProduct) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultProduct)));
-        }
-
-        /// <summary>
-        /// Duplicate a product 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>Task of RestApiResultProduct</returns>
-        public async System.Threading.Tasks.Task<RestApiResultProduct> DuplicateProduct_0Async (string appId, string productId)
-        {
-             ApiResponse<RestApiResultProduct> localVarResponse = await DuplicateProduct_0AsyncWithHttpInfo(appId, productId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Duplicate a product 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>Task of ApiResponse (RestApiResultProduct)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultProduct>> DuplicateProduct_0AsyncWithHttpInfo (string appId, string productId)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling ProductsApi->DuplicateProduct_0");
-            // verify the required parameter 'productId' is set
-            if (productId == null)
-                throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->DuplicateProduct_0");
-
-            var localVarPath = "/api/v1.0/{appId}/catalog/products/{productId}/duplicate";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (productId != null) localVarPathParams.Add("productId", this.Configuration.ApiClient.ParameterToString(productId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("DuplicateProduct_0", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiResultProduct>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultProduct) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultProduct)));
-        }
-
-        /// <summary>
         /// Get products by productId 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1673,7 +1211,7 @@ namespace Flipdish.Api
             if (productId == null)
                 throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->GetProductById");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/product/{productId}";
+            var localVarPath = "/api/v1.0/{appId}/catalog/products/{productId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1755,7 +1293,7 @@ namespace Flipdish.Api
             if (productId == null)
                 throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->GetProductById");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/product/{productId}";
+            var localVarPath = "/api/v1.0/{appId}/catalog/products/{productId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1799,169 +1337,6 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetProductById", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Product>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Product) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Product)));
-        }
-
-        /// <summary>
-        /// Get products by productId 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>Product</returns>
-        public Product GetProductById_0 (string appId, string productId)
-        {
-             ApiResponse<Product> localVarResponse = GetProductById_0WithHttpInfo(appId, productId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get products by productId 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>ApiResponse of Product</returns>
-        public ApiResponse< Product > GetProductById_0WithHttpInfo (string appId, string productId)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling ProductsApi->GetProductById_0");
-            // verify the required parameter 'productId' is set
-            if (productId == null)
-                throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->GetProductById_0");
-
-            var localVarPath = "/api/v1.0/{appId}/catalog/products/{productId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (productId != null) localVarPathParams.Add("productId", this.Configuration.ApiClient.ParameterToString(productId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetProductById_0", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Product>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Product) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Product)));
-        }
-
-        /// <summary>
-        /// Get products by productId 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>Task of Product</returns>
-        public async System.Threading.Tasks.Task<Product> GetProductById_0Async (string appId, string productId)
-        {
-             ApiResponse<Product> localVarResponse = await GetProductById_0AsyncWithHttpInfo(appId, productId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get products by productId 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="productId"></param>
-        /// <returns>Task of ApiResponse (Product)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Product>> GetProductById_0AsyncWithHttpInfo (string appId, string productId)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling ProductsApi->GetProductById_0");
-            // verify the required parameter 'productId' is set
-            if (productId == null)
-                throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->GetProductById_0");
-
-            var localVarPath = "/api/v1.0/{appId}/catalog/products/{productId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (productId != null) localVarPathParams.Add("productId", this.Configuration.ApiClient.ParameterToString(productId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetProductById_0", localVarResponse);
                 if (exception != null) throw exception;
             }
 
