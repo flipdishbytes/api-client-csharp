@@ -31,18 +31,59 @@ namespace Flipdish.Model
     public partial class CreateProduct :  IEquatable<CreateProduct>, IValidatableObject
     {
         /// <summary>
+        /// Product Type (SimpleProduct, Modifier, ModifierGroup, etc)
+        /// </summary>
+        /// <value>Product Type (SimpleProduct, Modifier, ModifierGroup, etc)</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ProductTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Unknown for value: Unknown
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown = 1,
+            
+            /// <summary>
+            /// Enum SimpleProduct for value: SimpleProduct
+            /// </summary>
+            [EnumMember(Value = "SimpleProduct")]
+            SimpleProduct = 2,
+            
+            /// <summary>
+            /// Enum Modifier for value: Modifier
+            /// </summary>
+            [EnumMember(Value = "Modifier")]
+            Modifier = 3,
+            
+            /// <summary>
+            /// Enum ModifierGroup for value: ModifierGroup
+            /// </summary>
+            [EnumMember(Value = "ModifierGroup")]
+            ModifierGroup = 4
+        }
+
+        /// <summary>
+        /// Product Type (SimpleProduct, Modifier, ModifierGroup, etc)
+        /// </summary>
+        /// <value>Product Type (SimpleProduct, Modifier, ModifierGroup, etc)</value>
+        [DataMember(Name="ProductType", EmitDefaultValue=false)]
+        public ProductTypeEnum? ProductType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="CreateProduct" /> class.
         /// </summary>
         /// <param name="sku">Stock Keeping Unit (SKU).</param>
         /// <param name="name">Product name.</param>
         /// <param name="description">Product description.</param>
         /// <param name="price">Product price.</param>
-        public CreateProduct(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?))
+        /// <param name="productType">Product Type (SimpleProduct, Modifier, ModifierGroup, etc).</param>
+        public CreateProduct(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), ProductTypeEnum? productType = default(ProductTypeEnum?))
         {
             this.Sku = sku;
             this.Name = name;
             this.Description = description;
             this.Price = price;
+            this.ProductType = productType;
         }
         
         /// <summary>
@@ -73,6 +114,7 @@ namespace Flipdish.Model
         [DataMember(Name="Price", EmitDefaultValue=false)]
         public double? Price { get; set; }
 
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -85,6 +127,7 @@ namespace Flipdish.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
+            sb.Append("  ProductType: ").Append(ProductType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,6 +181,11 @@ namespace Flipdish.Model
                     this.Price == input.Price ||
                     (this.Price != null &&
                     this.Price.Equals(input.Price))
+                ) && 
+                (
+                    this.ProductType == input.ProductType ||
+                    (this.ProductType != null &&
+                    this.ProductType.Equals(input.ProductType))
                 );
         }
 
@@ -158,6 +206,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Price != null)
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
+                if (this.ProductType != null)
+                    hashCode = hashCode * 59 + this.ProductType.GetHashCode();
                 return hashCode;
             }
         }
