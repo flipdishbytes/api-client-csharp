@@ -783,6 +783,7 @@ namespace Flipdish.Model
         /// <param name="preOrderDeliveryEnabled">Is PerOrder Enabled for Delivery.</param>
         /// <param name="preOrderPickupEnabled">Is PerOrder Enabled for Pickup.</param>
         /// <param name="logoUrl">Url for logo image.</param>
+        /// <param name="fraudPreventionStrategy">Fraud Prevention Strategy.</param>
         /// <param name="phoneNumber">Phone number.</param>
         /// <param name="alwaysAppearOpen">True if the store always appears open.</param>
         /// <param name="preOrderEnabled">True if the store accepts pre-orders.</param>
@@ -812,7 +813,7 @@ namespace Flipdish.Model
         /// <param name="name">Name.</param>
         /// <param name="emailAddress">Email address (visible to customers).</param>
         /// <param name="staffLanguage">Staff Language (used for communication with the staff)  Emails, Printouts etc.</param>
-        public Store(int? storeId = default(int?), int? storeGroupId = default(int?), StoreAddress address = default(StoreAddress), List<DeliveryZone> deliveryZones = default(List<DeliveryZone>), string apmPhoneNumber = default(string), List<BusinessHoursPeriod> pickupHours = default(List<BusinessHoursPeriod>), List<BusinessHoursPeriod> deliveryHours = default(List<BusinessHoursPeriod>), int? menuId = default(int?), string orderConfirmationMessageOverrideDelivery = default(string), string orderConfirmationMessageOverridePickup = default(string), PrintoutLayoutTypeEnum? printoutLayoutType = default(PrintoutLayoutTypeEnum?), List<StoreNote> storeNotes = default(List<StoreNote>), string microsoftTimeZone = default(string), string ianaTimeZone = default(string), CurrencyEnum? currency = default(CurrencyEnum?), bool? preOrderDeliveryEnabled = default(bool?), bool? preOrderPickupEnabled = default(bool?), string logoUrl = default(string), string phoneNumber = default(string), bool? alwaysAppearOpen = default(bool?), bool? preOrderEnabled = default(bool?), bool? takeOutEnabled = default(bool?), bool? tableServiceEnabled = default(bool?), bool? dineInEnabled = default(bool?), bool? allowPreOrdersAndTableService = default(bool?), bool? pickupEnabled = default(bool?), bool? deliveryEnabled = default(bool?), bool? cardOrderDeliveryEnabled = default(bool?), bool? cashOrdersDeliveryEnabled = default(bool?), bool? cardOrdersPickupEnabled = default(bool?), bool? cashOrdersPickupEnabled = default(bool?), bool? tipsEnabled = default(bool?), bool? automaticallyAcceptOrders = default(bool?), bool? openForDelivery = default(bool?), bool? openForPickup = default(bool?), double? minimumPickupOrderAmount = default(double?), bool? requireCustomerNameForPickup = default(bool?), bool? gdprCustomerPhoneNumbers = default(bool?), bool? requireCustomerNameForDelivery = default(bool?), bool? allowChefNotes = default(bool?), bool? etaInPickupConfirmationSmsEnabled = default(bool?), bool? etaInDeliveryConfirmationSmsEnabled = default(bool?), bool? isArchived = default(bool?), bool? isPublished = default(bool?), string name = default(string), string emailAddress = default(string), string staffLanguage = default(string))
+        public Store(int? storeId = default(int?), int? storeGroupId = default(int?), StoreAddress address = default(StoreAddress), List<DeliveryZone> deliveryZones = default(List<DeliveryZone>), string apmPhoneNumber = default(string), List<BusinessHoursPeriod> pickupHours = default(List<BusinessHoursPeriod>), List<BusinessHoursPeriod> deliveryHours = default(List<BusinessHoursPeriod>), int? menuId = default(int?), string orderConfirmationMessageOverrideDelivery = default(string), string orderConfirmationMessageOverridePickup = default(string), PrintoutLayoutTypeEnum? printoutLayoutType = default(PrintoutLayoutTypeEnum?), List<StoreNote> storeNotes = default(List<StoreNote>), string microsoftTimeZone = default(string), string ianaTimeZone = default(string), CurrencyEnum? currency = default(CurrencyEnum?), bool? preOrderDeliveryEnabled = default(bool?), bool? preOrderPickupEnabled = default(bool?), string logoUrl = default(string), string fraudPreventionStrategy = default(string), string phoneNumber = default(string), bool? alwaysAppearOpen = default(bool?), bool? preOrderEnabled = default(bool?), bool? takeOutEnabled = default(bool?), bool? tableServiceEnabled = default(bool?), bool? dineInEnabled = default(bool?), bool? allowPreOrdersAndTableService = default(bool?), bool? pickupEnabled = default(bool?), bool? deliveryEnabled = default(bool?), bool? cardOrderDeliveryEnabled = default(bool?), bool? cashOrdersDeliveryEnabled = default(bool?), bool? cardOrdersPickupEnabled = default(bool?), bool? cashOrdersPickupEnabled = default(bool?), bool? tipsEnabled = default(bool?), bool? automaticallyAcceptOrders = default(bool?), bool? openForDelivery = default(bool?), bool? openForPickup = default(bool?), double? minimumPickupOrderAmount = default(double?), bool? requireCustomerNameForPickup = default(bool?), bool? gdprCustomerPhoneNumbers = default(bool?), bool? requireCustomerNameForDelivery = default(bool?), bool? allowChefNotes = default(bool?), bool? etaInPickupConfirmationSmsEnabled = default(bool?), bool? etaInDeliveryConfirmationSmsEnabled = default(bool?), bool? isArchived = default(bool?), bool? isPublished = default(bool?), string name = default(string), string emailAddress = default(string), string staffLanguage = default(string))
         {
             this.StoreId = storeId;
             this.StoreGroupId = storeGroupId;
@@ -832,6 +833,7 @@ namespace Flipdish.Model
             this.PreOrderDeliveryEnabled = preOrderDeliveryEnabled;
             this.PreOrderPickupEnabled = preOrderPickupEnabled;
             this.LogoUrl = logoUrl;
+            this.FraudPreventionStrategy = fraudPreventionStrategy;
             this.PhoneNumber = phoneNumber;
             this.AlwaysAppearOpen = alwaysAppearOpen;
             this.PreOrderEnabled = preOrderEnabled;
@@ -976,6 +978,13 @@ namespace Flipdish.Model
         /// <value>Url for logo image</value>
         [DataMember(Name="LogoUrl", EmitDefaultValue=false)]
         public string LogoUrl { get; set; }
+
+        /// <summary>
+        /// Fraud Prevention Strategy
+        /// </summary>
+        /// <value>Fraud Prevention Strategy</value>
+        [DataMember(Name="FraudPreventionStrategy", EmitDefaultValue=false)]
+        public string FraudPreventionStrategy { get; set; }
 
         /// <summary>
         /// Phone number
@@ -1206,6 +1215,7 @@ namespace Flipdish.Model
             sb.Append("  PreOrderDeliveryEnabled: ").Append(PreOrderDeliveryEnabled).Append("\n");
             sb.Append("  PreOrderPickupEnabled: ").Append(PreOrderPickupEnabled).Append("\n");
             sb.Append("  LogoUrl: ").Append(LogoUrl).Append("\n");
+            sb.Append("  FraudPreventionStrategy: ").Append(FraudPreventionStrategy).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  AlwaysAppearOpen: ").Append(AlwaysAppearOpen).Append("\n");
             sb.Append("  PreOrderEnabled: ").Append(PreOrderEnabled).Append("\n");
@@ -1358,6 +1368,11 @@ namespace Flipdish.Model
                     this.LogoUrl == input.LogoUrl ||
                     (this.LogoUrl != null &&
                     this.LogoUrl.Equals(input.LogoUrl))
+                ) && 
+                (
+                    this.FraudPreventionStrategy == input.FraudPreventionStrategy ||
+                    (this.FraudPreventionStrategy != null &&
+                    this.FraudPreventionStrategy.Equals(input.FraudPreventionStrategy))
                 ) && 
                 (
                     this.PhoneNumber == input.PhoneNumber ||
@@ -1551,6 +1566,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PreOrderPickupEnabled.GetHashCode();
                 if (this.LogoUrl != null)
                     hashCode = hashCode * 59 + this.LogoUrl.GetHashCode();
+                if (this.FraudPreventionStrategy != null)
+                    hashCode = hashCode * 59 + this.FraudPreventionStrategy.GetHashCode();
                 if (this.PhoneNumber != null)
                     hashCode = hashCode * 59 + this.PhoneNumber.GetHashCode();
                 if (this.AlwaysAppearOpen != null)
