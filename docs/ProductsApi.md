@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**DeleteProductImage**](ProductsApi.md#deleteproductimage) | **DELETE** /api/v1.0/{appId}/catalog/products/{productId}/image | 
 [**DuplicateProduct**](ProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/duplicate | Duplicate a product
 [**GetProductById**](ProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/products/{productId} | Get products by productId
-[**GetProducts**](ProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get products by app name id
+[**GetProducts**](ProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get paginated products by app name id filtered by product types
 [**UpdateProduct**](ProductsApi.md#updateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId} | Update a product
 [**UploadProductImage**](ProductsApi.md#uploadproductimage) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/image | Upload a Product Image
 
@@ -333,9 +333,9 @@ Name | Type | Description  | Notes
 
 <a name="getproducts"></a>
 # **GetProducts**
-> RestApiPaginationResultProduct GetProducts (string appId, string searchTerm = null, int? page = null, int? limit = null)
+> RestApiPaginationResultProduct GetProducts (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null)
 
-Get products by app name id
+Get paginated products by app name id filtered by product types
 
 ### Example
 ```csharp
@@ -356,14 +356,15 @@ namespace Example
 
             var apiInstance = new ProductsApi();
             var appId = appId_example;  // string | 
+            var productTypes = productTypes_example;  // List<string> | 
             var searchTerm = searchTerm_example;  // string |  (optional) 
             var page = 56;  // int? |  (optional) 
             var limit = 56;  // int? |  (optional) 
 
             try
             {
-                // Get products by app name id
-                RestApiPaginationResultProduct result = apiInstance.GetProducts(appId, searchTerm, page, limit);
+                // Get paginated products by app name id filtered by product types
+                RestApiPaginationResultProduct result = apiInstance.GetProducts(appId, productTypes, searchTerm, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -380,6 +381,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
+ **productTypes** | **List&lt;string&gt;**|  | 
  **searchTerm** | **string**|  | [optional] 
  **page** | **int?**|  | [optional] 
  **limit** | **int?**|  | [optional] 

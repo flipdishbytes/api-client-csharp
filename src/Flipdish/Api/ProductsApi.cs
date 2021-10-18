@@ -140,32 +140,34 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Product</returns>
         ApiResponse<Product> GetProductByIdWithHttpInfo (string appId, string productId);
         /// <summary>
-        /// Get products by app name id
+        /// Get paginated products by app name id filtered by product types
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="productTypes"></param>
         /// <param name="searchTerm"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultProduct</returns>
-        RestApiPaginationResultProduct GetProducts (string appId, string searchTerm = null, int? page = null, int? limit = null);
+        RestApiPaginationResultProduct GetProducts (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get products by app name id
+        /// Get paginated products by app name id filtered by product types
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="productTypes"></param>
         /// <param name="searchTerm"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultProduct</returns>
-        ApiResponse<RestApiPaginationResultProduct> GetProductsWithHttpInfo (string appId, string searchTerm = null, int? page = null, int? limit = null);
+        ApiResponse<RestApiPaginationResultProduct> GetProductsWithHttpInfo (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null);
         /// <summary>
         /// Update a product
         /// </summary>
@@ -334,32 +336,34 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (Product)</returns>
         System.Threading.Tasks.Task<ApiResponse<Product>> GetProductByIdAsyncWithHttpInfo (string appId, string productId);
         /// <summary>
-        /// Get products by app name id
+        /// Get paginated products by app name id filtered by product types
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="productTypes"></param>
         /// <param name="searchTerm"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultProduct</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultProduct> GetProductsAsync (string appId, string searchTerm = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultProduct> GetProductsAsync (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get products by app name id
+        /// Get paginated products by app name id filtered by product types
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="productTypes"></param>
         /// <param name="searchTerm"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultProduct)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultProduct>> GetProductsAsyncWithHttpInfo (string appId, string searchTerm = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultProduct>> GetProductsAsyncWithHttpInfo (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null);
         /// <summary>
         /// Update a product
         /// </summary>
@@ -1346,34 +1350,39 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get products by app name id 
+        /// Get paginated products by app name id filtered by product types 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="productTypes"></param>
         /// <param name="searchTerm"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultProduct</returns>
-        public RestApiPaginationResultProduct GetProducts (string appId, string searchTerm = null, int? page = null, int? limit = null)
+        public RestApiPaginationResultProduct GetProducts (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultProduct> localVarResponse = GetProductsWithHttpInfo(appId, searchTerm, page, limit);
+             ApiResponse<RestApiPaginationResultProduct> localVarResponse = GetProductsWithHttpInfo(appId, productTypes, searchTerm, page, limit);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get products by app name id 
+        /// Get paginated products by app name id filtered by product types 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="productTypes"></param>
         /// <param name="searchTerm"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultProduct</returns>
-        public ApiResponse< RestApiPaginationResultProduct > GetProductsWithHttpInfo (string appId, string searchTerm = null, int? page = null, int? limit = null)
+        public ApiResponse< RestApiPaginationResultProduct > GetProductsWithHttpInfo (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ProductsApi->GetProducts");
+            // verify the required parameter 'productTypes' is set
+            if (productTypes == null)
+                throw new ApiException(400, "Missing required parameter 'productTypes' when calling ProductsApi->GetProducts");
 
             var localVarPath = "/api/v1.0/{appId}/catalog/products";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1400,6 +1409,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (productTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "productTypes", productTypes)); // query parameter
             if (searchTerm != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchTerm", searchTerm)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
@@ -1430,35 +1440,40 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get products by app name id 
+        /// Get paginated products by app name id filtered by product types 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="productTypes"></param>
         /// <param name="searchTerm"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultProduct</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultProduct> GetProductsAsync (string appId, string searchTerm = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultProduct> GetProductsAsync (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultProduct> localVarResponse = await GetProductsAsyncWithHttpInfo(appId, searchTerm, page, limit);
+             ApiResponse<RestApiPaginationResultProduct> localVarResponse = await GetProductsAsyncWithHttpInfo(appId, productTypes, searchTerm, page, limit);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get products by app name id 
+        /// Get paginated products by app name id filtered by product types 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="productTypes"></param>
         /// <param name="searchTerm"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultProduct)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultProduct>> GetProductsAsyncWithHttpInfo (string appId, string searchTerm = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultProduct>> GetProductsAsyncWithHttpInfo (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ProductsApi->GetProducts");
+            // verify the required parameter 'productTypes' is set
+            if (productTypes == null)
+                throw new ApiException(400, "Missing required parameter 'productTypes' when calling ProductsApi->GetProducts");
 
             var localVarPath = "/api/v1.0/{appId}/catalog/products";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1485,6 +1500,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (productTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "productTypes", productTypes)); // query parameter
             if (searchTerm != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchTerm", searchTerm)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
