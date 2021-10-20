@@ -31,6 +31,45 @@ namespace Flipdish.Model
     public partial class UpdateProduct :  IEquatable<UpdateProduct>, IValidatableObject
     {
         /// <summary>
+        /// Product Type (SimpleProduct, Modifier, ModifierGroup, etc)
+        /// </summary>
+        /// <value>Product Type (SimpleProduct, Modifier, ModifierGroup, etc)</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ProductTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Unknown for value: Unknown
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown = 1,
+            
+            /// <summary>
+            /// Enum SimpleProduct for value: SimpleProduct
+            /// </summary>
+            [EnumMember(Value = "SimpleProduct")]
+            SimpleProduct = 2,
+            
+            /// <summary>
+            /// Enum Modifier for value: Modifier
+            /// </summary>
+            [EnumMember(Value = "Modifier")]
+            Modifier = 3,
+            
+            /// <summary>
+            /// Enum ModifierGroup for value: ModifierGroup
+            /// </summary>
+            [EnumMember(Value = "ModifierGroup")]
+            ModifierGroup = 4
+        }
+
+        /// <summary>
+        /// Product Type (SimpleProduct, Modifier, ModifierGroup, etc)
+        /// </summary>
+        /// <value>Product Type (SimpleProduct, Modifier, ModifierGroup, etc)</value>
+        [DataMember(Name="ProductType", EmitDefaultValue=false)]
+        public ProductTypeEnum? ProductType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="UpdateProduct" /> class.
         /// </summary>
         /// <param name="sku">Stock Keeping Unit (SKU).</param>
@@ -38,13 +77,15 @@ namespace Flipdish.Model
         /// <param name="description">Product description.</param>
         /// <param name="price">Product price.</param>
         /// <param name="alcohol">Product contains alcohol.</param>
-        public UpdateProduct(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), bool? alcohol = default(bool?))
+        /// <param name="productType">Product Type (SimpleProduct, Modifier, ModifierGroup, etc).</param>
+        public UpdateProduct(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), bool? alcohol = default(bool?), ProductTypeEnum? productType = default(ProductTypeEnum?))
         {
             this.Sku = sku;
             this.Name = name;
             this.Description = description;
             this.Price = price;
             this.Alcohol = alcohol;
+            this.ProductType = productType;
         }
         
         /// <summary>
@@ -82,6 +123,7 @@ namespace Flipdish.Model
         [DataMember(Name="Alcohol", EmitDefaultValue=false)]
         public bool? Alcohol { get; set; }
 
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -95,6 +137,7 @@ namespace Flipdish.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("  Alcohol: ").Append(Alcohol).Append("\n");
+            sb.Append("  ProductType: ").Append(ProductType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -153,6 +196,11 @@ namespace Flipdish.Model
                     this.Alcohol == input.Alcohol ||
                     (this.Alcohol != null &&
                     this.Alcohol.Equals(input.Alcohol))
+                ) && 
+                (
+                    this.ProductType == input.ProductType ||
+                    (this.ProductType != null &&
+                    this.ProductType.Equals(input.ProductType))
                 );
         }
 
@@ -175,6 +223,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
                 if (this.Alcohol != null)
                     hashCode = hashCode * 59 + this.Alcohol.GetHashCode();
+                if (this.ProductType != null)
+                    hashCode = hashCode * 59 + this.ProductType.GetHashCode();
                 return hashCode;
             }
         }
