@@ -91,6 +91,39 @@ namespace Flipdish.Model
         [DataMember(Name="StoreSelectorType", EmitDefaultValue=false)]
         public StoreSelectorTypeEnum StoreSelectorType { get; set; }
         /// <summary>
+        /// Application verification status
+        /// </summary>
+        /// <value>Application verification status</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum VerificationStatusEnum
+        {
+            
+            /// <summary>
+            /// Enum Draft for value: Draft
+            /// </summary>
+            [EnumMember(Value = "Draft")]
+            Draft = 1,
+            
+            /// <summary>
+            /// Enum Submitted for value: Submitted
+            /// </summary>
+            [EnumMember(Value = "Submitted")]
+            Submitted = 2,
+            
+            /// <summary>
+            /// Enum Verified for value: Verified
+            /// </summary>
+            [EnumMember(Value = "Verified")]
+            Verified = 3
+        }
+
+        /// <summary>
+        /// Application verification status
+        /// </summary>
+        /// <value>Application verification status</value>
+        [DataMember(Name="VerificationStatus", EmitDefaultValue=false)]
+        public VerificationStatusEnum VerificationStatus { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="AppConfigurationDetail" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -112,11 +145,11 @@ namespace Flipdish.Model
         /// <param name="name">Name (required).</param>
         /// <param name="description">Description (required).</param>
         /// <param name="logo">Logo.</param>
-        /// <param name="isVerified">Is application verified for use in the App Store.</param>
+        /// <param name="verificationStatus">Application verification status (required).</param>
         /// <param name="tags">Tags (required).</param>
         /// <param name="regions">Regions (required).</param>
         /// <param name="developerName">Developer Name.</param>
-        public AppConfigurationDetail(string id = default(string), string appId = default(string), string appStoreAppId = default(string), bool? isEnabled = default(bool?), List<int?> physicalRestaurants = default(List<int?>), List<Setting> settings = default(List<Setting>), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string setupInstructions = default(string), string externalSetupLink = default(string), string name = default(string), string description = default(string), string logo = default(string), bool? isVerified = default(bool?), List<string> tags = default(List<string>), List<string> regions = default(List<string>), string developerName = default(string))
+        public AppConfigurationDetail(string id = default(string), string appId = default(string), string appStoreAppId = default(string), bool? isEnabled = default(bool?), List<int?> physicalRestaurants = default(List<int?>), List<Setting> settings = default(List<Setting>), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string setupInstructions = default(string), string externalSetupLink = default(string), string name = default(string), string description = default(string), string logo = default(string), VerificationStatusEnum verificationStatus = default(VerificationStatusEnum), List<string> tags = default(List<string>), List<string> regions = default(List<string>), string developerName = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -190,6 +223,15 @@ namespace Flipdish.Model
             {
                 this.Description = description;
             }
+            // to ensure "verificationStatus" is required (not null)
+            if (verificationStatus == null)
+            {
+                throw new InvalidDataException("verificationStatus is a required property for AppConfigurationDetail and cannot be null");
+            }
+            else
+            {
+                this.VerificationStatus = verificationStatus;
+            }
             // to ensure "tags" is required (not null)
             if (tags == null)
             {
@@ -214,7 +256,6 @@ namespace Flipdish.Model
             this.SetupInstructions = setupInstructions;
             this.ExternalSetupLink = externalSetupLink;
             this.Logo = logo;
-            this.IsVerified = isVerified;
             this.DeveloperName = developerName;
         }
         
@@ -304,12 +345,6 @@ namespace Flipdish.Model
         [DataMember(Name="Logo", EmitDefaultValue=false)]
         public string Logo { get; set; }
 
-        /// <summary>
-        /// Is application verified for use in the App Store
-        /// </summary>
-        /// <value>Is application verified for use in the App Store</value>
-        [DataMember(Name="IsVerified", EmitDefaultValue=false)]
-        public bool? IsVerified { get; set; }
 
         /// <summary>
         /// Tags
@@ -354,7 +389,7 @@ namespace Flipdish.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Logo: ").Append(Logo).Append("\n");
-            sb.Append("  IsVerified: ").Append(IsVerified).Append("\n");
+            sb.Append("  VerificationStatus: ").Append(VerificationStatus).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  Regions: ").Append(Regions).Append("\n");
             sb.Append("  DeveloperName: ").Append(DeveloperName).Append("\n");
@@ -463,9 +498,9 @@ namespace Flipdish.Model
                     this.Logo.Equals(input.Logo))
                 ) && 
                 (
-                    this.IsVerified == input.IsVerified ||
-                    (this.IsVerified != null &&
-                    this.IsVerified.Equals(input.IsVerified))
+                    this.VerificationStatus == input.VerificationStatus ||
+                    (this.VerificationStatus != null &&
+                    this.VerificationStatus.Equals(input.VerificationStatus))
                 ) && 
                 (
                     this.Tags == input.Tags ||
@@ -521,8 +556,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Logo != null)
                     hashCode = hashCode * 59 + this.Logo.GetHashCode();
-                if (this.IsVerified != null)
-                    hashCode = hashCode * 59 + this.IsVerified.GetHashCode();
+                if (this.VerificationStatus != null)
+                    hashCode = hashCode * 59 + this.VerificationStatus.GetHashCode();
                 if (this.Tags != null)
                     hashCode = hashCode * 59 + this.Tags.GetHashCode();
                 if (this.Regions != null)

@@ -25,6 +25,29 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Update app store app verification
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="verificationStatus">New Verification Status</param>
+        /// <returns></returns>
+        void AppVerificationUpdate (string appStoreAppId, string verificationStatus);
+
+        /// <summary>
+        /// Update app store app verification
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="verificationStatus">New Verification Status</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> AppVerificationUpdateWithHttpInfo (string appStoreAppId, string verificationStatus);
+        /// <summary>
         /// Create app store app
         /// </summary>
         /// <remarks>
@@ -160,6 +183,29 @@ namespace Flipdish.Api
         ApiResponse<Object> UploadAppStoreAppLogoWithHttpInfo (string appStoreAppId, System.IO.Stream image);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Update app store app verification
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="verificationStatus">New Verification Status</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task AppVerificationUpdateAsync (string appStoreAppId, string verificationStatus);
+
+        /// <summary>
+        /// Update app store app verification
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="verificationStatus">New Verification Status</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> AppVerificationUpdateAsyncWithHttpInfo (string appStoreAppId, string verificationStatus);
         /// <summary>
         /// Create app store app
         /// </summary>
@@ -392,6 +438,191 @@ namespace Flipdish.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="verificationStatus">New Verification Status</param>
+        /// <returns></returns>
+        public void AppVerificationUpdate (string appStoreAppId, string verificationStatus)
+        {
+             AppVerificationUpdateWithHttpInfo(appStoreAppId, verificationStatus);
+        }
+
+        /// <summary>
+        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="verificationStatus">New Verification Status</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> AppVerificationUpdateWithHttpInfo (string appStoreAppId, string verificationStatus)
+        {
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreApi->AppVerificationUpdate");
+            // verify the required parameter 'verificationStatus' is set
+            if (verificationStatus == null)
+                throw new ApiException(400, "Missing required parameter 'verificationStatus' when calling AppStoreApi->AppVerificationUpdate");
+
+            var localVarPath = "/api/v1.0/appstore/apps/{appStoreAppId}/verification";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+            if (verificationStatus != null && verificationStatus.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(verificationStatus); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = verificationStatus; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AppVerificationUpdate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="verificationStatus">New Verification Status</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task AppVerificationUpdateAsync (string appStoreAppId, string verificationStatus)
+        {
+             await AppVerificationUpdateAsyncWithHttpInfo(appStoreAppId, verificationStatus);
+
+        }
+
+        /// <summary>
+        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="verificationStatus">New Verification Status</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AppVerificationUpdateAsyncWithHttpInfo (string appStoreAppId, string verificationStatus)
+        {
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreApi->AppVerificationUpdate");
+            // verify the required parameter 'verificationStatus' is set
+            if (verificationStatus == null)
+                throw new ApiException(400, "Missing required parameter 'verificationStatus' when calling AppStoreApi->AppVerificationUpdate");
+
+            var localVarPath = "/api/v1.0/appstore/apps/{appStoreAppId}/verification";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+            if (verificationStatus != null && verificationStatus.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(verificationStatus); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = verificationStatus; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AppVerificationUpdate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>

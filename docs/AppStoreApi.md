@@ -4,6 +4,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**AppVerificationUpdate**](AppStoreApi.md#appverificationupdate) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId}/verification | Update app store app verification
 [**CreateAppStoreApp**](AppStoreApi.md#createappstoreapp) | **POST** /api/v1.0/appstore/apps | Create app store app
 [**DeleteAppStoreApp**](AppStoreApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/appstore/apps/{appStoreAppId} | Delete app store app
 [**GetAppStoreApp**](AppStoreApi.md#getappstoreapp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | Get app store app details
@@ -11,6 +12,71 @@ Method | HTTP request | Description
 [**UpdateAppStoreApp**](AppStoreApi.md#updateappstoreapp) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId} | Update app store app
 [**UploadAppStoreAppLogo**](AppStoreApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/appstore/apps/{appStoreAppId}/logo | Upload the app store app logo \\ icon
 
+
+<a name="appverificationupdate"></a>
+# **AppVerificationUpdate**
+> void AppVerificationUpdate (string appStoreAppId, string verificationStatus)
+
+Update app store app verification
+
+[BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class AppVerificationUpdateExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppStoreApi();
+            var appStoreAppId = appStoreAppId_example;  // string | App Store App Id
+            var verificationStatus = verificationStatus_example;  // string | New Verification Status
+
+            try
+            {
+                // Update app store app verification
+                apiInstance.AppVerificationUpdate(appStoreAppId, verificationStatus);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppStoreApi.AppVerificationUpdate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appStoreAppId** | **string**| App Store App Id | 
+ **verificationStatus** | **string**| New Verification Status | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="createappstoreapp"></a>
 # **CreateAppStoreApp**

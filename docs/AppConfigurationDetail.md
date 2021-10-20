@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **Name** | **string** | Name | 
 **Description** | **string** | Description | 
 **Logo** | **string** | Logo | [optional] 
-**IsVerified** | **bool?** | Is application verified for use in the App Store | [optional] 
+**VerificationStatus** | **string** | Application verification status | 
 **Tags** | **List&lt;string&gt;** | Tags | 
 **Regions** | **List&lt;string&gt;** | Regions | 
 **DeveloperName** | **string** | Developer Name | [optional] 
