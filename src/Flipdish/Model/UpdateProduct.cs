@@ -19,6 +19,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using JsonSubTypes;
 using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
@@ -28,6 +29,10 @@ namespace Flipdish.Model
     /// Update Product
     /// </summary>
     [DataContract]
+    [JsonConverter(typeof(JsonSubtypes), "ProductType")]
+    [JsonSubtypes.KnownSubType(typeof(UpdateModifierGroup), "UpdateModifierGroup")]
+    [JsonSubtypes.KnownSubType(typeof(UpdateModifier), "UpdateModifier")]
+    [JsonSubtypes.KnownSubType(typeof(UpdateSimpleProduct), "UpdateSimpleProduct")]
     public partial class UpdateProduct :  IEquatable<UpdateProduct>, IValidatableObject
     {
         /// <summary>
@@ -68,7 +73,12 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Product Type (SimpleProduct, Modifier, ModifierGroup, etc)</value>
         [DataMember(Name="ProductType", EmitDefaultValue=false)]
-        public ProductTypeEnum? ProductType { get; set; }
+        public ProductTypeEnum ProductType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UpdateProduct" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UpdateProduct() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateProduct" /> class.
         /// </summary>
@@ -77,15 +87,23 @@ namespace Flipdish.Model
         /// <param name="description">Product description.</param>
         /// <param name="price">Product price.</param>
         /// <param name="alcohol">Product contains alcohol.</param>
-        /// <param name="productType">Product Type (SimpleProduct, Modifier, ModifierGroup, etc).</param>
-        public UpdateProduct(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), bool? alcohol = default(bool?), ProductTypeEnum? productType = default(ProductTypeEnum?))
+        /// <param name="productType">Product Type (SimpleProduct, Modifier, ModifierGroup, etc) (required).</param>
+        public UpdateProduct(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), bool? alcohol = default(bool?), ProductTypeEnum productType = default(ProductTypeEnum))
         {
+            // to ensure "productType" is required (not null)
+            if (productType == null)
+            {
+                throw new InvalidDataException("productType is a required property for UpdateProduct and cannot be null");
+            }
+            else
+            {
+                this.ProductType = productType;
+            }
             this.Sku = sku;
             this.Name = name;
             this.Description = description;
             this.Price = price;
             this.Alcohol = alcohol;
-            this.ProductType = productType;
         }
         
         /// <summary>
@@ -235,6 +253,16 @@ namespace Flipdish.Model
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> BaseValidate(ValidationContext validationContext)
         {
             // Sku (string) maxLength
             if(this.Sku != null && this.Sku.Length > 30)

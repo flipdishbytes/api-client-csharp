@@ -19,6 +19,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using JsonSubTypes;
 using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
@@ -28,6 +29,10 @@ namespace Flipdish.Model
     /// Product Information
     /// </summary>
     [DataContract]
+    [JsonConverter(typeof(JsonSubtypes), "ProductType")]
+    [JsonSubtypes.KnownSubType(typeof(Modifier), "Modifier")]
+    [JsonSubtypes.KnownSubType(typeof(SimpleProduct), "SimpleProduct")]
+    [JsonSubtypes.KnownSubType(typeof(ModifierGroup), "ModifierGroup")]
     public partial class Product :  IEquatable<Product>, IValidatableObject
     {
         /// <summary>
@@ -68,7 +73,12 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Product Type (SimpleProduct, Modifier, ModifierGroup, etc)</value>
         [DataMember(Name="ProductType", EmitDefaultValue=false)]
-        public ProductTypeEnum? ProductType { get; set; }
+        public ProductTypeEnum ProductType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Product" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected Product() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="Product" /> class.
         /// </summary>
@@ -284,6 +294,16 @@ namespace Flipdish.Model
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> BaseValidate(ValidationContext validationContext)
         {
             // ProductId (string) maxLength
             if(this.ProductId != null && this.ProductId.Length > 30)
