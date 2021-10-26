@@ -25,48 +25,11 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// CreateSimpleProduct
+    /// Information to create a Simple Product
     /// </summary>
     [DataContract]
     public partial class CreateSimpleProduct : CreateProduct,  IEquatable<CreateSimpleProduct>, IValidatableObject
     {
-        /// <summary>
-        /// Defines productType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum ProductTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum Unknown for value: Unknown
-            /// </summary>
-            [EnumMember(Value = "Unknown")]
-            Unknown = 1,
-            
-            /// <summary>
-            /// Enum SimpleProduct for value: SimpleProduct
-            /// </summary>
-            [EnumMember(Value = "SimpleProduct")]
-            SimpleProduct = 2,
-            
-            /// <summary>
-            /// Enum Modifier for value: Modifier
-            /// </summary>
-            [EnumMember(Value = "Modifier")]
-            Modifier = 3,
-            
-            /// <summary>
-            /// Enum ModifierGroup for value: ModifierGroup
-            /// </summary>
-            [EnumMember(Value = "ModifierGroup")]
-            ModifierGroup = 4
-        }
-
-        /// <summary>
-        /// Gets or Sets productType
-        /// </summary>
-        [DataMember(Name="productType", EmitDefaultValue=false)]
-        public ProductTypeEnum? productType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSimpleProduct" /> class.
         /// </summary>
@@ -75,12 +38,18 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSimpleProduct" /> class.
         /// </summary>
-        /// <param name="productType">productType.</param>
-        public CreateSimpleProduct(ProductTypeEnum? productType = default(ProductTypeEnum?), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), ProductTypeEnum productType = "CreateSimpleProduct") : base(sku, name, description, price, productType)
+        /// <param name="subProducts">Collection of products associated with this product.</param>
+        public CreateSimpleProduct(List<SimpleProductSubProduct> subProducts = default(List<SimpleProductSubProduct>), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), ProductTypeEnum productType = "CreateSimpleProduct") : base(sku, name, description, price, productType)
         {
-            this.productType = productType;
+            this.subProducts = subProducts;
         }
         
+        /// <summary>
+        /// Collection of products associated with this product
+        /// </summary>
+        /// <value>Collection of products associated with this product</value>
+        [DataMember(Name="subProducts", EmitDefaultValue=false)]
+        public List<SimpleProductSubProduct> subProducts { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +60,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class CreateSimpleProduct {\n");
             sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
-            sb.Append("  productType: ").Append(productType).Append("\n");
+            sb.Append("  subProducts: ").Append(subProducts).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -127,9 +96,9 @@ namespace Flipdish.Model
 
             return base.Equals(input) && 
                 (
-                    this.productType == input.productType ||
-                    (this.productType != null &&
-                    this.productType.Equals(input.productType))
+                    this.subProducts == input.subProducts ||
+                    this.subProducts != null &&
+                    this.subProducts.SequenceEqual(input.subProducts)
                 );
         }
 
@@ -142,8 +111,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = base.GetHashCode();
-                if (this.productType != null)
-                    hashCode = hashCode * 59 + this.productType.GetHashCode();
+                if (this.subProducts != null)
+                    hashCode = hashCode * 59 + this.subProducts.GetHashCode();
                 return hashCode;
             }
         }

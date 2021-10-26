@@ -243,6 +243,7 @@ Class | Method | HTTP request | Description
 *LightspeedApi* | [**LightspeedGenerateMenu**](docs/LightspeedApi.md#lightspeedgeneratemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
 *LightspeedApi* | [**LightspeedGetStoreSettings**](docs/LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
 *LightspeedApi* | [**LightspeedSaveStoreSettings**](docs/LightspeedApi.md#lightspeedsavestoresettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
+*LookerSingleSignOnApi* | [**GetLookerCustomerReportingEmbedUrl**](docs/LookerSingleSignOnApi.md#getlookercustomerreportingembedurl) | **GET** /api/v1.0/{appId}/looker/sso/CustomerReporting | 
 *MenuOptionSetItemsApi* | [**AddMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#addmenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Create menu item option set item
 *MenuOptionSetItemsApi* | [**DeleteOptionSetItemImage**](docs/MenuOptionSetItemsApi.md#deleteoptionsetitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Delete menu item option set item image
 *MenuOptionSetItemsApi* | [**GetMenuItemOptionSetItemById**](docs/MenuOptionSetItemsApi.md#getmenuitemoptionsetitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
@@ -497,7 +498,10 @@ Class | Method | HTTP request | Description
  - [Model.CreateMenuSectionItemFromProducts](docs/CreateMenuSectionItemFromProducts.md)
  - [Model.CreateMenuTaxRate](docs/CreateMenuTaxRate.md)
  - [Model.CreateMetadata](docs/CreateMetadata.md)
+ - [Model.CreateModifier](docs/CreateModifier.md)
+ - [Model.CreateModifierGroup](docs/CreateModifierGroup.md)
  - [Model.CreateProduct](docs/CreateProduct.md)
+ - [Model.CreateSimpleProduct](docs/CreateSimpleProduct.md)
  - [Model.CreateTeammate](docs/CreateTeammate.md)
  - [Model.CreateVoucher](docs/CreateVoucher.md)
  - [Model.CreatedMenuSectionItems](docs/CreatedMenuSectionItems.md)
@@ -513,6 +517,7 @@ Class | Method | HTTP request | Description
  - [Model.CustomerSummary](docs/CustomerSummary.md)
  - [Model.CustomerUpdateModel](docs/CustomerUpdateModel.md)
  - [Model.CustomerUpdatedEvent](docs/CustomerUpdatedEvent.md)
+ - [Model.DashboardEmbed](docs/DashboardEmbed.md)
  - [Model.DeliveryLocation](docs/DeliveryLocation.md)
  - [Model.DeliveryZone](docs/DeliveryZone.md)
  - [Model.DeliveryZoneBase](docs/DeliveryZoneBase.md)
@@ -630,6 +635,9 @@ Class | Method | HTTP request | Description
  - [Model.MenuUpdatedEvent](docs/MenuUpdatedEvent.md)
  - [Model.MenuUploadedEvent](docs/MenuUploadedEvent.md)
  - [Model.Metadata](docs/Metadata.md)
+ - [Model.Modifier](docs/Modifier.md)
+ - [Model.ModifierGroup](docs/ModifierGroup.md)
+ - [Model.ModifierGroupSubProduct](docs/ModifierGroupSubProduct.md)
  - [Model.OAuthApp](docs/OAuthApp.md)
  - [Model.OAuthTokenModel](docs/OAuthTokenModel.md)
  - [Model.OauthClientRedirectUri](docs/OauthClientRedirectUri.md)
@@ -839,6 +847,8 @@ Class | Method | HTTP request | Description
  - [Model.SetPasswordWithPinModel](docs/SetPasswordWithPinModel.md)
  - [Model.Setting](docs/Setting.md)
  - [Model.SignupStep](docs/SignupStep.md)
+ - [Model.SimpleProduct](docs/SimpleProduct.md)
+ - [Model.SimpleProductSubProduct](docs/SimpleProductSubProduct.md)
  - [Model.SmsInfo](docs/SmsInfo.md)
  - [Model.SmsReceivedEvent](docs/SmsReceivedEvent.md)
  - [Model.StatisticsCurrencyDataPoint](docs/StatisticsCurrencyDataPoint.md)
@@ -900,7 +910,10 @@ Class | Method | HTTP request | Description
  - [Model.TeammateUpdatedEvent](docs/TeammateUpdatedEvent.md)
  - [Model.UpdateDriverNotificationToken](docs/UpdateDriverNotificationToken.md)
  - [Model.UpdateDriverProfileModel](docs/UpdateDriverProfileModel.md)
+ - [Model.UpdateModifier](docs/UpdateModifier.md)
+ - [Model.UpdateModifierGroup](docs/UpdateModifierGroup.md)
  - [Model.UpdateProduct](docs/UpdateProduct.md)
+ - [Model.UpdateSimpleProduct](docs/UpdateSimpleProduct.md)
  - [Model.UserAnsweredSignupQuestionsEvent](docs/UserAnsweredSignupQuestionsEvent.md)
  - [Model.UserCreatedEvent](docs/UserCreatedEvent.md)
  - [Model.UserDeletedEvent](docs/UserDeletedEvent.md)

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **ImageFileName** | **string** | Image File Name | [optional] 
 **IsArchived** | **bool?** | Returns true if the product is archived | [optional] 
 **Alcohol** | **bool?** | Product contains alcohol | [optional] 
-**productType** | **string** |  | [optional] 
+**subProducts** | [**List&lt;SimpleProductSubProduct&gt;**](SimpleProductSubProduct.md) | Collection of products associated with this product | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

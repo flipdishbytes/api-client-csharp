@@ -805,7 +805,7 @@ namespace Flipdish.Model
         /// <param name="createdDate">Date payout was created.</param>
         /// <param name="periodStartTime">This payout includes operations after at this date (inclusive).</param>
         /// <param name="periodEndTime">This payout includes operations before at this date (exclusive).</param>
-        /// <param name="destinationBank">destinationBank.</param>
+        /// <param name="destinationBank">Destination bank name.</param>
         /// <param name="destinationAccount">Last 4 digits of the destination bank IBAN.</param>
         /// <param name="payoutType">Type of payout source.</param>
         /// <param name="currency">Payout currency.</param>
@@ -874,8 +874,9 @@ namespace Flipdish.Model
         public DateTime? PeriodEndTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets DestinationBank
+        /// Destination bank name
         /// </summary>
+        /// <value>Destination bank name</value>
         [DataMember(Name="DestinationBank", EmitDefaultValue=false)]
         public string DestinationBank { get; set; }
 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **CreatedDate** | **DateTime?** | Date payout was created | [optional] 
 **PeriodStartTime** | **DateTime?** | This payout includes operations after at this date (inclusive) | [optional] 
 **PeriodEndTime** | **DateTime?** | This payout includes operations before at this date (exclusive) | [optional] 
-**DestinationBank** | **string** |  | [optional] 
+**DestinationBank** | **string** | Destination bank name | [optional] 
 **DestinationAccount** | **string** | Last 4 digits of the destination bank IBAN | [optional] 
 **PayoutType** | **string** | Type of payout source | [optional] 
 **Currency** | **string** | Payout currency | [optional] 

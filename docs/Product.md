@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Name** | **string** | Product name | [optional] 
 **Description** | **string** | Product description | [optional] 
 **Price** | **double?** | Product price | [optional] 
-**ProductType** | **string** | Product Type (SimpleProduct, Modifier, ModifierGroup, etc) | [optional] 
+**ProductType** | **string** | Product Type (SimpleProduct, Modifier, ModifierGroup, etc) | 
 **ImageFileName** | **string** | Image File Name | [optional] 
 **IsArchived** | **bool?** | Returns true if the product is archived | [optional] 
 **Alcohol** | **bool?** | Product contains alcohol | [optional] 

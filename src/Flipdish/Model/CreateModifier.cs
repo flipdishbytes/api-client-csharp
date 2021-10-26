@@ -25,48 +25,11 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// CreateModifier
+    /// Create a modifier
     /// </summary>
     [DataContract]
     public partial class CreateModifier : CreateProduct,  IEquatable<CreateModifier>, IValidatableObject
     {
-        /// <summary>
-        /// Defines productType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum ProductTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum Unknown for value: Unknown
-            /// </summary>
-            [EnumMember(Value = "Unknown")]
-            Unknown = 1,
-            
-            /// <summary>
-            /// Enum SimpleProduct for value: SimpleProduct
-            /// </summary>
-            [EnumMember(Value = "SimpleProduct")]
-            SimpleProduct = 2,
-            
-            /// <summary>
-            /// Enum Modifier for value: Modifier
-            /// </summary>
-            [EnumMember(Value = "Modifier")]
-            Modifier = 3,
-            
-            /// <summary>
-            /// Enum ModifierGroup for value: ModifierGroup
-            /// </summary>
-            [EnumMember(Value = "ModifierGroup")]
-            ModifierGroup = 4
-        }
-
-        /// <summary>
-        /// Gets or Sets productType
-        /// </summary>
-        [DataMember(Name="productType", EmitDefaultValue=false)]
-        public ProductTypeEnum? productType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateModifier" /> class.
         /// </summary>
@@ -75,13 +38,10 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateModifier" /> class.
         /// </summary>
-        /// <param name="productType">productType.</param>
-        public CreateModifier(ProductTypeEnum? productType = default(ProductTypeEnum?), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), ProductTypeEnum productType = "CreateModifier") : base(sku, name, description, price, productType)
+        public CreateModifier(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), ProductTypeEnum productType = "CreateModifier") : base(sku, name, description, price, productType)
         {
-            this.productType = productType;
         }
         
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -91,7 +51,6 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class CreateModifier {\n");
             sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
-            sb.Append("  productType: ").Append(productType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -125,12 +84,7 @@ namespace Flipdish.Model
             if (input == null)
                 return false;
 
-            return base.Equals(input) && 
-                (
-                    this.productType == input.productType ||
-                    (this.productType != null &&
-                    this.productType.Equals(input.productType))
-                );
+            return base.Equals(input);
         }
 
         /// <summary>
@@ -142,8 +96,6 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = base.GetHashCode();
-                if (this.productType != null)
-                    hashCode = hashCode * 59 + this.productType.GetHashCode();
                 return hashCode;
             }
         }
