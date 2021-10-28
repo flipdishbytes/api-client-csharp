@@ -120,8 +120,9 @@ namespace Flipdish.Api
         /// <param name="search">Query app store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
         /// <returns>RestApiPaginationResultAppSummary</returns>
-        RestApiPaginationResultAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null);
+        RestApiPaginationResultAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
 
         /// <summary>
         /// Get list of app store app summaries
@@ -133,8 +134,9 @@ namespace Flipdish.Api
         /// <param name="search">Query app store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultAppSummary</returns>
-        ApiResponse<RestApiPaginationResultAppSummary> GetAppStoreAppsWithHttpInfo (string search, int? page = null, int? limit = null);
+        ApiResponse<RestApiPaginationResultAppSummary> GetAppStoreAppsWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
         /// <summary>
         /// Update app store app
         /// </summary>
@@ -144,8 +146,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
         /// <param name="appDetail">App Store App Detail</param>
-        /// <returns>AppDetail</returns>
-        AppDetail UpdateAppStoreApp (string appStoreAppId, AppDetail appDetail);
+        /// <returns></returns>
+        void UpdateAppStoreApp (string appStoreAppId, AppDetail appDetail);
 
         /// <summary>
         /// Update app store app
@@ -156,8 +158,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
         /// <param name="appDetail">App Store App Detail</param>
-        /// <returns>ApiResponse of AppDetail</returns>
-        ApiResponse<AppDetail> UpdateAppStoreAppWithHttpInfo (string appStoreAppId, AppDetail appDetail);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UpdateAppStoreAppWithHttpInfo (string appStoreAppId, AppDetail appDetail);
         /// <summary>
         /// Upload the app store app logo \\ icon
         /// </summary>
@@ -279,8 +281,9 @@ namespace Flipdish.Api
         /// <param name="search">Query app store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
         /// <returns>Task of RestApiPaginationResultAppSummary</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultAppSummary> GetAppStoreAppsAsync (string search, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultAppSummary> GetAppStoreAppsAsync (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
 
         /// <summary>
         /// Get list of app store app summaries
@@ -292,8 +295,9 @@ namespace Flipdish.Api
         /// <param name="search">Query app store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultAppSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultAppSummary>> GetAppStoreAppsAsyncWithHttpInfo (string search, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultAppSummary>> GetAppStoreAppsAsyncWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
         /// <summary>
         /// Update app store app
         /// </summary>
@@ -303,8 +307,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
         /// <param name="appDetail">App Store App Detail</param>
-        /// <returns>Task of AppDetail</returns>
-        System.Threading.Tasks.Task<AppDetail> UpdateAppStoreAppAsync (string appStoreAppId, AppDetail appDetail);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UpdateAppStoreAppAsync (string appStoreAppId, AppDetail appDetail);
 
         /// <summary>
         /// Update app store app
@@ -315,8 +319,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
         /// <param name="appDetail">App Store App Detail</param>
-        /// <returns>Task of ApiResponse (AppDetail)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AppDetail>> UpdateAppStoreAppAsyncWithHttpInfo (string appStoreAppId, AppDetail appDetail);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreAppAsyncWithHttpInfo (string appStoreAppId, AppDetail appDetail);
         /// <summary>
         /// Upload the app store app logo \\ icon
         /// </summary>
@@ -1109,10 +1113,11 @@ namespace Flipdish.Api
         /// <param name="search">Query app store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
         /// <returns>RestApiPaginationResultAppSummary</returns>
-        public RestApiPaginationResultAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null)
+        public RestApiPaginationResultAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
         {
-             ApiResponse<RestApiPaginationResultAppSummary> localVarResponse = GetAppStoreAppsWithHttpInfo(search, page, limit);
+             ApiResponse<RestApiPaginationResultAppSummary> localVarResponse = GetAppStoreAppsWithHttpInfo(search, page, limit, excludeNotOwned);
              return localVarResponse.Data;
         }
 
@@ -1123,8 +1128,9 @@ namespace Flipdish.Api
         /// <param name="search">Query app store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultAppSummary</returns>
-        public ApiResponse< RestApiPaginationResultAppSummary > GetAppStoreAppsWithHttpInfo (string search, int? page = null, int? limit = null)
+        public ApiResponse< RestApiPaginationResultAppSummary > GetAppStoreAppsWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
         {
             // verify the required parameter 'search' is set
             if (search == null)
@@ -1157,6 +1163,7 @@ namespace Flipdish.Api
             if (search != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "search", search)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (excludeNotOwned != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "excludeNotOwned", excludeNotOwned)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1190,10 +1197,11 @@ namespace Flipdish.Api
         /// <param name="search">Query app store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
         /// <returns>Task of RestApiPaginationResultAppSummary</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultAppSummary> GetAppStoreAppsAsync (string search, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultAppSummary> GetAppStoreAppsAsync (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
         {
-             ApiResponse<RestApiPaginationResultAppSummary> localVarResponse = await GetAppStoreAppsAsyncWithHttpInfo(search, page, limit);
+             ApiResponse<RestApiPaginationResultAppSummary> localVarResponse = await GetAppStoreAppsAsyncWithHttpInfo(search, page, limit, excludeNotOwned);
              return localVarResponse.Data;
 
         }
@@ -1205,8 +1213,9 @@ namespace Flipdish.Api
         /// <param name="search">Query app store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultAppSummary)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultAppSummary>> GetAppStoreAppsAsyncWithHttpInfo (string search, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultAppSummary>> GetAppStoreAppsAsyncWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
         {
             // verify the required parameter 'search' is set
             if (search == null)
@@ -1239,6 +1248,7 @@ namespace Flipdish.Api
             if (search != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "search", search)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (excludeNotOwned != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "excludeNotOwned", excludeNotOwned)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1271,11 +1281,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
         /// <param name="appDetail">App Store App Detail</param>
-        /// <returns>AppDetail</returns>
-        public AppDetail UpdateAppStoreApp (string appStoreAppId, AppDetail appDetail)
+        /// <returns></returns>
+        public void UpdateAppStoreApp (string appStoreAppId, AppDetail appDetail)
         {
-             ApiResponse<AppDetail> localVarResponse = UpdateAppStoreAppWithHttpInfo(appStoreAppId, appDetail);
-             return localVarResponse.Data;
+             UpdateAppStoreAppWithHttpInfo(appStoreAppId, appDetail);
         }
 
         /// <summary>
@@ -1284,8 +1293,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
         /// <param name="appDetail">App Store App Detail</param>
-        /// <returns>ApiResponse of AppDetail</returns>
-        public ApiResponse< AppDetail > UpdateAppStoreAppWithHttpInfo (string appStoreAppId, AppDetail appDetail)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UpdateAppStoreAppWithHttpInfo (string appStoreAppId, AppDetail appDetail)
         {
             // verify the required parameter 'appStoreAppId' is set
             if (appStoreAppId == null)
@@ -1353,9 +1362,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AppDetail>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AppDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppDetail)));
+                null);
         }
 
         /// <summary>
@@ -1364,11 +1373,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
         /// <param name="appDetail">App Store App Detail</param>
-        /// <returns>Task of AppDetail</returns>
-        public async System.Threading.Tasks.Task<AppDetail> UpdateAppStoreAppAsync (string appStoreAppId, AppDetail appDetail)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UpdateAppStoreAppAsync (string appStoreAppId, AppDetail appDetail)
         {
-             ApiResponse<AppDetail> localVarResponse = await UpdateAppStoreAppAsyncWithHttpInfo(appStoreAppId, appDetail);
-             return localVarResponse.Data;
+             await UpdateAppStoreAppAsyncWithHttpInfo(appStoreAppId, appDetail);
 
         }
 
@@ -1378,8 +1386,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
         /// <param name="appDetail">App Store App Detail</param>
-        /// <returns>Task of ApiResponse (AppDetail)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AppDetail>> UpdateAppStoreAppAsyncWithHttpInfo (string appStoreAppId, AppDetail appDetail)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreAppAsyncWithHttpInfo (string appStoreAppId, AppDetail appDetail)
         {
             // verify the required parameter 'appStoreAppId' is set
             if (appStoreAppId == null)
@@ -1447,9 +1455,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AppDetail>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AppDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppDetail)));
+                null);
         }
 
         /// <summary>

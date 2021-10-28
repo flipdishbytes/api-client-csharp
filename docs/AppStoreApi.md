@@ -272,7 +272,7 @@ Name | Type | Description  | Notes
 
 <a name="getappstoreapps"></a>
 # **GetAppStoreApps**
-> RestApiPaginationResultAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null)
+> RestApiPaginationResultAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
 
 Get list of app store app summaries
 
@@ -299,11 +299,12 @@ namespace Example
             var search = search_example;  // string | Query app store app name
             var page = 56;  // int? | Requested page index (optional) 
             var limit = 56;  // int? | Requested page limit (optional) 
+            var excludeNotOwned = true;  // bool? | Exclude app store apps that user is not the owner off (optional) 
 
             try
             {
                 // Get list of app store app summaries
-                RestApiPaginationResultAppSummary result = apiInstance.GetAppStoreApps(search, page, limit);
+                RestApiPaginationResultAppSummary result = apiInstance.GetAppStoreApps(search, page, limit, excludeNotOwned);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -322,6 +323,7 @@ Name | Type | Description  | Notes
  **search** | **string**| Query app store app name | 
  **page** | **int?**| Requested page index | [optional] 
  **limit** | **int?**| Requested page limit | [optional] 
+ **excludeNotOwned** | **bool?**| Exclude app store apps that user is not the owner off | [optional] 
 
 ### Return type
 
@@ -340,7 +342,7 @@ Name | Type | Description  | Notes
 
 <a name="updateappstoreapp"></a>
 # **UpdateAppStoreApp**
-> AppDetail UpdateAppStoreApp (string appStoreAppId, AppDetail appDetail)
+> void UpdateAppStoreApp (string appStoreAppId, AppDetail appDetail)
 
 Update app store app
 
@@ -370,8 +372,7 @@ namespace Example
             try
             {
                 // Update app store app
-                AppDetail result = apiInstance.UpdateAppStoreApp(appStoreAppId, appDetail);
-                Debug.WriteLine(result);
+                apiInstance.UpdateAppStoreApp(appStoreAppId, appDetail);
             }
             catch (Exception e)
             {
@@ -391,7 +392,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AppDetail**](AppDetail.md)
+void (empty response body)
 
 ### Authorization
 

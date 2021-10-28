@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **FieldGroups** | [**List&lt;FieldGroup&gt;**](FieldGroup.md) | Field Groups | [optional] 
 **SetupInstructions** | **string** | Setup Instructions | [optional] 
 **ExternalSetupLink** | **string** | External Setup Link | [optional] 
+**OAuthAppId** | **string** | OAuth App Id | 
 **Name** | **string** | Name | 
 **Description** | **string** | Description | 
 **Logo** | **string** | Logo | [optional] 

@@ -142,6 +142,7 @@ namespace Flipdish.Model
         /// <param name="fieldGroups">Field Groups.</param>
         /// <param name="setupInstructions">Setup Instructions.</param>
         /// <param name="externalSetupLink">External Setup Link.</param>
+        /// <param name="oAuthAppId">OAuth App Id (required).</param>
         /// <param name="name">Name (required).</param>
         /// <param name="description">Description (required).</param>
         /// <param name="logo">Logo.</param>
@@ -149,7 +150,7 @@ namespace Flipdish.Model
         /// <param name="tags">Tags (required).</param>
         /// <param name="regions">Regions (required).</param>
         /// <param name="developerName">Developer Name.</param>
-        public AppConfigurationDetail(string id = default(string), string appId = default(string), string appStoreAppId = default(string), bool? isEnabled = default(bool?), List<int?> physicalRestaurants = default(List<int?>), List<Setting> settings = default(List<Setting>), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string setupInstructions = default(string), string externalSetupLink = default(string), string name = default(string), string description = default(string), string logo = default(string), VerificationStatusEnum verificationStatus = default(VerificationStatusEnum), List<string> tags = default(List<string>), List<string> regions = default(List<string>), string developerName = default(string))
+        public AppConfigurationDetail(string id = default(string), string appId = default(string), string appStoreAppId = default(string), bool? isEnabled = default(bool?), List<int?> physicalRestaurants = default(List<int?>), List<Setting> settings = default(List<Setting>), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string setupInstructions = default(string), string externalSetupLink = default(string), string oAuthAppId = default(string), string name = default(string), string description = default(string), string logo = default(string), VerificationStatusEnum verificationStatus = default(VerificationStatusEnum), List<string> tags = default(List<string>), List<string> regions = default(List<string>), string developerName = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -204,6 +205,15 @@ namespace Flipdish.Model
             else
             {
                 this.StoreSelectorType = storeSelectorType;
+            }
+            // to ensure "oAuthAppId" is required (not null)
+            if (oAuthAppId == null)
+            {
+                throw new InvalidDataException("oAuthAppId is a required property for AppConfigurationDetail and cannot be null");
+            }
+            else
+            {
+                this.OAuthAppId = oAuthAppId;
             }
             // to ensure "name" is required (not null)
             if (name == null)
@@ -325,6 +335,13 @@ namespace Flipdish.Model
         public string ExternalSetupLink { get; set; }
 
         /// <summary>
+        /// OAuth App Id
+        /// </summary>
+        /// <value>OAuth App Id</value>
+        [DataMember(Name="OAuthAppId", EmitDefaultValue=false)]
+        public string OAuthAppId { get; set; }
+
+        /// <summary>
         /// Name
         /// </summary>
         /// <value>Name</value>
@@ -386,6 +403,7 @@ namespace Flipdish.Model
             sb.Append("  FieldGroups: ").Append(FieldGroups).Append("\n");
             sb.Append("  SetupInstructions: ").Append(SetupInstructions).Append("\n");
             sb.Append("  ExternalSetupLink: ").Append(ExternalSetupLink).Append("\n");
+            sb.Append("  OAuthAppId: ").Append(OAuthAppId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Logo: ").Append(Logo).Append("\n");
@@ -483,6 +501,11 @@ namespace Flipdish.Model
                     this.ExternalSetupLink.Equals(input.ExternalSetupLink))
                 ) && 
                 (
+                    this.OAuthAppId == input.OAuthAppId ||
+                    (this.OAuthAppId != null &&
+                    this.OAuthAppId.Equals(input.OAuthAppId))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -550,6 +573,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.SetupInstructions.GetHashCode();
                 if (this.ExternalSetupLink != null)
                     hashCode = hashCode * 59 + this.ExternalSetupLink.GetHashCode();
+                if (this.OAuthAppId != null)
+                    hashCode = hashCode * 59 + this.OAuthAppId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
