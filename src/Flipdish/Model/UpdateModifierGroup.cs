@@ -38,7 +38,7 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateModifierGroup" /> class.
         /// </summary>
-        public UpdateModifierGroup(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), bool? alcohol = default(bool?), ProductTypeEnum productType = "UpdateModifierGroup") : base(sku, name, description, price, alcohol, productType)
+        public UpdateModifierGroup(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), bool? alcohol = default(bool?), string discriminator = "UpdateModifierGroup") : base(sku, name, description, price, alcohol, discriminator)
         {
         }
         

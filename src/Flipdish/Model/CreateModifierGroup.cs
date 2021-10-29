@@ -39,7 +39,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="CreateModifierGroup" /> class.
         /// </summary>
         /// <param name="subProducts">Collection of products associated with this product.</param>
-        public CreateModifierGroup(List<ModifierGroupSubProduct> subProducts = default(List<ModifierGroupSubProduct>), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), ProductTypeEnum productType = "CreateModifierGroup") : base(sku, name, description, price, productType)
+        public CreateModifierGroup(List<ModifierGroupSubProduct> subProducts = default(List<ModifierGroupSubProduct>), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string discriminator = "CreateModifierGroup") : base(sku, name, description, price, discriminator)
         {
             this.subProducts = subProducts;
         }

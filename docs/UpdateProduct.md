@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Description** | **string** | Product description | [optional] 
 **Price** | **double?** | Product price | [optional] 
 **Alcohol** | **bool?** | Product contains alcohol | [optional] 
-**ProductType** | **string** | Product Type (SimpleProduct, Modifier, ModifierGroup, etc) | [optional] 
+**Discriminator** | **string** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

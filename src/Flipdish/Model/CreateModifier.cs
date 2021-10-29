@@ -38,7 +38,7 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateModifier" /> class.
         /// </summary>
-        public CreateModifier(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), ProductTypeEnum productType = "CreateModifier") : base(sku, name, description, price, productType)
+        public CreateModifier(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string discriminator = "CreateModifier") : base(sku, name, description, price, discriminator)
         {
         }
         

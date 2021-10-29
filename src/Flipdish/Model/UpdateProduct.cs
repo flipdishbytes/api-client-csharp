@@ -19,6 +19,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using JsonSubTypes;
 using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
@@ -28,47 +29,17 @@ namespace Flipdish.Model
     /// Update Product
     /// </summary>
     [DataContract]
+    [JsonConverter(typeof(JsonSubtypes), "Discriminator")]
+    [JsonSubtypes.KnownSubType(typeof(UpdateModifierGroup), "UpdateModifierGroup")]
+    [JsonSubtypes.KnownSubType(typeof(UpdateModifier), "UpdateModifier")]
+    [JsonSubtypes.KnownSubType(typeof(UpdateSimpleProduct), "UpdateSimpleProduct")]
     public partial class UpdateProduct :  IEquatable<UpdateProduct>, IValidatableObject
     {
         /// <summary>
-        /// Product Type (SimpleProduct, Modifier, ModifierGroup, etc)
+        /// Initializes a new instance of the <see cref="UpdateProduct" /> class.
         /// </summary>
-        /// <value>Product Type (SimpleProduct, Modifier, ModifierGroup, etc)</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum ProductTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum Unknown for value: Unknown
-            /// </summary>
-            [EnumMember(Value = "Unknown")]
-            Unknown = 1,
-            
-            /// <summary>
-            /// Enum SimpleProduct for value: SimpleProduct
-            /// </summary>
-            [EnumMember(Value = "SimpleProduct")]
-            SimpleProduct = 2,
-            
-            /// <summary>
-            /// Enum Modifier for value: Modifier
-            /// </summary>
-            [EnumMember(Value = "Modifier")]
-            Modifier = 3,
-            
-            /// <summary>
-            /// Enum ModifierGroup for value: ModifierGroup
-            /// </summary>
-            [EnumMember(Value = "ModifierGroup")]
-            ModifierGroup = 4
-        }
-
-        /// <summary>
-        /// Product Type (SimpleProduct, Modifier, ModifierGroup, etc)
-        /// </summary>
-        /// <value>Product Type (SimpleProduct, Modifier, ModifierGroup, etc)</value>
-        [DataMember(Name="ProductType", EmitDefaultValue=false)]
-        public ProductTypeEnum? ProductType { get; set; }
+        [JsonConstructorAttribute]
+        protected UpdateProduct() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateProduct" /> class.
         /// </summary>
@@ -77,15 +48,23 @@ namespace Flipdish.Model
         /// <param name="description">Product description.</param>
         /// <param name="price">Product price.</param>
         /// <param name="alcohol">Product contains alcohol.</param>
-        /// <param name="productType">Product Type (SimpleProduct, Modifier, ModifierGroup, etc).</param>
-        public UpdateProduct(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), bool? alcohol = default(bool?), ProductTypeEnum? productType = default(ProductTypeEnum?))
+        /// <param name="discriminator">discriminator (required).</param>
+        public UpdateProduct(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), bool? alcohol = default(bool?), string discriminator = default(string))
         {
+            // to ensure "discriminator" is required (not null)
+            if (discriminator == null)
+            {
+                throw new InvalidDataException("discriminator is a required property for UpdateProduct and cannot be null");
+            }
+            else
+            {
+                this.Discriminator = discriminator;
+            }
             this.Sku = sku;
             this.Name = name;
             this.Description = description;
             this.Price = price;
             this.Alcohol = alcohol;
-            this.ProductType = productType;
         }
         
         /// <summary>
@@ -123,6 +102,11 @@ namespace Flipdish.Model
         [DataMember(Name="Alcohol", EmitDefaultValue=false)]
         public bool? Alcohol { get; set; }
 
+        /// <summary>
+        /// Gets or Sets Discriminator
+        /// </summary>
+        [DataMember(Name="Discriminator", EmitDefaultValue=false)]
+        public string Discriminator { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -137,7 +121,7 @@ namespace Flipdish.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("  Alcohol: ").Append(Alcohol).Append("\n");
-            sb.Append("  ProductType: ").Append(ProductType).Append("\n");
+            sb.Append("  Discriminator: ").Append(Discriminator).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -198,9 +182,9 @@ namespace Flipdish.Model
                     this.Alcohol.Equals(input.Alcohol))
                 ) && 
                 (
-                    this.ProductType == input.ProductType ||
-                    (this.ProductType != null &&
-                    this.ProductType.Equals(input.ProductType))
+                    this.Discriminator == input.Discriminator ||
+                    (this.Discriminator != null &&
+                    this.Discriminator.Equals(input.Discriminator))
                 );
         }
 
@@ -223,8 +207,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
                 if (this.Alcohol != null)
                     hashCode = hashCode * 59 + this.Alcohol.GetHashCode();
-                if (this.ProductType != null)
-                    hashCode = hashCode * 59 + this.ProductType.GetHashCode();
+                if (this.Discriminator != null)
+                    hashCode = hashCode * 59 + this.Discriminator.GetHashCode();
                 return hashCode;
             }
         }
@@ -235,6 +219,16 @@ namespace Flipdish.Model
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> BaseValidate(ValidationContext validationContext)
         {
             // Sku (string) maxLength
             if(this.Sku != null && this.Sku.Length > 30)

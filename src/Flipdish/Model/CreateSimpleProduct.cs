@@ -39,7 +39,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="CreateSimpleProduct" /> class.
         /// </summary>
         /// <param name="subProducts">Collection of products associated with this product.</param>
-        public CreateSimpleProduct(List<SimpleProductSubProduct> subProducts = default(List<SimpleProductSubProduct>), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), ProductTypeEnum productType = "CreateSimpleProduct") : base(sku, name, description, price, productType)
+        public CreateSimpleProduct(List<SimpleProductSubProduct> subProducts = default(List<SimpleProductSubProduct>), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string discriminator = "CreateSimpleProduct") : base(sku, name, description, price, discriminator)
         {
             this.subProducts = subProducts;
         }
