@@ -19,7 +19,6 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using JsonSubTypes;
 using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
@@ -29,10 +28,6 @@ namespace Flipdish.Model
     /// Product Information
     /// </summary>
     [DataContract]
-    [JsonConverter(typeof(JsonSubtypes), "Discriminator")]
-    [JsonSubtypes.KnownSubType(typeof(Modifier), "Modifier")]
-    [JsonSubtypes.KnownSubType(typeof(SimpleProduct), "SimpleProduct")]
-    [JsonSubtypes.KnownSubType(typeof(ModifierGroup), "ModifierGroup")]
     public partial class Product :  IEquatable<Product>, IValidatableObject
     {
         /// <summary>
@@ -77,11 +72,6 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Product" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected Product() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Product" /> class.
-        /// </summary>
         /// <param name="productId">Unique product id.</param>
         /// <param name="sku">Stock Keeping Unit (SKU).</param>
         /// <param name="name">Product name.</param>
@@ -91,18 +81,8 @@ namespace Flipdish.Model
         /// <param name="imageFileName">Image File Name.</param>
         /// <param name="isArchived">Returns true if the product is archived.</param>
         /// <param name="alcohol">Product contains alcohol.</param>
-        /// <param name="discriminator">discriminator (required).</param>
-        public Product(string productId = default(string), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), ProductTypeEnum? productType = default(ProductTypeEnum?), string imageFileName = default(string), bool? isArchived = default(bool?), bool? alcohol = default(bool?), string discriminator = default(string))
+        public Product(string productId = default(string), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), ProductTypeEnum? productType = default(ProductTypeEnum?), string imageFileName = default(string), bool? isArchived = default(bool?), bool? alcohol = default(bool?))
         {
-            // to ensure "discriminator" is required (not null)
-            if (discriminator == null)
-            {
-                throw new InvalidDataException("discriminator is a required property for Product and cannot be null");
-            }
-            else
-            {
-                this.Discriminator = discriminator;
-            }
             this.ProductId = productId;
             this.Sku = sku;
             this.Name = name;
@@ -172,12 +152,6 @@ namespace Flipdish.Model
         public bool? Alcohol { get; set; }
 
         /// <summary>
-        /// Gets or Sets Discriminator
-        /// </summary>
-        [DataMember(Name="Discriminator", EmitDefaultValue=false)]
-        public string Discriminator { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -194,7 +168,6 @@ namespace Flipdish.Model
             sb.Append("  ImageFileName: ").Append(ImageFileName).Append("\n");
             sb.Append("  IsArchived: ").Append(IsArchived).Append("\n");
             sb.Append("  Alcohol: ").Append(Alcohol).Append("\n");
-            sb.Append("  Discriminator: ").Append(Discriminator).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -273,11 +246,6 @@ namespace Flipdish.Model
                     this.Alcohol == input.Alcohol ||
                     (this.Alcohol != null &&
                     this.Alcohol.Equals(input.Alcohol))
-                ) && 
-                (
-                    this.Discriminator == input.Discriminator ||
-                    (this.Discriminator != null &&
-                    this.Discriminator.Equals(input.Discriminator))
                 );
         }
 
@@ -308,8 +276,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.IsArchived.GetHashCode();
                 if (this.Alcohol != null)
                     hashCode = hashCode * 59 + this.Alcohol.GetHashCode();
-                if (this.Discriminator != null)
-                    hashCode = hashCode * 59 + this.Discriminator.GetHashCode();
                 return hashCode;
             }
         }
@@ -320,16 +286,6 @@ namespace Flipdish.Model
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> BaseValidate(ValidationContext validationContext)
         {
             // ProductId (string) maxLength
             if(this.ProductId != null && this.ProductId.Length > 30)
