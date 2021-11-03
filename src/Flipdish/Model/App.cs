@@ -860,7 +860,13 @@ namespace Flipdish.Model
             /// Enum ViewPayouts for value: ViewPayouts
             /// </summary>
             [EnumMember(Value = "ViewPayouts")]
-            ViewPayouts = 126
+            ViewPayouts = 126,
+            
+            /// <summary>
+            /// Enum Channels for value: Channels
+            /// </summary>
+            [EnumMember(Value = "Channels")]
+            Channels = 127
         }
 
 

@@ -173,6 +173,8 @@ Class | Method | HTTP request | Description
 *CardReadersApi* | [**InitiateKioskBluetoothPairingMode**](docs/CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
 *CardReadersApi* | [**InitiateKioskBluetoothUpdateInstall**](docs/CardReadersApi.md#initiatekioskbluetoothupdateinstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
 *CardReadersApi* | [**UnpairCurrentlyPairedBluetoothDevice**](docs/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
+*ChannelsApi* | [**GetChannel**](docs/ChannelsApi.md#getchannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
+*ChannelsApi* | [**GetChannels**](docs/ChannelsApi.md#getchannels) | **GET** /api/v1.0/{appId}/channels | 
 *ContentSecurityPolicyApi* | [**ContentSecurityPolicyReport**](docs/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
 *CustomersApi* | [**GetCustomerById**](docs/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | Get customer of an app by Id
 *CustomersApi* | [**UpdateCustomerById**](docs/CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | Update customer of an app by Id
@@ -487,6 +489,7 @@ Class | Method | HTTP request | Description
  - [Model.CertificateCreatedEvent](docs/CertificateCreatedEvent.md)
  - [Model.CertificateRenewedEvent](docs/CertificateRenewedEvent.md)
  - [Model.ChangePasswordModel](docs/ChangePasswordModel.md)
+ - [Model.Channel](docs/Channel.md)
  - [Model.ChargebackDetails](docs/ChargebackDetails.md)
  - [Model.ConfiguredPhysicalRestaurant](docs/ConfiguredPhysicalRestaurant.md)
  - [Model.Coordinates](docs/Coordinates.md)
@@ -748,6 +751,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultApp](docs/RestApiPaginationResultApp.md)
  - [Model.RestApiPaginationResultAppSummary](docs/RestApiPaginationResultAppSummary.md)
  - [Model.RestApiPaginationResultBusinessHoursOverride](docs/RestApiPaginationResultBusinessHoursOverride.md)
+ - [Model.RestApiPaginationResultChannel](docs/RestApiPaginationResultChannel.md)
  - [Model.RestApiPaginationResultHttpRequestAndResponseLog](docs/RestApiPaginationResultHttpRequestAndResponseLog.md)
  - [Model.RestApiPaginationResultHydraDeviceDetails](docs/RestApiPaginationResultHydraDeviceDetails.md)
  - [Model.RestApiPaginationResultOAuthTokenModel](docs/RestApiPaginationResultOAuthTokenModel.md)
