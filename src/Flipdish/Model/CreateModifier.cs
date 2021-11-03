@@ -28,20 +28,51 @@ namespace Flipdish.Model
     /// Create a modifier
     /// </summary>
     [DataContract]
-    public partial class CreateModifier : CreateProduct,  IEquatable<CreateModifier>, IValidatableObject
+    public partial class CreateModifier :  IEquatable<CreateModifier>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateModifier" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected CreateModifier() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CreateModifier" /> class.
-        /// </summary>
-        public CreateModifier(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string discriminator = "CreateModifier") : base(sku, name, description, price, discriminator)
+        /// <param name="sku">Stock Keeping Unit (SKU).</param>
+        /// <param name="name">Product name.</param>
+        /// <param name="description">Product description.</param>
+        /// <param name="price">Product price.</param>
+        public CreateModifier(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?))
         {
+            this.Sku = sku;
+            this.Name = name;
+            this.Description = description;
+            this.Price = price;
         }
         
+        /// <summary>
+        /// Stock Keeping Unit (SKU)
+        /// </summary>
+        /// <value>Stock Keeping Unit (SKU)</value>
+        [DataMember(Name="Sku", EmitDefaultValue=false)]
+        public string Sku { get; set; }
+
+        /// <summary>
+        /// Product name
+        /// </summary>
+        /// <value>Product name</value>
+        [DataMember(Name="Name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Product description
+        /// </summary>
+        /// <value>Product description</value>
+        [DataMember(Name="Description", EmitDefaultValue=false)]
+        public string Description { get; set; }
+
+        /// <summary>
+        /// Product price
+        /// </summary>
+        /// <value>Product price</value>
+        [DataMember(Name="Price", EmitDefaultValue=false)]
+        public double? Price { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -50,7 +81,10 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateModifier {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  Sku: ").Append(Sku).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -59,7 +93,7 @@ namespace Flipdish.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -84,7 +118,27 @@ namespace Flipdish.Model
             if (input == null)
                 return false;
 
-            return base.Equals(input);
+            return 
+                (
+                    this.Sku == input.Sku ||
+                    (this.Sku != null &&
+                    this.Sku.Equals(input.Sku))
+                ) && 
+                (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.Description == input.Description ||
+                    (this.Description != null &&
+                    this.Description.Equals(input.Description))
+                ) && 
+                (
+                    this.Price == input.Price ||
+                    (this.Price != null &&
+                    this.Price.Equals(input.Price))
+                );
         }
 
         /// <summary>
@@ -95,7 +149,15 @@ namespace Flipdish.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = base.GetHashCode();
+                int hashCode = 41;
+                if (this.Sku != null)
+                    hashCode = hashCode * 59 + this.Sku.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Description != null)
+                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.Price != null)
+                    hashCode = hashCode * 59 + this.Price.GetHashCode();
                 return hashCode;
             }
         }
@@ -107,7 +169,48 @@ namespace Flipdish.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            foreach(var x in BaseValidate(validationContext)) yield return x;
+            // Sku (string) maxLength
+            if(this.Sku != null && this.Sku.Length > 30)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Sku, length must be less than 30.", new [] { "Sku" });
+            }
+
+            // Sku (string) minLength
+            if(this.Sku != null && this.Sku.Length < 0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Sku, length must be greater than 0.", new [] { "Sku" });
+            }
+
+            // Name (string) maxLength
+            if(this.Name != null && this.Name.Length > 100)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be less than 100.", new [] { "Name" });
+            }
+
+            // Name (string) minLength
+            if(this.Name != null && this.Name.Length < 0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be greater than 0.", new [] { "Name" });
+            }
+
+            // Description (string) maxLength
+            if(this.Description != null && this.Description.Length > 256)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Description, length must be less than 256.", new [] { "Description" });
+            }
+
+            // Description (string) minLength
+            if(this.Description != null && this.Description.Length < 0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Description, length must be greater than 0.", new [] { "Description" });
+            }
+
+            // Price (double?) minimum
+            if(this.Price < (double?)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Price, must be a value greater than or equal to 0.", new [] { "Price" });
+            }
+
             yield break;
         }
     }

@@ -5,7 +5,9 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ArchiveProduct**](ProductsApi.md#archiveproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/archive | Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-[**CreateProduct**](ProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a new product
+[**CreateModifier**](ProductsApi.md#createmodifier) | **POST** /api/v1.0/{appId}/catalog/products/Modifier | Create a new modifier
+[**CreateModifierGroup**](ProductsApi.md#createmodifiergroup) | **POST** /api/v1.0/{appId}/catalog/products/ModifierGroup | Create a new modifier group
+[**CreateProduct**](ProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a simple product
 [**DeleteProductImage**](ProductsApi.md#deleteproductimage) | **DELETE** /api/v1.0/{appId}/catalog/products/{productId}/image | 
 [**DuplicateProduct**](ProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/duplicate | Duplicate a product
 [**GetProductById**](ProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/products/{productId} | Get products by productId
@@ -77,11 +79,139 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="createmodifier"></a>
+# **CreateModifier**
+> RestApiResultProduct CreateModifier (string appId, CreateModifier modifier)
+
+Create a new modifier
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class CreateModifierExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ProductsApi();
+            var appId = appId_example;  // string | 
+            var modifier = new CreateModifier(); // CreateModifier | 
+
+            try
+            {
+                // Create a new modifier
+                RestApiResultProduct result = apiInstance.CreateModifier(appId, modifier);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ProductsApi.CreateModifier: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **modifier** | [**CreateModifier**](CreateModifier.md)|  | 
+
+### Return type
+
+[**RestApiResultProduct**](RestApiResultProduct.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="createmodifiergroup"></a>
+# **CreateModifierGroup**
+> RestApiResultProduct CreateModifierGroup (string appId, CreateModifierGroup modifierGroup)
+
+Create a new modifier group
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class CreateModifierGroupExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ProductsApi();
+            var appId = appId_example;  // string | 
+            var modifierGroup = new CreateModifierGroup(); // CreateModifierGroup | 
+
+            try
+            {
+                // Create a new modifier group
+                RestApiResultProduct result = apiInstance.CreateModifierGroup(appId, modifierGroup);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ProductsApi.CreateModifierGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **modifierGroup** | [**CreateModifierGroup**](CreateModifierGroup.md)|  | 
+
+### Return type
+
+[**RestApiResultProduct**](RestApiResultProduct.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="createproduct"></a>
 # **CreateProduct**
-> RestApiResultProduct CreateProduct (string appId, CreateProduct product)
+> RestApiResultProduct CreateProduct (string appId, CreateSimpleProduct product)
 
-Create a new product
+Create a simple product
 
 ### Example
 ```csharp
@@ -102,11 +232,11 @@ namespace Example
 
             var apiInstance = new ProductsApi();
             var appId = appId_example;  // string | 
-            var product = new CreateProduct(); // CreateProduct | 
+            var product = new CreateSimpleProduct(); // CreateSimpleProduct | 
 
             try
             {
-                // Create a new product
+                // Create a simple product
                 RestApiResultProduct result = apiInstance.CreateProduct(appId, product);
                 Debug.WriteLine(result);
             }
@@ -124,7 +254,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **product** | [**CreateProduct**](CreateProduct.md)|  | 
+ **product** | [**CreateSimpleProduct**](CreateSimpleProduct.md)|  | 
 
 ### Return type
 

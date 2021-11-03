@@ -67,8 +67,8 @@ namespace Flipdish.Model
         /// Type of the SupProduct
         /// </summary>
         /// <value>Type of the SupProduct</value>
-        [DataMember(Name="productType", EmitDefaultValue=false)]
-        public ProductTypeEnum productType { get; set; }
+        [DataMember(Name="ProductType", EmitDefaultValue=false)]
+        public ProductTypeEnum ProductType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SimpleProductSubProduct" /> class.
         /// </summary>
@@ -88,7 +88,7 @@ namespace Flipdish.Model
             }
             else
             {
-                this.productId = productId;
+                this.ProductId = productId;
             }
             // to ensure "productType" is required (not null)
             if (productType == null)
@@ -97,7 +97,7 @@ namespace Flipdish.Model
             }
             else
             {
-                this.productType = productType;
+                this.ProductType = productType;
             }
         }
         
@@ -105,8 +105,8 @@ namespace Flipdish.Model
         /// Identifier of the ProductId to use as SubProduct
         /// </summary>
         /// <value>Identifier of the ProductId to use as SubProduct</value>
-        [DataMember(Name="productId", EmitDefaultValue=false)]
-        public string productId { get; set; }
+        [DataMember(Name="ProductId", EmitDefaultValue=false)]
+        public string ProductId { get; set; }
 
 
         /// <summary>
@@ -117,8 +117,8 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SimpleProductSubProduct {\n");
-            sb.Append("  productId: ").Append(productId).Append("\n");
-            sb.Append("  productType: ").Append(productType).Append("\n");
+            sb.Append("  ProductId: ").Append(ProductId).Append("\n");
+            sb.Append("  ProductType: ").Append(ProductType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -154,14 +154,14 @@ namespace Flipdish.Model
 
             return 
                 (
-                    this.productId == input.productId ||
-                    (this.productId != null &&
-                    this.productId.Equals(input.productId))
+                    this.ProductId == input.ProductId ||
+                    (this.ProductId != null &&
+                    this.ProductId.Equals(input.ProductId))
                 ) && 
                 (
-                    this.productType == input.productType ||
-                    (this.productType != null &&
-                    this.productType.Equals(input.productType))
+                    this.ProductType == input.ProductType ||
+                    (this.ProductType != null &&
+                    this.ProductType.Equals(input.ProductType))
                 );
         }
 
@@ -174,10 +174,10 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.productId != null)
-                    hashCode = hashCode * 59 + this.productId.GetHashCode();
-                if (this.productType != null)
-                    hashCode = hashCode * 59 + this.productType.GetHashCode();
+                if (this.ProductId != null)
+                    hashCode = hashCode * 59 + this.ProductId.GetHashCode();
+                if (this.ProductType != null)
+                    hashCode = hashCode * 59 + this.ProductType.GetHashCode();
                 return hashCode;
             }
         }
@@ -189,16 +189,16 @@ namespace Flipdish.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // productId (string) maxLength
-            if(this.productId != null && this.productId.Length > 30)
+            // ProductId (string) maxLength
+            if(this.ProductId != null && this.ProductId.Length > 30)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for productId, length must be less than 30.", new [] { "productId" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ProductId, length must be less than 30.", new [] { "ProductId" });
             }
 
-            // productId (string) minLength
-            if(this.productId != null && this.productId.Length < 0)
+            // ProductId (string) minLength
+            if(this.ProductId != null && this.ProductId.Length < 0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for productId, length must be greater than 0.", new [] { "productId" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ProductId, length must be greater than 0.", new [] { "ProductId" });
             }
 
             yield break;

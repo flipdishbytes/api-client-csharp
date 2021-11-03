@@ -347,7 +347,9 @@ Class | Method | HTTP request | Description
 *PayoutsExportApi* | [**ExportPayouts**](docs/PayoutsExportApi.md#exportpayouts) | **GET** /api/v1.0/{appId}/payouts/export | Export payouts as CSV
 *ProcessingFeeConfigsApi* | [**GetProcessingFeeConfigsByStoreIds**](docs/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
 *ProductsApi* | [**ArchiveProduct**](docs/ProductsApi.md#archiveproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/archive | Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-*ProductsApi* | [**CreateProduct**](docs/ProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a new product
+*ProductsApi* | [**CreateModifier**](docs/ProductsApi.md#createmodifier) | **POST** /api/v1.0/{appId}/catalog/products/Modifier | Create a new modifier
+*ProductsApi* | [**CreateModifierGroup**](docs/ProductsApi.md#createmodifiergroup) | **POST** /api/v1.0/{appId}/catalog/products/ModifierGroup | Create a new modifier group
+*ProductsApi* | [**CreateProduct**](docs/ProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a simple product
 *ProductsApi* | [**DeleteProductImage**](docs/ProductsApi.md#deleteproductimage) | **DELETE** /api/v1.0/{appId}/catalog/products/{productId}/image | 
 *ProductsApi* | [**DuplicateProduct**](docs/ProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/duplicate | Duplicate a product
 *ProductsApi* | [**GetProductById**](docs/ProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/products/{productId} | Get products by productId
@@ -498,7 +500,9 @@ Class | Method | HTTP request | Description
  - [Model.CreateMenuSectionItemFromProducts](docs/CreateMenuSectionItemFromProducts.md)
  - [Model.CreateMenuTaxRate](docs/CreateMenuTaxRate.md)
  - [Model.CreateMetadata](docs/CreateMetadata.md)
- - [Model.CreateProduct](docs/CreateProduct.md)
+ - [Model.CreateModifier](docs/CreateModifier.md)
+ - [Model.CreateModifierGroup](docs/CreateModifierGroup.md)
+ - [Model.CreateSimpleProduct](docs/CreateSimpleProduct.md)
  - [Model.CreateTeammate](docs/CreateTeammate.md)
  - [Model.CreateVoucher](docs/CreateVoucher.md)
  - [Model.CreatedMenuSectionItems](docs/CreatedMenuSectionItems.md)
@@ -632,6 +636,7 @@ Class | Method | HTTP request | Description
  - [Model.MenuUpdatedEvent](docs/MenuUpdatedEvent.md)
  - [Model.MenuUploadedEvent](docs/MenuUploadedEvent.md)
  - [Model.Metadata](docs/Metadata.md)
+ - [Model.ModifierGroupSubProduct](docs/ModifierGroupSubProduct.md)
  - [Model.OAuthApp](docs/OAuthApp.md)
  - [Model.OAuthTokenModel](docs/OAuthTokenModel.md)
  - [Model.OauthClientRedirectUri](docs/OauthClientRedirectUri.md)
@@ -841,6 +846,7 @@ Class | Method | HTTP request | Description
  - [Model.SetPasswordWithPinModel](docs/SetPasswordWithPinModel.md)
  - [Model.Setting](docs/Setting.md)
  - [Model.SignupStep](docs/SignupStep.md)
+ - [Model.SimpleProductSubProduct](docs/SimpleProductSubProduct.md)
  - [Model.SmsInfo](docs/SmsInfo.md)
  - [Model.SmsReceivedEvent](docs/SmsReceivedEvent.md)
  - [Model.StatisticsCurrencyDataPoint](docs/StatisticsCurrencyDataPoint.md)
