@@ -33,13 +33,17 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateModifierGroup" /> class.
         /// </summary>
+        /// <param name="minSelection">Minimum number of items that the user has to select.</param>
+        /// <param name="maxSelection">Maximum number of items that the user has to select.</param>
         /// <param name="subProducts">Collection of products associated with this product.</param>
         /// <param name="sku">Stock Keeping Unit (SKU).</param>
         /// <param name="name">Product name.</param>
         /// <param name="description">Product description.</param>
         /// <param name="price">Product price.</param>
-        public CreateModifierGroup(List<ModifierGroupSubProduct> subProducts = default(List<ModifierGroupSubProduct>), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?))
+        public CreateModifierGroup(int? minSelection = default(int?), int? maxSelection = default(int?), List<ModifierGroupSubProduct> subProducts = default(List<ModifierGroupSubProduct>), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?))
         {
+            this.MinSelection = minSelection;
+            this.MaxSelection = maxSelection;
             this.SubProducts = subProducts;
             this.Sku = sku;
             this.Name = name;
@@ -47,6 +51,20 @@ namespace Flipdish.Model
             this.Price = price;
         }
         
+        /// <summary>
+        /// Minimum number of items that the user has to select
+        /// </summary>
+        /// <value>Minimum number of items that the user has to select</value>
+        [DataMember(Name="MinSelection", EmitDefaultValue=false)]
+        public int? MinSelection { get; set; }
+
+        /// <summary>
+        /// Maximum number of items that the user has to select
+        /// </summary>
+        /// <value>Maximum number of items that the user has to select</value>
+        [DataMember(Name="MaxSelection", EmitDefaultValue=false)]
+        public int? MaxSelection { get; set; }
+
         /// <summary>
         /// Collection of products associated with this product
         /// </summary>
@@ -90,6 +108,8 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateModifierGroup {\n");
+            sb.Append("  MinSelection: ").Append(MinSelection).Append("\n");
+            sb.Append("  MaxSelection: ").Append(MaxSelection).Append("\n");
             sb.Append("  SubProducts: ").Append(SubProducts).Append("\n");
             sb.Append("  Sku: ").Append(Sku).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -130,6 +150,16 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.MinSelection == input.MinSelection ||
+                    (this.MinSelection != null &&
+                    this.MinSelection.Equals(input.MinSelection))
+                ) && 
+                (
+                    this.MaxSelection == input.MaxSelection ||
+                    (this.MaxSelection != null &&
+                    this.MaxSelection.Equals(input.MaxSelection))
+                ) && 
+                (
                     this.SubProducts == input.SubProducts ||
                     this.SubProducts != null &&
                     this.SubProducts.SequenceEqual(input.SubProducts)
@@ -165,6 +195,10 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.MinSelection != null)
+                    hashCode = hashCode * 59 + this.MinSelection.GetHashCode();
+                if (this.MaxSelection != null)
+                    hashCode = hashCode * 59 + this.MaxSelection.GetHashCode();
                 if (this.SubProducts != null)
                     hashCode = hashCode * 59 + this.SubProducts.GetHashCode();
                 if (this.Sku != null)

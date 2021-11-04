@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 <a name="createproduct"></a>
 # **CreateProduct**
-> RestApiResultProduct CreateProduct (string appId, CreateSimpleProduct product)
+> RestApiResultProduct CreateProduct (string appId, CreateSimpleProduct simpleProduct)
 
 Create a simple product
 
@@ -232,12 +232,12 @@ namespace Example
 
             var apiInstance = new ProductsApi();
             var appId = appId_example;  // string | 
-            var product = new CreateSimpleProduct(); // CreateSimpleProduct | 
+            var simpleProduct = new CreateSimpleProduct(); // CreateSimpleProduct | 
 
             try
             {
                 // Create a simple product
-                RestApiResultProduct result = apiInstance.CreateProduct(appId, product);
+                RestApiResultProduct result = apiInstance.CreateProduct(appId, simpleProduct);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -254,7 +254,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **product** | [**CreateSimpleProduct**](CreateSimpleProduct.md)|  | 
+ **simpleProduct** | [**CreateSimpleProduct**](CreateSimpleProduct.md)|  | 
 
 ### Return type
 

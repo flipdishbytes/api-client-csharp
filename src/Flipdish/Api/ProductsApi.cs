@@ -101,9 +101,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="product"></param>
+        /// <param name="simpleProduct"></param>
         /// <returns>RestApiResultProduct</returns>
-        RestApiResultProduct CreateProduct (string appId, CreateSimpleProduct product);
+        RestApiResultProduct CreateProduct (string appId, CreateSimpleProduct simpleProduct);
 
         /// <summary>
         /// Create a simple product
@@ -113,9 +113,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="product"></param>
+        /// <param name="simpleProduct"></param>
         /// <returns>ApiResponse of RestApiResultProduct</returns>
-        ApiResponse<RestApiResultProduct> CreateProductWithHttpInfo (string appId, CreateSimpleProduct product);
+        ApiResponse<RestApiResultProduct> CreateProductWithHttpInfo (string appId, CreateSimpleProduct simpleProduct);
         /// <summary>
         /// 
         /// </summary>
@@ -343,9 +343,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="product"></param>
+        /// <param name="simpleProduct"></param>
         /// <returns>Task of RestApiResultProduct</returns>
-        System.Threading.Tasks.Task<RestApiResultProduct> CreateProductAsync (string appId, CreateSimpleProduct product);
+        System.Threading.Tasks.Task<RestApiResultProduct> CreateProductAsync (string appId, CreateSimpleProduct simpleProduct);
 
         /// <summary>
         /// Create a simple product
@@ -355,9 +355,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="product"></param>
+        /// <param name="simpleProduct"></param>
         /// <returns>Task of ApiResponse (RestApiResultProduct)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultProduct>> CreateProductAsyncWithHttpInfo (string appId, CreateSimpleProduct product);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultProduct>> CreateProductAsyncWithHttpInfo (string appId, CreateSimpleProduct simpleProduct);
         /// <summary>
         /// 
         /// </summary>
@@ -1146,11 +1146,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="product"></param>
+        /// <param name="simpleProduct"></param>
         /// <returns>RestApiResultProduct</returns>
-        public RestApiResultProduct CreateProduct (string appId, CreateSimpleProduct product)
+        public RestApiResultProduct CreateProduct (string appId, CreateSimpleProduct simpleProduct)
         {
-             ApiResponse<RestApiResultProduct> localVarResponse = CreateProductWithHttpInfo(appId, product);
+             ApiResponse<RestApiResultProduct> localVarResponse = CreateProductWithHttpInfo(appId, simpleProduct);
              return localVarResponse.Data;
         }
 
@@ -1159,16 +1159,16 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="product"></param>
+        /// <param name="simpleProduct"></param>
         /// <returns>ApiResponse of RestApiResultProduct</returns>
-        public ApiResponse< RestApiResultProduct > CreateProductWithHttpInfo (string appId, CreateSimpleProduct product)
+        public ApiResponse< RestApiResultProduct > CreateProductWithHttpInfo (string appId, CreateSimpleProduct simpleProduct)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ProductsApi->CreateProduct");
-            // verify the required parameter 'product' is set
-            if (product == null)
-                throw new ApiException(400, "Missing required parameter 'product' when calling ProductsApi->CreateProduct");
+            // verify the required parameter 'simpleProduct' is set
+            if (simpleProduct == null)
+                throw new ApiException(400, "Missing required parameter 'simpleProduct' when calling ProductsApi->CreateProduct");
 
             var localVarPath = "/api/v1.0/{appId}/catalog/products";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1200,13 +1200,13 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (product != null && product.GetType() != typeof(byte[]))
+            if (simpleProduct != null && simpleProduct.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(product); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(simpleProduct); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = product; // byte array
+                localVarPostBody = simpleProduct; // byte array
             }
 
             // authentication (oauth2) required
@@ -1239,11 +1239,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="product"></param>
+        /// <param name="simpleProduct"></param>
         /// <returns>Task of RestApiResultProduct</returns>
-        public async System.Threading.Tasks.Task<RestApiResultProduct> CreateProductAsync (string appId, CreateSimpleProduct product)
+        public async System.Threading.Tasks.Task<RestApiResultProduct> CreateProductAsync (string appId, CreateSimpleProduct simpleProduct)
         {
-             ApiResponse<RestApiResultProduct> localVarResponse = await CreateProductAsyncWithHttpInfo(appId, product);
+             ApiResponse<RestApiResultProduct> localVarResponse = await CreateProductAsyncWithHttpInfo(appId, simpleProduct);
              return localVarResponse.Data;
 
         }
@@ -1253,16 +1253,16 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="product"></param>
+        /// <param name="simpleProduct"></param>
         /// <returns>Task of ApiResponse (RestApiResultProduct)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultProduct>> CreateProductAsyncWithHttpInfo (string appId, CreateSimpleProduct product)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultProduct>> CreateProductAsyncWithHttpInfo (string appId, CreateSimpleProduct simpleProduct)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ProductsApi->CreateProduct");
-            // verify the required parameter 'product' is set
-            if (product == null)
-                throw new ApiException(400, "Missing required parameter 'product' when calling ProductsApi->CreateProduct");
+            // verify the required parameter 'simpleProduct' is set
+            if (simpleProduct == null)
+                throw new ApiException(400, "Missing required parameter 'simpleProduct' when calling ProductsApi->CreateProduct");
 
             var localVarPath = "/api/v1.0/{appId}/catalog/products";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1294,13 +1294,13 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (product != null && product.GetType() != typeof(byte[]))
+            if (simpleProduct != null && simpleProduct.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(product); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(simpleProduct); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = product; // byte array
+                localVarPostBody = simpleProduct; // byte array
             }
 
             // authentication (oauth2) required
