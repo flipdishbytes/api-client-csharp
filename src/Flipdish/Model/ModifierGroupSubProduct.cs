@@ -80,7 +80,8 @@ namespace Flipdish.Model
         /// <param name="preselectedQuantity">Quantity of the modifier that will be set when the parent product is placed in the basket.</param>
         /// <param name="productId">Identifier of the ProductId to use as SubProduct (required).</param>
         /// <param name="productType">Type of the SupProduct (required).</param>
-        public ModifierGroupSubProduct(int? preselectedQuantity = default(int?), string productId = default(string), ProductTypeEnum productType = default(ProductTypeEnum))
+        /// <param name="product">Details of the sub product.</param>
+        public ModifierGroupSubProduct(int? preselectedQuantity = default(int?), string productId = default(string), ProductTypeEnum productType = default(ProductTypeEnum), Product product = default(Product))
         {
             // to ensure "productId" is required (not null)
             if (productId == null)
@@ -101,6 +102,7 @@ namespace Flipdish.Model
                 this.ProductType = productType;
             }
             this.PreselectedQuantity = preselectedQuantity;
+            this.Product = product;
         }
         
         /// <summary>
@@ -119,6 +121,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Details of the sub product
+        /// </summary>
+        /// <value>Details of the sub product</value>
+        [DataMember(Name="Product", EmitDefaultValue=false)]
+        public Product Product { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -129,6 +138,7 @@ namespace Flipdish.Model
             sb.Append("  PreselectedQuantity: ").Append(PreselectedQuantity).Append("\n");
             sb.Append("  ProductId: ").Append(ProductId).Append("\n");
             sb.Append("  ProductType: ").Append(ProductType).Append("\n");
+            sb.Append("  Product: ").Append(Product).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -177,6 +187,11 @@ namespace Flipdish.Model
                     this.ProductType == input.ProductType ||
                     (this.ProductType != null &&
                     this.ProductType.Equals(input.ProductType))
+                ) && 
+                (
+                    this.Product == input.Product ||
+                    (this.Product != null &&
+                    this.Product.Equals(input.Product))
                 );
         }
 
@@ -195,6 +210,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ProductId.GetHashCode();
                 if (this.ProductType != null)
                     hashCode = hashCode * 59 + this.ProductType.GetHashCode();
+                if (this.Product != null)
+                    hashCode = hashCode * 59 + this.Product.GetHashCode();
                 return hashCode;
             }
         }

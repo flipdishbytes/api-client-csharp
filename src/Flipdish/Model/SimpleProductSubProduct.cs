@@ -77,9 +77,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SimpleProductSubProduct" /> class.
         /// </summary>
+        /// <param name="minSelection">Minimum number of items that must be selected.</param>
+        /// <param name="maxSelection">Maximum number of items that can be selected.</param>
         /// <param name="productId">Identifier of the ProductId to use as SubProduct (required).</param>
         /// <param name="productType">Type of the SupProduct (required).</param>
-        public SimpleProductSubProduct(string productId = default(string), ProductTypeEnum productType = default(ProductTypeEnum))
+        /// <param name="product">Details of the sub product.</param>
+        public SimpleProductSubProduct(int? minSelection = default(int?), int? maxSelection = default(int?), string productId = default(string), ProductTypeEnum productType = default(ProductTypeEnum), Product product = default(Product))
         {
             // to ensure "productId" is required (not null)
             if (productId == null)
@@ -99,8 +102,25 @@ namespace Flipdish.Model
             {
                 this.ProductType = productType;
             }
+            this.MinSelection = minSelection;
+            this.MaxSelection = maxSelection;
+            this.Product = product;
         }
         
+        /// <summary>
+        /// Minimum number of items that must be selected
+        /// </summary>
+        /// <value>Minimum number of items that must be selected</value>
+        [DataMember(Name="MinSelection", EmitDefaultValue=false)]
+        public int? MinSelection { get; set; }
+
+        /// <summary>
+        /// Maximum number of items that can be selected
+        /// </summary>
+        /// <value>Maximum number of items that can be selected</value>
+        [DataMember(Name="MaxSelection", EmitDefaultValue=false)]
+        public int? MaxSelection { get; set; }
+
         /// <summary>
         /// Identifier of the ProductId to use as SubProduct
         /// </summary>
@@ -110,6 +130,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Details of the sub product
+        /// </summary>
+        /// <value>Details of the sub product</value>
+        [DataMember(Name="Product", EmitDefaultValue=false)]
+        public Product Product { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -117,8 +144,11 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SimpleProductSubProduct {\n");
+            sb.Append("  MinSelection: ").Append(MinSelection).Append("\n");
+            sb.Append("  MaxSelection: ").Append(MaxSelection).Append("\n");
             sb.Append("  ProductId: ").Append(ProductId).Append("\n");
             sb.Append("  ProductType: ").Append(ProductType).Append("\n");
+            sb.Append("  Product: ").Append(Product).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -154,6 +184,16 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.MinSelection == input.MinSelection ||
+                    (this.MinSelection != null &&
+                    this.MinSelection.Equals(input.MinSelection))
+                ) && 
+                (
+                    this.MaxSelection == input.MaxSelection ||
+                    (this.MaxSelection != null &&
+                    this.MaxSelection.Equals(input.MaxSelection))
+                ) && 
+                (
                     this.ProductId == input.ProductId ||
                     (this.ProductId != null &&
                     this.ProductId.Equals(input.ProductId))
@@ -162,6 +202,11 @@ namespace Flipdish.Model
                     this.ProductType == input.ProductType ||
                     (this.ProductType != null &&
                     this.ProductType.Equals(input.ProductType))
+                ) && 
+                (
+                    this.Product == input.Product ||
+                    (this.Product != null &&
+                    this.Product.Equals(input.Product))
                 );
         }
 
@@ -174,10 +219,16 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.MinSelection != null)
+                    hashCode = hashCode * 59 + this.MinSelection.GetHashCode();
+                if (this.MaxSelection != null)
+                    hashCode = hashCode * 59 + this.MaxSelection.GetHashCode();
                 if (this.ProductId != null)
                     hashCode = hashCode * 59 + this.ProductId.GetHashCode();
                 if (this.ProductType != null)
                     hashCode = hashCode * 59 + this.ProductType.GetHashCode();
+                if (this.Product != null)
+                    hashCode = hashCode * 59 + this.Product.GetHashCode();
                 return hashCode;
             }
         }
