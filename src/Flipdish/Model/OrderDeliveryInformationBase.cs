@@ -31,8 +31,9 @@ namespace Flipdish.Model
     public partial class OrderDeliveryInformationBase :  IEquatable<OrderDeliveryInformationBase>, IValidatableObject
     {
         /// <summary>
-        /// Defines Status
+        /// Delivery Status
         /// </summary>
+        /// <value>Delivery Status</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum
         {
@@ -93,20 +94,21 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets Status
+        /// Delivery Status
         /// </summary>
+        /// <value>Delivery Status</value>
         [DataMember(Name="Status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderDeliveryInformationBase" /> class.
         /// </summary>
-        /// <param name="externalReferenceId">externalReferenceId.</param>
-        /// <param name="trackUrl">trackUrl.</param>
-        /// <param name="status">status.</param>
-        /// <param name="deliveryStatusNotes">deliveryStatusNotes.</param>
-        /// <param name="errorMessage">errorMessage.</param>
-        /// <param name="integrationCode">integrationCode.</param>
-        /// <param name="integrationName">integrationName.</param>
+        /// <param name="externalReferenceId">External Reference Id.</param>
+        /// <param name="trackUrl">Tracking Url.</param>
+        /// <param name="status">Delivery Status.</param>
+        /// <param name="deliveryStatusNotes">Delivery Status Notes.</param>
+        /// <param name="errorMessage">Error Message.</param>
+        /// <param name="integrationCode">Integration Code.</param>
+        /// <param name="integrationName">Integration Name.</param>
         public OrderDeliveryInformationBase(string externalReferenceId = default(string), string trackUrl = default(string), StatusEnum? status = default(StatusEnum?), string deliveryStatusNotes = default(string), string errorMessage = default(string), string integrationCode = default(string), string integrationName = default(string))
         {
             this.ExternalReferenceId = externalReferenceId;
@@ -119,39 +121,45 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets ExternalReferenceId
+        /// External Reference Id
         /// </summary>
+        /// <value>External Reference Id</value>
         [DataMember(Name="ExternalReferenceId", EmitDefaultValue=false)]
         public string ExternalReferenceId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TrackUrl
+        /// Tracking Url
         /// </summary>
+        /// <value>Tracking Url</value>
         [DataMember(Name="TrackUrl", EmitDefaultValue=false)]
         public string TrackUrl { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets DeliveryStatusNotes
+        /// Delivery Status Notes
         /// </summary>
+        /// <value>Delivery Status Notes</value>
         [DataMember(Name="DeliveryStatusNotes", EmitDefaultValue=false)]
         public string DeliveryStatusNotes { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorMessage
+        /// Error Message
         /// </summary>
+        /// <value>Error Message</value>
         [DataMember(Name="ErrorMessage", EmitDefaultValue=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// Gets or Sets IntegrationCode
+        /// Integration Code
         /// </summary>
+        /// <value>Integration Code</value>
         [DataMember(Name="IntegrationCode", EmitDefaultValue=false)]
         public string IntegrationCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets IntegrationName
+        /// Integration Name
         /// </summary>
+        /// <value>Integration Name</value>
         [DataMember(Name="IntegrationName", EmitDefaultValue=false)]
         public string IntegrationName { get; set; }
 

@@ -72,10 +72,10 @@ namespace Flipdish.Api
         /// Get order delivery information
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">OrderId</param>
+        /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>RestApiResultOrderDeliveryInformation</returns>
         RestApiResultOrderDeliveryInformation GetDeliveryInformation (int? orderId);
 
@@ -83,10 +83,10 @@ namespace Flipdish.Api
         /// Get order delivery information
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">OrderId</param>
+        /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>ApiResponse of RestApiResultOrderDeliveryInformation</returns>
         ApiResponse<RestApiResultOrderDeliveryInformation> GetDeliveryInformationWithHttpInfo (int? orderId);
         /// <summary>
@@ -224,11 +224,11 @@ namespace Flipdish.Api
         /// Add/update delivery-related information to an order
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="deliveryInformation"></param>
+        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="deliveryInformation">Delivery Information</param>
         /// <returns></returns>
         void UpdateDeliveryInformation (int? orderId, OrderDeliveryInformationBase deliveryInformation);
 
@@ -236,11 +236,11 @@ namespace Flipdish.Api
         /// Add/update delivery-related information to an order
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="deliveryInformation"></param>
+        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="deliveryInformation">Delivery Information</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateDeliveryInformationWithHttpInfo (int? orderId, OrderDeliveryInformationBase deliveryInformation);
         #endregion Synchronous Operations
@@ -293,10 +293,10 @@ namespace Flipdish.Api
         /// Get order delivery information
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">OrderId</param>
+        /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>Task of RestApiResultOrderDeliveryInformation</returns>
         System.Threading.Tasks.Task<RestApiResultOrderDeliveryInformation> GetDeliveryInformationAsync (int? orderId);
 
@@ -304,10 +304,10 @@ namespace Flipdish.Api
         /// Get order delivery information
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">OrderId</param>
+        /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>Task of ApiResponse (RestApiResultOrderDeliveryInformation)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderDeliveryInformation>> GetDeliveryInformationAsyncWithHttpInfo (int? orderId);
         /// <summary>
@@ -445,11 +445,11 @@ namespace Flipdish.Api
         /// Add/update delivery-related information to an order
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="deliveryInformation"></param>
+        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="deliveryInformation">Delivery Information</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UpdateDeliveryInformationAsync (int? orderId, OrderDeliveryInformationBase deliveryInformation);
 
@@ -457,11 +457,11 @@ namespace Flipdish.Api
         /// Add/update delivery-related information to an order
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="deliveryInformation"></param>
+        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="deliveryInformation">Delivery Information</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDeliveryInformationAsyncWithHttpInfo (int? orderId, OrderDeliveryInformationBase deliveryInformation);
         #endregion Asynchronous Operations
@@ -899,10 +899,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order delivery information [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get order delivery information Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">OrderId</param>
+        /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>RestApiResultOrderDeliveryInformation</returns>
         public RestApiResultOrderDeliveryInformation GetDeliveryInformation (int? orderId)
         {
@@ -911,10 +911,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order delivery information [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get order delivery information Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">OrderId</param>
+        /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>ApiResponse of RestApiResultOrderDeliveryInformation</returns>
         public ApiResponse< RestApiResultOrderDeliveryInformation > GetDeliveryInformationWithHttpInfo (int? orderId)
         {
@@ -974,10 +974,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order delivery information [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get order delivery information Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">OrderId</param>
+        /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>Task of RestApiResultOrderDeliveryInformation</returns>
         public async System.Threading.Tasks.Task<RestApiResultOrderDeliveryInformation> GetDeliveryInformationAsync (int? orderId)
         {
@@ -987,10 +987,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order delivery information [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get order delivery information Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">OrderId</param>
+        /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>Task of ApiResponse (RestApiResultOrderDeliveryInformation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderDeliveryInformation>> GetDeliveryInformationAsyncWithHttpInfo (int? orderId)
         {
@@ -1933,11 +1933,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add/update delivery-related information to an order [BETA - this endpoint is under development, do not use it in your production system]
+        /// Add/update delivery-related information to an order Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="deliveryInformation"></param>
+        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="deliveryInformation">Delivery Information</param>
         /// <returns></returns>
         public void UpdateDeliveryInformation (int? orderId, OrderDeliveryInformationBase deliveryInformation)
         {
@@ -1945,11 +1945,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add/update delivery-related information to an order [BETA - this endpoint is under development, do not use it in your production system]
+        /// Add/update delivery-related information to an order Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="deliveryInformation"></param>
+        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="deliveryInformation">Delivery Information</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UpdateDeliveryInformationWithHttpInfo (int? orderId, OrderDeliveryInformationBase deliveryInformation)
         {
@@ -2025,11 +2025,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add/update delivery-related information to an order [BETA - this endpoint is under development, do not use it in your production system]
+        /// Add/update delivery-related information to an order Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="deliveryInformation"></param>
+        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="deliveryInformation">Delivery Information</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UpdateDeliveryInformationAsync (int? orderId, OrderDeliveryInformationBase deliveryInformation)
         {
@@ -2038,11 +2038,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add/update delivery-related information to an order [BETA - this endpoint is under development, do not use it in your production system]
+        /// Add/update delivery-related information to an order Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId"></param>
-        /// <param name="deliveryInformation"></param>
+        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="deliveryInformation">Delivery Information</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDeliveryInformationAsyncWithHttpInfo (int? orderId, OrderDeliveryInformationBase deliveryInformation)
         {

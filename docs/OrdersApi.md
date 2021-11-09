@@ -149,7 +149,7 @@ void (empty response body)
 
 Get order delivery information
 
-[BETA - this endpoint is under development, do not use it in your production system]
+Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
 
 ### Example
 ```csharp
@@ -169,7 +169,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var orderId = 56;  // int? | OrderId
+            var orderId = 56;  // int? | Flipdish Order Id
 
             try
             {
@@ -190,7 +190,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **int?**| OrderId | 
+ **orderId** | **int?**| Flipdish Order Id | 
 
 ### Return type
 
@@ -551,7 +551,7 @@ void (empty response body)
 
 Add/update delivery-related information to an order
 
-[BETA - this endpoint is under development, do not use it in your production system]
+Returns an order's delivery information. This would be used to display the latest known delivery information on a screen.
 
 ### Example
 ```csharp
@@ -571,8 +571,8 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var orderId = 56;  // int? | 
-            var deliveryInformation = new OrderDeliveryInformationBase(); // OrderDeliveryInformationBase | 
+            var orderId = 56;  // int? | Flipdish Order Id
+            var deliveryInformation = new OrderDeliveryInformationBase(); // OrderDeliveryInformationBase | Delivery Information
 
             try
             {
@@ -592,8 +592,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **int?**|  | 
- **deliveryInformation** | [**OrderDeliveryInformationBase**](OrderDeliveryInformationBase.md)|  | 
+ **orderId** | **int?**| Flipdish Order Id | 
+ **deliveryInformation** | [**OrderDeliveryInformationBase**](OrderDeliveryInformationBase.md)| Delivery Information | 
 
 ### Return type
 
