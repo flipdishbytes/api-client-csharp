@@ -76,18 +76,20 @@ namespace Flipdish.Model
         /// <param name="publicId">Permanent reference to the item..</param>
         /// <param name="metadata">List of metadata.</param>
         /// <param name="nextMenuItemOptionSetId">if null, next option set is next. if -1, this is the final option set.</param>
+        /// <param name="productId">Product Id when the OptionSet is associated to a Product.</param>
         /// <param name="name">Name.</param>
         /// <param name="price">Price.</param>
         /// <param name="isAvailable">Is available.</param>
         /// <param name="displayOrder">Display order. Displayed in ascending order..</param>
         /// <param name="cellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
         /// <param name="imageUrl">Image url.</param>
-        public MenuItemOptionSetItem(int? menuItemOptionSetItemId = default(int?), Guid? publicId = default(Guid?), List<CreateMetadata> metadata = default(List<CreateMetadata>), int? nextMenuItemOptionSetId = default(int?), string name = default(string), double? price = default(double?), bool? isAvailable = default(bool?), int? displayOrder = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), string imageUrl = default(string))
+        public MenuItemOptionSetItem(int? menuItemOptionSetItemId = default(int?), Guid? publicId = default(Guid?), List<CreateMetadata> metadata = default(List<CreateMetadata>), int? nextMenuItemOptionSetId = default(int?), string productId = default(string), string name = default(string), double? price = default(double?), bool? isAvailable = default(bool?), int? displayOrder = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), string imageUrl = default(string))
         {
             this.MenuItemOptionSetItemId = menuItemOptionSetItemId;
             this.PublicId = publicId;
             this.Metadata = metadata;
             this.NextMenuItemOptionSetId = nextMenuItemOptionSetId;
+            this.ProductId = productId;
             this.Name = name;
             this.Price = price;
             this.IsAvailable = isAvailable;
@@ -123,6 +125,13 @@ namespace Flipdish.Model
         /// <value>if null, next option set is next. if -1, this is the final option set</value>
         [DataMember(Name="NextMenuItemOptionSetId", EmitDefaultValue=false)]
         public int? NextMenuItemOptionSetId { get; set; }
+
+        /// <summary>
+        /// Product Id when the OptionSet is associated to a Product
+        /// </summary>
+        /// <value>Product Id when the OptionSet is associated to a Product</value>
+        [DataMember(Name="ProductId", EmitDefaultValue=false)]
+        public string ProductId { get; set; }
 
         /// <summary>
         /// Name
@@ -172,6 +181,7 @@ namespace Flipdish.Model
             sb.Append("  PublicId: ").Append(PublicId).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  NextMenuItemOptionSetId: ").Append(NextMenuItemOptionSetId).Append("\n");
+            sb.Append("  ProductId: ").Append(ProductId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("  IsAvailable: ").Append(IsAvailable).Append("\n");
@@ -233,6 +243,11 @@ namespace Flipdish.Model
                     this.NextMenuItemOptionSetId.Equals(input.NextMenuItemOptionSetId))
                 ) && 
                 (
+                    this.ProductId == input.ProductId ||
+                    (this.ProductId != null &&
+                    this.ProductId.Equals(input.ProductId))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -281,6 +296,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 if (this.NextMenuItemOptionSetId != null)
                     hashCode = hashCode * 59 + this.NextMenuItemOptionSetId.GetHashCode();
+                if (this.ProductId != null)
+                    hashCode = hashCode * 59 + this.ProductId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Price != null)
