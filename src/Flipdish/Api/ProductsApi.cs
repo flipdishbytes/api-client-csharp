@@ -117,7 +117,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultProduct</returns>
         ApiResponse<RestApiResultProduct> CreateProductWithHttpInfo (string appId, CreateSimpleProduct simpleProduct);
         /// <summary>
-        /// 
+        /// Delete a Product Image
         /// </summary>
         /// <remarks>
         /// 
@@ -129,7 +129,7 @@ namespace Flipdish.Api
         void DeleteProductImage (string appId, string productId);
 
         /// <summary>
-        /// 
+        /// Delete a Product Image
         /// </summary>
         /// <remarks>
         /// 
@@ -359,7 +359,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultProduct)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultProduct>> CreateProductAsyncWithHttpInfo (string appId, CreateSimpleProduct simpleProduct);
         /// <summary>
-        /// 
+        /// Delete a Product Image
         /// </summary>
         /// <remarks>
         /// 
@@ -371,7 +371,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task DeleteProductImageAsync (string appId, string productId);
 
         /// <summary>
-        /// 
+        /// Delete a Product Image
         /// </summary>
         /// <remarks>
         /// 
@@ -1329,7 +1329,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Delete a Product Image 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1341,7 +1341,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Delete a Product Image 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1409,7 +1409,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Delete a Product Image 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1422,7 +1422,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Delete a Product Image 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

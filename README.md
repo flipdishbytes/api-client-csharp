@@ -352,7 +352,7 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**CreateModifier**](docs/ProductsApi.md#createmodifier) | **POST** /api/v1.0/{appId}/catalog/products/Modifier | Create a new modifier
 *ProductsApi* | [**CreateModifierGroup**](docs/ProductsApi.md#createmodifiergroup) | **POST** /api/v1.0/{appId}/catalog/products/ModifierGroup | Create a new modifier group
 *ProductsApi* | [**CreateProduct**](docs/ProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a simple product
-*ProductsApi* | [**DeleteProductImage**](docs/ProductsApi.md#deleteproductimage) | **DELETE** /api/v1.0/{appId}/catalog/products/{productId}/image | 
+*ProductsApi* | [**DeleteProductImage**](docs/ProductsApi.md#deleteproductimage) | **DELETE** /api/v1.0/{appId}/catalog/products/{productId}/image | Delete a Product Image
 *ProductsApi* | [**DuplicateProduct**](docs/ProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/duplicate | Duplicate a product
 *ProductsApi* | [**GetProductById**](docs/ProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/products/{productId} | Get products by productId
 *ProductsApi* | [**GetProducts**](docs/ProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get paginated products by app name id filtered by product types

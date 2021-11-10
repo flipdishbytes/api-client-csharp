@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**CreateModifier**](ProductsApi.md#createmodifier) | **POST** /api/v1.0/{appId}/catalog/products/Modifier | Create a new modifier
 [**CreateModifierGroup**](ProductsApi.md#createmodifiergroup) | **POST** /api/v1.0/{appId}/catalog/products/ModifierGroup | Create a new modifier group
 [**CreateProduct**](ProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a simple product
-[**DeleteProductImage**](ProductsApi.md#deleteproductimage) | **DELETE** /api/v1.0/{appId}/catalog/products/{productId}/image | 
+[**DeleteProductImage**](ProductsApi.md#deleteproductimage) | **DELETE** /api/v1.0/{appId}/catalog/products/{productId}/image | Delete a Product Image
 [**DuplicateProduct**](ProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/duplicate | Duplicate a product
 [**GetProductById**](ProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/products/{productId} | Get products by productId
 [**GetProducts**](ProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get paginated products by app name id filtered by product types
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 # **DeleteProductImage**
 > void DeleteProductImage (string appId, string productId)
 
-
+Delete a Product Image
 
 ### Example
 ```csharp
@@ -300,6 +300,7 @@ namespace Example
 
             try
             {
+                // Delete a Product Image
                 apiInstance.DeleteProductImage(appId, productId);
             }
             catch (Exception e)
