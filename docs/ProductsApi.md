@@ -5,14 +5,16 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ArchiveProduct**](ProductsApi.md#archiveproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/archive | Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-[**CreateModifier**](ProductsApi.md#createmodifier) | **POST** /api/v1.0/{appId}/catalog/products/Modifier | Create a new modifier
-[**CreateModifierGroup**](ProductsApi.md#createmodifiergroup) | **POST** /api/v1.0/{appId}/catalog/products/ModifierGroup | Create a new modifier group
+[**CreateModifier**](ProductsApi.md#createmodifier) | **POST** /api/v1.0/{appId}/catalog/products/Modifier | Create a modifier
+[**CreateModifierGroup**](ProductsApi.md#createmodifiergroup) | **POST** /api/v1.0/{appId}/catalog/products/ModifierGroup | Create a modifier group
 [**CreateProduct**](ProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a simple product
 [**DeleteProductImage**](ProductsApi.md#deleteproductimage) | **DELETE** /api/v1.0/{appId}/catalog/products/{productId}/image | Delete a Product Image
 [**DuplicateProduct**](ProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/duplicate | Duplicate a product
 [**GetProductById**](ProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/products/{productId} | Get products by productId
 [**GetProducts**](ProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get paginated products by app name id filtered by product types
-[**UpdateProduct**](ProductsApi.md#updateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId} | Update a product
+[**UpdateModifier**](ProductsApi.md#updatemodifier) | **POST** /api/v1.0/{appId}/catalog/products/modifier/{productId} | Update modifier
+[**UpdateModifierGroup**](ProductsApi.md#updatemodifiergroup) | **POST** /api/v1.0/{appId}/catalog/products/modifierGroup/{productId} | Update modifier Group
+[**UpdateProduct**](ProductsApi.md#updateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId} | Update a simple product
 [**UploadProductImage**](ProductsApi.md#uploadproductimage) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/image | Upload a Product Image
 
 
@@ -83,7 +85,7 @@ void (empty response body)
 # **CreateModifier**
 > RestApiResultProduct CreateModifier (string appId, CreateModifier modifier)
 
-Create a new modifier
+Create a modifier
 
 ### Example
 ```csharp
@@ -108,7 +110,7 @@ namespace Example
 
             try
             {
-                // Create a new modifier
+                // Create a modifier
                 RestApiResultProduct result = apiInstance.CreateModifier(appId, modifier);
                 Debug.WriteLine(result);
             }
@@ -147,7 +149,7 @@ Name | Type | Description  | Notes
 # **CreateModifierGroup**
 > RestApiResultProduct CreateModifierGroup (string appId, CreateModifierGroup modifierGroup)
 
-Create a new modifier group
+Create a modifier group
 
 ### Example
 ```csharp
@@ -172,7 +174,7 @@ namespace Example
 
             try
             {
-                // Create a new modifier group
+                // Create a modifier group
                 RestApiResultProduct result = apiInstance.CreateModifierGroup(appId, modifierGroup);
                 Debug.WriteLine(result);
             }
@@ -532,11 +534,141 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="updatemodifier"></a>
+# **UpdateModifier**
+> void UpdateModifier (string appId, string productId, UpdateModifier modifier)
+
+Update modifier
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UpdateModifierExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ProductsApi();
+            var appId = appId_example;  // string | 
+            var productId = productId_example;  // string | 
+            var modifier = new UpdateModifier(); // UpdateModifier | 
+
+            try
+            {
+                // Update modifier
+                apiInstance.UpdateModifier(appId, productId, modifier);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ProductsApi.UpdateModifier: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **productId** | **string**|  | 
+ **modifier** | [**UpdateModifier**](UpdateModifier.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="updatemodifiergroup"></a>
+# **UpdateModifierGroup**
+> void UpdateModifierGroup (string appId, string productId, UpdateModifierGroup modifierGroup)
+
+Update modifier Group
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UpdateModifierGroupExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ProductsApi();
+            var appId = appId_example;  // string | 
+            var productId = productId_example;  // string | 
+            var modifierGroup = new UpdateModifierGroup(); // UpdateModifierGroup | 
+
+            try
+            {
+                // Update modifier Group
+                apiInstance.UpdateModifierGroup(appId, productId, modifierGroup);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ProductsApi.UpdateModifierGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **productId** | **string**|  | 
+ **modifierGroup** | [**UpdateModifierGroup**](UpdateModifierGroup.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="updateproduct"></a>
 # **UpdateProduct**
-> void UpdateProduct (string appId, string productId, UpdateProduct product)
+> void UpdateProduct (string appId, string productId, UpdateSimpleProduct product)
 
-Update a product
+Update a simple product
 
 ### Example
 ```csharp
@@ -558,11 +690,11 @@ namespace Example
             var apiInstance = new ProductsApi();
             var appId = appId_example;  // string | 
             var productId = productId_example;  // string | 
-            var product = new UpdateProduct(); // UpdateProduct | 
+            var product = new UpdateSimpleProduct(); // UpdateSimpleProduct | 
 
             try
             {
-                // Update a product
+                // Update a simple product
                 apiInstance.UpdateProduct(appId, productId, product);
             }
             catch (Exception e)
@@ -580,7 +712,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
  **productId** | **string**|  | 
- **product** | [**UpdateProduct**](UpdateProduct.md)|  | 
+ **product** | [**UpdateSimpleProduct**](UpdateSimpleProduct.md)|  | 
 
 ### Return type
 

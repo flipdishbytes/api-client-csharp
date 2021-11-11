@@ -349,14 +349,16 @@ Class | Method | HTTP request | Description
 *PayoutsExportApi* | [**ExportPayouts**](docs/PayoutsExportApi.md#exportpayouts) | **GET** /api/v1.0/{appId}/payouts/export | Export payouts as CSV
 *ProcessingFeeConfigsApi* | [**GetProcessingFeeConfigsByStoreIds**](docs/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
 *ProductsApi* | [**ArchiveProduct**](docs/ProductsApi.md#archiveproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/archive | Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-*ProductsApi* | [**CreateModifier**](docs/ProductsApi.md#createmodifier) | **POST** /api/v1.0/{appId}/catalog/products/Modifier | Create a new modifier
-*ProductsApi* | [**CreateModifierGroup**](docs/ProductsApi.md#createmodifiergroup) | **POST** /api/v1.0/{appId}/catalog/products/ModifierGroup | Create a new modifier group
+*ProductsApi* | [**CreateModifier**](docs/ProductsApi.md#createmodifier) | **POST** /api/v1.0/{appId}/catalog/products/Modifier | Create a modifier
+*ProductsApi* | [**CreateModifierGroup**](docs/ProductsApi.md#createmodifiergroup) | **POST** /api/v1.0/{appId}/catalog/products/ModifierGroup | Create a modifier group
 *ProductsApi* | [**CreateProduct**](docs/ProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a simple product
 *ProductsApi* | [**DeleteProductImage**](docs/ProductsApi.md#deleteproductimage) | **DELETE** /api/v1.0/{appId}/catalog/products/{productId}/image | Delete a Product Image
 *ProductsApi* | [**DuplicateProduct**](docs/ProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/duplicate | Duplicate a product
 *ProductsApi* | [**GetProductById**](docs/ProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/products/{productId} | Get products by productId
 *ProductsApi* | [**GetProducts**](docs/ProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get paginated products by app name id filtered by product types
-*ProductsApi* | [**UpdateProduct**](docs/ProductsApi.md#updateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId} | Update a product
+*ProductsApi* | [**UpdateModifier**](docs/ProductsApi.md#updatemodifier) | **POST** /api/v1.0/{appId}/catalog/products/modifier/{productId} | Update modifier
+*ProductsApi* | [**UpdateModifierGroup**](docs/ProductsApi.md#updatemodifiergroup) | **POST** /api/v1.0/{appId}/catalog/products/modifierGroup/{productId} | Update modifier Group
+*ProductsApi* | [**UpdateProduct**](docs/ProductsApi.md#updateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId} | Update a simple product
 *ProductsApi* | [**UploadProductImage**](docs/ProductsApi.md#uploadproductimage) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/image | Upload a Product Image
 *PushNotificationsApi* | [**DeletePushNotification**](docs/PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**GetPushNotifications**](docs/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
@@ -912,7 +914,9 @@ Class | Method | HTTP request | Description
  - [Model.TeammateUpdatedEvent](docs/TeammateUpdatedEvent.md)
  - [Model.UpdateDriverNotificationToken](docs/UpdateDriverNotificationToken.md)
  - [Model.UpdateDriverProfileModel](docs/UpdateDriverProfileModel.md)
- - [Model.UpdateProduct](docs/UpdateProduct.md)
+ - [Model.UpdateModifier](docs/UpdateModifier.md)
+ - [Model.UpdateModifierGroup](docs/UpdateModifierGroup.md)
+ - [Model.UpdateSimpleProduct](docs/UpdateSimpleProduct.md)
  - [Model.UserAnsweredSignupQuestionsEvent](docs/UserAnsweredSignupQuestionsEvent.md)
  - [Model.UserCreatedEvent](docs/UserCreatedEvent.md)
  - [Model.UserDeletedEvent](docs/UserDeletedEvent.md)

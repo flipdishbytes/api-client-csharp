@@ -48,7 +48,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ArchiveProductWithHttpInfo (string appId, string productId);
         /// <summary>
-        /// Create a new modifier
+        /// Create a modifier
         /// </summary>
         /// <remarks>
         /// 
@@ -60,7 +60,7 @@ namespace Flipdish.Api
         RestApiResultProduct CreateModifier (string appId, CreateModifier modifier);
 
         /// <summary>
-        /// Create a new modifier
+        /// Create a modifier
         /// </summary>
         /// <remarks>
         /// 
@@ -71,7 +71,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultProduct</returns>
         ApiResponse<RestApiResultProduct> CreateModifierWithHttpInfo (string appId, CreateModifier modifier);
         /// <summary>
-        /// Create a new modifier group
+        /// Create a modifier group
         /// </summary>
         /// <remarks>
         /// 
@@ -83,7 +83,7 @@ namespace Flipdish.Api
         RestApiResultProduct CreateModifierGroup (string appId, CreateModifierGroup modifierGroup);
 
         /// <summary>
-        /// Create a new modifier group
+        /// Create a modifier group
         /// </summary>
         /// <remarks>
         /// 
@@ -215,7 +215,57 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultProduct</returns>
         ApiResponse<RestApiPaginationResultProduct> GetProductsWithHttpInfo (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Update a product
+        /// Update modifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifier"></param>
+        /// <returns></returns>
+        void UpdateModifier (string appId, string productId, UpdateModifier modifier);
+
+        /// <summary>
+        /// Update modifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifier"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UpdateModifierWithHttpInfo (string appId, string productId, UpdateModifier modifier);
+        /// <summary>
+        /// Update modifier Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifierGroup"></param>
+        /// <returns></returns>
+        void UpdateModifierGroup (string appId, string productId, UpdateModifierGroup modifierGroup);
+
+        /// <summary>
+        /// Update modifier Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifierGroup"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UpdateModifierGroupWithHttpInfo (string appId, string productId, UpdateModifierGroup modifierGroup);
+        /// <summary>
+        /// Update a simple product
         /// </summary>
         /// <remarks>
         /// 
@@ -225,10 +275,10 @@ namespace Flipdish.Api
         /// <param name="productId"></param>
         /// <param name="product"></param>
         /// <returns></returns>
-        void UpdateProduct (string appId, string productId, UpdateProduct product);
+        void UpdateProduct (string appId, string productId, UpdateSimpleProduct product);
 
         /// <summary>
-        /// Update a product
+        /// Update a simple product
         /// </summary>
         /// <remarks>
         /// 
@@ -238,7 +288,7 @@ namespace Flipdish.Api
         /// <param name="productId"></param>
         /// <param name="product"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateProductWithHttpInfo (string appId, string productId, UpdateProduct product);
+        ApiResponse<Object> UpdateProductWithHttpInfo (string appId, string productId, UpdateSimpleProduct product);
         /// <summary>
         /// Upload a Product Image
         /// </summary>
@@ -290,7 +340,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ArchiveProductAsyncWithHttpInfo (string appId, string productId);
         /// <summary>
-        /// Create a new modifier
+        /// Create a modifier
         /// </summary>
         /// <remarks>
         /// 
@@ -302,7 +352,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultProduct> CreateModifierAsync (string appId, CreateModifier modifier);
 
         /// <summary>
-        /// Create a new modifier
+        /// Create a modifier
         /// </summary>
         /// <remarks>
         /// 
@@ -313,7 +363,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultProduct)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultProduct>> CreateModifierAsyncWithHttpInfo (string appId, CreateModifier modifier);
         /// <summary>
-        /// Create a new modifier group
+        /// Create a modifier group
         /// </summary>
         /// <remarks>
         /// 
@@ -325,7 +375,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultProduct> CreateModifierGroupAsync (string appId, CreateModifierGroup modifierGroup);
 
         /// <summary>
-        /// Create a new modifier group
+        /// Create a modifier group
         /// </summary>
         /// <remarks>
         /// 
@@ -457,7 +507,57 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiPaginationResultProduct)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultProduct>> GetProductsAsyncWithHttpInfo (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Update a product
+        /// Update modifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifier"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UpdateModifierAsync (string appId, string productId, UpdateModifier modifier);
+
+        /// <summary>
+        /// Update modifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifier"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateModifierAsyncWithHttpInfo (string appId, string productId, UpdateModifier modifier);
+        /// <summary>
+        /// Update modifier Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifierGroup"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UpdateModifierGroupAsync (string appId, string productId, UpdateModifierGroup modifierGroup);
+
+        /// <summary>
+        /// Update modifier Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifierGroup"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateModifierGroupAsyncWithHttpInfo (string appId, string productId, UpdateModifierGroup modifierGroup);
+        /// <summary>
+        /// Update a simple product
         /// </summary>
         /// <remarks>
         /// 
@@ -467,10 +567,10 @@ namespace Flipdish.Api
         /// <param name="productId"></param>
         /// <param name="product"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateProductAsync (string appId, string productId, UpdateProduct product);
+        System.Threading.Tasks.Task UpdateProductAsync (string appId, string productId, UpdateSimpleProduct product);
 
         /// <summary>
-        /// Update a product
+        /// Update a simple product
         /// </summary>
         /// <remarks>
         /// 
@@ -480,7 +580,7 @@ namespace Flipdish.Api
         /// <param name="productId"></param>
         /// <param name="product"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateProductAsyncWithHttpInfo (string appId, string productId, UpdateProduct product);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateProductAsyncWithHttpInfo (string appId, string productId, UpdateSimpleProduct product);
         /// <summary>
         /// Upload a Product Image
         /// </summary>
@@ -768,7 +868,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new modifier 
+        /// Create a modifier 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -781,7 +881,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new modifier 
+        /// Create a modifier 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -861,7 +961,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new modifier 
+        /// Create a modifier 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -875,7 +975,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new modifier 
+        /// Create a modifier 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -955,7 +1055,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new modifier group 
+        /// Create a modifier group 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -968,7 +1068,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new modifier group 
+        /// Create a modifier group 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1048,7 +1148,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new modifier group 
+        /// Create a modifier group 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1062,7 +1162,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new modifier group 
+        /// Create a modifier group 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1997,27 +2097,421 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a product 
+        /// Update modifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifier"></param>
+        /// <returns></returns>
+        public void UpdateModifier (string appId, string productId, UpdateModifier modifier)
+        {
+             UpdateModifierWithHttpInfo(appId, productId, modifier);
+        }
+
+        /// <summary>
+        /// Update modifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifier"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UpdateModifierWithHttpInfo (string appId, string productId, UpdateModifier modifier)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling ProductsApi->UpdateModifier");
+            // verify the required parameter 'productId' is set
+            if (productId == null)
+                throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->UpdateModifier");
+            // verify the required parameter 'modifier' is set
+            if (modifier == null)
+                throw new ApiException(400, "Missing required parameter 'modifier' when calling ProductsApi->UpdateModifier");
+
+            var localVarPath = "/api/v1.0/{appId}/catalog/products/modifier/{productId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (productId != null) localVarPathParams.Add("productId", this.Configuration.ApiClient.ParameterToString(productId)); // path parameter
+            if (modifier != null && modifier.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(modifier); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = modifier; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateModifier", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update modifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifier"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UpdateModifierAsync (string appId, string productId, UpdateModifier modifier)
+        {
+             await UpdateModifierAsyncWithHttpInfo(appId, productId, modifier);
+
+        }
+
+        /// <summary>
+        /// Update modifier 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifier"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateModifierAsyncWithHttpInfo (string appId, string productId, UpdateModifier modifier)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling ProductsApi->UpdateModifier");
+            // verify the required parameter 'productId' is set
+            if (productId == null)
+                throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->UpdateModifier");
+            // verify the required parameter 'modifier' is set
+            if (modifier == null)
+                throw new ApiException(400, "Missing required parameter 'modifier' when calling ProductsApi->UpdateModifier");
+
+            var localVarPath = "/api/v1.0/{appId}/catalog/products/modifier/{productId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (productId != null) localVarPathParams.Add("productId", this.Configuration.ApiClient.ParameterToString(productId)); // path parameter
+            if (modifier != null && modifier.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(modifier); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = modifier; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateModifier", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update modifier Group 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifierGroup"></param>
+        /// <returns></returns>
+        public void UpdateModifierGroup (string appId, string productId, UpdateModifierGroup modifierGroup)
+        {
+             UpdateModifierGroupWithHttpInfo(appId, productId, modifierGroup);
+        }
+
+        /// <summary>
+        /// Update modifier Group 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifierGroup"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UpdateModifierGroupWithHttpInfo (string appId, string productId, UpdateModifierGroup modifierGroup)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling ProductsApi->UpdateModifierGroup");
+            // verify the required parameter 'productId' is set
+            if (productId == null)
+                throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->UpdateModifierGroup");
+            // verify the required parameter 'modifierGroup' is set
+            if (modifierGroup == null)
+                throw new ApiException(400, "Missing required parameter 'modifierGroup' when calling ProductsApi->UpdateModifierGroup");
+
+            var localVarPath = "/api/v1.0/{appId}/catalog/products/modifierGroup/{productId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (productId != null) localVarPathParams.Add("productId", this.Configuration.ApiClient.ParameterToString(productId)); // path parameter
+            if (modifierGroup != null && modifierGroup.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(modifierGroup); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = modifierGroup; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateModifierGroup", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update modifier Group 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifierGroup"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UpdateModifierGroupAsync (string appId, string productId, UpdateModifierGroup modifierGroup)
+        {
+             await UpdateModifierGroupAsyncWithHttpInfo(appId, productId, modifierGroup);
+
+        }
+
+        /// <summary>
+        /// Update modifier Group 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="productId"></param>
+        /// <param name="modifierGroup"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateModifierGroupAsyncWithHttpInfo (string appId, string productId, UpdateModifierGroup modifierGroup)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling ProductsApi->UpdateModifierGroup");
+            // verify the required parameter 'productId' is set
+            if (productId == null)
+                throw new ApiException(400, "Missing required parameter 'productId' when calling ProductsApi->UpdateModifierGroup");
+            // verify the required parameter 'modifierGroup' is set
+            if (modifierGroup == null)
+                throw new ApiException(400, "Missing required parameter 'modifierGroup' when calling ProductsApi->UpdateModifierGroup");
+
+            var localVarPath = "/api/v1.0/{appId}/catalog/products/modifierGroup/{productId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (productId != null) localVarPathParams.Add("productId", this.Configuration.ApiClient.ParameterToString(productId)); // path parameter
+            if (modifierGroup != null && modifierGroup.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(modifierGroup); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = modifierGroup; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateModifierGroup", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update a simple product 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="productId"></param>
         /// <param name="product"></param>
         /// <returns></returns>
-        public void UpdateProduct (string appId, string productId, UpdateProduct product)
+        public void UpdateProduct (string appId, string productId, UpdateSimpleProduct product)
         {
              UpdateProductWithHttpInfo(appId, productId, product);
         }
 
         /// <summary>
-        /// Update a product 
+        /// Update a simple product 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="productId"></param>
         /// <param name="product"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateProductWithHttpInfo (string appId, string productId, UpdateProduct product)
+        public ApiResponse<Object> UpdateProductWithHttpInfo (string appId, string productId, UpdateSimpleProduct product)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -2095,28 +2589,28 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a product 
+        /// Update a simple product 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="productId"></param>
         /// <param name="product"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateProductAsync (string appId, string productId, UpdateProduct product)
+        public async System.Threading.Tasks.Task UpdateProductAsync (string appId, string productId, UpdateSimpleProduct product)
         {
              await UpdateProductAsyncWithHttpInfo(appId, productId, product);
 
         }
 
         /// <summary>
-        /// Update a product 
+        /// Update a simple product 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="productId"></param>
         /// <param name="product"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateProductAsyncWithHttpInfo (string appId, string productId, UpdateProduct product)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateProductAsyncWithHttpInfo (string appId, string productId, UpdateSimpleProduct product)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
