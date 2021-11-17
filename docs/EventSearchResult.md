@@ -117,6 +117,9 @@ Name | Type | Description | Notes
 **WebsiteUpdatedEvent** | [**List&lt;WebsiteUpdatedEvent&gt;**](WebsiteUpdatedEvent.md) | Website updated | [optional] 
 **OrderCapacityUpdatedEvent** | [**List&lt;OrderCapacityConfigUpdatedEvent&gt;**](OrderCapacityConfigUpdatedEvent.md) | Order capacity config updated | [optional] 
 **ExternalStoreEvent** | [**List&lt;ExternalStoreEvent&gt;**](ExternalStoreEvent.md) | External event | [optional] 
+**AppStoreConfigCreatedEvent** | [**List&lt;AppStoreConfigCreatedEvent&gt;**](AppStoreConfigCreatedEvent.md) | App Store Config Created | [optional] 
+**AppStoreConfigUpdatedEvent** | [**List&lt;AppStoreConfigUpdatedEvent&gt;**](AppStoreConfigUpdatedEvent.md) | App Store Config Updated | [optional] 
+**AppStoreConfigDeletedEvent** | [**List&lt;AppStoreConfigDeletedEvent&gt;**](AppStoreConfigDeletedEvent.md) | App Store Config Deleted | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
