@@ -40,7 +40,8 @@ namespace Flipdish.Model
         /// <param name="name">Product name.</param>
         /// <param name="description">Product description.</param>
         /// <param name="price">Product price.</param>
-        public CreateModifierGroup(int? minSelection = default(int?), int? maxSelection = default(int?), List<ModifierGroupSubProduct> subProducts = default(List<ModifierGroupSubProduct>), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?))
+        /// <param name="imageFileName">Image File Name.</param>
+        public CreateModifierGroup(int? minSelection = default(int?), int? maxSelection = default(int?), List<ModifierGroupSubProduct> subProducts = default(List<ModifierGroupSubProduct>), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string imageFileName = default(string))
         {
             this.MinSelection = minSelection;
             this.MaxSelection = maxSelection;
@@ -49,6 +50,7 @@ namespace Flipdish.Model
             this.Name = name;
             this.Description = description;
             this.Price = price;
+            this.ImageFileName = imageFileName;
         }
         
         /// <summary>
@@ -101,6 +103,13 @@ namespace Flipdish.Model
         public double? Price { get; set; }
 
         /// <summary>
+        /// Image File Name
+        /// </summary>
+        /// <value>Image File Name</value>
+        [DataMember(Name="ImageFileName", EmitDefaultValue=false)]
+        public string ImageFileName { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -115,6 +124,7 @@ namespace Flipdish.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
+            sb.Append("  ImageFileName: ").Append(ImageFileName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -183,6 +193,11 @@ namespace Flipdish.Model
                     this.Price == input.Price ||
                     (this.Price != null &&
                     this.Price.Equals(input.Price))
+                ) && 
+                (
+                    this.ImageFileName == input.ImageFileName ||
+                    (this.ImageFileName != null &&
+                    this.ImageFileName.Equals(input.ImageFileName))
                 );
         }
 
@@ -209,6 +224,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Price != null)
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
+                if (this.ImageFileName != null)
+                    hashCode = hashCode * 59 + this.ImageFileName.GetHashCode();
                 return hashCode;
             }
         }
@@ -260,6 +277,18 @@ namespace Flipdish.Model
             if(this.Price < (double?)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Price, must be a value greater than or equal to 0.", new [] { "Price" });
+            }
+
+            // ImageFileName (string) maxLength
+            if(this.ImageFileName != null && this.ImageFileName.Length > 512)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ImageFileName, length must be less than 512.", new [] { "ImageFileName" });
+            }
+
+            // ImageFileName (string) minLength
+            if(this.ImageFileName != null && this.ImageFileName.Length < 0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ImageFileName, length must be greater than 0.", new [] { "ImageFileName" });
             }
 
             yield break;
