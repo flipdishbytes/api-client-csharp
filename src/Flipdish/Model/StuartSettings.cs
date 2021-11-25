@@ -143,8 +143,8 @@ namespace Flipdish.Model
         /// <param name="packageType">Package type.</param>
         /// <param name="transportType">Transport type.</param>
         /// <param name="cancelOrderIfStuartCancelDelivery">Determines if Flipdish order should be cancel when Stuart cancels delivery.</param>
-        /// <param name="transportPrices">transportPrices.</param>
-        public StuartSettings(string clientId = default(string), string clientSecret = default(string), bool? enabled = default(bool?), string webhookUrlBasicAuthentication = default(string), int? minutesToPickupBeforeThanDeliveryTime = default(int?), PackageTypeEnum? packageType = default(PackageTypeEnum?), TransportTypeEnum? transportType = default(TransportTypeEnum?), bool? cancelOrderIfStuartCancelDelivery = default(bool?), StuartSettingsTransportPrices transportPrices = default(StuartSettingsTransportPrices))
+        /// <param name="transportPrices">If the order exceeds are certain amount this configuration will determine a new vehicle type.</param>
+        public StuartSettings(string clientId = default(string), string clientSecret = default(string), bool? enabled = default(bool?), string webhookUrlBasicAuthentication = default(string), int? minutesToPickupBeforeThanDeliveryTime = default(int?), PackageTypeEnum? packageType = default(PackageTypeEnum?), TransportTypeEnum? transportType = default(TransportTypeEnum?), bool? cancelOrderIfStuartCancelDelivery = default(bool?), Object transportPrices = default(Object))
         {
             this.ClientId = clientId;
             this.ClientSecret = clientSecret;
@@ -202,10 +202,11 @@ namespace Flipdish.Model
         public bool? CancelOrderIfStuartCancelDelivery { get; set; }
 
         /// <summary>
-        /// Gets or Sets TransportPrices
+        /// If the order exceeds are certain amount this configuration will determine a new vehicle type
         /// </summary>
+        /// <value>If the order exceeds are certain amount this configuration will determine a new vehicle type</value>
         [DataMember(Name="TransportPrices", EmitDefaultValue=false)]
-        public StuartSettingsTransportPrices TransportPrices { get; set; }
+        public Object TransportPrices { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

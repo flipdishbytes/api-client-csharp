@@ -917,7 +917,6 @@ Class | Method | HTTP request | Description
  - [Model.StripeConnectedAccountInfo](docs/StripeConnectedAccountInfo.md)
  - [Model.StripeTerminalPrivateKey](docs/StripeTerminalPrivateKey.md)
  - [Model.StuartSettings](docs/StuartSettings.md)
- - [Model.StuartSettingsTransportPrices](docs/StuartSettingsTransportPrices.md)
  - [Model.SupportedCountry](docs/SupportedCountry.md)
  - [Model.Teammate](docs/Teammate.md)
  - [Model.TeammateBase](docs/TeammateBase.md)
