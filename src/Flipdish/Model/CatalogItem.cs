@@ -76,7 +76,7 @@ namespace Flipdish.Model
         /// <param name="alcohol">item contains alcohol.</param>
         /// <param name="type">Sellable types - Product, Modifier, etc.</param>
         /// <param name="groups">Collection of groups associated with this item.</param>
-        public CatalogItem(string catalogItemId = default(string), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string imageFileName = default(string), bool? isArchived = default(bool?), bool? alcohol = default(bool?), TypeEnum? type = default(TypeEnum?), List<SimpleProductSubProduct> groups = default(List<SimpleProductSubProduct>))
+        public CatalogItem(string catalogItemId = default(string), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string imageFileName = default(string), bool? isArchived = default(bool?), bool? alcohol = default(bool?), TypeEnum? type = default(TypeEnum?), List<CatalogGroupReference> groups = default(List<CatalogGroupReference>))
         {
             this.CatalogItemId = catalogItemId;
             this.Sku = sku;
@@ -152,7 +152,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Collection of groups associated with this item</value>
         [DataMember(Name="Groups", EmitDefaultValue=false)]
-        public List<SimpleProductSubProduct> Groups { get; set; }
+        public List<CatalogGroupReference> Groups { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -173,6 +173,8 @@ Class | Method | HTTP request | Description
 *CardReadersApi* | [**InitiateKioskBluetoothPairingMode**](docs/CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
 *CardReadersApi* | [**InitiateKioskBluetoothUpdateInstall**](docs/CardReadersApi.md#initiatekioskbluetoothupdateinstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
 *CardReadersApi* | [**UnpairCurrentlyPairedBluetoothDevice**](docs/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
+*CatalogGroupsApi* | [**GetById**](docs/CatalogGroupsApi.md#getbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Get group by Id
+*CatalogGroupsApi* | [**GetGroups**](docs/CatalogGroupsApi.md#getgroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
 *CatalogItemsApi* | [**GetById**](docs/CatalogItemsApi.md#getbyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
 *CatalogItemsApi* | [**GetItems**](docs/CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
 *ChannelsApi* | [**GetChannel**](docs/ChannelsApi.md#getchannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
@@ -493,7 +495,10 @@ Class | Method | HTTP request | Description
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
  - [Model.BusinessHoursPeriodBase](docs/BusinessHoursPeriodBase.md)
  - [Model.CampaignStatistics](docs/CampaignStatistics.md)
+ - [Model.CatalogGroup](docs/CatalogGroup.md)
+ - [Model.CatalogGroupReference](docs/CatalogGroupReference.md)
  - [Model.CatalogItem](docs/CatalogItem.md)
+ - [Model.CatalogItemReference](docs/CatalogItemReference.md)
  - [Model.CertificateCreatedEvent](docs/CertificateCreatedEvent.md)
  - [Model.CertificateRenewedEvent](docs/CertificateRenewedEvent.md)
  - [Model.ChangePasswordModel](docs/ChangePasswordModel.md)
@@ -759,6 +764,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultApp](docs/RestApiPaginationResultApp.md)
  - [Model.RestApiPaginationResultAppSummary](docs/RestApiPaginationResultAppSummary.md)
  - [Model.RestApiPaginationResultBusinessHoursOverride](docs/RestApiPaginationResultBusinessHoursOverride.md)
+ - [Model.RestApiPaginationResultCatalogGroup](docs/RestApiPaginationResultCatalogGroup.md)
  - [Model.RestApiPaginationResultCatalogItem](docs/RestApiPaginationResultCatalogItem.md)
  - [Model.RestApiPaginationResultChannel](docs/RestApiPaginationResultChannel.md)
  - [Model.RestApiPaginationResultHttpRequestAndResponseLog](docs/RestApiPaginationResultHttpRequestAndResponseLog.md)
