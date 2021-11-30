@@ -4,9 +4,74 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**CreateCatalogItem**](CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create an item product
 [**GetById**](CatalogItemsApi.md#getbyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
 [**GetItems**](CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
 
+
+<a name="createcatalogitem"></a>
+# **CreateCatalogItem**
+> RestApiResultCatalogItem CreateCatalogItem (string appId, CreateCatalogItem createCatalogItem)
+
+Create an item product
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class CreateCatalogItemExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new CatalogItemsApi();
+            var appId = appId_example;  // string | 
+            var createCatalogItem = new CreateCatalogItem(); // CreateCatalogItem | 
+
+            try
+            {
+                // Create an item product
+                RestApiResultCatalogItem result = apiInstance.CreateCatalogItem(appId, createCatalogItem);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CatalogItemsApi.CreateCatalogItem: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **createCatalogItem** | [**CreateCatalogItem**](CreateCatalogItem.md)|  | 
+
+### Return type
+
+[**RestApiResultCatalogItem**](RestApiResultCatalogItem.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getbyid"></a>
 # **GetById**

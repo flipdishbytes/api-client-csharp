@@ -25,6 +25,29 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Create an item product
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="createCatalogItem"></param>
+        /// <returns>RestApiResultCatalogItem</returns>
+        RestApiResultCatalogItem CreateCatalogItem (string appId, CreateCatalogItem createCatalogItem);
+
+        /// <summary>
+        /// Create an item product
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="createCatalogItem"></param>
+        /// <returns>ApiResponse of RestApiResultCatalogItem</returns>
+        ApiResponse<RestApiResultCatalogItem> CreateCatalogItemWithHttpInfo (string appId, CreateCatalogItem createCatalogItem);
+        /// <summary>
         /// Get item by Id
         /// </summary>
         /// <remarks>
@@ -78,6 +101,29 @@ namespace Flipdish.Api
         ApiResponse<RestApiPaginationResultCatalogItem> GetItemsWithHttpInfo (string appId, List<string> itemTypes, string searchTerm = null, int? page = null, int? limit = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Create an item product
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="createCatalogItem"></param>
+        /// <returns>Task of RestApiResultCatalogItem</returns>
+        System.Threading.Tasks.Task<RestApiResultCatalogItem> CreateCatalogItemAsync (string appId, CreateCatalogItem createCatalogItem);
+
+        /// <summary>
+        /// Create an item product
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="createCatalogItem"></param>
+        /// <returns>Task of ApiResponse (RestApiResultCatalogItem)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultCatalogItem>> CreateCatalogItemAsyncWithHttpInfo (string appId, CreateCatalogItem createCatalogItem);
         /// <summary>
         /// Get item by Id
         /// </summary>
@@ -228,6 +274,193 @@ namespace Flipdish.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Create an item product 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="createCatalogItem"></param>
+        /// <returns>RestApiResultCatalogItem</returns>
+        public RestApiResultCatalogItem CreateCatalogItem (string appId, CreateCatalogItem createCatalogItem)
+        {
+             ApiResponse<RestApiResultCatalogItem> localVarResponse = CreateCatalogItemWithHttpInfo(appId, createCatalogItem);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create an item product 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="createCatalogItem"></param>
+        /// <returns>ApiResponse of RestApiResultCatalogItem</returns>
+        public ApiResponse< RestApiResultCatalogItem > CreateCatalogItemWithHttpInfo (string appId, CreateCatalogItem createCatalogItem)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogItemsApi->CreateCatalogItem");
+            // verify the required parameter 'createCatalogItem' is set
+            if (createCatalogItem == null)
+                throw new ApiException(400, "Missing required parameter 'createCatalogItem' when calling CatalogItemsApi->CreateCatalogItem");
+
+            var localVarPath = "/api/v1.0/{appId}/catalog/items";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (createCatalogItem != null && createCatalogItem.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(createCatalogItem); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = createCatalogItem; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateCatalogItem", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultCatalogItem>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultCatalogItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCatalogItem)));
+        }
+
+        /// <summary>
+        /// Create an item product 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="createCatalogItem"></param>
+        /// <returns>Task of RestApiResultCatalogItem</returns>
+        public async System.Threading.Tasks.Task<RestApiResultCatalogItem> CreateCatalogItemAsync (string appId, CreateCatalogItem createCatalogItem)
+        {
+             ApiResponse<RestApiResultCatalogItem> localVarResponse = await CreateCatalogItemAsyncWithHttpInfo(appId, createCatalogItem);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create an item product 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="createCatalogItem"></param>
+        /// <returns>Task of ApiResponse (RestApiResultCatalogItem)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCatalogItem>> CreateCatalogItemAsyncWithHttpInfo (string appId, CreateCatalogItem createCatalogItem)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogItemsApi->CreateCatalogItem");
+            // verify the required parameter 'createCatalogItem' is set
+            if (createCatalogItem == null)
+                throw new ApiException(400, "Missing required parameter 'createCatalogItem' when calling CatalogItemsApi->CreateCatalogItem");
+
+            var localVarPath = "/api/v1.0/{appId}/catalog/items";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (createCatalogItem != null && createCatalogItem.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(createCatalogItem); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = createCatalogItem; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateCatalogItem", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultCatalogItem>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultCatalogItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCatalogItem)));
         }
 
         /// <summary>

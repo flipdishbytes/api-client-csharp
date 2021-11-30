@@ -39,28 +39,22 @@ namespace Flipdish.Model
         {
             
             /// <summary>
-            /// Enum Unknown for value: Unknown
-            /// </summary>
-            [EnumMember(Value = "Unknown")]
-            Unknown = 1,
-            
-            /// <summary>
             /// Enum SimpleProduct for value: SimpleProduct
             /// </summary>
             [EnumMember(Value = "SimpleProduct")]
-            SimpleProduct = 2,
+            SimpleProduct = 1,
             
             /// <summary>
             /// Enum Modifier for value: Modifier
             /// </summary>
             [EnumMember(Value = "Modifier")]
-            Modifier = 3,
+            Modifier = 2,
             
             /// <summary>
             /// Enum ModifierGroup for value: ModifierGroup
             /// </summary>
             [EnumMember(Value = "ModifierGroup")]
-            ModifierGroup = 4
+            ModifierGroup = 3
         }
 
         /// <summary>

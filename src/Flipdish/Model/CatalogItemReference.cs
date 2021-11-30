@@ -39,22 +39,16 @@ namespace Flipdish.Model
         {
             
             /// <summary>
-            /// Enum Unknown for value: Unknown
-            /// </summary>
-            [EnumMember(Value = "Unknown")]
-            Unknown = 1,
-            
-            /// <summary>
             /// Enum Product for value: Product
             /// </summary>
             [EnumMember(Value = "Product")]
-            Product = 2,
+            Product = 1,
             
             /// <summary>
             /// Enum Modifier for value: Modifier
             /// </summary>
             [EnumMember(Value = "Modifier")]
-            Modifier = 3
+            Modifier = 2
         }
 
         /// <summary>
@@ -71,11 +65,11 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CatalogItemReference" /> class.
         /// </summary>
+        /// <param name="item">Details of the referenced {Flipdish.PublicModels.V1.Catalog.Item.CatalogItem}.</param>
         /// <param name="catalogItemId">Identifier of the CatalogItemId to use as SubProduct (required).</param>
         /// <param name="type">Type of the SupProduct (required).</param>
-        /// <param name="item">Details of the sub product.</param>
         /// <param name="preselectedQuantity">Quantity of the modifier that will be set when the parent product is placed in the basket.</param>
-        public CatalogItemReference(string catalogItemId = default(string), TypeEnum type = default(TypeEnum), Product item = default(Product), int? preselectedQuantity = default(int?))
+        public CatalogItemReference(CatalogItem item = default(CatalogItem), string catalogItemId = default(string), TypeEnum type = default(TypeEnum), int? preselectedQuantity = default(int?))
         {
             // to ensure "catalogItemId" is required (not null)
             if (catalogItemId == null)
@@ -100,19 +94,19 @@ namespace Flipdish.Model
         }
         
         /// <summary>
+        /// Details of the referenced {Flipdish.PublicModels.V1.Catalog.Item.CatalogItem}
+        /// </summary>
+        /// <value>Details of the referenced {Flipdish.PublicModels.V1.Catalog.Item.CatalogItem}</value>
+        [DataMember(Name="Item", EmitDefaultValue=false)]
+        public CatalogItem Item { get; set; }
+
+        /// <summary>
         /// Identifier of the CatalogItemId to use as SubProduct
         /// </summary>
         /// <value>Identifier of the CatalogItemId to use as SubProduct</value>
         [DataMember(Name="CatalogItemId", EmitDefaultValue=false)]
         public string CatalogItemId { get; set; }
 
-
-        /// <summary>
-        /// Details of the sub product
-        /// </summary>
-        /// <value>Details of the sub product</value>
-        [DataMember(Name="Item", EmitDefaultValue=false)]
-        public Product Item { get; set; }
 
         /// <summary>
         /// Quantity of the modifier that will be set when the parent product is placed in the basket
@@ -129,9 +123,9 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CatalogItemReference {\n");
+            sb.Append("  Item: ").Append(Item).Append("\n");
             sb.Append("  CatalogItemId: ").Append(CatalogItemId).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Item: ").Append(Item).Append("\n");
             sb.Append("  PreselectedQuantity: ").Append(PreselectedQuantity).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -168,6 +162,11 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.Item == input.Item ||
+                    (this.Item != null &&
+                    this.Item.Equals(input.Item))
+                ) && 
+                (
                     this.CatalogItemId == input.CatalogItemId ||
                     (this.CatalogItemId != null &&
                     this.CatalogItemId.Equals(input.CatalogItemId))
@@ -176,11 +175,6 @@ namespace Flipdish.Model
                     this.Type == input.Type ||
                     (this.Type != null &&
                     this.Type.Equals(input.Type))
-                ) && 
-                (
-                    this.Item == input.Item ||
-                    (this.Item != null &&
-                    this.Item.Equals(input.Item))
                 ) && 
                 (
                     this.PreselectedQuantity == input.PreselectedQuantity ||
@@ -198,12 +192,12 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.Item != null)
+                    hashCode = hashCode * 59 + this.Item.GetHashCode();
                 if (this.CatalogItemId != null)
                     hashCode = hashCode * 59 + this.CatalogItemId.GetHashCode();
                 if (this.Type != null)
                     hashCode = hashCode * 59 + this.Type.GetHashCode();
-                if (this.Item != null)
-                    hashCode = hashCode * 59 + this.Item.GetHashCode();
                 if (this.PreselectedQuantity != null)
                     hashCode = hashCode * 59 + this.PreselectedQuantity.GetHashCode();
                 return hashCode;

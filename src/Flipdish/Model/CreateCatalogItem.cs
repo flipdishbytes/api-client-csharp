@@ -25,10 +25,10 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// CatalogItem
+    /// Create a Catalog Item
     /// </summary>
     [DataContract]
-    public partial class CatalogItem :  IEquatable<CatalogItem>, IValidatableObject
+    public partial class CreateCatalogItem :  IEquatable<CreateCatalogItem>, IValidatableObject
     {
         /// <summary>
         /// Type of item (Product, Modifier, etc)
@@ -58,15 +58,13 @@ namespace Flipdish.Model
         [DataMember(Name="ItemType", EmitDefaultValue=false)]
         public ItemTypeEnum ItemType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CatalogItem" /> class.
+        /// Initializes a new instance of the <see cref="CreateCatalogItem" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected CatalogItem() { }
+        protected CreateCatalogItem() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CatalogItem" /> class.
+        /// Initializes a new instance of the <see cref="CreateCatalogItem" /> class.
         /// </summary>
-        /// <param name="catalogItemId">Unique catalog Item id.</param>
-        /// <param name="isArchived">Returns true if the item is archived.</param>
         /// <param name="groups">Collection of groups associated with this item.</param>
         /// <param name="itemType">Type of item (Product, Modifier, etc) (required).</param>
         /// <param name="sku">Stock Keeping Unit (SKU) (required).</param>
@@ -75,12 +73,12 @@ namespace Flipdish.Model
         /// <param name="price">Item price (required).</param>
         /// <param name="imageFileName">Image File Name.</param>
         /// <param name="alcohol">item contains alcohol.</param>
-        public CatalogItem(string catalogItemId = default(string), bool? isArchived = default(bool?), List<CatalogGroupReference> groups = default(List<CatalogGroupReference>), ItemTypeEnum itemType = default(ItemTypeEnum), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string imageFileName = default(string), bool? alcohol = default(bool?))
+        public CreateCatalogItem(List<CreateCatalogGroupReference> groups = default(List<CreateCatalogGroupReference>), ItemTypeEnum itemType = default(ItemTypeEnum), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string imageFileName = default(string), bool? alcohol = default(bool?))
         {
             // to ensure "itemType" is required (not null)
             if (itemType == null)
             {
-                throw new InvalidDataException("itemType is a required property for CatalogItem and cannot be null");
+                throw new InvalidDataException("itemType is a required property for CreateCatalogItem and cannot be null");
             }
             else
             {
@@ -89,7 +87,7 @@ namespace Flipdish.Model
             // to ensure "sku" is required (not null)
             if (sku == null)
             {
-                throw new InvalidDataException("sku is a required property for CatalogItem and cannot be null");
+                throw new InvalidDataException("sku is a required property for CreateCatalogItem and cannot be null");
             }
             else
             {
@@ -98,7 +96,7 @@ namespace Flipdish.Model
             // to ensure "name" is required (not null)
             if (name == null)
             {
-                throw new InvalidDataException("name is a required property for CatalogItem and cannot be null");
+                throw new InvalidDataException("name is a required property for CreateCatalogItem and cannot be null");
             }
             else
             {
@@ -107,14 +105,12 @@ namespace Flipdish.Model
             // to ensure "price" is required (not null)
             if (price == null)
             {
-                throw new InvalidDataException("price is a required property for CatalogItem and cannot be null");
+                throw new InvalidDataException("price is a required property for CreateCatalogItem and cannot be null");
             }
             else
             {
                 this.Price = price;
             }
-            this.CatalogItemId = catalogItemId;
-            this.IsArchived = isArchived;
             this.Groups = groups;
             this.Description = description;
             this.ImageFileName = imageFileName;
@@ -122,25 +118,11 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Unique catalog Item id
-        /// </summary>
-        /// <value>Unique catalog Item id</value>
-        [DataMember(Name="CatalogItemId", EmitDefaultValue=false)]
-        public string CatalogItemId { get; set; }
-
-        /// <summary>
-        /// Returns true if the item is archived
-        /// </summary>
-        /// <value>Returns true if the item is archived</value>
-        [DataMember(Name="IsArchived", EmitDefaultValue=false)]
-        public bool? IsArchived { get; set; }
-
-        /// <summary>
         /// Collection of groups associated with this item
         /// </summary>
         /// <value>Collection of groups associated with this item</value>
         [DataMember(Name="Groups", EmitDefaultValue=false)]
-        public List<CatalogGroupReference> Groups { get; set; }
+        public List<CreateCatalogGroupReference> Groups { get; set; }
 
 
         /// <summary>
@@ -192,9 +174,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CatalogItem {\n");
-            sb.Append("  CatalogItemId: ").Append(CatalogItemId).Append("\n");
-            sb.Append("  IsArchived: ").Append(IsArchived).Append("\n");
+            sb.Append("class CreateCatalogItem {\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
             sb.Append("  ItemType: ").Append(ItemType).Append("\n");
             sb.Append("  Sku: ").Append(Sku).Append("\n");
@@ -223,30 +203,20 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CatalogItem);
+            return this.Equals(input as CreateCatalogItem);
         }
 
         /// <summary>
-        /// Returns true if CatalogItem instances are equal
+        /// Returns true if CreateCatalogItem instances are equal
         /// </summary>
-        /// <param name="input">Instance of CatalogItem to be compared</param>
+        /// <param name="input">Instance of CreateCatalogItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CatalogItem input)
+        public bool Equals(CreateCatalogItem input)
         {
             if (input == null)
                 return false;
 
             return 
-                (
-                    this.CatalogItemId == input.CatalogItemId ||
-                    (this.CatalogItemId != null &&
-                    this.CatalogItemId.Equals(input.CatalogItemId))
-                ) && 
-                (
-                    this.IsArchived == input.IsArchived ||
-                    (this.IsArchived != null &&
-                    this.IsArchived.Equals(input.IsArchived))
-                ) && 
                 (
                     this.Groups == input.Groups ||
                     this.Groups != null &&
@@ -298,10 +268,6 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.CatalogItemId != null)
-                    hashCode = hashCode * 59 + this.CatalogItemId.GetHashCode();
-                if (this.IsArchived != null)
-                    hashCode = hashCode * 59 + this.IsArchived.GetHashCode();
                 if (this.Groups != null)
                     hashCode = hashCode * 59 + this.Groups.GetHashCode();
                 if (this.ItemType != null)
@@ -329,18 +295,6 @@ namespace Flipdish.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // CatalogItemId (string) maxLength
-            if(this.CatalogItemId != null && this.CatalogItemId.Length > 30)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CatalogItemId, length must be less than 30.", new [] { "CatalogItemId" });
-            }
-
-            // CatalogItemId (string) minLength
-            if(this.CatalogItemId != null && this.CatalogItemId.Length < 0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CatalogItemId, length must be greater than 0.", new [] { "CatalogItemId" });
-            }
-
             // Sku (string) maxLength
             if(this.Sku != null && this.Sku.Length > 30)
             {

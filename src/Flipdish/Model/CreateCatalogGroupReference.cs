@@ -25,10 +25,10 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Reference to an existing {Flipdish.PublicModels.V1.Catalog.Group.CatalogGroup}
+    /// Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Group.CatalogGroup}
     /// </summary>
     [DataContract]
-    public partial class CatalogGroupReference :  IEquatable<CatalogGroupReference>, IValidatableObject
+    public partial class CreateCatalogGroupReference :  IEquatable<CreateCatalogGroupReference>, IValidatableObject
     {
         /// <summary>
         /// Type of the SupProduct
@@ -58,22 +58,21 @@ namespace Flipdish.Model
         [DataMember(Name="GroupType", EmitDefaultValue=false)]
         public GroupTypeEnum GroupType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CatalogGroupReference" /> class.
+        /// Initializes a new instance of the <see cref="CreateCatalogGroupReference" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected CatalogGroupReference() { }
+        protected CreateCatalogGroupReference() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CatalogGroupReference" /> class.
+        /// Initializes a new instance of the <see cref="CreateCatalogGroupReference" /> class.
         /// </summary>
-        /// <param name="group">Details of the referenced {Flipdish.PublicModels.V1.Catalog.Item.CatalogItem}.</param>
         /// <param name="catalogGroupId">Identifier of the ProductId to use as SubProduct (required).</param>
         /// <param name="groupType">Type of the SupProduct (required).</param>
-        public CatalogGroupReference(CatalogGroup group = default(CatalogGroup), string catalogGroupId = default(string), GroupTypeEnum groupType = default(GroupTypeEnum))
+        public CreateCatalogGroupReference(string catalogGroupId = default(string), GroupTypeEnum groupType = default(GroupTypeEnum))
         {
             // to ensure "catalogGroupId" is required (not null)
             if (catalogGroupId == null)
             {
-                throw new InvalidDataException("catalogGroupId is a required property for CatalogGroupReference and cannot be null");
+                throw new InvalidDataException("catalogGroupId is a required property for CreateCatalogGroupReference and cannot be null");
             }
             else
             {
@@ -82,22 +81,14 @@ namespace Flipdish.Model
             // to ensure "groupType" is required (not null)
             if (groupType == null)
             {
-                throw new InvalidDataException("groupType is a required property for CatalogGroupReference and cannot be null");
+                throw new InvalidDataException("groupType is a required property for CreateCatalogGroupReference and cannot be null");
             }
             else
             {
                 this.GroupType = groupType;
             }
-            this.Group = group;
         }
         
-        /// <summary>
-        /// Details of the referenced {Flipdish.PublicModels.V1.Catalog.Item.CatalogItem}
-        /// </summary>
-        /// <value>Details of the referenced {Flipdish.PublicModels.V1.Catalog.Item.CatalogItem}</value>
-        [DataMember(Name="Group", EmitDefaultValue=false)]
-        public CatalogGroup Group { get; set; }
-
         /// <summary>
         /// Identifier of the ProductId to use as SubProduct
         /// </summary>
@@ -113,8 +104,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CatalogGroupReference {\n");
-            sb.Append("  Group: ").Append(Group).Append("\n");
+            sb.Append("class CreateCatalogGroupReference {\n");
             sb.Append("  CatalogGroupId: ").Append(CatalogGroupId).Append("\n");
             sb.Append("  GroupType: ").Append(GroupType).Append("\n");
             sb.Append("}\n");
@@ -137,25 +127,20 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CatalogGroupReference);
+            return this.Equals(input as CreateCatalogGroupReference);
         }
 
         /// <summary>
-        /// Returns true if CatalogGroupReference instances are equal
+        /// Returns true if CreateCatalogGroupReference instances are equal
         /// </summary>
-        /// <param name="input">Instance of CatalogGroupReference to be compared</param>
+        /// <param name="input">Instance of CreateCatalogGroupReference to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CatalogGroupReference input)
+        public bool Equals(CreateCatalogGroupReference input)
         {
             if (input == null)
                 return false;
 
             return 
-                (
-                    this.Group == input.Group ||
-                    (this.Group != null &&
-                    this.Group.Equals(input.Group))
-                ) && 
                 (
                     this.CatalogGroupId == input.CatalogGroupId ||
                     (this.CatalogGroupId != null &&
@@ -177,8 +162,6 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Group != null)
-                    hashCode = hashCode * 59 + this.Group.GetHashCode();
                 if (this.CatalogGroupId != null)
                     hashCode = hashCode * 59 + this.CatalogGroupId.GetHashCode();
                 if (this.GroupType != null)
