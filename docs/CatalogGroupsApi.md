@@ -4,13 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetById**](CatalogGroupsApi.md#getbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Get group by Id
+[**GetCatalogGroupById**](CatalogGroupsApi.md#getcataloggroupbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Get group by Id
 [**GetGroups**](CatalogGroupsApi.md#getgroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
 
 
-<a name="getbyid"></a>
-# **GetById**
-> CatalogGroup GetById (string appId, string catalogGroupId)
+<a name="getcataloggroupbyid"></a>
+# **GetCatalogGroupById**
+> CatalogGroup GetCatalogGroupById (string appId, string catalogGroupId)
 
 Get group by Id
 
@@ -24,7 +24,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GetByIdExample
+    public class GetCatalogGroupByIdExample
     {
         public void main()
         {
@@ -38,12 +38,12 @@ namespace Example
             try
             {
                 // Get group by Id
-                CatalogGroup result = apiInstance.GetById(appId, catalogGroupId);
+                CatalogGroup result = apiInstance.GetCatalogGroupById(appId, catalogGroupId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling CatalogGroupsApi.GetById: " + e.Message );
+                Debug.Print("Exception when calling CatalogGroupsApi.GetCatalogGroupById: " + e.Message );
             }
         }
     }

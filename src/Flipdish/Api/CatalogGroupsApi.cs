@@ -34,7 +34,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogGroupId"></param>
         /// <returns>CatalogGroup</returns>
-        CatalogGroup GetById (string appId, string catalogGroupId);
+        CatalogGroup GetCatalogGroupById (string appId, string catalogGroupId);
 
         /// <summary>
         /// Get group by Id
@@ -46,7 +46,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogGroupId"></param>
         /// <returns>ApiResponse of CatalogGroup</returns>
-        ApiResponse<CatalogGroup> GetByIdWithHttpInfo (string appId, string catalogGroupId);
+        ApiResponse<CatalogGroup> GetCatalogGroupByIdWithHttpInfo (string appId, string catalogGroupId);
         /// <summary>
         /// Get paginated groups by app name id filtered by types
         /// </summary>
@@ -88,7 +88,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogGroupId"></param>
         /// <returns>Task of CatalogGroup</returns>
-        System.Threading.Tasks.Task<CatalogGroup> GetByIdAsync (string appId, string catalogGroupId);
+        System.Threading.Tasks.Task<CatalogGroup> GetCatalogGroupByIdAsync (string appId, string catalogGroupId);
 
         /// <summary>
         /// Get group by Id
@@ -100,7 +100,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogGroupId"></param>
         /// <returns>Task of ApiResponse (CatalogGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CatalogGroup>> GetByIdAsyncWithHttpInfo (string appId, string catalogGroupId);
+        System.Threading.Tasks.Task<ApiResponse<CatalogGroup>> GetCatalogGroupByIdAsyncWithHttpInfo (string appId, string catalogGroupId);
         /// <summary>
         /// Get paginated groups by app name id filtered by types
         /// </summary>
@@ -237,9 +237,9 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogGroupId"></param>
         /// <returns>CatalogGroup</returns>
-        public CatalogGroup GetById (string appId, string catalogGroupId)
+        public CatalogGroup GetCatalogGroupById (string appId, string catalogGroupId)
         {
-             ApiResponse<CatalogGroup> localVarResponse = GetByIdWithHttpInfo(appId, catalogGroupId);
+             ApiResponse<CatalogGroup> localVarResponse = GetCatalogGroupByIdWithHttpInfo(appId, catalogGroupId);
              return localVarResponse.Data;
         }
 
@@ -250,14 +250,14 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogGroupId"></param>
         /// <returns>ApiResponse of CatalogGroup</returns>
-        public ApiResponse< CatalogGroup > GetByIdWithHttpInfo (string appId, string catalogGroupId)
+        public ApiResponse< CatalogGroup > GetCatalogGroupByIdWithHttpInfo (string appId, string catalogGroupId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->GetById");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->GetCatalogGroupById");
             // verify the required parameter 'catalogGroupId' is set
             if (catalogGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'catalogGroupId' when calling CatalogGroupsApi->GetById");
+                throw new ApiException(400, "Missing required parameter 'catalogGroupId' when calling CatalogGroupsApi->GetCatalogGroupById");
 
             var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogGroupId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -302,7 +302,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetById", localVarResponse);
+                Exception exception = ExceptionFactory("GetCatalogGroupById", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -318,9 +318,9 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogGroupId"></param>
         /// <returns>Task of CatalogGroup</returns>
-        public async System.Threading.Tasks.Task<CatalogGroup> GetByIdAsync (string appId, string catalogGroupId)
+        public async System.Threading.Tasks.Task<CatalogGroup> GetCatalogGroupByIdAsync (string appId, string catalogGroupId)
         {
-             ApiResponse<CatalogGroup> localVarResponse = await GetByIdAsyncWithHttpInfo(appId, catalogGroupId);
+             ApiResponse<CatalogGroup> localVarResponse = await GetCatalogGroupByIdAsyncWithHttpInfo(appId, catalogGroupId);
              return localVarResponse.Data;
 
         }
@@ -332,14 +332,14 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogGroupId"></param>
         /// <returns>Task of ApiResponse (CatalogGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CatalogGroup>> GetByIdAsyncWithHttpInfo (string appId, string catalogGroupId)
+        public async System.Threading.Tasks.Task<ApiResponse<CatalogGroup>> GetCatalogGroupByIdAsyncWithHttpInfo (string appId, string catalogGroupId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->GetById");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->GetCatalogGroupById");
             // verify the required parameter 'catalogGroupId' is set
             if (catalogGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'catalogGroupId' when calling CatalogGroupsApi->GetById");
+                throw new ApiException(400, "Missing required parameter 'catalogGroupId' when calling CatalogGroupsApi->GetCatalogGroupById");
 
             var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogGroupId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -384,7 +384,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetById", localVarResponse);
+                Exception exception = ExceptionFactory("GetCatalogGroupById", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -5,7 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateCatalogItem**](CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create an item product
-[**GetById**](CatalogItemsApi.md#getbyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
+[**GetCatalogItemById**](CatalogItemsApi.md#getcatalogitembyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
 [**GetItems**](CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
 
 
@@ -73,9 +73,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getbyid"></a>
-# **GetById**
-> CatalogItem GetById (string appId, string catalogItemId)
+<a name="getcatalogitembyid"></a>
+# **GetCatalogItemById**
+> CatalogItem GetCatalogItemById (string appId, string catalogItemId)
 
 Get item by Id
 
@@ -89,7 +89,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GetByIdExample
+    public class GetCatalogItemByIdExample
     {
         public void main()
         {
@@ -103,12 +103,12 @@ namespace Example
             try
             {
                 // Get item by Id
-                CatalogItem result = apiInstance.GetById(appId, catalogItemId);
+                CatalogItem result = apiInstance.GetCatalogItemById(appId, catalogItemId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling CatalogItemsApi.GetById: " + e.Message );
+                Debug.Print("Exception when calling CatalogItemsApi.GetCatalogItemById: " + e.Message );
             }
         }
     }

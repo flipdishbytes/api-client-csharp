@@ -57,7 +57,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogItemId"></param>
         /// <returns>CatalogItem</returns>
-        CatalogItem GetById (string appId, string catalogItemId);
+        CatalogItem GetCatalogItemById (string appId, string catalogItemId);
 
         /// <summary>
         /// Get item by Id
@@ -69,7 +69,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogItemId"></param>
         /// <returns>ApiResponse of CatalogItem</returns>
-        ApiResponse<CatalogItem> GetByIdWithHttpInfo (string appId, string catalogItemId);
+        ApiResponse<CatalogItem> GetCatalogItemByIdWithHttpInfo (string appId, string catalogItemId);
         /// <summary>
         /// Get paginated items by app name id filtered by types
         /// </summary>
@@ -134,7 +134,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogItemId"></param>
         /// <returns>Task of CatalogItem</returns>
-        System.Threading.Tasks.Task<CatalogItem> GetByIdAsync (string appId, string catalogItemId);
+        System.Threading.Tasks.Task<CatalogItem> GetCatalogItemByIdAsync (string appId, string catalogItemId);
 
         /// <summary>
         /// Get item by Id
@@ -146,7 +146,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogItemId"></param>
         /// <returns>Task of ApiResponse (CatalogItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CatalogItem>> GetByIdAsyncWithHttpInfo (string appId, string catalogItemId);
+        System.Threading.Tasks.Task<ApiResponse<CatalogItem>> GetCatalogItemByIdAsyncWithHttpInfo (string appId, string catalogItemId);
         /// <summary>
         /// Get paginated items by app name id filtered by types
         /// </summary>
@@ -470,9 +470,9 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogItemId"></param>
         /// <returns>CatalogItem</returns>
-        public CatalogItem GetById (string appId, string catalogItemId)
+        public CatalogItem GetCatalogItemById (string appId, string catalogItemId)
         {
-             ApiResponse<CatalogItem> localVarResponse = GetByIdWithHttpInfo(appId, catalogItemId);
+             ApiResponse<CatalogItem> localVarResponse = GetCatalogItemByIdWithHttpInfo(appId, catalogItemId);
              return localVarResponse.Data;
         }
 
@@ -483,14 +483,14 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogItemId"></param>
         /// <returns>ApiResponse of CatalogItem</returns>
-        public ApiResponse< CatalogItem > GetByIdWithHttpInfo (string appId, string catalogItemId)
+        public ApiResponse< CatalogItem > GetCatalogItemByIdWithHttpInfo (string appId, string catalogItemId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogItemsApi->GetById");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogItemsApi->GetCatalogItemById");
             // verify the required parameter 'catalogItemId' is set
             if (catalogItemId == null)
-                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogItemsApi->GetById");
+                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogItemsApi->GetCatalogItemById");
 
             var localVarPath = "/api/v1.0/{appId}/catalog/items/{catalogItemId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -535,7 +535,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetById", localVarResponse);
+                Exception exception = ExceptionFactory("GetCatalogItemById", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -551,9 +551,9 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogItemId"></param>
         /// <returns>Task of CatalogItem</returns>
-        public async System.Threading.Tasks.Task<CatalogItem> GetByIdAsync (string appId, string catalogItemId)
+        public async System.Threading.Tasks.Task<CatalogItem> GetCatalogItemByIdAsync (string appId, string catalogItemId)
         {
-             ApiResponse<CatalogItem> localVarResponse = await GetByIdAsyncWithHttpInfo(appId, catalogItemId);
+             ApiResponse<CatalogItem> localVarResponse = await GetCatalogItemByIdAsyncWithHttpInfo(appId, catalogItemId);
              return localVarResponse.Data;
 
         }
@@ -565,14 +565,14 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="catalogItemId"></param>
         /// <returns>Task of ApiResponse (CatalogItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CatalogItem>> GetByIdAsyncWithHttpInfo (string appId, string catalogItemId)
+        public async System.Threading.Tasks.Task<ApiResponse<CatalogItem>> GetCatalogItemByIdAsyncWithHttpInfo (string appId, string catalogItemId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogItemsApi->GetById");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogItemsApi->GetCatalogItemById");
             // verify the required parameter 'catalogItemId' is set
             if (catalogItemId == null)
-                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogItemsApi->GetById");
+                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogItemsApi->GetCatalogItemById");
 
             var localVarPath = "/api/v1.0/{appId}/catalog/items/{catalogItemId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -617,7 +617,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetById", localVarResponse);
+                Exception exception = ExceptionFactory("GetCatalogItemById", localVarResponse);
                 if (exception != null) throw exception;
             }
 

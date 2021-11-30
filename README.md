@@ -173,10 +173,10 @@ Class | Method | HTTP request | Description
 *CardReadersApi* | [**InitiateKioskBluetoothPairingMode**](docs/CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
 *CardReadersApi* | [**InitiateKioskBluetoothUpdateInstall**](docs/CardReadersApi.md#initiatekioskbluetoothupdateinstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
 *CardReadersApi* | [**UnpairCurrentlyPairedBluetoothDevice**](docs/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
-*CatalogGroupsApi* | [**GetById**](docs/CatalogGroupsApi.md#getbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Get group by Id
+*CatalogGroupsApi* | [**GetCatalogGroupById**](docs/CatalogGroupsApi.md#getcataloggroupbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Get group by Id
 *CatalogGroupsApi* | [**GetGroups**](docs/CatalogGroupsApi.md#getgroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
 *CatalogItemsApi* | [**CreateCatalogItem**](docs/CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create an item product
-*CatalogItemsApi* | [**GetById**](docs/CatalogItemsApi.md#getbyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
+*CatalogItemsApi* | [**GetCatalogItemById**](docs/CatalogItemsApi.md#getcatalogitembyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
 *CatalogItemsApi* | [**GetItems**](docs/CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
 *ChannelsApi* | [**GetChannel**](docs/ChannelsApi.md#getchannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
 *ChannelsApi* | [**GetChannels**](docs/ChannelsApi.md#getchannels) | **GET** /api/v1.0/{appId}/channels | 
