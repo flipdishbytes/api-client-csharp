@@ -178,6 +178,7 @@ Class | Method | HTTP request | Description
 *CatalogItemsApi* | [**CreateCatalogItem**](docs/CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create an item product
 *CatalogItemsApi* | [**GetCatalogItemById**](docs/CatalogItemsApi.md#getcatalogitembyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
 *CatalogItemsApi* | [**GetItems**](docs/CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
+*CatalogItemsApi* | [**UpdateCatalogItem**](docs/CatalogItemsApi.md#updatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Update Catalog Item
 *ChannelsApi* | [**GetChannel**](docs/ChannelsApi.md#getchannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
 *ChannelsApi* | [**GetChannels**](docs/ChannelsApi.md#getchannels) | **GET** /api/v1.0/{appId}/channels | 
 *ContentSecurityPolicyApi* | [**ContentSecurityPolicyReport**](docs/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
@@ -497,9 +498,15 @@ Class | Method | HTTP request | Description
  - [Model.BusinessHoursPeriodBase](docs/BusinessHoursPeriodBase.md)
  - [Model.CampaignStatistics](docs/CampaignStatistics.md)
  - [Model.CatalogGroup](docs/CatalogGroup.md)
+ - [Model.CatalogGroupArchivedEvent](docs/CatalogGroupArchivedEvent.md)
+ - [Model.CatalogGroupCreatedEvent](docs/CatalogGroupCreatedEvent.md)
  - [Model.CatalogGroupReference](docs/CatalogGroupReference.md)
+ - [Model.CatalogGroupUpdatedEvent](docs/CatalogGroupUpdatedEvent.md)
  - [Model.CatalogItem](docs/CatalogItem.md)
+ - [Model.CatalogItemArchivedEvent](docs/CatalogItemArchivedEvent.md)
+ - [Model.CatalogItemCreatedEvent](docs/CatalogItemCreatedEvent.md)
  - [Model.CatalogItemReference](docs/CatalogItemReference.md)
+ - [Model.CatalogItemUpdatedEvent](docs/CatalogItemUpdatedEvent.md)
  - [Model.CertificateCreatedEvent](docs/CertificateCreatedEvent.md)
  - [Model.CertificateRenewedEvent](docs/CertificateRenewedEvent.md)
  - [Model.ChangePasswordModel](docs/ChangePasswordModel.md)
@@ -929,6 +936,8 @@ Class | Method | HTTP request | Description
  - [Model.TeammateInviteAcceptedEvent](docs/TeammateInviteAcceptedEvent.md)
  - [Model.TeammateInviteSentEvent](docs/TeammateInviteSentEvent.md)
  - [Model.TeammateUpdatedEvent](docs/TeammateUpdatedEvent.md)
+ - [Model.UpdateCatalogGroupReference](docs/UpdateCatalogGroupReference.md)
+ - [Model.UpdateCatalogItem](docs/UpdateCatalogItem.md)
  - [Model.UpdateDriverNotificationToken](docs/UpdateDriverNotificationToken.md)
  - [Model.UpdateDriverProfileModel](docs/UpdateDriverProfileModel.md)
  - [Model.UpdateModifier](docs/UpdateModifier.md)

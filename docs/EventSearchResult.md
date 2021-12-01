@@ -120,6 +120,12 @@ Name | Type | Description | Notes
 **AppStoreConfigCreatedEvent** | [**List&lt;AppStoreConfigCreatedEvent&gt;**](AppStoreConfigCreatedEvent.md) | App Store Config Created | [optional] 
 **AppStoreConfigUpdatedEvent** | [**List&lt;AppStoreConfigUpdatedEvent&gt;**](AppStoreConfigUpdatedEvent.md) | App Store Config Updated | [optional] 
 **AppStoreConfigDeletedEvent** | [**List&lt;AppStoreConfigDeletedEvent&gt;**](AppStoreConfigDeletedEvent.md) | App Store Config Deleted | [optional] 
+**CatalogItemCreatedEvent** | [**List&lt;CatalogItemCreatedEvent&gt;**](CatalogItemCreatedEvent.md) | Catalog Item Created | [optional] 
+**CatalogItemUpdatedEvent** | [**List&lt;CatalogItemUpdatedEvent&gt;**](CatalogItemUpdatedEvent.md) | Catalog Item Updated | [optional] 
+**CatalogItemArchivedEvent** | [**List&lt;CatalogItemArchivedEvent&gt;**](CatalogItemArchivedEvent.md) | Catalog Item Archived | [optional] 
+**CatalogGroupCreatedEvent** | [**List&lt;CatalogGroupCreatedEvent&gt;**](CatalogGroupCreatedEvent.md) | Catalog Group Created | [optional] 
+**CatalogGroupUpdatedEvent** | [**List&lt;CatalogGroupUpdatedEvent&gt;**](CatalogGroupUpdatedEvent.md) | Catalog Group Updated | [optional] 
+**CatalogGroupArchivedEvent** | [**List&lt;CatalogGroupArchivedEvent&gt;**](CatalogGroupArchivedEvent.md) | Catalog Group Archived | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

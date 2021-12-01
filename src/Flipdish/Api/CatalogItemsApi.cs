@@ -99,6 +99,31 @@ namespace Flipdish.Api
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultCatalogItem</returns>
         ApiResponse<RestApiPaginationResultCatalogItem> GetItemsWithHttpInfo (string appId, List<string> itemTypes, string searchTerm = null, int? page = null, int? limit = null);
+        /// <summary>
+        /// Update Catalog Item
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <param name="updateCatalogItem"></param>
+        /// <returns></returns>
+        void UpdateCatalogItem (string appId, string catalogItemId, UpdateCatalogItem updateCatalogItem);
+
+        /// <summary>
+        /// Update Catalog Item
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <param name="updateCatalogItem"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UpdateCatalogItemWithHttpInfo (string appId, string catalogItemId, UpdateCatalogItem updateCatalogItem);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -176,6 +201,31 @@ namespace Flipdish.Api
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultCatalogItem)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultCatalogItem>> GetItemsAsyncWithHttpInfo (string appId, List<string> itemTypes, string searchTerm = null, int? page = null, int? limit = null);
+        /// <summary>
+        /// Update Catalog Item
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <param name="updateCatalogItem"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UpdateCatalogItemAsync (string appId, string catalogItemId, UpdateCatalogItem updateCatalogItem);
+
+        /// <summary>
+        /// Update Catalog Item
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <param name="updateCatalogItem"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateCatalogItemAsyncWithHttpInfo (string appId, string catalogItemId, UpdateCatalogItem updateCatalogItem);
         #endregion Asynchronous Operations
     }
 
@@ -805,6 +855,203 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiPaginationResultCatalogItem>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiPaginationResultCatalogItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultCatalogItem)));
+        }
+
+        /// <summary>
+        /// Update Catalog Item 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <param name="updateCatalogItem"></param>
+        /// <returns></returns>
+        public void UpdateCatalogItem (string appId, string catalogItemId, UpdateCatalogItem updateCatalogItem)
+        {
+             UpdateCatalogItemWithHttpInfo(appId, catalogItemId, updateCatalogItem);
+        }
+
+        /// <summary>
+        /// Update Catalog Item 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <param name="updateCatalogItem"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UpdateCatalogItemWithHttpInfo (string appId, string catalogItemId, UpdateCatalogItem updateCatalogItem)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogItemsApi->UpdateCatalogItem");
+            // verify the required parameter 'catalogItemId' is set
+            if (catalogItemId == null)
+                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogItemsApi->UpdateCatalogItem");
+            // verify the required parameter 'updateCatalogItem' is set
+            if (updateCatalogItem == null)
+                throw new ApiException(400, "Missing required parameter 'updateCatalogItem' when calling CatalogItemsApi->UpdateCatalogItem");
+
+            var localVarPath = "/api/v1.0/{appId}/catalog/items/{catalogItemId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (catalogItemId != null) localVarPathParams.Add("catalogItemId", this.Configuration.ApiClient.ParameterToString(catalogItemId)); // path parameter
+            if (updateCatalogItem != null && updateCatalogItem.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(updateCatalogItem); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = updateCatalogItem; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateCatalogItem", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update Catalog Item 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <param name="updateCatalogItem"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UpdateCatalogItemAsync (string appId, string catalogItemId, UpdateCatalogItem updateCatalogItem)
+        {
+             await UpdateCatalogItemAsyncWithHttpInfo(appId, catalogItemId, updateCatalogItem);
+
+        }
+
+        /// <summary>
+        /// Update Catalog Item 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <param name="updateCatalogItem"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateCatalogItemAsyncWithHttpInfo (string appId, string catalogItemId, UpdateCatalogItem updateCatalogItem)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogItemsApi->UpdateCatalogItem");
+            // verify the required parameter 'catalogItemId' is set
+            if (catalogItemId == null)
+                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogItemsApi->UpdateCatalogItem");
+            // verify the required parameter 'updateCatalogItem' is set
+            if (updateCatalogItem == null)
+                throw new ApiException(400, "Missing required parameter 'updateCatalogItem' when calling CatalogItemsApi->UpdateCatalogItem");
+
+            var localVarPath = "/api/v1.0/{appId}/catalog/items/{catalogItemId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (catalogItemId != null) localVarPathParams.Add("catalogItemId", this.Configuration.ApiClient.ParameterToString(catalogItemId)); // path parameter
+            if (updateCatalogItem != null && updateCatalogItem.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(updateCatalogItem); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = updateCatalogItem; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateCatalogItem", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
     }

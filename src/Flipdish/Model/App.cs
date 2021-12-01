@@ -791,106 +791,112 @@ namespace Flipdish.Model
             CreateExternalAuditLogEvents = 114,
             
             /// <summary>
+            /// Enum ViewCatalogAuditLogs for value: ViewCatalogAuditLogs
+            /// </summary>
+            [EnumMember(Value = "ViewCatalogAuditLogs")]
+            ViewCatalogAuditLogs = 115,
+            
+            /// <summary>
             /// Enum CreateAppStoreApp for value: CreateAppStoreApp
             /// </summary>
             [EnumMember(Value = "CreateAppStoreApp")]
-            CreateAppStoreApp = 115,
+            CreateAppStoreApp = 116,
             
             /// <summary>
             /// Enum ViewAppStoreApp for value: ViewAppStoreApp
             /// </summary>
             [EnumMember(Value = "ViewAppStoreApp")]
-            ViewAppStoreApp = 116,
+            ViewAppStoreApp = 117,
             
             /// <summary>
             /// Enum UpdateAppStoreApp for value: UpdateAppStoreApp
             /// </summary>
             [EnumMember(Value = "UpdateAppStoreApp")]
-            UpdateAppStoreApp = 117,
+            UpdateAppStoreApp = 118,
             
             /// <summary>
             /// Enum DeleteAppStoreApp for value: DeleteAppStoreApp
             /// </summary>
             [EnumMember(Value = "DeleteAppStoreApp")]
-            DeleteAppStoreApp = 118,
+            DeleteAppStoreApp = 119,
             
             /// <summary>
             /// Enum CreateAppStoreAppConfiguration for value: CreateAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "CreateAppStoreAppConfiguration")]
-            CreateAppStoreAppConfiguration = 119,
+            CreateAppStoreAppConfiguration = 120,
             
             /// <summary>
             /// Enum ViewAppStoreAppConfiguration for value: ViewAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "ViewAppStoreAppConfiguration")]
-            ViewAppStoreAppConfiguration = 120,
+            ViewAppStoreAppConfiguration = 121,
             
             /// <summary>
             /// Enum UpdateAppStoreAppConfiguration for value: UpdateAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "UpdateAppStoreAppConfiguration")]
-            UpdateAppStoreAppConfiguration = 121,
+            UpdateAppStoreAppConfiguration = 122,
             
             /// <summary>
             /// Enum DeleteAppStoreAppConfiguration for value: DeleteAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "DeleteAppStoreAppConfiguration")]
-            DeleteAppStoreAppConfiguration = 122,
+            DeleteAppStoreAppConfiguration = 123,
             
             /// <summary>
             /// Enum SendPushNotificationToCustomer for value: SendPushNotificationToCustomer
             /// </summary>
             [EnumMember(Value = "SendPushNotificationToCustomer")]
-            SendPushNotificationToCustomer = 123,
+            SendPushNotificationToCustomer = 124,
             
             /// <summary>
             /// Enum InviteDriverToApp for value: InviteDriverToApp
             /// </summary>
             [EnumMember(Value = "InviteDriverToApp")]
-            InviteDriverToApp = 124,
+            InviteDriverToApp = 125,
             
             /// <summary>
             /// Enum GetDriverForApp for value: GetDriverForApp
             /// </summary>
             [EnumMember(Value = "GetDriverForApp")]
-            GetDriverForApp = 125,
+            GetDriverForApp = 126,
             
             /// <summary>
             /// Enum RemoveDriverFromApp for value: RemoveDriverFromApp
             /// </summary>
             [EnumMember(Value = "RemoveDriverFromApp")]
-            RemoveDriverFromApp = 126,
+            RemoveDriverFromApp = 127,
             
             /// <summary>
             /// Enum AssignDriverToOrder for value: AssignDriverToOrder
             /// </summary>
             [EnumMember(Value = "AssignDriverToOrder")]
-            AssignDriverToOrder = 127,
+            AssignDriverToOrder = 128,
             
             /// <summary>
             /// Enum UnassignDriverFromOrder for value: UnassignDriverFromOrder
             /// </summary>
             [EnumMember(Value = "UnassignDriverFromOrder")]
-            UnassignDriverFromOrder = 128,
+            UnassignDriverFromOrder = 129,
             
             /// <summary>
             /// Enum UpdateOrdersDeliveryTrackingStatus for value: UpdateOrdersDeliveryTrackingStatus
             /// </summary>
             [EnumMember(Value = "UpdateOrdersDeliveryTrackingStatus")]
-            UpdateOrdersDeliveryTrackingStatus = 129,
+            UpdateOrdersDeliveryTrackingStatus = 130,
             
             /// <summary>
             /// Enum ViewPayouts for value: ViewPayouts
             /// </summary>
             [EnumMember(Value = "ViewPayouts")]
-            ViewPayouts = 130,
+            ViewPayouts = 131,
             
             /// <summary>
             /// Enum Channels for value: Channels
             /// </summary>
             [EnumMember(Value = "Channels")]
-            Channels = 131
+            Channels = 132
         }
 
 
