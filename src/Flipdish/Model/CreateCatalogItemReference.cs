@@ -25,10 +25,10 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Catalog Item associated
+    /// Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}
     /// </summary>
     [DataContract]
-    public partial class CatalogItemReference :  IEquatable<CatalogItemReference>, IValidatableObject
+    public partial class CreateCatalogItemReference :  IEquatable<CreateCatalogItemReference>, IValidatableObject
     {
         /// <summary>
         /// Type of the SupProduct
@@ -58,23 +58,22 @@ namespace Flipdish.Model
         [DataMember(Name="ItemType", EmitDefaultValue=false)]
         public ItemTypeEnum ItemType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CatalogItemReference" /> class.
+        /// Initializes a new instance of the <see cref="CreateCatalogItemReference" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected CatalogItemReference() { }
+        protected CreateCatalogItemReference() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CatalogItemReference" /> class.
+        /// Initializes a new instance of the <see cref="CreateCatalogItemReference" /> class.
         /// </summary>
-        /// <param name="item">Details of the referenced {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}.</param>
         /// <param name="catalogItemId">Identifier of the CatalogItemId to use as SubProduct (required).</param>
         /// <param name="itemType">Type of the SupProduct (required).</param>
         /// <param name="preselectedQuantity">Quantity of the modifier that will be set when the parent product is placed in the basket.</param>
-        public CatalogItemReference(CatalogItem item = default(CatalogItem), string catalogItemId = default(string), ItemTypeEnum itemType = default(ItemTypeEnum), int? preselectedQuantity = default(int?))
+        public CreateCatalogItemReference(string catalogItemId = default(string), ItemTypeEnum itemType = default(ItemTypeEnum), int? preselectedQuantity = default(int?))
         {
             // to ensure "catalogItemId" is required (not null)
             if (catalogItemId == null)
             {
-                throw new InvalidDataException("catalogItemId is a required property for CatalogItemReference and cannot be null");
+                throw new InvalidDataException("catalogItemId is a required property for CreateCatalogItemReference and cannot be null");
             }
             else
             {
@@ -83,23 +82,15 @@ namespace Flipdish.Model
             // to ensure "itemType" is required (not null)
             if (itemType == null)
             {
-                throw new InvalidDataException("itemType is a required property for CatalogItemReference and cannot be null");
+                throw new InvalidDataException("itemType is a required property for CreateCatalogItemReference and cannot be null");
             }
             else
             {
                 this.ItemType = itemType;
             }
-            this.Item = item;
             this.PreselectedQuantity = preselectedQuantity;
         }
         
-        /// <summary>
-        /// Details of the referenced {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}
-        /// </summary>
-        /// <value>Details of the referenced {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}</value>
-        [DataMember(Name="Item", EmitDefaultValue=false)]
-        public CatalogItem Item { get; set; }
-
         /// <summary>
         /// Identifier of the CatalogItemId to use as SubProduct
         /// </summary>
@@ -122,8 +113,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CatalogItemReference {\n");
-            sb.Append("  Item: ").Append(Item).Append("\n");
+            sb.Append("class CreateCatalogItemReference {\n");
             sb.Append("  CatalogItemId: ").Append(CatalogItemId).Append("\n");
             sb.Append("  ItemType: ").Append(ItemType).Append("\n");
             sb.Append("  PreselectedQuantity: ").Append(PreselectedQuantity).Append("\n");
@@ -147,25 +137,20 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CatalogItemReference);
+            return this.Equals(input as CreateCatalogItemReference);
         }
 
         /// <summary>
-        /// Returns true if CatalogItemReference instances are equal
+        /// Returns true if CreateCatalogItemReference instances are equal
         /// </summary>
-        /// <param name="input">Instance of CatalogItemReference to be compared</param>
+        /// <param name="input">Instance of CreateCatalogItemReference to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CatalogItemReference input)
+        public bool Equals(CreateCatalogItemReference input)
         {
             if (input == null)
                 return false;
 
             return 
-                (
-                    this.Item == input.Item ||
-                    (this.Item != null &&
-                    this.Item.Equals(input.Item))
-                ) && 
                 (
                     this.CatalogItemId == input.CatalogItemId ||
                     (this.CatalogItemId != null &&
@@ -192,8 +177,6 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Item != null)
-                    hashCode = hashCode * 59 + this.Item.GetHashCode();
                 if (this.CatalogItemId != null)
                     hashCode = hashCode * 59 + this.CatalogItemId.GetHashCode();
                 if (this.ItemType != null)

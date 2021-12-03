@@ -25,15 +25,15 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// CatalogGroup
+    /// Create a Catalog Group
     /// </summary>
     [DataContract]
-    public partial class CatalogGroup :  IEquatable<CatalogGroup>, IValidatableObject
+    public partial class CreateCatalogGroup :  IEquatable<CreateCatalogGroup>, IValidatableObject
     {
         /// <summary>
-        /// ModifierGroup, etc
+        /// Type of group (ModifierGroup, etc)
         /// </summary>
-        /// <value>ModifierGroup, etc</value>
+        /// <value>Type of group (ModifierGroup, etc)</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum GroupTypeEnum
         {
@@ -46,40 +46,79 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// ModifierGroup, etc
+        /// Type of group (ModifierGroup, etc)
         /// </summary>
-        /// <value>ModifierGroup, etc</value>
+        /// <value>Type of group (ModifierGroup, etc)</value>
         [DataMember(Name="GroupType", EmitDefaultValue=false)]
-        public GroupTypeEnum? GroupType { get; set; }
+        public GroupTypeEnum GroupType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CatalogGroup" /> class.
+        /// Initializes a new instance of the <see cref="CreateCatalogGroup" /> class.
         /// </summary>
-        /// <param name="catalogGroupId">Unique catalog group id.</param>
-        /// <param name="groupType">ModifierGroup, etc.</param>
-        /// <param name="sku">Stock Keeping Unit (SKU).</param>
-        /// <param name="name">Group name.</param>
-        /// <param name="isArchived">Returns true if the group is archived.</param>
+        [JsonConstructorAttribute]
+        protected CreateCatalogGroup() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateCatalogGroup" /> class.
+        /// </summary>
         /// <param name="minSelectCount">Minimum number of items that the user has to select.</param>
         /// <param name="maxSelectCount">Maximum number of items that the user has to select.</param>
-        /// <param name="items">Collection of items associated with this product.</param>
-        public CatalogGroup(string catalogGroupId = default(string), GroupTypeEnum? groupType = default(GroupTypeEnum?), string sku = default(string), string name = default(string), bool? isArchived = default(bool?), int? minSelectCount = default(int?), int? maxSelectCount = default(int?), List<CatalogItemReference> items = default(List<CatalogItemReference>))
+        /// <param name="items">Collection of items associated with this group.</param>
+        /// <param name="groupType">Type of group (ModifierGroup, etc) (required).</param>
+        /// <param name="sku">Stock Keeping Unit (SKU) (required).</param>
+        /// <param name="name">Group name (required).</param>
+        public CreateCatalogGroup(int? minSelectCount = default(int?), int? maxSelectCount = default(int?), List<CreateCatalogItemReference> items = default(List<CreateCatalogItemReference>), GroupTypeEnum groupType = default(GroupTypeEnum), string sku = default(string), string name = default(string))
         {
-            this.CatalogGroupId = catalogGroupId;
-            this.GroupType = groupType;
-            this.Sku = sku;
-            this.Name = name;
-            this.IsArchived = isArchived;
+            // to ensure "groupType" is required (not null)
+            if (groupType == null)
+            {
+                throw new InvalidDataException("groupType is a required property for CreateCatalogGroup and cannot be null");
+            }
+            else
+            {
+                this.GroupType = groupType;
+            }
+            // to ensure "sku" is required (not null)
+            if (sku == null)
+            {
+                throw new InvalidDataException("sku is a required property for CreateCatalogGroup and cannot be null");
+            }
+            else
+            {
+                this.Sku = sku;
+            }
+            // to ensure "name" is required (not null)
+            if (name == null)
+            {
+                throw new InvalidDataException("name is a required property for CreateCatalogGroup and cannot be null");
+            }
+            else
+            {
+                this.Name = name;
+            }
             this.MinSelectCount = minSelectCount;
             this.MaxSelectCount = maxSelectCount;
             this.Items = items;
         }
         
         /// <summary>
-        /// Unique catalog group id
+        /// Minimum number of items that the user has to select
         /// </summary>
-        /// <value>Unique catalog group id</value>
-        [DataMember(Name="CatalogGroupId", EmitDefaultValue=false)]
-        public string CatalogGroupId { get; set; }
+        /// <value>Minimum number of items that the user has to select</value>
+        [DataMember(Name="MinSelectCount", EmitDefaultValue=false)]
+        public int? MinSelectCount { get; set; }
+
+        /// <summary>
+        /// Maximum number of items that the user has to select
+        /// </summary>
+        /// <value>Maximum number of items that the user has to select</value>
+        [DataMember(Name="MaxSelectCount", EmitDefaultValue=false)]
+        public int? MaxSelectCount { get; set; }
+
+        /// <summary>
+        /// Collection of items associated with this group
+        /// </summary>
+        /// <value>Collection of items associated with this group</value>
+        [DataMember(Name="Items", EmitDefaultValue=false)]
+        public List<CreateCatalogItemReference> Items { get; set; }
 
 
         /// <summary>
@@ -97,49 +136,19 @@ namespace Flipdish.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// Returns true if the group is archived
-        /// </summary>
-        /// <value>Returns true if the group is archived</value>
-        [DataMember(Name="IsArchived", EmitDefaultValue=false)]
-        public bool? IsArchived { get; set; }
-
-        /// <summary>
-        /// Minimum number of items that the user has to select
-        /// </summary>
-        /// <value>Minimum number of items that the user has to select</value>
-        [DataMember(Name="MinSelectCount", EmitDefaultValue=false)]
-        public int? MinSelectCount { get; set; }
-
-        /// <summary>
-        /// Maximum number of items that the user has to select
-        /// </summary>
-        /// <value>Maximum number of items that the user has to select</value>
-        [DataMember(Name="MaxSelectCount", EmitDefaultValue=false)]
-        public int? MaxSelectCount { get; set; }
-
-        /// <summary>
-        /// Collection of items associated with this product
-        /// </summary>
-        /// <value>Collection of items associated with this product</value>
-        [DataMember(Name="Items", EmitDefaultValue=false)]
-        public List<CatalogItemReference> Items { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CatalogGroup {\n");
-            sb.Append("  CatalogGroupId: ").Append(CatalogGroupId).Append("\n");
-            sb.Append("  GroupType: ").Append(GroupType).Append("\n");
-            sb.Append("  Sku: ").Append(Sku).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  IsArchived: ").Append(IsArchived).Append("\n");
+            sb.Append("class CreateCatalogGroup {\n");
             sb.Append("  MinSelectCount: ").Append(MinSelectCount).Append("\n");
             sb.Append("  MaxSelectCount: ").Append(MaxSelectCount).Append("\n");
             sb.Append("  Items: ").Append(Items).Append("\n");
+            sb.Append("  GroupType: ").Append(GroupType).Append("\n");
+            sb.Append("  Sku: ").Append(Sku).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,24 +169,34 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CatalogGroup);
+            return this.Equals(input as CreateCatalogGroup);
         }
 
         /// <summary>
-        /// Returns true if CatalogGroup instances are equal
+        /// Returns true if CreateCatalogGroup instances are equal
         /// </summary>
-        /// <param name="input">Instance of CatalogGroup to be compared</param>
+        /// <param name="input">Instance of CreateCatalogGroup to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CatalogGroup input)
+        public bool Equals(CreateCatalogGroup input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.CatalogGroupId == input.CatalogGroupId ||
-                    (this.CatalogGroupId != null &&
-                    this.CatalogGroupId.Equals(input.CatalogGroupId))
+                    this.MinSelectCount == input.MinSelectCount ||
+                    (this.MinSelectCount != null &&
+                    this.MinSelectCount.Equals(input.MinSelectCount))
+                ) && 
+                (
+                    this.MaxSelectCount == input.MaxSelectCount ||
+                    (this.MaxSelectCount != null &&
+                    this.MaxSelectCount.Equals(input.MaxSelectCount))
+                ) && 
+                (
+                    this.Items == input.Items ||
+                    this.Items != null &&
+                    this.Items.SequenceEqual(input.Items)
                 ) && 
                 (
                     this.GroupType == input.GroupType ||
@@ -193,26 +212,6 @@ namespace Flipdish.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
-                ) && 
-                (
-                    this.IsArchived == input.IsArchived ||
-                    (this.IsArchived != null &&
-                    this.IsArchived.Equals(input.IsArchived))
-                ) && 
-                (
-                    this.MinSelectCount == input.MinSelectCount ||
-                    (this.MinSelectCount != null &&
-                    this.MinSelectCount.Equals(input.MinSelectCount))
-                ) && 
-                (
-                    this.MaxSelectCount == input.MaxSelectCount ||
-                    (this.MaxSelectCount != null &&
-                    this.MaxSelectCount.Equals(input.MaxSelectCount))
-                ) && 
-                (
-                    this.Items == input.Items ||
-                    this.Items != null &&
-                    this.Items.SequenceEqual(input.Items)
                 );
         }
 
@@ -225,22 +224,18 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.CatalogGroupId != null)
-                    hashCode = hashCode * 59 + this.CatalogGroupId.GetHashCode();
-                if (this.GroupType != null)
-                    hashCode = hashCode * 59 + this.GroupType.GetHashCode();
-                if (this.Sku != null)
-                    hashCode = hashCode * 59 + this.Sku.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.IsArchived != null)
-                    hashCode = hashCode * 59 + this.IsArchived.GetHashCode();
                 if (this.MinSelectCount != null)
                     hashCode = hashCode * 59 + this.MinSelectCount.GetHashCode();
                 if (this.MaxSelectCount != null)
                     hashCode = hashCode * 59 + this.MaxSelectCount.GetHashCode();
                 if (this.Items != null)
                     hashCode = hashCode * 59 + this.Items.GetHashCode();
+                if (this.GroupType != null)
+                    hashCode = hashCode * 59 + this.GroupType.GetHashCode();
+                if (this.Sku != null)
+                    hashCode = hashCode * 59 + this.Sku.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 return hashCode;
             }
         }
@@ -252,18 +247,6 @@ namespace Flipdish.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // CatalogGroupId (string) maxLength
-            if(this.CatalogGroupId != null && this.CatalogGroupId.Length > 30)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CatalogGroupId, length must be less than 30.", new [] { "CatalogGroupId" });
-            }
-
-            // CatalogGroupId (string) minLength
-            if(this.CatalogGroupId != null && this.CatalogGroupId.Length < 0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CatalogGroupId, length must be greater than 0.", new [] { "CatalogGroupId" });
-            }
-
             // Sku (string) maxLength
             if(this.Sku != null && this.Sku.Length > 30)
             {

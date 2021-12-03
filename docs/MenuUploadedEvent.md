@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **Description** | **string** | Description | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | User who has uploaded the menu | [optional] 
 **Menu** | [**Menu**](Menu.md) | The menu | [optional] 
+**InstanceEventCount** | **string** | Quantity of events | [optional] 
+**MenuId** | **int?** | The menu Id | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 
 **Position** | **int?** | Position | [optional] 

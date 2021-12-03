@@ -173,9 +173,11 @@ Class | Method | HTTP request | Description
 *CardReadersApi* | [**InitiateKioskBluetoothPairingMode**](docs/CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
 *CardReadersApi* | [**InitiateKioskBluetoothUpdateInstall**](docs/CardReadersApi.md#initiatekioskbluetoothupdateinstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
 *CardReadersApi* | [**UnpairCurrentlyPairedBluetoothDevice**](docs/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
+*CatalogGroupsApi* | [**CreateCatalogGroup**](docs/CatalogGroupsApi.md#createcataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
 *CatalogGroupsApi* | [**GetCatalogGroupById**](docs/CatalogGroupsApi.md#getcataloggroupbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Get group by Id
 *CatalogGroupsApi* | [**GetGroups**](docs/CatalogGroupsApi.md#getgroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
-*CatalogItemsApi* | [**CreateCatalogItem**](docs/CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create an item product
+*CatalogGroupsApi* | [**UpdateCatalogGroup**](docs/CatalogGroupsApi.md#updatecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Update Catalog Group
+*CatalogItemsApi* | [**CreateCatalogItem**](docs/CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create a Catalog Item
 *CatalogItemsApi* | [**GetCatalogItemById**](docs/CatalogItemsApi.md#getcatalogitembyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
 *CatalogItemsApi* | [**GetItems**](docs/CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
 *CatalogItemsApi* | [**UpdateCatalogItem**](docs/CatalogItemsApi.md#updatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Update Catalog Item
@@ -516,8 +518,10 @@ Class | Method | HTTP request | Description
  - [Model.Coordinates](docs/Coordinates.md)
  - [Model.CountryWithAccountFieldsDefinitions](docs/CountryWithAccountFieldsDefinitions.md)
  - [Model.CreateAccountModel](docs/CreateAccountModel.md)
+ - [Model.CreateCatalogGroup](docs/CreateCatalogGroup.md)
  - [Model.CreateCatalogGroupReference](docs/CreateCatalogGroupReference.md)
  - [Model.CreateCatalogItem](docs/CreateCatalogItem.md)
+ - [Model.CreateCatalogItemReference](docs/CreateCatalogItemReference.md)
  - [Model.CreateFullMenu](docs/CreateFullMenu.md)
  - [Model.CreateFullMenuItemOptionSet](docs/CreateFullMenuItemOptionSet.md)
  - [Model.CreateFullMenuItemOptionSetItem](docs/CreateFullMenuItemOptionSetItem.md)
@@ -810,6 +814,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultBluetoothTerminalStatus](docs/RestApiResultBluetoothTerminalStatus.md)
  - [Model.RestApiResultBusinessHoursOverride](docs/RestApiResultBusinessHoursOverride.md)
  - [Model.RestApiResultBusinessHoursPeriod](docs/RestApiResultBusinessHoursPeriod.md)
+ - [Model.RestApiResultCatalogGroup](docs/RestApiResultCatalogGroup.md)
  - [Model.RestApiResultCatalogItem](docs/RestApiResultCatalogItem.md)
  - [Model.RestApiResultCoordinates](docs/RestApiResultCoordinates.md)
  - [Model.RestApiResultCreatedMenuSectionItems](docs/RestApiResultCreatedMenuSectionItems.md)
@@ -936,8 +941,10 @@ Class | Method | HTTP request | Description
  - [Model.TeammateInviteAcceptedEvent](docs/TeammateInviteAcceptedEvent.md)
  - [Model.TeammateInviteSentEvent](docs/TeammateInviteSentEvent.md)
  - [Model.TeammateUpdatedEvent](docs/TeammateUpdatedEvent.md)
+ - [Model.UpdateCatalogGroup](docs/UpdateCatalogGroup.md)
  - [Model.UpdateCatalogGroupReference](docs/UpdateCatalogGroupReference.md)
  - [Model.UpdateCatalogItem](docs/UpdateCatalogItem.md)
+ - [Model.UpdateCatalogItemReference](docs/UpdateCatalogItemReference.md)
  - [Model.UpdateDriverNotificationToken](docs/UpdateDriverNotificationToken.md)
  - [Model.UpdateDriverProfileModel](docs/UpdateDriverProfileModel.md)
  - [Model.UpdateModifier](docs/UpdateModifier.md)

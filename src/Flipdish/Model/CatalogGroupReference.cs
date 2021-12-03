@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Reference to an existing {Flipdish.PublicModels.V1.Catalog.Group.CatalogGroup}
+    /// Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.CatalogGroup}
     /// </summary>
     [DataContract]
     public partial class CatalogGroupReference :  IEquatable<CatalogGroupReference>, IValidatableObject
@@ -39,16 +39,10 @@ namespace Flipdish.Model
         {
             
             /// <summary>
-            /// Enum Unknown for value: Unknown
-            /// </summary>
-            [EnumMember(Value = "Unknown")]
-            Unknown = 1,
-            
-            /// <summary>
             /// Enum ModifierGroup for value: ModifierGroup
             /// </summary>
             [EnumMember(Value = "ModifierGroup")]
-            ModifierGroup = 2
+            ModifierGroup = 1
         }
 
         /// <summary>
@@ -65,7 +59,7 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CatalogGroupReference" /> class.
         /// </summary>
-        /// <param name="group">Details of the referenced {Flipdish.PublicModels.V1.Catalog.Item.CatalogItem}.</param>
+        /// <param name="group">Details of the referenced {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}.</param>
         /// <param name="catalogGroupId">Identifier of the ProductId to use as SubProduct (required).</param>
         /// <param name="groupType">Type of the SupProduct (required).</param>
         public CatalogGroupReference(CatalogGroup group = default(CatalogGroup), string catalogGroupId = default(string), GroupTypeEnum groupType = default(GroupTypeEnum))
@@ -92,9 +86,9 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Details of the referenced {Flipdish.PublicModels.V1.Catalog.Item.CatalogItem}
+        /// Details of the referenced {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}
         /// </summary>
-        /// <value>Details of the referenced {Flipdish.PublicModels.V1.Catalog.Item.CatalogItem}</value>
+        /// <value>Details of the referenced {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}</value>
         [DataMember(Name="Group", EmitDefaultValue=false)]
         public CatalogGroup Group { get; set; }
 

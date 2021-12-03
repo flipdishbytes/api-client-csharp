@@ -39,7 +39,7 @@ namespace Flipdish.Model
         /// <param name="price">Product price.</param>
         /// <param name="imageFileName">Image File Name.</param>
         /// <param name="alcohol">Product contains alcohol.</param>
-        /// <param name="groups">Collection of products associated with this product.</param>
+        /// <param name="groups">Collection of groups associated with this item.</param>
         public UpdateCatalogItem(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string imageFileName = default(string), bool? alcohol = default(bool?), List<UpdateCatalogGroupReference> groups = default(List<UpdateCatalogGroupReference>))
         {
             this.Sku = sku;
@@ -94,9 +94,9 @@ namespace Flipdish.Model
         public bool? Alcohol { get; set; }
 
         /// <summary>
-        /// Collection of products associated with this product
+        /// Collection of groups associated with this item
         /// </summary>
-        /// <value>Collection of products associated with this product</value>
+        /// <value>Collection of groups associated with this item</value>
         [DataMember(Name="Groups", EmitDefaultValue=false)]
         public List<UpdateCatalogGroupReference> Groups { get; set; }
 

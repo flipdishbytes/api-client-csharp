@@ -1,9 +1,8 @@
-# Flipdish.Model.CatalogItemReference
+# Flipdish.Model.UpdateCatalogItemReference
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Item** | [**CatalogItem**](CatalogItem.md) | Details of the referenced {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem} | [optional] 
 **CatalogItemId** | **string** | Identifier of the CatalogItemId to use as SubProduct | 
 **ItemType** | **string** | Type of the SupProduct | 
 **PreselectedQuantity** | **int?** | Quantity of the modifier that will be set when the parent product is placed in the basket | [optional] 

@@ -25,7 +25,7 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create an item product
+        /// Create a Catalog Item
         /// </summary>
         /// <remarks>
         /// 
@@ -37,7 +37,7 @@ namespace Flipdish.Api
         RestApiResultCatalogItem CreateCatalogItem (string appId, CreateCatalogItem createCatalogItem);
 
         /// <summary>
-        /// Create an item product
+        /// Create a Catalog Item
         /// </summary>
         /// <remarks>
         /// 
@@ -127,7 +127,7 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create an item product
+        /// Create a Catalog Item
         /// </summary>
         /// <remarks>
         /// 
@@ -139,7 +139,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultCatalogItem> CreateCatalogItemAsync (string appId, CreateCatalogItem createCatalogItem);
 
         /// <summary>
-        /// Create an item product
+        /// Create a Catalog Item
         /// </summary>
         /// <remarks>
         /// 
@@ -327,7 +327,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create an item product 
+        /// Create a Catalog Item 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -340,7 +340,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create an item product 
+        /// Create a Catalog Item 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -420,7 +420,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create an item product 
+        /// Create a Catalog Item 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -434,7 +434,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create an item product 
+        /// Create a Catalog Item 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

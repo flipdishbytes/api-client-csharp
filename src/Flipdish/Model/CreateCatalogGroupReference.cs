@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Group.CatalogGroup}
+    /// Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Groups.CatalogGroup}
     /// </summary>
     [DataContract]
     public partial class CreateCatalogGroupReference :  IEquatable<CreateCatalogGroupReference>, IValidatableObject
@@ -39,16 +39,10 @@ namespace Flipdish.Model
         {
             
             /// <summary>
-            /// Enum Unknown for value: Unknown
-            /// </summary>
-            [EnumMember(Value = "Unknown")]
-            Unknown = 1,
-            
-            /// <summary>
             /// Enum ModifierGroup for value: ModifierGroup
             /// </summary>
             [EnumMember(Value = "ModifierGroup")]
-            ModifierGroup = 2
+            ModifierGroup = 1
         }
 
         /// <summary>

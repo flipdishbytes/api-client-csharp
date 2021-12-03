@@ -4,7 +4,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateCatalogItem**](CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create an item product
+[**CreateCatalogItem**](CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create a Catalog Item
 [**GetCatalogItemById**](CatalogItemsApi.md#getcatalogitembyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
 [**GetItems**](CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
 [**UpdateCatalogItem**](CatalogItemsApi.md#updatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Update Catalog Item
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 # **CreateCatalogItem**
 > RestApiResultCatalogItem CreateCatalogItem (string appId, CreateCatalogItem createCatalogItem)
 
-Create an item product
+Create a Catalog Item
 
 ### Example
 ```csharp
@@ -39,7 +39,7 @@ namespace Example
 
             try
             {
-                // Create an item product
+                // Create a Catalog Item
                 RestApiResultCatalogItem result = apiInstance.CreateCatalogItem(appId, createCatalogItem);
                 Debug.WriteLine(result);
             }
