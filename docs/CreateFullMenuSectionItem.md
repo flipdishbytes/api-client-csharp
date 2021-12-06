@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **CellLayoutType** | **string** | Small | Medium | Large  Affects the layout of the menu. | [optional] 
 **DisableVouchers** | **bool?** | If true, then vouchers won&#39;t be applied for this item | [optional] 
 **ImageUrl** | **string** | Image url | [optional] 
+**MenuItemId** | **int?** | Menu Item Id | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

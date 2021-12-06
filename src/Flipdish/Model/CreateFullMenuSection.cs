@@ -41,7 +41,8 @@ namespace Flipdish.Model
         /// <param name="isAvailable">Is available.</param>
         /// <param name="isHiddenFromCustomers">Is hidden from customer. Perhaps when the item is out of stock..</param>
         /// <param name="imageUrl">Image url.</param>
-        public CreateFullMenuSection(MenuSectionAvailability menuSectionAvailability = default(MenuSectionAvailability), List<CreateFullMenuSectionItem> menuItems = default(List<CreateFullMenuSectionItem>), string name = default(string), string description = default(string), int? displayOrder = default(int?), bool? isAvailable = default(bool?), bool? isHiddenFromCustomers = default(bool?), string imageUrl = default(string))
+        /// <param name="menuSectionId">Menu Section Id.</param>
+        public CreateFullMenuSection(MenuSectionAvailability menuSectionAvailability = default(MenuSectionAvailability), List<CreateFullMenuSectionItem> menuItems = default(List<CreateFullMenuSectionItem>), string name = default(string), string description = default(string), int? displayOrder = default(int?), bool? isAvailable = default(bool?), bool? isHiddenFromCustomers = default(bool?), string imageUrl = default(string), int? menuSectionId = default(int?))
         {
             this.MenuSectionAvailability = menuSectionAvailability;
             this.MenuItems = menuItems;
@@ -51,6 +52,7 @@ namespace Flipdish.Model
             this.IsAvailable = isAvailable;
             this.IsHiddenFromCustomers = isHiddenFromCustomers;
             this.ImageUrl = imageUrl;
+            this.MenuSectionId = menuSectionId;
         }
         
         /// <summary>
@@ -110,6 +112,13 @@ namespace Flipdish.Model
         public string ImageUrl { get; set; }
 
         /// <summary>
+        /// Menu Section Id
+        /// </summary>
+        /// <value>Menu Section Id</value>
+        [DataMember(Name="MenuSectionId", EmitDefaultValue=false)]
+        public int? MenuSectionId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -125,6 +134,7 @@ namespace Flipdish.Model
             sb.Append("  IsAvailable: ").Append(IsAvailable).Append("\n");
             sb.Append("  IsHiddenFromCustomers: ").Append(IsHiddenFromCustomers).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
+            sb.Append("  MenuSectionId: ").Append(MenuSectionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -198,6 +208,11 @@ namespace Flipdish.Model
                     this.ImageUrl == input.ImageUrl ||
                     (this.ImageUrl != null &&
                     this.ImageUrl.Equals(input.ImageUrl))
+                ) && 
+                (
+                    this.MenuSectionId == input.MenuSectionId ||
+                    (this.MenuSectionId != null &&
+                    this.MenuSectionId.Equals(input.MenuSectionId))
                 );
         }
 
@@ -226,6 +241,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.IsHiddenFromCustomers.GetHashCode();
                 if (this.ImageUrl != null)
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
+                if (this.MenuSectionId != null)
+                    hashCode = hashCode * 59 + this.MenuSectionId.GetHashCode();
                 return hashCode;
             }
         }
