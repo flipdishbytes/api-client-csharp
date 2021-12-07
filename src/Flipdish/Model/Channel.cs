@@ -31,6 +31,33 @@ namespace Flipdish.Model
     public partial class Channel :  IEquatable<Channel>, IValidatableObject
     {
         /// <summary>
+        /// Channel Source
+        /// </summary>
+        /// <value>Channel Source</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SourceEnum
+        {
+            
+            /// <summary>
+            /// Enum Internal for value: Internal
+            /// </summary>
+            [EnumMember(Value = "Internal")]
+            Internal = 1,
+            
+            /// <summary>
+            /// Enum External for value: External
+            /// </summary>
+            [EnumMember(Value = "External")]
+            External = 2
+        }
+
+        /// <summary>
+        /// Channel Source
+        /// </summary>
+        /// <value>Channel Source</value>
+        [DataMember(Name="Source", EmitDefaultValue=false)]
+        public SourceEnum? Source { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Channel" /> class.
         /// </summary>
         /// <param name="channelId">Channel Id.</param>
@@ -39,7 +66,7 @@ namespace Flipdish.Model
         /// <param name="logoUri">Channel Logo URl.</param>
         /// <param name="available">Channel is Available or not.</param>
         /// <param name="maintainedExternally">Channel is Maintained Externally or not.</param>
-        public Channel(int? channelId = default(int?), string translationKey = default(string), string source = default(string), string logoUri = default(string), bool? available = default(bool?), bool? maintainedExternally = default(bool?))
+        public Channel(int? channelId = default(int?), string translationKey = default(string), SourceEnum? source = default(SourceEnum?), string logoUri = default(string), bool? available = default(bool?), bool? maintainedExternally = default(bool?))
         {
             this.ChannelId = channelId;
             this.TranslationKey = translationKey;
@@ -63,12 +90,6 @@ namespace Flipdish.Model
         [DataMember(Name="TranslationKey", EmitDefaultValue=false)]
         public string TranslationKey { get; set; }
 
-        /// <summary>
-        /// Channel Source
-        /// </summary>
-        /// <value>Channel Source</value>
-        [DataMember(Name="Source", EmitDefaultValue=false)]
-        public string Source { get; set; }
 
         /// <summary>
         /// Channel Logo URl

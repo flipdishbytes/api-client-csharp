@@ -23,8 +23,11 @@ Name | Type | Description | Notes
 **DropOffLocationId** | **int?** | id of the collection/drop off location | [optional] 
 **DropOffLocation** | **string** | Represents table service drop off location | [optional] 
 **AcceptedFor** | **DateTime?** | Time store has accepted the order for | [optional] 
+**Channel** | [**Channel**](Channel.md) | Channel where the Order comes from | [optional] 
 **InFraudZone** | **bool?** | Was order made within a fraud zone | [optional] 
 **UnusualHighValueOrder** | **bool?** | Is order of unusually high value | [optional] 
+**ExternalOrderId** | **string** | ExternalOrderId from external channel | [optional] 
+**ExternalOrderDisplayId** | **string** | ExternalOrderDisplayId from external channel | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -155,8 +155,9 @@ namespace Flipdish.Api
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
         /// <returns>RestApiPaginationResultOrderSummary</returns>
-        RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null);
+        RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null);
 
         /// <summary>
         /// [PRIVATE API] Get summary of orders by filter
@@ -172,8 +173,9 @@ namespace Flipdish.Api
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultOrderSummary</returns>
-        ApiResponse<RestApiPaginationResultOrderSummary> GetOrdersSummaryWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null);
+        ApiResponse<RestApiPaginationResultOrderSummary> GetOrdersSummaryWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null);
         /// <summary>
         /// Refund order
         /// </summary>
@@ -376,8 +378,9 @@ namespace Flipdish.Api
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultOrderSummary</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultOrderSummary> GetOrdersSummaryAsync (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultOrderSummary> GetOrdersSummaryAsync (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null);
 
         /// <summary>
         /// [PRIVATE API] Get summary of orders by filter
@@ -393,8 +396,9 @@ namespace Flipdish.Api
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOrderSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrderSummary>> GetOrdersSummaryAsyncWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrderSummary>> GetOrdersSummaryAsyncWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null);
         /// <summary>
         /// Refund order
         /// </summary>
@@ -1386,10 +1390,11 @@ namespace Flipdish.Api
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
         /// <returns>RestApiPaginationResultOrderSummary</returns>
-        public RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null)
+        public RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null)
         {
-             ApiResponse<RestApiPaginationResultOrderSummary> localVarResponse = GetOrdersSummaryWithHttpInfo(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime);
+             ApiResponse<RestApiPaginationResultOrderSummary> localVarResponse = GetOrdersSummaryWithHttpInfo(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels);
              return localVarResponse.Data;
         }
 
@@ -1404,8 +1409,9 @@ namespace Flipdish.Api
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultOrderSummary</returns>
-        public ApiResponse< RestApiPaginationResultOrderSummary > GetOrdersSummaryWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null)
+        public ApiResponse< RestApiPaginationResultOrderSummary > GetOrdersSummaryWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1442,6 +1448,7 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
             if (orderByRequestedForTime != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderByRequestedForTime", orderByRequestedForTime)); // query parameter
+            if (channels != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "channels", channels)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1479,10 +1486,11 @@ namespace Flipdish.Api
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultOrderSummary</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultOrderSummary> GetOrdersSummaryAsync (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultOrderSummary> GetOrdersSummaryAsync (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null)
         {
-             ApiResponse<RestApiPaginationResultOrderSummary> localVarResponse = await GetOrdersSummaryAsyncWithHttpInfo(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime);
+             ApiResponse<RestApiPaginationResultOrderSummary> localVarResponse = await GetOrdersSummaryAsyncWithHttpInfo(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels);
              return localVarResponse.Data;
 
         }
@@ -1498,8 +1506,9 @@ namespace Flipdish.Api
         /// <param name="page">Requested page number (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOrderSummary)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrderSummary>> GetOrdersSummaryAsyncWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrderSummary>> GetOrdersSummaryAsyncWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1536,6 +1545,7 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
             if (orderByRequestedForTime != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderByRequestedForTime", orderByRequestedForTime)); // query parameter
+            if (channels != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "channels", channels)); // query parameter
 
             // authentication (oauth2) required
             // oauth required

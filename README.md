@@ -334,6 +334,7 @@ Class | Method | HTTP request | Description
 *OAuthClientsApi* | [**OAuthClientsGetApplications**](docs/OAuthClientsApi.md#oauthclientsgetapplications) | **GET** /api/v1.0/{appId}/oauthclients/appnames | 
 *OAuthClientsApi* | [**RemoveRedirectUri**](docs/OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis/{uriId} | Delete OAuth App redirect uri
 *OAuthClientsApi* | [**UpdateOAuthApp**](docs/OAuthClientsApi.md#updateoauthapp) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Update OAuth App
+*OrderIngestApi* | [**OrderIngestSubmitNewOrder**](docs/OrderIngestApi.md#orderingestsubmitneworder) | **POST** /api/v1.0/{appNameId}/order-ingest/submit | Provides an ability to ingest a 3rd party order into Flipdish ecosystem
 *OrdersApi* | [**AcceptOrder**](docs/OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 *OrdersApi* | [**DispatchOrder**](docs/OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 *OrdersApi* | [**GetDeliveryInformation**](docs/OrdersApi.md#getdeliveryinformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
@@ -501,6 +502,7 @@ Class | Method | HTTP request | Description
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
  - [Model.BusinessHoursPeriodBase](docs/BusinessHoursPeriodBase.md)
  - [Model.CampaignStatistics](docs/CampaignStatistics.md)
+ - [Model.Cart](docs/Cart.md)
  - [Model.CatalogGroup](docs/CatalogGroup.md)
  - [Model.CatalogGroupArchivedEvent](docs/CatalogGroupArchivedEvent.md)
  - [Model.CatalogGroupCreatedEvent](docs/CatalogGroupCreatedEvent.md)
@@ -517,6 +519,7 @@ Class | Method | HTTP request | Description
  - [Model.Channel](docs/Channel.md)
  - [Model.ChargebackDetails](docs/ChargebackDetails.md)
  - [Model.ConfiguredPhysicalRestaurant](docs/ConfiguredPhysicalRestaurant.md)
+ - [Model.Contact](docs/Contact.md)
  - [Model.Coordinates](docs/Coordinates.md)
  - [Model.CountryWithAccountFieldsDefinitions](docs/CountryWithAccountFieldsDefinitions.md)
  - [Model.CreateAccountModel](docs/CreateAccountModel.md)
@@ -576,6 +579,7 @@ Class | Method | HTTP request | Description
  - [Model.FieldGroup](docs/FieldGroup.md)
  - [Model.FlipdishEventBase](docs/FlipdishEventBase.md)
  - [Model.FlipdishFeesDetails](docs/FlipdishFeesDetails.md)
+ - [Model.FulfillmentInfo](docs/FulfillmentInfo.md)
  - [Model.GroupedCoordinates](docs/GroupedCoordinates.md)
  - [Model.HomeAction](docs/HomeAction.md)
  - [Model.HomeStatistics](docs/HomeStatistics.md)
@@ -618,7 +622,10 @@ Class | Method | HTTP request | Description
  - [Model.KioskStoreSettings](docs/KioskStoreSettings.md)
  - [Model.Language](docs/Language.md)
  - [Model.LightspeedSettings](docs/LightspeedSettings.md)
+ - [Model.LineItem](docs/LineItem.md)
+ - [Model.LineItemOption](docs/LineItemOption.md)
  - [Model.LocalisedTimeZone](docs/LocalisedTimeZone.md)
+ - [Model.Location](docs/Location.md)
  - [Model.LoginModel](docs/LoginModel.md)
  - [Model.LoginWithPinModel](docs/LoginWithPinModel.md)
  - [Model.LoyaltyCampaign](docs/LoyaltyCampaign.md)
@@ -683,6 +690,8 @@ Class | Method | HTTP request | Description
  - [Model.OrderDeliveryTrackingStatusUpdatedEvent](docs/OrderDeliveryTrackingStatusUpdatedEvent.md)
  - [Model.OrderDispatchedEvent](docs/OrderDispatchedEvent.md)
  - [Model.OrderIdAndSequenceNumber](docs/OrderIdAndSequenceNumber.md)
+ - [Model.OrderIngestSubmitOrderRequest](docs/OrderIngestSubmitOrderRequest.md)
+ - [Model.OrderIngestSubmitOrderResponse](docs/OrderIngestSubmitOrderResponse.md)
  - [Model.OrderItem](docs/OrderItem.md)
  - [Model.OrderItemOption](docs/OrderItemOption.md)
  - [Model.OrderPaymentInformation](docs/OrderPaymentInformation.md)
@@ -694,6 +703,7 @@ Class | Method | HTTP request | Description
  - [Model.OrderVoucherSummary](docs/OrderVoucherSummary.md)
  - [Model.OtherChargesDetails](docs/OtherChargesDetails.md)
  - [Model.PasswordResetModel](docs/PasswordResetModel.md)
+ - [Model.PaymentInfo](docs/PaymentInfo.md)
  - [Model.PaymentTerminalDetails](docs/PaymentTerminalDetails.md)
  - [Model.PaymentTerminalTransactionDetails](docs/PaymentTerminalTransactionDetails.md)
  - [Model.Payout](docs/Payout.md)
@@ -712,6 +722,7 @@ Class | Method | HTTP request | Description
  - [Model.PreOrderConfig](docs/PreOrderConfig.md)
  - [Model.PreOrderTime](docs/PreOrderTime.md)
  - [Model.PredefinedAnswer](docs/PredefinedAnswer.md)
+ - [Model.Price](docs/Price.md)
  - [Model.Printer](docs/Printer.md)
  - [Model.PrinterAssignedToStoreEvent](docs/PrinterAssignedToStoreEvent.md)
  - [Model.PrinterTurnedOffEvent](docs/PrinterTurnedOffEvent.md)
@@ -846,6 +857,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultOauthClientRedirectUri](docs/RestApiResultOauthClientRedirectUri.md)
  - [Model.RestApiResultOrder](docs/RestApiResultOrder.md)
  - [Model.RestApiResultOrderDeliveryInformation](docs/RestApiResultOrderDeliveryInformation.md)
+ - [Model.RestApiResultOrderIngestSubmitOrderResponse](docs/RestApiResultOrderIngestSubmitOrderResponse.md)
  - [Model.RestApiResultOrderPaymentInformation](docs/RestApiResultOrderPaymentInformation.md)
  - [Model.RestApiResultPaymentTerminalDetails](docs/RestApiResultPaymentTerminalDetails.md)
  - [Model.RestApiResultPaymentTerminalTransactionDetails](docs/RestApiResultPaymentTerminalTransactionDetails.md)

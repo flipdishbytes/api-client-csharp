@@ -1119,7 +1119,13 @@ namespace Flipdish.Model
             /// Enum PwaIos for value: PwaIos
             /// </summary>
             [EnumMember(Value = "PwaIos")]
-            PwaIos = 10
+            PwaIos = 10,
+            
+            /// <summary>
+            /// Enum Google for value: Google
+            /// </summary>
+            [EnumMember(Value = "Google")]
+            Google = 11
         }
 
         /// <summary>
@@ -1151,9 +1157,12 @@ namespace Flipdish.Model
         /// <param name="dropOffLocationId">id of the collection/drop off location.</param>
         /// <param name="dropOffLocation">Represents table service drop off location.</param>
         /// <param name="acceptedFor">Time store has accepted the order for.</param>
+        /// <param name="channel">Channel where the Order comes from.</param>
         /// <param name="inFraudZone">Was order made within a fraud zone.</param>
         /// <param name="unusualHighValueOrder">Is order of unusually high value.</param>
-        public OrderSummary(int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), TableServiceCatagoryEnum? tableServiceCatagory = default(TableServiceCatagoryEnum?), OrderStateEnum? orderState = default(OrderStateEnum?), DateTime? requestedForTime = default(DateTime?), string storeName = default(string), string storeIanaTimeZone = default(string), string customerName = default(string), string customerPhoneNumber = default(string), double? amount = default(double?), double? refundedAmount = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), CurrencyEnum? currency = default(CurrencyEnum?), AppTypeEnum? appType = default(AppTypeEnum?), string localOrderId = default(string), int? dropOffLocationId = default(int?), string dropOffLocation = default(string), DateTime? acceptedFor = default(DateTime?), bool? inFraudZone = default(bool?), bool? unusualHighValueOrder = default(bool?))
+        /// <param name="externalOrderId">ExternalOrderId from external channel.</param>
+        /// <param name="externalOrderDisplayId">ExternalOrderDisplayId from external channel.</param>
+        public OrderSummary(int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), TableServiceCatagoryEnum? tableServiceCatagory = default(TableServiceCatagoryEnum?), OrderStateEnum? orderState = default(OrderStateEnum?), DateTime? requestedForTime = default(DateTime?), string storeName = default(string), string storeIanaTimeZone = default(string), string customerName = default(string), string customerPhoneNumber = default(string), double? amount = default(double?), double? refundedAmount = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), CurrencyEnum? currency = default(CurrencyEnum?), AppTypeEnum? appType = default(AppTypeEnum?), string localOrderId = default(string), int? dropOffLocationId = default(int?), string dropOffLocation = default(string), DateTime? acceptedFor = default(DateTime?), Channel channel = default(Channel), bool? inFraudZone = default(bool?), bool? unusualHighValueOrder = default(bool?), string externalOrderId = default(string), string externalOrderDisplayId = default(string))
         {
             this.OrderId = orderId;
             this.DeliveryType = deliveryType;
@@ -1175,8 +1184,11 @@ namespace Flipdish.Model
             this.DropOffLocationId = dropOffLocationId;
             this.DropOffLocation = dropOffLocation;
             this.AcceptedFor = acceptedFor;
+            this.Channel = channel;
             this.InFraudZone = inFraudZone;
             this.UnusualHighValueOrder = unusualHighValueOrder;
+            this.ExternalOrderId = externalOrderId;
+            this.ExternalOrderDisplayId = externalOrderDisplayId;
         }
         
         /// <summary>
@@ -1272,6 +1284,13 @@ namespace Flipdish.Model
         public DateTime? AcceptedFor { get; set; }
 
         /// <summary>
+        /// Channel where the Order comes from
+        /// </summary>
+        /// <value>Channel where the Order comes from</value>
+        [DataMember(Name="Channel", EmitDefaultValue=false)]
+        public Channel Channel { get; set; }
+
+        /// <summary>
         /// Was order made within a fraud zone
         /// </summary>
         /// <value>Was order made within a fraud zone</value>
@@ -1284,6 +1303,20 @@ namespace Flipdish.Model
         /// <value>Is order of unusually high value</value>
         [DataMember(Name="UnusualHighValueOrder", EmitDefaultValue=false)]
         public bool? UnusualHighValueOrder { get; set; }
+
+        /// <summary>
+        /// ExternalOrderId from external channel
+        /// </summary>
+        /// <value>ExternalOrderId from external channel</value>
+        [DataMember(Name="ExternalOrderId", EmitDefaultValue=false)]
+        public string ExternalOrderId { get; set; }
+
+        /// <summary>
+        /// ExternalOrderDisplayId from external channel
+        /// </summary>
+        /// <value>ExternalOrderDisplayId from external channel</value>
+        [DataMember(Name="ExternalOrderDisplayId", EmitDefaultValue=false)]
+        public string ExternalOrderDisplayId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -1313,8 +1346,11 @@ namespace Flipdish.Model
             sb.Append("  DropOffLocationId: ").Append(DropOffLocationId).Append("\n");
             sb.Append("  DropOffLocation: ").Append(DropOffLocation).Append("\n");
             sb.Append("  AcceptedFor: ").Append(AcceptedFor).Append("\n");
+            sb.Append("  Channel: ").Append(Channel).Append("\n");
             sb.Append("  InFraudZone: ").Append(InFraudZone).Append("\n");
             sb.Append("  UnusualHighValueOrder: ").Append(UnusualHighValueOrder).Append("\n");
+            sb.Append("  ExternalOrderId: ").Append(ExternalOrderId).Append("\n");
+            sb.Append("  ExternalOrderDisplayId: ").Append(ExternalOrderDisplayId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1450,6 +1486,11 @@ namespace Flipdish.Model
                     this.AcceptedFor.Equals(input.AcceptedFor))
                 ) && 
                 (
+                    this.Channel == input.Channel ||
+                    (this.Channel != null &&
+                    this.Channel.Equals(input.Channel))
+                ) && 
+                (
                     this.InFraudZone == input.InFraudZone ||
                     (this.InFraudZone != null &&
                     this.InFraudZone.Equals(input.InFraudZone))
@@ -1458,6 +1499,16 @@ namespace Flipdish.Model
                     this.UnusualHighValueOrder == input.UnusualHighValueOrder ||
                     (this.UnusualHighValueOrder != null &&
                     this.UnusualHighValueOrder.Equals(input.UnusualHighValueOrder))
+                ) && 
+                (
+                    this.ExternalOrderId == input.ExternalOrderId ||
+                    (this.ExternalOrderId != null &&
+                    this.ExternalOrderId.Equals(input.ExternalOrderId))
+                ) && 
+                (
+                    this.ExternalOrderDisplayId == input.ExternalOrderDisplayId ||
+                    (this.ExternalOrderDisplayId != null &&
+                    this.ExternalOrderDisplayId.Equals(input.ExternalOrderDisplayId))
                 );
         }
 
@@ -1510,10 +1561,16 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DropOffLocation.GetHashCode();
                 if (this.AcceptedFor != null)
                     hashCode = hashCode * 59 + this.AcceptedFor.GetHashCode();
+                if (this.Channel != null)
+                    hashCode = hashCode * 59 + this.Channel.GetHashCode();
                 if (this.InFraudZone != null)
                     hashCode = hashCode * 59 + this.InFraudZone.GetHashCode();
                 if (this.UnusualHighValueOrder != null)
                     hashCode = hashCode * 59 + this.UnusualHighValueOrder.GetHashCode();
+                if (this.ExternalOrderId != null)
+                    hashCode = hashCode * 59 + this.ExternalOrderId.GetHashCode();
+                if (this.ExternalOrderDisplayId != null)
+                    hashCode = hashCode * 59 + this.ExternalOrderDisplayId.GetHashCode();
                 return hashCode;
             }
         }
