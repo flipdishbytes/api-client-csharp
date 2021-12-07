@@ -5,9 +5,11 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateCatalogItem**](CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create a Catalog Item
+[**DeleteCatalogItemImage**](CatalogItemsApi.md#deletecatalogitemimage) | **DELETE** /api/v1.0/{appId}/catalog/items/{catalogItemId}/image | Delete a CatalogItem Image
 [**GetCatalogItemById**](CatalogItemsApi.md#getcatalogitembyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
 [**GetItems**](CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
 [**UpdateCatalogItem**](CatalogItemsApi.md#updatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Update Catalog Item
+[**UploadCatalogItemImage**](CatalogItemsApi.md#uploadcatalogitemimage) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/image | Upload a Catalog Item Image
 
 
 <a name="createcatalogitem"></a>
@@ -70,6 +72,69 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletecatalogitemimage"></a>
+# **DeleteCatalogItemImage**
+> void DeleteCatalogItemImage (string appId, string catalogItemId)
+
+Delete a CatalogItem Image
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class DeleteCatalogItemImageExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new CatalogItemsApi();
+            var appId = appId_example;  // string | 
+            var catalogItemId = catalogItemId_example;  // string | 
+
+            try
+            {
+                // Delete a CatalogItem Image
+                apiInstance.DeleteCatalogItemImage(appId, catalogItemId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CatalogItemsApi.DeleteCatalogItemImage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **catalogItemId** | **string**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -269,6 +334,72 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uploadcatalogitemimage"></a>
+# **UploadCatalogItemImage**
+> RestApiStringResult UploadCatalogItemImage (string appId, string catalogItemId, System.IO.Stream image)
+
+Upload a Catalog Item Image
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UploadCatalogItemImageExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new CatalogItemsApi();
+            var appId = appId_example;  // string | 
+            var catalogItemId = catalogItemId_example;  // string | 
+            var image = new System.IO.Stream(); // System.IO.Stream | Catalog Item image
+
+            try
+            {
+                // Upload a Catalog Item Image
+                RestApiStringResult result = apiInstance.UploadCatalogItemImage(appId, catalogItemId, image);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CatalogItemsApi.UploadCatalogItemImage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **catalogItemId** | **string**|  | 
+ **image** | **System.IO.Stream**| Catalog Item image | 
+
+### Return type
+
+[**RestApiStringResult**](RestApiStringResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

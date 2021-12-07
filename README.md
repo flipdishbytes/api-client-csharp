@@ -178,9 +178,11 @@ Class | Method | HTTP request | Description
 *CatalogGroupsApi* | [**GetGroups**](docs/CatalogGroupsApi.md#getgroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
 *CatalogGroupsApi* | [**UpdateCatalogGroup**](docs/CatalogGroupsApi.md#updatecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Update Catalog Group
 *CatalogItemsApi* | [**CreateCatalogItem**](docs/CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create a Catalog Item
+*CatalogItemsApi* | [**DeleteCatalogItemImage**](docs/CatalogItemsApi.md#deletecatalogitemimage) | **DELETE** /api/v1.0/{appId}/catalog/items/{catalogItemId}/image | Delete a CatalogItem Image
 *CatalogItemsApi* | [**GetCatalogItemById**](docs/CatalogItemsApi.md#getcatalogitembyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
 *CatalogItemsApi* | [**GetItems**](docs/CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
 *CatalogItemsApi* | [**UpdateCatalogItem**](docs/CatalogItemsApi.md#updatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Update Catalog Item
+*CatalogItemsApi* | [**UploadCatalogItemImage**](docs/CatalogItemsApi.md#uploadcatalogitemimage) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/image | Upload a Catalog Item Image
 *ChannelsApi* | [**GetChannel**](docs/ChannelsApi.md#getchannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
 *ChannelsApi* | [**GetChannels**](docs/ChannelsApi.md#getchannels) | **GET** /api/v1.0/{appId}/channels | 
 *ContentSecurityPolicyApi* | [**ContentSecurityPolicyReport**](docs/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
