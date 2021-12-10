@@ -153,7 +153,7 @@ namespace Flipdish.Api
         /// <param name="configId">App Store Configuration Id</param>
         /// <param name="appConfigurationBase">App Store Configuration Base</param>
         /// <returns></returns>
-        void UpdateAppStoreConfig (string appId, string appStoreAppId, string configId, AppConfigurationBase appConfigurationBase);
+        void UpdateAppStoreConfig (string appId, string appStoreAppId, string configId, AppConfiguration appConfigurationBase);
 
         /// <summary>
         /// Update app store app configuration
@@ -167,7 +167,7 @@ namespace Flipdish.Api
         /// <param name="configId">App Store Configuration Id</param>
         /// <param name="appConfigurationBase">App Store Configuration Base</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId, AppConfigurationBase appConfigurationBase);
+        ApiResponse<Object> UpdateAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId, AppConfiguration appConfigurationBase);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -299,7 +299,7 @@ namespace Flipdish.Api
         /// <param name="configId">App Store Configuration Id</param>
         /// <param name="appConfigurationBase">App Store Configuration Base</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateAppStoreConfigAsync (string appId, string appStoreAppId, string configId, AppConfigurationBase appConfigurationBase);
+        System.Threading.Tasks.Task UpdateAppStoreConfigAsync (string appId, string appStoreAppId, string configId, AppConfiguration appConfigurationBase);
 
         /// <summary>
         /// Update app store app configuration
@@ -313,7 +313,7 @@ namespace Flipdish.Api
         /// <param name="configId">App Store Configuration Id</param>
         /// <param name="appConfigurationBase">App Store Configuration Base</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId, AppConfigurationBase appConfigurationBase);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId, AppConfiguration appConfigurationBase);
         #endregion Asynchronous Operations
     }
 
@@ -1250,7 +1250,7 @@ namespace Flipdish.Api
         /// <param name="configId">App Store Configuration Id</param>
         /// <param name="appConfigurationBase">App Store Configuration Base</param>
         /// <returns></returns>
-        public void UpdateAppStoreConfig (string appId, string appStoreAppId, string configId, AppConfigurationBase appConfigurationBase)
+        public void UpdateAppStoreConfig (string appId, string appStoreAppId, string configId, AppConfiguration appConfigurationBase)
         {
              UpdateAppStoreConfigWithHttpInfo(appId, appStoreAppId, configId, appConfigurationBase);
         }
@@ -1264,7 +1264,7 @@ namespace Flipdish.Api
         /// <param name="configId">App Store Configuration Id</param>
         /// <param name="appConfigurationBase">App Store Configuration Base</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId, AppConfigurationBase appConfigurationBase)
+        public ApiResponse<Object> UpdateAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId, AppConfiguration appConfigurationBase)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1354,7 +1354,7 @@ namespace Flipdish.Api
         /// <param name="configId">App Store Configuration Id</param>
         /// <param name="appConfigurationBase">App Store Configuration Base</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateAppStoreConfigAsync (string appId, string appStoreAppId, string configId, AppConfigurationBase appConfigurationBase)
+        public async System.Threading.Tasks.Task UpdateAppStoreConfigAsync (string appId, string appStoreAppId, string configId, AppConfiguration appConfigurationBase)
         {
              await UpdateAppStoreConfigAsyncWithHttpInfo(appId, appStoreAppId, configId, appConfigurationBase);
 
@@ -1369,7 +1369,7 @@ namespace Flipdish.Api
         /// <param name="configId">App Store Configuration Id</param>
         /// <param name="appConfigurationBase">App Store Configuration Base</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId, AppConfigurationBase appConfigurationBase)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId, AppConfiguration appConfigurationBase)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)

@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 Update app store app verification
 
-[BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+[BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
 
 ### Example
 ```csharp

@@ -28,7 +28,7 @@ namespace Flipdish.Api
         /// Update app store app verification
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
@@ -40,7 +40,7 @@ namespace Flipdish.Api
         /// Update app store app verification
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
@@ -189,7 +189,7 @@ namespace Flipdish.Api
         /// Update app store app verification
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
@@ -201,7 +201,7 @@ namespace Flipdish.Api
         /// Update app store app verification
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
@@ -445,7 +445,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
@@ -457,7 +457,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
@@ -537,7 +537,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
@@ -550,7 +550,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Flipdish Admin access required]
+        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId">App Store App Id</param>
