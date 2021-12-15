@@ -373,48 +373,6 @@ namespace Flipdish.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // AboutSectionTitle (string) pattern
-            Regex regexAboutSectionTitle = new Regex(@"^(?!.*<[^>]+>).*", RegexOptions.CultureInvariant);
-            if (false == regexAboutSectionTitle.Match(this.AboutSectionTitle).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for AboutSectionTitle, must match a pattern of " + regexAboutSectionTitle, new [] { "AboutSectionTitle" });
-            }
-
-            // AboutSectionSubtitle (string) pattern
-            Regex regexAboutSectionSubtitle = new Regex(@"^(?!.*<[^>]+>).*", RegexOptions.CultureInvariant);
-            if (false == regexAboutSectionSubtitle.Match(this.AboutSectionSubtitle).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for AboutSectionSubtitle, must match a pattern of " + regexAboutSectionSubtitle, new [] { "AboutSectionSubtitle" });
-            }
-
-            // AboutSectionLeftTitle (string) pattern
-            Regex regexAboutSectionLeftTitle = new Regex(@"^(?!.*<[^>]+>).*", RegexOptions.CultureInvariant);
-            if (false == regexAboutSectionLeftTitle.Match(this.AboutSectionLeftTitle).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for AboutSectionLeftTitle, must match a pattern of " + regexAboutSectionLeftTitle, new [] { "AboutSectionLeftTitle" });
-            }
-
-            // AboutSectionLeftBody (string) pattern
-            Regex regexAboutSectionLeftBody = new Regex(@"^(?!.*<[^>]+>).*", RegexOptions.CultureInvariant);
-            if (false == regexAboutSectionLeftBody.Match(this.AboutSectionLeftBody).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for AboutSectionLeftBody, must match a pattern of " + regexAboutSectionLeftBody, new [] { "AboutSectionLeftBody" });
-            }
-
-            // AboutSectionRightTitle (string) pattern
-            Regex regexAboutSectionRightTitle = new Regex(@"^(?!.*<[^>]+>).*", RegexOptions.CultureInvariant);
-            if (false == regexAboutSectionRightTitle.Match(this.AboutSectionRightTitle).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for AboutSectionRightTitle, must match a pattern of " + regexAboutSectionRightTitle, new [] { "AboutSectionRightTitle" });
-            }
-
-            // AboutSectionRightBody (string) pattern
-            Regex regexAboutSectionRightBody = new Regex(@"^(?!.*<[^>]+>).*", RegexOptions.CultureInvariant);
-            if (false == regexAboutSectionRightBody.Match(this.AboutSectionRightBody).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for AboutSectionRightBody, must match a pattern of " + regexAboutSectionRightBody, new [] { "AboutSectionRightBody" });
-            }
-
             yield break;
         }
     }
