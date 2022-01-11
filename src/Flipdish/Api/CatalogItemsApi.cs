@@ -25,6 +25,29 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Archive Catalog Item
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <returns></returns>
+        void ArchiveCatalogItem (string appId, string catalogItemId);
+
+        /// <summary>
+        /// Archive Catalog Item
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ArchiveCatalogItemWithHttpInfo (string appId, string catalogItemId);
+        /// <summary>
         /// Create a Catalog Item
         /// </summary>
         /// <remarks>
@@ -197,6 +220,29 @@ namespace Flipdish.Api
         ApiResponse<RestApiStringResult> UploadCatalogItemImageWithHttpInfo (string appId, string catalogItemId, System.IO.Stream image);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Archive Catalog Item
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task ArchiveCatalogItemAsync (string appId, string catalogItemId);
+
+        /// <summary>
+        /// Archive Catalog Item
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ArchiveCatalogItemAsyncWithHttpInfo (string appId, string catalogItemId);
         /// <summary>
         /// Create a Catalog Item
         /// </summary>
@@ -466,6 +512,167 @@ namespace Flipdish.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Archive Catalog Item 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <returns></returns>
+        public void ArchiveCatalogItem (string appId, string catalogItemId)
+        {
+             ArchiveCatalogItemWithHttpInfo(appId, catalogItemId);
+        }
+
+        /// <summary>
+        /// Archive Catalog Item 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ArchiveCatalogItemWithHttpInfo (string appId, string catalogItemId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogItemsApi->ArchiveCatalogItem");
+            // verify the required parameter 'catalogItemId' is set
+            if (catalogItemId == null)
+                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogItemsApi->ArchiveCatalogItem");
+
+            var localVarPath = "/api/v1.0/{appId}/catalog/items/{catalogItemId}/archive";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (catalogItemId != null) localVarPathParams.Add("catalogItemId", this.Configuration.ApiClient.ParameterToString(catalogItemId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ArchiveCatalogItem", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Archive Catalog Item 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task ArchiveCatalogItemAsync (string appId, string catalogItemId)
+        {
+             await ArchiveCatalogItemAsyncWithHttpInfo(appId, catalogItemId);
+
+        }
+
+        /// <summary>
+        /// Archive Catalog Item 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="catalogItemId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ArchiveCatalogItemAsyncWithHttpInfo (string appId, string catalogItemId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogItemsApi->ArchiveCatalogItem");
+            // verify the required parameter 'catalogItemId' is set
+            if (catalogItemId == null)
+                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogItemsApi->ArchiveCatalogItem");
+
+            var localVarPath = "/api/v1.0/{appId}/catalog/items/{catalogItemId}/archive";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (catalogItemId != null) localVarPathParams.Add("catalogItemId", this.Configuration.ApiClient.ParameterToString(catalogItemId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ArchiveCatalogItem", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>

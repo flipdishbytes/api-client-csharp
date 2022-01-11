@@ -173,11 +173,13 @@ Class | Method | HTTP request | Description
 *CardReadersApi* | [**InitiateKioskBluetoothPairingMode**](docs/CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
 *CardReadersApi* | [**InitiateKioskBluetoothUpdateInstall**](docs/CardReadersApi.md#initiatekioskbluetoothupdateinstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
 *CardReadersApi* | [**UnpairCurrentlyPairedBluetoothDevice**](docs/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
+*CatalogGroupsApi* | [**ArchiveCatalogGroup**](docs/CatalogGroupsApi.md#archivecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId}/archive | Archive Catalog Group
 *CatalogGroupsApi* | [**CreateCatalogGroup**](docs/CatalogGroupsApi.md#createcataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
 *CatalogGroupsApi* | [**DuplicateCatalogGroup**](docs/CatalogGroupsApi.md#duplicatecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId}/duplicate | Duplicate Catalog Group
 *CatalogGroupsApi* | [**GetCatalogGroupById**](docs/CatalogGroupsApi.md#getcataloggroupbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Get group by Id
 *CatalogGroupsApi* | [**GetGroups**](docs/CatalogGroupsApi.md#getgroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
 *CatalogGroupsApi* | [**UpdateCatalogGroup**](docs/CatalogGroupsApi.md#updatecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Update Catalog Group
+*CatalogItemsApi* | [**ArchiveCatalogItem**](docs/CatalogItemsApi.md#archivecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/archive | Archive Catalog Item
 *CatalogItemsApi* | [**CreateCatalogItem**](docs/CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create a Catalog Item
 *CatalogItemsApi* | [**DeleteCatalogItemImage**](docs/CatalogItemsApi.md#deletecatalogitemimage) | **DELETE** /api/v1.0/{appId}/catalog/items/{catalogItemId}/image | Delete a CatalogItem Image
 *CatalogItemsApi* | [**DuplicateCatalogItem**](docs/CatalogItemsApi.md#duplicatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/duplicate | Duplicate Catalog Item
@@ -185,8 +187,12 @@ Class | Method | HTTP request | Description
 *CatalogItemsApi* | [**GetItems**](docs/CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
 *CatalogItemsApi* | [**UpdateCatalogItem**](docs/CatalogItemsApi.md#updatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Update Catalog Item
 *CatalogItemsApi* | [**UploadCatalogItemImage**](docs/CatalogItemsApi.md#uploadcatalogitemimage) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/image | Upload a Catalog Item Image
+*ChannelsApi* | [**AttachStoreToSalesChannel**](docs/ChannelsApi.md#attachstoretosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Attachs the specified store to the given sales channel.
+*ChannelsApi* | [**DetachAllStoresFromSalesChannel**](docs/ChannelsApi.md#detachallstoresfromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | Detaches all the stores from the given sales channel.
+*ChannelsApi* | [**DetachStoreFromSalesChannel**](docs/ChannelsApi.md#detachstorefromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Detaches the specified store from the given sales channel.
 *ChannelsApi* | [**GetChannel**](docs/ChannelsApi.md#getchannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
 *ChannelsApi* | [**GetChannels**](docs/ChannelsApi.md#getchannels) | **GET** /api/v1.0/{appId}/channels | 
+*ChannelsApi* | [**GetStoresBySalesChannel**](docs/ChannelsApi.md#getstoresbysaleschannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | Returns a list of store ids attached to the given channel type for the specified app.
 *ContentSecurityPolicyApi* | [**ContentSecurityPolicyReport**](docs/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
 *CustomersApi* | [**GetCustomerById**](docs/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | Get customer of an app by Id
 *CustomersApi* | [**UpdateCustomerById**](docs/CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | Update customer of an app by Id
@@ -362,17 +368,8 @@ Class | Method | HTTP request | Description
 *PayoutsExportApi* | [**ExportPayouts**](docs/PayoutsExportApi.md#exportpayouts) | **GET** /api/v1.0/{appId}/payouts/export | Export payouts as CSV
 *ProcessingFeeConfigsApi* | [**GetProcessingFeeConfigsByStoreIds**](docs/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
 *ProductsApi* | [**ArchiveProduct**](docs/ProductsApi.md#archiveproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/archive | Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-*ProductsApi* | [**CreateModifier**](docs/ProductsApi.md#createmodifier) | **POST** /api/v1.0/{appId}/catalog/products/Modifier | Create a modifier
-*ProductsApi* | [**CreateModifierGroup**](docs/ProductsApi.md#createmodifiergroup) | **POST** /api/v1.0/{appId}/catalog/products/ModifierGroup | Create a modifier group
-*ProductsApi* | [**CreateProduct**](docs/ProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a simple product
-*ProductsApi* | [**DeleteProductImage**](docs/ProductsApi.md#deleteproductimage) | **DELETE** /api/v1.0/{appId}/catalog/products/{productId}/image | Delete a Product Image
 *ProductsApi* | [**DuplicateProduct**](docs/ProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/duplicate | Duplicate a product
-*ProductsApi* | [**GetProductById**](docs/ProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/products/{productId} | Get products by productId
 *ProductsApi* | [**GetProducts**](docs/ProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get paginated products by app name id filtered by product types
-*ProductsApi* | [**UpdateModifier**](docs/ProductsApi.md#updatemodifier) | **POST** /api/v1.0/{appId}/catalog/products/modifier/{productId} | Update modifier
-*ProductsApi* | [**UpdateModifierGroup**](docs/ProductsApi.md#updatemodifiergroup) | **POST** /api/v1.0/{appId}/catalog/products/modifierGroup/{productId} | Update modifier Group
-*ProductsApi* | [**UpdateProduct**](docs/ProductsApi.md#updateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId} | Update a simple product
-*ProductsApi* | [**UploadProductImage**](docs/ProductsApi.md#uploadproductimage) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/image | Upload a Product Image
 *PushNotificationsApi* | [**DeletePushNotification**](docs/PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**GetPushNotifications**](docs/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**SchedulePushNotification**](docs/PushNotificationsApi.md#schedulepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
@@ -539,9 +536,6 @@ Class | Method | HTTP request | Description
  - [Model.CreateMenuSectionItemFromProducts](docs/CreateMenuSectionItemFromProducts.md)
  - [Model.CreateMenuTaxRate](docs/CreateMenuTaxRate.md)
  - [Model.CreateMetadata](docs/CreateMetadata.md)
- - [Model.CreateModifier](docs/CreateModifier.md)
- - [Model.CreateModifierGroup](docs/CreateModifierGroup.md)
- - [Model.CreateSimpleProduct](docs/CreateSimpleProduct.md)
  - [Model.CreateTeammate](docs/CreateTeammate.md)
  - [Model.CreateVoucher](docs/CreateVoucher.md)
  - [Model.CreatedMenuSectionItems](docs/CreatedMenuSectionItems.md)
@@ -679,7 +673,6 @@ Class | Method | HTTP request | Description
  - [Model.MenuUpdatedEvent](docs/MenuUpdatedEvent.md)
  - [Model.MenuUploadedEvent](docs/MenuUploadedEvent.md)
  - [Model.Metadata](docs/Metadata.md)
- - [Model.ModifierGroupSubProduct](docs/ModifierGroupSubProduct.md)
  - [Model.OAuthApp](docs/OAuthApp.md)
  - [Model.OAuthTokenModel](docs/OAuthTokenModel.md)
  - [Model.OauthClientRedirectUri](docs/OauthClientRedirectUri.md)
@@ -747,6 +740,7 @@ Class | Method | HTTP request | Description
  - [Model.RequestLoginPinModel](docs/RequestLoginPinModel.md)
  - [Model.RequestLoginPinResposne](docs/RequestLoginPinResposne.md)
  - [Model.RequestPasswordResetModel](docs/RequestPasswordResetModel.md)
+ - [Model.Response](docs/Response.md)
  - [Model.RestApiArrayResultAllMetadataResult](docs/RestApiArrayResultAllMetadataResult.md)
  - [Model.RestApiArrayResultApmCurrencyDataPoint](docs/RestApiArrayResultApmCurrencyDataPoint.md)
  - [Model.RestApiArrayResultApmDataPoint](docs/RestApiArrayResultApmDataPoint.md)
@@ -899,7 +893,6 @@ Class | Method | HTTP request | Description
  - [Model.SetPasswordWithPinModel](docs/SetPasswordWithPinModel.md)
  - [Model.Setting](docs/Setting.md)
  - [Model.SignupStep](docs/SignupStep.md)
- - [Model.SimpleProductSubProduct](docs/SimpleProductSubProduct.md)
  - [Model.SmsInfo](docs/SmsInfo.md)
  - [Model.SmsReceivedEvent](docs/SmsReceivedEvent.md)
  - [Model.StatisticsCurrencyDataPoint](docs/StatisticsCurrencyDataPoint.md)
@@ -925,6 +918,7 @@ Class | Method | HTTP request | Description
  - [Model.StoreGroupExtended](docs/StoreGroupExtended.md)
  - [Model.StoreGroupUpdatedEvent](docs/StoreGroupUpdatedEvent.md)
  - [Model.StoreHeader](docs/StoreHeader.md)
+ - [Model.StoreItemHeader](docs/StoreItemHeader.md)
  - [Model.StoreKioskSetting](docs/StoreKioskSetting.md)
  - [Model.StoreKioskSettingModel](docs/StoreKioskSettingModel.md)
  - [Model.StoreKioskSettingUpdatedEvent](docs/StoreKioskSettingUpdatedEvent.md)
@@ -965,9 +959,6 @@ Class | Method | HTTP request | Description
  - [Model.UpdateCatalogItemReference](docs/UpdateCatalogItemReference.md)
  - [Model.UpdateDriverNotificationToken](docs/UpdateDriverNotificationToken.md)
  - [Model.UpdateDriverProfileModel](docs/UpdateDriverProfileModel.md)
- - [Model.UpdateModifier](docs/UpdateModifier.md)
- - [Model.UpdateModifierGroup](docs/UpdateModifierGroup.md)
- - [Model.UpdateSimpleProduct](docs/UpdateSimpleProduct.md)
  - [Model.UserAnsweredSignupQuestionsEvent](docs/UserAnsweredSignupQuestionsEvent.md)
  - [Model.UserCreatedEvent](docs/UserCreatedEvent.md)
  - [Model.UserDeletedEvent](docs/UserDeletedEvent.md)

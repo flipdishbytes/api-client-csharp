@@ -4,6 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EventName** | **string** | The event name | [optional] 
+**Description** | **string** | Description | [optional] 
+**User** | [**UserEventInfo**](UserEventInfo.md) | User who has created the group | [optional] 
+**CatalogGroup** | [**CatalogGroup**](CatalogGroup.md) | Catalog group created | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 
 **Position** | **int?** | Position | [optional] 

@@ -36,16 +36,22 @@ namespace Flipdish.Model
         /// <param name="description">Description.</param>
         /// <param name="user">User who has created the menu.</param>
         /// <param name="menu">Menu identifier.</param>
+        /// <param name="menuId">Menu Id.</param>
+        /// <param name="checkpointName">Checkpoint Name.</param>
+        /// <param name="menuCheckpointSetId">Checkpoint Set Id.</param>
         /// <param name="eventName">The event name.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
-        public MenuCheckpointCreatedEvent(string description = default(string), UserEventInfo user = default(UserEventInfo), Menu menu = default(Menu), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
+        public MenuCheckpointCreatedEvent(string description = default(string), UserEventInfo user = default(UserEventInfo), Menu menu = default(Menu), int? menuId = default(int?), string checkpointName = default(string), int? menuCheckpointSetId = default(int?), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
         {
             this.Description = description;
             this.User = user;
             this.Menu = menu;
+            this.MenuId = menuId;
+            this.CheckpointName = checkpointName;
+            this.MenuCheckpointSetId = menuCheckpointSetId;
             this.EventName = eventName;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
@@ -73,6 +79,27 @@ namespace Flipdish.Model
         /// <value>Menu identifier</value>
         [DataMember(Name="Menu", EmitDefaultValue=false)]
         public Menu Menu { get; set; }
+
+        /// <summary>
+        /// Menu Id
+        /// </summary>
+        /// <value>Menu Id</value>
+        [DataMember(Name="MenuId", EmitDefaultValue=false)]
+        public int? MenuId { get; set; }
+
+        /// <summary>
+        /// Checkpoint Name
+        /// </summary>
+        /// <value>Checkpoint Name</value>
+        [DataMember(Name="CheckpointName", EmitDefaultValue=false)]
+        public string CheckpointName { get; set; }
+
+        /// <summary>
+        /// Checkpoint Set Id
+        /// </summary>
+        /// <value>Checkpoint Set Id</value>
+        [DataMember(Name="MenuCheckpointSetId", EmitDefaultValue=false)]
+        public int? MenuCheckpointSetId { get; set; }
 
         /// <summary>
         /// The event name
@@ -120,6 +147,9 @@ namespace Flipdish.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Menu: ").Append(Menu).Append("\n");
+            sb.Append("  MenuId: ").Append(MenuId).Append("\n");
+            sb.Append("  CheckpointName: ").Append(CheckpointName).Append("\n");
+            sb.Append("  MenuCheckpointSetId: ").Append(MenuCheckpointSetId).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
@@ -175,6 +205,21 @@ namespace Flipdish.Model
                     this.Menu.Equals(input.Menu))
                 ) && 
                 (
+                    this.MenuId == input.MenuId ||
+                    (this.MenuId != null &&
+                    this.MenuId.Equals(input.MenuId))
+                ) && 
+                (
+                    this.CheckpointName == input.CheckpointName ||
+                    (this.CheckpointName != null &&
+                    this.CheckpointName.Equals(input.CheckpointName))
+                ) && 
+                (
+                    this.MenuCheckpointSetId == input.MenuCheckpointSetId ||
+                    (this.MenuCheckpointSetId != null &&
+                    this.MenuCheckpointSetId.Equals(input.MenuCheckpointSetId))
+                ) && 
+                (
                     this.EventName == input.EventName ||
                     (this.EventName != null &&
                     this.EventName.Equals(input.EventName))
@@ -216,6 +261,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.Menu != null)
                     hashCode = hashCode * 59 + this.Menu.GetHashCode();
+                if (this.MenuId != null)
+                    hashCode = hashCode * 59 + this.MenuId.GetHashCode();
+                if (this.CheckpointName != null)
+                    hashCode = hashCode * 59 + this.CheckpointName.GetHashCode();
+                if (this.MenuCheckpointSetId != null)
+                    hashCode = hashCode * 59 + this.MenuCheckpointSetId.GetHashCode();
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.FlipdishEventId != null)

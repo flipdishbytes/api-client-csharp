@@ -34,13 +34,19 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="CatalogItemArchivedEvent" /> class.
         /// </summary>
         /// <param name="eventName">The event name.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="user">User who has created the item.</param>
+        /// <param name="catalogItem">Catalog item created.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
-        public CatalogItemArchivedEvent(string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
+        public CatalogItemArchivedEvent(string eventName = default(string), string description = default(string), UserEventInfo user = default(UserEventInfo), CatalogItem catalogItem = default(CatalogItem), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
         {
             this.EventName = eventName;
+            this.Description = description;
+            this.User = user;
+            this.CatalogItem = catalogItem;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
             this.Position = position;
@@ -53,6 +59,27 @@ namespace Flipdish.Model
         /// <value>The event name</value>
         [DataMember(Name="EventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
+
+        /// <summary>
+        /// Description
+        /// </summary>
+        /// <value>Description</value>
+        [DataMember(Name="Description", EmitDefaultValue=false)]
+        public string Description { get; set; }
+
+        /// <summary>
+        /// User who has created the item
+        /// </summary>
+        /// <value>User who has created the item</value>
+        [DataMember(Name="User", EmitDefaultValue=false)]
+        public UserEventInfo User { get; set; }
+
+        /// <summary>
+        /// Catalog item created
+        /// </summary>
+        /// <value>Catalog item created</value>
+        [DataMember(Name="CatalogItem", EmitDefaultValue=false)]
+        public CatalogItem CatalogItem { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -91,6 +118,9 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class CatalogItemArchivedEvent {\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  CatalogItem: ").Append(CatalogItem).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -135,6 +165,21 @@ namespace Flipdish.Model
                     this.EventName.Equals(input.EventName))
                 ) && 
                 (
+                    this.Description == input.Description ||
+                    (this.Description != null &&
+                    this.Description.Equals(input.Description))
+                ) && 
+                (
+                    this.User == input.User ||
+                    (this.User != null &&
+                    this.User.Equals(input.User))
+                ) && 
+                (
+                    this.CatalogItem == input.CatalogItem ||
+                    (this.CatalogItem != null &&
+                    this.CatalogItem.Equals(input.CatalogItem))
+                ) && 
+                (
                     this.FlipdishEventId == input.FlipdishEventId ||
                     (this.FlipdishEventId != null &&
                     this.FlipdishEventId.Equals(input.FlipdishEventId))
@@ -167,6 +212,12 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
+                if (this.Description != null)
+                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.User != null)
+                    hashCode = hashCode * 59 + this.User.GetHashCode();
+                if (this.CatalogItem != null)
+                    hashCode = hashCode * 59 + this.CatalogItem.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)
