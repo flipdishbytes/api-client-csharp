@@ -7,8 +7,6 @@ Name | Type | Description | Notes
 **User** | [**UserEventInfo**](UserEventInfo.md) | User who has created the menu | [optional] 
 **Menu** | [**Menu**](Menu.md) | Menu identifier | [optional] 
 **MenuId** | **int?** | Menu Id | [optional] 
-**CheckpointName** | **string** | Checkpoint Name | [optional] 
-**MenuCheckpointSetId** | **int?** | Checkpoint Set Id | [optional] 
 **EventName** | **string** | The event name | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 
