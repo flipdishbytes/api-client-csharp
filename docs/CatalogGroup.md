@@ -4,13 +4,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CatalogGroupId** | **string** | Unique catalog group id | [optional] 
-**GroupType** | **string** | ModifierGroup, etc | [optional] 
-**Sku** | **string** | Stock Keeping Unit (SKU) | [optional] 
-**Name** | **string** | Group name | [optional] 
 **IsArchived** | **bool?** | Returns true if the group is archived | [optional] 
 **MinSelectCount** | **int?** | Minimum number of items that the user has to select | [optional] 
 **MaxSelectCount** | **int?** | Maximum number of items that the user has to select | [optional] 
 **Items** | [**List&lt;CatalogItemReference&gt;**](CatalogItemReference.md) | Collection of items associated with this product | [optional] 
+**GroupType** | **string** | Type of group (ModifierGroup, etc) | 
+**Sku** | **string** | Stock Keeping Unit (SKU) | 
+**Name** | **string** | Group name | 
+**ImageFileName** | **string** | Image File Name | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -35,13 +35,15 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="sku">Stock Keeping Unit (SKU).</param>
         /// <param name="name">Group name.</param>
+        /// <param name="imageFileName">Image File Name.</param>
         /// <param name="minSelectCount">Minimum number of items that the user has to select.</param>
         /// <param name="maxSelectCount">Maximum number of items that the user has to select.</param>
         /// <param name="items">Collection of items associated with this group.</param>
-        public UpdateCatalogGroup(string sku = default(string), string name = default(string), int? minSelectCount = default(int?), int? maxSelectCount = default(int?), List<UpdateCatalogItemReference> items = default(List<UpdateCatalogItemReference>))
+        public UpdateCatalogGroup(string sku = default(string), string name = default(string), string imageFileName = default(string), int? minSelectCount = default(int?), int? maxSelectCount = default(int?), List<UpdateCatalogItemReference> items = default(List<UpdateCatalogItemReference>))
         {
             this.Sku = sku;
             this.Name = name;
+            this.ImageFileName = imageFileName;
             this.MinSelectCount = minSelectCount;
             this.MaxSelectCount = maxSelectCount;
             this.Items = items;
@@ -60,6 +62,13 @@ namespace Flipdish.Model
         /// <value>Group name</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Image File Name
+        /// </summary>
+        /// <value>Image File Name</value>
+        [DataMember(Name="ImageFileName", EmitDefaultValue=false)]
+        public string ImageFileName { get; set; }
 
         /// <summary>
         /// Minimum number of items that the user has to select
@@ -92,6 +101,7 @@ namespace Flipdish.Model
             sb.Append("class UpdateCatalogGroup {\n");
             sb.Append("  Sku: ").Append(Sku).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  ImageFileName: ").Append(ImageFileName).Append("\n");
             sb.Append("  MinSelectCount: ").Append(MinSelectCount).Append("\n");
             sb.Append("  MaxSelectCount: ").Append(MaxSelectCount).Append("\n");
             sb.Append("  Items: ").Append(Items).Append("\n");
@@ -140,6 +150,11 @@ namespace Flipdish.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
+                    this.ImageFileName == input.ImageFileName ||
+                    (this.ImageFileName != null &&
+                    this.ImageFileName.Equals(input.ImageFileName))
+                ) && 
+                (
                     this.MinSelectCount == input.MinSelectCount ||
                     (this.MinSelectCount != null &&
                     this.MinSelectCount.Equals(input.MinSelectCount))
@@ -169,6 +184,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Sku.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.ImageFileName != null)
+                    hashCode = hashCode * 59 + this.ImageFileName.GetHashCode();
                 if (this.MinSelectCount != null)
                     hashCode = hashCode * 59 + this.MinSelectCount.GetHashCode();
                 if (this.MaxSelectCount != null)
@@ -208,6 +225,18 @@ namespace Flipdish.Model
             if(this.Name != null && this.Name.Length < 0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be greater than 0.", new [] { "Name" });
+            }
+
+            // ImageFileName (string) maxLength
+            if(this.ImageFileName != null && this.ImageFileName.Length > 512)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ImageFileName, length must be less than 512.", new [] { "ImageFileName" });
+            }
+
+            // ImageFileName (string) minLength
+            if(this.ImageFileName != null && this.ImageFileName.Length < 0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ImageFileName, length must be greater than 0.", new [] { "ImageFileName" });
             }
 
             yield break;

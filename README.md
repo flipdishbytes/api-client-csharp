@@ -179,6 +179,7 @@ Class | Method | HTTP request | Description
 *CatalogGroupsApi* | [**GetCatalogGroupById**](docs/CatalogGroupsApi.md#getcataloggroupbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Get group by Id
 *CatalogGroupsApi* | [**GetGroups**](docs/CatalogGroupsApi.md#getgroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
 *CatalogGroupsApi* | [**UpdateCatalogGroup**](docs/CatalogGroupsApi.md#updatecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Update Catalog Group
+*CatalogImagesApi* | [**UploadCatalogImage**](docs/CatalogImagesApi.md#uploadcatalogimage) | **POST** /api/v1.0/{appId}/catalog/images | Upload a Catalog Image
 *CatalogItemsApi* | [**ArchiveCatalogItem**](docs/CatalogItemsApi.md#archivecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/archive | Archive Catalog Item
 *CatalogItemsApi* | [**CreateCatalogItem**](docs/CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create a Catalog Item
 *CatalogItemsApi* | [**DeleteCatalogItemImage**](docs/CatalogItemsApi.md#deletecatalogitemimage) | **DELETE** /api/v1.0/{appId}/catalog/items/{catalogItemId}/image | Delete a CatalogItem Image
@@ -510,6 +511,7 @@ Class | Method | HTTP request | Description
  - [Model.CatalogGroupCreatedEvent](docs/CatalogGroupCreatedEvent.md)
  - [Model.CatalogGroupReference](docs/CatalogGroupReference.md)
  - [Model.CatalogGroupUpdatedEvent](docs/CatalogGroupUpdatedEvent.md)
+ - [Model.CatalogImage](docs/CatalogImage.md)
  - [Model.CatalogItem](docs/CatalogItem.md)
  - [Model.CatalogItemArchivedEvent](docs/CatalogItemArchivedEvent.md)
  - [Model.CatalogItemCreatedEvent](docs/CatalogItemCreatedEvent.md)

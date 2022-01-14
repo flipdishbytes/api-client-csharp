@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **GroupType** | **string** | Type of group (ModifierGroup, etc) | 
 **Sku** | **string** | Stock Keeping Unit (SKU) | 
 **Name** | **string** | Group name | 
+**ImageFileName** | **string** | Image File Name | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -65,7 +65,8 @@ namespace Flipdish.Model
         /// <param name="groupType">Type of group (ModifierGroup, etc) (required).</param>
         /// <param name="sku">Stock Keeping Unit (SKU) (required).</param>
         /// <param name="name">Group name (required).</param>
-        public CreateCatalogGroup(int? minSelectCount = default(int?), int? maxSelectCount = default(int?), List<CreateCatalogItemReference> items = default(List<CreateCatalogItemReference>), GroupTypeEnum groupType = default(GroupTypeEnum), string sku = default(string), string name = default(string))
+        /// <param name="imageFileName">Image File Name.</param>
+        public CreateCatalogGroup(int? minSelectCount = default(int?), int? maxSelectCount = default(int?), List<CreateCatalogItemReference> items = default(List<CreateCatalogItemReference>), GroupTypeEnum groupType = default(GroupTypeEnum), string sku = default(string), string name = default(string), string imageFileName = default(string))
         {
             // to ensure "groupType" is required (not null)
             if (groupType == null)
@@ -97,6 +98,7 @@ namespace Flipdish.Model
             this.MinSelectCount = minSelectCount;
             this.MaxSelectCount = maxSelectCount;
             this.Items = items;
+            this.ImageFileName = imageFileName;
         }
         
         /// <summary>
@@ -136,6 +138,13 @@ namespace Flipdish.Model
         public string Name { get; set; }
 
         /// <summary>
+        /// Image File Name
+        /// </summary>
+        /// <value>Image File Name</value>
+        [DataMember(Name="ImageFileName", EmitDefaultValue=false)]
+        public string ImageFileName { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -149,6 +158,7 @@ namespace Flipdish.Model
             sb.Append("  GroupType: ").Append(GroupType).Append("\n");
             sb.Append("  Sku: ").Append(Sku).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  ImageFileName: ").Append(ImageFileName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -212,6 +222,11 @@ namespace Flipdish.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.ImageFileName == input.ImageFileName ||
+                    (this.ImageFileName != null &&
+                    this.ImageFileName.Equals(input.ImageFileName))
                 );
         }
 
@@ -236,6 +251,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Sku.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.ImageFileName != null)
+                    hashCode = hashCode * 59 + this.ImageFileName.GetHashCode();
                 return hashCode;
             }
         }
@@ -269,6 +286,18 @@ namespace Flipdish.Model
             if(this.Name != null && this.Name.Length < 0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be greater than 0.", new [] { "Name" });
+            }
+
+            // ImageFileName (string) maxLength
+            if(this.ImageFileName != null && this.ImageFileName.Length > 512)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ImageFileName, length must be less than 512.", new [] { "ImageFileName" });
+            }
+
+            // ImageFileName (string) minLength
+            if(this.ImageFileName != null && this.ImageFileName.Length < 0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ImageFileName, length must be greater than 0.", new [] { "ImageFileName" });
             }
 
             yield break;
