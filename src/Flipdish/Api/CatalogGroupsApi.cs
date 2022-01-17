@@ -28,7 +28,7 @@ namespace Flipdish.Api
         /// Archive Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -40,7 +40,7 @@ namespace Flipdish.Api
         /// Archive Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -51,7 +51,7 @@ namespace Flipdish.Api
         /// Create a Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -63,7 +63,7 @@ namespace Flipdish.Api
         /// Create a Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -74,7 +74,7 @@ namespace Flipdish.Api
         /// Duplicate Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -86,7 +86,7 @@ namespace Flipdish.Api
         /// Duplicate Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -97,7 +97,7 @@ namespace Flipdish.Api
         /// Get group by Id
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -109,7 +109,7 @@ namespace Flipdish.Api
         /// Get group by Id
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -120,7 +120,7 @@ namespace Flipdish.Api
         /// Get paginated groups by app name id filtered by types
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -135,7 +135,7 @@ namespace Flipdish.Api
         /// Get paginated groups by app name id filtered by types
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -149,7 +149,7 @@ namespace Flipdish.Api
         /// Update Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -162,7 +162,7 @@ namespace Flipdish.Api
         /// Update Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -176,7 +176,7 @@ namespace Flipdish.Api
         /// Archive Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -188,7 +188,7 @@ namespace Flipdish.Api
         /// Archive Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -199,7 +199,7 @@ namespace Flipdish.Api
         /// Create a Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -211,7 +211,7 @@ namespace Flipdish.Api
         /// Create a Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -222,7 +222,7 @@ namespace Flipdish.Api
         /// Duplicate Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -234,7 +234,7 @@ namespace Flipdish.Api
         /// Duplicate Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -245,7 +245,7 @@ namespace Flipdish.Api
         /// Get group by Id
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -257,7 +257,7 @@ namespace Flipdish.Api
         /// Get group by Id
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -268,7 +268,7 @@ namespace Flipdish.Api
         /// Get paginated groups by app name id filtered by types
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -283,7 +283,7 @@ namespace Flipdish.Api
         /// Get paginated groups by app name id filtered by types
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -297,7 +297,7 @@ namespace Flipdish.Api
         /// Update Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -310,7 +310,7 @@ namespace Flipdish.Api
         /// Update Catalog Group
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -419,7 +419,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive Catalog Group 
+        /// Archive Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -431,7 +431,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive Catalog Group 
+        /// Archive Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -499,7 +499,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive Catalog Group 
+        /// Archive Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -512,7 +512,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive Catalog Group 
+        /// Archive Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -580,7 +580,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Catalog Group 
+        /// Create a Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -593,7 +593,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Catalog Group 
+        /// Create a Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -673,7 +673,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Catalog Group 
+        /// Create a Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -687,7 +687,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Catalog Group 
+        /// Create a Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -767,7 +767,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Duplicate Catalog Group 
+        /// Duplicate Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -779,7 +779,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Duplicate Catalog Group 
+        /// Duplicate Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -847,7 +847,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Duplicate Catalog Group 
+        /// Duplicate Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -860,7 +860,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Duplicate Catalog Group 
+        /// Duplicate Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -928,7 +928,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get group by Id 
+        /// Get group by Id [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -941,7 +941,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get group by Id 
+        /// Get group by Id [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1009,7 +1009,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get group by Id 
+        /// Get group by Id [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1023,7 +1023,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get group by Id 
+        /// Get group by Id [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1091,7 +1091,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get paginated groups by app name id filtered by types 
+        /// Get paginated groups by app name id filtered by types [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1107,7 +1107,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get paginated groups by app name id filtered by types 
+        /// Get paginated groups by app name id filtered by types [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1181,7 +1181,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get paginated groups by app name id filtered by types 
+        /// Get paginated groups by app name id filtered by types [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1198,7 +1198,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get paginated groups by app name id filtered by types 
+        /// Get paginated groups by app name id filtered by types [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1272,7 +1272,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update Catalog Group 
+        /// Update Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1285,7 +1285,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update Catalog Group 
+        /// Update Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1370,7 +1370,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update Catalog Group 
+        /// Update Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1384,7 +1384,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update Catalog Group 
+        /// Update Catalog Group [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

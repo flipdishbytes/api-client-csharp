@@ -15,6 +15,8 @@ Method | HTTP request | Description
 
 Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
 
+[BETA - this endpoint is under development, do not use it in your production system]
+
 ### Example
 ```csharp
 using System;
@@ -77,6 +79,8 @@ void (empty response body)
 > RestApiResultProduct DuplicateProduct (string appId, string productId)
 
 Duplicate a product
+
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -141,6 +145,8 @@ Name | Type | Description  | Notes
 > RestApiPaginationResultProduct GetProducts (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null)
 
 Get paginated products by app name id filtered by product types
+
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp

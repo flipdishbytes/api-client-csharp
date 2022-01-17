@@ -18,6 +18,8 @@ Method | HTTP request | Description
 
 Archive Catalog Group
 
+[BETA - this endpoint is under development, do not use it in your production system]
+
 ### Example
 ```csharp
 using System;
@@ -80,6 +82,8 @@ void (empty response body)
 > RestApiResultCatalogGroup CreateCatalogGroup (string appId, CreateCatalogGroup createCatalogGroup)
 
 Create a Catalog Group
+
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -145,6 +149,8 @@ Name | Type | Description  | Notes
 
 Duplicate Catalog Group
 
+[BETA - this endpoint is under development, do not use it in your production system]
+
 ### Example
 ```csharp
 using System;
@@ -207,6 +213,8 @@ void (empty response body)
 > CatalogGroup GetCatalogGroupById (string appId, string catalogGroupId)
 
 Get group by Id
+
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -271,6 +279,8 @@ Name | Type | Description  | Notes
 > RestApiPaginationResultCatalogGroup GetGroups (string appId, List<string> groupTypes, string searchTerm = null, int? page = null, int? limit = null)
 
 Get paginated groups by app name id filtered by types
+
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -341,6 +351,8 @@ Name | Type | Description  | Notes
 > void UpdateCatalogGroup (string appId, string catalogGroupId, UpdateCatalogGroup updateCatalogGroup)
 
 Update Catalog Group
+
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp

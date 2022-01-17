@@ -20,6 +20,8 @@ Method | HTTP request | Description
 
 Archive Catalog Item
 
+[BETA - this endpoint is under development, do not use it in your production system]
+
 ### Example
 ```csharp
 using System;
@@ -82,6 +84,8 @@ void (empty response body)
 > RestApiResultCatalogItem CreateCatalogItem (string appId, CreateCatalogItem createCatalogItem)
 
 Create a Catalog Item
+
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -147,6 +151,8 @@ Name | Type | Description  | Notes
 
 Delete a CatalogItem Image
 
+[BETA - this endpoint is under development, do not use it in your production system]
+
 ### Example
 ```csharp
 using System;
@@ -209,6 +215,8 @@ void (empty response body)
 > void DuplicateCatalogItem (string appId, string catalogItemId)
 
 Duplicate Catalog Item
+
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -337,6 +345,8 @@ Name | Type | Description  | Notes
 
 Get paginated items by app name id filtered by types
 
+[BETA - this endpoint is under development, do not use it in your production system]
+
 ### Example
 ```csharp
 using System;
@@ -407,6 +417,8 @@ Name | Type | Description  | Notes
 
 Update Catalog Item
 
+[BETA - this endpoint is under development, do not use it in your production system]
+
 ### Example
 ```csharp
 using System;
@@ -471,6 +483,8 @@ void (empty response body)
 > RestApiStringResult UploadCatalogItemImage (string appId, string catalogItemId, System.IO.Stream image)
 
 Upload a Catalog Item Image
+
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp

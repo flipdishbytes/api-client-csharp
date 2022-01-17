@@ -28,7 +28,7 @@ namespace Flipdish.Api
         /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -40,7 +40,7 @@ namespace Flipdish.Api
         /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -51,7 +51,7 @@ namespace Flipdish.Api
         /// Duplicate a product
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -63,7 +63,7 @@ namespace Flipdish.Api
         /// Duplicate a product
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -74,7 +74,7 @@ namespace Flipdish.Api
         /// Get paginated products by app name id filtered by product types
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -89,7 +89,7 @@ namespace Flipdish.Api
         /// Get paginated products by app name id filtered by product types
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -105,7 +105,7 @@ namespace Flipdish.Api
         /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -117,7 +117,7 @@ namespace Flipdish.Api
         /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -128,7 +128,7 @@ namespace Flipdish.Api
         /// Duplicate a product
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -140,7 +140,7 @@ namespace Flipdish.Api
         /// Duplicate a product
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -151,7 +151,7 @@ namespace Flipdish.Api
         /// Get paginated products by app name id filtered by product types
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -166,7 +166,7 @@ namespace Flipdish.Api
         /// Get paginated products by app name id filtered by product types
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -277,7 +277,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted 
+        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -289,7 +289,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted 
+        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -357,7 +357,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted 
+        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -370,7 +370,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted 
+        /// Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -438,7 +438,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Duplicate a product 
+        /// Duplicate a product [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -451,7 +451,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Duplicate a product 
+        /// Duplicate a product [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -519,7 +519,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Duplicate a product 
+        /// Duplicate a product [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -533,7 +533,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Duplicate a product 
+        /// Duplicate a product [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -601,7 +601,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get paginated products by app name id filtered by product types 
+        /// Get paginated products by app name id filtered by product types [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -617,7 +617,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get paginated products by app name id filtered by product types 
+        /// Get paginated products by app name id filtered by product types [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -691,7 +691,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get paginated products by app name id filtered by product types 
+        /// Get paginated products by app name id filtered by product types [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -708,7 +708,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get paginated products by app name id filtered by product types 
+        /// Get paginated products by app name id filtered by product types [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
