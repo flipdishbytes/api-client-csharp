@@ -73,6 +73,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="MenuItemOptionSet" /> class.
         /// </summary>
         /// <param name="menuItemOptionSetId">Menu item option set identifier.</param>
+        /// <param name="imageName">Image Name.</param>
         /// <param name="imageUrl">Image url.</param>
         /// <param name="menuItemOptionSetItems">Option set items.</param>
         /// <param name="publicId">Permanent reference to the item..</param>
@@ -83,9 +84,10 @@ namespace Flipdish.Model
         /// <param name="minSelectCount">Minimum items must be selected.</param>
         /// <param name="maxSelectCount">Maximum number of items can be selected.</param>
         /// <param name="cellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
-        public MenuItemOptionSet(int? menuItemOptionSetId = default(int?), string imageUrl = default(string), List<MenuItemOptionSetItem> menuItemOptionSetItems = default(List<MenuItemOptionSetItem>), Guid? publicId = default(Guid?), string productId = default(string), string name = default(string), bool? isMasterOptionSet = default(bool?), int? displayOrder = default(int?), int? minSelectCount = default(int?), int? maxSelectCount = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?))
+        public MenuItemOptionSet(int? menuItemOptionSetId = default(int?), string imageName = default(string), string imageUrl = default(string), List<MenuItemOptionSetItem> menuItemOptionSetItems = default(List<MenuItemOptionSetItem>), Guid? publicId = default(Guid?), string productId = default(string), string name = default(string), bool? isMasterOptionSet = default(bool?), int? displayOrder = default(int?), int? minSelectCount = default(int?), int? maxSelectCount = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?))
         {
             this.MenuItemOptionSetId = menuItemOptionSetId;
+            this.ImageName = imageName;
             this.ImageUrl = imageUrl;
             this.MenuItemOptionSetItems = menuItemOptionSetItems;
             this.PublicId = publicId;
@@ -104,6 +106,13 @@ namespace Flipdish.Model
         /// <value>Menu item option set identifier</value>
         [DataMember(Name="MenuItemOptionSetId", EmitDefaultValue=false)]
         public int? MenuItemOptionSetId { get; set; }
+
+        /// <summary>
+        /// Image Name
+        /// </summary>
+        /// <value>Image Name</value>
+        [DataMember(Name="ImageName", EmitDefaultValue=false)]
+        public string ImageName { get; set; }
 
         /// <summary>
         /// Image url
@@ -178,6 +187,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class MenuItemOptionSet {\n");
             sb.Append("  MenuItemOptionSetId: ").Append(MenuItemOptionSetId).Append("\n");
+            sb.Append("  ImageName: ").Append(ImageName).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  MenuItemOptionSetItems: ").Append(MenuItemOptionSetItems).Append("\n");
             sb.Append("  PublicId: ").Append(PublicId).Append("\n");
@@ -226,6 +236,11 @@ namespace Flipdish.Model
                     this.MenuItemOptionSetId == input.MenuItemOptionSetId ||
                     (this.MenuItemOptionSetId != null &&
                     this.MenuItemOptionSetId.Equals(input.MenuItemOptionSetId))
+                ) && 
+                (
+                    this.ImageName == input.ImageName ||
+                    (this.ImageName != null &&
+                    this.ImageName.Equals(input.ImageName))
                 ) && 
                 (
                     this.ImageUrl == input.ImageUrl ||
@@ -290,6 +305,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.MenuItemOptionSetId != null)
                     hashCode = hashCode * 59 + this.MenuItemOptionSetId.GetHashCode();
+                if (this.ImageName != null)
+                    hashCode = hashCode * 59 + this.ImageName.GetHashCode();
                 if (this.ImageUrl != null)
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 if (this.MenuItemOptionSetItems != null)

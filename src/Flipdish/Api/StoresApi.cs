@@ -92,6 +92,29 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultStore</returns>
         ApiResponse<RestApiResultStore> CloneStoreWithHttpInfo (int? storeId, StoreCloneSettings settings);
         /// <summary>
+        /// Configure Store Service Charge; Idempotent Operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="serviceCharge">Service charge</param>
+        /// <returns>Object</returns>
+        Object ConfigureStoreServiceCharge (int? storeId, ServiceCharge serviceCharge);
+
+        /// <summary>
+        /// Configure Store Service Charge; Idempotent Operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="serviceCharge">Service charge</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ConfigureStoreServiceChargeWithHttpInfo (int? storeId, ServiceCharge serviceCharge);
+        /// <summary>
         /// Create Business Hours Override for a store
         /// </summary>
         /// <remarks>
@@ -440,6 +463,27 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultStoreStatistics</returns>
         ApiResponse<RestApiArrayResultStoreStatistics> GetStoreNetSalesWithHttpInfo (string appId, List<int?> storeId);
         /// <summary>
+        /// Retrieve Store Service Charge
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>ServiceCharge</returns>
+        ServiceCharge GetStoreServiceCharge (int? storeId);
+
+        /// <summary>
+        /// Retrieve Store Service Charge
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>ApiResponse of ServiceCharge</returns>
+        ApiResponse<ServiceCharge> GetStoreServiceChargeWithHttpInfo (int? storeId);
+        /// <summary>
         /// Get all stores, excluding archived ones
         /// </summary>
         /// <remarks>
@@ -750,6 +794,29 @@ namespace Flipdish.Api
         /// <param name="settings">Settings for cloning the store</param>
         /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> CloneStoreAsyncWithHttpInfo (int? storeId, StoreCloneSettings settings);
+        /// <summary>
+        /// Configure Store Service Charge; Idempotent Operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="serviceCharge">Service charge</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ConfigureStoreServiceChargeAsync (int? storeId, ServiceCharge serviceCharge);
+
+        /// <summary>
+        /// Configure Store Service Charge; Idempotent Operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="serviceCharge">Service charge</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ConfigureStoreServiceChargeAsyncWithHttpInfo (int? storeId, ServiceCharge serviceCharge);
         /// <summary>
         /// Create Business Hours Override for a store
         /// </summary>
@@ -1098,6 +1165,27 @@ namespace Flipdish.Api
         /// <param name="storeId">Store Ids</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultStoreStatistics)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreStatistics>> GetStoreNetSalesAsyncWithHttpInfo (string appId, List<int?> storeId);
+        /// <summary>
+        /// Retrieve Store Service Charge
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>Task of ServiceCharge</returns>
+        System.Threading.Tasks.Task<ServiceCharge> GetStoreServiceChargeAsync (int? storeId);
+
+        /// <summary>
+        /// Retrieve Store Service Charge
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>Task of ApiResponse (ServiceCharge)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ServiceCharge>> GetStoreServiceChargeAsyncWithHttpInfo (int? storeId);
         /// <summary>
         /// Get all stores, excluding archived ones
         /// </summary>
@@ -1937,6 +2025,193 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultStore>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiResultStore) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStore)));
+        }
+
+        /// <summary>
+        /// Configure Store Service Charge; Idempotent Operation 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="serviceCharge">Service charge</param>
+        /// <returns>Object</returns>
+        public Object ConfigureStoreServiceCharge (int? storeId, ServiceCharge serviceCharge)
+        {
+             ApiResponse<Object> localVarResponse = ConfigureStoreServiceChargeWithHttpInfo(storeId, serviceCharge);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Configure Store Service Charge; Idempotent Operation 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="serviceCharge">Service charge</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ConfigureStoreServiceChargeWithHttpInfo (int? storeId, ServiceCharge serviceCharge)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->ConfigureStoreServiceCharge");
+            // verify the required parameter 'serviceCharge' is set
+            if (serviceCharge == null)
+                throw new ApiException(400, "Missing required parameter 'serviceCharge' when calling StoresApi->ConfigureStoreServiceCharge");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/servicecharge";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (serviceCharge != null && serviceCharge.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(serviceCharge); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = serviceCharge; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConfigureStoreServiceCharge", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Configure Store Service Charge; Idempotent Operation 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="serviceCharge">Service charge</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ConfigureStoreServiceChargeAsync (int? storeId, ServiceCharge serviceCharge)
+        {
+             ApiResponse<Object> localVarResponse = await ConfigureStoreServiceChargeAsyncWithHttpInfo(storeId, serviceCharge);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Configure Store Service Charge; Idempotent Operation 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <param name="serviceCharge">Service charge</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConfigureStoreServiceChargeAsyncWithHttpInfo (int? storeId, ServiceCharge serviceCharge)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->ConfigureStoreServiceCharge");
+            // verify the required parameter 'serviceCharge' is set
+            if (serviceCharge == null)
+                throw new ApiException(400, "Missing required parameter 'serviceCharge' when calling StoresApi->ConfigureStoreServiceCharge");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/servicecharge";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (serviceCharge != null && serviceCharge.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(serviceCharge); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = serviceCharge; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConfigureStoreServiceCharge", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -4319,6 +4594,157 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiArrayResultStoreStatistics>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiArrayResultStoreStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultStoreStatistics)));
+        }
+
+        /// <summary>
+        /// Retrieve Store Service Charge 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>ServiceCharge</returns>
+        public ServiceCharge GetStoreServiceCharge (int? storeId)
+        {
+             ApiResponse<ServiceCharge> localVarResponse = GetStoreServiceChargeWithHttpInfo(storeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Store Service Charge 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>ApiResponse of ServiceCharge</returns>
+        public ApiResponse< ServiceCharge > GetStoreServiceChargeWithHttpInfo (int? storeId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetStoreServiceCharge");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/servicecharge";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStoreServiceCharge", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ServiceCharge>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ServiceCharge) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServiceCharge)));
+        }
+
+        /// <summary>
+        /// Retrieve Store Service Charge 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>Task of ServiceCharge</returns>
+        public async System.Threading.Tasks.Task<ServiceCharge> GetStoreServiceChargeAsync (int? storeId)
+        {
+             ApiResponse<ServiceCharge> localVarResponse = await GetStoreServiceChargeAsyncWithHttpInfo(storeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve Store Service Charge 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId">Store identifier</param>
+        /// <returns>Task of ApiResponse (ServiceCharge)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ServiceCharge>> GetStoreServiceChargeAsyncWithHttpInfo (int? storeId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetStoreServiceCharge");
+
+            var localVarPath = "/api/v1.0/stores/{storeId}/servicecharge";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStoreServiceCharge", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ServiceCharge>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ServiceCharge) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServiceCharge)));
         }
 
         /// <summary>

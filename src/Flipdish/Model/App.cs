@@ -527,16 +527,16 @@ namespace Flipdish.Model
             VerifyBankAccounts = 70,
             
             /// <summary>
-            /// Enum ViewFeesConfigurations for value: ViewFeesConfigurations
+            /// Enum ViewServiceChargeConfigurations for value: ViewServiceChargeConfigurations
             /// </summary>
-            [EnumMember(Value = "ViewFeesConfigurations")]
-            ViewFeesConfigurations = 71,
+            [EnumMember(Value = "ViewServiceChargeConfigurations")]
+            ViewServiceChargeConfigurations = 71,
             
             /// <summary>
-            /// Enum EditFeesConfigurations for value: EditFeesConfigurations
+            /// Enum EditServiceChargeConfigurations for value: EditServiceChargeConfigurations
             /// </summary>
-            [EnumMember(Value = "EditFeesConfigurations")]
-            EditFeesConfigurations = 72,
+            [EnumMember(Value = "EditServiceChargeConfigurations")]
+            EditServiceChargeConfigurations = 72,
             
             /// <summary>
             /// Enum ViewHydraConfig for value: ViewHydraConfig

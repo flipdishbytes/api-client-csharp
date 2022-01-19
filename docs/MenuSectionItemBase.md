@@ -12,8 +12,12 @@ Name | Type | Description | Notes
 **IsAvailable** | **bool?** | True if we accept orders for this item still | [optional] 
 **CellLayoutType** | **string** | Small | Medium | Large  Affects the layout of the menu. | [optional] 
 **DisableVouchers** | **bool?** | If true, then vouchers won&#39;t be applied for this item | [optional] 
+**ImageName** | **string** | Image url | [optional] 
 **ImageUrl** | **string** | Image url | [optional] 
 **MenuItemId** | **int?** | Menu Item Id | [optional] 
+**TaxRateName** | **string** | Tax rate name | [optional] 
+**TaxRateId** | **int?** |  | [optional] 
+**TaxValue** | **double?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -90,6 +90,7 @@ namespace Flipdish.Model
         /// <param name="menuId">Menu identifier.</param>
         /// <param name="modifiedTime">Last modified time.</param>
         /// <param name="versionNumber">Menu version.</param>
+        /// <param name="imageName">Image Name.</param>
         /// <param name="imageUrl">Image url.</param>
         /// <param name="name">Name of Menu, only shown in portal.</param>
         /// <param name="locked">Locked: is menu locked against modifcation.</param>
@@ -98,11 +99,12 @@ namespace Flipdish.Model
         /// <param name="displaySectionLinks">Display menu section link on UI.</param>
         /// <param name="menuSectionBehaviour">Menu section behaviour.</param>
         /// <param name="taxType">Tax type.</param>
-        public Menu(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string imageUrl = default(string), string name = default(string), bool? locked = default(bool?), List<MenuSection> menuSections = default(List<MenuSection>), List<MenuTaxRate> taxRates = default(List<MenuTaxRate>), bool? displaySectionLinks = default(bool?), MenuSectionBehaviourEnum? menuSectionBehaviour = default(MenuSectionBehaviourEnum?), TaxTypeEnum? taxType = default(TaxTypeEnum?))
+        public Menu(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string imageName = default(string), string imageUrl = default(string), string name = default(string), bool? locked = default(bool?), List<MenuSection> menuSections = default(List<MenuSection>), List<MenuTaxRate> taxRates = default(List<MenuTaxRate>), bool? displaySectionLinks = default(bool?), MenuSectionBehaviourEnum? menuSectionBehaviour = default(MenuSectionBehaviourEnum?), TaxTypeEnum? taxType = default(TaxTypeEnum?))
         {
             this.MenuId = menuId;
             this.ModifiedTime = modifiedTime;
             this.VersionNumber = versionNumber;
+            this.ImageName = imageName;
             this.ImageUrl = imageUrl;
             this.Name = name;
             this.Locked = locked;
@@ -133,6 +135,13 @@ namespace Flipdish.Model
         /// <value>Menu version</value>
         [DataMember(Name="VersionNumber", EmitDefaultValue=false)]
         public int? VersionNumber { get; set; }
+
+        /// <summary>
+        /// Image Name
+        /// </summary>
+        /// <value>Image Name</value>
+        [DataMember(Name="ImageName", EmitDefaultValue=false)]
+        public string ImageName { get; set; }
 
         /// <summary>
         /// Image url
@@ -189,6 +198,7 @@ namespace Flipdish.Model
             sb.Append("  MenuId: ").Append(MenuId).Append("\n");
             sb.Append("  ModifiedTime: ").Append(ModifiedTime).Append("\n");
             sb.Append("  VersionNumber: ").Append(VersionNumber).Append("\n");
+            sb.Append("  ImageName: ").Append(ImageName).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Locked: ").Append(Locked).Append("\n");
@@ -247,6 +257,11 @@ namespace Flipdish.Model
                     this.VersionNumber.Equals(input.VersionNumber))
                 ) && 
                 (
+                    this.ImageName == input.ImageName ||
+                    (this.ImageName != null &&
+                    this.ImageName.Equals(input.ImageName))
+                ) && 
+                (
                     this.ImageUrl == input.ImageUrl ||
                     (this.ImageUrl != null &&
                     this.ImageUrl.Equals(input.ImageUrl))
@@ -303,6 +318,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ModifiedTime.GetHashCode();
                 if (this.VersionNumber != null)
                     hashCode = hashCode * 59 + this.VersionNumber.GetHashCode();
+                if (this.ImageName != null)
+                    hashCode = hashCode * 59 + this.ImageName.GetHashCode();
                 if (this.ImageUrl != null)
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 if (this.Name != null)

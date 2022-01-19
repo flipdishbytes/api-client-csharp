@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **MenuItemOptionSetId** | **int?** | Menu item option set identifier | [optional] 
+**ImageName** | **string** | Image Name | [optional] 
 **ImageUrl** | **string** | Image url | [optional] 
 **MenuItemOptionSetItems** | [**List&lt;MenuItemOptionSetItem&gt;**](MenuItemOptionSetItem.md) | Option set items | [optional] 
 **PublicId** | **Guid?** | Permanent reference to the item. | [optional] 

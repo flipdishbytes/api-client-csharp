@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **MenuId** | **int?** | Menu identifier | [optional] 
 **ModifiedTime** | **DateTime?** | Last modified time | [optional] 
 **VersionNumber** | **int?** | Menu version | [optional] 
+**ImageName** | **string** | Image Name | [optional] 
 **ImageUrl** | **string** | Image url | [optional] 
 **Name** | **string** | Name of Menu, only shown in portal | [optional] 
 **Locked** | **bool?** | Locked: is menu locked against modifcation | [optional] 
