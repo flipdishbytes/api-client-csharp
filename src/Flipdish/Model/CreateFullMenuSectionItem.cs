@@ -126,9 +126,7 @@ namespace Flipdish.Model
         /// <param name="imageName">Image url.</param>
         /// <param name="imageUrl">Image url.</param>
         /// <param name="menuItemId">Menu Item Id.</param>
-        /// <param name="taxRateId">taxRateId.</param>
-        /// <param name="taxValue">taxValue.</param>
-        public CreateFullMenuSectionItem(List<CreateFullMenuItemOptionSet> menuItemOptionSets = default(List<CreateFullMenuItemOptionSet>), List<CreateMetadata> metadata = default(List<CreateMetadata>), string taxRateName = default(string), string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string), int? menuItemId = default(int?), int? taxRateId = default(int?), double? taxValue = default(double?))
+        public CreateFullMenuSectionItem(List<CreateFullMenuItemOptionSet> menuItemOptionSets = default(List<CreateFullMenuItemOptionSet>), List<CreateMetadata> metadata = default(List<CreateMetadata>), string taxRateName = default(string), string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string), int? menuItemId = default(int?))
         {
             this.MenuItemOptionSets = menuItemOptionSets;
             this.Metadata = metadata;
@@ -145,8 +143,6 @@ namespace Flipdish.Model
             this.ImageName = imageName;
             this.ImageUrl = imageUrl;
             this.MenuItemId = menuItemId;
-            this.TaxRateId = taxRateId;
-            this.TaxValue = taxValue;
         }
         
         /// <summary>
@@ -243,18 +239,6 @@ namespace Flipdish.Model
         public int? MenuItemId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TaxRateId
-        /// </summary>
-        [DataMember(Name="TaxRateId", EmitDefaultValue=false)]
-        public int? TaxRateId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets TaxValue
-        /// </summary>
-        [DataMember(Name="TaxValue", EmitDefaultValue=false)]
-        public double? TaxValue { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -277,8 +261,6 @@ namespace Flipdish.Model
             sb.Append("  ImageName: ").Append(ImageName).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  MenuItemId: ").Append(MenuItemId).Append("\n");
-            sb.Append("  TaxRateId: ").Append(TaxRateId).Append("\n");
-            sb.Append("  TaxValue: ").Append(TaxValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -387,16 +369,6 @@ namespace Flipdish.Model
                     this.MenuItemId == input.MenuItemId ||
                     (this.MenuItemId != null &&
                     this.MenuItemId.Equals(input.MenuItemId))
-                ) && 
-                (
-                    this.TaxRateId == input.TaxRateId ||
-                    (this.TaxRateId != null &&
-                    this.TaxRateId.Equals(input.TaxRateId))
-                ) && 
-                (
-                    this.TaxValue == input.TaxValue ||
-                    (this.TaxValue != null &&
-                    this.TaxValue.Equals(input.TaxValue))
                 );
         }
 
@@ -439,10 +411,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 if (this.MenuItemId != null)
                     hashCode = hashCode * 59 + this.MenuItemId.GetHashCode();
-                if (this.TaxRateId != null)
-                    hashCode = hashCode * 59 + this.TaxRateId.GetHashCode();
-                if (this.TaxValue != null)
-                    hashCode = hashCode * 59 + this.TaxValue.GetHashCode();
                 return hashCode;
             }
         }

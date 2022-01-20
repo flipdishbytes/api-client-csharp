@@ -8,6 +8,9 @@ Name | Type | Description | Notes
 **MenuItemOptionSets** | [**List&lt;MenuItemOptionSet&gt;**](MenuItemOptionSet.md) | Menu item option sets | [optional] 
 **DailySpecialHours** | [**List&lt;BusinessHoursPeriod&gt;**](BusinessHoursPeriod.md) | Daily special hours | [optional] 
 **PublicId** | **Guid?** | Permanent reference to the item. | [optional] 
+**TaxRateName** | **string** | Tax rate name | [optional] 
+**TaxRateId** | **int?** |  | [optional] 
+**TaxValue** | **double?** |  | [optional] 
 **Metadata** | [**List&lt;CreateMetadata&gt;**](CreateMetadata.md) | List of metadata | [optional] 
 **ProductId** | **string** | Product Id when the Item is associated to a Product | [optional] 
 **Name** | **string** | Menu item name (like \&quot;Korma\&quot;) | [optional] 
@@ -21,9 +24,6 @@ Name | Type | Description | Notes
 **DisableVouchers** | **bool?** | If true, then vouchers won&#39;t be applied for this item | [optional] 
 **ImageName** | **string** | Image url | [optional] 
 **ImageUrl** | **string** | Image url | [optional] 
-**TaxRateName** | **string** | Tax rate name | [optional] 
-**TaxRateId** | **int?** |  | [optional] 
-**TaxValue** | **double?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

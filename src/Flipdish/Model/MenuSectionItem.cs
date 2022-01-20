@@ -116,6 +116,9 @@ namespace Flipdish.Model
         /// <param name="menuItemOptionSets">Menu item option sets.</param>
         /// <param name="dailySpecialHours">Daily special hours.</param>
         /// <param name="publicId">Permanent reference to the item..</param>
+        /// <param name="taxRateName">Tax rate name.</param>
+        /// <param name="taxRateId">taxRateId.</param>
+        /// <param name="taxValue">taxValue.</param>
         /// <param name="metadata">List of metadata.</param>
         /// <param name="productId">Product Id when the Item is associated to a Product.</param>
         /// <param name="name">Menu item name (like \&quot;Korma\&quot;).</param>
@@ -129,16 +132,16 @@ namespace Flipdish.Model
         /// <param name="disableVouchers">If true, then vouchers won&#39;t be applied for this item.</param>
         /// <param name="imageName">Image url.</param>
         /// <param name="imageUrl">Image url.</param>
-        /// <param name="taxRateName">Tax rate name.</param>
-        /// <param name="taxRateId">taxRateId.</param>
-        /// <param name="taxValue">taxValue.</param>
-        public MenuSectionItem(int? menuItemId = default(int?), double? actualPrice = default(double?), List<MenuItemOptionSet> menuItemOptionSets = default(List<MenuItemOptionSet>), List<BusinessHoursPeriod> dailySpecialHours = default(List<BusinessHoursPeriod>), Guid? publicId = default(Guid?), List<CreateMetadata> metadata = default(List<CreateMetadata>), string productId = default(string), string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string), string taxRateName = default(string), int? taxRateId = default(int?), double? taxValue = default(double?))
+        public MenuSectionItem(int? menuItemId = default(int?), double? actualPrice = default(double?), List<MenuItemOptionSet> menuItemOptionSets = default(List<MenuItemOptionSet>), List<BusinessHoursPeriod> dailySpecialHours = default(List<BusinessHoursPeriod>), Guid? publicId = default(Guid?), string taxRateName = default(string), int? taxRateId = default(int?), double? taxValue = default(double?), List<CreateMetadata> metadata = default(List<CreateMetadata>), string productId = default(string), string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string))
         {
             this.MenuItemId = menuItemId;
             this.ActualPrice = actualPrice;
             this.MenuItemOptionSets = menuItemOptionSets;
             this.DailySpecialHours = dailySpecialHours;
             this.PublicId = publicId;
+            this.TaxRateName = taxRateName;
+            this.TaxRateId = taxRateId;
+            this.TaxValue = taxValue;
             this.Metadata = metadata;
             this.ProductId = productId;
             this.Name = name;
@@ -152,9 +155,6 @@ namespace Flipdish.Model
             this.DisableVouchers = disableVouchers;
             this.ImageName = imageName;
             this.ImageUrl = imageUrl;
-            this.TaxRateName = taxRateName;
-            this.TaxRateId = taxRateId;
-            this.TaxValue = taxValue;
         }
         
         /// <summary>
@@ -191,6 +191,25 @@ namespace Flipdish.Model
         /// <value>Permanent reference to the item.</value>
         [DataMember(Name="PublicId", EmitDefaultValue=false)]
         public Guid? PublicId { get; set; }
+
+        /// <summary>
+        /// Tax rate name
+        /// </summary>
+        /// <value>Tax rate name</value>
+        [DataMember(Name="TaxRateName", EmitDefaultValue=false)]
+        public string TaxRateName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TaxRateId
+        /// </summary>
+        [DataMember(Name="TaxRateId", EmitDefaultValue=false)]
+        public int? TaxRateId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TaxValue
+        /// </summary>
+        [DataMember(Name="TaxValue", EmitDefaultValue=false)]
+        public double? TaxValue { get; set; }
 
         /// <summary>
         /// List of metadata
@@ -272,25 +291,6 @@ namespace Flipdish.Model
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// Tax rate name
-        /// </summary>
-        /// <value>Tax rate name</value>
-        [DataMember(Name="TaxRateName", EmitDefaultValue=false)]
-        public string TaxRateName { get; set; }
-
-        /// <summary>
-        /// Gets or Sets TaxRateId
-        /// </summary>
-        [DataMember(Name="TaxRateId", EmitDefaultValue=false)]
-        public int? TaxRateId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets TaxValue
-        /// </summary>
-        [DataMember(Name="TaxValue", EmitDefaultValue=false)]
-        public double? TaxValue { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -303,6 +303,9 @@ namespace Flipdish.Model
             sb.Append("  MenuItemOptionSets: ").Append(MenuItemOptionSets).Append("\n");
             sb.Append("  DailySpecialHours: ").Append(DailySpecialHours).Append("\n");
             sb.Append("  PublicId: ").Append(PublicId).Append("\n");
+            sb.Append("  TaxRateName: ").Append(TaxRateName).Append("\n");
+            sb.Append("  TaxRateId: ").Append(TaxRateId).Append("\n");
+            sb.Append("  TaxValue: ").Append(TaxValue).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  ProductId: ").Append(ProductId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -316,9 +319,6 @@ namespace Flipdish.Model
             sb.Append("  DisableVouchers: ").Append(DisableVouchers).Append("\n");
             sb.Append("  ImageName: ").Append(ImageName).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
-            sb.Append("  TaxRateName: ").Append(TaxRateName).Append("\n");
-            sb.Append("  TaxRateId: ").Append(TaxRateId).Append("\n");
-            sb.Append("  TaxValue: ").Append(TaxValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -377,6 +377,21 @@ namespace Flipdish.Model
                     this.PublicId == input.PublicId ||
                     (this.PublicId != null &&
                     this.PublicId.Equals(input.PublicId))
+                ) && 
+                (
+                    this.TaxRateName == input.TaxRateName ||
+                    (this.TaxRateName != null &&
+                    this.TaxRateName.Equals(input.TaxRateName))
+                ) && 
+                (
+                    this.TaxRateId == input.TaxRateId ||
+                    (this.TaxRateId != null &&
+                    this.TaxRateId.Equals(input.TaxRateId))
+                ) && 
+                (
+                    this.TaxValue == input.TaxValue ||
+                    (this.TaxValue != null &&
+                    this.TaxValue.Equals(input.TaxValue))
                 ) && 
                 (
                     this.Metadata == input.Metadata ||
@@ -442,21 +457,6 @@ namespace Flipdish.Model
                     this.ImageUrl == input.ImageUrl ||
                     (this.ImageUrl != null &&
                     this.ImageUrl.Equals(input.ImageUrl))
-                ) && 
-                (
-                    this.TaxRateName == input.TaxRateName ||
-                    (this.TaxRateName != null &&
-                    this.TaxRateName.Equals(input.TaxRateName))
-                ) && 
-                (
-                    this.TaxRateId == input.TaxRateId ||
-                    (this.TaxRateId != null &&
-                    this.TaxRateId.Equals(input.TaxRateId))
-                ) && 
-                (
-                    this.TaxValue == input.TaxValue ||
-                    (this.TaxValue != null &&
-                    this.TaxValue.Equals(input.TaxValue))
                 );
         }
 
@@ -479,6 +479,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DailySpecialHours.GetHashCode();
                 if (this.PublicId != null)
                     hashCode = hashCode * 59 + this.PublicId.GetHashCode();
+                if (this.TaxRateName != null)
+                    hashCode = hashCode * 59 + this.TaxRateName.GetHashCode();
+                if (this.TaxRateId != null)
+                    hashCode = hashCode * 59 + this.TaxRateId.GetHashCode();
+                if (this.TaxValue != null)
+                    hashCode = hashCode * 59 + this.TaxValue.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 if (this.ProductId != null)
@@ -505,12 +511,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ImageName.GetHashCode();
                 if (this.ImageUrl != null)
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
-                if (this.TaxRateName != null)
-                    hashCode = hashCode * 59 + this.TaxRateName.GetHashCode();
-                if (this.TaxRateId != null)
-                    hashCode = hashCode * 59 + this.TaxRateId.GetHashCode();
-                if (this.TaxValue != null)
-                    hashCode = hashCode * 59 + this.TaxValue.GetHashCode();
                 return hashCode;
             }
         }
