@@ -37,18 +37,20 @@ namespace Flipdish.Model
         /// <param name="menuItems">Menu items.</param>
         /// <param name="menuSectionAvailability">Menu section availability.</param>
         /// <param name="publicId">Permanent reference to the item..</param>
+        /// <param name="imageName">Image Name.</param>
         /// <param name="name">Name.</param>
         /// <param name="description">Description.</param>
         /// <param name="displayOrder">Display order.</param>
         /// <param name="isAvailable">Is available.</param>
         /// <param name="isHiddenFromCustomers">Is hidden from customer. Perhaps when the item is out of stock..</param>
         /// <param name="imageUrl">Image url.</param>
-        public MenuSection(int? menuSectionId = default(int?), List<MenuSectionItem> menuItems = default(List<MenuSectionItem>), MenuSectionAvailability menuSectionAvailability = default(MenuSectionAvailability), Guid? publicId = default(Guid?), string name = default(string), string description = default(string), int? displayOrder = default(int?), bool? isAvailable = default(bool?), bool? isHiddenFromCustomers = default(bool?), string imageUrl = default(string))
+        public MenuSection(int? menuSectionId = default(int?), List<MenuSectionItem> menuItems = default(List<MenuSectionItem>), MenuSectionAvailability menuSectionAvailability = default(MenuSectionAvailability), Guid? publicId = default(Guid?), string imageName = default(string), string name = default(string), string description = default(string), int? displayOrder = default(int?), bool? isAvailable = default(bool?), bool? isHiddenFromCustomers = default(bool?), string imageUrl = default(string))
         {
             this.MenuSectionId = menuSectionId;
             this.MenuItems = menuItems;
             this.MenuSectionAvailability = menuSectionAvailability;
             this.PublicId = publicId;
+            this.ImageName = imageName;
             this.Name = name;
             this.Description = description;
             this.DisplayOrder = displayOrder;
@@ -84,6 +86,13 @@ namespace Flipdish.Model
         /// <value>Permanent reference to the item.</value>
         [DataMember(Name="PublicId", EmitDefaultValue=false)]
         public Guid? PublicId { get; set; }
+
+        /// <summary>
+        /// Image Name
+        /// </summary>
+        /// <value>Image Name</value>
+        [DataMember(Name="ImageName", EmitDefaultValue=false)]
+        public string ImageName { get; set; }
 
         /// <summary>
         /// Name
@@ -139,6 +148,7 @@ namespace Flipdish.Model
             sb.Append("  MenuItems: ").Append(MenuItems).Append("\n");
             sb.Append("  MenuSectionAvailability: ").Append(MenuSectionAvailability).Append("\n");
             sb.Append("  PublicId: ").Append(PublicId).Append("\n");
+            sb.Append("  ImageName: ").Append(ImageName).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
@@ -200,6 +210,11 @@ namespace Flipdish.Model
                     this.PublicId.Equals(input.PublicId))
                 ) && 
                 (
+                    this.ImageName == input.ImageName ||
+                    (this.ImageName != null &&
+                    this.ImageName.Equals(input.ImageName))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -248,6 +263,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MenuSectionAvailability.GetHashCode();
                 if (this.PublicId != null)
                     hashCode = hashCode * 59 + this.PublicId.GetHashCode();
+                if (this.ImageName != null)
+                    hashCode = hashCode * 59 + this.ImageName.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
