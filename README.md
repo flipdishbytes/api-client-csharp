@@ -333,6 +333,7 @@ Class | Method | HTTP request | Description
 *MenusApi* | [**UpdateMenu**](docs/MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
 *MenusApi* | [**UploadMenuImage**](docs/MenusApi.md#uploadmenuimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
 *MenusApi* | [**UploadNewMenuForApp**](docs/MenusApi.md#uploadnewmenuforapp) | **POST** /api/v1.0/{appId}/menus/xlsx | Create a new menu from xlsx file.
+*MetafieldDefinitionsApi* | [**GetMetafieldDefinitions**](docs/MetafieldDefinitionsApi.md#getmetafielddefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Get paginated groups by app name id filtered by types
 *OAuthClientsApi* | [**AddRedirectUri**](docs/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
 *OAuthClientsApi* | [**CreateOAuthApp**](docs/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
 *OAuthClientsApi* | [**DeleteOAuthApp**](docs/OAuthClientsApi.md#deleteoauthapp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Delete OAuth App
@@ -680,6 +681,7 @@ Class | Method | HTTP request | Description
  - [Model.MenuUpdatedEvent](docs/MenuUpdatedEvent.md)
  - [Model.MenuUploadedEvent](docs/MenuUploadedEvent.md)
  - [Model.Metadata](docs/Metadata.md)
+ - [Model.MetafieldDefinition](docs/MetafieldDefinition.md)
  - [Model.OAuthApp](docs/OAuthApp.md)
  - [Model.OAuthTokenModel](docs/OAuthTokenModel.md)
  - [Model.OauthClientRedirectUri](docs/OauthClientRedirectUri.md)
@@ -801,6 +803,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultChannel](docs/RestApiPaginationResultChannel.md)
  - [Model.RestApiPaginationResultHttpRequestAndResponseLog](docs/RestApiPaginationResultHttpRequestAndResponseLog.md)
  - [Model.RestApiPaginationResultHydraDeviceDetails](docs/RestApiPaginationResultHydraDeviceDetails.md)
+ - [Model.RestApiPaginationResultMetafieldDefinition](docs/RestApiPaginationResultMetafieldDefinition.md)
  - [Model.RestApiPaginationResultOAuthTokenModel](docs/RestApiPaginationResultOAuthTokenModel.md)
  - [Model.RestApiPaginationResultOrder](docs/RestApiPaginationResultOrder.md)
  - [Model.RestApiPaginationResultOrderSummary](docs/RestApiPaginationResultOrderSummary.md)
