@@ -84,7 +84,8 @@ namespace Flipdish.Model
         /// <param name="deliveryTableIds">Delivery Table IDs to send orders to.</param>
         /// <param name="useTaxInclusivePrices">Exclude tax.</param>
         /// <param name="skipStatusCheckAndAcceptOrderAfterSending">WARNING: only use this option if the Liteserver is not synchronizing within max 5 minutes with Lightspeed cloud!.</param>
-        public LightspeedSettings(string companyId = default(string), bool? useOAuth = default(bool?), bool? enabled = default(bool?), int? estimatedMinutesForDelivery = default(int?), int? estimatedMinutesForCollection = default(int?), string geographicLocation = default(string), bool? establishment = default(bool?), string voucherId = default(string), string deliveryFeeId = default(string), string processingFeeId = default(string), PriceTypeEnum? priceType = default(PriceTypeEnum?), int? menuId = default(int?), int? collectionTableId = default(int?), int? deliveryTableId = default(int?), Dictionary<string, string> collectionTableIds = default(Dictionary<string, string>), Dictionary<string, string> deliveryTableIds = default(Dictionary<string, string>), bool? useTaxInclusivePrices = default(bool?), bool? skipStatusCheckAndAcceptOrderAfterSending = default(bool?))
+        /// <param name="sendTableNumberToTableId">Send Table Number to Table Id.</param>
+        public LightspeedSettings(string companyId = default(string), bool? useOAuth = default(bool?), bool? enabled = default(bool?), int? estimatedMinutesForDelivery = default(int?), int? estimatedMinutesForCollection = default(int?), string geographicLocation = default(string), bool? establishment = default(bool?), string voucherId = default(string), string deliveryFeeId = default(string), string processingFeeId = default(string), PriceTypeEnum? priceType = default(PriceTypeEnum?), int? menuId = default(int?), int? collectionTableId = default(int?), int? deliveryTableId = default(int?), Dictionary<string, string> collectionTableIds = default(Dictionary<string, string>), Dictionary<string, string> deliveryTableIds = default(Dictionary<string, string>), bool? useTaxInclusivePrices = default(bool?), bool? skipStatusCheckAndAcceptOrderAfterSending = default(bool?), bool? sendTableNumberToTableId = default(bool?))
         {
             this.CompanyId = companyId;
             this.UseOAuth = useOAuth;
@@ -104,6 +105,7 @@ namespace Flipdish.Model
             this.DeliveryTableIds = deliveryTableIds;
             this.UseTaxInclusivePrices = useTaxInclusivePrices;
             this.SkipStatusCheckAndAcceptOrderAfterSending = skipStatusCheckAndAcceptOrderAfterSending;
+            this.SendTableNumberToTableId = sendTableNumberToTableId;
         }
         
         /// <summary>
@@ -227,6 +229,13 @@ namespace Flipdish.Model
         public bool? SkipStatusCheckAndAcceptOrderAfterSending { get; set; }
 
         /// <summary>
+        /// Send Table Number to Table Id
+        /// </summary>
+        /// <value>Send Table Number to Table Id</value>
+        [DataMember(Name="SendTableNumberToTableId", EmitDefaultValue=false)]
+        public bool? SendTableNumberToTableId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -252,6 +261,7 @@ namespace Flipdish.Model
             sb.Append("  DeliveryTableIds: ").Append(DeliveryTableIds).Append("\n");
             sb.Append("  UseTaxInclusivePrices: ").Append(UseTaxInclusivePrices).Append("\n");
             sb.Append("  SkipStatusCheckAndAcceptOrderAfterSending: ").Append(SkipStatusCheckAndAcceptOrderAfterSending).Append("\n");
+            sb.Append("  SendTableNumberToTableId: ").Append(SendTableNumberToTableId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -375,6 +385,11 @@ namespace Flipdish.Model
                     this.SkipStatusCheckAndAcceptOrderAfterSending == input.SkipStatusCheckAndAcceptOrderAfterSending ||
                     (this.SkipStatusCheckAndAcceptOrderAfterSending != null &&
                     this.SkipStatusCheckAndAcceptOrderAfterSending.Equals(input.SkipStatusCheckAndAcceptOrderAfterSending))
+                ) && 
+                (
+                    this.SendTableNumberToTableId == input.SendTableNumberToTableId ||
+                    (this.SendTableNumberToTableId != null &&
+                    this.SendTableNumberToTableId.Equals(input.SendTableNumberToTableId))
                 );
         }
 
@@ -423,6 +438,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.UseTaxInclusivePrices.GetHashCode();
                 if (this.SkipStatusCheckAndAcceptOrderAfterSending != null)
                     hashCode = hashCode * 59 + this.SkipStatusCheckAndAcceptOrderAfterSending.GetHashCode();
+                if (this.SendTableNumberToTableId != null)
+                    hashCode = hashCode * 59 + this.SendTableNumberToTableId.GetHashCode();
                 return hashCode;
             }
         }
