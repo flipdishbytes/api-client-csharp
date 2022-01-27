@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **OwnerEntity** | **string** | The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition.OwnerEntity} | [optional] 
 **Key** | **string** | Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot | 
+**IsReadOnly** | **bool?** | Indicates if a definition can be edited or not | [optional] 
 **ValueType** | **string** | The excepted type for the Value field | [optional] 
 **Name** | **string** | Field Name | 
 **Description** | **string** | Field Description | [optional] 

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **CatalogItemId** | **string** | Unique catalog Item id | [optional] 
 **IsArchived** | **bool?** | Returns true if the item is archived | [optional] 
 **Groups** | [**List&lt;CatalogGroupReference&gt;**](CatalogGroupReference.md) | Collection of groups associated with this item | [optional] 
+**Metafields** | [**List&lt;Metafield&gt;**](Metafield.md) | Collection of metafields | [optional] 
 **ItemType** | **string** | Type of item (Product, Modifier, etc) | 
 **Sku** | **string** | Stock Keeping Unit (SKU) | 
 **Name** | **string** | Item name | 

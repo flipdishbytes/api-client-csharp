@@ -68,6 +68,7 @@ namespace Flipdish.Model
         /// <param name="catalogItemId">Unique catalog Item id.</param>
         /// <param name="isArchived">Returns true if the item is archived.</param>
         /// <param name="groups">Collection of groups associated with this item.</param>
+        /// <param name="metafields">Collection of metafields.</param>
         /// <param name="itemType">Type of item (Product, Modifier, etc) (required).</param>
         /// <param name="sku">Stock Keeping Unit (SKU) (required).</param>
         /// <param name="name">Item name (required).</param>
@@ -75,7 +76,7 @@ namespace Flipdish.Model
         /// <param name="price">Item price (required).</param>
         /// <param name="imageFileName">Image File Name.</param>
         /// <param name="alcohol">item contains alcohol.</param>
-        public CatalogItem(string catalogItemId = default(string), bool? isArchived = default(bool?), List<CatalogGroupReference> groups = default(List<CatalogGroupReference>), ItemTypeEnum itemType = default(ItemTypeEnum), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string imageFileName = default(string), bool? alcohol = default(bool?))
+        public CatalogItem(string catalogItemId = default(string), bool? isArchived = default(bool?), List<CatalogGroupReference> groups = default(List<CatalogGroupReference>), List<Metafield> metafields = default(List<Metafield>), ItemTypeEnum itemType = default(ItemTypeEnum), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string imageFileName = default(string), bool? alcohol = default(bool?))
         {
             // to ensure "itemType" is required (not null)
             if (itemType == null)
@@ -116,6 +117,7 @@ namespace Flipdish.Model
             this.CatalogItemId = catalogItemId;
             this.IsArchived = isArchived;
             this.Groups = groups;
+            this.Metafields = metafields;
             this.Description = description;
             this.ImageFileName = imageFileName;
             this.Alcohol = alcohol;
@@ -141,6 +143,13 @@ namespace Flipdish.Model
         /// <value>Collection of groups associated with this item</value>
         [DataMember(Name="Groups", EmitDefaultValue=false)]
         public List<CatalogGroupReference> Groups { get; set; }
+
+        /// <summary>
+        /// Collection of metafields
+        /// </summary>
+        /// <value>Collection of metafields</value>
+        [DataMember(Name="Metafields", EmitDefaultValue=false)]
+        public List<Metafield> Metafields { get; set; }
 
 
         /// <summary>
@@ -196,6 +205,7 @@ namespace Flipdish.Model
             sb.Append("  CatalogItemId: ").Append(CatalogItemId).Append("\n");
             sb.Append("  IsArchived: ").Append(IsArchived).Append("\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
+            sb.Append("  Metafields: ").Append(Metafields).Append("\n");
             sb.Append("  ItemType: ").Append(ItemType).Append("\n");
             sb.Append("  Sku: ").Append(Sku).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -253,6 +263,11 @@ namespace Flipdish.Model
                     this.Groups.SequenceEqual(input.Groups)
                 ) && 
                 (
+                    this.Metafields == input.Metafields ||
+                    this.Metafields != null &&
+                    this.Metafields.SequenceEqual(input.Metafields)
+                ) && 
+                (
                     this.ItemType == input.ItemType ||
                     (this.ItemType != null &&
                     this.ItemType.Equals(input.ItemType))
@@ -304,6 +319,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.IsArchived.GetHashCode();
                 if (this.Groups != null)
                     hashCode = hashCode * 59 + this.Groups.GetHashCode();
+                if (this.Metafields != null)
+                    hashCode = hashCode * 59 + this.Metafields.GetHashCode();
                 if (this.ItemType != null)
                     hashCode = hashCode * 59 + this.ItemType.GetHashCode();
                 if (this.Sku != null)

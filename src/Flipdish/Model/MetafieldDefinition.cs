@@ -133,11 +133,12 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="ownerEntity">The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition.OwnerEntity}.</param>
         /// <param name="key">Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot (required).</param>
+        /// <param name="isReadOnly">Indicates if a definition can be edited or not.</param>
         /// <param name="valueType">The excepted type for the Value field.</param>
         /// <param name="name">Field Name (required).</param>
         /// <param name="description">Field Description.</param>
         /// <param name="behaviors">Enable Metafield Behaviors.</param>
-        public MetafieldDefinition(OwnerEntityEnum? ownerEntity = default(OwnerEntityEnum?), string key = default(string), ValueTypeEnum? valueType = default(ValueTypeEnum?), string name = default(string), string description = default(string), List<BehaviorsEnum> behaviors = default(List<BehaviorsEnum>))
+        public MetafieldDefinition(OwnerEntityEnum? ownerEntity = default(OwnerEntityEnum?), string key = default(string), bool? isReadOnly = default(bool?), ValueTypeEnum? valueType = default(ValueTypeEnum?), string name = default(string), string description = default(string), List<BehaviorsEnum> behaviors = default(List<BehaviorsEnum>))
         {
             // to ensure "key" is required (not null)
             if (key == null)
@@ -158,6 +159,7 @@ namespace Flipdish.Model
                 this.Name = name;
             }
             this.OwnerEntity = ownerEntity;
+            this.IsReadOnly = isReadOnly;
             this.ValueType = valueType;
             this.Description = description;
             this.Behaviors = behaviors;
@@ -170,6 +172,13 @@ namespace Flipdish.Model
         /// <value>Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot</value>
         [DataMember(Name="Key", EmitDefaultValue=false)]
         public string Key { get; set; }
+
+        /// <summary>
+        /// Indicates if a definition can be edited or not
+        /// </summary>
+        /// <value>Indicates if a definition can be edited or not</value>
+        [DataMember(Name="IsReadOnly", EmitDefaultValue=false)]
+        public bool? IsReadOnly { get; set; }
 
 
         /// <summary>
@@ -197,6 +206,7 @@ namespace Flipdish.Model
             sb.Append("class MetafieldDefinition {\n");
             sb.Append("  OwnerEntity: ").Append(OwnerEntity).Append("\n");
             sb.Append("  Key: ").Append(Key).Append("\n");
+            sb.Append("  IsReadOnly: ").Append(IsReadOnly).Append("\n");
             sb.Append("  ValueType: ").Append(ValueType).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -246,6 +256,11 @@ namespace Flipdish.Model
                     this.Key.Equals(input.Key))
                 ) && 
                 (
+                    this.IsReadOnly == input.IsReadOnly ||
+                    (this.IsReadOnly != null &&
+                    this.IsReadOnly.Equals(input.IsReadOnly))
+                ) && 
+                (
                     this.ValueType == input.ValueType ||
                     (this.ValueType != null &&
                     this.ValueType.Equals(input.ValueType))
@@ -280,6 +295,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OwnerEntity.GetHashCode();
                 if (this.Key != null)
                     hashCode = hashCode * 59 + this.Key.GetHashCode();
+                if (this.IsReadOnly != null)
+                    hashCode = hashCode * 59 + this.IsReadOnly.GetHashCode();
                 if (this.ValueType != null)
                     hashCode = hashCode * 59 + this.ValueType.GetHashCode();
                 if (this.Name != null)
