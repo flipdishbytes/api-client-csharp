@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **TotalPrice** | [**Price**](Price.md) |  | [optional] 
 **DeliveryFee** | [**Price**](Price.md) |  | [optional] 
 **EstimatedDeliveryTime** | **DateTime?** |  | [optional] 
+**ChannelOrderId** | **string** |  | [optional] 
 **ExternalOrderId** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **InFraudZone** | **bool?** | Was order made within a fraud zone | [optional] 
 **UnusualHighValueOrder** | **bool?** | Is order of unusually high value | [optional] 
 **RejectedByUserId** | **int?** | Id of user who rejected order, if available | [optional] 
+**ChannelOrderId** | **string** | ChannelOrderId from external channel | [optional] 
+**ChannelOrderDisplayId** | **string** | ChannelOrderDisplayId from external channel | [optional] 
 **ExternalOrderId** | **string** | ExternalOrderId from external channel | [optional] 
 **ExternalOrderDisplayId** | **string** | ExternalOrderDisplayId from external channel | [optional] 
 **Channel** | [**Channel**](Channel.md) | Channel where the Order comes from | [optional] 

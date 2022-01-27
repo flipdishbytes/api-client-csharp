@@ -26,6 +26,8 @@ Name | Type | Description | Notes
 **Channel** | [**Channel**](Channel.md) | Channel where the Order comes from | [optional] 
 **InFraudZone** | **bool?** | Was order made within a fraud zone | [optional] 
 **UnusualHighValueOrder** | **bool?** | Is order of unusually high value | [optional] 
+**ChannelOrderId** | **string** | ChannelOrderId from external channel | [optional] 
+**ChannelOrderDisplayId** | **string** | ChannelOrderDisplayId from external channel | [optional] 
 **ExternalOrderId** | **string** | ExternalOrderId from external channel | [optional] 
 **ExternalOrderDisplayId** | **string** | ExternalOrderDisplayId from external channel | [optional] 
 

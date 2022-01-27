@@ -730,8 +730,9 @@ namespace Flipdish.Model
         /// <param name="totalPrice">totalPrice.</param>
         /// <param name="deliveryFee">deliveryFee.</param>
         /// <param name="estimatedDeliveryTime">estimatedDeliveryTime.</param>
+        /// <param name="channelOrderId">channelOrderId.</param>
         /// <param name="externalOrderId">externalOrderId.</param>
-        public OrderIngestSubmitOrderResponse(int? orderId = default(int?), string receiptUrl = default(string), CurrencyCodeEnum? currencyCode = default(CurrencyCodeEnum?), Price totalPrice = default(Price), Price deliveryFee = default(Price), DateTime? estimatedDeliveryTime = default(DateTime?), string externalOrderId = default(string))
+        public OrderIngestSubmitOrderResponse(int? orderId = default(int?), string receiptUrl = default(string), CurrencyCodeEnum? currencyCode = default(CurrencyCodeEnum?), Price totalPrice = default(Price), Price deliveryFee = default(Price), DateTime? estimatedDeliveryTime = default(DateTime?), string channelOrderId = default(string), string externalOrderId = default(string))
         {
             this.OrderId = orderId;
             this.ReceiptUrl = receiptUrl;
@@ -739,6 +740,7 @@ namespace Flipdish.Model
             this.TotalPrice = totalPrice;
             this.DeliveryFee = deliveryFee;
             this.EstimatedDeliveryTime = estimatedDeliveryTime;
+            this.ChannelOrderId = channelOrderId;
             this.ExternalOrderId = externalOrderId;
         }
         
@@ -774,6 +776,12 @@ namespace Flipdish.Model
         public DateTime? EstimatedDeliveryTime { get; set; }
 
         /// <summary>
+        /// Gets or Sets ChannelOrderId
+        /// </summary>
+        [DataMember(Name="ChannelOrderId", EmitDefaultValue=false)]
+        public string ChannelOrderId { get; set; }
+
+        /// <summary>
         /// Gets or Sets ExternalOrderId
         /// </summary>
         [DataMember(Name="ExternalOrderId", EmitDefaultValue=false)]
@@ -793,6 +801,7 @@ namespace Flipdish.Model
             sb.Append("  TotalPrice: ").Append(TotalPrice).Append("\n");
             sb.Append("  DeliveryFee: ").Append(DeliveryFee).Append("\n");
             sb.Append("  EstimatedDeliveryTime: ").Append(EstimatedDeliveryTime).Append("\n");
+            sb.Append("  ChannelOrderId: ").Append(ChannelOrderId).Append("\n");
             sb.Append("  ExternalOrderId: ").Append(ExternalOrderId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -859,6 +868,11 @@ namespace Flipdish.Model
                     this.EstimatedDeliveryTime.Equals(input.EstimatedDeliveryTime))
                 ) && 
                 (
+                    this.ChannelOrderId == input.ChannelOrderId ||
+                    (this.ChannelOrderId != null &&
+                    this.ChannelOrderId.Equals(input.ChannelOrderId))
+                ) && 
+                (
                     this.ExternalOrderId == input.ExternalOrderId ||
                     (this.ExternalOrderId != null &&
                     this.ExternalOrderId.Equals(input.ExternalOrderId))
@@ -886,6 +900,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DeliveryFee.GetHashCode();
                 if (this.EstimatedDeliveryTime != null)
                     hashCode = hashCode * 59 + this.EstimatedDeliveryTime.GetHashCode();
+                if (this.ChannelOrderId != null)
+                    hashCode = hashCode * 59 + this.ChannelOrderId.GetHashCode();
                 if (this.ExternalOrderId != null)
                     hashCode = hashCode * 59 + this.ExternalOrderId.GetHashCode();
                 return hashCode;

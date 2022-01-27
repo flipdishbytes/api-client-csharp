@@ -812,21 +812,21 @@ namespace Flipdish.Model
         /// <param name="currencyCode">[Required] Currency Code  These must match three letter codes ISO 4127 http://en.wikipedia.org/wiki/ISO_4217.</param>
         /// <param name="cart">[Required] Cart of the user.</param>
         /// <param name="fulfillmentInfo">[Required] Relevant fulfillment Information.</param>
-        /// <param name="externalOrderId">[Required] Order ID in the external System.</param>
-        /// <param name="externalPublicOrderId">[Optional] Public Order ID in the external System.</param>
+        /// <param name="channelOrderId">[Required] Order ID in the external System.</param>
+        /// <param name="channelPublicOrderId">[Optional] Public Order ID in the external System.</param>
         /// <param name="orderDateUtc">Date the order was placed at in UTC  [Required].</param>
         /// <param name="paymentInfo">Payment Information  [Required].</param>
         /// <param name="contact">Contact Information  [Required].</param>
         /// <param name="tipAmount">Tip amount.</param>
-        public OrderIngestSubmitOrderRequest(AppTypeEnum? appType = default(AppTypeEnum?), int? storeId = default(int?), CurrencyCodeEnum? currencyCode = default(CurrencyCodeEnum?), Cart cart = default(Cart), FulfillmentInfo fulfillmentInfo = default(FulfillmentInfo), string externalOrderId = default(string), string externalPublicOrderId = default(string), DateTime? orderDateUtc = default(DateTime?), PaymentInfo paymentInfo = default(PaymentInfo), Contact contact = default(Contact), double? tipAmount = default(double?))
+        public OrderIngestSubmitOrderRequest(AppTypeEnum? appType = default(AppTypeEnum?), int? storeId = default(int?), CurrencyCodeEnum? currencyCode = default(CurrencyCodeEnum?), Cart cart = default(Cart), FulfillmentInfo fulfillmentInfo = default(FulfillmentInfo), string channelOrderId = default(string), string channelPublicOrderId = default(string), DateTime? orderDateUtc = default(DateTime?), PaymentInfo paymentInfo = default(PaymentInfo), Contact contact = default(Contact), double? tipAmount = default(double?))
         {
             this.AppType = appType;
             this.StoreId = storeId;
             this.CurrencyCode = currencyCode;
             this.Cart = cart;
             this.FulfillmentInfo = fulfillmentInfo;
-            this.ExternalOrderId = externalOrderId;
-            this.ExternalPublicOrderId = externalPublicOrderId;
+            this.ChannelOrderId = channelOrderId;
+            this.ChannelPublicOrderId = channelPublicOrderId;
             this.OrderDateUtc = orderDateUtc;
             this.PaymentInfo = paymentInfo;
             this.Contact = contact;
@@ -860,15 +860,15 @@ namespace Flipdish.Model
         /// [Required] Order ID in the external System
         /// </summary>
         /// <value>[Required] Order ID in the external System</value>
-        [DataMember(Name="ExternalOrderId", EmitDefaultValue=false)]
-        public string ExternalOrderId { get; set; }
+        [DataMember(Name="ChannelOrderId", EmitDefaultValue=false)]
+        public string ChannelOrderId { get; set; }
 
         /// <summary>
         /// [Optional] Public Order ID in the external System
         /// </summary>
         /// <value>[Optional] Public Order ID in the external System</value>
-        [DataMember(Name="ExternalPublicOrderId", EmitDefaultValue=false)]
-        public string ExternalPublicOrderId { get; set; }
+        [DataMember(Name="ChannelPublicOrderId", EmitDefaultValue=false)]
+        public string ChannelPublicOrderId { get; set; }
 
         /// <summary>
         /// Date the order was placed at in UTC  [Required]
@@ -911,8 +911,8 @@ namespace Flipdish.Model
             sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
             sb.Append("  Cart: ").Append(Cart).Append("\n");
             sb.Append("  FulfillmentInfo: ").Append(FulfillmentInfo).Append("\n");
-            sb.Append("  ExternalOrderId: ").Append(ExternalOrderId).Append("\n");
-            sb.Append("  ExternalPublicOrderId: ").Append(ExternalPublicOrderId).Append("\n");
+            sb.Append("  ChannelOrderId: ").Append(ChannelOrderId).Append("\n");
+            sb.Append("  ChannelPublicOrderId: ").Append(ChannelPublicOrderId).Append("\n");
             sb.Append("  OrderDateUtc: ").Append(OrderDateUtc).Append("\n");
             sb.Append("  PaymentInfo: ").Append(PaymentInfo).Append("\n");
             sb.Append("  Contact: ").Append(Contact).Append("\n");
@@ -977,14 +977,14 @@ namespace Flipdish.Model
                     this.FulfillmentInfo.Equals(input.FulfillmentInfo))
                 ) && 
                 (
-                    this.ExternalOrderId == input.ExternalOrderId ||
-                    (this.ExternalOrderId != null &&
-                    this.ExternalOrderId.Equals(input.ExternalOrderId))
+                    this.ChannelOrderId == input.ChannelOrderId ||
+                    (this.ChannelOrderId != null &&
+                    this.ChannelOrderId.Equals(input.ChannelOrderId))
                 ) && 
                 (
-                    this.ExternalPublicOrderId == input.ExternalPublicOrderId ||
-                    (this.ExternalPublicOrderId != null &&
-                    this.ExternalPublicOrderId.Equals(input.ExternalPublicOrderId))
+                    this.ChannelPublicOrderId == input.ChannelPublicOrderId ||
+                    (this.ChannelPublicOrderId != null &&
+                    this.ChannelPublicOrderId.Equals(input.ChannelPublicOrderId))
                 ) && 
                 (
                     this.OrderDateUtc == input.OrderDateUtc ||
@@ -1027,10 +1027,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Cart.GetHashCode();
                 if (this.FulfillmentInfo != null)
                     hashCode = hashCode * 59 + this.FulfillmentInfo.GetHashCode();
-                if (this.ExternalOrderId != null)
-                    hashCode = hashCode * 59 + this.ExternalOrderId.GetHashCode();
-                if (this.ExternalPublicOrderId != null)
-                    hashCode = hashCode * 59 + this.ExternalPublicOrderId.GetHashCode();
+                if (this.ChannelOrderId != null)
+                    hashCode = hashCode * 59 + this.ChannelOrderId.GetHashCode();
+                if (this.ChannelPublicOrderId != null)
+                    hashCode = hashCode * 59 + this.ChannelPublicOrderId.GetHashCode();
                 if (this.OrderDateUtc != null)
                     hashCode = hashCode * 59 + this.OrderDateUtc.GetHashCode();
                 if (this.PaymentInfo != null)

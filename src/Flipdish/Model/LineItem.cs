@@ -41,9 +41,8 @@ namespace Flipdish.Model
         /// <param name="price">Item Price.</param>
         /// <param name="notes">Item Notes.</param>
         /// <param name="options">Item Option.</param>
-        /// <param name="isAlchohol">isAlchohol.</param>
         /// <param name="metadata">Other Item Metadata.</param>
-        public LineItem(int? id = default(int?), string name = default(string), string sectionName = default(string), string externalId = default(string), int? quantity = default(int?), Price price = default(Price), string notes = default(string), List<LineItemOption> options = default(List<LineItemOption>), bool? isAlchohol = default(bool?), Dictionary<string, string> metadata = default(Dictionary<string, string>))
+        public LineItem(int? id = default(int?), string name = default(string), string sectionName = default(string), string externalId = default(string), int? quantity = default(int?), Price price = default(Price), string notes = default(string), List<LineItemOption> options = default(List<LineItemOption>), Dictionary<string, string> metadata = default(Dictionary<string, string>))
         {
             this.Id = id;
             this.Name = name;
@@ -53,7 +52,6 @@ namespace Flipdish.Model
             this.Price = price;
             this.Notes = notes;
             this.Options = options;
-            this.IsAlchohol = isAlchohol;
             this.Metadata = metadata;
         }
         
@@ -114,12 +112,6 @@ namespace Flipdish.Model
         public List<LineItemOption> Options { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsAlchohol
-        /// </summary>
-        [DataMember(Name="IsAlchohol", EmitDefaultValue=false)]
-        public bool? IsAlchohol { get; set; }
-
-        /// <summary>
         /// Other Item Metadata
         /// </summary>
         /// <value>Other Item Metadata</value>
@@ -142,7 +134,6 @@ namespace Flipdish.Model
             sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  Options: ").Append(Options).Append("\n");
-            sb.Append("  IsAlchohol: ").Append(IsAlchohol).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -219,11 +210,6 @@ namespace Flipdish.Model
                     this.Options.SequenceEqual(input.Options)
                 ) && 
                 (
-                    this.IsAlchohol == input.IsAlchohol ||
-                    (this.IsAlchohol != null &&
-                    this.IsAlchohol.Equals(input.IsAlchohol))
-                ) && 
-                (
                     this.Metadata == input.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.SequenceEqual(input.Metadata)
@@ -255,8 +241,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Notes.GetHashCode();
                 if (this.Options != null)
                     hashCode = hashCode * 59 + this.Options.GetHashCode();
-                if (this.IsAlchohol != null)
-                    hashCode = hashCode * 59 + this.IsAlchohol.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 return hashCode;
