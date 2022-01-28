@@ -28,8 +28,6 @@ Name | Type | Description | Notes
 **UnusualHighValueOrder** | **bool?** | Is order of unusually high value | [optional] 
 **ChannelOrderId** | **string** | ChannelOrderId from external channel | [optional] 
 **ChannelOrderDisplayId** | **string** | ChannelOrderDisplayId from external channel | [optional] 
-**ExternalOrderId** | **string** | ExternalOrderId from external channel | [optional] 
-**ExternalOrderDisplayId** | **string** | ExternalOrderDisplayId from external channel | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
