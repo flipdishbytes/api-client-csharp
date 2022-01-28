@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **ImageFileName** | **string** | Image File Name | [optional] 
 **Alcohol** | **bool?** | Product contains alcohol | [optional] 
 **Groups** | [**List&lt;UpdateCatalogGroupReference&gt;**](UpdateCatalogGroupReference.md) | Collection of groups associated with this item | [optional] 
+**Metafields** | [**List&lt;Metafield&gt;**](Metafield.md) | Collection of metafields | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

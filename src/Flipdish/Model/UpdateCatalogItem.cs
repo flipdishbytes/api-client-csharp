@@ -40,7 +40,8 @@ namespace Flipdish.Model
         /// <param name="imageFileName">Image File Name.</param>
         /// <param name="alcohol">Product contains alcohol.</param>
         /// <param name="groups">Collection of groups associated with this item.</param>
-        public UpdateCatalogItem(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string imageFileName = default(string), bool? alcohol = default(bool?), List<UpdateCatalogGroupReference> groups = default(List<UpdateCatalogGroupReference>))
+        /// <param name="metafields">Collection of metafields.</param>
+        public UpdateCatalogItem(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string imageFileName = default(string), bool? alcohol = default(bool?), List<UpdateCatalogGroupReference> groups = default(List<UpdateCatalogGroupReference>), List<Metafield> metafields = default(List<Metafield>))
         {
             this.Sku = sku;
             this.Name = name;
@@ -49,6 +50,7 @@ namespace Flipdish.Model
             this.ImageFileName = imageFileName;
             this.Alcohol = alcohol;
             this.Groups = groups;
+            this.Metafields = metafields;
         }
         
         /// <summary>
@@ -101,6 +103,13 @@ namespace Flipdish.Model
         public List<UpdateCatalogGroupReference> Groups { get; set; }
 
         /// <summary>
+        /// Collection of metafields
+        /// </summary>
+        /// <value>Collection of metafields</value>
+        [DataMember(Name="Metafields", EmitDefaultValue=false)]
+        public List<Metafield> Metafields { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -115,6 +124,7 @@ namespace Flipdish.Model
             sb.Append("  ImageFileName: ").Append(ImageFileName).Append("\n");
             sb.Append("  Alcohol: ").Append(Alcohol).Append("\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
+            sb.Append("  Metafields: ").Append(Metafields).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -183,6 +193,11 @@ namespace Flipdish.Model
                     this.Groups == input.Groups ||
                     this.Groups != null &&
                     this.Groups.SequenceEqual(input.Groups)
+                ) && 
+                (
+                    this.Metafields == input.Metafields ||
+                    this.Metafields != null &&
+                    this.Metafields.SequenceEqual(input.Metafields)
                 );
         }
 
@@ -209,6 +224,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Alcohol.GetHashCode();
                 if (this.Groups != null)
                     hashCode = hashCode * 59 + this.Groups.GetHashCode();
+                if (this.Metafields != null)
+                    hashCode = hashCode * 59 + this.Metafields.GetHashCode();
                 return hashCode;
             }
         }
