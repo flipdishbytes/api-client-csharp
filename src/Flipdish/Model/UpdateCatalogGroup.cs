@@ -39,7 +39,8 @@ namespace Flipdish.Model
         /// <param name="minSelectCount">Minimum number of items that the user has to select.</param>
         /// <param name="maxSelectCount">Maximum number of items that the user has to select.</param>
         /// <param name="items">Collection of items associated with this group.</param>
-        public UpdateCatalogGroup(string sku = default(string), string name = default(string), string imageFileName = default(string), int? minSelectCount = default(int?), int? maxSelectCount = default(int?), List<UpdateCatalogItemReference> items = default(List<UpdateCatalogItemReference>))
+        /// <param name="metafields">Collection of metafields.</param>
+        public UpdateCatalogGroup(string sku = default(string), string name = default(string), string imageFileName = default(string), int? minSelectCount = default(int?), int? maxSelectCount = default(int?), List<UpdateCatalogItemReference> items = default(List<UpdateCatalogItemReference>), List<Metafield> metafields = default(List<Metafield>))
         {
             this.Sku = sku;
             this.Name = name;
@@ -47,6 +48,7 @@ namespace Flipdish.Model
             this.MinSelectCount = minSelectCount;
             this.MaxSelectCount = maxSelectCount;
             this.Items = items;
+            this.Metafields = metafields;
         }
         
         /// <summary>
@@ -92,6 +94,13 @@ namespace Flipdish.Model
         public List<UpdateCatalogItemReference> Items { get; set; }
 
         /// <summary>
+        /// Collection of metafields
+        /// </summary>
+        /// <value>Collection of metafields</value>
+        [DataMember(Name="Metafields", EmitDefaultValue=false)]
+        public List<Metafield> Metafields { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -105,6 +114,7 @@ namespace Flipdish.Model
             sb.Append("  MinSelectCount: ").Append(MinSelectCount).Append("\n");
             sb.Append("  MaxSelectCount: ").Append(MaxSelectCount).Append("\n");
             sb.Append("  Items: ").Append(Items).Append("\n");
+            sb.Append("  Metafields: ").Append(Metafields).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -168,6 +178,11 @@ namespace Flipdish.Model
                     this.Items == input.Items ||
                     this.Items != null &&
                     this.Items.SequenceEqual(input.Items)
+                ) && 
+                (
+                    this.Metafields == input.Metafields ||
+                    this.Metafields != null &&
+                    this.Metafields.SequenceEqual(input.Metafields)
                 );
         }
 
@@ -192,6 +207,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MaxSelectCount.GetHashCode();
                 if (this.Items != null)
                     hashCode = hashCode * 59 + this.Items.GetHashCode();
+                if (this.Metafields != null)
+                    hashCode = hashCode * 59 + this.Metafields.GetHashCode();
                 return hashCode;
             }
         }

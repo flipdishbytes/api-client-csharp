@@ -62,11 +62,12 @@ namespace Flipdish.Model
         /// <param name="minSelectCount">Minimum number of items that the user has to select.</param>
         /// <param name="maxSelectCount">Maximum number of items that the user has to select.</param>
         /// <param name="items">Collection of items associated with this group.</param>
+        /// <param name="metafields">Collection of metafields.</param>
         /// <param name="groupType">Type of group (ModifierGroup, etc) (required).</param>
         /// <param name="sku">Stock Keeping Unit (SKU) (required).</param>
         /// <param name="name">Group name (required).</param>
         /// <param name="imageFileName">Image File Name.</param>
-        public CreateCatalogGroup(int? minSelectCount = default(int?), int? maxSelectCount = default(int?), List<CreateCatalogItemReference> items = default(List<CreateCatalogItemReference>), GroupTypeEnum groupType = default(GroupTypeEnum), string sku = default(string), string name = default(string), string imageFileName = default(string))
+        public CreateCatalogGroup(int? minSelectCount = default(int?), int? maxSelectCount = default(int?), List<CreateCatalogItemReference> items = default(List<CreateCatalogItemReference>), List<Metafield> metafields = default(List<Metafield>), GroupTypeEnum groupType = default(GroupTypeEnum), string sku = default(string), string name = default(string), string imageFileName = default(string))
         {
             // to ensure "groupType" is required (not null)
             if (groupType == null)
@@ -98,6 +99,7 @@ namespace Flipdish.Model
             this.MinSelectCount = minSelectCount;
             this.MaxSelectCount = maxSelectCount;
             this.Items = items;
+            this.Metafields = metafields;
             this.ImageFileName = imageFileName;
         }
         
@@ -121,6 +123,13 @@ namespace Flipdish.Model
         /// <value>Collection of items associated with this group</value>
         [DataMember(Name="Items", EmitDefaultValue=false)]
         public List<CreateCatalogItemReference> Items { get; set; }
+
+        /// <summary>
+        /// Collection of metafields
+        /// </summary>
+        /// <value>Collection of metafields</value>
+        [DataMember(Name="Metafields", EmitDefaultValue=false)]
+        public List<Metafield> Metafields { get; set; }
 
 
         /// <summary>
@@ -155,6 +164,7 @@ namespace Flipdish.Model
             sb.Append("  MinSelectCount: ").Append(MinSelectCount).Append("\n");
             sb.Append("  MaxSelectCount: ").Append(MaxSelectCount).Append("\n");
             sb.Append("  Items: ").Append(Items).Append("\n");
+            sb.Append("  Metafields: ").Append(Metafields).Append("\n");
             sb.Append("  GroupType: ").Append(GroupType).Append("\n");
             sb.Append("  Sku: ").Append(Sku).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -209,6 +219,11 @@ namespace Flipdish.Model
                     this.Items.SequenceEqual(input.Items)
                 ) && 
                 (
+                    this.Metafields == input.Metafields ||
+                    this.Metafields != null &&
+                    this.Metafields.SequenceEqual(input.Metafields)
+                ) && 
+                (
                     this.GroupType == input.GroupType ||
                     (this.GroupType != null &&
                     this.GroupType.Equals(input.GroupType))
@@ -245,6 +260,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MaxSelectCount.GetHashCode();
                 if (this.Items != null)
                     hashCode = hashCode * 59 + this.Items.GetHashCode();
+                if (this.Metafields != null)
+                    hashCode = hashCode * 59 + this.Metafields.GetHashCode();
                 if (this.GroupType != null)
                     hashCode = hashCode * 59 + this.GroupType.GetHashCode();
                 if (this.Sku != null)
