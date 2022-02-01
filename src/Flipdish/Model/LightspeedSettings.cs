@@ -85,7 +85,10 @@ namespace Flipdish.Model
         /// <param name="useTaxInclusivePrices">Exclude tax.</param>
         /// <param name="skipStatusCheckAndAcceptOrderAfterSending">WARNING: only use this option if the Liteserver is not synchronizing within max 5 minutes with Lightspeed cloud!.</param>
         /// <param name="sendTableNumberToTableId">Send Table Number to Table Id.</param>
-        public LightspeedSettings(string companyId = default(string), bool? useOAuth = default(bool?), bool? enabled = default(bool?), int? estimatedMinutesForDelivery = default(int?), int? estimatedMinutesForCollection = default(int?), string geographicLocation = default(string), bool? establishment = default(bool?), string voucherId = default(string), string deliveryFeeId = default(string), string processingFeeId = default(string), PriceTypeEnum? priceType = default(PriceTypeEnum?), int? menuId = default(int?), int? collectionTableId = default(int?), int? deliveryTableId = default(int?), Dictionary<string, string> collectionTableIds = default(Dictionary<string, string>), Dictionary<string, string> deliveryTableIds = default(Dictionary<string, string>), bool? useTaxInclusivePrices = default(bool?), bool? skipStatusCheckAndAcceptOrderAfterSending = default(bool?), bool? sendTableNumberToTableId = default(bool?))
+        /// <param name="addChefNoteToProduct">Add ChefNote To Product.</param>
+        /// <param name="chefNoteItemId">The Lightspeed Chef Note Item Id to map.</param>
+        /// <param name="chefNoteModifierId">The Lightspeed Chef Note Modifier Id to map.</param>
+        public LightspeedSettings(string companyId = default(string), bool? useOAuth = default(bool?), bool? enabled = default(bool?), int? estimatedMinutesForDelivery = default(int?), int? estimatedMinutesForCollection = default(int?), string geographicLocation = default(string), bool? establishment = default(bool?), string voucherId = default(string), string deliveryFeeId = default(string), string processingFeeId = default(string), PriceTypeEnum? priceType = default(PriceTypeEnum?), int? menuId = default(int?), int? collectionTableId = default(int?), int? deliveryTableId = default(int?), Dictionary<string, string> collectionTableIds = default(Dictionary<string, string>), Dictionary<string, string> deliveryTableIds = default(Dictionary<string, string>), bool? useTaxInclusivePrices = default(bool?), bool? skipStatusCheckAndAcceptOrderAfterSending = default(bool?), bool? sendTableNumberToTableId = default(bool?), bool? addChefNoteToProduct = default(bool?), string chefNoteItemId = default(string), string chefNoteModifierId = default(string))
         {
             this.CompanyId = companyId;
             this.UseOAuth = useOAuth;
@@ -106,6 +109,9 @@ namespace Flipdish.Model
             this.UseTaxInclusivePrices = useTaxInclusivePrices;
             this.SkipStatusCheckAndAcceptOrderAfterSending = skipStatusCheckAndAcceptOrderAfterSending;
             this.SendTableNumberToTableId = sendTableNumberToTableId;
+            this.AddChefNoteToProduct = addChefNoteToProduct;
+            this.ChefNoteItemId = chefNoteItemId;
+            this.ChefNoteModifierId = chefNoteModifierId;
         }
         
         /// <summary>
@@ -236,6 +242,27 @@ namespace Flipdish.Model
         public bool? SendTableNumberToTableId { get; set; }
 
         /// <summary>
+        /// Add ChefNote To Product
+        /// </summary>
+        /// <value>Add ChefNote To Product</value>
+        [DataMember(Name="AddChefNoteToProduct", EmitDefaultValue=false)]
+        public bool? AddChefNoteToProduct { get; set; }
+
+        /// <summary>
+        /// The Lightspeed Chef Note Item Id to map
+        /// </summary>
+        /// <value>The Lightspeed Chef Note Item Id to map</value>
+        [DataMember(Name="ChefNoteItemId", EmitDefaultValue=false)]
+        public string ChefNoteItemId { get; set; }
+
+        /// <summary>
+        /// The Lightspeed Chef Note Modifier Id to map
+        /// </summary>
+        /// <value>The Lightspeed Chef Note Modifier Id to map</value>
+        [DataMember(Name="ChefNoteModifierId", EmitDefaultValue=false)]
+        public string ChefNoteModifierId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -262,6 +289,9 @@ namespace Flipdish.Model
             sb.Append("  UseTaxInclusivePrices: ").Append(UseTaxInclusivePrices).Append("\n");
             sb.Append("  SkipStatusCheckAndAcceptOrderAfterSending: ").Append(SkipStatusCheckAndAcceptOrderAfterSending).Append("\n");
             sb.Append("  SendTableNumberToTableId: ").Append(SendTableNumberToTableId).Append("\n");
+            sb.Append("  AddChefNoteToProduct: ").Append(AddChefNoteToProduct).Append("\n");
+            sb.Append("  ChefNoteItemId: ").Append(ChefNoteItemId).Append("\n");
+            sb.Append("  ChefNoteModifierId: ").Append(ChefNoteModifierId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -390,6 +420,21 @@ namespace Flipdish.Model
                     this.SendTableNumberToTableId == input.SendTableNumberToTableId ||
                     (this.SendTableNumberToTableId != null &&
                     this.SendTableNumberToTableId.Equals(input.SendTableNumberToTableId))
+                ) && 
+                (
+                    this.AddChefNoteToProduct == input.AddChefNoteToProduct ||
+                    (this.AddChefNoteToProduct != null &&
+                    this.AddChefNoteToProduct.Equals(input.AddChefNoteToProduct))
+                ) && 
+                (
+                    this.ChefNoteItemId == input.ChefNoteItemId ||
+                    (this.ChefNoteItemId != null &&
+                    this.ChefNoteItemId.Equals(input.ChefNoteItemId))
+                ) && 
+                (
+                    this.ChefNoteModifierId == input.ChefNoteModifierId ||
+                    (this.ChefNoteModifierId != null &&
+                    this.ChefNoteModifierId.Equals(input.ChefNoteModifierId))
                 );
         }
 
@@ -440,6 +485,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.SkipStatusCheckAndAcceptOrderAfterSending.GetHashCode();
                 if (this.SendTableNumberToTableId != null)
                     hashCode = hashCode * 59 + this.SendTableNumberToTableId.GetHashCode();
+                if (this.AddChefNoteToProduct != null)
+                    hashCode = hashCode * 59 + this.AddChefNoteToProduct.GetHashCode();
+                if (this.ChefNoteItemId != null)
+                    hashCode = hashCode * 59 + this.ChefNoteItemId.GetHashCode();
+                if (this.ChefNoteModifierId != null)
+                    hashCode = hashCode * 59 + this.ChefNoteModifierId.GetHashCode();
                 return hashCode;
             }
         }
