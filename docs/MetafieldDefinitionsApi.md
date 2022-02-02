@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 <a name="getownerentityconfigurations"></a>
 # **GetOwnerEntityConfigurations**
-> RestApiPaginationResultOwnerEntityConfigurations GetOwnerEntityConfigurations (string appId)
+> OwnerEntityConfigurations GetOwnerEntityConfigurations (string appId)
 
 Get OwnerEntity Configurations which contain information to manage Metafield Definitions
 
@@ -181,7 +181,7 @@ namespace Example
             try
             {
                 // Get OwnerEntity Configurations which contain information to manage Metafield Definitions
-                RestApiPaginationResultOwnerEntityConfigurations result = apiInstance.GetOwnerEntityConfigurations(appId);
+                OwnerEntityConfigurations result = apiInstance.GetOwnerEntityConfigurations(appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiPaginationResultOwnerEntityConfigurations**](RestApiPaginationResultOwnerEntityConfigurations.md)
+[**OwnerEntityConfigurations**](OwnerEntityConfigurations.md)
 
 ### Authorization
 

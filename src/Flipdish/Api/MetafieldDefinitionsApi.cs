@@ -86,8 +86,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>RestApiPaginationResultOwnerEntityConfigurations</returns>
-        RestApiPaginationResultOwnerEntityConfigurations GetOwnerEntityConfigurations (string appId);
+        /// <returns>OwnerEntityConfigurations</returns>
+        OwnerEntityConfigurations GetOwnerEntityConfigurations (string appId);
 
         /// <summary>
         /// Get OwnerEntity Configurations which contain information to manage Metafield Definitions
@@ -97,8 +97,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>ApiResponse of RestApiPaginationResultOwnerEntityConfigurations</returns>
-        ApiResponse<RestApiPaginationResultOwnerEntityConfigurations> GetOwnerEntityConfigurationsWithHttpInfo (string appId);
+        /// <returns>ApiResponse of OwnerEntityConfigurations</returns>
+        ApiResponse<OwnerEntityConfigurations> GetOwnerEntityConfigurationsWithHttpInfo (string appId);
         /// <summary>
         /// Create a Metafield Definition
         /// </summary>
@@ -190,8 +190,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>Task of RestApiPaginationResultOwnerEntityConfigurations</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultOwnerEntityConfigurations> GetOwnerEntityConfigurationsAsync (string appId);
+        /// <returns>Task of OwnerEntityConfigurations</returns>
+        System.Threading.Tasks.Task<OwnerEntityConfigurations> GetOwnerEntityConfigurationsAsync (string appId);
 
         /// <summary>
         /// Get OwnerEntity Configurations which contain information to manage Metafield Definitions
@@ -201,8 +201,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultOwnerEntityConfigurations)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOwnerEntityConfigurations>> GetOwnerEntityConfigurationsAsyncWithHttpInfo (string appId);
+        /// <returns>Task of ApiResponse (OwnerEntityConfigurations)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OwnerEntityConfigurations>> GetOwnerEntityConfigurationsAsyncWithHttpInfo (string appId);
         /// <summary>
         /// Create a Metafield Definition
         /// </summary>
@@ -715,10 +715,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>RestApiPaginationResultOwnerEntityConfigurations</returns>
-        public RestApiPaginationResultOwnerEntityConfigurations GetOwnerEntityConfigurations (string appId)
+        /// <returns>OwnerEntityConfigurations</returns>
+        public OwnerEntityConfigurations GetOwnerEntityConfigurations (string appId)
         {
-             ApiResponse<RestApiPaginationResultOwnerEntityConfigurations> localVarResponse = GetOwnerEntityConfigurationsWithHttpInfo(appId);
+             ApiResponse<OwnerEntityConfigurations> localVarResponse = GetOwnerEntityConfigurationsWithHttpInfo(appId);
              return localVarResponse.Data;
         }
 
@@ -727,8 +727,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>ApiResponse of RestApiPaginationResultOwnerEntityConfigurations</returns>
-        public ApiResponse< RestApiPaginationResultOwnerEntityConfigurations > GetOwnerEntityConfigurationsWithHttpInfo (string appId)
+        /// <returns>ApiResponse of OwnerEntityConfigurations</returns>
+        public ApiResponse< OwnerEntityConfigurations > GetOwnerEntityConfigurationsWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -780,9 +780,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultOwnerEntityConfigurations>(localVarStatusCode,
+            return new ApiResponse<OwnerEntityConfigurations>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultOwnerEntityConfigurations) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultOwnerEntityConfigurations)));
+                (OwnerEntityConfigurations) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OwnerEntityConfigurations)));
         }
 
         /// <summary>
@@ -790,10 +790,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>Task of RestApiPaginationResultOwnerEntityConfigurations</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultOwnerEntityConfigurations> GetOwnerEntityConfigurationsAsync (string appId)
+        /// <returns>Task of OwnerEntityConfigurations</returns>
+        public async System.Threading.Tasks.Task<OwnerEntityConfigurations> GetOwnerEntityConfigurationsAsync (string appId)
         {
-             ApiResponse<RestApiPaginationResultOwnerEntityConfigurations> localVarResponse = await GetOwnerEntityConfigurationsAsyncWithHttpInfo(appId);
+             ApiResponse<OwnerEntityConfigurations> localVarResponse = await GetOwnerEntityConfigurationsAsyncWithHttpInfo(appId);
              return localVarResponse.Data;
 
         }
@@ -803,8 +803,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultOwnerEntityConfigurations)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOwnerEntityConfigurations>> GetOwnerEntityConfigurationsAsyncWithHttpInfo (string appId)
+        /// <returns>Task of ApiResponse (OwnerEntityConfigurations)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OwnerEntityConfigurations>> GetOwnerEntityConfigurationsAsyncWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -856,9 +856,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultOwnerEntityConfigurations>(localVarStatusCode,
+            return new ApiResponse<OwnerEntityConfigurations>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultOwnerEntityConfigurations) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultOwnerEntityConfigurations)));
+                (OwnerEntityConfigurations) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OwnerEntityConfigurations)));
         }
 
         /// <summary>
