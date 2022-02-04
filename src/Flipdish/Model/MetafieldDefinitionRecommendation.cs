@@ -25,10 +25,10 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Information to create a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}
+    /// OwnerEntity Metafield Definition Recommendation
     /// </summary>
     [DataContract]
-    public partial class CreateMetafieldDefinition :  IEquatable<CreateMetafieldDefinition>, IValidatableObject
+    public partial class MetafieldDefinitionRecommendation :  IEquatable<MetafieldDefinitionRecommendation>, IValidatableObject
     {
         /// <summary>
         /// The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}
@@ -124,26 +124,25 @@ namespace Flipdish.Model
         [DataMember(Name="Behaviors", EmitDefaultValue=false)]
         public List<BehaviorsEnum> Behaviors { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateMetafieldDefinition" /> class.
+        /// Initializes a new instance of the <see cref="MetafieldDefinitionRecommendation" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected CreateMetafieldDefinition() { }
+        protected MetafieldDefinitionRecommendation() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateMetafieldDefinition" /> class.
+        /// Initializes a new instance of the <see cref="MetafieldDefinitionRecommendation" /> class.
         /// </summary>
-        /// <param name="isReadOnly">Indicates if a definition can be edited or not.</param>
         /// <param name="ownerEntity">The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}.</param>
         /// <param name="key">Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot (required).</param>
         /// <param name="valueType">The excepted type for the Value field.</param>
         /// <param name="name">Field Name (required).</param>
         /// <param name="description">Field Description.</param>
         /// <param name="behaviors">Enable Metafield Behaviors.</param>
-        public CreateMetafieldDefinition(bool? isReadOnly = default(bool?), OwnerEntityEnum? ownerEntity = default(OwnerEntityEnum?), string key = default(string), ValueTypeEnum? valueType = default(ValueTypeEnum?), string name = default(string), string description = default(string), List<BehaviorsEnum> behaviors = default(List<BehaviorsEnum>))
+        public MetafieldDefinitionRecommendation(OwnerEntityEnum? ownerEntity = default(OwnerEntityEnum?), string key = default(string), ValueTypeEnum? valueType = default(ValueTypeEnum?), string name = default(string), string description = default(string), List<BehaviorsEnum> behaviors = default(List<BehaviorsEnum>))
         {
             // to ensure "key" is required (not null)
             if (key == null)
             {
-                throw new InvalidDataException("key is a required property for CreateMetafieldDefinition and cannot be null");
+                throw new InvalidDataException("key is a required property for MetafieldDefinitionRecommendation and cannot be null");
             }
             else
             {
@@ -152,26 +151,18 @@ namespace Flipdish.Model
             // to ensure "name" is required (not null)
             if (name == null)
             {
-                throw new InvalidDataException("name is a required property for CreateMetafieldDefinition and cannot be null");
+                throw new InvalidDataException("name is a required property for MetafieldDefinitionRecommendation and cannot be null");
             }
             else
             {
                 this.Name = name;
             }
-            this.IsReadOnly = isReadOnly;
             this.OwnerEntity = ownerEntity;
             this.ValueType = valueType;
             this.Description = description;
             this.Behaviors = behaviors;
         }
         
-        /// <summary>
-        /// Indicates if a definition can be edited or not
-        /// </summary>
-        /// <value>Indicates if a definition can be edited or not</value>
-        [DataMember(Name="IsReadOnly", EmitDefaultValue=false)]
-        public bool? IsReadOnly { get; set; }
-
 
         /// <summary>
         /// Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot
@@ -203,8 +194,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CreateMetafieldDefinition {\n");
-            sb.Append("  IsReadOnly: ").Append(IsReadOnly).Append("\n");
+            sb.Append("class MetafieldDefinitionRecommendation {\n");
             sb.Append("  OwnerEntity: ").Append(OwnerEntity).Append("\n");
             sb.Append("  Key: ").Append(Key).Append("\n");
             sb.Append("  ValueType: ").Append(ValueType).Append("\n");
@@ -231,25 +221,20 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CreateMetafieldDefinition);
+            return this.Equals(input as MetafieldDefinitionRecommendation);
         }
 
         /// <summary>
-        /// Returns true if CreateMetafieldDefinition instances are equal
+        /// Returns true if MetafieldDefinitionRecommendation instances are equal
         /// </summary>
-        /// <param name="input">Instance of CreateMetafieldDefinition to be compared</param>
+        /// <param name="input">Instance of MetafieldDefinitionRecommendation to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CreateMetafieldDefinition input)
+        public bool Equals(MetafieldDefinitionRecommendation input)
         {
             if (input == null)
                 return false;
 
             return 
-                (
-                    this.IsReadOnly == input.IsReadOnly ||
-                    (this.IsReadOnly != null &&
-                    this.IsReadOnly.Equals(input.IsReadOnly))
-                ) && 
                 (
                     this.OwnerEntity == input.OwnerEntity ||
                     (this.OwnerEntity != null &&
@@ -291,8 +276,6 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.IsReadOnly != null)
-                    hashCode = hashCode * 59 + this.IsReadOnly.GetHashCode();
                 if (this.OwnerEntity != null)
                     hashCode = hashCode * 59 + this.OwnerEntity.GetHashCode();
                 if (this.Key != null)

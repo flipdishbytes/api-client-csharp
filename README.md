@@ -334,9 +334,11 @@ Class | Method | HTTP request | Description
 *MenusApi* | [**UploadMenuImage**](docs/MenusApi.md#uploadmenuimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
 *MenusApi* | [**UploadNewMenuForApp**](docs/MenusApi.md#uploadnewmenuforapp) | **POST** /api/v1.0/{appId}/menus/xlsx | Create a new menu from xlsx file.
 *MetafieldDefinitionsApi* | [**CreateMetafieldDefinition**](docs/MetafieldDefinitionsApi.md#createmetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Create a Metafield Definition
-*MetafieldDefinitionsApi* | [**GetMetafieldDefinitions**](docs/MetafieldDefinitionsApi.md#getmetafielddefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
+*MetafieldDefinitionsApi* | [**GetMetafieldDefinitionByKey**](docs/MetafieldDefinitionsApi.md#getmetafielddefinitionbykey) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Get a Metafield Definition for the specified owner entity and key.
+*MetafieldDefinitionsApi* | [**GetMetafieldDefinitions**](docs/MetafieldDefinitionsApi.md#getmetafielddefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Get Metafield Definitions for the specified owner entity.
 *MetafieldDefinitionsApi* | [**GetOwnerEntityConfigurations**](docs/MetafieldDefinitionsApi.md#getownerentityconfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | Get OwnerEntity Configurations which contain information to manage Metafield Definitions
-*MetafieldDefinitionsApi* | [**UpdateMetafieldDefinition**](docs/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Create a Metafield Definition
+*MetafieldDefinitionsApi* | [**GetOwnerEntityRecommendations**](docs/MetafieldDefinitionsApi.md#getownerentityrecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | Get OwnerEntity Definition Recommendations
+*MetafieldDefinitionsApi* | [**UpdateMetafieldDefinition**](docs/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Update a Metafield Definition
 *OAuthClientsApi* | [**AddRedirectUri**](docs/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
 *OAuthClientsApi* | [**CreateOAuthApp**](docs/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
 *OAuthClientsApi* | [**DeleteOAuthApp**](docs/OAuthClientsApi.md#deleteoauthapp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Delete OAuth App
@@ -687,6 +689,7 @@ Class | Method | HTTP request | Description
  - [Model.Metadata](docs/Metadata.md)
  - [Model.Metafield](docs/Metafield.md)
  - [Model.MetafieldDefinition](docs/MetafieldDefinition.md)
+ - [Model.MetafieldDefinitionRecommendation](docs/MetafieldDefinitionRecommendation.md)
  - [Model.OAuthApp](docs/OAuthApp.md)
  - [Model.OAuthTokenModel](docs/OAuthTokenModel.md)
  - [Model.OauthClientRedirectUri](docs/OauthClientRedirectUri.md)
@@ -811,6 +814,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultHttpRequestAndResponseLog](docs/RestApiPaginationResultHttpRequestAndResponseLog.md)
  - [Model.RestApiPaginationResultHydraDeviceDetails](docs/RestApiPaginationResultHydraDeviceDetails.md)
  - [Model.RestApiPaginationResultMetafieldDefinition](docs/RestApiPaginationResultMetafieldDefinition.md)
+ - [Model.RestApiPaginationResultMetafieldDefinitionRecommendation](docs/RestApiPaginationResultMetafieldDefinitionRecommendation.md)
  - [Model.RestApiPaginationResultOAuthTokenModel](docs/RestApiPaginationResultOAuthTokenModel.md)
  - [Model.RestApiPaginationResultOrder](docs/RestApiPaginationResultOrder.md)
  - [Model.RestApiPaginationResultOrderSummary](docs/RestApiPaginationResultOrderSummary.md)

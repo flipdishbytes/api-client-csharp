@@ -50,7 +50,32 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultMetafieldDefinition</returns>
         ApiResponse<RestApiResultMetafieldDefinition> CreateMetafieldDefinitionWithHttpInfo (string appId, string ownerEntity, CreateMetafieldDefinition createMetafieldDefinition);
         /// <summary>
-        /// Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
+        /// Get a Metafield Definition for the specified owner entity and key.
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="key"></param>
+        /// <returns>RestApiResultMetafieldDefinition</returns>
+        RestApiResultMetafieldDefinition GetMetafieldDefinitionByKey (string appId, string ownerEntity, string key);
+
+        /// <summary>
+        /// Get a Metafield Definition for the specified owner entity and key.
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="key"></param>
+        /// <returns>ApiResponse of RestApiResultMetafieldDefinition</returns>
+        ApiResponse<RestApiResultMetafieldDefinition> GetMetafieldDefinitionByKeyWithHttpInfo (string appId, string ownerEntity, string key);
+        /// <summary>
+        /// Get Metafield Definitions for the specified owner entity.
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -65,7 +90,7 @@ namespace Flipdish.Api
         RestApiPaginationResultMetafieldDefinition GetMetafieldDefinitions (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
+        /// Get Metafield Definitions for the specified owner entity.
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -100,7 +125,36 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of OwnerEntityConfigurations</returns>
         ApiResponse<OwnerEntityConfigurations> GetOwnerEntityConfigurationsWithHttpInfo (string appId);
         /// <summary>
-        /// Create a Metafield Definition
+        /// Get OwnerEntity Definition Recommendations
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="searchTerm"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>RestApiPaginationResultMetafieldDefinitionRecommendation</returns>
+        RestApiPaginationResultMetafieldDefinitionRecommendation GetOwnerEntityRecommendations (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Get OwnerEntity Definition Recommendations
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="searchTerm"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultMetafieldDefinitionRecommendation</returns>
+        ApiResponse<RestApiPaginationResultMetafieldDefinitionRecommendation> GetOwnerEntityRecommendationsWithHttpInfo (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null);
+        /// <summary>
+        /// Update a Metafield Definition
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -114,7 +168,7 @@ namespace Flipdish.Api
         RestApiResultMetafieldDefinition UpdateMetafieldDefinition (string appId, string ownerEntity, string key, UpdateMetafieldDefinition updateMetafieldDefinition);
 
         /// <summary>
-        /// Create a Metafield Definition
+        /// Update a Metafield Definition
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -154,7 +208,32 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultMetafieldDefinition)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMetafieldDefinition>> CreateMetafieldDefinitionAsyncWithHttpInfo (string appId, string ownerEntity, CreateMetafieldDefinition createMetafieldDefinition);
         /// <summary>
-        /// Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
+        /// Get a Metafield Definition for the specified owner entity and key.
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="key"></param>
+        /// <returns>Task of RestApiResultMetafieldDefinition</returns>
+        System.Threading.Tasks.Task<RestApiResultMetafieldDefinition> GetMetafieldDefinitionByKeyAsync (string appId, string ownerEntity, string key);
+
+        /// <summary>
+        /// Get a Metafield Definition for the specified owner entity and key.
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="key"></param>
+        /// <returns>Task of ApiResponse (RestApiResultMetafieldDefinition)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultMetafieldDefinition>> GetMetafieldDefinitionByKeyAsyncWithHttpInfo (string appId, string ownerEntity, string key);
+        /// <summary>
+        /// Get Metafield Definitions for the specified owner entity.
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -169,7 +248,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiPaginationResultMetafieldDefinition> GetMetafieldDefinitionsAsync (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
+        /// Get Metafield Definitions for the specified owner entity.
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -204,7 +283,36 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (OwnerEntityConfigurations)</returns>
         System.Threading.Tasks.Task<ApiResponse<OwnerEntityConfigurations>> GetOwnerEntityConfigurationsAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Create a Metafield Definition
+        /// Get OwnerEntity Definition Recommendations
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="searchTerm"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>Task of RestApiPaginationResultMetafieldDefinitionRecommendation</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultMetafieldDefinitionRecommendation> GetOwnerEntityRecommendationsAsync (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Get OwnerEntity Definition Recommendations
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="searchTerm"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultMetafieldDefinitionRecommendation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultMetafieldDefinitionRecommendation>> GetOwnerEntityRecommendationsAsyncWithHttpInfo (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null);
+        /// <summary>
+        /// Update a Metafield Definition
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -218,7 +326,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultMetafieldDefinition> UpdateMetafieldDefinitionAsync (string appId, string ownerEntity, string key, UpdateMetafieldDefinition updateMetafieldDefinition);
 
         /// <summary>
-        /// Create a Metafield Definition
+        /// Update a Metafield Definition
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -530,7 +638,182 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity} [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get a Metafield Definition for the specified owner entity and key. [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="key"></param>
+        /// <returns>RestApiResultMetafieldDefinition</returns>
+        public RestApiResultMetafieldDefinition GetMetafieldDefinitionByKey (string appId, string ownerEntity, string key)
+        {
+             ApiResponse<RestApiResultMetafieldDefinition> localVarResponse = GetMetafieldDefinitionByKeyWithHttpInfo(appId, ownerEntity, key);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a Metafield Definition for the specified owner entity and key. [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="key"></param>
+        /// <returns>ApiResponse of RestApiResultMetafieldDefinition</returns>
+        public ApiResponse< RestApiResultMetafieldDefinition > GetMetafieldDefinitionByKeyWithHttpInfo (string appId, string ownerEntity, string key)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling MetafieldDefinitionsApi->GetMetafieldDefinitionByKey");
+            // verify the required parameter 'ownerEntity' is set
+            if (ownerEntity == null)
+                throw new ApiException(400, "Missing required parameter 'ownerEntity' when calling MetafieldDefinitionsApi->GetMetafieldDefinitionByKey");
+            // verify the required parameter 'key' is set
+            if (key == null)
+                throw new ApiException(400, "Missing required parameter 'key' when calling MetafieldDefinitionsApi->GetMetafieldDefinitionByKey");
+
+            var localVarPath = "/api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (ownerEntity != null) localVarPathParams.Add("ownerEntity", this.Configuration.ApiClient.ParameterToString(ownerEntity)); // path parameter
+            if (key != null) localVarPathParams.Add("key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetMetafieldDefinitionByKey", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultMetafieldDefinition>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultMetafieldDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMetafieldDefinition)));
+        }
+
+        /// <summary>
+        /// Get a Metafield Definition for the specified owner entity and key. [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="key"></param>
+        /// <returns>Task of RestApiResultMetafieldDefinition</returns>
+        public async System.Threading.Tasks.Task<RestApiResultMetafieldDefinition> GetMetafieldDefinitionByKeyAsync (string appId, string ownerEntity, string key)
+        {
+             ApiResponse<RestApiResultMetafieldDefinition> localVarResponse = await GetMetafieldDefinitionByKeyAsyncWithHttpInfo(appId, ownerEntity, key);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a Metafield Definition for the specified owner entity and key. [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="key"></param>
+        /// <returns>Task of ApiResponse (RestApiResultMetafieldDefinition)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultMetafieldDefinition>> GetMetafieldDefinitionByKeyAsyncWithHttpInfo (string appId, string ownerEntity, string key)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling MetafieldDefinitionsApi->GetMetafieldDefinitionByKey");
+            // verify the required parameter 'ownerEntity' is set
+            if (ownerEntity == null)
+                throw new ApiException(400, "Missing required parameter 'ownerEntity' when calling MetafieldDefinitionsApi->GetMetafieldDefinitionByKey");
+            // verify the required parameter 'key' is set
+            if (key == null)
+                throw new ApiException(400, "Missing required parameter 'key' when calling MetafieldDefinitionsApi->GetMetafieldDefinitionByKey");
+
+            var localVarPath = "/api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (ownerEntity != null) localVarPathParams.Add("ownerEntity", this.Configuration.ApiClient.ParameterToString(ownerEntity)); // path parameter
+            if (key != null) localVarPathParams.Add("key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetMetafieldDefinitionByKey", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultMetafieldDefinition>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultMetafieldDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMetafieldDefinition)));
+        }
+
+        /// <summary>
+        /// Get Metafield Definitions for the specified owner entity. [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -546,7 +829,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity} [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get Metafield Definitions for the specified owner entity. [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -620,7 +903,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity} [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get Metafield Definitions for the specified owner entity. [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -637,7 +920,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity} [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get Metafield Definitions for the specified owner entity. [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -862,7 +1145,188 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get OwnerEntity Definition Recommendations [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="searchTerm"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>RestApiPaginationResultMetafieldDefinitionRecommendation</returns>
+        public RestApiPaginationResultMetafieldDefinitionRecommendation GetOwnerEntityRecommendations (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<RestApiPaginationResultMetafieldDefinitionRecommendation> localVarResponse = GetOwnerEntityRecommendationsWithHttpInfo(appId, ownerEntity, searchTerm, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get OwnerEntity Definition Recommendations [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="searchTerm"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultMetafieldDefinitionRecommendation</returns>
+        public ApiResponse< RestApiPaginationResultMetafieldDefinitionRecommendation > GetOwnerEntityRecommendationsWithHttpInfo (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling MetafieldDefinitionsApi->GetOwnerEntityRecommendations");
+            // verify the required parameter 'ownerEntity' is set
+            if (ownerEntity == null)
+                throw new ApiException(400, "Missing required parameter 'ownerEntity' when calling MetafieldDefinitionsApi->GetOwnerEntityRecommendations");
+
+            var localVarPath = "/api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (ownerEntity != null) localVarPathParams.Add("ownerEntity", this.Configuration.ApiClient.ParameterToString(ownerEntity)); // path parameter
+            if (searchTerm != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchTerm", searchTerm)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOwnerEntityRecommendations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultMetafieldDefinitionRecommendation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiPaginationResultMetafieldDefinitionRecommendation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultMetafieldDefinitionRecommendation)));
+        }
+
+        /// <summary>
+        /// Get OwnerEntity Definition Recommendations [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="searchTerm"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>Task of RestApiPaginationResultMetafieldDefinitionRecommendation</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultMetafieldDefinitionRecommendation> GetOwnerEntityRecommendationsAsync (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<RestApiPaginationResultMetafieldDefinitionRecommendation> localVarResponse = await GetOwnerEntityRecommendationsAsyncWithHttpInfo(appId, ownerEntity, searchTerm, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get OwnerEntity Definition Recommendations [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="ownerEntity"></param>
+        /// <param name="searchTerm"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultMetafieldDefinitionRecommendation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultMetafieldDefinitionRecommendation>> GetOwnerEntityRecommendationsAsyncWithHttpInfo (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling MetafieldDefinitionsApi->GetOwnerEntityRecommendations");
+            // verify the required parameter 'ownerEntity' is set
+            if (ownerEntity == null)
+                throw new ApiException(400, "Missing required parameter 'ownerEntity' when calling MetafieldDefinitionsApi->GetOwnerEntityRecommendations");
+
+            var localVarPath = "/api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (ownerEntity != null) localVarPathParams.Add("ownerEntity", this.Configuration.ApiClient.ParameterToString(ownerEntity)); // path parameter
+            if (searchTerm != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchTerm", searchTerm)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOwnerEntityRecommendations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultMetafieldDefinitionRecommendation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiPaginationResultMetafieldDefinitionRecommendation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultMetafieldDefinitionRecommendation)));
+        }
+
+        /// <summary>
+        /// Update a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -877,7 +1341,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
+        /// Update a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -967,7 +1431,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
+        /// Update a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -983,7 +1447,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
+        /// Update a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
