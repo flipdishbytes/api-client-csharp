@@ -77,19 +77,25 @@ namespace Flipdish.Model
         /// <param name="metadata">List of metadata.</param>
         /// <param name="nextMenuItemOptionSetId">if null, next option set is next. if -1, this is the final option set.</param>
         /// <param name="productId">Product Id when the OptionSet is associated to a Product.</param>
+        /// <param name="taxRateName">Tax rate name.</param>
+        /// <param name="taxRateId">taxRateId.</param>
+        /// <param name="taxValue">taxValue.</param>
         /// <param name="name">Name.</param>
         /// <param name="price">Price.</param>
         /// <param name="isAvailable">Is available.</param>
         /// <param name="displayOrder">Display order. Displayed in ascending order..</param>
         /// <param name="cellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
         /// <param name="imageUrl">Image url.</param>
-        public MenuItemOptionSetItem(int? menuItemOptionSetItemId = default(int?), Guid? publicId = default(Guid?), List<CreateMetadata> metadata = default(List<CreateMetadata>), int? nextMenuItemOptionSetId = default(int?), string productId = default(string), string name = default(string), double? price = default(double?), bool? isAvailable = default(bool?), int? displayOrder = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), string imageUrl = default(string))
+        public MenuItemOptionSetItem(int? menuItemOptionSetItemId = default(int?), Guid? publicId = default(Guid?), List<CreateMetadata> metadata = default(List<CreateMetadata>), int? nextMenuItemOptionSetId = default(int?), string productId = default(string), string taxRateName = default(string), int? taxRateId = default(int?), double? taxValue = default(double?), string name = default(string), double? price = default(double?), bool? isAvailable = default(bool?), int? displayOrder = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), string imageUrl = default(string))
         {
             this.MenuItemOptionSetItemId = menuItemOptionSetItemId;
             this.PublicId = publicId;
             this.Metadata = metadata;
             this.NextMenuItemOptionSetId = nextMenuItemOptionSetId;
             this.ProductId = productId;
+            this.TaxRateName = taxRateName;
+            this.TaxRateId = taxRateId;
+            this.TaxValue = taxValue;
             this.Name = name;
             this.Price = price;
             this.IsAvailable = isAvailable;
@@ -132,6 +138,25 @@ namespace Flipdish.Model
         /// <value>Product Id when the OptionSet is associated to a Product</value>
         [DataMember(Name="ProductId", EmitDefaultValue=false)]
         public string ProductId { get; set; }
+
+        /// <summary>
+        /// Tax rate name
+        /// </summary>
+        /// <value>Tax rate name</value>
+        [DataMember(Name="TaxRateName", EmitDefaultValue=false)]
+        public string TaxRateName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TaxRateId
+        /// </summary>
+        [DataMember(Name="TaxRateId", EmitDefaultValue=false)]
+        public int? TaxRateId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TaxValue
+        /// </summary>
+        [DataMember(Name="TaxValue", EmitDefaultValue=false)]
+        public double? TaxValue { get; set; }
 
         /// <summary>
         /// Name
@@ -182,6 +207,9 @@ namespace Flipdish.Model
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  NextMenuItemOptionSetId: ").Append(NextMenuItemOptionSetId).Append("\n");
             sb.Append("  ProductId: ").Append(ProductId).Append("\n");
+            sb.Append("  TaxRateName: ").Append(TaxRateName).Append("\n");
+            sb.Append("  TaxRateId: ").Append(TaxRateId).Append("\n");
+            sb.Append("  TaxValue: ").Append(TaxValue).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("  IsAvailable: ").Append(IsAvailable).Append("\n");
@@ -248,6 +276,21 @@ namespace Flipdish.Model
                     this.ProductId.Equals(input.ProductId))
                 ) && 
                 (
+                    this.TaxRateName == input.TaxRateName ||
+                    (this.TaxRateName != null &&
+                    this.TaxRateName.Equals(input.TaxRateName))
+                ) && 
+                (
+                    this.TaxRateId == input.TaxRateId ||
+                    (this.TaxRateId != null &&
+                    this.TaxRateId.Equals(input.TaxRateId))
+                ) && 
+                (
+                    this.TaxValue == input.TaxValue ||
+                    (this.TaxValue != null &&
+                    this.TaxValue.Equals(input.TaxValue))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -298,6 +341,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.NextMenuItemOptionSetId.GetHashCode();
                 if (this.ProductId != null)
                     hashCode = hashCode * 59 + this.ProductId.GetHashCode();
+                if (this.TaxRateName != null)
+                    hashCode = hashCode * 59 + this.TaxRateName.GetHashCode();
+                if (this.TaxRateId != null)
+                    hashCode = hashCode * 59 + this.TaxRateId.GetHashCode();
+                if (this.TaxValue != null)
+                    hashCode = hashCode * 59 + this.TaxValue.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Price != null)
