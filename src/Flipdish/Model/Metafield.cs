@@ -33,12 +33,33 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Metafield" /> class.
         /// </summary>
-        /// <param name="key">Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot.</param>
-        /// <param name="value">Value of the metafield..</param>
+        [JsonConstructorAttribute]
+        protected Metafield() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Metafield" /> class.
+        /// </summary>
+        /// <param name="key">Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot (required).</param>
+        /// <param name="value">Value of the metafield. (required).</param>
         public Metafield(string key = default(string), string value = default(string))
         {
-            this.Key = key;
-            this.Value = value;
+            // to ensure "key" is required (not null)
+            if (key == null)
+            {
+                throw new InvalidDataException("key is a required property for Metafield and cannot be null");
+            }
+            else
+            {
+                this.Key = key;
+            }
+            // to ensure "value" is required (not null)
+            if (value == null)
+            {
+                throw new InvalidDataException("value is a required property for Metafield and cannot be null");
+            }
+            else
+            {
+                this.Value = value;
+            }
         }
         
         /// <summary>

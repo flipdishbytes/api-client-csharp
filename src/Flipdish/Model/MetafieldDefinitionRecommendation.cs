@@ -132,12 +132,13 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="MetafieldDefinitionRecommendation" /> class.
         /// </summary>
         /// <param name="ownerEntity">The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}.</param>
-        /// <param name="key">Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot (required).</param>
+        /// <param name="key">Key of the metafield.  The key must have two parts, separated by a dot. The first part acts as a category, for organizational purposes.  The parts can be composed of lowercase letters, numbers, hyphen and underscore (required).</param>
         /// <param name="valueType">The excepted type for the Value field.</param>
         /// <param name="name">Field Name (required).</param>
         /// <param name="description">Field Description.</param>
         /// <param name="behaviors">Enable Metafield Behaviors.</param>
-        public MetafieldDefinitionRecommendation(OwnerEntityEnum? ownerEntity = default(OwnerEntityEnum?), string key = default(string), ValueTypeEnum? valueType = default(ValueTypeEnum?), string name = default(string), string description = default(string), List<BehaviorsEnum> behaviors = default(List<BehaviorsEnum>))
+        /// <param name="metafieldDefinitionRecommendationId">Metafield Recommendation Id.</param>
+        public MetafieldDefinitionRecommendation(OwnerEntityEnum? ownerEntity = default(OwnerEntityEnum?), string key = default(string), ValueTypeEnum? valueType = default(ValueTypeEnum?), string name = default(string), string description = default(string), List<BehaviorsEnum> behaviors = default(List<BehaviorsEnum>), int? metafieldDefinitionRecommendationId = default(int?))
         {
             // to ensure "key" is required (not null)
             if (key == null)
@@ -161,13 +162,14 @@ namespace Flipdish.Model
             this.ValueType = valueType;
             this.Description = description;
             this.Behaviors = behaviors;
+            this.MetafieldDefinitionRecommendationId = metafieldDefinitionRecommendationId;
         }
         
 
         /// <summary>
-        /// Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot
+        /// Key of the metafield.  The key must have two parts, separated by a dot. The first part acts as a category, for organizational purposes.  The parts can be composed of lowercase letters, numbers, hyphen and underscore
         /// </summary>
-        /// <value>Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot</value>
+        /// <value>Key of the metafield.  The key must have two parts, separated by a dot. The first part acts as a category, for organizational purposes.  The parts can be composed of lowercase letters, numbers, hyphen and underscore</value>
         [DataMember(Name="Key", EmitDefaultValue=false)]
         public string Key { get; set; }
 
@@ -188,6 +190,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Metafield Recommendation Id
+        /// </summary>
+        /// <value>Metafield Recommendation Id</value>
+        [DataMember(Name="MetafieldDefinitionRecommendationId", EmitDefaultValue=false)]
+        public int? MetafieldDefinitionRecommendationId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -201,6 +210,7 @@ namespace Flipdish.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Behaviors: ").Append(Behaviors).Append("\n");
+            sb.Append("  MetafieldDefinitionRecommendationId: ").Append(MetafieldDefinitionRecommendationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -264,6 +274,11 @@ namespace Flipdish.Model
                     this.Behaviors == input.Behaviors ||
                     this.Behaviors != null &&
                     this.Behaviors.SequenceEqual(input.Behaviors)
+                ) && 
+                (
+                    this.MetafieldDefinitionRecommendationId == input.MetafieldDefinitionRecommendationId ||
+                    (this.MetafieldDefinitionRecommendationId != null &&
+                    this.MetafieldDefinitionRecommendationId.Equals(input.MetafieldDefinitionRecommendationId))
                 );
         }
 
@@ -288,6 +303,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Behaviors != null)
                     hashCode = hashCode * 59 + this.Behaviors.GetHashCode();
+                if (this.MetafieldDefinitionRecommendationId != null)
+                    hashCode = hashCode * 59 + this.MetafieldDefinitionRecommendationId.GetHashCode();
                 return hashCode;
             }
         }
