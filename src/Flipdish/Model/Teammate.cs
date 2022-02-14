@@ -123,7 +123,13 @@ namespace Flipdish.Model
             /// Enum FinanceManger for value: FinanceManger
             /// </summary>
             [EnumMember(Value = "FinanceManger")]
-            FinanceManger = 9
+            FinanceManger = 9,
+            
+            /// <summary>
+            /// Enum Support for value: Support
+            /// </summary>
+            [EnumMember(Value = "Support")]
+            Support = 10
         }
 
         /// <summary>
