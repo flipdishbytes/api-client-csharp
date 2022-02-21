@@ -98,6 +98,27 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DetachStoreFromSalesChannelWithHttpInfo (string appId, int? channelId, int? storeId);
         /// <summary>
+        /// Returns a list of sales channels that are assigned to a given whitelabel
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>Object</returns>
+        Object GetAssignedChannels (string appId);
+
+        /// <summary>
+        /// Returns a list of sales channels that are assigned to a given whitelabel
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> GetAssignedChannelsWithHttpInfo (string appId);
+        /// <summary>
         /// 
         /// </summary>
         /// <remarks>
@@ -141,6 +162,50 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiPaginationResultChannel</returns>
         ApiResponse<RestApiPaginationResultChannel> GetChannelsWithHttpInfo (string appId);
+        /// <summary>
+        /// Returns a list of sales channels that are not yet assigned to a given whitelabel
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>Object</returns>
+        Object GetNotAssignedChannels (string appId);
+
+        /// <summary>
+        /// Returns a list of sales channels that are not yet assigned to a given whitelabel
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> GetNotAssignedChannelsWithHttpInfo (string appId);
+        /// <summary>
+        /// Returns a list of store that are assigned to the given sales channel.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameId)</param>
+        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <returns>Object</returns>
+        Object GetStoresAssignedToChannel (string appId, int? channelId);
+
+        /// <summary>
+        /// Returns a list of store that are assigned to the given sales channel.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameId)</param>
+        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> GetStoresAssignedToChannelWithHttpInfo (string appId, int? channelId);
         /// <summary>
         /// Returns a list of store ids attached to the given channel type for the specified app.
         /// </summary>
@@ -240,6 +305,27 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DetachStoreFromSalesChannelAsyncWithHttpInfo (string appId, int? channelId, int? storeId);
         /// <summary>
+        /// Returns a list of sales channels that are assigned to a given whitelabel
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> GetAssignedChannelsAsync (string appId);
+
+        /// <summary>
+        /// Returns a list of sales channels that are assigned to a given whitelabel
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetAssignedChannelsAsyncWithHttpInfo (string appId);
+        /// <summary>
         /// 
         /// </summary>
         /// <remarks>
@@ -283,6 +369,50 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultChannel)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultChannel>> GetChannelsAsyncWithHttpInfo (string appId);
+        /// <summary>
+        /// Returns a list of sales channels that are not yet assigned to a given whitelabel
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> GetNotAssignedChannelsAsync (string appId);
+
+        /// <summary>
+        /// Returns a list of sales channels that are not yet assigned to a given whitelabel
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetNotAssignedChannelsAsyncWithHttpInfo (string appId);
+        /// <summary>
+        /// Returns a list of store that are assigned to the given sales channel.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameId)</param>
+        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> GetStoresAssignedToChannelAsync (string appId, int? channelId);
+
+        /// <summary>
+        /// Returns a list of store that are assigned to the given sales channel.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameId)</param>
+        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetStoresAssignedToChannelAsyncWithHttpInfo (string appId, int? channelId);
         /// <summary>
         /// Returns a list of store ids attached to the given channel type for the specified app.
         /// </summary>
@@ -920,6 +1050,157 @@ namespace Flipdish.Api
         }
 
         /// <summary>
+        /// Returns a list of sales channels that are assigned to a given whitelabel 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>Object</returns>
+        public Object GetAssignedChannels (string appId)
+        {
+             ApiResponse<Object> localVarResponse = GetAssignedChannelsWithHttpInfo(appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns a list of sales channels that are assigned to a given whitelabel 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > GetAssignedChannelsWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->GetAssignedChannels");
+
+            var localVarPath = "/api/v1.0/{appId}/channels/assigned-channels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAssignedChannels", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Returns a list of sales channels that are assigned to a given whitelabel 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> GetAssignedChannelsAsync (string appId)
+        {
+             ApiResponse<Object> localVarResponse = await GetAssignedChannelsAsyncWithHttpInfo(appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns a list of sales channels that are assigned to a given whitelabel 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetAssignedChannelsAsyncWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->GetAssignedChannels");
+
+            var localVarPath = "/api/v1.0/{appId}/channels/assigned-channels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAssignedChannels", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1231,6 +1512,320 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiPaginationResultChannel>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiPaginationResultChannel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultChannel)));
+        }
+
+        /// <summary>
+        /// Returns a list of sales channels that are not yet assigned to a given whitelabel 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>Object</returns>
+        public Object GetNotAssignedChannels (string appId)
+        {
+             ApiResponse<Object> localVarResponse = GetNotAssignedChannelsWithHttpInfo(appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns a list of sales channels that are not yet assigned to a given whitelabel 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > GetNotAssignedChannelsWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->GetNotAssignedChannels");
+
+            var localVarPath = "/api/v1.0/{appId}/channels/available-channels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetNotAssignedChannels", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Returns a list of sales channels that are not yet assigned to a given whitelabel 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> GetNotAssignedChannelsAsync (string appId)
+        {
+             ApiResponse<Object> localVarResponse = await GetNotAssignedChannelsAsyncWithHttpInfo(appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns a list of sales channels that are not yet assigned to a given whitelabel 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetNotAssignedChannelsAsyncWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->GetNotAssignedChannels");
+
+            var localVarPath = "/api/v1.0/{appId}/channels/available-channels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetNotAssignedChannels", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Returns a list of store that are assigned to the given sales channel. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameId)</param>
+        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <returns>Object</returns>
+        public Object GetStoresAssignedToChannel (string appId, int? channelId)
+        {
+             ApiResponse<Object> localVarResponse = GetStoresAssignedToChannelWithHttpInfo(appId, channelId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns a list of store that are assigned to the given sales channel. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameId)</param>
+        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > GetStoresAssignedToChannelWithHttpInfo (string appId, int? channelId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->GetStoresAssignedToChannel");
+            // verify the required parameter 'channelId' is set
+            if (channelId == null)
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->GetStoresAssignedToChannel");
+
+            var localVarPath = "/api/v1.0/{appId}/channels/{channelId}/assigned-stores";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (channelId != null) localVarPathParams.Add("channelId", this.Configuration.ApiClient.ParameterToString(channelId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStoresAssignedToChannel", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Returns a list of store that are assigned to the given sales channel. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameId)</param>
+        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> GetStoresAssignedToChannelAsync (string appId, int? channelId)
+        {
+             ApiResponse<Object> localVarResponse = await GetStoresAssignedToChannelAsyncWithHttpInfo(appId, channelId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns a list of store that are assigned to the given sales channel. 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">Application Id (AppNameId)</param>
+        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetStoresAssignedToChannelAsyncWithHttpInfo (string appId, int? channelId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->GetStoresAssignedToChannel");
+            // verify the required parameter 'channelId' is set
+            if (channelId == null)
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->GetStoresAssignedToChannel");
+
+            var localVarPath = "/api/v1.0/{appId}/channels/{channelId}/assigned-stores";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (channelId != null) localVarPathParams.Add("channelId", this.Configuration.ApiClient.ParameterToString(channelId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStoresAssignedToChannel", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>

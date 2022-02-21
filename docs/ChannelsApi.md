@@ -7,8 +7,11 @@ Method | HTTP request | Description
 [**AttachStoreToSalesChannel**](ChannelsApi.md#attachstoretosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Attachs the specified store to the given sales channel.
 [**DetachAllStoresFromSalesChannel**](ChannelsApi.md#detachallstoresfromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | Detaches all the stores from the given sales channel.
 [**DetachStoreFromSalesChannel**](ChannelsApi.md#detachstorefromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Detaches the specified store from the given sales channel.
+[**GetAssignedChannels**](ChannelsApi.md#getassignedchannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given whitelabel
 [**GetChannel**](ChannelsApi.md#getchannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
 [**GetChannels**](ChannelsApi.md#getchannels) | **GET** /api/v1.0/{appId}/channels | 
+[**GetNotAssignedChannels**](ChannelsApi.md#getnotassignedchannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given whitelabel
+[**GetStoresAssignedToChannel**](ChannelsApi.md#getstoresassignedtochannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of store that are assigned to the given sales channel.
 [**GetStoresBySalesChannel**](ChannelsApi.md#getstoresbysaleschannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | Returns a list of store ids attached to the given channel type for the specified app.
 
 
@@ -208,6 +211,68 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getassignedchannels"></a>
+# **GetAssignedChannels**
+> Object GetAssignedChannels (string appId)
+
+Returns a list of sales channels that are assigned to a given whitelabel
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetAssignedChannelsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ChannelsApi();
+            var appId = appId_example;  // string | Application Id (AppNameIdxxx)
+
+            try
+            {
+                // Returns a list of sales channels that are assigned to a given whitelabel
+                Object result = apiInstance.GetAssignedChannels(appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChannelsApi.GetAssignedChannels: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**| Application Id (AppNameIdxxx) | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getchannel"></a>
 # **GetChannel**
 > RestApiPaginationResultChannel GetChannel (int? id, string appId)
@@ -320,6 +385,132 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiPaginationResultChannel**](RestApiPaginationResultChannel.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getnotassignedchannels"></a>
+# **GetNotAssignedChannels**
+> Object GetNotAssignedChannels (string appId)
+
+Returns a list of sales channels that are not yet assigned to a given whitelabel
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetNotAssignedChannelsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ChannelsApi();
+            var appId = appId_example;  // string | Application Id (AppNameIdxxx)
+
+            try
+            {
+                // Returns a list of sales channels that are not yet assigned to a given whitelabel
+                Object result = apiInstance.GetNotAssignedChannels(appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChannelsApi.GetNotAssignedChannels: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**| Application Id (AppNameIdxxx) | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getstoresassignedtochannel"></a>
+# **GetStoresAssignedToChannel**
+> Object GetStoresAssignedToChannel (string appId, int? channelId)
+
+Returns a list of store that are assigned to the given sales channel.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetStoresAssignedToChannelExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ChannelsApi();
+            var appId = appId_example;  // string | Application Id (AppNameId)
+            var channelId = 56;  // int? | Sales channel (Android, IOS, Web, etc.)
+
+            try
+            {
+                // Returns a list of store that are assigned to the given sales channel.
+                Object result = apiInstance.GetStoresAssignedToChannel(appId, channelId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChannelsApi.GetStoresAssignedToChannel: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**| Application Id (AppNameId) | 
+ **channelId** | **int?**| Sales channel (Android, IOS, Web, etc.) | 
+
+### Return type
+
+**Object**
 
 ### Authorization
 

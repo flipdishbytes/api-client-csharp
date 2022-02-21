@@ -191,8 +191,11 @@ Class | Method | HTTP request | Description
 *ChannelsApi* | [**AttachStoreToSalesChannel**](docs/ChannelsApi.md#attachstoretosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Attachs the specified store to the given sales channel.
 *ChannelsApi* | [**DetachAllStoresFromSalesChannel**](docs/ChannelsApi.md#detachallstoresfromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | Detaches all the stores from the given sales channel.
 *ChannelsApi* | [**DetachStoreFromSalesChannel**](docs/ChannelsApi.md#detachstorefromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Detaches the specified store from the given sales channel.
+*ChannelsApi* | [**GetAssignedChannels**](docs/ChannelsApi.md#getassignedchannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given whitelabel
 *ChannelsApi* | [**GetChannel**](docs/ChannelsApi.md#getchannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
 *ChannelsApi* | [**GetChannels**](docs/ChannelsApi.md#getchannels) | **GET** /api/v1.0/{appId}/channels | 
+*ChannelsApi* | [**GetNotAssignedChannels**](docs/ChannelsApi.md#getnotassignedchannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given whitelabel
+*ChannelsApi* | [**GetStoresAssignedToChannel**](docs/ChannelsApi.md#getstoresassignedtochannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of store that are assigned to the given sales channel.
 *ChannelsApi* | [**GetStoresBySalesChannel**](docs/ChannelsApi.md#getstoresbysaleschannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | Returns a list of store ids attached to the given channel type for the specified app.
 *ContentSecurityPolicyApi* | [**ContentSecurityPolicyReport**](docs/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
 *CustomersApi* | [**GetCustomerById**](docs/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | Get customer of an app by Id
