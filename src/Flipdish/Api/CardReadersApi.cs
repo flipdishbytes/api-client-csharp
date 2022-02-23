@@ -71,6 +71,27 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> CancelCurrentlyInitiatedBluetoothDeviceUpdateWithHttpInfo (string appId, string deviceId, string terminalType);
         /// <summary>
+        /// Get Location ID for Stripe Terminal
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultStripeTerminalLocation</returns>
+        RestApiResultStripeTerminalLocation GenerateStripeTerminalLocation (string appId);
+
+        /// <summary>
+        /// Get Location ID for Stripe Terminal
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultStripeTerminalLocation</returns>
+        ApiResponse<RestApiResultStripeTerminalLocation> GenerateStripeTerminalLocationWithHttpInfo (string appId);
+        /// <summary>
         /// Get the status of the bluetooth terminal
         /// </summary>
         /// <remarks>
@@ -93,6 +114,27 @@ namespace Flipdish.Api
         /// <param name="deviceId"></param>
         /// <returns>ApiResponse of RestApiResultBluetoothTerminalStatus</returns>
         ApiResponse<RestApiResultBluetoothTerminalStatus> GetBluetoothTerminalStatusWithHttpInfo (string appId, string deviceId);
+        /// <summary>
+        /// Get Connection Token For a Stripe Terminal
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultStripeTerminalConnectionToken</returns>
+        RestApiResultStripeTerminalConnectionToken GetStripeConnectionToken (string appId);
+
+        /// <summary>
+        /// Get Connection Token For a Stripe Terminal
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultStripeTerminalConnectionToken</returns>
+        ApiResponse<RestApiResultStripeTerminalConnectionToken> GetStripeConnectionTokenWithHttpInfo (string appId);
         /// <summary>
         /// Trigger check for Bluetooth device update on Kiosk
         /// </summary>
@@ -240,6 +282,27 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CancelCurrentlyInitiatedBluetoothDeviceUpdateAsyncWithHttpInfo (string appId, string deviceId, string terminalType);
         /// <summary>
+        /// Get Location ID for Stripe Terminal
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultStripeTerminalLocation</returns>
+        System.Threading.Tasks.Task<RestApiResultStripeTerminalLocation> GenerateStripeTerminalLocationAsync (string appId);
+
+        /// <summary>
+        /// Get Location ID for Stripe Terminal
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultStripeTerminalLocation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeTerminalLocation>> GenerateStripeTerminalLocationAsyncWithHttpInfo (string appId);
+        /// <summary>
         /// Get the status of the bluetooth terminal
         /// </summary>
         /// <remarks>
@@ -262,6 +325,27 @@ namespace Flipdish.Api
         /// <param name="deviceId"></param>
         /// <returns>Task of ApiResponse (RestApiResultBluetoothTerminalStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultBluetoothTerminalStatus>> GetBluetoothTerminalStatusAsyncWithHttpInfo (string appId, string deviceId);
+        /// <summary>
+        /// Get Connection Token For a Stripe Terminal
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultStripeTerminalConnectionToken</returns>
+        System.Threading.Tasks.Task<RestApiResultStripeTerminalConnectionToken> GetStripeConnectionTokenAsync (string appId);
+
+        /// <summary>
+        /// Get Connection Token For a Stripe Terminal
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultStripeTerminalConnectionToken)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeTerminalConnectionToken>> GetStripeConnectionTokenAsyncWithHttpInfo (string appId);
         /// <summary>
         /// Trigger check for Bluetooth device update on Kiosk
         /// </summary>
@@ -785,6 +869,157 @@ namespace Flipdish.Api
         }
 
         /// <summary>
+        /// Get Location ID for Stripe Terminal Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultStripeTerminalLocation</returns>
+        public RestApiResultStripeTerminalLocation GenerateStripeTerminalLocation (string appId)
+        {
+             ApiResponse<RestApiResultStripeTerminalLocation> localVarResponse = GenerateStripeTerminalLocationWithHttpInfo(appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Location ID for Stripe Terminal Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultStripeTerminalLocation</returns>
+        public ApiResponse< RestApiResultStripeTerminalLocation > GenerateStripeTerminalLocationWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->GenerateStripeTerminalLocation");
+
+            var localVarPath = "/api/v1.0/{appId}/stripeterminal/location";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GenerateStripeTerminalLocation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultStripeTerminalLocation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultStripeTerminalLocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeTerminalLocation)));
+        }
+
+        /// <summary>
+        /// Get Location ID for Stripe Terminal Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultStripeTerminalLocation</returns>
+        public async System.Threading.Tasks.Task<RestApiResultStripeTerminalLocation> GenerateStripeTerminalLocationAsync (string appId)
+        {
+             ApiResponse<RestApiResultStripeTerminalLocation> localVarResponse = await GenerateStripeTerminalLocationAsyncWithHttpInfo(appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Location ID for Stripe Terminal Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultStripeTerminalLocation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeTerminalLocation>> GenerateStripeTerminalLocationAsyncWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->GenerateStripeTerminalLocation");
+
+            var localVarPath = "/api/v1.0/{appId}/stripeterminal/location";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GenerateStripeTerminalLocation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultStripeTerminalLocation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultStripeTerminalLocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeTerminalLocation)));
+        }
+
+        /// <summary>
         /// Get the status of the bluetooth terminal [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
@@ -945,6 +1180,157 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultBluetoothTerminalStatus>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiResultBluetoothTerminalStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBluetoothTerminalStatus)));
+        }
+
+        /// <summary>
+        /// Get Connection Token For a Stripe Terminal Can only be called by Kiosk
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultStripeTerminalConnectionToken</returns>
+        public RestApiResultStripeTerminalConnectionToken GetStripeConnectionToken (string appId)
+        {
+             ApiResponse<RestApiResultStripeTerminalConnectionToken> localVarResponse = GetStripeConnectionTokenWithHttpInfo(appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Connection Token For a Stripe Terminal Can only be called by Kiosk
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultStripeTerminalConnectionToken</returns>
+        public ApiResponse< RestApiResultStripeTerminalConnectionToken > GetStripeConnectionTokenWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->GetStripeConnectionToken");
+
+            var localVarPath = "/api/v1.0/{appId}/stripeterminal/connectiontoken";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStripeConnectionToken", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultStripeTerminalConnectionToken>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultStripeTerminalConnectionToken) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeTerminalConnectionToken)));
+        }
+
+        /// <summary>
+        /// Get Connection Token For a Stripe Terminal Can only be called by Kiosk
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultStripeTerminalConnectionToken</returns>
+        public async System.Threading.Tasks.Task<RestApiResultStripeTerminalConnectionToken> GetStripeConnectionTokenAsync (string appId)
+        {
+             ApiResponse<RestApiResultStripeTerminalConnectionToken> localVarResponse = await GetStripeConnectionTokenAsyncWithHttpInfo(appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Connection Token For a Stripe Terminal Can only be called by Kiosk
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultStripeTerminalConnectionToken)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeTerminalConnectionToken>> GetStripeConnectionTokenAsyncWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->GetStripeConnectionToken");
+
+            var localVarPath = "/api/v1.0/{appId}/stripeterminal/connectiontoken";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStripeConnectionToken", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultStripeTerminalConnectionToken>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultStripeTerminalConnectionToken) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeTerminalConnectionToken)));
         }
 
         /// <summary>
