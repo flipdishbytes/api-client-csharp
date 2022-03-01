@@ -929,10 +929,10 @@ namespace Flipdish.Model
             ViewPayouts = 136,
             
             /// <summary>
-            /// Enum Channels for value: Channels
+            /// Enum ViewChannels for value: ViewChannels
             /// </summary>
-            [EnumMember(Value = "Channels")]
-            Channels = 137
+            [EnumMember(Value = "ViewChannels")]
+            ViewChannels = 137
         }
 
 
