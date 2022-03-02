@@ -192,7 +192,10 @@ Class | Method | HTTP request | Description
 *CatalogItemsApi* | [**UploadCatalogItemImage**](docs/CatalogItemsApi.md#uploadcatalogitemimage) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/image | Upload a Catalog Item Image
 *ChannelsApi* | [**AssignAppIdToSalesChannel**](docs/ChannelsApi.md#assignappidtosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | Assign a given AppId to a Sales Channel
 *ChannelsApi* | [**AssignStoreToChannel**](docs/ChannelsApi.md#assignstoretochannel) | **POST** /api/v1.0/{appId}/channels/assign-store | Assign a Store to a Sales Channel
+*ChannelsApi* | [**AssignStoreToChannel_0**](docs/ChannelsApi.md#assignstoretochannel_0) | **POST** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
 *ChannelsApi* | [**AttachStoreToSalesChannel**](docs/ChannelsApi.md#attachstoretosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Attachs the specified store to the given sales channel.
+*ChannelsApi* | [**ChannelsGetStoreChannelStoreMapping**](docs/ChannelsApi.md#channelsgetstorechannelstoremapping) | **GET** /api/v1.0/{appId}/channels/channelstores | 
+*ChannelsApi* | [**ChannelsSetStoreChannelStoreMapping**](docs/ChannelsApi.md#channelssetstorechannelstoremapping) | **POST** /api/v1.0/{appId}/channels/channelstores | 
 *ChannelsApi* | [**DetachAllStoresFromSalesChannel**](docs/ChannelsApi.md#detachallstoresfromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | Detaches all the stores from the given sales channel.
 *ChannelsApi* | [**DetachStoreFromSalesChannel**](docs/ChannelsApi.md#detachstorefromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Detaches the specified store from the given sales channel.
 *ChannelsApi* | [**GetAssignedChannels**](docs/ChannelsApi.md#getassignedchannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given whitelabel
@@ -536,6 +539,7 @@ Class | Method | HTTP request | Description
  - [Model.CertificateRenewedEvent](docs/CertificateRenewedEvent.md)
  - [Model.ChangePasswordModel](docs/ChangePasswordModel.md)
  - [Model.Channel](docs/Channel.md)
+ - [Model.ChannelStoreMapping](docs/ChannelStoreMapping.md)
  - [Model.ChargebackDetails](docs/ChargebackDetails.md)
  - [Model.ConfiguredPhysicalRestaurant](docs/ConfiguredPhysicalRestaurant.md)
  - [Model.Contact](docs/Contact.md)
@@ -802,6 +806,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultProcessingFeeConfig](docs/RestApiArrayResultProcessingFeeConfig.md)
  - [Model.RestApiArrayResultRestApiDefaultResponse](docs/RestApiArrayResultRestApiDefaultResponse.md)
  - [Model.RestApiArrayResultRetentionCampaign](docs/RestApiArrayResultRetentionCampaign.md)
+ - [Model.RestApiArrayResultStoreChannelStoreMapping](docs/RestApiArrayResultStoreChannelStoreMapping.md)
  - [Model.RestApiArrayResultStoreListItem](docs/RestApiArrayResultStoreListItem.md)
  - [Model.RestApiArrayResultStoreStatistics](docs/RestApiArrayResultStoreStatistics.md)
  - [Model.RestApiArrayResultSupportedCountry](docs/RestApiArrayResultSupportedCountry.md)
@@ -937,6 +942,7 @@ Class | Method | HTTP request | Description
  - [Model.StoreBusinessHoursOverrideCreatedEvent](docs/StoreBusinessHoursOverrideCreatedEvent.md)
  - [Model.StoreBusinessHoursOverrideDeletedEvent](docs/StoreBusinessHoursOverrideDeletedEvent.md)
  - [Model.StoreCampaignStartTime](docs/StoreCampaignStartTime.md)
+ - [Model.StoreChannelStoreMapping](docs/StoreChannelStoreMapping.md)
  - [Model.StoreCloneSettings](docs/StoreCloneSettings.md)
  - [Model.StoreCreateBase](docs/StoreCreateBase.md)
  - [Model.StoreCreatedEvent](docs/StoreCreatedEvent.md)
