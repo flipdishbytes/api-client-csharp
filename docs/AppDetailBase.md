@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **SetupInstructions** | **string** | Setup Instructions | [optional] 
 **ExternalSetupLink** | **string** | External Setup Link | [optional] 
 **OAuthAppId** | **string** | OAuth App Id | 
+**TeammateAppAccessLevel** | **string** | Teammate App Access Level | [optional] 
+**PermissionsType** | **string** | Permissions Type | 
 **Name** | **string** | Name | 
 **Description** | **string** | Description | 
 **Logo** | **string** | Logo | [optional] 

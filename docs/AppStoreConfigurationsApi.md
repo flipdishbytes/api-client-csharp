@@ -346,7 +346,7 @@ Name | Type | Description  | Notes
 
 <a name="updateappstoreconfig"></a>
 # **UpdateAppStoreConfig**
-> void UpdateAppStoreConfig (string appId, string appStoreAppId, string configId, AppConfiguration appConfigurationBase)
+> void UpdateAppStoreConfig (string appId, string appStoreAppId, string configId, UpdateAppConfiguration updateAppConfigurationBase)
 
 Update app store app configuration
 
@@ -373,12 +373,12 @@ namespace Example
             var appId = appId_example;  // string | App Id
             var appStoreAppId = appStoreAppId_example;  // string | App Store App Id
             var configId = configId_example;  // string | App Store Configuration Id
-            var appConfigurationBase = new AppConfiguration(); // AppConfiguration | App Store Configuration Base
+            var updateAppConfigurationBase = new UpdateAppConfiguration(); // UpdateAppConfiguration | App Store Configuration Base
 
             try
             {
                 // Update app store app configuration
-                apiInstance.UpdateAppStoreConfig(appId, appStoreAppId, configId, appConfigurationBase);
+                apiInstance.UpdateAppStoreConfig(appId, appStoreAppId, configId, updateAppConfigurationBase);
             }
             catch (Exception e)
             {
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
  **appId** | **string**| App Id | 
  **appStoreAppId** | **string**| App Store App Id | 
  **configId** | **string**| App Store Configuration Id | 
- **appConfigurationBase** | [**AppConfiguration**](AppConfiguration.md)| App Store Configuration Base | 
+ **updateAppConfigurationBase** | [**UpdateAppConfiguration**](UpdateAppConfiguration.md)| App Store Configuration Base | 
 
 ### Return type
 
