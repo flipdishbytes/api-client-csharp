@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AssignAppIdToSalesChannel**](ChannelsApi.md#assignappidtosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | Assign a given AppId to a Sales Channel
 [**AssignStoreToChannel**](ChannelsApi.md#assignstoretochannel) | **POST** /api/v1.0/{appId}/channels/assign-store | Assign a Store to a Sales Channel
-[**AssignStoreToChannel_0**](ChannelsApi.md#assignstoretochannel_0) | **POST** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
 [**AttachStoreToSalesChannel**](ChannelsApi.md#attachstoretosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Attachs the specified store to the given sales channel.
 [**ChannelsGetStoreChannelStoreMapping**](ChannelsApi.md#channelsgetstorechannelstoremapping) | **GET** /api/v1.0/{appId}/channels/channelstores | 
 [**ChannelsSetStoreChannelStoreMapping**](ChannelsApi.md#channelssetstorechannelstoremapping) | **POST** /api/v1.0/{appId}/channels/channelstores | 
@@ -18,6 +17,7 @@ Method | HTTP request | Description
 [**GetNotAssignedChannels**](ChannelsApi.md#getnotassignedchannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given whitelabel
 [**GetStoresAssignedToChannel**](ChannelsApi.md#getstoresassignedtochannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of store that are assigned to the given sales channel.
 [**GetStoresBySalesChannel**](ChannelsApi.md#getstoresbysaleschannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | Returns a list of store ids attached to the given channel type for the specified app.
+[**UnassignStoreFromChannel**](ChannelsApi.md#unassignstorefromchannel) | **POST** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
 
 
 <a name="assignappidtosaleschannel"></a>
@@ -121,72 +121,6 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling ChannelsApi.AssignStoreToChannel: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store Id (123, 456) | 
- **appId** | **string**| AppId (AppNameIdxxx) | 
- **channelId** | **int?**| Channel Id (123, 456) | 
-
-### Return type
-
-**Object**
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="assignstoretochannel_0"></a>
-# **AssignStoreToChannel_0**
-> Object AssignStoreToChannel_0 (int? storeId, string appId, int? channelId)
-
-Unassign a Store from a Sales Channel
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class AssignStoreToChannel_0Example
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new ChannelsApi();
-            var storeId = 56;  // int? | Store Id (123, 456)
-            var appId = appId_example;  // string | AppId (AppNameIdxxx)
-            var channelId = 56;  // int? | Channel Id (123, 456)
-
-            try
-            {
-                // Unassign a Store from a Sales Channel
-                Object result = apiInstance.AssignStoreToChannel_0(storeId, appId, channelId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ChannelsApi.AssignStoreToChannel_0: " + e.Message );
             }
         }
     }
@@ -904,6 +838,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Response**](Response.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="unassignstorefromchannel"></a>
+# **UnassignStoreFromChannel**
+> Object UnassignStoreFromChannel (int? storeId, string appId, int? channelId)
+
+Unassign a Store from a Sales Channel
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UnassignStoreFromChannelExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ChannelsApi();
+            var storeId = 56;  // int? | Store Id (123, 456)
+            var appId = appId_example;  // string | AppId (AppNameIdxxx)
+            var channelId = 56;  // int? | Channel Id (123, 456)
+
+            try
+            {
+                // Unassign a Store from a Sales Channel
+                Object result = apiInstance.UnassignStoreFromChannel(storeId, appId, channelId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChannelsApi.UnassignStoreFromChannel: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**| Store Id (123, 456) | 
+ **appId** | **string**| AppId (AppNameIdxxx) | 
+ **channelId** | **int?**| Channel Id (123, 456) | 
+
+### Return type
+
+**Object**
 
 ### Authorization
 

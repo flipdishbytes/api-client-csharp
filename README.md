@@ -192,7 +192,6 @@ Class | Method | HTTP request | Description
 *CatalogItemsApi* | [**UploadCatalogItemImage**](docs/CatalogItemsApi.md#uploadcatalogitemimage) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/image | Upload a Catalog Item Image
 *ChannelsApi* | [**AssignAppIdToSalesChannel**](docs/ChannelsApi.md#assignappidtosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | Assign a given AppId to a Sales Channel
 *ChannelsApi* | [**AssignStoreToChannel**](docs/ChannelsApi.md#assignstoretochannel) | **POST** /api/v1.0/{appId}/channels/assign-store | Assign a Store to a Sales Channel
-*ChannelsApi* | [**AssignStoreToChannel_0**](docs/ChannelsApi.md#assignstoretochannel_0) | **POST** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
 *ChannelsApi* | [**AttachStoreToSalesChannel**](docs/ChannelsApi.md#attachstoretosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Attachs the specified store to the given sales channel.
 *ChannelsApi* | [**ChannelsGetStoreChannelStoreMapping**](docs/ChannelsApi.md#channelsgetstorechannelstoremapping) | **GET** /api/v1.0/{appId}/channels/channelstores | 
 *ChannelsApi* | [**ChannelsSetStoreChannelStoreMapping**](docs/ChannelsApi.md#channelssetstorechannelstoremapping) | **POST** /api/v1.0/{appId}/channels/channelstores | 
@@ -204,6 +203,7 @@ Class | Method | HTTP request | Description
 *ChannelsApi* | [**GetNotAssignedChannels**](docs/ChannelsApi.md#getnotassignedchannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given whitelabel
 *ChannelsApi* | [**GetStoresAssignedToChannel**](docs/ChannelsApi.md#getstoresassignedtochannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of store that are assigned to the given sales channel.
 *ChannelsApi* | [**GetStoresBySalesChannel**](docs/ChannelsApi.md#getstoresbysaleschannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | Returns a list of store ids attached to the given channel type for the specified app.
+*ChannelsApi* | [**UnassignStoreFromChannel**](docs/ChannelsApi.md#unassignstorefromchannel) | **POST** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
 *ContentSecurityPolicyApi* | [**ContentSecurityPolicyReport**](docs/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
 *CustomersApi* | [**GetCustomerById**](docs/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | Get customer of an app by Id
 *CustomersApi* | [**UpdateCustomerById**](docs/CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | Update customer of an app by Id
