@@ -932,7 +932,19 @@ namespace Flipdish.Model
             /// Enum ViewChannels for value: ViewChannels
             /// </summary>
             [EnumMember(Value = "ViewChannels")]
-            ViewChannels = 137
+            ViewChannels = 137,
+            
+            /// <summary>
+            /// Enum ViewOnboarding for value: ViewOnboarding
+            /// </summary>
+            [EnumMember(Value = "ViewOnboarding")]
+            ViewOnboarding = 138,
+            
+            /// <summary>
+            /// Enum UpdateOnboarding for value: UpdateOnboarding
+            /// </summary>
+            [EnumMember(Value = "UpdateOnboarding")]
+            UpdateOnboarding = 139
         }
 
 
