@@ -268,6 +268,7 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**UnAssign**](docs/HydraApi.md#unassign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | [Private]
 *HydraApi* | [**UnassignEmv**](docs/HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | Unassign the currently assigned EMV terminal from a kiosk
 *HydraApi* | [**UpdateKioskCashVisibilitySettings**](docs/HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | Update the Cash Payment Methon Visiability on Kisok
+*KioskIotApi* | [**GetKioskIotConnection**](docs/KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
 *KioskStoreSettingsApi* | [**GetAllKioskSettingsForStore**](docs/KioskStoreSettingsApi.md#getallkiosksettingsforstore) | **GET** /api/v1.0/{appId}/kiosksettings/store/{storeId} | Get all kiosk settings associated with a store
 *KioskStoreSettingsApi* | [**GetAllStoreSettingsForKioskHydra**](docs/KioskStoreSettingsApi.md#getallstoresettingsforkioskhydra) | **GET** /api/v1.0/kioskstoresettings | [For Kiosk use only] Get all stores connected to a Kiosk
 *KioskStoreSettingsApi* | [**UpdateCashSettingForKiosk**](docs/KioskStoreSettingsApi.md#updatecashsettingforkiosk) | **POST** /api/v1.0/{appId}/kiosksettings/cash | 
@@ -642,6 +643,7 @@ Class | Method | HTTP request | Description
  - [Model.KioskBluetoothUnpairingModeEvent](docs/KioskBluetoothUnpairingModeEvent.md)
  - [Model.KioskCashPaymentSettings](docs/KioskCashPaymentSettings.md)
  - [Model.KioskCashSetting](docs/KioskCashSetting.md)
+ - [Model.KioskIotConnectionParameters](docs/KioskIotConnectionParameters.md)
  - [Model.KioskStoreSettings](docs/KioskStoreSettings.md)
  - [Model.Language](docs/Language.md)
  - [Model.LightspeedSettings](docs/LightspeedSettings.md)
@@ -876,6 +878,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultIndexPageBase](docs/RestApiResultIndexPageBase.md)
  - [Model.RestApiResultJobResponse](docs/RestApiResultJobResponse.md)
  - [Model.RestApiResultKioskCashSetting](docs/RestApiResultKioskCashSetting.md)
+ - [Model.RestApiResultKioskIotConnectionParameters](docs/RestApiResultKioskIotConnectionParameters.md)
  - [Model.RestApiResultKioskStoreSettings](docs/RestApiResultKioskStoreSettings.md)
  - [Model.RestApiResultLightspeedSettings](docs/RestApiResultLightspeedSettings.md)
  - [Model.RestApiResultLoyaltyCampaign](docs/RestApiResultLoyaltyCampaign.md)
