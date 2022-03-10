@@ -4,19 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAppStoreConfig**](AppStoreConfigurationsApi.md#createappstoreconfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | Create app store app configuration
-[**DeleteAppStoreConfig**](AppStoreConfigurationsApi.md#deleteappstoreconfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Delete app store app configuration
-[**GetAppStoreConfig**](AppStoreConfigurationsApi.md#getappstoreconfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Get app store app configuration
-[**GetConfiguredAppSingleApp**](AppStoreConfigurationsApi.md#getconfiguredappsingleapp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of app store app configurations for one app store app
-[**GetConfiguredApps**](AppStoreConfigurationsApi.md#getconfiguredapps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of app store apps which have been configured
-[**UpdateAppStoreConfig**](AppStoreConfigurationsApi.md#updateappstoreconfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update app store app configuration
+[**CreateAppStoreConfig**](AppStoreConfigurationsApi.md#createappstoreconfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | Create App store app configuration
+[**DeleteAppStoreConfig**](AppStoreConfigurationsApi.md#deleteappstoreconfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Delete App store app configuration
+[**GetAppStoreConfig**](AppStoreConfigurationsApi.md#getappstoreconfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Get App store app configuration
+[**GetConfiguredAppSingleApp**](AppStoreConfigurationsApi.md#getconfiguredappsingleapp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of App store app configurations for one App store app
+[**GetConfiguredApps**](AppStoreConfigurationsApi.md#getconfiguredapps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of App store apps which have been configured
+[**UpdateAppStoreConfig**](AppStoreConfigurationsApi.md#updateappstoreconfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update App store app configuration
 
 
 <a name="createappstoreconfig"></a>
 # **CreateAppStoreConfig**
-> RestApiResultAppConfigurationSummary CreateAppStoreConfig (string appId, string appStoreAppId)
+> RestApiResultAppStoreAppConfiguration CreateAppStoreConfig (string appId, string appStoreAppId)
 
-Create app store app configuration
+Create App store app configuration
 
 [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
 
@@ -38,13 +38,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreConfigurationsApi();
-            var appId = appId_example;  // string | App Id
-            var appStoreAppId = appStoreAppId_example;  // string | App Store App Id
+            var appId = appId_example;  // string | App id
+            var appStoreAppId = appStoreAppId_example;  // string | App store app id
 
             try
             {
-                // Create app store app configuration
-                RestApiResultAppConfigurationSummary result = apiInstance.CreateAppStoreConfig(appId, appStoreAppId);
+                // Create App store app configuration
+                RestApiResultAppStoreAppConfiguration result = apiInstance.CreateAppStoreConfig(appId, appStoreAppId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -60,12 +60,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **appStoreAppId** | **string**| App Store App Id | 
+ **appId** | **string**| App id | 
+ **appStoreAppId** | **string**| App store app id | 
 
 ### Return type
 
-[**RestApiResultAppConfigurationSummary**](RestApiResultAppConfigurationSummary.md)
+[**RestApiResultAppStoreAppConfiguration**](RestApiResultAppStoreAppConfiguration.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 # **DeleteAppStoreConfig**
 > RestApiStringResult DeleteAppStoreConfig (string appId, string appStoreAppId, string configId)
 
-Delete app store app configuration
+Delete App store app configuration
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -104,13 +104,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreConfigurationsApi();
-            var appId = appId_example;  // string | App Id
-            var appStoreAppId = appStoreAppId_example;  // string | App Store App Id
-            var configId = configId_example;  // string | App Store Configuration Id
+            var appId = appId_example;  // string | App id
+            var appStoreAppId = appStoreAppId_example;  // string | App store app id
+            var configId = configId_example;  // string | App store app configuration id
 
             try
             {
-                // Delete app store app configuration
+                // Delete App store app configuration
                 RestApiStringResult result = apiInstance.DeleteAppStoreConfig(appId, appStoreAppId, configId);
                 Debug.WriteLine(result);
             }
@@ -127,9 +127,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **appStoreAppId** | **string**| App Store App Id | 
- **configId** | **string**| App Store Configuration Id | 
+ **appId** | **string**| App id | 
+ **appStoreAppId** | **string**| App store app id | 
+ **configId** | **string**| App store app configuration id | 
 
 ### Return type
 
@@ -148,9 +148,9 @@ Name | Type | Description  | Notes
 
 <a name="getappstoreconfig"></a>
 # **GetAppStoreConfig**
-> AppConfigurationDetail GetAppStoreConfig (string appId, string appStoreAppId, string configId)
+> AppStoreAppConfiguration GetAppStoreConfig (string appId, string appStoreAppId, string configId)
 
-Get app store app configuration
+Get App store app configuration
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -172,14 +172,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreConfigurationsApi();
-            var appId = appId_example;  // string | App Id
-            var appStoreAppId = appStoreAppId_example;  // string | App Store App Id
-            var configId = configId_example;  // string | App Store Configuration Id
+            var appId = appId_example;  // string | App id
+            var appStoreAppId = appStoreAppId_example;  // string | App store app id
+            var configId = configId_example;  // string | App store app configuration id
 
             try
             {
-                // Get app store app configuration
-                AppConfigurationDetail result = apiInstance.GetAppStoreConfig(appId, appStoreAppId, configId);
+                // Get App store app configuration
+                AppStoreAppConfiguration result = apiInstance.GetAppStoreConfig(appId, appStoreAppId, configId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -195,13 +195,13 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **appStoreAppId** | **string**| App Store App Id | 
- **configId** | **string**| App Store Configuration Id | 
+ **appId** | **string**| App id | 
+ **appStoreAppId** | **string**| App store app id | 
+ **configId** | **string**| App store app configuration id | 
 
 ### Return type
 
-[**AppConfigurationDetail**](AppConfigurationDetail.md)
+[**AppStoreAppConfiguration**](AppStoreAppConfiguration.md)
 
 ### Authorization
 
@@ -216,9 +216,9 @@ Name | Type | Description  | Notes
 
 <a name="getconfiguredappsingleapp"></a>
 # **GetConfiguredAppSingleApp**
-> RestApiArrayResultAppConfigurationSummary GetConfiguredAppSingleApp (string appId, string appStoreAppId)
+> RestApiArrayResultAppStoreAppConfigurationSummary GetConfiguredAppSingleApp (string appId, string appStoreAppId)
 
-Get list of app store app configurations for one app store app
+Get list of App store app configurations for one App store app
 
 [ALPHA - this endpoint is not ready to be consumed]
 
@@ -240,13 +240,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreConfigurationsApi();
-            var appId = appId_example;  // string | App Id
-            var appStoreAppId = appStoreAppId_example;  // string | App Store App Id
+            var appId = appId_example;  // string | App id
+            var appStoreAppId = appStoreAppId_example;  // string | App store app id
 
             try
             {
-                // Get list of app store app configurations for one app store app
-                RestApiArrayResultAppConfigurationSummary result = apiInstance.GetConfiguredAppSingleApp(appId, appStoreAppId);
+                // Get list of App store app configurations for one App store app
+                RestApiArrayResultAppStoreAppConfigurationSummary result = apiInstance.GetConfiguredAppSingleApp(appId, appStoreAppId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -262,12 +262,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **appStoreAppId** | **string**| App Store App Id | 
+ **appId** | **string**| App id | 
+ **appStoreAppId** | **string**| App store app id | 
 
 ### Return type
 
-[**RestApiArrayResultAppConfigurationSummary**](RestApiArrayResultAppConfigurationSummary.md)
+[**RestApiArrayResultAppStoreAppConfigurationSummary**](RestApiArrayResultAppStoreAppConfigurationSummary.md)
 
 ### Authorization
 
@@ -282,9 +282,9 @@ Name | Type | Description  | Notes
 
 <a name="getconfiguredapps"></a>
 # **GetConfiguredApps**
-> RestApiArrayResultAppConfigurationHeader GetConfiguredApps (string appId)
+> RestApiArrayResultAppStoreAppConfigurationHeader GetConfiguredApps (string appId)
 
-Get list of app store apps which have been configured
+Get list of App store apps which have been configured
 
 [ALPHA - this endpoint is not ready to be consumed]
 
@@ -306,12 +306,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreConfigurationsApi();
-            var appId = appId_example;  // string | App Id
+            var appId = appId_example;  // string | App id
 
             try
             {
-                // Get list of app store apps which have been configured
-                RestApiArrayResultAppConfigurationHeader result = apiInstance.GetConfiguredApps(appId);
+                // Get list of App store apps which have been configured
+                RestApiArrayResultAppStoreAppConfigurationHeader result = apiInstance.GetConfiguredApps(appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -327,11 +327,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
+ **appId** | **string**| App id | 
 
 ### Return type
 
-[**RestApiArrayResultAppConfigurationHeader**](RestApiArrayResultAppConfigurationHeader.md)
+[**RestApiArrayResultAppStoreAppConfigurationHeader**](RestApiArrayResultAppStoreAppConfigurationHeader.md)
 
 ### Authorization
 
@@ -346,9 +346,9 @@ Name | Type | Description  | Notes
 
 <a name="updateappstoreconfig"></a>
 # **UpdateAppStoreConfig**
-> void UpdateAppStoreConfig (string appId, string appStoreAppId, string configId, UpdateAppConfiguration updateAppConfigurationBase)
+> void UpdateAppStoreConfig (string appId, string appStoreAppId, string configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration)
 
-Update app store app configuration
+Update App store app configuration
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -370,15 +370,15 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreConfigurationsApi();
-            var appId = appId_example;  // string | App Id
-            var appStoreAppId = appStoreAppId_example;  // string | App Store App Id
-            var configId = configId_example;  // string | App Store Configuration Id
-            var updateAppConfigurationBase = new UpdateAppConfiguration(); // UpdateAppConfiguration | App Store Configuration Base
+            var appId = appId_example;  // string | App id
+            var appStoreAppId = appStoreAppId_example;  // string | App store app id
+            var configId = configId_example;  // string | App store app configuration id
+            var updateAppStoreAppConfiguration = new UpdateAppStoreAppConfiguration(); // UpdateAppStoreAppConfiguration | Update App store app configuration
 
             try
             {
-                // Update app store app configuration
-                apiInstance.UpdateAppStoreConfig(appId, appStoreAppId, configId, updateAppConfigurationBase);
+                // Update App store app configuration
+                apiInstance.UpdateAppStoreConfig(appId, appStoreAppId, configId, updateAppStoreAppConfiguration);
             }
             catch (Exception e)
             {
@@ -393,10 +393,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **appStoreAppId** | **string**| App Store App Id | 
- **configId** | **string**| App Store Configuration Id | 
- **updateAppConfigurationBase** | [**UpdateAppConfiguration**](UpdateAppConfiguration.md)| App Store Configuration Base | 
+ **appId** | **string**| App id | 
+ **appStoreAppId** | **string**| App store app id | 
+ **configId** | **string**| App store app configuration id | 
+ **updateAppStoreAppConfiguration** | [**UpdateAppStoreAppConfiguration**](UpdateAppStoreAppConfiguration.md)| Update App store app configuration | 
 
 ### Return type
 

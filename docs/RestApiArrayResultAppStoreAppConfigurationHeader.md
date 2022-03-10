@@ -1,10 +1,9 @@
-# Flipdish.Model.ConfiguredPhysicalRestaurant
+# Flipdish.Model.RestApiArrayResultAppStoreAppConfigurationHeader
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StoreId** | **int?** | Store id | [optional] 
-**Name** | **string** | Name of store | [optional] 
+**Data** | [**List&lt;AppStoreAppConfigurationHeader&gt;**](AppStoreAppConfigurationHeader.md) | Generic data object. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

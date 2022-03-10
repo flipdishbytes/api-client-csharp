@@ -25,35 +25,39 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Configured stores
+    /// Rest api array result
     /// </summary>
     [DataContract]
-    public partial class ConfiguredPhysicalRestaurant :  IEquatable<ConfiguredPhysicalRestaurant>, IValidatableObject
+    public partial class RestApiArrayResultAppStoreAppConfigurationSummary :  IEquatable<RestApiArrayResultAppStoreAppConfigurationSummary>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConfiguredPhysicalRestaurant" /> class.
+        /// Initializes a new instance of the <see cref="RestApiArrayResultAppStoreAppConfigurationSummary" /> class.
         /// </summary>
-        /// <param name="storeId">Store id.</param>
-        /// <param name="name">Name of store.</param>
-        public ConfiguredPhysicalRestaurant(int? storeId = default(int?), string name = default(string))
+        [JsonConstructorAttribute]
+        protected RestApiArrayResultAppStoreAppConfigurationSummary() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RestApiArrayResultAppStoreAppConfigurationSummary" /> class.
+        /// </summary>
+        /// <param name="data">Generic data object. (required).</param>
+        public RestApiArrayResultAppStoreAppConfigurationSummary(List<AppStoreAppConfigurationSummary> data = default(List<AppStoreAppConfigurationSummary>))
         {
-            this.StoreId = storeId;
-            this.Name = name;
+            // to ensure "data" is required (not null)
+            if (data == null)
+            {
+                throw new InvalidDataException("data is a required property for RestApiArrayResultAppStoreAppConfigurationSummary and cannot be null");
+            }
+            else
+            {
+                this.Data = data;
+            }
         }
         
         /// <summary>
-        /// Store id
+        /// Generic data object.
         /// </summary>
-        /// <value>Store id</value>
-        [DataMember(Name="StoreId", EmitDefaultValue=false)]
-        public int? StoreId { get; set; }
-
-        /// <summary>
-        /// Name of store
-        /// </summary>
-        /// <value>Name of store</value>
-        [DataMember(Name="Name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        /// <value>Generic data object.</value>
+        [DataMember(Name="Data", EmitDefaultValue=false)]
+        public List<AppStoreAppConfigurationSummary> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,9 +66,8 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ConfiguredPhysicalRestaurant {\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("class RestApiArrayResultAppStoreAppConfigurationSummary {\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,29 +88,24 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ConfiguredPhysicalRestaurant);
+            return this.Equals(input as RestApiArrayResultAppStoreAppConfigurationSummary);
         }
 
         /// <summary>
-        /// Returns true if ConfiguredPhysicalRestaurant instances are equal
+        /// Returns true if RestApiArrayResultAppStoreAppConfigurationSummary instances are equal
         /// </summary>
-        /// <param name="input">Instance of ConfiguredPhysicalRestaurant to be compared</param>
+        /// <param name="input">Instance of RestApiArrayResultAppStoreAppConfigurationSummary to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ConfiguredPhysicalRestaurant input)
+        public bool Equals(RestApiArrayResultAppStoreAppConfigurationSummary input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.StoreId == input.StoreId ||
-                    (this.StoreId != null &&
-                    this.StoreId.Equals(input.StoreId))
-                ) && 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    this.Data == input.Data ||
+                    this.Data != null &&
+                    this.Data.SequenceEqual(input.Data)
                 );
         }
 
@@ -120,10 +118,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.StoreId != null)
-                    hashCode = hashCode * 59 + this.StoreId.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Data != null)
+                    hashCode = hashCode * 59 + this.Data.GetHashCode();
                 return hashCode;
             }
         }

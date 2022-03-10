@@ -111,8 +111,8 @@ namespace Flipdish.Model
         /// <param name="description">Description (required).</param>
         /// <param name="key">Key (required).</param>
         /// <param name="tooltip">Tooltip.</param>
-        /// <param name="position">Position  &lt;remarks&gt;Position order in the fields list to display&lt;/remarks&gt; (required).</param>
-        /// <param name="defaultValue">Default Value  &lt;example&gt;10&lt;/example&gt;&lt;example&gt;true&lt;/example&gt;.</param>
+        /// <param name="position">Position (required).</param>
+        /// <param name="defaultValue">Default Value.</param>
         /// <param name="validValues">Valid Values  &lt;remarks&gt;Used typically for dropdown/select&lt;/remarks&gt;.</param>
         /// <param name="validationRegex">Validation Regex.</param>
         /// <param name="fieldType">Field Type (required).</param>
@@ -198,16 +198,16 @@ namespace Flipdish.Model
         public string Tooltip { get; set; }
 
         /// <summary>
-        /// Position  &lt;remarks&gt;Position order in the fields list to display&lt;/remarks&gt;
+        /// Position
         /// </summary>
-        /// <value>Position  &lt;remarks&gt;Position order in the fields list to display&lt;/remarks&gt;</value>
+        /// <value>Position</value>
         [DataMember(Name="Position", EmitDefaultValue=false)]
         public int? Position { get; set; }
 
         /// <summary>
-        /// Default Value  &lt;example&gt;10&lt;/example&gt;&lt;example&gt;true&lt;/example&gt;
+        /// Default Value
         /// </summary>
-        /// <value>Default Value  &lt;example&gt;10&lt;/example&gt;&lt;example&gt;true&lt;/example&gt;</value>
+        /// <value>Default Value</value>
         [DataMember(Name="DefaultValue", EmitDefaultValue=false)]
         public string DefaultValue { get; set; }
 

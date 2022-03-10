@@ -1,10 +1,11 @@
-# Flipdish.Model.ConfiguredPhysicalRestaurant
+# Flipdish.Model.UpdateAppStoreAppConfiguration
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StoreId** | **int?** | Store id | [optional] 
-**Name** | **string** | Name of store | [optional] 
+**IsEnabled** | **bool?** | Is enabled | 
+**PhysicalRestaurants** | **List&lt;int?&gt;** | Stores id&#39;s | [optional] 
+**Settings** | [**List&lt;Setting&gt;**](Setting.md) | Settings | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

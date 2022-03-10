@@ -25,322 +25,322 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Update app store app verification
+        /// Update App store app verification
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="verificationStatus">New Verification Status</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="verificationStatus">New verification status</param>
         /// <returns></returns>
         void AppVerificationUpdate (string appStoreAppId, string verificationStatus);
 
         /// <summary>
-        /// Update app store app verification
+        /// Update App store app verification
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="verificationStatus">New Verification Status</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="verificationStatus">New verification status</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AppVerificationUpdateWithHttpInfo (string appStoreAppId, string verificationStatus);
         /// <summary>
-        /// Create app store app
+        /// Create App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appDetailBase">App Store App Detail Base</param>
-        /// <returns>RestApiResultAppDetail</returns>
-        RestApiResultAppDetail CreateAppStoreApp (AppDetailBase appDetailBase);
+        /// <param name="createAppStoreApp">App store app</param>
+        /// <returns>RestApiResultAppStoreApp</returns>
+        RestApiResultAppStoreApp CreateAppStoreApp (CreateAppStoreApp createAppStoreApp);
 
         /// <summary>
-        /// Create app store app
+        /// Create App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appDetailBase">App Store App Detail Base</param>
-        /// <returns>ApiResponse of RestApiResultAppDetail</returns>
-        ApiResponse<RestApiResultAppDetail> CreateAppStoreAppWithHttpInfo (AppDetailBase appDetailBase);
+        /// <param name="createAppStoreApp">App store app</param>
+        /// <returns>ApiResponse of RestApiResultAppStoreApp</returns>
+        ApiResponse<RestApiResultAppStoreApp> CreateAppStoreAppWithHttpInfo (CreateAppStoreApp createAppStoreApp);
         /// <summary>
-        /// Delete app store app
+        /// Delete App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <returns>RestApiStringResult</returns>
         RestApiStringResult DeleteAppStoreApp (string appStoreAppId);
 
         /// <summary>
-        /// Delete app store app
+        /// Delete App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         ApiResponse<RestApiStringResult> DeleteAppStoreAppWithHttpInfo (string appStoreAppId);
         /// <summary>
-        /// Get app store app details
+        /// Get App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <returns>AppDetail</returns>
-        AppDetail GetAppStoreApp (string appStoreAppId);
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <returns>AppStoreApp</returns>
+        AppStoreApp GetAppStoreApp (string appStoreAppId);
 
         /// <summary>
-        /// Get app store app details
+        /// Get App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <returns>ApiResponse of AppDetail</returns>
-        ApiResponse<AppDetail> GetAppStoreAppWithHttpInfo (string appStoreAppId);
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <returns>ApiResponse of AppStoreApp</returns>
+        ApiResponse<AppStoreApp> GetAppStoreAppWithHttpInfo (string appStoreAppId);
         /// <summary>
-        /// Get list of app store app summaries
+        /// Get list of App store app summaries
         /// </summary>
         /// <remarks>
         /// Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query app store app name</param>
+        /// <param name="search">Query App store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
-        /// <returns>RestApiPaginationResultAppSummary</returns>
-        RestApiPaginationResultAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
+        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <returns>RestApiPaginationResultAppStoreAppSummary</returns>
+        RestApiPaginationResultAppStoreAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
 
         /// <summary>
-        /// Get list of app store app summaries
+        /// Get list of App store app summaries
         /// </summary>
         /// <remarks>
         /// Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query app store app name</param>
+        /// <param name="search">Query App store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
-        /// <returns>ApiResponse of RestApiPaginationResultAppSummary</returns>
-        ApiResponse<RestApiPaginationResultAppSummary> GetAppStoreAppsWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
+        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultAppStoreAppSummary</returns>
+        ApiResponse<RestApiPaginationResultAppStoreAppSummary> GetAppStoreAppsWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
         /// <summary>
-        /// Update app store app
+        /// Update App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="appDetail">App Store App Detail</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreApp">Update App store app</param>
         /// <returns></returns>
-        void UpdateAppStoreApp (string appStoreAppId, AppDetail appDetail);
+        void UpdateAppStoreApp (string appStoreAppId, UpdateAppStoreApp appStoreApp);
 
         /// <summary>
-        /// Update app store app
+        /// Update App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="appDetail">App Store App Detail</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreApp">Update App store app</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateAppStoreAppWithHttpInfo (string appStoreAppId, AppDetail appDetail);
+        ApiResponse<Object> UpdateAppStoreAppWithHttpInfo (string appStoreAppId, UpdateAppStoreApp appStoreApp);
         /// <summary>
-        /// Upload the app store app logo \\ icon
+        /// Upload the App store app logo \\ icon
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <param name="image">App Store App Logo</param>
         /// <returns></returns>
         void UploadAppStoreAppLogo (string appStoreAppId, System.IO.Stream image);
 
         /// <summary>
-        /// Upload the app store app logo \\ icon
+        /// Upload the App store app logo \\ icon
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <param name="image">App Store App Logo</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UploadAppStoreAppLogoWithHttpInfo (string appStoreAppId, System.IO.Stream image);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Update app store app verification
+        /// Update App store app verification
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="verificationStatus">New Verification Status</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="verificationStatus">New verification status</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task AppVerificationUpdateAsync (string appStoreAppId, string verificationStatus);
 
         /// <summary>
-        /// Update app store app verification
+        /// Update App store app verification
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="verificationStatus">New Verification Status</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="verificationStatus">New verification status</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AppVerificationUpdateAsyncWithHttpInfo (string appStoreAppId, string verificationStatus);
         /// <summary>
-        /// Create app store app
+        /// Create App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appDetailBase">App Store App Detail Base</param>
-        /// <returns>Task of RestApiResultAppDetail</returns>
-        System.Threading.Tasks.Task<RestApiResultAppDetail> CreateAppStoreAppAsync (AppDetailBase appDetailBase);
+        /// <param name="createAppStoreApp">App store app</param>
+        /// <returns>Task of RestApiResultAppStoreApp</returns>
+        System.Threading.Tasks.Task<RestApiResultAppStoreApp> CreateAppStoreAppAsync (CreateAppStoreApp createAppStoreApp);
 
         /// <summary>
-        /// Create app store app
+        /// Create App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appDetailBase">App Store App Detail Base</param>
-        /// <returns>Task of ApiResponse (RestApiResultAppDetail)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppDetail>> CreateAppStoreAppAsyncWithHttpInfo (AppDetailBase appDetailBase);
+        /// <param name="createAppStoreApp">App store app</param>
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreApp)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreApp>> CreateAppStoreAppAsyncWithHttpInfo (CreateAppStoreApp createAppStoreApp);
         /// <summary>
-        /// Delete app store app
+        /// Delete App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <returns>Task of RestApiStringResult</returns>
         System.Threading.Tasks.Task<RestApiStringResult> DeleteAppStoreAppAsync (string appStoreAppId);
 
         /// <summary>
-        /// Delete app store app
+        /// Delete App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> DeleteAppStoreAppAsyncWithHttpInfo (string appStoreAppId);
         /// <summary>
-        /// Get app store app details
+        /// Get App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <returns>Task of AppDetail</returns>
-        System.Threading.Tasks.Task<AppDetail> GetAppStoreAppAsync (string appStoreAppId);
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <returns>Task of AppStoreApp</returns>
+        System.Threading.Tasks.Task<AppStoreApp> GetAppStoreAppAsync (string appStoreAppId);
 
         /// <summary>
-        /// Get app store app details
+        /// Get App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <returns>Task of ApiResponse (AppDetail)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AppDetail>> GetAppStoreAppAsyncWithHttpInfo (string appStoreAppId);
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <returns>Task of ApiResponse (AppStoreApp)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AppStoreApp>> GetAppStoreAppAsyncWithHttpInfo (string appStoreAppId);
         /// <summary>
-        /// Get list of app store app summaries
+        /// Get list of App store app summaries
         /// </summary>
         /// <remarks>
         /// Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query app store app name</param>
+        /// <param name="search">Query App store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
-        /// <returns>Task of RestApiPaginationResultAppSummary</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultAppSummary> GetAppStoreAppsAsync (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
+        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <returns>Task of RestApiPaginationResultAppStoreAppSummary</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultAppStoreAppSummary> GetAppStoreAppsAsync (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
 
         /// <summary>
-        /// Get list of app store app summaries
+        /// Get list of App store app summaries
         /// </summary>
         /// <remarks>
         /// Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query app store app name</param>
+        /// <param name="search">Query App store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultAppSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultAppSummary>> GetAppStoreAppsAsyncWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
+        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultAppStoreAppSummary)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultAppStoreAppSummary>> GetAppStoreAppsAsyncWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
         /// <summary>
-        /// Update app store app
+        /// Update App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="appDetail">App Store App Detail</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreApp">Update App store app</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateAppStoreAppAsync (string appStoreAppId, AppDetail appDetail);
+        System.Threading.Tasks.Task UpdateAppStoreAppAsync (string appStoreAppId, UpdateAppStoreApp appStoreApp);
 
         /// <summary>
-        /// Update app store app
+        /// Update App store app
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="appDetail">App Store App Detail</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreApp">Update App store app</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreAppAsyncWithHttpInfo (string appStoreAppId, AppDetail appDetail);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreAppAsyncWithHttpInfo (string appStoreAppId, UpdateAppStoreApp appStoreApp);
         /// <summary>
-        /// Upload the app store app logo \\ icon
+        /// Upload the App store app logo \\ icon
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <param name="image">App Store App Logo</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UploadAppStoreAppLogoAsync (string appStoreAppId, System.IO.Stream image);
 
         /// <summary>
-        /// Upload the app store app logo \\ icon
+        /// Upload the App store app logo \\ icon
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <param name="image">App Store App Logo</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UploadAppStoreAppLogoAsyncWithHttpInfo (string appStoreAppId, System.IO.Stream image);
@@ -445,11 +445,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
+        /// Update App store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="verificationStatus">New Verification Status</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="verificationStatus">New verification status</param>
         /// <returns></returns>
         public void AppVerificationUpdate (string appStoreAppId, string verificationStatus)
         {
@@ -457,11 +457,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
+        /// Update App store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="verificationStatus">New Verification Status</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="verificationStatus">New verification status</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> AppVerificationUpdateWithHttpInfo (string appStoreAppId, string verificationStatus)
         {
@@ -537,11 +537,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
+        /// Update App store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="verificationStatus">New Verification Status</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="verificationStatus">New verification status</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task AppVerificationUpdateAsync (string appStoreAppId, string verificationStatus)
         {
@@ -550,11 +550,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update app store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
+        /// Update App store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="verificationStatus">New Verification Status</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="verificationStatus">New verification status</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AppVerificationUpdateAsyncWithHttpInfo (string appStoreAppId, string verificationStatus)
         {
@@ -630,28 +630,28 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create app store app [BETA - this endpoint is under development, do not use it in your production system]
+        /// Create App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appDetailBase">App Store App Detail Base</param>
-        /// <returns>RestApiResultAppDetail</returns>
-        public RestApiResultAppDetail CreateAppStoreApp (AppDetailBase appDetailBase)
+        /// <param name="createAppStoreApp">App store app</param>
+        /// <returns>RestApiResultAppStoreApp</returns>
+        public RestApiResultAppStoreApp CreateAppStoreApp (CreateAppStoreApp createAppStoreApp)
         {
-             ApiResponse<RestApiResultAppDetail> localVarResponse = CreateAppStoreAppWithHttpInfo(appDetailBase);
+             ApiResponse<RestApiResultAppStoreApp> localVarResponse = CreateAppStoreAppWithHttpInfo(createAppStoreApp);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create app store app [BETA - this endpoint is under development, do not use it in your production system]
+        /// Create App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appDetailBase">App Store App Detail Base</param>
-        /// <returns>ApiResponse of RestApiResultAppDetail</returns>
-        public ApiResponse< RestApiResultAppDetail > CreateAppStoreAppWithHttpInfo (AppDetailBase appDetailBase)
+        /// <param name="createAppStoreApp">App store app</param>
+        /// <returns>ApiResponse of RestApiResultAppStoreApp</returns>
+        public ApiResponse< RestApiResultAppStoreApp > CreateAppStoreAppWithHttpInfo (CreateAppStoreApp createAppStoreApp)
         {
-            // verify the required parameter 'appDetailBase' is set
-            if (appDetailBase == null)
-                throw new ApiException(400, "Missing required parameter 'appDetailBase' when calling AppStoreApi->CreateAppStoreApp");
+            // verify the required parameter 'createAppStoreApp' is set
+            if (createAppStoreApp == null)
+                throw new ApiException(400, "Missing required parameter 'createAppStoreApp' when calling AppStoreApi->CreateAppStoreApp");
 
             var localVarPath = "/api/v1.0/appstore/apps";
             var localVarPathParams = new Dictionary<String, String>();
@@ -682,13 +682,13 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (appDetailBase != null && appDetailBase.GetType() != typeof(byte[]))
+            if (createAppStoreApp != null && createAppStoreApp.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(appDetailBase); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(createAppStoreApp); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = appDetailBase; // byte array
+                localVarPostBody = createAppStoreApp; // byte array
             }
 
             // authentication (oauth2) required
@@ -711,35 +711,35 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultAppDetail>(localVarStatusCode,
+            return new ApiResponse<RestApiResultAppStoreApp>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultAppDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppDetail)));
+                (RestApiResultAppStoreApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreApp)));
         }
 
         /// <summary>
-        /// Create app store app [BETA - this endpoint is under development, do not use it in your production system]
+        /// Create App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appDetailBase">App Store App Detail Base</param>
-        /// <returns>Task of RestApiResultAppDetail</returns>
-        public async System.Threading.Tasks.Task<RestApiResultAppDetail> CreateAppStoreAppAsync (AppDetailBase appDetailBase)
+        /// <param name="createAppStoreApp">App store app</param>
+        /// <returns>Task of RestApiResultAppStoreApp</returns>
+        public async System.Threading.Tasks.Task<RestApiResultAppStoreApp> CreateAppStoreAppAsync (CreateAppStoreApp createAppStoreApp)
         {
-             ApiResponse<RestApiResultAppDetail> localVarResponse = await CreateAppStoreAppAsyncWithHttpInfo(appDetailBase);
+             ApiResponse<RestApiResultAppStoreApp> localVarResponse = await CreateAppStoreAppAsyncWithHttpInfo(createAppStoreApp);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Create app store app [BETA - this endpoint is under development, do not use it in your production system]
+        /// Create App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appDetailBase">App Store App Detail Base</param>
-        /// <returns>Task of ApiResponse (RestApiResultAppDetail)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppDetail>> CreateAppStoreAppAsyncWithHttpInfo (AppDetailBase appDetailBase)
+        /// <param name="createAppStoreApp">App store app</param>
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreApp)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreApp>> CreateAppStoreAppAsyncWithHttpInfo (CreateAppStoreApp createAppStoreApp)
         {
-            // verify the required parameter 'appDetailBase' is set
-            if (appDetailBase == null)
-                throw new ApiException(400, "Missing required parameter 'appDetailBase' when calling AppStoreApi->CreateAppStoreApp");
+            // verify the required parameter 'createAppStoreApp' is set
+            if (createAppStoreApp == null)
+                throw new ApiException(400, "Missing required parameter 'createAppStoreApp' when calling AppStoreApi->CreateAppStoreApp");
 
             var localVarPath = "/api/v1.0/appstore/apps";
             var localVarPathParams = new Dictionary<String, String>();
@@ -770,13 +770,13 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (appDetailBase != null && appDetailBase.GetType() != typeof(byte[]))
+            if (createAppStoreApp != null && createAppStoreApp.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(appDetailBase); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(createAppStoreApp); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = appDetailBase; // byte array
+                localVarPostBody = createAppStoreApp; // byte array
             }
 
             // authentication (oauth2) required
@@ -799,16 +799,16 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultAppDetail>(localVarStatusCode,
+            return new ApiResponse<RestApiResultAppStoreApp>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultAppDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppDetail)));
+                (RestApiResultAppStoreApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreApp)));
         }
 
         /// <summary>
-        /// Delete app store app [BETA - this endpoint is under development, do not use it in your production system]
+        /// Delete App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <returns>RestApiStringResult</returns>
         public RestApiStringResult DeleteAppStoreApp (string appStoreAppId)
         {
@@ -817,10 +817,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete app store app [BETA - this endpoint is under development, do not use it in your production system]
+        /// Delete App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         public ApiResponse< RestApiStringResult > DeleteAppStoreAppWithHttpInfo (string appStoreAppId)
         {
@@ -880,10 +880,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete app store app [BETA - this endpoint is under development, do not use it in your production system]
+        /// Delete App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <returns>Task of RestApiStringResult</returns>
         public async System.Threading.Tasks.Task<RestApiStringResult> DeleteAppStoreAppAsync (string appStoreAppId)
         {
@@ -893,10 +893,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete app store app [BETA - this endpoint is under development, do not use it in your production system]
+        /// Delete App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> DeleteAppStoreAppAsyncWithHttpInfo (string appStoreAppId)
         {
@@ -956,24 +956,24 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get app store app details [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <returns>AppDetail</returns>
-        public AppDetail GetAppStoreApp (string appStoreAppId)
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <returns>AppStoreApp</returns>
+        public AppStoreApp GetAppStoreApp (string appStoreAppId)
         {
-             ApiResponse<AppDetail> localVarResponse = GetAppStoreAppWithHttpInfo(appStoreAppId);
+             ApiResponse<AppStoreApp> localVarResponse = GetAppStoreAppWithHttpInfo(appStoreAppId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get app store app details [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <returns>ApiResponse of AppDetail</returns>
-        public ApiResponse< AppDetail > GetAppStoreAppWithHttpInfo (string appStoreAppId)
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <returns>ApiResponse of AppStoreApp</returns>
+        public ApiResponse< AppStoreApp > GetAppStoreAppWithHttpInfo (string appStoreAppId)
         {
             // verify the required parameter 'appStoreAppId' is set
             if (appStoreAppId == null)
@@ -1025,31 +1025,31 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AppDetail>(localVarStatusCode,
+            return new ApiResponse<AppStoreApp>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AppDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppDetail)));
+                (AppStoreApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppStoreApp)));
         }
 
         /// <summary>
-        /// Get app store app details [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <returns>Task of AppDetail</returns>
-        public async System.Threading.Tasks.Task<AppDetail> GetAppStoreAppAsync (string appStoreAppId)
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <returns>Task of AppStoreApp</returns>
+        public async System.Threading.Tasks.Task<AppStoreApp> GetAppStoreAppAsync (string appStoreAppId)
         {
-             ApiResponse<AppDetail> localVarResponse = await GetAppStoreAppAsyncWithHttpInfo(appStoreAppId);
+             ApiResponse<AppStoreApp> localVarResponse = await GetAppStoreAppAsyncWithHttpInfo(appStoreAppId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get app store app details [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <returns>Task of ApiResponse (AppDetail)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AppDetail>> GetAppStoreAppAsyncWithHttpInfo (string appStoreAppId)
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <returns>Task of ApiResponse (AppStoreApp)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AppStoreApp>> GetAppStoreAppAsyncWithHttpInfo (string appStoreAppId)
         {
             // verify the required parameter 'appStoreAppId' is set
             if (appStoreAppId == null)
@@ -1101,36 +1101,36 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AppDetail>(localVarStatusCode,
+            return new ApiResponse<AppStoreApp>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AppDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppDetail)));
+                (AppStoreApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppStoreApp)));
         }
 
         /// <summary>
-        /// Get list of app store app summaries Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get list of App store app summaries Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query app store app name</param>
+        /// <param name="search">Query App store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
-        /// <returns>RestApiPaginationResultAppSummary</returns>
-        public RestApiPaginationResultAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
+        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <returns>RestApiPaginationResultAppStoreAppSummary</returns>
+        public RestApiPaginationResultAppStoreAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
         {
-             ApiResponse<RestApiPaginationResultAppSummary> localVarResponse = GetAppStoreAppsWithHttpInfo(search, page, limit, excludeNotOwned);
+             ApiResponse<RestApiPaginationResultAppStoreAppSummary> localVarResponse = GetAppStoreAppsWithHttpInfo(search, page, limit, excludeNotOwned);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get list of app store app summaries Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get list of App store app summaries Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query app store app name</param>
+        /// <param name="search">Query App store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
-        /// <returns>ApiResponse of RestApiPaginationResultAppSummary</returns>
-        public ApiResponse< RestApiPaginationResultAppSummary > GetAppStoreAppsWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
+        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultAppStoreAppSummary</returns>
+        public ApiResponse< RestApiPaginationResultAppStoreAppSummary > GetAppStoreAppsWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
         {
             // verify the required parameter 'search' is set
             if (search == null)
@@ -1185,37 +1185,37 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultAppSummary>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultAppStoreAppSummary>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultAppSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultAppSummary)));
+                (RestApiPaginationResultAppStoreAppSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultAppStoreAppSummary)));
         }
 
         /// <summary>
-        /// Get list of app store app summaries Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get list of App store app summaries Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query app store app name</param>
+        /// <param name="search">Query App store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
-        /// <returns>Task of RestApiPaginationResultAppSummary</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultAppSummary> GetAppStoreAppsAsync (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
+        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <returns>Task of RestApiPaginationResultAppStoreAppSummary</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultAppStoreAppSummary> GetAppStoreAppsAsync (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
         {
-             ApiResponse<RestApiPaginationResultAppSummary> localVarResponse = await GetAppStoreAppsAsyncWithHttpInfo(search, page, limit, excludeNotOwned);
+             ApiResponse<RestApiPaginationResultAppStoreAppSummary> localVarResponse = await GetAppStoreAppsAsyncWithHttpInfo(search, page, limit, excludeNotOwned);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get list of app store app summaries Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get list of App store app summaries Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query app store app name</param>
+        /// <param name="search">Query App store app name</param>
         /// <param name="page">Requested page index (optional)</param>
         /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude app store apps that user is not the owner off (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultAppSummary)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultAppSummary>> GetAppStoreAppsAsyncWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
+        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultAppStoreAppSummary)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultAppStoreAppSummary>> GetAppStoreAppsAsyncWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
         {
             // verify the required parameter 'search' is set
             if (search == null)
@@ -1270,38 +1270,38 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultAppSummary>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultAppStoreAppSummary>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiPaginationResultAppSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultAppSummary)));
+                (RestApiPaginationResultAppStoreAppSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultAppStoreAppSummary)));
         }
 
         /// <summary>
-        /// Update app store app [BETA - this endpoint is under development, do not use it in your production system]
+        /// Update App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="appDetail">App Store App Detail</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreApp">Update App store app</param>
         /// <returns></returns>
-        public void UpdateAppStoreApp (string appStoreAppId, AppDetail appDetail)
+        public void UpdateAppStoreApp (string appStoreAppId, UpdateAppStoreApp appStoreApp)
         {
-             UpdateAppStoreAppWithHttpInfo(appStoreAppId, appDetail);
+             UpdateAppStoreAppWithHttpInfo(appStoreAppId, appStoreApp);
         }
 
         /// <summary>
-        /// Update app store app [BETA - this endpoint is under development, do not use it in your production system]
+        /// Update App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="appDetail">App Store App Detail</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreApp">Update App store app</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateAppStoreAppWithHttpInfo (string appStoreAppId, AppDetail appDetail)
+        public ApiResponse<Object> UpdateAppStoreAppWithHttpInfo (string appStoreAppId, UpdateAppStoreApp appStoreApp)
         {
             // verify the required parameter 'appStoreAppId' is set
             if (appStoreAppId == null)
                 throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreApi->UpdateAppStoreApp");
-            // verify the required parameter 'appDetail' is set
-            if (appDetail == null)
-                throw new ApiException(400, "Missing required parameter 'appDetail' when calling AppStoreApi->UpdateAppStoreApp");
+            // verify the required parameter 'appStoreApp' is set
+            if (appStoreApp == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreApp' when calling AppStoreApi->UpdateAppStoreApp");
 
             var localVarPath = "/api/v1.0/appstore/apps/{appStoreAppId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1333,13 +1333,13 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
-            if (appDetail != null && appDetail.GetType() != typeof(byte[]))
+            if (appStoreApp != null && appStoreApp.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(appDetail); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(appStoreApp); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = appDetail; // byte array
+                localVarPostBody = appStoreApp; // byte array
             }
 
             // authentication (oauth2) required
@@ -1368,33 +1368,33 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update app store app [BETA - this endpoint is under development, do not use it in your production system]
+        /// Update App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="appDetail">App Store App Detail</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreApp">Update App store app</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateAppStoreAppAsync (string appStoreAppId, AppDetail appDetail)
+        public async System.Threading.Tasks.Task UpdateAppStoreAppAsync (string appStoreAppId, UpdateAppStoreApp appStoreApp)
         {
-             await UpdateAppStoreAppAsyncWithHttpInfo(appStoreAppId, appDetail);
+             await UpdateAppStoreAppAsyncWithHttpInfo(appStoreAppId, appStoreApp);
 
         }
 
         /// <summary>
-        /// Update app store app [BETA - this endpoint is under development, do not use it in your production system]
+        /// Update App store app [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
-        /// <param name="appDetail">App Store App Detail</param>
+        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreApp">Update App store app</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreAppAsyncWithHttpInfo (string appStoreAppId, AppDetail appDetail)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreAppAsyncWithHttpInfo (string appStoreAppId, UpdateAppStoreApp appStoreApp)
         {
             // verify the required parameter 'appStoreAppId' is set
             if (appStoreAppId == null)
                 throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreApi->UpdateAppStoreApp");
-            // verify the required parameter 'appDetail' is set
-            if (appDetail == null)
-                throw new ApiException(400, "Missing required parameter 'appDetail' when calling AppStoreApi->UpdateAppStoreApp");
+            // verify the required parameter 'appStoreApp' is set
+            if (appStoreApp == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreApp' when calling AppStoreApi->UpdateAppStoreApp");
 
             var localVarPath = "/api/v1.0/appstore/apps/{appStoreAppId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1426,13 +1426,13 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
-            if (appDetail != null && appDetail.GetType() != typeof(byte[]))
+            if (appStoreApp != null && appStoreApp.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(appDetail); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(appStoreApp); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = appDetail; // byte array
+                localVarPostBody = appStoreApp; // byte array
             }
 
             // authentication (oauth2) required
@@ -1461,10 +1461,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload the app store app logo \\ icon 
+        /// Upload the App store app logo \\ icon 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <param name="image">App Store App Logo</param>
         /// <returns></returns>
         public void UploadAppStoreAppLogo (string appStoreAppId, System.IO.Stream image)
@@ -1473,10 +1473,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload the app store app logo \\ icon 
+        /// Upload the App store app logo \\ icon 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <param name="image">App Store App Logo</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UploadAppStoreAppLogoWithHttpInfo (string appStoreAppId, System.IO.Stream image)
@@ -1542,10 +1542,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload the app store app logo \\ icon 
+        /// Upload the App store app logo \\ icon 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <param name="image">App Store App Logo</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UploadAppStoreAppLogoAsync (string appStoreAppId, System.IO.Stream image)
@@ -1555,10 +1555,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload the app store app logo \\ icon 
+        /// Upload the App store app logo \\ icon 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App Store App Id</param>
+        /// <param name="appStoreAppId">App store app id</param>
         /// <param name="image">App Store App Logo</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UploadAppStoreAppLogoAsyncWithHttpInfo (string appStoreAppId, System.IO.Stream image)

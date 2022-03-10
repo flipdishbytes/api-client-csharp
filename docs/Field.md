@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **Description** | **string** | Description | 
 **Key** | **string** | Key | 
 **Tooltip** | **string** | Tooltip | [optional] 
-**Position** | **int?** | Position  &lt;remarks&gt;Position order in the fields list to display&lt;/remarks&gt; | 
-**DefaultValue** | **string** | Default Value  &lt;example&gt;10&lt;/example&gt;&lt;example&gt;true&lt;/example&gt; | [optional] 
+**Position** | **int?** | Position | 
+**DefaultValue** | **string** | Default Value | [optional] 
 **ValidValues** | [**List&lt;ValidValue&gt;**](ValidValue.md) | Valid Values  &lt;remarks&gt;Used typically for dropdown/select&lt;/remarks&gt; | [optional] 
 **ValidationRegex** | **string** | Validation Regex | [optional] 
 **FieldType** | **string** | Field Type | 

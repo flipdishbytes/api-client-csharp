@@ -4,20 +4,20 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AppVerificationUpdate**](AppStoreApi.md#appverificationupdate) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId}/verification | Update app store app verification
-[**CreateAppStoreApp**](AppStoreApi.md#createappstoreapp) | **POST** /api/v1.0/appstore/apps | Create app store app
-[**DeleteAppStoreApp**](AppStoreApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/appstore/apps/{appStoreAppId} | Delete app store app
-[**GetAppStoreApp**](AppStoreApi.md#getappstoreapp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | Get app store app details
-[**GetAppStoreApps**](AppStoreApi.md#getappstoreapps) | **GET** /api/v1.0/appstore/apps | Get list of app store app summaries
-[**UpdateAppStoreApp**](AppStoreApi.md#updateappstoreapp) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId} | Update app store app
-[**UploadAppStoreAppLogo**](AppStoreApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/appstore/apps/{appStoreAppId}/logo | Upload the app store app logo \\ icon
+[**AppVerificationUpdate**](AppStoreApi.md#appverificationupdate) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId}/verification | Update App store app verification
+[**CreateAppStoreApp**](AppStoreApi.md#createappstoreapp) | **POST** /api/v1.0/appstore/apps | Create App store app
+[**DeleteAppStoreApp**](AppStoreApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/appstore/apps/{appStoreAppId} | Delete App store app
+[**GetAppStoreApp**](AppStoreApi.md#getappstoreapp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | Get App store app
+[**GetAppStoreApps**](AppStoreApi.md#getappstoreapps) | **GET** /api/v1.0/appstore/apps | Get list of App store app summaries
+[**UpdateAppStoreApp**](AppStoreApi.md#updateappstoreapp) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId} | Update App store app
+[**UploadAppStoreAppLogo**](AppStoreApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/appstore/apps/{appStoreAppId}/logo | Upload the App store app logo \\ icon
 
 
 <a name="appverificationupdate"></a>
 # **AppVerificationUpdate**
 > void AppVerificationUpdate (string appStoreAppId, string verificationStatus)
 
-Update app store app verification
+Update App store app verification
 
 [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
 
@@ -39,12 +39,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreApi();
-            var appStoreAppId = appStoreAppId_example;  // string | App Store App Id
-            var verificationStatus = verificationStatus_example;  // string | New Verification Status
+            var appStoreAppId = appStoreAppId_example;  // string | App store app id
+            var verificationStatus = verificationStatus_example;  // string | New verification status
 
             try
             {
-                // Update app store app verification
+                // Update App store app verification
                 apiInstance.AppVerificationUpdate(appStoreAppId, verificationStatus);
             }
             catch (Exception e)
@@ -60,8 +60,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appStoreAppId** | **string**| App Store App Id | 
- **verificationStatus** | **string**| New Verification Status | 
+ **appStoreAppId** | **string**| App store app id | 
+ **verificationStatus** | **string**| New verification status | 
 
 ### Return type
 
@@ -80,9 +80,9 @@ void (empty response body)
 
 <a name="createappstoreapp"></a>
 # **CreateAppStoreApp**
-> RestApiResultAppDetail CreateAppStoreApp (AppDetailBase appDetailBase)
+> RestApiResultAppStoreApp CreateAppStoreApp (CreateAppStoreApp createAppStoreApp)
 
-Create app store app
+Create App store app
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -104,12 +104,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreApi();
-            var appDetailBase = new AppDetailBase(); // AppDetailBase | App Store App Detail Base
+            var createAppStoreApp = new CreateAppStoreApp(); // CreateAppStoreApp | App store app
 
             try
             {
-                // Create app store app
-                RestApiResultAppDetail result = apiInstance.CreateAppStoreApp(appDetailBase);
+                // Create App store app
+                RestApiResultAppStoreApp result = apiInstance.CreateAppStoreApp(createAppStoreApp);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -125,11 +125,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appDetailBase** | [**AppDetailBase**](AppDetailBase.md)| App Store App Detail Base | 
+ **createAppStoreApp** | [**CreateAppStoreApp**](CreateAppStoreApp.md)| App store app | 
 
 ### Return type
 
-[**RestApiResultAppDetail**](RestApiResultAppDetail.md)
+[**RestApiResultAppStoreApp**](RestApiResultAppStoreApp.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 # **DeleteAppStoreApp**
 > RestApiStringResult DeleteAppStoreApp (string appStoreAppId)
 
-Delete app store app
+Delete App store app
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -168,11 +168,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreApi();
-            var appStoreAppId = appStoreAppId_example;  // string | App Store App Id
+            var appStoreAppId = appStoreAppId_example;  // string | App store app id
 
             try
             {
-                // Delete app store app
+                // Delete App store app
                 RestApiStringResult result = apiInstance.DeleteAppStoreApp(appStoreAppId);
                 Debug.WriteLine(result);
             }
@@ -189,7 +189,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appStoreAppId** | **string**| App Store App Id | 
+ **appStoreAppId** | **string**| App store app id | 
 
 ### Return type
 
@@ -208,9 +208,9 @@ Name | Type | Description  | Notes
 
 <a name="getappstoreapp"></a>
 # **GetAppStoreApp**
-> AppDetail GetAppStoreApp (string appStoreAppId)
+> AppStoreApp GetAppStoreApp (string appStoreAppId)
 
-Get app store app details
+Get App store app
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -232,12 +232,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreApi();
-            var appStoreAppId = appStoreAppId_example;  // string | App Store App Id
+            var appStoreAppId = appStoreAppId_example;  // string | App store app id
 
             try
             {
-                // Get app store app details
-                AppDetail result = apiInstance.GetAppStoreApp(appStoreAppId);
+                // Get App store app
+                AppStoreApp result = apiInstance.GetAppStoreApp(appStoreAppId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -253,11 +253,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appStoreAppId** | **string**| App Store App Id | 
+ **appStoreAppId** | **string**| App store app id | 
 
 ### Return type
 
-[**AppDetail**](AppDetail.md)
+[**AppStoreApp**](AppStoreApp.md)
 
 ### Authorization
 
@@ -272,9 +272,9 @@ Name | Type | Description  | Notes
 
 <a name="getappstoreapps"></a>
 # **GetAppStoreApps**
-> RestApiPaginationResultAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
+> RestApiPaginationResultAppStoreAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
 
-Get list of app store app summaries
+Get list of App store app summaries
 
 Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -296,15 +296,15 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreApi();
-            var search = search_example;  // string | Query app store app name
+            var search = search_example;  // string | Query App store app name
             var page = 56;  // int? | Requested page index (optional) 
             var limit = 56;  // int? | Requested page limit (optional) 
-            var excludeNotOwned = true;  // bool? | Exclude app store apps that user is not the owner off (optional) 
+            var excludeNotOwned = true;  // bool? | Exclude App store apps that user is not the owner off (optional) 
 
             try
             {
-                // Get list of app store app summaries
-                RestApiPaginationResultAppSummary result = apiInstance.GetAppStoreApps(search, page, limit, excludeNotOwned);
+                // Get list of App store app summaries
+                RestApiPaginationResultAppStoreAppSummary result = apiInstance.GetAppStoreApps(search, page, limit, excludeNotOwned);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -320,14 +320,14 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **search** | **string**| Query app store app name | 
+ **search** | **string**| Query App store app name | 
  **page** | **int?**| Requested page index | [optional] 
  **limit** | **int?**| Requested page limit | [optional] 
- **excludeNotOwned** | **bool?**| Exclude app store apps that user is not the owner off | [optional] 
+ **excludeNotOwned** | **bool?**| Exclude App store apps that user is not the owner off | [optional] 
 
 ### Return type
 
-[**RestApiPaginationResultAppSummary**](RestApiPaginationResultAppSummary.md)
+[**RestApiPaginationResultAppStoreAppSummary**](RestApiPaginationResultAppStoreAppSummary.md)
 
 ### Authorization
 
@@ -342,9 +342,9 @@ Name | Type | Description  | Notes
 
 <a name="updateappstoreapp"></a>
 # **UpdateAppStoreApp**
-> void UpdateAppStoreApp (string appStoreAppId, AppDetail appDetail)
+> void UpdateAppStoreApp (string appStoreAppId, UpdateAppStoreApp appStoreApp)
 
-Update app store app
+Update App store app
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -366,13 +366,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreApi();
-            var appStoreAppId = appStoreAppId_example;  // string | App Store App Id
-            var appDetail = new AppDetail(); // AppDetail | App Store App Detail
+            var appStoreAppId = appStoreAppId_example;  // string | App store app id
+            var appStoreApp = new UpdateAppStoreApp(); // UpdateAppStoreApp | Update App store app
 
             try
             {
-                // Update app store app
-                apiInstance.UpdateAppStoreApp(appStoreAppId, appDetail);
+                // Update App store app
+                apiInstance.UpdateAppStoreApp(appStoreAppId, appStoreApp);
             }
             catch (Exception e)
             {
@@ -387,8 +387,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appStoreAppId** | **string**| App Store App Id | 
- **appDetail** | [**AppDetail**](AppDetail.md)| App Store App Detail | 
+ **appStoreAppId** | **string**| App store app id | 
+ **appStoreApp** | [**UpdateAppStoreApp**](UpdateAppStoreApp.md)| Update App store app | 
 
 ### Return type
 
@@ -409,7 +409,7 @@ void (empty response body)
 # **UploadAppStoreAppLogo**
 > void UploadAppStoreAppLogo (string appStoreAppId, System.IO.Stream image)
 
-Upload the app store app logo \\ icon
+Upload the App store app logo \\ icon
 
 ### Example
 ```csharp
@@ -429,12 +429,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreApi();
-            var appStoreAppId = appStoreAppId_example;  // string | App Store App Id
+            var appStoreAppId = appStoreAppId_example;  // string | App store app id
             var image = new System.IO.Stream(); // System.IO.Stream | App Store App Logo
 
             try
             {
-                // Upload the app store app logo \\ icon
+                // Upload the App store app logo \\ icon
                 apiInstance.UploadAppStoreAppLogo(appStoreAppId, image);
             }
             catch (Exception e)
@@ -450,7 +450,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appStoreAppId** | **string**| App Store App Id | 
+ **appStoreAppId** | **string**| App store app id | 
  **image** | **System.IO.Stream**| App Store App Logo | 
 
 ### Return type

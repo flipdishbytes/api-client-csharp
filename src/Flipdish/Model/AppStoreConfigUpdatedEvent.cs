@@ -35,16 +35,16 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="eventName">The event name.</param>
         /// <param name="appStoreAppId">App Store Id.</param>
-        /// <param name="appStoreAppConfiguration">App Configuration.</param>
+        /// <param name="updateAppStoreAppStoreAppStoreAppConfiguration">App Configuration.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
-        public AppStoreConfigUpdatedEvent(string eventName = default(string), string appStoreAppId = default(string), AppConfigurationBase appStoreAppConfiguration = default(AppConfigurationBase), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
+        public AppStoreConfigUpdatedEvent(string eventName = default(string), string appStoreAppId = default(string), UpdateAppStoreAppConfigurationWebhookDTO updateAppStoreAppStoreAppStoreAppConfiguration = default(UpdateAppStoreAppConfigurationWebhookDTO), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string))
         {
             this.EventName = eventName;
             this.AppStoreAppId = appStoreAppId;
-            this.AppStoreAppConfiguration = appStoreAppConfiguration;
+            this.UpdateAppStoreAppStoreAppStoreAppConfiguration = updateAppStoreAppStoreAppStoreAppConfiguration;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
             this.Position = position;
@@ -69,8 +69,8 @@ namespace Flipdish.Model
         /// App Configuration
         /// </summary>
         /// <value>App Configuration</value>
-        [DataMember(Name="AppStoreAppConfiguration", EmitDefaultValue=false)]
-        public AppConfigurationBase AppStoreAppConfiguration { get; set; }
+        [DataMember(Name="UpdateAppStoreAppStoreAppStoreAppConfiguration", EmitDefaultValue=false)]
+        public UpdateAppStoreAppConfigurationWebhookDTO UpdateAppStoreAppStoreAppStoreAppConfiguration { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -110,7 +110,7 @@ namespace Flipdish.Model
             sb.Append("class AppStoreConfigUpdatedEvent {\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  AppStoreAppId: ").Append(AppStoreAppId).Append("\n");
-            sb.Append("  AppStoreAppConfiguration: ").Append(AppStoreAppConfiguration).Append("\n");
+            sb.Append("  UpdateAppStoreAppStoreAppStoreAppConfiguration: ").Append(UpdateAppStoreAppStoreAppStoreAppConfiguration).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -160,9 +160,9 @@ namespace Flipdish.Model
                     this.AppStoreAppId.Equals(input.AppStoreAppId))
                 ) && 
                 (
-                    this.AppStoreAppConfiguration == input.AppStoreAppConfiguration ||
-                    (this.AppStoreAppConfiguration != null &&
-                    this.AppStoreAppConfiguration.Equals(input.AppStoreAppConfiguration))
+                    this.UpdateAppStoreAppStoreAppStoreAppConfiguration == input.UpdateAppStoreAppStoreAppStoreAppConfiguration ||
+                    (this.UpdateAppStoreAppStoreAppStoreAppConfiguration != null &&
+                    this.UpdateAppStoreAppStoreAppStoreAppConfiguration.Equals(input.UpdateAppStoreAppStoreAppStoreAppConfiguration))
                 ) && 
                 (
                     this.FlipdishEventId == input.FlipdishEventId ||
@@ -199,8 +199,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.AppStoreAppId != null)
                     hashCode = hashCode * 59 + this.AppStoreAppId.GetHashCode();
-                if (this.AppStoreAppConfiguration != null)
-                    hashCode = hashCode * 59 + this.AppStoreAppConfiguration.GetHashCode();
+                if (this.UpdateAppStoreAppStoreAppStoreAppConfiguration != null)
+                    hashCode = hashCode * 59 + this.UpdateAppStoreAppStoreAppStoreAppConfiguration.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)
