@@ -11,13 +11,13 @@ Method | HTTP request | Description
 [**ChannelsSetStoreChannelStoreMapping**](ChannelsApi.md#channelssetstorechannelstoremapping) | **POST** /api/v1.0/{appId}/channels/channelstores | 
 [**DetachAllStoresFromSalesChannel**](ChannelsApi.md#detachallstoresfromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | Detaches all the stores from the given sales channel.
 [**DetachStoreFromSalesChannel**](ChannelsApi.md#detachstorefromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Detaches the specified store from the given sales channel.
-[**GetAssignedChannels**](ChannelsApi.md#getassignedchannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given whitelabel
+[**GetAssignedChannels**](ChannelsApi.md#getassignedchannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given AppId
+[**GetAvailableChannels**](ChannelsApi.md#getavailablechannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given AppId
 [**GetChannel**](ChannelsApi.md#getchannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
 [**GetChannels**](ChannelsApi.md#getchannels) | **GET** /api/v1.0/{appId}/channels | 
-[**GetNotAssignedChannels**](ChannelsApi.md#getnotassignedchannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given whitelabel
-[**GetStoresAssignedToChannel**](ChannelsApi.md#getstoresassignedtochannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of store that are assigned to the given sales channel.
+[**GetStoresAssignedToChannel**](ChannelsApi.md#getstoresassignedtochannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of stores of an AppId that are assigned to a given Sales Channel
 [**GetStoresBySalesChannel**](ChannelsApi.md#getstoresbysaleschannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | Returns a list of store ids attached to the given channel type for the specified app.
-[**UnassignStoreFromChannel**](ChannelsApi.md#unassignstorefromchannel) | **POST** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
+[**UnassignStoreFromChannel**](ChannelsApi.md#unassignstorefromchannel) | **DELETE** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
 
 
 <a name="assignappidtosaleschannel"></a>
@@ -476,9 +476,9 @@ Name | Type | Description  | Notes
 
 <a name="getassignedchannels"></a>
 # **GetAssignedChannels**
-> Object GetAssignedChannels (string appId)
+> RestApiArrayResultChannel GetAssignedChannels (string appId)
 
-Returns a list of sales channels that are assigned to a given whitelabel
+Returns a list of sales channels that are assigned to a given AppId
 
 ### Example
 ```csharp
@@ -502,8 +502,8 @@ namespace Example
 
             try
             {
-                // Returns a list of sales channels that are assigned to a given whitelabel
-                Object result = apiInstance.GetAssignedChannels(appId);
+                // Returns a list of sales channels that are assigned to a given AppId
+                RestApiArrayResultChannel result = apiInstance.GetAssignedChannels(appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -523,7 +523,69 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiArrayResultChannel**](RestApiArrayResultChannel.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getavailablechannels"></a>
+# **GetAvailableChannels**
+> RestApiArrayResultChannel GetAvailableChannels (string appId)
+
+Returns a list of sales channels that are not yet assigned to a given AppId
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetAvailableChannelsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ChannelsApi();
+            var appId = appId_example;  // string | Application Id (AppNameIdxxx)
+
+            try
+            {
+                // Returns a list of sales channels that are not yet assigned to a given AppId
+                RestApiArrayResultChannel result = apiInstance.GetAvailableChannels(appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChannelsApi.GetAvailableChannels: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**| Application Id (AppNameIdxxx) | 
+
+### Return type
+
+[**RestApiArrayResultChannel**](RestApiArrayResultChannel.md)
 
 ### Authorization
 
@@ -538,7 +600,7 @@ Name | Type | Description  | Notes
 
 <a name="getchannel"></a>
 # **GetChannel**
-> RestApiPaginationResultChannel GetChannel (int? id, string appId)
+> Channel GetChannel (int? id, string appId)
 
 
 
@@ -560,12 +622,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ChannelsApi();
-            var id = 56;  // int? | 
-            var appId = appId_example;  // string | 
+            var id = 56;  // int? | ChannelId
+            var appId = appId_example;  // string | AppId
 
             try
             {
-                RestApiPaginationResultChannel result = apiInstance.GetChannel(id, appId);
+                Channel result = apiInstance.GetChannel(id, appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -581,12 +643,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | 
- **appId** | **string**|  | 
+ **id** | **int?**| ChannelId | 
+ **appId** | **string**| AppId | 
 
 ### Return type
 
-[**RestApiPaginationResultChannel**](RestApiPaginationResultChannel.md)
+[**Channel**](Channel.md)
 
 ### Authorization
 
@@ -601,7 +663,7 @@ Name | Type | Description  | Notes
 
 <a name="getchannels"></a>
 # **GetChannels**
-> RestApiPaginationResultChannel GetChannels (string appId)
+> RestApiArrayResultChannel GetChannels (string appId)
 
 
 
@@ -627,7 +689,7 @@ namespace Example
 
             try
             {
-                RestApiPaginationResultChannel result = apiInstance.GetChannels(appId);
+                RestApiArrayResultChannel result = apiInstance.GetChannels(appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -647,69 +709,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiPaginationResultChannel**](RestApiPaginationResultChannel.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getnotassignedchannels"></a>
-# **GetNotAssignedChannels**
-> Object GetNotAssignedChannels (string appId)
-
-Returns a list of sales channels that are not yet assigned to a given whitelabel
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class GetNotAssignedChannelsExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new ChannelsApi();
-            var appId = appId_example;  // string | Application Id (AppNameIdxxx)
-
-            try
-            {
-                // Returns a list of sales channels that are not yet assigned to a given whitelabel
-                Object result = apiInstance.GetNotAssignedChannels(appId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ChannelsApi.GetNotAssignedChannels: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application Id (AppNameIdxxx) | 
-
-### Return type
-
-**Object**
+[**RestApiArrayResultChannel**](RestApiArrayResultChannel.md)
 
 ### Authorization
 
@@ -724,9 +724,9 @@ Name | Type | Description  | Notes
 
 <a name="getstoresassignedtochannel"></a>
 # **GetStoresAssignedToChannel**
-> Object GetStoresAssignedToChannel (string appId, int? channelId)
+> RestApiArrayResultStoreChannelAssignment GetStoresAssignedToChannel (string appId, int? channelId)
 
-Returns a list of store that are assigned to the given sales channel.
+Returns a list of stores of an AppId that are assigned to a given Sales Channel
 
 ### Example
 ```csharp
@@ -751,8 +751,8 @@ namespace Example
 
             try
             {
-                // Returns a list of store that are assigned to the given sales channel.
-                Object result = apiInstance.GetStoresAssignedToChannel(appId, channelId);
+                // Returns a list of stores of an AppId that are assigned to a given Sales Channel
+                RestApiArrayResultStoreChannelAssignment result = apiInstance.GetStoresAssignedToChannel(appId, channelId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -773,7 +773,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiArrayResultStoreChannelAssignment**](RestApiArrayResultStoreChannelAssignment.md)
 
 ### Authorization
 
