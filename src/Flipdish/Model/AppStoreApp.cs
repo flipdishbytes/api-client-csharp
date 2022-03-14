@@ -208,6 +208,180 @@ namespace Flipdish.Model
         [DataMember(Name="PermissionsType", EmitDefaultValue=false)]
         public PermissionsTypeEnum PermissionsType { get; set; }
         /// <summary>
+        /// Defines Tags
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TagsEnum
+        {
+            
+            /// <summary>
+            /// Enum PointOfSale for value: PointOfSale
+            /// </summary>
+            [EnumMember(Value = "PointOfSale")]
+            PointOfSale = 1,
+            
+            /// <summary>
+            /// Enum DeliveryAndLogistics for value: DeliveryAndLogistics
+            /// </summary>
+            [EnumMember(Value = "DeliveryAndLogistics")]
+            DeliveryAndLogistics = 2,
+            
+            /// <summary>
+            /// Enum CRM for value: CRM
+            /// </summary>
+            [EnumMember(Value = "CRM")]
+            CRM = 3,
+            
+            /// <summary>
+            /// Enum GiftCard for value: GiftCard
+            /// </summary>
+            [EnumMember(Value = "GiftCard")]
+            GiftCard = 4,
+            
+            /// <summary>
+            /// Enum Accounting for value: Accounting
+            /// </summary>
+            [EnumMember(Value = "Accounting")]
+            Accounting = 5,
+            
+            /// <summary>
+            /// Enum LoyaltyAndMarketing for value: LoyaltyAndMarketing
+            /// </summary>
+            [EnumMember(Value = "LoyaltyAndMarketing")]
+            LoyaltyAndMarketing = 6,
+            
+            /// <summary>
+            /// Enum Other for value: Other
+            /// </summary>
+            [EnumMember(Value = "Other")]
+            Other = 7
+        }
+
+
+        /// <summary>
+        /// Tags
+        /// </summary>
+        /// <value>Tags</value>
+        [DataMember(Name="Tags", EmitDefaultValue=false)]
+        public List<TagsEnum> Tags { get; set; }
+        /// <summary>
+        /// Defines Regions
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum RegionsEnum
+        {
+            
+            /// <summary>
+            /// Enum GB for value: GB
+            /// </summary>
+            [EnumMember(Value = "GB")]
+            GB = 1,
+            
+            /// <summary>
+            /// Enum IE for value: IE
+            /// </summary>
+            [EnumMember(Value = "IE")]
+            IE = 2,
+            
+            /// <summary>
+            /// Enum FR for value: FR
+            /// </summary>
+            [EnumMember(Value = "FR")]
+            FR = 3,
+            
+            /// <summary>
+            /// Enum ES for value: ES
+            /// </summary>
+            [EnumMember(Value = "ES")]
+            ES = 4,
+            
+            /// <summary>
+            /// Enum PT for value: PT
+            /// </summary>
+            [EnumMember(Value = "PT")]
+            PT = 5,
+            
+            /// <summary>
+            /// Enum IT for value: IT
+            /// </summary>
+            [EnumMember(Value = "IT")]
+            IT = 6,
+            
+            /// <summary>
+            /// Enum DE for value: DE
+            /// </summary>
+            [EnumMember(Value = "DE")]
+            DE = 7,
+            
+            /// <summary>
+            /// Enum PL for value: PL
+            /// </summary>
+            [EnumMember(Value = "PL")]
+            PL = 8,
+            
+            /// <summary>
+            /// Enum BE for value: BE
+            /// </summary>
+            [EnumMember(Value = "BE")]
+            BE = 9,
+            
+            /// <summary>
+            /// Enum LU for value: LU
+            /// </summary>
+            [EnumMember(Value = "LU")]
+            LU = 10,
+            
+            /// <summary>
+            /// Enum NL for value: NL
+            /// </summary>
+            [EnumMember(Value = "NL")]
+            NL = 11,
+            
+            /// <summary>
+            /// Enum US for value: US
+            /// </summary>
+            [EnumMember(Value = "US")]
+            US = 12,
+            
+            /// <summary>
+            /// Enum CA for value: CA
+            /// </summary>
+            [EnumMember(Value = "CA")]
+            CA = 13,
+            
+            /// <summary>
+            /// Enum BG for value: BG
+            /// </summary>
+            [EnumMember(Value = "BG")]
+            BG = 14,
+            
+            /// <summary>
+            /// Enum MX for value: MX
+            /// </summary>
+            [EnumMember(Value = "MX")]
+            MX = 15,
+            
+            /// <summary>
+            /// Enum AU for value: AU
+            /// </summary>
+            [EnumMember(Value = "AU")]
+            AU = 16,
+            
+            /// <summary>
+            /// Enum NZ for value: NZ
+            /// </summary>
+            [EnumMember(Value = "NZ")]
+            NZ = 17
+        }
+
+
+        /// <summary>
+        /// Regions
+        /// </summary>
+        /// <value>Regions</value>
+        [DataMember(Name="Regions", EmitDefaultValue=false)]
+        public List<RegionsEnum> Regions { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="AppStoreApp" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -232,7 +406,7 @@ namespace Flipdish.Model
         /// <param name="tags">Tags (required).</param>
         /// <param name="regions">Regions (required).</param>
         /// <param name="developerName">Developer Name.</param>
-        public AppStoreApp(string id = default(string), VerificationStatusEnum verificationStatus = default(VerificationStatusEnum), string logo = default(string), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string setupInstructions = default(string), string externalSetupLink = default(string), string oAuthAppId = default(string), TeammateAppAccessLevelEnum? teammateAppAccessLevel = default(TeammateAppAccessLevelEnum?), PermissionsTypeEnum permissionsType = default(PermissionsTypeEnum), string name = default(string), string description = default(string), bool? isEnabled = default(bool?), List<string> tags = default(List<string>), List<string> regions = default(List<string>), string developerName = default(string))
+        public AppStoreApp(string id = default(string), VerificationStatusEnum verificationStatus = default(VerificationStatusEnum), string logo = default(string), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string setupInstructions = default(string), string externalSetupLink = default(string), string oAuthAppId = default(string), TeammateAppAccessLevelEnum? teammateAppAccessLevel = default(TeammateAppAccessLevelEnum?), PermissionsTypeEnum permissionsType = default(PermissionsTypeEnum), string name = default(string), string description = default(string), bool? isEnabled = default(bool?), List<TagsEnum> tags = default(List<TagsEnum>), List<RegionsEnum> regions = default(List<RegionsEnum>), string developerName = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -401,19 +575,7 @@ namespace Flipdish.Model
         [DataMember(Name="IsEnabled", EmitDefaultValue=false)]
         public bool? IsEnabled { get; set; }
 
-        /// <summary>
-        /// Tags
-        /// </summary>
-        /// <value>Tags</value>
-        [DataMember(Name="Tags", EmitDefaultValue=false)]
-        public List<string> Tags { get; set; }
 
-        /// <summary>
-        /// Regions
-        /// </summary>
-        /// <value>Regions</value>
-        [DataMember(Name="Regions", EmitDefaultValue=false)]
-        public List<string> Regions { get; set; }
 
         /// <summary>
         /// Developer Name
