@@ -98,54 +98,6 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> AttachStoreToSalesChannelWithHttpInfo (string appId, int? channelId, int? storeId);
         /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <returns>RestApiArrayResultStoreChannelStoreMapping</returns>
-        RestApiArrayResultStoreChannelStoreMapping ChannelsGetStoreChannelStoreMapping (string appId, int? channelId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <returns>ApiResponse of RestApiArrayResultStoreChannelStoreMapping</returns>
-        ApiResponse<RestApiArrayResultStoreChannelStoreMapping> ChannelsGetStoreChannelStoreMappingWithHttpInfo (string appId, int? channelId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
-        /// <returns>RestApiArrayResultStoreChannelStoreMapping</returns>
-        RestApiArrayResultStoreChannelStoreMapping ChannelsSetStoreChannelStoreMapping (string appId, int? channelId, List<ChannelStoreMapping> stores);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
-        /// <returns>ApiResponse of RestApiArrayResultStoreChannelStoreMapping</returns>
-        ApiResponse<RestApiArrayResultStoreChannelStoreMapping> ChannelsSetStoreChannelStoreMappingWithHttpInfo (string appId, int? channelId, List<ChannelStoreMapping> stores);
-        /// <summary>
         /// Detaches all the stores from the given sales channel.
         /// </summary>
         /// <remarks>
@@ -236,7 +188,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultChannel</returns>
         ApiResponse<RestApiArrayResultChannel> GetAvailableChannelsWithHttpInfo (string appId);
         /// <summary>
-        /// 
+        /// Returns a Sales Channel by Id.
         /// </summary>
         /// <remarks>
         /// 
@@ -248,7 +200,7 @@ namespace Flipdish.Api
         Channel GetChannel (int? id, string appId);
 
         /// <summary>
-        /// 
+        /// Returns a Sales Channel by Id.
         /// </summary>
         /// <remarks>
         /// 
@@ -259,7 +211,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Channel</returns>
         ApiResponse<Channel> GetChannelWithHttpInfo (int? id, string appId);
         /// <summary>
-        /// 
+        /// Returns a list of enabled Channels
         /// </summary>
         /// <remarks>
         /// 
@@ -270,7 +222,7 @@ namespace Flipdish.Api
         RestApiArrayResultChannel GetChannels (string appId);
 
         /// <summary>
-        /// 
+        /// Returns a list of enabled Channels
         /// </summary>
         /// <remarks>
         /// 
@@ -426,54 +378,6 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AttachStoreToSalesChannelAsyncWithHttpInfo (string appId, int? channelId, int? storeId);
         /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <returns>Task of RestApiArrayResultStoreChannelStoreMapping</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultStoreChannelStoreMapping> ChannelsGetStoreChannelStoreMappingAsync (string appId, int? channelId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultStoreChannelStoreMapping)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreChannelStoreMapping>> ChannelsGetStoreChannelStoreMappingAsyncWithHttpInfo (string appId, int? channelId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
-        /// <returns>Task of RestApiArrayResultStoreChannelStoreMapping</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultStoreChannelStoreMapping> ChannelsSetStoreChannelStoreMappingAsync (string appId, int? channelId, List<ChannelStoreMapping> stores);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultStoreChannelStoreMapping)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreChannelStoreMapping>> ChannelsSetStoreChannelStoreMappingAsyncWithHttpInfo (string appId, int? channelId, List<ChannelStoreMapping> stores);
-        /// <summary>
         /// Detaches all the stores from the given sales channel.
         /// </summary>
         /// <remarks>
@@ -564,7 +468,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultChannel)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultChannel>> GetAvailableChannelsAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// 
+        /// Returns a Sales Channel by Id.
         /// </summary>
         /// <remarks>
         /// 
@@ -576,7 +480,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<Channel> GetChannelAsync (int? id, string appId);
 
         /// <summary>
-        /// 
+        /// Returns a Sales Channel by Id.
         /// </summary>
         /// <remarks>
         /// 
@@ -587,7 +491,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (Channel)</returns>
         System.Threading.Tasks.Task<ApiResponse<Channel>> GetChannelAsyncWithHttpInfo (int? id, string appId);
         /// <summary>
-        /// 
+        /// Returns a list of enabled Channels
         /// </summary>
         /// <remarks>
         /// 
@@ -598,7 +502,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultChannel> GetChannelsAsync (string appId);
 
         /// <summary>
-        /// 
+        /// Returns a list of enabled Channels
         /// </summary>
         /// <remarks>
         /// 
@@ -1292,368 +1196,6 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <returns>RestApiArrayResultStoreChannelStoreMapping</returns>
-        public RestApiArrayResultStoreChannelStoreMapping ChannelsGetStoreChannelStoreMapping (string appId, int? channelId)
-        {
-             ApiResponse<RestApiArrayResultStoreChannelStoreMapping> localVarResponse = ChannelsGetStoreChannelStoreMappingWithHttpInfo(appId, channelId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <returns>ApiResponse of RestApiArrayResultStoreChannelStoreMapping</returns>
-        public ApiResponse< RestApiArrayResultStoreChannelStoreMapping > ChannelsGetStoreChannelStoreMappingWithHttpInfo (string appId, int? channelId)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->ChannelsGetStoreChannelStoreMapping");
-            // verify the required parameter 'channelId' is set
-            if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsGetStoreChannelStoreMapping");
-
-            var localVarPath = "/api/v1.0/{appId}/channels/channelstores";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (channelId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "channelId", channelId)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ChannelsGetStoreChannelStoreMapping", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiArrayResultStoreChannelStoreMapping>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultStoreChannelStoreMapping) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultStoreChannelStoreMapping)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <returns>Task of RestApiArrayResultStoreChannelStoreMapping</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultStoreChannelStoreMapping> ChannelsGetStoreChannelStoreMappingAsync (string appId, int? channelId)
-        {
-             ApiResponse<RestApiArrayResultStoreChannelStoreMapping> localVarResponse = await ChannelsGetStoreChannelStoreMappingAsyncWithHttpInfo(appId, channelId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultStoreChannelStoreMapping)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreChannelStoreMapping>> ChannelsGetStoreChannelStoreMappingAsyncWithHttpInfo (string appId, int? channelId)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->ChannelsGetStoreChannelStoreMapping");
-            // verify the required parameter 'channelId' is set
-            if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsGetStoreChannelStoreMapping");
-
-            var localVarPath = "/api/v1.0/{appId}/channels/channelstores";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (channelId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "channelId", channelId)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ChannelsGetStoreChannelStoreMapping", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiArrayResultStoreChannelStoreMapping>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultStoreChannelStoreMapping) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultStoreChannelStoreMapping)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
-        /// <returns>RestApiArrayResultStoreChannelStoreMapping</returns>
-        public RestApiArrayResultStoreChannelStoreMapping ChannelsSetStoreChannelStoreMapping (string appId, int? channelId, List<ChannelStoreMapping> stores)
-        {
-             ApiResponse<RestApiArrayResultStoreChannelStoreMapping> localVarResponse = ChannelsSetStoreChannelStoreMappingWithHttpInfo(appId, channelId, stores);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
-        /// <returns>ApiResponse of RestApiArrayResultStoreChannelStoreMapping</returns>
-        public ApiResponse< RestApiArrayResultStoreChannelStoreMapping > ChannelsSetStoreChannelStoreMappingWithHttpInfo (string appId, int? channelId, List<ChannelStoreMapping> stores)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->ChannelsSetStoreChannelStoreMapping");
-            // verify the required parameter 'channelId' is set
-            if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsSetStoreChannelStoreMapping");
-            // verify the required parameter 'stores' is set
-            if (stores == null)
-                throw new ApiException(400, "Missing required parameter 'stores' when calling ChannelsApi->ChannelsSetStoreChannelStoreMapping");
-
-            var localVarPath = "/api/v1.0/{appId}/channels/channelstores";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (channelId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "channelId", channelId)); // query parameter
-            if (stores != null && stores.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(stores); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = stores; // byte array
-            }
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ChannelsSetStoreChannelStoreMapping", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiArrayResultStoreChannelStoreMapping>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultStoreChannelStoreMapping) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultStoreChannelStoreMapping)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
-        /// <returns>Task of RestApiArrayResultStoreChannelStoreMapping</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultStoreChannelStoreMapping> ChannelsSetStoreChannelStoreMappingAsync (string appId, int? channelId, List<ChannelStoreMapping> stores)
-        {
-             ApiResponse<RestApiArrayResultStoreChannelStoreMapping> localVarResponse = await ChannelsSetStoreChannelStoreMappingAsyncWithHttpInfo(appId, channelId, stores);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultStoreChannelStoreMapping)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreChannelStoreMapping>> ChannelsSetStoreChannelStoreMappingAsyncWithHttpInfo (string appId, int? channelId, List<ChannelStoreMapping> stores)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->ChannelsSetStoreChannelStoreMapping");
-            // verify the required parameter 'channelId' is set
-            if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsSetStoreChannelStoreMapping");
-            // verify the required parameter 'stores' is set
-            if (stores == null)
-                throw new ApiException(400, "Missing required parameter 'stores' when calling ChannelsApi->ChannelsSetStoreChannelStoreMapping");
-
-            var localVarPath = "/api/v1.0/{appId}/channels/channelstores";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (channelId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "channelId", channelId)); // query parameter
-            if (stores != null && stores.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(stores); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = stores; // byte array
-            }
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ChannelsSetStoreChannelStoreMapping", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiArrayResultStoreChannelStoreMapping>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiArrayResultStoreChannelStoreMapping) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultStoreChannelStoreMapping)));
-        }
-
-        /// <summary>
         /// Detaches all the stores from the given sales channel. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2294,7 +1836,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Returns a Sales Channel by Id. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ChannelId</param>
@@ -2307,7 +1849,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Returns a Sales Channel by Id. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ChannelId</param>
@@ -2375,7 +1917,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Returns a Sales Channel by Id. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ChannelId</param>
@@ -2389,7 +1931,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Returns a Sales Channel by Id. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ChannelId</param>
@@ -2457,7 +1999,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Returns a list of enabled Channels 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2469,7 +2011,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Returns a list of enabled Channels 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2532,7 +2074,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Returns a list of enabled Channels 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2545,7 +2087,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Returns a list of enabled Channels 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
