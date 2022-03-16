@@ -389,9 +389,6 @@ Class | Method | HTTP request | Description
 *PayoutsExportApi* | [**ExportPayoutStores**](docs/PayoutsExportApi.md#exportpayoutstores) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export | Export payout's details as CSV
 *PayoutsExportApi* | [**ExportPayouts**](docs/PayoutsExportApi.md#exportpayouts) | **GET** /api/v1.0/{appId}/payouts/export | Export payouts as CSV
 *ProcessingFeeConfigsApi* | [**GetProcessingFeeConfigsByStoreIds**](docs/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
-*ProductsApi* | [**ArchiveProduct**](docs/ProductsApi.md#archiveproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/archive | Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-*ProductsApi* | [**DuplicateProduct**](docs/ProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{productId}/duplicate | Duplicate a product
-*ProductsApi* | [**GetProducts**](docs/ProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get paginated products by app name id filtered by product types
 *PushNotificationsApi* | [**DeletePushNotification**](docs/PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**GetPushNotifications**](docs/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**SchedulePushNotification**](docs/PushNotificationsApi.md#schedulepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
@@ -450,6 +447,8 @@ Class | Method | HTTP request | Description
 *TeammatesApi* | [**GetTeammatesByAppId**](docs/TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
 *TeammatesApi* | [**RedeemInvitation**](docs/TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | Redeem one-time code from invitation
 *TeammatesApi* | [**UpdateTeammate**](docs/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | Update teammates (this method does not support Deltas!)
+*TipsApi* | [**TipConfigGet**](docs/TipsApi.md#tipconfigget) | **GET** /api/v1.0/stores/{storeId}/tipconfig | Returns current tip configuration for a store
+*TipsApi* | [**TipConfigUpsert**](docs/TipsApi.md#tipconfigupsert) | **POST** /api/v1.0/stores/{storeId}/tipconfig | Update or insert current tip configuration for a store
 *UsersApi* | [**GetPreviousOrderCountForStore**](docs/UsersApi.md#getpreviousordercountforstore) | **GET** /api/v1.0/users/{userId}/previousordercount/{storeId} | 
 *UsersApi* | [**GetRoles**](docs/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | Get role names
 *VouchersApi* | [**CreateVoucher**](docs/VouchersApi.md#createvoucher) | **POST** /api/v1.0/vouchers/{appId} | [PRIVATE API] Create voucher
@@ -762,7 +761,6 @@ Class | Method | HTTP request | Description
  - [Model.PrinterTurnedOnEvent](docs/PrinterTurnedOnEvent.md)
  - [Model.PrinterUnassignedFromStoreEvent](docs/PrinterUnassignedFromStoreEvent.md)
  - [Model.ProcessingFeeConfig](docs/ProcessingFeeConfig.md)
- - [Model.Product](docs/Product.md)
  - [Model.ProductItem](docs/ProductItem.md)
  - [Model.PushNotificationDeletedEvent](docs/PushNotificationDeletedEvent.md)
  - [Model.PushNotificationRequest](docs/PushNotificationRequest.md)
@@ -843,7 +841,6 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultPayoutOtherCharge](docs/RestApiPaginationResultPayoutOtherCharge.md)
  - [Model.RestApiPaginationResultPayoutRefund](docs/RestApiPaginationResultPayoutRefund.md)
  - [Model.RestApiPaginationResultPhoneCall](docs/RestApiPaginationResultPhoneCall.md)
- - [Model.RestApiPaginationResultProduct](docs/RestApiPaginationResultProduct.md)
  - [Model.RestApiPaginationResultPushNotificationResponse](docs/RestApiPaginationResultPushNotificationResponse.md)
  - [Model.RestApiPaginationResultStore](docs/RestApiPaginationResultStore.md)
  - [Model.RestApiPaginationResultStoreGroup](docs/RestApiPaginationResultStoreGroup.md)
@@ -905,7 +902,6 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultPaymentTerminalTransactionDetails](docs/RestApiResultPaymentTerminalTransactionDetails.md)
  - [Model.RestApiResultPreOrderConfig](docs/RestApiResultPreOrderConfig.md)
  - [Model.RestApiResultProcessingFeeConfig](docs/RestApiResultProcessingFeeConfig.md)
- - [Model.RestApiResultProduct](docs/RestApiResultProduct.md)
  - [Model.RestApiResultPushNotificationResponse](docs/RestApiResultPushNotificationResponse.md)
  - [Model.RestApiResultRedeemInvitationResult](docs/RestApiResultRedeemInvitationResult.md)
  - [Model.RestApiResultRetentionCampaign](docs/RestApiResultRetentionCampaign.md)
@@ -923,6 +919,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultStripeTerminalPrivateKey](docs/RestApiResultStripeTerminalPrivateKey.md)
  - [Model.RestApiResultStuartSettings](docs/RestApiResultStuartSettings.md)
  - [Model.RestApiResultTeammate](docs/RestApiResultTeammate.md)
+ - [Model.RestApiResultTipConfiguration](docs/RestApiResultTipConfiguration.md)
  - [Model.RestApiResultVoucherWithStats](docs/RestApiResultVoucherWithStats.md)
  - [Model.RestApiResultWebsiteImage](docs/RestApiResultWebsiteImage.md)
  - [Model.RestApiResultWebsiteTestimonial](docs/RestApiResultWebsiteTestimonial.md)
@@ -1005,6 +1002,7 @@ Class | Method | HTTP request | Description
  - [Model.TeammateInviteAcceptedEvent](docs/TeammateInviteAcceptedEvent.md)
  - [Model.TeammateInviteSentEvent](docs/TeammateInviteSentEvent.md)
  - [Model.TeammateUpdatedEvent](docs/TeammateUpdatedEvent.md)
+ - [Model.TipConfiguration](docs/TipConfiguration.md)
  - [Model.UpdateAppStoreApp](docs/UpdateAppStoreApp.md)
  - [Model.UpdateAppStoreAppConfiguration](docs/UpdateAppStoreAppConfiguration.md)
  - [Model.UpdateAppStoreAppConfigurationWebhookDTO](docs/UpdateAppStoreAppConfigurationWebhookDTO.md)
@@ -1015,6 +1013,7 @@ Class | Method | HTTP request | Description
  - [Model.UpdateDriverNotificationToken](docs/UpdateDriverNotificationToken.md)
  - [Model.UpdateDriverProfileModel](docs/UpdateDriverProfileModel.md)
  - [Model.UpdateMetafieldDefinition](docs/UpdateMetafieldDefinition.md)
+ - [Model.UpdateTipConfiguration](docs/UpdateTipConfiguration.md)
  - [Model.UserAnsweredSignupQuestionsEvent](docs/UserAnsweredSignupQuestionsEvent.md)
  - [Model.UserCreatedEvent](docs/UserCreatedEvent.md)
  - [Model.UserDeletedEvent](docs/UserDeletedEvent.md)
