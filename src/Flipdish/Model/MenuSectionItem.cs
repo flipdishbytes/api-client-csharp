@@ -117,8 +117,8 @@ namespace Flipdish.Model
         /// <param name="dailySpecialHours">Daily special hours.</param>
         /// <param name="publicId">Permanent reference to the item..</param>
         /// <param name="taxRateName">Tax rate name.</param>
-        /// <param name="taxRateId">taxRateId.</param>
-        /// <param name="taxValue">taxValue.</param>
+        /// <param name="taxRateId">TaxRate.</param>
+        /// <param name="taxValue">TaxValue - the tax associated with this item, based on TaxRate / TaxType and Currency (currency determines decimal point precision).</param>
         /// <param name="metadata">List of metadata.</param>
         /// <param name="productId">Product Id when the Item is associated to a Product.</param>
         /// <param name="name">Menu item name (like \&quot;Korma\&quot;).</param>
@@ -200,14 +200,16 @@ namespace Flipdish.Model
         public string TaxRateName { get; set; }
 
         /// <summary>
-        /// Gets or Sets TaxRateId
+        /// TaxRate
         /// </summary>
+        /// <value>TaxRate</value>
         [DataMember(Name="TaxRateId", EmitDefaultValue=false)]
         public int? TaxRateId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TaxValue
+        /// TaxValue - the tax associated with this item, based on TaxRate / TaxType and Currency (currency determines decimal point precision)
         /// </summary>
+        /// <value>TaxValue - the tax associated with this item, based on TaxRate / TaxType and Currency (currency determines decimal point precision)</value>
         [DataMember(Name="TaxValue", EmitDefaultValue=false)]
         public double? TaxValue { get; set; }
 

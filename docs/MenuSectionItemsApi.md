@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**CloneMenuSectionItem**](MenuSectionItemsApi.md#clonemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/clone | Clone menu section item
 [**CreateMenuSectionItem**](MenuSectionItemsApi.md#createmenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Create menu section item
 [**CreateMenuSectionItemFromCatalogItems**](MenuSectionItemsApi.md#createmenusectionitemfromcatalogitems) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/add-catalogitems | Create menu section items from a list of Catalog Items
-[**CreateMenuSectionItemFromProducts**](MenuSectionItemsApi.md#createmenusectionitemfromproducts) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/add-products | Create menu section items from a list of Products
 [**DeleteMenuSectionItem**](MenuSectionItemsApi.md#deletemenusectionitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Delete menu section item
 [**DeleteMenuSectionItemImage**](MenuSectionItemsApi.md#deletemenusectionitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
 [**GetMenuItemById**](MenuSectionItemsApi.md#getmenuitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Get menu item by identifier
@@ -202,74 +201,6 @@ Name | Type | Description  | Notes
  **menuId** | **int?**| Menu identifier | 
  **menuSectionId** | **int?**| Menu section identifier | 
  **createFromCatalogItems** | [**CreateMenuSectionItemFromCatalogItems**](CreateMenuSectionItemFromCatalogItems.md)| Information to create the new MenuSectionItems | 
-
-### Return type
-
-**Object**
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="createmenusectionitemfromproducts"></a>
-# **CreateMenuSectionItemFromProducts**
-> Object CreateMenuSectionItemFromProducts (int? menuId, int? menuSectionId, CreateMenuSectionItemFromProducts createFromProducts)
-
-Create menu section items from a list of Products
-
-BETA - this endpoint is under development, do not use it in your production system
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class CreateMenuSectionItemFromProductsExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MenuSectionItemsApi();
-            var menuId = 56;  // int? | Menu identifier
-            var menuSectionId = 56;  // int? | Menu section identifier
-            var createFromProducts = new CreateMenuSectionItemFromProducts(); // CreateMenuSectionItemFromProducts | Menu section item
-
-            try
-            {
-                // Create menu section items from a list of Products
-                Object result = apiInstance.CreateMenuSectionItemFromProducts(menuId, menuSectionId, createFromProducts);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MenuSectionItemsApi.CreateMenuSectionItemFromProducts: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **menuSectionId** | **int?**| Menu section identifier | 
- **createFromProducts** | [**CreateMenuSectionItemFromProducts**](CreateMenuSectionItemFromProducts.md)| Menu section item | 
 
 ### Return type
 
