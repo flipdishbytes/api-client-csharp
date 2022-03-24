@@ -356,6 +356,7 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateAppStoreApp" /> class.
         /// </summary>
+        /// <param name="details">Details (required).</param>
         /// <param name="configurationType">Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt; (required).</param>
         /// <param name="storeSelectorType">Store selector type (required).</param>
         /// <param name="fieldGroups">Field groups.</param>
@@ -370,8 +371,17 @@ namespace Flipdish.Model
         /// <param name="tags">Tags (required).</param>
         /// <param name="regions">Regions (required).</param>
         /// <param name="developerName">Developer Name.</param>
-        public UpdateAppStoreApp(ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string setupInstructions = default(string), string externalSetupLink = default(string), string oAuthAppId = default(string), TeammateAppAccessLevelEnum? teammateAppAccessLevel = default(TeammateAppAccessLevelEnum?), PermissionsTypeEnum permissionsType = default(PermissionsTypeEnum), string name = default(string), string description = default(string), bool? isEnabled = default(bool?), List<TagsEnum> tags = default(List<TagsEnum>), List<RegionsEnum> regions = default(List<RegionsEnum>), string developerName = default(string))
+        public UpdateAppStoreApp(string details = default(string), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string setupInstructions = default(string), string externalSetupLink = default(string), string oAuthAppId = default(string), TeammateAppAccessLevelEnum? teammateAppAccessLevel = default(TeammateAppAccessLevelEnum?), PermissionsTypeEnum permissionsType = default(PermissionsTypeEnum), string name = default(string), string description = default(string), bool? isEnabled = default(bool?), List<TagsEnum> tags = default(List<TagsEnum>), List<RegionsEnum> regions = default(List<RegionsEnum>), string developerName = default(string))
         {
+            // to ensure "details" is required (not null)
+            if (details == null)
+            {
+                throw new InvalidDataException("details is a required property for UpdateAppStoreApp and cannot be null");
+            }
+            else
+            {
+                this.Details = details;
+            }
             // to ensure "configurationType" is required (not null)
             if (configurationType == null)
             {
@@ -452,6 +462,13 @@ namespace Flipdish.Model
             this.DeveloperName = developerName;
         }
         
+        /// <summary>
+        /// Details
+        /// </summary>
+        /// <value>Details</value>
+        [DataMember(Name="Details", EmitDefaultValue=false)]
+        public string Details { get; set; }
+
 
 
         /// <summary>
@@ -522,6 +539,7 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UpdateAppStoreApp {\n");
+            sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("  ConfigurationType: ").Append(ConfigurationType).Append("\n");
             sb.Append("  StoreSelectorType: ").Append(StoreSelectorType).Append("\n");
             sb.Append("  FieldGroups: ").Append(FieldGroups).Append("\n");
@@ -570,6 +588,11 @@ namespace Flipdish.Model
                 return false;
 
             return 
+                (
+                    this.Details == input.Details ||
+                    (this.Details != null &&
+                    this.Details.Equals(input.Details))
+                ) && 
                 (
                     this.ConfigurationType == input.ConfigurationType ||
                     (this.ConfigurationType != null &&
@@ -651,6 +674,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.Details != null)
+                    hashCode = hashCode * 59 + this.Details.GetHashCode();
                 if (this.ConfigurationType != null)
                     hashCode = hashCode * 59 + this.ConfigurationType.GetHashCode();
                 if (this.StoreSelectorType != null)

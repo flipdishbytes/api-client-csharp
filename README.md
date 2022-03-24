@@ -274,6 +274,7 @@ Class | Method | HTTP request | Description
 *LightspeedApi* | [**LightspeedGenerateMenu**](docs/LightspeedApi.md#lightspeedgeneratemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
 *LightspeedApi* | [**LightspeedGetStoreSettings**](docs/LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
 *LightspeedApi* | [**LightspeedSaveStoreSettings**](docs/LightspeedApi.md#lightspeedsavestoresettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
+*LocationApi* | [**CreateLocation**](docs/LocationApi.md#createlocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location | Create a Location i.e: Table, Hotel Room, Car park space
 *LocationAreasApi* | [**CreateLocationArea**](docs/LocationAreasApi.md#createlocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | Create a Location Area, i.e: Room, Floor, Parking lot
 *LocationAreasApi* | [**GetLocationArea**](docs/LocationAreasApi.md#getlocationarea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | Retrieve a Location Area
 *LocationAreasApi* | [**GetLocationsForStore**](docs/LocationAreasApi.md#getlocationsforstore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | Retrieve all Location Areas for a Store
@@ -389,6 +390,7 @@ Class | Method | HTTP request | Description
 *PayoutsExportApi* | [**ExportPayoutRefunds**](docs/PayoutsExportApi.md#exportpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export | Export a list of payout's refunds as CSV
 *PayoutsExportApi* | [**ExportPayoutStores**](docs/PayoutsExportApi.md#exportpayoutstores) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export | Export payout's details as CSV
 *PayoutsExportApi* | [**ExportPayouts**](docs/PayoutsExportApi.md#exportpayouts) | **GET** /api/v1.0/{appId}/payouts/export | Export payouts as CSV
+*PendingMenuChangesApi* | [**GetPendingMenuChanges**](docs/PendingMenuChangesApi.md#getpendingmenuchanges) | **GET** /api/v1.0/{appId}/menus/pendingmenuchanges | Get menu pending changes from Catalog groups and items
 *ProcessingFeeConfigsApi* | [**GetProcessingFeeConfigsByStoreIds**](docs/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
 *PushNotificationsApi* | [**DeletePushNotification**](docs/PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**GetPushNotifications**](docs/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
@@ -559,6 +561,7 @@ Class | Method | HTTP request | Description
  - [Model.CreateFullMenuItemOptionSetItem](docs/CreateFullMenuItemOptionSetItem.md)
  - [Model.CreateFullMenuSection](docs/CreateFullMenuSection.md)
  - [Model.CreateFullMenuSectionItem](docs/CreateFullMenuSectionItem.md)
+ - [Model.CreateLocation](docs/CreateLocation.md)
  - [Model.CreateLocationArea](docs/CreateLocationArea.md)
  - [Model.CreateMenuSectionItemFromCatalogItems](docs/CreateMenuSectionItemFromCatalogItems.md)
  - [Model.CreateMenuTaxRate](docs/CreateMenuTaxRate.md)
@@ -751,6 +754,7 @@ Class | Method | HTTP request | Description
  - [Model.PayoutRequestIds](docs/PayoutRequestIds.md)
  - [Model.PayoutStore](docs/PayoutStore.md)
  - [Model.PayoutSummary](docs/PayoutSummary.md)
+ - [Model.PendingMenuChanges](docs/PendingMenuChanges.md)
  - [Model.PercentDiscountDetails](docs/PercentDiscountDetails.md)
  - [Model.PhoneCall](docs/PhoneCall.md)
  - [Model.PhoneCallEndedEvent](docs/PhoneCallEndedEvent.md)
@@ -844,6 +848,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultPayoutOrder](docs/RestApiPaginationResultPayoutOrder.md)
  - [Model.RestApiPaginationResultPayoutOtherCharge](docs/RestApiPaginationResultPayoutOtherCharge.md)
  - [Model.RestApiPaginationResultPayoutRefund](docs/RestApiPaginationResultPayoutRefund.md)
+ - [Model.RestApiPaginationResultPendingMenuChanges](docs/RestApiPaginationResultPendingMenuChanges.md)
  - [Model.RestApiPaginationResultPhoneCall](docs/RestApiPaginationResultPhoneCall.md)
  - [Model.RestApiPaginationResultPushNotificationResponse](docs/RestApiPaginationResultPushNotificationResponse.md)
  - [Model.RestApiPaginationResultStore](docs/RestApiPaginationResultStore.md)

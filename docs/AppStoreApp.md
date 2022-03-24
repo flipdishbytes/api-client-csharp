@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **Id** | **string** | Unique App store app id | 
 **VerificationStatus** | **string** | Application verification status | 
 **Logo** | **string** | Logo | [optional] 
+**Details** | **string** | Details | 
 **ConfigurationType** | **string** | Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt; | 
 **StoreSelectorType** | **string** | Store selector type | 
 **FieldGroups** | [**List&lt;FieldGroup&gt;**](FieldGroup.md) | Field groups | [optional] 

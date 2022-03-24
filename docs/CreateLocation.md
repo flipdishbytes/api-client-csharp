@@ -1,10 +1,9 @@
-# Flipdish.Model.LocationAreaLocation
+# Flipdish.Model.CreateLocation
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LocationId** | **int?** | Id of the Location | [optional] 
-**LocationName** | **string** | Name of the Location | [optional] 
+**LocationName** | **string** | Descriptive LocationArea name | [optional] 
 **DisplayOrder** | **int?** | The order that the Location should be displayed on the screen | [optional] 
 **ExternalLocationId** | **string** | Id of the Location on an external system | [optional] 
 
