@@ -51,6 +51,35 @@ namespace Flipdish.Api
         /// <param name="storeId">Id of the Store</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> CreateLocationWithHttpInfo (CreateLocation createLocationInput, int? locationAreaId, string appId, int? storeId);
+        /// <summary>
+        /// Update a Location i.e: Table, Hotel Room, Car park space
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateLocationInput">Input data for updating the Location</param>
+        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
+        /// <param name="locationId">Id of the Location to be updated</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <returns>LocationAreaLocation</returns>
+        LocationAreaLocation UpdateLocation (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId);
+
+        /// <summary>
+        /// Update a Location i.e: Table, Hotel Room, Car park space
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateLocationInput">Input data for updating the Location</param>
+        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
+        /// <param name="locationId">Id of the Location to be updated</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <returns>ApiResponse of LocationAreaLocation</returns>
+        ApiResponse<LocationAreaLocation> UpdateLocationWithHttpInfo (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -80,6 +109,35 @@ namespace Flipdish.Api
         /// <param name="storeId">Id of the Store</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateLocationAsyncWithHttpInfo (CreateLocation createLocationInput, int? locationAreaId, string appId, int? storeId);
+        /// <summary>
+        /// Update a Location i.e: Table, Hotel Room, Car park space
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateLocationInput">Input data for updating the Location</param>
+        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
+        /// <param name="locationId">Id of the Location to be updated</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <returns>Task of LocationAreaLocation</returns>
+        System.Threading.Tasks.Task<LocationAreaLocation> UpdateLocationAsync (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId);
+
+        /// <summary>
+        /// Update a Location i.e: Table, Hotel Room, Car park space
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateLocationInput">Input data for updating the Location</param>
+        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
+        /// <param name="locationId">Id of the Location to be updated</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <returns>Task of ApiResponse (LocationAreaLocation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LocationAreaLocation>> UpdateLocationAsyncWithHttpInfo (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId);
         #endregion Asynchronous Operations
     }
 
@@ -389,6 +447,229 @@ namespace Flipdish.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Update a Location i.e: Table, Hotel Room, Car park space 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateLocationInput">Input data for updating the Location</param>
+        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
+        /// <param name="locationId">Id of the Location to be updated</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <returns>LocationAreaLocation</returns>
+        public LocationAreaLocation UpdateLocation (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId)
+        {
+             ApiResponse<LocationAreaLocation> localVarResponse = UpdateLocationWithHttpInfo(updateLocationInput, locationAreaId, locationId, appId, storeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a Location i.e: Table, Hotel Room, Car park space 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateLocationInput">Input data for updating the Location</param>
+        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
+        /// <param name="locationId">Id of the Location to be updated</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <returns>ApiResponse of LocationAreaLocation</returns>
+        public ApiResponse< LocationAreaLocation > UpdateLocationWithHttpInfo (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId)
+        {
+            // verify the required parameter 'updateLocationInput' is set
+            if (updateLocationInput == null)
+                throw new ApiException(400, "Missing required parameter 'updateLocationInput' when calling LocationApi->UpdateLocation");
+            // verify the required parameter 'locationAreaId' is set
+            if (locationAreaId == null)
+                throw new ApiException(400, "Missing required parameter 'locationAreaId' when calling LocationApi->UpdateLocation");
+            // verify the required parameter 'locationId' is set
+            if (locationId == null)
+                throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationApi->UpdateLocation");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling LocationApi->UpdateLocation");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationApi->UpdateLocation");
+
+            var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (locationAreaId != null) localVarPathParams.Add("locationAreaId", this.Configuration.ApiClient.ParameterToString(locationAreaId)); // path parameter
+            if (locationId != null) localVarPathParams.Add("locationId", this.Configuration.ApiClient.ParameterToString(locationId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (updateLocationInput != null && updateLocationInput.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(updateLocationInput); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = updateLocationInput; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateLocation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LocationAreaLocation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LocationAreaLocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationAreaLocation)));
+        }
+
+        /// <summary>
+        /// Update a Location i.e: Table, Hotel Room, Car park space 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateLocationInput">Input data for updating the Location</param>
+        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
+        /// <param name="locationId">Id of the Location to be updated</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <returns>Task of LocationAreaLocation</returns>
+        public async System.Threading.Tasks.Task<LocationAreaLocation> UpdateLocationAsync (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId)
+        {
+             ApiResponse<LocationAreaLocation> localVarResponse = await UpdateLocationAsyncWithHttpInfo(updateLocationInput, locationAreaId, locationId, appId, storeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a Location i.e: Table, Hotel Room, Car park space 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateLocationInput">Input data for updating the Location</param>
+        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
+        /// <param name="locationId">Id of the Location to be updated</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <returns>Task of ApiResponse (LocationAreaLocation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LocationAreaLocation>> UpdateLocationAsyncWithHttpInfo (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId)
+        {
+            // verify the required parameter 'updateLocationInput' is set
+            if (updateLocationInput == null)
+                throw new ApiException(400, "Missing required parameter 'updateLocationInput' when calling LocationApi->UpdateLocation");
+            // verify the required parameter 'locationAreaId' is set
+            if (locationAreaId == null)
+                throw new ApiException(400, "Missing required parameter 'locationAreaId' when calling LocationApi->UpdateLocation");
+            // verify the required parameter 'locationId' is set
+            if (locationId == null)
+                throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationApi->UpdateLocation");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling LocationApi->UpdateLocation");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationApi->UpdateLocation");
+
+            var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (locationAreaId != null) localVarPathParams.Add("locationAreaId", this.Configuration.ApiClient.ParameterToString(locationAreaId)); // path parameter
+            if (locationId != null) localVarPathParams.Add("locationId", this.Configuration.ApiClient.ParameterToString(locationId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (updateLocationInput != null && updateLocationInput.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(updateLocationInput); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = updateLocationInput; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateLocation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LocationAreaLocation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LocationAreaLocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationAreaLocation)));
         }
 
     }

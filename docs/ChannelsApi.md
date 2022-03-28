@@ -470,7 +470,7 @@ Name | Type | Description  | Notes
 
 <a name="getchannel"></a>
 # **GetChannel**
-> Channel GetChannel (int? id, string appId)
+> RestApiResultChannel GetChannel (int? id, string appId)
 
 Returns a Sales Channel by Id.
 
@@ -498,7 +498,7 @@ namespace Example
             try
             {
                 // Returns a Sales Channel by Id.
-                Channel result = apiInstance.GetChannel(id, appId);
+                RestApiResultChannel result = apiInstance.GetChannel(id, appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -519,7 +519,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Channel**](Channel.md)
+[**RestApiResultChannel**](RestApiResultChannel.md)
 
 ### Authorization
 

@@ -196,8 +196,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ChannelId</param>
         /// <param name="appId">AppId</param>
-        /// <returns>Channel</returns>
-        Channel GetChannel (int? id, string appId);
+        /// <returns>RestApiResultChannel</returns>
+        RestApiResultChannel GetChannel (int? id, string appId);
 
         /// <summary>
         /// Returns a Sales Channel by Id.
@@ -208,8 +208,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ChannelId</param>
         /// <param name="appId">AppId</param>
-        /// <returns>ApiResponse of Channel</returns>
-        ApiResponse<Channel> GetChannelWithHttpInfo (int? id, string appId);
+        /// <returns>ApiResponse of RestApiResultChannel</returns>
+        ApiResponse<RestApiResultChannel> GetChannelWithHttpInfo (int? id, string appId);
         /// <summary>
         /// Returns a list of enabled Channels
         /// </summary>
@@ -476,8 +476,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ChannelId</param>
         /// <param name="appId">AppId</param>
-        /// <returns>Task of Channel</returns>
-        System.Threading.Tasks.Task<Channel> GetChannelAsync (int? id, string appId);
+        /// <returns>Task of RestApiResultChannel</returns>
+        System.Threading.Tasks.Task<RestApiResultChannel> GetChannelAsync (int? id, string appId);
 
         /// <summary>
         /// Returns a Sales Channel by Id.
@@ -488,8 +488,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ChannelId</param>
         /// <param name="appId">AppId</param>
-        /// <returns>Task of ApiResponse (Channel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Channel>> GetChannelAsyncWithHttpInfo (int? id, string appId);
+        /// <returns>Task of ApiResponse (RestApiResultChannel)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultChannel>> GetChannelAsyncWithHttpInfo (int? id, string appId);
         /// <summary>
         /// Returns a list of enabled Channels
         /// </summary>
@@ -1841,10 +1841,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ChannelId</param>
         /// <param name="appId">AppId</param>
-        /// <returns>Channel</returns>
-        public Channel GetChannel (int? id, string appId)
+        /// <returns>RestApiResultChannel</returns>
+        public RestApiResultChannel GetChannel (int? id, string appId)
         {
-             ApiResponse<Channel> localVarResponse = GetChannelWithHttpInfo(id, appId);
+             ApiResponse<RestApiResultChannel> localVarResponse = GetChannelWithHttpInfo(id, appId);
              return localVarResponse.Data;
         }
 
@@ -1854,8 +1854,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ChannelId</param>
         /// <param name="appId">AppId</param>
-        /// <returns>ApiResponse of Channel</returns>
-        public ApiResponse< Channel > GetChannelWithHttpInfo (int? id, string appId)
+        /// <returns>ApiResponse of RestApiResultChannel</returns>
+        public ApiResponse< RestApiResultChannel > GetChannelWithHttpInfo (int? id, string appId)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1911,9 +1911,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Channel>(localVarStatusCode,
+            return new ApiResponse<RestApiResultChannel>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Channel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Channel)));
+                (RestApiResultChannel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultChannel)));
         }
 
         /// <summary>
@@ -1922,10 +1922,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ChannelId</param>
         /// <param name="appId">AppId</param>
-        /// <returns>Task of Channel</returns>
-        public async System.Threading.Tasks.Task<Channel> GetChannelAsync (int? id, string appId)
+        /// <returns>Task of RestApiResultChannel</returns>
+        public async System.Threading.Tasks.Task<RestApiResultChannel> GetChannelAsync (int? id, string appId)
         {
-             ApiResponse<Channel> localVarResponse = await GetChannelAsyncWithHttpInfo(id, appId);
+             ApiResponse<RestApiResultChannel> localVarResponse = await GetChannelAsyncWithHttpInfo(id, appId);
              return localVarResponse.Data;
 
         }
@@ -1936,8 +1936,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ChannelId</param>
         /// <param name="appId">AppId</param>
-        /// <returns>Task of ApiResponse (Channel)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Channel>> GetChannelAsyncWithHttpInfo (int? id, string appId)
+        /// <returns>Task of ApiResponse (RestApiResultChannel)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultChannel>> GetChannelAsyncWithHttpInfo (int? id, string appId)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1993,9 +1993,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Channel>(localVarStatusCode,
+            return new ApiResponse<RestApiResultChannel>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Channel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Channel)));
+                (RestApiResultChannel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultChannel)));
         }
 
         /// <summary>

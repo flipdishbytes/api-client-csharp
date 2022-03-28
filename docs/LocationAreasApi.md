@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 <a name="getlocationarea"></a>
 # **GetLocationArea**
-> LocationAreaWithLocations GetLocationArea (int? locationAreaId, string appId, int? storeId)
+> RestApiResultLocationAreaWithLocations GetLocationArea (int? locationAreaId, string appId, int? storeId)
 
 Retrieve a Location Area
 
@@ -107,7 +107,7 @@ namespace Example
             try
             {
                 // Retrieve a Location Area
-                LocationAreaWithLocations result = apiInstance.GetLocationArea(locationAreaId, appId, storeId);
+                RestApiResultLocationAreaWithLocations result = apiInstance.GetLocationArea(locationAreaId, appId, storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LocationAreaWithLocations**](LocationAreaWithLocations.md)
+[**RestApiResultLocationAreaWithLocations**](RestApiResultLocationAreaWithLocations.md)
 
 ### Authorization
 

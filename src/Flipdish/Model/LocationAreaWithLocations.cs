@@ -37,12 +37,14 @@ namespace Flipdish.Model
         /// <param name="storeId">Id of the Store that this LocationArea belongs to.</param>
         /// <param name="locationAreaName">Descriptive LocationArea name.</param>
         /// <param name="locations">List of Locations that belongs to this Location Area.</param>
-        public LocationAreaWithLocations(int? locationAreaId = default(int?), int? storeId = default(int?), string locationAreaName = default(string), List<LocationAreaLocation> locations = default(List<LocationAreaLocation>))
+        /// <param name="isDeleted">Returns if the LocationArea is deleted or not.</param>
+        public LocationAreaWithLocations(int? locationAreaId = default(int?), int? storeId = default(int?), string locationAreaName = default(string), List<LocationAreaLocation> locations = default(List<LocationAreaLocation>), bool? isDeleted = default(bool?))
         {
             this.LocationAreaId = locationAreaId;
             this.StoreId = storeId;
             this.LocationAreaName = locationAreaName;
             this.Locations = locations;
+            this.IsDeleted = isDeleted;
         }
         
         /// <summary>
@@ -74,6 +76,13 @@ namespace Flipdish.Model
         public List<LocationAreaLocation> Locations { get; set; }
 
         /// <summary>
+        /// Returns if the LocationArea is deleted or not
+        /// </summary>
+        /// <value>Returns if the LocationArea is deleted or not</value>
+        [DataMember(Name="IsDeleted", EmitDefaultValue=false)]
+        public bool? IsDeleted { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -85,6 +94,7 @@ namespace Flipdish.Model
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  LocationAreaName: ").Append(LocationAreaName).Append("\n");
             sb.Append("  Locations: ").Append(Locations).Append("\n");
+            sb.Append("  IsDeleted: ").Append(IsDeleted).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,6 +148,11 @@ namespace Flipdish.Model
                     this.Locations == input.Locations ||
                     this.Locations != null &&
                     this.Locations.SequenceEqual(input.Locations)
+                ) && 
+                (
+                    this.IsDeleted == input.IsDeleted ||
+                    (this.IsDeleted != null &&
+                    this.IsDeleted.Equals(input.IsDeleted))
                 );
         }
 
@@ -158,6 +173,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.LocationAreaName.GetHashCode();
                 if (this.Locations != null)
                     hashCode = hashCode * 59 + this.Locations.GetHashCode();
+                if (this.IsDeleted != null)
+                    hashCode = hashCode * 59 + this.IsDeleted.GetHashCode();
                 return hashCode;
             }
         }
