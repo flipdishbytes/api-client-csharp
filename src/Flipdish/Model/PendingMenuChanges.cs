@@ -33,22 +33,22 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PendingMenuChanges" /> class.
         /// </summary>
-        /// <param name="productId">Unique product id.</param>
+        /// <param name="catalogElementId">Unique catalog element id.</param>
         /// <param name="menuId">Unique menu id.</param>
         /// <param name="lastUpdatedAt">Update date and time.</param>
-        public PendingMenuChanges(string productId = default(string), int? menuId = default(int?), DateTime? lastUpdatedAt = default(DateTime?))
+        public PendingMenuChanges(string catalogElementId = default(string), int? menuId = default(int?), DateTime? lastUpdatedAt = default(DateTime?))
         {
-            this.ProductId = productId;
+            this.CatalogElementId = catalogElementId;
             this.MenuId = menuId;
             this.LastUpdatedAt = lastUpdatedAt;
         }
         
         /// <summary>
-        /// Unique product id
+        /// Unique catalog element id
         /// </summary>
-        /// <value>Unique product id</value>
-        [DataMember(Name="ProductId", EmitDefaultValue=false)]
-        public string ProductId { get; set; }
+        /// <value>Unique catalog element id</value>
+        [DataMember(Name="CatalogElementId", EmitDefaultValue=false)]
+        public string CatalogElementId { get; set; }
 
         /// <summary>
         /// Unique menu id
@@ -72,7 +72,7 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PendingMenuChanges {\n");
-            sb.Append("  ProductId: ").Append(ProductId).Append("\n");
+            sb.Append("  CatalogElementId: ").Append(CatalogElementId).Append("\n");
             sb.Append("  MenuId: ").Append(MenuId).Append("\n");
             sb.Append("  LastUpdatedAt: ").Append(LastUpdatedAt).Append("\n");
             sb.Append("}\n");
@@ -110,9 +110,9 @@ namespace Flipdish.Model
 
             return 
                 (
-                    this.ProductId == input.ProductId ||
-                    (this.ProductId != null &&
-                    this.ProductId.Equals(input.ProductId))
+                    this.CatalogElementId == input.CatalogElementId ||
+                    (this.CatalogElementId != null &&
+                    this.CatalogElementId.Equals(input.CatalogElementId))
                 ) && 
                 (
                     this.MenuId == input.MenuId ||
@@ -135,8 +135,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ProductId != null)
-                    hashCode = hashCode * 59 + this.ProductId.GetHashCode();
+                if (this.CatalogElementId != null)
+                    hashCode = hashCode * 59 + this.CatalogElementId.GetHashCode();
                 if (this.MenuId != null)
                     hashCode = hashCode * 59 + this.MenuId.GetHashCode();
                 if (this.LastUpdatedAt != null)
@@ -152,16 +152,16 @@ namespace Flipdish.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // ProductId (string) maxLength
-            if(this.ProductId != null && this.ProductId.Length > 30)
+            // CatalogElementId (string) maxLength
+            if(this.CatalogElementId != null && this.CatalogElementId.Length > 30)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ProductId, length must be less than 30.", new [] { "ProductId" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CatalogElementId, length must be less than 30.", new [] { "CatalogElementId" });
             }
 
-            // ProductId (string) minLength
-            if(this.ProductId != null && this.ProductId.Length < 0)
+            // CatalogElementId (string) minLength
+            if(this.CatalogElementId != null && this.CatalogElementId.Length < 0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ProductId, length must be greater than 0.", new [] { "ProductId" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CatalogElementId, length must be greater than 0.", new [] { "CatalogElementId" });
             }
 
             yield break;

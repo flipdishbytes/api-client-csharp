@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProductId** | **string** | Unique product id | [optional] 
+**CatalogElementId** | **string** | Unique catalog element id | [optional] 
 **MenuId** | **int?** | Unique menu id | [optional] 
 **LastUpdatedAt** | **DateTime?** | Update date and time | [optional] 
 

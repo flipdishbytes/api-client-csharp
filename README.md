@@ -176,6 +176,7 @@ Class | Method | HTTP request | Description
 *CardReadersApi* | [**InitiateKioskBluetoothUpdateInstall**](docs/CardReadersApi.md#initiatekioskbluetoothupdateinstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
 *CardReadersApi* | [**RegisterStripeTerminal**](docs/CardReadersApi.md#registerstripeterminal) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/register | 
 *CardReadersApi* | [**UnpairCurrentlyPairedBluetoothDevice**](docs/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
+*CatalogChangesApi* | [**GetPendingMenuChanges**](docs/CatalogChangesApi.md#getpendingmenuchanges) | **GET** /api/v1.0/{appId}/menus/catalog-changes | Get menu pending changes from Catalog groups and items
 *CatalogGroupsApi* | [**ArchiveCatalogGroup**](docs/CatalogGroupsApi.md#archivecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId}/archive | Archive Catalog Group
 *CatalogGroupsApi* | [**CreateCatalogGroup**](docs/CatalogGroupsApi.md#createcataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
 *CatalogGroupsApi* | [**DuplicateCatalogGroup**](docs/CatalogGroupsApi.md#duplicatecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId}/duplicate | Duplicate Catalog Group
@@ -390,7 +391,6 @@ Class | Method | HTTP request | Description
 *PayoutsExportApi* | [**ExportPayoutRefunds**](docs/PayoutsExportApi.md#exportpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export | Export a list of payout's refunds as CSV
 *PayoutsExportApi* | [**ExportPayoutStores**](docs/PayoutsExportApi.md#exportpayoutstores) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export | Export payout's details as CSV
 *PayoutsExportApi* | [**ExportPayouts**](docs/PayoutsExportApi.md#exportpayouts) | **GET** /api/v1.0/{appId}/payouts/export | Export payouts as CSV
-*PendingMenuChangesApi* | [**GetPendingMenuChanges**](docs/PendingMenuChangesApi.md#getpendingmenuchanges) | **GET** /api/v1.0/{appId}/menus/pendingmenuchanges | Get menu pending changes from Catalog groups and items
 *ProcessingFeeConfigsApi* | [**GetProcessingFeeConfigsByStoreIds**](docs/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
 *PushNotificationsApi* | [**DeletePushNotification**](docs/PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**GetPushNotifications**](docs/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
