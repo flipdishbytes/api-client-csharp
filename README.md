@@ -611,6 +611,7 @@ Class | Method | HTTP request | Description
  - [Model.FlipdishEventBase](docs/FlipdishEventBase.md)
  - [Model.FlipdishFeesDetails](docs/FlipdishFeesDetails.md)
  - [Model.FulfillmentInfo](docs/FulfillmentInfo.md)
+ - [Model.GeoPointRequest](docs/GeoPointRequest.md)
  - [Model.GroupedCoordinates](docs/GroupedCoordinates.md)
  - [Model.HomeAction](docs/HomeAction.md)
  - [Model.HomeStatistics](docs/HomeStatistics.md)

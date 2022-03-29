@@ -77,9 +77,10 @@ namespace Flipdish.Api
         /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geoPointRequest"></param>
         /// <param name="appId"></param>
         /// <returns>RestApiResultStripeTerminalLocation</returns>
-        RestApiResultStripeTerminalLocation GenerateStripeTerminalLocation (string appId);
+        RestApiResultStripeTerminalLocation GenerateStripeTerminalLocation (GeoPointRequest geoPointRequest, string appId);
 
         /// <summary>
         /// Get Location ID for Stripe Terminal
@@ -88,9 +89,10 @@ namespace Flipdish.Api
         /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geoPointRequest"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultStripeTerminalLocation</returns>
-        ApiResponse<RestApiResultStripeTerminalLocation> GenerateStripeTerminalLocationWithHttpInfo (string appId);
+        ApiResponse<RestApiResultStripeTerminalLocation> GenerateStripeTerminalLocationWithHttpInfo (GeoPointRequest geoPointRequest, string appId);
         /// <summary>
         /// Get the status of the bluetooth terminal
         /// </summary>
@@ -311,9 +313,10 @@ namespace Flipdish.Api
         /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geoPointRequest"></param>
         /// <param name="appId"></param>
         /// <returns>Task of RestApiResultStripeTerminalLocation</returns>
-        System.Threading.Tasks.Task<RestApiResultStripeTerminalLocation> GenerateStripeTerminalLocationAsync (string appId);
+        System.Threading.Tasks.Task<RestApiResultStripeTerminalLocation> GenerateStripeTerminalLocationAsync (GeoPointRequest geoPointRequest, string appId);
 
         /// <summary>
         /// Get Location ID for Stripe Terminal
@@ -322,9 +325,10 @@ namespace Flipdish.Api
         /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geoPointRequest"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStripeTerminalLocation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeTerminalLocation>> GenerateStripeTerminalLocationAsyncWithHttpInfo (string appId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeTerminalLocation>> GenerateStripeTerminalLocationAsyncWithHttpInfo (GeoPointRequest geoPointRequest, string appId);
         /// <summary>
         /// Get the status of the bluetooth terminal
         /// </summary>
@@ -918,11 +922,12 @@ namespace Flipdish.Api
         /// Get Location ID for Stripe Terminal Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geoPointRequest"></param>
         /// <param name="appId"></param>
         /// <returns>RestApiResultStripeTerminalLocation</returns>
-        public RestApiResultStripeTerminalLocation GenerateStripeTerminalLocation (string appId)
+        public RestApiResultStripeTerminalLocation GenerateStripeTerminalLocation (GeoPointRequest geoPointRequest, string appId)
         {
-             ApiResponse<RestApiResultStripeTerminalLocation> localVarResponse = GenerateStripeTerminalLocationWithHttpInfo(appId);
+             ApiResponse<RestApiResultStripeTerminalLocation> localVarResponse = GenerateStripeTerminalLocationWithHttpInfo(geoPointRequest, appId);
              return localVarResponse.Data;
         }
 
@@ -930,10 +935,14 @@ namespace Flipdish.Api
         /// Get Location ID for Stripe Terminal Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geoPointRequest"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultStripeTerminalLocation</returns>
-        public ApiResponse< RestApiResultStripeTerminalLocation > GenerateStripeTerminalLocationWithHttpInfo (string appId)
+        public ApiResponse< RestApiResultStripeTerminalLocation > GenerateStripeTerminalLocationWithHttpInfo (GeoPointRequest geoPointRequest, string appId)
         {
+            // verify the required parameter 'geoPointRequest' is set
+            if (geoPointRequest == null)
+                throw new ApiException(400, "Missing required parameter 'geoPointRequest' when calling CardReadersApi->GenerateStripeTerminalLocation");
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->GenerateStripeTerminalLocation");
@@ -948,6 +957,11 @@ namespace Flipdish.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -963,6 +977,14 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (geoPointRequest != null && geoPointRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(geoPointRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = geoPointRequest; // byte array
+            }
 
             // authentication (oauth2) required
             // oauth required
@@ -993,11 +1015,12 @@ namespace Flipdish.Api
         /// Get Location ID for Stripe Terminal Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geoPointRequest"></param>
         /// <param name="appId"></param>
         /// <returns>Task of RestApiResultStripeTerminalLocation</returns>
-        public async System.Threading.Tasks.Task<RestApiResultStripeTerminalLocation> GenerateStripeTerminalLocationAsync (string appId)
+        public async System.Threading.Tasks.Task<RestApiResultStripeTerminalLocation> GenerateStripeTerminalLocationAsync (GeoPointRequest geoPointRequest, string appId)
         {
-             ApiResponse<RestApiResultStripeTerminalLocation> localVarResponse = await GenerateStripeTerminalLocationAsyncWithHttpInfo(appId);
+             ApiResponse<RestApiResultStripeTerminalLocation> localVarResponse = await GenerateStripeTerminalLocationAsyncWithHttpInfo(geoPointRequest, appId);
              return localVarResponse.Data;
 
         }
@@ -1006,10 +1029,14 @@ namespace Flipdish.Api
         /// Get Location ID for Stripe Terminal Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geoPointRequest"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStripeTerminalLocation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeTerminalLocation>> GenerateStripeTerminalLocationAsyncWithHttpInfo (string appId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeTerminalLocation>> GenerateStripeTerminalLocationAsyncWithHttpInfo (GeoPointRequest geoPointRequest, string appId)
         {
+            // verify the required parameter 'geoPointRequest' is set
+            if (geoPointRequest == null)
+                throw new ApiException(400, "Missing required parameter 'geoPointRequest' when calling CardReadersApi->GenerateStripeTerminalLocation");
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->GenerateStripeTerminalLocation");
@@ -1024,6 +1051,11 @@ namespace Flipdish.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1039,6 +1071,14 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (geoPointRequest != null && geoPointRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(geoPointRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = geoPointRequest; // byte array
+            }
 
             // authentication (oauth2) required
             // oauth required

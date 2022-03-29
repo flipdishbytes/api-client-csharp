@@ -149,7 +149,7 @@ void (empty response body)
 
 <a name="generatestripeterminallocation"></a>
 # **GenerateStripeTerminalLocation**
-> RestApiResultStripeTerminalLocation GenerateStripeTerminalLocation (string appId)
+> RestApiResultStripeTerminalLocation GenerateStripeTerminalLocation (GeoPointRequest geoPointRequest, string appId)
 
 Get Location ID for Stripe Terminal
 
@@ -173,12 +173,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CardReadersApi();
+            var geoPointRequest = new GeoPointRequest(); // GeoPointRequest | 
             var appId = appId_example;  // string | 
 
             try
             {
                 // Get Location ID for Stripe Terminal
-                RestApiResultStripeTerminalLocation result = apiInstance.GenerateStripeTerminalLocation(appId);
+                RestApiResultStripeTerminalLocation result = apiInstance.GenerateStripeTerminalLocation(geoPointRequest, appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -194,6 +195,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **geoPointRequest** | [**GeoPointRequest**](GeoPointRequest.md)|  | 
  **appId** | **string**|  | 
 
 ### Return type
@@ -206,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
