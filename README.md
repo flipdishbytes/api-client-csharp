@@ -113,6 +113,9 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**RequestPasswordReset**](docs/AccountsApi.md#requestpasswordreset) | **POST** /api/v1.0/accounts/passwordreset | Request password reset. Flipdish system will send a token via email.
 *AccountsApi* | [**SkipSignupStep**](docs/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | Skip a signup question
 *AccountsApi* | [**UpdateAccount**](docs/AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | Update account with name and language
+*AddressApi* | [**FormByApp**](docs/AddressApi.md#formbyapp) | **GET** /api/v1.0/app/{appId}/address/form | Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
+*AddressApi* | [**FormByCountry**](docs/AddressApi.md#formbycountry) | **GET** /api/v1.0/address/country/{countryCode}/form | Provides a dyamic form definition for the given country code, with labels localized using the provided language.
+*AddressApi* | [**FormatGoogleAddress**](docs/AddressApi.md#formatgoogleaddress) | **POST** /api/v1.0/address/google | Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
 *ApmApi* | [**GetApmStatus**](docs/ApmApi.md#getapmstatus) | **GET** /api/v1.0/{appId}/apm/status | [PRIVATE API] Returns true if APM is enabled on at least one store in an application
 *ApmApi* | [**GetBasicStatistics**](docs/ApmApi.md#getbasicstatistics) | **GET** /api/v1.0/{appId}/apm/statistics | [PRIVATE API] Get Basic Statistics
 *ApmApi* | [**GetCalendarWeekStatistics**](docs/ApmApi.md#getcalendarweekstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calendar | [PRIVATE API] Get Calendar statistics
@@ -492,6 +495,8 @@ Class | Method | HTTP request | Description
  - [Model.AccountFieldKeyValuePair](docs/AccountFieldKeyValuePair.md)
  - [Model.AccountFieldsDefinitions](docs/AccountFieldsDefinitions.md)
  - [Model.AddItemDetails](docs/AddItemDetails.md)
+ - [Model.AddressFormDisplayFormat](docs/AddressFormDisplayFormat.md)
+ - [Model.AddressFormResponse](docs/AddressFormResponse.md)
  - [Model.AllMetadataResult](docs/AllMetadataResult.md)
  - [Model.AnalyticsClientEvent](docs/AnalyticsClientEvent.md)
  - [Model.ApmCurrencyDataPoint](docs/ApmCurrencyDataPoint.md)
@@ -600,6 +605,11 @@ Class | Method | HTTP request | Description
  - [Model.DriverLoginModel](docs/DriverLoginModel.md)
  - [Model.DriverRequestLoginPinModel](docs/DriverRequestLoginPinModel.md)
  - [Model.DriverStore](docs/DriverStore.md)
+ - [Model.DynamicFormField](docs/DynamicFormField.md)
+ - [Model.DynamicFormFieldMapping](docs/DynamicFormFieldMapping.md)
+ - [Model.DynamicFormFieldOption](docs/DynamicFormFieldOption.md)
+ - [Model.DynamicFormRule](docs/DynamicFormRule.md)
+ - [Model.DynamicFormRules](docs/DynamicFormRules.md)
  - [Model.EmvNotificationEvent](docs/EmvNotificationEvent.md)
  - [Model.EmvTerminal](docs/EmvTerminal.md)
  - [Model.EmvTerminalWithAssignments](docs/EmvTerminalWithAssignments.md)
@@ -613,6 +623,13 @@ Class | Method | HTTP request | Description
  - [Model.FlipdishFeesDetails](docs/FlipdishFeesDetails.md)
  - [Model.FulfillmentInfo](docs/FulfillmentInfo.md)
  - [Model.GeoPointRequest](docs/GeoPointRequest.md)
+ - [Model.GoogleAddress](docs/GoogleAddress.md)
+ - [Model.GoogleAddressComponent](docs/GoogleAddressComponent.md)
+ - [Model.GoogleAddressResult](docs/GoogleAddressResult.md)
+ - [Model.GoogleCoordinates](docs/GoogleCoordinates.md)
+ - [Model.GoogleGeometry](docs/GoogleGeometry.md)
+ - [Model.GoogleLocation](docs/GoogleLocation.md)
+ - [Model.GoogleViewport](docs/GoogleViewport.md)
  - [Model.GroupedCoordinates](docs/GroupedCoordinates.md)
  - [Model.HomeAction](docs/HomeAction.md)
  - [Model.HomeStatistics](docs/HomeStatistics.md)
@@ -864,6 +881,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultWebhookSubscription](docs/RestApiPaginationResultWebhookSubscription.md)
  - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
  - [Model.RestApiResultAccountFieldsDefinitions](docs/RestApiResultAccountFieldsDefinitions.md)
+ - [Model.RestApiResultAddressFormResponse](docs/RestApiResultAddressFormResponse.md)
  - [Model.RestApiResultApmStatistics](docs/RestApiResultApmStatistics.md)
  - [Model.RestApiResultApmStatus](docs/RestApiResultApmStatus.md)
  - [Model.RestApiResultApp](docs/RestApiResultApp.md)

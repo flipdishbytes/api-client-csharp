@@ -38,13 +38,15 @@ namespace Flipdish.Model
         /// <param name="city">City.</param>
         /// <param name="countryCode">Country code (ISO-alpha2).</param>
         /// <param name="displayForCustomer">Display for customer.</param>
-        public StoreAddressBase(string line1 = default(string), string postcode = default(string), string city = default(string), string countryCode = default(string), string displayForCustomer = default(string))
+        /// <param name="addressFields">Dyanmic field/value pairs, defined by the form assigned to the given country code..</param>
+        public StoreAddressBase(string line1 = default(string), string postcode = default(string), string city = default(string), string countryCode = default(string), string displayForCustomer = default(string), Dictionary<string, Object> addressFields = default(Dictionary<string, Object>))
         {
             this.Line1 = line1;
             this.Postcode = postcode;
             this.City = city;
             this.CountryCode = countryCode;
             this.DisplayForCustomer = displayForCustomer;
+            this.AddressFields = addressFields;
         }
         
         /// <summary>
@@ -83,6 +85,13 @@ namespace Flipdish.Model
         public string DisplayForCustomer { get; set; }
 
         /// <summary>
+        /// Dyanmic field/value pairs, defined by the form assigned to the given country code.
+        /// </summary>
+        /// <value>Dyanmic field/value pairs, defined by the form assigned to the given country code.</value>
+        [DataMember(Name="AddressFields", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AddressFields { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -95,6 +104,7 @@ namespace Flipdish.Model
             sb.Append("  City: ").Append(City).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("  DisplayForCustomer: ").Append(DisplayForCustomer).Append("\n");
+            sb.Append("  AddressFields: ").Append(AddressFields).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -153,6 +163,11 @@ namespace Flipdish.Model
                     this.DisplayForCustomer == input.DisplayForCustomer ||
                     (this.DisplayForCustomer != null &&
                     this.DisplayForCustomer.Equals(input.DisplayForCustomer))
+                ) && 
+                (
+                    this.AddressFields == input.AddressFields ||
+                    this.AddressFields != null &&
+                    this.AddressFields.SequenceEqual(input.AddressFields)
                 );
         }
 
@@ -175,6 +190,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CountryCode.GetHashCode();
                 if (this.DisplayForCustomer != null)
                     hashCode = hashCode * 59 + this.DisplayForCustomer.GetHashCode();
+                if (this.AddressFields != null)
+                    hashCode = hashCode * 59 + this.AddressFields.GetHashCode();
                 return hashCode;
             }
         }
