@@ -602,6 +602,7 @@ namespace Flipdish.Model
         /// <param name="tipAmount">Tip amount.</param>
         /// <param name="deliveryAmount">Delivery amount.</param>
         /// <param name="orderItemsAmount">Ordered items amount.</param>
+        /// <param name="serviceChargeAmount">Service Charge Amount.</param>
         /// <param name="amount">This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer..</param>
         /// <param name="processingFee">This contains the online ordering processing fee. For card payments this is charged directly to the customer and for cash orders it is paid by the customer to the store. It is tax inclusive..</param>
         /// <param name="paymentAccountType">Payment account type.</param>
@@ -620,7 +621,7 @@ namespace Flipdish.Model
         /// <param name="driverId">Assigned driver identifier.</param>
         /// <param name="totalTax">Total tax applied to order.</param>
         /// <param name="orderTrackingCode">Unique, 6 character long alpha numeric code for tracking..</param>
-        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), MaskedPhoneNumber maskedPhoneNumber = default(MaskedPhoneNumber), int? dropOffLocationId = default(int?), string dropOffLocation = default(string), DateTime? acceptedFor = default(DateTime?), bool? inFraudZone = default(bool?), bool? unusualHighValueOrder = default(bool?), int? rejectedByUserId = default(int?), string channelOrderId = default(string), string channelOrderDisplayId = default(string), Channel channel = default(Channel), string receiptCode = default(string), int? orderId = default(int?), string localOrderId = default(string), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), TableServiceCatagoryEnum? tableServiceCatagory = default(TableServiceCatagoryEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), RejectionReasonEnum? rejectionReason = default(RejectionReasonEnum?), double? refundedAmount = default(double?), DeliveryTrackingStatusEnum? deliveryTrackingStatus = default(DeliveryTrackingStatusEnum?), int? driverId = default(int?), double? totalTax = default(double?), string orderTrackingCode = default(string))
+        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), MaskedPhoneNumber maskedPhoneNumber = default(MaskedPhoneNumber), int? dropOffLocationId = default(int?), string dropOffLocation = default(string), DateTime? acceptedFor = default(DateTime?), bool? inFraudZone = default(bool?), bool? unusualHighValueOrder = default(bool?), int? rejectedByUserId = default(int?), string channelOrderId = default(string), string channelOrderDisplayId = default(string), Channel channel = default(Channel), string receiptCode = default(string), int? orderId = default(int?), string localOrderId = default(string), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), TableServiceCatagoryEnum? tableServiceCatagory = default(TableServiceCatagoryEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? serviceChargeAmount = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), RejectionReasonEnum? rejectionReason = default(RejectionReasonEnum?), double? refundedAmount = default(double?), DeliveryTrackingStatusEnum? deliveryTrackingStatus = default(DeliveryTrackingStatusEnum?), int? driverId = default(int?), double? totalTax = default(double?), string orderTrackingCode = default(string))
         {
             this.Store = store;
             this.Customer = customer;
@@ -648,6 +649,7 @@ namespace Flipdish.Model
             this.TipAmount = tipAmount;
             this.DeliveryAmount = deliveryAmount;
             this.OrderItemsAmount = orderItemsAmount;
+            this.ServiceChargeAmount = serviceChargeAmount;
             this.Amount = amount;
             this.ProcessingFee = processingFee;
             this.PaymentAccountType = paymentAccountType;
@@ -833,6 +835,13 @@ namespace Flipdish.Model
         public double? OrderItemsAmount { get; set; }
 
         /// <summary>
+        /// Service Charge Amount
+        /// </summary>
+        /// <value>Service Charge Amount</value>
+        [DataMember(Name="ServiceChargeAmount", EmitDefaultValue=false)]
+        public double? ServiceChargeAmount { get; set; }
+
+        /// <summary>
         /// This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer.
         /// </summary>
         /// <value>This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer.</value>
@@ -956,6 +965,7 @@ namespace Flipdish.Model
             sb.Append("  TipAmount: ").Append(TipAmount).Append("\n");
             sb.Append("  DeliveryAmount: ").Append(DeliveryAmount).Append("\n");
             sb.Append("  OrderItemsAmount: ").Append(OrderItemsAmount).Append("\n");
+            sb.Append("  ServiceChargeAmount: ").Append(ServiceChargeAmount).Append("\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
             sb.Append("  ProcessingFee: ").Append(ProcessingFee).Append("\n");
             sb.Append("  PaymentAccountType: ").Append(PaymentAccountType).Append("\n");
@@ -1139,6 +1149,11 @@ namespace Flipdish.Model
                     this.OrderItemsAmount.Equals(input.OrderItemsAmount))
                 ) && 
                 (
+                    this.ServiceChargeAmount == input.ServiceChargeAmount ||
+                    (this.ServiceChargeAmount != null &&
+                    this.ServiceChargeAmount.Equals(input.ServiceChargeAmount))
+                ) && 
+                (
                     this.Amount == input.Amount ||
                     (this.Amount != null &&
                     this.Amount.Equals(input.Amount))
@@ -1291,6 +1306,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DeliveryAmount.GetHashCode();
                 if (this.OrderItemsAmount != null)
                     hashCode = hashCode * 59 + this.OrderItemsAmount.GetHashCode();
+                if (this.ServiceChargeAmount != null)
+                    hashCode = hashCode * 59 + this.ServiceChargeAmount.GetHashCode();
                 if (this.Amount != null)
                     hashCode = hashCode * 59 + this.Amount.GetHashCode();
                 if (this.ProcessingFee != null)
