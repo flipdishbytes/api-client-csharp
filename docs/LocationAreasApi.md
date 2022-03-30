@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateLocationArea**](LocationAreasApi.md#createlocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | Create a Location Area, i.e: Room, Floor, Parking lot
 [**GetLocationArea**](LocationAreasApi.md#getlocationarea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | Retrieve a Location Area
-[**GetLocationsForStore**](LocationAreasApi.md#getlocationsforstore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | Retrieve all Location Areas for a Store
+[**GetLocationAreasForStore**](LocationAreasApi.md#getlocationareasforstore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | Retrieve all Location Areas for a Store
 [**UpdateLocationArea**](LocationAreasApi.md#updatelocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/update | Update a Location Area, i.e: Room, Floor, Car park space
 
 
@@ -142,9 +142,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getlocationsforstore"></a>
-# **GetLocationsForStore**
-> RestApiArrayResultLocationAreaWithLocations GetLocationsForStore (string appId, int? storeId)
+<a name="getlocationareasforstore"></a>
+# **GetLocationAreasForStore**
+> RestApiArrayResultLocationAreaWithLocations GetLocationAreasForStore (string appId, int? storeId)
 
 Retrieve all Location Areas for a Store
 
@@ -158,7 +158,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GetLocationsForStoreExample
+    public class GetLocationAreasForStoreExample
     {
         public void main()
         {
@@ -172,12 +172,12 @@ namespace Example
             try
             {
                 // Retrieve all Location Areas for a Store
-                RestApiArrayResultLocationAreaWithLocations result = apiInstance.GetLocationsForStore(appId, storeId);
+                RestApiArrayResultLocationAreaWithLocations result = apiInstance.GetLocationAreasForStore(appId, storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling LocationAreasApi.GetLocationsForStore: " + e.Message );
+                Debug.Print("Exception when calling LocationAreasApi.GetLocationAreasForStore: " + e.Message );
             }
         }
     }

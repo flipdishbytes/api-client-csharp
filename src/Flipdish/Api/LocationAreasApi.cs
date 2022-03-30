@@ -84,7 +84,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>RestApiArrayResultLocationAreaWithLocations</returns>
-        RestApiArrayResultLocationAreaWithLocations GetLocationsForStore (string appId, int? storeId);
+        RestApiArrayResultLocationAreaWithLocations GetLocationAreasForStore (string appId, int? storeId);
 
         /// <summary>
         /// Retrieve all Location Areas for a Store
@@ -96,7 +96,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>ApiResponse of RestApiArrayResultLocationAreaWithLocations</returns>
-        ApiResponse<RestApiArrayResultLocationAreaWithLocations> GetLocationsForStoreWithHttpInfo (string appId, int? storeId);
+        ApiResponse<RestApiArrayResultLocationAreaWithLocations> GetLocationAreasForStoreWithHttpInfo (string appId, int? storeId);
         /// <summary>
         /// Update a Location Area, i.e: Room, Floor, Car park space
         /// </summary>
@@ -186,7 +186,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>Task of RestApiArrayResultLocationAreaWithLocations</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultLocationAreaWithLocations> GetLocationsForStoreAsync (string appId, int? storeId);
+        System.Threading.Tasks.Task<RestApiArrayResultLocationAreaWithLocations> GetLocationAreasForStoreAsync (string appId, int? storeId);
 
         /// <summary>
         /// Retrieve all Location Areas for a Store
@@ -198,7 +198,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultLocationAreaWithLocations)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultLocationAreaWithLocations>> GetLocationsForStoreAsyncWithHttpInfo (string appId, int? storeId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultLocationAreaWithLocations>> GetLocationAreasForStoreAsyncWithHttpInfo (string appId, int? storeId);
         /// <summary>
         /// Update a Location Area, i.e: Room, Floor, Car park space
         /// </summary>
@@ -707,9 +707,9 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>RestApiArrayResultLocationAreaWithLocations</returns>
-        public RestApiArrayResultLocationAreaWithLocations GetLocationsForStore (string appId, int? storeId)
+        public RestApiArrayResultLocationAreaWithLocations GetLocationAreasForStore (string appId, int? storeId)
         {
-             ApiResponse<RestApiArrayResultLocationAreaWithLocations> localVarResponse = GetLocationsForStoreWithHttpInfo(appId, storeId);
+             ApiResponse<RestApiArrayResultLocationAreaWithLocations> localVarResponse = GetLocationAreasForStoreWithHttpInfo(appId, storeId);
              return localVarResponse.Data;
         }
 
@@ -720,14 +720,14 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>ApiResponse of RestApiArrayResultLocationAreaWithLocations</returns>
-        public ApiResponse< RestApiArrayResultLocationAreaWithLocations > GetLocationsForStoreWithHttpInfo (string appId, int? storeId)
+        public ApiResponse< RestApiArrayResultLocationAreaWithLocations > GetLocationAreasForStoreWithHttpInfo (string appId, int? storeId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling LocationAreasApi->GetLocationsForStore");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling LocationAreasApi->GetLocationAreasForStore");
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationAreasApi->GetLocationsForStore");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationAreasApi->GetLocationAreasForStore");
 
             var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas";
             var localVarPathParams = new Dictionary<String, String>();
@@ -772,7 +772,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetLocationsForStore", localVarResponse);
+                Exception exception = ExceptionFactory("GetLocationAreasForStore", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -788,9 +788,9 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>Task of RestApiArrayResultLocationAreaWithLocations</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultLocationAreaWithLocations> GetLocationsForStoreAsync (string appId, int? storeId)
+        public async System.Threading.Tasks.Task<RestApiArrayResultLocationAreaWithLocations> GetLocationAreasForStoreAsync (string appId, int? storeId)
         {
-             ApiResponse<RestApiArrayResultLocationAreaWithLocations> localVarResponse = await GetLocationsForStoreAsyncWithHttpInfo(appId, storeId);
+             ApiResponse<RestApiArrayResultLocationAreaWithLocations> localVarResponse = await GetLocationAreasForStoreAsyncWithHttpInfo(appId, storeId);
              return localVarResponse.Data;
 
         }
@@ -802,14 +802,14 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultLocationAreaWithLocations)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultLocationAreaWithLocations>> GetLocationsForStoreAsyncWithHttpInfo (string appId, int? storeId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultLocationAreaWithLocations>> GetLocationAreasForStoreAsyncWithHttpInfo (string appId, int? storeId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling LocationAreasApi->GetLocationsForStore");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling LocationAreasApi->GetLocationAreasForStore");
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationAreasApi->GetLocationsForStore");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationAreasApi->GetLocationAreasForStore");
 
             var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas";
             var localVarPathParams = new Dictionary<String, String>();
@@ -854,7 +854,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetLocationsForStore", localVarResponse);
+                Exception exception = ExceptionFactory("GetLocationAreasForStore", localVarResponse);
                 if (exception != null) throw exception;
             }
 

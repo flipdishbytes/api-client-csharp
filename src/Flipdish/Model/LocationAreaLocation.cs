@@ -37,12 +37,14 @@ namespace Flipdish.Model
         /// <param name="locationName">Name of the Location.</param>
         /// <param name="displayOrder">The order that the Location should be displayed on the screen.</param>
         /// <param name="externalLocationId">Id of the Location on an external system.</param>
-        public LocationAreaLocation(int? locationId = default(int?), string locationName = default(string), int? displayOrder = default(int?), string externalLocationId = default(string))
+        /// <param name="isDeleted">Shows if the Location is deleted or not.</param>
+        public LocationAreaLocation(int? locationId = default(int?), string locationName = default(string), int? displayOrder = default(int?), string externalLocationId = default(string), bool? isDeleted = default(bool?))
         {
             this.LocationId = locationId;
             this.LocationName = locationName;
             this.DisplayOrder = displayOrder;
             this.ExternalLocationId = externalLocationId;
+            this.IsDeleted = isDeleted;
         }
         
         /// <summary>
@@ -74,6 +76,13 @@ namespace Flipdish.Model
         public string ExternalLocationId { get; set; }
 
         /// <summary>
+        /// Shows if the Location is deleted or not
+        /// </summary>
+        /// <value>Shows if the Location is deleted or not</value>
+        [DataMember(Name="IsDeleted", EmitDefaultValue=false)]
+        public bool? IsDeleted { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -85,6 +94,7 @@ namespace Flipdish.Model
             sb.Append("  LocationName: ").Append(LocationName).Append("\n");
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
             sb.Append("  ExternalLocationId: ").Append(ExternalLocationId).Append("\n");
+            sb.Append("  IsDeleted: ").Append(IsDeleted).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,6 +148,11 @@ namespace Flipdish.Model
                     this.ExternalLocationId == input.ExternalLocationId ||
                     (this.ExternalLocationId != null &&
                     this.ExternalLocationId.Equals(input.ExternalLocationId))
+                ) && 
+                (
+                    this.IsDeleted == input.IsDeleted ||
+                    (this.IsDeleted != null &&
+                    this.IsDeleted.Equals(input.IsDeleted))
                 );
         }
 
@@ -158,6 +173,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DisplayOrder.GetHashCode();
                 if (this.ExternalLocationId != null)
                     hashCode = hashCode * 59 + this.ExternalLocationId.GetHashCode();
+                if (this.IsDeleted != null)
+                    hashCode = hashCode * 59 + this.IsDeleted.GetHashCode();
                 return hashCode;
             }
         }
