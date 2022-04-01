@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 <a name="updatelocationarea"></a>
 # **UpdateLocationArea**
-> LocationArea UpdateLocationArea (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId)
+> RestApiResultLocationArea UpdateLocationArea (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId)
 
 Update a Location Area, i.e: Room, Floor, Car park space
 
@@ -238,7 +238,7 @@ namespace Example
             try
             {
                 // Update a Location Area, i.e: Room, Floor, Car park space
-                LocationArea result = apiInstance.UpdateLocationArea(locationAreaInput, appId, storeId, locationAreaId);
+                RestApiResultLocationArea result = apiInstance.UpdateLocationArea(locationAreaInput, appId, storeId, locationAreaId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LocationArea**](LocationArea.md)
+[**RestApiResultLocationArea**](RestApiResultLocationArea.md)
 
 ### Authorization
 

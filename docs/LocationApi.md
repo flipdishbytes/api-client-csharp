@@ -5,7 +5,8 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateLocation**](LocationApi.md#createlocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location | Create a Location i.e: Table, Hotel Room, Car park space
-[**DeleteLocation**](LocationApi.md#deletelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete | Set a Location as deleted
+[**DeleteLocation**](LocationApi.md#deletelocation) | **DELETE** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete | Set a Location as deleted
+[**MapLocationToExternalId**](LocationApi.md#maplocationtoexternalid) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external | Set or unset External Location Id on a Location
 [**MoveLocation**](LocationApi.md#movelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/move | Move a Location to a different location Area
 [**UpdateLocation**](LocationApi.md#updatelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update | Update a Location i.e: Table, Hotel Room, Car park space
 
@@ -134,6 +135,76 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="maplocationtoexternalid"></a>
+# **MapLocationToExternalId**
+> RestApiResultMappedLocation MapLocationToExternalId (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null)
+
+Set or unset External Location Id on a Location
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class MapLocationToExternalIdExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new LocationApi();
+            var locationId = 56;  // int? | Id of the Location that will be mapped
+            var locationAreaId = 56;  // int? | Id of the Location Area that the Location belong
+            var appId = appId_example;  // string | AppId i.e: (fd1234)
+            var storeId = 56;  // int? | Id of the Store
+            var externalLocationId = externalLocationId_example;  // string | External Id to be mapped to the location (optional) 
+
+            try
+            {
+                // Set or unset External Location Id on a Location
+                RestApiResultMappedLocation result = apiInstance.MapLocationToExternalId(locationId, locationAreaId, appId, storeId, externalLocationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LocationApi.MapLocationToExternalId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **locationId** | **int?**| Id of the Location that will be mapped | 
+ **locationAreaId** | **int?**| Id of the Location Area that the Location belong | 
+ **appId** | **string**| AppId i.e: (fd1234) | 
+ **storeId** | **int?**| Id of the Store | 
+ **externalLocationId** | **string**| External Id to be mapped to the location | [optional] 
+
+### Return type
+
+[**RestApiResultMappedLocation**](RestApiResultMappedLocation.md)
 
 ### Authorization
 

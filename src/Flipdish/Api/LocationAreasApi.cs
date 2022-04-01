@@ -108,8 +108,8 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <param name="locationAreaId"></param>
-        /// <returns>LocationArea</returns>
-        LocationArea UpdateLocationArea (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId);
+        /// <returns>RestApiResultLocationArea</returns>
+        RestApiResultLocationArea UpdateLocationArea (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId);
 
         /// <summary>
         /// Update a Location Area, i.e: Room, Floor, Car park space
@@ -122,8 +122,8 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <param name="locationAreaId"></param>
-        /// <returns>ApiResponse of LocationArea</returns>
-        ApiResponse<LocationArea> UpdateLocationAreaWithHttpInfo (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId);
+        /// <returns>ApiResponse of RestApiResultLocationArea</returns>
+        ApiResponse<RestApiResultLocationArea> UpdateLocationAreaWithHttpInfo (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -210,8 +210,8 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <param name="locationAreaId"></param>
-        /// <returns>Task of LocationArea</returns>
-        System.Threading.Tasks.Task<LocationArea> UpdateLocationAreaAsync (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId);
+        /// <returns>Task of RestApiResultLocationArea</returns>
+        System.Threading.Tasks.Task<RestApiResultLocationArea> UpdateLocationAreaAsync (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId);
 
         /// <summary>
         /// Update a Location Area, i.e: Room, Floor, Car park space
@@ -224,8 +224,8 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <param name="locationAreaId"></param>
-        /// <returns>Task of ApiResponse (LocationArea)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LocationArea>> UpdateLocationAreaAsyncWithHttpInfo (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId);
+        /// <returns>Task of ApiResponse (RestApiResultLocationArea)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultLocationArea>> UpdateLocationAreaAsyncWithHttpInfo (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId);
         #endregion Asynchronous Operations
     }
 
@@ -871,10 +871,10 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <param name="locationAreaId"></param>
-        /// <returns>LocationArea</returns>
-        public LocationArea UpdateLocationArea (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId)
+        /// <returns>RestApiResultLocationArea</returns>
+        public RestApiResultLocationArea UpdateLocationArea (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId)
         {
-             ApiResponse<LocationArea> localVarResponse = UpdateLocationAreaWithHttpInfo(locationAreaInput, appId, storeId, locationAreaId);
+             ApiResponse<RestApiResultLocationArea> localVarResponse = UpdateLocationAreaWithHttpInfo(locationAreaInput, appId, storeId, locationAreaId);
              return localVarResponse.Data;
         }
 
@@ -886,8 +886,8 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <param name="locationAreaId"></param>
-        /// <returns>ApiResponse of LocationArea</returns>
-        public ApiResponse< LocationArea > UpdateLocationAreaWithHttpInfo (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId)
+        /// <returns>ApiResponse of RestApiResultLocationArea</returns>
+        public ApiResponse< RestApiResultLocationArea > UpdateLocationAreaWithHttpInfo (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId)
         {
             // verify the required parameter 'locationAreaInput' is set
             if (locationAreaInput == null)
@@ -963,9 +963,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<LocationArea>(localVarStatusCode,
+            return new ApiResponse<RestApiResultLocationArea>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (LocationArea) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationArea)));
+                (RestApiResultLocationArea) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultLocationArea)));
         }
 
         /// <summary>
@@ -976,10 +976,10 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <param name="locationAreaId"></param>
-        /// <returns>Task of LocationArea</returns>
-        public async System.Threading.Tasks.Task<LocationArea> UpdateLocationAreaAsync (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId)
+        /// <returns>Task of RestApiResultLocationArea</returns>
+        public async System.Threading.Tasks.Task<RestApiResultLocationArea> UpdateLocationAreaAsync (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId)
         {
-             ApiResponse<LocationArea> localVarResponse = await UpdateLocationAreaAsyncWithHttpInfo(locationAreaInput, appId, storeId, locationAreaId);
+             ApiResponse<RestApiResultLocationArea> localVarResponse = await UpdateLocationAreaAsyncWithHttpInfo(locationAreaInput, appId, storeId, locationAreaId);
              return localVarResponse.Data;
 
         }
@@ -992,8 +992,8 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <param name="locationAreaId"></param>
-        /// <returns>Task of ApiResponse (LocationArea)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LocationArea>> UpdateLocationAreaAsyncWithHttpInfo (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId)
+        /// <returns>Task of ApiResponse (RestApiResultLocationArea)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultLocationArea>> UpdateLocationAreaAsyncWithHttpInfo (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId)
         {
             // verify the required parameter 'locationAreaInput' is set
             if (locationAreaInput == null)
@@ -1069,9 +1069,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<LocationArea>(localVarStatusCode,
+            return new ApiResponse<RestApiResultLocationArea>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (LocationArea) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationArea)));
+                (RestApiResultLocationArea) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultLocationArea)));
         }
 
     }

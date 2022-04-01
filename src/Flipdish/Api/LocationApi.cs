@@ -79,6 +79,35 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DeleteLocationWithHttpInfo (int? locationId, int? locationAreaId, string appId, int? storeId);
         /// <summary>
+        /// Set or unset External Location Id on a Location
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Id of the Location that will be mapped</param>
+        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <returns>RestApiResultMappedLocation</returns>
+        RestApiResultMappedLocation MapLocationToExternalId (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null);
+
+        /// <summary>
+        /// Set or unset External Location Id on a Location
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Id of the Location that will be mapped</param>
+        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <returns>ApiResponse of RestApiResultMappedLocation</returns>
+        ApiResponse<RestApiResultMappedLocation> MapLocationToExternalIdWithHttpInfo (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null);
+        /// <summary>
         /// Move a Location to a different location Area
         /// </summary>
         /// <remarks>
@@ -192,6 +221,35 @@ namespace Flipdish.Api
         /// <param name="storeId">Id of the Store</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLocationAsyncWithHttpInfo (int? locationId, int? locationAreaId, string appId, int? storeId);
+        /// <summary>
+        /// Set or unset External Location Id on a Location
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Id of the Location that will be mapped</param>
+        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <returns>Task of RestApiResultMappedLocation</returns>
+        System.Threading.Tasks.Task<RestApiResultMappedLocation> MapLocationToExternalIdAsync (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null);
+
+        /// <summary>
+        /// Set or unset External Location Id on a Location
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Id of the Location that will be mapped</param>
+        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiResultMappedLocation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultMappedLocation>> MapLocationToExternalIdAsyncWithHttpInfo (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null);
         /// <summary>
         /// Move a Location to a different location Area
         /// </summary>
@@ -638,7 +696,7 @@ namespace Flipdish.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -732,7 +790,7 @@ namespace Flipdish.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -746,6 +804,199 @@ namespace Flipdish.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Set or unset External Location Id on a Location 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Id of the Location that will be mapped</param>
+        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <returns>RestApiResultMappedLocation</returns>
+        public RestApiResultMappedLocation MapLocationToExternalId (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null)
+        {
+             ApiResponse<RestApiResultMappedLocation> localVarResponse = MapLocationToExternalIdWithHttpInfo(locationId, locationAreaId, appId, storeId, externalLocationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set or unset External Location Id on a Location 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Id of the Location that will be mapped</param>
+        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <returns>ApiResponse of RestApiResultMappedLocation</returns>
+        public ApiResponse< RestApiResultMappedLocation > MapLocationToExternalIdWithHttpInfo (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null)
+        {
+            // verify the required parameter 'locationId' is set
+            if (locationId == null)
+                throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationApi->MapLocationToExternalId");
+            // verify the required parameter 'locationAreaId' is set
+            if (locationAreaId == null)
+                throw new ApiException(400, "Missing required parameter 'locationAreaId' when calling LocationApi->MapLocationToExternalId");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling LocationApi->MapLocationToExternalId");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationApi->MapLocationToExternalId");
+
+            var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (locationId != null) localVarPathParams.Add("locationId", this.Configuration.ApiClient.ParameterToString(locationId)); // path parameter
+            if (locationAreaId != null) localVarPathParams.Add("locationAreaId", this.Configuration.ApiClient.ParameterToString(locationAreaId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (externalLocationId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "externalLocationId", externalLocationId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MapLocationToExternalId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultMappedLocation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultMappedLocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMappedLocation)));
+        }
+
+        /// <summary>
+        /// Set or unset External Location Id on a Location 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Id of the Location that will be mapped</param>
+        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <returns>Task of RestApiResultMappedLocation</returns>
+        public async System.Threading.Tasks.Task<RestApiResultMappedLocation> MapLocationToExternalIdAsync (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null)
+        {
+             ApiResponse<RestApiResultMappedLocation> localVarResponse = await MapLocationToExternalIdAsyncWithHttpInfo(locationId, locationAreaId, appId, storeId, externalLocationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set or unset External Location Id on a Location 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Id of the Location that will be mapped</param>
+        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
+        /// <param name="appId">AppId i.e: (fd1234)</param>
+        /// <param name="storeId">Id of the Store</param>
+        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiResultMappedLocation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultMappedLocation>> MapLocationToExternalIdAsyncWithHttpInfo (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null)
+        {
+            // verify the required parameter 'locationId' is set
+            if (locationId == null)
+                throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationApi->MapLocationToExternalId");
+            // verify the required parameter 'locationAreaId' is set
+            if (locationAreaId == null)
+                throw new ApiException(400, "Missing required parameter 'locationAreaId' when calling LocationApi->MapLocationToExternalId");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling LocationApi->MapLocationToExternalId");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationApi->MapLocationToExternalId");
+
+            var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (locationId != null) localVarPathParams.Add("locationId", this.Configuration.ApiClient.ParameterToString(locationId)); // path parameter
+            if (locationAreaId != null) localVarPathParams.Add("locationAreaId", this.Configuration.ApiClient.ParameterToString(locationAreaId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (externalLocationId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "externalLocationId", externalLocationId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MapLocationToExternalId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultMappedLocation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultMappedLocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMappedLocation)));
         }
 
         /// <summary>
