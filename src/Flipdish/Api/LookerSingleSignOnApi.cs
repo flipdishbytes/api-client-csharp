@@ -47,6 +47,29 @@ namespace Flipdish.Api
         /// <param name="embedPath"></param>
         /// <returns>ApiResponse of DashboardEmbed</returns>
         ApiResponse<DashboardEmbed> GetLookerCustomerReportingEmbedUrlWithHttpInfo (string appId, string embedPath);
+        /// <summary>
+        /// Get the single sign on embed URL for PerformanceSummary Dashboard
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">AppNameId</param>
+        /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <returns>DashboardEmbed</returns>
+        DashboardEmbed GetLookerPerformanceSummaryEmbedUrl (string appId, string embedPath);
+
+        /// <summary>
+        /// Get the single sign on embed URL for PerformanceSummary Dashboard
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">AppNameId</param>
+        /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <returns>ApiResponse of DashboardEmbed</returns>
+        ApiResponse<DashboardEmbed> GetLookerPerformanceSummaryEmbedUrlWithHttpInfo (string appId, string embedPath);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -72,6 +95,29 @@ namespace Flipdish.Api
         /// <param name="embedPath"></param>
         /// <returns>Task of ApiResponse (DashboardEmbed)</returns>
         System.Threading.Tasks.Task<ApiResponse<DashboardEmbed>> GetLookerCustomerReportingEmbedUrlAsyncWithHttpInfo (string appId, string embedPath);
+        /// <summary>
+        /// Get the single sign on embed URL for PerformanceSummary Dashboard
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">AppNameId</param>
+        /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <returns>Task of DashboardEmbed</returns>
+        System.Threading.Tasks.Task<DashboardEmbed> GetLookerPerformanceSummaryEmbedUrlAsync (string appId, string embedPath);
+
+        /// <summary>
+        /// Get the single sign on embed URL for PerformanceSummary Dashboard
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">AppNameId</param>
+        /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <returns>Task of ApiResponse (DashboardEmbed)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DashboardEmbed>> GetLookerPerformanceSummaryEmbedUrlAsyncWithHttpInfo (string appId, string embedPath);
         #endregion Asynchronous Operations
     }
 
@@ -327,6 +373,169 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetLookerCustomerReportingEmbedUrl", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DashboardEmbed>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DashboardEmbed) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DashboardEmbed)));
+        }
+
+        /// <summary>
+        /// Get the single sign on embed URL for PerformanceSummary Dashboard 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">AppNameId</param>
+        /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <returns>DashboardEmbed</returns>
+        public DashboardEmbed GetLookerPerformanceSummaryEmbedUrl (string appId, string embedPath)
+        {
+             ApiResponse<DashboardEmbed> localVarResponse = GetLookerPerformanceSummaryEmbedUrlWithHttpInfo(appId, embedPath);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the single sign on embed URL for PerformanceSummary Dashboard 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">AppNameId</param>
+        /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <returns>ApiResponse of DashboardEmbed</returns>
+        public ApiResponse< DashboardEmbed > GetLookerPerformanceSummaryEmbedUrlWithHttpInfo (string appId, string embedPath)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling LookerSingleSignOnApi->GetLookerPerformanceSummaryEmbedUrl");
+            // verify the required parameter 'embedPath' is set
+            if (embedPath == null)
+                throw new ApiException(400, "Missing required parameter 'embedPath' when calling LookerSingleSignOnApi->GetLookerPerformanceSummaryEmbedUrl");
+
+            var localVarPath = "/api/v1.0/{appId}/looker/sso/PerformanceSummary";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (embedPath != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "embedPath", embedPath)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetLookerPerformanceSummaryEmbedUrl", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DashboardEmbed>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DashboardEmbed) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DashboardEmbed)));
+        }
+
+        /// <summary>
+        /// Get the single sign on embed URL for PerformanceSummary Dashboard 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">AppNameId</param>
+        /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <returns>Task of DashboardEmbed</returns>
+        public async System.Threading.Tasks.Task<DashboardEmbed> GetLookerPerformanceSummaryEmbedUrlAsync (string appId, string embedPath)
+        {
+             ApiResponse<DashboardEmbed> localVarResponse = await GetLookerPerformanceSummaryEmbedUrlAsyncWithHttpInfo(appId, embedPath);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the single sign on embed URL for PerformanceSummary Dashboard 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">AppNameId</param>
+        /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <returns>Task of ApiResponse (DashboardEmbed)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DashboardEmbed>> GetLookerPerformanceSummaryEmbedUrlAsyncWithHttpInfo (string appId, string embedPath)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling LookerSingleSignOnApi->GetLookerPerformanceSummaryEmbedUrl");
+            // verify the required parameter 'embedPath' is set
+            if (embedPath == null)
+                throw new ApiException(400, "Missing required parameter 'embedPath' when calling LookerSingleSignOnApi->GetLookerPerformanceSummaryEmbedUrl");
+
+            var localVarPath = "/api/v1.0/{appId}/looker/sso/PerformanceSummary";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (embedPath != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "embedPath", embedPath)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetLookerPerformanceSummaryEmbedUrl", localVarResponse);
                 if (exception != null) throw exception;
             }
 
