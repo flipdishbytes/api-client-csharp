@@ -36,7 +36,7 @@ namespace Flipdish.Model
         /// <param name="storeId">Store identifier.</param>
         /// <param name="percentageValue">The Default Service Charge Value.</param>
         /// <param name="enabled">Enable Service Charge for store true(on) / false(off).</param>
-        public ServiceCharge(int? storeId = default(int?), int? percentageValue = default(int?), bool? enabled = default(bool?))
+        public ServiceCharge(int? storeId = default(int?), double? percentageValue = default(double?), bool? enabled = default(bool?))
         {
             this.StoreId = storeId;
             this.PercentageValue = percentageValue;
@@ -55,7 +55,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>The Default Service Charge Value</value>
         [DataMember(Name="PercentageValue", EmitDefaultValue=false)]
-        public int? PercentageValue { get; set; }
+        public double? PercentageValue { get; set; }
 
         /// <summary>
         /// Enable Service Charge for store true(on) / false(off)

@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 <a name="configurestoreservicecharge"></a>
 # **ConfigureStoreServiceCharge**
-> Object ConfigureStoreServiceCharge (int? storeId, ServiceCharge serviceCharge)
+> RestApiResultServiceCharge ConfigureStoreServiceCharge (int? storeId, ServiceCharge serviceCharge)
 
 Configure Store Service Charge; Idempotent Operation
 
@@ -254,7 +254,7 @@ namespace Example
             try
             {
                 // Configure Store Service Charge; Idempotent Operation
-                Object result = apiInstance.ConfigureStoreServiceCharge(storeId, serviceCharge);
+                RestApiResultServiceCharge result = apiInstance.ConfigureStoreServiceCharge(storeId, serviceCharge);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiResultServiceCharge**](RestApiResultServiceCharge.md)
 
 ### Authorization
 

@@ -128,6 +128,7 @@ Name | Type | Description | Notes
 **CatalogGroupUpdatedEvent** | [**List&lt;CatalogGroupUpdatedEvent&gt;**](CatalogGroupUpdatedEvent.md) | Catalog Group Updated | [optional] 
 **CatalogGroupArchivedEvent** | [**List&lt;CatalogGroupArchivedEvent&gt;**](CatalogGroupArchivedEvent.md) | Catalog Group Archived | [optional] 
 **StoreTipUpdatedEvent** | [**List&lt;StoreTipUpdatedEvent&gt;**](StoreTipUpdatedEvent.md) | Store Tip Updated Event | [optional] 
+**StoreServiceChargeUpdatedEvent** | [**List&lt;StoreServiceChargeUpdatedEvent&gt;**](StoreServiceChargeUpdatedEvent.md) | Service Charge Updated Event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

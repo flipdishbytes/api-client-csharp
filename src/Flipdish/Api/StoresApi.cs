@@ -100,8 +100,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="serviceCharge">Service charge</param>
-        /// <returns>Object</returns>
-        Object ConfigureStoreServiceCharge (int? storeId, ServiceCharge serviceCharge);
+        /// <returns>RestApiResultServiceCharge</returns>
+        RestApiResultServiceCharge ConfigureStoreServiceCharge (int? storeId, ServiceCharge serviceCharge);
 
         /// <summary>
         /// Configure Store Service Charge; Idempotent Operation
@@ -112,8 +112,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="serviceCharge">Service charge</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ConfigureStoreServiceChargeWithHttpInfo (int? storeId, ServiceCharge serviceCharge);
+        /// <returns>ApiResponse of RestApiResultServiceCharge</returns>
+        ApiResponse<RestApiResultServiceCharge> ConfigureStoreServiceChargeWithHttpInfo (int? storeId, ServiceCharge serviceCharge);
         /// <summary>
         /// Create Business Hours Override for a store
         /// </summary>
@@ -803,8 +803,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="serviceCharge">Service charge</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ConfigureStoreServiceChargeAsync (int? storeId, ServiceCharge serviceCharge);
+        /// <returns>Task of RestApiResultServiceCharge</returns>
+        System.Threading.Tasks.Task<RestApiResultServiceCharge> ConfigureStoreServiceChargeAsync (int? storeId, ServiceCharge serviceCharge);
 
         /// <summary>
         /// Configure Store Service Charge; Idempotent Operation
@@ -815,8 +815,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="serviceCharge">Service charge</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConfigureStoreServiceChargeAsyncWithHttpInfo (int? storeId, ServiceCharge serviceCharge);
+        /// <returns>Task of ApiResponse (RestApiResultServiceCharge)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultServiceCharge>> ConfigureStoreServiceChargeAsyncWithHttpInfo (int? storeId, ServiceCharge serviceCharge);
         /// <summary>
         /// Create Business Hours Override for a store
         /// </summary>
@@ -2033,10 +2033,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="serviceCharge">Service charge</param>
-        /// <returns>Object</returns>
-        public Object ConfigureStoreServiceCharge (int? storeId, ServiceCharge serviceCharge)
+        /// <returns>RestApiResultServiceCharge</returns>
+        public RestApiResultServiceCharge ConfigureStoreServiceCharge (int? storeId, ServiceCharge serviceCharge)
         {
-             ApiResponse<Object> localVarResponse = ConfigureStoreServiceChargeWithHttpInfo(storeId, serviceCharge);
+             ApiResponse<RestApiResultServiceCharge> localVarResponse = ConfigureStoreServiceChargeWithHttpInfo(storeId, serviceCharge);
              return localVarResponse.Data;
         }
 
@@ -2046,8 +2046,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="serviceCharge">Service charge</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ConfigureStoreServiceChargeWithHttpInfo (int? storeId, ServiceCharge serviceCharge)
+        /// <returns>ApiResponse of RestApiResultServiceCharge</returns>
+        public ApiResponse< RestApiResultServiceCharge > ConfigureStoreServiceChargeWithHttpInfo (int? storeId, ServiceCharge serviceCharge)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -2115,9 +2115,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiResultServiceCharge>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (RestApiResultServiceCharge) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultServiceCharge)));
         }
 
         /// <summary>
@@ -2126,10 +2126,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="serviceCharge">Service charge</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ConfigureStoreServiceChargeAsync (int? storeId, ServiceCharge serviceCharge)
+        /// <returns>Task of RestApiResultServiceCharge</returns>
+        public async System.Threading.Tasks.Task<RestApiResultServiceCharge> ConfigureStoreServiceChargeAsync (int? storeId, ServiceCharge serviceCharge)
         {
-             ApiResponse<Object> localVarResponse = await ConfigureStoreServiceChargeAsyncWithHttpInfo(storeId, serviceCharge);
+             ApiResponse<RestApiResultServiceCharge> localVarResponse = await ConfigureStoreServiceChargeAsyncWithHttpInfo(storeId, serviceCharge);
              return localVarResponse.Data;
 
         }
@@ -2140,8 +2140,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store identifier</param>
         /// <param name="serviceCharge">Service charge</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConfigureStoreServiceChargeAsyncWithHttpInfo (int? storeId, ServiceCharge serviceCharge)
+        /// <returns>Task of ApiResponse (RestApiResultServiceCharge)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultServiceCharge>> ConfigureStoreServiceChargeAsyncWithHttpInfo (int? storeId, ServiceCharge serviceCharge)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -2209,9 +2209,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiResultServiceCharge>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (RestApiResultServiceCharge) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultServiceCharge)));
         }
 
         /// <summary>
