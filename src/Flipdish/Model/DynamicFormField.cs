@@ -39,7 +39,7 @@ namespace Flipdish.Model
         /// <param name="rules">rules.</param>
         /// <param name="mapping">mapping.</param>
         /// <param name="value">value.</param>
-        public DynamicFormField(string identifier = default(string), string label = default(string), string placeholder = default(string), DynamicFormRules rules = default(DynamicFormRules), DynamicFormFieldMapping mapping = default(DynamicFormFieldMapping), Object value = default(Object))
+        public DynamicFormField(string identifier = default(string), string label = default(string), string placeholder = default(string), DynamicFormRules rules = default(DynamicFormRules), Dictionary<string, string> mapping = default(Dictionary<string, string>), Object value = default(Object))
         {
             this.Identifier = identifier;
             this.Label = label;
@@ -77,7 +77,7 @@ namespace Flipdish.Model
         /// Gets or Sets Mapping
         /// </summary>
         [DataMember(Name="Mapping", EmitDefaultValue=false)]
-        public DynamicFormFieldMapping Mapping { get; set; }
+        public Dictionary<string, string> Mapping { get; set; }
 
         /// <summary>
         /// Gets or Sets Value
@@ -155,8 +155,8 @@ namespace Flipdish.Model
                 ) && 
                 (
                     this.Mapping == input.Mapping ||
-                    (this.Mapping != null &&
-                    this.Mapping.Equals(input.Mapping))
+                    this.Mapping != null &&
+                    this.Mapping.SequenceEqual(input.Mapping)
                 ) && 
                 (
                     this.Value == input.Value ||
