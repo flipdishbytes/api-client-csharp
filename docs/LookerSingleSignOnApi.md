@@ -5,7 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetLookerCustomerReportingEmbedUrl**](LookerSingleSignOnApi.md#getlookercustomerreportingembedurl) | **GET** /api/v1.0/{appId}/looker/sso/CustomerReporting | 
-[**GetLookerPerformanceSummaryEmbedUrl**](LookerSingleSignOnApi.md#getlookerperformancesummaryembedurl) | **GET** /api/v1.0/{appId}/looker/sso/PerformanceSummary | Get the single sign on embed URL for PerformanceSummary Dashboard
+[**GetSSOEndpoint**](LookerSingleSignOnApi.md#getssoendpoint) | **GET** /api/v1.0/{appId}/looker/sso | Get the single sign on embed URL for PerformanceSummary Dashboard
 
 
 <a name="getlookercustomerreportingembedurl"></a>
@@ -71,9 +71,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getlookerperformancesummaryembedurl"></a>
-# **GetLookerPerformanceSummaryEmbedUrl**
-> DashboardEmbed GetLookerPerformanceSummaryEmbedUrl (string appId, string embedPath)
+<a name="getssoendpoint"></a>
+# **GetSSOEndpoint**
+> DashboardEmbed GetSSOEndpoint (string appId, string embedPath)
 
 Get the single sign on embed URL for PerformanceSummary Dashboard
 
@@ -87,7 +87,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GetLookerPerformanceSummaryEmbedUrlExample
+    public class GetSSOEndpointExample
     {
         public void main()
         {
@@ -101,12 +101,12 @@ namespace Example
             try
             {
                 // Get the single sign on embed URL for PerformanceSummary Dashboard
-                DashboardEmbed result = apiInstance.GetLookerPerformanceSummaryEmbedUrl(appId, embedPath);
+                DashboardEmbed result = apiInstance.GetSSOEndpoint(appId, embedPath);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling LookerSingleSignOnApi.GetLookerPerformanceSummaryEmbedUrl: " + e.Message );
+                Debug.Print("Exception when calling LookerSingleSignOnApi.GetSSOEndpoint: " + e.Message );
             }
         }
     }

@@ -57,7 +57,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
         /// <returns>DashboardEmbed</returns>
-        DashboardEmbed GetLookerPerformanceSummaryEmbedUrl (string appId, string embedPath);
+        DashboardEmbed GetSSOEndpoint (string appId, string embedPath);
 
         /// <summary>
         /// Get the single sign on embed URL for PerformanceSummary Dashboard
@@ -69,7 +69,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
         /// <returns>ApiResponse of DashboardEmbed</returns>
-        ApiResponse<DashboardEmbed> GetLookerPerformanceSummaryEmbedUrlWithHttpInfo (string appId, string embedPath);
+        ApiResponse<DashboardEmbed> GetSSOEndpointWithHttpInfo (string appId, string embedPath);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -105,7 +105,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
         /// <returns>Task of DashboardEmbed</returns>
-        System.Threading.Tasks.Task<DashboardEmbed> GetLookerPerformanceSummaryEmbedUrlAsync (string appId, string embedPath);
+        System.Threading.Tasks.Task<DashboardEmbed> GetSSOEndpointAsync (string appId, string embedPath);
 
         /// <summary>
         /// Get the single sign on embed URL for PerformanceSummary Dashboard
@@ -117,7 +117,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
         /// <returns>Task of ApiResponse (DashboardEmbed)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DashboardEmbed>> GetLookerPerformanceSummaryEmbedUrlAsyncWithHttpInfo (string appId, string embedPath);
+        System.Threading.Tasks.Task<ApiResponse<DashboardEmbed>> GetSSOEndpointAsyncWithHttpInfo (string appId, string embedPath);
         #endregion Asynchronous Operations
     }
 
@@ -388,9 +388,9 @@ namespace Flipdish.Api
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
         /// <returns>DashboardEmbed</returns>
-        public DashboardEmbed GetLookerPerformanceSummaryEmbedUrl (string appId, string embedPath)
+        public DashboardEmbed GetSSOEndpoint (string appId, string embedPath)
         {
-             ApiResponse<DashboardEmbed> localVarResponse = GetLookerPerformanceSummaryEmbedUrlWithHttpInfo(appId, embedPath);
+             ApiResponse<DashboardEmbed> localVarResponse = GetSSOEndpointWithHttpInfo(appId, embedPath);
              return localVarResponse.Data;
         }
 
@@ -401,16 +401,16 @@ namespace Flipdish.Api
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
         /// <returns>ApiResponse of DashboardEmbed</returns>
-        public ApiResponse< DashboardEmbed > GetLookerPerformanceSummaryEmbedUrlWithHttpInfo (string appId, string embedPath)
+        public ApiResponse< DashboardEmbed > GetSSOEndpointWithHttpInfo (string appId, string embedPath)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling LookerSingleSignOnApi->GetLookerPerformanceSummaryEmbedUrl");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling LookerSingleSignOnApi->GetSSOEndpoint");
             // verify the required parameter 'embedPath' is set
             if (embedPath == null)
-                throw new ApiException(400, "Missing required parameter 'embedPath' when calling LookerSingleSignOnApi->GetLookerPerformanceSummaryEmbedUrl");
+                throw new ApiException(400, "Missing required parameter 'embedPath' when calling LookerSingleSignOnApi->GetSSOEndpoint");
 
-            var localVarPath = "/api/v1.0/{appId}/looker/sso/PerformanceSummary";
+            var localVarPath = "/api/v1.0/{appId}/looker/sso";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -453,7 +453,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetLookerPerformanceSummaryEmbedUrl", localVarResponse);
+                Exception exception = ExceptionFactory("GetSSOEndpoint", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -469,9 +469,9 @@ namespace Flipdish.Api
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
         /// <returns>Task of DashboardEmbed</returns>
-        public async System.Threading.Tasks.Task<DashboardEmbed> GetLookerPerformanceSummaryEmbedUrlAsync (string appId, string embedPath)
+        public async System.Threading.Tasks.Task<DashboardEmbed> GetSSOEndpointAsync (string appId, string embedPath)
         {
-             ApiResponse<DashboardEmbed> localVarResponse = await GetLookerPerformanceSummaryEmbedUrlAsyncWithHttpInfo(appId, embedPath);
+             ApiResponse<DashboardEmbed> localVarResponse = await GetSSOEndpointAsyncWithHttpInfo(appId, embedPath);
              return localVarResponse.Data;
 
         }
@@ -483,16 +483,16 @@ namespace Flipdish.Api
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
         /// <returns>Task of ApiResponse (DashboardEmbed)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DashboardEmbed>> GetLookerPerformanceSummaryEmbedUrlAsyncWithHttpInfo (string appId, string embedPath)
+        public async System.Threading.Tasks.Task<ApiResponse<DashboardEmbed>> GetSSOEndpointAsyncWithHttpInfo (string appId, string embedPath)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling LookerSingleSignOnApi->GetLookerPerformanceSummaryEmbedUrl");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling LookerSingleSignOnApi->GetSSOEndpoint");
             // verify the required parameter 'embedPath' is set
             if (embedPath == null)
-                throw new ApiException(400, "Missing required parameter 'embedPath' when calling LookerSingleSignOnApi->GetLookerPerformanceSummaryEmbedUrl");
+                throw new ApiException(400, "Missing required parameter 'embedPath' when calling LookerSingleSignOnApi->GetSSOEndpoint");
 
-            var localVarPath = "/api/v1.0/{appId}/looker/sso/PerformanceSummary";
+            var localVarPath = "/api/v1.0/{appId}/looker/sso";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -535,7 +535,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetLookerPerformanceSummaryEmbedUrl", localVarResponse);
+                Exception exception = ExceptionFactory("GetSSOEndpoint", localVarResponse);
                 if (exception != null) throw exception;
             }
 
