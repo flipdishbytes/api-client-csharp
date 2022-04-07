@@ -38,14 +38,16 @@ namespace Flipdish.Model
         /// <param name="placeholder">placeholder.</param>
         /// <param name="rules">rules.</param>
         /// <param name="mapping">mapping.</param>
+        /// <param name="modifiers">modifiers.</param>
         /// <param name="value">value.</param>
-        public DynamicFormField(string identifier = default(string), string label = default(string), string placeholder = default(string), DynamicFormRules rules = default(DynamicFormRules), Dictionary<string, string> mapping = default(Dictionary<string, string>), Object value = default(Object))
+        public DynamicFormField(string identifier = default(string), string label = default(string), string placeholder = default(string), DynamicFormRules rules = default(DynamicFormRules), Dictionary<string, string> mapping = default(Dictionary<string, string>), List<string> modifiers = default(List<string>), Object value = default(Object))
         {
             this.Identifier = identifier;
             this.Label = label;
             this.Placeholder = placeholder;
             this.Rules = rules;
             this.Mapping = mapping;
+            this.Modifiers = modifiers;
             this.Value = value;
         }
         
@@ -80,6 +82,12 @@ namespace Flipdish.Model
         public Dictionary<string, string> Mapping { get; set; }
 
         /// <summary>
+        /// Gets or Sets Modifiers
+        /// </summary>
+        [DataMember(Name="Modifiers", EmitDefaultValue=false)]
+        public List<string> Modifiers { get; set; }
+
+        /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="Value", EmitDefaultValue=false)]
@@ -98,6 +106,7 @@ namespace Flipdish.Model
             sb.Append("  Placeholder: ").Append(Placeholder).Append("\n");
             sb.Append("  Rules: ").Append(Rules).Append("\n");
             sb.Append("  Mapping: ").Append(Mapping).Append("\n");
+            sb.Append("  Modifiers: ").Append(Modifiers).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -159,6 +168,11 @@ namespace Flipdish.Model
                     this.Mapping.SequenceEqual(input.Mapping)
                 ) && 
                 (
+                    this.Modifiers == input.Modifiers ||
+                    this.Modifiers != null &&
+                    this.Modifiers.SequenceEqual(input.Modifiers)
+                ) && 
+                (
                     this.Value == input.Value ||
                     (this.Value != null &&
                     this.Value.Equals(input.Value))
@@ -184,6 +198,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Rules.GetHashCode();
                 if (this.Mapping != null)
                     hashCode = hashCode * 59 + this.Mapping.GetHashCode();
+                if (this.Modifiers != null)
+                    hashCode = hashCode * 59 + this.Modifiers.GetHashCode();
                 if (this.Value != null)
                     hashCode = hashCode * 59 + this.Value.GetHashCode();
                 return hashCode;

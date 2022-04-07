@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Placeholder** | **string** |  | [optional] 
 **Rules** | [**DynamicFormRules**](DynamicFormRules.md) |  | [optional] 
 **Mapping** | **Dictionary&lt;string, string&gt;** |  | [optional] 
+**Modifiers** | **List&lt;string&gt;** |  | [optional] 
 **Value** | **Object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
