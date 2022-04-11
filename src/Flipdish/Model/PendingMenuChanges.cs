@@ -35,12 +35,10 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="catalogElementId">Unique catalog element id.</param>
         /// <param name="menuId">Unique menu id.</param>
-        /// <param name="lastUpdatedAt">Update date and time.</param>
-        public PendingMenuChanges(string catalogElementId = default(string), int? menuId = default(int?), DateTime? lastUpdatedAt = default(DateTime?))
+        public PendingMenuChanges(string catalogElementId = default(string), int? menuId = default(int?))
         {
             this.CatalogElementId = catalogElementId;
             this.MenuId = menuId;
-            this.LastUpdatedAt = lastUpdatedAt;
         }
         
         /// <summary>
@@ -58,13 +56,6 @@ namespace Flipdish.Model
         public int? MenuId { get; set; }
 
         /// <summary>
-        /// Update date and time
-        /// </summary>
-        /// <value>Update date and time</value>
-        [DataMember(Name="LastUpdatedAt", EmitDefaultValue=false)]
-        public DateTime? LastUpdatedAt { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -74,7 +65,6 @@ namespace Flipdish.Model
             sb.Append("class PendingMenuChanges {\n");
             sb.Append("  CatalogElementId: ").Append(CatalogElementId).Append("\n");
             sb.Append("  MenuId: ").Append(MenuId).Append("\n");
-            sb.Append("  LastUpdatedAt: ").Append(LastUpdatedAt).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -118,11 +108,6 @@ namespace Flipdish.Model
                     this.MenuId == input.MenuId ||
                     (this.MenuId != null &&
                     this.MenuId.Equals(input.MenuId))
-                ) && 
-                (
-                    this.LastUpdatedAt == input.LastUpdatedAt ||
-                    (this.LastUpdatedAt != null &&
-                    this.LastUpdatedAt.Equals(input.LastUpdatedAt))
                 );
         }
 
@@ -139,8 +124,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CatalogElementId.GetHashCode();
                 if (this.MenuId != null)
                     hashCode = hashCode * 59 + this.MenuId.GetHashCode();
-                if (this.LastUpdatedAt != null)
-                    hashCode = hashCode * 59 + this.LastUpdatedAt.GetHashCode();
                 return hashCode;
             }
         }

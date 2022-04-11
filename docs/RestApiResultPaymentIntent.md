@@ -1,10 +1,9 @@
-# Flipdish.Model.PendingMenuChanges
+# Flipdish.Model.RestApiResultPaymentIntent
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CatalogElementId** | **string** | Unique catalog element id | [optional] 
-**MenuId** | **int?** | Unique menu id | [optional] 
+**Data** | [**PaymentIntent**](PaymentIntent.md) | Generic data object. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

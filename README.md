@@ -387,6 +387,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**RefundOrder**](docs/OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
 *OrdersApi* | [**RejectOrder**](docs/OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 *OrdersApi* | [**UpdateDeliveryInformation**](docs/OrdersApi.md#updatedeliveryinformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
+*PaymentIntentsApi* | [**GetPaymentIntent**](docs/PaymentIntentsApi.md#getpaymentintent) | **GET** /api/v1.0/payment_intents/{paymentIntentId} | Returns stripe payment intent for a given id
 *PaymentsApi* | [**GetOrderPaymentInformation**](docs/PaymentsApi.md#getorderpaymentinformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | Returns payment refund information related to the order with the order id
 *PayoutsApi* | [**GetPayout**](docs/PayoutsApi.md#getpayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | Get Payout details broken down by Store
 *PayoutsApi* | [**GetPayoutChargebacks**](docs/PayoutsApi.md#getpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks | Get list of payout's chargebacks
@@ -768,6 +769,7 @@ Class | Method | HTTP request | Description
  - [Model.OwnerEntityConfigurations](docs/OwnerEntityConfigurations.md)
  - [Model.PasswordResetModel](docs/PasswordResetModel.md)
  - [Model.PaymentInfo](docs/PaymentInfo.md)
+ - [Model.PaymentIntent](docs/PaymentIntent.md)
  - [Model.PaymentTerminalDetails](docs/PaymentTerminalDetails.md)
  - [Model.PaymentTerminalTransactionDetails](docs/PaymentTerminalTransactionDetails.md)
  - [Model.Payout](docs/Payout.md)
@@ -939,6 +941,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultOrderDeliveryInformation](docs/RestApiResultOrderDeliveryInformation.md)
  - [Model.RestApiResultOrderIngestSubmitOrderResponse](docs/RestApiResultOrderIngestSubmitOrderResponse.md)
  - [Model.RestApiResultOrderPaymentInformation](docs/RestApiResultOrderPaymentInformation.md)
+ - [Model.RestApiResultPaymentIntent](docs/RestApiResultPaymentIntent.md)
  - [Model.RestApiResultPaymentTerminalDetails](docs/RestApiResultPaymentTerminalDetails.md)
  - [Model.RestApiResultPaymentTerminalTransactionDetails](docs/RestApiResultPaymentTerminalTransactionDetails.md)
  - [Model.RestApiResultPreOrderConfig](docs/RestApiResultPreOrderConfig.md)
