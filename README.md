@@ -752,6 +752,7 @@ Class | Method | HTTP request | Description
  - [Model.OrderDeliveryInformationBase](docs/OrderDeliveryInformationBase.md)
  - [Model.OrderDeliveryTrackingStatusUpdatedEvent](docs/OrderDeliveryTrackingStatusUpdatedEvent.md)
  - [Model.OrderDispatchedEvent](docs/OrderDispatchedEvent.md)
+ - [Model.OrderDropOffLocation](docs/OrderDropOffLocation.md)
  - [Model.OrderIdAndSequenceNumber](docs/OrderIdAndSequenceNumber.md)
  - [Model.OrderIngestSubmitOrderRequest](docs/OrderIngestSubmitOrderRequest.md)
  - [Model.OrderIngestSubmitOrderResponse](docs/OrderIngestSubmitOrderResponse.md)
