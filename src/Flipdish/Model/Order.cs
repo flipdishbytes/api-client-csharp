@@ -594,7 +594,7 @@ namespace Flipdish.Model
         /// <param name="channelOrderDisplayId">ChannelOrderDisplayId from external channel.</param>
         /// <param name="channel">Channel where the Order comes from.</param>
         /// <param name="receiptCode">Generated receipt code for an order.</param>
-        /// <param name="orderDropOffLocation">Order Drop Off Location.</param>
+        /// <param name="orderDropOffLocation">DropOffLocation selected for this order.</param>
         /// <param name="orderId">Order identifier.</param>
         /// <param name="localOrderId">Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders).</param>
         /// <param name="deliveryType">Delivery type.</param>
@@ -799,9 +799,9 @@ namespace Flipdish.Model
         public string ReceiptCode { get; set; }
 
         /// <summary>
-        /// Order Drop Off Location
+        /// DropOffLocation selected for this order
         /// </summary>
-        /// <value>Order Drop Off Location</value>
+        /// <value>DropOffLocation selected for this order</value>
         [DataMember(Name="OrderDropOffLocation", EmitDefaultValue=false)]
         public OrderDropOffLocation OrderDropOffLocation { get; set; }
 

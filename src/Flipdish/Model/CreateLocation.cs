@@ -33,16 +33,25 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateLocation" /> class.
         /// </summary>
+        /// <param name="locationId">Location Id.</param>
         /// <param name="locationName">Descriptive LocationArea name.</param>
         /// <param name="displayOrder">The order that the Location should be displayed on the screen.</param>
         /// <param name="externalLocationId">Id of the Location on an external system.</param>
-        public CreateLocation(string locationName = default(string), int? displayOrder = default(int?), string externalLocationId = default(string))
+        public CreateLocation(int? locationId = default(int?), string locationName = default(string), int? displayOrder = default(int?), string externalLocationId = default(string))
         {
+            this.LocationId = locationId;
             this.LocationName = locationName;
             this.DisplayOrder = displayOrder;
             this.ExternalLocationId = externalLocationId;
         }
         
+        /// <summary>
+        /// Location Id
+        /// </summary>
+        /// <value>Location Id</value>
+        [DataMember(Name="LocationId", EmitDefaultValue=false)]
+        public int? LocationId { get; set; }
+
         /// <summary>
         /// Descriptive LocationArea name
         /// </summary>
@@ -72,6 +81,7 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateLocation {\n");
+            sb.Append("  LocationId: ").Append(LocationId).Append("\n");
             sb.Append("  LocationName: ").Append(LocationName).Append("\n");
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
             sb.Append("  ExternalLocationId: ").Append(ExternalLocationId).Append("\n");
@@ -110,6 +120,11 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.LocationId == input.LocationId ||
+                    (this.LocationId != null &&
+                    this.LocationId.Equals(input.LocationId))
+                ) && 
+                (
                     this.LocationName == input.LocationName ||
                     (this.LocationName != null &&
                     this.LocationName.Equals(input.LocationName))
@@ -135,6 +150,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.LocationId != null)
+                    hashCode = hashCode * 59 + this.LocationId.GetHashCode();
                 if (this.LocationName != null)
                     hashCode = hashCode * 59 + this.LocationName.GetHashCode();
                 if (this.DisplayOrder != null)

@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**LocationId** | **int?** | Location Id | [optional] 
 **LocationName** | **string** | Descriptive LocationArea name | [optional] 
 **DisplayOrder** | **int?** | The order that the Location should be displayed on the screen | [optional] 
 **ExternalLocationId** | **string** | Id of the Location on an external system | [optional] 

@@ -821,118 +821,94 @@ namespace Flipdish.Model
             ViewCatalogAuditLogs = 118,
             
             /// <summary>
-            /// Enum CreateAppStoreApp for value: CreateAppStoreApp
-            /// </summary>
-            [EnumMember(Value = "CreateAppStoreApp")]
-            CreateAppStoreApp = 119,
-            
-            /// <summary>
-            /// Enum ViewAppStoreApp for value: ViewAppStoreApp
-            /// </summary>
-            [EnumMember(Value = "ViewAppStoreApp")]
-            ViewAppStoreApp = 120,
-            
-            /// <summary>
-            /// Enum UpdateAppStoreApp for value: UpdateAppStoreApp
-            /// </summary>
-            [EnumMember(Value = "UpdateAppStoreApp")]
-            UpdateAppStoreApp = 121,
-            
-            /// <summary>
-            /// Enum DeleteAppStoreApp for value: DeleteAppStoreApp
-            /// </summary>
-            [EnumMember(Value = "DeleteAppStoreApp")]
-            DeleteAppStoreApp = 122,
-            
-            /// <summary>
-            /// Enum CreateAppStoreAppConfiguration for value: CreateAppStoreAppConfiguration
-            /// </summary>
-            [EnumMember(Value = "CreateAppStoreAppConfiguration")]
-            CreateAppStoreAppConfiguration = 123,
-            
-            /// <summary>
-            /// Enum ViewAppStoreAppConfiguration for value: ViewAppStoreAppConfiguration
-            /// </summary>
-            [EnumMember(Value = "ViewAppStoreAppConfiguration")]
-            ViewAppStoreAppConfiguration = 124,
-            
-            /// <summary>
-            /// Enum UpdateAppStoreAppConfiguration for value: UpdateAppStoreAppConfiguration
-            /// </summary>
-            [EnumMember(Value = "UpdateAppStoreAppConfiguration")]
-            UpdateAppStoreAppConfiguration = 125,
-            
-            /// <summary>
-            /// Enum DeleteAppStoreAppConfiguration for value: DeleteAppStoreAppConfiguration
-            /// </summary>
-            [EnumMember(Value = "DeleteAppStoreAppConfiguration")]
-            DeleteAppStoreAppConfiguration = 126,
-            
-            /// <summary>
             /// Enum SendPushNotificationToCustomer for value: SendPushNotificationToCustomer
             /// </summary>
             [EnumMember(Value = "SendPushNotificationToCustomer")]
-            SendPushNotificationToCustomer = 127,
+            SendPushNotificationToCustomer = 119,
             
             /// <summary>
             /// Enum InviteDriverToApp for value: InviteDriverToApp
             /// </summary>
             [EnumMember(Value = "InviteDriverToApp")]
-            InviteDriverToApp = 128,
+            InviteDriverToApp = 120,
             
             /// <summary>
             /// Enum GetDriverForApp for value: GetDriverForApp
             /// </summary>
             [EnumMember(Value = "GetDriverForApp")]
-            GetDriverForApp = 129,
+            GetDriverForApp = 121,
             
             /// <summary>
             /// Enum RemoveDriverFromApp for value: RemoveDriverFromApp
             /// </summary>
             [EnumMember(Value = "RemoveDriverFromApp")]
-            RemoveDriverFromApp = 130,
+            RemoveDriverFromApp = 122,
             
             /// <summary>
             /// Enum AssignDriverToOrder for value: AssignDriverToOrder
             /// </summary>
             [EnumMember(Value = "AssignDriverToOrder")]
-            AssignDriverToOrder = 131,
+            AssignDriverToOrder = 123,
             
             /// <summary>
             /// Enum UnassignDriverFromOrder for value: UnassignDriverFromOrder
             /// </summary>
             [EnumMember(Value = "UnassignDriverFromOrder")]
-            UnassignDriverFromOrder = 132,
+            UnassignDriverFromOrder = 124,
             
             /// <summary>
             /// Enum UpdateOrdersDeliveryTrackingStatus for value: UpdateOrdersDeliveryTrackingStatus
             /// </summary>
             [EnumMember(Value = "UpdateOrdersDeliveryTrackingStatus")]
-            UpdateOrdersDeliveryTrackingStatus = 133,
+            UpdateOrdersDeliveryTrackingStatus = 125,
             
             /// <summary>
             /// Enum ViewPayouts for value: ViewPayouts
             /// </summary>
             [EnumMember(Value = "ViewPayouts")]
-            ViewPayouts = 134,
+            ViewPayouts = 126,
             
             /// <summary>
             /// Enum ViewChannels for value: ViewChannels
             /// </summary>
             [EnumMember(Value = "ViewChannels")]
-            ViewChannels = 135,
+            ViewChannels = 127,
             
             /// <summary>
             /// Enum ViewOnboarding for value: ViewOnboarding
             /// </summary>
             [EnumMember(Value = "ViewOnboarding")]
-            ViewOnboarding = 136,
+            ViewOnboarding = 128,
             
             /// <summary>
             /// Enum UpdateOnboarding for value: UpdateOnboarding
             /// </summary>
             [EnumMember(Value = "UpdateOnboarding")]
-            UpdateOnboarding = 137
+            UpdateOnboarding = 129,
+            
+            /// <summary>
+            /// Enum CreateAppStoreAppConfiguration for value: CreateAppStoreAppConfiguration
+            /// </summary>
+            [EnumMember(Value = "CreateAppStoreAppConfiguration")]
+            CreateAppStoreAppConfiguration = 130,
+            
+            /// <summary>
+            /// Enum ViewAppStoreAppConfiguration for value: ViewAppStoreAppConfiguration
+            /// </summary>
+            [EnumMember(Value = "ViewAppStoreAppConfiguration")]
+            ViewAppStoreAppConfiguration = 131,
+            
+            /// <summary>
+            /// Enum UpdateAppStoreAppConfiguration for value: UpdateAppStoreAppConfiguration
+            /// </summary>
+            [EnumMember(Value = "UpdateAppStoreAppConfiguration")]
+            UpdateAppStoreAppConfiguration = 132,
+            
+            /// <summary>
+            /// Enum DeleteAppStoreAppConfiguration for value: DeleteAppStoreAppConfiguration
+            /// </summary>
+            [EnumMember(Value = "DeleteAppStoreAppConfiguration")]
+            DeleteAppStoreAppConfiguration = 133
         }
 
 

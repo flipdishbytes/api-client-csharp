@@ -36,7 +36,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>Object</returns>
-        Object CreateLocation (CreateLocation createLocationInput, int? locationAreaId, string appId, int? storeId);
+        Object CreateLocation (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId);
 
         /// <summary>
         /// Create a Location i.e: Table, Hotel Room, Car park space
@@ -50,7 +50,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> CreateLocationWithHttpInfo (CreateLocation createLocationInput, int? locationAreaId, string appId, int? storeId);
+        ApiResponse<Object> CreateLocationWithHttpInfo (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId);
         /// <summary>
         /// Set a Location as deleted
         /// </summary>
@@ -179,7 +179,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> CreateLocationAsync (CreateLocation createLocationInput, int? locationAreaId, string appId, int? storeId);
+        System.Threading.Tasks.Task<Object> CreateLocationAsync (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId);
 
         /// <summary>
         /// Create a Location i.e: Table, Hotel Room, Car park space
@@ -193,7 +193,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateLocationAsyncWithHttpInfo (CreateLocation createLocationInput, int? locationAreaId, string appId, int? storeId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateLocationAsyncWithHttpInfo (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId);
         /// <summary>
         /// Set a Location as deleted
         /// </summary>
@@ -417,7 +417,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>Object</returns>
-        public Object CreateLocation (CreateLocation createLocationInput, int? locationAreaId, string appId, int? storeId)
+        public Object CreateLocation (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId)
         {
              ApiResponse<Object> localVarResponse = CreateLocationWithHttpInfo(createLocationInput, locationAreaId, appId, storeId);
              return localVarResponse.Data;
@@ -432,7 +432,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > CreateLocationWithHttpInfo (CreateLocation createLocationInput, int? locationAreaId, string appId, int? storeId)
+        public ApiResponse< Object > CreateLocationWithHttpInfo (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId)
         {
             // verify the required parameter 'createLocationInput' is set
             if (createLocationInput == null)
@@ -522,7 +522,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> CreateLocationAsync (CreateLocation createLocationInput, int? locationAreaId, string appId, int? storeId)
+        public async System.Threading.Tasks.Task<Object> CreateLocationAsync (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId)
         {
              ApiResponse<Object> localVarResponse = await CreateLocationAsyncWithHttpInfo(createLocationInput, locationAreaId, appId, storeId);
              return localVarResponse.Data;
@@ -538,7 +538,7 @@ namespace Flipdish.Api
         /// <param name="appId">AppId i.e: (fd1234)</param>
         /// <param name="storeId">Id of the Store</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateLocationAsyncWithHttpInfo (CreateLocation createLocationInput, int? locationAreaId, string appId, int? storeId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateLocationAsyncWithHttpInfo (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId)
         {
             // verify the required parameter 'createLocationInput' is set
             if (createLocationInput == null)

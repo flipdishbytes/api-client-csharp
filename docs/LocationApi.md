@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="createlocation"></a>
 # **CreateLocation**
-> Object CreateLocation (CreateLocation createLocationInput, int? locationAreaId, string appId, int? storeId)
+> Object CreateLocation (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId)
 
 Create a Location i.e: Table, Hotel Room, Car park space
 
@@ -35,7 +35,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationApi();
-            var createLocationInput = new CreateLocation(); // CreateLocation | Input data for creating the Location
+            var createLocationInput = new List<CreateLocation>(); // List<CreateLocation> | Input data for creating the Location
             var locationAreaId = 56;  // int? | Id of the Location area where the Location belongs
             var appId = appId_example;  // string | AppId i.e: (fd1234)
             var storeId = 56;  // int? | Id of the Store
@@ -59,7 +59,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createLocationInput** | [**CreateLocation**](CreateLocation.md)| Input data for creating the Location | 
+ **createLocationInput** | [**List&lt;CreateLocation&gt;**](CreateLocation.md)| Input data for creating the Location | 
  **locationAreaId** | **int?**| Id of the Location area where the Location belongs | 
  **appId** | **string**| AppId i.e: (fd1234) | 
  **storeId** | **int?**| Id of the Store | 

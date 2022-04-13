@@ -122,19 +122,20 @@ Class | Method | HTTP request | Description
 *ApmApi* | [**GetCallsStatistics**](docs/ApmApi.md#getcallsstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy} | [PRIVATE API] Get Calls Statistics
 *ApmApi* | [**GetOrderStatistics**](docs/ApmApi.md#getorderstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | [PRIVATE API] Get Order Statistics (Value of Orders)
 *ApmApi* | [**GetPaginatedCallList**](docs/ApmApi.md#getpaginatedcalllist) | **GET** /api/v1.0/{appId}/apm/calls | [PRIVATE API] Get paginated APM call list
-*AppStoreApi* | [**AppVerificationUpdate**](docs/AppStoreApi.md#appverificationupdate) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId}/verification | Update App store app verification
-*AppStoreApi* | [**CreateAppStoreApp**](docs/AppStoreApi.md#createappstoreapp) | **POST** /api/v1.0/appstore/apps | Create App store app
-*AppStoreApi* | [**DeleteAppStoreApp**](docs/AppStoreApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/appstore/apps/{appStoreAppId} | Delete App store app
 *AppStoreApi* | [**GetAppStoreApp**](docs/AppStoreApi.md#getappstoreapp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | Get App store app
 *AppStoreApi* | [**GetAppStoreApps**](docs/AppStoreApi.md#getappstoreapps) | **GET** /api/v1.0/appstore/apps | Get list of App store app summaries
-*AppStoreApi* | [**UpdateAppStoreApp**](docs/AppStoreApi.md#updateappstoreapp) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId} | Update App store app
-*AppStoreApi* | [**UploadAppStoreAppLogo**](docs/AppStoreApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/appstore/apps/{appStoreAppId}/logo | Upload the App store app logo \\ icon
 *AppStoreConfigurationsApi* | [**CreateAppStoreConfig**](docs/AppStoreConfigurationsApi.md#createappstoreconfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | Create App store app configuration
 *AppStoreConfigurationsApi* | [**DeleteAppStoreConfig**](docs/AppStoreConfigurationsApi.md#deleteappstoreconfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Delete App store app configuration
 *AppStoreConfigurationsApi* | [**GetAppStoreConfig**](docs/AppStoreConfigurationsApi.md#getappstoreconfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Get App store app configuration
 *AppStoreConfigurationsApi* | [**GetConfiguredAppSingleApp**](docs/AppStoreConfigurationsApi.md#getconfiguredappsingleapp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of App store app configurations for one App store app
 *AppStoreConfigurationsApi* | [**GetConfiguredApps**](docs/AppStoreConfigurationsApi.md#getconfiguredapps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of App store apps which have been configured
 *AppStoreConfigurationsApi* | [**UpdateAppStoreConfig**](docs/AppStoreConfigurationsApi.md#updateappstoreconfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update App store app configuration
+*AppStoreDeveloperApi* | [**AppVerificationUpdate**](docs/AppStoreDeveloperApi.md#appverificationupdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | Update App store app verification
+*AppStoreDeveloperApi* | [**CreateAppStoreApp**](docs/AppStoreDeveloperApi.md#createappstoreapp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | Create App store app
+*AppStoreDeveloperApi* | [**DeleteAppStoreApp**](docs/AppStoreDeveloperApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Delete App store app
+*AppStoreDeveloperApi* | [**GetAppStoreApp**](docs/AppStoreDeveloperApi.md#getappstoreapp) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Get App store app
+*AppStoreDeveloperApi* | [**UpdateAppStoreApp**](docs/AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Update App store app
+*AppStoreDeveloperApi* | [**UploadAppStoreAppLogo**](docs/AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | Upload the App store app logo \\ icon
 *AppsApi* | [**GetApp**](docs/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | Get the application configuration
 *AppsApi* | [**GetAppHostnameStatus**](docs/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | Get the application hostname DNS delegation states for A and CNAME records.
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
@@ -828,6 +829,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultHomeAction](docs/RestApiArrayResultHomeAction.md)
  - [Model.RestApiArrayResultKioskCashPaymentSettings](docs/RestApiArrayResultKioskCashPaymentSettings.md)
  - [Model.RestApiArrayResultLocalisedTimeZone](docs/RestApiArrayResultLocalisedTimeZone.md)
+ - [Model.RestApiArrayResultLocationAreaLocation](docs/RestApiArrayResultLocationAreaLocation.md)
  - [Model.RestApiArrayResultLocationAreaWithLocations](docs/RestApiArrayResultLocationAreaWithLocations.md)
  - [Model.RestApiArrayResultLoyaltyCampaign](docs/RestApiArrayResultLoyaltyCampaign.md)
  - [Model.RestApiArrayResultMenuCheckpoint](docs/RestApiArrayResultMenuCheckpoint.md)

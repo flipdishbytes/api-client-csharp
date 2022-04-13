@@ -362,7 +362,6 @@ namespace Flipdish.Model
         /// <param name="fieldGroups">Field groups.</param>
         /// <param name="setupInstructions">Setup instructions.</param>
         /// <param name="externalSetupLink">External setup link.</param>
-        /// <param name="oAuthAppId">OAuth app id (required).</param>
         /// <param name="teammateAppAccessLevel">Teammate app access level.</param>
         /// <param name="permissionsType">Permissions type (required).</param>
         /// <param name="name">Name (required).</param>
@@ -371,7 +370,7 @@ namespace Flipdish.Model
         /// <param name="tags">Tags (required).</param>
         /// <param name="regions">Regions (required).</param>
         /// <param name="developerName">Developer Name.</param>
-        public UpdateAppStoreApp(string details = default(string), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string setupInstructions = default(string), string externalSetupLink = default(string), string oAuthAppId = default(string), TeammateAppAccessLevelEnum? teammateAppAccessLevel = default(TeammateAppAccessLevelEnum?), PermissionsTypeEnum permissionsType = default(PermissionsTypeEnum), string name = default(string), string description = default(string), bool? isEnabled = default(bool?), List<TagsEnum> tags = default(List<TagsEnum>), List<RegionsEnum> regions = default(List<RegionsEnum>), string developerName = default(string))
+        public UpdateAppStoreApp(string details = default(string), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string setupInstructions = default(string), string externalSetupLink = default(string), TeammateAppAccessLevelEnum? teammateAppAccessLevel = default(TeammateAppAccessLevelEnum?), PermissionsTypeEnum permissionsType = default(PermissionsTypeEnum), string name = default(string), string description = default(string), bool? isEnabled = default(bool?), List<TagsEnum> tags = default(List<TagsEnum>), List<RegionsEnum> regions = default(List<RegionsEnum>), string developerName = default(string))
         {
             // to ensure "details" is required (not null)
             if (details == null)
@@ -399,15 +398,6 @@ namespace Flipdish.Model
             else
             {
                 this.StoreSelectorType = storeSelectorType;
-            }
-            // to ensure "oAuthAppId" is required (not null)
-            if (oAuthAppId == null)
-            {
-                throw new InvalidDataException("oAuthAppId is a required property for UpdateAppStoreApp and cannot be null");
-            }
-            else
-            {
-                this.OAuthAppId = oAuthAppId;
             }
             // to ensure "permissionsType" is required (not null)
             if (permissionsType == null)
@@ -492,13 +482,6 @@ namespace Flipdish.Model
         [DataMember(Name="ExternalSetupLink", EmitDefaultValue=false)]
         public string ExternalSetupLink { get; set; }
 
-        /// <summary>
-        /// OAuth app id
-        /// </summary>
-        /// <value>OAuth app id</value>
-        [DataMember(Name="OAuthAppId", EmitDefaultValue=false)]
-        public string OAuthAppId { get; set; }
-
 
 
         /// <summary>
@@ -545,7 +528,6 @@ namespace Flipdish.Model
             sb.Append("  FieldGroups: ").Append(FieldGroups).Append("\n");
             sb.Append("  SetupInstructions: ").Append(SetupInstructions).Append("\n");
             sb.Append("  ExternalSetupLink: ").Append(ExternalSetupLink).Append("\n");
-            sb.Append("  OAuthAppId: ").Append(OAuthAppId).Append("\n");
             sb.Append("  TeammateAppAccessLevel: ").Append(TeammateAppAccessLevel).Append("\n");
             sb.Append("  PermissionsType: ").Append(PermissionsType).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -619,11 +601,6 @@ namespace Flipdish.Model
                     this.ExternalSetupLink.Equals(input.ExternalSetupLink))
                 ) && 
                 (
-                    this.OAuthAppId == input.OAuthAppId ||
-                    (this.OAuthAppId != null &&
-                    this.OAuthAppId.Equals(input.OAuthAppId))
-                ) && 
-                (
                     this.TeammateAppAccessLevel == input.TeammateAppAccessLevel ||
                     (this.TeammateAppAccessLevel != null &&
                     this.TeammateAppAccessLevel.Equals(input.TeammateAppAccessLevel))
@@ -686,8 +663,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.SetupInstructions.GetHashCode();
                 if (this.ExternalSetupLink != null)
                     hashCode = hashCode * 59 + this.ExternalSetupLink.GetHashCode();
-                if (this.OAuthAppId != null)
-                    hashCode = hashCode * 59 + this.OAuthAppId.GetHashCode();
                 if (this.TeammateAppAccessLevel != null)
                     hashCode = hashCode * 59 + this.TeammateAppAccessLevel.GetHashCode();
                 if (this.PermissionsType != null)

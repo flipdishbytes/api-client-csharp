@@ -36,11 +36,17 @@ namespace Flipdish.Model
         /// <param name="storeId">Store identifier.</param>
         /// <param name="percentageValue">The Default Service Charge Value.</param>
         /// <param name="enabled">Enable Service Charge for store true(on) / false(off).</param>
-        public ServiceCharge(int? storeId = default(int?), double? percentageValue = default(double?), bool? enabled = default(bool?))
+        /// <param name="isOptional">Sets the service charge to be optional.</param>
+        /// <param name="displayWithProcessingFee">Display service charge together with processing fee.</param>
+        /// <param name="includesVouchers">If true, will include voucher value in calculation   i.e 10E order with 1E service charge and 5E voucher would have service charge at 0.5E.</param>
+        public ServiceCharge(int? storeId = default(int?), double? percentageValue = default(double?), bool? enabled = default(bool?), bool? isOptional = default(bool?), bool? displayWithProcessingFee = default(bool?), bool? includesVouchers = default(bool?))
         {
             this.StoreId = storeId;
             this.PercentageValue = percentageValue;
             this.Enabled = enabled;
+            this.IsOptional = isOptional;
+            this.DisplayWithProcessingFee = displayWithProcessingFee;
+            this.IncludesVouchers = includesVouchers;
         }
         
         /// <summary>
@@ -65,6 +71,27 @@ namespace Flipdish.Model
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// Sets the service charge to be optional
+        /// </summary>
+        /// <value>Sets the service charge to be optional</value>
+        [DataMember(Name="IsOptional", EmitDefaultValue=false)]
+        public bool? IsOptional { get; set; }
+
+        /// <summary>
+        /// Display service charge together with processing fee
+        /// </summary>
+        /// <value>Display service charge together with processing fee</value>
+        [DataMember(Name="DisplayWithProcessingFee", EmitDefaultValue=false)]
+        public bool? DisplayWithProcessingFee { get; set; }
+
+        /// <summary>
+        /// If true, will include voucher value in calculation   i.e 10E order with 1E service charge and 5E voucher would have service charge at 0.5E
+        /// </summary>
+        /// <value>If true, will include voucher value in calculation   i.e 10E order with 1E service charge and 5E voucher would have service charge at 0.5E</value>
+        [DataMember(Name="IncludesVouchers", EmitDefaultValue=false)]
+        public bool? IncludesVouchers { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -75,6 +102,9 @@ namespace Flipdish.Model
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  PercentageValue: ").Append(PercentageValue).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  IsOptional: ").Append(IsOptional).Append("\n");
+            sb.Append("  DisplayWithProcessingFee: ").Append(DisplayWithProcessingFee).Append("\n");
+            sb.Append("  IncludesVouchers: ").Append(IncludesVouchers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,6 +153,21 @@ namespace Flipdish.Model
                     this.Enabled == input.Enabled ||
                     (this.Enabled != null &&
                     this.Enabled.Equals(input.Enabled))
+                ) && 
+                (
+                    this.IsOptional == input.IsOptional ||
+                    (this.IsOptional != null &&
+                    this.IsOptional.Equals(input.IsOptional))
+                ) && 
+                (
+                    this.DisplayWithProcessingFee == input.DisplayWithProcessingFee ||
+                    (this.DisplayWithProcessingFee != null &&
+                    this.DisplayWithProcessingFee.Equals(input.DisplayWithProcessingFee))
+                ) && 
+                (
+                    this.IncludesVouchers == input.IncludesVouchers ||
+                    (this.IncludesVouchers != null &&
+                    this.IncludesVouchers.Equals(input.IncludesVouchers))
                 );
         }
 
@@ -141,6 +186,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PercentageValue.GetHashCode();
                 if (this.Enabled != null)
                     hashCode = hashCode * 59 + this.Enabled.GetHashCode();
+                if (this.IsOptional != null)
+                    hashCode = hashCode * 59 + this.IsOptional.GetHashCode();
+                if (this.DisplayWithProcessingFee != null)
+                    hashCode = hashCode * 59 + this.DisplayWithProcessingFee.GetHashCode();
+                if (this.IncludesVouchers != null)
+                    hashCode = hashCode * 59 + this.IncludesVouchers.GetHashCode();
                 return hashCode;
             }
         }
