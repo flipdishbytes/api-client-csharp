@@ -101,7 +101,7 @@ namespace Flipdish.Model
         /// <param name="id">Unique App store app configuration id (required).</param>
         /// <param name="appId">App Id (required).</param>
         /// <param name="isEnabled">Is enabled (required).</param>
-        /// <param name="physicalRestaurants">List of stores (required).</param>
+        /// <param name="stores">List of stores (required).</param>
         /// <param name="configurationType">Configuration type.</param>
         /// <param name="storeSelectorType">Store selector type.</param>
         /// <param name="appStoreAppId">Unique App store app id (required).</param>
@@ -109,7 +109,7 @@ namespace Flipdish.Model
         /// <param name="description">Description (required).</param>
         /// <param name="logo">Logo.</param>
         /// <param name="developerName">Developer name.</param>
-        public AppStoreAppConfigurationSummary(string id = default(string), string appId = default(string), bool? isEnabled = default(bool?), List<ConfiguredPhysicalRestaurant> physicalRestaurants = default(List<ConfiguredPhysicalRestaurant>), ConfigurationTypeEnum? configurationType = default(ConfigurationTypeEnum?), StoreSelectorTypeEnum? storeSelectorType = default(StoreSelectorTypeEnum?), string appStoreAppId = default(string), string name = default(string), string description = default(string), string logo = default(string), string developerName = default(string))
+        public AppStoreAppConfigurationSummary(string id = default(string), string appId = default(string), bool? isEnabled = default(bool?), List<ConfiguredStore> stores = default(List<ConfiguredStore>), ConfigurationTypeEnum? configurationType = default(ConfigurationTypeEnum?), StoreSelectorTypeEnum? storeSelectorType = default(StoreSelectorTypeEnum?), string appStoreAppId = default(string), string name = default(string), string description = default(string), string logo = default(string), string developerName = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -138,14 +138,14 @@ namespace Flipdish.Model
             {
                 this.IsEnabled = isEnabled;
             }
-            // to ensure "physicalRestaurants" is required (not null)
-            if (physicalRestaurants == null)
+            // to ensure "stores" is required (not null)
+            if (stores == null)
             {
-                throw new InvalidDataException("physicalRestaurants is a required property for AppStoreAppConfigurationSummary and cannot be null");
+                throw new InvalidDataException("stores is a required property for AppStoreAppConfigurationSummary and cannot be null");
             }
             else
             {
-                this.PhysicalRestaurants = physicalRestaurants;
+                this.Stores = stores;
             }
             // to ensure "appStoreAppId" is required (not null)
             if (appStoreAppId == null)
@@ -205,8 +205,8 @@ namespace Flipdish.Model
         /// List of stores
         /// </summary>
         /// <value>List of stores</value>
-        [DataMember(Name="PhysicalRestaurants", EmitDefaultValue=false)]
-        public List<ConfiguredPhysicalRestaurant> PhysicalRestaurants { get; set; }
+        [DataMember(Name="Stores", EmitDefaultValue=false)]
+        public List<ConfiguredStore> Stores { get; set; }
 
 
 
@@ -256,7 +256,7 @@ namespace Flipdish.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
-            sb.Append("  PhysicalRestaurants: ").Append(PhysicalRestaurants).Append("\n");
+            sb.Append("  Stores: ").Append(Stores).Append("\n");
             sb.Append("  ConfigurationType: ").Append(ConfigurationType).Append("\n");
             sb.Append("  StoreSelectorType: ").Append(StoreSelectorType).Append("\n");
             sb.Append("  AppStoreAppId: ").Append(AppStoreAppId).Append("\n");
@@ -314,9 +314,9 @@ namespace Flipdish.Model
                     this.IsEnabled.Equals(input.IsEnabled))
                 ) && 
                 (
-                    this.PhysicalRestaurants == input.PhysicalRestaurants ||
-                    this.PhysicalRestaurants != null &&
-                    this.PhysicalRestaurants.SequenceEqual(input.PhysicalRestaurants)
+                    this.Stores == input.Stores ||
+                    this.Stores != null &&
+                    this.Stores.SequenceEqual(input.Stores)
                 ) && 
                 (
                     this.ConfigurationType == input.ConfigurationType ||
@@ -370,8 +370,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 if (this.IsEnabled != null)
                     hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
-                if (this.PhysicalRestaurants != null)
-                    hashCode = hashCode * 59 + this.PhysicalRestaurants.GetHashCode();
+                if (this.Stores != null)
+                    hashCode = hashCode * 59 + this.Stores.GetHashCode();
                 if (this.ConfigurationType != null)
                     hashCode = hashCode * 59 + this.ConfigurationType.GetHashCode();
                 if (this.StoreSelectorType != null)

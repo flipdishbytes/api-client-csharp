@@ -39,9 +39,9 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="UpdateAppStoreAppConfiguration" /> class.
         /// </summary>
         /// <param name="isEnabled">Is enabled (required).</param>
-        /// <param name="physicalRestaurants">Stores id&#39;s.</param>
+        /// <param name="storeIds">Stores id&#39;s.</param>
         /// <param name="settings">Settings.</param>
-        public UpdateAppStoreAppConfiguration(bool? isEnabled = default(bool?), List<int?> physicalRestaurants = default(List<int?>), List<Setting> settings = default(List<Setting>))
+        public UpdateAppStoreAppConfiguration(bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>), List<Setting> settings = default(List<Setting>))
         {
             // to ensure "isEnabled" is required (not null)
             if (isEnabled == null)
@@ -52,7 +52,7 @@ namespace Flipdish.Model
             {
                 this.IsEnabled = isEnabled;
             }
-            this.PhysicalRestaurants = physicalRestaurants;
+            this.StoreIds = storeIds;
             this.Settings = settings;
         }
         
@@ -67,8 +67,8 @@ namespace Flipdish.Model
         /// Stores id&#39;s
         /// </summary>
         /// <value>Stores id&#39;s</value>
-        [DataMember(Name="PhysicalRestaurants", EmitDefaultValue=false)]
-        public List<int?> PhysicalRestaurants { get; set; }
+        [DataMember(Name="StoreIds", EmitDefaultValue=false)]
+        public List<int?> StoreIds { get; set; }
 
         /// <summary>
         /// Settings
@@ -86,7 +86,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class UpdateAppStoreAppConfiguration {\n");
             sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
-            sb.Append("  PhysicalRestaurants: ").Append(PhysicalRestaurants).Append("\n");
+            sb.Append("  StoreIds: ").Append(StoreIds).Append("\n");
             sb.Append("  Settings: ").Append(Settings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -128,9 +128,9 @@ namespace Flipdish.Model
                     this.IsEnabled.Equals(input.IsEnabled))
                 ) && 
                 (
-                    this.PhysicalRestaurants == input.PhysicalRestaurants ||
-                    this.PhysicalRestaurants != null &&
-                    this.PhysicalRestaurants.SequenceEqual(input.PhysicalRestaurants)
+                    this.StoreIds == input.StoreIds ||
+                    this.StoreIds != null &&
+                    this.StoreIds.SequenceEqual(input.StoreIds)
                 ) && 
                 (
                     this.Settings == input.Settings ||
@@ -150,8 +150,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.IsEnabled != null)
                     hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
-                if (this.PhysicalRestaurants != null)
-                    hashCode = hashCode * 59 + this.PhysicalRestaurants.GetHashCode();
+                if (this.StoreIds != null)
+                    hashCode = hashCode * 59 + this.StoreIds.GetHashCode();
                 if (this.Settings != null)
                     hashCode = hashCode * 59 + this.Settings.GetHashCode();
                 return hashCode;

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **AppId** | **string** | App id | 
 **AppStoreAppId** | **string** | App store app id | 
 **IsEnabled** | **bool?** | Is enabled | 
-**PhysicalRestaurants** | **List&lt;int?&gt;** | Stores id&#39;s | [optional] 
+**StoreIds** | **List&lt;int?&gt;** | Stores id&#39;s | [optional] 
 **Settings** | [**List&lt;Setting&gt;**](Setting.md) | Settings | [optional] 
 **VerificationStatus** | **string** | Application verification status | 
 **Logo** | **string** | Logo | [optional] 
@@ -22,8 +22,8 @@ Name | Type | Description | Notes
 **PermissionsType** | **string** | Permissions type | 
 **Name** | **string** | Name | 
 **Description** | **string** | Description | 
-**Tags** | **List&lt;string&gt;** | Tags | 
-**Regions** | **List&lt;string&gt;** | Regions | 
+**Categories** | **List&lt;string&gt;** | Categories | 
+**Countries** | **List&lt;string&gt;** | Countries | 
 **DeveloperName** | **string** | Developer Name | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

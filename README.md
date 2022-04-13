@@ -560,7 +560,7 @@ Class | Method | HTTP request | Description
  - [Model.Channel](docs/Channel.md)
  - [Model.ChannelStoreMapping](docs/ChannelStoreMapping.md)
  - [Model.ChargebackDetails](docs/ChargebackDetails.md)
- - [Model.ConfiguredPhysicalRestaurant](docs/ConfiguredPhysicalRestaurant.md)
+ - [Model.ConfiguredStore](docs/ConfiguredStore.md)
  - [Model.Contact](docs/Contact.md)
  - [Model.Coordinates](docs/Coordinates.md)
  - [Model.CountryWithAccountFieldsDefinitions](docs/CountryWithAccountFieldsDefinitions.md)

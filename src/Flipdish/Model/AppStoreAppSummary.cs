@@ -64,10 +64,10 @@ namespace Flipdish.Model
         [DataMember(Name="VerificationStatus", EmitDefaultValue=false)]
         public VerificationStatusEnum VerificationStatus { get; set; }
         /// <summary>
-        /// Defines Tags
+        /// Defines Categories
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TagsEnum
+        public enum CategoriesEnum
         {
             
             /// <summary>
@@ -115,16 +115,16 @@ namespace Flipdish.Model
 
 
         /// <summary>
-        /// Tags
+        /// Categories
         /// </summary>
-        /// <value>Tags</value>
-        [DataMember(Name="Tags", EmitDefaultValue=false)]
-        public List<TagsEnum> Tags { get; set; }
+        /// <value>Categories</value>
+        [DataMember(Name="Categories", EmitDefaultValue=false)]
+        public List<CategoriesEnum> Categories { get; set; }
         /// <summary>
-        /// Defines Regions
+        /// Defines Countries
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum RegionsEnum
+        public enum CountriesEnum
         {
             
             /// <summary>
@@ -232,11 +232,11 @@ namespace Flipdish.Model
 
 
         /// <summary>
-        /// Regions
+        /// Countries
         /// </summary>
-        /// <value>Regions</value>
-        [DataMember(Name="Regions", EmitDefaultValue=false)]
-        public List<RegionsEnum> Regions { get; set; }
+        /// <value>Countries</value>
+        [DataMember(Name="Countries", EmitDefaultValue=false)]
+        public List<CountriesEnum> Countries { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AppStoreAppSummary" /> class.
         /// </summary>
@@ -251,10 +251,10 @@ namespace Flipdish.Model
         /// <param name="name">Name (required).</param>
         /// <param name="description">Description (required).</param>
         /// <param name="isEnabled">Is application enabled.</param>
-        /// <param name="tags">Tags (required).</param>
-        /// <param name="regions">Regions (required).</param>
+        /// <param name="categories">Categories (required).</param>
+        /// <param name="countries">Countries (required).</param>
         /// <param name="developerName">Developer Name.</param>
-        public AppStoreAppSummary(string id = default(string), VerificationStatusEnum verificationStatus = default(VerificationStatusEnum), string logo = default(string), string name = default(string), string description = default(string), bool? isEnabled = default(bool?), List<TagsEnum> tags = default(List<TagsEnum>), List<RegionsEnum> regions = default(List<RegionsEnum>), string developerName = default(string))
+        public AppStoreAppSummary(string id = default(string), VerificationStatusEnum verificationStatus = default(VerificationStatusEnum), string logo = default(string), string name = default(string), string description = default(string), bool? isEnabled = default(bool?), List<CategoriesEnum> categories = default(List<CategoriesEnum>), List<CountriesEnum> countries = default(List<CountriesEnum>), string developerName = default(string))
         {
             // to ensure "verificationStatus" is required (not null)
             if (verificationStatus == null)
@@ -283,23 +283,23 @@ namespace Flipdish.Model
             {
                 this.Description = description;
             }
-            // to ensure "tags" is required (not null)
-            if (tags == null)
+            // to ensure "categories" is required (not null)
+            if (categories == null)
             {
-                throw new InvalidDataException("tags is a required property for AppStoreAppSummary and cannot be null");
+                throw new InvalidDataException("categories is a required property for AppStoreAppSummary and cannot be null");
             }
             else
             {
-                this.Tags = tags;
+                this.Categories = categories;
             }
-            // to ensure "regions" is required (not null)
-            if (regions == null)
+            // to ensure "countries" is required (not null)
+            if (countries == null)
             {
-                throw new InvalidDataException("regions is a required property for AppStoreAppSummary and cannot be null");
+                throw new InvalidDataException("countries is a required property for AppStoreAppSummary and cannot be null");
             }
             else
             {
-                this.Regions = regions;
+                this.Countries = countries;
             }
             this.Id = id;
             this.Logo = logo;
@@ -366,8 +366,8 @@ namespace Flipdish.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
-            sb.Append("  Tags: ").Append(Tags).Append("\n");
-            sb.Append("  Regions: ").Append(Regions).Append("\n");
+            sb.Append("  Categories: ").Append(Categories).Append("\n");
+            sb.Append("  Countries: ").Append(Countries).Append("\n");
             sb.Append("  DeveloperName: ").Append(DeveloperName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -434,14 +434,14 @@ namespace Flipdish.Model
                     this.IsEnabled.Equals(input.IsEnabled))
                 ) && 
                 (
-                    this.Tags == input.Tags ||
-                    this.Tags != null &&
-                    this.Tags.SequenceEqual(input.Tags)
+                    this.Categories == input.Categories ||
+                    this.Categories != null &&
+                    this.Categories.SequenceEqual(input.Categories)
                 ) && 
                 (
-                    this.Regions == input.Regions ||
-                    this.Regions != null &&
-                    this.Regions.SequenceEqual(input.Regions)
+                    this.Countries == input.Countries ||
+                    this.Countries != null &&
+                    this.Countries.SequenceEqual(input.Countries)
                 ) && 
                 (
                     this.DeveloperName == input.DeveloperName ||
@@ -471,10 +471,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.IsEnabled != null)
                     hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
-                if (this.Tags != null)
-                    hashCode = hashCode * 59 + this.Tags.GetHashCode();
-                if (this.Regions != null)
-                    hashCode = hashCode * 59 + this.Regions.GetHashCode();
+                if (this.Categories != null)
+                    hashCode = hashCode * 59 + this.Categories.GetHashCode();
+                if (this.Countries != null)
+                    hashCode = hashCode * 59 + this.Countries.GetHashCode();
                 if (this.DeveloperName != null)
                     hashCode = hashCode * 59 + this.DeveloperName.GetHashCode();
                 return hashCode;
