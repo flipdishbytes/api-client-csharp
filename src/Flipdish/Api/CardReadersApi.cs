@@ -71,6 +71,29 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> CancelCurrentlyInitiatedBluetoothDeviceUpdateWithHttpInfo (string appId, string deviceId, string terminalType);
         /// <summary>
+        /// Cancel terminals action
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultCardReader</returns>
+        RestApiResultCardReader CancelReaderAction (string readerId, string appId);
+
+        /// <summary>
+        /// Cancel terminals action
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultCardReader</returns>
+        ApiResponse<RestApiResultCardReader> CancelReaderActionWithHttpInfo (string readerId, string appId);
+        /// <summary>
         /// Get Location ID for Stripe Terminal
         /// </summary>
         /// <remarks>
@@ -306,6 +329,29 @@ namespace Flipdish.Api
         /// <param name="terminalType"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CancelCurrentlyInitiatedBluetoothDeviceUpdateAsyncWithHttpInfo (string appId, string deviceId, string terminalType);
+        /// <summary>
+        /// Cancel terminals action
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultCardReader</returns>
+        System.Threading.Tasks.Task<RestApiResultCardReader> CancelReaderActionAsync (string readerId, string appId);
+
+        /// <summary>
+        /// Cancel terminals action
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultCardReader)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultCardReader>> CancelReaderActionAsyncWithHttpInfo (string readerId, string appId);
         /// <summary>
         /// Get Location ID for Stripe Terminal
         /// </summary>
@@ -916,6 +962,169 @@ namespace Flipdish.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
+        }
+
+        /// <summary>
+        /// Cancel terminals action Can only be called by Kiosk
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultCardReader</returns>
+        public RestApiResultCardReader CancelReaderAction (string readerId, string appId)
+        {
+             ApiResponse<RestApiResultCardReader> localVarResponse = CancelReaderActionWithHttpInfo(readerId, appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Cancel terminals action Can only be called by Kiosk
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultCardReader</returns>
+        public ApiResponse< RestApiResultCardReader > CancelReaderActionWithHttpInfo (string readerId, string appId)
+        {
+            // verify the required parameter 'readerId' is set
+            if (readerId == null)
+                throw new ApiException(400, "Missing required parameter 'readerId' when calling CardReadersApi->CancelReaderAction");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->CancelReaderAction");
+
+            var localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (readerId != null) localVarPathParams.Add("readerId", this.Configuration.ApiClient.ParameterToString(readerId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CancelReaderAction", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
+        }
+
+        /// <summary>
+        /// Cancel terminals action Can only be called by Kiosk
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultCardReader</returns>
+        public async System.Threading.Tasks.Task<RestApiResultCardReader> CancelReaderActionAsync (string readerId, string appId)
+        {
+             ApiResponse<RestApiResultCardReader> localVarResponse = await CancelReaderActionAsyncWithHttpInfo(readerId, appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Cancel terminals action Can only be called by Kiosk
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultCardReader)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCardReader>> CancelReaderActionAsyncWithHttpInfo (string readerId, string appId)
+        {
+            // verify the required parameter 'readerId' is set
+            if (readerId == null)
+                throw new ApiException(400, "Missing required parameter 'readerId' when calling CardReadersApi->CancelReaderAction");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->CancelReaderAction");
+
+            var localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (readerId != null) localVarPathParams.Add("readerId", this.Configuration.ApiClient.ParameterToString(readerId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CancelReaderAction", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
         }
 
         /// <summary>

@@ -172,6 +172,7 @@ Class | Method | HTTP request | Description
 *CampaignsApi* | [**UpdateRetentionCampaign**](docs/CampaignsApi.md#updateretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention/{campaignId} | Updates retention campaign
 *CardReadersApi* | [**AuthorizeStripeTerminal**](docs/CardReadersApi.md#authorizestripeterminal) | **POST** /api/v1.0/{appId}/stripeterminal/authorize | Get Authorization Key for Stripe Terminal
 *CardReadersApi* | [**CancelCurrentlyInitiatedBluetoothDeviceUpdate**](docs/CardReadersApi.md#cancelcurrentlyinitiatedbluetoothdeviceupdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | Cancel currently initiated install update for bluetooth terminal
+*CardReadersApi* | [**CancelReaderAction**](docs/CardReadersApi.md#cancelreaderaction) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action | Cancel terminals action
 *CardReadersApi* | [**GenerateStripeTerminalLocation**](docs/CardReadersApi.md#generatestripeterminallocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | Get Location ID for Stripe Terminal
 *CardReadersApi* | [**GetBluetoothTerminalStatus**](docs/CardReadersApi.md#getbluetoothterminalstatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | Get the status of the bluetooth terminal
 *CardReadersApi* | [**GetStripeConnectionToken**](docs/CardReadersApi.md#getstripeconnectiontoken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | Get Connection Token For a Stripe Terminal
