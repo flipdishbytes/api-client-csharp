@@ -97,7 +97,7 @@ namespace Flipdish.Api
         /// Get item by Id
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -109,7 +109,7 @@ namespace Flipdish.Api
         /// Get item by Id
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -245,7 +245,7 @@ namespace Flipdish.Api
         /// Get item by Id
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -257,7 +257,7 @@ namespace Flipdish.Api
         /// Get item by Id
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -928,7 +928,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get item by Id 
+        /// Get item by Id [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -941,7 +941,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get item by Id 
+        /// Get item by Id [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1009,7 +1009,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get item by Id 
+        /// Get item by Id [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1023,7 +1023,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get item by Id 
+        /// Get item by Id [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

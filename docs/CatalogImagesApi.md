@@ -13,6 +13,8 @@ Method | HTTP request | Description
 
 Upload a Catalog Image
 
+[BETA - this endpoint is under development, do not use it in your production system]
+
 ### Example
 ```csharp
 using System;
