@@ -133,7 +133,6 @@ Class | Method | HTTP request | Description
 *AppStoreDeveloperApi* | [**AppVerificationUpdate**](docs/AppStoreDeveloperApi.md#appverificationupdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | Update App store app verification
 *AppStoreDeveloperApi* | [**CreateAppStoreApp**](docs/AppStoreDeveloperApi.md#createappstoreapp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | Create App store app
 *AppStoreDeveloperApi* | [**DeleteAppStoreApp**](docs/AppStoreDeveloperApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Delete App store app
-*AppStoreDeveloperApi* | [**GetAppStoreApp**](docs/AppStoreDeveloperApi.md#getappstoreapp) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Get App store app
 *AppStoreDeveloperApi* | [**UpdateAppStoreApp**](docs/AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Update App store app
 *AppStoreDeveloperApi* | [**UploadAppStoreAppLogo**](docs/AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | Upload the App store app logo \\ icon
 *AppsApi* | [**GetApp**](docs/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | Get the application configuration
