@@ -128,6 +128,10 @@ Name | Type | Description | Notes
 **CatalogGroupUpdatedEvent** | [**List&lt;CatalogGroupUpdatedEvent&gt;**](CatalogGroupUpdatedEvent.md) | Catalog Group Updated | [optional] 
 **CatalogGroupArchivedEvent** | [**List&lt;CatalogGroupArchivedEvent&gt;**](CatalogGroupArchivedEvent.md) | Catalog Group Archived | [optional] 
 **StoreTipUpdatedEvent** | [**List&lt;StoreTipUpdatedEvent&gt;**](StoreTipUpdatedEvent.md) | Store Tip Updated Event | [optional] 
+**LocationAreaCreatedEvent** | [**List&lt;LocationAreaCreatedEvent&gt;**](LocationAreaCreatedEvent.md) | LocationArea created event | [optional] 
+**LocationAreaUpdatedEvent** | [**List&lt;LocationAreaUpdatedEvent&gt;**](LocationAreaUpdatedEvent.md) | LocationArea updated event | [optional] 
+**LocationCreatedEvent** | [**List&lt;LocationCreatedEvent&gt;**](LocationCreatedEvent.md) | Location created event | [optional] 
+**LocationDeletedEvent** | [**List&lt;LocationDeletedEvent&gt;**](LocationDeletedEvent.md) | Location deleted event | [optional] 
 **StoreServiceChargeUpdatedEvent** | [**List&lt;StoreServiceChargeUpdatedEvent&gt;**](StoreServiceChargeUpdatedEvent.md) | Service Charge Updated Event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
