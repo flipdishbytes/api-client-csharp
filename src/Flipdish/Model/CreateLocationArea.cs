@@ -33,10 +33,23 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateLocationArea" /> class.
         /// </summary>
-        /// <param name="locationAreaName">Descriptive LocationArea name.</param>
+        [JsonConstructorAttribute]
+        protected CreateLocationArea() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateLocationArea" /> class.
+        /// </summary>
+        /// <param name="locationAreaName">Descriptive LocationArea name (required).</param>
         public CreateLocationArea(string locationAreaName = default(string))
         {
-            this.LocationAreaName = locationAreaName;
+            // to ensure "locationAreaName" is required (not null)
+            if (locationAreaName == null)
+            {
+                throw new InvalidDataException("locationAreaName is a required property for CreateLocationArea and cannot be null");
+            }
+            else
+            {
+                this.LocationAreaName = locationAreaName;
+            }
         }
         
         /// <summary>

@@ -33,16 +33,45 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationAreaWithLocations" /> class.
         /// </summary>
-        /// <param name="locationAreaId">Id of the LocationArea.</param>
-        /// <param name="storeId">Id of the Store that this LocationArea belongs to.</param>
-        /// <param name="locationAreaName">Descriptive LocationArea name.</param>
+        [JsonConstructorAttribute]
+        protected LocationAreaWithLocations() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LocationAreaWithLocations" /> class.
+        /// </summary>
+        /// <param name="locationAreaId">Id of the LocationArea (required).</param>
+        /// <param name="storeId">Id of the Store that this LocationArea belongs to (required).</param>
+        /// <param name="locationAreaName">Descriptive LocationArea name (required).</param>
         /// <param name="locations">List of Locations that belongs to this Location Area.</param>
         /// <param name="isDeleted">Returns if the LocationArea is deleted or not.</param>
         public LocationAreaWithLocations(int? locationAreaId = default(int?), int? storeId = default(int?), string locationAreaName = default(string), List<LocationAreaLocation> locations = default(List<LocationAreaLocation>), bool? isDeleted = default(bool?))
         {
-            this.LocationAreaId = locationAreaId;
-            this.StoreId = storeId;
-            this.LocationAreaName = locationAreaName;
+            // to ensure "locationAreaId" is required (not null)
+            if (locationAreaId == null)
+            {
+                throw new InvalidDataException("locationAreaId is a required property for LocationAreaWithLocations and cannot be null");
+            }
+            else
+            {
+                this.LocationAreaId = locationAreaId;
+            }
+            // to ensure "storeId" is required (not null)
+            if (storeId == null)
+            {
+                throw new InvalidDataException("storeId is a required property for LocationAreaWithLocations and cannot be null");
+            }
+            else
+            {
+                this.StoreId = storeId;
+            }
+            // to ensure "locationAreaName" is required (not null)
+            if (locationAreaName == null)
+            {
+                throw new InvalidDataException("locationAreaName is a required property for LocationAreaWithLocations and cannot be null");
+            }
+            else
+            {
+                this.LocationAreaName = locationAreaName;
+            }
             this.Locations = locations;
             this.IsDeleted = isDeleted;
         }

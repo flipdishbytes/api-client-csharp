@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LocationAreaId** | **int?** | Id of the LocationArea | [optional] 
-**StoreId** | **int?** | Id of the Store that this LocationArea belongs to | [optional] 
-**LocationAreaName** | **string** | Descriptive LocationArea name | [optional] 
+**LocationAreaId** | **int?** | Id of the LocationArea | 
+**StoreId** | **int?** | Id of the Store that this LocationArea belongs to | 
+**LocationAreaName** | **string** | Descriptive LocationArea name | 
 **Locations** | [**List&lt;LocationAreaLocation&gt;**](LocationAreaLocation.md) | List of Locations that belongs to this Location Area | [optional] 
 **IsDeleted** | **bool?** | Returns if the LocationArea is deleted or not | [optional] 
 

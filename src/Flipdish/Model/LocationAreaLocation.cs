@@ -33,16 +33,45 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationAreaLocation" /> class.
         /// </summary>
-        /// <param name="locationId">Id of the Location.</param>
-        /// <param name="locationName">Name of the Location.</param>
-        /// <param name="displayOrder">The order that the Location should be displayed on the screen.</param>
+        [JsonConstructorAttribute]
+        protected LocationAreaLocation() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LocationAreaLocation" /> class.
+        /// </summary>
+        /// <param name="locationId">Id of the Location (required).</param>
+        /// <param name="locationName">Name of the Location (required).</param>
+        /// <param name="displayOrder">The order that the Location should be displayed on the screen (required).</param>
         /// <param name="externalLocationId">Id of the Location on an external system.</param>
         /// <param name="isDeleted">Shows if the Location is deleted or not.</param>
         public LocationAreaLocation(int? locationId = default(int?), string locationName = default(string), int? displayOrder = default(int?), string externalLocationId = default(string), bool? isDeleted = default(bool?))
         {
-            this.LocationId = locationId;
-            this.LocationName = locationName;
-            this.DisplayOrder = displayOrder;
+            // to ensure "locationId" is required (not null)
+            if (locationId == null)
+            {
+                throw new InvalidDataException("locationId is a required property for LocationAreaLocation and cannot be null");
+            }
+            else
+            {
+                this.LocationId = locationId;
+            }
+            // to ensure "locationName" is required (not null)
+            if (locationName == null)
+            {
+                throw new InvalidDataException("locationName is a required property for LocationAreaLocation and cannot be null");
+            }
+            else
+            {
+                this.LocationName = locationName;
+            }
+            // to ensure "displayOrder" is required (not null)
+            if (displayOrder == null)
+            {
+                throw new InvalidDataException("displayOrder is a required property for LocationAreaLocation and cannot be null");
+            }
+            else
+            {
+                this.DisplayOrder = displayOrder;
+            }
             this.ExternalLocationId = externalLocationId;
             this.IsDeleted = isDeleted;
         }

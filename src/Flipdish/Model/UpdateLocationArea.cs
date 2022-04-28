@@ -33,13 +33,34 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateLocationArea" /> class.
         /// </summary>
-        /// <param name="locationAreaId">Location Area Id.</param>
-        /// <param name="locationAreaName">Descriptive LocationArea name.</param>
+        [JsonConstructorAttribute]
+        protected UpdateLocationArea() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UpdateLocationArea" /> class.
+        /// </summary>
+        /// <param name="locationAreaId">Location Area Id (required).</param>
+        /// <param name="locationAreaName">Descriptive LocationArea name (required).</param>
         /// <param name="isDeleted">Sets if the Location Area should be soft deleted or not.</param>
         public UpdateLocationArea(int? locationAreaId = default(int?), string locationAreaName = default(string), bool? isDeleted = default(bool?))
         {
-            this.LocationAreaId = locationAreaId;
-            this.LocationAreaName = locationAreaName;
+            // to ensure "locationAreaId" is required (not null)
+            if (locationAreaId == null)
+            {
+                throw new InvalidDataException("locationAreaId is a required property for UpdateLocationArea and cannot be null");
+            }
+            else
+            {
+                this.LocationAreaId = locationAreaId;
+            }
+            // to ensure "locationAreaName" is required (not null)
+            if (locationAreaName == null)
+            {
+                throw new InvalidDataException("locationAreaName is a required property for UpdateLocationArea and cannot be null");
+            }
+            else
+            {
+                this.LocationAreaName = locationAreaName;
+            }
             this.IsDeleted = isDeleted;
         }
         

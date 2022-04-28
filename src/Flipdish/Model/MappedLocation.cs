@@ -33,12 +33,33 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MappedLocation" /> class.
         /// </summary>
-        /// <param name="locationId">Id of the Location.</param>
-        /// <param name="externalLocationId">Id of the Location on an external system.</param>
+        [JsonConstructorAttribute]
+        protected MappedLocation() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MappedLocation" /> class.
+        /// </summary>
+        /// <param name="locationId">Id of the Location (required).</param>
+        /// <param name="externalLocationId">Id of the Location on an external system (required).</param>
         public MappedLocation(int? locationId = default(int?), string externalLocationId = default(string))
         {
-            this.LocationId = locationId;
-            this.ExternalLocationId = externalLocationId;
+            // to ensure "locationId" is required (not null)
+            if (locationId == null)
+            {
+                throw new InvalidDataException("locationId is a required property for MappedLocation and cannot be null");
+            }
+            else
+            {
+                this.LocationId = locationId;
+            }
+            // to ensure "externalLocationId" is required (not null)
+            if (externalLocationId == null)
+            {
+                throw new InvalidDataException("externalLocationId is a required property for MappedLocation and cannot be null");
+            }
+            else
+            {
+                this.ExternalLocationId = externalLocationId;
+            }
         }
         
         /// <summary>
