@@ -445,6 +445,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**UpdateStore**](docs/StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | Update store by identifier
 *StoresApi* | [**UpdateStoreAddress**](docs/StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
 *StoresApi* | [**UpdateStoreAddressCoordinates**](docs/StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
+*StoresApi* | [**UpdateStoreAddressForm**](docs/StoresApi.md#updatestoreaddressform) | **POST** /api/v1.0/stores/{storeId}/addressform | Update store address
 *StripeCustomConnectApi* | [**CreateBankAccountAndConnectedAccount**](docs/StripeCustomConnectApi.md#createbankaccountandconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/bank-account | Create a new Bank Account and Stripe connected account
 *StripeCustomConnectApi* | [**CreateStripeConnectedAccount**](docs/StripeCustomConnectApi.md#createstripeconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account | Create or update a Stripe connected account associated with the bank account of bankAccountId
 *StripeCustomConnectApi* | [**CreateStripeConnectedAccountLink**](docs/StripeCustomConnectApi.md#createstripeconnectedaccountlink) | **POST** /api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link | Gets a single-use Stripe URL for the given account
@@ -996,6 +997,7 @@ Class | Method | HTTP request | Description
  - [Model.Store](docs/Store.md)
  - [Model.StoreAddress](docs/StoreAddress.md)
  - [Model.StoreAddressBase](docs/StoreAddressBase.md)
+ - [Model.StoreAddressForm](docs/StoreAddressForm.md)
  - [Model.StoreAddressUpdatedEvent](docs/StoreAddressUpdatedEvent.md)
  - [Model.StoreArchivedEvent](docs/StoreArchivedEvent.md)
  - [Model.StoreBase](docs/StoreBase.md)

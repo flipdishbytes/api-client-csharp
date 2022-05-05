@@ -33,6 +33,7 @@ Method | HTTP request | Description
 [**UpdateStore**](StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | Update store by identifier
 [**UpdateStoreAddress**](StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
 [**UpdateStoreAddressCoordinates**](StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
+[**UpdateStoreAddressForm**](StoresApi.md#updatestoreaddressform) | **POST** /api/v1.0/stores/{storeId}/addressform | Update store address
 
 
 <a name="archivestore"></a>
@@ -1910,6 +1911,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultCoordinates**](RestApiResultCoordinates.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="updatestoreaddressform"></a>
+# **UpdateStoreAddressForm**
+> Object UpdateStoreAddressForm (int? storeId, StoreAddressForm address)
+
+Update store address
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UpdateStoreAddressFormExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | Store identifier
+            var address = new StoreAddressForm(); // StoreAddressForm | Store address
+
+            try
+            {
+                // Update store address
+                Object result = apiInstance.UpdateStoreAddressForm(storeId, address);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.UpdateStoreAddressForm: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**| Store identifier | 
+ **address** | [**StoreAddressForm**](StoreAddressForm.md)| Store address | 
+
+### Return type
+
+**Object**
 
 ### Authorization
 

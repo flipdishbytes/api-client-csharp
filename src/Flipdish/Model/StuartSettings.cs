@@ -139,17 +139,19 @@ namespace Flipdish.Model
         /// <param name="clientSecret">Client Secret.</param>
         /// <param name="enabled">Enabled.</param>
         /// <param name="webhookUrlBasicAuthentication">Webhook url to settle in the Stuart portal.</param>
+        /// <param name="overrideWebhookUrl">Override Flipdish Webhook Url.</param>
         /// <param name="minutesToPickupBeforeThanDeliveryTime">MinutesToPickupBeforeThanDeliveryTime.</param>
         /// <param name="packageType">Package type.</param>
         /// <param name="transportType">Transport type.</param>
         /// <param name="cancelOrderIfStuartCancelDelivery">Determines if Flipdish order should be cancel when Stuart cancels delivery.</param>
         /// <param name="transportPrices">transportPrices.</param>
-        public StuartSettings(string clientId = default(string), string clientSecret = default(string), bool? enabled = default(bool?), string webhookUrlBasicAuthentication = default(string), int? minutesToPickupBeforeThanDeliveryTime = default(int?), PackageTypeEnum? packageType = default(PackageTypeEnum?), TransportTypeEnum? transportType = default(TransportTypeEnum?), bool? cancelOrderIfStuartCancelDelivery = default(bool?), StuartSettingsTransportPrices transportPrices = default(StuartSettingsTransportPrices))
+        public StuartSettings(string clientId = default(string), string clientSecret = default(string), bool? enabled = default(bool?), string webhookUrlBasicAuthentication = default(string), bool? overrideWebhookUrl = default(bool?), int? minutesToPickupBeforeThanDeliveryTime = default(int?), PackageTypeEnum? packageType = default(PackageTypeEnum?), TransportTypeEnum? transportType = default(TransportTypeEnum?), bool? cancelOrderIfStuartCancelDelivery = default(bool?), StuartSettingsTransportPrices transportPrices = default(StuartSettingsTransportPrices))
         {
             this.ClientId = clientId;
             this.ClientSecret = clientSecret;
             this.Enabled = enabled;
             this.WebhookUrlBasicAuthentication = webhookUrlBasicAuthentication;
+            this.OverrideWebhookUrl = overrideWebhookUrl;
             this.MinutesToPickupBeforeThanDeliveryTime = minutesToPickupBeforeThanDeliveryTime;
             this.PackageType = packageType;
             this.TransportType = transportType;
@@ -186,6 +188,13 @@ namespace Flipdish.Model
         public string WebhookUrlBasicAuthentication { get; set; }
 
         /// <summary>
+        /// Override Flipdish Webhook Url
+        /// </summary>
+        /// <value>Override Flipdish Webhook Url</value>
+        [DataMember(Name="OverrideWebhookUrl", EmitDefaultValue=false)]
+        public bool? OverrideWebhookUrl { get; set; }
+
+        /// <summary>
         /// MinutesToPickupBeforeThanDeliveryTime
         /// </summary>
         /// <value>MinutesToPickupBeforeThanDeliveryTime</value>
@@ -219,6 +228,7 @@ namespace Flipdish.Model
             sb.Append("  ClientSecret: ").Append(ClientSecret).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  WebhookUrlBasicAuthentication: ").Append(WebhookUrlBasicAuthentication).Append("\n");
+            sb.Append("  OverrideWebhookUrl: ").Append(OverrideWebhookUrl).Append("\n");
             sb.Append("  MinutesToPickupBeforeThanDeliveryTime: ").Append(MinutesToPickupBeforeThanDeliveryTime).Append("\n");
             sb.Append("  PackageType: ").Append(PackageType).Append("\n");
             sb.Append("  TransportType: ").Append(TransportType).Append("\n");
@@ -279,6 +289,11 @@ namespace Flipdish.Model
                     this.WebhookUrlBasicAuthentication.Equals(input.WebhookUrlBasicAuthentication))
                 ) && 
                 (
+                    this.OverrideWebhookUrl == input.OverrideWebhookUrl ||
+                    (this.OverrideWebhookUrl != null &&
+                    this.OverrideWebhookUrl.Equals(input.OverrideWebhookUrl))
+                ) && 
+                (
                     this.MinutesToPickupBeforeThanDeliveryTime == input.MinutesToPickupBeforeThanDeliveryTime ||
                     (this.MinutesToPickupBeforeThanDeliveryTime != null &&
                     this.MinutesToPickupBeforeThanDeliveryTime.Equals(input.MinutesToPickupBeforeThanDeliveryTime))
@@ -322,6 +337,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Enabled.GetHashCode();
                 if (this.WebhookUrlBasicAuthentication != null)
                     hashCode = hashCode * 59 + this.WebhookUrlBasicAuthentication.GetHashCode();
+                if (this.OverrideWebhookUrl != null)
+                    hashCode = hashCode * 59 + this.OverrideWebhookUrl.GetHashCode();
                 if (this.MinutesToPickupBeforeThanDeliveryTime != null)
                     hashCode = hashCode * 59 + this.MinutesToPickupBeforeThanDeliveryTime.GetHashCode();
                 if (this.PackageType != null)
