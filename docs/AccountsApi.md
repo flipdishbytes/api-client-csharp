@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**PasswordResetWithToken**](AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
 [**RequestLoginPin**](AccountsApi.md#requestloginpin) | **POST** /api/v1.0/accounts/pin | Request login PIN. The server sends the PIN to the email address.
 [**RequestPasswordReset**](AccountsApi.md#requestpasswordreset) | **POST** /api/v1.0/accounts/passwordreset | Request password reset. Flipdish system will send a token via email.
+[**SendPinForPasswordReset**](AccountsApi.md#sendpinforpasswordreset) | **POST** /api/v1.0/accounts/password/resetpin | Request Password Reset PIN. The server sends the PIN to the email address.
 [**SkipSignupStep**](AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | Skip a signup question
 [**UpdateAccount**](AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | Update account with name and language
 
@@ -733,6 +734,68 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="sendpinforpasswordreset"></a>
+# **SendPinForPasswordReset**
+> RequestPasswordResetPinResponse SendPinForPasswordReset (RequestPasswordResetModel requestPasswordResetRequest)
+
+Request Password Reset PIN. The server sends the PIN to the email address.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SendPinForPasswordResetExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AccountsApi();
+            var requestPasswordResetRequest = new RequestPasswordResetModel(); // RequestPasswordResetModel | 
+
+            try
+            {
+                // Request Password Reset PIN. The server sends the PIN to the email address.
+                RequestPasswordResetPinResponse result = apiInstance.SendPinForPasswordReset(requestPasswordResetRequest);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AccountsApi.SendPinForPasswordReset: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **requestPasswordResetRequest** | [**RequestPasswordResetModel**](RequestPasswordResetModel.md)|  | 
+
+### Return type
+
+[**RequestPasswordResetPinResponse**](RequestPasswordResetPinResponse.md)
 
 ### Authorization
 
