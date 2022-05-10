@@ -259,6 +259,29 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultCardReader</returns>
         ApiResponse<RestApiResultCardReader> RegisterStripeTerminalWithHttpInfo (CardReaderRegistrationRequest request, string appId);
         /// <summary>
+        /// Un-register terminal by deleting it from stripe
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultCardReader</returns>
+        RestApiResultCardReader UnRegisterTerminal (UnRegisterCardReaderRequest request, string appId);
+
+        /// <summary>
+        /// Un-register terminal by deleting it from stripe
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultCardReader</returns>
+        ApiResponse<RestApiResultCardReader> UnRegisterTerminalWithHttpInfo (UnRegisterCardReaderRequest request, string appId);
+        /// <summary>
         /// Unpair the currently paired stripe terminal
         /// </summary>
         /// <remarks>
@@ -517,6 +540,29 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultCardReader)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultCardReader>> RegisterStripeTerminalAsyncWithHttpInfo (CardReaderRegistrationRequest request, string appId);
+        /// <summary>
+        /// Un-register terminal by deleting it from stripe
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultCardReader</returns>
+        System.Threading.Tasks.Task<RestApiResultCardReader> UnRegisterTerminalAsync (UnRegisterCardReaderRequest request, string appId);
+
+        /// <summary>
+        /// Un-register terminal by deleting it from stripe
+        /// </summary>
+        /// <remarks>
+        /// Can only be called by Kiosk
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultCardReader)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultCardReader>> UnRegisterTerminalAsyncWithHttpInfo (UnRegisterCardReaderRequest request, string appId);
         /// <summary>
         /// Unpair the currently paired stripe terminal
         /// </summary>
@@ -2326,6 +2372,193 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("RegisterStripeTerminal", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
+        }
+
+        /// <summary>
+        /// Un-register terminal by deleting it from stripe Can only be called by Kiosk
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultCardReader</returns>
+        public RestApiResultCardReader UnRegisterTerminal (UnRegisterCardReaderRequest request, string appId)
+        {
+             ApiResponse<RestApiResultCardReader> localVarResponse = UnRegisterTerminalWithHttpInfo(request, appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Un-register terminal by deleting it from stripe Can only be called by Kiosk
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultCardReader</returns>
+        public ApiResponse< RestApiResultCardReader > UnRegisterTerminalWithHttpInfo (UnRegisterCardReaderRequest request, string appId)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling CardReadersApi->UnRegisterTerminal");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->UnRegisterTerminal");
+
+            var localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/unregister";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UnRegisterTerminal", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
+        }
+
+        /// <summary>
+        /// Un-register terminal by deleting it from stripe Can only be called by Kiosk
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultCardReader</returns>
+        public async System.Threading.Tasks.Task<RestApiResultCardReader> UnRegisterTerminalAsync (UnRegisterCardReaderRequest request, string appId)
+        {
+             ApiResponse<RestApiResultCardReader> localVarResponse = await UnRegisterTerminalAsyncWithHttpInfo(request, appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Un-register terminal by deleting it from stripe Can only be called by Kiosk
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultCardReader)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCardReader>> UnRegisterTerminalAsyncWithHttpInfo (UnRegisterCardReaderRequest request, string appId)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling CardReadersApi->UnRegisterTerminal");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->UnRegisterTerminal");
+
+            var localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/unregister";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UnRegisterTerminal", localVarResponse);
                 if (exception != null) throw exception;
             }
 

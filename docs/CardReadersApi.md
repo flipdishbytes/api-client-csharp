@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**InitiateKioskBluetoothPairingMode**](CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
 [**InitiateKioskBluetoothUpdateInstall**](CardReadersApi.md#initiatekioskbluetoothupdateinstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
 [**RegisterStripeTerminal**](CardReadersApi.md#registerstripeterminal) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/register | 
+[**UnRegisterTerminal**](CardReadersApi.md#unregisterterminal) | **DELETE** /api/v1.0/{appId}/payments/terminals/stripe/unregister | Un-register terminal by deleting it from stripe
 [**UnpairCurrentlyPairedBluetoothDevice**](CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
 
 
@@ -657,6 +658,72 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**CardReaderRegistrationRequest**](CardReaderRegistrationRequest.md)|  | 
+ **appId** | **string**|  | 
+
+### Return type
+
+[**RestApiResultCardReader**](RestApiResultCardReader.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="unregisterterminal"></a>
+# **UnRegisterTerminal**
+> RestApiResultCardReader UnRegisterTerminal (UnRegisterCardReaderRequest request, string appId)
+
+Un-register terminal by deleting it from stripe
+
+Can only be called by Kiosk
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UnRegisterTerminalExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new CardReadersApi();
+            var request = new UnRegisterCardReaderRequest(); // UnRegisterCardReaderRequest | 
+            var appId = appId_example;  // string | 
+
+            try
+            {
+                // Un-register terminal by deleting it from stripe
+                RestApiResultCardReader result = apiInstance.UnRegisterTerminal(request, appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CardReadersApi.UnRegisterTerminal: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**UnRegisterCardReaderRequest**](UnRegisterCardReaderRequest.md)|  | 
  **appId** | **string**|  | 
 
 ### Return type

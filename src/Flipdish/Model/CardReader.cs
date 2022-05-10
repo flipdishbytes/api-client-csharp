@@ -39,7 +39,8 @@ namespace Flipdish.Model
         /// <param name="status">Device status online or offline.</param>
         /// <param name="registrationCode">Registration code.</param>
         /// <param name="deviceType">Device type.</param>
-        public CardReader(string id = default(string), string deviceSoftwareVersion = default(string), string serialNumber = default(string), string status = default(string), string registrationCode = default(string), string deviceType = default(string))
+        /// <param name="deleted">Indicates that the reader is deleted or not.</param>
+        public CardReader(string id = default(string), string deviceSoftwareVersion = default(string), string serialNumber = default(string), string status = default(string), string registrationCode = default(string), string deviceType = default(string), bool? deleted = default(bool?))
         {
             this.Id = id;
             this.DeviceSoftwareVersion = deviceSoftwareVersion;
@@ -47,6 +48,7 @@ namespace Flipdish.Model
             this.Status = status;
             this.RegistrationCode = registrationCode;
             this.DeviceType = deviceType;
+            this.Deleted = deleted;
         }
         
         /// <summary>
@@ -92,6 +94,13 @@ namespace Flipdish.Model
         public string DeviceType { get; set; }
 
         /// <summary>
+        /// Indicates that the reader is deleted or not
+        /// </summary>
+        /// <value>Indicates that the reader is deleted or not</value>
+        [DataMember(Name="Deleted", EmitDefaultValue=false)]
+        public bool? Deleted { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -105,6 +114,7 @@ namespace Flipdish.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  RegistrationCode: ").Append(RegistrationCode).Append("\n");
             sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
+            sb.Append("  Deleted: ").Append(Deleted).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -168,6 +178,11 @@ namespace Flipdish.Model
                     this.DeviceType == input.DeviceType ||
                     (this.DeviceType != null &&
                     this.DeviceType.Equals(input.DeviceType))
+                ) && 
+                (
+                    this.Deleted == input.Deleted ||
+                    (this.Deleted != null &&
+                    this.Deleted.Equals(input.Deleted))
                 );
         }
 
@@ -192,6 +207,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.RegistrationCode.GetHashCode();
                 if (this.DeviceType != null)
                     hashCode = hashCode * 59 + this.DeviceType.GetHashCode();
+                if (this.Deleted != null)
+                    hashCode = hashCode * 59 + this.Deleted.GetHashCode();
                 return hashCode;
             }
         }
