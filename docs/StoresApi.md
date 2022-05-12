@@ -25,6 +25,7 @@ Method | HTTP request | Description
 [**GetStoreServiceCharge**](StoresApi.md#getstoreservicecharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
 [**GetStores**](StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores, excluding archived ones
 [**GetStoresByAppId**](StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
+[**GetStoresByStoreIdWithValidations**](StoresApi.md#getstoresbystoreidwithvalidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | Get store validation by storeIds
 [**PublishStore**](StoresApi.md#publishstore) | **POST** /api/v1.0/stores/{storeId}/publish | Publish store
 [**SetBusinessHours**](StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Set Business hours
 [**SetPreOrdeEnabled**](StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | UPDATE pre order config for a store, by type
@@ -1397,6 +1398,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiPaginationResultStore**](RestApiPaginationResultStore.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getstoresbystoreidwithvalidations"></a>
+# **GetStoresByStoreIdWithValidations**
+> RestApiPaginationResultStoreValidationConfig GetStoresByStoreIdWithValidations (List<int?> storeId, string appId, int? page = null, int? limit = null)
+
+Get store validation by storeIds
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetStoresByStoreIdWithValidationsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = new List<int?>(); // List<int?> | Store identifier
+            var appId = appId_example;  // string | 
+            var page = 56;  // int? | Requested page index (optional) 
+            var limit = 56;  // int? | Requested page limit (optional) 
+
+            try
+            {
+                // Get store validation by storeIds
+                RestApiPaginationResultStoreValidationConfig result = apiInstance.GetStoresByStoreIdWithValidations(storeId, appId, page, limit);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.GetStoresByStoreIdWithValidations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | [**List&lt;int?&gt;**](int?.md)| Store identifier | 
+ **appId** | **string**|  | 
+ **page** | **int?**| Requested page index | [optional] 
+ **limit** | **int?**| Requested page limit | [optional] 
+
+### Return type
+
+[**RestApiPaginationResultStoreValidationConfig**](RestApiPaginationResultStoreValidationConfig.md)
 
 ### Authorization
 
