@@ -60,7 +60,13 @@ namespace Flipdish.Model
             /// Enum WISEPAD3 for value: WISEPAD_3
             /// </summary>
             [EnumMember(Value = "WISEPAD_3")]
-            WISEPAD3 = 4
+            WISEPAD3 = 4,
+            
+            /// <summary>
+            /// Enum WISEPOSE for value: WISEPOS_E
+            /// </summary>
+            [EnumMember(Value = "WISEPOS_E")]
+            WISEPOSE = 5
         }
 
         /// <summary>
