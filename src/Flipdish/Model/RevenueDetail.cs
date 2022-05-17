@@ -45,7 +45,8 @@ namespace Flipdish.Model
         /// <param name="onlineSalesDeliveryCharges">Delivery charges on online sales.</param>
         /// <param name="onlineSalesTips">Tips for online sales.</param>
         /// <param name="totalOnlineRevenue">Online sales plus online delivery charges and tips.</param>
-        public RevenueDetail(double? onlineSalesAmount = default(double?), double? onlineSalesTax = default(double?), double? onlineSalesIncludingTax = default(double?), double? onlineSalesFeesBaseAmount = default(double?), double? cashSalesAmount = default(double?), double? cashSalesTax = default(double?), double? cashSalesIncludingTax = default(double?), double? cashSalesFeesBaseAmount = default(double?), double? totalSalesIncludingTax = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? totalOnlineRevenue = default(double?))
+        /// <param name="onlineSalesServiceCharges">Service charge on online sales.</param>
+        public RevenueDetail(double? onlineSalesAmount = default(double?), double? onlineSalesTax = default(double?), double? onlineSalesIncludingTax = default(double?), double? onlineSalesFeesBaseAmount = default(double?), double? cashSalesAmount = default(double?), double? cashSalesTax = default(double?), double? cashSalesIncludingTax = default(double?), double? cashSalesFeesBaseAmount = default(double?), double? totalSalesIncludingTax = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? totalOnlineRevenue = default(double?), double? onlineSalesServiceCharges = default(double?))
         {
             this.OnlineSalesAmount = onlineSalesAmount;
             this.OnlineSalesTax = onlineSalesTax;
@@ -59,6 +60,7 @@ namespace Flipdish.Model
             this.OnlineSalesDeliveryCharges = onlineSalesDeliveryCharges;
             this.OnlineSalesTips = onlineSalesTips;
             this.TotalOnlineRevenue = totalOnlineRevenue;
+            this.OnlineSalesServiceCharges = onlineSalesServiceCharges;
         }
         
         /// <summary>
@@ -146,6 +148,13 @@ namespace Flipdish.Model
         public double? TotalOnlineRevenue { get; set; }
 
         /// <summary>
+        /// Service charge on online sales
+        /// </summary>
+        /// <value>Service charge on online sales</value>
+        [DataMember(Name="OnlineSalesServiceCharges", EmitDefaultValue=false)]
+        public double? OnlineSalesServiceCharges { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -165,6 +174,7 @@ namespace Flipdish.Model
             sb.Append("  OnlineSalesDeliveryCharges: ").Append(OnlineSalesDeliveryCharges).Append("\n");
             sb.Append("  OnlineSalesTips: ").Append(OnlineSalesTips).Append("\n");
             sb.Append("  TotalOnlineRevenue: ").Append(TotalOnlineRevenue).Append("\n");
+            sb.Append("  OnlineSalesServiceCharges: ").Append(OnlineSalesServiceCharges).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -258,6 +268,11 @@ namespace Flipdish.Model
                     this.TotalOnlineRevenue == input.TotalOnlineRevenue ||
                     (this.TotalOnlineRevenue != null &&
                     this.TotalOnlineRevenue.Equals(input.TotalOnlineRevenue))
+                ) && 
+                (
+                    this.OnlineSalesServiceCharges == input.OnlineSalesServiceCharges ||
+                    (this.OnlineSalesServiceCharges != null &&
+                    this.OnlineSalesServiceCharges.Equals(input.OnlineSalesServiceCharges))
                 );
         }
 
@@ -294,6 +309,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OnlineSalesTips.GetHashCode();
                 if (this.TotalOnlineRevenue != null)
                     hashCode = hashCode * 59 + this.TotalOnlineRevenue.GetHashCode();
+                if (this.OnlineSalesServiceCharges != null)
+                    hashCode = hashCode * 59 + this.OnlineSalesServiceCharges.GetHashCode();
                 return hashCode;
             }
         }
