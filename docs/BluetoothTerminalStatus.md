@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Status** | **string** | Device Status | [optional] 
 **BatteryLevel** | **float?** | Indication of the battery level from 0 to 1 | [optional] 
 **UpdateTime** | **DateTime?** | Last time the status was updated | [optional] 
+**ReaderId** | **string** | ReaderId for Stripe Terminal | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

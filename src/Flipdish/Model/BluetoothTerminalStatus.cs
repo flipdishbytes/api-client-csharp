@@ -99,7 +99,19 @@ namespace Flipdish.Model
             /// Enum Connected for value: Connected
             /// </summary>
             [EnumMember(Value = "Connected")]
-            Connected = 3
+            Connected = 3,
+            
+            /// <summary>
+            /// Enum Online for value: Online
+            /// </summary>
+            [EnumMember(Value = "Online")]
+            Online = 4,
+            
+            /// <summary>
+            /// Enum Offline for value: Offline
+            /// </summary>
+            [EnumMember(Value = "Offline")]
+            Offline = 5
         }
 
         /// <summary>
@@ -117,7 +129,8 @@ namespace Flipdish.Model
         /// <param name="status">Device Status.</param>
         /// <param name="batteryLevel">Indication of the battery level from 0 to 1.</param>
         /// <param name="updateTime">Last time the status was updated.</param>
-        public BluetoothTerminalStatus(string serialNumber = default(string), string softwareVersion = default(string), DeviceTypeEnum? deviceType = default(DeviceTypeEnum?), StatusEnum? status = default(StatusEnum?), float? batteryLevel = default(float?), DateTime? updateTime = default(DateTime?))
+        /// <param name="readerId">ReaderId for Stripe Terminal.</param>
+        public BluetoothTerminalStatus(string serialNumber = default(string), string softwareVersion = default(string), DeviceTypeEnum? deviceType = default(DeviceTypeEnum?), StatusEnum? status = default(StatusEnum?), float? batteryLevel = default(float?), DateTime? updateTime = default(DateTime?), string readerId = default(string))
         {
             this.SerialNumber = serialNumber;
             this.SoftwareVersion = softwareVersion;
@@ -125,6 +138,7 @@ namespace Flipdish.Model
             this.Status = status;
             this.BatteryLevel = batteryLevel;
             this.UpdateTime = updateTime;
+            this.ReaderId = readerId;
         }
         
         /// <summary>
@@ -158,6 +172,13 @@ namespace Flipdish.Model
         public DateTime? UpdateTime { get; set; }
 
         /// <summary>
+        /// ReaderId for Stripe Terminal
+        /// </summary>
+        /// <value>ReaderId for Stripe Terminal</value>
+        [DataMember(Name="ReaderId", EmitDefaultValue=false)]
+        public string ReaderId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -171,6 +192,7 @@ namespace Flipdish.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  BatteryLevel: ").Append(BatteryLevel).Append("\n");
             sb.Append("  UpdateTime: ").Append(UpdateTime).Append("\n");
+            sb.Append("  ReaderId: ").Append(ReaderId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -234,6 +256,11 @@ namespace Flipdish.Model
                     this.UpdateTime == input.UpdateTime ||
                     (this.UpdateTime != null &&
                     this.UpdateTime.Equals(input.UpdateTime))
+                ) && 
+                (
+                    this.ReaderId == input.ReaderId ||
+                    (this.ReaderId != null &&
+                    this.ReaderId.Equals(input.ReaderId))
                 );
         }
 
@@ -258,6 +285,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.BatteryLevel.GetHashCode();
                 if (this.UpdateTime != null)
                     hashCode = hashCode * 59 + this.UpdateTime.GetHashCode();
+                if (this.ReaderId != null)
+                    hashCode = hashCode * 59 + this.ReaderId.GetHashCode();
                 return hashCode;
             }
         }
