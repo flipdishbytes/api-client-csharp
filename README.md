@@ -456,6 +456,7 @@ Class | Method | HTTP request | Description
 *StripeCustomConnectApi* | [**SetBankAccountBusinessType**](docs/StripeCustomConnectApi.md#setbankaccountbusinesstype) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | Update bank account's BusinessType and create a Stripe Connected Account
 *StripeCustomConnectApi* | [**StripeCustomConnectRefresh**](docs/StripeCustomConnectApi.md#stripecustomconnectrefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
 *StripeCustomConnectApi* | [**UpdateBankAccountDetails**](docs/StripeCustomConnectApi.md#updatebankaccountdetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | Update bank account details
+*StripeCustomConnectAdminApi* | [**InitializeBankAccountConnectedAccount**](docs/StripeCustomConnectAdminApi.md#initializebankaccountconnectedaccount) | **POST** /api/v1.0/customconnect/initialize-bank-account | Create a new Bank Account and Stripe connected account
 *StuartApi* | [**StuartCancelJob**](docs/StuartApi.md#stuartcanceljob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | Cancel a stuart job
 *StuartApi* | [**StuartGetJob**](docs/StuartApi.md#stuartgetjob) | **GET** /api/v1.0/stuart/jobs/{jobId} | Get start job details
 *StuartApi* | [**StuartGetStuartSettings**](docs/StuartApi.md#stuartgetstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | Get stuart settings for a store
