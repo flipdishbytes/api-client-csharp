@@ -120,7 +120,7 @@ namespace Flipdish.Model
         /// <param name="taxRateId">TaxRate.</param>
         /// <param name="taxValue">TaxValue - the tax associated with this item, based on TaxRate / TaxType and Currency (currency determines decimal point precision).</param>
         /// <param name="metadata">List of metadata.</param>
-        /// <param name="productId">Product Id when the Item is associated to a Product.</param>
+        /// <param name="catalogItemId">Catalog item Id when the Item is associated to a Product.</param>
         /// <param name="name">Menu item name (like \&quot;Korma\&quot;).</param>
         /// <param name="description">Description (like \&quot;A lovely dish from the east\&quot;).</param>
         /// <param name="spicinessRating">Spiciness rating.</param>
@@ -132,7 +132,7 @@ namespace Flipdish.Model
         /// <param name="disableVouchers">If true, then vouchers won&#39;t be applied for this item.</param>
         /// <param name="imageName">Image url.</param>
         /// <param name="imageUrl">Image url.</param>
-        public MenuSectionItem(int? menuItemId = default(int?), double? actualPrice = default(double?), List<MenuItemOptionSet> menuItemOptionSets = default(List<MenuItemOptionSet>), List<BusinessHoursPeriod> dailySpecialHours = default(List<BusinessHoursPeriod>), Guid? publicId = default(Guid?), string taxRateName = default(string), int? taxRateId = default(int?), double? taxValue = default(double?), List<CreateMetadata> metadata = default(List<CreateMetadata>), string productId = default(string), string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string))
+        public MenuSectionItem(int? menuItemId = default(int?), double? actualPrice = default(double?), List<MenuItemOptionSet> menuItemOptionSets = default(List<MenuItemOptionSet>), List<BusinessHoursPeriod> dailySpecialHours = default(List<BusinessHoursPeriod>), Guid? publicId = default(Guid?), string taxRateName = default(string), int? taxRateId = default(int?), double? taxValue = default(double?), List<CreateMetadata> metadata = default(List<CreateMetadata>), string catalogItemId = default(string), string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string))
         {
             this.MenuItemId = menuItemId;
             this.ActualPrice = actualPrice;
@@ -143,7 +143,7 @@ namespace Flipdish.Model
             this.TaxRateId = taxRateId;
             this.TaxValue = taxValue;
             this.Metadata = metadata;
-            this.ProductId = productId;
+            this.CatalogItemId = catalogItemId;
             this.Name = name;
             this.Description = description;
             this.SpicinessRating = spicinessRating;
@@ -221,11 +221,11 @@ namespace Flipdish.Model
         public List<CreateMetadata> Metadata { get; set; }
 
         /// <summary>
-        /// Product Id when the Item is associated to a Product
+        /// Catalog item Id when the Item is associated to a Product
         /// </summary>
-        /// <value>Product Id when the Item is associated to a Product</value>
-        [DataMember(Name="ProductId", EmitDefaultValue=false)]
-        public string ProductId { get; set; }
+        /// <value>Catalog item Id when the Item is associated to a Product</value>
+        [DataMember(Name="CatalogItemId", EmitDefaultValue=false)]
+        public string CatalogItemId { get; set; }
 
         /// <summary>
         /// Menu item name (like \&quot;Korma\&quot;)
@@ -309,7 +309,7 @@ namespace Flipdish.Model
             sb.Append("  TaxRateId: ").Append(TaxRateId).Append("\n");
             sb.Append("  TaxValue: ").Append(TaxValue).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
-            sb.Append("  ProductId: ").Append(ProductId).Append("\n");
+            sb.Append("  CatalogItemId: ").Append(CatalogItemId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  SpicinessRating: ").Append(SpicinessRating).Append("\n");
@@ -401,9 +401,9 @@ namespace Flipdish.Model
                     this.Metadata.SequenceEqual(input.Metadata)
                 ) && 
                 (
-                    this.ProductId == input.ProductId ||
-                    (this.ProductId != null &&
-                    this.ProductId.Equals(input.ProductId))
+                    this.CatalogItemId == input.CatalogItemId ||
+                    (this.CatalogItemId != null &&
+                    this.CatalogItemId.Equals(input.CatalogItemId))
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -489,8 +489,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.TaxValue.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
-                if (this.ProductId != null)
-                    hashCode = hashCode * 59 + this.ProductId.GetHashCode();
+                if (this.CatalogItemId != null)
+                    hashCode = hashCode * 59 + this.CatalogItemId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Description != null)

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **PublicId** | **Guid?** | Permanent reference to the item. | [optional] 
 **Metadata** | [**List&lt;CreateMetadata&gt;**](CreateMetadata.md) | List of metadata | [optional] 
 **NextMenuItemOptionSetId** | **int?** | if null, next option set is next. if -1, this is the final option set | [optional] 
-**ProductId** | **string** | Product Id when the OptionSet is associated to a Product | [optional] 
+**CatalogItemId** | **string** | Catalog item Id when the OptionSet is associated to a Product | [optional] 
 **TaxRateName** | **string** | Tax rate name | [optional] 
 **TaxRateId** | **int?** |  | [optional] 
 **TaxValue** | **double?** |  | [optional] 
