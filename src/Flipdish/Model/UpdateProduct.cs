@@ -37,14 +37,20 @@ namespace Flipdish.Model
         /// <param name="name">Product name.</param>
         /// <param name="description">Product description.</param>
         /// <param name="price">Product price.</param>
+        /// <param name="imageFileName">Image File Name.</param>
         /// <param name="alcohol">Product contains alcohol.</param>
-        public UpdateProduct(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), bool? alcohol = default(bool?))
+        /// <param name="groups">Collection of groups associated with this item.</param>
+        /// <param name="metafields">Collection of metafields.</param>
+        public UpdateProduct(string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string imageFileName = default(string), bool? alcohol = default(bool?), List<UpdateGroupReference> groups = default(List<UpdateGroupReference>), List<Metafield> metafields = default(List<Metafield>))
         {
             this.Sku = sku;
             this.Name = name;
             this.Description = description;
             this.Price = price;
+            this.ImageFileName = imageFileName;
             this.Alcohol = alcohol;
+            this.Groups = groups;
+            this.Metafields = metafields;
         }
         
         /// <summary>
@@ -76,11 +82,32 @@ namespace Flipdish.Model
         public double? Price { get; set; }
 
         /// <summary>
+        /// Image File Name
+        /// </summary>
+        /// <value>Image File Name</value>
+        [DataMember(Name="ImageFileName", EmitDefaultValue=false)]
+        public string ImageFileName { get; set; }
+
+        /// <summary>
         /// Product contains alcohol
         /// </summary>
         /// <value>Product contains alcohol</value>
         [DataMember(Name="Alcohol", EmitDefaultValue=false)]
         public bool? Alcohol { get; set; }
+
+        /// <summary>
+        /// Collection of groups associated with this item
+        /// </summary>
+        /// <value>Collection of groups associated with this item</value>
+        [DataMember(Name="Groups", EmitDefaultValue=false)]
+        public List<UpdateGroupReference> Groups { get; set; }
+
+        /// <summary>
+        /// Collection of metafields
+        /// </summary>
+        /// <value>Collection of metafields</value>
+        [DataMember(Name="Metafields", EmitDefaultValue=false)]
+        public List<Metafield> Metafields { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -94,7 +121,10 @@ namespace Flipdish.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
+            sb.Append("  ImageFileName: ").Append(ImageFileName).Append("\n");
             sb.Append("  Alcohol: ").Append(Alcohol).Append("\n");
+            sb.Append("  Groups: ").Append(Groups).Append("\n");
+            sb.Append("  Metafields: ").Append(Metafields).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,9 +180,24 @@ namespace Flipdish.Model
                     this.Price.Equals(input.Price))
                 ) && 
                 (
+                    this.ImageFileName == input.ImageFileName ||
+                    (this.ImageFileName != null &&
+                    this.ImageFileName.Equals(input.ImageFileName))
+                ) && 
+                (
                     this.Alcohol == input.Alcohol ||
                     (this.Alcohol != null &&
                     this.Alcohol.Equals(input.Alcohol))
+                ) && 
+                (
+                    this.Groups == input.Groups ||
+                    this.Groups != null &&
+                    this.Groups.SequenceEqual(input.Groups)
+                ) && 
+                (
+                    this.Metafields == input.Metafields ||
+                    this.Metafields != null &&
+                    this.Metafields.SequenceEqual(input.Metafields)
                 );
         }
 
@@ -173,8 +218,14 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Price != null)
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
+                if (this.ImageFileName != null)
+                    hashCode = hashCode * 59 + this.ImageFileName.GetHashCode();
                 if (this.Alcohol != null)
                     hashCode = hashCode * 59 + this.Alcohol.GetHashCode();
+                if (this.Groups != null)
+                    hashCode = hashCode * 59 + this.Groups.GetHashCode();
+                if (this.Metafields != null)
+                    hashCode = hashCode * 59 + this.Metafields.GetHashCode();
                 return hashCode;
             }
         }
@@ -226,6 +277,18 @@ namespace Flipdish.Model
             if(this.Price < (double?)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Price, must be a value greater than or equal to 0.", new [] { "Price" });
+            }
+
+            // ImageFileName (string) maxLength
+            if(this.ImageFileName != null && this.ImageFileName.Length > 512)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ImageFileName, length must be less than 512.", new [] { "ImageFileName" });
+            }
+
+            // ImageFileName (string) minLength
+            if(this.ImageFileName != null && this.ImageFileName.Length < 0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ImageFileName, length must be greater than 0.", new [] { "ImageFileName" });
             }
 
             yield break;

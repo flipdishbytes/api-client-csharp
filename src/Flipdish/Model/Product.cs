@@ -25,75 +25,132 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Product Information
+    /// Product
     /// </summary>
     [DataContract]
     public partial class Product :  IEquatable<Product>, IValidatableObject
     {
         /// <summary>
-        /// Product Type (SimpleProduct, Modifier, ModifierGroup, etc)
+        /// Type of item (Product, Modifier, etc)
         /// </summary>
-        /// <value>Product Type (SimpleProduct, Modifier, ModifierGroup, etc)</value>
+        /// <value>Type of item (Product, Modifier, etc)</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ProductTypeEnum
+        public enum ItemTypeEnum
         {
             
             /// <summary>
-            /// Enum SimpleProduct for value: SimpleProduct
+            /// Enum Product for value: Product
             /// </summary>
-            [EnumMember(Value = "SimpleProduct")]
-            SimpleProduct = 1,
+            [EnumMember(Value = "Product")]
+            Product = 1,
             
             /// <summary>
             /// Enum Modifier for value: Modifier
             /// </summary>
             [EnumMember(Value = "Modifier")]
-            Modifier = 2,
-            
-            /// <summary>
-            /// Enum ModifierGroup for value: ModifierGroup
-            /// </summary>
-            [EnumMember(Value = "ModifierGroup")]
-            ModifierGroup = 3
+            Modifier = 2
         }
 
         /// <summary>
-        /// Product Type (SimpleProduct, Modifier, ModifierGroup, etc)
+        /// Type of item (Product, Modifier, etc)
         /// </summary>
-        /// <value>Product Type (SimpleProduct, Modifier, ModifierGroup, etc)</value>
-        [DataMember(Name="ProductType", EmitDefaultValue=false)]
-        public ProductTypeEnum? ProductType { get; set; }
+        /// <value>Type of item (Product, Modifier, etc)</value>
+        [DataMember(Name="ItemType", EmitDefaultValue=false)]
+        public ItemTypeEnum ItemType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Product" /> class.
         /// </summary>
-        /// <param name="productId">Unique product id.</param>
-        /// <param name="sku">Stock Keeping Unit (SKU).</param>
-        /// <param name="name">Product name.</param>
-        /// <param name="description">Product description.</param>
-        /// <param name="price">Product price.</param>
-        /// <param name="productType">Product Type (SimpleProduct, Modifier, ModifierGroup, etc).</param>
+        [JsonConstructorAttribute]
+        protected Product() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Product" /> class.
+        /// </summary>
+        /// <param name="catalogItemId">Unique catalog Item id.</param>
+        /// <param name="isArchived">Returns true if the item is archived.</param>
+        /// <param name="groups">Collection of groups associated with this item.</param>
+        /// <param name="metafields">Collection of metafields.</param>
+        /// <param name="itemType">Type of item (Product, Modifier, etc) (required).</param>
+        /// <param name="sku">Stock Keeping Unit (SKU) (required).</param>
+        /// <param name="name">Item name (required).</param>
+        /// <param name="description">Item description.</param>
+        /// <param name="price">Item price (required).</param>
         /// <param name="imageFileName">Image File Name.</param>
-        /// <param name="isArchived">Returns true if the product is archived.</param>
-        /// <param name="alcohol">Product contains alcohol.</param>
-        public Product(string productId = default(string), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), ProductTypeEnum? productType = default(ProductTypeEnum?), string imageFileName = default(string), bool? isArchived = default(bool?), bool? alcohol = default(bool?))
+        /// <param name="alcohol">item contains alcohol.</param>
+        public Product(string catalogItemId = default(string), bool? isArchived = default(bool?), List<GroupReference> groups = default(List<GroupReference>), List<Metafield> metafields = default(List<Metafield>), ItemTypeEnum itemType = default(ItemTypeEnum), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string imageFileName = default(string), bool? alcohol = default(bool?))
         {
-            this.ProductId = productId;
-            this.Sku = sku;
-            this.Name = name;
-            this.Description = description;
-            this.Price = price;
-            this.ProductType = productType;
-            this.ImageFileName = imageFileName;
+            // to ensure "itemType" is required (not null)
+            if (itemType == null)
+            {
+                throw new InvalidDataException("itemType is a required property for Product and cannot be null");
+            }
+            else
+            {
+                this.ItemType = itemType;
+            }
+            // to ensure "sku" is required (not null)
+            if (sku == null)
+            {
+                throw new InvalidDataException("sku is a required property for Product and cannot be null");
+            }
+            else
+            {
+                this.Sku = sku;
+            }
+            // to ensure "name" is required (not null)
+            if (name == null)
+            {
+                throw new InvalidDataException("name is a required property for Product and cannot be null");
+            }
+            else
+            {
+                this.Name = name;
+            }
+            // to ensure "price" is required (not null)
+            if (price == null)
+            {
+                throw new InvalidDataException("price is a required property for Product and cannot be null");
+            }
+            else
+            {
+                this.Price = price;
+            }
+            this.CatalogItemId = catalogItemId;
             this.IsArchived = isArchived;
+            this.Groups = groups;
+            this.Metafields = metafields;
+            this.Description = description;
+            this.ImageFileName = imageFileName;
             this.Alcohol = alcohol;
         }
         
         /// <summary>
-        /// Unique product id
+        /// Unique catalog Item id
         /// </summary>
-        /// <value>Unique product id</value>
-        [DataMember(Name="ProductId", EmitDefaultValue=false)]
-        public string ProductId { get; set; }
+        /// <value>Unique catalog Item id</value>
+        [DataMember(Name="CatalogItemId", EmitDefaultValue=false)]
+        public string CatalogItemId { get; set; }
+
+        /// <summary>
+        /// Returns true if the item is archived
+        /// </summary>
+        /// <value>Returns true if the item is archived</value>
+        [DataMember(Name="IsArchived", EmitDefaultValue=false)]
+        public bool? IsArchived { get; set; }
+
+        /// <summary>
+        /// Collection of groups associated with this item
+        /// </summary>
+        /// <value>Collection of groups associated with this item</value>
+        [DataMember(Name="Groups", EmitDefaultValue=false)]
+        public List<GroupReference> Groups { get; set; }
+
+        /// <summary>
+        /// Collection of metafields
+        /// </summary>
+        /// <value>Collection of metafields</value>
+        [DataMember(Name="Metafields", EmitDefaultValue=false)]
+        public List<Metafield> Metafields { get; set; }
+
 
         /// <summary>
         /// Stock Keeping Unit (SKU)
@@ -103,26 +160,25 @@ namespace Flipdish.Model
         public string Sku { get; set; }
 
         /// <summary>
-        /// Product name
+        /// Item name
         /// </summary>
-        /// <value>Product name</value>
+        /// <value>Item name</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Product description
+        /// Item description
         /// </summary>
-        /// <value>Product description</value>
+        /// <value>Item description</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Product price
+        /// Item price
         /// </summary>
-        /// <value>Product price</value>
+        /// <value>Item price</value>
         [DataMember(Name="Price", EmitDefaultValue=false)]
         public double? Price { get; set; }
-
 
         /// <summary>
         /// Image File Name
@@ -132,16 +188,9 @@ namespace Flipdish.Model
         public string ImageFileName { get; set; }
 
         /// <summary>
-        /// Returns true if the product is archived
+        /// item contains alcohol
         /// </summary>
-        /// <value>Returns true if the product is archived</value>
-        [DataMember(Name="IsArchived", EmitDefaultValue=false)]
-        public bool? IsArchived { get; set; }
-
-        /// <summary>
-        /// Product contains alcohol
-        /// </summary>
-        /// <value>Product contains alcohol</value>
+        /// <value>item contains alcohol</value>
         [DataMember(Name="Alcohol", EmitDefaultValue=false)]
         public bool? Alcohol { get; set; }
 
@@ -153,14 +202,16 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Product {\n");
-            sb.Append("  ProductId: ").Append(ProductId).Append("\n");
+            sb.Append("  CatalogItemId: ").Append(CatalogItemId).Append("\n");
+            sb.Append("  IsArchived: ").Append(IsArchived).Append("\n");
+            sb.Append("  Groups: ").Append(Groups).Append("\n");
+            sb.Append("  Metafields: ").Append(Metafields).Append("\n");
+            sb.Append("  ItemType: ").Append(ItemType).Append("\n");
             sb.Append("  Sku: ").Append(Sku).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
-            sb.Append("  ProductType: ").Append(ProductType).Append("\n");
             sb.Append("  ImageFileName: ").Append(ImageFileName).Append("\n");
-            sb.Append("  IsArchived: ").Append(IsArchived).Append("\n");
             sb.Append("  Alcohol: ").Append(Alcohol).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -197,9 +248,29 @@ namespace Flipdish.Model
 
             return 
                 (
-                    this.ProductId == input.ProductId ||
-                    (this.ProductId != null &&
-                    this.ProductId.Equals(input.ProductId))
+                    this.CatalogItemId == input.CatalogItemId ||
+                    (this.CatalogItemId != null &&
+                    this.CatalogItemId.Equals(input.CatalogItemId))
+                ) && 
+                (
+                    this.IsArchived == input.IsArchived ||
+                    (this.IsArchived != null &&
+                    this.IsArchived.Equals(input.IsArchived))
+                ) && 
+                (
+                    this.Groups == input.Groups ||
+                    this.Groups != null &&
+                    this.Groups.SequenceEqual(input.Groups)
+                ) && 
+                (
+                    this.Metafields == input.Metafields ||
+                    this.Metafields != null &&
+                    this.Metafields.SequenceEqual(input.Metafields)
+                ) && 
+                (
+                    this.ItemType == input.ItemType ||
+                    (this.ItemType != null &&
+                    this.ItemType.Equals(input.ItemType))
                 ) && 
                 (
                     this.Sku == input.Sku ||
@@ -222,19 +293,9 @@ namespace Flipdish.Model
                     this.Price.Equals(input.Price))
                 ) && 
                 (
-                    this.ProductType == input.ProductType ||
-                    (this.ProductType != null &&
-                    this.ProductType.Equals(input.ProductType))
-                ) && 
-                (
                     this.ImageFileName == input.ImageFileName ||
                     (this.ImageFileName != null &&
                     this.ImageFileName.Equals(input.ImageFileName))
-                ) && 
-                (
-                    this.IsArchived == input.IsArchived ||
-                    (this.IsArchived != null &&
-                    this.IsArchived.Equals(input.IsArchived))
                 ) && 
                 (
                     this.Alcohol == input.Alcohol ||
@@ -252,8 +313,16 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ProductId != null)
-                    hashCode = hashCode * 59 + this.ProductId.GetHashCode();
+                if (this.CatalogItemId != null)
+                    hashCode = hashCode * 59 + this.CatalogItemId.GetHashCode();
+                if (this.IsArchived != null)
+                    hashCode = hashCode * 59 + this.IsArchived.GetHashCode();
+                if (this.Groups != null)
+                    hashCode = hashCode * 59 + this.Groups.GetHashCode();
+                if (this.Metafields != null)
+                    hashCode = hashCode * 59 + this.Metafields.GetHashCode();
+                if (this.ItemType != null)
+                    hashCode = hashCode * 59 + this.ItemType.GetHashCode();
                 if (this.Sku != null)
                     hashCode = hashCode * 59 + this.Sku.GetHashCode();
                 if (this.Name != null)
@@ -262,12 +331,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Price != null)
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
-                if (this.ProductType != null)
-                    hashCode = hashCode * 59 + this.ProductType.GetHashCode();
                 if (this.ImageFileName != null)
                     hashCode = hashCode * 59 + this.ImageFileName.GetHashCode();
-                if (this.IsArchived != null)
-                    hashCode = hashCode * 59 + this.IsArchived.GetHashCode();
                 if (this.Alcohol != null)
                     hashCode = hashCode * 59 + this.Alcohol.GetHashCode();
                 return hashCode;
@@ -281,16 +346,16 @@ namespace Flipdish.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // ProductId (string) maxLength
-            if(this.ProductId != null && this.ProductId.Length > 30)
+            // CatalogItemId (string) maxLength
+            if(this.CatalogItemId != null && this.CatalogItemId.Length > 30)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ProductId, length must be less than 30.", new [] { "ProductId" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CatalogItemId, length must be less than 30.", new [] { "CatalogItemId" });
             }
 
-            // ProductId (string) minLength
-            if(this.ProductId != null && this.ProductId.Length < 0)
+            // CatalogItemId (string) minLength
+            if(this.CatalogItemId != null && this.CatalogItemId.Length < 0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ProductId, length must be greater than 0.", new [] { "ProductId" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CatalogItemId, length must be greater than 0.", new [] { "CatalogItemId" });
             }
 
             // Sku (string) maxLength
