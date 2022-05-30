@@ -32,9 +32,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns></returns>
-        void ArchiveCatalogGroup (string appId, string catalogGroupId);
+        void ArchiveGroup (string appId, string catalogItemId);
 
         /// <summary>
         /// Archive Catalog Group
@@ -44,9 +44,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ArchiveCatalogGroupWithHttpInfo (string appId, string catalogGroupId);
+        ApiResponse<Object> ArchiveGroupWithHttpInfo (string appId, string catalogItemId);
         /// <summary>
         /// Create a Catalog Group
         /// </summary>
@@ -78,9 +78,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns></returns>
-        void DuplicateCatalogGroup (string appId, string catalogGroupId);
+        void DuplicateGroup (string appId, string catalogItemId);
 
         /// <summary>
         /// Duplicate Catalog Group
@@ -90,9 +90,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DuplicateCatalogGroupWithHttpInfo (string appId, string catalogGroupId);
+        ApiResponse<Object> DuplicateGroupWithHttpInfo (string appId, string catalogItemId);
         /// <summary>
         /// Get group by Id
         /// </summary>
@@ -101,9 +101,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>CatalogGroup</returns>
-        CatalogGroup GetCatalogGroupById (string appId, string catalogGroupId);
+        CatalogGroup GetGroupById (string appId, string catalogItemId);
 
         /// <summary>
         /// Get group by Id
@@ -113,9 +113,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>ApiResponse of CatalogGroup</returns>
-        ApiResponse<CatalogGroup> GetCatalogGroupByIdWithHttpInfo (string appId, string catalogGroupId);
+        ApiResponse<CatalogGroup> GetGroupByIdWithHttpInfo (string appId, string catalogItemId);
         /// <summary>
         /// Get paginated groups by app name id filtered by types
         /// </summary>
@@ -153,10 +153,10 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <param name="updateCatalogGroup"></param>
         /// <returns></returns>
-        void UpdateCatalogGroup (string appId, string catalogGroupId, UpdateCatalogGroup updateCatalogGroup);
+        void UpdateGroup (string appId, string catalogItemId, UpdateCatalogGroup updateCatalogGroup);
 
         /// <summary>
         /// Update Catalog Group
@@ -166,10 +166,10 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <param name="updateCatalogGroup"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateCatalogGroupWithHttpInfo (string appId, string catalogGroupId, UpdateCatalogGroup updateCatalogGroup);
+        ApiResponse<Object> UpdateGroupWithHttpInfo (string appId, string catalogItemId, UpdateCatalogGroup updateCatalogGroup);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -180,9 +180,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ArchiveCatalogGroupAsync (string appId, string catalogGroupId);
+        System.Threading.Tasks.Task ArchiveGroupAsync (string appId, string catalogItemId);
 
         /// <summary>
         /// Archive Catalog Group
@@ -192,9 +192,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ArchiveCatalogGroupAsyncWithHttpInfo (string appId, string catalogGroupId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ArchiveGroupAsyncWithHttpInfo (string appId, string catalogItemId);
         /// <summary>
         /// Create a Catalog Group
         /// </summary>
@@ -226,9 +226,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DuplicateCatalogGroupAsync (string appId, string catalogGroupId);
+        System.Threading.Tasks.Task DuplicateGroupAsync (string appId, string catalogItemId);
 
         /// <summary>
         /// Duplicate Catalog Group
@@ -238,9 +238,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DuplicateCatalogGroupAsyncWithHttpInfo (string appId, string catalogGroupId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DuplicateGroupAsyncWithHttpInfo (string appId, string catalogItemId);
         /// <summary>
         /// Get group by Id
         /// </summary>
@@ -249,9 +249,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>Task of CatalogGroup</returns>
-        System.Threading.Tasks.Task<CatalogGroup> GetCatalogGroupByIdAsync (string appId, string catalogGroupId);
+        System.Threading.Tasks.Task<CatalogGroup> GetGroupByIdAsync (string appId, string catalogItemId);
 
         /// <summary>
         /// Get group by Id
@@ -261,9 +261,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>Task of ApiResponse (CatalogGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CatalogGroup>> GetCatalogGroupByIdAsyncWithHttpInfo (string appId, string catalogGroupId);
+        System.Threading.Tasks.Task<ApiResponse<CatalogGroup>> GetGroupByIdAsyncWithHttpInfo (string appId, string catalogItemId);
         /// <summary>
         /// Get paginated groups by app name id filtered by types
         /// </summary>
@@ -301,10 +301,10 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <param name="updateCatalogGroup"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateCatalogGroupAsync (string appId, string catalogGroupId, UpdateCatalogGroup updateCatalogGroup);
+        System.Threading.Tasks.Task UpdateGroupAsync (string appId, string catalogItemId, UpdateCatalogGroup updateCatalogGroup);
 
         /// <summary>
         /// Update Catalog Group
@@ -314,10 +314,10 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <param name="updateCatalogGroup"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateCatalogGroupAsyncWithHttpInfo (string appId, string catalogGroupId, UpdateCatalogGroup updateCatalogGroup);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateGroupAsyncWithHttpInfo (string appId, string catalogItemId, UpdateCatalogGroup updateCatalogGroup);
         #endregion Asynchronous Operations
     }
 
@@ -423,11 +423,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns></returns>
-        public void ArchiveCatalogGroup (string appId, string catalogGroupId)
+        public void ArchiveGroup (string appId, string catalogItemId)
         {
-             ArchiveCatalogGroupWithHttpInfo(appId, catalogGroupId);
+             ArchiveGroupWithHttpInfo(appId, catalogItemId);
         }
 
         /// <summary>
@@ -435,18 +435,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ArchiveCatalogGroupWithHttpInfo (string appId, string catalogGroupId)
+        public ApiResponse<Object> ArchiveGroupWithHttpInfo (string appId, string catalogItemId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->ArchiveCatalogGroup");
-            // verify the required parameter 'catalogGroupId' is set
-            if (catalogGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'catalogGroupId' when calling CatalogGroupsApi->ArchiveCatalogGroup");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->ArchiveGroup");
+            // verify the required parameter 'catalogItemId' is set
+            if (catalogItemId == null)
+                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogGroupsApi->ArchiveGroup");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogGroupId}/archive";
+            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -471,7 +471,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (catalogGroupId != null) localVarPathParams.Add("catalogGroupId", this.Configuration.ApiClient.ParameterToString(catalogGroupId)); // path parameter
+            if (catalogItemId != null) localVarPathParams.Add("catalogItemId", this.Configuration.ApiClient.ParameterToString(catalogItemId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -489,7 +489,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ArchiveCatalogGroup", localVarResponse);
+                Exception exception = ExceptionFactory("ArchiveGroup", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -503,11 +503,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ArchiveCatalogGroupAsync (string appId, string catalogGroupId)
+        public async System.Threading.Tasks.Task ArchiveGroupAsync (string appId, string catalogItemId)
         {
-             await ArchiveCatalogGroupAsyncWithHttpInfo(appId, catalogGroupId);
+             await ArchiveGroupAsyncWithHttpInfo(appId, catalogItemId);
 
         }
 
@@ -516,18 +516,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ArchiveCatalogGroupAsyncWithHttpInfo (string appId, string catalogGroupId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ArchiveGroupAsyncWithHttpInfo (string appId, string catalogItemId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->ArchiveCatalogGroup");
-            // verify the required parameter 'catalogGroupId' is set
-            if (catalogGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'catalogGroupId' when calling CatalogGroupsApi->ArchiveCatalogGroup");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->ArchiveGroup");
+            // verify the required parameter 'catalogItemId' is set
+            if (catalogItemId == null)
+                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogGroupsApi->ArchiveGroup");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogGroupId}/archive";
+            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -552,7 +552,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (catalogGroupId != null) localVarPathParams.Add("catalogGroupId", this.Configuration.ApiClient.ParameterToString(catalogGroupId)); // path parameter
+            if (catalogItemId != null) localVarPathParams.Add("catalogItemId", this.Configuration.ApiClient.ParameterToString(catalogItemId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -570,7 +570,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ArchiveCatalogGroup", localVarResponse);
+                Exception exception = ExceptionFactory("ArchiveGroup", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -771,11 +771,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns></returns>
-        public void DuplicateCatalogGroup (string appId, string catalogGroupId)
+        public void DuplicateGroup (string appId, string catalogItemId)
         {
-             DuplicateCatalogGroupWithHttpInfo(appId, catalogGroupId);
+             DuplicateGroupWithHttpInfo(appId, catalogItemId);
         }
 
         /// <summary>
@@ -783,18 +783,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DuplicateCatalogGroupWithHttpInfo (string appId, string catalogGroupId)
+        public ApiResponse<Object> DuplicateGroupWithHttpInfo (string appId, string catalogItemId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->DuplicateCatalogGroup");
-            // verify the required parameter 'catalogGroupId' is set
-            if (catalogGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'catalogGroupId' when calling CatalogGroupsApi->DuplicateCatalogGroup");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->DuplicateGroup");
+            // verify the required parameter 'catalogItemId' is set
+            if (catalogItemId == null)
+                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogGroupsApi->DuplicateGroup");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogGroupId}/duplicate";
+            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -819,7 +819,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (catalogGroupId != null) localVarPathParams.Add("catalogGroupId", this.Configuration.ApiClient.ParameterToString(catalogGroupId)); // path parameter
+            if (catalogItemId != null) localVarPathParams.Add("catalogItemId", this.Configuration.ApiClient.ParameterToString(catalogItemId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -837,7 +837,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DuplicateCatalogGroup", localVarResponse);
+                Exception exception = ExceptionFactory("DuplicateGroup", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -851,11 +851,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DuplicateCatalogGroupAsync (string appId, string catalogGroupId)
+        public async System.Threading.Tasks.Task DuplicateGroupAsync (string appId, string catalogItemId)
         {
-             await DuplicateCatalogGroupAsyncWithHttpInfo(appId, catalogGroupId);
+             await DuplicateGroupAsyncWithHttpInfo(appId, catalogItemId);
 
         }
 
@@ -864,18 +864,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DuplicateCatalogGroupAsyncWithHttpInfo (string appId, string catalogGroupId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DuplicateGroupAsyncWithHttpInfo (string appId, string catalogItemId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->DuplicateCatalogGroup");
-            // verify the required parameter 'catalogGroupId' is set
-            if (catalogGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'catalogGroupId' when calling CatalogGroupsApi->DuplicateCatalogGroup");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->DuplicateGroup");
+            // verify the required parameter 'catalogItemId' is set
+            if (catalogItemId == null)
+                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogGroupsApi->DuplicateGroup");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogGroupId}/duplicate";
+            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -900,7 +900,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (catalogGroupId != null) localVarPathParams.Add("catalogGroupId", this.Configuration.ApiClient.ParameterToString(catalogGroupId)); // path parameter
+            if (catalogItemId != null) localVarPathParams.Add("catalogItemId", this.Configuration.ApiClient.ParameterToString(catalogItemId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -918,7 +918,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DuplicateCatalogGroup", localVarResponse);
+                Exception exception = ExceptionFactory("DuplicateGroup", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -932,11 +932,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>CatalogGroup</returns>
-        public CatalogGroup GetCatalogGroupById (string appId, string catalogGroupId)
+        public CatalogGroup GetGroupById (string appId, string catalogItemId)
         {
-             ApiResponse<CatalogGroup> localVarResponse = GetCatalogGroupByIdWithHttpInfo(appId, catalogGroupId);
+             ApiResponse<CatalogGroup> localVarResponse = GetGroupByIdWithHttpInfo(appId, catalogItemId);
              return localVarResponse.Data;
         }
 
@@ -945,18 +945,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>ApiResponse of CatalogGroup</returns>
-        public ApiResponse< CatalogGroup > GetCatalogGroupByIdWithHttpInfo (string appId, string catalogGroupId)
+        public ApiResponse< CatalogGroup > GetGroupByIdWithHttpInfo (string appId, string catalogItemId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->GetCatalogGroupById");
-            // verify the required parameter 'catalogGroupId' is set
-            if (catalogGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'catalogGroupId' when calling CatalogGroupsApi->GetCatalogGroupById");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->GetGroupById");
+            // verify the required parameter 'catalogItemId' is set
+            if (catalogItemId == null)
+                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogGroupsApi->GetGroupById");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogGroupId}";
+            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogItemId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -981,7 +981,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (catalogGroupId != null) localVarPathParams.Add("catalogGroupId", this.Configuration.ApiClient.ParameterToString(catalogGroupId)); // path parameter
+            if (catalogItemId != null) localVarPathParams.Add("catalogItemId", this.Configuration.ApiClient.ParameterToString(catalogItemId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -999,7 +999,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetCatalogGroupById", localVarResponse);
+                Exception exception = ExceptionFactory("GetGroupById", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1013,11 +1013,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>Task of CatalogGroup</returns>
-        public async System.Threading.Tasks.Task<CatalogGroup> GetCatalogGroupByIdAsync (string appId, string catalogGroupId)
+        public async System.Threading.Tasks.Task<CatalogGroup> GetGroupByIdAsync (string appId, string catalogItemId)
         {
-             ApiResponse<CatalogGroup> localVarResponse = await GetCatalogGroupByIdAsyncWithHttpInfo(appId, catalogGroupId);
+             ApiResponse<CatalogGroup> localVarResponse = await GetGroupByIdAsyncWithHttpInfo(appId, catalogItemId);
              return localVarResponse.Data;
 
         }
@@ -1027,18 +1027,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <returns>Task of ApiResponse (CatalogGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CatalogGroup>> GetCatalogGroupByIdAsyncWithHttpInfo (string appId, string catalogGroupId)
+        public async System.Threading.Tasks.Task<ApiResponse<CatalogGroup>> GetGroupByIdAsyncWithHttpInfo (string appId, string catalogItemId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->GetCatalogGroupById");
-            // verify the required parameter 'catalogGroupId' is set
-            if (catalogGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'catalogGroupId' when calling CatalogGroupsApi->GetCatalogGroupById");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->GetGroupById");
+            // verify the required parameter 'catalogItemId' is set
+            if (catalogItemId == null)
+                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogGroupsApi->GetGroupById");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogGroupId}";
+            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogItemId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1063,7 +1063,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (catalogGroupId != null) localVarPathParams.Add("catalogGroupId", this.Configuration.ApiClient.ParameterToString(catalogGroupId)); // path parameter
+            if (catalogItemId != null) localVarPathParams.Add("catalogItemId", this.Configuration.ApiClient.ParameterToString(catalogItemId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1081,7 +1081,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetCatalogGroupById", localVarResponse);
+                Exception exception = ExceptionFactory("GetGroupById", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1276,12 +1276,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <param name="updateCatalogGroup"></param>
         /// <returns></returns>
-        public void UpdateCatalogGroup (string appId, string catalogGroupId, UpdateCatalogGroup updateCatalogGroup)
+        public void UpdateGroup (string appId, string catalogItemId, UpdateCatalogGroup updateCatalogGroup)
         {
-             UpdateCatalogGroupWithHttpInfo(appId, catalogGroupId, updateCatalogGroup);
+             UpdateGroupWithHttpInfo(appId, catalogItemId, updateCatalogGroup);
         }
 
         /// <summary>
@@ -1289,22 +1289,22 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <param name="updateCatalogGroup"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateCatalogGroupWithHttpInfo (string appId, string catalogGroupId, UpdateCatalogGroup updateCatalogGroup)
+        public ApiResponse<Object> UpdateGroupWithHttpInfo (string appId, string catalogItemId, UpdateCatalogGroup updateCatalogGroup)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->UpdateCatalogGroup");
-            // verify the required parameter 'catalogGroupId' is set
-            if (catalogGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'catalogGroupId' when calling CatalogGroupsApi->UpdateCatalogGroup");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->UpdateGroup");
+            // verify the required parameter 'catalogItemId' is set
+            if (catalogItemId == null)
+                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogGroupsApi->UpdateGroup");
             // verify the required parameter 'updateCatalogGroup' is set
             if (updateCatalogGroup == null)
-                throw new ApiException(400, "Missing required parameter 'updateCatalogGroup' when calling CatalogGroupsApi->UpdateCatalogGroup");
+                throw new ApiException(400, "Missing required parameter 'updateCatalogGroup' when calling CatalogGroupsApi->UpdateGroup");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogGroupId}";
+            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogItemId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1334,7 +1334,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (catalogGroupId != null) localVarPathParams.Add("catalogGroupId", this.Configuration.ApiClient.ParameterToString(catalogGroupId)); // path parameter
+            if (catalogItemId != null) localVarPathParams.Add("catalogItemId", this.Configuration.ApiClient.ParameterToString(catalogItemId)); // path parameter
             if (updateCatalogGroup != null && updateCatalogGroup.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateCatalogGroup); // http body (model) parameter
@@ -1360,7 +1360,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateCatalogGroup", localVarResponse);
+                Exception exception = ExceptionFactory("UpdateGroup", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1374,12 +1374,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <param name="updateCatalogGroup"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateCatalogGroupAsync (string appId, string catalogGroupId, UpdateCatalogGroup updateCatalogGroup)
+        public async System.Threading.Tasks.Task UpdateGroupAsync (string appId, string catalogItemId, UpdateCatalogGroup updateCatalogGroup)
         {
-             await UpdateCatalogGroupAsyncWithHttpInfo(appId, catalogGroupId, updateCatalogGroup);
+             await UpdateGroupAsyncWithHttpInfo(appId, catalogItemId, updateCatalogGroup);
 
         }
 
@@ -1388,22 +1388,22 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="catalogGroupId"></param>
+        /// <param name="catalogItemId"></param>
         /// <param name="updateCatalogGroup"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateCatalogGroupAsyncWithHttpInfo (string appId, string catalogGroupId, UpdateCatalogGroup updateCatalogGroup)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateGroupAsyncWithHttpInfo (string appId, string catalogItemId, UpdateCatalogGroup updateCatalogGroup)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->UpdateCatalogGroup");
-            // verify the required parameter 'catalogGroupId' is set
-            if (catalogGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'catalogGroupId' when calling CatalogGroupsApi->UpdateCatalogGroup");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CatalogGroupsApi->UpdateGroup");
+            // verify the required parameter 'catalogItemId' is set
+            if (catalogItemId == null)
+                throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogGroupsApi->UpdateGroup");
             // verify the required parameter 'updateCatalogGroup' is set
             if (updateCatalogGroup == null)
-                throw new ApiException(400, "Missing required parameter 'updateCatalogGroup' when calling CatalogGroupsApi->UpdateCatalogGroup");
+                throw new ApiException(400, "Missing required parameter 'updateCatalogGroup' when calling CatalogGroupsApi->UpdateGroup");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogGroupId}";
+            var localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogItemId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1433,7 +1433,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (catalogGroupId != null) localVarPathParams.Add("catalogGroupId", this.Configuration.ApiClient.ParameterToString(catalogGroupId)); // path parameter
+            if (catalogItemId != null) localVarPathParams.Add("catalogItemId", this.Configuration.ApiClient.ParameterToString(catalogItemId)); // path parameter
             if (updateCatalogGroup != null && updateCatalogGroup.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateCatalogGroup); // http body (model) parameter
@@ -1459,7 +1459,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateCatalogGroup", localVarResponse);
+                Exception exception = ExceptionFactory("UpdateGroup", localVarResponse);
                 if (exception != null) throw exception;
             }
 

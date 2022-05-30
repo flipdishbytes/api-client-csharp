@@ -4,17 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ArchiveCatalogGroup**](CatalogGroupsApi.md#archivecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId}/archive | Archive Catalog Group
+[**ArchiveGroup**](CatalogGroupsApi.md#archivegroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | Archive Catalog Group
 [**CreateCatalogGroup**](CatalogGroupsApi.md#createcataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
-[**DuplicateCatalogGroup**](CatalogGroupsApi.md#duplicatecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId}/duplicate | Duplicate Catalog Group
-[**GetCatalogGroupById**](CatalogGroupsApi.md#getcataloggroupbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Get group by Id
+[**DuplicateGroup**](CatalogGroupsApi.md#duplicategroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate | Duplicate Catalog Group
+[**GetGroupById**](CatalogGroupsApi.md#getgroupbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Get group by Id
 [**GetGroups**](CatalogGroupsApi.md#getgroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
-[**UpdateCatalogGroup**](CatalogGroupsApi.md#updatecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Update Catalog Group
+[**UpdateGroup**](CatalogGroupsApi.md#updategroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Update Catalog Group
 
 
-<a name="archivecataloggroup"></a>
-# **ArchiveCatalogGroup**
-> void ArchiveCatalogGroup (string appId, string catalogGroupId)
+<a name="archivegroup"></a>
+# **ArchiveGroup**
+> void ArchiveGroup (string appId, string catalogItemId)
 
 Archive Catalog Group
 
@@ -30,7 +30,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class ArchiveCatalogGroupExample
+    public class ArchiveGroupExample
     {
         public void main()
         {
@@ -39,16 +39,16 @@ namespace Example
 
             var apiInstance = new CatalogGroupsApi();
             var appId = appId_example;  // string | 
-            var catalogGroupId = catalogGroupId_example;  // string | 
+            var catalogItemId = catalogItemId_example;  // string | 
 
             try
             {
                 // Archive Catalog Group
-                apiInstance.ArchiveCatalogGroup(appId, catalogGroupId);
+                apiInstance.ArchiveGroup(appId, catalogItemId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling CatalogGroupsApi.ArchiveCatalogGroup: " + e.Message );
+                Debug.Print("Exception when calling CatalogGroupsApi.ArchiveGroup: " + e.Message );
             }
         }
     }
@@ -60,7 +60,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **catalogGroupId** | **string**|  | 
+ **catalogItemId** | **string**|  | 
 
 ### Return type
 
@@ -143,9 +143,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="duplicatecataloggroup"></a>
-# **DuplicateCatalogGroup**
-> void DuplicateCatalogGroup (string appId, string catalogGroupId)
+<a name="duplicategroup"></a>
+# **DuplicateGroup**
+> void DuplicateGroup (string appId, string catalogItemId)
 
 Duplicate Catalog Group
 
@@ -161,7 +161,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class DuplicateCatalogGroupExample
+    public class DuplicateGroupExample
     {
         public void main()
         {
@@ -170,16 +170,16 @@ namespace Example
 
             var apiInstance = new CatalogGroupsApi();
             var appId = appId_example;  // string | 
-            var catalogGroupId = catalogGroupId_example;  // string | 
+            var catalogItemId = catalogItemId_example;  // string | 
 
             try
             {
                 // Duplicate Catalog Group
-                apiInstance.DuplicateCatalogGroup(appId, catalogGroupId);
+                apiInstance.DuplicateGroup(appId, catalogItemId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling CatalogGroupsApi.DuplicateCatalogGroup: " + e.Message );
+                Debug.Print("Exception when calling CatalogGroupsApi.DuplicateGroup: " + e.Message );
             }
         }
     }
@@ -191,7 +191,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **catalogGroupId** | **string**|  | 
+ **catalogItemId** | **string**|  | 
 
 ### Return type
 
@@ -208,9 +208,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getcataloggroupbyid"></a>
-# **GetCatalogGroupById**
-> CatalogGroup GetCatalogGroupById (string appId, string catalogGroupId)
+<a name="getgroupbyid"></a>
+# **GetGroupById**
+> CatalogGroup GetGroupById (string appId, string catalogItemId)
 
 Get group by Id
 
@@ -226,7 +226,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GetCatalogGroupByIdExample
+    public class GetGroupByIdExample
     {
         public void main()
         {
@@ -235,17 +235,17 @@ namespace Example
 
             var apiInstance = new CatalogGroupsApi();
             var appId = appId_example;  // string | 
-            var catalogGroupId = catalogGroupId_example;  // string | 
+            var catalogItemId = catalogItemId_example;  // string | 
 
             try
             {
                 // Get group by Id
-                CatalogGroup result = apiInstance.GetCatalogGroupById(appId, catalogGroupId);
+                CatalogGroup result = apiInstance.GetGroupById(appId, catalogItemId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling CatalogGroupsApi.GetCatalogGroupById: " + e.Message );
+                Debug.Print("Exception when calling CatalogGroupsApi.GetGroupById: " + e.Message );
             }
         }
     }
@@ -257,7 +257,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **catalogGroupId** | **string**|  | 
+ **catalogItemId** | **string**|  | 
 
 ### Return type
 
@@ -346,9 +346,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatecataloggroup"></a>
-# **UpdateCatalogGroup**
-> void UpdateCatalogGroup (string appId, string catalogGroupId, UpdateCatalogGroup updateCatalogGroup)
+<a name="updategroup"></a>
+# **UpdateGroup**
+> void UpdateGroup (string appId, string catalogItemId, UpdateCatalogGroup updateCatalogGroup)
 
 Update Catalog Group
 
@@ -364,7 +364,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class UpdateCatalogGroupExample
+    public class UpdateGroupExample
     {
         public void main()
         {
@@ -373,17 +373,17 @@ namespace Example
 
             var apiInstance = new CatalogGroupsApi();
             var appId = appId_example;  // string | 
-            var catalogGroupId = catalogGroupId_example;  // string | 
+            var catalogItemId = catalogItemId_example;  // string | 
             var updateCatalogGroup = new UpdateCatalogGroup(); // UpdateCatalogGroup | 
 
             try
             {
                 // Update Catalog Group
-                apiInstance.UpdateCatalogGroup(appId, catalogGroupId, updateCatalogGroup);
+                apiInstance.UpdateGroup(appId, catalogItemId, updateCatalogGroup);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling CatalogGroupsApi.UpdateCatalogGroup: " + e.Message );
+                Debug.Print("Exception when calling CatalogGroupsApi.UpdateGroup: " + e.Message );
             }
         }
     }
@@ -395,7 +395,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **catalogGroupId** | **string**|  | 
+ **catalogItemId** | **string**|  | 
  **updateCatalogGroup** | [**UpdateCatalogGroup**](UpdateCatalogGroup.md)|  | 
 
 ### Return type

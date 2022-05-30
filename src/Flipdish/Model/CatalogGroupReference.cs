@@ -61,8 +61,9 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="group">Details of the referenced {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}.</param>
         /// <param name="catalogGroupId">Identifier of the ProductId to use as SubProduct (required).</param>
+        /// <param name="catalogItemId">Identifier of the ProductId to use as SubProduct.</param>
         /// <param name="groupType">Type of the SupProduct (required).</param>
-        public CatalogGroupReference(CatalogGroup group = default(CatalogGroup), string catalogGroupId = default(string), GroupTypeEnum groupType = default(GroupTypeEnum))
+        public CatalogGroupReference(CatalogGroup group = default(CatalogGroup), string catalogGroupId = default(string), string catalogItemId = default(string), GroupTypeEnum groupType = default(GroupTypeEnum))
         {
             // to ensure "catalogGroupId" is required (not null)
             if (catalogGroupId == null)
@@ -83,6 +84,7 @@ namespace Flipdish.Model
                 this.GroupType = groupType;
             }
             this.Group = group;
+            this.CatalogItemId = catalogItemId;
         }
         
         /// <summary>
@@ -99,6 +101,13 @@ namespace Flipdish.Model
         [DataMember(Name="CatalogGroupId", EmitDefaultValue=false)]
         public string CatalogGroupId { get; set; }
 
+        /// <summary>
+        /// Identifier of the ProductId to use as SubProduct
+        /// </summary>
+        /// <value>Identifier of the ProductId to use as SubProduct</value>
+        [DataMember(Name="CatalogItemId", EmitDefaultValue=false)]
+        public string CatalogItemId { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -110,6 +119,7 @@ namespace Flipdish.Model
             sb.Append("class CatalogGroupReference {\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  CatalogGroupId: ").Append(CatalogGroupId).Append("\n");
+            sb.Append("  CatalogItemId: ").Append(CatalogItemId).Append("\n");
             sb.Append("  GroupType: ").Append(GroupType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -156,6 +166,11 @@ namespace Flipdish.Model
                     this.CatalogGroupId.Equals(input.CatalogGroupId))
                 ) && 
                 (
+                    this.CatalogItemId == input.CatalogItemId ||
+                    (this.CatalogItemId != null &&
+                    this.CatalogItemId.Equals(input.CatalogItemId))
+                ) && 
+                (
                     this.GroupType == input.GroupType ||
                     (this.GroupType != null &&
                     this.GroupType.Equals(input.GroupType))
@@ -175,6 +190,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Group.GetHashCode();
                 if (this.CatalogGroupId != null)
                     hashCode = hashCode * 59 + this.CatalogGroupId.GetHashCode();
+                if (this.CatalogItemId != null)
+                    hashCode = hashCode * 59 + this.CatalogItemId.GetHashCode();
                 if (this.GroupType != null)
                     hashCode = hashCode * 59 + this.GroupType.GetHashCode();
                 return hashCode;
@@ -198,6 +215,18 @@ namespace Flipdish.Model
             if(this.CatalogGroupId != null && this.CatalogGroupId.Length < 0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CatalogGroupId, length must be greater than 0.", new [] { "CatalogGroupId" });
+            }
+
+            // CatalogItemId (string) maxLength
+            if(this.CatalogItemId != null && this.CatalogItemId.Length > 30)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CatalogItemId, length must be less than 30.", new [] { "CatalogItemId" });
+            }
+
+            // CatalogItemId (string) minLength
+            if(this.CatalogItemId != null && this.CatalogItemId.Length < 0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CatalogItemId, length must be greater than 0.", new [] { "CatalogItemId" });
             }
 
             yield break;
