@@ -282,6 +282,7 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**UnassignEmv**](docs/HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | Unassign the currently assigned EMV terminal from a kiosk
 *HydraApi* | [**UpdateKioskCashVisibilitySettings**](docs/HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | Update the Cash Payment Methon Visiability on Kisok
 *KioskIotApi* | [**GetKioskIotConnection**](docs/KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
+*KioskIotApi* | [**QueryTelemetrySeries**](docs/KioskIotApi.md#querytelemetryseries) | **POST** /api/v1.0/{appId}/kioskiot/timeseries/query | Get the IoT time series values for a given Kiosk Id, properties and time range
 *KioskStoreSettingsApi* | [**GetAllKioskSettingsForStore**](docs/KioskStoreSettingsApi.md#getallkiosksettingsforstore) | **GET** /api/v1.0/{appId}/kiosksettings/store/{storeId} | Get all kiosk settings associated with a store
 *KioskStoreSettingsApi* | [**GetAllStoreSettingsForKioskHydra**](docs/KioskStoreSettingsApi.md#getallstoresettingsforkioskhydra) | **GET** /api/v1.0/kioskstoresettings | [For Kiosk use only] Get all stores connected to a Kiosk
 *KioskStoreSettingsApi* | [**UpdateCashSettingForKiosk**](docs/KioskStoreSettingsApi.md#updatecashsettingforkiosk) | **POST** /api/v1.0/{appId}/kiosksettings/cash | 
@@ -989,6 +990,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultStripeTerminalPrivateKey](docs/RestApiResultStripeTerminalPrivateKey.md)
  - [Model.RestApiResultStuartSettings](docs/RestApiResultStuartSettings.md)
  - [Model.RestApiResultTeammate](docs/RestApiResultTeammate.md)
+ - [Model.RestApiResultTelemetrySeriesResult](docs/RestApiResultTelemetrySeriesResult.md)
  - [Model.RestApiResultTipConfiguration](docs/RestApiResultTipConfiguration.md)
  - [Model.RestApiResultVoucherWithStats](docs/RestApiResultVoucherWithStats.md)
  - [Model.RestApiResultWebsiteImage](docs/RestApiResultWebsiteImage.md)
@@ -1077,6 +1079,9 @@ Class | Method | HTTP request | Description
  - [Model.TeammateInviteAcceptedEvent](docs/TeammateInviteAcceptedEvent.md)
  - [Model.TeammateInviteSentEvent](docs/TeammateInviteSentEvent.md)
  - [Model.TeammateUpdatedEvent](docs/TeammateUpdatedEvent.md)
+ - [Model.TelemetrySeriesProperty](docs/TelemetrySeriesProperty.md)
+ - [Model.TelemetrySeriesQueryParameters](docs/TelemetrySeriesQueryParameters.md)
+ - [Model.TelemetrySeriesResult](docs/TelemetrySeriesResult.md)
  - [Model.TipConfiguration](docs/TipConfiguration.md)
  - [Model.UnRegisterCardReaderRequest](docs/UnRegisterCardReaderRequest.md)
  - [Model.UpdateAppStoreApp](docs/UpdateAppStoreApp.md)
