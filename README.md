@@ -902,6 +902,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultPayoutRefund](docs/RestApiPaginationResultPayoutRefund.md)
  - [Model.RestApiPaginationResultPendingMenuChanges](docs/RestApiPaginationResultPendingMenuChanges.md)
  - [Model.RestApiPaginationResultPhoneCall](docs/RestApiPaginationResultPhoneCall.md)
+ - [Model.RestApiPaginationResultProduct](docs/RestApiPaginationResultProduct.md)
  - [Model.RestApiPaginationResultPushNotificationResponse](docs/RestApiPaginationResultPushNotificationResponse.md)
  - [Model.RestApiPaginationResultStore](docs/RestApiPaginationResultStore.md)
  - [Model.RestApiPaginationResultStoreGroup](docs/RestApiPaginationResultStoreGroup.md)

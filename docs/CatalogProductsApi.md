@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 <a name="getproducts"></a>
 # **GetProducts**
-> RestApiPaginationResultCatalogItem GetProducts (string appId, List<string> itemTypes, string searchTerm = null, int? page = null, int? limit = null)
+> RestApiPaginationResultProduct GetProducts (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null)
 
 Get paginated products by app name id filtered by types
 
@@ -301,7 +301,7 @@ namespace Example
 
             var apiInstance = new CatalogProductsApi();
             var appId = appId_example;  // string | 
-            var itemTypes = itemTypes_example;  // List<string> | 
+            var productTypes = productTypes_example;  // List<string> | 
             var searchTerm = searchTerm_example;  // string |  (optional) 
             var page = 56;  // int? |  (optional) 
             var limit = 56;  // int? |  (optional) 
@@ -309,7 +309,7 @@ namespace Example
             try
             {
                 // Get paginated products by app name id filtered by types
-                RestApiPaginationResultCatalogItem result = apiInstance.GetProducts(appId, itemTypes, searchTerm, page, limit);
+                RestApiPaginationResultProduct result = apiInstance.GetProducts(appId, productTypes, searchTerm, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -326,14 +326,14 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **itemTypes** | **List&lt;string&gt;**|  | 
+ **productTypes** | **List&lt;string&gt;**|  | 
  **searchTerm** | **string**|  | [optional] 
  **page** | **int?**|  | [optional] 
  **limit** | **int?**|  | [optional] 
 
 ### Return type
 
-[**RestApiPaginationResultCatalogItem**](RestApiPaginationResultCatalogItem.md)
+[**RestApiPaginationResultProduct**](RestApiPaginationResultProduct.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Groups** | [**List&lt;CreateGroupReference&gt;**](CreateGroupReference.md) | Collection of groups associated with this item | [optional] 
 **Metafields** | [**List&lt;Metafield&gt;**](Metafield.md) | Collection of metafields | [optional] 
-**ItemType** | **string** | Type of item (Product, Modifier, etc) | 
+**ProductType** | **string** | Type of item (Product, Modifier, etc) | 
 **Sku** | **string** | Stock Keeping Unit (SKU) | 
 **Name** | **string** | Item name | 
 **Description** | **string** | Item description | [optional] 

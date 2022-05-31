@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **IsArchived** | **bool?** | Returns true if the item is archived | [optional] 
 **Groups** | [**List&lt;GroupReference&gt;**](GroupReference.md) | Collection of groups associated with this item | [optional] 
 **Metafields** | [**List&lt;Metafield&gt;**](Metafield.md) | Collection of metafields | [optional] 
-**ItemType** | **string** | Type of item (Product, Modifier, etc) | 
+**ProductType** | **string** | Type of item (Product, Modifier, etc) | 
 **Sku** | **string** | Stock Keeping Unit (SKU) | 
 **Name** | **string** | Item name | 
 **Description** | **string** | Item description | [optional] 
