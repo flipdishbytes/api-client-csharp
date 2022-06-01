@@ -31,8 +31,9 @@ namespace Flipdish.Model
     public partial class OnboardingItemUpdate :  IEquatable<OnboardingItemUpdate>, IValidatableObject
     {
         /// <summary>
-        /// Defines Status
+        /// Completion Status for Onboarding Item
         /// </summary>
+        /// <value>Completion Status for Onboarding Item</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum
         {
@@ -57,14 +58,15 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets Status
+        /// Completion Status for Onboarding Item
         /// </summary>
+        /// <value>Completion Status for Onboarding Item</value>
         [DataMember(Name="Status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="OnboardingItemUpdate" /> class.
         /// </summary>
-        /// <param name="status">status.</param>
+        /// <param name="status">Completion Status for Onboarding Item.</param>
         public OnboardingItemUpdate(StatusEnum? status = default(StatusEnum?))
         {
             this.Status = status;
