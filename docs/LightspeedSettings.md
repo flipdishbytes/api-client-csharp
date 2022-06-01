@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **AddChefNoteToProduct** | **bool?** | Add ChefNote To Product | [optional] 
 **ChefNoteItemId** | **string** | The Lightspeed Chef Note Item Id to map | [optional] 
 **ChefNoteModifierId** | **string** | The Lightspeed Chef Note Modifier Id to map | [optional] 
+**ServiceChargeId** | **string** | The Lightspeed Service Charge Id to map | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
