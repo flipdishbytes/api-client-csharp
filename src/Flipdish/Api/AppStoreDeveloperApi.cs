@@ -411,11 +411,6 @@ namespace Flipdish.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -432,14 +427,7 @@ namespace Flipdish.Api
 
             if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
-            if (verificationStatus != null && verificationStatus.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(verificationStatus); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = verificationStatus; // byte array
-            }
+            if (verificationStatus != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "verificationStatus", verificationStatus)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -510,11 +498,6 @@ namespace Flipdish.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -531,14 +514,7 @@ namespace Flipdish.Api
 
             if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
             if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
-            if (verificationStatus != null && verificationStatus.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(verificationStatus); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = verificationStatus; // byte array
-            }
+            if (verificationStatus != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "verificationStatus", verificationStatus)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
