@@ -71,11 +71,11 @@ namespace Flipdish.Model
         /// <param name="metafields">Collection of metafields.</param>
         /// <param name="productType">Type of item (Product, Modifier, etc) (required).</param>
         /// <param name="sku">Stock Keeping Unit (SKU) (required).</param>
-        /// <param name="name">Item name (required).</param>
-        /// <param name="description">Item description.</param>
-        /// <param name="price">Item price (required).</param>
+        /// <param name="name">Product name (required).</param>
+        /// <param name="description">Product description.</param>
+        /// <param name="price">Product price (required).</param>
         /// <param name="imageFileName">Image File Name.</param>
-        /// <param name="alcohol">item contains alcohol.</param>
+        /// <param name="alcohol">Product contains alcohol.</param>
         public Product(string catalogItemId = default(string), bool? isArchived = default(bool?), List<GroupReference> groups = default(List<GroupReference>), List<Metafield> metafields = default(List<Metafield>), ProductTypeEnum productType = default(ProductTypeEnum), string sku = default(string), string name = default(string), string description = default(string), double? price = default(double?), string imageFileName = default(string), bool? alcohol = default(bool?))
         {
             // to ensure "productType" is required (not null)
@@ -160,23 +160,23 @@ namespace Flipdish.Model
         public string Sku { get; set; }
 
         /// <summary>
-        /// Item name
+        /// Product name
         /// </summary>
-        /// <value>Item name</value>
+        /// <value>Product name</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Item description
+        /// Product description
         /// </summary>
-        /// <value>Item description</value>
+        /// <value>Product description</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Item price
+        /// Product price
         /// </summary>
-        /// <value>Item price</value>
+        /// <value>Product price</value>
         [DataMember(Name="Price", EmitDefaultValue=false)]
         public double? Price { get; set; }
 
@@ -188,9 +188,9 @@ namespace Flipdish.Model
         public string ImageFileName { get; set; }
 
         /// <summary>
-        /// item contains alcohol
+        /// Product contains alcohol
         /// </summary>
-        /// <value>item contains alcohol</value>
+        /// <value>Product contains alcohol</value>
         [DataMember(Name="Alcohol", EmitDefaultValue=false)]
         public bool? Alcohol { get; set; }
 
@@ -371,9 +371,9 @@ namespace Flipdish.Model
             }
 
             // Name (string) maxLength
-            if(this.Name != null && this.Name.Length > 200)
+            if(this.Name != null && this.Name.Length > 300)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be less than 200.", new [] { "Name" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be less than 300.", new [] { "Name" });
             }
 
             // Name (string) minLength
@@ -383,9 +383,9 @@ namespace Flipdish.Model
             }
 
             // Description (string) maxLength
-            if(this.Description != null && this.Description.Length > 1000)
+            if(this.Description != null && this.Description.Length > 3000)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Description, length must be less than 1000.", new [] { "Description" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Description, length must be less than 3000.", new [] { "Description" });
             }
 
             // Description (string) minLength

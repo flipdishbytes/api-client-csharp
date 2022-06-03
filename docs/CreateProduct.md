@@ -7,11 +7,11 @@ Name | Type | Description | Notes
 **Metafields** | [**List&lt;Metafield&gt;**](Metafield.md) | Collection of metafields | [optional] 
 **ProductType** | **string** | Type of item (Product, Modifier, etc) | 
 **Sku** | **string** | Stock Keeping Unit (SKU) | 
-**Name** | **string** | Item name | 
-**Description** | **string** | Item description | [optional] 
-**Price** | **double?** | Item price | 
+**Name** | **string** | Product name | 
+**Description** | **string** | Product description | [optional] 
+**Price** | **double?** | Product price | 
 **ImageFileName** | **string** | Image File Name | [optional] 
-**Alcohol** | **bool?** | item contains alcohol | [optional] 
+**Alcohol** | **bool?** | Product contains alcohol | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
