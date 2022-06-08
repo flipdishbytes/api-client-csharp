@@ -35,12 +35,14 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="isEnabled">Are tips enabled?.</param>
         /// <param name="allowCustomTips">Are custom tips allowed?.</param>
+        /// <param name="allowRoundUp">Is round up allowed?.</param>
         /// <param name="percentages">Ordered list of tip breakpoints (smallest -&amp;gt; largest).</param>
         /// <param name="defaultPercentage">Defines a default percentage, it must be in the list of Percentages.</param>
-        public UpdateTipConfiguration(bool? isEnabled = default(bool?), bool? allowCustomTips = default(bool?), List<double?> percentages = default(List<double?>), double? defaultPercentage = default(double?))
+        public UpdateTipConfiguration(bool? isEnabled = default(bool?), bool? allowCustomTips = default(bool?), bool? allowRoundUp = default(bool?), List<double?> percentages = default(List<double?>), double? defaultPercentage = default(double?))
         {
             this.IsEnabled = isEnabled;
             this.AllowCustomTips = allowCustomTips;
+            this.AllowRoundUp = allowRoundUp;
             this.Percentages = percentages;
             this.DefaultPercentage = defaultPercentage;
         }
@@ -58,6 +60,13 @@ namespace Flipdish.Model
         /// <value>Are custom tips allowed?</value>
         [DataMember(Name="AllowCustomTips", EmitDefaultValue=false)]
         public bool? AllowCustomTips { get; set; }
+
+        /// <summary>
+        /// Is round up allowed?
+        /// </summary>
+        /// <value>Is round up allowed?</value>
+        [DataMember(Name="AllowRoundUp", EmitDefaultValue=false)]
+        public bool? AllowRoundUp { get; set; }
 
         /// <summary>
         /// Ordered list of tip breakpoints (smallest -&amp;gt; largest)
@@ -83,6 +92,7 @@ namespace Flipdish.Model
             sb.Append("class UpdateTipConfiguration {\n");
             sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
             sb.Append("  AllowCustomTips: ").Append(AllowCustomTips).Append("\n");
+            sb.Append("  AllowRoundUp: ").Append(AllowRoundUp).Append("\n");
             sb.Append("  Percentages: ").Append(Percentages).Append("\n");
             sb.Append("  DefaultPercentage: ").Append(DefaultPercentage).Append("\n");
             sb.Append("}\n");
@@ -130,6 +140,11 @@ namespace Flipdish.Model
                     this.AllowCustomTips.Equals(input.AllowCustomTips))
                 ) && 
                 (
+                    this.AllowRoundUp == input.AllowRoundUp ||
+                    (this.AllowRoundUp != null &&
+                    this.AllowRoundUp.Equals(input.AllowRoundUp))
+                ) && 
+                (
                     this.Percentages == input.Percentages ||
                     this.Percentages != null &&
                     this.Percentages.SequenceEqual(input.Percentages)
@@ -154,6 +169,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
                 if (this.AllowCustomTips != null)
                     hashCode = hashCode * 59 + this.AllowCustomTips.GetHashCode();
+                if (this.AllowRoundUp != null)
+                    hashCode = hashCode * 59 + this.AllowRoundUp.GetHashCode();
                 if (this.Percentages != null)
                     hashCode = hashCode * 59 + this.Percentages.GetHashCode();
                 if (this.DefaultPercentage != null)
