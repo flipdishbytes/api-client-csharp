@@ -25,35 +25,39 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Pending Menu Changes
+    /// Rest api result
     /// </summary>
     [DataContract]
-    public partial class PendingMenuChanges :  IEquatable<PendingMenuChanges>, IValidatableObject
+    public partial class RestApiResultGroup :  IEquatable<RestApiResultGroup>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PendingMenuChanges" /> class.
+        /// Initializes a new instance of the <see cref="RestApiResultGroup" /> class.
         /// </summary>
-        /// <param name="catalogItemId">Unique catalog item id.</param>
-        /// <param name="menuId">Unique menu id.</param>
-        public PendingMenuChanges(string catalogItemId = default(string), int? menuId = default(int?))
+        [JsonConstructorAttribute]
+        protected RestApiResultGroup() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RestApiResultGroup" /> class.
+        /// </summary>
+        /// <param name="data">Generic data object. (required).</param>
+        public RestApiResultGroup(Group data = default(Group))
         {
-            this.CatalogItemId = catalogItemId;
-            this.MenuId = menuId;
+            // to ensure "data" is required (not null)
+            if (data == null)
+            {
+                throw new InvalidDataException("data is a required property for RestApiResultGroup and cannot be null");
+            }
+            else
+            {
+                this.Data = data;
+            }
         }
         
         /// <summary>
-        /// Unique catalog item id
+        /// Generic data object.
         /// </summary>
-        /// <value>Unique catalog item id</value>
-        [DataMember(Name="CatalogItemId", EmitDefaultValue=false)]
-        public string CatalogItemId { get; set; }
-
-        /// <summary>
-        /// Unique menu id
-        /// </summary>
-        /// <value>Unique menu id</value>
-        [DataMember(Name="MenuId", EmitDefaultValue=false)]
-        public int? MenuId { get; set; }
+        /// <value>Generic data object.</value>
+        [DataMember(Name="Data", EmitDefaultValue=false)]
+        public Group Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,9 +66,8 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PendingMenuChanges {\n");
-            sb.Append("  CatalogItemId: ").Append(CatalogItemId).Append("\n");
-            sb.Append("  MenuId: ").Append(MenuId).Append("\n");
+            sb.Append("class RestApiResultGroup {\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,29 +88,24 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PendingMenuChanges);
+            return this.Equals(input as RestApiResultGroup);
         }
 
         /// <summary>
-        /// Returns true if PendingMenuChanges instances are equal
+        /// Returns true if RestApiResultGroup instances are equal
         /// </summary>
-        /// <param name="input">Instance of PendingMenuChanges to be compared</param>
+        /// <param name="input">Instance of RestApiResultGroup to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PendingMenuChanges input)
+        public bool Equals(RestApiResultGroup input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.CatalogItemId == input.CatalogItemId ||
-                    (this.CatalogItemId != null &&
-                    this.CatalogItemId.Equals(input.CatalogItemId))
-                ) && 
-                (
-                    this.MenuId == input.MenuId ||
-                    (this.MenuId != null &&
-                    this.MenuId.Equals(input.MenuId))
+                    this.Data == input.Data ||
+                    (this.Data != null &&
+                    this.Data.Equals(input.Data))
                 );
         }
 
@@ -120,10 +118,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.CatalogItemId != null)
-                    hashCode = hashCode * 59 + this.CatalogItemId.GetHashCode();
-                if (this.MenuId != null)
-                    hashCode = hashCode * 59 + this.MenuId.GetHashCode();
+                if (this.Data != null)
+                    hashCode = hashCode * 59 + this.Data.GetHashCode();
                 return hashCode;
             }
         }
@@ -135,18 +131,6 @@ namespace Flipdish.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // CatalogItemId (string) maxLength
-            if(this.CatalogItemId != null && this.CatalogItemId.Length > 30)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CatalogItemId, length must be less than 30.", new [] { "CatalogItemId" });
-            }
-
-            // CatalogItemId (string) minLength
-            if(this.CatalogItemId != null && this.CatalogItemId.Length < 0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CatalogItemId, length must be greater than 0.", new [] { "CatalogItemId" });
-            }
-
             yield break;
         }
     }

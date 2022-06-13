@@ -33,11 +33,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="menuId"> (optional)</param>
-        /// <param name="catalogElementId"> (optional)</param>
+        /// <param name="catalogItemId"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultPendingMenuChanges</returns>
-        RestApiPaginationResultPendingMenuChanges GetPendingMenuChanges (string appId, int? menuId = null, string catalogElementId = null, int? page = null, int? limit = null);
+        RestApiPaginationResultPendingMenuChanges GetPendingMenuChanges (string appId, int? menuId = null, string catalogItemId = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get menu pending changes from Catalog groups and items
@@ -48,11 +48,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="menuId"> (optional)</param>
-        /// <param name="catalogElementId"> (optional)</param>
+        /// <param name="catalogItemId"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultPendingMenuChanges</returns>
-        ApiResponse<RestApiPaginationResultPendingMenuChanges> GetPendingMenuChangesWithHttpInfo (string appId, int? menuId = null, string catalogElementId = null, int? page = null, int? limit = null);
+        ApiResponse<RestApiPaginationResultPendingMenuChanges> GetPendingMenuChangesWithHttpInfo (string appId, int? menuId = null, string catalogItemId = null, int? page = null, int? limit = null);
         /// <summary>
         /// Update menus with the pending changes from Catalog groups and items
         /// </summary>
@@ -87,11 +87,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="menuId"> (optional)</param>
-        /// <param name="catalogElementId"> (optional)</param>
+        /// <param name="catalogItemId"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultPendingMenuChanges</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultPendingMenuChanges> GetPendingMenuChangesAsync (string appId, int? menuId = null, string catalogElementId = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultPendingMenuChanges> GetPendingMenuChangesAsync (string appId, int? menuId = null, string catalogItemId = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get menu pending changes from Catalog groups and items
@@ -102,11 +102,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="menuId"> (optional)</param>
-        /// <param name="catalogElementId"> (optional)</param>
+        /// <param name="catalogItemId"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultPendingMenuChanges)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPendingMenuChanges>> GetPendingMenuChangesAsyncWithHttpInfo (string appId, int? menuId = null, string catalogElementId = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPendingMenuChanges>> GetPendingMenuChangesAsyncWithHttpInfo (string appId, int? menuId = null, string catalogItemId = null, int? page = null, int? limit = null);
         /// <summary>
         /// Update menus with the pending changes from Catalog groups and items
         /// </summary>
@@ -236,13 +236,13 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="menuId"> (optional)</param>
-        /// <param name="catalogElementId"> (optional)</param>
+        /// <param name="catalogItemId"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultPendingMenuChanges</returns>
-        public RestApiPaginationResultPendingMenuChanges GetPendingMenuChanges (string appId, int? menuId = null, string catalogElementId = null, int? page = null, int? limit = null)
+        public RestApiPaginationResultPendingMenuChanges GetPendingMenuChanges (string appId, int? menuId = null, string catalogItemId = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultPendingMenuChanges> localVarResponse = GetPendingMenuChangesWithHttpInfo(appId, menuId, catalogElementId, page, limit);
+             ApiResponse<RestApiPaginationResultPendingMenuChanges> localVarResponse = GetPendingMenuChangesWithHttpInfo(appId, menuId, catalogItemId, page, limit);
              return localVarResponse.Data;
         }
 
@@ -252,11 +252,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="menuId"> (optional)</param>
-        /// <param name="catalogElementId"> (optional)</param>
+        /// <param name="catalogItemId"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultPendingMenuChanges</returns>
-        public ApiResponse< RestApiPaginationResultPendingMenuChanges > GetPendingMenuChangesWithHttpInfo (string appId, int? menuId = null, string catalogElementId = null, int? page = null, int? limit = null)
+        public ApiResponse< RestApiPaginationResultPendingMenuChanges > GetPendingMenuChangesWithHttpInfo (string appId, int? menuId = null, string catalogItemId = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -288,7 +288,7 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (menuId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "menuId", menuId)); // query parameter
-            if (catalogElementId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "catalogElementId", catalogElementId)); // query parameter
+            if (catalogItemId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "catalogItemId", catalogItemId)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -323,13 +323,13 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="menuId"> (optional)</param>
-        /// <param name="catalogElementId"> (optional)</param>
+        /// <param name="catalogItemId"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultPendingMenuChanges</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultPendingMenuChanges> GetPendingMenuChangesAsync (string appId, int? menuId = null, string catalogElementId = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultPendingMenuChanges> GetPendingMenuChangesAsync (string appId, int? menuId = null, string catalogItemId = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultPendingMenuChanges> localVarResponse = await GetPendingMenuChangesAsyncWithHttpInfo(appId, menuId, catalogElementId, page, limit);
+             ApiResponse<RestApiPaginationResultPendingMenuChanges> localVarResponse = await GetPendingMenuChangesAsyncWithHttpInfo(appId, menuId, catalogItemId, page, limit);
              return localVarResponse.Data;
 
         }
@@ -340,11 +340,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="menuId"> (optional)</param>
-        /// <param name="catalogElementId"> (optional)</param>
+        /// <param name="catalogItemId"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultPendingMenuChanges)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPendingMenuChanges>> GetPendingMenuChangesAsyncWithHttpInfo (string appId, int? menuId = null, string catalogElementId = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPendingMenuChanges>> GetPendingMenuChangesAsyncWithHttpInfo (string appId, int? menuId = null, string catalogItemId = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -376,7 +376,7 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (menuId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "menuId", menuId)); // query parameter
-            if (catalogElementId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "catalogElementId", catalogElementId)); // query parameter
+            if (catalogItemId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "catalogItemId", catalogItemId)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 

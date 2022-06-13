@@ -5,7 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ArchiveGroup**](CatalogGroupsApi.md#archivegroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | Archive Catalog Group
-[**CreateCatalogGroup**](CatalogGroupsApi.md#createcataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
+[**CreateGroup**](CatalogGroupsApi.md#creategroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
 [**DuplicateGroup**](CatalogGroupsApi.md#duplicategroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate | Duplicate Catalog Group
 [**GetGroupById**](CatalogGroupsApi.md#getgroupbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Get group by Id
 [**GetGroups**](CatalogGroupsApi.md#getgroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
@@ -77,9 +77,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createcataloggroup"></a>
-# **CreateCatalogGroup**
-> RestApiResultCatalogGroup CreateCatalogGroup (string appId, CreateCatalogGroup createCatalogGroup)
+<a name="creategroup"></a>
+# **CreateGroup**
+> RestApiResultGroup CreateGroup (string appId, CreateGroup createGroup)
 
 Create a Catalog Group
 
@@ -95,7 +95,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class CreateCatalogGroupExample
+    public class CreateGroupExample
     {
         public void main()
         {
@@ -104,17 +104,17 @@ namespace Example
 
             var apiInstance = new CatalogGroupsApi();
             var appId = appId_example;  // string | 
-            var createCatalogGroup = new CreateCatalogGroup(); // CreateCatalogGroup | 
+            var createGroup = new CreateGroup(); // CreateGroup | 
 
             try
             {
                 // Create a Catalog Group
-                RestApiResultCatalogGroup result = apiInstance.CreateCatalogGroup(appId, createCatalogGroup);
+                RestApiResultGroup result = apiInstance.CreateGroup(appId, createGroup);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling CatalogGroupsApi.CreateCatalogGroup: " + e.Message );
+                Debug.Print("Exception when calling CatalogGroupsApi.CreateGroup: " + e.Message );
             }
         }
     }
@@ -126,11 +126,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **createCatalogGroup** | [**CreateCatalogGroup**](CreateCatalogGroup.md)|  | 
+ **createGroup** | [**CreateGroup**](CreateGroup.md)|  | 
 
 ### Return type
 
-[**RestApiResultCatalogGroup**](RestApiResultCatalogGroup.md)
+[**RestApiResultGroup**](RestApiResultGroup.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ void (empty response body)
 
 <a name="getgroupbyid"></a>
 # **GetGroupById**
-> CatalogGroup GetGroupById (string appId, string catalogItemId)
+> Group GetGroupById (string appId, string catalogItemId)
 
 Get group by Id
 
@@ -240,7 +240,7 @@ namespace Example
             try
             {
                 // Get group by Id
-                CatalogGroup result = apiInstance.GetGroupById(appId, catalogItemId);
+                Group result = apiInstance.GetGroupById(appId, catalogItemId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CatalogGroup**](CatalogGroup.md)
+[**Group**](Group.md)
 
 ### Authorization
 
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 <a name="getgroups"></a>
 # **GetGroups**
-> RestApiPaginationResultCatalogGroup GetGroups (string appId, List<string> groupTypes, string searchTerm = null, int? page = null, int? limit = null)
+> RestApiPaginationResultGroup GetGroups (string appId, List<string> groupTypes, string searchTerm = null, int? page = null, int? limit = null)
 
 Get paginated groups by app name id filtered by types
 
@@ -309,7 +309,7 @@ namespace Example
             try
             {
                 // Get paginated groups by app name id filtered by types
-                RestApiPaginationResultCatalogGroup result = apiInstance.GetGroups(appId, groupTypes, searchTerm, page, limit);
+                RestApiPaginationResultGroup result = apiInstance.GetGroups(appId, groupTypes, searchTerm, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiPaginationResultCatalogGroup**](RestApiPaginationResultCatalogGroup.md)
+[**RestApiPaginationResultGroup**](RestApiPaginationResultGroup.md)
 
 ### Authorization
 
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
 
 <a name="updategroup"></a>
 # **UpdateGroup**
-> void UpdateGroup (string appId, string catalogItemId, UpdateCatalogGroup updateCatalogGroup)
+> void UpdateGroup (string appId, string catalogItemId, UpdateGroup updateGroup)
 
 Update Catalog Group
 
@@ -374,12 +374,12 @@ namespace Example
             var apiInstance = new CatalogGroupsApi();
             var appId = appId_example;  // string | 
             var catalogItemId = catalogItemId_example;  // string | 
-            var updateCatalogGroup = new UpdateCatalogGroup(); // UpdateCatalogGroup | 
+            var updateGroup = new UpdateGroup(); // UpdateGroup | 
 
             try
             {
                 // Update Catalog Group
-                apiInstance.UpdateGroup(appId, catalogItemId, updateCatalogGroup);
+                apiInstance.UpdateGroup(appId, catalogItemId, updateGroup);
             }
             catch (Exception e)
             {
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
  **catalogItemId** | **string**|  | 
- **updateCatalogGroup** | [**UpdateCatalogGroup**](UpdateCatalogGroup.md)|  | 
+ **updateGroup** | [**UpdateGroup**](UpdateGroup.md)|  | 
 
 ### Return type
 

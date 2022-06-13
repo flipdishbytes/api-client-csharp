@@ -59,19 +59,18 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateGroupReference" /> class.
         /// </summary>
-        /// <param name="catalogGroupId">Identifier of the ProductId to use as SubProduct (required).</param>
-        /// <param name="catalogItemId">Identifier of the ProductId to use as SubProduct.</param>
+        /// <param name="catalogItemId">Identifier of the ProductId to use as SubProduct (required).</param>
         /// <param name="groupType">Type of the SupProduct (required).</param>
-        public CreateGroupReference(string catalogGroupId = default(string), string catalogItemId = default(string), GroupTypeEnum groupType = default(GroupTypeEnum))
+        public CreateGroupReference(string catalogItemId = default(string), GroupTypeEnum groupType = default(GroupTypeEnum))
         {
-            // to ensure "catalogGroupId" is required (not null)
-            if (catalogGroupId == null)
+            // to ensure "catalogItemId" is required (not null)
+            if (catalogItemId == null)
             {
-                throw new InvalidDataException("catalogGroupId is a required property for CreateGroupReference and cannot be null");
+                throw new InvalidDataException("catalogItemId is a required property for CreateGroupReference and cannot be null");
             }
             else
             {
-                this.CatalogGroupId = catalogGroupId;
+                this.CatalogItemId = catalogItemId;
             }
             // to ensure "groupType" is required (not null)
             if (groupType == null)
@@ -82,16 +81,8 @@ namespace Flipdish.Model
             {
                 this.GroupType = groupType;
             }
-            this.CatalogItemId = catalogItemId;
         }
         
-        /// <summary>
-        /// Identifier of the ProductId to use as SubProduct
-        /// </summary>
-        /// <value>Identifier of the ProductId to use as SubProduct</value>
-        [DataMember(Name="CatalogGroupId", EmitDefaultValue=false)]
-        public string CatalogGroupId { get; set; }
-
         /// <summary>
         /// Identifier of the ProductId to use as SubProduct
         /// </summary>
@@ -108,7 +99,6 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateGroupReference {\n");
-            sb.Append("  CatalogGroupId: ").Append(CatalogGroupId).Append("\n");
             sb.Append("  CatalogItemId: ").Append(CatalogItemId).Append("\n");
             sb.Append("  GroupType: ").Append(GroupType).Append("\n");
             sb.Append("}\n");
@@ -146,11 +136,6 @@ namespace Flipdish.Model
 
             return 
                 (
-                    this.CatalogGroupId == input.CatalogGroupId ||
-                    (this.CatalogGroupId != null &&
-                    this.CatalogGroupId.Equals(input.CatalogGroupId))
-                ) && 
-                (
                     this.CatalogItemId == input.CatalogItemId ||
                     (this.CatalogItemId != null &&
                     this.CatalogItemId.Equals(input.CatalogItemId))
@@ -171,8 +156,6 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.CatalogGroupId != null)
-                    hashCode = hashCode * 59 + this.CatalogGroupId.GetHashCode();
                 if (this.CatalogItemId != null)
                     hashCode = hashCode * 59 + this.CatalogItemId.GetHashCode();
                 if (this.GroupType != null)
@@ -188,18 +171,6 @@ namespace Flipdish.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // CatalogGroupId (string) maxLength
-            if(this.CatalogGroupId != null && this.CatalogGroupId.Length > 30)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CatalogGroupId, length must be less than 30.", new [] { "CatalogGroupId" });
-            }
-
-            // CatalogGroupId (string) minLength
-            if(this.CatalogGroupId != null && this.CatalogGroupId.Length < 0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CatalogGroupId, length must be greater than 0.", new [] { "CatalogGroupId" });
-            }
-
             // CatalogItemId (string) maxLength
             if(this.CatalogItemId != null && this.CatalogItemId.Length > 30)
             {

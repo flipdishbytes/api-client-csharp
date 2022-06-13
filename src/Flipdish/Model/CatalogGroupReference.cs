@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.CatalogGroup}
+    /// Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.Group}
     /// </summary>
     [DataContract]
     public partial class CatalogGroupReference :  IEquatable<CatalogGroupReference>, IValidatableObject
@@ -63,7 +63,7 @@ namespace Flipdish.Model
         /// <param name="catalogGroupId">Identifier of the ProductId to use as SubProduct (required).</param>
         /// <param name="catalogItemId">Identifier of the ProductId to use as SubProduct.</param>
         /// <param name="groupType">Type of the SupProduct (required).</param>
-        public CatalogGroupReference(CatalogGroup group = default(CatalogGroup), string catalogGroupId = default(string), string catalogItemId = default(string), GroupTypeEnum groupType = default(GroupTypeEnum))
+        public CatalogGroupReference(Group group = default(Group), string catalogGroupId = default(string), string catalogItemId = default(string), GroupTypeEnum groupType = default(GroupTypeEnum))
         {
             // to ensure "catalogGroupId" is required (not null)
             if (catalogGroupId == null)
@@ -92,7 +92,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Details of the referenced {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}</value>
         [DataMember(Name="Group", EmitDefaultValue=false)]
-        public CatalogGroup Group { get; set; }
+        public Group Group { get; set; }
 
         /// <summary>
         /// Identifier of the ProductId to use as SubProduct

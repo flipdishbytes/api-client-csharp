@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getpendingmenuchanges"></a>
 # **GetPendingMenuChanges**
-> RestApiPaginationResultPendingMenuChanges GetPendingMenuChanges (string appId, int? menuId = null, string catalogElementId = null, int? page = null, int? limit = null)
+> RestApiPaginationResultPendingMenuChanges GetPendingMenuChanges (string appId, int? menuId = null, string catalogItemId = null, int? page = null, int? limit = null)
 
 Get menu pending changes from Catalog groups and items
 
@@ -36,14 +36,14 @@ namespace Example
             var apiInstance = new CatalogChangesApi();
             var appId = appId_example;  // string | 
             var menuId = 56;  // int? |  (optional) 
-            var catalogElementId = catalogElementId_example;  // string |  (optional) 
+            var catalogItemId = catalogItemId_example;  // string |  (optional) 
             var page = 56;  // int? |  (optional) 
             var limit = 56;  // int? |  (optional) 
 
             try
             {
                 // Get menu pending changes from Catalog groups and items
-                RestApiPaginationResultPendingMenuChanges result = apiInstance.GetPendingMenuChanges(appId, menuId, catalogElementId, page, limit);
+                RestApiPaginationResultPendingMenuChanges result = apiInstance.GetPendingMenuChanges(appId, menuId, catalogItemId, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
  **menuId** | **int?**|  | [optional] 
- **catalogElementId** | **string**|  | [optional] 
+ **catalogItemId** | **string**|  | [optional] 
  **page** | **int?**|  | [optional] 
  **limit** | **int?**|  | [optional] 
 

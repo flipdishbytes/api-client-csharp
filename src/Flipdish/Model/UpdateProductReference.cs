@@ -25,71 +25,86 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Data to update a {Flipdish.PublicModels.V1.Catalog.Products.GroupReference}
+    /// Data to update a {Flipdish.PublicModels.V1.Catalog.Groups.UpdateProductReference}
     /// </summary>
     [DataContract]
-    public partial class UpdateGroupReference :  IEquatable<UpdateGroupReference>, IValidatableObject
+    public partial class UpdateProductReference :  IEquatable<UpdateProductReference>, IValidatableObject
     {
         /// <summary>
         /// Type of the SupProduct
         /// </summary>
         /// <value>Type of the SupProduct</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum GroupTypeEnum
+        public enum ProductTypeEnum
         {
             
             /// <summary>
-            /// Enum ModifierGroup for value: ModifierGroup
+            /// Enum Product for value: Product
             /// </summary>
-            [EnumMember(Value = "ModifierGroup")]
-            ModifierGroup = 1
+            [EnumMember(Value = "Product")]
+            Product = 1,
+            
+            /// <summary>
+            /// Enum Modifier for value: Modifier
+            /// </summary>
+            [EnumMember(Value = "Modifier")]
+            Modifier = 2
         }
 
         /// <summary>
         /// Type of the SupProduct
         /// </summary>
         /// <value>Type of the SupProduct</value>
-        [DataMember(Name="GroupType", EmitDefaultValue=false)]
-        public GroupTypeEnum GroupType { get; set; }
+        [DataMember(Name="ProductType", EmitDefaultValue=false)]
+        public ProductTypeEnum ProductType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="UpdateGroupReference" /> class.
+        /// Initializes a new instance of the <see cref="UpdateProductReference" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected UpdateGroupReference() { }
+        protected UpdateProductReference() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="UpdateGroupReference" /> class.
+        /// Initializes a new instance of the <see cref="UpdateProductReference" /> class.
         /// </summary>
-        /// <param name="catalogItemId">Identifier of the ProductId to use as SubProduct (required).</param>
-        /// <param name="groupType">Type of the SupProduct (required).</param>
-        public UpdateGroupReference(string catalogItemId = default(string), GroupTypeEnum groupType = default(GroupTypeEnum))
+        /// <param name="catalogItemId">Identifier of the CatalogItemId to use as SubProduct (required).</param>
+        /// <param name="productType">Type of the SupProduct (required).</param>
+        /// <param name="preselectedQuantity">Quantity of the modifier that will be set when the parent product is placed in the basket.</param>
+        public UpdateProductReference(string catalogItemId = default(string), ProductTypeEnum productType = default(ProductTypeEnum), int? preselectedQuantity = default(int?))
         {
             // to ensure "catalogItemId" is required (not null)
             if (catalogItemId == null)
             {
-                throw new InvalidDataException("catalogItemId is a required property for UpdateGroupReference and cannot be null");
+                throw new InvalidDataException("catalogItemId is a required property for UpdateProductReference and cannot be null");
             }
             else
             {
                 this.CatalogItemId = catalogItemId;
             }
-            // to ensure "groupType" is required (not null)
-            if (groupType == null)
+            // to ensure "productType" is required (not null)
+            if (productType == null)
             {
-                throw new InvalidDataException("groupType is a required property for UpdateGroupReference and cannot be null");
+                throw new InvalidDataException("productType is a required property for UpdateProductReference and cannot be null");
             }
             else
             {
-                this.GroupType = groupType;
+                this.ProductType = productType;
             }
+            this.PreselectedQuantity = preselectedQuantity;
         }
         
         /// <summary>
-        /// Identifier of the ProductId to use as SubProduct
+        /// Identifier of the CatalogItemId to use as SubProduct
         /// </summary>
-        /// <value>Identifier of the ProductId to use as SubProduct</value>
+        /// <value>Identifier of the CatalogItemId to use as SubProduct</value>
         [DataMember(Name="CatalogItemId", EmitDefaultValue=false)]
         public string CatalogItemId { get; set; }
 
+
+        /// <summary>
+        /// Quantity of the modifier that will be set when the parent product is placed in the basket
+        /// </summary>
+        /// <value>Quantity of the modifier that will be set when the parent product is placed in the basket</value>
+        [DataMember(Name="PreselectedQuantity", EmitDefaultValue=false)]
+        public int? PreselectedQuantity { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -98,9 +113,10 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UpdateGroupReference {\n");
+            sb.Append("class UpdateProductReference {\n");
             sb.Append("  CatalogItemId: ").Append(CatalogItemId).Append("\n");
-            sb.Append("  GroupType: ").Append(GroupType).Append("\n");
+            sb.Append("  ProductType: ").Append(ProductType).Append("\n");
+            sb.Append("  PreselectedQuantity: ").Append(PreselectedQuantity).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,15 +137,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as UpdateGroupReference);
+            return this.Equals(input as UpdateProductReference);
         }
 
         /// <summary>
-        /// Returns true if UpdateGroupReference instances are equal
+        /// Returns true if UpdateProductReference instances are equal
         /// </summary>
-        /// <param name="input">Instance of UpdateGroupReference to be compared</param>
+        /// <param name="input">Instance of UpdateProductReference to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UpdateGroupReference input)
+        public bool Equals(UpdateProductReference input)
         {
             if (input == null)
                 return false;
@@ -141,9 +157,14 @@ namespace Flipdish.Model
                     this.CatalogItemId.Equals(input.CatalogItemId))
                 ) && 
                 (
-                    this.GroupType == input.GroupType ||
-                    (this.GroupType != null &&
-                    this.GroupType.Equals(input.GroupType))
+                    this.ProductType == input.ProductType ||
+                    (this.ProductType != null &&
+                    this.ProductType.Equals(input.ProductType))
+                ) && 
+                (
+                    this.PreselectedQuantity == input.PreselectedQuantity ||
+                    (this.PreselectedQuantity != null &&
+                    this.PreselectedQuantity.Equals(input.PreselectedQuantity))
                 );
         }
 
@@ -158,8 +179,10 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.CatalogItemId != null)
                     hashCode = hashCode * 59 + this.CatalogItemId.GetHashCode();
-                if (this.GroupType != null)
-                    hashCode = hashCode * 59 + this.GroupType.GetHashCode();
+                if (this.ProductType != null)
+                    hashCode = hashCode * 59 + this.ProductType.GetHashCode();
+                if (this.PreselectedQuantity != null)
+                    hashCode = hashCode * 59 + this.PreselectedQuantity.GetHashCode();
                 return hashCode;
             }
         }

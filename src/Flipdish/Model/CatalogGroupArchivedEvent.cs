@@ -36,18 +36,18 @@ namespace Flipdish.Model
         /// <param name="eventName">The event name.</param>
         /// <param name="description">Description.</param>
         /// <param name="user">User who has created the group.</param>
-        /// <param name="catalogGroup">Catalog group created.</param>
+        /// <param name="group">Catalog group created.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public CatalogGroupArchivedEvent(string eventName = default(string), string description = default(string), UserEventInfo user = default(UserEventInfo), CatalogGroup catalogGroup = default(CatalogGroup), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public CatalogGroupArchivedEvent(string eventName = default(string), string description = default(string), UserEventInfo user = default(UserEventInfo), Group group = default(Group), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
             this.EventName = eventName;
             this.Description = description;
             this.User = user;
-            this.CatalogGroup = catalogGroup;
+            this.Group = group;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
             this.Position = position;
@@ -80,8 +80,8 @@ namespace Flipdish.Model
         /// Catalog group created
         /// </summary>
         /// <value>Catalog group created</value>
-        [DataMember(Name="CatalogGroup", EmitDefaultValue=false)]
-        public CatalogGroup CatalogGroup { get; set; }
+        [DataMember(Name="Group", EmitDefaultValue=false)]
+        public Group Group { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -129,7 +129,7 @@ namespace Flipdish.Model
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
-            sb.Append("  CatalogGroup: ").Append(CatalogGroup).Append("\n");
+            sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -185,9 +185,9 @@ namespace Flipdish.Model
                     this.User.Equals(input.User))
                 ) && 
                 (
-                    this.CatalogGroup == input.CatalogGroup ||
-                    (this.CatalogGroup != null &&
-                    this.CatalogGroup.Equals(input.CatalogGroup))
+                    this.Group == input.Group ||
+                    (this.Group != null &&
+                    this.Group.Equals(input.Group))
                 ) && 
                 (
                     this.FlipdishEventId == input.FlipdishEventId ||
@@ -231,8 +231,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.User != null)
                     hashCode = hashCode * 59 + this.User.GetHashCode();
-                if (this.CatalogGroup != null)
-                    hashCode = hashCode * 59 + this.CatalogGroup.GetHashCode();
+                if (this.Group != null)
+                    hashCode = hashCode * 59 + this.Group.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)

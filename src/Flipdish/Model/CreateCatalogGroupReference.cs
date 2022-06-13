@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Groups.CatalogGroup}
+    /// Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Groups.Group}
     /// </summary>
     [DataContract]
     public partial class CreateCatalogGroupReference :  IEquatable<CreateCatalogGroupReference>, IValidatableObject
