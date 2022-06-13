@@ -772,7 +772,9 @@ namespace Flipdish.Model
         /// <param name="cashFeeChargedToCustomer">Cash fee charged to customer.</param>
         /// <param name="netSales">Order net sales amount.</param>
         /// <param name="storeId">Store id.</param>
-        public PayoutOrder(int? orderId = default(int?), int? payoutId = default(int?), DateTime? orderDate = default(DateTime?), OrderTypeEnum? orderType = default(OrderTypeEnum?), OrderCurrencyEnum? orderCurrency = default(OrderCurrencyEnum?), double? sales = default(double?), double? salesTax = default(double?), double? deliveryCharges = default(double?), double? tips = default(double?), double? voucher = default(double?), double? flatFeeExcludingVat = default(double?), double? flatFeeExcludingVAT = default(double?), double? percentageFeeExcludingVat = default(double?), double? percentageFeeExcludingVAT = default(double?), double? vat = default(double?), double? totalFees = default(double?), double? cashFeeChargedToCustomer = default(double?), double? netSales = default(double?), int? storeId = default(int?))
+        /// <param name="serviceChargeAmount">Order ServiceChargeAmount amount.</param>
+        /// <param name="serviceChargePercentage">Order ServiceChargePercentage amount.</param>
+        public PayoutOrder(int? orderId = default(int?), int? payoutId = default(int?), DateTime? orderDate = default(DateTime?), OrderTypeEnum? orderType = default(OrderTypeEnum?), OrderCurrencyEnum? orderCurrency = default(OrderCurrencyEnum?), double? sales = default(double?), double? salesTax = default(double?), double? deliveryCharges = default(double?), double? tips = default(double?), double? voucher = default(double?), double? flatFeeExcludingVat = default(double?), double? flatFeeExcludingVAT = default(double?), double? percentageFeeExcludingVat = default(double?), double? percentageFeeExcludingVAT = default(double?), double? vat = default(double?), double? totalFees = default(double?), double? cashFeeChargedToCustomer = default(double?), double? netSales = default(double?), int? storeId = default(int?), double? serviceChargeAmount = default(double?), double? serviceChargePercentage = default(double?))
         {
             this.OrderId = orderId;
             this.PayoutId = payoutId;
@@ -793,6 +795,8 @@ namespace Flipdish.Model
             this.CashFeeChargedToCustomer = cashFeeChargedToCustomer;
             this.NetSales = netSales;
             this.StoreId = storeId;
+            this.ServiceChargeAmount = serviceChargeAmount;
+            this.ServiceChargePercentage = serviceChargePercentage;
         }
         
         /// <summary>
@@ -915,6 +919,20 @@ namespace Flipdish.Model
         public int? StoreId { get; set; }
 
         /// <summary>
+        /// Order ServiceChargeAmount amount
+        /// </summary>
+        /// <value>Order ServiceChargeAmount amount</value>
+        [DataMember(Name="ServiceChargeAmount", EmitDefaultValue=false)]
+        public double? ServiceChargeAmount { get; set; }
+
+        /// <summary>
+        /// Order ServiceChargePercentage amount
+        /// </summary>
+        /// <value>Order ServiceChargePercentage amount</value>
+        [DataMember(Name="ServiceChargePercentage", EmitDefaultValue=false)]
+        public double? ServiceChargePercentage { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -941,6 +959,8 @@ namespace Flipdish.Model
             sb.Append("  CashFeeChargedToCustomer: ").Append(CashFeeChargedToCustomer).Append("\n");
             sb.Append("  NetSales: ").Append(NetSales).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  ServiceChargeAmount: ").Append(ServiceChargeAmount).Append("\n");
+            sb.Append("  ServiceChargePercentage: ").Append(ServiceChargePercentage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1069,6 +1089,16 @@ namespace Flipdish.Model
                     this.StoreId == input.StoreId ||
                     (this.StoreId != null &&
                     this.StoreId.Equals(input.StoreId))
+                ) && 
+                (
+                    this.ServiceChargeAmount == input.ServiceChargeAmount ||
+                    (this.ServiceChargeAmount != null &&
+                    this.ServiceChargeAmount.Equals(input.ServiceChargeAmount))
+                ) && 
+                (
+                    this.ServiceChargePercentage == input.ServiceChargePercentage ||
+                    (this.ServiceChargePercentage != null &&
+                    this.ServiceChargePercentage.Equals(input.ServiceChargePercentage))
                 );
         }
 
@@ -1119,6 +1149,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.NetSales.GetHashCode();
                 if (this.StoreId != null)
                     hashCode = hashCode * 59 + this.StoreId.GetHashCode();
+                if (this.ServiceChargeAmount != null)
+                    hashCode = hashCode * 59 + this.ServiceChargeAmount.GetHashCode();
+                if (this.ServiceChargePercentage != null)
+                    hashCode = hashCode * 59 + this.ServiceChargePercentage.GetHashCode();
                 return hashCode;
             }
         }

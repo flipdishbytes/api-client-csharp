@@ -22,6 +22,8 @@ Name | Type | Description | Notes
 **CashFeeChargedToCustomer** | **double?** | Cash fee charged to customer | [optional] 
 **NetSales** | **double?** | Order net sales amount | [optional] 
 **StoreId** | **int?** | Store id | [optional] 
+**ServiceChargeAmount** | **double?** | Order ServiceChargeAmount amount | [optional] 
+**ServiceChargePercentage** | **double?** | Order ServiceChargePercentage amount | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
