@@ -48,7 +48,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of DashboardEmbed</returns>
         ApiResponse<DashboardEmbed> GetLookerCustomerReportingEmbedUrlWithHttpInfo (string appId, string embedPath);
         /// <summary>
-        /// Get the single sign on embed URL for PerformanceSummary Dashboard
+        /// Get the generic single sign on embed URL for Looker dashboards
         /// </summary>
         /// <remarks>
         /// 
@@ -56,11 +56,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <param name="filters">Filters that will be passed to the dashboard (optional)</param>
         /// <returns>DashboardEmbed</returns>
-        DashboardEmbed GetSSOEndpoint (string appId, string embedPath);
+        DashboardEmbed GetSSOEndpoint (string appId, string embedPath, string filters = null);
 
         /// <summary>
-        /// Get the single sign on embed URL for PerformanceSummary Dashboard
+        /// Get the generic single sign on embed URL for Looker dashboards
         /// </summary>
         /// <remarks>
         /// 
@@ -68,8 +69,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <param name="filters">Filters that will be passed to the dashboard (optional)</param>
         /// <returns>ApiResponse of DashboardEmbed</returns>
-        ApiResponse<DashboardEmbed> GetSSOEndpointWithHttpInfo (string appId, string embedPath);
+        ApiResponse<DashboardEmbed> GetSSOEndpointWithHttpInfo (string appId, string embedPath, string filters = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -96,7 +98,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (DashboardEmbed)</returns>
         System.Threading.Tasks.Task<ApiResponse<DashboardEmbed>> GetLookerCustomerReportingEmbedUrlAsyncWithHttpInfo (string appId, string embedPath);
         /// <summary>
-        /// Get the single sign on embed URL for PerformanceSummary Dashboard
+        /// Get the generic single sign on embed URL for Looker dashboards
         /// </summary>
         /// <remarks>
         /// 
@@ -104,11 +106,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <param name="filters">Filters that will be passed to the dashboard (optional)</param>
         /// <returns>Task of DashboardEmbed</returns>
-        System.Threading.Tasks.Task<DashboardEmbed> GetSSOEndpointAsync (string appId, string embedPath);
+        System.Threading.Tasks.Task<DashboardEmbed> GetSSOEndpointAsync (string appId, string embedPath, string filters = null);
 
         /// <summary>
-        /// Get the single sign on embed URL for PerformanceSummary Dashboard
+        /// Get the generic single sign on embed URL for Looker dashboards
         /// </summary>
         /// <remarks>
         /// 
@@ -116,8 +119,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <param name="filters">Filters that will be passed to the dashboard (optional)</param>
         /// <returns>Task of ApiResponse (DashboardEmbed)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DashboardEmbed>> GetSSOEndpointAsyncWithHttpInfo (string appId, string embedPath);
+        System.Threading.Tasks.Task<ApiResponse<DashboardEmbed>> GetSSOEndpointAsyncWithHttpInfo (string appId, string embedPath, string filters = null);
         #endregion Asynchronous Operations
     }
 
@@ -382,26 +386,28 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the single sign on embed URL for PerformanceSummary Dashboard 
+        /// Get the generic single sign on embed URL for Looker dashboards 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <param name="filters">Filters that will be passed to the dashboard (optional)</param>
         /// <returns>DashboardEmbed</returns>
-        public DashboardEmbed GetSSOEndpoint (string appId, string embedPath)
+        public DashboardEmbed GetSSOEndpoint (string appId, string embedPath, string filters = null)
         {
-             ApiResponse<DashboardEmbed> localVarResponse = GetSSOEndpointWithHttpInfo(appId, embedPath);
+             ApiResponse<DashboardEmbed> localVarResponse = GetSSOEndpointWithHttpInfo(appId, embedPath, filters);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get the single sign on embed URL for PerformanceSummary Dashboard 
+        /// Get the generic single sign on embed URL for Looker dashboards 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <param name="filters">Filters that will be passed to the dashboard (optional)</param>
         /// <returns>ApiResponse of DashboardEmbed</returns>
-        public ApiResponse< DashboardEmbed > GetSSOEndpointWithHttpInfo (string appId, string embedPath)
+        public ApiResponse< DashboardEmbed > GetSSOEndpointWithHttpInfo (string appId, string embedPath, string filters = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -436,6 +442,7 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (embedPath != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "embedPath", embedPath)); // query parameter
+            if (filters != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "filters", filters)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -463,27 +470,29 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the single sign on embed URL for PerformanceSummary Dashboard 
+        /// Get the generic single sign on embed URL for Looker dashboards 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <param name="filters">Filters that will be passed to the dashboard (optional)</param>
         /// <returns>Task of DashboardEmbed</returns>
-        public async System.Threading.Tasks.Task<DashboardEmbed> GetSSOEndpointAsync (string appId, string embedPath)
+        public async System.Threading.Tasks.Task<DashboardEmbed> GetSSOEndpointAsync (string appId, string embedPath, string filters = null)
         {
-             ApiResponse<DashboardEmbed> localVarResponse = await GetSSOEndpointAsyncWithHttpInfo(appId, embedPath);
+             ApiResponse<DashboardEmbed> localVarResponse = await GetSSOEndpointAsyncWithHttpInfo(appId, embedPath, filters);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get the single sign on embed URL for PerformanceSummary Dashboard 
+        /// Get the generic single sign on embed URL for Looker dashboards 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">AppNameId</param>
         /// <param name="embedPath">Embed URL of the dashboard</param>
+        /// <param name="filters">Filters that will be passed to the dashboard (optional)</param>
         /// <returns>Task of ApiResponse (DashboardEmbed)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DashboardEmbed>> GetSSOEndpointAsyncWithHttpInfo (string appId, string embedPath)
+        public async System.Threading.Tasks.Task<ApiResponse<DashboardEmbed>> GetSSOEndpointAsyncWithHttpInfo (string appId, string embedPath, string filters = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -518,6 +527,7 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (embedPath != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "embedPath", embedPath)); // query parameter
+            if (filters != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "filters", filters)); // query parameter
 
             // authentication (oauth2) required
             // oauth required

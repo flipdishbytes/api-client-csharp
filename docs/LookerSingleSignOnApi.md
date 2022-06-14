@@ -5,7 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetLookerCustomerReportingEmbedUrl**](LookerSingleSignOnApi.md#getlookercustomerreportingembedurl) | **GET** /api/v1.0/{appId}/looker/sso/CustomerReporting | 
-[**GetSSOEndpoint**](LookerSingleSignOnApi.md#getssoendpoint) | **GET** /api/v1.0/{appId}/looker/sso | Get the single sign on embed URL for PerformanceSummary Dashboard
+[**GetSSOEndpoint**](LookerSingleSignOnApi.md#getssoendpoint) | **GET** /api/v1.0/{appId}/looker/sso | Get the generic single sign on embed URL for Looker dashboards
 
 
 <a name="getlookercustomerreportingembedurl"></a>
@@ -73,9 +73,9 @@ Name | Type | Description  | Notes
 
 <a name="getssoendpoint"></a>
 # **GetSSOEndpoint**
-> DashboardEmbed GetSSOEndpoint (string appId, string embedPath)
+> DashboardEmbed GetSSOEndpoint (string appId, string embedPath, string filters = null)
 
-Get the single sign on embed URL for PerformanceSummary Dashboard
+Get the generic single sign on embed URL for Looker dashboards
 
 ### Example
 ```csharp
@@ -97,11 +97,12 @@ namespace Example
             var apiInstance = new LookerSingleSignOnApi();
             var appId = appId_example;  // string | AppNameId
             var embedPath = embedPath_example;  // string | Embed URL of the dashboard
+            var filters = filters_example;  // string | Filters that will be passed to the dashboard (optional) 
 
             try
             {
-                // Get the single sign on embed URL for PerformanceSummary Dashboard
-                DashboardEmbed result = apiInstance.GetSSOEndpoint(appId, embedPath);
+                // Get the generic single sign on embed URL for Looker dashboards
+                DashboardEmbed result = apiInstance.GetSSOEndpoint(appId, embedPath, filters);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -119,6 +120,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| AppNameId | 
  **embedPath** | **string**| Embed URL of the dashboard | 
+ **filters** | **string**| Filters that will be passed to the dashboard | [optional] 
 
 ### Return type
 
