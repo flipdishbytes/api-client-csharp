@@ -191,6 +191,31 @@ namespace Flipdish.Api
         /// <param name="updateRequest">fields to be updated</param>
         /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
         ApiResponse<RestApiResultStripeConnectedAccount> UpdateBankAccountDetailsWithHttpInfo (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest);
+        /// <summary>
+        /// Update Stripe Connection Account&#39;s payout schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
+        /// <param name="interval"></param>
+        /// <returns>RestApiResultModelBase</returns>
+        RestApiResultModelBase UpdatePayoutSchedule (string appId, string stripeConnectedAccountId, string interval);
+
+        /// <summary>
+        /// Update Stripe Connection Account&#39;s payout schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
+        /// <param name="interval"></param>
+        /// <returns>ApiResponse of RestApiResultModelBase</returns>
+        ApiResponse<RestApiResultModelBase> UpdatePayoutScheduleWithHttpInfo (string appId, string stripeConnectedAccountId, string interval);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -360,6 +385,31 @@ namespace Flipdish.Api
         /// <param name="updateRequest">fields to be updated</param>
         /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> UpdateBankAccountDetailsAsyncWithHttpInfo (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest);
+        /// <summary>
+        /// Update Stripe Connection Account&#39;s payout schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
+        /// <param name="interval"></param>
+        /// <returns>Task of RestApiResultModelBase</returns>
+        System.Threading.Tasks.Task<RestApiResultModelBase> UpdatePayoutScheduleAsync (string appId, string stripeConnectedAccountId, string interval);
+
+        /// <summary>
+        /// Update Stripe Connection Account&#39;s payout schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
+        /// <param name="interval"></param>
+        /// <returns>Task of ApiResponse (RestApiResultModelBase)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultModelBase>> UpdatePayoutScheduleAsyncWithHttpInfo (string appId, string stripeConnectedAccountId, string interval);
         #endregion Asynchronous Operations
     }
 
@@ -1731,6 +1781,181 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultStripeConnectedAccount>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiResultStripeConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeConnectedAccount)));
+        }
+
+        /// <summary>
+        /// Update Stripe Connection Account&#39;s payout schedule 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
+        /// <param name="interval"></param>
+        /// <returns>RestApiResultModelBase</returns>
+        public RestApiResultModelBase UpdatePayoutSchedule (string appId, string stripeConnectedAccountId, string interval)
+        {
+             ApiResponse<RestApiResultModelBase> localVarResponse = UpdatePayoutScheduleWithHttpInfo(appId, stripeConnectedAccountId, interval);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Stripe Connection Account&#39;s payout schedule 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
+        /// <param name="interval"></param>
+        /// <returns>ApiResponse of RestApiResultModelBase</returns>
+        public ApiResponse< RestApiResultModelBase > UpdatePayoutScheduleWithHttpInfo (string appId, string stripeConnectedAccountId, string interval)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->UpdatePayoutSchedule");
+            // verify the required parameter 'stripeConnectedAccountId' is set
+            if (stripeConnectedAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'stripeConnectedAccountId' when calling StripeCustomConnectApi->UpdatePayoutSchedule");
+            // verify the required parameter 'interval' is set
+            if (interval == null)
+                throw new ApiException(400, "Missing required parameter 'interval' when calling StripeCustomConnectApi->UpdatePayoutSchedule");
+
+            var localVarPath = "/api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (stripeConnectedAccountId != null) localVarPathParams.Add("stripeConnectedAccountId", this.Configuration.ApiClient.ParameterToString(stripeConnectedAccountId)); // path parameter
+            if (interval != null) localVarPathParams.Add("interval", this.Configuration.ApiClient.ParameterToString(interval)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdatePayoutSchedule", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultModelBase>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultModelBase) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultModelBase)));
+        }
+
+        /// <summary>
+        /// Update Stripe Connection Account&#39;s payout schedule 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
+        /// <param name="interval"></param>
+        /// <returns>Task of RestApiResultModelBase</returns>
+        public async System.Threading.Tasks.Task<RestApiResultModelBase> UpdatePayoutScheduleAsync (string appId, string stripeConnectedAccountId, string interval)
+        {
+             ApiResponse<RestApiResultModelBase> localVarResponse = await UpdatePayoutScheduleAsyncWithHttpInfo(appId, stripeConnectedAccountId, interval);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update Stripe Connection Account&#39;s payout schedule 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
+        /// <param name="interval"></param>
+        /// <returns>Task of ApiResponse (RestApiResultModelBase)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultModelBase>> UpdatePayoutScheduleAsyncWithHttpInfo (string appId, string stripeConnectedAccountId, string interval)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->UpdatePayoutSchedule");
+            // verify the required parameter 'stripeConnectedAccountId' is set
+            if (stripeConnectedAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'stripeConnectedAccountId' when calling StripeCustomConnectApi->UpdatePayoutSchedule");
+            // verify the required parameter 'interval' is set
+            if (interval == null)
+                throw new ApiException(400, "Missing required parameter 'interval' when calling StripeCustomConnectApi->UpdatePayoutSchedule");
+
+            var localVarPath = "/api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (stripeConnectedAccountId != null) localVarPathParams.Add("stripeConnectedAccountId", this.Configuration.ApiClient.ParameterToString(stripeConnectedAccountId)); // path parameter
+            if (interval != null) localVarPathParams.Add("interval", this.Configuration.ApiClient.ParameterToString(interval)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdatePayoutSchedule", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultModelBase>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultModelBase) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultModelBase)));
         }
 
     }

@@ -127,16 +127,57 @@ namespace Flipdish.Model
         [DataMember(Name="CardPaymentStatus", EmitDefaultValue=false)]
         public CardPaymentStatusEnum? CardPaymentStatus { get; set; }
         /// <summary>
+        /// Payouts Schedule Interval
+        /// </summary>
+        /// <value>Payouts Schedule Interval</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PayoutScheduleIntervalEnum
+        {
+            
+            /// <summary>
+            /// Enum Manual for value: Manual
+            /// </summary>
+            [EnumMember(Value = "Manual")]
+            Manual = 1,
+            
+            /// <summary>
+            /// Enum Daily for value: Daily
+            /// </summary>
+            [EnumMember(Value = "Daily")]
+            Daily = 2,
+            
+            /// <summary>
+            /// Enum Weekly for value: Weekly
+            /// </summary>
+            [EnumMember(Value = "Weekly")]
+            Weekly = 3,
+            
+            /// <summary>
+            /// Enum Monthly for value: Monthly
+            /// </summary>
+            [EnumMember(Value = "Monthly")]
+            Monthly = 4
+        }
+
+        /// <summary>
+        /// Payouts Schedule Interval
+        /// </summary>
+        /// <value>Payouts Schedule Interval</value>
+        [DataMember(Name="PayoutScheduleInterval", EmitDefaultValue=false)]
+        public PayoutScheduleIntervalEnum? PayoutScheduleInterval { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="StripeConnectedAccountInfo" /> class.
         /// </summary>
         /// <param name="accountStatus">Stripe connected account status.</param>
         /// <param name="stripeId">Stripe connected account id.</param>
         /// <param name="cardPaymentStatus">Current status of the Card Payment capability of the account.</param>
-        public StripeConnectedAccountInfo(AccountStatusEnum? accountStatus = default(AccountStatusEnum?), string stripeId = default(string), CardPaymentStatusEnum? cardPaymentStatus = default(CardPaymentStatusEnum?))
+        /// <param name="payoutScheduleInterval">Payouts Schedule Interval.</param>
+        public StripeConnectedAccountInfo(AccountStatusEnum? accountStatus = default(AccountStatusEnum?), string stripeId = default(string), CardPaymentStatusEnum? cardPaymentStatus = default(CardPaymentStatusEnum?), PayoutScheduleIntervalEnum? payoutScheduleInterval = default(PayoutScheduleIntervalEnum?))
         {
             this.AccountStatus = accountStatus;
             this.StripeId = stripeId;
             this.CardPaymentStatus = cardPaymentStatus;
+            this.PayoutScheduleInterval = payoutScheduleInterval;
         }
         
 
@@ -146,6 +187,7 @@ namespace Flipdish.Model
         /// <value>Stripe connected account id</value>
         [DataMember(Name="StripeId", EmitDefaultValue=false)]
         public string StripeId { get; set; }
+
 
 
         /// <summary>
@@ -159,6 +201,7 @@ namespace Flipdish.Model
             sb.Append("  AccountStatus: ").Append(AccountStatus).Append("\n");
             sb.Append("  StripeId: ").Append(StripeId).Append("\n");
             sb.Append("  CardPaymentStatus: ").Append(CardPaymentStatus).Append("\n");
+            sb.Append("  PayoutScheduleInterval: ").Append(PayoutScheduleInterval).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -207,6 +250,11 @@ namespace Flipdish.Model
                     this.CardPaymentStatus == input.CardPaymentStatus ||
                     (this.CardPaymentStatus != null &&
                     this.CardPaymentStatus.Equals(input.CardPaymentStatus))
+                ) && 
+                (
+                    this.PayoutScheduleInterval == input.PayoutScheduleInterval ||
+                    (this.PayoutScheduleInterval != null &&
+                    this.PayoutScheduleInterval.Equals(input.PayoutScheduleInterval))
                 );
         }
 
@@ -225,6 +273,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StripeId.GetHashCode();
                 if (this.CardPaymentStatus != null)
                     hashCode = hashCode * 59 + this.CardPaymentStatus.GetHashCode();
+                if (this.PayoutScheduleInterval != null)
+                    hashCode = hashCode * 59 + this.PayoutScheduleInterval.GetHashCode();
                 return hashCode;
             }
         }

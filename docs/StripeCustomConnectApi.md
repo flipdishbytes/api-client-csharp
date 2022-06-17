@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**SetBankAccountBusinessType**](StripeCustomConnectApi.md#setbankaccountbusinesstype) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | Update bank account&#39;s BusinessType and create a Stripe Connected Account
 [**StripeCustomConnectRefresh**](StripeCustomConnectApi.md#stripecustomconnectrefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
 [**UpdateBankAccountDetails**](StripeCustomConnectApi.md#updatebankaccountdetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | Update bank account details
+[**UpdatePayoutSchedule**](StripeCustomConnectApi.md#updatepayoutschedule) | **POST** /api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval} | Update Stripe Connection Account&#39;s payout schedule
 
 
 <a name="createbankaccountandconnectedaccount"></a>
@@ -462,6 +463,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="updatepayoutschedule"></a>
+# **UpdatePayoutSchedule**
+> RestApiResultModelBase UpdatePayoutSchedule (string appId, string stripeConnectedAccountId, string interval)
+
+Update Stripe Connection Account's payout schedule
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UpdatePayoutScheduleExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StripeCustomConnectApi();
+            var appId = appId_example;  // string | 
+            var stripeConnectedAccountId = stripeConnectedAccountId_example;  // string | 
+            var interval = interval_example;  // string | 
+
+            try
+            {
+                // Update Stripe Connection Account's payout schedule
+                RestApiResultModelBase result = apiInstance.UpdatePayoutSchedule(appId, stripeConnectedAccountId, interval);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StripeCustomConnectApi.UpdatePayoutSchedule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **stripeConnectedAccountId** | **string**|  | 
+ **interval** | **string**|  | 
+
+### Return type
+
+[**RestApiResultModelBase**](RestApiResultModelBase.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

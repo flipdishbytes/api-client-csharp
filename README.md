@@ -463,6 +463,7 @@ Class | Method | HTTP request | Description
 *StripeCustomConnectApi* | [**SetBankAccountBusinessType**](docs/StripeCustomConnectApi.md#setbankaccountbusinesstype) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | Update bank account's BusinessType and create a Stripe Connected Account
 *StripeCustomConnectApi* | [**StripeCustomConnectRefresh**](docs/StripeCustomConnectApi.md#stripecustomconnectrefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
 *StripeCustomConnectApi* | [**UpdateBankAccountDetails**](docs/StripeCustomConnectApi.md#updatebankaccountdetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | Update bank account details
+*StripeCustomConnectApi* | [**UpdatePayoutSchedule**](docs/StripeCustomConnectApi.md#updatepayoutschedule) | **POST** /api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval} | Update Stripe Connection Account's payout schedule
 *StripeCustomConnectAdminApi* | [**InitializeBankAccountConnectedAccount**](docs/StripeCustomConnectAdminApi.md#initializebankaccountconnectedaccount) | **POST** /api/v1.0/customconnect/initialize-bank-account | Create a new Bank Account and Stripe connected account
 *StuartApi* | [**StuartCancelJob**](docs/StuartApi.md#stuartcanceljob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | Cancel a stuart job
 *StuartApi* | [**StuartGetJob**](docs/StuartApi.md#stuartgetjob) | **GET** /api/v1.0/stuart/jobs/{jobId} | Get start job details
@@ -758,6 +759,7 @@ Class | Method | HTTP request | Description
  - [Model.Metafield](docs/Metafield.md)
  - [Model.MetafieldDefinition](docs/MetafieldDefinition.md)
  - [Model.MetafieldDefinitionRecommendation](docs/MetafieldDefinitionRecommendation.md)
+ - [Model.ModelBase](docs/ModelBase.md)
  - [Model.OAuthApp](docs/OAuthApp.md)
  - [Model.OAuthTokenModel](docs/OAuthTokenModel.md)
  - [Model.OauthClientRedirectUri](docs/OauthClientRedirectUri.md)
@@ -962,6 +964,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultMenuSectionItem](docs/RestApiResultMenuSectionItem.md)
  - [Model.RestApiResultMetadata](docs/RestApiResultMetadata.md)
  - [Model.RestApiResultMetafieldDefinition](docs/RestApiResultMetafieldDefinition.md)
+ - [Model.RestApiResultModelBase](docs/RestApiResultModelBase.md)
  - [Model.RestApiResultOAuthApp](docs/RestApiResultOAuthApp.md)
  - [Model.RestApiResultOauthClientRedirectUri](docs/RestApiResultOauthClientRedirectUri.md)
  - [Model.RestApiResultOrder](docs/RestApiResultOrder.md)
