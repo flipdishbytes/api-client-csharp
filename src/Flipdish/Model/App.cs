@@ -875,52 +875,58 @@ namespace Flipdish.Model
             UpdateOrdersDeliveryTrackingStatus = 127,
             
             /// <summary>
+            /// Enum UpdateOrderFulfillmentStatus for value: UpdateOrderFulfillmentStatus
+            /// </summary>
+            [EnumMember(Value = "UpdateOrderFulfillmentStatus")]
+            UpdateOrderFulfillmentStatus = 128,
+            
+            /// <summary>
             /// Enum ViewPayouts for value: ViewPayouts
             /// </summary>
             [EnumMember(Value = "ViewPayouts")]
-            ViewPayouts = 128,
+            ViewPayouts = 129,
             
             /// <summary>
             /// Enum ViewChannels for value: ViewChannels
             /// </summary>
             [EnumMember(Value = "ViewChannels")]
-            ViewChannels = 129,
+            ViewChannels = 130,
             
             /// <summary>
             /// Enum ViewOnboarding for value: ViewOnboarding
             /// </summary>
             [EnumMember(Value = "ViewOnboarding")]
-            ViewOnboarding = 130,
+            ViewOnboarding = 131,
             
             /// <summary>
             /// Enum UpdateOnboarding for value: UpdateOnboarding
             /// </summary>
             [EnumMember(Value = "UpdateOnboarding")]
-            UpdateOnboarding = 131,
+            UpdateOnboarding = 132,
             
             /// <summary>
             /// Enum CreateAppStoreAppConfiguration for value: CreateAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "CreateAppStoreAppConfiguration")]
-            CreateAppStoreAppConfiguration = 132,
+            CreateAppStoreAppConfiguration = 133,
             
             /// <summary>
             /// Enum ViewAppStoreAppConfiguration for value: ViewAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "ViewAppStoreAppConfiguration")]
-            ViewAppStoreAppConfiguration = 133,
+            ViewAppStoreAppConfiguration = 134,
             
             /// <summary>
             /// Enum UpdateAppStoreAppConfiguration for value: UpdateAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "UpdateAppStoreAppConfiguration")]
-            UpdateAppStoreAppConfiguration = 134,
+            UpdateAppStoreAppConfiguration = 135,
             
             /// <summary>
             /// Enum DeleteAppStoreAppConfiguration for value: DeleteAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "DeleteAppStoreAppConfiguration")]
-            DeleteAppStoreAppConfiguration = 135
+            DeleteAppStoreAppConfiguration = 136
         }
 
 
