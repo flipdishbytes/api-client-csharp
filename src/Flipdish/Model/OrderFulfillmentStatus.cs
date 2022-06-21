@@ -25,7 +25,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Order Delivery Status Information
+    /// Order Fulfillment Status Information
     /// </summary>
     [DataContract]
     public partial class OrderFulfillmentStatus :  IEquatable<OrderFulfillmentStatus>, IValidatableObject

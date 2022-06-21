@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**AcceptOrder**](OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 [**DispatchOrder**](OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 [**GetDeliveryInformation**](OrdersApi.md#getdeliveryinformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
-[**GetFulfillmentStatus**](OrdersApi.md#getfulfillmentstatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order delivery information
+[**GetFulfillmentStatus**](OrdersApi.md#getfulfillmentstatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order fulfillment status
 [**GetOrderById**](OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | Get order by ID
 [**GetOrders**](OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
 [**GetOrdersSummary**](OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 # **GetFulfillmentStatus**
 > RestApiResultOrderFulfillmentStatus GetFulfillmentStatus (int? orderId)
 
-Get order delivery information
+Get order fulfillment status
 
 [BETA - this endpoint is under development, do not use it in your production system] Returns an order's fulfillment status.
 
@@ -239,7 +239,7 @@ namespace Example
 
             try
             {
-                // Get order delivery information
+                // Get order fulfillment status
                 RestApiResultOrderFulfillmentStatus result = apiInstance.GetFulfillmentStatus(orderId);
                 Debug.WriteLine(result);
             }
@@ -705,7 +705,7 @@ namespace Example
 
             var apiInstance = new OrdersApi();
             var orderId = 56;  // int? | Flipdish Order Id
-            var fulfillmentStatusRequest = new OrderFulfillmentStatusBase(); // OrderFulfillmentStatusBase | 
+            var fulfillmentStatusRequest = new OrderFulfillmentStatusBase(); // OrderFulfillmentStatusBase | Fulfillment Status
 
             try
             {
@@ -726,7 +726,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orderId** | **int?**| Flipdish Order Id | 
- **fulfillmentStatusRequest** | [**OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md)|  | 
+ **fulfillmentStatusRequest** | [**OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md)| Fulfillment Status | 
 
 ### Return type
 

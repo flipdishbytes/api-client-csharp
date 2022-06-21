@@ -391,7 +391,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**AcceptOrder**](docs/OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 *OrdersApi* | [**DispatchOrder**](docs/OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 *OrdersApi* | [**GetDeliveryInformation**](docs/OrdersApi.md#getdeliveryinformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
-*OrdersApi* | [**GetFulfillmentStatus**](docs/OrdersApi.md#getfulfillmentstatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order delivery information
+*OrdersApi* | [**GetFulfillmentStatus**](docs/OrdersApi.md#getfulfillmentstatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order fulfillment status
 *OrdersApi* | [**GetOrderById**](docs/OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | Get order by ID
 *OrdersApi* | [**GetOrders**](docs/OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
 *OrdersApi* | [**GetOrdersSummary**](docs/OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
@@ -779,6 +779,7 @@ Class | Method | HTTP request | Description
  - [Model.OrderDropOffLocation](docs/OrderDropOffLocation.md)
  - [Model.OrderFulfillmentStatus](docs/OrderFulfillmentStatus.md)
  - [Model.OrderFulfillmentStatusBase](docs/OrderFulfillmentStatusBase.md)
+ - [Model.OrderFulfillmentStatusUpdatedEvent](docs/OrderFulfillmentStatusUpdatedEvent.md)
  - [Model.OrderIdAndSequenceNumber](docs/OrderIdAndSequenceNumber.md)
  - [Model.OrderIngestSubmitOrderRequest](docs/OrderIngestSubmitOrderRequest.md)
  - [Model.OrderIngestSubmitOrderResponse](docs/OrderIngestSubmitOrderResponse.md)
