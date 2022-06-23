@@ -38,18 +38,20 @@ namespace Flipdish.Model
         /// <param name="user">User which deleted delivery zone for this store.</param>
         /// <param name="description">Description.</param>
         /// <param name="preOrderConfig">Pre Order Configuration.</param>
+        /// <param name="oldPreOrderConfig">Old Pre Order Configuration.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public StorePreOrderConfigUpdatedEvent(string eventName = default(string), int? storeId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), PreOrderConfig preOrderConfig = default(PreOrderConfig), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public StorePreOrderConfigUpdatedEvent(string eventName = default(string), int? storeId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), PreOrderConfig preOrderConfig = default(PreOrderConfig), PreOrderConfig oldPreOrderConfig = default(PreOrderConfig), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
             this.EventName = eventName;
             this.StoreId = storeId;
             this.User = user;
             this.Description = description;
             this.PreOrderConfig = preOrderConfig;
+            this.OldPreOrderConfig = oldPreOrderConfig;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
             this.Position = position;
@@ -91,6 +93,13 @@ namespace Flipdish.Model
         /// <value>Pre Order Configuration</value>
         [DataMember(Name="PreOrderConfig", EmitDefaultValue=false)]
         public PreOrderConfig PreOrderConfig { get; set; }
+
+        /// <summary>
+        /// Old Pre Order Configuration
+        /// </summary>
+        /// <value>Old Pre Order Configuration</value>
+        [DataMember(Name="OldPreOrderConfig", EmitDefaultValue=false)]
+        public PreOrderConfig OldPreOrderConfig { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -140,6 +149,7 @@ namespace Flipdish.Model
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  PreOrderConfig: ").Append(PreOrderConfig).Append("\n");
+            sb.Append("  OldPreOrderConfig: ").Append(OldPreOrderConfig).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -205,6 +215,11 @@ namespace Flipdish.Model
                     this.PreOrderConfig.Equals(input.PreOrderConfig))
                 ) && 
                 (
+                    this.OldPreOrderConfig == input.OldPreOrderConfig ||
+                    (this.OldPreOrderConfig != null &&
+                    this.OldPreOrderConfig.Equals(input.OldPreOrderConfig))
+                ) && 
+                (
                     this.FlipdishEventId == input.FlipdishEventId ||
                     (this.FlipdishEventId != null &&
                     this.FlipdishEventId.Equals(input.FlipdishEventId))
@@ -250,6 +265,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.PreOrderConfig != null)
                     hashCode = hashCode * 59 + this.PreOrderConfig.GetHashCode();
+                if (this.OldPreOrderConfig != null)
+                    hashCode = hashCode * 59 + this.OldPreOrderConfig.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)
