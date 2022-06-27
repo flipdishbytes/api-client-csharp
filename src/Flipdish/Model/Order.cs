@@ -150,7 +150,13 @@ namespace Flipdish.Model
             /// Enum DriveThrough for value: DriveThrough
             /// </summary>
             [EnumMember(Value = "DriveThrough")]
-            DriveThrough = 9
+            DriveThrough = 9,
+            
+            /// <summary>
+            /// Enum Team for value: Team
+            /// </summary>
+            [EnumMember(Value = "Team")]
+            Team = 10
         }
 
         /// <summary>
