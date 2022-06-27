@@ -31,7 +31,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new PaymentIntentsApi();
-            var paymentIntentId = paymentIntentId_example;  // string | Stripes payment intent indentifier
+            var paymentIntentId = paymentIntentId_example;  // string | Stripe payment intent identifier
 
             try
             {
@@ -52,7 +52,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **paymentIntentId** | **string**| Stripes payment intent indentifier | 
+ **paymentIntentId** | **string**| Stripe payment intent identifier | 
 
 ### Return type
 

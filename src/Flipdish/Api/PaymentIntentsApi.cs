@@ -31,7 +31,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentIntentId">Stripes payment intent indentifier</param>
+        /// <param name="paymentIntentId">Stripe payment intent identifier</param>
         /// <returns>RestApiResultPaymentIntent</returns>
         RestApiResultPaymentIntent GetPaymentIntent (string paymentIntentId);
 
@@ -42,7 +42,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentIntentId">Stripes payment intent indentifier</param>
+        /// <param name="paymentIntentId">Stripe payment intent identifier</param>
         /// <returns>ApiResponse of RestApiResultPaymentIntent</returns>
         ApiResponse<RestApiResultPaymentIntent> GetPaymentIntentWithHttpInfo (string paymentIntentId);
         #endregion Synchronous Operations
@@ -54,7 +54,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentIntentId">Stripes payment intent indentifier</param>
+        /// <param name="paymentIntentId">Stripe payment intent identifier</param>
         /// <returns>Task of RestApiResultPaymentIntent</returns>
         System.Threading.Tasks.Task<RestApiResultPaymentIntent> GetPaymentIntentAsync (string paymentIntentId);
 
@@ -65,7 +65,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentIntentId">Stripes payment intent indentifier</param>
+        /// <param name="paymentIntentId">Stripe payment intent identifier</param>
         /// <returns>Task of ApiResponse (RestApiResultPaymentIntent)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultPaymentIntent>> GetPaymentIntentAsyncWithHttpInfo (string paymentIntentId);
         #endregion Asynchronous Operations
@@ -172,7 +172,7 @@ namespace Flipdish.Api
         /// Returns stripe payment intent for a given id 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentIntentId">Stripes payment intent indentifier</param>
+        /// <param name="paymentIntentId">Stripe payment intent identifier</param>
         /// <returns>RestApiResultPaymentIntent</returns>
         public RestApiResultPaymentIntent GetPaymentIntent (string paymentIntentId)
         {
@@ -184,7 +184,7 @@ namespace Flipdish.Api
         /// Returns stripe payment intent for a given id 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentIntentId">Stripes payment intent indentifier</param>
+        /// <param name="paymentIntentId">Stripe payment intent identifier</param>
         /// <returns>ApiResponse of RestApiResultPaymentIntent</returns>
         public ApiResponse< RestApiResultPaymentIntent > GetPaymentIntentWithHttpInfo (string paymentIntentId)
         {
@@ -247,7 +247,7 @@ namespace Flipdish.Api
         /// Returns stripe payment intent for a given id 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentIntentId">Stripes payment intent indentifier</param>
+        /// <param name="paymentIntentId">Stripe payment intent identifier</param>
         /// <returns>Task of RestApiResultPaymentIntent</returns>
         public async System.Threading.Tasks.Task<RestApiResultPaymentIntent> GetPaymentIntentAsync (string paymentIntentId)
         {
@@ -260,7 +260,7 @@ namespace Flipdish.Api
         /// Returns stripe payment intent for a given id 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentIntentId">Stripes payment intent indentifier</param>
+        /// <param name="paymentIntentId">Stripe payment intent identifier</param>
         /// <returns>Task of ApiResponse (RestApiResultPaymentIntent)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultPaymentIntent>> GetPaymentIntentAsyncWithHttpInfo (string paymentIntentId)
         {
