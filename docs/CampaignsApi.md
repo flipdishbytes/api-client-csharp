@@ -398,7 +398,7 @@ Name | Type | Description  | Notes
 
 <a name="getstorelist"></a>
 # **GetStoreList**
-> RestApiArrayResultStoreListItem GetStoreList (string appId)
+> RestApiArrayResultStoreListItem GetStoreList (string appId, bool? onlyPublished = null)
 
 Gets list of stores for app
 
@@ -421,11 +421,12 @@ namespace Example
 
             var apiInstance = new CampaignsApi();
             var appId = appId_example;  // string | App Name Id
+            var onlyPublished = true;  // bool? |  (optional) 
 
             try
             {
                 // Gets list of stores for app
-                RestApiArrayResultStoreListItem result = apiInstance.GetStoreList(appId);
+                RestApiArrayResultStoreListItem result = apiInstance.GetStoreList(appId, onlyPublished);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -442,6 +443,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App Name Id | 
+ **onlyPublished** | **bool?**|  | [optional] 
 
 ### Return type
 

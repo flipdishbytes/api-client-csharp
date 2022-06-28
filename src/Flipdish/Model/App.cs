@@ -887,52 +887,76 @@ namespace Flipdish.Model
             UpdateOrderFulfillmentStatus = 129,
             
             /// <summary>
+            /// Enum ViewFulfillmentStatesConfiguration for value: ViewFulfillmentStatesConfiguration
+            /// </summary>
+            [EnumMember(Value = "ViewFulfillmentStatesConfiguration")]
+            ViewFulfillmentStatesConfiguration = 130,
+            
+            /// <summary>
+            /// Enum CreateFulfillmentStatesConfiguration for value: CreateFulfillmentStatesConfiguration
+            /// </summary>
+            [EnumMember(Value = "CreateFulfillmentStatesConfiguration")]
+            CreateFulfillmentStatesConfiguration = 131,
+            
+            /// <summary>
+            /// Enum UpdateFulfillmentStatesConfiguration for value: UpdateFulfillmentStatesConfiguration
+            /// </summary>
+            [EnumMember(Value = "UpdateFulfillmentStatesConfiguration")]
+            UpdateFulfillmentStatesConfiguration = 132,
+            
+            /// <summary>
+            /// Enum DeleteFulfillmentStatesConfiguration for value: DeleteFulfillmentStatesConfiguration
+            /// </summary>
+            [EnumMember(Value = "DeleteFulfillmentStatesConfiguration")]
+            DeleteFulfillmentStatesConfiguration = 133,
+            
+            /// <summary>
             /// Enum ViewPayouts for value: ViewPayouts
             /// </summary>
             [EnumMember(Value = "ViewPayouts")]
-            ViewPayouts = 130,
+            ViewPayouts = 134,
             
             /// <summary>
             /// Enum ViewChannels for value: ViewChannels
             /// </summary>
             [EnumMember(Value = "ViewChannels")]
-            ViewChannels = 131,
+            ViewChannels = 135,
             
             /// <summary>
             /// Enum ViewOnboarding for value: ViewOnboarding
             /// </summary>
             [EnumMember(Value = "ViewOnboarding")]
-            ViewOnboarding = 132,
+            ViewOnboarding = 136,
             
             /// <summary>
             /// Enum UpdateOnboarding for value: UpdateOnboarding
             /// </summary>
             [EnumMember(Value = "UpdateOnboarding")]
-            UpdateOnboarding = 133,
+            UpdateOnboarding = 137,
             
             /// <summary>
             /// Enum CreateAppStoreAppConfiguration for value: CreateAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "CreateAppStoreAppConfiguration")]
-            CreateAppStoreAppConfiguration = 134,
+            CreateAppStoreAppConfiguration = 138,
             
             /// <summary>
             /// Enum ViewAppStoreAppConfiguration for value: ViewAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "ViewAppStoreAppConfiguration")]
-            ViewAppStoreAppConfiguration = 135,
+            ViewAppStoreAppConfiguration = 139,
             
             /// <summary>
             /// Enum UpdateAppStoreAppConfiguration for value: UpdateAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "UpdateAppStoreAppConfiguration")]
-            UpdateAppStoreAppConfiguration = 136,
+            UpdateAppStoreAppConfiguration = 140,
             
             /// <summary>
             /// Enum DeleteAppStoreAppConfiguration for value: DeleteAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "DeleteAppStoreAppConfiguration")]
-            DeleteAppStoreAppConfiguration = 137
+            DeleteAppStoreAppConfiguration = 141
         }
 
 

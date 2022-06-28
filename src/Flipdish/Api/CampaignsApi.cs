@@ -166,8 +166,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name Id</param>
+        /// <param name="onlyPublished"> (optional)</param>
         /// <returns>RestApiArrayResultStoreListItem</returns>
-        RestApiArrayResultStoreListItem GetStoreList (string appId);
+        RestApiArrayResultStoreListItem GetStoreList (string appId, bool? onlyPublished = null);
 
         /// <summary>
         /// Gets list of stores for app
@@ -177,8 +178,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name Id</param>
+        /// <param name="onlyPublished"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultStoreListItem</returns>
-        ApiResponse<RestApiArrayResultStoreListItem> GetStoreListWithHttpInfo (string appId);
+        ApiResponse<RestApiArrayResultStoreListItem> GetStoreListWithHttpInfo (string appId, bool? onlyPublished = null);
         /// <summary>
         /// Deletes a campaign
         /// </summary>
@@ -396,8 +398,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name Id</param>
+        /// <param name="onlyPublished"> (optional)</param>
         /// <returns>Task of RestApiArrayResultStoreListItem</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultStoreListItem> GetStoreListAsync (string appId);
+        System.Threading.Tasks.Task<RestApiArrayResultStoreListItem> GetStoreListAsync (string appId, bool? onlyPublished = null);
 
         /// <summary>
         /// Gets list of stores for app
@@ -407,8 +410,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name Id</param>
+        /// <param name="onlyPublished"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultStoreListItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreListItem>> GetStoreListAsyncWithHttpInfo (string appId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreListItem>> GetStoreListAsyncWithHttpInfo (string appId, bool? onlyPublished = null);
         /// <summary>
         /// Deletes a campaign
         /// </summary>
@@ -1589,10 +1593,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name Id</param>
+        /// <param name="onlyPublished"> (optional)</param>
         /// <returns>RestApiArrayResultStoreListItem</returns>
-        public RestApiArrayResultStoreListItem GetStoreList (string appId)
+        public RestApiArrayResultStoreListItem GetStoreList (string appId, bool? onlyPublished = null)
         {
-             ApiResponse<RestApiArrayResultStoreListItem> localVarResponse = GetStoreListWithHttpInfo(appId);
+             ApiResponse<RestApiArrayResultStoreListItem> localVarResponse = GetStoreListWithHttpInfo(appId, onlyPublished);
              return localVarResponse.Data;
         }
 
@@ -1601,8 +1606,9 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name Id</param>
+        /// <param name="onlyPublished"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultStoreListItem</returns>
-        public ApiResponse< RestApiArrayResultStoreListItem > GetStoreListWithHttpInfo (string appId)
+        public ApiResponse< RestApiArrayResultStoreListItem > GetStoreListWithHttpInfo (string appId, bool? onlyPublished = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1633,6 +1639,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (onlyPublished != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "onlyPublished", onlyPublished)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1664,10 +1671,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name Id</param>
+        /// <param name="onlyPublished"> (optional)</param>
         /// <returns>Task of RestApiArrayResultStoreListItem</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultStoreListItem> GetStoreListAsync (string appId)
+        public async System.Threading.Tasks.Task<RestApiArrayResultStoreListItem> GetStoreListAsync (string appId, bool? onlyPublished = null)
         {
-             ApiResponse<RestApiArrayResultStoreListItem> localVarResponse = await GetStoreListAsyncWithHttpInfo(appId);
+             ApiResponse<RestApiArrayResultStoreListItem> localVarResponse = await GetStoreListAsyncWithHttpInfo(appId, onlyPublished);
              return localVarResponse.Data;
 
         }
@@ -1677,8 +1685,9 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Name Id</param>
+        /// <param name="onlyPublished"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultStoreListItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreListItem>> GetStoreListAsyncWithHttpInfo (string appId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreListItem>> GetStoreListAsyncWithHttpInfo (string appId, bool? onlyPublished = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1709,6 +1718,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (onlyPublished != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "onlyPublished", onlyPublished)); // query parameter
 
             // authentication (oauth2) required
             // oauth required

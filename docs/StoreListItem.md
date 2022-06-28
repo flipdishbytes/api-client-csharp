@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **StoreGroupName** | **string** | Store Group Name | [optional] 
 **HasLoyaltyCampaign** | **bool?** | Store has loyalty campaign | [optional] 
 **HasRetentionCampaign** | **bool?** | Store has retention campaign | [optional] 
+**IsPublished** | **bool?** | Is Published store | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

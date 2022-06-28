@@ -39,7 +39,8 @@ namespace Flipdish.Model
         /// <param name="storeGroupName">Store Group Name.</param>
         /// <param name="hasLoyaltyCampaign">Store has loyalty campaign.</param>
         /// <param name="hasRetentionCampaign">Store has retention campaign.</param>
-        public StoreListItem(int? storeId = default(int?), string storeName = default(string), int? storeGroupId = default(int?), string storeGroupName = default(string), bool? hasLoyaltyCampaign = default(bool?), bool? hasRetentionCampaign = default(bool?))
+        /// <param name="isPublished">Is Published store.</param>
+        public StoreListItem(int? storeId = default(int?), string storeName = default(string), int? storeGroupId = default(int?), string storeGroupName = default(string), bool? hasLoyaltyCampaign = default(bool?), bool? hasRetentionCampaign = default(bool?), bool? isPublished = default(bool?))
         {
             this.StoreId = storeId;
             this.StoreName = storeName;
@@ -47,6 +48,7 @@ namespace Flipdish.Model
             this.StoreGroupName = storeGroupName;
             this.HasLoyaltyCampaign = hasLoyaltyCampaign;
             this.HasRetentionCampaign = hasRetentionCampaign;
+            this.IsPublished = isPublished;
         }
         
         /// <summary>
@@ -92,6 +94,13 @@ namespace Flipdish.Model
         public bool? HasRetentionCampaign { get; set; }
 
         /// <summary>
+        /// Is Published store
+        /// </summary>
+        /// <value>Is Published store</value>
+        [DataMember(Name="IsPublished", EmitDefaultValue=false)]
+        public bool? IsPublished { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -105,6 +114,7 @@ namespace Flipdish.Model
             sb.Append("  StoreGroupName: ").Append(StoreGroupName).Append("\n");
             sb.Append("  HasLoyaltyCampaign: ").Append(HasLoyaltyCampaign).Append("\n");
             sb.Append("  HasRetentionCampaign: ").Append(HasRetentionCampaign).Append("\n");
+            sb.Append("  IsPublished: ").Append(IsPublished).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -168,6 +178,11 @@ namespace Flipdish.Model
                     this.HasRetentionCampaign == input.HasRetentionCampaign ||
                     (this.HasRetentionCampaign != null &&
                     this.HasRetentionCampaign.Equals(input.HasRetentionCampaign))
+                ) && 
+                (
+                    this.IsPublished == input.IsPublished ||
+                    (this.IsPublished != null &&
+                    this.IsPublished.Equals(input.IsPublished))
                 );
         }
 
@@ -192,6 +207,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.HasLoyaltyCampaign.GetHashCode();
                 if (this.HasRetentionCampaign != null)
                     hashCode = hashCode * 59 + this.HasRetentionCampaign.GetHashCode();
+                if (this.IsPublished != null)
+                    hashCode = hashCode * 59 + this.IsPublished.GetHashCode();
                 return hashCode;
             }
         }
