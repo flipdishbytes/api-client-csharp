@@ -35,10 +35,14 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="orderId">Order Id.</param>
         /// <param name="statusId">Fulfillment Status Id.</param>
-        public OrderFulfillmentStatus(int? orderId = default(int?), string statusId = default(string))
+        /// <param name="statusName">Fulfillment Status Name.</param>
+        /// <param name="icon">Status Icon.</param>
+        public OrderFulfillmentStatus(int? orderId = default(int?), string statusId = default(string), string statusName = default(string), string icon = default(string))
         {
             this.OrderId = orderId;
             this.StatusId = statusId;
+            this.StatusName = statusName;
+            this.Icon = icon;
         }
         
         /// <summary>
@@ -56,6 +60,20 @@ namespace Flipdish.Model
         public string StatusId { get; set; }
 
         /// <summary>
+        /// Fulfillment Status Name
+        /// </summary>
+        /// <value>Fulfillment Status Name</value>
+        [DataMember(Name="StatusName", EmitDefaultValue=false)]
+        public string StatusName { get; set; }
+
+        /// <summary>
+        /// Status Icon
+        /// </summary>
+        /// <value>Status Icon</value>
+        [DataMember(Name="Icon", EmitDefaultValue=false)]
+        public string Icon { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +83,8 @@ namespace Flipdish.Model
             sb.Append("class OrderFulfillmentStatus {\n");
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
             sb.Append("  StatusId: ").Append(StatusId).Append("\n");
+            sb.Append("  StatusName: ").Append(StatusName).Append("\n");
+            sb.Append("  Icon: ").Append(Icon).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,6 +128,16 @@ namespace Flipdish.Model
                     this.StatusId == input.StatusId ||
                     (this.StatusId != null &&
                     this.StatusId.Equals(input.StatusId))
+                ) && 
+                (
+                    this.StatusName == input.StatusName ||
+                    (this.StatusName != null &&
+                    this.StatusName.Equals(input.StatusName))
+                ) && 
+                (
+                    this.Icon == input.Icon ||
+                    (this.Icon != null &&
+                    this.Icon.Equals(input.Icon))
                 );
         }
 
@@ -124,6 +154,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OrderId.GetHashCode();
                 if (this.StatusId != null)
                     hashCode = hashCode * 59 + this.StatusId.GetHashCode();
+                if (this.StatusName != null)
+                    hashCode = hashCode * 59 + this.StatusName.GetHashCode();
+                if (this.Icon != null)
+                    hashCode = hashCode * 59 + this.Icon.GetHashCode();
                 return hashCode;
             }
         }
