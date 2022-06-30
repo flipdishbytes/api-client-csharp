@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**GetOrdersSummary**](OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
 [**RefundOrder**](OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
 [**RejectOrder**](OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
+[**SearchFulfillmentStatuses**](OrdersApi.md#searchfulfillmentstatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
 [**UpdateDeliveryInformation**](OrdersApi.md#updatedeliveryinformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
 [**UpdateFulfillmentStatus**](OrdersApi.md#updatefulfillmentstatus) | **POST** /api/v1.0/orders/{orderId}/fulfillmentstatus | Add/update fulfillment status information to an order
 
@@ -609,6 +610,72 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="searchfulfillmentstatuses"></a>
+# **SearchFulfillmentStatuses**
+> RestApiArrayResultOrderFulfillmentStatus SearchFulfillmentStatuses (string appId, string orderIds)
+
+Get fulfillment status for a list of orders
+
+[BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SearchFulfillmentStatusesExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OrdersApi();
+            var appId = appId_example;  // string | App Id
+            var orderIds = orderIds_example;  // string | Flipdish Order Id list, comma separated
+
+            try
+            {
+                // Get fulfillment status for a list of orders
+                RestApiArrayResultOrderFulfillmentStatus result = apiInstance.SearchFulfillmentStatuses(appId, orderIds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrdersApi.SearchFulfillmentStatuses: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**| App Id | 
+ **orderIds** | **string**| Flipdish Order Id list, comma separated | 
+
+### Return type
+
+[**RestApiArrayResultOrderFulfillmentStatus**](RestApiArrayResultOrderFulfillmentStatus.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
