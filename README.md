@@ -544,6 +544,7 @@ Class | Method | HTTP request | Description
  - [Model.AppStoreAppConfigurationHeader](docs/AppStoreAppConfigurationHeader.md)
  - [Model.AppStoreAppConfigurationSummary](docs/AppStoreAppConfigurationSummary.md)
  - [Model.AppStoreAppSummary](docs/AppStoreAppSummary.md)
+ - [Model.AppStoreAppSupportInfo](docs/AppStoreAppSupportInfo.md)
  - [Model.AppStoreConfigCreatedEvent](docs/AppStoreConfigCreatedEvent.md)
  - [Model.AppStoreConfigDeletedEvent](docs/AppStoreConfigDeletedEvent.md)
  - [Model.AppStoreConfigUpdatedEvent](docs/AppStoreConfigUpdatedEvent.md)
