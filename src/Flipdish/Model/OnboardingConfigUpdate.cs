@@ -34,9 +34,11 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="OnboardingConfigUpdate" /> class.
         /// </summary>
         /// <param name="isEnabled">Gets or sets whether onboarding is enabled.</param>
-        public OnboardingConfigUpdate(bool? isEnabled = default(bool?))
+        /// <param name="isWelcomeScreenEnabled">isWelcomeScreenEnabled.</param>
+        public OnboardingConfigUpdate(bool? isEnabled = default(bool?), bool? isWelcomeScreenEnabled = default(bool?))
         {
             this.IsEnabled = isEnabled;
+            this.IsWelcomeScreenEnabled = isWelcomeScreenEnabled;
         }
         
         /// <summary>
@@ -47,6 +49,12 @@ namespace Flipdish.Model
         public bool? IsEnabled { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsWelcomeScreenEnabled
+        /// </summary>
+        [DataMember(Name="IsWelcomeScreenEnabled", EmitDefaultValue=false)]
+        public bool? IsWelcomeScreenEnabled { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -55,6 +63,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class OnboardingConfigUpdate {\n");
             sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
+            sb.Append("  IsWelcomeScreenEnabled: ").Append(IsWelcomeScreenEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,6 +102,11 @@ namespace Flipdish.Model
                     this.IsEnabled == input.IsEnabled ||
                     (this.IsEnabled != null &&
                     this.IsEnabled.Equals(input.IsEnabled))
+                ) && 
+                (
+                    this.IsWelcomeScreenEnabled == input.IsWelcomeScreenEnabled ||
+                    (this.IsWelcomeScreenEnabled != null &&
+                    this.IsWelcomeScreenEnabled.Equals(input.IsWelcomeScreenEnabled))
                 );
         }
 
@@ -107,6 +121,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.IsEnabled != null)
                     hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
+                if (this.IsWelcomeScreenEnabled != null)
+                    hashCode = hashCode * 59 + this.IsWelcomeScreenEnabled.GetHashCode();
                 return hashCode;
             }
         }
