@@ -136,6 +136,7 @@ Class | Method | HTTP request | Description
 *AppStoreDeveloperApi* | [**DeleteAppStoreApp**](docs/AppStoreDeveloperApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Delete App store app
 *AppStoreDeveloperApi* | [**UpdateAppStoreApp**](docs/AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Update App store app
 *AppStoreDeveloperApi* | [**UploadAppStoreAppLogo**](docs/AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | Upload the App store app logo \\ icon
+*AppsApi* | [**EditAppConfigSalesChannel**](docs/AppsApi.md#editappconfigsaleschannel) | **POST** /api/v1.0/apps/{appId}/config/saleschannel | Set the application sales channel configuration
 *AppsApi* | [**GetApp**](docs/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | Get the application configuration
 *AppsApi* | [**GetAppHostnameStatus**](docs/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | Get the application hostname DNS delegation states for A and CNAME records.
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
@@ -537,6 +538,7 @@ Class | Method | HTTP request | Description
  - [Model.App](docs/App.md)
  - [Model.AppChannelAssignment](docs/AppChannelAssignment.md)
  - [Model.AppCompliance](docs/AppCompliance.md)
+ - [Model.AppConfigSalesChannel](docs/AppConfigSalesChannel.md)
  - [Model.AppConfigUpdateModel](docs/AppConfigUpdateModel.md)
  - [Model.AppCreatedEvent](docs/AppCreatedEvent.md)
  - [Model.AppStoreApp](docs/AppStoreApp.md)
@@ -944,6 +946,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultApp](docs/RestApiResultApp.md)
  - [Model.RestApiResultAppChannelAssignment](docs/RestApiResultAppChannelAssignment.md)
  - [Model.RestApiResultAppCompliance](docs/RestApiResultAppCompliance.md)
+ - [Model.RestApiResultAppConfigSalesChannel](docs/RestApiResultAppConfigSalesChannel.md)
  - [Model.RestApiResultAppStoreApp](docs/RestApiResultAppStoreApp.md)
  - [Model.RestApiResultAppStoreAppConfiguration](docs/RestApiResultAppStoreAppConfiguration.md)
  - [Model.RestApiResultAssignedBankAccount](docs/RestApiResultAssignedBankAccount.md)
