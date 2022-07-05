@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**DispatchOrder**](OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 [**GetDeliveryInformation**](OrdersApi.md#getdeliveryinformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
 [**GetFulfillmentStatus**](OrdersApi.md#getfulfillmentstatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order fulfillment status
+[**GetFulfillmentStatus_0**](OrdersApi.md#getfulfillmentstatus_0) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatusdetails | Get order fulfillment status with actionable details like default next status
 [**GetOrderById**](OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | Get order by ID
 [**GetOrders**](OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
 [**GetOrdersSummary**](OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
@@ -262,6 +263,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultOrderFulfillmentStatus**](RestApiResultOrderFulfillmentStatus.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getfulfillmentstatus_0"></a>
+# **GetFulfillmentStatus_0**
+> RestApiResultOrderFulfillmentStatusWithConfigurationActions GetFulfillmentStatus_0 (int? orderId)
+
+Get order fulfillment status with actionable details like default next status
+
+[BETA - this endpoint is under development, do not use it in your production system] Returns an order's fulfillment status and details about possible states.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetFulfillmentStatus_0Example
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OrdersApi();
+            var orderId = 56;  // int? | Flipdish Order Id
+
+            try
+            {
+                // Get order fulfillment status with actionable details like default next status
+                RestApiResultOrderFulfillmentStatusWithConfigurationActions result = apiInstance.GetFulfillmentStatus_0(orderId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrdersApi.GetFulfillmentStatus_0: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **int?**| Flipdish Order Id | 
+
+### Return type
+
+[**RestApiResultOrderFulfillmentStatusWithConfigurationActions**](RestApiResultOrderFulfillmentStatusWithConfigurationActions.md)
 
 ### Authorization
 

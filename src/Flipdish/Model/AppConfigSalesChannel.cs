@@ -109,18 +109,54 @@ namespace Flipdish.Model
         [DataMember(Name="WebToAppRedirect", EmitDefaultValue=false)]
         public WebToAppRedirectEnum? WebToAppRedirect { get; set; }
         /// <summary>
+        /// Address entry type
+        /// </summary>
+        /// <value>Address entry type</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AddressEntryTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum MapFirst for value: MapFirst
+            /// </summary>
+            [EnumMember(Value = "MapFirst")]
+            MapFirst = 1,
+            
+            /// <summary>
+            /// Enum TextEntryManualAllowed for value: TextEntryManualAllowed
+            /// </summary>
+            [EnumMember(Value = "TextEntryManualAllowed")]
+            TextEntryManualAllowed = 2,
+            
+            /// <summary>
+            /// Enum TextEntryManualDisallowed for value: TextEntryManualDisallowed
+            /// </summary>
+            [EnumMember(Value = "TextEntryManualDisallowed")]
+            TextEntryManualDisallowed = 3
+        }
+
+        /// <summary>
+        /// Address entry type
+        /// </summary>
+        /// <value>Address entry type</value>
+        [DataMember(Name="AddressEntryType", EmitDefaultValue=false)]
+        public AddressEntryTypeEnum? AddressEntryType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="AppConfigSalesChannel" /> class.
         /// </summary>
         /// <param name="emailRequestMode">Display a popup to users requesting their email address.</param>
         /// <param name="webToAppRedirect">Sends users to their native apps or request them to install the pwa.</param>
+        /// <param name="addressEntryType">Address entry type.</param>
         /// <param name="displayDeliveryRestaurantListScreen">Display Pickup Restaurant List Screen.</param>
-        public AppConfigSalesChannel(EmailRequestModeEnum? emailRequestMode = default(EmailRequestModeEnum?), WebToAppRedirectEnum? webToAppRedirect = default(WebToAppRedirectEnum?), bool? displayDeliveryRestaurantListScreen = default(bool?))
+        public AppConfigSalesChannel(EmailRequestModeEnum? emailRequestMode = default(EmailRequestModeEnum?), WebToAppRedirectEnum? webToAppRedirect = default(WebToAppRedirectEnum?), AddressEntryTypeEnum? addressEntryType = default(AddressEntryTypeEnum?), bool? displayDeliveryRestaurantListScreen = default(bool?))
         {
             this.EmailRequestMode = emailRequestMode;
             this.WebToAppRedirect = webToAppRedirect;
+            this.AddressEntryType = addressEntryType;
             this.DisplayDeliveryRestaurantListScreen = displayDeliveryRestaurantListScreen;
         }
         
+
 
 
         /// <summary>
@@ -140,6 +176,7 @@ namespace Flipdish.Model
             sb.Append("class AppConfigSalesChannel {\n");
             sb.Append("  EmailRequestMode: ").Append(EmailRequestMode).Append("\n");
             sb.Append("  WebToAppRedirect: ").Append(WebToAppRedirect).Append("\n");
+            sb.Append("  AddressEntryType: ").Append(AddressEntryType).Append("\n");
             sb.Append("  DisplayDeliveryRestaurantListScreen: ").Append(DisplayDeliveryRestaurantListScreen).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -186,6 +223,11 @@ namespace Flipdish.Model
                     this.WebToAppRedirect.Equals(input.WebToAppRedirect))
                 ) && 
                 (
+                    this.AddressEntryType == input.AddressEntryType ||
+                    (this.AddressEntryType != null &&
+                    this.AddressEntryType.Equals(input.AddressEntryType))
+                ) && 
+                (
                     this.DisplayDeliveryRestaurantListScreen == input.DisplayDeliveryRestaurantListScreen ||
                     (this.DisplayDeliveryRestaurantListScreen != null &&
                     this.DisplayDeliveryRestaurantListScreen.Equals(input.DisplayDeliveryRestaurantListScreen))
@@ -205,6 +247,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.EmailRequestMode.GetHashCode();
                 if (this.WebToAppRedirect != null)
                     hashCode = hashCode * 59 + this.WebToAppRedirect.GetHashCode();
+                if (this.AddressEntryType != null)
+                    hashCode = hashCode * 59 + this.AddressEntryType.GetHashCode();
                 if (this.DisplayDeliveryRestaurantListScreen != null)
                     hashCode = hashCode * 59 + this.DisplayDeliveryRestaurantListScreen.GetHashCode();
                 return hashCode;
