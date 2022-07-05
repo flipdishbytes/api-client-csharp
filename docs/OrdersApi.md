@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**RejectOrder**](OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 [**SearchFulfillmentStatuses**](OrdersApi.md#searchfulfillmentstatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
 [**UpdateDeliveryInformation**](OrdersApi.md#updatedeliveryinformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
-[**UpdateFulfillmentStatus**](OrdersApi.md#updatefulfillmentstatus) | **POST** /api/v1.0/orders/{orderId}/fulfillmentstatus | Add/update fulfillment status information to an order
+[**UpdateFulfillmentStatus**](OrdersApi.md#updatefulfillmentstatus) | **POST** /api/v1.0/{appId}/orders/{orderId}/fulfillmentstatus | Add/update fulfillment status information to an order
 
 
 <a name="acceptorder"></a>
@@ -747,7 +747,7 @@ void (empty response body)
 
 <a name="updatefulfillmentstatus"></a>
 # **UpdateFulfillmentStatus**
-> void UpdateFulfillmentStatus (int? orderId, OrderFulfillmentStatusBase fulfillmentStatusRequest)
+> void UpdateFulfillmentStatus (string appId, int? orderId, OrderFulfillmentStatusBase fulfillmentStatusRequest)
 
 Add/update fulfillment status information to an order
 
@@ -771,13 +771,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
+            var appId = appId_example;  // string | 
             var orderId = 56;  // int? | Flipdish Order Id
             var fulfillmentStatusRequest = new OrderFulfillmentStatusBase(); // OrderFulfillmentStatusBase | Fulfillment Status
 
             try
             {
                 // Add/update fulfillment status information to an order
-                apiInstance.UpdateFulfillmentStatus(orderId, fulfillmentStatusRequest);
+                apiInstance.UpdateFulfillmentStatus(appId, orderId, fulfillmentStatusRequest);
             }
             catch (Exception e)
             {
@@ -792,6 +793,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
  **orderId** | **int?**| Flipdish Order Id | 
  **fulfillmentStatusRequest** | [**OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md)| Fulfillment Status | 
 
