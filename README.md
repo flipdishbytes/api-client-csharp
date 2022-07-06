@@ -136,7 +136,6 @@ Class | Method | HTTP request | Description
 *AppStoreDeveloperApi* | [**DeleteAppStoreApp**](docs/AppStoreDeveloperApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Delete App store app
 *AppStoreDeveloperApi* | [**UpdateAppStoreApp**](docs/AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Update App store app
 *AppStoreDeveloperApi* | [**UploadAppStoreAppLogo**](docs/AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | Upload the App store app logo \\ icon
-*AppsApi* | [**EditAppConfigSalesChannel**](docs/AppsApi.md#editappconfigsaleschannel) | **POST** /api/v1.0/apps/{appId}/config/saleschannel | Set the application sales channel configuration
 *AppsApi* | [**GetApp**](docs/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | Get the application configuration
 *AppsApi* | [**GetAppHostnameStatus**](docs/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | Get the application hostname DNS delegation states for A and CNAME records.
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
@@ -380,6 +379,8 @@ Class | Method | HTTP request | Description
 *MetafieldDefinitionsApi* | [**GetOwnerEntityConfigurations**](docs/MetafieldDefinitionsApi.md#getownerentityconfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | Get OwnerEntity Configurations which contain information to manage Metafield Definitions
 *MetafieldDefinitionsApi* | [**GetOwnerEntityRecommendations**](docs/MetafieldDefinitionsApi.md#getownerentityrecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | Get OwnerEntity Definition Recommendations
 *MetafieldDefinitionsApi* | [**UpdateMetafieldDefinition**](docs/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Update a Metafield Definition
+*MobileAppsApi* | [**EditAppConfigSalesChannel**](docs/MobileAppsApi.md#editappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
+*MobileAppsApi* | [**EditAppConfigSalesChannel_0**](docs/MobileAppsApi.md#editappconfigsaleschannel_0) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
 *OAuthClientsApi* | [**AddRedirectUri**](docs/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
 *OAuthClientsApi* | [**CreateOAuthApp**](docs/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
 *OAuthClientsApi* | [**DeleteOAuthApp**](docs/OAuthClientsApi.md#deleteoauthapp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Delete OAuth App
@@ -778,6 +779,7 @@ Class | Method | HTTP request | Description
  - [Model.Metafield](docs/Metafield.md)
  - [Model.MetafieldDefinition](docs/MetafieldDefinition.md)
  - [Model.MetafieldDefinitionRecommendation](docs/MetafieldDefinitionRecommendation.md)
+ - [Model.MobileAppsSubmission](docs/MobileAppsSubmission.md)
  - [Model.ModelBase](docs/ModelBase.md)
  - [Model.OAuthApp](docs/OAuthApp.md)
  - [Model.OAuthTokenModel](docs/OAuthTokenModel.md)
