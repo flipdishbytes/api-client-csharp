@@ -39,7 +39,9 @@ namespace Flipdish.Model
         /// <param name="countryCode">Country code (ISO-alpha2).</param>
         /// <param name="displayForCustomer">Display for customer.</param>
         /// <param name="addressFields">Dyanmic field/value pairs, defined by the form assigned to the given country code..</param>
-        public StoreAddressBase(string line1 = default(string), string postcode = default(string), string city = default(string), string countryCode = default(string), string displayForCustomer = default(string), Dictionary<string, Object> addressFields = default(Dictionary<string, Object>))
+        /// <param name="singleLineDisplay">Single line display i18n, may be empty for not supported countries.</param>
+        /// <param name="twoLinesDisplay">Two line display i18n, may be empty for not supported countries.</param>
+        public StoreAddressBase(string line1 = default(string), string postcode = default(string), string city = default(string), string countryCode = default(string), string displayForCustomer = default(string), Dictionary<string, Object> addressFields = default(Dictionary<string, Object>), string singleLineDisplay = default(string), List<string> twoLinesDisplay = default(List<string>))
         {
             this.Line1 = line1;
             this.Postcode = postcode;
@@ -47,6 +49,8 @@ namespace Flipdish.Model
             this.CountryCode = countryCode;
             this.DisplayForCustomer = displayForCustomer;
             this.AddressFields = addressFields;
+            this.SingleLineDisplay = singleLineDisplay;
+            this.TwoLinesDisplay = twoLinesDisplay;
         }
         
         /// <summary>
@@ -92,6 +96,20 @@ namespace Flipdish.Model
         public Dictionary<string, Object> AddressFields { get; set; }
 
         /// <summary>
+        /// Single line display i18n, may be empty for not supported countries
+        /// </summary>
+        /// <value>Single line display i18n, may be empty for not supported countries</value>
+        [DataMember(Name="SingleLineDisplay", EmitDefaultValue=false)]
+        public string SingleLineDisplay { get; set; }
+
+        /// <summary>
+        /// Two line display i18n, may be empty for not supported countries
+        /// </summary>
+        /// <value>Two line display i18n, may be empty for not supported countries</value>
+        [DataMember(Name="TwoLinesDisplay", EmitDefaultValue=false)]
+        public List<string> TwoLinesDisplay { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -105,6 +123,8 @@ namespace Flipdish.Model
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("  DisplayForCustomer: ").Append(DisplayForCustomer).Append("\n");
             sb.Append("  AddressFields: ").Append(AddressFields).Append("\n");
+            sb.Append("  SingleLineDisplay: ").Append(SingleLineDisplay).Append("\n");
+            sb.Append("  TwoLinesDisplay: ").Append(TwoLinesDisplay).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -168,6 +188,16 @@ namespace Flipdish.Model
                     this.AddressFields == input.AddressFields ||
                     this.AddressFields != null &&
                     this.AddressFields.SequenceEqual(input.AddressFields)
+                ) && 
+                (
+                    this.SingleLineDisplay == input.SingleLineDisplay ||
+                    (this.SingleLineDisplay != null &&
+                    this.SingleLineDisplay.Equals(input.SingleLineDisplay))
+                ) && 
+                (
+                    this.TwoLinesDisplay == input.TwoLinesDisplay ||
+                    this.TwoLinesDisplay != null &&
+                    this.TwoLinesDisplay.SequenceEqual(input.TwoLinesDisplay)
                 );
         }
 
@@ -192,6 +222,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DisplayForCustomer.GetHashCode();
                 if (this.AddressFields != null)
                     hashCode = hashCode * 59 + this.AddressFields.GetHashCode();
+                if (this.SingleLineDisplay != null)
+                    hashCode = hashCode * 59 + this.SingleLineDisplay.GetHashCode();
+                if (this.TwoLinesDisplay != null)
+                    hashCode = hashCode * 59 + this.TwoLinesDisplay.GetHashCode();
                 return hashCode;
             }
         }
