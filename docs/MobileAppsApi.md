@@ -6,11 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**EditAppConfigSalesChannel**](MobileAppsApi.md#editappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
 [**EditAppConfigSalesChannel_0**](MobileAppsApi.md#editappconfigsaleschannel_0) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
+[**UploadMobileAppsImage**](MobileAppsApi.md#uploadmobileappsimage) | **POST** /api/v1.0/mobileapps/{appId}/image | Upload a Mobile Apps Image
 
 
 <a name="editappconfigsaleschannel"></a>
 # **EditAppConfigSalesChannel**
-> RestApiResultAppConfigSalesChannel EditAppConfigSalesChannel (string appId, MobileAppsSubmission mobileAppsSubmission)
+> RestApiResultMobileAppsSubmission EditAppConfigSalesChannel (string appId, MobileAppsSubmission mobileAppsSubmission)
 
 Submission form mobile apps
 
@@ -38,7 +39,7 @@ namespace Example
             try
             {
                 // Submission form mobile apps
-                RestApiResultAppConfigSalesChannel result = apiInstance.EditAppConfigSalesChannel(appId, mobileAppsSubmission);
+                RestApiResultMobileAppsSubmission result = apiInstance.EditAppConfigSalesChannel(appId, mobileAppsSubmission);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -59,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiResultAppConfigSalesChannel**](RestApiResultAppConfigSalesChannel.md)
+[**RestApiResultMobileAppsSubmission**](RestApiResultMobileAppsSubmission.md)
 
 ### Authorization
 
@@ -132,6 +133,70 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uploadmobileappsimage"></a>
+# **UploadMobileAppsImage**
+> RestApiResultMobileAppsImage UploadMobileAppsImage (string appId, System.IO.Stream image)
+
+Upload a Mobile Apps Image
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UploadMobileAppsImageExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MobileAppsApi();
+            var appId = appId_example;  // string | 
+            var image = new System.IO.Stream(); // System.IO.Stream | Mobile Apps image
+
+            try
+            {
+                // Upload a Mobile Apps Image
+                RestApiResultMobileAppsImage result = apiInstance.UploadMobileAppsImage(appId, image);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MobileAppsApi.UploadMobileAppsImage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **image** | **System.IO.Stream**| Mobile Apps image | 
+
+### Return type
+
+[**RestApiResultMobileAppsImage**](RestApiResultMobileAppsImage.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
