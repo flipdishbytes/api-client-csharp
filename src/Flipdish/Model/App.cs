@@ -956,7 +956,19 @@ namespace Flipdish.Model
             /// Enum DeleteAppStoreAppConfiguration for value: DeleteAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "DeleteAppStoreAppConfiguration")]
-            DeleteAppStoreAppConfiguration = 141
+            DeleteAppStoreAppConfiguration = 141,
+            
+            /// <summary>
+            /// Enum ViewSalesChannels for value: ViewSalesChannels
+            /// </summary>
+            [EnumMember(Value = "ViewSalesChannels")]
+            ViewSalesChannels = 142,
+            
+            /// <summary>
+            /// Enum EditSalesChannels for value: EditSalesChannels
+            /// </summary>
+            [EnumMember(Value = "EditSalesChannels")]
+            EditSalesChannels = 143
         }
 
 
