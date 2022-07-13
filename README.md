@@ -381,6 +381,7 @@ Class | Method | HTTP request | Description
 *MetafieldDefinitionsApi* | [**UpdateMetafieldDefinition**](docs/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Update a Metafield Definition
 *MobileAppsApi* | [**EditAppConfigSalesChannel**](docs/MobileAppsApi.md#editappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
 *MobileAppsApi* | [**EditAppConfigSalesChannel_0**](docs/MobileAppsApi.md#editappconfigsaleschannel_0) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
+*MobileAppsApi* | [**GetAppDetails**](docs/MobileAppsApi.md#getappdetails) | **GET** /api/v1.0/mobileapps/{appId}/details | Get mobile app details
 *MobileAppsApi* | [**UploadMobileAppsImage**](docs/MobileAppsApi.md#uploadmobileappsimage) | **POST** /api/v1.0/mobileapps/{appId}/image | Upload a Mobile Apps Image
 *OAuthClientsApi* | [**AddRedirectUri**](docs/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
 *OAuthClientsApi* | [**CreateOAuthApp**](docs/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
@@ -780,6 +781,7 @@ Class | Method | HTTP request | Description
  - [Model.Metafield](docs/Metafield.md)
  - [Model.MetafieldDefinition](docs/MetafieldDefinition.md)
  - [Model.MetafieldDefinitionRecommendation](docs/MetafieldDefinitionRecommendation.md)
+ - [Model.MobileAppsDetails](docs/MobileAppsDetails.md)
  - [Model.MobileAppsImage](docs/MobileAppsImage.md)
  - [Model.MobileAppsSubmission](docs/MobileAppsSubmission.md)
  - [Model.ModelBase](docs/ModelBase.md)
@@ -995,6 +997,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultMenuSectionItem](docs/RestApiResultMenuSectionItem.md)
  - [Model.RestApiResultMetadata](docs/RestApiResultMetadata.md)
  - [Model.RestApiResultMetafieldDefinition](docs/RestApiResultMetafieldDefinition.md)
+ - [Model.RestApiResultMobileAppsDetails](docs/RestApiResultMobileAppsDetails.md)
  - [Model.RestApiResultMobileAppsImage](docs/RestApiResultMobileAppsImage.md)
  - [Model.RestApiResultMobileAppsSubmission](docs/RestApiResultMobileAppsSubmission.md)
  - [Model.RestApiResultModelBase](docs/RestApiResultModelBase.md)
