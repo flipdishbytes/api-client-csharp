@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**AcceptOrder**](OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 [**DispatchOrder**](OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 [**GetDeliveryInformation**](OrdersApi.md#getdeliveryinformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
-[**GetFulfillmentStatus**](OrdersApi.md#getfulfillmentstatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order fulfillment status
-[**GetFulfillmentStatus_0**](OrdersApi.md#getfulfillmentstatus_0) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatusdetails | Get order fulfillment status with actionable details like default next status
+[**GetFulfillmentState**](OrdersApi.md#getfulfillmentstate) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state | Get order fulfillment state
+[**GetFulfillmentStatusWithDetailsAndActions**](OrdersApi.md#getfulfillmentstatuswithdetailsandactions) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state/details | Get order fulfillment state with actionable details like default next state
 [**GetOrderById**](OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | Get order by ID
 [**GetOrders**](OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
 [**GetOrdersSummary**](OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**RejectOrder**](OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 [**SearchFulfillmentStatuses**](OrdersApi.md#searchfulfillmentstatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
 [**UpdateDeliveryInformation**](OrdersApi.md#updatedeliveryinformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
-[**UpdateFulfillmentStatus**](OrdersApi.md#updatefulfillmentstatus) | **POST** /api/v1.0/{appId}/orders/{orderId}/fulfillmentstatus | Add/update fulfillment status information to an order
+[**UpdateFulfillmentState**](OrdersApi.md#updatefulfillmentstate) | **POST** /api/v1.0/orders/{orderId}/fulfillment/state | Update fulfillment status information to an order
 
 
 <a name="acceptorder"></a>
@@ -211,13 +211,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getfulfillmentstatus"></a>
-# **GetFulfillmentStatus**
-> RestApiResultOrderFulfillmentStatus GetFulfillmentStatus (int? orderId)
+<a name="getfulfillmentstate"></a>
+# **GetFulfillmentState**
+> RestApiResultOrderFulfillmentStatus GetFulfillmentState (int? orderId)
 
-Get order fulfillment status
+Get order fulfillment state
 
-[BETA - this endpoint is under development, do not use it in your production system] Returns an order's fulfillment status.
+[BETA - this endpoint is under development, do not use it in your production system] Returns an order's fulfillment state.
 
 ### Example
 ```csharp
@@ -229,7 +229,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GetFulfillmentStatusExample
+    public class GetFulfillmentStateExample
     {
         public void main()
         {
@@ -241,13 +241,13 @@ namespace Example
 
             try
             {
-                // Get order fulfillment status
-                RestApiResultOrderFulfillmentStatus result = apiInstance.GetFulfillmentStatus(orderId);
+                // Get order fulfillment state
+                RestApiResultOrderFulfillmentStatus result = apiInstance.GetFulfillmentState(orderId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OrdersApi.GetFulfillmentStatus: " + e.Message );
+                Debug.Print("Exception when calling OrdersApi.GetFulfillmentState: " + e.Message );
             }
         }
     }
@@ -275,11 +275,11 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getfulfillmentstatus_0"></a>
-# **GetFulfillmentStatus_0**
-> RestApiResultOrderFulfillmentStatusWithConfigurationActions GetFulfillmentStatus_0 (int? orderId)
+<a name="getfulfillmentstatuswithdetailsandactions"></a>
+# **GetFulfillmentStatusWithDetailsAndActions**
+> RestApiResultOrderFulfillmentStatusWithConfigurationActions GetFulfillmentStatusWithDetailsAndActions (int? orderId)
 
-Get order fulfillment status with actionable details like default next status
+Get order fulfillment state with actionable details like default next state
 
 [BETA - this endpoint is under development, do not use it in your production system] Returns an order's fulfillment status and details about possible states.
 
@@ -293,7 +293,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GetFulfillmentStatus_0Example
+    public class GetFulfillmentStatusWithDetailsAndActionsExample
     {
         public void main()
         {
@@ -305,13 +305,13 @@ namespace Example
 
             try
             {
-                // Get order fulfillment status with actionable details like default next status
-                RestApiResultOrderFulfillmentStatusWithConfigurationActions result = apiInstance.GetFulfillmentStatus_0(orderId);
+                // Get order fulfillment state with actionable details like default next state
+                RestApiResultOrderFulfillmentStatusWithConfigurationActions result = apiInstance.GetFulfillmentStatusWithDetailsAndActions(orderId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OrdersApi.GetFulfillmentStatus_0: " + e.Message );
+                Debug.Print("Exception when calling OrdersApi.GetFulfillmentStatusWithDetailsAndActions: " + e.Message );
             }
         }
     }
@@ -810,13 +810,13 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatefulfillmentstatus"></a>
-# **UpdateFulfillmentStatus**
-> void UpdateFulfillmentStatus (string appId, int? orderId, OrderFulfillmentStatusBase fulfillmentStatusRequest)
+<a name="updatefulfillmentstate"></a>
+# **UpdateFulfillmentState**
+> void UpdateFulfillmentState (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest)
 
-Add/update fulfillment status information to an order
+Update fulfillment status information to an order
 
-[BETA - this endpoint is under development, do not use it in your production system] Updates an order's fulfillment status.
+[BETA - this endpoint is under development, do not use it in your production system] Updates an order's fulfillment states.
 
 ### Example
 ```csharp
@@ -828,7 +828,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class UpdateFulfillmentStatusExample
+    public class UpdateFulfillmentStateExample
     {
         public void main()
         {
@@ -836,18 +836,17 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var appId = appId_example;  // string | 
             var orderId = 56;  // int? | Flipdish Order Id
-            var fulfillmentStatusRequest = new OrderFulfillmentStatusBase(); // OrderFulfillmentStatusBase | Fulfillment Status
+            var fulfillmentStatusRequest = new OrderFulfillmentStatusUpdate(); // OrderFulfillmentStatusUpdate | Fulfillment Status
 
             try
             {
-                // Add/update fulfillment status information to an order
-                apiInstance.UpdateFulfillmentStatus(appId, orderId, fulfillmentStatusRequest);
+                // Update fulfillment status information to an order
+                apiInstance.UpdateFulfillmentState(orderId, fulfillmentStatusRequest);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OrdersApi.UpdateFulfillmentStatus: " + e.Message );
+                Debug.Print("Exception when calling OrdersApi.UpdateFulfillmentState: " + e.Message );
             }
         }
     }
@@ -858,9 +857,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
  **orderId** | **int?**| Flipdish Order Id | 
- **fulfillmentStatusRequest** | [**OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md)| Fulfillment Status | 
+ **fulfillmentStatusRequest** | [**OrderFulfillmentStatusUpdate**](OrderFulfillmentStatusUpdate.md)| Fulfillment Status | 
 
 ### Return type
 

@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **Channel** | [**Channel**](Channel.md) | Channel where the Order comes from | [optional] 
 **ReceiptCode** | **string** | Generated receipt code for an order | [optional] 
 **OrderDropOffLocation** | [**OrderDropOffLocation**](OrderDropOffLocation.md) | DropOffLocation selected for this order | [optional] 
-**FulfillmentStatus** | [**OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md) | Fulfillment status for this order | [optional] 
+**FulfillmentStatus** | [**OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md) | [BETA - this is a new field in development] Fulfillment status for this order | [optional] 
 **OrderId** | **int?** | Order identifier | [optional] 
 **LocalOrderId** | **string** | Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders) | [optional] 
 **DeliveryType** | **string** | Delivery type | [optional] 

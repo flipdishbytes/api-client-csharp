@@ -601,7 +601,7 @@ namespace Flipdish.Model
         /// <param name="channel">Channel where the Order comes from.</param>
         /// <param name="receiptCode">Generated receipt code for an order.</param>
         /// <param name="orderDropOffLocation">DropOffLocation selected for this order.</param>
-        /// <param name="fulfillmentStatus">Fulfillment status for this order.</param>
+        /// <param name="fulfillmentStatus">[BETA - this is a new field in development] Fulfillment status for this order.</param>
         /// <param name="orderId">Order identifier.</param>
         /// <param name="localOrderId">Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders).</param>
         /// <param name="deliveryType">Delivery type.</param>
@@ -816,9 +816,9 @@ namespace Flipdish.Model
         public OrderDropOffLocation OrderDropOffLocation { get; set; }
 
         /// <summary>
-        /// Fulfillment status for this order
+        /// [BETA - this is a new field in development] Fulfillment status for this order
         /// </summary>
-        /// <value>Fulfillment status for this order</value>
+        /// <value>[BETA - this is a new field in development] Fulfillment status for this order</value>
         [DataMember(Name="FulfillmentStatus", EmitDefaultValue=false)]
         public OrderFulfillmentStatusBase FulfillmentStatus { get; set; }
 

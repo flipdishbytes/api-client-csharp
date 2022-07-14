@@ -90,28 +90,28 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultOrderDeliveryInformation</returns>
         ApiResponse<RestApiResultOrderDeliveryInformation> GetDeliveryInformationWithHttpInfo (int? orderId);
         /// <summary>
-        /// Get order fulfillment status
+        /// Get order fulfillment state
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
+        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>RestApiResultOrderFulfillmentStatus</returns>
-        RestApiResultOrderFulfillmentStatus GetFulfillmentStatus (int? orderId);
+        RestApiResultOrderFulfillmentStatus GetFulfillmentState (int? orderId);
 
         /// <summary>
-        /// Get order fulfillment status
+        /// Get order fulfillment state
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
+        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>ApiResponse of RestApiResultOrderFulfillmentStatus</returns>
-        ApiResponse<RestApiResultOrderFulfillmentStatus> GetFulfillmentStatusWithHttpInfo (int? orderId);
+        ApiResponse<RestApiResultOrderFulfillmentStatus> GetFulfillmentStateWithHttpInfo (int? orderId);
         /// <summary>
-        /// Get order fulfillment status with actionable details like default next status
+        /// Get order fulfillment state with actionable details like default next state
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
@@ -119,10 +119,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>RestApiResultOrderFulfillmentStatusWithConfigurationActions</returns>
-        RestApiResultOrderFulfillmentStatusWithConfigurationActions GetFulfillmentStatus_0 (int? orderId);
+        RestApiResultOrderFulfillmentStatusWithConfigurationActions GetFulfillmentStatusWithDetailsAndActions (int? orderId);
 
         /// <summary>
-        /// Get order fulfillment status with actionable details like default next status
+        /// Get order fulfillment state with actionable details like default next state
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
@@ -130,7 +130,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>ApiResponse of RestApiResultOrderFulfillmentStatusWithConfigurationActions</returns>
-        ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions> GetFulfillmentStatus_0WithHttpInfo (int? orderId);
+        ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions> GetFulfillmentStatusWithDetailsAndActionsWithHttpInfo (int? orderId);
         /// <summary>
         /// Get order by ID
         /// </summary>
@@ -311,30 +311,28 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateDeliveryInformationWithHttpInfo (int? orderId, OrderDeliveryInformationBase deliveryInformation);
         /// <summary>
-        /// Add/update fulfillment status information to an order
+        /// Update fulfillment status information to an order
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment status.
+        /// [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
         /// <returns></returns>
-        void UpdateFulfillmentStatus (string appId, int? orderId, OrderFulfillmentStatusBase fulfillmentStatusRequest);
+        void UpdateFulfillmentState (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest);
 
         /// <summary>
-        /// Add/update fulfillment status information to an order
+        /// Update fulfillment status information to an order
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment status.
+        /// [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateFulfillmentStatusWithHttpInfo (string appId, int? orderId, OrderFulfillmentStatusBase fulfillmentStatusRequest);
+        ApiResponse<Object> UpdateFulfillmentStateWithHttpInfo (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -403,28 +401,28 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultOrderDeliveryInformation)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderDeliveryInformation>> GetDeliveryInformationAsyncWithHttpInfo (int? orderId);
         /// <summary>
-        /// Get order fulfillment status
+        /// Get order fulfillment state
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
+        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>Task of RestApiResultOrderFulfillmentStatus</returns>
-        System.Threading.Tasks.Task<RestApiResultOrderFulfillmentStatus> GetFulfillmentStatusAsync (int? orderId);
+        System.Threading.Tasks.Task<RestApiResultOrderFulfillmentStatus> GetFulfillmentStateAsync (int? orderId);
 
         /// <summary>
-        /// Get order fulfillment status
+        /// Get order fulfillment state
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
+        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>Task of ApiResponse (RestApiResultOrderFulfillmentStatus)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderFulfillmentStatus>> GetFulfillmentStatusAsyncWithHttpInfo (int? orderId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderFulfillmentStatus>> GetFulfillmentStateAsyncWithHttpInfo (int? orderId);
         /// <summary>
-        /// Get order fulfillment status with actionable details like default next status
+        /// Get order fulfillment state with actionable details like default next state
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
@@ -432,10 +430,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>Task of RestApiResultOrderFulfillmentStatusWithConfigurationActions</returns>
-        System.Threading.Tasks.Task<RestApiResultOrderFulfillmentStatusWithConfigurationActions> GetFulfillmentStatus_0Async (int? orderId);
+        System.Threading.Tasks.Task<RestApiResultOrderFulfillmentStatusWithConfigurationActions> GetFulfillmentStatusWithDetailsAndActionsAsync (int? orderId);
 
         /// <summary>
-        /// Get order fulfillment status with actionable details like default next status
+        /// Get order fulfillment state with actionable details like default next state
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
@@ -443,7 +441,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>Task of ApiResponse (RestApiResultOrderFulfillmentStatusWithConfigurationActions)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions>> GetFulfillmentStatus_0AsyncWithHttpInfo (int? orderId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions>> GetFulfillmentStatusWithDetailsAndActionsAsyncWithHttpInfo (int? orderId);
         /// <summary>
         /// Get order by ID
         /// </summary>
@@ -624,30 +622,28 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDeliveryInformationAsyncWithHttpInfo (int? orderId, OrderDeliveryInformationBase deliveryInformation);
         /// <summary>
-        /// Add/update fulfillment status information to an order
+        /// Update fulfillment status information to an order
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment status.
+        /// [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateFulfillmentStatusAsync (string appId, int? orderId, OrderFulfillmentStatusBase fulfillmentStatusRequest);
+        System.Threading.Tasks.Task UpdateFulfillmentStateAsync (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest);
 
         /// <summary>
-        /// Add/update fulfillment status information to an order
+        /// Update fulfillment status information to an order
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment status.
+        /// [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateFulfillmentStatusAsyncWithHttpInfo (string appId, int? orderId, OrderFulfillmentStatusBase fulfillmentStatusRequest);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateFulfillmentStateAsyncWithHttpInfo (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest);
         #endregion Asynchronous Operations
     }
 
@@ -1234,30 +1230,30 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order fulfillment status [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
+        /// Get order fulfillment state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>RestApiResultOrderFulfillmentStatus</returns>
-        public RestApiResultOrderFulfillmentStatus GetFulfillmentStatus (int? orderId)
+        public RestApiResultOrderFulfillmentStatus GetFulfillmentState (int? orderId)
         {
-             ApiResponse<RestApiResultOrderFulfillmentStatus> localVarResponse = GetFulfillmentStatusWithHttpInfo(orderId);
+             ApiResponse<RestApiResultOrderFulfillmentStatus> localVarResponse = GetFulfillmentStateWithHttpInfo(orderId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get order fulfillment status [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
+        /// Get order fulfillment state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>ApiResponse of RestApiResultOrderFulfillmentStatus</returns>
-        public ApiResponse< RestApiResultOrderFulfillmentStatus > GetFulfillmentStatusWithHttpInfo (int? orderId)
+        public ApiResponse< RestApiResultOrderFulfillmentStatus > GetFulfillmentStateWithHttpInfo (int? orderId)
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
-                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->GetFulfillmentStatus");
+                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->GetFulfillmentState");
 
-            var localVarPath = "/api/v1.0/orders/{orderId}/fulfillmentstatus";
+            var localVarPath = "/api/v1.0/orders/{orderId}/fulfillment/state";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1299,7 +1295,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetFulfillmentStatus", localVarResponse);
+                Exception exception = ExceptionFactory("GetFulfillmentState", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1309,31 +1305,31 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order fulfillment status [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
+        /// Get order fulfillment state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>Task of RestApiResultOrderFulfillmentStatus</returns>
-        public async System.Threading.Tasks.Task<RestApiResultOrderFulfillmentStatus> GetFulfillmentStatusAsync (int? orderId)
+        public async System.Threading.Tasks.Task<RestApiResultOrderFulfillmentStatus> GetFulfillmentStateAsync (int? orderId)
         {
-             ApiResponse<RestApiResultOrderFulfillmentStatus> localVarResponse = await GetFulfillmentStatusAsyncWithHttpInfo(orderId);
+             ApiResponse<RestApiResultOrderFulfillmentStatus> localVarResponse = await GetFulfillmentStateAsyncWithHttpInfo(orderId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get order fulfillment status [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
+        /// Get order fulfillment state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>Task of ApiResponse (RestApiResultOrderFulfillmentStatus)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderFulfillmentStatus>> GetFulfillmentStatusAsyncWithHttpInfo (int? orderId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderFulfillmentStatus>> GetFulfillmentStateAsyncWithHttpInfo (int? orderId)
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
-                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->GetFulfillmentStatus");
+                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->GetFulfillmentState");
 
-            var localVarPath = "/api/v1.0/orders/{orderId}/fulfillmentstatus";
+            var localVarPath = "/api/v1.0/orders/{orderId}/fulfillment/state";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1375,7 +1371,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetFulfillmentStatus", localVarResponse);
+                Exception exception = ExceptionFactory("GetFulfillmentState", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1385,30 +1381,30 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order fulfillment status with actionable details like default next status [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+        /// Get order fulfillment state with actionable details like default next state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>RestApiResultOrderFulfillmentStatusWithConfigurationActions</returns>
-        public RestApiResultOrderFulfillmentStatusWithConfigurationActions GetFulfillmentStatus_0 (int? orderId)
+        public RestApiResultOrderFulfillmentStatusWithConfigurationActions GetFulfillmentStatusWithDetailsAndActions (int? orderId)
         {
-             ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions> localVarResponse = GetFulfillmentStatus_0WithHttpInfo(orderId);
+             ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions> localVarResponse = GetFulfillmentStatusWithDetailsAndActionsWithHttpInfo(orderId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get order fulfillment status with actionable details like default next status [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+        /// Get order fulfillment state with actionable details like default next state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>ApiResponse of RestApiResultOrderFulfillmentStatusWithConfigurationActions</returns>
-        public ApiResponse< RestApiResultOrderFulfillmentStatusWithConfigurationActions > GetFulfillmentStatus_0WithHttpInfo (int? orderId)
+        public ApiResponse< RestApiResultOrderFulfillmentStatusWithConfigurationActions > GetFulfillmentStatusWithDetailsAndActionsWithHttpInfo (int? orderId)
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
-                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->GetFulfillmentStatus_0");
+                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->GetFulfillmentStatusWithDetailsAndActions");
 
-            var localVarPath = "/api/v1.0/orders/{orderId}/fulfillmentstatusdetails";
+            var localVarPath = "/api/v1.0/orders/{orderId}/fulfillment/state/details";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1450,7 +1446,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetFulfillmentStatus_0", localVarResponse);
+                Exception exception = ExceptionFactory("GetFulfillmentStatusWithDetailsAndActions", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1460,31 +1456,31 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order fulfillment status with actionable details like default next status [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+        /// Get order fulfillment state with actionable details like default next state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>Task of RestApiResultOrderFulfillmentStatusWithConfigurationActions</returns>
-        public async System.Threading.Tasks.Task<RestApiResultOrderFulfillmentStatusWithConfigurationActions> GetFulfillmentStatus_0Async (int? orderId)
+        public async System.Threading.Tasks.Task<RestApiResultOrderFulfillmentStatusWithConfigurationActions> GetFulfillmentStatusWithDetailsAndActionsAsync (int? orderId)
         {
-             ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions> localVarResponse = await GetFulfillmentStatus_0AsyncWithHttpInfo(orderId);
+             ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions> localVarResponse = await GetFulfillmentStatusWithDetailsAndActionsAsyncWithHttpInfo(orderId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get order fulfillment status with actionable details like default next status [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+        /// Get order fulfillment state with actionable details like default next state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <returns>Task of ApiResponse (RestApiResultOrderFulfillmentStatusWithConfigurationActions)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions>> GetFulfillmentStatus_0AsyncWithHttpInfo (int? orderId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions>> GetFulfillmentStatusWithDetailsAndActionsAsyncWithHttpInfo (int? orderId)
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
-                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->GetFulfillmentStatus_0");
+                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->GetFulfillmentStatusWithDetailsAndActions");
 
-            var localVarPath = "/api/v1.0/orders/{orderId}/fulfillmentstatusdetails";
+            var localVarPath = "/api/v1.0/orders/{orderId}/fulfillment/state/details";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1526,7 +1522,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetFulfillmentStatus_0", localVarResponse);
+                Exception exception = ExceptionFactory("GetFulfillmentStatusWithDetailsAndActions", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2773,39 +2769,34 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add/update fulfillment status information to an order [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment status.
+        /// Update fulfillment status information to an order [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
         /// <returns></returns>
-        public void UpdateFulfillmentStatus (string appId, int? orderId, OrderFulfillmentStatusBase fulfillmentStatusRequest)
+        public void UpdateFulfillmentState (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest)
         {
-             UpdateFulfillmentStatusWithHttpInfo(appId, orderId, fulfillmentStatusRequest);
+             UpdateFulfillmentStateWithHttpInfo(orderId, fulfillmentStatusRequest);
         }
 
         /// <summary>
-        /// Add/update fulfillment status information to an order [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment status.
+        /// Update fulfillment status information to an order [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateFulfillmentStatusWithHttpInfo (string appId, int? orderId, OrderFulfillmentStatusBase fulfillmentStatusRequest)
+        public ApiResponse<Object> UpdateFulfillmentStateWithHttpInfo (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest)
         {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OrdersApi->UpdateFulfillmentStatus");
             // verify the required parameter 'orderId' is set
             if (orderId == null)
-                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->UpdateFulfillmentStatus");
+                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->UpdateFulfillmentState");
             // verify the required parameter 'fulfillmentStatusRequest' is set
             if (fulfillmentStatusRequest == null)
-                throw new ApiException(400, "Missing required parameter 'fulfillmentStatusRequest' when calling OrdersApi->UpdateFulfillmentStatus");
+                throw new ApiException(400, "Missing required parameter 'fulfillmentStatusRequest' when calling OrdersApi->UpdateFulfillmentState");
 
-            var localVarPath = "/api/v1.0/{appId}/orders/{orderId}/fulfillmentstatus";
+            var localVarPath = "/api/v1.0/orders/{orderId}/fulfillment/state";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2834,7 +2825,6 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (orderId != null) localVarPathParams.Add("orderId", this.Configuration.ApiClient.ParameterToString(orderId)); // path parameter
             if (fulfillmentStatusRequest != null && fulfillmentStatusRequest.GetType() != typeof(byte[]))
             {
@@ -2861,7 +2851,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateFulfillmentStatus", localVarResponse);
+                Exception exception = ExceptionFactory("UpdateFulfillmentState", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2871,40 +2861,35 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add/update fulfillment status information to an order [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment status.
+        /// Update fulfillment status information to an order [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateFulfillmentStatusAsync (string appId, int? orderId, OrderFulfillmentStatusBase fulfillmentStatusRequest)
+        public async System.Threading.Tasks.Task UpdateFulfillmentStateAsync (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest)
         {
-             await UpdateFulfillmentStatusAsyncWithHttpInfo(appId, orderId, fulfillmentStatusRequest);
+             await UpdateFulfillmentStateAsyncWithHttpInfo(orderId, fulfillmentStatusRequest);
 
         }
 
         /// <summary>
-        /// Add/update fulfillment status information to an order [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment status.
+        /// Update fulfillment status information to an order [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="orderId">Flipdish Order Id</param>
         /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateFulfillmentStatusAsyncWithHttpInfo (string appId, int? orderId, OrderFulfillmentStatusBase fulfillmentStatusRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateFulfillmentStateAsyncWithHttpInfo (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest)
         {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OrdersApi->UpdateFulfillmentStatus");
             // verify the required parameter 'orderId' is set
             if (orderId == null)
-                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->UpdateFulfillmentStatus");
+                throw new ApiException(400, "Missing required parameter 'orderId' when calling OrdersApi->UpdateFulfillmentState");
             // verify the required parameter 'fulfillmentStatusRequest' is set
             if (fulfillmentStatusRequest == null)
-                throw new ApiException(400, "Missing required parameter 'fulfillmentStatusRequest' when calling OrdersApi->UpdateFulfillmentStatus");
+                throw new ApiException(400, "Missing required parameter 'fulfillmentStatusRequest' when calling OrdersApi->UpdateFulfillmentState");
 
-            var localVarPath = "/api/v1.0/{appId}/orders/{orderId}/fulfillmentstatus";
+            var localVarPath = "/api/v1.0/orders/{orderId}/fulfillment/state";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2933,7 +2918,6 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (orderId != null) localVarPathParams.Add("orderId", this.Configuration.ApiClient.ParameterToString(orderId)); // path parameter
             if (fulfillmentStatusRequest != null && fulfillmentStatusRequest.GetType() != typeof(byte[]))
             {
@@ -2960,7 +2944,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateFulfillmentStatus", localVarResponse);
+                Exception exception = ExceptionFactory("UpdateFulfillmentState", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -402,8 +402,8 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**AcceptOrder**](docs/OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 *OrdersApi* | [**DispatchOrder**](docs/OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 *OrdersApi* | [**GetDeliveryInformation**](docs/OrdersApi.md#getdeliveryinformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
-*OrdersApi* | [**GetFulfillmentStatus**](docs/OrdersApi.md#getfulfillmentstatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order fulfillment status
-*OrdersApi* | [**GetFulfillmentStatus_0**](docs/OrdersApi.md#getfulfillmentstatus_0) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatusdetails | Get order fulfillment status with actionable details like default next status
+*OrdersApi* | [**GetFulfillmentState**](docs/OrdersApi.md#getfulfillmentstate) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state | Get order fulfillment state
+*OrdersApi* | [**GetFulfillmentStatusWithDetailsAndActions**](docs/OrdersApi.md#getfulfillmentstatuswithdetailsandactions) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state/details | Get order fulfillment state with actionable details like default next state
 *OrdersApi* | [**GetOrderById**](docs/OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | Get order by ID
 *OrdersApi* | [**GetOrders**](docs/OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
 *OrdersApi* | [**GetOrdersSummary**](docs/OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
@@ -411,7 +411,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**RejectOrder**](docs/OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 *OrdersApi* | [**SearchFulfillmentStatuses**](docs/OrdersApi.md#searchfulfillmentstatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
 *OrdersApi* | [**UpdateDeliveryInformation**](docs/OrdersApi.md#updatedeliveryinformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
-*OrdersApi* | [**UpdateFulfillmentStatus**](docs/OrdersApi.md#updatefulfillmentstatus) | **POST** /api/v1.0/{appId}/orders/{orderId}/fulfillmentstatus | Add/update fulfillment status information to an order
+*OrdersApi* | [**UpdateFulfillmentState**](docs/OrdersApi.md#updatefulfillmentstate) | **POST** /api/v1.0/orders/{orderId}/fulfillment/state | Update fulfillment status information to an order
 *PaymentIntentsApi* | [**GetPaymentIntent**](docs/PaymentIntentsApi.md#getpaymentintent) | **GET** /api/v1.0/payment_intents/{paymentIntentId} | Returns stripe payment intent for a given id
 *PaymentsApi* | [**GetOrderPaymentInformation**](docs/PaymentsApi.md#getorderpaymentinformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | Returns payment refund information related to the order with the order id
 *PayoutsApi* | [**GetPayout**](docs/PayoutsApi.md#getpayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | Get Payout details broken down by Store
@@ -803,6 +803,7 @@ Class | Method | HTTP request | Description
  - [Model.OrderDropOffLocation](docs/OrderDropOffLocation.md)
  - [Model.OrderFulfillmentStatus](docs/OrderFulfillmentStatus.md)
  - [Model.OrderFulfillmentStatusBase](docs/OrderFulfillmentStatusBase.md)
+ - [Model.OrderFulfillmentStatusUpdate](docs/OrderFulfillmentStatusUpdate.md)
  - [Model.OrderFulfillmentStatusUpdatedEvent](docs/OrderFulfillmentStatusUpdatedEvent.md)
  - [Model.OrderFulfillmentStatusWithConfigurationActions](docs/OrderFulfillmentStatusWithConfigurationActions.md)
  - [Model.OrderIdAndSequenceNumber](docs/OrderIdAndSequenceNumber.md)
