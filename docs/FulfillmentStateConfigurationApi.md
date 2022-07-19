@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="createfulfillmentstatesconfig"></a>
 # **CreateFulfillmentStatesConfig**
-> Object CreateFulfillmentStatesConfig (string appId)
+> RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId)
 
 Create fulfillment configuration
 
@@ -42,7 +42,7 @@ namespace Example
             try
             {
                 // Create fulfillment configuration
-                Object result = apiInstance.CreateFulfillmentStatesConfig(appId);
+                RestApiResultFulfillmentStatesConfiguration result = apiInstance.CreateFulfillmentStatesConfig(appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiResultFulfillmentStatesConfiguration**](RestApiResultFulfillmentStatesConfiguration.md)
 
 ### Authorization
 

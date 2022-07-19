@@ -113,6 +113,29 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultMobileAppsDetails</returns>
         ApiResponse<RestApiResultMobileAppsDetails> GetAppDetailsWithHttpInfo (string appId);
         /// <summary>
+        /// Get mobile app submitted status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="plataformType"></param>
+        /// <returns>RestApiResultMobileAppsSubmissionStatus</returns>
+        RestApiResultMobileAppsSubmissionStatus GetMobileAppsSubmissionStatus (string appId, string plataformType);
+
+        /// <summary>
+        /// Get mobile app submitted status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="plataformType"></param>
+        /// <returns>ApiResponse of RestApiResultMobileAppsSubmissionStatus</returns>
+        ApiResponse<RestApiResultMobileAppsSubmissionStatus> GetMobileAppsSubmissionStatusWithHttpInfo (string appId, string plataformType);
+        /// <summary>
         /// Upload a Mobile Apps Image
         /// </summary>
         /// <remarks>
@@ -225,6 +248,29 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultMobileAppsDetails)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMobileAppsDetails>> GetAppDetailsAsyncWithHttpInfo (string appId);
+        /// <summary>
+        /// Get mobile app submitted status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="plataformType"></param>
+        /// <returns>Task of RestApiResultMobileAppsSubmissionStatus</returns>
+        System.Threading.Tasks.Task<RestApiResultMobileAppsSubmissionStatus> GetMobileAppsSubmissionStatusAsync (string appId, string plataformType);
+
+        /// <summary>
+        /// Get mobile app submitted status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="plataformType"></param>
+        /// <returns>Task of ApiResponse (RestApiResultMobileAppsSubmissionStatus)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultMobileAppsSubmissionStatus>> GetMobileAppsSubmissionStatusAsyncWithHttpInfo (string appId, string plataformType);
         /// <summary>
         /// Upload a Mobile Apps Image
         /// </summary>
@@ -1022,6 +1068,169 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultMobileAppsDetails>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiResultMobileAppsDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMobileAppsDetails)));
+        }
+
+        /// <summary>
+        /// Get mobile app submitted status 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="plataformType"></param>
+        /// <returns>RestApiResultMobileAppsSubmissionStatus</returns>
+        public RestApiResultMobileAppsSubmissionStatus GetMobileAppsSubmissionStatus (string appId, string plataformType)
+        {
+             ApiResponse<RestApiResultMobileAppsSubmissionStatus> localVarResponse = GetMobileAppsSubmissionStatusWithHttpInfo(appId, plataformType);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get mobile app submitted status 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="plataformType"></param>
+        /// <returns>ApiResponse of RestApiResultMobileAppsSubmissionStatus</returns>
+        public ApiResponse< RestApiResultMobileAppsSubmissionStatus > GetMobileAppsSubmissionStatusWithHttpInfo (string appId, string plataformType)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->GetMobileAppsSubmissionStatus");
+            // verify the required parameter 'plataformType' is set
+            if (plataformType == null)
+                throw new ApiException(400, "Missing required parameter 'plataformType' when calling MobileAppsApi->GetMobileAppsSubmissionStatus");
+
+            var localVarPath = "/api/v1.0/mobileapps/{appId}/submissionstatus{plataformType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (plataformType != null) localVarPathParams.Add("plataformType", this.Configuration.ApiClient.ParameterToString(plataformType)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetMobileAppsSubmissionStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultMobileAppsSubmissionStatus>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultMobileAppsSubmissionStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMobileAppsSubmissionStatus)));
+        }
+
+        /// <summary>
+        /// Get mobile app submitted status 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="plataformType"></param>
+        /// <returns>Task of RestApiResultMobileAppsSubmissionStatus</returns>
+        public async System.Threading.Tasks.Task<RestApiResultMobileAppsSubmissionStatus> GetMobileAppsSubmissionStatusAsync (string appId, string plataformType)
+        {
+             ApiResponse<RestApiResultMobileAppsSubmissionStatus> localVarResponse = await GetMobileAppsSubmissionStatusAsyncWithHttpInfo(appId, plataformType);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get mobile app submitted status 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="plataformType"></param>
+        /// <returns>Task of ApiResponse (RestApiResultMobileAppsSubmissionStatus)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultMobileAppsSubmissionStatus>> GetMobileAppsSubmissionStatusAsyncWithHttpInfo (string appId, string plataformType)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->GetMobileAppsSubmissionStatus");
+            // verify the required parameter 'plataformType' is set
+            if (plataformType == null)
+                throw new ApiException(400, "Missing required parameter 'plataformType' when calling MobileAppsApi->GetMobileAppsSubmissionStatus");
+
+            var localVarPath = "/api/v1.0/mobileapps/{appId}/submissionstatus{plataformType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (plataformType != null) localVarPathParams.Add("plataformType", this.Configuration.ApiClient.ParameterToString(plataformType)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetMobileAppsSubmissionStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultMobileAppsSubmissionStatus>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultMobileAppsSubmissionStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMobileAppsSubmissionStatus)));
         }
 
         /// <summary>

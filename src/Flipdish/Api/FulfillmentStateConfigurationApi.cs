@@ -32,8 +32,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <returns>Object</returns>
-        Object CreateFulfillmentStatesConfig (string appId);
+        /// <returns>RestApiResultFulfillmentStatesConfiguration</returns>
+        RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId);
 
         /// <summary>
         /// Create fulfillment configuration
@@ -43,8 +43,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> CreateFulfillmentStatesConfigWithHttpInfo (string appId);
+        /// <returns>ApiResponse of RestApiResultFulfillmentStatesConfiguration</returns>
+        ApiResponse<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigWithHttpInfo (string appId);
         /// <summary>
         /// Delete fulfillment states configuration
         /// </summary>
@@ -147,8 +147,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> CreateFulfillmentStatesConfigAsync (string appId);
+        /// <returns>Task of RestApiResultFulfillmentStatesConfiguration</returns>
+        System.Threading.Tasks.Task<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigAsync (string appId);
 
         /// <summary>
         /// Create fulfillment configuration
@@ -158,8 +158,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateFulfillmentStatesConfigAsyncWithHttpInfo (string appId);
+        /// <returns>Task of ApiResponse (RestApiResultFulfillmentStatesConfiguration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultFulfillmentStatesConfiguration>> CreateFulfillmentStatesConfigAsyncWithHttpInfo (string appId);
         /// <summary>
         /// Delete fulfillment states configuration
         /// </summary>
@@ -357,10 +357,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <returns>Object</returns>
-        public Object CreateFulfillmentStatesConfig (string appId)
+        /// <returns>RestApiResultFulfillmentStatesConfiguration</returns>
+        public RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId)
         {
-             ApiResponse<Object> localVarResponse = CreateFulfillmentStatesConfigWithHttpInfo(appId);
+             ApiResponse<RestApiResultFulfillmentStatesConfiguration> localVarResponse = CreateFulfillmentStatesConfigWithHttpInfo(appId);
              return localVarResponse.Data;
         }
 
@@ -369,8 +369,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > CreateFulfillmentStatesConfigWithHttpInfo (string appId)
+        /// <returns>ApiResponse of RestApiResultFulfillmentStatesConfiguration</returns>
+        public ApiResponse< RestApiResultFulfillmentStatesConfiguration > CreateFulfillmentStatesConfigWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -422,9 +422,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiResultFulfillmentStatesConfiguration>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (RestApiResultFulfillmentStatesConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultFulfillmentStatesConfiguration)));
         }
 
         /// <summary>
@@ -432,10 +432,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> CreateFulfillmentStatesConfigAsync (string appId)
+        /// <returns>Task of RestApiResultFulfillmentStatesConfiguration</returns>
+        public async System.Threading.Tasks.Task<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigAsync (string appId)
         {
-             ApiResponse<Object> localVarResponse = await CreateFulfillmentStatesConfigAsyncWithHttpInfo(appId);
+             ApiResponse<RestApiResultFulfillmentStatesConfiguration> localVarResponse = await CreateFulfillmentStatesConfigAsyncWithHttpInfo(appId);
              return localVarResponse.Data;
 
         }
@@ -445,8 +445,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateFulfillmentStatesConfigAsyncWithHttpInfo (string appId)
+        /// <returns>Task of ApiResponse (RestApiResultFulfillmentStatesConfiguration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFulfillmentStatesConfiguration>> CreateFulfillmentStatesConfigAsyncWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -498,9 +498,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiResultFulfillmentStatesConfiguration>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (RestApiResultFulfillmentStatesConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultFulfillmentStatesConfiguration)));
         }
 
         /// <summary>
