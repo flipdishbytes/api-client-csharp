@@ -384,6 +384,7 @@ Class | Method | HTTP request | Description
 *MobileAppsApi* | [**GetAppConfig**](docs/MobileAppsApi.md#getappconfig) | **GET** /api/v1.0/mobileapps/{appId}/config | Get mobile app configuration
 *MobileAppsApi* | [**GetAppDetails**](docs/MobileAppsApi.md#getappdetails) | **GET** /api/v1.0/mobileapps/{appId}/details | Get mobile app details
 *MobileAppsApi* | [**GetMobileAppsSubmissionStatus**](docs/MobileAppsApi.md#getmobileappssubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submissionstatus{plataformType} | Get mobile app submitted status
+*MobileAppsApi* | [**SetAppConfig**](docs/MobileAppsApi.md#setappconfig) | **POST** /api/v1.0/mobileapps/{appId}/config | Set mobile app configuration
 *MobileAppsApi* | [**UploadMobileAppsImage**](docs/MobileAppsApi.md#uploadmobileappsimage) | **POST** /api/v1.0/mobileapps/{appId}/image | Upload a Mobile Apps Image
 *OAuthClientsApi* | [**AddRedirectUri**](docs/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
 *OAuthClientsApi* | [**CreateOAuthApp**](docs/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
@@ -783,6 +784,7 @@ Class | Method | HTTP request | Description
  - [Model.Metafield](docs/Metafield.md)
  - [Model.MetafieldDefinition](docs/MetafieldDefinition.md)
  - [Model.MetafieldDefinitionRecommendation](docs/MetafieldDefinitionRecommendation.md)
+ - [Model.MobileAppConfig](docs/MobileAppConfig.md)
  - [Model.MobileAppsDetails](docs/MobileAppsDetails.md)
  - [Model.MobileAppsImage](docs/MobileAppsImage.md)
  - [Model.MobileAppsSubmission](docs/MobileAppsSubmission.md)
@@ -951,6 +953,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultVoucherSummary](docs/RestApiPaginationResultVoucherSummary.md)
  - [Model.RestApiPaginationResultWebhookLog](docs/RestApiPaginationResultWebhookLog.md)
  - [Model.RestApiPaginationResultWebhookSubscription](docs/RestApiPaginationResultWebhookSubscription.md)
+ - [Model.RestApiResult](docs/RestApiResult.md)
  - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
  - [Model.RestApiResultAccountFieldsDefinitions](docs/RestApiResultAccountFieldsDefinitions.md)
  - [Model.RestApiResultAddressFormResponse](docs/RestApiResultAddressFormResponse.md)
