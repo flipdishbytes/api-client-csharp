@@ -25,29 +25,6 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Submission form mobile apps
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="mobileAppsSubmission"></param>
-        /// <returns>RestApiResultMobileAppsSubmission</returns>
-        RestApiResultMobileAppsSubmission EditAppConfigSalesChannel (string appId, MobileAppsSubmission mobileAppsSubmission);
-
-        /// <summary>
-        /// Submission form mobile apps
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="mobileAppsSubmission"></param>
-        /// <returns>ApiResponse of RestApiResultMobileAppsSubmission</returns>
-        ApiResponse<RestApiResultMobileAppsSubmission> EditAppConfigSalesChannelWithHttpInfo (string appId, MobileAppsSubmission mobileAppsSubmission);
-        /// <summary>
         /// Set the application sales channel configuration
         /// </summary>
         /// <remarks>
@@ -57,7 +34,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appConfigSalesChannel"></param>
         /// <returns>RestApiResultAppConfigSalesChannel</returns>
-        RestApiResultAppConfigSalesChannel EditAppConfigSalesChannel_0 (string appId, AppConfigSalesChannel appConfigSalesChannel);
+        RestApiResultAppConfigSalesChannel EditAppConfigSalesChannel (string appId, AppConfigSalesChannel appConfigSalesChannel);
 
         /// <summary>
         /// Set the application sales channel configuration
@@ -69,7 +46,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appConfigSalesChannel"></param>
         /// <returns>ApiResponse of RestApiResultAppConfigSalesChannel</returns>
-        ApiResponse<RestApiResultAppConfigSalesChannel> EditAppConfigSalesChannel_0WithHttpInfo (string appId, AppConfigSalesChannel appConfigSalesChannel);
+        ApiResponse<RestApiResultAppConfigSalesChannel> EditAppConfigSalesChannelWithHttpInfo (string appId, AppConfigSalesChannel appConfigSalesChannel);
         /// <summary>
         /// Get mobile app configuration
         /// </summary>
@@ -136,6 +113,29 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultMobileAppsSubmissionStatus</returns>
         ApiResponse<RestApiResultMobileAppsSubmissionStatus> GetMobileAppsSubmissionStatusWithHttpInfo (string appId, string plataformType);
         /// <summary>
+        /// Get statistics mobile apps
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="platformTypes"></param>
+        /// <returns>RestApiArrayResultMobileAppsStatistics</returns>
+        RestApiArrayResultMobileAppsStatistics GetStatistics (string appId, List<string> platformTypes);
+
+        /// <summary>
+        /// Get statistics mobile apps
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="platformTypes"></param>
+        /// <returns>ApiResponse of RestApiArrayResultMobileAppsStatistics</returns>
+        ApiResponse<RestApiArrayResultMobileAppsStatistics> GetStatisticsWithHttpInfo (string appId, List<string> platformTypes);
+        /// <summary>
         /// Set mobile app configuration
         /// </summary>
         /// <remarks>
@@ -158,6 +158,29 @@ namespace Flipdish.Api
         /// <param name="configUpdate"></param>
         /// <returns>ApiResponse of RestApiResult</returns>
         ApiResponse<RestApiResult> SetAppConfigWithHttpInfo (string appId, MobileAppConfig configUpdate);
+        /// <summary>
+        /// Submission form mobile apps
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="mobileAppsSubmission"></param>
+        /// <returns>RestApiResultMobileAppsSubmission</returns>
+        RestApiResultMobileAppsSubmission Submission (string appId, MobileAppsSubmission mobileAppsSubmission);
+
+        /// <summary>
+        /// Submission form mobile apps
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="mobileAppsSubmission"></param>
+        /// <returns>ApiResponse of RestApiResultMobileAppsSubmission</returns>
+        ApiResponse<RestApiResultMobileAppsSubmission> SubmissionWithHttpInfo (string appId, MobileAppsSubmission mobileAppsSubmission);
         /// <summary>
         /// Upload a Mobile Apps Image
         /// </summary>
@@ -184,29 +207,6 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Submission form mobile apps
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="mobileAppsSubmission"></param>
-        /// <returns>Task of RestApiResultMobileAppsSubmission</returns>
-        System.Threading.Tasks.Task<RestApiResultMobileAppsSubmission> EditAppConfigSalesChannelAsync (string appId, MobileAppsSubmission mobileAppsSubmission);
-
-        /// <summary>
-        /// Submission form mobile apps
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="mobileAppsSubmission"></param>
-        /// <returns>Task of ApiResponse (RestApiResultMobileAppsSubmission)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultMobileAppsSubmission>> EditAppConfigSalesChannelAsyncWithHttpInfo (string appId, MobileAppsSubmission mobileAppsSubmission);
-        /// <summary>
         /// Set the application sales channel configuration
         /// </summary>
         /// <remarks>
@@ -216,7 +216,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appConfigSalesChannel"></param>
         /// <returns>Task of RestApiResultAppConfigSalesChannel</returns>
-        System.Threading.Tasks.Task<RestApiResultAppConfigSalesChannel> EditAppConfigSalesChannel_0Async (string appId, AppConfigSalesChannel appConfigSalesChannel);
+        System.Threading.Tasks.Task<RestApiResultAppConfigSalesChannel> EditAppConfigSalesChannelAsync (string appId, AppConfigSalesChannel appConfigSalesChannel);
 
         /// <summary>
         /// Set the application sales channel configuration
@@ -228,7 +228,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appConfigSalesChannel"></param>
         /// <returns>Task of ApiResponse (RestApiResultAppConfigSalesChannel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppConfigSalesChannel>> EditAppConfigSalesChannel_0AsyncWithHttpInfo (string appId, AppConfigSalesChannel appConfigSalesChannel);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppConfigSalesChannel>> EditAppConfigSalesChannelAsyncWithHttpInfo (string appId, AppConfigSalesChannel appConfigSalesChannel);
         /// <summary>
         /// Get mobile app configuration
         /// </summary>
@@ -295,6 +295,29 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultMobileAppsSubmissionStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMobileAppsSubmissionStatus>> GetMobileAppsSubmissionStatusAsyncWithHttpInfo (string appId, string plataformType);
         /// <summary>
+        /// Get statistics mobile apps
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="platformTypes"></param>
+        /// <returns>Task of RestApiArrayResultMobileAppsStatistics</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultMobileAppsStatistics> GetStatisticsAsync (string appId, List<string> platformTypes);
+
+        /// <summary>
+        /// Get statistics mobile apps
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="platformTypes"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultMobileAppsStatistics)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMobileAppsStatistics>> GetStatisticsAsyncWithHttpInfo (string appId, List<string> platformTypes);
+        /// <summary>
         /// Set mobile app configuration
         /// </summary>
         /// <remarks>
@@ -317,6 +340,29 @@ namespace Flipdish.Api
         /// <param name="configUpdate"></param>
         /// <returns>Task of ApiResponse (RestApiResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResult>> SetAppConfigAsyncWithHttpInfo (string appId, MobileAppConfig configUpdate);
+        /// <summary>
+        /// Submission form mobile apps
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="mobileAppsSubmission"></param>
+        /// <returns>Task of RestApiResultMobileAppsSubmission</returns>
+        System.Threading.Tasks.Task<RestApiResultMobileAppsSubmission> SubmissionAsync (string appId, MobileAppsSubmission mobileAppsSubmission);
+
+        /// <summary>
+        /// Submission form mobile apps
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="mobileAppsSubmission"></param>
+        /// <returns>Task of ApiResponse (RestApiResultMobileAppsSubmission)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultMobileAppsSubmission>> SubmissionAsyncWithHttpInfo (string appId, MobileAppsSubmission mobileAppsSubmission);
         /// <summary>
         /// Upload a Mobile Apps Image
         /// </summary>
@@ -441,202 +487,15 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Submission form mobile apps 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="mobileAppsSubmission"></param>
-        /// <returns>RestApiResultMobileAppsSubmission</returns>
-        public RestApiResultMobileAppsSubmission EditAppConfigSalesChannel (string appId, MobileAppsSubmission mobileAppsSubmission)
-        {
-             ApiResponse<RestApiResultMobileAppsSubmission> localVarResponse = EditAppConfigSalesChannelWithHttpInfo(appId, mobileAppsSubmission);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Submission form mobile apps 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="mobileAppsSubmission"></param>
-        /// <returns>ApiResponse of RestApiResultMobileAppsSubmission</returns>
-        public ApiResponse< RestApiResultMobileAppsSubmission > EditAppConfigSalesChannelWithHttpInfo (string appId, MobileAppsSubmission mobileAppsSubmission)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->EditAppConfigSalesChannel");
-            // verify the required parameter 'mobileAppsSubmission' is set
-            if (mobileAppsSubmission == null)
-                throw new ApiException(400, "Missing required parameter 'mobileAppsSubmission' when calling MobileAppsApi->EditAppConfigSalesChannel");
-
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/submission";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (mobileAppsSubmission != null && mobileAppsSubmission.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(mobileAppsSubmission); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = mobileAppsSubmission; // byte array
-            }
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("EditAppConfigSalesChannel", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiResultMobileAppsSubmission>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultMobileAppsSubmission) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMobileAppsSubmission)));
-        }
-
-        /// <summary>
-        /// Submission form mobile apps 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="mobileAppsSubmission"></param>
-        /// <returns>Task of RestApiResultMobileAppsSubmission</returns>
-        public async System.Threading.Tasks.Task<RestApiResultMobileAppsSubmission> EditAppConfigSalesChannelAsync (string appId, MobileAppsSubmission mobileAppsSubmission)
-        {
-             ApiResponse<RestApiResultMobileAppsSubmission> localVarResponse = await EditAppConfigSalesChannelAsyncWithHttpInfo(appId, mobileAppsSubmission);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Submission form mobile apps 
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="mobileAppsSubmission"></param>
-        /// <returns>Task of ApiResponse (RestApiResultMobileAppsSubmission)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultMobileAppsSubmission>> EditAppConfigSalesChannelAsyncWithHttpInfo (string appId, MobileAppsSubmission mobileAppsSubmission)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->EditAppConfigSalesChannel");
-            // verify the required parameter 'mobileAppsSubmission' is set
-            if (mobileAppsSubmission == null)
-                throw new ApiException(400, "Missing required parameter 'mobileAppsSubmission' when calling MobileAppsApi->EditAppConfigSalesChannel");
-
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/submission";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (mobileAppsSubmission != null && mobileAppsSubmission.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(mobileAppsSubmission); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = mobileAppsSubmission; // byte array
-            }
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("EditAppConfigSalesChannel", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiResultMobileAppsSubmission>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RestApiResultMobileAppsSubmission) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMobileAppsSubmission)));
-        }
-
-        /// <summary>
         /// Set the application sales channel configuration 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="appConfigSalesChannel"></param>
         /// <returns>RestApiResultAppConfigSalesChannel</returns>
-        public RestApiResultAppConfigSalesChannel EditAppConfigSalesChannel_0 (string appId, AppConfigSalesChannel appConfigSalesChannel)
+        public RestApiResultAppConfigSalesChannel EditAppConfigSalesChannel (string appId, AppConfigSalesChannel appConfigSalesChannel)
         {
-             ApiResponse<RestApiResultAppConfigSalesChannel> localVarResponse = EditAppConfigSalesChannel_0WithHttpInfo(appId, appConfigSalesChannel);
+             ApiResponse<RestApiResultAppConfigSalesChannel> localVarResponse = EditAppConfigSalesChannelWithHttpInfo(appId, appConfigSalesChannel);
              return localVarResponse.Data;
         }
 
@@ -647,14 +506,14 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appConfigSalesChannel"></param>
         /// <returns>ApiResponse of RestApiResultAppConfigSalesChannel</returns>
-        public ApiResponse< RestApiResultAppConfigSalesChannel > EditAppConfigSalesChannel_0WithHttpInfo (string appId, AppConfigSalesChannel appConfigSalesChannel)
+        public ApiResponse< RestApiResultAppConfigSalesChannel > EditAppConfigSalesChannelWithHttpInfo (string appId, AppConfigSalesChannel appConfigSalesChannel)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->EditAppConfigSalesChannel_0");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->EditAppConfigSalesChannel");
             // verify the required parameter 'appConfigSalesChannel' is set
             if (appConfigSalesChannel == null)
-                throw new ApiException(400, "Missing required parameter 'appConfigSalesChannel' when calling MobileAppsApi->EditAppConfigSalesChannel_0");
+                throw new ApiException(400, "Missing required parameter 'appConfigSalesChannel' when calling MobileAppsApi->EditAppConfigSalesChannel");
 
             var localVarPath = "/api/v1.0/mobileapps/{appId}/saleschannel";
             var localVarPathParams = new Dictionary<String, String>();
@@ -711,7 +570,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("EditAppConfigSalesChannel_0", localVarResponse);
+                Exception exception = ExceptionFactory("EditAppConfigSalesChannel", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -727,9 +586,9 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appConfigSalesChannel"></param>
         /// <returns>Task of RestApiResultAppConfigSalesChannel</returns>
-        public async System.Threading.Tasks.Task<RestApiResultAppConfigSalesChannel> EditAppConfigSalesChannel_0Async (string appId, AppConfigSalesChannel appConfigSalesChannel)
+        public async System.Threading.Tasks.Task<RestApiResultAppConfigSalesChannel> EditAppConfigSalesChannelAsync (string appId, AppConfigSalesChannel appConfigSalesChannel)
         {
-             ApiResponse<RestApiResultAppConfigSalesChannel> localVarResponse = await EditAppConfigSalesChannel_0AsyncWithHttpInfo(appId, appConfigSalesChannel);
+             ApiResponse<RestApiResultAppConfigSalesChannel> localVarResponse = await EditAppConfigSalesChannelAsyncWithHttpInfo(appId, appConfigSalesChannel);
              return localVarResponse.Data;
 
         }
@@ -741,14 +600,14 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appConfigSalesChannel"></param>
         /// <returns>Task of ApiResponse (RestApiResultAppConfigSalesChannel)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppConfigSalesChannel>> EditAppConfigSalesChannel_0AsyncWithHttpInfo (string appId, AppConfigSalesChannel appConfigSalesChannel)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppConfigSalesChannel>> EditAppConfigSalesChannelAsyncWithHttpInfo (string appId, AppConfigSalesChannel appConfigSalesChannel)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->EditAppConfigSalesChannel_0");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->EditAppConfigSalesChannel");
             // verify the required parameter 'appConfigSalesChannel' is set
             if (appConfigSalesChannel == null)
-                throw new ApiException(400, "Missing required parameter 'appConfigSalesChannel' when calling MobileAppsApi->EditAppConfigSalesChannel_0");
+                throw new ApiException(400, "Missing required parameter 'appConfigSalesChannel' when calling MobileAppsApi->EditAppConfigSalesChannel");
 
             var localVarPath = "/api/v1.0/mobileapps/{appId}/saleschannel";
             var localVarPathParams = new Dictionary<String, String>();
@@ -805,7 +664,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("EditAppConfigSalesChannel_0", localVarResponse);
+                Exception exception = ExceptionFactory("EditAppConfigSalesChannel", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1280,6 +1139,169 @@ namespace Flipdish.Api
         }
 
         /// <summary>
+        /// Get statistics mobile apps 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="platformTypes"></param>
+        /// <returns>RestApiArrayResultMobileAppsStatistics</returns>
+        public RestApiArrayResultMobileAppsStatistics GetStatistics (string appId, List<string> platformTypes)
+        {
+             ApiResponse<RestApiArrayResultMobileAppsStatistics> localVarResponse = GetStatisticsWithHttpInfo(appId, platformTypes);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get statistics mobile apps 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="platformTypes"></param>
+        /// <returns>ApiResponse of RestApiArrayResultMobileAppsStatistics</returns>
+        public ApiResponse< RestApiArrayResultMobileAppsStatistics > GetStatisticsWithHttpInfo (string appId, List<string> platformTypes)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->GetStatistics");
+            // verify the required parameter 'platformTypes' is set
+            if (platformTypes == null)
+                throw new ApiException(400, "Missing required parameter 'platformTypes' when calling MobileAppsApi->GetStatistics");
+
+            var localVarPath = "/api/v1.0/mobileapps/{appId}/statistics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (platformTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "platformTypes", platformTypes)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStatistics", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultMobileAppsStatistics>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultMobileAppsStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMobileAppsStatistics)));
+        }
+
+        /// <summary>
+        /// Get statistics mobile apps 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="platformTypes"></param>
+        /// <returns>Task of RestApiArrayResultMobileAppsStatistics</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultMobileAppsStatistics> GetStatisticsAsync (string appId, List<string> platformTypes)
+        {
+             ApiResponse<RestApiArrayResultMobileAppsStatistics> localVarResponse = await GetStatisticsAsyncWithHttpInfo(appId, platformTypes);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get statistics mobile apps 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="platformTypes"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultMobileAppsStatistics)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMobileAppsStatistics>> GetStatisticsAsyncWithHttpInfo (string appId, List<string> platformTypes)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->GetStatistics");
+            // verify the required parameter 'platformTypes' is set
+            if (platformTypes == null)
+                throw new ApiException(400, "Missing required parameter 'platformTypes' when calling MobileAppsApi->GetStatistics");
+
+            var localVarPath = "/api/v1.0/mobileapps/{appId}/statistics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (platformTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "platformTypes", platformTypes)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStatistics", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultMobileAppsStatistics>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiArrayResultMobileAppsStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMobileAppsStatistics)));
+        }
+
+        /// <summary>
         /// Set mobile app configuration 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1464,6 +1486,193 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResult)));
+        }
+
+        /// <summary>
+        /// Submission form mobile apps 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="mobileAppsSubmission"></param>
+        /// <returns>RestApiResultMobileAppsSubmission</returns>
+        public RestApiResultMobileAppsSubmission Submission (string appId, MobileAppsSubmission mobileAppsSubmission)
+        {
+             ApiResponse<RestApiResultMobileAppsSubmission> localVarResponse = SubmissionWithHttpInfo(appId, mobileAppsSubmission);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Submission form mobile apps 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="mobileAppsSubmission"></param>
+        /// <returns>ApiResponse of RestApiResultMobileAppsSubmission</returns>
+        public ApiResponse< RestApiResultMobileAppsSubmission > SubmissionWithHttpInfo (string appId, MobileAppsSubmission mobileAppsSubmission)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->Submission");
+            // verify the required parameter 'mobileAppsSubmission' is set
+            if (mobileAppsSubmission == null)
+                throw new ApiException(400, "Missing required parameter 'mobileAppsSubmission' when calling MobileAppsApi->Submission");
+
+            var localVarPath = "/api/v1.0/mobileapps/{appId}/submission";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (mobileAppsSubmission != null && mobileAppsSubmission.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(mobileAppsSubmission); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = mobileAppsSubmission; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("Submission", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultMobileAppsSubmission>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultMobileAppsSubmission) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMobileAppsSubmission)));
+        }
+
+        /// <summary>
+        /// Submission form mobile apps 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="mobileAppsSubmission"></param>
+        /// <returns>Task of RestApiResultMobileAppsSubmission</returns>
+        public async System.Threading.Tasks.Task<RestApiResultMobileAppsSubmission> SubmissionAsync (string appId, MobileAppsSubmission mobileAppsSubmission)
+        {
+             ApiResponse<RestApiResultMobileAppsSubmission> localVarResponse = await SubmissionAsyncWithHttpInfo(appId, mobileAppsSubmission);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Submission form mobile apps 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="mobileAppsSubmission"></param>
+        /// <returns>Task of ApiResponse (RestApiResultMobileAppsSubmission)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultMobileAppsSubmission>> SubmissionAsyncWithHttpInfo (string appId, MobileAppsSubmission mobileAppsSubmission)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->Submission");
+            // verify the required parameter 'mobileAppsSubmission' is set
+            if (mobileAppsSubmission == null)
+                throw new ApiException(400, "Missing required parameter 'mobileAppsSubmission' when calling MobileAppsApi->Submission");
+
+            var localVarPath = "/api/v1.0/mobileapps/{appId}/submission";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (mobileAppsSubmission != null && mobileAppsSubmission.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(mobileAppsSubmission); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = mobileAppsSubmission; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("Submission", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultMobileAppsSubmission>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultMobileAppsSubmission) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMobileAppsSubmission)));
         }
 
         /// <summary>

@@ -379,12 +379,13 @@ Class | Method | HTTP request | Description
 *MetafieldDefinitionsApi* | [**GetOwnerEntityConfigurations**](docs/MetafieldDefinitionsApi.md#getownerentityconfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | Get OwnerEntity Configurations which contain information to manage Metafield Definitions
 *MetafieldDefinitionsApi* | [**GetOwnerEntityRecommendations**](docs/MetafieldDefinitionsApi.md#getownerentityrecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | Get OwnerEntity Definition Recommendations
 *MetafieldDefinitionsApi* | [**UpdateMetafieldDefinition**](docs/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Update a Metafield Definition
-*MobileAppsApi* | [**EditAppConfigSalesChannel**](docs/MobileAppsApi.md#editappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
-*MobileAppsApi* | [**EditAppConfigSalesChannel_0**](docs/MobileAppsApi.md#editappconfigsaleschannel_0) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
+*MobileAppsApi* | [**EditAppConfigSalesChannel**](docs/MobileAppsApi.md#editappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
 *MobileAppsApi* | [**GetAppConfig**](docs/MobileAppsApi.md#getappconfig) | **GET** /api/v1.0/mobileapps/{appId}/config | Get mobile app configuration
 *MobileAppsApi* | [**GetAppDetails**](docs/MobileAppsApi.md#getappdetails) | **GET** /api/v1.0/mobileapps/{appId}/details | Get mobile app details
 *MobileAppsApi* | [**GetMobileAppsSubmissionStatus**](docs/MobileAppsApi.md#getmobileappssubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submissionstatus{plataformType} | Get mobile app submitted status
+*MobileAppsApi* | [**GetStatistics**](docs/MobileAppsApi.md#getstatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
 *MobileAppsApi* | [**SetAppConfig**](docs/MobileAppsApi.md#setappconfig) | **POST** /api/v1.0/mobileapps/{appId}/config | Set mobile app configuration
+*MobileAppsApi* | [**Submission**](docs/MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
 *MobileAppsApi* | [**UploadMobileAppsImage**](docs/MobileAppsApi.md#uploadmobileappsimage) | **POST** /api/v1.0/mobileapps/{appId}/image | Upload a Mobile Apps Image
 *OAuthClientsApi* | [**AddRedirectUri**](docs/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
 *OAuthClientsApi* | [**CreateOAuthApp**](docs/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
@@ -401,6 +402,7 @@ Class | Method | HTTP request | Description
 *OnboardingApi* | [**OnboardingGetOnboardingItems**](docs/OnboardingApi.md#onboardinggetonboardingitems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
 *OnboardingApi* | [**OnboardingUpdateOnboardingConfig**](docs/OnboardingApi.md#onboardingupdateonboardingconfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
 *OnboardingApi* | [**OnboardingUpdateOnboardingItem**](docs/OnboardingApi.md#onboardingupdateonboardingitem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
+*OrderBatchApi* | [**GetAllOrderBatches**](docs/OrderBatchApi.md#getallorderbatches) | **GET** /api/v1.0/{appId}/stores/{storeId}/order-batches | Returns order batches created in a given time range
 *OrderIngestApi* | [**OrderIngestSubmitNewOrder**](docs/OrderIngestApi.md#orderingestsubmitneworder) | **POST** /api/v1.0/{appNameId}/order-ingest/submit | Provides an ability to ingest a 3rd party order into Flipdish ecosystem
 *OrdersApi* | [**AcceptOrder**](docs/OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 *OrdersApi* | [**DispatchOrder**](docs/OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
@@ -787,6 +789,7 @@ Class | Method | HTTP request | Description
  - [Model.MobileAppConfig](docs/MobileAppConfig.md)
  - [Model.MobileAppsDetails](docs/MobileAppsDetails.md)
  - [Model.MobileAppsImage](docs/MobileAppsImage.md)
+ - [Model.MobileAppsStatistics](docs/MobileAppsStatistics.md)
  - [Model.MobileAppsSubmission](docs/MobileAppsSubmission.md)
  - [Model.MobileAppsSubmissionStatus](docs/MobileAppsSubmissionStatus.md)
  - [Model.ModelBase](docs/ModelBase.md)
@@ -798,6 +801,7 @@ Class | Method | HTTP request | Description
  - [Model.OnboardingItemUpdate](docs/OnboardingItemUpdate.md)
  - [Model.Order](docs/Order.md)
  - [Model.OrderAcceptedEvent](docs/OrderAcceptedEvent.md)
+ - [Model.OrderBatchItem](docs/OrderBatchItem.md)
  - [Model.OrderCapacityConfigUpdatedEvent](docs/OrderCapacityConfigUpdatedEvent.md)
  - [Model.OrderCreatedEvent](docs/OrderCreatedEvent.md)
  - [Model.OrderCustomerTrackingCreatedEvent](docs/OrderCustomerTrackingCreatedEvent.md)
@@ -904,8 +908,10 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultMenuSummary](docs/RestApiArrayResultMenuSummary.md)
  - [Model.RestApiArrayResultMenuTaxDetails](docs/RestApiArrayResultMenuTaxDetails.md)
  - [Model.RestApiArrayResultMetadata](docs/RestApiArrayResultMetadata.md)
+ - [Model.RestApiArrayResultMobileAppsStatistics](docs/RestApiArrayResultMobileAppsStatistics.md)
  - [Model.RestApiArrayResultOAuthApp](docs/RestApiArrayResultOAuthApp.md)
  - [Model.RestApiArrayResultOauthClientRedirectUri](docs/RestApiArrayResultOauthClientRedirectUri.md)
+ - [Model.RestApiArrayResultOrderBatchItem](docs/RestApiArrayResultOrderBatchItem.md)
  - [Model.RestApiArrayResultOrderFulfillmentStatus](docs/RestApiArrayResultOrderFulfillmentStatus.md)
  - [Model.RestApiArrayResultPayoutSummary](docs/RestApiArrayResultPayoutSummary.md)
  - [Model.RestApiArrayResultPreOrderTime](docs/RestApiArrayResultPreOrderTime.md)
