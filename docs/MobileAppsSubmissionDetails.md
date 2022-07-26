@@ -1,4 +1,4 @@
-# Flipdish.Model.MobileAppsSubmission
+# Flipdish.Model.MobileAppsSubmissionDetails
 ## Properties
 
 Name | Type | Description | Notes
@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **AppDescription** | **string** | App Description | [optional] 
 **AppShortDescription** | **string** | App Description | [optional] 
 **Keywords** | **List&lt;string&gt;** | Keywords | [optional] 
+**AppLogoUrl** | **string** | Logo URL | [optional] 
 **AutoPublish** | **bool?** | Publish automatically | [optional] 
 **Status** | **string** | Mobile App Status | [optional] 
 

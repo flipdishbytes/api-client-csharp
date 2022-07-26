@@ -4,267 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**EditAppConfigSalesChannel**](MobileAppsApi.md#editappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
-[**GetAppConfig**](MobileAppsApi.md#getappconfig) | **GET** /api/v1.0/mobileapps/{appId}/config | Get mobile app configuration
-[**GetAppDetails**](MobileAppsApi.md#getappdetails) | **GET** /api/v1.0/mobileapps/{appId}/details | Get mobile app details
-[**GetMobileAppsSubmissionStatus**](MobileAppsApi.md#getmobileappssubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submissionstatus{plataformType} | Get mobile app submitted status
 [**GetStatistics**](MobileAppsApi.md#getstatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
-[**SetAppConfig**](MobileAppsApi.md#setappconfig) | **POST** /api/v1.0/mobileapps/{appId}/config | Set mobile app configuration
+[**GetSubmissionDetails**](MobileAppsApi.md#getsubmissiondetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | Get submission details mobile apps
+[**GetSubmissionStatus**](MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/status | Get submission status mobile apps
 [**Submission**](MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
-[**UploadMobileAppsImage**](MobileAppsApi.md#uploadmobileappsimage) | **POST** /api/v1.0/mobileapps/{appId}/image | Upload a Mobile Apps Image
+[**UpdateAppConfigSalesChannel**](MobileAppsApi.md#updateappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Update the application sales channel configuration
+[**UploadImage**](MobileAppsApi.md#uploadimage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | Upload image mobile apps
 
-
-<a name="editappconfigsaleschannel"></a>
-# **EditAppConfigSalesChannel**
-> RestApiResultAppConfigSalesChannel EditAppConfigSalesChannel (string appId, AppConfigSalesChannel appConfigSalesChannel)
-
-Set the application sales channel configuration
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class EditAppConfigSalesChannelExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MobileAppsApi();
-            var appId = appId_example;  // string | 
-            var appConfigSalesChannel = new AppConfigSalesChannel(); // AppConfigSalesChannel | 
-
-            try
-            {
-                // Set the application sales channel configuration
-                RestApiResultAppConfigSalesChannel result = apiInstance.EditAppConfigSalesChannel(appId, appConfigSalesChannel);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MobileAppsApi.EditAppConfigSalesChannel: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
- **appConfigSalesChannel** | [**AppConfigSalesChannel**](AppConfigSalesChannel.md)|  | 
-
-### Return type
-
-[**RestApiResultAppConfigSalesChannel**](RestApiResultAppConfigSalesChannel.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getappconfig"></a>
-# **GetAppConfig**
-> RestApiResultMobileAppsDetails GetAppConfig (string appId)
-
-Get mobile app configuration
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class GetAppConfigExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MobileAppsApi();
-            var appId = appId_example;  // string | 
-
-            try
-            {
-                // Get mobile app configuration
-                RestApiResultMobileAppsDetails result = apiInstance.GetAppConfig(appId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MobileAppsApi.GetAppConfig: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
-
-### Return type
-
-[**RestApiResultMobileAppsDetails**](RestApiResultMobileAppsDetails.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getappdetails"></a>
-# **GetAppDetails**
-> RestApiResultMobileAppsDetails GetAppDetails (string appId)
-
-Get mobile app details
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class GetAppDetailsExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MobileAppsApi();
-            var appId = appId_example;  // string | 
-
-            try
-            {
-                // Get mobile app details
-                RestApiResultMobileAppsDetails result = apiInstance.GetAppDetails(appId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MobileAppsApi.GetAppDetails: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
-
-### Return type
-
-[**RestApiResultMobileAppsDetails**](RestApiResultMobileAppsDetails.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getmobileappssubmissionstatus"></a>
-# **GetMobileAppsSubmissionStatus**
-> RestApiResultMobileAppsSubmissionStatus GetMobileAppsSubmissionStatus (string appId, string plataformType)
-
-Get mobile app submitted status
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class GetMobileAppsSubmissionStatusExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MobileAppsApi();
-            var appId = appId_example;  // string | 
-            var plataformType = plataformType_example;  // string | 
-
-            try
-            {
-                // Get mobile app submitted status
-                RestApiResultMobileAppsSubmissionStatus result = apiInstance.GetMobileAppsSubmissionStatus(appId, plataformType);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MobileAppsApi.GetMobileAppsSubmissionStatus: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
- **plataformType** | **string**|  | 
-
-### Return type
-
-[**RestApiResultMobileAppsSubmissionStatus**](RestApiResultMobileAppsSubmissionStatus.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getstatistics"></a>
 # **GetStatistics**
@@ -330,11 +76,11 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="setappconfig"></a>
-# **SetAppConfig**
-> RestApiResult SetAppConfig (string appId, MobileAppConfig configUpdate)
+<a name="getsubmissiondetails"></a>
+# **GetSubmissionDetails**
+> RestApiResultMobileAppsSubmissionDetails GetSubmissionDetails (string appId)
 
-Set mobile app configuration
+Get submission details mobile apps
 
 ### Example
 ```csharp
@@ -346,7 +92,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class SetAppConfigExample
+    public class GetSubmissionDetailsExample
     {
         public void main()
         {
@@ -355,17 +101,16 @@ namespace Example
 
             var apiInstance = new MobileAppsApi();
             var appId = appId_example;  // string | 
-            var configUpdate = new MobileAppConfig(); // MobileAppConfig | 
 
             try
             {
-                // Set mobile app configuration
-                RestApiResult result = apiInstance.SetAppConfig(appId, configUpdate);
+                // Get submission details mobile apps
+                RestApiResultMobileAppsSubmissionDetails result = apiInstance.GetSubmissionDetails(appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MobileAppsApi.SetAppConfig: " + e.Message );
+                Debug.Print("Exception when calling MobileAppsApi.GetSubmissionDetails: " + e.Message );
             }
         }
     }
@@ -377,11 +122,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **configUpdate** | [**MobileAppConfig**](MobileAppConfig.md)|  | 
 
 ### Return type
 
-[**RestApiResult**](RestApiResult.md)
+[**RestApiResultMobileAppsSubmissionDetails**](RestApiResultMobileAppsSubmissionDetails.md)
 
 ### Authorization
 
@@ -389,7 +133,71 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsubmissionstatus"></a>
+# **GetSubmissionStatus**
+> RestApiResultMobileAppsSubmissionStatus GetSubmissionStatus (string appId, string type)
+
+Get submission status mobile apps
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetSubmissionStatusExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MobileAppsApi();
+            var appId = appId_example;  // string | 
+            var type = type_example;  // string | 
+
+            try
+            {
+                // Get submission status mobile apps
+                RestApiResultMobileAppsSubmissionStatus result = apiInstance.GetSubmissionStatus(appId, type);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MobileAppsApi.GetSubmissionStatus: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **type** | **string**|  | 
+
+### Return type
+
+[**RestApiResultMobileAppsSubmissionStatus**](RestApiResultMobileAppsSubmissionStatus.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -458,11 +266,11 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uploadmobileappsimage"></a>
-# **UploadMobileAppsImage**
-> RestApiResultMobileAppsImage UploadMobileAppsImage (string appId, System.IO.Stream image)
+<a name="updateappconfigsaleschannel"></a>
+# **UpdateAppConfigSalesChannel**
+> RestApiResultAppConfigSalesChannel UpdateAppConfigSalesChannel (string appId, AppConfigSalesChannel appConfigSalesChannel)
 
-Upload a Mobile Apps Image
+Update the application sales channel configuration
 
 ### Example
 ```csharp
@@ -474,7 +282,71 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class UploadMobileAppsImageExample
+    public class UpdateAppConfigSalesChannelExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MobileAppsApi();
+            var appId = appId_example;  // string | 
+            var appConfigSalesChannel = new AppConfigSalesChannel(); // AppConfigSalesChannel | 
+
+            try
+            {
+                // Update the application sales channel configuration
+                RestApiResultAppConfigSalesChannel result = apiInstance.UpdateAppConfigSalesChannel(appId, appConfigSalesChannel);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MobileAppsApi.UpdateAppConfigSalesChannel: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **appConfigSalesChannel** | [**AppConfigSalesChannel**](AppConfigSalesChannel.md)|  | 
+
+### Return type
+
+[**RestApiResultAppConfigSalesChannel**](RestApiResultAppConfigSalesChannel.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uploadimage"></a>
+# **UploadImage**
+> RestApiResultMobileAppsImage UploadImage (string appId, System.IO.Stream image)
+
+Upload image mobile apps
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UploadImageExample
     {
         public void main()
         {
@@ -487,13 +359,13 @@ namespace Example
 
             try
             {
-                // Upload a Mobile Apps Image
-                RestApiResultMobileAppsImage result = apiInstance.UploadMobileAppsImage(appId, image);
+                // Upload image mobile apps
+                RestApiResultMobileAppsImage result = apiInstance.UploadImage(appId, image);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MobileAppsApi.UploadMobileAppsImage: " + e.Message );
+                Debug.Print("Exception when calling MobileAppsApi.UploadImage: " + e.Message );
             }
         }
     }

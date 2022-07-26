@@ -968,7 +968,31 @@ namespace Flipdish.Model
             /// Enum EditSalesChannels for value: EditSalesChannels
             /// </summary>
             [EnumMember(Value = "EditSalesChannels")]
-            EditSalesChannels = 143
+            EditSalesChannels = 143,
+            
+            /// <summary>
+            /// Enum ViewPayGreenWhiteLabelConfiguration for value: ViewPayGreenWhiteLabelConfiguration
+            /// </summary>
+            [EnumMember(Value = "ViewPayGreenWhiteLabelConfiguration")]
+            ViewPayGreenWhiteLabelConfiguration = 144,
+            
+            /// <summary>
+            /// Enum CreatePayGreenWhiteLabelConfiguration for value: CreatePayGreenWhiteLabelConfiguration
+            /// </summary>
+            [EnumMember(Value = "CreatePayGreenWhiteLabelConfiguration")]
+            CreatePayGreenWhiteLabelConfiguration = 145,
+            
+            /// <summary>
+            /// Enum UpdatePayGreenWhiteLabelConfiguration for value: UpdatePayGreenWhiteLabelConfiguration
+            /// </summary>
+            [EnumMember(Value = "UpdatePayGreenWhiteLabelConfiguration")]
+            UpdatePayGreenWhiteLabelConfiguration = 146,
+            
+            /// <summary>
+            /// Enum UpdatePayGreenStoreConfiguration for value: UpdatePayGreenStoreConfiguration
+            /// </summary>
+            [EnumMember(Value = "UpdatePayGreenStoreConfiguration")]
+            UpdatePayGreenStoreConfiguration = 147
         }
 
 

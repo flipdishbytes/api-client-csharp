@@ -25,71 +25,33 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Mobile Apps Status
+    /// UpdateStorePayGreenConfigurationRequest
     /// </summary>
     [DataContract]
-    public partial class MobileAppsSubmissionStatus :  IEquatable<MobileAppsSubmissionStatus>, IValidatableObject
+    public partial class UpdateStorePayGreenConfigurationRequest :  IEquatable<UpdateStorePayGreenConfigurationRequest>, IValidatableObject
     {
         /// <summary>
-        /// Mobile App Status
+        /// Initializes a new instance of the <see cref="UpdateStorePayGreenConfigurationRequest" /> class.
         /// </summary>
-        /// <value>Mobile App Status</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum
+        /// <param name="active">active.</param>
+        /// <param name="payGreenConfigurationId">payGreenConfigurationId.</param>
+        public UpdateStorePayGreenConfigurationRequest(bool? active = default(bool?), int? payGreenConfigurationId = default(int?))
         {
-            
-            /// <summary>
-            /// Enum None for value: None
-            /// </summary>
-            [EnumMember(Value = "None")]
-            None = 1,
-            
-            /// <summary>
-            /// Enum InProgress for value: InProgress
-            /// </summary>
-            [EnumMember(Value = "InProgress")]
-            InProgress = 2,
-            
-            /// <summary>
-            /// Enum Submitted for value: Submitted
-            /// </summary>
-            [EnumMember(Value = "Submitted")]
-            Submitted = 3,
-            
-            /// <summary>
-            /// Enum AppStoreReview for value: AppStoreReview
-            /// </summary>
-            [EnumMember(Value = "AppStoreReview")]
-            AppStoreReview = 4,
-            
-            /// <summary>
-            /// Enum Sucessfull for value: Sucessfull
-            /// </summary>
-            [EnumMember(Value = "Sucessfull")]
-            Sucessfull = 5,
-            
-            /// <summary>
-            /// Enum Unsuccesful for value: Unsuccesful
-            /// </summary>
-            [EnumMember(Value = "Unsuccesful")]
-            Unsuccesful = 6
-        }
-
-        /// <summary>
-        /// Mobile App Status
-        /// </summary>
-        /// <value>Mobile App Status</value>
-        [DataMember(Name="Status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MobileAppsSubmissionStatus" /> class.
-        /// </summary>
-        /// <param name="status">Mobile App Status.</param>
-        public MobileAppsSubmissionStatus(StatusEnum? status = default(StatusEnum?))
-        {
-            this.Status = status;
+            this.Active = active;
+            this.PayGreenConfigurationId = payGreenConfigurationId;
         }
         
+        /// <summary>
+        /// Gets or Sets Active
+        /// </summary>
+        [DataMember(Name="Active", EmitDefaultValue=false)]
+        public bool? Active { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PayGreenConfigurationId
+        /// </summary>
+        [DataMember(Name="PayGreenConfigurationId", EmitDefaultValue=false)]
+        public int? PayGreenConfigurationId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -98,8 +60,9 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class MobileAppsSubmissionStatus {\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("class UpdateStorePayGreenConfigurationRequest {\n");
+            sb.Append("  Active: ").Append(Active).Append("\n");
+            sb.Append("  PayGreenConfigurationId: ").Append(PayGreenConfigurationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -120,24 +83,29 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as MobileAppsSubmissionStatus);
+            return this.Equals(input as UpdateStorePayGreenConfigurationRequest);
         }
 
         /// <summary>
-        /// Returns true if MobileAppsSubmissionStatus instances are equal
+        /// Returns true if UpdateStorePayGreenConfigurationRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of MobileAppsSubmissionStatus to be compared</param>
+        /// <param name="input">Instance of UpdateStorePayGreenConfigurationRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MobileAppsSubmissionStatus input)
+        public bool Equals(UpdateStorePayGreenConfigurationRequest input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Status == input.Status ||
-                    (this.Status != null &&
-                    this.Status.Equals(input.Status))
+                    this.Active == input.Active ||
+                    (this.Active != null &&
+                    this.Active.Equals(input.Active))
+                ) && 
+                (
+                    this.PayGreenConfigurationId == input.PayGreenConfigurationId ||
+                    (this.PayGreenConfigurationId != null &&
+                    this.PayGreenConfigurationId.Equals(input.PayGreenConfigurationId))
                 );
         }
 
@@ -150,8 +118,10 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Status != null)
-                    hashCode = hashCode * 59 + this.Status.GetHashCode();
+                if (this.Active != null)
+                    hashCode = hashCode * 59 + this.Active.GetHashCode();
+                if (this.PayGreenConfigurationId != null)
+                    hashCode = hashCode * 59 + this.PayGreenConfigurationId.GetHashCode();
                 return hashCode;
             }
         }

@@ -25,24 +25,20 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// CreatePayGreenConfigurationRequest
+    /// RestaurantVoucherPayGreenConfigurationSummary
     /// </summary>
     [DataContract]
-    public partial class CreatePayGreenConfigurationRequest :  IEquatable<CreatePayGreenConfigurationRequest>, IValidatableObject
+    public partial class RestaurantVoucherPayGreenConfigurationSummary :  IEquatable<RestaurantVoucherPayGreenConfigurationSummary>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreatePayGreenConfigurationRequest" /> class.
+        /// Initializes a new instance of the <see cref="RestaurantVoucherPayGreenConfigurationSummary" /> class.
         /// </summary>
         /// <param name="name">name.</param>
-        /// <param name="payGreenId">payGreenId.</param>
-        /// <param name="payGreenPrivateKey">payGreenPrivateKey.</param>
-        /// <param name="assignedStores">assignedStores.</param>
-        public CreatePayGreenConfigurationRequest(string name = default(string), string payGreenId = default(string), string payGreenPrivateKey = default(string), List<int?> assignedStores = default(List<int?>))
+        /// <param name="payGreenConfigurationId">payGreenConfigurationId.</param>
+        public RestaurantVoucherPayGreenConfigurationSummary(string name = default(string), int? payGreenConfigurationId = default(int?))
         {
             this.Name = name;
-            this.PayGreenId = payGreenId;
-            this.PayGreenPrivateKey = payGreenPrivateKey;
-            this.AssignedStores = assignedStores;
+            this.PayGreenConfigurationId = payGreenConfigurationId;
         }
         
         /// <summary>
@@ -52,22 +48,10 @@ namespace Flipdish.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets PayGreenId
+        /// Gets or Sets PayGreenConfigurationId
         /// </summary>
-        [DataMember(Name="PayGreenId", EmitDefaultValue=false)]
-        public string PayGreenId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets PayGreenPrivateKey
-        /// </summary>
-        [DataMember(Name="PayGreenPrivateKey", EmitDefaultValue=false)]
-        public string PayGreenPrivateKey { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AssignedStores
-        /// </summary>
-        [DataMember(Name="AssignedStores", EmitDefaultValue=false)]
-        public List<int?> AssignedStores { get; set; }
+        [DataMember(Name="PayGreenConfigurationId", EmitDefaultValue=false)]
+        public int? PayGreenConfigurationId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -76,11 +60,9 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CreatePayGreenConfigurationRequest {\n");
+            sb.Append("class RestaurantVoucherPayGreenConfigurationSummary {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  PayGreenId: ").Append(PayGreenId).Append("\n");
-            sb.Append("  PayGreenPrivateKey: ").Append(PayGreenPrivateKey).Append("\n");
-            sb.Append("  AssignedStores: ").Append(AssignedStores).Append("\n");
+            sb.Append("  PayGreenConfigurationId: ").Append(PayGreenConfigurationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -101,15 +83,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CreatePayGreenConfigurationRequest);
+            return this.Equals(input as RestaurantVoucherPayGreenConfigurationSummary);
         }
 
         /// <summary>
-        /// Returns true if CreatePayGreenConfigurationRequest instances are equal
+        /// Returns true if RestaurantVoucherPayGreenConfigurationSummary instances are equal
         /// </summary>
-        /// <param name="input">Instance of CreatePayGreenConfigurationRequest to be compared</param>
+        /// <param name="input">Instance of RestaurantVoucherPayGreenConfigurationSummary to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CreatePayGreenConfigurationRequest input)
+        public bool Equals(RestaurantVoucherPayGreenConfigurationSummary input)
         {
             if (input == null)
                 return false;
@@ -121,19 +103,9 @@ namespace Flipdish.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.PayGreenId == input.PayGreenId ||
-                    (this.PayGreenId != null &&
-                    this.PayGreenId.Equals(input.PayGreenId))
-                ) && 
-                (
-                    this.PayGreenPrivateKey == input.PayGreenPrivateKey ||
-                    (this.PayGreenPrivateKey != null &&
-                    this.PayGreenPrivateKey.Equals(input.PayGreenPrivateKey))
-                ) && 
-                (
-                    this.AssignedStores == input.AssignedStores ||
-                    this.AssignedStores != null &&
-                    this.AssignedStores.SequenceEqual(input.AssignedStores)
+                    this.PayGreenConfigurationId == input.PayGreenConfigurationId ||
+                    (this.PayGreenConfigurationId != null &&
+                    this.PayGreenConfigurationId.Equals(input.PayGreenConfigurationId))
                 );
         }
 
@@ -148,12 +120,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.PayGreenId != null)
-                    hashCode = hashCode * 59 + this.PayGreenId.GetHashCode();
-                if (this.PayGreenPrivateKey != null)
-                    hashCode = hashCode * 59 + this.PayGreenPrivateKey.GetHashCode();
-                if (this.AssignedStores != null)
-                    hashCode = hashCode * 59 + this.AssignedStores.GetHashCode();
+                if (this.PayGreenConfigurationId != null)
+                    hashCode = hashCode * 59 + this.PayGreenConfigurationId.GetHashCode();
                 return hashCode;
             }
         }

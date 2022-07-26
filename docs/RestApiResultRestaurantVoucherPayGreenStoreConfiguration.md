@@ -1,12 +1,9 @@
-# Flipdish.Model.CreatePayGreenConfigurationRequest
+# Flipdish.Model.RestApiResultRestaurantVoucherPayGreenStoreConfiguration
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** |  | [optional] 
-**PayGreenId** | **string** |  | [optional] 
-**PayGreenPrivateKey** | **string** |  | [optional] 
-**AssignedStores** | **List&lt;int?&gt;** |  | [optional] 
+**Data** | [**RestaurantVoucherPayGreenStoreConfiguration**](RestaurantVoucherPayGreenStoreConfiguration.md) | Generic data object. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

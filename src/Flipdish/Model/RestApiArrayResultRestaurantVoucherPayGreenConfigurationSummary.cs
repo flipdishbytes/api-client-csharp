@@ -25,71 +25,39 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Mobile Apps Status
+    /// Rest api array result
     /// </summary>
     [DataContract]
-    public partial class MobileAppsSubmissionStatus :  IEquatable<MobileAppsSubmissionStatus>, IValidatableObject
+    public partial class RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary :  IEquatable<RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary>, IValidatableObject
     {
         /// <summary>
-        /// Mobile App Status
+        /// Initializes a new instance of the <see cref="RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary" /> class.
         /// </summary>
-        /// <value>Mobile App Status</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum
-        {
-            
-            /// <summary>
-            /// Enum None for value: None
-            /// </summary>
-            [EnumMember(Value = "None")]
-            None = 1,
-            
-            /// <summary>
-            /// Enum InProgress for value: InProgress
-            /// </summary>
-            [EnumMember(Value = "InProgress")]
-            InProgress = 2,
-            
-            /// <summary>
-            /// Enum Submitted for value: Submitted
-            /// </summary>
-            [EnumMember(Value = "Submitted")]
-            Submitted = 3,
-            
-            /// <summary>
-            /// Enum AppStoreReview for value: AppStoreReview
-            /// </summary>
-            [EnumMember(Value = "AppStoreReview")]
-            AppStoreReview = 4,
-            
-            /// <summary>
-            /// Enum Sucessfull for value: Sucessfull
-            /// </summary>
-            [EnumMember(Value = "Sucessfull")]
-            Sucessfull = 5,
-            
-            /// <summary>
-            /// Enum Unsuccesful for value: Unsuccesful
-            /// </summary>
-            [EnumMember(Value = "Unsuccesful")]
-            Unsuccesful = 6
-        }
-
+        [JsonConstructorAttribute]
+        protected RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary() { }
         /// <summary>
-        /// Mobile App Status
+        /// Initializes a new instance of the <see cref="RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary" /> class.
         /// </summary>
-        /// <value>Mobile App Status</value>
-        [DataMember(Name="Status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MobileAppsSubmissionStatus" /> class.
-        /// </summary>
-        /// <param name="status">Mobile App Status.</param>
-        public MobileAppsSubmissionStatus(StatusEnum? status = default(StatusEnum?))
+        /// <param name="data">Generic data object. (required).</param>
+        public RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary(List<RestaurantVoucherPayGreenConfigurationSummary> data = default(List<RestaurantVoucherPayGreenConfigurationSummary>))
         {
-            this.Status = status;
+            // to ensure "data" is required (not null)
+            if (data == null)
+            {
+                throw new InvalidDataException("data is a required property for RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary and cannot be null");
+            }
+            else
+            {
+                this.Data = data;
+            }
         }
         
+        /// <summary>
+        /// Generic data object.
+        /// </summary>
+        /// <value>Generic data object.</value>
+        [DataMember(Name="Data", EmitDefaultValue=false)]
+        public List<RestaurantVoucherPayGreenConfigurationSummary> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -98,8 +66,8 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class MobileAppsSubmissionStatus {\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("class RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary {\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -120,24 +88,24 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as MobileAppsSubmissionStatus);
+            return this.Equals(input as RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary);
         }
 
         /// <summary>
-        /// Returns true if MobileAppsSubmissionStatus instances are equal
+        /// Returns true if RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary instances are equal
         /// </summary>
-        /// <param name="input">Instance of MobileAppsSubmissionStatus to be compared</param>
+        /// <param name="input">Instance of RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MobileAppsSubmissionStatus input)
+        public bool Equals(RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Status == input.Status ||
-                    (this.Status != null &&
-                    this.Status.Equals(input.Status))
+                    this.Data == input.Data ||
+                    this.Data != null &&
+                    this.Data.SequenceEqual(input.Data)
                 );
         }
 
@@ -150,8 +118,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Status != null)
-                    hashCode = hashCode * 59 + this.Status.GetHashCode();
+                if (this.Data != null)
+                    hashCode = hashCode * 59 + this.Data.GetHashCode();
                 return hashCode;
             }
         }

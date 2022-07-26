@@ -28,7 +28,7 @@ namespace Flipdish.Model
     /// Mobile Apps form submission
     /// </summary>
     [DataContract]
-    public partial class MobileAppsSubmission :  IEquatable<MobileAppsSubmission>, IValidatableObject
+    public partial class MobileAppsSubmissionDetails :  IEquatable<MobileAppsSubmissionDetails>, IValidatableObject
     {
         /// <summary>
         /// Mobile App Status
@@ -82,20 +82,22 @@ namespace Flipdish.Model
         [DataMember(Name="Status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="MobileAppsSubmission" /> class.
+        /// Initializes a new instance of the <see cref="MobileAppsSubmissionDetails" /> class.
         /// </summary>
         /// <param name="appName">App Name.</param>
         /// <param name="appDescription">App Description.</param>
         /// <param name="appShortDescription">App Description.</param>
         /// <param name="keywords">Keywords.</param>
+        /// <param name="appLogoUrl">Logo URL.</param>
         /// <param name="autoPublish">Publish automatically.</param>
         /// <param name="status">Mobile App Status.</param>
-        public MobileAppsSubmission(string appName = default(string), string appDescription = default(string), string appShortDescription = default(string), List<string> keywords = default(List<string>), bool? autoPublish = default(bool?), StatusEnum? status = default(StatusEnum?))
+        public MobileAppsSubmissionDetails(string appName = default(string), string appDescription = default(string), string appShortDescription = default(string), List<string> keywords = default(List<string>), string appLogoUrl = default(string), bool? autoPublish = default(bool?), StatusEnum? status = default(StatusEnum?))
         {
             this.AppName = appName;
             this.AppDescription = appDescription;
             this.AppShortDescription = appShortDescription;
             this.Keywords = keywords;
+            this.AppLogoUrl = appLogoUrl;
             this.AutoPublish = autoPublish;
             this.Status = status;
         }
@@ -129,6 +131,13 @@ namespace Flipdish.Model
         public List<string> Keywords { get; set; }
 
         /// <summary>
+        /// Logo URL
+        /// </summary>
+        /// <value>Logo URL</value>
+        [DataMember(Name="AppLogoUrl", EmitDefaultValue=false)]
+        public string AppLogoUrl { get; set; }
+
+        /// <summary>
         /// Publish automatically
         /// </summary>
         /// <value>Publish automatically</value>
@@ -143,11 +152,12 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class MobileAppsSubmission {\n");
+            sb.Append("class MobileAppsSubmissionDetails {\n");
             sb.Append("  AppName: ").Append(AppName).Append("\n");
             sb.Append("  AppDescription: ").Append(AppDescription).Append("\n");
             sb.Append("  AppShortDescription: ").Append(AppShortDescription).Append("\n");
             sb.Append("  Keywords: ").Append(Keywords).Append("\n");
+            sb.Append("  AppLogoUrl: ").Append(AppLogoUrl).Append("\n");
             sb.Append("  AutoPublish: ").Append(AutoPublish).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("}\n");
@@ -170,15 +180,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as MobileAppsSubmission);
+            return this.Equals(input as MobileAppsSubmissionDetails);
         }
 
         /// <summary>
-        /// Returns true if MobileAppsSubmission instances are equal
+        /// Returns true if MobileAppsSubmissionDetails instances are equal
         /// </summary>
-        /// <param name="input">Instance of MobileAppsSubmission to be compared</param>
+        /// <param name="input">Instance of MobileAppsSubmissionDetails to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MobileAppsSubmission input)
+        public bool Equals(MobileAppsSubmissionDetails input)
         {
             if (input == null)
                 return false;
@@ -203,6 +213,11 @@ namespace Flipdish.Model
                     this.Keywords == input.Keywords ||
                     this.Keywords != null &&
                     this.Keywords.SequenceEqual(input.Keywords)
+                ) && 
+                (
+                    this.AppLogoUrl == input.AppLogoUrl ||
+                    (this.AppLogoUrl != null &&
+                    this.AppLogoUrl.Equals(input.AppLogoUrl))
                 ) && 
                 (
                     this.AutoPublish == input.AutoPublish ||
@@ -233,6 +248,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.AppShortDescription.GetHashCode();
                 if (this.Keywords != null)
                     hashCode = hashCode * 59 + this.Keywords.GetHashCode();
+                if (this.AppLogoUrl != null)
+                    hashCode = hashCode * 59 + this.AppLogoUrl.GetHashCode();
                 if (this.AutoPublish != null)
                     hashCode = hashCode * 59 + this.AutoPublish.GetHashCode();
                 if (this.Status != null)

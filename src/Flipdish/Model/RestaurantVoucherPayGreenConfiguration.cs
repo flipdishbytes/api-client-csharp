@@ -25,23 +25,23 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// CreatePayGreenConfigurationRequest
+    /// RestaurantVoucherPayGreenConfiguration
     /// </summary>
     [DataContract]
-    public partial class CreatePayGreenConfigurationRequest :  IEquatable<CreatePayGreenConfigurationRequest>, IValidatableObject
+    public partial class RestaurantVoucherPayGreenConfiguration :  IEquatable<RestaurantVoucherPayGreenConfiguration>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreatePayGreenConfigurationRequest" /> class.
+        /// Initializes a new instance of the <see cref="RestaurantVoucherPayGreenConfiguration" /> class.
         /// </summary>
         /// <param name="name">name.</param>
         /// <param name="payGreenId">payGreenId.</param>
-        /// <param name="payGreenPrivateKey">payGreenPrivateKey.</param>
+        /// <param name="payGreenConfigurationId">payGreenConfigurationId.</param>
         /// <param name="assignedStores">assignedStores.</param>
-        public CreatePayGreenConfigurationRequest(string name = default(string), string payGreenId = default(string), string payGreenPrivateKey = default(string), List<int?> assignedStores = default(List<int?>))
+        public RestaurantVoucherPayGreenConfiguration(string name = default(string), string payGreenId = default(string), int? payGreenConfigurationId = default(int?), List<RestaurantVoucherAssignedStore> assignedStores = default(List<RestaurantVoucherAssignedStore>))
         {
             this.Name = name;
             this.PayGreenId = payGreenId;
-            this.PayGreenPrivateKey = payGreenPrivateKey;
+            this.PayGreenConfigurationId = payGreenConfigurationId;
             this.AssignedStores = assignedStores;
         }
         
@@ -58,16 +58,16 @@ namespace Flipdish.Model
         public string PayGreenId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PayGreenPrivateKey
+        /// Gets or Sets PayGreenConfigurationId
         /// </summary>
-        [DataMember(Name="PayGreenPrivateKey", EmitDefaultValue=false)]
-        public string PayGreenPrivateKey { get; set; }
+        [DataMember(Name="PayGreenConfigurationId", EmitDefaultValue=false)]
+        public int? PayGreenConfigurationId { get; set; }
 
         /// <summary>
         /// Gets or Sets AssignedStores
         /// </summary>
         [DataMember(Name="AssignedStores", EmitDefaultValue=false)]
-        public List<int?> AssignedStores { get; set; }
+        public List<RestaurantVoucherAssignedStore> AssignedStores { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -76,10 +76,10 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CreatePayGreenConfigurationRequest {\n");
+            sb.Append("class RestaurantVoucherPayGreenConfiguration {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  PayGreenId: ").Append(PayGreenId).Append("\n");
-            sb.Append("  PayGreenPrivateKey: ").Append(PayGreenPrivateKey).Append("\n");
+            sb.Append("  PayGreenConfigurationId: ").Append(PayGreenConfigurationId).Append("\n");
             sb.Append("  AssignedStores: ").Append(AssignedStores).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -101,15 +101,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CreatePayGreenConfigurationRequest);
+            return this.Equals(input as RestaurantVoucherPayGreenConfiguration);
         }
 
         /// <summary>
-        /// Returns true if CreatePayGreenConfigurationRequest instances are equal
+        /// Returns true if RestaurantVoucherPayGreenConfiguration instances are equal
         /// </summary>
-        /// <param name="input">Instance of CreatePayGreenConfigurationRequest to be compared</param>
+        /// <param name="input">Instance of RestaurantVoucherPayGreenConfiguration to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CreatePayGreenConfigurationRequest input)
+        public bool Equals(RestaurantVoucherPayGreenConfiguration input)
         {
             if (input == null)
                 return false;
@@ -126,9 +126,9 @@ namespace Flipdish.Model
                     this.PayGreenId.Equals(input.PayGreenId))
                 ) && 
                 (
-                    this.PayGreenPrivateKey == input.PayGreenPrivateKey ||
-                    (this.PayGreenPrivateKey != null &&
-                    this.PayGreenPrivateKey.Equals(input.PayGreenPrivateKey))
+                    this.PayGreenConfigurationId == input.PayGreenConfigurationId ||
+                    (this.PayGreenConfigurationId != null &&
+                    this.PayGreenConfigurationId.Equals(input.PayGreenConfigurationId))
                 ) && 
                 (
                     this.AssignedStores == input.AssignedStores ||
@@ -150,8 +150,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.PayGreenId != null)
                     hashCode = hashCode * 59 + this.PayGreenId.GetHashCode();
-                if (this.PayGreenPrivateKey != null)
-                    hashCode = hashCode * 59 + this.PayGreenPrivateKey.GetHashCode();
+                if (this.PayGreenConfigurationId != null)
+                    hashCode = hashCode * 59 + this.PayGreenConfigurationId.GetHashCode();
                 if (this.AssignedStores != null)
                     hashCode = hashCode * 59 + this.AssignedStores.GetHashCode();
                 return hashCode;
