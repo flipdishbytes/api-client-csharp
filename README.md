@@ -401,7 +401,8 @@ Class | Method | HTTP request | Description
 *OnboardingApi* | [**OnboardingGetOnboardingItems**](docs/OnboardingApi.md#onboardinggetonboardingitems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
 *OnboardingApi* | [**OnboardingUpdateOnboardingConfig**](docs/OnboardingApi.md#onboardingupdateonboardingconfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
 *OnboardingApi* | [**OnboardingUpdateOnboardingItem**](docs/OnboardingApi.md#onboardingupdateonboardingitem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
-*OrderBatchApi* | [**GetAllOrderBatches**](docs/OrderBatchApi.md#getallorderbatches) | **GET** /api/v1.0/{appId}/stores/{storeId}/order-batches | Returns order batches created in a given time range
+*OrderBatchesApi* | [**GetAllOrderBatches**](docs/OrderBatchesApi.md#getallorderbatches) | **GET** /api/v1.0/{appId}/stores/{storeId}/order-batches | Returns order batches
+*OrderBatchesApi* | [**GetOrderBatch**](docs/OrderBatchesApi.md#getorderbatch) | **GET** /api/v1.0/{appId}/stores/{storeId}/order-batches/{batchId} | Returns the order batch details
 *OrderIngestApi* | [**OrderIngestSubmitNewOrder**](docs/OrderIngestApi.md#orderingestsubmitneworder) | **POST** /api/v1.0/{appNameId}/order-ingest/submit | Provides an ability to ingest a 3rd party order into Flipdish ecosystem
 *OrdersApi* | [**AcceptOrder**](docs/OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 *OrdersApi* | [**DispatchOrder**](docs/OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
@@ -809,6 +810,7 @@ Class | Method | HTTP request | Description
  - [Model.OnboardingItemUpdate](docs/OnboardingItemUpdate.md)
  - [Model.Order](docs/Order.md)
  - [Model.OrderAcceptedEvent](docs/OrderAcceptedEvent.md)
+ - [Model.OrderBatch](docs/OrderBatch.md)
  - [Model.OrderBatchItem](docs/OrderBatchItem.md)
  - [Model.OrderCapacityConfigUpdatedEvent](docs/OrderCapacityConfigUpdatedEvent.md)
  - [Model.OrderCreatedEvent](docs/OrderCreatedEvent.md)
@@ -1031,6 +1033,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultOAuthApp](docs/RestApiResultOAuthApp.md)
  - [Model.RestApiResultOauthClientRedirectUri](docs/RestApiResultOauthClientRedirectUri.md)
  - [Model.RestApiResultOrder](docs/RestApiResultOrder.md)
+ - [Model.RestApiResultOrderBatch](docs/RestApiResultOrderBatch.md)
  - [Model.RestApiResultOrderDeliveryInformation](docs/RestApiResultOrderDeliveryInformation.md)
  - [Model.RestApiResultOrderFulfillmentStatus](docs/RestApiResultOrderFulfillmentStatus.md)
  - [Model.RestApiResultOrderFulfillmentStatusWithConfigurationActions](docs/RestApiResultOrderFulfillmentStatusWithConfigurationActions.md)
