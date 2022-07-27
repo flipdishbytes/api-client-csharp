@@ -183,6 +183,7 @@ Class | Method | HTTP request | Description
 *CardReadersApi* | [**UnRegisterTerminal**](docs/CardReadersApi.md#unregisterterminal) | **DELETE** /api/v1.0/{appId}/payments/terminals/stripe/unregister | Un-register terminal by deleting it from stripe
 *CardReadersApi* | [**UnpairCurrentlyPairedBluetoothDevice**](docs/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
 *CatalogChangesApi* | [**GetPendingMenuChanges**](docs/CatalogChangesApi.md#getpendingmenuchanges) | **GET** /api/v1.0/{appId}/menus/catalog-changes | Get menu pending changes from Catalog groups and items
+*CatalogChangesApi* | [**GetPendingMenuChangesSummaries**](docs/CatalogChangesApi.md#getpendingmenuchangessummaries) | **GET** /api/v1.0/{appId}/menus/catalog-changes/summaries | Get menu pending changes summaries by appId
 *CatalogChangesApi* | [**PublishPendingMenuChanges**](docs/CatalogChangesApi.md#publishpendingmenuchanges) | **POST** /api/v1.0/{appId}/menus/catalog-changes/publish | Update menus with the pending changes from Catalog groups and items
 *CatalogGroupsApi* | [**ArchiveGroup**](docs/CatalogGroupsApi.md#archivegroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | Archive Catalog Group
 *CatalogGroupsApi* | [**CreateGroup**](docs/CatalogGroupsApi.md#creategroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
@@ -852,6 +853,7 @@ Class | Method | HTTP request | Description
  - [Model.PayoutStore](docs/PayoutStore.md)
  - [Model.PayoutSummary](docs/PayoutSummary.md)
  - [Model.PendingMenuChanges](docs/PendingMenuChanges.md)
+ - [Model.PendingMenuChangesSummaries](docs/PendingMenuChangesSummaries.md)
  - [Model.PercentDiscountDetails](docs/PercentDiscountDetails.md)
  - [Model.PhoneCall](docs/PhoneCall.md)
  - [Model.PhoneCallEndedEvent](docs/PhoneCallEndedEvent.md)
@@ -921,6 +923,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultOrderBatchItem](docs/RestApiArrayResultOrderBatchItem.md)
  - [Model.RestApiArrayResultOrderFulfillmentStatus](docs/RestApiArrayResultOrderFulfillmentStatus.md)
  - [Model.RestApiArrayResultPayoutSummary](docs/RestApiArrayResultPayoutSummary.md)
+ - [Model.RestApiArrayResultPendingMenuChangesSummaries](docs/RestApiArrayResultPendingMenuChangesSummaries.md)
  - [Model.RestApiArrayResultPreOrderTime](docs/RestApiArrayResultPreOrderTime.md)
  - [Model.RestApiArrayResultProcessingFeeConfig](docs/RestApiArrayResultProcessingFeeConfig.md)
  - [Model.RestApiArrayResultRestApiDefaultResponse](docs/RestApiArrayResultRestApiDefaultResponse.md)
