@@ -149,6 +149,8 @@ Class | Method | HTTP request | Description
 *AppsApi* | [**SetCompliance**](docs/AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | Set the application compliance configuration
 *AppsApi* | [**SetPanaceaVanityUrl**](docs/AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | Set panacea vanity url
 *AppsApi* | [**UploadAppLogo**](docs/AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | Set the application logo \\ icon
+*AuditLogsApi* | [**AddOrderAuditLog**](docs/AuditLogsApi.md#addorderauditlog) | **POST** /api/v1.0/auditlogs/orders/{orderId} | Create an order audit log event
+*AuditLogsApi* | [**AddStoreAuditLogEvent**](docs/AuditLogsApi.md#addstoreauditlogevent) | **POST** /api/v1.0/auditlogs/stores/{storeId} | Create a store audit log event
 *AuthorizationTokensApi* | [**GetAuthorizationTokens**](docs/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/{appId}/authorizationtokens/{oauthAppId} | Get authorization tokens
 *AuthorizationTokensApi* | [**RevokeToken**](docs/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/{appId}/authorizationtokens/{key} | Revoke token
 *BankAccountApi* | [**AttachBankAccountToStore**](docs/BankAccountApi.md#attachbankaccounttostore) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/store/{storeId} | [PRIVATE API] Attach Bank Account to Store
@@ -571,6 +573,7 @@ Class | Method | HTTP request | Description
  - [Model.AppStoreConfigUpdatedEvent](docs/AppStoreConfigUpdatedEvent.md)
  - [Model.AppUpdatedEvent](docs/AppUpdatedEvent.md)
  - [Model.AssignedBankAccount](docs/AssignedBankAccount.md)
+ - [Model.AuditLogFieldChangeInformation](docs/AuditLogFieldChangeInformation.md)
  - [Model.BalanceDetails](docs/BalanceDetails.md)
  - [Model.BankAccount](docs/BankAccount.md)
  - [Model.BankAccountCreate](docs/BankAccountCreate.md)
@@ -666,6 +669,7 @@ Class | Method | HTTP request | Description
  - [Model.EmvTerminal](docs/EmvTerminal.md)
  - [Model.EmvTerminalWithAssignments](docs/EmvTerminalWithAssignments.md)
  - [Model.EventSearchResult](docs/EventSearchResult.md)
+ - [Model.ExternalStoreAuditLog](docs/ExternalStoreAuditLog.md)
  - [Model.ExternalStoreEvent](docs/ExternalStoreEvent.md)
  - [Model.FeeSummary](docs/FeeSummary.md)
  - [Model.Field](docs/Field.md)
