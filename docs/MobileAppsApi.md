@@ -4,6 +4,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**GetAppConfigSalesChannel**](MobileAppsApi.md#getappconfigsaleschannel) | **GET** /api/v1.0/mobileapps/{appId}/saleschannel/details | Get sales channel configuration
 [**GetStatistics**](MobileAppsApi.md#getstatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
 [**GetSubmissionDetails**](MobileAppsApi.md#getsubmissiondetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | Get submission details mobile apps
 [**GetSubmissionStatus**](MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/status | Get submission status mobile apps
@@ -11,6 +12,68 @@ Method | HTTP request | Description
 [**UpdateAppConfigSalesChannel**](MobileAppsApi.md#updateappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Update the application sales channel configuration
 [**UploadImage**](MobileAppsApi.md#uploadimage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | Upload image mobile apps
 
+
+<a name="getappconfigsaleschannel"></a>
+# **GetAppConfigSalesChannel**
+> RestApiResultAppConfigSalesChannel GetAppConfigSalesChannel (string appId)
+
+Get sales channel configuration
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetAppConfigSalesChannelExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MobileAppsApi();
+            var appId = appId_example;  // string | 
+
+            try
+            {
+                // Get sales channel configuration
+                RestApiResultAppConfigSalesChannel result = apiInstance.GetAppConfigSalesChannel(appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MobileAppsApi.GetAppConfigSalesChannel: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+
+### Return type
+
+[**RestApiResultAppConfigSalesChannel**](RestApiResultAppConfigSalesChannel.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getstatistics"></a>
 # **GetStatistics**
