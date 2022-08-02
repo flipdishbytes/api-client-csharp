@@ -84,17 +84,46 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MobileAppsSubmission" /> class.
         /// </summary>
-        /// <param name="appName">App Name.</param>
-        /// <param name="appDescription">App Description.</param>
-        /// <param name="appShortDescription">App Description.</param>
+        [JsonConstructorAttribute]
+        protected MobileAppsSubmission() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MobileAppsSubmission" /> class.
+        /// </summary>
+        /// <param name="appName">App Name (required).</param>
+        /// <param name="appDescription">App Description (required).</param>
+        /// <param name="appShortDescription">App Description (required).</param>
         /// <param name="keywords">Keywords.</param>
         /// <param name="autoPublish">Publish automatically.</param>
         /// <param name="status">Mobile App Status.</param>
         public MobileAppsSubmission(string appName = default(string), string appDescription = default(string), string appShortDescription = default(string), List<string> keywords = default(List<string>), bool? autoPublish = default(bool?), StatusEnum? status = default(StatusEnum?))
         {
-            this.AppName = appName;
-            this.AppDescription = appDescription;
-            this.AppShortDescription = appShortDescription;
+            // to ensure "appName" is required (not null)
+            if (appName == null)
+            {
+                throw new InvalidDataException("appName is a required property for MobileAppsSubmission and cannot be null");
+            }
+            else
+            {
+                this.AppName = appName;
+            }
+            // to ensure "appDescription" is required (not null)
+            if (appDescription == null)
+            {
+                throw new InvalidDataException("appDescription is a required property for MobileAppsSubmission and cannot be null");
+            }
+            else
+            {
+                this.AppDescription = appDescription;
+            }
+            // to ensure "appShortDescription" is required (not null)
+            if (appShortDescription == null)
+            {
+                throw new InvalidDataException("appShortDescription is a required property for MobileAppsSubmission and cannot be null");
+            }
+            else
+            {
+                this.AppShortDescription = appShortDescription;
+            }
             this.Keywords = keywords;
             this.AutoPublish = autoPublish;
             this.Status = status;

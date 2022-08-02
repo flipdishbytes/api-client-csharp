@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppName** | **string** | App Name | [optional] 
-**AppDescription** | **string** | App Description | [optional] 
-**AppShortDescription** | **string** | App Description | [optional] 
+**AppName** | **string** | App Name | 
+**AppDescription** | **string** | App Description | 
+**AppShortDescription** | **string** | App Description | 
 **Keywords** | **List&lt;string&gt;** | Keywords | [optional] 
 **AutoPublish** | **bool?** | Publish automatically | [optional] 
 **Status** | **string** | Mobile App Status | [optional] 
