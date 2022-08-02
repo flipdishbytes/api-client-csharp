@@ -37,14 +37,16 @@ namespace Flipdish.Model
         /// <param name="isEnabled">Are tips enabled?.</param>
         /// <param name="allowCustomTips">Are custom tips allowed?.</param>
         /// <param name="allowRoundUp">Is round up allowed?.</param>
+        /// <param name="allowEmojis">Are emojis allowed?.</param>
         /// <param name="percentages">Ordered list of tip breakpoints (smallest -&amp;gt; largest).</param>
         /// <param name="defaultPercentage">Defines a default percentage, it must be in the list of Percentages.</param>
-        public TipConfiguration(int? storeId = default(int?), bool? isEnabled = default(bool?), bool? allowCustomTips = default(bool?), bool? allowRoundUp = default(bool?), List<double?> percentages = default(List<double?>), double? defaultPercentage = default(double?))
+        public TipConfiguration(int? storeId = default(int?), bool? isEnabled = default(bool?), bool? allowCustomTips = default(bool?), bool? allowRoundUp = default(bool?), bool? allowEmojis = default(bool?), List<double?> percentages = default(List<double?>), double? defaultPercentage = default(double?))
         {
             this.StoreId = storeId;
             this.IsEnabled = isEnabled;
             this.AllowCustomTips = allowCustomTips;
             this.AllowRoundUp = allowRoundUp;
+            this.AllowEmojis = allowEmojis;
             this.Percentages = percentages;
             this.DefaultPercentage = defaultPercentage;
         }
@@ -78,6 +80,13 @@ namespace Flipdish.Model
         public bool? AllowRoundUp { get; set; }
 
         /// <summary>
+        /// Are emojis allowed?
+        /// </summary>
+        /// <value>Are emojis allowed?</value>
+        [DataMember(Name="AllowEmojis", EmitDefaultValue=false)]
+        public bool? AllowEmojis { get; set; }
+
+        /// <summary>
         /// Ordered list of tip breakpoints (smallest -&amp;gt; largest)
         /// </summary>
         /// <value>Ordered list of tip breakpoints (smallest -&amp;gt; largest)</value>
@@ -103,6 +112,7 @@ namespace Flipdish.Model
             sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
             sb.Append("  AllowCustomTips: ").Append(AllowCustomTips).Append("\n");
             sb.Append("  AllowRoundUp: ").Append(AllowRoundUp).Append("\n");
+            sb.Append("  AllowEmojis: ").Append(AllowEmojis).Append("\n");
             sb.Append("  Percentages: ").Append(Percentages).Append("\n");
             sb.Append("  DefaultPercentage: ").Append(DefaultPercentage).Append("\n");
             sb.Append("}\n");
@@ -160,6 +170,11 @@ namespace Flipdish.Model
                     this.AllowRoundUp.Equals(input.AllowRoundUp))
                 ) && 
                 (
+                    this.AllowEmojis == input.AllowEmojis ||
+                    (this.AllowEmojis != null &&
+                    this.AllowEmojis.Equals(input.AllowEmojis))
+                ) && 
+                (
                     this.Percentages == input.Percentages ||
                     this.Percentages != null &&
                     this.Percentages.SequenceEqual(input.Percentages)
@@ -188,6 +203,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.AllowCustomTips.GetHashCode();
                 if (this.AllowRoundUp != null)
                     hashCode = hashCode * 59 + this.AllowRoundUp.GetHashCode();
+                if (this.AllowEmojis != null)
+                    hashCode = hashCode * 59 + this.AllowEmojis.GetHashCode();
                 if (this.Percentages != null)
                     hashCode = hashCode * 59 + this.Percentages.GetHashCode();
                 if (this.DefaultPercentage != null)
