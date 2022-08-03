@@ -406,6 +406,8 @@ Class | Method | HTTP request | Description
 *OnboardingApi* | [**OnboardingUpdateOnboardingItem**](docs/OnboardingApi.md#onboardingupdateonboardingitem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
 *OrderBatchesApi* | [**GetAllOrderBatches**](docs/OrderBatchesApi.md#getallorderbatches) | **GET** /api/v1.0/{appId}/stores/{storeId}/order-batches | Returns order batches
 *OrderBatchesApi* | [**GetOrderBatch**](docs/OrderBatchesApi.md#getorderbatch) | **GET** /api/v1.0/{appId}/stores/{storeId}/order-batches/{batchId} | Returns the order batch details
+*OrderBatchingConfigurationApi* | [**Get**](docs/OrderBatchingConfigurationApi.md#get) | **GET** /api/v1.0/stores/{storeId}/order-batching-configuration | Returns order batching configuration for a specific store
+*OrderBatchingConfigurationApi* | [**Post**](docs/OrderBatchingConfigurationApi.md#post) | **POST** /api/v1.0/stores/{storeId}/order-batching-configuration | Sets order batching configuration for a specific store
 *OrderIngestApi* | [**OrderIngestSubmitNewOrder**](docs/OrderIngestApi.md#orderingestsubmitneworder) | **POST** /api/v1.0/{appNameId}/order-ingest/submit | Provides an ability to ingest a 3rd party order into Flipdish ecosystem
 *OrdersApi* | [**AcceptOrder**](docs/OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 *OrdersApi* | [**DispatchOrder**](docs/OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
@@ -817,6 +819,7 @@ Class | Method | HTTP request | Description
  - [Model.OrderAcceptedEvent](docs/OrderAcceptedEvent.md)
  - [Model.OrderBatch](docs/OrderBatch.md)
  - [Model.OrderBatchItem](docs/OrderBatchItem.md)
+ - [Model.OrderBatchingConfiguration](docs/OrderBatchingConfiguration.md)
  - [Model.OrderCapacityConfigUpdatedEvent](docs/OrderCapacityConfigUpdatedEvent.md)
  - [Model.OrderCreatedEvent](docs/OrderCreatedEvent.md)
  - [Model.OrderCustomerTrackingCreatedEvent](docs/OrderCustomerTrackingCreatedEvent.md)
@@ -1039,6 +1042,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultOauthClientRedirectUri](docs/RestApiResultOauthClientRedirectUri.md)
  - [Model.RestApiResultOrder](docs/RestApiResultOrder.md)
  - [Model.RestApiResultOrderBatch](docs/RestApiResultOrderBatch.md)
+ - [Model.RestApiResultOrderBatchingConfiguration](docs/RestApiResultOrderBatchingConfiguration.md)
  - [Model.RestApiResultOrderDeliveryInformation](docs/RestApiResultOrderDeliveryInformation.md)
  - [Model.RestApiResultOrderFulfillmentStatus](docs/RestApiResultOrderFulfillmentStatus.md)
  - [Model.RestApiResultOrderFulfillmentStatusWithConfigurationActions](docs/RestApiResultOrderFulfillmentStatusWithConfigurationActions.md)
@@ -1092,6 +1096,7 @@ Class | Method | HTTP request | Description
  - [Model.RevenueDetail](docs/RevenueDetail.md)
  - [Model.SearchCriteria](docs/SearchCriteria.md)
  - [Model.ServiceCharge](docs/ServiceCharge.md)
+ - [Model.SetOrderBatchingConfiguration](docs/SetOrderBatchingConfiguration.md)
  - [Model.SetPasswordWithPinModel](docs/SetPasswordWithPinModel.md)
  - [Model.Setting](docs/Setting.md)
  - [Model.SignupStep](docs/SignupStep.md)
