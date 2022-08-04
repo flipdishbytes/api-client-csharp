@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="createfulfillmentstatesconfig"></a>
 # **CreateFulfillmentStatesConfig**
-> RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId)
+> RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration)
 
 Create fulfillment configuration
 
@@ -38,11 +38,12 @@ namespace Example
 
             var apiInstance = new FulfillmentStateConfigurationApi();
             var appId = appId_example;  // string | App id
+            var fulfillmentStateConfiguration = new FulfillmentStatesConfigurationCreateBase(); // FulfillmentStatesConfigurationCreateBase | Fulfillment state configuration
 
             try
             {
                 // Create fulfillment configuration
-                RestApiResultFulfillmentStatesConfiguration result = apiInstance.CreateFulfillmentStatesConfig(appId);
+                RestApiResultFulfillmentStatesConfiguration result = apiInstance.CreateFulfillmentStatesConfig(appId, fulfillmentStateConfiguration);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -59,6 +60,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App id | 
+ **fulfillmentStateConfiguration** | [**FulfillmentStatesConfigurationCreateBase**](FulfillmentStatesConfigurationCreateBase.md)| Fulfillment state configuration | 
 
 ### Return type
 
@@ -70,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

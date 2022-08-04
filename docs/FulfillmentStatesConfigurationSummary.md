@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AppId** | **string** | AppId | 
 **ConfigurationUid** | **string** | Configuration Uid | [optional] 
+**Name** | **string** | Name | [optional] 
 **StoreSelectorType** | **string** | Store selector type | [optional] 
 **Stores** | [**List&lt;FulfillmentStatesConfiguredStore&gt;**](FulfillmentStatesConfiguredStore.md) | Stores | [optional] 
 

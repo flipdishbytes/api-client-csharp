@@ -71,13 +71,15 @@ namespace Flipdish.Model
         /// <param name="configurationUid">Configuration Uid.</param>
         /// <param name="storeSelectorType">Store Selector Type.</param>
         /// <param name="storeIds">Store Ids.</param>
-        public FulfillmentStatesConfiguration(List<FulfillmentStatusConfigurationItem> states = default(List<FulfillmentStatusConfigurationItem>), string appId = default(string), string configurationUid = default(string), StoreSelectorTypeEnum? storeSelectorType = default(StoreSelectorTypeEnum?), List<int?> storeIds = default(List<int?>))
+        /// <param name="name">Name.</param>
+        public FulfillmentStatesConfiguration(List<FulfillmentStatusConfigurationItem> states = default(List<FulfillmentStatusConfigurationItem>), string appId = default(string), string configurationUid = default(string), StoreSelectorTypeEnum? storeSelectorType = default(StoreSelectorTypeEnum?), List<int?> storeIds = default(List<int?>), string name = default(string))
         {
             this.States = states;
             this.AppId = appId;
             this.ConfigurationUid = configurationUid;
             this.StoreSelectorType = storeSelectorType;
             this.StoreIds = storeIds;
+            this.Name = name;
         }
         
         /// <summary>
@@ -110,6 +112,13 @@ namespace Flipdish.Model
         public List<int?> StoreIds { get; set; }
 
         /// <summary>
+        /// Name
+        /// </summary>
+        /// <value>Name</value>
+        [DataMember(Name="Name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -122,6 +131,7 @@ namespace Flipdish.Model
             sb.Append("  ConfigurationUid: ").Append(ConfigurationUid).Append("\n");
             sb.Append("  StoreSelectorType: ").Append(StoreSelectorType).Append("\n");
             sb.Append("  StoreIds: ").Append(StoreIds).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -180,6 +190,11 @@ namespace Flipdish.Model
                     this.StoreIds == input.StoreIds ||
                     this.StoreIds != null &&
                     this.StoreIds.SequenceEqual(input.StoreIds)
+                ) && 
+                (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 );
         }
 
@@ -202,6 +217,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreSelectorType.GetHashCode();
                 if (this.StoreIds != null)
                     hashCode = hashCode * 59 + this.StoreIds.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 return hashCode;
             }
         }

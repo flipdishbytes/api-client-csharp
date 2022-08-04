@@ -69,11 +69,13 @@ namespace Flipdish.Model
         /// <param name="storeIds">Stores id&#39;s.</param>
         /// <param name="storeSelectorType">Store Selector Type.</param>
         /// <param name="states">Settings.</param>
-        public UpdateFulfillmentStatesConfiguration(List<int?> storeIds = default(List<int?>), StoreSelectorTypeEnum? storeSelectorType = default(StoreSelectorTypeEnum?), List<FulfillmentStatusConfigurationItem> states = default(List<FulfillmentStatusConfigurationItem>))
+        /// <param name="name">Name.</param>
+        public UpdateFulfillmentStatesConfiguration(List<int?> storeIds = default(List<int?>), StoreSelectorTypeEnum? storeSelectorType = default(StoreSelectorTypeEnum?), List<FulfillmentStatusConfigurationItem> states = default(List<FulfillmentStatusConfigurationItem>), string name = default(string))
         {
             this.StoreIds = storeIds;
             this.StoreSelectorType = storeSelectorType;
             this.States = states;
+            this.Name = name;
         }
         
         /// <summary>
@@ -92,6 +94,13 @@ namespace Flipdish.Model
         public List<FulfillmentStatusConfigurationItem> States { get; set; }
 
         /// <summary>
+        /// Name
+        /// </summary>
+        /// <value>Name</value>
+        [DataMember(Name="Name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -102,6 +111,7 @@ namespace Flipdish.Model
             sb.Append("  StoreIds: ").Append(StoreIds).Append("\n");
             sb.Append("  StoreSelectorType: ").Append(StoreSelectorType).Append("\n");
             sb.Append("  States: ").Append(States).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,6 +160,11 @@ namespace Flipdish.Model
                     this.States == input.States ||
                     this.States != null &&
                     this.States.SequenceEqual(input.States)
+                ) && 
+                (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 );
         }
 
@@ -168,6 +183,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreSelectorType.GetHashCode();
                 if (this.States != null)
                     hashCode = hashCode * 59 + this.States.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 return hashCode;
             }
         }

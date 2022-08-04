@@ -32,8 +32,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
+        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>RestApiResultFulfillmentStatesConfiguration</returns>
-        RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId);
+        RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration);
 
         /// <summary>
         /// Create fulfillment configuration
@@ -43,8 +44,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
+        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>ApiResponse of RestApiResultFulfillmentStatesConfiguration</returns>
-        ApiResponse<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigWithHttpInfo (string appId);
+        ApiResponse<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigWithHttpInfo (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration);
         /// <summary>
         /// Delete fulfillment states configuration
         /// </summary>
@@ -147,8 +149,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
+        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>Task of RestApiResultFulfillmentStatesConfiguration</returns>
-        System.Threading.Tasks.Task<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigAsync (string appId);
+        System.Threading.Tasks.Task<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigAsync (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration);
 
         /// <summary>
         /// Create fulfillment configuration
@@ -158,8 +161,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
+        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>Task of ApiResponse (RestApiResultFulfillmentStatesConfiguration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultFulfillmentStatesConfiguration>> CreateFulfillmentStatesConfigAsyncWithHttpInfo (string appId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultFulfillmentStatesConfiguration>> CreateFulfillmentStatesConfigAsyncWithHttpInfo (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration);
         /// <summary>
         /// Delete fulfillment states configuration
         /// </summary>
@@ -357,10 +361,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
+        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>RestApiResultFulfillmentStatesConfiguration</returns>
-        public RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId)
+        public RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration)
         {
-             ApiResponse<RestApiResultFulfillmentStatesConfiguration> localVarResponse = CreateFulfillmentStatesConfigWithHttpInfo(appId);
+             ApiResponse<RestApiResultFulfillmentStatesConfiguration> localVarResponse = CreateFulfillmentStatesConfigWithHttpInfo(appId, fulfillmentStateConfiguration);
              return localVarResponse.Data;
         }
 
@@ -369,12 +374,16 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
+        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>ApiResponse of RestApiResultFulfillmentStatesConfiguration</returns>
-        public ApiResponse< RestApiResultFulfillmentStatesConfiguration > CreateFulfillmentStatesConfigWithHttpInfo (string appId)
+        public ApiResponse< RestApiResultFulfillmentStatesConfiguration > CreateFulfillmentStatesConfigWithHttpInfo (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling FulfillmentStateConfigurationApi->CreateFulfillmentStatesConfig");
+            // verify the required parameter 'fulfillmentStateConfiguration' is set
+            if (fulfillmentStateConfiguration == null)
+                throw new ApiException(400, "Missing required parameter 'fulfillmentStateConfiguration' when calling FulfillmentStateConfigurationApi->CreateFulfillmentStatesConfig");
 
             var localVarPath = "/api/v1.0/{appId}/fulfillment/configuration/states";
             var localVarPathParams = new Dictionary<String, String>();
@@ -386,6 +395,11 @@ namespace Flipdish.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -401,6 +415,14 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (fulfillmentStateConfiguration != null && fulfillmentStateConfiguration.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(fulfillmentStateConfiguration); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = fulfillmentStateConfiguration; // byte array
+            }
 
             // authentication (oauth2) required
             // oauth required
@@ -432,10 +454,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
+        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>Task of RestApiResultFulfillmentStatesConfiguration</returns>
-        public async System.Threading.Tasks.Task<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigAsync (string appId)
+        public async System.Threading.Tasks.Task<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigAsync (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration)
         {
-             ApiResponse<RestApiResultFulfillmentStatesConfiguration> localVarResponse = await CreateFulfillmentStatesConfigAsyncWithHttpInfo(appId);
+             ApiResponse<RestApiResultFulfillmentStatesConfiguration> localVarResponse = await CreateFulfillmentStatesConfigAsyncWithHttpInfo(appId, fulfillmentStateConfiguration);
              return localVarResponse.Data;
 
         }
@@ -445,12 +468,16 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
+        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>Task of ApiResponse (RestApiResultFulfillmentStatesConfiguration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFulfillmentStatesConfiguration>> CreateFulfillmentStatesConfigAsyncWithHttpInfo (string appId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFulfillmentStatesConfiguration>> CreateFulfillmentStatesConfigAsyncWithHttpInfo (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling FulfillmentStateConfigurationApi->CreateFulfillmentStatesConfig");
+            // verify the required parameter 'fulfillmentStateConfiguration' is set
+            if (fulfillmentStateConfiguration == null)
+                throw new ApiException(400, "Missing required parameter 'fulfillmentStateConfiguration' when calling FulfillmentStateConfigurationApi->CreateFulfillmentStatesConfig");
 
             var localVarPath = "/api/v1.0/{appId}/fulfillment/configuration/states";
             var localVarPathParams = new Dictionary<String, String>();
@@ -462,6 +489,11 @@ namespace Flipdish.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -477,6 +509,14 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (fulfillmentStateConfiguration != null && fulfillmentStateConfiguration.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(fulfillmentStateConfiguration); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = fulfillmentStateConfiguration; // byte array
+            }
 
             // authentication (oauth2) required
             // oauth required

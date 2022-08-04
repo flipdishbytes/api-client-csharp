@@ -73,9 +73,10 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="appId">AppId (required).</param>
         /// <param name="configurationUid">Configuration Uid.</param>
+        /// <param name="name">Name.</param>
         /// <param name="storeSelectorType">Store selector type.</param>
         /// <param name="stores">Stores.</param>
-        public FulfillmentStatesConfigurationSummary(string appId = default(string), string configurationUid = default(string), StoreSelectorTypeEnum? storeSelectorType = default(StoreSelectorTypeEnum?), List<FulfillmentStatesConfiguredStore> stores = default(List<FulfillmentStatesConfiguredStore>))
+        public FulfillmentStatesConfigurationSummary(string appId = default(string), string configurationUid = default(string), string name = default(string), StoreSelectorTypeEnum? storeSelectorType = default(StoreSelectorTypeEnum?), List<FulfillmentStatesConfiguredStore> stores = default(List<FulfillmentStatesConfiguredStore>))
         {
             // to ensure "appId" is required (not null)
             if (appId == null)
@@ -87,6 +88,7 @@ namespace Flipdish.Model
                 this.AppId = appId;
             }
             this.ConfigurationUid = configurationUid;
+            this.Name = name;
             this.StoreSelectorType = storeSelectorType;
             this.Stores = stores;
         }
@@ -104,6 +106,13 @@ namespace Flipdish.Model
         /// <value>Configuration Uid</value>
         [DataMember(Name="ConfigurationUid", EmitDefaultValue=false)]
         public string ConfigurationUid { get; set; }
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        /// <value>Name</value>
+        [DataMember(Name="Name", EmitDefaultValue=false)]
+        public string Name { get; set; }
 
 
         /// <summary>
@@ -123,6 +132,7 @@ namespace Flipdish.Model
             sb.Append("class FulfillmentStatesConfigurationSummary {\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  ConfigurationUid: ").Append(ConfigurationUid).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  StoreSelectorType: ").Append(StoreSelectorType).Append("\n");
             sb.Append("  Stores: ").Append(Stores).Append("\n");
             sb.Append("}\n");
@@ -170,6 +180,11 @@ namespace Flipdish.Model
                     this.ConfigurationUid.Equals(input.ConfigurationUid))
                 ) && 
                 (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
+                ) && 
+                (
                     this.StoreSelectorType == input.StoreSelectorType ||
                     (this.StoreSelectorType != null &&
                     this.StoreSelectorType.Equals(input.StoreSelectorType))
@@ -194,6 +209,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 if (this.ConfigurationUid != null)
                     hashCode = hashCode * 59 + this.ConfigurationUid.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.StoreSelectorType != null)
                     hashCode = hashCode * 59 + this.StoreSelectorType.GetHashCode();
                 if (this.Stores != null)
