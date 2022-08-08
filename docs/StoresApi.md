@@ -22,7 +22,8 @@ Method | HTTP request | Description
 [**GetStoreById**](StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
 [**GetStoreHeadersByAppId**](StoresApi.md#getstoreheadersbyappid) | **GET** /api/v1.0/{appId}/stores/header | Get all stores by app name id
 [**GetStoreNetSales**](StoresApi.md#getstorenetsales) | **GET** /api/v1.0/{appId}/stores/stats | Get stores statistics by app name id and storeIds
-[**GetStoreServiceCharge**](StoresApi.md#getstoreservicecharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
+[**GetStoreServiceCharge**](StoresApi.md#getstoreservicecharge) | **GET** /api/v1.0/stores/{storeId}/feeConfig | Retrieve Store feeConfig
+[**GetStoreServiceCharge_0**](StoresApi.md#getstoreservicecharge_0) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
 [**GetStores**](StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores, excluding archived ones
 [**GetStoresByAppId**](StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
 [**GetStoresByStoreIdWithValidations**](StoresApi.md#getstoresbystoreidwithvalidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | Get store validation by storeIds
@@ -1214,9 +1215,9 @@ Name | Type | Description  | Notes
 
 <a name="getstoreservicecharge"></a>
 # **GetStoreServiceCharge**
-> ServiceCharge GetStoreServiceCharge (int? storeId)
+> StoreFeeConfig GetStoreServiceCharge (int? storeId)
 
-Retrieve Store Service Charge
+Retrieve Store feeConfig
 
 ### Example
 ```csharp
@@ -1240,13 +1241,75 @@ namespace Example
 
             try
             {
-                // Retrieve Store Service Charge
-                ServiceCharge result = apiInstance.GetStoreServiceCharge(storeId);
+                // Retrieve Store feeConfig
+                StoreFeeConfig result = apiInstance.GetStoreServiceCharge(storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
                 Debug.Print("Exception when calling StoresApi.GetStoreServiceCharge: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**| Store identifier | 
+
+### Return type
+
+[**StoreFeeConfig**](StoreFeeConfig.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getstoreservicecharge_0"></a>
+# **GetStoreServiceCharge_0**
+> ServiceCharge GetStoreServiceCharge_0 (int? storeId)
+
+Retrieve Store Service Charge
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetStoreServiceCharge_0Example
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | Store identifier
+
+            try
+            {
+                // Retrieve Store Service Charge
+                ServiceCharge result = apiInstance.GetStoreServiceCharge_0(storeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.GetStoreServiceCharge_0: " + e.Message );
             }
         }
     }

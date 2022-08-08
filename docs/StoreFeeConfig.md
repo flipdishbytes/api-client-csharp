@@ -1,0 +1,43 @@
+# Flipdish.Model.StoreFeeConfig
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**FeeConfigId** | **int?** |  | [optional] 
+**StoreId** | **int?** |  | [optional] 
+**StartTime** | **DateTime?** |  | [optional] 
+**PercentFeeCardOrders** | **double?** |  | [optional] 
+**PercentFeeCashOrders** | **double?** |  | [optional] 
+**PercentFeeCardOrdersWeb** | **double?** |  | [optional] 
+**PercentFeeCashOrdersWeb** | **double?** |  | [optional] 
+**PercentFeeCardOrdersKiosk** | **double?** |  | [optional] 
+**PercentFeeCashOrdersKiosk** | **double?** |  | [optional] 
+**FixedFeeCardOrdersKiosk** | **double?** |  | [optional] 
+**FixedFeeCashOrdersKiosk** | **double?** |  | [optional] 
+**PercentFeeCardOrdersKioskChargedToCustomerIncludingVat** | **double?** |  | [optional] 
+**FixedFeeCardOrdersKioskChargedToCustomerIncludingVat** | **double?** |  | [optional] 
+**PercentFeeCashOrdersKioskChargedToCustomerIncludingVat** | **double?** |  | [optional] 
+**FixedFeeCashOrdersKioskChargedToCustomerIncludingVat** | **double?** |  | [optional] 
+**FixedFeeCardOrders** | **double?** |  | [optional] 
+**FixedFeeCashOrders** | **double?** |  | [optional] 
+**PercentFeeCardOrdersChargedToCustomerIncludingVat** | **double?** |  | [optional] 
+**FixedFeeCardOrdersChargedToCustomerIncludingVat** | **double?** |  | [optional] 
+**PercentFeeCashOrdersChargedToCustomerIncludingVat** | **double?** |  | [optional] 
+**FixedFeeCashOrdersChargedToCustomerIncludingVat** | **double?** |  | [optional] 
+**PercentFeeTips** | **double?** | Gets or sets the percent fee tips. | [optional] 
+**TaxRatePercent** | **double?** | Gets or sets the tax rate percent. | [optional] 
+**PercentFeeCardOrdersLocationService** | **double?** | Gets or sets the percent fee card orders location service. | [optional] 
+**PercentFeeCashOrdersLocationService** | **double?** | Gets or sets the percent fee cash orders location service. | [optional] 
+**FixedFeeCardOrdersLocationService** | **double?** | Gets or sets the fixed fee card orders location service. | [optional] 
+**FixedFeeCashOrdersLocationService** | **double?** | Gets or sets the fixed fee cash orders location service. | [optional] 
+**PercentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat** | **double?** | Gets or sets the percent fee card orders location service charged to customer including vat. | [optional] 
+**PercentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat** | **double?** | Gets or sets the percent fee cash orders location service charged to customer including vat. | [optional] 
+**FixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat** | **double?** | Gets or sets the fixed fee card orders location service charged to customer including vat. | [optional] 
+**FixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat** | **double?** | Gets or sets the fixed fee cash orders location service charged to customer including vat. | [optional] 
+**PercentFeeCardOrdersIngest** | **double?** | Gets or sets the percent fee card orders ingest. | [optional] 
+**PercentFeeCashOrdersIngest** | **double?** | Gets or sets the percent fee cash orders ingest. | [optional] 
+**FixedFeeCardOrdersIngest** | **double?** | Gets or sets the fixed fee card orders ingest. | [optional] 
+**FixedFeeCashOrdersIngest** | **double?** | Gets or sets the fixed fee cash orders ingest. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
