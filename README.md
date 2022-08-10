@@ -737,6 +737,7 @@ Class | Method | HTTP request | Description
  - [Model.KioskCashSetting](docs/KioskCashSetting.md)
  - [Model.KioskIotConnectionParameters](docs/KioskIotConnectionParameters.md)
  - [Model.KioskStoreSettings](docs/KioskStoreSettings.md)
+ - [Model.KioskTerminalActionStateChangedEvent](docs/KioskTerminalActionStateChangedEvent.md)
  - [Model.Language](docs/Language.md)
  - [Model.LightspeedSettings](docs/LightspeedSettings.md)
  - [Model.LineItem](docs/LineItem.md)
