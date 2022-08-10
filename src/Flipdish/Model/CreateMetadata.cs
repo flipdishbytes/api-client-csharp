@@ -165,9 +165,9 @@ namespace Flipdish.Model
             }
 
             // Value (string) maxLength
-            if(this.Value != null && this.Value.Length > 128)
+            if(this.Value != null && this.Value.Length > 4000)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Value, length must be less than 128.", new [] { "Value" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Value, length must be less than 4000.", new [] { "Value" });
             }
 
             // Value (string) minLength
