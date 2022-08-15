@@ -175,12 +175,14 @@ Class | Method | HTTP request | Description
 *CardReadersApi* | [**AuthorizeStripeTerminal**](docs/CardReadersApi.md#authorizestripeterminal) | **POST** /api/v1.0/{appId}/stripeterminal/authorize | Get Authorization Key for Stripe Terminal
 *CardReadersApi* | [**CancelCurrentlyInitiatedBluetoothDeviceUpdate**](docs/CardReadersApi.md#cancelcurrentlyinitiatedbluetoothdeviceupdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | Cancel currently initiated install update for bluetooth terminal
 *CardReadersApi* | [**CancelReaderAction**](docs/CardReadersApi.md#cancelreaderaction) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action | Cancel terminals action
+*CardReadersApi* | [**CardReadersGetReader**](docs/CardReadersApi.md#cardreadersgetreader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | Get reader
 *CardReadersApi* | [**GenerateStripeTerminalLocation**](docs/CardReadersApi.md#generatestripeterminallocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | Get Location ID for Stripe Terminal
 *CardReadersApi* | [**GetBluetoothTerminalStatus**](docs/CardReadersApi.md#getbluetoothterminalstatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | Get the status of the bluetooth terminal
 *CardReadersApi* | [**GetStripeConnectionToken**](docs/CardReadersApi.md#getstripeconnectiontoken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | Get Connection Token For a Stripe Terminal
 *CardReadersApi* | [**InitiateBluetoothTerminalDeviceUpdateCheck**](docs/CardReadersApi.md#initiatebluetoothterminaldeviceupdatecheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | Trigger check for Bluetooth device update on Kiosk
 *CardReadersApi* | [**InitiateKioskBluetoothPairingMode**](docs/CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
 *CardReadersApi* | [**InitiateKioskBluetoothUpdateInstall**](docs/CardReadersApi.md#initiatekioskbluetoothupdateinstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
+*CardReadersApi* | [**InitiateReaderProcessPaymentIntent**](docs/CardReadersApi.md#initiatereaderprocesspaymentintent) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/processPaymentIntent | Initiate Stripe terminal to Process Payment Intent
 *CardReadersApi* | [**RegisterStripeTerminal**](docs/CardReadersApi.md#registerstripeterminal) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/register | 
 *CardReadersApi* | [**UnRegisterTerminal**](docs/CardReadersApi.md#unregisterterminal) | **DELETE** /api/v1.0/{appId}/payments/terminals/stripe/unregister | Un-register terminal by deleting it from stripe
 *CardReadersApi* | [**UnpairCurrentlyPairedBluetoothDevice**](docs/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
@@ -879,6 +881,7 @@ Class | Method | HTTP request | Description
  - [Model.PrinterTurnedOffEvent](docs/PrinterTurnedOffEvent.md)
  - [Model.PrinterTurnedOnEvent](docs/PrinterTurnedOnEvent.md)
  - [Model.PrinterUnassignedFromStoreEvent](docs/PrinterUnassignedFromStoreEvent.md)
+ - [Model.ProcessPaymentIntentRequest](docs/ProcessPaymentIntentRequest.md)
  - [Model.ProcessingFeeConfig](docs/ProcessingFeeConfig.md)
  - [Model.Product](docs/Product.md)
  - [Model.ProductReference](docs/ProductReference.md)
@@ -889,6 +892,7 @@ Class | Method | HTTP request | Description
  - [Model.PushNotificationScheduledEvent](docs/PushNotificationScheduledEvent.md)
  - [Model.PushNotificationSentEvent](docs/PushNotificationSentEvent.md)
  - [Model.Range](docs/Range.md)
+ - [Model.ReaderActionStateInfo](docs/ReaderActionStateInfo.md)
  - [Model.RedeemInvitationResult](docs/RedeemInvitationResult.md)
  - [Model.Refund](docs/Refund.md)
  - [Model.Reject](docs/Reject.md)
