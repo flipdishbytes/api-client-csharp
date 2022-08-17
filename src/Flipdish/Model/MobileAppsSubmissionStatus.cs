@@ -31,6 +31,66 @@ namespace Flipdish.Model
     public partial class MobileAppsSubmissionStatus :  IEquatable<MobileAppsSubmissionStatus>, IValidatableObject
     {
         /// <summary>
+        /// Mobile Type
+        /// </summary>
+        /// <value>Mobile Type</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Android for value: Android
+            /// </summary>
+            [EnumMember(Value = "Android")]
+            Android = 1,
+            
+            /// <summary>
+            /// Enum IOS for value: IOS
+            /// </summary>
+            [EnumMember(Value = "IOS")]
+            IOS = 2
+        }
+
+        /// <summary>
+        /// Mobile Type
+        /// </summary>
+        /// <value>Mobile Type</value>
+        [DataMember(Name="Type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+        /// <summary>
+        /// Mobile App Status
+        /// </summary>
+        /// <value>Mobile App Status</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AppStatusEnum
+        {
+            
+            /// <summary>
+            /// Enum None for value: None
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None = 1,
+            
+            /// <summary>
+            /// Enum Published for value: Published
+            /// </summary>
+            [EnumMember(Value = "Published")]
+            Published = 2,
+            
+            /// <summary>
+            /// Enum Unpublished for value: Unpublished
+            /// </summary>
+            [EnumMember(Value = "Unpublished")]
+            Unpublished = 3
+        }
+
+        /// <summary>
+        /// Mobile App Status
+        /// </summary>
+        /// <value>Mobile App Status</value>
+        [DataMember(Name="AppStatus", EmitDefaultValue=false)]
+        public AppStatusEnum? AppStatus { get; set; }
+        /// <summary>
         /// Mobile App Status
         /// </summary>
         /// <value>Mobile App Status</value>
@@ -84,12 +144,72 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MobileAppsSubmissionStatus" /> class.
         /// </summary>
+        /// <param name="mobileAppsSubmissionStatusId">Mobile Apps Submission Status Id.</param>
+        /// <param name="mobileAppsSubmissionId">Mobile Apps Submission Id.</param>
+        /// <param name="type">Mobile Type.</param>
+        /// <param name="appStatus">Mobile App Status.</param>
         /// <param name="status">Mobile App Status.</param>
-        public MobileAppsSubmissionStatus(StatusEnum? status = default(StatusEnum?))
+        /// <param name="lastUpdateStatusTime">Mobile LastUpdateStatusTime.</param>
+        /// <param name="createTime">Mobile CreateTime.</param>
+        /// <param name="updateTime">Mobile UpdateTime.</param>
+        /// <param name="notes">Mobile Notes.</param>
+        public MobileAppsSubmissionStatus(int? mobileAppsSubmissionStatusId = default(int?), int? mobileAppsSubmissionId = default(int?), TypeEnum? type = default(TypeEnum?), AppStatusEnum? appStatus = default(AppStatusEnum?), StatusEnum? status = default(StatusEnum?), DateTime? lastUpdateStatusTime = default(DateTime?), DateTime? createTime = default(DateTime?), DateTime? updateTime = default(DateTime?), string notes = default(string))
         {
+            this.MobileAppsSubmissionStatusId = mobileAppsSubmissionStatusId;
+            this.MobileAppsSubmissionId = mobileAppsSubmissionId;
+            this.Type = type;
+            this.AppStatus = appStatus;
             this.Status = status;
+            this.LastUpdateStatusTime = lastUpdateStatusTime;
+            this.CreateTime = createTime;
+            this.UpdateTime = updateTime;
+            this.Notes = notes;
         }
         
+        /// <summary>
+        /// Mobile Apps Submission Status Id
+        /// </summary>
+        /// <value>Mobile Apps Submission Status Id</value>
+        [DataMember(Name="MobileAppsSubmissionStatusId", EmitDefaultValue=false)]
+        public int? MobileAppsSubmissionStatusId { get; set; }
+
+        /// <summary>
+        /// Mobile Apps Submission Id
+        /// </summary>
+        /// <value>Mobile Apps Submission Id</value>
+        [DataMember(Name="MobileAppsSubmissionId", EmitDefaultValue=false)]
+        public int? MobileAppsSubmissionId { get; set; }
+
+
+
+
+        /// <summary>
+        /// Mobile LastUpdateStatusTime
+        /// </summary>
+        /// <value>Mobile LastUpdateStatusTime</value>
+        [DataMember(Name="LastUpdateStatusTime", EmitDefaultValue=false)]
+        public DateTime? LastUpdateStatusTime { get; set; }
+
+        /// <summary>
+        /// Mobile CreateTime
+        /// </summary>
+        /// <value>Mobile CreateTime</value>
+        [DataMember(Name="CreateTime", EmitDefaultValue=false)]
+        public DateTime? CreateTime { get; set; }
+
+        /// <summary>
+        /// Mobile UpdateTime
+        /// </summary>
+        /// <value>Mobile UpdateTime</value>
+        [DataMember(Name="UpdateTime", EmitDefaultValue=false)]
+        public DateTime? UpdateTime { get; set; }
+
+        /// <summary>
+        /// Mobile Notes
+        /// </summary>
+        /// <value>Mobile Notes</value>
+        [DataMember(Name="Notes", EmitDefaultValue=false)]
+        public string Notes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,7 +219,15 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MobileAppsSubmissionStatus {\n");
+            sb.Append("  MobileAppsSubmissionStatusId: ").Append(MobileAppsSubmissionStatusId).Append("\n");
+            sb.Append("  MobileAppsSubmissionId: ").Append(MobileAppsSubmissionId).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  AppStatus: ").Append(AppStatus).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  LastUpdateStatusTime: ").Append(LastUpdateStatusTime).Append("\n");
+            sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
+            sb.Append("  UpdateTime: ").Append(UpdateTime).Append("\n");
+            sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -135,9 +263,49 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.MobileAppsSubmissionStatusId == input.MobileAppsSubmissionStatusId ||
+                    (this.MobileAppsSubmissionStatusId != null &&
+                    this.MobileAppsSubmissionStatusId.Equals(input.MobileAppsSubmissionStatusId))
+                ) && 
+                (
+                    this.MobileAppsSubmissionId == input.MobileAppsSubmissionId ||
+                    (this.MobileAppsSubmissionId != null &&
+                    this.MobileAppsSubmissionId.Equals(input.MobileAppsSubmissionId))
+                ) && 
+                (
+                    this.Type == input.Type ||
+                    (this.Type != null &&
+                    this.Type.Equals(input.Type))
+                ) && 
+                (
+                    this.AppStatus == input.AppStatus ||
+                    (this.AppStatus != null &&
+                    this.AppStatus.Equals(input.AppStatus))
+                ) && 
+                (
                     this.Status == input.Status ||
                     (this.Status != null &&
                     this.Status.Equals(input.Status))
+                ) && 
+                (
+                    this.LastUpdateStatusTime == input.LastUpdateStatusTime ||
+                    (this.LastUpdateStatusTime != null &&
+                    this.LastUpdateStatusTime.Equals(input.LastUpdateStatusTime))
+                ) && 
+                (
+                    this.CreateTime == input.CreateTime ||
+                    (this.CreateTime != null &&
+                    this.CreateTime.Equals(input.CreateTime))
+                ) && 
+                (
+                    this.UpdateTime == input.UpdateTime ||
+                    (this.UpdateTime != null &&
+                    this.UpdateTime.Equals(input.UpdateTime))
+                ) && 
+                (
+                    this.Notes == input.Notes ||
+                    (this.Notes != null &&
+                    this.Notes.Equals(input.Notes))
                 );
         }
 
@@ -150,8 +318,24 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.MobileAppsSubmissionStatusId != null)
+                    hashCode = hashCode * 59 + this.MobileAppsSubmissionStatusId.GetHashCode();
+                if (this.MobileAppsSubmissionId != null)
+                    hashCode = hashCode * 59 + this.MobileAppsSubmissionId.GetHashCode();
+                if (this.Type != null)
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                if (this.AppStatus != null)
+                    hashCode = hashCode * 59 + this.AppStatus.GetHashCode();
                 if (this.Status != null)
                     hashCode = hashCode * 59 + this.Status.GetHashCode();
+                if (this.LastUpdateStatusTime != null)
+                    hashCode = hashCode * 59 + this.LastUpdateStatusTime.GetHashCode();
+                if (this.CreateTime != null)
+                    hashCode = hashCode * 59 + this.CreateTime.GetHashCode();
+                if (this.UpdateTime != null)
+                    hashCode = hashCode * 59 + this.UpdateTime.GetHashCode();
+                if (this.Notes != null)
+                    hashCode = hashCode * 59 + this.Notes.GetHashCode();
                 return hashCode;
             }
         }

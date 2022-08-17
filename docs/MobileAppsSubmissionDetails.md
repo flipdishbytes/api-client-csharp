@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Keywords** | **List&lt;string&gt;** | Keywords | [optional] 
 **AppLogoUrl** | **string** | Logo URL | [optional] 
 **AutoPublish** | **bool?** | Publish automatically | [optional] 
-**Status** | **string** | Mobile App Status | [optional] 
+**Status** | [**List&lt;MobileAppsSubmissionStatus&gt;**](MobileAppsSubmissionStatus.md) | Mobile App Status | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

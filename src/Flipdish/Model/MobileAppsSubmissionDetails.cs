@@ -31,57 +31,6 @@ namespace Flipdish.Model
     public partial class MobileAppsSubmissionDetails :  IEquatable<MobileAppsSubmissionDetails>, IValidatableObject
     {
         /// <summary>
-        /// Mobile App Status
-        /// </summary>
-        /// <value>Mobile App Status</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum
-        {
-            
-            /// <summary>
-            /// Enum None for value: None
-            /// </summary>
-            [EnumMember(Value = "None")]
-            None = 1,
-            
-            /// <summary>
-            /// Enum InProgress for value: InProgress
-            /// </summary>
-            [EnumMember(Value = "InProgress")]
-            InProgress = 2,
-            
-            /// <summary>
-            /// Enum Submitted for value: Submitted
-            /// </summary>
-            [EnumMember(Value = "Submitted")]
-            Submitted = 3,
-            
-            /// <summary>
-            /// Enum AppStoreReview for value: AppStoreReview
-            /// </summary>
-            [EnumMember(Value = "AppStoreReview")]
-            AppStoreReview = 4,
-            
-            /// <summary>
-            /// Enum Sucessfull for value: Sucessfull
-            /// </summary>
-            [EnumMember(Value = "Sucessfull")]
-            Sucessfull = 5,
-            
-            /// <summary>
-            /// Enum Unsuccesful for value: Unsuccesful
-            /// </summary>
-            [EnumMember(Value = "Unsuccesful")]
-            Unsuccesful = 6
-        }
-
-        /// <summary>
-        /// Mobile App Status
-        /// </summary>
-        /// <value>Mobile App Status</value>
-        [DataMember(Name="Status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="MobileAppsSubmissionDetails" /> class.
         /// </summary>
         /// <param name="appName">App Name.</param>
@@ -91,7 +40,7 @@ namespace Flipdish.Model
         /// <param name="appLogoUrl">Logo URL.</param>
         /// <param name="autoPublish">Publish automatically.</param>
         /// <param name="status">Mobile App Status.</param>
-        public MobileAppsSubmissionDetails(string appName = default(string), string appDescription = default(string), string appShortDescription = default(string), List<string> keywords = default(List<string>), string appLogoUrl = default(string), bool? autoPublish = default(bool?), StatusEnum? status = default(StatusEnum?))
+        public MobileAppsSubmissionDetails(string appName = default(string), string appDescription = default(string), string appShortDescription = default(string), List<string> keywords = default(List<string>), string appLogoUrl = default(string), bool? autoPublish = default(bool?), List<MobileAppsSubmissionStatus> status = default(List<MobileAppsSubmissionStatus>))
         {
             this.AppName = appName;
             this.AppDescription = appDescription;
@@ -144,6 +93,12 @@ namespace Flipdish.Model
         [DataMember(Name="AutoPublish", EmitDefaultValue=false)]
         public bool? AutoPublish { get; set; }
 
+        /// <summary>
+        /// Mobile App Status
+        /// </summary>
+        /// <value>Mobile App Status</value>
+        [DataMember(Name="Status", EmitDefaultValue=false)]
+        public List<MobileAppsSubmissionStatus> Status { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -226,8 +181,8 @@ namespace Flipdish.Model
                 ) && 
                 (
                     this.Status == input.Status ||
-                    (this.Status != null &&
-                    this.Status.Equals(input.Status))
+                    this.Status != null &&
+                    this.Status.SequenceEqual(input.Status)
                 );
         }
 

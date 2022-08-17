@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 <a name="getsubmissionstatus"></a>
 # **GetSubmissionStatus**
-> RestApiResultMobileAppsSubmissionStatus GetSubmissionStatus (string appId, string type)
+> RestApiResultMobileAppsSubmissionStatus GetSubmissionStatus (string appId, int? mobileAppsSubmissionId)
 
 Get submission status mobile apps
 
@@ -226,12 +226,12 @@ namespace Example
 
             var apiInstance = new MobileAppsApi();
             var appId = appId_example;  // string | 
-            var type = type_example;  // string | 
+            var mobileAppsSubmissionId = 56;  // int? | 
 
             try
             {
                 // Get submission status mobile apps
-                RestApiResultMobileAppsSubmissionStatus result = apiInstance.GetSubmissionStatus(appId, type);
+                RestApiResultMobileAppsSubmissionStatus result = apiInstance.GetSubmissionStatus(appId, mobileAppsSubmissionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -248,7 +248,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **type** | **string**|  | 
+ **mobileAppsSubmissionId** | **int?**|  | 
 
 ### Return type
 
