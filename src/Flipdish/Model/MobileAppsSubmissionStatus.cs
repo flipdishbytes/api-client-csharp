@@ -95,7 +95,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Mobile App Status</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum
+        public enum UpdateStatusEnum
         {
             
             /// <summary>
@@ -105,42 +105,42 @@ namespace Flipdish.Model
             None = 1,
             
             /// <summary>
-            /// Enum InProgress for value: InProgress
-            /// </summary>
-            [EnumMember(Value = "InProgress")]
-            InProgress = 2,
-            
-            /// <summary>
             /// Enum Submitted for value: Submitted
             /// </summary>
             [EnumMember(Value = "Submitted")]
-            Submitted = 3,
+            Submitted = 2,
             
             /// <summary>
-            /// Enum AppStoreReview for value: AppStoreReview
+            /// Enum InReview for value: InReview
             /// </summary>
-            [EnumMember(Value = "AppStoreReview")]
-            AppStoreReview = 4,
+            [EnumMember(Value = "InReview")]
+            InReview = 3,
             
             /// <summary>
-            /// Enum Sucessfull for value: Sucessfull
+            /// Enum Rejected for value: Rejected
             /// </summary>
-            [EnumMember(Value = "Sucessfull")]
-            Sucessfull = 5,
+            [EnumMember(Value = "Rejected")]
+            Rejected = 4,
             
             /// <summary>
-            /// Enum Unsuccesful for value: Unsuccesful
+            /// Enum Approved for value: Approved
             /// </summary>
-            [EnumMember(Value = "Unsuccesful")]
-            Unsuccesful = 6
+            [EnumMember(Value = "Approved")]
+            Approved = 5,
+            
+            /// <summary>
+            /// Enum Published for value: Published
+            /// </summary>
+            [EnumMember(Value = "Published")]
+            Published = 6
         }
 
         /// <summary>
         /// Mobile App Status
         /// </summary>
         /// <value>Mobile App Status</value>
-        [DataMember(Name="Status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
+        [DataMember(Name="UpdateStatus", EmitDefaultValue=false)]
+        public UpdateStatusEnum? UpdateStatus { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="MobileAppsSubmissionStatus" /> class.
         /// </summary>
@@ -148,18 +148,18 @@ namespace Flipdish.Model
         /// <param name="mobileAppsSubmissionId">Mobile Apps Submission Id.</param>
         /// <param name="type">Mobile Type.</param>
         /// <param name="appStatus">Mobile App Status.</param>
-        /// <param name="status">Mobile App Status.</param>
+        /// <param name="updateStatus">Mobile App Status.</param>
         /// <param name="lastUpdateStatusTime">Mobile LastUpdateStatusTime.</param>
         /// <param name="createTime">Mobile CreateTime.</param>
         /// <param name="updateTime">Mobile UpdateTime.</param>
         /// <param name="notes">Mobile Notes.</param>
-        public MobileAppsSubmissionStatus(int? mobileAppsSubmissionStatusId = default(int?), int? mobileAppsSubmissionId = default(int?), TypeEnum? type = default(TypeEnum?), AppStatusEnum? appStatus = default(AppStatusEnum?), StatusEnum? status = default(StatusEnum?), DateTime? lastUpdateStatusTime = default(DateTime?), DateTime? createTime = default(DateTime?), DateTime? updateTime = default(DateTime?), string notes = default(string))
+        public MobileAppsSubmissionStatus(int? mobileAppsSubmissionStatusId = default(int?), int? mobileAppsSubmissionId = default(int?), TypeEnum? type = default(TypeEnum?), AppStatusEnum? appStatus = default(AppStatusEnum?), UpdateStatusEnum? updateStatus = default(UpdateStatusEnum?), DateTime? lastUpdateStatusTime = default(DateTime?), DateTime? createTime = default(DateTime?), DateTime? updateTime = default(DateTime?), string notes = default(string))
         {
             this.MobileAppsSubmissionStatusId = mobileAppsSubmissionStatusId;
             this.MobileAppsSubmissionId = mobileAppsSubmissionId;
             this.Type = type;
             this.AppStatus = appStatus;
-            this.Status = status;
+            this.UpdateStatus = updateStatus;
             this.LastUpdateStatusTime = lastUpdateStatusTime;
             this.CreateTime = createTime;
             this.UpdateTime = updateTime;
@@ -223,7 +223,7 @@ namespace Flipdish.Model
             sb.Append("  MobileAppsSubmissionId: ").Append(MobileAppsSubmissionId).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  AppStatus: ").Append(AppStatus).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  UpdateStatus: ").Append(UpdateStatus).Append("\n");
             sb.Append("  LastUpdateStatusTime: ").Append(LastUpdateStatusTime).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  UpdateTime: ").Append(UpdateTime).Append("\n");
@@ -283,9 +283,9 @@ namespace Flipdish.Model
                     this.AppStatus.Equals(input.AppStatus))
                 ) && 
                 (
-                    this.Status == input.Status ||
-                    (this.Status != null &&
-                    this.Status.Equals(input.Status))
+                    this.UpdateStatus == input.UpdateStatus ||
+                    (this.UpdateStatus != null &&
+                    this.UpdateStatus.Equals(input.UpdateStatus))
                 ) && 
                 (
                     this.LastUpdateStatusTime == input.LastUpdateStatusTime ||
@@ -326,8 +326,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.AppStatus != null)
                     hashCode = hashCode * 59 + this.AppStatus.GetHashCode();
-                if (this.Status != null)
-                    hashCode = hashCode * 59 + this.Status.GetHashCode();
+                if (this.UpdateStatus != null)
+                    hashCode = hashCode * 59 + this.UpdateStatus.GetHashCode();
                 if (this.LastUpdateStatusTime != null)
                     hashCode = hashCode * 59 + this.LastUpdateStatusTime.GetHashCode();
                 if (this.CreateTime != null)

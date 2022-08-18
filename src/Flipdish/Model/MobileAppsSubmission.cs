@@ -31,57 +31,6 @@ namespace Flipdish.Model
     public partial class MobileAppsSubmission :  IEquatable<MobileAppsSubmission>, IValidatableObject
     {
         /// <summary>
-        /// Mobile App Status
-        /// </summary>
-        /// <value>Mobile App Status</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum
-        {
-            
-            /// <summary>
-            /// Enum None for value: None
-            /// </summary>
-            [EnumMember(Value = "None")]
-            None = 1,
-            
-            /// <summary>
-            /// Enum InProgress for value: InProgress
-            /// </summary>
-            [EnumMember(Value = "InProgress")]
-            InProgress = 2,
-            
-            /// <summary>
-            /// Enum Submitted for value: Submitted
-            /// </summary>
-            [EnumMember(Value = "Submitted")]
-            Submitted = 3,
-            
-            /// <summary>
-            /// Enum AppStoreReview for value: AppStoreReview
-            /// </summary>
-            [EnumMember(Value = "AppStoreReview")]
-            AppStoreReview = 4,
-            
-            /// <summary>
-            /// Enum Sucessfull for value: Sucessfull
-            /// </summary>
-            [EnumMember(Value = "Sucessfull")]
-            Sucessfull = 5,
-            
-            /// <summary>
-            /// Enum Unsuccesful for value: Unsuccesful
-            /// </summary>
-            [EnumMember(Value = "Unsuccesful")]
-            Unsuccesful = 6
-        }
-
-        /// <summary>
-        /// Mobile App Status
-        /// </summary>
-        /// <value>Mobile App Status</value>
-        [DataMember(Name="Status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="MobileAppsSubmission" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -94,8 +43,7 @@ namespace Flipdish.Model
         /// <param name="appShortDescription">App Description (required).</param>
         /// <param name="keywords">Keywords.</param>
         /// <param name="autoPublish">Publish automatically.</param>
-        /// <param name="status">Mobile App Status.</param>
-        public MobileAppsSubmission(string appName = default(string), string appDescription = default(string), string appShortDescription = default(string), List<string> keywords = default(List<string>), bool? autoPublish = default(bool?), StatusEnum? status = default(StatusEnum?))
+        public MobileAppsSubmission(string appName = default(string), string appDescription = default(string), string appShortDescription = default(string), List<string> keywords = default(List<string>), bool? autoPublish = default(bool?))
         {
             // to ensure "appName" is required (not null)
             if (appName == null)
@@ -126,7 +74,6 @@ namespace Flipdish.Model
             }
             this.Keywords = keywords;
             this.AutoPublish = autoPublish;
-            this.Status = status;
         }
         
         /// <summary>
@@ -164,7 +111,6 @@ namespace Flipdish.Model
         [DataMember(Name="AutoPublish", EmitDefaultValue=false)]
         public bool? AutoPublish { get; set; }
 
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -178,7 +124,6 @@ namespace Flipdish.Model
             sb.Append("  AppShortDescription: ").Append(AppShortDescription).Append("\n");
             sb.Append("  Keywords: ").Append(Keywords).Append("\n");
             sb.Append("  AutoPublish: ").Append(AutoPublish).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -237,11 +182,6 @@ namespace Flipdish.Model
                     this.AutoPublish == input.AutoPublish ||
                     (this.AutoPublish != null &&
                     this.AutoPublish.Equals(input.AutoPublish))
-                ) && 
-                (
-                    this.Status == input.Status ||
-                    (this.Status != null &&
-                    this.Status.Equals(input.Status))
                 );
         }
 
@@ -264,8 +204,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Keywords.GetHashCode();
                 if (this.AutoPublish != null)
                     hashCode = hashCode * 59 + this.AutoPublish.GetHashCode();
-                if (this.Status != null)
-                    hashCode = hashCode * 59 + this.Status.GetHashCode();
                 return hashCode;
             }
         }

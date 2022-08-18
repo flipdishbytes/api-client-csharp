@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **MobileAppsSubmissionId** | **int?** | Mobile Apps Submission Id | [optional] 
 **Type** | **string** | Mobile Type | [optional] 
 **AppStatus** | **string** | Mobile App Status | [optional] 
-**Status** | **string** | Mobile App Status | [optional] 
+**UpdateStatus** | **string** | Mobile App Status | [optional] 
 **LastUpdateStatusTime** | **DateTime?** | Mobile LastUpdateStatusTime | [optional] 
 **CreateTime** | **DateTime?** | Mobile CreateTime | [optional] 
 **UpdateTime** | **DateTime?** | Mobile UpdateTime | [optional] 
