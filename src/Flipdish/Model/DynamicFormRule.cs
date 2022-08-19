@@ -35,10 +35,12 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="value">value.</param>
         /// <param name="message">message.</param>
-        public DynamicFormRule(Object value = default(Object), string message = default(string))
+        /// <param name="scopes">scopes.</param>
+        public DynamicFormRule(Object value = default(Object), string message = default(string), string scopes = default(string))
         {
             this.Value = value;
             this.Message = message;
+            this.Scopes = scopes;
         }
         
         /// <summary>
@@ -54,6 +56,12 @@ namespace Flipdish.Model
         public string Message { get; set; }
 
         /// <summary>
+        /// Gets or Sets Scopes
+        /// </summary>
+        [DataMember(Name="Scopes", EmitDefaultValue=false)]
+        public string Scopes { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -63,6 +71,7 @@ namespace Flipdish.Model
             sb.Append("class DynamicFormRule {\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  Scopes: ").Append(Scopes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,6 +115,11 @@ namespace Flipdish.Model
                     this.Message == input.Message ||
                     (this.Message != null &&
                     this.Message.Equals(input.Message))
+                ) && 
+                (
+                    this.Scopes == input.Scopes ||
+                    (this.Scopes != null &&
+                    this.Scopes.Equals(input.Scopes))
                 );
         }
 
@@ -122,6 +136,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Value.GetHashCode();
                 if (this.Message != null)
                     hashCode = hashCode * 59 + this.Message.GetHashCode();
+                if (this.Scopes != null)
+                    hashCode = hashCode * 59 + this.Scopes.GetHashCode();
                 return hashCode;
             }
         }
