@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**GetSubmissionStatus**](MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/status | Get submission status mobile apps
 [**Submission**](MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
 [**UpdateAppConfigSalesChannel**](MobileAppsApi.md#updateappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Update the application sales channel configuration
+[**UpdateSubmissionStatus**](MobileAppsApi.md#updatesubmissionstatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{mobileAppsSubmissionId}/status | Update submission status
 [**UploadImage**](MobileAppsApi.md#uploadimage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | Upload image mobile apps
 
 
@@ -381,6 +382,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultAppConfigSalesChannel**](RestApiResultAppConfigSalesChannel.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="updatesubmissionstatus"></a>
+# **UpdateSubmissionStatus**
+> RestApiResultUpdateMobileAppsSubmissionStatus UpdateSubmissionStatus (string appId, int? mobileAppsSubmissionId, UpdateMobileAppsSubmissionStatus updateMobileAppsSubmissionStatus)
+
+Update submission status
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UpdateSubmissionStatusExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MobileAppsApi();
+            var appId = appId_example;  // string | 
+            var mobileAppsSubmissionId = 56;  // int? | 
+            var updateMobileAppsSubmissionStatus = new UpdateMobileAppsSubmissionStatus(); // UpdateMobileAppsSubmissionStatus | 
+
+            try
+            {
+                // Update submission status
+                RestApiResultUpdateMobileAppsSubmissionStatus result = apiInstance.UpdateSubmissionStatus(appId, mobileAppsSubmissionId, updateMobileAppsSubmissionStatus);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MobileAppsApi.UpdateSubmissionStatus: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **mobileAppsSubmissionId** | **int?**|  | 
+ **updateMobileAppsSubmissionStatus** | [**UpdateMobileAppsSubmissionStatus**](UpdateMobileAppsSubmissionStatus.md)|  | 
+
+### Return type
+
+[**RestApiResultUpdateMobileAppsSubmissionStatus**](RestApiResultUpdateMobileAppsSubmissionStatus.md)
 
 ### Authorization
 
