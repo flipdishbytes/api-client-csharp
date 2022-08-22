@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 <a name="formatgoogleaddress"></a>
 # **FormatGoogleAddress**
-> RestApiResultAddressFormResponse FormatGoogleAddress (GoogleAddress googleAddress)
+> RestApiResultAddressFormResponse FormatGoogleAddress (GoogleAddress googleAddress, string language = null)
 
 Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
 
@@ -162,11 +162,12 @@ namespace Example
 
             var apiInstance = new AddressApi();
             var googleAddress = new GoogleAddress(); // GoogleAddress | A Google address object, as it is retuned from the maps API.
+            var language = language_example;  // string | (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional) 
 
             try
             {
                 // Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
-                RestApiResultAddressFormResponse result = apiInstance.FormatGoogleAddress(googleAddress);
+                RestApiResultAddressFormResponse result = apiInstance.FormatGoogleAddress(googleAddress, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -183,6 +184,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **googleAddress** | [**GoogleAddress**](GoogleAddress.md)| A Google address object, as it is retuned from the maps API. | 
+ **language** | **string**| (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. | [optional] 
 
 ### Return type
 
