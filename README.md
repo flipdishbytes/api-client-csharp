@@ -742,6 +742,7 @@ Class | Method | HTTP request | Description
  - [Model.KioskStoreSettings](docs/KioskStoreSettings.md)
  - [Model.KioskTerminalActionStateChangedEvent](docs/KioskTerminalActionStateChangedEvent.md)
  - [Model.Language](docs/Language.md)
+ - [Model.LastPaymentError](docs/LastPaymentError.md)
  - [Model.LightspeedSettings](docs/LightspeedSettings.md)
  - [Model.LineItem](docs/LineItem.md)
  - [Model.LineItemOption](docs/LineItemOption.md)

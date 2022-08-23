@@ -35,11 +35,13 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="actionState">Action state.</param>
         /// <param name="failureCode">Failure code.</param>
+        /// <param name="failureMessage">Failure Message.</param>
         /// <param name="type">Type.</param>
-        public ReaderActionStateInfo(string actionState = default(string), string failureCode = default(string), string type = default(string))
+        public ReaderActionStateInfo(string actionState = default(string), string failureCode = default(string), string failureMessage = default(string), string type = default(string))
         {
             this.ActionState = actionState;
             this.FailureCode = failureCode;
+            this.FailureMessage = failureMessage;
             this.Type = type;
         }
         
@@ -58,6 +60,13 @@ namespace Flipdish.Model
         public string FailureCode { get; set; }
 
         /// <summary>
+        /// Failure Message
+        /// </summary>
+        /// <value>Failure Message</value>
+        [DataMember(Name="FailureMessage", EmitDefaultValue=false)]
+        public string FailureMessage { get; set; }
+
+        /// <summary>
         /// Type
         /// </summary>
         /// <value>Type</value>
@@ -74,6 +83,7 @@ namespace Flipdish.Model
             sb.Append("class ReaderActionStateInfo {\n");
             sb.Append("  ActionState: ").Append(ActionState).Append("\n");
             sb.Append("  FailureCode: ").Append(FailureCode).Append("\n");
+            sb.Append("  FailureMessage: ").Append(FailureMessage).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,6 +130,11 @@ namespace Flipdish.Model
                     this.FailureCode.Equals(input.FailureCode))
                 ) && 
                 (
+                    this.FailureMessage == input.FailureMessage ||
+                    (this.FailureMessage != null &&
+                    this.FailureMessage.Equals(input.FailureMessage))
+                ) && 
+                (
                     this.Type == input.Type ||
                     (this.Type != null &&
                     this.Type.Equals(input.Type))
@@ -139,6 +154,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ActionState.GetHashCode();
                 if (this.FailureCode != null)
                     hashCode = hashCode * 59 + this.FailureCode.GetHashCode();
+                if (this.FailureMessage != null)
+                    hashCode = hashCode * 59 + this.FailureMessage.GetHashCode();
                 if (this.Type != null)
                     hashCode = hashCode * 59 + this.Type.GetHashCode();
                 return hashCode;

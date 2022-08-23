@@ -38,13 +38,15 @@ namespace Flipdish.Model
         /// <param name="currency">Three-letter &lt;a href&#x3D;\&quot;https://www.iso.org/iso-4217-currency-codes.html\&quot;&gt;ISO currency  code&lt;/a&gt;, in lowercase. Must be a &lt;a href&#x3D;\&quot;https://stripe.com/docs/currencies\&quot;&gt;supported  currency&lt;/a&gt;..</param>
         /// <param name="status">Status of this PaymentIntent, one of requires_payment_method,  requires_confirmation, requires_action, processing,  requires_capture, canceled, or succeeded. Read more about each  PaymentIntent &lt;a href&#x3D;\&quot;https://stripe.com/docs/payments/intents#intent-statuses\&quot;&gt;status&lt;/a&gt;.  One of: canceled, processing, requires_action,  requires_capture, requires_confirmation, requires_payment_method,  or succeeded..</param>
         /// <param name="created">Time at which the object was created. Measured in seconds since the Unix epoch..</param>
-        public PaymentIntent(string id = default(string), string description = default(string), string currency = default(string), string status = default(string), DateTime? created = default(DateTime?))
+        /// <param name="lastPaymentError">Failed payment intent Errors.</param>
+        public PaymentIntent(string id = default(string), string description = default(string), string currency = default(string), string status = default(string), DateTime? created = default(DateTime?), LastPaymentError lastPaymentError = default(LastPaymentError))
         {
             this.Id = id;
             this.Description = description;
             this.Currency = currency;
             this.Status = status;
             this.Created = created;
+            this.LastPaymentError = lastPaymentError;
         }
         
         /// <summary>
@@ -83,6 +85,13 @@ namespace Flipdish.Model
         public DateTime? Created { get; set; }
 
         /// <summary>
+        /// Failed payment intent Errors
+        /// </summary>
+        /// <value>Failed payment intent Errors</value>
+        [DataMember(Name="LastPaymentError", EmitDefaultValue=false)]
+        public LastPaymentError LastPaymentError { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -95,6 +104,7 @@ namespace Flipdish.Model
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Created: ").Append(Created).Append("\n");
+            sb.Append("  LastPaymentError: ").Append(LastPaymentError).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -153,6 +163,11 @@ namespace Flipdish.Model
                     this.Created == input.Created ||
                     (this.Created != null &&
                     this.Created.Equals(input.Created))
+                ) && 
+                (
+                    this.LastPaymentError == input.LastPaymentError ||
+                    (this.LastPaymentError != null &&
+                    this.LastPaymentError.Equals(input.LastPaymentError))
                 );
         }
 
@@ -175,6 +190,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.Created != null)
                     hashCode = hashCode * 59 + this.Created.GetHashCode();
+                if (this.LastPaymentError != null)
+                    hashCode = hashCode * 59 + this.LastPaymentError.GetHashCode();
                 return hashCode;
             }
         }
