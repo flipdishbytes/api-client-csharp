@@ -312,7 +312,13 @@ namespace Flipdish.Model
             /// Enum PayPal for value: PayPal
             /// </summary>
             [EnumMember(Value = "PayPal")]
-            PayPal = 8
+            PayPal = 8,
+            
+            /// <summary>
+            /// Enum PayGreen for value: PayGreen
+            /// </summary>
+            [EnumMember(Value = "PayGreen")]
+            PayGreen = 9
         }
 
         /// <summary>

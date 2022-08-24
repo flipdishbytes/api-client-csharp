@@ -117,6 +117,7 @@ Class | Method | HTTP request | Description
 *AddressApi* | [**FormByApp**](docs/AddressApi.md#formbyapp) | **GET** /api/v1.0/app/{appId}/address/form | Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
 *AddressApi* | [**FormByCountry**](docs/AddressApi.md#formbycountry) | **GET** /api/v1.0/address/country/{countryCode}/form | Provides a dyamic form definition for the given country code, with labels localized using the provided language.
 *AddressApi* | [**FormatGoogleAddress**](docs/AddressApi.md#formatgoogleaddress) | **POST** /api/v1.0/address/google | Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
+*AddressApi* | [**GetCountries**](docs/AddressApi.md#getcountries) | **GET** /api/v1.0/address/countries | Retuns a list of localised countries
 *ApmApi* | [**GetApmStatus**](docs/ApmApi.md#getapmstatus) | **GET** /api/v1.0/{appId}/apm/status | [PRIVATE API] Returns true if APM is enabled on at least one store in an application
 *ApmApi* | [**GetBasicStatistics**](docs/ApmApi.md#getbasicstatistics) | **GET** /api/v1.0/{appId}/apm/statistics | [PRIVATE API] Get Basic Statistics
 *ApmApi* | [**GetCalendarWeekStatistics**](docs/ApmApi.md#getcalendarweekstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calendar | [PRIVATE API] Get Calendar statistics
@@ -615,6 +616,7 @@ Class | Method | HTTP request | Description
  - [Model.ConfiguredStore](docs/ConfiguredStore.md)
  - [Model.Contact](docs/Contact.md)
  - [Model.Coordinates](docs/Coordinates.md)
+ - [Model.CountryFormResponse](docs/CountryFormResponse.md)
  - [Model.CountryWithAccountFieldsDefinitions](docs/CountryWithAccountFieldsDefinitions.md)
  - [Model.CreateAccountModel](docs/CreateAccountModel.md)
  - [Model.CreateAppStoreApp](docs/CreateAppStoreApp.md)
@@ -1010,6 +1012,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultCatalogItem](docs/RestApiResultCatalogItem.md)
  - [Model.RestApiResultChannel](docs/RestApiResultChannel.md)
  - [Model.RestApiResultCoordinates](docs/RestApiResultCoordinates.md)
+ - [Model.RestApiResultCountryFormResponse](docs/RestApiResultCountryFormResponse.md)
  - [Model.RestApiResultCreatedMenuSectionItems](docs/RestApiResultCreatedMenuSectionItems.md)
  - [Model.RestApiResultCustomer](docs/RestApiResultCustomer.md)
  - [Model.RestApiResultDeliveryZone](docs/RestApiResultDeliveryZone.md)

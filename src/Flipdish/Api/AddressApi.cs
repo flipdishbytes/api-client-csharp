@@ -93,6 +93,27 @@ namespace Flipdish.Api
         /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
         /// <returns>ApiResponse of RestApiResultAddressFormResponse</returns>
         ApiResponse<RestApiResultAddressFormResponse> FormatGoogleAddressWithHttpInfo (GoogleAddress googleAddress, string language = null);
+        /// <summary>
+        /// Retuns a list of localised countries
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language"> (optional)</param>
+        /// <returns>RestApiResultCountryFormResponse</returns>
+        RestApiResultCountryFormResponse GetCountries (string language = null);
+
+        /// <summary>
+        /// Retuns a list of localised countries
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language"> (optional)</param>
+        /// <returns>ApiResponse of RestApiResultCountryFormResponse</returns>
+        ApiResponse<RestApiResultCountryFormResponse> GetCountriesWithHttpInfo (string language = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -164,6 +185,27 @@ namespace Flipdish.Api
         /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultAddressFormResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAddressFormResponse>> FormatGoogleAddressAsyncWithHttpInfo (GoogleAddress googleAddress, string language = null);
+        /// <summary>
+        /// Retuns a list of localised countries
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language"> (optional)</param>
+        /// <returns>Task of RestApiResultCountryFormResponse</returns>
+        System.Threading.Tasks.Task<RestApiResultCountryFormResponse> GetCountriesAsync (string language = null);
+
+        /// <summary>
+        /// Retuns a list of localised countries
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiResultCountryFormResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultCountryFormResponse>> GetCountriesAsyncWithHttpInfo (string language = null);
         #endregion Asynchronous Operations
     }
 
@@ -757,6 +799,151 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultAddressFormResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestApiResultAddressFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAddressFormResponse)));
+        }
+
+        /// <summary>
+        /// Retuns a list of localised countries 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language"> (optional)</param>
+        /// <returns>RestApiResultCountryFormResponse</returns>
+        public RestApiResultCountryFormResponse GetCountries (string language = null)
+        {
+             ApiResponse<RestApiResultCountryFormResponse> localVarResponse = GetCountriesWithHttpInfo(language);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retuns a list of localised countries 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language"> (optional)</param>
+        /// <returns>ApiResponse of RestApiResultCountryFormResponse</returns>
+        public ApiResponse< RestApiResultCountryFormResponse > GetCountriesWithHttpInfo (string language = null)
+        {
+
+            var localVarPath = "/api/v1.0/address/countries";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (language != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "language", language)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCountries", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultCountryFormResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultCountryFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCountryFormResponse)));
+        }
+
+        /// <summary>
+        /// Retuns a list of localised countries 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language"> (optional)</param>
+        /// <returns>Task of RestApiResultCountryFormResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiResultCountryFormResponse> GetCountriesAsync (string language = null)
+        {
+             ApiResponse<RestApiResultCountryFormResponse> localVarResponse = await GetCountriesAsyncWithHttpInfo(language);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retuns a list of localised countries 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiResultCountryFormResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCountryFormResponse>> GetCountriesAsyncWithHttpInfo (string language = null)
+        {
+
+            var localVarPath = "/api/v1.0/address/countries";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (language != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "language", language)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCountries", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultCountryFormResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RestApiResultCountryFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCountryFormResponse)));
         }
 
     }
