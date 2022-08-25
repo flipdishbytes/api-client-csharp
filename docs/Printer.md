@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Printer
+# Flipdish.Model.Printer
 ## Properties
 
 Name | Type | Description | Notes

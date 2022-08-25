@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CustomerConsentUpdatedEvent
+# Flipdish.Model.CustomerConsentUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

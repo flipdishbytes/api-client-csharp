@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -264,7 +264,7 @@ namespace Flipdish.Api
             if (deliveryType == null)
                 throw new ApiException(400, "Missing required parameter 'deliveryType' when calling StoreOrderCapacityApi->GetStoreOrderCapacity");
 
-            var localVarPath = "/api/v1.0/{appId}/storeordercapacity/{storeId}/{deliveryType}";
+            var localVarPath = "./api/v1.0/{appId}/storeordercapacity/{storeId}/{deliveryType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -313,7 +313,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStoreOrderCapacityConfig>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStoreOrderCapacityConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreOrderCapacityConfig)));
         }
 
@@ -352,7 +352,7 @@ namespace Flipdish.Api
             if (deliveryType == null)
                 throw new ApiException(400, "Missing required parameter 'deliveryType' when calling StoreOrderCapacityApi->GetStoreOrderCapacity");
 
-            var localVarPath = "/api/v1.0/{appId}/storeordercapacity/{storeId}/{deliveryType}";
+            var localVarPath = "./api/v1.0/{appId}/storeordercapacity/{storeId}/{deliveryType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -401,7 +401,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStoreOrderCapacityConfig>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStoreOrderCapacityConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreOrderCapacityConfig)));
         }
 
@@ -443,7 +443,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling StoreOrderCapacityApi->UpdateStoreOrderCapacityConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/storeordercapacity/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/storeordercapacity/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -505,7 +505,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -548,7 +548,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling StoreOrderCapacityApi->UpdateStoreOrderCapacityConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/storeordercapacity/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/storeordercapacity/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -610,7 +610,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 

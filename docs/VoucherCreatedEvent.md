@@ -1,4 +1,4 @@
-# IO.Swagger.Model.VoucherCreatedEvent
+# Flipdish.Model.VoucherCreatedEvent
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.UserEventInfo
+# Flipdish.Model.UserEventInfo
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiPaginationResultWebhookSubscription
+# Flipdish.Model.RestApiPaginationResultWebhookSubscription
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.HydraRegistrationRequest
+# Flipdish.Model.HydraRegistrationRequest
 ## Properties
 
 Name | Type | Description | Notes

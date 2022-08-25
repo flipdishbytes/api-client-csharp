@@ -1,4 +1,4 @@
-# IO.Swagger.Model.DriverRequestLoginPinModel
+# Flipdish.Model.DriverRequestLoginPinModel
 ## Properties
 
 Name | Type | Description | Notes

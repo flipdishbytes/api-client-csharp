@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -692,7 +692,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->CraeteWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -753,7 +753,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiIntegerResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiIntegerResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiIntegerResult)));
         }
 
@@ -792,7 +792,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->CraeteWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -853,7 +853,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiIntegerResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiIntegerResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiIntegerResult)));
         }
 
@@ -895,7 +895,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->CreateWebhookSubscriptionEventNames");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -945,7 +945,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -988,7 +988,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->CreateWebhookSubscriptionEventNames");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1038,7 +1038,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1075,7 +1075,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->DeleteWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1124,7 +1124,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1162,7 +1162,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->DeleteWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1211,7 +1211,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1253,7 +1253,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->DeleteWebhookSubscriptionEventName");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1303,7 +1303,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1346,7 +1346,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->DeleteWebhookSubscriptionEventName");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1396,7 +1396,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1424,7 +1424,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookEventNames");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/events";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/events";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1471,7 +1471,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringArrayResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringArrayResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringArrayResult)));
         }
 
@@ -1500,7 +1500,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookEventNames");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/events";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/events";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1547,7 +1547,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringArrayResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringArrayResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringArrayResult)));
         }
 
@@ -1585,7 +1585,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookEventNamesBySubscriptionId");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1634,7 +1634,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringArrayResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringArrayResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringArrayResult)));
         }
 
@@ -1673,7 +1673,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookEventNamesBySubscriptionId");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1722,7 +1722,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringArrayResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringArrayResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringArrayResult)));
         }
 
@@ -1767,7 +1767,7 @@ namespace Flipdish.Api
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->GetWebhookEventSample");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}/test";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}/test";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1818,7 +1818,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<WebhookEventSample>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (WebhookEventSample) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookEventSample)));
         }
 
@@ -1864,7 +1864,7 @@ namespace Flipdish.Api
             if (webhookSubscriptionId == null)
                 throw new ApiException(400, "Missing required parameter 'webhookSubscriptionId' when calling WebhooksApi->GetWebhookEventSample");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}/test";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}/test";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1915,7 +1915,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<WebhookEventSample>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (WebhookEventSample) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookEventSample)));
         }
 
@@ -1967,7 +1967,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookLogs");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2020,7 +2020,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultWebhookLog>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultWebhookLog) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultWebhookLog)));
         }
 
@@ -2073,7 +2073,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookLogs");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2126,7 +2126,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultWebhookLog>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultWebhookLog) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultWebhookLog)));
         }
 
@@ -2163,7 +2163,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookSubscriptions");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2213,7 +2213,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultWebhookSubscription>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultWebhookSubscription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultWebhookSubscription)));
         }
 
@@ -2251,7 +2251,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->GetWebhookSubscriptions");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2301,7 +2301,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultWebhookSubscription>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultWebhookSubscription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultWebhookSubscription)));
         }
 
@@ -2343,7 +2343,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->UpdateWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2405,7 +2405,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2448,7 +2448,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->UpdateWebhookSubscription");
 
-            var localVarPath = "/api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}";
+            var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2510,7 +2510,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 

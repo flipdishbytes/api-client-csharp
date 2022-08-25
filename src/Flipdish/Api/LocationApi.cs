@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -447,7 +447,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationApi->CreateLocation");
 
-            var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location";
+            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -509,7 +509,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -553,7 +553,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationApi->CreateLocation");
 
-            var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location";
+            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -615,7 +615,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -658,7 +658,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationApi->DeleteLocation");
 
-            var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete";
+            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -708,7 +708,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -752,7 +752,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationApi->DeleteLocation");
 
-            var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete";
+            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -802,7 +802,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -847,7 +847,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationApi->MapLocationToExternalId");
 
-            var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external";
+            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -898,7 +898,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMappedLocation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMappedLocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMappedLocation)));
         }
 
@@ -944,7 +944,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationApi->MapLocationToExternalId");
 
-            var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external";
+            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -995,7 +995,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMappedLocation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMappedLocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMappedLocation)));
         }
 
@@ -1043,7 +1043,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationApi->MoveLocation");
 
-            var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/move";
+            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/move";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1094,7 +1094,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -1143,7 +1143,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationApi->MoveLocation");
 
-            var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/move";
+            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/move";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1194,7 +1194,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -1242,7 +1242,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationApi->UpdateLocation");
 
-            var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update";
+            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1305,7 +1305,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultLocationAreaLocation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultLocationAreaLocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultLocationAreaLocation)));
         }
 
@@ -1354,7 +1354,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling LocationApi->UpdateLocation");
 
-            var localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update";
+            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1417,7 +1417,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultLocationAreaLocation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultLocationAreaLocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultLocationAreaLocation)));
         }
 

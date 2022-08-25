@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -238,7 +238,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling TipsApi->TipConfigGet");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/tipconfig";
+            var localVarPath = "./api/v1.0/stores/{storeId}/tipconfig";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -285,7 +285,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultTipConfiguration>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultTipConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultTipConfiguration)));
         }
 
@@ -314,7 +314,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling TipsApi->TipConfigGet");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/tipconfig";
+            var localVarPath = "./api/v1.0/stores/{storeId}/tipconfig";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -361,7 +361,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultTipConfiguration>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultTipConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultTipConfiguration)));
         }
 
@@ -394,7 +394,7 @@ namespace Flipdish.Api
             if (updateConfig == null)
                 throw new ApiException(400, "Missing required parameter 'updateConfig' when calling TipsApi->TipConfigUpsert");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/tipconfig";
+            var localVarPath = "./api/v1.0/stores/{storeId}/tipconfig";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -454,7 +454,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultTipConfiguration>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultTipConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultTipConfiguration)));
         }
 
@@ -488,7 +488,7 @@ namespace Flipdish.Api
             if (updateConfig == null)
                 throw new ApiException(400, "Missing required parameter 'updateConfig' when calling TipsApi->TipConfigUpsert");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/tipconfig";
+            var localVarPath = "./api/v1.0/stores/{storeId}/tipconfig";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -548,7 +548,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultTipConfiguration>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultTipConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultTipConfiguration)));
         }
 

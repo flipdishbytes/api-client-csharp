@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -332,7 +332,7 @@ namespace Flipdish.Api
             if (isDismissed == null)
                 throw new ApiException(400, "Missing required parameter 'isDismissed' when calling HomeApi->CompleteHomeAction");
 
-            var localVarPath = "/api/v1.0/{appId}/home/{homeActionId}";
+            var localVarPath = "./api/v1.0/{appId}/home/{homeActionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -381,7 +381,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -420,7 +420,7 @@ namespace Flipdish.Api
             if (isDismissed == null)
                 throw new ApiException(400, "Missing required parameter 'isDismissed' when calling HomeApi->CompleteHomeAction");
 
-            var localVarPath = "/api/v1.0/{appId}/home/{homeActionId}";
+            var localVarPath = "./api/v1.0/{appId}/home/{homeActionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -469,7 +469,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -492,7 +492,7 @@ namespace Flipdish.Api
         public ApiResponse< Object > DismissOldPortalActionWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/home/dismissoldportalaction";
+            var localVarPath = "./api/v1.0/home/dismissoldportalaction";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -538,7 +538,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -562,7 +562,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DismissOldPortalActionAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/home/dismissoldportalaction";
+            var localVarPath = "./api/v1.0/home/dismissoldportalaction";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -608,7 +608,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -636,7 +636,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling HomeApi->GetHomeActions");
 
-            var localVarPath = "/api/v1.0/{appId}/home";
+            var localVarPath = "./api/v1.0/{appId}/home";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -683,7 +683,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultHomeAction>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultHomeAction) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultHomeAction)));
         }
 
@@ -712,7 +712,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling HomeApi->GetHomeActions");
 
-            var localVarPath = "/api/v1.0/{appId}/home";
+            var localVarPath = "./api/v1.0/{appId}/home";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -759,7 +759,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultHomeAction>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultHomeAction) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultHomeAction)));
         }
 
@@ -787,7 +787,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling HomeApi->GetHomeStatistics");
 
-            var localVarPath = "/api/v1.0/{appId}/home/stats";
+            var localVarPath = "./api/v1.0/{appId}/home/stats";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -834,7 +834,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHomeStatistics>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHomeStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHomeStatistics)));
         }
 
@@ -863,7 +863,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling HomeApi->GetHomeStatistics");
 
-            var localVarPath = "/api/v1.0/{appId}/home/stats";
+            var localVarPath = "./api/v1.0/{appId}/home/stats";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -910,7 +910,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHomeStatistics>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHomeStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHomeStatistics)));
         }
 

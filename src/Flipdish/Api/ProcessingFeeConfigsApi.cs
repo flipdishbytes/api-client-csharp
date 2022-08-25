@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -192,7 +192,7 @@ namespace Flipdish.Api
             if (storeIds == null)
                 throw new ApiException(400, "Missing required parameter 'storeIds' when calling ProcessingFeeConfigsApi->GetProcessingFeeConfigsByStoreIds");
 
-            var localVarPath = "/api/v1.0/processingfeeconfigs";
+            var localVarPath = "./api/v1.0/processingfeeconfigs";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -239,7 +239,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultProcessingFeeConfig>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultProcessingFeeConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultProcessingFeeConfig)));
         }
 
@@ -268,7 +268,7 @@ namespace Flipdish.Api
             if (storeIds == null)
                 throw new ApiException(400, "Missing required parameter 'storeIds' when calling ProcessingFeeConfigsApi->GetProcessingFeeConfigsByStoreIds");
 
-            var localVarPath = "/api/v1.0/processingfeeconfigs";
+            var localVarPath = "./api/v1.0/processingfeeconfigs";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -315,7 +315,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultProcessingFeeConfig>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultProcessingFeeConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultProcessingFeeConfig)));
         }
 

@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -238,7 +238,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling OrderBatchingConfigurationApi->Get");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/order-batching-configuration";
+            var localVarPath = "./api/v1.0/stores/{storeId}/order-batching-configuration";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -285,7 +285,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultOrderBatchingConfiguration>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultOrderBatchingConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrderBatchingConfiguration)));
         }
 
@@ -314,7 +314,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling OrderBatchingConfigurationApi->Get");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/order-batching-configuration";
+            var localVarPath = "./api/v1.0/stores/{storeId}/order-batching-configuration";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -361,7 +361,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultOrderBatchingConfiguration>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultOrderBatchingConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrderBatchingConfiguration)));
         }
 
@@ -393,7 +393,7 @@ namespace Flipdish.Api
             if (setOrderBatchingConfiguration == null)
                 throw new ApiException(400, "Missing required parameter 'setOrderBatchingConfiguration' when calling OrderBatchingConfigurationApi->Post");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/order-batching-configuration";
+            var localVarPath = "./api/v1.0/stores/{storeId}/order-batching-configuration";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -453,7 +453,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -486,7 +486,7 @@ namespace Flipdish.Api
             if (setOrderBatchingConfiguration == null)
                 throw new ApiException(400, "Missing required parameter 'setOrderBatchingConfiguration' when calling OrderBatchingConfigurationApi->Post");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/order-batching-configuration";
+            var localVarPath = "./api/v1.0/stores/{storeId}/order-batching-configuration";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -546,7 +546,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 

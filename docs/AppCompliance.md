@@ -1,4 +1,4 @@
-# IO.Swagger.Model.AppCompliance
+# Flipdish.Model.AppCompliance
 ## Properties
 
 Name | Type | Description | Notes

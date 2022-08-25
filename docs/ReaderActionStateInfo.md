@@ -1,4 +1,4 @@
-# IO.Swagger.Model.ReaderActionStateInfo
+# Flipdish.Model.ReaderActionStateInfo
 ## Properties
 
 Name | Type | Description | Notes

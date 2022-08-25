@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiArrayResultLoyaltyCampaign
+# Flipdish.Model.RestApiArrayResultLoyaltyCampaign
 ## Properties
 
 Name | Type | Description | Notes

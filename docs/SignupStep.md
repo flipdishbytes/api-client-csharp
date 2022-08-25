@@ -1,4 +1,4 @@
-# IO.Swagger.Model.SignupStep
+# Flipdish.Model.SignupStep
 ## Properties
 
 Name | Type | Description | Notes

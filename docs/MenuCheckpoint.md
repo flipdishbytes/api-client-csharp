@@ -1,4 +1,4 @@
-# IO.Swagger.Model.MenuCheckpoint
+# Flipdish.Model.MenuCheckpoint
 ## Properties
 
 Name | Type | Description | Notes

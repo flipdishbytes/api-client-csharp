@@ -1,4 +1,4 @@
-# IO.Swagger.Api.DeliveryZoneApi
+# Flipdish.Api.DeliveryZoneApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -20,9 +20,9 @@ Adds a delivery zone to the store id
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -84,9 +84,9 @@ Get all the delivery zones associated with a store
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -146,9 +146,9 @@ Removes the existing delivery zone
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -209,9 +209,9 @@ Updates the existing delivery zone
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {

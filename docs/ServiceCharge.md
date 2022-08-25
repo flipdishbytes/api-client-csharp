@@ -1,4 +1,4 @@
-# IO.Swagger.Model.ServiceCharge
+# Flipdish.Model.ServiceCharge
 ## Properties
 
 Name | Type | Description | Notes

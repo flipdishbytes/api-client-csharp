@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultTelemetrySeriesResult
+# Flipdish.Model.RestApiResultTelemetrySeriesResult
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Api.CustomersApi
+# Flipdish.Api.CustomersApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -18,9 +18,9 @@ Get customer of an app by Id
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -82,9 +82,9 @@ Update customer of an app by Id
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {

@@ -1,4 +1,4 @@
-# IO.Swagger.Api.TeammatesApi
+# Flipdish.Api.TeammatesApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -22,9 +22,9 @@ Create teammate and send an invite.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -86,9 +86,9 @@ Delete teammate
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -149,9 +149,9 @@ Get a teammates by email address
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -213,9 +213,9 @@ Get all teammates
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -275,9 +275,9 @@ Redeem one-time code from invitation
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -339,9 +339,9 @@ Update teammates (this method does not support Deltas!)
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {

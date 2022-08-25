@@ -1,4 +1,4 @@
-# IO.Swagger.Api.MetafieldDefinitionsApi
+# Flipdish.Api.MetafieldDefinitionsApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -24,9 +24,9 @@ Create a Metafield Definition
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -92,9 +92,9 @@ Get a Metafield Definition for the specified owner entity and key.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -160,9 +160,9 @@ Get Metafield Definitions for the specified owner entity.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -232,9 +232,9 @@ Get OwnerEntity Configurations which contain information to manage Metafield Def
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -296,9 +296,9 @@ Get OwnerEntity Definition Recommendations
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -368,9 +368,9 @@ Update a Metafield Definition
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PhoneCallStartedEvent
+# Flipdish.Model.PhoneCallStartedEvent
 ## Properties
 
 Name | Type | Description | Notes

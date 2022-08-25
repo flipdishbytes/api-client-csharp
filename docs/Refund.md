@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Refund
+# Flipdish.Model.Refund
 ## Properties
 
 Name | Type | Description | Notes

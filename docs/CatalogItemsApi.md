@@ -1,4 +1,4 @@
-# IO.Swagger.Api.CatalogItemsApi
+# Flipdish.Api.CatalogItemsApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -24,9 +24,9 @@ Archive Catalog Item
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -89,9 +89,9 @@ Create a Catalog Item
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -155,9 +155,9 @@ Duplicate Catalog Item
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -220,9 +220,9 @@ Get item by Id
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -286,9 +286,9 @@ Get paginated items by app name id filtered by types
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -358,9 +358,9 @@ Update Catalog Item
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultLightspeedSettings
+# Flipdish.Model.RestApiResultLightspeedSettings
 ## Properties
 
 Name | Type | Description | Notes

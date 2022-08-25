@@ -1,4 +1,4 @@
-# IO.Swagger.Model.VoucherWithStats
+# Flipdish.Model.VoucherWithStats
 ## Properties
 
 Name | Type | Description | Notes

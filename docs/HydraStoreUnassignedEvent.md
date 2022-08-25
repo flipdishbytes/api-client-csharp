@@ -1,4 +1,4 @@
-# IO.Swagger.Model.HydraStoreUnassignedEvent
+# Flipdish.Model.HydraStoreUnassignedEvent
 ## Properties
 
 Name | Type | Description | Notes

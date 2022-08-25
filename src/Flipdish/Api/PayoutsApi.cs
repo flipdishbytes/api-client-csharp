@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -582,7 +582,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsApi->GetPayout");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -631,7 +631,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<PayoutDetail>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (PayoutDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PayoutDetail)));
         }
 
@@ -670,7 +670,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsApi->GetPayout");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -719,7 +719,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<PayoutDetail>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (PayoutDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PayoutDetail)));
         }
 
@@ -763,7 +763,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsApi->GetPayoutChargebacks");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -815,7 +815,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultPayoutChargeback>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultPayoutChargeback) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPayoutChargeback)));
         }
 
@@ -860,7 +860,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsApi->GetPayoutChargebacks");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -912,7 +912,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultPayoutChargeback>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultPayoutChargeback) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPayoutChargeback)));
         }
 
@@ -956,7 +956,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsApi->GetPayoutOrders");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1008,7 +1008,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultPayoutOrder>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultPayoutOrder) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPayoutOrder)));
         }
 
@@ -1053,7 +1053,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsApi->GetPayoutOrders");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1105,7 +1105,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultPayoutOrder>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultPayoutOrder) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPayoutOrder)));
         }
 
@@ -1149,7 +1149,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsApi->GetPayoutOtherCharges");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1201,7 +1201,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultPayoutOtherCharge>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultPayoutOtherCharge) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPayoutOtherCharge)));
         }
 
@@ -1246,7 +1246,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsApi->GetPayoutOtherCharges");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1298,7 +1298,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultPayoutOtherCharge>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultPayoutOtherCharge) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPayoutOtherCharge)));
         }
 
@@ -1342,7 +1342,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsApi->GetPayoutRefunds");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1394,7 +1394,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultPayoutRefund>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultPayoutRefund) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPayoutRefund)));
         }
 
@@ -1439,7 +1439,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsApi->GetPayoutRefunds");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1491,7 +1491,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultPayoutRefund>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultPayoutRefund) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPayoutRefund)));
         }
 
@@ -1527,7 +1527,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling PayoutsApi->GetPayoutSummaries");
 
-            var localVarPath = "/api/v1.0/{appId}/payouts/summaries";
+            var localVarPath = "./api/v1.0/{appId}/payouts/summaries";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1578,7 +1578,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultPayoutSummary>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultPayoutSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultPayoutSummary)));
         }
 
@@ -1615,7 +1615,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling PayoutsApi->GetPayoutSummaries");
 
-            var localVarPath = "/api/v1.0/{appId}/payouts/summaries";
+            var localVarPath = "./api/v1.0/{appId}/payouts/summaries";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1666,7 +1666,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultPayoutSummary>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultPayoutSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultPayoutSummary)));
         }
 
@@ -1706,7 +1706,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling PayoutsApi->GetPayouts");
 
-            var localVarPath = "/api/v1.0/{appId}/payouts";
+            var localVarPath = "./api/v1.0/{appId}/payouts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1759,7 +1759,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultPayout>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultPayout) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPayout)));
         }
 
@@ -1800,7 +1800,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling PayoutsApi->GetPayouts");
 
-            var localVarPath = "/api/v1.0/{appId}/payouts";
+            var localVarPath = "./api/v1.0/{appId}/payouts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1853,7 +1853,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultPayout>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultPayout) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPayout)));
         }
 

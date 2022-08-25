@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CustomerCreatedEvent
+# Flipdish.Model.CustomerCreatedEvent
 ## Properties
 
 Name | Type | Description | Notes

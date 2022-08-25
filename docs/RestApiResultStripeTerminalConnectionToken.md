@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultStripeTerminalConnectionToken
+# Flipdish.Model.RestApiResultStripeTerminalConnectionToken
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PendingMenuChangesSummaries
+# Flipdish.Model.PendingMenuChangesSummaries
 ## Properties
 
 Name | Type | Description | Notes

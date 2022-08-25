@@ -1,4 +1,4 @@
-# IO.Swagger.Api.TipsApi
+# Flipdish.Api.TipsApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -18,9 +18,9 @@ Returns current tip configuration for a store
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -80,9 +80,9 @@ Update or insert current tip configuration for a store
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {

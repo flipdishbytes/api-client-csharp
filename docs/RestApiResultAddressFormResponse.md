@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultAddressFormResponse
+# Flipdish.Model.RestApiResultAddressFormResponse
 ## Properties
 
 Name | Type | Description | Notes

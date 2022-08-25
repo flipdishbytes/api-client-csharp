@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultMobileAppsSubmissionStatus
+# Flipdish.Model.RestApiResultMobileAppsSubmissionStatus
 ## Properties
 
 Name | Type | Description | Notes

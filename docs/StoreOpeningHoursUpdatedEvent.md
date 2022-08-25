@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StoreOpeningHoursUpdatedEvent
+# Flipdish.Model.StoreOpeningHoursUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

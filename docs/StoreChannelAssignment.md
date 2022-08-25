@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StoreChannelAssignment
+# Flipdish.Model.StoreChannelAssignment
 ## Properties
 
 Name | Type | Description | Notes

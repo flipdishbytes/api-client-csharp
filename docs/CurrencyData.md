@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CurrencyData
+# Flipdish.Model.CurrencyData
 ## Properties
 
 Name | Type | Description | Notes

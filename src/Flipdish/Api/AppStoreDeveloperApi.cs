@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -401,7 +401,7 @@ namespace Flipdish.Api
             if (verificationStatus == null)
                 throw new ApiException(400, "Missing required parameter 'verificationStatus' when calling AppStoreDeveloperApi->AppVerificationUpdate");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification";
+            var localVarPath = "./api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -450,7 +450,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -488,7 +488,7 @@ namespace Flipdish.Api
             if (verificationStatus == null)
                 throw new ApiException(400, "Missing required parameter 'verificationStatus' when calling AppStoreDeveloperApi->AppVerificationUpdate");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification";
+            var localVarPath = "./api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -537,7 +537,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -570,7 +570,7 @@ namespace Flipdish.Api
             if (createAppStoreApp == null)
                 throw new ApiException(400, "Missing required parameter 'createAppStoreApp' when calling AppStoreDeveloperApi->CreateAppStoreApp");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oauthAppId}/appstore/apps";
+            var localVarPath = "./api/v1.0/oauthclients/{oauthAppId}/appstore/apps";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -630,7 +630,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAppStoreApp>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAppStoreApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreApp)));
         }
 
@@ -664,7 +664,7 @@ namespace Flipdish.Api
             if (createAppStoreApp == null)
                 throw new ApiException(400, "Missing required parameter 'createAppStoreApp' when calling AppStoreDeveloperApi->CreateAppStoreApp");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oauthAppId}/appstore/apps";
+            var localVarPath = "./api/v1.0/oauthclients/{oauthAppId}/appstore/apps";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -724,7 +724,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAppStoreApp>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAppStoreApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreApp)));
         }
 
@@ -757,7 +757,7 @@ namespace Flipdish.Api
             if (appStoreAppId == null)
                 throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreDeveloperApi->DeleteAppStoreApp");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}";
+            var localVarPath = "./api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -805,7 +805,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
@@ -839,7 +839,7 @@ namespace Flipdish.Api
             if (appStoreAppId == null)
                 throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreDeveloperApi->DeleteAppStoreApp");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}";
+            var localVarPath = "./api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -887,7 +887,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
@@ -924,7 +924,7 @@ namespace Flipdish.Api
             if (appStoreApp == null)
                 throw new ApiException(400, "Missing required parameter 'appStoreApp' when calling AppStoreDeveloperApi->UpdateAppStoreApp");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}";
+            var localVarPath = "./api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -985,7 +985,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1023,7 +1023,7 @@ namespace Flipdish.Api
             if (appStoreApp == null)
                 throw new ApiException(400, "Missing required parameter 'appStoreApp' when calling AppStoreDeveloperApi->UpdateAppStoreApp");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}";
+            var localVarPath = "./api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1084,7 +1084,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1121,7 +1121,7 @@ namespace Flipdish.Api
             if (image == null)
                 throw new ApiException(400, "Missing required parameter 'image' when calling AppStoreDeveloperApi->UploadAppStoreAppLogo");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo";
+            var localVarPath = "./api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1171,7 +1171,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1209,7 +1209,7 @@ namespace Flipdish.Api
             if (image == null)
                 throw new ApiException(400, "Missing required parameter 'image' when calling AppStoreDeveloperApi->UploadAppStoreAppLogo");
 
-            var localVarPath = "/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo";
+            var localVarPath = "./api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1259,7 +1259,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 

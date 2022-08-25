@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RetentionCampaignUpdatedEvent
+# Flipdish.Model.RetentionCampaignUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

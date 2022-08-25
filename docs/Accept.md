@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Accept
+# Flipdish.Model.Accept
 ## Properties
 
 Name | Type | Description | Notes

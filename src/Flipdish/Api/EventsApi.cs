@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -974,7 +974,7 @@ namespace Flipdish.Api
             if (customerId == null)
                 throw new ApiException(400, "Missing required parameter 'customerId' when calling EventsApi->GetCustomerEvents");
 
-            var localVarPath = "/api/v1.0/events/customer/{customerId}";
+            var localVarPath = "./api/v1.0/events/customer/{customerId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1034,7 +1034,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 
@@ -1089,7 +1089,7 @@ namespace Flipdish.Api
             if (customerId == null)
                 throw new ApiException(400, "Missing required parameter 'customerId' when calling EventsApi->GetCustomerEvents");
 
-            var localVarPath = "/api/v1.0/events/customer/{customerId}";
+            var localVarPath = "./api/v1.0/events/customer/{customerId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1149,7 +1149,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 
@@ -1202,7 +1202,7 @@ namespace Flipdish.Api
         public ApiResponse< RestApiEventSearchPaginationResult > GetEventsWithHttpInfo (int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
 
-            var localVarPath = "/api/v1.0/events";
+            var localVarPath = "./api/v1.0/events";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1263,7 +1263,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 
@@ -1317,7 +1317,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<RestApiEventSearchPaginationResult>> GetEventsAsyncWithHttpInfo (int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
         {
 
-            var localVarPath = "/api/v1.0/events";
+            var localVarPath = "./api/v1.0/events";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1378,7 +1378,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 
@@ -1406,7 +1406,7 @@ namespace Flipdish.Api
             if (eventId == null)
                 throw new ApiException(400, "Missing required parameter 'eventId' when calling EventsApi->GetEventsById");
 
-            var localVarPath = "/api/v1.0/events/{eventId}";
+            var localVarPath = "./api/v1.0/events/{eventId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1453,7 +1453,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<EventSearchResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (EventSearchResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EventSearchResult)));
         }
 
@@ -1482,7 +1482,7 @@ namespace Flipdish.Api
             if (eventId == null)
                 throw new ApiException(400, "Missing required parameter 'eventId' when calling EventsApi->GetEventsById");
 
-            var localVarPath = "/api/v1.0/events/{eventId}";
+            var localVarPath = "./api/v1.0/events/{eventId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1529,7 +1529,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<EventSearchResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (EventSearchResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EventSearchResult)));
         }
 
@@ -1583,7 +1583,7 @@ namespace Flipdish.Api
             if (menuId == null)
                 throw new ApiException(400, "Missing required parameter 'menuId' when calling EventsApi->GetMenuEvents");
 
-            var localVarPath = "/api/v1.0/events/menu/{menuId}";
+            var localVarPath = "./api/v1.0/events/menu/{menuId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1643,7 +1643,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 
@@ -1698,7 +1698,7 @@ namespace Flipdish.Api
             if (menuId == null)
                 throw new ApiException(400, "Missing required parameter 'menuId' when calling EventsApi->GetMenuEvents");
 
-            var localVarPath = "/api/v1.0/events/menu/{menuId}";
+            var localVarPath = "./api/v1.0/events/menu/{menuId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1758,7 +1758,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 
@@ -1812,7 +1812,7 @@ namespace Flipdish.Api
             if (orderId == null)
                 throw new ApiException(400, "Missing required parameter 'orderId' when calling EventsApi->GetOrderEvents");
 
-            var localVarPath = "/api/v1.0/events/order/{orderId}";
+            var localVarPath = "./api/v1.0/events/order/{orderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1872,7 +1872,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 
@@ -1927,7 +1927,7 @@ namespace Flipdish.Api
             if (orderId == null)
                 throw new ApiException(400, "Missing required parameter 'orderId' when calling EventsApi->GetOrderEvents");
 
-            var localVarPath = "/api/v1.0/events/order/{orderId}";
+            var localVarPath = "./api/v1.0/events/order/{orderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1987,7 +1987,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 
@@ -2041,7 +2041,7 @@ namespace Flipdish.Api
             if (customerId == null)
                 throw new ApiException(400, "Missing required parameter 'customerId' when calling EventsApi->GetOrderEventsByCustomer");
 
-            var localVarPath = "/api/v1.0/events/order";
+            var localVarPath = "./api/v1.0/events/order";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2101,7 +2101,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 
@@ -2156,7 +2156,7 @@ namespace Flipdish.Api
             if (customerId == null)
                 throw new ApiException(400, "Missing required parameter 'customerId' when calling EventsApi->GetOrderEventsByCustomer");
 
-            var localVarPath = "/api/v1.0/events/order";
+            var localVarPath = "./api/v1.0/events/order";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2216,7 +2216,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 
@@ -2270,7 +2270,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling EventsApi->GetStoreEvents");
 
-            var localVarPath = "/api/v1.0/events/store/{storeId}";
+            var localVarPath = "./api/v1.0/events/store/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2330,7 +2330,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 
@@ -2385,7 +2385,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling EventsApi->GetStoreEvents");
 
-            var localVarPath = "/api/v1.0/events/store/{storeId}";
+            var localVarPath = "./api/v1.0/events/store/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2445,7 +2445,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 
@@ -2499,7 +2499,7 @@ namespace Flipdish.Api
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling EventsApi->GetUserEvents");
 
-            var localVarPath = "/api/v1.0/events/user/{userId}";
+            var localVarPath = "./api/v1.0/events/user/{userId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2559,7 +2559,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 
@@ -2614,7 +2614,7 @@ namespace Flipdish.Api
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling EventsApi->GetUserEvents");
 
-            var localVarPath = "/api/v1.0/events/user/{userId}";
+            var localVarPath = "./api/v1.0/events/user/{userId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2674,7 +2674,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 
@@ -2728,7 +2728,7 @@ namespace Flipdish.Api
             if (whitelabelId == null)
                 throw new ApiException(400, "Missing required parameter 'whitelabelId' when calling EventsApi->GetWhiteLabelEvents");
 
-            var localVarPath = "/api/v1.0/events/whitelabel/{whitelabelId}";
+            var localVarPath = "./api/v1.0/events/whitelabel/{whitelabelId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2788,7 +2788,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 
@@ -2843,7 +2843,7 @@ namespace Flipdish.Api
             if (whitelabelId == null)
                 throw new ApiException(400, "Missing required parameter 'whitelabelId' when calling EventsApi->GetWhiteLabelEvents");
 
-            var localVarPath = "/api/v1.0/events/whitelabel/{whitelabelId}";
+            var localVarPath = "./api/v1.0/events/whitelabel/{whitelabelId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2903,7 +2903,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiEventSearchPaginationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiEventSearchPaginationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiEventSearchPaginationResult)));
         }
 

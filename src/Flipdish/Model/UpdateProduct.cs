@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
 namespace Flipdish.Model
@@ -28,7 +26,7 @@ namespace Flipdish.Model
     /// Update Product
     /// </summary>
     [DataContract]
-    public partial class UpdateProduct :  IEquatable<UpdateProduct>, IValidatableObject
+    public partial class UpdateProduct :  IEquatable<UpdateProduct>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateProduct" /> class.
@@ -228,70 +226,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Metafields.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            // Sku (string) maxLength
-            if(this.Sku != null && this.Sku.Length > 30)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Sku, length must be less than 30.", new [] { "Sku" });
-            }
-
-            // Sku (string) minLength
-            if(this.Sku != null && this.Sku.Length < 0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Sku, length must be greater than 0.", new [] { "Sku" });
-            }
-
-            // Name (string) maxLength
-            if(this.Name != null && this.Name.Length > 300)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be less than 300.", new [] { "Name" });
-            }
-
-            // Name (string) minLength
-            if(this.Name != null && this.Name.Length < 0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be greater than 0.", new [] { "Name" });
-            }
-
-            // Description (string) maxLength
-            if(this.Description != null && this.Description.Length > 3000)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Description, length must be less than 3000.", new [] { "Description" });
-            }
-
-            // Description (string) minLength
-            if(this.Description != null && this.Description.Length < 0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Description, length must be greater than 0.", new [] { "Description" });
-            }
-
-            // Price (double?) minimum
-            if(this.Price < (double?)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Price, must be a value greater than or equal to 0.", new [] { "Price" });
-            }
-
-            // ImageFileName (string) maxLength
-            if(this.ImageFileName != null && this.ImageFileName.Length > 512)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ImageFileName, length must be less than 512.", new [] { "ImageFileName" });
-            }
-
-            // ImageFileName (string) minLength
-            if(this.ImageFileName != null && this.ImageFileName.Length < 0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ImageFileName, length must be greater than 0.", new [] { "ImageFileName" });
-            }
-
-            yield break;
         }
     }
 

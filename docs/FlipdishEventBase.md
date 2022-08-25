@@ -1,4 +1,4 @@
-# IO.Swagger.Model.FlipdishEventBase
+# Flipdish.Model.FlipdishEventBase
 ## Properties
 
 Name | Type | Description | Notes

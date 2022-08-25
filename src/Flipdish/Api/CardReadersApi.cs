@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -806,7 +806,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->AuthorizeStripeTerminal");
 
-            var localVarPath = "/api/v1.0/{appId}/stripeterminal/authorize";
+            var localVarPath = "./api/v1.0/{appId}/stripeterminal/authorize";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -853,7 +853,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStripeTerminalPrivateKey>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStripeTerminalPrivateKey) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeTerminalPrivateKey)));
         }
 
@@ -882,7 +882,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->AuthorizeStripeTerminal");
 
-            var localVarPath = "/api/v1.0/{appId}/stripeterminal/authorize";
+            var localVarPath = "./api/v1.0/{appId}/stripeterminal/authorize";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -929,7 +929,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStripeTerminalPrivateKey>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStripeTerminalPrivateKey) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeTerminalPrivateKey)));
         }
 
@@ -966,7 +966,7 @@ namespace Flipdish.Api
             if (terminalType == null)
                 throw new ApiException(400, "Missing required parameter 'terminalType' when calling CardReadersApi->CancelCurrentlyInitiatedBluetoothDeviceUpdate");
 
-            var localVarPath = "/api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate";
+            var localVarPath = "./api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1015,7 +1015,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1053,7 +1053,7 @@ namespace Flipdish.Api
             if (terminalType == null)
                 throw new ApiException(400, "Missing required parameter 'terminalType' when calling CardReadersApi->CancelCurrentlyInitiatedBluetoothDeviceUpdate");
 
-            var localVarPath = "/api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate";
+            var localVarPath = "./api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1102,7 +1102,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1135,7 +1135,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->CancelReaderAction");
 
-            var localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action";
+            var localVarPath = "./api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1183,7 +1183,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
         }
 
@@ -1217,7 +1217,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->CancelReaderAction");
 
-            var localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action";
+            var localVarPath = "./api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1265,7 +1265,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
         }
 
@@ -1298,7 +1298,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->CardReadersGetReader");
 
-            var localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/{readerId}";
+            var localVarPath = "./api/v1.0/{appId}/payments/terminals/stripe/{readerId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1346,7 +1346,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
         }
 
@@ -1380,7 +1380,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->CardReadersGetReader");
 
-            var localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/{readerId}";
+            var localVarPath = "./api/v1.0/{appId}/payments/terminals/stripe/{readerId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1428,7 +1428,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
         }
 
@@ -1461,7 +1461,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->GenerateStripeTerminalLocation");
 
-            var localVarPath = "/api/v1.0/{appId}/stripeterminal/location";
+            var localVarPath = "./api/v1.0/{appId}/stripeterminal/location";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1521,7 +1521,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStripeTerminalLocation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStripeTerminalLocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeTerminalLocation)));
         }
 
@@ -1555,7 +1555,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->GenerateStripeTerminalLocation");
 
-            var localVarPath = "/api/v1.0/{appId}/stripeterminal/location";
+            var localVarPath = "./api/v1.0/{appId}/stripeterminal/location";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1615,7 +1615,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStripeTerminalLocation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStripeTerminalLocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeTerminalLocation)));
         }
 
@@ -1648,7 +1648,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling CardReadersApi->GetBluetoothTerminalStatus");
 
-            var localVarPath = "/api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status";
+            var localVarPath = "./api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1696,7 +1696,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultBluetoothTerminalStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultBluetoothTerminalStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBluetoothTerminalStatus)));
         }
 
@@ -1730,7 +1730,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling CardReadersApi->GetBluetoothTerminalStatus");
 
-            var localVarPath = "/api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status";
+            var localVarPath = "./api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1778,7 +1778,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultBluetoothTerminalStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultBluetoothTerminalStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBluetoothTerminalStatus)));
         }
 
@@ -1806,7 +1806,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->GetStripeConnectionToken");
 
-            var localVarPath = "/api/v1.0/{appId}/stripeterminal/connectiontoken";
+            var localVarPath = "./api/v1.0/{appId}/stripeterminal/connectiontoken";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1853,7 +1853,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStripeTerminalConnectionToken>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStripeTerminalConnectionToken) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeTerminalConnectionToken)));
         }
 
@@ -1882,7 +1882,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->GetStripeConnectionToken");
 
-            var localVarPath = "/api/v1.0/{appId}/stripeterminal/connectiontoken";
+            var localVarPath = "./api/v1.0/{appId}/stripeterminal/connectiontoken";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1929,7 +1929,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStripeTerminalConnectionToken>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStripeTerminalConnectionToken) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeTerminalConnectionToken)));
         }
 
@@ -1966,7 +1966,7 @@ namespace Flipdish.Api
             if (terminalType == null)
                 throw new ApiException(400, "Missing required parameter 'terminalType' when calling CardReadersApi->InitiateBluetoothTerminalDeviceUpdateCheck");
 
-            var localVarPath = "/api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate";
+            var localVarPath = "./api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2015,7 +2015,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2053,7 +2053,7 @@ namespace Flipdish.Api
             if (terminalType == null)
                 throw new ApiException(400, "Missing required parameter 'terminalType' when calling CardReadersApi->InitiateBluetoothTerminalDeviceUpdateCheck");
 
-            var localVarPath = "/api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate";
+            var localVarPath = "./api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2102,7 +2102,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2139,7 +2139,7 @@ namespace Flipdish.Api
             if (terminalType == null)
                 throw new ApiException(400, "Missing required parameter 'terminalType' when calling CardReadersApi->InitiateKioskBluetoothPairingMode");
 
-            var localVarPath = "/api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair";
+            var localVarPath = "./api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2188,7 +2188,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2226,7 +2226,7 @@ namespace Flipdish.Api
             if (terminalType == null)
                 throw new ApiException(400, "Missing required parameter 'terminalType' when calling CardReadersApi->InitiateKioskBluetoothPairingMode");
 
-            var localVarPath = "/api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair";
+            var localVarPath = "./api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2275,7 +2275,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2312,7 +2312,7 @@ namespace Flipdish.Api
             if (terminalType == null)
                 throw new ApiException(400, "Missing required parameter 'terminalType' when calling CardReadersApi->InitiateKioskBluetoothUpdateInstall");
 
-            var localVarPath = "/api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate";
+            var localVarPath = "./api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2361,7 +2361,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2399,7 +2399,7 @@ namespace Flipdish.Api
             if (terminalType == null)
                 throw new ApiException(400, "Missing required parameter 'terminalType' when calling CardReadersApi->InitiateKioskBluetoothUpdateInstall");
 
-            var localVarPath = "/api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate";
+            var localVarPath = "./api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2448,7 +2448,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2486,7 +2486,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->InitiateReaderProcessPaymentIntent");
 
-            var localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/{readerId}/processPaymentIntent";
+            var localVarPath = "./api/v1.0/{appId}/payments/terminals/stripe/{readerId}/processPaymentIntent";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2547,7 +2547,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
         }
 
@@ -2586,7 +2586,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->InitiateReaderProcessPaymentIntent");
 
-            var localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/{readerId}/processPaymentIntent";
+            var localVarPath = "./api/v1.0/{appId}/payments/terminals/stripe/{readerId}/processPaymentIntent";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2647,7 +2647,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
         }
 
@@ -2680,7 +2680,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->RegisterStripeTerminal");
 
-            var localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/register";
+            var localVarPath = "./api/v1.0/{appId}/payments/terminals/stripe/register";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2740,7 +2740,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
         }
 
@@ -2774,7 +2774,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->RegisterStripeTerminal");
 
-            var localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/register";
+            var localVarPath = "./api/v1.0/{appId}/payments/terminals/stripe/register";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2834,7 +2834,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
         }
 
@@ -2867,7 +2867,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->UnRegisterTerminal");
 
-            var localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/unregister";
+            var localVarPath = "./api/v1.0/{appId}/payments/terminals/stripe/unregister";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2927,7 +2927,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
         }
 
@@ -2961,7 +2961,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->UnRegisterTerminal");
 
-            var localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/unregister";
+            var localVarPath = "./api/v1.0/{appId}/payments/terminals/stripe/unregister";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3021,7 +3021,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
         }
 
@@ -3053,7 +3053,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling CardReadersApi->UnpairCurrentlyPairedBluetoothDevice");
 
-            var localVarPath = "/api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair";
+            var localVarPath = "./api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3101,7 +3101,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -3134,7 +3134,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling CardReadersApi->UnpairCurrentlyPairedBluetoothDevice");
 
-            var localVarPath = "/api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair";
+            var localVarPath = "./api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3182,7 +3182,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 

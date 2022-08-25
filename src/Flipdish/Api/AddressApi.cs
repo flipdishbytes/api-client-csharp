@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -332,7 +332,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling AddressApi->FormByApp");
 
-            var localVarPath = "/api/v1.0/app/{appId}/address/form";
+            var localVarPath = "./api/v1.0/app/{appId}/address/form";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -380,7 +380,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAddressFormResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAddressFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAddressFormResponse)));
         }
 
@@ -411,7 +411,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling AddressApi->FormByApp");
 
-            var localVarPath = "/api/v1.0/app/{appId}/address/form";
+            var localVarPath = "./api/v1.0/app/{appId}/address/form";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -459,7 +459,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAddressFormResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAddressFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAddressFormResponse)));
         }
 
@@ -489,7 +489,7 @@ namespace Flipdish.Api
             if (countryCode == null)
                 throw new ApiException(400, "Missing required parameter 'countryCode' when calling AddressApi->FormByCountry");
 
-            var localVarPath = "/api/v1.0/address/country/{countryCode}/form";
+            var localVarPath = "./api/v1.0/address/country/{countryCode}/form";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -537,7 +537,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAddressFormResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAddressFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAddressFormResponse)));
         }
 
@@ -568,7 +568,7 @@ namespace Flipdish.Api
             if (countryCode == null)
                 throw new ApiException(400, "Missing required parameter 'countryCode' when calling AddressApi->FormByCountry");
 
-            var localVarPath = "/api/v1.0/address/country/{countryCode}/form";
+            var localVarPath = "./api/v1.0/address/country/{countryCode}/form";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -616,7 +616,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAddressFormResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAddressFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAddressFormResponse)));
         }
 
@@ -646,7 +646,7 @@ namespace Flipdish.Api
             if (googleAddress == null)
                 throw new ApiException(400, "Missing required parameter 'googleAddress' when calling AddressApi->FormatGoogleAddress");
 
-            var localVarPath = "/api/v1.0/address/google";
+            var localVarPath = "./api/v1.0/address/google";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -706,7 +706,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAddressFormResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAddressFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAddressFormResponse)));
         }
 
@@ -737,7 +737,7 @@ namespace Flipdish.Api
             if (googleAddress == null)
                 throw new ApiException(400, "Missing required parameter 'googleAddress' when calling AddressApi->FormatGoogleAddress");
 
-            var localVarPath = "/api/v1.0/address/google";
+            var localVarPath = "./api/v1.0/address/google";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -797,7 +797,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAddressFormResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAddressFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAddressFormResponse)));
         }
 
@@ -822,7 +822,7 @@ namespace Flipdish.Api
         public ApiResponse< RestApiResultCountryFormResponse > GetCountriesWithHttpInfo (string language = null)
         {
 
-            var localVarPath = "/api/v1.0/address/countries";
+            var localVarPath = "./api/v1.0/address/countries";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -869,7 +869,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCountryFormResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCountryFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCountryFormResponse)));
         }
 
@@ -895,7 +895,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCountryFormResponse>> GetCountriesAsyncWithHttpInfo (string language = null)
         {
 
-            var localVarPath = "/api/v1.0/address/countries";
+            var localVarPath = "./api/v1.0/address/countries";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -942,7 +942,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCountryFormResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCountryFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCountryFormResponse)));
         }
 

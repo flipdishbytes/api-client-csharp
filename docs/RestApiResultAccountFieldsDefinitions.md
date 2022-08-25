@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultAccountFieldsDefinitions
+# Flipdish.Model.RestApiResultAccountFieldsDefinitions
 ## Properties
 
 Name | Type | Description | Notes

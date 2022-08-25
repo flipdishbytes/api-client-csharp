@@ -1,4 +1,4 @@
-# IO.Swagger.Model.BusinessHoursPeriodBase
+# Flipdish.Model.BusinessHoursPeriodBase
 ## Properties
 
 Name | Type | Description | Notes

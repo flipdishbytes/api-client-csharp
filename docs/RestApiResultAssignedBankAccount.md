@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultAssignedBankAccount
+# Flipdish.Model.RestApiResultAssignedBankAccount
 ## Properties
 
 Name | Type | Description | Notes

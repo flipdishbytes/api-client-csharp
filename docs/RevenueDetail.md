@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RevenueDetail
+# Flipdish.Model.RevenueDetail
 ## Properties
 
 Name | Type | Description | Notes

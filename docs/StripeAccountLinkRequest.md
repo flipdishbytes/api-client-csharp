@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StripeAccountLinkRequest
+# Flipdish.Model.StripeAccountLinkRequest
 ## Properties
 
 Name | Type | Description | Notes

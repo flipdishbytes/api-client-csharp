@@ -1,4 +1,4 @@
-# IO.Swagger.Model.OrderItem
+# Flipdish.Model.OrderItem
 ## Properties
 
 Name | Type | Description | Notes

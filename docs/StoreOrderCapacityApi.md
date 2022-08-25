@@ -1,4 +1,4 @@
-# IO.Swagger.Api.StoreOrderCapacityApi
+# Flipdish.Api.StoreOrderCapacityApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -18,9 +18,9 @@ Get store's order capacity configuration
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {
@@ -84,9 +84,9 @@ Create or update a store's order capacity configuration
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {

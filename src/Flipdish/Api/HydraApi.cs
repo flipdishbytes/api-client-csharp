@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -1153,7 +1153,7 @@ namespace Flipdish.Api
             if (emvTerminalId == null)
                 throw new ApiException(400, "Missing required parameter 'emvTerminalId' when calling HydraApi->AssignEmv");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId}";
+            var localVarPath = "./api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1202,7 +1202,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1240,7 +1240,7 @@ namespace Flipdish.Api
             if (emvTerminalId == null)
                 throw new ApiException(400, "Missing required parameter 'emvTerminalId' when calling HydraApi->AssignEmv");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId}";
+            var localVarPath = "./api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1289,7 +1289,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1327,7 +1327,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->AttachStoreToKiosk");
 
-            var localVarPath = "/api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1376,7 +1376,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraStatus)));
         }
 
@@ -1415,7 +1415,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->AttachStoreToKiosk");
 
-            var localVarPath = "/api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1464,7 +1464,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraStatus)));
         }
 
@@ -1502,7 +1502,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling HydraApi->AttachStoreToTerminal");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1551,7 +1551,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraStatus)));
         }
 
@@ -1590,7 +1590,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling HydraApi->AttachStoreToTerminal");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1639,7 +1639,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraStatus)));
         }
 
@@ -1671,7 +1671,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->CancelEmvPayment");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/cancelemvpayment/{orderId}";
+            var localVarPath = "./api/v1.0/{appId}/hydra/cancelemvpayment/{orderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1719,7 +1719,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1752,7 +1752,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->CancelEmvPayment");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/cancelemvpayment/{orderId}";
+            var localVarPath = "./api/v1.0/{appId}/hydra/cancelemvpayment/{orderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1800,7 +1800,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1838,7 +1838,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling HydraApi->DetachStoreFromTerminal");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1887,7 +1887,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraStatus)));
         }
 
@@ -1926,7 +1926,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling HydraApi->DetachStoreFromTerminal");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1975,7 +1975,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraStatus)));
         }
 
@@ -2013,7 +2013,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->GetAttachedDevice");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/{deviceType}/{deviceId}";
+            var localVarPath = "./api/v1.0/{appId}/hydra/{deviceType}/{deviceId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2062,7 +2062,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraDeviceDetails>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraDeviceDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraDeviceDetails)));
         }
 
@@ -2101,7 +2101,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->GetAttachedDevice");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/{deviceType}/{deviceId}";
+            var localVarPath = "./api/v1.0/{appId}/hydra/{deviceType}/{deviceId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2150,7 +2150,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraDeviceDetails>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraDeviceDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraDeviceDetails)));
         }
 
@@ -2193,7 +2193,7 @@ namespace Flipdish.Api
             if (deviceType == null)
                 throw new ApiException(400, "Missing required parameter 'deviceType' when calling HydraApi->GetAttachedDevices");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/{deviceType}/list";
+            var localVarPath = "./api/v1.0/{appId}/hydra/{deviceType}/list";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2246,7 +2246,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultHydraDeviceDetails>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultHydraDeviceDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultHydraDeviceDetails)));
         }
 
@@ -2290,7 +2290,7 @@ namespace Flipdish.Api
             if (deviceType == null)
                 throw new ApiException(400, "Missing required parameter 'deviceType' when calling HydraApi->GetAttachedDevices");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/{deviceType}/list";
+            var localVarPath = "./api/v1.0/{appId}/hydra/{deviceType}/list";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2343,7 +2343,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultHydraDeviceDetails>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultHydraDeviceDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultHydraDeviceDetails)));
         }
 
@@ -2371,7 +2371,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->GetEMVTerminalDetails");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/emvterminal";
+            var localVarPath = "./api/v1.0/{appId}/hydra/emvterminal";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2418,7 +2418,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultPaymentTerminalDetails>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultPaymentTerminalDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPaymentTerminalDetails)));
         }
 
@@ -2447,7 +2447,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->GetEMVTerminalDetails");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/emvterminal";
+            var localVarPath = "./api/v1.0/{appId}/hydra/emvterminal";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2494,7 +2494,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultPaymentTerminalDetails>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultPaymentTerminalDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPaymentTerminalDetails)));
         }
 
@@ -2527,7 +2527,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->GetEmvOrderState");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/emvorderstate/{orderId}";
+            var localVarPath = "./api/v1.0/{appId}/hydra/emvorderstate/{orderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2575,7 +2575,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultPaymentTerminalTransactionDetails>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultPaymentTerminalTransactionDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPaymentTerminalTransactionDetails)));
         }
 
@@ -2609,7 +2609,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->GetEmvOrderState");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/emvorderstate/{orderId}";
+            var localVarPath = "./api/v1.0/{appId}/hydra/emvorderstate/{orderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2657,7 +2657,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultPaymentTerminalTransactionDetails>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultPaymentTerminalTransactionDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPaymentTerminalTransactionDetails)));
         }
 
@@ -2690,7 +2690,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->GetKioskCashPaymentSettings");
 
-            var localVarPath = "/api/v1.0/{appId}/kioskcashsettings/{deviceId}";
+            var localVarPath = "./api/v1.0/{appId}/kioskcashsettings/{deviceId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2738,7 +2738,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultKioskCashPaymentSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultKioskCashPaymentSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultKioskCashPaymentSettings)));
         }
 
@@ -2772,7 +2772,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->GetKioskCashPaymentSettings");
 
-            var localVarPath = "/api/v1.0/{appId}/kioskcashsettings/{deviceId}";
+            var localVarPath = "./api/v1.0/{appId}/kioskcashsettings/{deviceId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2820,7 +2820,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultKioskCashPaymentSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultKioskCashPaymentSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultKioskCashPaymentSettings)));
         }
 
@@ -2843,7 +2843,7 @@ namespace Flipdish.Api
         public ApiResponse< RestApiResultHydraStatus > GetRegistrationWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/hydra/registration";
+            var localVarPath = "./api/v1.0/hydra/registration";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2889,7 +2889,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraStatus)));
         }
 
@@ -2913,7 +2913,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultHydraStatus>> GetRegistrationAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/hydra/registration";
+            var localVarPath = "./api/v1.0/hydra/registration";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2959,7 +2959,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraStatus)));
         }
 
@@ -2982,7 +2982,7 @@ namespace Flipdish.Api
         public ApiResponse< RestApiResultHydraConfig > GetSettingsWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/hydra/settings";
+            var localVarPath = "./api/v1.0/hydra/settings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3028,7 +3028,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraConfig>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraConfig)));
         }
 
@@ -3052,7 +3052,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultHydraConfig>> GetSettingsAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/hydra/settings";
+            var localVarPath = "./api/v1.0/hydra/settings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3098,7 +3098,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraConfig>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraConfig)));
         }
 
@@ -3131,7 +3131,7 @@ namespace Flipdish.Api
             if (emv == null)
                 throw new ApiException(400, "Missing required parameter 'emv' when calling HydraApi->HydraCreateEmv");
 
-            var localVarPath = "/api/v1.0/{appId}/emvterminals";
+            var localVarPath = "./api/v1.0/{appId}/emvterminals";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3191,7 +3191,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -3225,7 +3225,7 @@ namespace Flipdish.Api
             if (emv == null)
                 throw new ApiException(400, "Missing required parameter 'emv' when calling HydraApi->HydraCreateEmv");
 
-            var localVarPath = "/api/v1.0/{appId}/emvterminals";
+            var localVarPath = "./api/v1.0/{appId}/emvterminals";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3285,7 +3285,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -3318,7 +3318,7 @@ namespace Flipdish.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling HydraApi->HydraDeleteEmv");
 
-            var localVarPath = "/api/v1.0/{appId}/emvterminals/{id}";
+            var localVarPath = "./api/v1.0/{appId}/emvterminals/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3366,7 +3366,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -3400,7 +3400,7 @@ namespace Flipdish.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling HydraApi->HydraDeleteEmv");
 
-            var localVarPath = "/api/v1.0/{appId}/emvterminals/{id}";
+            var localVarPath = "./api/v1.0/{appId}/emvterminals/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3448,7 +3448,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -3486,7 +3486,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->HydraDetachStoreFromKiosk");
 
-            var localVarPath = "/api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3535,7 +3535,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraStatus)));
         }
 
@@ -3574,7 +3574,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->HydraDetachStoreFromKiosk");
 
-            var localVarPath = "/api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3623,7 +3623,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraStatus)));
         }
 
@@ -3651,7 +3651,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->HydraGetEmvsForAppId");
 
-            var localVarPath = "/api/v1.0/{appId}/emvterminals";
+            var localVarPath = "./api/v1.0/{appId}/emvterminals";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3698,7 +3698,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultEmvTerminalWithAssignments>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultEmvTerminalWithAssignments) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultEmvTerminalWithAssignments)));
         }
 
@@ -3727,7 +3727,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling HydraApi->HydraGetEmvsForAppId");
 
-            var localVarPath = "/api/v1.0/{appId}/emvterminals";
+            var localVarPath = "./api/v1.0/{appId}/emvterminals";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3774,7 +3774,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultEmvTerminalWithAssignments>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultEmvTerminalWithAssignments) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultEmvTerminalWithAssignments)));
         }
 
@@ -3805,7 +3805,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->LoginWithDeviceId");
 
-            var localVarPath = "/api/v1.0/hydra/{deviceId}/login";
+            var localVarPath = "./api/v1.0/hydra/{deviceId}/login";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3854,7 +3854,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -3886,7 +3886,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->LoginWithDeviceId");
 
-            var localVarPath = "/api/v1.0/hydra/{deviceId}/login";
+            var localVarPath = "./api/v1.0/hydra/{deviceId}/login";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3935,7 +3935,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -3968,7 +3968,7 @@ namespace Flipdish.Api
             if (hydraRegistration == null)
                 throw new ApiException(400, "Missing required parameter 'hydraRegistration' when calling HydraApi->Register");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/registration";
+            var localVarPath = "./api/v1.0/{appId}/hydra/registration";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4028,7 +4028,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraStatus)));
         }
 
@@ -4062,7 +4062,7 @@ namespace Flipdish.Api
             if (hydraRegistration == null)
                 throw new ApiException(400, "Missing required parameter 'hydraRegistration' when calling HydraApi->Register");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/registration";
+            var localVarPath = "./api/v1.0/{appId}/hydra/registration";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4122,7 +4122,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultHydraStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHydraStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHydraStatus)));
         }
 
@@ -4154,7 +4154,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->UnAssign");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/{deviceId}/registration";
+            var localVarPath = "./api/v1.0/{appId}/hydra/{deviceId}/registration";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4202,7 +4202,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -4235,7 +4235,7 @@ namespace Flipdish.Api
             if (deviceId == null)
                 throw new ApiException(400, "Missing required parameter 'deviceId' when calling HydraApi->UnAssign");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/{deviceId}/registration";
+            var localVarPath = "./api/v1.0/{appId}/hydra/{deviceId}/registration";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4283,7 +4283,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -4315,7 +4315,7 @@ namespace Flipdish.Api
             if (hydraConfigId == null)
                 throw new ApiException(400, "Missing required parameter 'hydraConfigId' when calling HydraApi->UnassignEmv");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId}";
+            var localVarPath = "./api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4363,7 +4363,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -4396,7 +4396,7 @@ namespace Flipdish.Api
             if (hydraConfigId == null)
                 throw new ApiException(400, "Missing required parameter 'hydraConfigId' when calling HydraApi->UnassignEmv");
 
-            var localVarPath = "/api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId}";
+            var localVarPath = "./api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4444,7 +4444,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -4481,7 +4481,7 @@ namespace Flipdish.Api
             if (isCashEnabled == null)
                 throw new ApiException(400, "Missing required parameter 'isCashEnabled' when calling HydraApi->UpdateKioskCashVisibilitySettings");
 
-            var localVarPath = "/api/v1.0/{appId}/kioskupdatecashsettings";
+            var localVarPath = "./api/v1.0/{appId}/kioskupdatecashsettings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4530,7 +4530,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -4568,7 +4568,7 @@ namespace Flipdish.Api
             if (isCashEnabled == null)
                 throw new ApiException(400, "Missing required parameter 'isCashEnabled' when calling HydraApi->UpdateKioskCashVisibilitySettings");
 
-            var localVarPath = "/api/v1.0/{appId}/kioskupdatecashsettings";
+            var localVarPath = "./api/v1.0/{appId}/kioskupdatecashsettings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4617,7 +4617,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 

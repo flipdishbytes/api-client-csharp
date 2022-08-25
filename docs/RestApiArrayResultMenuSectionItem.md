@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiArrayResultMenuSectionItem
+# Flipdish.Model.RestApiArrayResultMenuSectionItem
 ## Properties
 
 Name | Type | Description | Notes

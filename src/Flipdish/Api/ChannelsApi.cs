@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -711,7 +711,7 @@ namespace Flipdish.Api
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->AssignAppIdToSalesChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/{channelId}/assign-appId";
+            var localVarPath = "./api/v1.0/{appId}/channels/{channelId}/assign-appId";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -759,7 +759,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -793,7 +793,7 @@ namespace Flipdish.Api
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->AssignAppIdToSalesChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/{channelId}/assign-appId";
+            var localVarPath = "./api/v1.0/{appId}/channels/{channelId}/assign-appId";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -841,7 +841,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -879,7 +879,7 @@ namespace Flipdish.Api
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->AssignStoreToChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/assign-store";
+            var localVarPath = "./api/v1.0/{appId}/channels/assign-store";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -928,7 +928,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -967,7 +967,7 @@ namespace Flipdish.Api
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->AssignStoreToChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/assign-store";
+            var localVarPath = "./api/v1.0/{appId}/channels/assign-store";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1016,7 +1016,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -1054,7 +1054,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling ChannelsApi->AttachStoreToSalesChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/{channelId}/stores/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/channels/{channelId}/stores/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1103,7 +1103,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -1142,7 +1142,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling ChannelsApi->AttachStoreToSalesChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/{channelId}/stores/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/channels/{channelId}/stores/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1191,7 +1191,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -1224,7 +1224,7 @@ namespace Flipdish.Api
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->DetachAllStoresFromSalesChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/{channelId}/stores";
+            var localVarPath = "./api/v1.0/{appId}/channels/{channelId}/stores";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1272,7 +1272,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -1306,7 +1306,7 @@ namespace Flipdish.Api
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->DetachAllStoresFromSalesChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/{channelId}/stores";
+            var localVarPath = "./api/v1.0/{appId}/channels/{channelId}/stores";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1354,7 +1354,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -1392,7 +1392,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling ChannelsApi->DetachStoreFromSalesChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/{channelId}/stores/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/channels/{channelId}/stores/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1441,7 +1441,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -1480,7 +1480,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling ChannelsApi->DetachStoreFromSalesChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/{channelId}/stores/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/channels/{channelId}/stores/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1529,7 +1529,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -1557,7 +1557,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->GetAssignedChannels");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/assigned-channels";
+            var localVarPath = "./api/v1.0/{appId}/channels/assigned-channels";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1604,7 +1604,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultChannel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultChannel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultChannel)));
         }
 
@@ -1633,7 +1633,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->GetAssignedChannels");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/assigned-channels";
+            var localVarPath = "./api/v1.0/{appId}/channels/assigned-channels";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1680,7 +1680,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultChannel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultChannel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultChannel)));
         }
 
@@ -1708,7 +1708,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->GetAvailableChannels");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/available-channels";
+            var localVarPath = "./api/v1.0/{appId}/channels/available-channels";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1755,7 +1755,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultChannel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultChannel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultChannel)));
         }
 
@@ -1784,7 +1784,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->GetAvailableChannels");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/available-channels";
+            var localVarPath = "./api/v1.0/{appId}/channels/available-channels";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1831,7 +1831,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultChannel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultChannel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultChannel)));
         }
 
@@ -1864,7 +1864,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->GetChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/{id}";
+            var localVarPath = "./api/v1.0/{appId}/channels/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1912,7 +1912,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultChannel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultChannel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultChannel)));
         }
 
@@ -1946,7 +1946,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->GetChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/{id}";
+            var localVarPath = "./api/v1.0/{appId}/channels/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1994,7 +1994,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultChannel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultChannel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultChannel)));
         }
 
@@ -2022,7 +2022,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->GetChannels");
 
-            var localVarPath = "/api/v1.0/{appId}/channels";
+            var localVarPath = "./api/v1.0/{appId}/channels";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2069,7 +2069,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultChannel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultChannel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultChannel)));
         }
 
@@ -2098,7 +2098,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ChannelsApi->GetChannels");
 
-            var localVarPath = "/api/v1.0/{appId}/channels";
+            var localVarPath = "./api/v1.0/{appId}/channels";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2145,7 +2145,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultChannel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultChannel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultChannel)));
         }
 
@@ -2178,7 +2178,7 @@ namespace Flipdish.Api
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->GetStoresAssignedToChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/{channelId}/assigned-stores";
+            var localVarPath = "./api/v1.0/{appId}/channels/{channelId}/assigned-stores";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2226,7 +2226,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultStoreChannelAssignment>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultStoreChannelAssignment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultStoreChannelAssignment)));
         }
 
@@ -2260,7 +2260,7 @@ namespace Flipdish.Api
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->GetStoresAssignedToChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/{channelId}/assigned-stores";
+            var localVarPath = "./api/v1.0/{appId}/channels/{channelId}/assigned-stores";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2308,7 +2308,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultStoreChannelAssignment>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultStoreChannelAssignment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultStoreChannelAssignment)));
         }
 
@@ -2341,7 +2341,7 @@ namespace Flipdish.Api
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->GetStoresBySalesChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/{channelId}/stores";
+            var localVarPath = "./api/v1.0/{appId}/channels/{channelId}/stores";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2389,7 +2389,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Response)));
         }
 
@@ -2423,7 +2423,7 @@ namespace Flipdish.Api
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->GetStoresBySalesChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/{channelId}/stores";
+            var localVarPath = "./api/v1.0/{appId}/channels/{channelId}/stores";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2471,7 +2471,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Response)));
         }
 
@@ -2509,7 +2509,7 @@ namespace Flipdish.Api
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->UnassignStoreFromChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/unassign-store";
+            var localVarPath = "./api/v1.0/{appId}/channels/unassign-store";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2558,7 +2558,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -2597,7 +2597,7 @@ namespace Flipdish.Api
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->UnassignStoreFromChannel");
 
-            var localVarPath = "/api/v1.0/{appId}/channels/unassign-store";
+            var localVarPath = "./api/v1.0/{appId}/channels/unassign-store";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2646,7 +2646,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 

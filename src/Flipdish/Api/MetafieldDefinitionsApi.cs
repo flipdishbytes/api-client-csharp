@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -472,7 +472,7 @@ namespace Flipdish.Api
             if (createMetafieldDefinition == null)
                 throw new ApiException(400, "Missing required parameter 'createMetafieldDefinition' when calling MetafieldDefinitionsApi->CreateMetafieldDefinition");
 
-            var localVarPath = "/api/v1.0/{appId}/metafields/definitions/{ownerEntity}";
+            var localVarPath = "./api/v1.0/{appId}/metafields/definitions/{ownerEntity}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -533,7 +533,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMetafieldDefinition>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMetafieldDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMetafieldDefinition)));
         }
 
@@ -572,7 +572,7 @@ namespace Flipdish.Api
             if (createMetafieldDefinition == null)
                 throw new ApiException(400, "Missing required parameter 'createMetafieldDefinition' when calling MetafieldDefinitionsApi->CreateMetafieldDefinition");
 
-            var localVarPath = "/api/v1.0/{appId}/metafields/definitions/{ownerEntity}";
+            var localVarPath = "./api/v1.0/{appId}/metafields/definitions/{ownerEntity}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -633,7 +633,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMetafieldDefinition>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMetafieldDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMetafieldDefinition)));
         }
 
@@ -671,7 +671,7 @@ namespace Flipdish.Api
             if (key == null)
                 throw new ApiException(400, "Missing required parameter 'key' when calling MetafieldDefinitionsApi->GetMetafieldDefinitionByKey");
 
-            var localVarPath = "/api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key}";
+            var localVarPath = "./api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -720,7 +720,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMetafieldDefinition>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMetafieldDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMetafieldDefinition)));
         }
 
@@ -759,7 +759,7 @@ namespace Flipdish.Api
             if (key == null)
                 throw new ApiException(400, "Missing required parameter 'key' when calling MetafieldDefinitionsApi->GetMetafieldDefinitionByKey");
 
-            var localVarPath = "/api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key}";
+            var localVarPath = "./api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -808,7 +808,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMetafieldDefinition>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMetafieldDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMetafieldDefinition)));
         }
 
@@ -847,7 +847,7 @@ namespace Flipdish.Api
             if (ownerEntity == null)
                 throw new ApiException(400, "Missing required parameter 'ownerEntity' when calling MetafieldDefinitionsApi->GetMetafieldDefinitions");
 
-            var localVarPath = "/api/v1.0/{appId}/metafields/definitions/{ownerEntity}";
+            var localVarPath = "./api/v1.0/{appId}/metafields/definitions/{ownerEntity}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -898,7 +898,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultMetafieldDefinition>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultMetafieldDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultMetafieldDefinition)));
         }
 
@@ -938,7 +938,7 @@ namespace Flipdish.Api
             if (ownerEntity == null)
                 throw new ApiException(400, "Missing required parameter 'ownerEntity' when calling MetafieldDefinitionsApi->GetMetafieldDefinitions");
 
-            var localVarPath = "/api/v1.0/{appId}/metafields/definitions/{ownerEntity}";
+            var localVarPath = "./api/v1.0/{appId}/metafields/definitions/{ownerEntity}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -989,7 +989,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultMetafieldDefinition>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultMetafieldDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultMetafieldDefinition)));
         }
 
@@ -1017,7 +1017,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling MetafieldDefinitionsApi->GetOwnerEntityConfigurations");
 
-            var localVarPath = "/api/v1.0/{appId}/metafields/definitions";
+            var localVarPath = "./api/v1.0/{appId}/metafields/definitions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1064,7 +1064,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<OwnerEntityConfigurations>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (OwnerEntityConfigurations) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OwnerEntityConfigurations)));
         }
 
@@ -1093,7 +1093,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling MetafieldDefinitionsApi->GetOwnerEntityConfigurations");
 
-            var localVarPath = "/api/v1.0/{appId}/metafields/definitions";
+            var localVarPath = "./api/v1.0/{appId}/metafields/definitions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1140,7 +1140,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<OwnerEntityConfigurations>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (OwnerEntityConfigurations) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OwnerEntityConfigurations)));
         }
 
@@ -1179,7 +1179,7 @@ namespace Flipdish.Api
             if (ownerEntity == null)
                 throw new ApiException(400, "Missing required parameter 'ownerEntity' when calling MetafieldDefinitionsApi->GetOwnerEntityRecommendations");
 
-            var localVarPath = "/api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity}";
+            var localVarPath = "./api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1230,7 +1230,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultMetafieldDefinitionRecommendation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultMetafieldDefinitionRecommendation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultMetafieldDefinitionRecommendation)));
         }
 
@@ -1270,7 +1270,7 @@ namespace Flipdish.Api
             if (ownerEntity == null)
                 throw new ApiException(400, "Missing required parameter 'ownerEntity' when calling MetafieldDefinitionsApi->GetOwnerEntityRecommendations");
 
-            var localVarPath = "/api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity}";
+            var localVarPath = "./api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1321,7 +1321,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultMetafieldDefinitionRecommendation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultMetafieldDefinitionRecommendation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultMetafieldDefinitionRecommendation)));
         }
 
@@ -1364,7 +1364,7 @@ namespace Flipdish.Api
             if (updateMetafieldDefinition == null)
                 throw new ApiException(400, "Missing required parameter 'updateMetafieldDefinition' when calling MetafieldDefinitionsApi->UpdateMetafieldDefinition");
 
-            var localVarPath = "/api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key}";
+            var localVarPath = "./api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1426,7 +1426,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMetafieldDefinition>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMetafieldDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMetafieldDefinition)));
         }
 
@@ -1470,7 +1470,7 @@ namespace Flipdish.Api
             if (updateMetafieldDefinition == null)
                 throw new ApiException(400, "Missing required parameter 'updateMetafieldDefinition' when calling MetafieldDefinitionsApi->UpdateMetafieldDefinition");
 
-            var localVarPath = "/api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key}";
+            var localVarPath = "./api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1532,7 +1532,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMetafieldDefinition>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMetafieldDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMetafieldDefinition)));
         }
 

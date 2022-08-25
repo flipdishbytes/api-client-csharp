@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -446,7 +446,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ApmApi->GetApmStatus");
 
-            var localVarPath = "/api/v1.0/{appId}/apm/status";
+            var localVarPath = "./api/v1.0/{appId}/apm/status";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -493,7 +493,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultApmStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultApmStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApmStatus)));
         }
 
@@ -522,7 +522,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ApmApi->GetApmStatus");
 
-            var localVarPath = "/api/v1.0/{appId}/apm/status";
+            var localVarPath = "./api/v1.0/{appId}/apm/status";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -569,7 +569,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultApmStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultApmStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApmStatus)));
         }
 
@@ -599,7 +599,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ApmApi->GetBasicStatistics");
 
-            var localVarPath = "/api/v1.0/{appId}/apm/statistics";
+            var localVarPath = "./api/v1.0/{appId}/apm/statistics";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -647,7 +647,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultApmStatistics>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultApmStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApmStatistics)));
         }
 
@@ -678,7 +678,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ApmApi->GetBasicStatistics");
 
-            var localVarPath = "/api/v1.0/{appId}/apm/statistics";
+            var localVarPath = "./api/v1.0/{appId}/apm/statistics";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -726,7 +726,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultApmStatistics>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultApmStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApmStatistics)));
         }
 
@@ -756,7 +756,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ApmApi->GetCalendarWeekStatistics");
 
-            var localVarPath = "/api/v1.0/{appId}/apm/statistics/calendar";
+            var localVarPath = "./api/v1.0/{appId}/apm/statistics/calendar";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -804,7 +804,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultApmHourlyDataPoint>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultApmHourlyDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultApmHourlyDataPoint)));
         }
 
@@ -835,7 +835,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ApmApi->GetCalendarWeekStatistics");
 
-            var localVarPath = "/api/v1.0/{appId}/apm/statistics/calendar";
+            var localVarPath = "./api/v1.0/{appId}/apm/statistics/calendar";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -883,7 +883,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultApmHourlyDataPoint>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultApmHourlyDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultApmHourlyDataPoint)));
         }
 
@@ -920,7 +920,7 @@ namespace Flipdish.Api
             if (aggregateDataBy == null)
                 throw new ApiException(400, "Missing required parameter 'aggregateDataBy' when calling ApmApi->GetCallsStatistics");
 
-            var localVarPath = "/api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy}";
+            var localVarPath = "./api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -970,7 +970,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultApmDataPoint>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultApmDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultApmDataPoint)));
         }
 
@@ -1008,7 +1008,7 @@ namespace Flipdish.Api
             if (aggregateDataBy == null)
                 throw new ApiException(400, "Missing required parameter 'aggregateDataBy' when calling ApmApi->GetCallsStatistics");
 
-            var localVarPath = "/api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy}";
+            var localVarPath = "./api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1058,7 +1058,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultApmDataPoint>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultApmDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultApmDataPoint)));
         }
 
@@ -1095,7 +1095,7 @@ namespace Flipdish.Api
             if (aggregateDataBy == null)
                 throw new ApiException(400, "Missing required parameter 'aggregateDataBy' when calling ApmApi->GetOrderStatistics");
 
-            var localVarPath = "/api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy}";
+            var localVarPath = "./api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1145,7 +1145,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultApmCurrencyDataPoint>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultApmCurrencyDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultApmCurrencyDataPoint)));
         }
 
@@ -1183,7 +1183,7 @@ namespace Flipdish.Api
             if (aggregateDataBy == null)
                 throw new ApiException(400, "Missing required parameter 'aggregateDataBy' when calling ApmApi->GetOrderStatistics");
 
-            var localVarPath = "/api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy}";
+            var localVarPath = "./api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1233,7 +1233,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultApmCurrencyDataPoint>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultApmCurrencyDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultApmCurrencyDataPoint)));
         }
 
@@ -1267,7 +1267,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ApmApi->GetPaginatedCallList");
 
-            var localVarPath = "/api/v1.0/{appId}/apm/calls";
+            var localVarPath = "./api/v1.0/{appId}/apm/calls";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1317,7 +1317,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultPhoneCall>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultPhoneCall) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPhoneCall)));
         }
 
@@ -1352,7 +1352,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling ApmApi->GetPaginatedCallList");
 
-            var localVarPath = "/api/v1.0/{appId}/apm/calls";
+            var localVarPath = "./api/v1.0/{appId}/apm/calls";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1402,7 +1402,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultPhoneCall>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultPhoneCall) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPhoneCall)));
         }
 

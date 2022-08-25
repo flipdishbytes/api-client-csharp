@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GeoPointRequest
+# Flipdish.Model.GeoPointRequest
 ## Properties
 
 Name | Type | Description | Notes

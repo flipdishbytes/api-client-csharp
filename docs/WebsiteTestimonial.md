@@ -1,4 +1,4 @@
-# IO.Swagger.Model.WebsiteTestimonial
+# Flipdish.Model.WebsiteTestimonial
 ## Properties
 
 Name | Type | Description | Notes

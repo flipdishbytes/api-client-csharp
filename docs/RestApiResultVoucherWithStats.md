@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultVoucherWithStats
+# Flipdish.Model.RestApiResultVoucherWithStats
 ## Properties
 
 Name | Type | Description | Notes

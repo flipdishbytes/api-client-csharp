@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiArrayResultAllMetadataResult
+# Flipdish.Model.RestApiArrayResultAllMetadataResult
 ## Properties
 
 Name | Type | Description | Notes

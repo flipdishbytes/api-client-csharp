@@ -1,4 +1,4 @@
-# IO.Swagger.Model.KioskBluetoothTerminalCancelUpdateEvent
+# Flipdish.Model.KioskBluetoothTerminalCancelUpdateEvent
 ## Properties
 
 Name | Type | Description | Notes

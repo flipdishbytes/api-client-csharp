@@ -1,4 +1,4 @@
-# IO.Swagger.Model.AppConfigSalesChannel
+# Flipdish.Model.AppConfigSalesChannel
 ## Properties
 
 Name | Type | Description | Notes

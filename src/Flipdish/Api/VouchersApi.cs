@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -425,7 +425,7 @@ namespace Flipdish.Api
             if (voucher == null)
                 throw new ApiException(400, "Missing required parameter 'voucher' when calling VouchersApi->CreateVoucher");
 
-            var localVarPath = "/api/v1.0/vouchers/{appId}";
+            var localVarPath = "./api/v1.0/vouchers/{appId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -485,7 +485,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultVoucherWithStats>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultVoucherWithStats) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultVoucherWithStats)));
         }
 
@@ -519,7 +519,7 @@ namespace Flipdish.Api
             if (voucher == null)
                 throw new ApiException(400, "Missing required parameter 'voucher' when calling VouchersApi->CreateVoucher");
 
-            var localVarPath = "/api/v1.0/vouchers/{appId}";
+            var localVarPath = "./api/v1.0/vouchers/{appId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -579,7 +579,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultVoucherWithStats>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultVoucherWithStats) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultVoucherWithStats)));
         }
 
@@ -607,7 +607,7 @@ namespace Flipdish.Api
             if (voucherId == null)
                 throw new ApiException(400, "Missing required parameter 'voucherId' when calling VouchersApi->GetVoucherById");
 
-            var localVarPath = "/api/v1.0/vouchers/{voucherId}";
+            var localVarPath = "./api/v1.0/vouchers/{voucherId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -654,7 +654,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultVoucherWithStats>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultVoucherWithStats) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultVoucherWithStats)));
         }
 
@@ -683,7 +683,7 @@ namespace Flipdish.Api
             if (voucherId == null)
                 throw new ApiException(400, "Missing required parameter 'voucherId' when calling VouchersApi->GetVoucherById");
 
-            var localVarPath = "/api/v1.0/vouchers/{voucherId}";
+            var localVarPath = "./api/v1.0/vouchers/{voucherId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -730,7 +730,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultVoucherWithStats>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultVoucherWithStats) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultVoucherWithStats)));
         }
 
@@ -765,7 +765,7 @@ namespace Flipdish.Api
             if (aggregateDataBy == null)
                 throw new ApiException(400, "Missing required parameter 'aggregateDataBy' when calling VouchersApi->GetVoucherStatsById");
 
-            var localVarPath = "/api/v1.0/vouchers/stats/{voucherId}";
+            var localVarPath = "./api/v1.0/vouchers/stats/{voucherId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -814,7 +814,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultVoucherDataPoint>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultVoucherDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultVoucherDataPoint)));
         }
 
@@ -850,7 +850,7 @@ namespace Flipdish.Api
             if (aggregateDataBy == null)
                 throw new ApiException(400, "Missing required parameter 'aggregateDataBy' when calling VouchersApi->GetVoucherStatsById");
 
-            var localVarPath = "/api/v1.0/vouchers/stats/{voucherId}";
+            var localVarPath = "./api/v1.0/vouchers/stats/{voucherId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -899,7 +899,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultVoucherDataPoint>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultVoucherDataPoint) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultVoucherDataPoint)));
         }
 
@@ -941,7 +941,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling VouchersApi->GetVouchers");
 
-            var localVarPath = "/api/v1.0/{appId}/vouchers/summaries";
+            var localVarPath = "./api/v1.0/{appId}/vouchers/summaries";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -995,7 +995,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultVoucherSummary>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultVoucherSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultVoucherSummary)));
         }
 
@@ -1038,7 +1038,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling VouchersApi->GetVouchers");
 
-            var localVarPath = "/api/v1.0/{appId}/vouchers/summaries";
+            var localVarPath = "./api/v1.0/{appId}/vouchers/summaries";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1092,7 +1092,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultVoucherSummary>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultVoucherSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultVoucherSummary)));
         }
 
@@ -1133,7 +1133,7 @@ namespace Flipdish.Api
             if (voucher == null)
                 throw new ApiException(400, "Missing required parameter 'voucher' when calling VouchersApi->UpdateVoucher");
 
-            var localVarPath = "/api/v1.0/vouchers/{voucherId}";
+            var localVarPath = "./api/v1.0/vouchers/{voucherId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1197,7 +1197,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultVoucherWithStats>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultVoucherWithStats) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultVoucherWithStats)));
         }
 
@@ -1239,7 +1239,7 @@ namespace Flipdish.Api
             if (voucher == null)
                 throw new ApiException(400, "Missing required parameter 'voucher' when calling VouchersApi->UpdateVoucher");
 
-            var localVarPath = "/api/v1.0/vouchers/{voucherId}";
+            var localVarPath = "./api/v1.0/vouchers/{voucherId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1303,7 +1303,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultVoucherWithStats>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultVoucherWithStats) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultVoucherWithStats)));
         }
 

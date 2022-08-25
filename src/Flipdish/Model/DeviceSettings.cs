@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
 namespace Flipdish.Model
@@ -28,7 +26,7 @@ namespace Flipdish.Model
     /// Device settings for Hydra
     /// </summary>
     [DataContract]
-    public partial class DeviceSettings :  IEquatable<DeviceSettings>, IValidatableObject
+    public partial class DeviceSettings :  IEquatable<DeviceSettings>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DeviceSettings" /> class.
@@ -172,52 +170,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Brightness.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            // Volume (int?) maximum
-            if(this.Volume > (int?)10)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Volume, must be a value less than or equal to 10.", new [] { "Volume" });
-            }
-
-            // Volume (int?) minimum
-            if(this.Volume < (int?)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Volume, must be a value greater than or equal to 0.", new [] { "Volume" });
-            }
-
-            // FontSize (double?) maximum
-            if(this.FontSize > (double?)100)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FontSize, must be a value less than or equal to 100.", new [] { "FontSize" });
-            }
-
-            // FontSize (double?) minimum
-            if(this.FontSize < (double?)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FontSize, must be a value greater than or equal to 1.", new [] { "FontSize" });
-            }
-
-            // Brightness (int?) maximum
-            if(this.Brightness > (int?)100)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Brightness, must be a value less than or equal to 100.", new [] { "Brightness" });
-            }
-
-            // Brightness (int?) minimum
-            if(this.Brightness < (int?)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Brightness, must be a value greater than or equal to 0.", new [] { "Brightness" });
-            }
-
-            yield break;
         }
     }
 

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StorePublishedEvent
+# Flipdish.Model.StorePublishedEvent
 ## Properties
 
 Name | Type | Description | Notes

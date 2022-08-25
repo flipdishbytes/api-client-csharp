@@ -1,4 +1,4 @@
-# IO.Swagger.Model.OrderFulfillmentStatus
+# Flipdish.Model.OrderFulfillmentStatus
 ## Properties
 
 Name | Type | Description | Notes

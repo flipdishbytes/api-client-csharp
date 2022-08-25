@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -615,7 +615,7 @@ namespace Flipdish.Api
             if (campaign == null)
                 throw new ApiException(400, "Missing required parameter 'campaign' when calling CampaignsApi->CreateLoyaltyCampaign");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/loyalty";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/loyalty";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -675,7 +675,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultLoyaltyCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultLoyaltyCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultLoyaltyCampaign)));
         }
 
@@ -709,7 +709,7 @@ namespace Flipdish.Api
             if (campaign == null)
                 throw new ApiException(400, "Missing required parameter 'campaign' when calling CampaignsApi->CreateLoyaltyCampaign");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/loyalty";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/loyalty";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -769,7 +769,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultLoyaltyCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultLoyaltyCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultLoyaltyCampaign)));
         }
 
@@ -802,7 +802,7 @@ namespace Flipdish.Api
             if (campaign == null)
                 throw new ApiException(400, "Missing required parameter 'campaign' when calling CampaignsApi->CreateRetentionCampaign");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/retention";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/retention";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -862,7 +862,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultRetentionCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultRetentionCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultRetentionCampaign)));
         }
 
@@ -896,7 +896,7 @@ namespace Flipdish.Api
             if (campaign == null)
                 throw new ApiException(400, "Missing required parameter 'campaign' when calling CampaignsApi->CreateRetentionCampaign");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/retention";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/retention";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -956,7 +956,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultRetentionCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultRetentionCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultRetentionCampaign)));
         }
 
@@ -984,7 +984,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CampaignsApi->GetLoyaltyCampaignsForApp");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/loyalty";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/loyalty";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1031,7 +1031,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultLoyaltyCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultLoyaltyCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultLoyaltyCampaign)));
         }
 
@@ -1060,7 +1060,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CampaignsApi->GetLoyaltyCampaignsForApp");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/loyalty";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/loyalty";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1107,7 +1107,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultLoyaltyCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultLoyaltyCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultLoyaltyCampaign)));
         }
 
@@ -1140,7 +1140,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling CampaignsApi->GetLoyaltyCampaignsForStore");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/loyalty/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/loyalty/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1188,7 +1188,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultLoyaltyCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultLoyaltyCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultLoyaltyCampaign)));
         }
 
@@ -1222,7 +1222,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling CampaignsApi->GetLoyaltyCampaignsForStore");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/loyalty/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/loyalty/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1270,7 +1270,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultLoyaltyCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultLoyaltyCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultLoyaltyCampaign)));
         }
 
@@ -1298,7 +1298,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CampaignsApi->GetRetentionCampaignsForApp");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/retention";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/retention";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1345,7 +1345,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultRetentionCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultRetentionCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultRetentionCampaign)));
         }
 
@@ -1374,7 +1374,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CampaignsApi->GetRetentionCampaignsForApp");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/retention";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/retention";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1421,7 +1421,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultRetentionCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultRetentionCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultRetentionCampaign)));
         }
 
@@ -1454,7 +1454,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling CampaignsApi->GetRetentionCampaignsForStore");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/retention/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/retention/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1502,7 +1502,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultRetentionCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultRetentionCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultRetentionCampaign)));
         }
 
@@ -1536,7 +1536,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling CampaignsApi->GetRetentionCampaignsForStore");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/retention/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/retention/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1584,7 +1584,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultRetentionCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultRetentionCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultRetentionCampaign)));
         }
 
@@ -1614,7 +1614,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CampaignsApi->GetStoreList");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/stores";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/stores";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1662,7 +1662,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultStoreListItem>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultStoreListItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultStoreListItem)));
         }
 
@@ -1693,7 +1693,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CampaignsApi->GetStoreList");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/stores";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/stores";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1741,7 +1741,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultStoreListItem>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultStoreListItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultStoreListItem)));
         }
 
@@ -1773,7 +1773,7 @@ namespace Flipdish.Api
             if (campaignId == null)
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling CampaignsApi->RemoveCampaign");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/{campaignId}";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/{campaignId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1821,7 +1821,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1854,7 +1854,7 @@ namespace Flipdish.Api
             if (campaignId == null)
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling CampaignsApi->RemoveCampaign");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/{campaignId}";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/{campaignId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1902,7 +1902,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1940,7 +1940,7 @@ namespace Flipdish.Api
             if (campaign == null)
                 throw new ApiException(400, "Missing required parameter 'campaign' when calling CampaignsApi->UpdateLoyaltyCampaign");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/loyalty/{campaignId}";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/loyalty/{campaignId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2001,7 +2001,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultLoyaltyCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultLoyaltyCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultLoyaltyCampaign)));
         }
 
@@ -2040,7 +2040,7 @@ namespace Flipdish.Api
             if (campaign == null)
                 throw new ApiException(400, "Missing required parameter 'campaign' when calling CampaignsApi->UpdateLoyaltyCampaign");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/loyalty/{campaignId}";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/loyalty/{campaignId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2101,7 +2101,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultLoyaltyCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultLoyaltyCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultLoyaltyCampaign)));
         }
 
@@ -2139,7 +2139,7 @@ namespace Flipdish.Api
             if (campaign == null)
                 throw new ApiException(400, "Missing required parameter 'campaign' when calling CampaignsApi->UpdateRetentionCampaign");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/retention/{campaignId}";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/retention/{campaignId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2200,7 +2200,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultRetentionCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultRetentionCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultRetentionCampaign)));
         }
 
@@ -2239,7 +2239,7 @@ namespace Flipdish.Api
             if (campaign == null)
                 throw new ApiException(400, "Missing required parameter 'campaign' when calling CampaignsApi->UpdateRetentionCampaign");
 
-            var localVarPath = "/api/v1.0/{appId}/campaigns/retention/{campaignId}";
+            var localVarPath = "./api/v1.0/{appId}/campaigns/retention/{campaignId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2300,7 +2300,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultRetentionCampaign>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultRetentionCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultRetentionCampaign)));
         }
 

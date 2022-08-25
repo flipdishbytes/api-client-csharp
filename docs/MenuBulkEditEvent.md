@@ -1,4 +1,4 @@
-# IO.Swagger.Model.MenuBulkEditEvent
+# Flipdish.Model.MenuBulkEditEvent
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultProcessingFeeConfig
+# Flipdish.Model.RestApiResultProcessingFeeConfig
 ## Properties
 
 Name | Type | Description | Notes

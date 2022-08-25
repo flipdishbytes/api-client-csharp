@@ -1,4 +1,4 @@
-# IO.Swagger.Model.JobResponse
+# Flipdish.Model.JobResponse
 ## Properties
 
 Name | Type | Description | Notes

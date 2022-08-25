@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -776,7 +776,7 @@ namespace Flipdish.Api
             if (answerId == null)
                 throw new ApiException(400, "Missing required parameter 'answerId' when calling AccountsApi->AnswerSignUpQuestion");
 
-            var localVarPath = "/api/v1.0/accounts/signupstep/{signupStepAction}/answer";
+            var localVarPath = "./api/v1.0/accounts/signupstep/{signupStepAction}/answer";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -836,7 +836,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -869,7 +869,7 @@ namespace Flipdish.Api
             if (answerId == null)
                 throw new ApiException(400, "Missing required parameter 'answerId' when calling AccountsApi->AnswerSignUpQuestion");
 
-            var localVarPath = "/api/v1.0/accounts/signupstep/{signupStepAction}/answer";
+            var localVarPath = "./api/v1.0/accounts/signupstep/{signupStepAction}/answer";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -929,7 +929,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -956,7 +956,7 @@ namespace Flipdish.Api
             if (changePasswordModel == null)
                 throw new ApiException(400, "Missing required parameter 'changePasswordModel' when calling AccountsApi->ChangePassword");
 
-            var localVarPath = "/api/v1.0/accounts/password";
+            var localVarPath = "./api/v1.0/accounts/password";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1015,7 +1015,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1043,7 +1043,7 @@ namespace Flipdish.Api
             if (changePasswordModel == null)
                 throw new ApiException(400, "Missing required parameter 'changePasswordModel' when calling AccountsApi->ChangePassword");
 
-            var localVarPath = "/api/v1.0/accounts/password";
+            var localVarPath = "./api/v1.0/accounts/password";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1102,7 +1102,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1129,7 +1129,7 @@ namespace Flipdish.Api
             if (changePasswordModel == null)
                 throw new ApiException(400, "Missing required parameter 'changePasswordModel' when calling AccountsApi->ChangePasswordWithPin");
 
-            var localVarPath = "/api/v1.0/accounts/password/pin";
+            var localVarPath = "./api/v1.0/accounts/password/pin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1188,7 +1188,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1216,7 +1216,7 @@ namespace Flipdish.Api
             if (changePasswordModel == null)
                 throw new ApiException(400, "Missing required parameter 'changePasswordModel' when calling AccountsApi->ChangePasswordWithPin");
 
-            var localVarPath = "/api/v1.0/accounts/password/pin";
+            var localVarPath = "./api/v1.0/accounts/password/pin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1275,7 +1275,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1302,7 +1302,7 @@ namespace Flipdish.Api
             if (createAccountModel == null)
                 throw new ApiException(400, "Missing required parameter 'createAccountModel' when calling AccountsApi->CreateAccount");
 
-            var localVarPath = "/api/v1.0/accounts";
+            var localVarPath = "./api/v1.0/accounts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1361,7 +1361,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1389,7 +1389,7 @@ namespace Flipdish.Api
             if (createAccountModel == null)
                 throw new ApiException(400, "Missing required parameter 'createAccountModel' when calling AccountsApi->CreateAccount");
 
-            var localVarPath = "/api/v1.0/accounts";
+            var localVarPath = "./api/v1.0/accounts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1448,7 +1448,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1471,7 +1471,7 @@ namespace Flipdish.Api
         public ApiResponse< RestApiResultAccountDetail > GetAccountDetailsWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/accounts";
+            var localVarPath = "./api/v1.0/accounts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1517,7 +1517,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAccountDetail>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAccountDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAccountDetail)));
         }
 
@@ -1541,7 +1541,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAccountDetail>> GetAccountDetailsAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/accounts";
+            var localVarPath = "./api/v1.0/accounts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1587,7 +1587,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAccountDetail>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAccountDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAccountDetail)));
         }
 
@@ -1610,7 +1610,7 @@ namespace Flipdish.Api
         public ApiResponse< RestApiArrayResultLocalisedTimeZone > GetLocalisedTimeZonesWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/accounts/timezones";
+            var localVarPath = "./api/v1.0/accounts/timezones";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1656,7 +1656,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultLocalisedTimeZone>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultLocalisedTimeZone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultLocalisedTimeZone)));
         }
 
@@ -1680,7 +1680,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultLocalisedTimeZone>> GetLocalisedTimeZonesAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/accounts/timezones";
+            var localVarPath = "./api/v1.0/accounts/timezones";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1726,7 +1726,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultLocalisedTimeZone>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultLocalisedTimeZone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultLocalisedTimeZone)));
         }
 
@@ -1753,7 +1753,7 @@ namespace Flipdish.Api
             if (loginModel == null)
                 throw new ApiException(400, "Missing required parameter 'loginModel' when calling AccountsApi->Login");
 
-            var localVarPath = "/api/v1.0/accounts/login";
+            var localVarPath = "./api/v1.0/accounts/login";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1812,7 +1812,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1840,7 +1840,7 @@ namespace Flipdish.Api
             if (loginModel == null)
                 throw new ApiException(400, "Missing required parameter 'loginModel' when calling AccountsApi->Login");
 
-            var localVarPath = "/api/v1.0/accounts/login";
+            var localVarPath = "./api/v1.0/accounts/login";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1899,7 +1899,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1926,7 +1926,7 @@ namespace Flipdish.Api
             if (loginModel == null)
                 throw new ApiException(400, "Missing required parameter 'loginModel' when calling AccountsApi->LoginWithPin");
 
-            var localVarPath = "/api/v1.0/accounts/login/pin";
+            var localVarPath = "./api/v1.0/accounts/login/pin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1985,7 +1985,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2013,7 +2013,7 @@ namespace Flipdish.Api
             if (loginModel == null)
                 throw new ApiException(400, "Missing required parameter 'loginModel' when calling AccountsApi->LoginWithPin");
 
-            var localVarPath = "/api/v1.0/accounts/login/pin";
+            var localVarPath = "./api/v1.0/accounts/login/pin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2072,7 +2072,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2094,7 +2094,7 @@ namespace Flipdish.Api
         public ApiResponse<Object> LogoutWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/accounts/logout";
+            var localVarPath = "./api/v1.0/accounts/logout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2140,7 +2140,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2163,7 +2163,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> LogoutAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/accounts/logout";
+            var localVarPath = "./api/v1.0/accounts/logout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2209,7 +2209,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2236,7 +2236,7 @@ namespace Flipdish.Api
             if (passwordResetModel == null)
                 throw new ApiException(400, "Missing required parameter 'passwordResetModel' when calling AccountsApi->PasswordResetWithToken");
 
-            var localVarPath = "/api/v1.0/accounts/password";
+            var localVarPath = "./api/v1.0/accounts/password";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2295,7 +2295,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2323,7 +2323,7 @@ namespace Flipdish.Api
             if (passwordResetModel == null)
                 throw new ApiException(400, "Missing required parameter 'passwordResetModel' when calling AccountsApi->PasswordResetWithToken");
 
-            var localVarPath = "/api/v1.0/accounts/password";
+            var localVarPath = "./api/v1.0/accounts/password";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2382,7 +2382,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2410,7 +2410,7 @@ namespace Flipdish.Api
             if (requestLoginPinRequest == null)
                 throw new ApiException(400, "Missing required parameter 'requestLoginPinRequest' when calling AccountsApi->RequestLoginPin");
 
-            var localVarPath = "/api/v1.0/accounts/pin";
+            var localVarPath = "./api/v1.0/accounts/pin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2469,7 +2469,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RequestLoginPinResposne>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RequestLoginPinResposne) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestLoginPinResposne)));
         }
 
@@ -2498,7 +2498,7 @@ namespace Flipdish.Api
             if (requestLoginPinRequest == null)
                 throw new ApiException(400, "Missing required parameter 'requestLoginPinRequest' when calling AccountsApi->RequestLoginPin");
 
-            var localVarPath = "/api/v1.0/accounts/pin";
+            var localVarPath = "./api/v1.0/accounts/pin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2557,7 +2557,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RequestLoginPinResposne>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RequestLoginPinResposne) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestLoginPinResposne)));
         }
 
@@ -2584,7 +2584,7 @@ namespace Flipdish.Api
             if (requestPasswordResetModel == null)
                 throw new ApiException(400, "Missing required parameter 'requestPasswordResetModel' when calling AccountsApi->RequestPasswordReset");
 
-            var localVarPath = "/api/v1.0/accounts/passwordreset";
+            var localVarPath = "./api/v1.0/accounts/passwordreset";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2643,7 +2643,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2671,7 +2671,7 @@ namespace Flipdish.Api
             if (requestPasswordResetModel == null)
                 throw new ApiException(400, "Missing required parameter 'requestPasswordResetModel' when calling AccountsApi->RequestPasswordReset");
 
-            var localVarPath = "/api/v1.0/accounts/passwordreset";
+            var localVarPath = "./api/v1.0/accounts/passwordreset";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2730,7 +2730,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2758,7 +2758,7 @@ namespace Flipdish.Api
             if (requestPasswordResetRequest == null)
                 throw new ApiException(400, "Missing required parameter 'requestPasswordResetRequest' when calling AccountsApi->SendPinForPasswordReset");
 
-            var localVarPath = "/api/v1.0/accounts/password/resetpin";
+            var localVarPath = "./api/v1.0/accounts/password/resetpin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2817,7 +2817,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RequestPasswordResetPinResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RequestPasswordResetPinResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestPasswordResetPinResponse)));
         }
 
@@ -2846,7 +2846,7 @@ namespace Flipdish.Api
             if (requestPasswordResetRequest == null)
                 throw new ApiException(400, "Missing required parameter 'requestPasswordResetRequest' when calling AccountsApi->SendPinForPasswordReset");
 
-            var localVarPath = "/api/v1.0/accounts/password/resetpin";
+            var localVarPath = "./api/v1.0/accounts/password/resetpin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2905,7 +2905,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RequestPasswordResetPinResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RequestPasswordResetPinResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestPasswordResetPinResponse)));
         }
 
@@ -2932,7 +2932,7 @@ namespace Flipdish.Api
             if (signupStepAction == null)
                 throw new ApiException(400, "Missing required parameter 'signupStepAction' when calling AccountsApi->SkipSignupStep");
 
-            var localVarPath = "/api/v1.0/accounts/signupstep/{signupStepAction}/skip";
+            var localVarPath = "./api/v1.0/accounts/signupstep/{signupStepAction}/skip";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2979,7 +2979,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -3007,7 +3007,7 @@ namespace Flipdish.Api
             if (signupStepAction == null)
                 throw new ApiException(400, "Missing required parameter 'signupStepAction' when calling AccountsApi->SkipSignupStep");
 
-            var localVarPath = "/api/v1.0/accounts/signupstep/{signupStepAction}/skip";
+            var localVarPath = "./api/v1.0/accounts/signupstep/{signupStepAction}/skip";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3054,7 +3054,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -3081,7 +3081,7 @@ namespace Flipdish.Api
             if (updateAccountModel == null)
                 throw new ApiException(400, "Missing required parameter 'updateAccountModel' when calling AccountsApi->UpdateAccount");
 
-            var localVarPath = "/api/v1.0/accounts";
+            var localVarPath = "./api/v1.0/accounts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3140,7 +3140,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -3168,7 +3168,7 @@ namespace Flipdish.Api
             if (updateAccountModel == null)
                 throw new ApiException(400, "Missing required parameter 'updateAccountModel' when calling AccountsApi->UpdateAccount");
 
-            var localVarPath = "/api/v1.0/accounts";
+            var localVarPath = "./api/v1.0/accounts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3227,7 +3227,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 

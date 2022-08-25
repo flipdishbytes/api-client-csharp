@@ -1,4 +1,4 @@
-# IO.Swagger.Model.SmsInfo
+# Flipdish.Model.SmsInfo
 ## Properties
 
 Name | Type | Description | Notes

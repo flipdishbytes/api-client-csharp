@@ -1,4 +1,4 @@
-# IO.Swagger.Model.TelemetrySeriesProperty
+# Flipdish.Model.TelemetrySeriesProperty
 ## Properties
 
 Name | Type | Description | Notes

@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
 namespace Flipdish.Model
@@ -28,7 +26,7 @@ namespace Flipdish.Model
     /// A class that represents a single opening period in a day.  This starts &#39;StartTime&#39; after midnight and runs for a &#39;Period&#39;  after that, on the given DayOfWeek.
     /// </summary>
     [DataContract]
-    public partial class Range :  IEquatable<Range>, IValidatableObject
+    public partial class Range :  IEquatable<Range>
     {
         /// <summary>
         /// Day of week
@@ -194,16 +192,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DayOfWeek.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

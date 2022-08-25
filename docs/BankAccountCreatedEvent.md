@@ -1,4 +1,4 @@
-# IO.Swagger.Model.BankAccountCreatedEvent
+# Flipdish.Model.BankAccountCreatedEvent
 ## Properties
 
 Name | Type | Description | Notes

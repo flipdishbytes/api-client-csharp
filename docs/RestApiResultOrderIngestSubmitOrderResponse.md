@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultOrderIngestSubmitOrderResponse
+# Flipdish.Model.RestApiResultOrderIngestSubmitOrderResponse
 ## Properties
 
 Name | Type | Description | Notes

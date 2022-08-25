@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CreateMenuSectionItemFromCatalogItems
+# Flipdish.Model.CreateMenuSectionItemFromCatalogItems
 ## Properties
 
 Name | Type | Description | Notes

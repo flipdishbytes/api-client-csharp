@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GoogleCoordinates
+# Flipdish.Model.GoogleCoordinates
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StoreLogoDeletedEvent
+# Flipdish.Model.StoreLogoDeletedEvent
 ## Properties
 
 Name | Type | Description | Notes

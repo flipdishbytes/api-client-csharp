@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StoreCloneSettings
+# Flipdish.Model.StoreCloneSettings
 ## Properties
 
 Name | Type | Description | Notes

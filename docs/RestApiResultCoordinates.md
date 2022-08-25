@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultCoordinates
+# Flipdish.Model.RestApiResultCoordinates
 ## Properties
 
 Name | Type | Description | Notes

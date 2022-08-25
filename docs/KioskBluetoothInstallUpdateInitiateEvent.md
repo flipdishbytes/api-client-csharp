@@ -1,4 +1,4 @@
-# IO.Swagger.Model.KioskBluetoothInstallUpdateInitiateEvent
+# Flipdish.Model.KioskBluetoothInstallUpdateInitiateEvent
 ## Properties
 
 Name | Type | Description | Notes

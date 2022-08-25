@@ -1,4 +1,4 @@
-# IO.Swagger.Model.JobCancellation
+# Flipdish.Model.JobCancellation
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StripeTerminalConnectionToken
+# Flipdish.Model.StripeTerminalConnectionToken
 ## Properties
 
 Name | Type | Description | Notes

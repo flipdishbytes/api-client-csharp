@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CreateMetafieldDefinition
+# Flipdish.Model.CreateMetafieldDefinition
 ## Properties
 
 Name | Type | Description | Notes

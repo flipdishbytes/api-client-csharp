@@ -1,4 +1,4 @@
-# IO.Swagger.Model.FieldChangeInformation
+# Flipdish.Model.FieldChangeInformation
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.ProcessingFeeConfig
+# Flipdish.Model.ProcessingFeeConfig
 ## Properties
 
 Name | Type | Description | Notes

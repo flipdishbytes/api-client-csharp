@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Contact
+# Flipdish.Model.Contact
 ## Properties
 
 Name | Type | Description | Notes

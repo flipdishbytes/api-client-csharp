@@ -1,4 +1,4 @@
-# IO.Swagger.Model.HydraDeviceDetails
+# Flipdish.Model.HydraDeviceDetails
 ## Properties
 
 Name | Type | Description | Notes

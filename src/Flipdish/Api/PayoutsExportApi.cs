@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -490,7 +490,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsExportApi->ExportPayoutChargebacks");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks/export";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks/export";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -540,7 +540,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -581,7 +581,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsExportApi->ExportPayoutChargebacks");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks/export";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks/export";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -631,7 +631,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -671,7 +671,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsExportApi->ExportPayoutOrders");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders/export";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders/export";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -721,7 +721,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -762,7 +762,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsExportApi->ExportPayoutOrders");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders/export";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders/export";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -812,7 +812,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -852,7 +852,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsExportApi->ExportPayoutOtherCharges");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges/export";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges/export";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -902,7 +902,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -943,7 +943,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsExportApi->ExportPayoutOtherCharges");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges/export";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges/export";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -993,7 +993,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -1033,7 +1033,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsExportApi->ExportPayoutRefunds");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1083,7 +1083,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -1124,7 +1124,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsExportApi->ExportPayoutRefunds");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1174,7 +1174,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -1214,7 +1214,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsExportApi->ExportPayoutStores");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1264,7 +1264,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -1305,7 +1305,7 @@ namespace Flipdish.Api
             if (payoutId == null)
                 throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutsExportApi->ExportPayoutStores");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1355,7 +1355,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -1391,7 +1391,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling PayoutsExportApi->ExportPayouts");
 
-            var localVarPath = "/api/v1.0/{appId}/payouts/export";
+            var localVarPath = "./api/v1.0/{appId}/payouts/export";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1442,7 +1442,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -1479,7 +1479,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling PayoutsExportApi->ExportPayouts");
 
-            var localVarPath = "/api/v1.0/{appId}/payouts/export";
+            var localVarPath = "./api/v1.0/{appId}/payouts/export";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1530,7 +1530,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 

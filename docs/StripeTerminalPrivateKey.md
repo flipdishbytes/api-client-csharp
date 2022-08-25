@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StripeTerminalPrivateKey
+# Flipdish.Model.StripeTerminalPrivateKey
 ## Properties
 
 Name | Type | Description | Notes

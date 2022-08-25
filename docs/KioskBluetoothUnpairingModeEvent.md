@@ -1,4 +1,4 @@
-# IO.Swagger.Model.KioskBluetoothUnpairingModeEvent
+# Flipdish.Model.KioskBluetoothUnpairingModeEvent
 ## Properties
 
 Name | Type | Description | Notes

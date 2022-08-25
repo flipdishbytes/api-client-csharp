@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -259,7 +259,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling AuthorizationTokensApi->GetAuthorizationTokens");
 
-            var localVarPath = "/api/v1.0/{appId}/authorizationtokens/{oauthAppId}";
+            var localVarPath = "./api/v1.0/{appId}/authorizationtokens/{oauthAppId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -309,7 +309,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultOAuthTokenModel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultOAuthTokenModel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultOAuthTokenModel)));
         }
 
@@ -347,7 +347,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling AuthorizationTokensApi->GetAuthorizationTokens");
 
-            var localVarPath = "/api/v1.0/{appId}/authorizationtokens/{oauthAppId}";
+            var localVarPath = "./api/v1.0/{appId}/authorizationtokens/{oauthAppId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -397,7 +397,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultOAuthTokenModel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultOAuthTokenModel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultOAuthTokenModel)));
         }
 
@@ -429,7 +429,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling AuthorizationTokensApi->RevokeToken");
 
-            var localVarPath = "/api/v1.0/{appId}/authorizationtokens/{key}";
+            var localVarPath = "./api/v1.0/{appId}/authorizationtokens/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -477,7 +477,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -510,7 +510,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling AuthorizationTokensApi->RevokeToken");
 
-            var localVarPath = "/api/v1.0/{appId}/authorizationtokens/{key}";
+            var localVarPath = "./api/v1.0/{appId}/authorizationtokens/{key}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -558,7 +558,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CertificateCreatedEvent
+# Flipdish.Model.CertificateCreatedEvent
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.BusinessHoursOverride
+# Flipdish.Model.BusinessHoursOverride
 ## Properties
 
 Name | Type | Description | Notes

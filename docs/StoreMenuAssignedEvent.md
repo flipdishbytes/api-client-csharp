@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StoreMenuAssignedEvent
+# Flipdish.Model.StoreMenuAssignedEvent
 ## Properties
 
 Name | Type | Description | Notes

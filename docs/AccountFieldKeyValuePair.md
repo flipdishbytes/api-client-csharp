@@ -1,4 +1,4 @@
-# IO.Swagger.Model.AccountFieldKeyValuePair
+# Flipdish.Model.AccountFieldKeyValuePair
 ## Properties
 
 Name | Type | Description | Notes

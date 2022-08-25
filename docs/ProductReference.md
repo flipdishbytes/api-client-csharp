@@ -1,4 +1,4 @@
-# IO.Swagger.Model.ProductReference
+# Flipdish.Model.ProductReference
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RetentionCampaign
+# Flipdish.Model.RetentionCampaign
 ## Properties
 
 Name | Type | Description | Notes

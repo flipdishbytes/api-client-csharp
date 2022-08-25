@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -455,7 +455,7 @@ namespace Flipdish.Api
             if (driverId == null)
                 throw new ApiException(400, "Missing required parameter 'driverId' when calling DeliveryTrackingApi->AssignDriverToOrder");
 
-            var localVarPath = "/api/v1.0/{appId}/drivers/{driverId}/orders/{orderId}";
+            var localVarPath = "./api/v1.0/{appId}/drivers/{driverId}/orders/{orderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -504,7 +504,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -542,7 +542,7 @@ namespace Flipdish.Api
             if (driverId == null)
                 throw new ApiException(400, "Missing required parameter 'driverId' when calling DeliveryTrackingApi->AssignDriverToOrder");
 
-            var localVarPath = "/api/v1.0/{appId}/drivers/{driverId}/orders/{orderId}";
+            var localVarPath = "./api/v1.0/{appId}/drivers/{driverId}/orders/{orderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -591,7 +591,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -628,7 +628,7 @@ namespace Flipdish.Api
             if (orderIdAndSequenceNumbers == null)
                 throw new ApiException(400, "Missing required parameter 'orderIdAndSequenceNumbers' when calling DeliveryTrackingApi->AssignDriverToOrders");
 
-            var localVarPath = "/api/v1.0/{appId}/drivers/{driverId}/orders";
+            var localVarPath = "./api/v1.0/{appId}/drivers/{driverId}/orders";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -689,7 +689,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -727,7 +727,7 @@ namespace Flipdish.Api
             if (orderIdAndSequenceNumbers == null)
                 throw new ApiException(400, "Missing required parameter 'orderIdAndSequenceNumbers' when calling DeliveryTrackingApi->AssignDriverToOrders");
 
-            var localVarPath = "/api/v1.0/{appId}/drivers/{driverId}/orders";
+            var localVarPath = "./api/v1.0/{appId}/drivers/{driverId}/orders";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -788,7 +788,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -824,7 +824,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling DeliveryTrackingApi->GetDrivers");
 
-            var localVarPath = "/api/v1.0/{appId}/drivers";
+            var localVarPath = "./api/v1.0/{appId}/drivers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -875,7 +875,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultDriver>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultDriver) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultDriver)));
         }
 
@@ -912,7 +912,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling DeliveryTrackingApi->GetDrivers");
 
-            var localVarPath = "/api/v1.0/{appId}/drivers";
+            var localVarPath = "./api/v1.0/{appId}/drivers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -963,7 +963,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultDriver>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultDriver) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultDriver)));
         }
 
@@ -996,7 +996,7 @@ namespace Flipdish.Api
             if (driverInvitation == null)
                 throw new ApiException(400, "Missing required parameter 'driverInvitation' when calling DeliveryTrackingApi->InviteDriverToApp");
 
-            var localVarPath = "/api/v1.0/{appId}/drivers";
+            var localVarPath = "./api/v1.0/{appId}/drivers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1056,7 +1056,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultDriver>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultDriver) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultDriver)));
         }
 
@@ -1090,7 +1090,7 @@ namespace Flipdish.Api
             if (driverInvitation == null)
                 throw new ApiException(400, "Missing required parameter 'driverInvitation' when calling DeliveryTrackingApi->InviteDriverToApp");
 
-            var localVarPath = "/api/v1.0/{appId}/drivers";
+            var localVarPath = "./api/v1.0/{appId}/drivers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1150,7 +1150,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultDriver>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultDriver) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultDriver)));
         }
 
@@ -1182,7 +1182,7 @@ namespace Flipdish.Api
             if (driverId == null)
                 throw new ApiException(400, "Missing required parameter 'driverId' when calling DeliveryTrackingApi->RemoveDriverFromApp");
 
-            var localVarPath = "/api/v1.0/{appId}/drivers/{driverId}";
+            var localVarPath = "./api/v1.0/{appId}/drivers/{driverId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1230,7 +1230,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1263,7 +1263,7 @@ namespace Flipdish.Api
             if (driverId == null)
                 throw new ApiException(400, "Missing required parameter 'driverId' when calling DeliveryTrackingApi->RemoveDriverFromApp");
 
-            var localVarPath = "/api/v1.0/{appId}/drivers/{driverId}";
+            var localVarPath = "./api/v1.0/{appId}/drivers/{driverId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1311,7 +1311,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1343,7 +1343,7 @@ namespace Flipdish.Api
             if (orderId == null)
                 throw new ApiException(400, "Missing required parameter 'orderId' when calling DeliveryTrackingApi->UnassignDriverFromOrder");
 
-            var localVarPath = "/api/v1.0/{appId}/orders/{orderId}/driver";
+            var localVarPath = "./api/v1.0/{appId}/orders/{orderId}/driver";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1391,7 +1391,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1424,7 +1424,7 @@ namespace Flipdish.Api
             if (orderId == null)
                 throw new ApiException(400, "Missing required parameter 'orderId' when calling DeliveryTrackingApi->UnassignDriverFromOrder");
 
-            var localVarPath = "/api/v1.0/{appId}/orders/{orderId}/driver";
+            var localVarPath = "./api/v1.0/{appId}/orders/{orderId}/driver";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1472,7 +1472,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.OrderDropOffLocation
+# Flipdish.Model.OrderDropOffLocation
 ## Properties
 
 Name | Type | Description | Notes

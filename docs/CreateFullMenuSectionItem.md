@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CreateFullMenuSectionItem
+# Flipdish.Model.CreateFullMenuSectionItem
 ## Properties
 
 Name | Type | Description | Notes

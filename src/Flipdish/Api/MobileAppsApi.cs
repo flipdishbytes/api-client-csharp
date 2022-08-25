@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -514,7 +514,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->GetAppConfigSalesChannel");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/saleschannel/details";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/saleschannel/details";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -561,7 +561,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAppConfigSalesChannel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAppConfigSalesChannel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppConfigSalesChannel)));
         }
 
@@ -590,7 +590,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->GetAppConfigSalesChannel");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/saleschannel/details";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/saleschannel/details";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -637,7 +637,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAppConfigSalesChannel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAppConfigSalesChannel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppConfigSalesChannel)));
         }
 
@@ -670,7 +670,7 @@ namespace Flipdish.Api
             if (platformTypes == null)
                 throw new ApiException(400, "Missing required parameter 'platformTypes' when calling MobileAppsApi->GetStatistics");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/statistics";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/statistics";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -718,7 +718,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultMobileAppsStatistics>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultMobileAppsStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMobileAppsStatistics)));
         }
 
@@ -752,7 +752,7 @@ namespace Flipdish.Api
             if (platformTypes == null)
                 throw new ApiException(400, "Missing required parameter 'platformTypes' when calling MobileAppsApi->GetStatistics");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/statistics";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/statistics";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -800,7 +800,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultMobileAppsStatistics>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultMobileAppsStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMobileAppsStatistics)));
         }
 
@@ -828,7 +828,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->GetSubmissionDetails");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/submission/details";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/details";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -875,7 +875,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMobileAppsSubmissionDetails>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMobileAppsSubmissionDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMobileAppsSubmissionDetails)));
         }
 
@@ -904,7 +904,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling MobileAppsApi->GetSubmissionDetails");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/submission/details";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/details";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -951,7 +951,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMobileAppsSubmissionDetails>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMobileAppsSubmissionDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMobileAppsSubmissionDetails)));
         }
 
@@ -984,7 +984,7 @@ namespace Flipdish.Api
             if (mobileAppsSubmissionId == null)
                 throw new ApiException(400, "Missing required parameter 'mobileAppsSubmissionId' when calling MobileAppsApi->GetSubmissionStatus");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/submission/status";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/status";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1032,7 +1032,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMobileAppsSubmissionStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMobileAppsSubmissionStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMobileAppsSubmissionStatus)));
         }
 
@@ -1066,7 +1066,7 @@ namespace Flipdish.Api
             if (mobileAppsSubmissionId == null)
                 throw new ApiException(400, "Missing required parameter 'mobileAppsSubmissionId' when calling MobileAppsApi->GetSubmissionStatus");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/submission/status";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/status";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1114,7 +1114,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMobileAppsSubmissionStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMobileAppsSubmissionStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMobileAppsSubmissionStatus)));
         }
 
@@ -1147,7 +1147,7 @@ namespace Flipdish.Api
             if (mobileAppsSubmission == null)
                 throw new ApiException(400, "Missing required parameter 'mobileAppsSubmission' when calling MobileAppsApi->Submission");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/submission";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/submission";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1207,7 +1207,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMobileAppsSubmission>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMobileAppsSubmission) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMobileAppsSubmission)));
         }
 
@@ -1241,7 +1241,7 @@ namespace Flipdish.Api
             if (mobileAppsSubmission == null)
                 throw new ApiException(400, "Missing required parameter 'mobileAppsSubmission' when calling MobileAppsApi->Submission");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/submission";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/submission";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1301,7 +1301,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMobileAppsSubmission>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMobileAppsSubmission) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMobileAppsSubmission)));
         }
 
@@ -1334,7 +1334,7 @@ namespace Flipdish.Api
             if (appConfigSalesChannel == null)
                 throw new ApiException(400, "Missing required parameter 'appConfigSalesChannel' when calling MobileAppsApi->UpdateAppConfigSalesChannel");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/saleschannel";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/saleschannel";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1394,7 +1394,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAppConfigSalesChannel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAppConfigSalesChannel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppConfigSalesChannel)));
         }
 
@@ -1428,7 +1428,7 @@ namespace Flipdish.Api
             if (appConfigSalesChannel == null)
                 throw new ApiException(400, "Missing required parameter 'appConfigSalesChannel' when calling MobileAppsApi->UpdateAppConfigSalesChannel");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/saleschannel";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/saleschannel";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1488,7 +1488,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAppConfigSalesChannel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAppConfigSalesChannel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppConfigSalesChannel)));
         }
 
@@ -1526,7 +1526,7 @@ namespace Flipdish.Api
             if (updateMobileAppsSubmissionStatus == null)
                 throw new ApiException(400, "Missing required parameter 'updateMobileAppsSubmissionStatus' when calling MobileAppsApi->UpdateSubmissionStatus");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/submission/{mobileAppsSubmissionId}/status";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/{mobileAppsSubmissionId}/status";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1587,7 +1587,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultUpdateMobileAppsSubmissionStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultUpdateMobileAppsSubmissionStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultUpdateMobileAppsSubmissionStatus)));
         }
 
@@ -1626,7 +1626,7 @@ namespace Flipdish.Api
             if (updateMobileAppsSubmissionStatus == null)
                 throw new ApiException(400, "Missing required parameter 'updateMobileAppsSubmissionStatus' when calling MobileAppsApi->UpdateSubmissionStatus");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/submission/{mobileAppsSubmissionId}/status";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/{mobileAppsSubmissionId}/status";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1687,7 +1687,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultUpdateMobileAppsSubmissionStatus>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultUpdateMobileAppsSubmissionStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultUpdateMobileAppsSubmissionStatus)));
         }
 
@@ -1720,7 +1720,7 @@ namespace Flipdish.Api
             if (image == null)
                 throw new ApiException(400, "Missing required parameter 'image' when calling MobileAppsApi->UploadImage");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/submission/image";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/image";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1769,7 +1769,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMobileAppsImage>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMobileAppsImage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMobileAppsImage)));
         }
 
@@ -1803,7 +1803,7 @@ namespace Flipdish.Api
             if (image == null)
                 throw new ApiException(400, "Missing required parameter 'image' when calling MobileAppsApi->UploadImage");
 
-            var localVarPath = "/api/v1.0/mobileapps/{appId}/submission/image";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/image";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1852,7 +1852,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMobileAppsImage>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMobileAppsImage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMobileAppsImage)));
         }
 

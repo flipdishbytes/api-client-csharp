@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiPaginationResultHttpRequestAndResponseLog
+# Flipdish.Model.RestApiPaginationResultHttpRequestAndResponseLog
 ## Properties
 
 Name | Type | Description | Notes

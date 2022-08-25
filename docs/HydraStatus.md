@@ -1,4 +1,4 @@
-# IO.Swagger.Model.HydraStatus
+# Flipdish.Model.HydraStatus
 ## Properties
 
 Name | Type | Description | Notes

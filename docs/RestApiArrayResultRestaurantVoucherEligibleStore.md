@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiArrayResultRestaurantVoucherEligibleStore
+# Flipdish.Model.RestApiArrayResultRestaurantVoucherEligibleStore
 ## Properties
 
 Name | Type | Description | Notes

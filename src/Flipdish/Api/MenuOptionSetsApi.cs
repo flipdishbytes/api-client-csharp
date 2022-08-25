@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -547,7 +547,7 @@ namespace Flipdish.Api
             if (menuItemOptionSet == null)
                 throw new ApiException(400, "Missing required parameter 'menuItemOptionSet' when calling MenuOptionSetsApi->CreateMenuItemOptionSet");
 
-            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets";
+            var localVarPath = "./api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -609,7 +609,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -653,7 +653,7 @@ namespace Flipdish.Api
             if (menuItemOptionSet == null)
                 throw new ApiException(400, "Missing required parameter 'menuItemOptionSet' when calling MenuOptionSetsApi->CreateMenuItemOptionSet");
 
-            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets";
+            var localVarPath = "./api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -715,7 +715,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -757,7 +757,7 @@ namespace Flipdish.Api
             if (optionSetId == null)
                 throw new ApiException(400, "Missing required parameter 'optionSetId' when calling MenuOptionSetsApi->DeleteMenuItemOptionSet");
 
-            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}";
+            var localVarPath = "./api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -807,7 +807,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -850,7 +850,7 @@ namespace Flipdish.Api
             if (optionSetId == null)
                 throw new ApiException(400, "Missing required parameter 'optionSetId' when calling MenuOptionSetsApi->DeleteMenuItemOptionSet");
 
-            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}";
+            var localVarPath = "./api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -900,7 +900,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -942,7 +942,7 @@ namespace Flipdish.Api
             if (optionSetId == null)
                 throw new ApiException(400, "Missing required parameter 'optionSetId' when calling MenuOptionSetsApi->DeleteOptionSetImage");
 
-            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image";
+            var localVarPath = "./api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -992,7 +992,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1035,7 +1035,7 @@ namespace Flipdish.Api
             if (optionSetId == null)
                 throw new ApiException(400, "Missing required parameter 'optionSetId' when calling MenuOptionSetsApi->DeleteOptionSetImage");
 
-            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image";
+            var localVarPath = "./api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1085,7 +1085,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1128,7 +1128,7 @@ namespace Flipdish.Api
             if (optionSetId == null)
                 throw new ApiException(400, "Missing required parameter 'optionSetId' when calling MenuOptionSetsApi->GetMenuItemOptionSetById");
 
-            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}";
+            var localVarPath = "./api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1178,7 +1178,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMenuItemOptionSet>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMenuItemOptionSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMenuItemOptionSet)));
         }
 
@@ -1222,7 +1222,7 @@ namespace Flipdish.Api
             if (optionSetId == null)
                 throw new ApiException(400, "Missing required parameter 'optionSetId' when calling MenuOptionSetsApi->GetMenuItemOptionSetById");
 
-            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}";
+            var localVarPath = "./api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1272,7 +1272,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultMenuItemOptionSet>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultMenuItemOptionSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMenuItemOptionSet)));
         }
 
@@ -1310,7 +1310,7 @@ namespace Flipdish.Api
             if (menuSectionItemId == null)
                 throw new ApiException(400, "Missing required parameter 'menuSectionItemId' when calling MenuOptionSetsApi->GetMenuItemOptionSets");
 
-            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets";
+            var localVarPath = "./api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1359,7 +1359,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultMenuItemOptionSet>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultMenuItemOptionSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMenuItemOptionSet)));
         }
 
@@ -1398,7 +1398,7 @@ namespace Flipdish.Api
             if (menuSectionItemId == null)
                 throw new ApiException(400, "Missing required parameter 'menuSectionItemId' when calling MenuOptionSetsApi->GetMenuItemOptionSets");
 
-            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets";
+            var localVarPath = "./api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1447,7 +1447,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultMenuItemOptionSet>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultMenuItemOptionSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultMenuItemOptionSet)));
         }
 
@@ -1494,7 +1494,7 @@ namespace Flipdish.Api
             if (menuItemOptionSet == null)
                 throw new ApiException(400, "Missing required parameter 'menuItemOptionSet' when calling MenuOptionSetsApi->UpdateMenuItemOptionSet");
 
-            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}";
+            var localVarPath = "./api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1557,7 +1557,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1605,7 +1605,7 @@ namespace Flipdish.Api
             if (menuItemOptionSet == null)
                 throw new ApiException(400, "Missing required parameter 'menuItemOptionSet' when calling MenuOptionSetsApi->UpdateMenuItemOptionSet");
 
-            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}";
+            var localVarPath = "./api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1668,7 +1668,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1716,7 +1716,7 @@ namespace Flipdish.Api
             if (image == null)
                 throw new ApiException(400, "Missing required parameter 'image' when calling MenuOptionSetsApi->UploadOptionSetImage");
 
-            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image";
+            var localVarPath = "./api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1768,7 +1768,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
@@ -1817,7 +1817,7 @@ namespace Flipdish.Api
             if (image == null)
                 throw new ApiException(400, "Missing required parameter 'image' when calling MenuOptionSetsApi->UploadOptionSetImage");
 
-            var localVarPath = "/api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image";
+            var localVarPath = "./api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1869,7 +1869,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 

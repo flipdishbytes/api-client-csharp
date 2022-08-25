@@ -1,4 +1,4 @@
-# IO.Swagger.Model.JobEta
+# Flipdish.Model.JobEta
 ## Properties
 
 Name | Type | Description | Notes

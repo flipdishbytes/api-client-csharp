@@ -1,4 +1,4 @@
-# IO.Swagger.Model.UpdateProductReference
+# Flipdish.Model.UpdateProductReference
 ## Properties
 
 Name | Type | Description | Notes

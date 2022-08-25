@@ -1,4 +1,4 @@
-# IO.Swagger.Model.AccountFieldsDefinitions
+# Flipdish.Model.AccountFieldsDefinitions
 ## Properties
 
 Name | Type | Description | Notes

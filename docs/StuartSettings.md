@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StuartSettings
+# Flipdish.Model.StuartSettings
 ## Properties
 
 Name | Type | Description | Notes

@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -431,7 +431,7 @@ namespace Flipdish.Api
             if (teammate == null)
                 throw new ApiException(400, "Missing required parameter 'teammate' when calling TeammatesApi->CreateTeammate");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates";
+            var localVarPath = "./api/v1.0/{appId}/teammates";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -491,7 +491,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultTeammate>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultTeammate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultTeammate)));
         }
 
@@ -525,7 +525,7 @@ namespace Flipdish.Api
             if (teammate == null)
                 throw new ApiException(400, "Missing required parameter 'teammate' when calling TeammatesApi->CreateTeammate");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates";
+            var localVarPath = "./api/v1.0/{appId}/teammates";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -585,7 +585,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultTeammate>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultTeammate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultTeammate)));
         }
 
@@ -617,7 +617,7 @@ namespace Flipdish.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling TeammatesApi->DeleteTeammate");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates/{id}";
+            var localVarPath = "./api/v1.0/{appId}/teammates/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -665,7 +665,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -698,7 +698,7 @@ namespace Flipdish.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling TeammatesApi->DeleteTeammate");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates/{id}";
+            var localVarPath = "./api/v1.0/{appId}/teammates/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -746,7 +746,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -779,7 +779,7 @@ namespace Flipdish.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling TeammatesApi->GetTeammateByAppIdAndTeammateId");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates/{id}";
+            var localVarPath = "./api/v1.0/{appId}/teammates/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -827,7 +827,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultTeammate>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultTeammate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultTeammate)));
         }
 
@@ -861,7 +861,7 @@ namespace Flipdish.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling TeammatesApi->GetTeammateByAppIdAndTeammateId");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates/{id}";
+            var localVarPath = "./api/v1.0/{appId}/teammates/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -909,7 +909,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultTeammate>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultTeammate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultTeammate)));
         }
 
@@ -937,7 +937,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->GetTeammatesByAppId");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates";
+            var localVarPath = "./api/v1.0/{appId}/teammates";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -984,7 +984,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultTeammate>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultTeammate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultTeammate)));
         }
 
@@ -1013,7 +1013,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->GetTeammatesByAppId");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates";
+            var localVarPath = "./api/v1.0/{appId}/teammates";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1060,7 +1060,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultTeammate>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultTeammate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultTeammate)));
         }
 
@@ -1093,7 +1093,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->RedeemInvitation");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates/redeem/{otc}";
+            var localVarPath = "./api/v1.0/{appId}/teammates/redeem/{otc}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1141,7 +1141,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultRedeemInvitationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultRedeemInvitationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultRedeemInvitationResult)));
         }
 
@@ -1175,7 +1175,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->RedeemInvitation");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates/redeem/{otc}";
+            var localVarPath = "./api/v1.0/{appId}/teammates/redeem/{otc}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1223,7 +1223,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultRedeemInvitationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultRedeemInvitationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultRedeemInvitationResult)));
         }
 
@@ -1261,7 +1261,7 @@ namespace Flipdish.Api
             if (teammate == null)
                 throw new ApiException(400, "Missing required parameter 'teammate' when calling TeammatesApi->UpdateTeammate");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates/{id}";
+            var localVarPath = "./api/v1.0/{appId}/teammates/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1322,7 +1322,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultTeammate>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultTeammate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultTeammate)));
         }
 
@@ -1361,7 +1361,7 @@ namespace Flipdish.Api
             if (teammate == null)
                 throw new ApiException(400, "Missing required parameter 'teammate' when calling TeammatesApi->UpdateTeammate");
 
-            var localVarPath = "/api/v1.0/{appId}/teammates/{id}";
+            var localVarPath = "./api/v1.0/{appId}/teammates/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1422,7 +1422,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultTeammate>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultTeammate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultTeammate)));
         }
 

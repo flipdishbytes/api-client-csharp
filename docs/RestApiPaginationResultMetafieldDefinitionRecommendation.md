@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiPaginationResultMetafieldDefinitionRecommendation
+# Flipdish.Model.RestApiPaginationResultMetafieldDefinitionRecommendation
 ## Properties
 
 Name | Type | Description | Notes

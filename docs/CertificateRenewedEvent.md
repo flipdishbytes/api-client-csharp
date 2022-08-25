@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CertificateRenewedEvent
+# Flipdish.Model.CertificateRenewedEvent
 ## Properties
 
 Name | Type | Description | Notes

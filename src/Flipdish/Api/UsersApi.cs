@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -239,7 +239,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling UsersApi->GetPreviousOrderCountForStore");
 
-            var localVarPath = "/api/v1.0/users/{userId}/previousordercount/{storeId}";
+            var localVarPath = "./api/v1.0/users/{userId}/previousordercount/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -287,7 +287,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
@@ -321,7 +321,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling UsersApi->GetPreviousOrderCountForStore");
 
-            var localVarPath = "/api/v1.0/users/{userId}/previousordercount/{storeId}";
+            var localVarPath = "./api/v1.0/users/{userId}/previousordercount/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -369,7 +369,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
@@ -392,7 +392,7 @@ namespace Flipdish.Api
         public ApiResponse< RestApiStringArrayResult > GetRolesWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/users/roles";
+            var localVarPath = "./api/v1.0/users/roles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -438,7 +438,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringArrayResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringArrayResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringArrayResult)));
         }
 
@@ -462,7 +462,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetRolesAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/users/roles";
+            var localVarPath = "./api/v1.0/users/roles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -508,7 +508,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringArrayResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringArrayResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringArrayResult)));
         }
 

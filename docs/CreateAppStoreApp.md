@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CreateAppStoreApp
+# Flipdish.Model.CreateAppStoreApp
 ## Properties
 
 Name | Type | Description | Notes

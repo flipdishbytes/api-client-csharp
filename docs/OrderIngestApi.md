@@ -1,4 +1,4 @@
-# IO.Swagger.Api.OrderIngestApi
+# Flipdish.Api.OrderIngestApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -19,9 +19,9 @@ Provides an ability to ingest a 3rd party order into Flipdish ecosystem
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
 
 namespace Example
 {

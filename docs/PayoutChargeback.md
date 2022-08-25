@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PayoutChargeback
+# Flipdish.Model.PayoutChargeback
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.MenuItemOptionSetItemUpdatedEvent
+# Flipdish.Model.MenuItemOptionSetItemUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

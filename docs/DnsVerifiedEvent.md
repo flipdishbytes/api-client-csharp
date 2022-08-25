@@ -1,4 +1,4 @@
-# IO.Swagger.Model.DnsVerifiedEvent
+# Flipdish.Model.DnsVerifiedEvent
 ## Properties
 
 Name | Type | Description | Notes

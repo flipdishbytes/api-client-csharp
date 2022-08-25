@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -192,7 +192,7 @@ namespace Flipdish.Api
             if (paymentIntentId == null)
                 throw new ApiException(400, "Missing required parameter 'paymentIntentId' when calling PaymentIntentsApi->GetPaymentIntent");
 
-            var localVarPath = "/api/v1.0/payment_intents/{paymentIntentId}";
+            var localVarPath = "./api/v1.0/payment_intents/{paymentIntentId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -239,7 +239,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultPaymentIntent>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultPaymentIntent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPaymentIntent)));
         }
 
@@ -268,7 +268,7 @@ namespace Flipdish.Api
             if (paymentIntentId == null)
                 throw new ApiException(400, "Missing required parameter 'paymentIntentId' when calling PaymentIntentsApi->GetPaymentIntent");
 
-            var localVarPath = "/api/v1.0/payment_intents/{paymentIntentId}";
+            var localVarPath = "./api/v1.0/payment_intents/{paymentIntentId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -315,7 +315,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultPaymentIntent>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultPaymentIntent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPaymentIntent)));
         }
 

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PrinterTurnedOffEvent
+# Flipdish.Model.PrinterTurnedOffEvent
 ## Properties
 
 Name | Type | Description | Notes

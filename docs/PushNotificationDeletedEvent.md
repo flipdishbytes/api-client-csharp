@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PushNotificationDeletedEvent
+# Flipdish.Model.PushNotificationDeletedEvent
 ## Properties
 
 Name | Type | Description | Notes

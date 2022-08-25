@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PrinterUnassignedFromStoreEvent
+# Flipdish.Model.PrinterUnassignedFromStoreEvent
 ## Properties
 
 Name | Type | Description | Notes

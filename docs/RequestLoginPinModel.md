@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RequestLoginPinModel
+# Flipdish.Model.RequestLoginPinModel
 ## Properties
 
 Name | Type | Description | Notes

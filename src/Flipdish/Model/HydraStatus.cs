@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
 namespace Flipdish.Model
@@ -28,7 +26,7 @@ namespace Flipdish.Model
     /// Hydra status
     /// </summary>
     [DataContract]
-    public partial class HydraStatus :  IEquatable<HydraStatus>, IValidatableObject
+    public partial class HydraStatus :  IEquatable<HydraStatus>
     {
         /// <summary>
         /// Hydra User Type
@@ -241,28 +239,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.UserType.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            // PinCode (int?) maximum
-            if(this.PinCode > (int?)999999)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PinCode, must be a value less than or equal to 999999.", new [] { "PinCode" });
-            }
-
-            // PinCode (int?) minimum
-            if(this.PinCode < (int?)100000)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PinCode, must be a value greater than or equal to 100000.", new [] { "PinCode" });
-            }
-
-            yield break;
         }
     }
 

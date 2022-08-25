@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PrinterTurnedOnEvent
+# Flipdish.Model.PrinterTurnedOnEvent
 ## Properties
 
 Name | Type | Description | Notes

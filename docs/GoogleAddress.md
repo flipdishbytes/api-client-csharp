@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GoogleAddress
+# Flipdish.Model.GoogleAddress
 ## Properties
 
 Name | Type | Description | Notes

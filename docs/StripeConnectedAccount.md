@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StripeConnectedAccount
+# Flipdish.Model.StripeConnectedAccount
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiArrayResultMenuElementEditResponse
+# Flipdish.Model.RestApiArrayResultMenuElementEditResponse
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StorePreOrderConfigUpdatedEvent
+# Flipdish.Model.StorePreOrderConfigUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

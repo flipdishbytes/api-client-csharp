@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
 namespace Flipdish.Model
@@ -28,7 +26,7 @@ namespace Flipdish.Model
     /// App
     /// </summary>
     [DataContract]
-    public partial class App :  IEquatable<App>, IValidatableObject
+    public partial class App :  IEquatable<App>
     {
         /// <summary>
         /// App access level for the logged in user
@@ -1402,28 +1400,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CookieConsentPromptEnabled.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            // CountryId (string) maxLength
-            if(this.CountryId != null && this.CountryId.Length > 2)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CountryId, length must be less than 2.", new [] { "CountryId" });
-            }
-
-            // CountryId (string) minLength
-            if(this.CountryId != null && this.CountryId.Length < 0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CountryId, length must be greater than 0.", new [] { "CountryId" });
-            }
-
-            yield break;
         }
     }
 

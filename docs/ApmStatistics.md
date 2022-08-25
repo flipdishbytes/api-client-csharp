@@ -1,4 +1,4 @@
-# IO.Swagger.Model.ApmStatistics
+# Flipdish.Model.ApmStatistics
 ## Properties
 
 Name | Type | Description | Notes

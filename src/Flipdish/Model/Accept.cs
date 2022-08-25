@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
 namespace Flipdish.Model
@@ -28,7 +26,7 @@ namespace Flipdish.Model
     /// Accept
     /// </summary>
     [DataContract]
-    public partial class Accept :  IEquatable<Accept>, IValidatableObject
+    public partial class Accept :  IEquatable<Accept>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Accept" /> class.
@@ -109,28 +107,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.EstimatedMinutesForDelivery.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            // EstimatedMinutesForDelivery (int?) maximum
-            if(this.EstimatedMinutesForDelivery > (int?)200)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EstimatedMinutesForDelivery, must be a value less than or equal to 200.", new [] { "EstimatedMinutesForDelivery" });
-            }
-
-            // EstimatedMinutesForDelivery (int?) minimum
-            if(this.EstimatedMinutesForDelivery < (int?)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EstimatedMinutesForDelivery, must be a value greater than or equal to 0.", new [] { "EstimatedMinutesForDelivery" });
-            }
-
-            yield break;
         }
     }
 

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CreateMetadata
+# Flipdish.Model.CreateMetadata
 ## Properties
 
 Name | Type | Description | Notes

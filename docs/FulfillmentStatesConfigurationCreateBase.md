@@ -1,4 +1,4 @@
-# IO.Swagger.Model.FulfillmentStatesConfigurationCreateBase
+# Flipdish.Model.FulfillmentStatesConfigurationCreateBase
 ## Properties
 
 Name | Type | Description | Notes

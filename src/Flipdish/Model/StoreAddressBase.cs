@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
 namespace Flipdish.Model
@@ -28,7 +26,7 @@ namespace Flipdish.Model
     /// Store address base
     /// </summary>
     [DataContract]
-    public partial class StoreAddressBase :  IEquatable<StoreAddressBase>, IValidatableObject
+    public partial class StoreAddressBase :  IEquatable<StoreAddressBase>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreAddressBase" /> class.
@@ -228,28 +226,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.TwoLinesDisplay.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            // CountryCode (string) maxLength
-            if(this.CountryCode != null && this.CountryCode.Length > 2)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CountryCode, length must be less than 2.", new [] { "CountryCode" });
-            }
-
-            // CountryCode (string) minLength
-            if(this.CountryCode != null && this.CountryCode.Length < 0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CountryCode, length must be greater than 0.", new [] { "CountryCode" });
-            }
-
-            yield break;
         }
     }
 

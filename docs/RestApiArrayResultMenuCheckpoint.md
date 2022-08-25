@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiArrayResultMenuCheckpoint
+# Flipdish.Model.RestApiArrayResultMenuCheckpoint
 ## Properties
 
 Name | Type | Description | Notes

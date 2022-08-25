@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiPaginationResultBusinessHoursOverride
+# Flipdish.Model.RestApiPaginationResultBusinessHoursOverride
 ## Properties
 
 Name | Type | Description | Notes

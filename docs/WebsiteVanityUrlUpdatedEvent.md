@@ -1,4 +1,4 @@
-# IO.Swagger.Model.WebsiteVanityUrlUpdatedEvent
+# Flipdish.Model.WebsiteVanityUrlUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

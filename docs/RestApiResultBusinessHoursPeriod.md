@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultBusinessHoursPeriod
+# Flipdish.Model.RestApiResultBusinessHoursPeriod
 ## Properties
 
 Name | Type | Description | Notes

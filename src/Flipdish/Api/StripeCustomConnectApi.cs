@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -539,7 +539,7 @@ namespace Flipdish.Api
             if (account == null)
                 throw new ApiException(400, "Missing required parameter 'account' when calling StripeCustomConnectApi->CreateBankAccountAndConnectedAccount");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/bank-account";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/bank-account";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -599,7 +599,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultBankAccountDetail>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultBankAccountDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBankAccountDetail)));
         }
 
@@ -633,7 +633,7 @@ namespace Flipdish.Api
             if (account == null)
                 throw new ApiException(400, "Missing required parameter 'account' when calling StripeCustomConnectApi->CreateBankAccountAndConnectedAccount");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/bank-account";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/bank-account";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -693,7 +693,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultBankAccountDetail>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultBankAccountDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBankAccountDetail)));
         }
 
@@ -726,7 +726,7 @@ namespace Flipdish.Api
             if (bankAccountId == null)
                 throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling StripeCustomConnectApi->CreateStripeConnectedAccount");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -774,7 +774,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStripeConnectedAccount>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStripeConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeConnectedAccount)));
         }
 
@@ -808,7 +808,7 @@ namespace Flipdish.Api
             if (bankAccountId == null)
                 throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling StripeCustomConnectApi->CreateStripeConnectedAccount");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -856,7 +856,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStripeConnectedAccount>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStripeConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeConnectedAccount)));
         }
 
@@ -894,7 +894,7 @@ namespace Flipdish.Api
             if (stripeAccountLinkRequest == null)
                 throw new ApiException(400, "Missing required parameter 'stripeAccountLinkRequest' when calling StripeCustomConnectApi->CreateStripeConnectedAccountLink");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -955,7 +955,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStripeConnectedAccount>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStripeConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeConnectedAccount)));
         }
 
@@ -994,7 +994,7 @@ namespace Flipdish.Api
             if (stripeAccountLinkRequest == null)
                 throw new ApiException(400, "Missing required parameter 'stripeAccountLinkRequest' when calling StripeCustomConnectApi->CreateStripeConnectedAccountLink");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1055,7 +1055,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStripeConnectedAccount>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStripeConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeConnectedAccount)));
         }
 
@@ -1088,7 +1088,7 @@ namespace Flipdish.Api
             if (stripeConnectedAccountId == null)
                 throw new ApiException(400, "Missing required parameter 'stripeConnectedAccountId' when calling StripeCustomConnectApi->GetVerificationStatus");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/verification-status";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/verification-status";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1136,7 +1136,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStripeConnectedAccount>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStripeConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeConnectedAccount)));
         }
 
@@ -1170,7 +1170,7 @@ namespace Flipdish.Api
             if (stripeConnectedAccountId == null)
                 throw new ApiException(400, "Missing required parameter 'stripeConnectedAccountId' when calling StripeCustomConnectApi->GetVerificationStatus");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/verification-status";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/verification-status";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1218,7 +1218,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStripeConnectedAccount>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStripeConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeConnectedAccount)));
         }
 
@@ -1256,7 +1256,7 @@ namespace Flipdish.Api
             if (businessType == null)
                 throw new ApiException(400, "Missing required parameter 'businessType' when calling StripeCustomConnectApi->SetBankAccountBusinessType");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1317,7 +1317,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultBankAccountDetail>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultBankAccountDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBankAccountDetail)));
         }
 
@@ -1356,7 +1356,7 @@ namespace Flipdish.Api
             if (businessType == null)
                 throw new ApiException(400, "Missing required parameter 'businessType' when calling StripeCustomConnectApi->SetBankAccountBusinessType");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1417,7 +1417,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultBankAccountDetail>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultBankAccountDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBankAccountDetail)));
         }
 
@@ -1450,7 +1450,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->StripeCustomConnectRefresh");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/refresh-link";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/refresh-link";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1498,7 +1498,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -1532,7 +1532,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->StripeCustomConnectRefresh");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/refresh-link";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/refresh-link";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1580,7 +1580,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -1618,7 +1618,7 @@ namespace Flipdish.Api
             if (updateRequest == null)
                 throw new ApiException(400, "Missing required parameter 'updateRequest' when calling StripeCustomConnectApi->UpdateBankAccountDetails");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1679,7 +1679,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStripeConnectedAccount>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStripeConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeConnectedAccount)));
         }
 
@@ -1718,7 +1718,7 @@ namespace Flipdish.Api
             if (updateRequest == null)
                 throw new ApiException(400, "Missing required parameter 'updateRequest' when calling StripeCustomConnectApi->UpdateBankAccountDetails");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1779,7 +1779,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStripeConnectedAccount>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStripeConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeConnectedAccount)));
         }
 
@@ -1817,7 +1817,7 @@ namespace Flipdish.Api
             if (interval == null)
                 throw new ApiException(400, "Missing required parameter 'interval' when calling StripeCustomConnectApi->UpdatePayoutSchedule");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval}";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1866,7 +1866,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultModelBase>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultModelBase) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultModelBase)));
         }
 
@@ -1905,7 +1905,7 @@ namespace Flipdish.Api
             if (interval == null)
                 throw new ApiException(400, "Missing required parameter 'interval' when calling StripeCustomConnectApi->UpdatePayoutSchedule");
 
-            var localVarPath = "/api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval}";
+            var localVarPath = "./api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1954,7 +1954,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultModelBase>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultModelBase) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultModelBase)));
         }
 

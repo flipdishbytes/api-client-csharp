@@ -1,4 +1,4 @@
-# IO.Swagger.Model.MetafieldDefinitionRecommendation
+# Flipdish.Model.MetafieldDefinitionRecommendation
 ## Properties
 
 Name | Type | Description | Notes

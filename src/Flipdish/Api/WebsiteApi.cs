@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -523,7 +523,7 @@ namespace Flipdish.Api
             if (testimonial == null)
                 throw new ApiException(400, "Missing required parameter 'testimonial' when calling WebsiteApi->AddTestimonial");
 
-            var localVarPath = "/api/v1.0/{appId}/website/testimonial";
+            var localVarPath = "./api/v1.0/{appId}/website/testimonial";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -583,7 +583,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultWebsiteTestimonial>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultWebsiteTestimonial) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultWebsiteTestimonial)));
         }
 
@@ -617,7 +617,7 @@ namespace Flipdish.Api
             if (testimonial == null)
                 throw new ApiException(400, "Missing required parameter 'testimonial' when calling WebsiteApi->AddTestimonial");
 
-            var localVarPath = "/api/v1.0/{appId}/website/testimonial";
+            var localVarPath = "./api/v1.0/{appId}/website/testimonial";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -677,7 +677,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultWebsiteTestimonial>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultWebsiteTestimonial) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultWebsiteTestimonial)));
         }
 
@@ -709,7 +709,7 @@ namespace Flipdish.Api
             if (testimonialId == null)
                 throw new ApiException(400, "Missing required parameter 'testimonialId' when calling WebsiteApi->DeleteTestimonial");
 
-            var localVarPath = "/api/v1.0/{appId}/website/testimonial/{testimonialId}";
+            var localVarPath = "./api/v1.0/{appId}/website/testimonial/{testimonialId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -757,7 +757,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -790,7 +790,7 @@ namespace Flipdish.Api
             if (testimonialId == null)
                 throw new ApiException(400, "Missing required parameter 'testimonialId' when calling WebsiteApi->DeleteTestimonial");
 
-            var localVarPath = "/api/v1.0/{appId}/website/testimonial/{testimonialId}";
+            var localVarPath = "./api/v1.0/{appId}/website/testimonial/{testimonialId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -838,7 +838,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -870,7 +870,7 @@ namespace Flipdish.Api
             if (imageId == null)
                 throw new ApiException(400, "Missing required parameter 'imageId' when calling WebsiteApi->DeleteWebsiteImage");
 
-            var localVarPath = "/api/v1.0/{appId}/website/image/{imageId}";
+            var localVarPath = "./api/v1.0/{appId}/website/image/{imageId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -918,7 +918,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -951,7 +951,7 @@ namespace Flipdish.Api
             if (imageId == null)
                 throw new ApiException(400, "Missing required parameter 'imageId' when calling WebsiteApi->DeleteWebsiteImage");
 
-            var localVarPath = "/api/v1.0/{appId}/website/image/{imageId}";
+            var localVarPath = "./api/v1.0/{appId}/website/image/{imageId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -999,7 +999,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1037,7 +1037,7 @@ namespace Flipdish.Api
             if (testimonial == null)
                 throw new ApiException(400, "Missing required parameter 'testimonial' when calling WebsiteApi->EditTestimonial");
 
-            var localVarPath = "/api/v1.0/{appId}/website/testimonial/{testimonialId}";
+            var localVarPath = "./api/v1.0/{appId}/website/testimonial/{testimonialId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1098,7 +1098,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultWebsiteTestimonial>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultWebsiteTestimonial) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultWebsiteTestimonial)));
         }
 
@@ -1137,7 +1137,7 @@ namespace Flipdish.Api
             if (testimonial == null)
                 throw new ApiException(400, "Missing required parameter 'testimonial' when calling WebsiteApi->EditTestimonial");
 
-            var localVarPath = "/api/v1.0/{appId}/website/testimonial/{testimonialId}";
+            var localVarPath = "./api/v1.0/{appId}/website/testimonial/{testimonialId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1198,7 +1198,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultWebsiteTestimonial>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultWebsiteTestimonial) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultWebsiteTestimonial)));
         }
 
@@ -1226,7 +1226,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebsiteApi->GetIndexConfiguration");
 
-            var localVarPath = "/api/v1.0/{appId}/website/index";
+            var localVarPath = "./api/v1.0/{appId}/website/index";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1273,7 +1273,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultIndexPage>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultIndexPage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultIndexPage)));
         }
 
@@ -1302,7 +1302,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebsiteApi->GetIndexConfiguration");
 
-            var localVarPath = "/api/v1.0/{appId}/website/index";
+            var localVarPath = "./api/v1.0/{appId}/website/index";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1349,7 +1349,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultIndexPage>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultIndexPage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultIndexPage)));
         }
 
@@ -1382,7 +1382,7 @@ namespace Flipdish.Api
             if (indexPage == null)
                 throw new ApiException(400, "Missing required parameter 'indexPage' when calling WebsiteApi->SetIndexConfiguration");
 
-            var localVarPath = "/api/v1.0/{appId}/website/index";
+            var localVarPath = "./api/v1.0/{appId}/website/index";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1442,7 +1442,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultIndexPageBase>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultIndexPageBase) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultIndexPageBase)));
         }
 
@@ -1476,7 +1476,7 @@ namespace Flipdish.Api
             if (indexPage == null)
                 throw new ApiException(400, "Missing required parameter 'indexPage' when calling WebsiteApi->SetIndexConfiguration");
 
-            var localVarPath = "/api/v1.0/{appId}/website/index";
+            var localVarPath = "./api/v1.0/{appId}/website/index";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1536,7 +1536,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultIndexPageBase>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultIndexPageBase) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultIndexPageBase)));
         }
 
@@ -1574,7 +1574,7 @@ namespace Flipdish.Api
             if (image == null)
                 throw new ApiException(400, "Missing required parameter 'image' when calling WebsiteApi->UploadWebsiteImage");
 
-            var localVarPath = "/api/v1.0/{appId}/website/image/{imageLocation}";
+            var localVarPath = "./api/v1.0/{appId}/website/image/{imageLocation}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1624,7 +1624,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultWebsiteImage>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultWebsiteImage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultWebsiteImage)));
         }
 
@@ -1663,7 +1663,7 @@ namespace Flipdish.Api
             if (image == null)
                 throw new ApiException(400, "Missing required parameter 'image' when calling WebsiteApi->UploadWebsiteImage");
 
-            var localVarPath = "/api/v1.0/{appId}/website/image/{imageLocation}";
+            var localVarPath = "./api/v1.0/{appId}/website/image/{imageLocation}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1713,7 +1713,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultWebsiteImage>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultWebsiteImage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultWebsiteImage)));
         }
 
@@ -1740,7 +1740,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebsiteApi->WebsiteCheckNow");
 
-            var localVarPath = "/api/v1.0/{appId}/website/dnscheck";
+            var localVarPath = "./api/v1.0/{appId}/website/dnscheck";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1787,7 +1787,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1815,7 +1815,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling WebsiteApi->WebsiteCheckNow");
 
-            var localVarPath = "/api/v1.0/{appId}/website/dnscheck";
+            var localVarPath = "./api/v1.0/{appId}/website/dnscheck";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1862,7 +1862,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 

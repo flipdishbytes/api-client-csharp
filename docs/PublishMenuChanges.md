@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PublishMenuChanges
+# Flipdish.Model.PublishMenuChanges
 ## Properties
 
 Name | Type | Description | Notes

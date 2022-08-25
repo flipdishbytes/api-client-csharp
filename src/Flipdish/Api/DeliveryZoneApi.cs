@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -339,7 +339,7 @@ namespace Flipdish.Api
             if (deliveryZoneBase == null)
                 throw new ApiException(400, "Missing required parameter 'deliveryZoneBase' when calling DeliveryZoneApi->AddDeliveryZone");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/deliveryzones";
+            var localVarPath = "./api/v1.0/stores/{storeId}/deliveryzones";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -399,7 +399,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultDeliveryZone>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultDeliveryZone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultDeliveryZone)));
         }
 
@@ -433,7 +433,7 @@ namespace Flipdish.Api
             if (deliveryZoneBase == null)
                 throw new ApiException(400, "Missing required parameter 'deliveryZoneBase' when calling DeliveryZoneApi->AddDeliveryZone");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/deliveryzones";
+            var localVarPath = "./api/v1.0/stores/{storeId}/deliveryzones";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -493,7 +493,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultDeliveryZone>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultDeliveryZone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultDeliveryZone)));
         }
 
@@ -521,7 +521,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling DeliveryZoneApi->GetDeliveryZones");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/deliveryzones";
+            var localVarPath = "./api/v1.0/stores/{storeId}/deliveryzones";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -568,7 +568,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultDeliveryZone>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultDeliveryZone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultDeliveryZone)));
         }
 
@@ -597,7 +597,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling DeliveryZoneApi->GetDeliveryZones");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/deliveryzones";
+            var localVarPath = "./api/v1.0/stores/{storeId}/deliveryzones";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -644,7 +644,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultDeliveryZone>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultDeliveryZone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultDeliveryZone)));
         }
 
@@ -676,7 +676,7 @@ namespace Flipdish.Api
             if (deliveryZoneId == null)
                 throw new ApiException(400, "Missing required parameter 'deliveryZoneId' when calling DeliveryZoneApi->RemoveDeliveryZone");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId}";
+            var localVarPath = "./api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -724,7 +724,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -757,7 +757,7 @@ namespace Flipdish.Api
             if (deliveryZoneId == null)
                 throw new ApiException(400, "Missing required parameter 'deliveryZoneId' when calling DeliveryZoneApi->RemoveDeliveryZone");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId}";
+            var localVarPath = "./api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -805,7 +805,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -843,7 +843,7 @@ namespace Flipdish.Api
             if (deliveryZone == null)
                 throw new ApiException(400, "Missing required parameter 'deliveryZone' when calling DeliveryZoneApi->UpdateDeliveryZone");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId}";
+            var localVarPath = "./api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -904,7 +904,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultDeliveryZone>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultDeliveryZone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultDeliveryZone)));
         }
 
@@ -943,7 +943,7 @@ namespace Flipdish.Api
             if (deliveryZone == null)
                 throw new ApiException(400, "Missing required parameter 'deliveryZone' when calling DeliveryZoneApi->UpdateDeliveryZone");
 
-            var localVarPath = "/api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId}";
+            var localVarPath = "./api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1004,7 +1004,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultDeliveryZone>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultDeliveryZone) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultDeliveryZone)));
         }
 

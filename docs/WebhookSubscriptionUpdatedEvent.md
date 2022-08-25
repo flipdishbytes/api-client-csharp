@@ -1,4 +1,4 @@
-# IO.Swagger.Model.WebhookSubscriptionUpdatedEvent
+# Flipdish.Model.WebhookSubscriptionUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

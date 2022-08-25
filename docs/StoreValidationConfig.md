@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StoreValidationConfig
+# Flipdish.Model.StoreValidationConfig
 ## Properties
 
 Name | Type | Description | Notes

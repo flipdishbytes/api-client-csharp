@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
 namespace Flipdish.Model
@@ -28,7 +26,7 @@ namespace Flipdish.Model
     /// Store Create Base
     /// </summary>
     [DataContract]
-    public partial class StoreCreateBase :  IEquatable<StoreCreateBase>, IValidatableObject
+    public partial class StoreCreateBase :  IEquatable<StoreCreateBase>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreCreateBase" /> class.
@@ -143,28 +141,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StaffLanguage.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            // EmailAddress (string) maxLength
-            if(this.EmailAddress != null && this.EmailAddress.Length > 100)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EmailAddress, length must be less than 100.", new [] { "EmailAddress" });
-            }
-
-            // EmailAddress (string) minLength
-            if(this.EmailAddress != null && this.EmailAddress.Length < 0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EmailAddress, length must be greater than 0.", new [] { "EmailAddress" });
-            }
-
-            yield break;
         }
     }
 

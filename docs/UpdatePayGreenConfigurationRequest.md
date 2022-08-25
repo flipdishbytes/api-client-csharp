@@ -1,4 +1,4 @@
-# IO.Swagger.Model.UpdatePayGreenConfigurationRequest
+# Flipdish.Model.UpdatePayGreenConfigurationRequest
 ## Properties
 
 Name | Type | Description | Notes

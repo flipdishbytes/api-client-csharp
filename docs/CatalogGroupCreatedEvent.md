@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CatalogGroupCreatedEvent
+# Flipdish.Model.CatalogGroupCreatedEvent
 ## Properties
 
 Name | Type | Description | Notes

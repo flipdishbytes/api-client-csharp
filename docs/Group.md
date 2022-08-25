@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Group
+# Flipdish.Model.Group
 ## Properties
 
 Name | Type | Description | Notes

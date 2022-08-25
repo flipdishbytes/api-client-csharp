@@ -1,4 +1,4 @@
-# IO.Swagger.Model.MenuElementEditResponse
+# Flipdish.Model.MenuElementEditResponse
 ## Properties
 
 Name | Type | Description | Notes

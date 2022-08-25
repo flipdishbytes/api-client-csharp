@@ -1,4 +1,4 @@
-# IO.Swagger.Model.AnalyticsClientEvent
+# Flipdish.Model.AnalyticsClientEvent
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.MenuSectionAvailabilityBase
+# Flipdish.Model.MenuSectionAvailabilityBase
 ## Properties
 
 Name | Type | Description | Notes

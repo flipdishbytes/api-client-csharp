@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiArrayResultEmvTerminalWithAssignments
+# Flipdish.Model.RestApiArrayResultEmvTerminalWithAssignments
 ## Properties
 
 Name | Type | Description | Notes

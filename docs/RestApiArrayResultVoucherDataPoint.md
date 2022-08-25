@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiArrayResultVoucherDataPoint
+# Flipdish.Model.RestApiArrayResultVoucherDataPoint
 ## Properties
 
 Name | Type | Description | Notes

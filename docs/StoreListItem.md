@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StoreListItem
+# Flipdish.Model.StoreListItem
 ## Properties
 
 Name | Type | Description | Notes

@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -443,7 +443,7 @@ namespace Flipdish.Api
             if (appStoreAppId == null)
                 throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreConfigurationsApi->CreateAppStoreConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config";
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -491,7 +491,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAppStoreAppConfiguration>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAppStoreAppConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreAppConfiguration)));
         }
 
@@ -525,7 +525,7 @@ namespace Flipdish.Api
             if (appStoreAppId == null)
                 throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreConfigurationsApi->CreateAppStoreConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config";
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -573,7 +573,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAppStoreAppConfiguration>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAppStoreAppConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreAppConfiguration)));
         }
 
@@ -611,7 +611,7 @@ namespace Flipdish.Api
             if (configId == null)
                 throw new ApiException(400, "Missing required parameter 'configId' when calling AppStoreConfigurationsApi->DeleteAppStoreConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}";
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -660,7 +660,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
@@ -699,7 +699,7 @@ namespace Flipdish.Api
             if (configId == null)
                 throw new ApiException(400, "Missing required parameter 'configId' when calling AppStoreConfigurationsApi->DeleteAppStoreConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}";
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -748,7 +748,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
@@ -786,7 +786,7 @@ namespace Flipdish.Api
             if (configId == null)
                 throw new ApiException(400, "Missing required parameter 'configId' when calling AppStoreConfigurationsApi->GetAppStoreConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}";
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -835,7 +835,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<AppStoreAppConfiguration>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (AppStoreAppConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppStoreAppConfiguration)));
         }
 
@@ -874,7 +874,7 @@ namespace Flipdish.Api
             if (configId == null)
                 throw new ApiException(400, "Missing required parameter 'configId' when calling AppStoreConfigurationsApi->GetAppStoreConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}";
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -923,7 +923,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<AppStoreAppConfiguration>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (AppStoreAppConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppStoreAppConfiguration)));
         }
 
@@ -956,7 +956,7 @@ namespace Flipdish.Api
             if (appStoreAppId == null)
                 throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreConfigurationsApi->GetConfiguredAppSingleApp");
 
-            var localVarPath = "/api/v1.0/{appId}/appstore/apps/{appStoreAppId}";
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1004,7 +1004,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultAppStoreAppConfigurationSummary>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultAppStoreAppConfigurationSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultAppStoreAppConfigurationSummary)));
         }
 
@@ -1038,7 +1038,7 @@ namespace Flipdish.Api
             if (appStoreAppId == null)
                 throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreConfigurationsApi->GetConfiguredAppSingleApp");
 
-            var localVarPath = "/api/v1.0/{appId}/appstore/apps/{appStoreAppId}";
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1086,7 +1086,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultAppStoreAppConfigurationSummary>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultAppStoreAppConfigurationSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultAppStoreAppConfigurationSummary)));
         }
 
@@ -1114,7 +1114,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreConfigurationsApi->GetConfiguredApps");
 
-            var localVarPath = "/api/v1.0/{appId}/appstore/apps";
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1161,7 +1161,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultAppStoreAppConfigurationHeader>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultAppStoreAppConfigurationHeader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultAppStoreAppConfigurationHeader)));
         }
 
@@ -1190,7 +1190,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreConfigurationsApi->GetConfiguredApps");
 
-            var localVarPath = "/api/v1.0/{appId}/appstore/apps";
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1237,7 +1237,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultAppStoreAppConfigurationHeader>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultAppStoreAppConfigurationHeader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultAppStoreAppConfigurationHeader)));
         }
 
@@ -1279,7 +1279,7 @@ namespace Flipdish.Api
             if (updateAppStoreAppConfiguration == null)
                 throw new ApiException(400, "Missing required parameter 'updateAppStoreAppConfiguration' when calling AppStoreConfigurationsApi->UpdateAppStoreConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}";
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1341,7 +1341,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1384,7 +1384,7 @@ namespace Flipdish.Api
             if (updateAppStoreAppConfiguration == null)
                 throw new ApiException(400, "Missing required parameter 'updateAppStoreAppConfiguration' when calling AppStoreConfigurationsApi->UpdateAppStoreConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}";
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1446,7 +1446,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 

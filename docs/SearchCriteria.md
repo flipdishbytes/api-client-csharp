@@ -1,4 +1,4 @@
-# IO.Swagger.Model.SearchCriteria
+# Flipdish.Model.SearchCriteria
 ## Properties
 
 Name | Type | Description | Notes

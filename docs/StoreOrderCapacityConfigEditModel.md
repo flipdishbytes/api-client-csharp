@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StoreOrderCapacityConfigEditModel
+# Flipdish.Model.StoreOrderCapacityConfigEditModel
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultWebsiteTestimonial
+# Flipdish.Model.RestApiResultWebsiteTestimonial
 ## Properties
 
 Name | Type | Description | Notes

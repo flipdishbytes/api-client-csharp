@@ -1,4 +1,4 @@
-# IO.Swagger.Model.JobAddress
+# Flipdish.Model.JobAddress
 ## Properties
 
 Name | Type | Description | Notes

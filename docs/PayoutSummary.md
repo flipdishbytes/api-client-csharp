@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PayoutSummary
+# Flipdish.Model.PayoutSummary
 ## Properties
 
 Name | Type | Description | Notes

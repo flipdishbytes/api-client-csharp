@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StoreGroupBase
+# Flipdish.Model.StoreGroupBase
 ## Properties
 
 Name | Type | Description | Notes

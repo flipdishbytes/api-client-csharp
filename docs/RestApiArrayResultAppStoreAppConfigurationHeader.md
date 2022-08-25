@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiArrayResultAppStoreAppConfigurationHeader
+# Flipdish.Model.RestApiArrayResultAppStoreAppConfigurationHeader
 ## Properties
 
 Name | Type | Description | Notes

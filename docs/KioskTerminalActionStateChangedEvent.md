@@ -1,4 +1,4 @@
-# IO.Swagger.Model.KioskTerminalActionStateChangedEvent
+# Flipdish.Model.KioskTerminalActionStateChangedEvent
 ## Properties
 
 Name | Type | Description | Notes

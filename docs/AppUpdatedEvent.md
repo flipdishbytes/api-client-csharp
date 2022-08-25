@@ -1,4 +1,4 @@
-# IO.Swagger.Model.AppUpdatedEvent
+# Flipdish.Model.AppUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

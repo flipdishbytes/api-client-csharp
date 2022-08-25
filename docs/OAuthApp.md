@@ -1,4 +1,4 @@
-# IO.Swagger.Model.OAuthApp
+# Flipdish.Model.OAuthApp
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.SmsReceivedEvent
+# Flipdish.Model.SmsReceivedEvent
 ## Properties
 
 Name | Type | Description | Notes

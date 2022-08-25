@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StuartSettingsTransportPrices
+# Flipdish.Model.StuartSettingsTransportPrices
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CatalogGroupReference
+# Flipdish.Model.CatalogGroupReference
 ## Properties
 
 Name | Type | Description | Notes

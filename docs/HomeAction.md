@@ -1,4 +1,4 @@
-# IO.Swagger.Model.HomeAction
+# Flipdish.Model.HomeAction
 ## Properties
 
 Name | Type | Description | Notes

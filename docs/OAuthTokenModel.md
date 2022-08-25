@@ -1,4 +1,4 @@
-# IO.Swagger.Model.OAuthTokenModel
+# Flipdish.Model.OAuthTokenModel
 ## Properties
 
 Name | Type | Description | Notes

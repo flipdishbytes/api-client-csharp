@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiArrayResultRetentionCampaign
+# Flipdish.Model.RestApiArrayResultRetentionCampaign
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.LocationCreatedEvent
+# Flipdish.Model.LocationCreatedEvent
 ## Properties
 
 Name | Type | Description | Notes

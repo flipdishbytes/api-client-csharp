@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultBluetoothTerminalStatus
+# Flipdish.Model.RestApiResultBluetoothTerminalStatus
 ## Properties
 
 Name | Type | Description | Notes

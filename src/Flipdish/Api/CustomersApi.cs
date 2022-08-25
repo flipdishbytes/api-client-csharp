@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -251,7 +251,7 @@ namespace Flipdish.Api
             if (customerId == null)
                 throw new ApiException(400, "Missing required parameter 'customerId' when calling CustomersApi->GetCustomerById");
 
-            var localVarPath = "/api/v1.0/{appId}/customers/{customerId}";
+            var localVarPath = "./api/v1.0/{appId}/customers/{customerId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -299,7 +299,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCustomer>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCustomer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCustomer)));
         }
 
@@ -333,7 +333,7 @@ namespace Flipdish.Api
             if (customerId == null)
                 throw new ApiException(400, "Missing required parameter 'customerId' when calling CustomersApi->GetCustomerById");
 
-            var localVarPath = "/api/v1.0/{appId}/customers/{customerId}";
+            var localVarPath = "./api/v1.0/{appId}/customers/{customerId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -381,7 +381,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCustomer>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCustomer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCustomer)));
         }
 
@@ -419,7 +419,7 @@ namespace Flipdish.Api
             if (updateCustomer == null)
                 throw new ApiException(400, "Missing required parameter 'updateCustomer' when calling CustomersApi->UpdateCustomerById");
 
-            var localVarPath = "/api/v1.0/{appId}/customers/{customerId}";
+            var localVarPath = "./api/v1.0/{appId}/customers/{customerId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -480,7 +480,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCustomer>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCustomer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCustomer)));
         }
 
@@ -519,7 +519,7 @@ namespace Flipdish.Api
             if (updateCustomer == null)
                 throw new ApiException(400, "Missing required parameter 'updateCustomer' when calling CustomersApi->UpdateCustomerById");
 
-            var localVarPath = "/api/v1.0/{appId}/customers/{customerId}";
+            var localVarPath = "./api/v1.0/{appId}/customers/{customerId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -580,7 +580,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCustomer>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCustomer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCustomer)));
         }
 

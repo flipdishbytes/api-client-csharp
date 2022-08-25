@@ -1,4 +1,4 @@
-# IO.Swagger.Model.ValidValue
+# Flipdish.Model.ValidValue
 ## Properties
 
 Name | Type | Description | Notes

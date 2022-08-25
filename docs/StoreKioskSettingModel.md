@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StoreKioskSettingModel
+# Flipdish.Model.StoreKioskSettingModel
 ## Properties
 
 Name | Type | Description | Notes

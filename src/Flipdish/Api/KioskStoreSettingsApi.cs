@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -289,7 +289,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling KioskStoreSettingsApi->GetAllKioskSettingsForStore");
 
-            var localVarPath = "/api/v1.0/{appId}/kiosksettings/store/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/kiosksettings/store/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -337,7 +337,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStoreKioskSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStoreKioskSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreKioskSettings)));
         }
 
@@ -371,7 +371,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling KioskStoreSettingsApi->GetAllKioskSettingsForStore");
 
-            var localVarPath = "/api/v1.0/{appId}/kiosksettings/store/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/kiosksettings/store/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -419,7 +419,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStoreKioskSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStoreKioskSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStoreKioskSettings)));
         }
 
@@ -442,7 +442,7 @@ namespace Flipdish.Api
         public ApiResponse< RestApiResultKioskStoreSettings > GetAllStoreSettingsForKioskHydraWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/kioskstoresettings";
+            var localVarPath = "./api/v1.0/kioskstoresettings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -488,7 +488,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultKioskStoreSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultKioskStoreSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultKioskStoreSettings)));
         }
 
@@ -512,7 +512,7 @@ namespace Flipdish.Api
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultKioskStoreSettings>> GetAllStoreSettingsForKioskHydraAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v1.0/kioskstoresettings";
+            var localVarPath = "./api/v1.0/kioskstoresettings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -558,7 +558,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultKioskStoreSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultKioskStoreSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultKioskStoreSettings)));
         }
 
@@ -596,7 +596,7 @@ namespace Flipdish.Api
             if (isCashEnabled == null)
                 throw new ApiException(400, "Missing required parameter 'isCashEnabled' when calling KioskStoreSettingsApi->UpdateCashSettingForKiosk");
 
-            var localVarPath = "/api/v1.0/{appId}/kiosksettings/cash";
+            var localVarPath = "./api/v1.0/{appId}/kiosksettings/cash";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -645,7 +645,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultKioskCashSetting>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultKioskCashSetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultKioskCashSetting)));
         }
 
@@ -684,7 +684,7 @@ namespace Flipdish.Api
             if (isCashEnabled == null)
                 throw new ApiException(400, "Missing required parameter 'isCashEnabled' when calling KioskStoreSettingsApi->UpdateCashSettingForKiosk");
 
-            var localVarPath = "/api/v1.0/{appId}/kiosksettings/cash";
+            var localVarPath = "./api/v1.0/{appId}/kiosksettings/cash";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -733,7 +733,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultKioskCashSetting>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultKioskCashSetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultKioskCashSetting)));
         }
 

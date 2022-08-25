@@ -1,4 +1,4 @@
-# IO.Swagger.Model.HydraAssignedEvent
+# Flipdish.Model.HydraAssignedEvent
 ## Properties
 
 Name | Type | Description | Notes

@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -446,7 +446,7 @@ namespace Flipdish.Api
             if (catalogItemId == null)
                 throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogItemsApi->ArchiveCatalogItem");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/items/{catalogItemId}/archive";
+            var localVarPath = "./api/v1.0/{appId}/catalog/items/{catalogItemId}/archive";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -494,7 +494,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -527,7 +527,7 @@ namespace Flipdish.Api
             if (catalogItemId == null)
                 throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogItemsApi->ArchiveCatalogItem");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/items/{catalogItemId}/archive";
+            var localVarPath = "./api/v1.0/{appId}/catalog/items/{catalogItemId}/archive";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -575,7 +575,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -608,7 +608,7 @@ namespace Flipdish.Api
             if (createCatalogItem == null)
                 throw new ApiException(400, "Missing required parameter 'createCatalogItem' when calling CatalogItemsApi->CreateCatalogItem");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/items";
+            var localVarPath = "./api/v1.0/{appId}/catalog/items";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -668,7 +668,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCatalogItem>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCatalogItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCatalogItem)));
         }
 
@@ -702,7 +702,7 @@ namespace Flipdish.Api
             if (createCatalogItem == null)
                 throw new ApiException(400, "Missing required parameter 'createCatalogItem' when calling CatalogItemsApi->CreateCatalogItem");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/items";
+            var localVarPath = "./api/v1.0/{appId}/catalog/items";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -762,7 +762,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultCatalogItem>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultCatalogItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCatalogItem)));
         }
 
@@ -794,7 +794,7 @@ namespace Flipdish.Api
             if (catalogItemId == null)
                 throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogItemsApi->DuplicateCatalogItem");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/items/{catalogItemId}/duplicate";
+            var localVarPath = "./api/v1.0/{appId}/catalog/items/{catalogItemId}/duplicate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -842,7 +842,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -875,7 +875,7 @@ namespace Flipdish.Api
             if (catalogItemId == null)
                 throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogItemsApi->DuplicateCatalogItem");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/items/{catalogItemId}/duplicate";
+            var localVarPath = "./api/v1.0/{appId}/catalog/items/{catalogItemId}/duplicate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -923,7 +923,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -956,7 +956,7 @@ namespace Flipdish.Api
             if (catalogItemId == null)
                 throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogItemsApi->GetCatalogItemById");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/items/{catalogItemId}";
+            var localVarPath = "./api/v1.0/{appId}/catalog/items/{catalogItemId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1004,7 +1004,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<CatalogItem>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (CatalogItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CatalogItem)));
         }
 
@@ -1038,7 +1038,7 @@ namespace Flipdish.Api
             if (catalogItemId == null)
                 throw new ApiException(400, "Missing required parameter 'catalogItemId' when calling CatalogItemsApi->GetCatalogItemById");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/items/{catalogItemId}";
+            var localVarPath = "./api/v1.0/{appId}/catalog/items/{catalogItemId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1086,7 +1086,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<CatalogItem>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (CatalogItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CatalogItem)));
         }
 
@@ -1125,7 +1125,7 @@ namespace Flipdish.Api
             if (itemTypes == null)
                 throw new ApiException(400, "Missing required parameter 'itemTypes' when calling CatalogItemsApi->GetItems");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/items";
+            var localVarPath = "./api/v1.0/{appId}/catalog/items";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1176,7 +1176,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultCatalogItem>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultCatalogItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultCatalogItem)));
         }
 
@@ -1216,7 +1216,7 @@ namespace Flipdish.Api
             if (itemTypes == null)
                 throw new ApiException(400, "Missing required parameter 'itemTypes' when calling CatalogItemsApi->GetItems");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/items";
+            var localVarPath = "./api/v1.0/{appId}/catalog/items";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1267,7 +1267,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultCatalogItem>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultCatalogItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultCatalogItem)));
         }
 
@@ -1304,7 +1304,7 @@ namespace Flipdish.Api
             if (updateCatalogItem == null)
                 throw new ApiException(400, "Missing required parameter 'updateCatalogItem' when calling CatalogItemsApi->UpdateCatalogItem");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/items/{catalogItemId}";
+            var localVarPath = "./api/v1.0/{appId}/catalog/items/{catalogItemId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1365,7 +1365,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1403,7 +1403,7 @@ namespace Flipdish.Api
             if (updateCatalogItem == null)
                 throw new ApiException(400, "Missing required parameter 'updateCatalogItem' when calling CatalogItemsApi->UpdateCatalogItem");
 
-            var localVarPath = "/api/v1.0/{appId}/catalog/items/{catalogItemId}";
+            var localVarPath = "./api/v1.0/{appId}/catalog/items/{catalogItemId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1464,7 +1464,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 

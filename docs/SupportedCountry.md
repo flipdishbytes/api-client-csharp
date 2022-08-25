@@ -1,4 +1,4 @@
-# IO.Swagger.Model.SupportedCountry
+# Flipdish.Model.SupportedCountry
 ## Properties
 
 Name | Type | Description | Notes

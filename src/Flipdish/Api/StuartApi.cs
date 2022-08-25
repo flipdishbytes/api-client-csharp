@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -335,7 +335,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartCancelJob");
 
-            var localVarPath = "/api/v1.0/stuart/jobs/{jobId}";
+            var localVarPath = "./api/v1.0/stuart/jobs/{jobId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -383,7 +383,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -417,7 +417,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartCancelJob");
 
-            var localVarPath = "/api/v1.0/stuart/jobs/{jobId}";
+            var localVarPath = "./api/v1.0/stuart/jobs/{jobId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -465,7 +465,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -498,7 +498,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartGetJob");
 
-            var localVarPath = "/api/v1.0/stuart/jobs/{jobId}";
+            var localVarPath = "./api/v1.0/stuart/jobs/{jobId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -546,7 +546,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultJobResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultJobResponse)));
         }
 
@@ -580,7 +580,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartGetJob");
 
-            var localVarPath = "/api/v1.0/stuart/jobs/{jobId}";
+            var localVarPath = "./api/v1.0/stuart/jobs/{jobId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -628,7 +628,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultJobResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultJobResponse)));
         }
 
@@ -656,7 +656,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartGetStuartSettings");
 
-            var localVarPath = "/api/v1.0/stuart/settings/{storeId}";
+            var localVarPath = "./api/v1.0/stuart/settings/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -703,7 +703,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStuartSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStuartSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStuartSettings)));
         }
 
@@ -732,7 +732,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartGetStuartSettings");
 
-            var localVarPath = "/api/v1.0/stuart/settings/{storeId}";
+            var localVarPath = "./api/v1.0/stuart/settings/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -779,7 +779,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultStuartSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStuartSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStuartSettings)));
         }
 
@@ -812,7 +812,7 @@ namespace Flipdish.Api
             if (stuartSettings == null)
                 throw new ApiException(400, "Missing required parameter 'stuartSettings' when calling StuartApi->StuartPostStuartSettings");
 
-            var localVarPath = "/api/v1.0/stuart/settings/{storeId}";
+            var localVarPath = "./api/v1.0/stuart/settings/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -872,7 +872,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -906,7 +906,7 @@ namespace Flipdish.Api
             if (stuartSettings == null)
                 throw new ApiException(400, "Missing required parameter 'stuartSettings' when calling StuartApi->StuartPostStuartSettings");
 
-            var localVarPath = "/api/v1.0/stuart/settings/{storeId}";
+            var localVarPath = "./api/v1.0/stuart/settings/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -966,7 +966,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 

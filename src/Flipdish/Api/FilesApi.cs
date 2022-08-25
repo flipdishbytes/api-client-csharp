@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -201,7 +201,7 @@ namespace Flipdish.Api
             if (fileId == null)
                 throw new ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->DownloadFile");
 
-            var localVarPath = "/api/v1.0/{appId}/files/download/{fileId}";
+            var localVarPath = "./api/v1.0/{appId}/files/download/{fileId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -249,7 +249,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -283,7 +283,7 @@ namespace Flipdish.Api
             if (fileId == null)
                 throw new ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->DownloadFile");
 
-            var localVarPath = "/api/v1.0/{appId}/files/download/{fileId}";
+            var localVarPath = "./api/v1.0/{appId}/files/download/{fileId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -331,7 +331,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 

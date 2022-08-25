@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiArrayResultPendingMenuChangesSummaries
+# Flipdish.Model.RestApiArrayResultPendingMenuChangesSummaries
 ## Properties
 
 Name | Type | Description | Notes

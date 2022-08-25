@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiArrayResultTeammate
+# Flipdish.Model.RestApiArrayResultTeammate
 ## Properties
 
 Name | Type | Description | Notes

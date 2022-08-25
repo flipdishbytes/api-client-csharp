@@ -1,12 +1,12 @@
-# IO.Swagger.Model.GoogleAddressResult
+# Flipdish.Model.GoogleAddressResult
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AddressComponents** | [**List&lt;GoogleAddressComponent&gt;**](GoogleAddressComponent.md) |  | [optional] 
-**FormattedAddress** | **string** |  | [optional] 
+**Address_components** | [**List&lt;GoogleAddressComponent&gt;**](GoogleAddressComponent.md) |  | [optional] 
+**Formatted_address** | **string** |  | [optional] 
 **Geometry** | [**GoogleGeometry**](GoogleGeometry.md) |  | [optional] 
-**PlaceId** | **string** |  | [optional] 
+**Place_id** | **string** |  | [optional] 
 **Types** | **List&lt;string&gt;** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

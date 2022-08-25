@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Range
+# Flipdish.Model.Range
 ## Properties
 
 Name | Type | Description | Notes

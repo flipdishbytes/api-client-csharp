@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
 namespace Flipdish.Model
@@ -28,7 +26,7 @@ namespace Flipdish.Model
     /// Represents one store&#39;s order capacity configuration
     /// </summary>
     [DataContract]
-    public partial class StoreOrderCapacityConfig :  IEquatable<StoreOrderCapacityConfig>, IValidatableObject
+    public partial class StoreOrderCapacityConfig :  IEquatable<StoreOrderCapacityConfig>
     {
         /// <summary>
         /// Signifies whether the order capacity configuration is for Delivery / Pickup
@@ -181,16 +179,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OrderCapacityPeriods.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

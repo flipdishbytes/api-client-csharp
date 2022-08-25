@@ -1,4 +1,4 @@
-# IO.Swagger.Model.OrderRefundedEvent
+# Flipdish.Model.OrderRefundedEvent
 ## Properties
 
 Name | Type | Description | Notes

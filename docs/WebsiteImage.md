@@ -1,4 +1,4 @@
-# IO.Swagger.Model.WebsiteImage
+# Flipdish.Model.WebsiteImage
 ## Properties
 
 Name | Type | Description | Notes

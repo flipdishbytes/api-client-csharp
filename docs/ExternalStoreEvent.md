@@ -1,4 +1,4 @@
-# IO.Swagger.Model.ExternalStoreEvent
+# Flipdish.Model.ExternalStoreEvent
 ## Properties
 
 Name | Type | Description | Notes

@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -346,7 +346,7 @@ namespace Flipdish.Api
             if (scheduledPushNotificationId == null)
                 throw new ApiException(400, "Missing required parameter 'scheduledPushNotificationId' when calling PushNotificationsApi->DeletePushNotification");
 
-            var localVarPath = "/api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId}";
+            var localVarPath = "./api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -394,7 +394,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -427,7 +427,7 @@ namespace Flipdish.Api
             if (scheduledPushNotificationId == null)
                 throw new ApiException(400, "Missing required parameter 'scheduledPushNotificationId' when calling PushNotificationsApi->DeletePushNotification");
 
-            var localVarPath = "/api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId}";
+            var localVarPath = "./api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -475,7 +475,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -507,7 +507,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling PushNotificationsApi->GetPushNotifications");
 
-            var localVarPath = "/api/v1.0/{appId}/pushnotifications";
+            var localVarPath = "./api/v1.0/{appId}/pushnotifications";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -556,7 +556,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultPushNotificationResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultPushNotificationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPushNotificationResponse)));
         }
 
@@ -589,7 +589,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling PushNotificationsApi->GetPushNotifications");
 
-            var localVarPath = "/api/v1.0/{appId}/pushnotifications";
+            var localVarPath = "./api/v1.0/{appId}/pushnotifications";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -638,7 +638,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiPaginationResultPushNotificationResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultPushNotificationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPushNotificationResponse)));
         }
 
@@ -671,7 +671,7 @@ namespace Flipdish.Api
             if (notification == null)
                 throw new ApiException(400, "Missing required parameter 'notification' when calling PushNotificationsApi->SchedulePushNotification");
 
-            var localVarPath = "/api/v1.0/{appId}/pushnotifications";
+            var localVarPath = "./api/v1.0/{appId}/pushnotifications";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -731,7 +731,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultPushNotificationResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultPushNotificationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPushNotificationResponse)));
         }
 
@@ -765,7 +765,7 @@ namespace Flipdish.Api
             if (notification == null)
                 throw new ApiException(400, "Missing required parameter 'notification' when calling PushNotificationsApi->SchedulePushNotification");
 
-            var localVarPath = "/api/v1.0/{appId}/pushnotifications";
+            var localVarPath = "./api/v1.0/{appId}/pushnotifications";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -825,7 +825,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultPushNotificationResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultPushNotificationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPushNotificationResponse)));
         }
 
@@ -863,7 +863,7 @@ namespace Flipdish.Api
             if (notification == null)
                 throw new ApiException(400, "Missing required parameter 'notification' when calling PushNotificationsApi->UpdatePushNotification");
 
-            var localVarPath = "/api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId}";
+            var localVarPath = "./api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -924,7 +924,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultPushNotificationResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultPushNotificationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPushNotificationResponse)));
         }
 
@@ -963,7 +963,7 @@ namespace Flipdish.Api
             if (notification == null)
                 throw new ApiException(400, "Missing required parameter 'notification' when calling PushNotificationsApi->UpdatePushNotification");
 
-            var localVarPath = "/api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId}";
+            var localVarPath = "./api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1024,7 +1024,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultPushNotificationResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultPushNotificationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPushNotificationResponse)));
         }
 

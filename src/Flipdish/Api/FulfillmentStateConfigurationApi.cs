@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -385,7 +385,7 @@ namespace Flipdish.Api
             if (fulfillmentStateConfiguration == null)
                 throw new ApiException(400, "Missing required parameter 'fulfillmentStateConfiguration' when calling FulfillmentStateConfigurationApi->CreateFulfillmentStatesConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/fulfillment/configuration/states";
+            var localVarPath = "./api/v1.0/{appId}/fulfillment/configuration/states";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -445,7 +445,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultFulfillmentStatesConfiguration>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultFulfillmentStatesConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultFulfillmentStatesConfiguration)));
         }
 
@@ -479,7 +479,7 @@ namespace Flipdish.Api
             if (fulfillmentStateConfiguration == null)
                 throw new ApiException(400, "Missing required parameter 'fulfillmentStateConfiguration' when calling FulfillmentStateConfigurationApi->CreateFulfillmentStatesConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/fulfillment/configuration/states";
+            var localVarPath = "./api/v1.0/{appId}/fulfillment/configuration/states";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -539,7 +539,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultFulfillmentStatesConfiguration>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultFulfillmentStatesConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultFulfillmentStatesConfiguration)));
         }
 
@@ -572,7 +572,7 @@ namespace Flipdish.Api
             if (configId == null)
                 throw new ApiException(400, "Missing required parameter 'configId' when calling FulfillmentStateConfigurationApi->DeleteFulfillmentStatesConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/fulfillment/configuration/states/{configId}";
+            var localVarPath = "./api/v1.0/{appId}/fulfillment/configuration/states/{configId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -620,7 +620,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
@@ -654,7 +654,7 @@ namespace Flipdish.Api
             if (configId == null)
                 throw new ApiException(400, "Missing required parameter 'configId' when calling FulfillmentStateConfigurationApi->DeleteFulfillmentStatesConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/fulfillment/configuration/states/{configId}";
+            var localVarPath = "./api/v1.0/{appId}/fulfillment/configuration/states/{configId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -702,7 +702,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiStringResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
@@ -735,7 +735,7 @@ namespace Flipdish.Api
             if (configId == null)
                 throw new ApiException(400, "Missing required parameter 'configId' when calling FulfillmentStateConfigurationApi->GetFulfillmentStatesConfiguration");
 
-            var localVarPath = "/api/v1.0/{appId}/fulfillment/configuration/states/{configId}";
+            var localVarPath = "./api/v1.0/{appId}/fulfillment/configuration/states/{configId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -783,7 +783,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<FulfillmentStatesConfiguration>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (FulfillmentStatesConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FulfillmentStatesConfiguration)));
         }
 
@@ -817,7 +817,7 @@ namespace Flipdish.Api
             if (configId == null)
                 throw new ApiException(400, "Missing required parameter 'configId' when calling FulfillmentStateConfigurationApi->GetFulfillmentStatesConfiguration");
 
-            var localVarPath = "/api/v1.0/{appId}/fulfillment/configuration/states/{configId}";
+            var localVarPath = "./api/v1.0/{appId}/fulfillment/configuration/states/{configId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -865,7 +865,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<FulfillmentStatesConfiguration>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (FulfillmentStatesConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FulfillmentStatesConfiguration)));
         }
 
@@ -893,7 +893,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling FulfillmentStateConfigurationApi->SearchFulfillmentStatesConfigurations");
 
-            var localVarPath = "/api/v1.0/{appId}/fulfillment/configuration/states";
+            var localVarPath = "./api/v1.0/{appId}/fulfillment/configuration/states";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -940,7 +940,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultFulfillmentStatesConfigurationSummary>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultFulfillmentStatesConfigurationSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultFulfillmentStatesConfigurationSummary)));
         }
 
@@ -969,7 +969,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling FulfillmentStateConfigurationApi->SearchFulfillmentStatesConfigurations");
 
-            var localVarPath = "/api/v1.0/{appId}/fulfillment/configuration/states";
+            var localVarPath = "./api/v1.0/{appId}/fulfillment/configuration/states";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1016,7 +1016,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultFulfillmentStatesConfigurationSummary>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultFulfillmentStatesConfigurationSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultFulfillmentStatesConfigurationSummary)));
         }
 
@@ -1053,7 +1053,7 @@ namespace Flipdish.Api
             if (updateFulfillmentStatesConfiguration == null)
                 throw new ApiException(400, "Missing required parameter 'updateFulfillmentStatesConfiguration' when calling FulfillmentStateConfigurationApi->UpdateFulfillmentStatesConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/fulfillment/configuration/states/{configId}";
+            var localVarPath = "./api/v1.0/{appId}/fulfillment/configuration/states/{configId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1114,7 +1114,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1152,7 +1152,7 @@ namespace Flipdish.Api
             if (updateFulfillmentStatesConfiguration == null)
                 throw new ApiException(400, "Missing required parameter 'updateFulfillmentStatesConfiguration' when calling FulfillmentStateConfigurationApi->UpdateFulfillmentStatesConfig");
 
-            var localVarPath = "/api/v1.0/{appId}/fulfillment/configuration/states/{configId}";
+            var localVarPath = "./api/v1.0/{appId}/fulfillment/configuration/states/{configId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1213,7 +1213,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 

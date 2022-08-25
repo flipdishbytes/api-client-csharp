@@ -1,4 +1,4 @@
-# IO.Swagger.Model.FeeSummary
+# Flipdish.Model.FeeSummary
 ## Properties
 
 Name | Type | Description | Notes

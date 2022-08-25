@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -192,7 +192,7 @@ namespace Flipdish.Api
             if (orderId == null)
                 throw new ApiException(400, "Missing required parameter 'orderId' when calling PaymentsApi->GetOrderPaymentInformation");
 
-            var localVarPath = "/api/v1.0/payments/payment/{orderId}/refundable";
+            var localVarPath = "./api/v1.0/payments/payment/{orderId}/refundable";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -239,7 +239,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultOrderPaymentInformation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultOrderPaymentInformation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrderPaymentInformation)));
         }
 
@@ -268,7 +268,7 @@ namespace Flipdish.Api
             if (orderId == null)
                 throw new ApiException(400, "Missing required parameter 'orderId' when calling PaymentsApi->GetOrderPaymentInformation");
 
-            var localVarPath = "/api/v1.0/payments/payment/{orderId}/refundable";
+            var localVarPath = "./api/v1.0/payments/payment/{orderId}/refundable";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -315,7 +315,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultOrderPaymentInformation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultOrderPaymentInformation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrderPaymentInformation)));
         }
 

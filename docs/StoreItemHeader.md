@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StoreItemHeader
+# Flipdish.Model.StoreItemHeader
 ## Properties
 
 Name | Type | Description | Notes

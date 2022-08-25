@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiPaginationResultPendingMenuChanges
+# Flipdish.Model.RestApiPaginationResultPendingMenuChanges
 ## Properties
 
 Name | Type | Description | Notes

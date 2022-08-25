@@ -1,4 +1,4 @@
-# IO.Swagger.Model.DeliveryZoneUpdatedEvent
+# Flipdish.Model.DeliveryZoneUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

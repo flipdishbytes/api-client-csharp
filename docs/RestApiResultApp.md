@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultApp
+# Flipdish.Model.RestApiResultApp
 ## Properties
 
 Name | Type | Description | Notes

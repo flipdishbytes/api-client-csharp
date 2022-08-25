@@ -1,15 +1,15 @@
-# IO.Swagger.Model.CspReport
+# Flipdish.Model.CspReport
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DocumentUri** | **string** |  | [optional] 
+**Document_uri** | **string** |  | [optional] 
 **Referrer** | **string** |  | [optional] 
-**ViolatedDirective** | **string** |  | [optional] 
-**EffectiveDirective** | **string** |  | [optional] 
-**OriginalPolicy** | **string** |  | [optional] 
-**BlockedUri** | **string** |  | [optional] 
-**StatusCode** | **int?** |  | [optional] 
+**Violated_directive** | **string** |  | [optional] 
+**Effective_directive** | **string** |  | [optional] 
+**Original_policy** | **string** |  | [optional] 
+**Blocked_uri** | **string** |  | [optional] 
+**Status_code** | **int?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

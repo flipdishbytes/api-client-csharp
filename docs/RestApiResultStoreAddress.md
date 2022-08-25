@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultStoreAddress
+# Flipdish.Model.RestApiResultStoreAddress
 ## Properties
 
 Name | Type | Description | Notes

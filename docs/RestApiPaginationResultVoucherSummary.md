@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiPaginationResultVoucherSummary
+# Flipdish.Model.RestApiPaginationResultVoucherSummary
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.UpdateDriverProfileModel
+# Flipdish.Model.UpdateDriverProfileModel
 ## Properties
 
 Name | Type | Description | Notes

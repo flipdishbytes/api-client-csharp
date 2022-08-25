@@ -1,4 +1,4 @@
-# IO.Swagger.Model.FulfillmentStatesConfigurationSummary
+# Flipdish.Model.FulfillmentStatesConfigurationSummary
 ## Properties
 
 Name | Type | Description | Notes

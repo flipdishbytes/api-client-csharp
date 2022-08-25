@@ -1,4 +1,4 @@
-# IO.Swagger.Model.OrderVoucherSummary
+# Flipdish.Model.OrderVoucherSummary
 ## Properties
 
 Name | Type | Description | Notes

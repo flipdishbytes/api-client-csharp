@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultKioskCashSetting
+# Flipdish.Model.RestApiResultKioskCashSetting
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.UnRegisterCardReaderRequest
+# Flipdish.Model.UnRegisterCardReaderRequest
 ## Properties
 
 Name | Type | Description | Notes

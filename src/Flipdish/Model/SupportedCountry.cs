@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
 namespace Flipdish.Model
@@ -28,7 +26,7 @@ namespace Flipdish.Model
     /// Describes a supported country
     /// </summary>
     [DataContract]
-    public partial class SupportedCountry :  IEquatable<SupportedCountry>, IValidatableObject
+    public partial class SupportedCountry :  IEquatable<SupportedCountry>
     {
         /// <summary>
         /// Address layout format. This changes the layout of address entry forms on the web app, iOS and Android app and should be set based on local custom.
@@ -343,16 +341,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.SupportRegion.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

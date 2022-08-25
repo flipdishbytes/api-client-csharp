@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CreateLocationArea
+# Flipdish.Model.CreateLocationArea
 ## Properties
 
 Name | Type | Description | Notes

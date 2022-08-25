@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StripeTerminalLocation
+# Flipdish.Model.StripeTerminalLocation
 ## Properties
 
 Name | Type | Description | Notes

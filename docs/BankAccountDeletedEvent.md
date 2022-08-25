@@ -1,4 +1,4 @@
-# IO.Swagger.Model.BankAccountDeletedEvent
+# Flipdish.Model.BankAccountDeletedEvent
 ## Properties
 
 Name | Type | Description | Notes

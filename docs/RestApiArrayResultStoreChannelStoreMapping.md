@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiArrayResultStoreChannelStoreMapping
+# Flipdish.Model.RestApiArrayResultStoreChannelStoreMapping
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CatalogImage
+# Flipdish.Model.CatalogImage
 ## Properties
 
 Name | Type | Description | Notes

@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -201,7 +201,7 @@ namespace Flipdish.Api
             if (appNameId == null)
                 throw new ApiException(400, "Missing required parameter 'appNameId' when calling OrderIngestApi->OrderIngestSubmitNewOrder");
 
-            var localVarPath = "/api/v1.0/{appNameId}/order-ingest/submit";
+            var localVarPath = "./api/v1.0/{appNameId}/order-ingest/submit";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -261,7 +261,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultOrderIngestSubmitOrderResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultOrderIngestSubmitOrderResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrderIngestSubmitOrderResponse)));
         }
 
@@ -295,7 +295,7 @@ namespace Flipdish.Api
             if (appNameId == null)
                 throw new ApiException(400, "Missing required parameter 'appNameId' when calling OrderIngestApi->OrderIngestSubmitNewOrder");
 
-            var localVarPath = "/api/v1.0/{appNameId}/order-ingest/submit";
+            var localVarPath = "./api/v1.0/{appNameId}/order-ingest/submit";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -355,7 +355,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultOrderIngestSubmitOrderResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultOrderIngestSubmitOrderResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrderIngestSubmitOrderResponse)));
         }
 

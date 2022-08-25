@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
 namespace Flipdish.Model
@@ -28,7 +26,7 @@ namespace Flipdish.Model
     /// Loyalty campaign
     /// </summary>
     [DataContract]
-    public partial class LoyaltyCampaign :  IEquatable<LoyaltyCampaign>, IValidatableObject
+    public partial class LoyaltyCampaign :  IEquatable<LoyaltyCampaign>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoyaltyCampaign" /> class.
@@ -313,52 +311,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreIds.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            // PercentDiscountAmount (int?) maximum
-            if(this.PercentDiscountAmount > (int?)100)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PercentDiscountAmount, must be a value less than or equal to 100.", new [] { "PercentDiscountAmount" });
-            }
-
-            // PercentDiscountAmount (int?) minimum
-            if(this.PercentDiscountAmount < (int?)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PercentDiscountAmount, must be a value greater than or equal to 1.", new [] { "PercentDiscountAmount" });
-            }
-
-            // RoundingStrategy (int?) maximum
-            if(this.RoundingStrategy > (int?)2)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RoundingStrategy, must be a value less than or equal to 2.", new [] { "RoundingStrategy" });
-            }
-
-            // RoundingStrategy (int?) minimum
-            if(this.RoundingStrategy < (int?)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RoundingStrategy, must be a value greater than or equal to 0.", new [] { "RoundingStrategy" });
-            }
-
-            // VoucherValidPeriodDays (int?) maximum
-            if(this.VoucherValidPeriodDays > (int?)300)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for VoucherValidPeriodDays, must be a value less than or equal to 300.", new [] { "VoucherValidPeriodDays" });
-            }
-
-            // VoucherValidPeriodDays (int?) minimum
-            if(this.VoucherValidPeriodDays < (int?)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for VoucherValidPeriodDays, must be a value greater than or equal to 1.", new [] { "VoucherValidPeriodDays" });
-            }
-
-            yield break;
         }
     }
 

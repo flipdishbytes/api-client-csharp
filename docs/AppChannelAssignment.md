@@ -1,4 +1,4 @@
-# IO.Swagger.Model.AppChannelAssignment
+# Flipdish.Model.AppChannelAssignment
 ## Properties
 
 Name | Type | Description | Notes

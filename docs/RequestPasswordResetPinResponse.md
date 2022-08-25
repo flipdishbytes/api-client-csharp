@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RequestPasswordResetPinResponse
+# Flipdish.Model.RequestPasswordResetPinResponse
 ## Properties
 
 Name | Type | Description | Notes

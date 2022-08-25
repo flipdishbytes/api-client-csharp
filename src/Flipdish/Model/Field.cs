@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 
 namespace Flipdish.Model
@@ -28,7 +26,7 @@ namespace Flipdish.Model
     /// Field
     /// </summary>
     [DataContract]
-    public partial class Field :  IEquatable<Field>, IValidatableObject
+    public partial class Field :  IEquatable<Field>
     {
         /// <summary>
         /// Field Type
@@ -353,28 +351,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.FieldType.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            // Position (int?) maximum
-            if(this.Position > (int?)1000)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Position, must be a value less than or equal to 1000.", new [] { "Position" });
-            }
-
-            // Position (int?) minimum
-            if(this.Position < (int?)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Position, must be a value greater than or equal to 1.", new [] { "Position" });
-            }
-
-            yield break;
         }
     }
 

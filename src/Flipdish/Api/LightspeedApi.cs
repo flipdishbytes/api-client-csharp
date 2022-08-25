@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -280,7 +280,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->LightspeedGenerateMenu");
 
-            var localVarPath = "/api/v1.0/lightspeed/{storeId}/menu/generate";
+            var localVarPath = "./api/v1.0/lightspeed/{storeId}/menu/generate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -327,7 +327,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -356,7 +356,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->LightspeedGenerateMenu");
 
-            var localVarPath = "/api/v1.0/lightspeed/{storeId}/menu/generate";
+            var localVarPath = "./api/v1.0/lightspeed/{storeId}/menu/generate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -403,7 +403,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
@@ -431,7 +431,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->LightspeedGetStoreSettings");
 
-            var localVarPath = "/api/v1.0/lightspeed/{storeId}/settings";
+            var localVarPath = "./api/v1.0/lightspeed/{storeId}/settings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -478,7 +478,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultLightspeedSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultLightspeedSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultLightspeedSettings)));
         }
 
@@ -507,7 +507,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->LightspeedGetStoreSettings");
 
-            var localVarPath = "/api/v1.0/lightspeed/{storeId}/settings";
+            var localVarPath = "./api/v1.0/lightspeed/{storeId}/settings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -554,7 +554,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultLightspeedSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultLightspeedSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultLightspeedSettings)));
         }
 
@@ -587,7 +587,7 @@ namespace Flipdish.Api
             if (lightspeedSettings == null)
                 throw new ApiException(400, "Missing required parameter 'lightspeedSettings' when calling LightspeedApi->LightspeedSaveStoreSettings");
 
-            var localVarPath = "/api/v1.0/lightspeed/{storeId}/settings";
+            var localVarPath = "./api/v1.0/lightspeed/{storeId}/settings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -647,7 +647,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultLightspeedSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultLightspeedSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultLightspeedSettings)));
         }
 
@@ -681,7 +681,7 @@ namespace Flipdish.Api
             if (lightspeedSettings == null)
                 throw new ApiException(400, "Missing required parameter 'lightspeedSettings' when calling LightspeedApi->LightspeedSaveStoreSettings");
 
-            var localVarPath = "/api/v1.0/lightspeed/{storeId}/settings";
+            var localVarPath = "./api/v1.0/lightspeed/{storeId}/settings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -741,7 +741,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultLightspeedSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultLightspeedSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultLightspeedSettings)));
         }
 

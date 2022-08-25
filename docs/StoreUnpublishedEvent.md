@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StoreUnpublishedEvent
+# Flipdish.Model.StoreUnpublishedEvent
 ## Properties
 
 Name | Type | Description | Notes

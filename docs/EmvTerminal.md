@@ -1,4 +1,4 @@
-# IO.Swagger.Model.EmvTerminal
+# Flipdish.Model.EmvTerminal
 ## Properties
 
 Name | Type | Description | Notes

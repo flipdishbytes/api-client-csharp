@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -577,7 +577,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling BankAccountApi->AttachBankAccountToStore");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/store/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/store/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -626,7 +626,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -664,7 +664,7 @@ namespace Flipdish.Api
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling BankAccountApi->AttachBankAccountToStore");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/store/{storeId}";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/store/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -713,7 +713,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -746,7 +746,7 @@ namespace Flipdish.Api
             if (account == null)
                 throw new ApiException(400, "Missing required parameter 'account' when calling BankAccountApi->CreateBankAccount");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -806,7 +806,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultBankAccountDetail>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultBankAccountDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBankAccountDetail)));
         }
 
@@ -840,7 +840,7 @@ namespace Flipdish.Api
             if (account == null)
                 throw new ApiException(400, "Missing required parameter 'account' when calling BankAccountApi->CreateBankAccount");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -900,7 +900,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultBankAccountDetail>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultBankAccountDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBankAccountDetail)));
         }
 
@@ -932,7 +932,7 @@ namespace Flipdish.Api
             if (bankAccountId == null)
                 throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling BankAccountApi->DeleteBankAccount");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -980,7 +980,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1013,7 +1013,7 @@ namespace Flipdish.Api
             if (bankAccountId == null)
                 throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling BankAccountApi->DeleteBankAccount");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1061,7 +1061,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1094,7 +1094,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling BankAccountApi->GetBankAccountById");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1142,7 +1142,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultBankAccountDetail>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultBankAccountDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBankAccountDetail)));
         }
 
@@ -1176,7 +1176,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling BankAccountApi->GetBankAccountById");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1224,7 +1224,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultBankAccountDetail>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultBankAccountDetail) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBankAccountDetail)));
         }
 
@@ -1252,7 +1252,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling BankAccountApi->GetBankAccounts");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1299,7 +1299,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultBankAccountSummary>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultBankAccountSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultBankAccountSummary)));
         }
 
@@ -1328,7 +1328,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling BankAccountApi->GetBankAccounts");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1375,7 +1375,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultBankAccountSummary>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultBankAccountSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultBankAccountSummary)));
         }
 
@@ -1403,7 +1403,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling BankAccountApi->GetCountriesWithFieldDefinitions");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/countries-field-definitions";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/countries-field-definitions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1450,7 +1450,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultCountryWithAccountFieldsDefinitions>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultCountryWithAccountFieldsDefinitions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultCountryWithAccountFieldsDefinitions)));
         }
 
@@ -1479,7 +1479,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling BankAccountApi->GetCountriesWithFieldDefinitions");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/countries-field-definitions";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/countries-field-definitions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1526,7 +1526,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiArrayResultCountryWithAccountFieldsDefinitions>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultCountryWithAccountFieldsDefinitions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultCountryWithAccountFieldsDefinitions)));
         }
 
@@ -1554,7 +1554,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling BankAccountApi->GetFieldDefinitions");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/field-definitions";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/field-definitions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1601,7 +1601,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAccountFieldsDefinitions>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAccountFieldsDefinitions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAccountFieldsDefinitions)));
         }
 
@@ -1630,7 +1630,7 @@ namespace Flipdish.Api
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling BankAccountApi->GetFieldDefinitions");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/field-definitions";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/field-definitions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1677,7 +1677,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<RestApiResultAccountFieldsDefinitions>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAccountFieldsDefinitions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAccountFieldsDefinitions)));
         }
 
@@ -1714,7 +1714,7 @@ namespace Flipdish.Api
             if (account == null)
                 throw new ApiException(400, "Missing required parameter 'account' when calling BankAccountApi->UpdateBankAccount");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1775,7 +1775,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1813,7 +1813,7 @@ namespace Flipdish.Api
             if (account == null)
                 throw new ApiException(400, "Missing required parameter 'account' when calling BankAccountApi->UpdateBankAccount");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1874,7 +1874,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -1916,7 +1916,7 @@ namespace Flipdish.Api
             if (reason == null)
                 throw new ApiException(400, "Missing required parameter 'reason' when calling BankAccountApi->UpdateBankAccountState");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/state/{state}";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/state/{state}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1978,7 +1978,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 
@@ -2021,7 +2021,7 @@ namespace Flipdish.Api
             if (reason == null)
                 throw new ApiException(400, "Missing required parameter 'reason' when calling BankAccountApi->UpdateBankAccountState");
 
-            var localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}/state/{state}";
+            var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}/state/{state}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2083,7 +2083,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 null);
         }
 

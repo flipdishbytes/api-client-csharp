@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PredefinedAnswer
+# Flipdish.Model.PredefinedAnswer
 ## Properties
 
 Name | Type | Description | Notes

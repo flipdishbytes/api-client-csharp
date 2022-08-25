@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultStuartSettings
+# Flipdish.Model.RestApiResultStuartSettings
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiPaginationResultWebhookLog
+# Flipdish.Model.RestApiPaginationResultWebhookLog
 ## Properties
 
 Name | Type | Description | Notes

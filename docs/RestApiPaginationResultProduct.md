@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiPaginationResultProduct
+# Flipdish.Model.RestApiPaginationResultProduct
 ## Properties
 
 Name | Type | Description | Notes

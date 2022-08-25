@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultDnsRecordInformation
+# Flipdish.Model.RestApiResultDnsRecordInformation
 ## Properties
 
 Name | Type | Description | Notes

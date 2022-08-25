@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultRestaurantVoucherPayGreenConfiguration
+# Flipdish.Model.RestApiResultRestaurantVoucherPayGreenConfiguration
 ## Properties
 
 Name | Type | Description | Notes

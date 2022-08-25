@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultCardReader
+# Flipdish.Model.RestApiResultCardReader
 ## Properties
 
 Name | Type | Description | Notes

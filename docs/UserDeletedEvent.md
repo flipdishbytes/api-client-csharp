@@ -1,4 +1,4 @@
-# IO.Swagger.Model.UserDeletedEvent
+# Flipdish.Model.UserDeletedEvent
 ## Properties
 
 Name | Type | Description | Notes

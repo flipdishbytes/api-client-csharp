@@ -1,4 +1,4 @@
-# IO.Swagger.Model.OrderCapacityConfigUpdatedEvent
+# Flipdish.Model.OrderCapacityConfigUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

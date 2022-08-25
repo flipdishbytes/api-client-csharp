@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestApiResultKioskIotConnectionParameters
+# Flipdish.Model.RestApiResultKioskIotConnectionParameters
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PushNotificationRequest
+# Flipdish.Model.PushNotificationRequest
 ## Properties
 
 Name | Type | Description | Notes

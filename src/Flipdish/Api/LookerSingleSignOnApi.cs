@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Flipdish.Client;
 using Flipdish.Model;
 
@@ -207,7 +207,7 @@ namespace Flipdish.Api
             if (embedPath == null)
                 throw new ApiException(400, "Missing required parameter 'embedPath' when calling LookerSingleSignOnApi->GetSSOEndpoint");
 
-            var localVarPath = "/api/v1.0/{appId}/looker/sso";
+            var localVarPath = "./api/v1.0/{appId}/looker/sso";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -256,7 +256,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<DashboardEmbed>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (DashboardEmbed) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DashboardEmbed)));
         }
 
@@ -292,7 +292,7 @@ namespace Flipdish.Api
             if (embedPath == null)
                 throw new ApiException(400, "Missing required parameter 'embedPath' when calling LookerSingleSignOnApi->GetSSOEndpoint");
 
-            var localVarPath = "/api/v1.0/{appId}/looker/sso";
+            var localVarPath = "./api/v1.0/{appId}/looker/sso";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -341,7 +341,7 @@ namespace Flipdish.Api
             }
 
             return new ApiResponse<DashboardEmbed>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (DashboardEmbed) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DashboardEmbed)));
         }
 
