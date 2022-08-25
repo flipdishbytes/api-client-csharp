@@ -1,4 +1,4 @@
-# Flipdish.Model.CreateGroup
+# IO.Swagger.Model.CreateGroup
 ## Properties
 
 Name | Type | Description | Notes

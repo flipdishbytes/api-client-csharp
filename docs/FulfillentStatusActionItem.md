@@ -1,4 +1,4 @@
-# Flipdish.Model.FulfillentStatusActionItem
+# IO.Swagger.Model.FulfillentStatusActionItem
 ## Properties
 
 Name | Type | Description | Notes

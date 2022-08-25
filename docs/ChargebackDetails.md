@@ -1,4 +1,4 @@
-# Flipdish.Model.ChargebackDetails
+# IO.Swagger.Model.ChargebackDetails
 ## Properties
 
 Name | Type | Description | Notes

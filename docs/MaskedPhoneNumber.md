@@ -1,4 +1,4 @@
-# Flipdish.Model.MaskedPhoneNumber
+# IO.Swagger.Model.MaskedPhoneNumber
 ## Properties
 
 Name | Type | Description | Notes

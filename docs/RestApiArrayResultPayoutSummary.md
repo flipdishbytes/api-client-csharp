@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiArrayResultPayoutSummary
+# IO.Swagger.Model.RestApiArrayResultPayoutSummary
 ## Properties
 
 Name | Type | Description | Notes

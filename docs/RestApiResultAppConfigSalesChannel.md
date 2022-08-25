@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultAppConfigSalesChannel
+# IO.Swagger.Model.RestApiResultAppConfigSalesChannel
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultAppChannelAssignment
+# IO.Swagger.Model.RestApiResultAppChannelAssignment
 ## Properties
 
 Name | Type | Description | Notes

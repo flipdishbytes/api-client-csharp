@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiArrayResultSupportedCountry
+# IO.Swagger.Model.RestApiArrayResultSupportedCountry
 ## Properties
 
 Name | Type | Description | Notes

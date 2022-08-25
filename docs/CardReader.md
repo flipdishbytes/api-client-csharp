@@ -1,4 +1,4 @@
-# Flipdish.Model.CardReader
+# IO.Swagger.Model.CardReader
 ## Properties
 
 Name | Type | Description | Notes

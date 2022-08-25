@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiArrayResultMobileAppsStatistics
+# IO.Swagger.Model.RestApiArrayResultMobileAppsStatistics
 ## Properties
 
 Name | Type | Description | Notes

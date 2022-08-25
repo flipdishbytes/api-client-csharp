@@ -1,4 +1,4 @@
-# Flipdish.Model.OrderRatingUpdatedEvent
+# IO.Swagger.Model.OrderRatingUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

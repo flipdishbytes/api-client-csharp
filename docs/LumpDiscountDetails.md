@@ -1,4 +1,4 @@
-# Flipdish.Model.LumpDiscountDetails
+# IO.Swagger.Model.LumpDiscountDetails
 ## Properties
 
 Name | Type | Description | Notes

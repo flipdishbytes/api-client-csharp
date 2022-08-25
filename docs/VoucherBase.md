@@ -1,4 +1,4 @@
-# Flipdish.Model.VoucherBase
+# IO.Swagger.Model.VoucherBase
 ## Properties
 
 Name | Type | Description | Notes

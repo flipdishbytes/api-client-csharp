@@ -1,4 +1,4 @@
-# Flipdish.Model.DeliveryZone
+# IO.Swagger.Model.DeliveryZone
 ## Properties
 
 Name | Type | Description | Notes

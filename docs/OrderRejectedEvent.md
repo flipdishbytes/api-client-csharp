@@ -1,4 +1,4 @@
-# Flipdish.Model.OrderRejectedEvent
+# IO.Swagger.Model.OrderRejectedEvent
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.VoucherDeletedEvent
+# IO.Swagger.Model.VoucherDeletedEvent
 ## Properties
 
 Name | Type | Description | Notes

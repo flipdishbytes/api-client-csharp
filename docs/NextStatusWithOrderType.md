@@ -1,4 +1,4 @@
-# Flipdish.Model.NextStatusWithOrderType
+# IO.Swagger.Model.NextStatusWithOrderType
 ## Properties
 
 Name | Type | Description | Notes

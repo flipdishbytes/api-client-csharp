@@ -1,4 +1,4 @@
-# Flipdish.Model.ProcessPaymentIntentRequest
+# IO.Swagger.Model.ProcessPaymentIntentRequest
 ## Properties
 
 Name | Type | Description | Notes

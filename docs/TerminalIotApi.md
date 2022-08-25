@@ -1,4 +1,4 @@
-# Flipdish.Api.TerminalIotApi
+# IO.Swagger.Api.TerminalIotApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -19,9 +19,9 @@ Get the IoT connection parameters for telemetry and commands  No input parameter
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {

@@ -1,4 +1,4 @@
-# Flipdish.Model.VoucherUpdatedEvent
+# IO.Swagger.Model.VoucherUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

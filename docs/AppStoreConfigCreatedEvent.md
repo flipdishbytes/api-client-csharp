@@ -1,4 +1,4 @@
-# Flipdish.Model.AppStoreConfigCreatedEvent
+# IO.Swagger.Model.AppStoreConfigCreatedEvent
 ## Properties
 
 Name | Type | Description | Notes

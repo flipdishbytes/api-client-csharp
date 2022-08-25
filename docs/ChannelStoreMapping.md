@@ -1,4 +1,4 @@
-# Flipdish.Model.ChannelStoreMapping
+# IO.Swagger.Model.ChannelStoreMapping
 ## Properties
 
 Name | Type | Description | Notes

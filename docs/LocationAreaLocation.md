@@ -1,4 +1,4 @@
-# Flipdish.Model.LocationAreaLocation
+# IO.Swagger.Model.LocationAreaLocation
 ## Properties
 
 Name | Type | Description | Notes

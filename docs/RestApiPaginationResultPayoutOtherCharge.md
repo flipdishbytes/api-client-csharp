@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiPaginationResultPayoutOtherCharge
+# IO.Swagger.Model.RestApiPaginationResultPayoutOtherCharge
 ## Properties
 
 Name | Type | Description | Notes

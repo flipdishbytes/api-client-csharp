@@ -1,4 +1,4 @@
-# Flipdish.Model.DynamicFormRules
+# IO.Swagger.Model.DynamicFormRules
 ## Properties
 
 Name | Type | Description | Notes

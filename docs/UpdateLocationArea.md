@@ -1,4 +1,4 @@
-# Flipdish.Model.UpdateLocationArea
+# IO.Swagger.Model.UpdateLocationArea
 ## Properties
 
 Name | Type | Description | Notes

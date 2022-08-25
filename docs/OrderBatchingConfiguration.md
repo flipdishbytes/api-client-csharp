@@ -1,4 +1,4 @@
-# Flipdish.Model.OrderBatchingConfiguration
+# IO.Swagger.Model.OrderBatchingConfiguration
 ## Properties
 
 Name | Type | Description | Notes

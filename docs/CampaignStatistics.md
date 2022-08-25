@@ -1,4 +1,4 @@
-# Flipdish.Model.CampaignStatistics
+# IO.Swagger.Model.CampaignStatistics
 ## Properties
 
 Name | Type | Description | Notes

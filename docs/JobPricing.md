@@ -1,4 +1,4 @@
-# Flipdish.Model.JobPricing
+# IO.Swagger.Model.JobPricing
 ## Properties
 
 Name | Type | Description | Notes

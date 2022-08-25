@@ -1,4 +1,4 @@
-# Flipdish.Model.DashboardEmbed
+# IO.Swagger.Model.DashboardEmbed
 ## Properties
 
 Name | Type | Description | Notes

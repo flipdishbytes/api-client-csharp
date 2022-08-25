@@ -1,4 +1,4 @@
-# Flipdish.Model.AppStoreAppConfigurationSummary
+# IO.Swagger.Model.AppStoreAppConfigurationSummary
 ## Properties
 
 Name | Type | Description | Notes

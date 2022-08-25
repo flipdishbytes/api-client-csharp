@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiErrorResult
+# IO.Swagger.Model.RestApiErrorResult
 ## Properties
 
 Name | Type | Description | Notes

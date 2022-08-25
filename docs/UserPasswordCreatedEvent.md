@@ -1,4 +1,4 @@
-# Flipdish.Model.UserPasswordCreatedEvent
+# IO.Swagger.Model.UserPasswordCreatedEvent
 ## Properties
 
 Name | Type | Description | Notes

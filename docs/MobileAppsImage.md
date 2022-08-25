@@ -1,4 +1,4 @@
-# Flipdish.Model.MobileAppsImage
+# IO.Swagger.Model.MobileAppsImage
 ## Properties
 
 Name | Type | Description | Notes

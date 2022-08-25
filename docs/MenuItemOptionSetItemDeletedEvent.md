@@ -1,4 +1,4 @@
-# Flipdish.Model.MenuItemOptionSetItemDeletedEvent
+# IO.Swagger.Model.MenuItemOptionSetItemDeletedEvent
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.MenuBase
+# IO.Swagger.Model.MenuBase
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.Cart
+# IO.Swagger.Model.Cart
 ## Properties
 
 Name | Type | Description | Notes

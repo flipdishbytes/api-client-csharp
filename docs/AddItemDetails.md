@@ -1,4 +1,4 @@
-# Flipdish.Model.AddItemDetails
+# IO.Swagger.Model.AddItemDetails
 ## Properties
 
 Name | Type | Description | Notes

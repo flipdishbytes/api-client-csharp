@@ -1,4 +1,4 @@
-# Flipdish.Model.GoogleViewport
+# IO.Swagger.Model.GoogleViewport
 ## Properties
 
 Name | Type | Description | Notes

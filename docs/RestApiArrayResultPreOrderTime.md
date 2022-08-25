@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiArrayResultPreOrderTime
+# IO.Swagger.Model.RestApiArrayResultPreOrderTime
 ## Properties
 
 Name | Type | Description | Notes

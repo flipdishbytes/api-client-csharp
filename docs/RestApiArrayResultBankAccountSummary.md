@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiArrayResultBankAccountSummary
+# IO.Swagger.Model.RestApiArrayResultBankAccountSummary
 ## Properties
 
 Name | Type | Description | Notes

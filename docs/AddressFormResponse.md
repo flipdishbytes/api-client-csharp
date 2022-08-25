@@ -1,4 +1,4 @@
-# Flipdish.Model.AddressFormResponse
+# IO.Swagger.Model.AddressFormResponse
 ## Properties
 
 Name | Type | Description | Notes

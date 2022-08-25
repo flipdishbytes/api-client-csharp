@@ -1,4 +1,4 @@
-# Flipdish.Model.LocalisedTimeZone
+# IO.Swagger.Model.LocalisedTimeZone
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.PercentDiscountDetails
+# IO.Swagger.Model.PercentDiscountDetails
 ## Properties
 
 Name | Type | Description | Notes

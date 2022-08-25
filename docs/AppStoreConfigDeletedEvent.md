@@ -1,4 +1,4 @@
-# Flipdish.Model.AppStoreConfigDeletedEvent
+# IO.Swagger.Model.AppStoreConfigDeletedEvent
 ## Properties
 
 Name | Type | Description | Notes

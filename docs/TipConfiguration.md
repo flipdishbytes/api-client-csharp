@@ -1,4 +1,4 @@
-# Flipdish.Model.TipConfiguration
+# IO.Swagger.Model.TipConfiguration
 ## Properties
 
 Name | Type | Description | Notes

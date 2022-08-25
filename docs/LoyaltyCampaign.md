@@ -1,4 +1,4 @@
-# Flipdish.Model.LoyaltyCampaign
+# IO.Swagger.Model.LoyaltyCampaign
 ## Properties
 
 Name | Type | Description | Notes

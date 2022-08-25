@@ -1,4 +1,4 @@
-# Flipdish.Model.CountryWithAccountFieldsDefinitions
+# IO.Swagger.Model.CountryWithAccountFieldsDefinitions
 ## Properties
 
 Name | Type | Description | Notes

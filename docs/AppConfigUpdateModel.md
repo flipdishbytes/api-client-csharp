@@ -1,4 +1,4 @@
-# Flipdish.Model.AppConfigUpdateModel
+# IO.Swagger.Model.AppConfigUpdateModel
 ## Properties
 
 Name | Type | Description | Notes

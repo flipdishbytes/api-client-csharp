@@ -1,4 +1,4 @@
-# Flipdish.Api.AppStoreApi
+# IO.Swagger.Api.AppStoreApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -20,9 +20,9 @@ App store app must be verified or you are the owner [BETA - this endpoint is und
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -84,9 +84,9 @@ Only returns verified applications [BETA - this endpoint is under development, d
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {

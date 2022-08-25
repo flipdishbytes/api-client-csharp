@@ -1,4 +1,4 @@
-# Flipdish.Model.AddressFormDisplayFormat
+# IO.Swagger.Model.AddressFormDisplayFormat
 ## Properties
 
 Name | Type | Description | Notes

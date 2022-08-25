@@ -1,4 +1,4 @@
-# Flipdish.Model.OnboardingConfigUpdate
+# IO.Swagger.Model.OnboardingConfigUpdate
 ## Properties
 
 Name | Type | Description | Notes

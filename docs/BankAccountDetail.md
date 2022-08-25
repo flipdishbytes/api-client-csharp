@@ -1,4 +1,4 @@
-# Flipdish.Model.BankAccountDetail
+# IO.Swagger.Model.BankAccountDetail
 ## Properties
 
 Name | Type | Description | Notes

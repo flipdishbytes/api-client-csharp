@@ -1,4 +1,4 @@
-# Flipdish.Model.EventSearchResult
+# IO.Swagger.Model.EventSearchResult
 ## Properties
 
 Name | Type | Description | Notes

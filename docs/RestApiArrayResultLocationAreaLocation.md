@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiArrayResultLocationAreaLocation
+# IO.Swagger.Model.RestApiArrayResultLocationAreaLocation
 ## Properties
 
 Name | Type | Description | Notes

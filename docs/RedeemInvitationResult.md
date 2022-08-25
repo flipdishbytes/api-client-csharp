@@ -1,4 +1,4 @@
-# Flipdish.Model.RedeemInvitationResult
+# IO.Swagger.Model.RedeemInvitationResult
 ## Properties
 
 Name | Type | Description | Notes

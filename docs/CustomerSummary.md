@@ -1,4 +1,4 @@
-# Flipdish.Model.CustomerSummary
+# IO.Swagger.Model.CustomerSummary
 ## Properties
 
 Name | Type | Description | Notes

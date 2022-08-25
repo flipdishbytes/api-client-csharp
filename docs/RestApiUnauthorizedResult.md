@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiUnauthorizedResult
+# IO.Swagger.Model.RestApiUnauthorizedResult
 ## Properties
 
 Name | Type | Description | Notes

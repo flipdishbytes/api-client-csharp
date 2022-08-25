@@ -1,4 +1,4 @@
-# Flipdish.Model.DeviceSettings
+# IO.Swagger.Model.DeviceSettings
 ## Properties
 
 Name | Type | Description | Notes

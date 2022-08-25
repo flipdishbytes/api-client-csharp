@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiArrayResultHomeAction
+# IO.Swagger.Model.RestApiArrayResultHomeAction
 ## Properties
 
 Name | Type | Description | Notes

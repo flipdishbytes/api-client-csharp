@@ -1,4 +1,4 @@
-# Flipdish.Model.CreateTeammate
+# IO.Swagger.Model.CreateTeammate
 ## Properties
 
 Name | Type | Description | Notes

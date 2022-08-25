@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiArrayResultCountryWithAccountFieldsDefinitions
+# IO.Swagger.Model.RestApiArrayResultCountryWithAccountFieldsDefinitions
 ## Properties
 
 Name | Type | Description | Notes

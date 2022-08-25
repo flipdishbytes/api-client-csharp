@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultCatalogItem
+# IO.Swagger.Model.RestApiResultCatalogItem
 ## Properties
 
 Name | Type | Description | Notes

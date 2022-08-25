@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiArrayResultApmCurrencyDataPoint
+# IO.Swagger.Model.RestApiArrayResultApmCurrencyDataPoint
 ## Properties
 
 Name | Type | Description | Notes

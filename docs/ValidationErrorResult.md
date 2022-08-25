@@ -1,4 +1,4 @@
-# Flipdish.Model.ValidationErrorResult
+# IO.Swagger.Model.ValidationErrorResult
 ## Properties
 
 Name | Type | Description | Notes

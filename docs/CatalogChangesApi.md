@@ -1,4 +1,4 @@
-# Flipdish.Api.CatalogChangesApi
+# IO.Swagger.Api.CatalogChangesApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -21,9 +21,9 @@ Get menu pending changes from Catalog groups and items
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -91,9 +91,9 @@ Get menu pending changes summaries by appId
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -155,9 +155,9 @@ Update menus with the pending changes from Catalog groups and items
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {

@@ -1,4 +1,4 @@
-# Flipdish.Model.PushNotificationScheduledEvent
+# IO.Swagger.Model.PushNotificationScheduledEvent
 ## Properties
 
 Name | Type | Description | Notes

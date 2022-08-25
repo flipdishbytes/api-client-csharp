@@ -1,4 +1,4 @@
-# Flipdish.Model.RestaurantVoucherAssignedStore
+# IO.Swagger.Model.RestaurantVoucherAssignedStore
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultMobileAppsImage
+# IO.Swagger.Model.RestApiResultMobileAppsImage
 ## Properties
 
 Name | Type | Description | Notes

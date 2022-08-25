@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultMetafieldDefinition
+# IO.Swagger.Model.RestApiResultMetafieldDefinition
 ## Properties
 
 Name | Type | Description | Notes

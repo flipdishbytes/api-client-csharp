@@ -1,4 +1,4 @@
-# Flipdish.Model.Metafield
+# IO.Swagger.Model.Metafield
 ## Properties
 
 Name | Type | Description | Notes

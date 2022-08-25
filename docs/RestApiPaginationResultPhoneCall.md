@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiPaginationResultPhoneCall
+# IO.Swagger.Model.RestApiPaginationResultPhoneCall
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.ApmCurrencyDataPoint
+# IO.Swagger.Model.ApmCurrencyDataPoint
 ## Properties
 
 Name | Type | Description | Notes

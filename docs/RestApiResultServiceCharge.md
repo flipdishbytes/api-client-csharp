@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultServiceCharge
+# IO.Swagger.Model.RestApiResultServiceCharge
 ## Properties
 
 Name | Type | Description | Notes

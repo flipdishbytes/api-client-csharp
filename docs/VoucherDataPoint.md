@@ -1,4 +1,4 @@
-# Flipdish.Model.VoucherDataPoint
+# IO.Swagger.Model.VoucherDataPoint
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.StoreKioskSettingUpdatedEvent
+# IO.Swagger.Model.StoreKioskSettingUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.StoreServiceChargeUpdatedEvent
+# IO.Swagger.Model.StoreServiceChargeUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.DynamicFormFieldOption
+# IO.Swagger.Model.DynamicFormFieldOption
 ## Properties
 
 Name | Type | Description | Notes

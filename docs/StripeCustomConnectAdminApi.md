@@ -1,4 +1,4 @@
-# Flipdish.Api.StripeCustomConnectAdminApi
+# IO.Swagger.Api.StripeCustomConnectAdminApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -17,9 +17,9 @@ Create a new Bank Account and Stripe connected account
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {

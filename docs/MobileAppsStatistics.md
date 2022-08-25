@@ -1,4 +1,4 @@
-# Flipdish.Model.MobileAppsStatistics
+# IO.Swagger.Model.MobileAppsStatistics
 ## Properties
 
 Name | Type | Description | Notes

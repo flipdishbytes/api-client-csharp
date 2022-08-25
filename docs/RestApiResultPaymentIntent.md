@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultPaymentIntent
+# IO.Swagger.Model.RestApiResultPaymentIntent
 ## Properties
 
 Name | Type | Description | Notes

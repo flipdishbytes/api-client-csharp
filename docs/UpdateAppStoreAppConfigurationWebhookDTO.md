@@ -1,4 +1,4 @@
-# Flipdish.Model.UpdateAppStoreAppConfigurationWebhookDTO
+# IO.Swagger.Model.UpdateAppStoreAppConfigurationWebhookDTO
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.SetPasswordWithPinModel
+# IO.Swagger.Model.SetPasswordWithPinModel
 ## Properties
 
 Name | Type | Description | Notes

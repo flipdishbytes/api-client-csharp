@@ -1,4 +1,4 @@
-# Flipdish.Model.GroupedCoordinates
+# IO.Swagger.Model.GroupedCoordinates
 ## Properties
 
 Name | Type | Description | Notes

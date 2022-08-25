@@ -1,4 +1,4 @@
-# Flipdish.Model.CustomerDeliveryTrackingOrderLine
+# IO.Swagger.Model.CustomerDeliveryTrackingOrderLine
 ## Properties
 
 Name | Type | Description | Notes

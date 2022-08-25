@@ -1,4 +1,4 @@
-# Flipdish.Model.KioskBluetoothTerminalInstallationStatusEvent
+# IO.Swagger.Model.KioskBluetoothTerminalInstallationStatusEvent
 ## Properties
 
 Name | Type | Description | Notes

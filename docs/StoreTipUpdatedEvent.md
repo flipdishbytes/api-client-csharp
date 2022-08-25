@@ -1,4 +1,4 @@
-# Flipdish.Model.StoreTipUpdatedEvent
+# IO.Swagger.Model.StoreTipUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

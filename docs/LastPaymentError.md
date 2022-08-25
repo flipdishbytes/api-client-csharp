@@ -1,4 +1,4 @@
-# Flipdish.Model.LastPaymentError
+# IO.Swagger.Model.LastPaymentError
 ## Properties
 
 Name | Type | Description | Notes

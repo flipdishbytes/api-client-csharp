@@ -1,4 +1,4 @@
-# Flipdish.Model.KioskIotConnectionParameters
+# IO.Swagger.Model.KioskIotConnectionParameters
 ## Properties
 
 Name | Type | Description | Notes

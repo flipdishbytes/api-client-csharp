@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultCountryFormResponse
+# IO.Swagger.Model.RestApiResultCountryFormResponse
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.BalanceDetails
+# IO.Swagger.Model.BalanceDetails
 ## Properties
 
 Name | Type | Description | Notes

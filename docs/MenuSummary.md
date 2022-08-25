@@ -1,4 +1,4 @@
-# Flipdish.Model.MenuSummary
+# IO.Swagger.Model.MenuSummary
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.OrderDeliveryInformationBase
+# IO.Swagger.Model.OrderDeliveryInformationBase
 ## Properties
 
 Name | Type | Description | Notes

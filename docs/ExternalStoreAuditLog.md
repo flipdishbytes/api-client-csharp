@@ -1,4 +1,4 @@
-# Flipdish.Model.ExternalStoreAuditLog
+# IO.Swagger.Model.ExternalStoreAuditLog
 ## Properties
 
 Name | Type | Description | Notes

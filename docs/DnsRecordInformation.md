@@ -1,4 +1,4 @@
-# Flipdish.Model.DnsRecordInformation
+# IO.Swagger.Model.DnsRecordInformation
 ## Properties
 
 Name | Type | Description | Notes

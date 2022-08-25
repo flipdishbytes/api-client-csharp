@@ -1,4 +1,4 @@
-# Flipdish.Api.PaymentIntentsApi
+# IO.Swagger.Api.PaymentIntentsApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -17,9 +17,9 @@ Returns stripe payment intent for a given id
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {

@@ -1,4 +1,4 @@
-# Flipdish.Model.Language
+# IO.Swagger.Model.Language
 ## Properties
 
 Name | Type | Description | Notes

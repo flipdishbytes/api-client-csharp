@@ -1,4 +1,4 @@
-# Flipdish.Model.HttpRequestAndResponseLog
+# IO.Swagger.Model.HttpRequestAndResponseLog
 ## Properties
 
 Name | Type | Description | Notes

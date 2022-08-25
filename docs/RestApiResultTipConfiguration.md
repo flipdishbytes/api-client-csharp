@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultTipConfiguration
+# IO.Swagger.Model.RestApiResultTipConfiguration
 ## Properties
 
 Name | Type | Description | Notes

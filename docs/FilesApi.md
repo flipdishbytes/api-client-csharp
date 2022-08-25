@@ -1,4 +1,4 @@
-# Flipdish.Api.FilesApi
+# IO.Swagger.Api.FilesApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -17,9 +17,9 @@ Get file from storage
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {

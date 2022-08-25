@@ -1,4 +1,4 @@
-# Flipdish.Model.OrderPaymentInformation
+# IO.Swagger.Model.OrderPaymentInformation
 ## Properties
 
 Name | Type | Description | Notes

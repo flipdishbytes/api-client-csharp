@@ -1,4 +1,4 @@
-# Flipdish.Model.LocationDeletedEvent
+# IO.Swagger.Model.LocationDeletedEvent
 ## Properties
 
 Name | Type | Description | Notes

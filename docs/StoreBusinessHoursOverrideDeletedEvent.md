@@ -1,4 +1,4 @@
-# Flipdish.Model.StoreBusinessHoursOverrideDeletedEvent
+# IO.Swagger.Model.StoreBusinessHoursOverrideDeletedEvent
 ## Properties
 
 Name | Type | Description | Notes

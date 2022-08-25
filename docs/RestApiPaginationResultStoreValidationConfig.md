@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiPaginationResultStoreValidationConfig
+# IO.Swagger.Model.RestApiPaginationResultStoreValidationConfig
 ## Properties
 
 Name | Type | Description | Notes

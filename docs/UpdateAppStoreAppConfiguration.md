@@ -1,4 +1,4 @@
-# Flipdish.Model.UpdateAppStoreAppConfiguration
+# IO.Swagger.Model.UpdateAppStoreAppConfiguration
 ## Properties
 
 Name | Type | Description | Notes

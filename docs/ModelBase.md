@@ -1,4 +1,4 @@
-# Flipdish.Model.ModelBase
+# IO.Swagger.Model.ModelBase
 ## Properties
 
 Name | Type | Description | Notes

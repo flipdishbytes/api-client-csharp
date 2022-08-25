@@ -1,4 +1,4 @@
-# Flipdish.Model.CreditNoteDetails
+# IO.Swagger.Model.CreditNoteDetails
 ## Properties
 
 Name | Type | Description | Notes

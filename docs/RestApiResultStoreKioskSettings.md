@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultStoreKioskSettings
+# IO.Swagger.Model.RestApiResultStoreKioskSettings
 ## Properties
 
 Name | Type | Description | Notes

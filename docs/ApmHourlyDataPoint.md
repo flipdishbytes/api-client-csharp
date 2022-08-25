@@ -1,4 +1,4 @@
-# Flipdish.Model.ApmHourlyDataPoint
+# IO.Swagger.Model.ApmHourlyDataPoint
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.Channel
+# IO.Swagger.Model.Channel
 ## Properties
 
 Name | Type | Description | Notes

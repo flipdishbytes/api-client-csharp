@@ -1,4 +1,4 @@
-# Flipdish.Model.KioskCashPaymentSettings
+# IO.Swagger.Model.KioskCashPaymentSettings
 ## Properties
 
 Name | Type | Description | Notes

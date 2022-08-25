@@ -1,4 +1,4 @@
-# Flipdish.Api.CatalogImagesApi
+# IO.Swagger.Api.CatalogImagesApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -19,9 +19,9 @@ Upload a Catalog Image
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {

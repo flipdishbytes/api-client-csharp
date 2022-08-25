@@ -1,4 +1,4 @@
-# Flipdish.Model.OtherChargesDetails
+# IO.Swagger.Model.OtherChargesDetails
 ## Properties
 
 Name | Type | Description | Notes

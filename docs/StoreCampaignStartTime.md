@@ -1,4 +1,4 @@
-# Flipdish.Model.StoreCampaignStartTime
+# IO.Swagger.Model.StoreCampaignStartTime
 ## Properties
 
 Name | Type | Description | Notes

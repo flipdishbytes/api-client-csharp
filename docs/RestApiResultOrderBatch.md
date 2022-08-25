@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultOrderBatch
+# IO.Swagger.Model.RestApiResultOrderBatch
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Api.OrderBatchesApi
+# IO.Swagger.Api.OrderBatchesApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -20,9 +20,9 @@ Entries are sorted by date, from the most recent. At most 100 entries are return
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {
@@ -88,9 +88,9 @@ Returns the order batch details
 ```csharp
 using System;
 using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace Example
 {

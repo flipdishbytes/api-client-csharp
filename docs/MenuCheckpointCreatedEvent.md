@@ -1,4 +1,4 @@
-# Flipdish.Model.MenuCheckpointCreatedEvent
+# IO.Swagger.Model.MenuCheckpointCreatedEvent
 ## Properties
 
 Name | Type | Description | Notes

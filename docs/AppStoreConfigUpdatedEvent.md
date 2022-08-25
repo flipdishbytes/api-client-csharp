@@ -1,4 +1,4 @@
-# Flipdish.Model.AppStoreConfigUpdatedEvent
+# IO.Swagger.Model.AppStoreConfigUpdatedEvent
 ## Properties
 
 Name | Type | Description | Notes

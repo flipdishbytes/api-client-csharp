@@ -1,4 +1,4 @@
-# Flipdish.Model.CatalogItem
+# IO.Swagger.Model.CatalogItem
 ## Properties
 
 Name | Type | Description | Notes

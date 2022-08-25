@@ -1,4 +1,4 @@
-# Flipdish.Model.StoreFeeConfig
+# IO.Swagger.Model.StoreFeeConfig
 ## Properties
 
 Name | Type | Description | Notes

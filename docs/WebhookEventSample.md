@@ -1,4 +1,4 @@
-# Flipdish.Model.WebhookEventSample
+# IO.Swagger.Model.WebhookEventSample
 ## Properties
 
 Name | Type | Description | Notes

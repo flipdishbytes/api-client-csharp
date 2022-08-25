@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultOrderFulfillmentStatusWithConfigurationActions
+# IO.Swagger.Model.RestApiResultOrderFulfillmentStatusWithConfigurationActions
 ## Properties
 
 Name | Type | Description | Notes

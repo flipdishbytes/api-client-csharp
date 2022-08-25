@@ -1,4 +1,4 @@
-# Flipdish.Model.UpdateCatalogItem
+# IO.Swagger.Model.UpdateCatalogItem
 ## Properties
 
 Name | Type | Description | Notes

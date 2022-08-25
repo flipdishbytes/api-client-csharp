@@ -1,4 +1,4 @@
-# Flipdish.Model.OrderItemOption
+# IO.Swagger.Model.OrderItemOption
 ## Properties
 
 Name | Type | Description | Notes

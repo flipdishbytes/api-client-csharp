@@ -1,4 +1,4 @@
-# Flipdish.Model.AuditLogFieldChangeInformation
+# IO.Swagger.Model.AuditLogFieldChangeInformation
 ## Properties
 
 Name | Type | Description | Notes

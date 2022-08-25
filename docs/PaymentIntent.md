@@ -1,4 +1,4 @@
-# Flipdish.Model.PaymentIntent
+# IO.Swagger.Model.PaymentIntent
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiArrayResultApmHourlyDataPoint
+# IO.Swagger.Model.RestApiArrayResultApmHourlyDataPoint
 ## Properties
 
 Name | Type | Description | Notes

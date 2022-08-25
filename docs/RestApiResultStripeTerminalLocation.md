@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultStripeTerminalLocation
+# IO.Swagger.Model.RestApiResultStripeTerminalLocation
 ## Properties
 
 Name | Type | Description | Notes

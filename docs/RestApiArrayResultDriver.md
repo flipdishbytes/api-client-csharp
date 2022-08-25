@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiArrayResultDriver
+# IO.Swagger.Model.RestApiArrayResultDriver
 ## Properties
 
 Name | Type | Description | Notes

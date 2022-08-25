@@ -1,4 +1,4 @@
-# Flipdish.Model.MenuElementHide
+# IO.Swagger.Model.MenuElementHide
 ## Properties
 
 Name | Type | Description | Notes

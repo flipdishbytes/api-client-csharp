@@ -1,4 +1,4 @@
-# Flipdish.Model.StatisticsCurrencyDataPoint
+# IO.Swagger.Model.StatisticsCurrencyDataPoint
 ## Properties
 
 Name | Type | Description | Notes

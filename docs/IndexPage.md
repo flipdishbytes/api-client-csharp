@@ -1,4 +1,4 @@
-# Flipdish.Model.IndexPage
+# IO.Swagger.Model.IndexPage
 ## Properties
 
 Name | Type | Description | Notes

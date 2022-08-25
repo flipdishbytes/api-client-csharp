@@ -1,4 +1,4 @@
-# Flipdish.Model.CreateProductReference
+# IO.Swagger.Model.CreateProductReference
 ## Properties
 
 Name | Type | Description | Notes

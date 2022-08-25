@@ -1,4 +1,4 @@
-# Flipdish.Model.WebhookLog
+# IO.Swagger.Model.WebhookLog
 ## Properties
 
 Name | Type | Description | Notes

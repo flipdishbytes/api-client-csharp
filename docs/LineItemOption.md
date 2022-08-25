@@ -1,4 +1,4 @@
-# Flipdish.Model.LineItemOption
+# IO.Swagger.Model.LineItemOption
 ## Properties
 
 Name | Type | Description | Notes

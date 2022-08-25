@@ -1,4 +1,4 @@
-# Flipdish.Model.CreateLocation
+# IO.Swagger.Model.CreateLocation
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flipdish.Model.RestApiResultHydraStatus
+# IO.Swagger.Model.RestApiResultHydraStatus
 ## Properties
 
 Name | Type | Description | Notes

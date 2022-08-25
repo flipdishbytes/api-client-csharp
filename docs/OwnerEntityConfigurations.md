@@ -1,4 +1,4 @@
-# Flipdish.Model.OwnerEntityConfigurations
+# IO.Swagger.Model.OwnerEntityConfigurations
 ## Properties
 
 Name | Type | Description | Notes
