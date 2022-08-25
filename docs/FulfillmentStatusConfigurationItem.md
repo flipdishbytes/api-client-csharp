@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **PublicDescription** | **string** | A string which could be used in notification templates with a placeholder (SMS, email, push, web page with status) | [optional] 
 **Internal** | **bool?** | Is internal state (internal states not shown to customers) | [optional] 
 **NextStatuses** | **List&lt;string&gt;** | list of statuses that this status can move to (can be back or forth) | [optional] 
-**DefaultNextStatus** | **string** | The default next status (on a dropdown or quick button on terminal or portal) | [optional] 
+**DefaultNextStatus** | [**List&lt;NextStatusWithOrderType&gt;**](NextStatusWithOrderType.md) | The default next status (on a dropdown or quick button on terminal or portal) | [optional] 
 **ChangeType** | **string** | How will state change (manually or automated, including timed) | [optional] 
 **IncludeInReports** | **bool?** | Include in reports | [optional] 
 **IsCustom** | **bool?** | Is custom state. If not, then it&#39;s a system state | [optional] 

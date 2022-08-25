@@ -64,6 +64,45 @@ namespace Flipdish.Model
         [DataMember(Name="ChangeType", EmitDefaultValue=false)]
         public ChangeTypeEnum? ChangeType { get; set; }
         /// <summary>
+        /// Defines OrderTypes
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum OrderTypesEnum
+        {
+            
+            /// <summary>
+            /// Enum All for value: All
+            /// </summary>
+            [EnumMember(Value = "All")]
+            All = 1,
+            
+            /// <summary>
+            /// Enum Delivery for value: Delivery
+            /// </summary>
+            [EnumMember(Value = "Delivery")]
+            Delivery = 2,
+            
+            /// <summary>
+            /// Enum Collection for value: Collection
+            /// </summary>
+            [EnumMember(Value = "Collection")]
+            Collection = 3,
+            
+            /// <summary>
+            /// Enum DineIn for value: DineIn
+            /// </summary>
+            [EnumMember(Value = "DineIn")]
+            DineIn = 4
+        }
+
+
+        /// <summary>
+        /// If empty then applies to all ordertypes, otherwise a list of order types this state applies to
+        /// </summary>
+        /// <value>If empty then applies to all ordertypes, otherwise a list of order types this state applies to</value>
+        [DataMember(Name="OrderTypes", EmitDefaultValue=false)]
+        public List<OrderTypesEnum> OrderTypes { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="FulfillmentStatusConfigurationItem" /> class.
         /// </summary>
         /// <param name="statusId">Status Id (no whitespaces).</param>
@@ -81,7 +120,7 @@ namespace Flipdish.Model
         /// <param name="orderTypes">If empty then applies to all ordertypes, otherwise a list of order types this state applies to.</param>
         /// <param name="communication">Whether state should fire off a notification to the customer.</param>
         /// <param name="visualOrder">Integer for ordering results in choices (eg. dropdowns).</param>
-        public FulfillmentStatusConfigurationItem(string statusId = default(string), string statusName = default(string), bool? enabled = default(bool?), string displayName = default(string), string icon = default(string), string publicDescription = default(string), bool? _internal = default(bool?), List<string> nextStatuses = default(List<string>), string defaultNextStatus = default(string), ChangeTypeEnum? changeType = default(ChangeTypeEnum?), bool? includeInReports = default(bool?), bool? isCustom = default(bool?), List<string> orderTypes = default(List<string>), bool? communication = default(bool?), int? visualOrder = default(int?))
+        public FulfillmentStatusConfigurationItem(string statusId = default(string), string statusName = default(string), bool? enabled = default(bool?), string displayName = default(string), string icon = default(string), string publicDescription = default(string), bool? _internal = default(bool?), List<string> nextStatuses = default(List<string>), List<NextStatusWithOrderType> defaultNextStatus = default(List<NextStatusWithOrderType>), ChangeTypeEnum? changeType = default(ChangeTypeEnum?), bool? includeInReports = default(bool?), bool? isCustom = default(bool?), List<OrderTypesEnum> orderTypes = default(List<OrderTypesEnum>), bool? communication = default(bool?), int? visualOrder = default(int?))
         {
             this.StatusId = statusId;
             this.StatusName = statusName;
@@ -161,7 +200,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>The default next status (on a dropdown or quick button on terminal or portal)</value>
         [DataMember(Name="DefaultNextStatus", EmitDefaultValue=false)]
-        public string DefaultNextStatus { get; set; }
+        public List<NextStatusWithOrderType> DefaultNextStatus { get; set; }
 
 
         /// <summary>
@@ -178,12 +217,6 @@ namespace Flipdish.Model
         [DataMember(Name="IsCustom", EmitDefaultValue=false)]
         public bool? IsCustom { get; set; }
 
-        /// <summary>
-        /// If empty then applies to all ordertypes, otherwise a list of order types this state applies to
-        /// </summary>
-        /// <value>If empty then applies to all ordertypes, otherwise a list of order types this state applies to</value>
-        [DataMember(Name="OrderTypes", EmitDefaultValue=false)]
-        public List<string> OrderTypes { get; set; }
 
         /// <summary>
         /// Whether state should fire off a notification to the customer
@@ -298,8 +331,8 @@ namespace Flipdish.Model
                 ) && 
                 (
                     this.DefaultNextStatus == input.DefaultNextStatus ||
-                    (this.DefaultNextStatus != null &&
-                    this.DefaultNextStatus.Equals(input.DefaultNextStatus))
+                    this.DefaultNextStatus != null &&
+                    this.DefaultNextStatus.SequenceEqual(input.DefaultNextStatus)
                 ) && 
                 (
                     this.ChangeType == input.ChangeType ||
