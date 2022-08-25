@@ -43,6 +43,8 @@ steps:
     command: 'pack'
     packagesToPack: '$(nuspec)'
     versioningScheme: 'byBuildNumber'
+  env:
+    NUGET_ENABLE_LEGACY_PROJECT_JSON_PACK: true
 
 - task: NuGetCommand@2
   inputs:
