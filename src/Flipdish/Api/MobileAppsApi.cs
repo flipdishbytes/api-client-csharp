@@ -984,7 +984,7 @@ namespace Flipdish.Api
             if (mobileAppsSubmissionId == null)
                 throw new ApiException(400, "Missing required parameter 'mobileAppsSubmissionId' when calling MobileAppsApi->GetSubmissionStatus");
 
-            var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/status";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/status/{mobileAppsSubmissionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1009,7 +1009,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (mobileAppsSubmissionId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "mobileAppsSubmissionId", mobileAppsSubmissionId)); // query parameter
+            if (mobileAppsSubmissionId != null) localVarPathParams.Add("mobileAppsSubmissionId", this.Configuration.ApiClient.ParameterToString(mobileAppsSubmissionId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1066,7 +1066,7 @@ namespace Flipdish.Api
             if (mobileAppsSubmissionId == null)
                 throw new ApiException(400, "Missing required parameter 'mobileAppsSubmissionId' when calling MobileAppsApi->GetSubmissionStatus");
 
-            var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/status";
+            var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/status/{mobileAppsSubmissionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1091,7 +1091,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (mobileAppsSubmissionId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "mobileAppsSubmissionId", mobileAppsSubmissionId)); // query parameter
+            if (mobileAppsSubmissionId != null) localVarPathParams.Add("mobileAppsSubmissionId", this.Configuration.ApiClient.ParameterToString(mobileAppsSubmissionId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required

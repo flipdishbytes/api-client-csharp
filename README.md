@@ -365,7 +365,7 @@ Class | Method | HTTP request | Description
 *MobileAppsApi* | [**GetAppConfigSalesChannel**](docs/MobileAppsApi.md#getappconfigsaleschannel) | **GET** /api/v1.0/mobileapps/{appId}/saleschannel/details | Get sales channel configuration
 *MobileAppsApi* | [**GetStatistics**](docs/MobileAppsApi.md#getstatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
 *MobileAppsApi* | [**GetSubmissionDetails**](docs/MobileAppsApi.md#getsubmissiondetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | Get submission details mobile apps
-*MobileAppsApi* | [**GetSubmissionStatus**](docs/MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/status | Get submission status mobile apps
+*MobileAppsApi* | [**GetSubmissionStatus**](docs/MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/status/{mobileAppsSubmissionId} | Get submission status mobile apps
 *MobileAppsApi* | [**Submission**](docs/MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
 *MobileAppsApi* | [**UpdateAppConfigSalesChannel**](docs/MobileAppsApi.md#updateappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Update the application sales channel configuration
 *MobileAppsApi* | [**UpdateSubmissionStatus**](docs/MobileAppsApi.md#updatesubmissionstatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{mobileAppsSubmissionId}/status | Update submission status
