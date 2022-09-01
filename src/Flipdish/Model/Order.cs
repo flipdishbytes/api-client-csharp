@@ -606,6 +606,7 @@ namespace Flipdish.Model
         /// <param name="receiptCode">Generated receipt code for an order.</param>
         /// <param name="orderDropOffLocation">DropOffLocation selected for this order.</param>
         /// <param name="fulfillmentStatus">[BETA - this is a new field in development] Fulfillment status for this order.</param>
+        /// <param name="orderBatchInfo">OrderBatch info. This property is not populated in the API.</param>
         /// <param name="orderId">Order identifier.</param>
         /// <param name="localOrderId">Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders).</param>
         /// <param name="deliveryType">Delivery type.</param>
@@ -634,7 +635,7 @@ namespace Flipdish.Model
         /// <param name="driverId">Assigned driver identifier.</param>
         /// <param name="totalTax">Total tax applied to order.</param>
         /// <param name="orderTrackingCode">Unique, 6 character long alpha numeric code for tracking..</param>
-        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), MaskedPhoneNumber maskedPhoneNumber = default(MaskedPhoneNumber), int? dropOffLocationId = default(int?), string dropOffLocation = default(string), DateTime? acceptedFor = default(DateTime?), bool? inFraudZone = default(bool?), bool? unusualHighValueOrder = default(bool?), int? rejectedByUserId = default(int?), string channelOrderId = default(string), string channelOrderDisplayId = default(string), Channel channel = default(Channel), string receiptCode = default(string), OrderDropOffLocation orderDropOffLocation = default(OrderDropOffLocation), OrderFulfillmentStatusBase fulfillmentStatus = default(OrderFulfillmentStatusBase), int? orderId = default(int?), string localOrderId = default(string), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), TableServiceCatagoryEnum? tableServiceCatagory = default(TableServiceCatagoryEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? serviceChargeAmount = default(double?), double? serviceChargePercentage = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), RejectionReasonEnum? rejectionReason = default(RejectionReasonEnum?), double? refundedAmount = default(double?), DeliveryTrackingStatusEnum? deliveryTrackingStatus = default(DeliveryTrackingStatusEnum?), int? driverId = default(int?), double? totalTax = default(double?), string orderTrackingCode = default(string))
+        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), MaskedPhoneNumber maskedPhoneNumber = default(MaskedPhoneNumber), int? dropOffLocationId = default(int?), string dropOffLocation = default(string), DateTime? acceptedFor = default(DateTime?), bool? inFraudZone = default(bool?), bool? unusualHighValueOrder = default(bool?), int? rejectedByUserId = default(int?), string channelOrderId = default(string), string channelOrderDisplayId = default(string), Channel channel = default(Channel), string receiptCode = default(string), OrderDropOffLocation orderDropOffLocation = default(OrderDropOffLocation), OrderFulfillmentStatusBase fulfillmentStatus = default(OrderFulfillmentStatusBase), OrderBatchDetails orderBatchInfo = default(OrderBatchDetails), int? orderId = default(int?), string localOrderId = default(string), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), TableServiceCatagoryEnum? tableServiceCatagory = default(TableServiceCatagoryEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? serviceChargeAmount = default(double?), double? serviceChargePercentage = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), RejectionReasonEnum? rejectionReason = default(RejectionReasonEnum?), double? refundedAmount = default(double?), DeliveryTrackingStatusEnum? deliveryTrackingStatus = default(DeliveryTrackingStatusEnum?), int? driverId = default(int?), double? totalTax = default(double?), string orderTrackingCode = default(string))
         {
             this.Store = store;
             this.Customer = customer;
@@ -656,6 +657,7 @@ namespace Flipdish.Model
             this.ReceiptCode = receiptCode;
             this.OrderDropOffLocation = orderDropOffLocation;
             this.FulfillmentStatus = fulfillmentStatus;
+            this.OrderBatchInfo = orderBatchInfo;
             this.OrderId = orderId;
             this.LocalOrderId = localOrderId;
             this.DeliveryType = deliveryType;
@@ -827,6 +829,13 @@ namespace Flipdish.Model
         public OrderFulfillmentStatusBase FulfillmentStatus { get; set; }
 
         /// <summary>
+        /// OrderBatch info. This property is not populated in the API
+        /// </summary>
+        /// <value>OrderBatch info. This property is not populated in the API</value>
+        [DataMember(Name="OrderBatchInfo", EmitDefaultValue=false)]
+        public OrderBatchDetails OrderBatchInfo { get; set; }
+
+        /// <summary>
         /// Order identifier
         /// </summary>
         /// <value>Order identifier</value>
@@ -996,6 +1005,7 @@ namespace Flipdish.Model
             sb.Append("  ReceiptCode: ").Append(ReceiptCode).Append("\n");
             sb.Append("  OrderDropOffLocation: ").Append(OrderDropOffLocation).Append("\n");
             sb.Append("  FulfillmentStatus: ").Append(FulfillmentStatus).Append("\n");
+            sb.Append("  OrderBatchInfo: ").Append(OrderBatchInfo).Append("\n");
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
             sb.Append("  LocalOrderId: ").Append(LocalOrderId).Append("\n");
             sb.Append("  DeliveryType: ").Append(DeliveryType).Append("\n");
@@ -1157,6 +1167,11 @@ namespace Flipdish.Model
                     this.FulfillmentStatus == input.FulfillmentStatus ||
                     (this.FulfillmentStatus != null &&
                     this.FulfillmentStatus.Equals(input.FulfillmentStatus))
+                ) && 
+                (
+                    this.OrderBatchInfo == input.OrderBatchInfo ||
+                    (this.OrderBatchInfo != null &&
+                    this.OrderBatchInfo.Equals(input.OrderBatchInfo))
                 ) && 
                 (
                     this.OrderId == input.OrderId ||
@@ -1349,6 +1364,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OrderDropOffLocation.GetHashCode();
                 if (this.FulfillmentStatus != null)
                     hashCode = hashCode * 59 + this.FulfillmentStatus.GetHashCode();
+                if (this.OrderBatchInfo != null)
+                    hashCode = hashCode * 59 + this.OrderBatchInfo.GetHashCode();
                 if (this.OrderId != null)
                     hashCode = hashCode * 59 + this.OrderId.GetHashCode();
                 if (this.LocalOrderId != null)
