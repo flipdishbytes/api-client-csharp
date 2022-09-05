@@ -7,10 +7,13 @@ Method | HTTP request | Description
 [**GetAppConfigSalesChannel**](MobileAppsApi.md#getappconfigsaleschannel) | **GET** /api/v1.0/mobileapps/{appId}/saleschannel/details | Get sales channel configuration
 [**GetStatistics**](MobileAppsApi.md#getstatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
 [**GetSubmissionDetails**](MobileAppsApi.md#getsubmissiondetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | Get submission details mobile apps
-[**GetSubmissionStatus**](MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/status/{mobileAppsSubmissionId} | Get submission status mobile apps
+[**GetSubmissionStatus**](MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | Get submission status mobile apps
+[**Publish**](MobileAppsApi.md#publish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/publish | Publish mobile apps
+[**Resubmission**](MobileAppsApi.md#resubmission) | **POST** /api/v1.0/mobileapps/{appId}/resubmission | Re-submission form mobile apps
 [**Submission**](MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
+[**Unpublish**](MobileAppsApi.md#unpublish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/unpublish | Unpublish mobile apps
 [**UpdateAppConfigSalesChannel**](MobileAppsApi.md#updateappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Update the application sales channel configuration
-[**UpdateSubmissionStatus**](MobileAppsApi.md#updatesubmissionstatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{mobileAppsSubmissionId}/status | Update submission status
+[**UpdateSubmissionStatus**](MobileAppsApi.md#updatesubmissionstatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | Update submission status
 [**UploadImage**](MobileAppsApi.md#uploadimage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | Upload image mobile apps
 
 
@@ -204,7 +207,7 @@ Name | Type | Description  | Notes
 
 <a name="getsubmissionstatus"></a>
 # **GetSubmissionStatus**
-> RestApiResultMobileAppsSubmissionStatus GetSubmissionStatus (string appId, int? mobileAppsSubmissionId)
+> RestApiResultMobileAppsSubmissionStatus GetSubmissionStatus (string appId, int? submissionId)
 
 Get submission status mobile apps
 
@@ -227,12 +230,12 @@ namespace Example
 
             var apiInstance = new MobileAppsApi();
             var appId = appId_example;  // string | 
-            var mobileAppsSubmissionId = 56;  // int? | 
+            var submissionId = 56;  // int? | 
 
             try
             {
                 // Get submission status mobile apps
-                RestApiResultMobileAppsSubmissionStatus result = apiInstance.GetSubmissionStatus(appId, mobileAppsSubmissionId);
+                RestApiResultMobileAppsSubmissionStatus result = apiInstance.GetSubmissionStatus(appId, submissionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -249,7 +252,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **mobileAppsSubmissionId** | **int?**|  | 
+ **submissionId** | **int?**|  | 
 
 ### Return type
 
@@ -262,6 +265,136 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="publish"></a>
+# **Publish**
+> RestApiResultRestApiIntegerResult Publish (string appId, int? submissionId, string platformType)
+
+Publish mobile apps
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class PublishExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MobileAppsApi();
+            var appId = appId_example;  // string | 
+            var submissionId = 56;  // int? | 
+            var platformType = platformType_example;  // string | 
+
+            try
+            {
+                // Publish mobile apps
+                RestApiResultRestApiIntegerResult result = apiInstance.Publish(appId, submissionId, platformType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MobileAppsApi.Publish: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **submissionId** | **int?**|  | 
+ **platformType** | **string**|  | 
+
+### Return type
+
+[**RestApiResultRestApiIntegerResult**](RestApiResultRestApiIntegerResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="resubmission"></a>
+# **Resubmission**
+> RestApiResultMobileAppsSubmission Resubmission (string appId, MobileAppsSubmission mobileAppsSubmission)
+
+Re-submission form mobile apps
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class ResubmissionExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MobileAppsApi();
+            var appId = appId_example;  // string | 
+            var mobileAppsSubmission = new MobileAppsSubmission(); // MobileAppsSubmission | 
+
+            try
+            {
+                // Re-submission form mobile apps
+                RestApiResultMobileAppsSubmission result = apiInstance.Resubmission(appId, mobileAppsSubmission);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MobileAppsApi.Resubmission: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **mobileAppsSubmission** | [**MobileAppsSubmission**](MobileAppsSubmission.md)|  | 
+
+### Return type
+
+[**RestApiResultMobileAppsSubmission**](RestApiResultMobileAppsSubmission.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -326,6 +459,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="unpublish"></a>
+# **Unpublish**
+> RestApiIntegerResult Unpublish (string appId, int? submissionId, string platformType)
+
+Unpublish mobile apps
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UnpublishExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MobileAppsApi();
+            var appId = appId_example;  // string | 
+            var submissionId = 56;  // int? | 
+            var platformType = platformType_example;  // string | 
+
+            try
+            {
+                // Unpublish mobile apps
+                RestApiIntegerResult result = apiInstance.Unpublish(appId, submissionId, platformType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MobileAppsApi.Unpublish: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **submissionId** | **int?**|  | 
+ **platformType** | **string**|  | 
+
+### Return type
+
+[**RestApiIntegerResult**](RestApiIntegerResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -396,7 +595,7 @@ Name | Type | Description  | Notes
 
 <a name="updatesubmissionstatus"></a>
 # **UpdateSubmissionStatus**
-> RestApiResultUpdateMobileAppsSubmissionStatus UpdateSubmissionStatus (string appId, int? mobileAppsSubmissionId, UpdateMobileAppsSubmissionStatus updateMobileAppsSubmissionStatus)
+> RestApiResultUpdateMobileAppsSubmissionStatus UpdateSubmissionStatus (string appId, int? submissionId, UpdateMobileAppsSubmissionStatus updateMobileAppsSubmissionStatus)
 
 Update submission status
 
@@ -419,13 +618,13 @@ namespace Example
 
             var apiInstance = new MobileAppsApi();
             var appId = appId_example;  // string | 
-            var mobileAppsSubmissionId = 56;  // int? | 
+            var submissionId = 56;  // int? | 
             var updateMobileAppsSubmissionStatus = new UpdateMobileAppsSubmissionStatus(); // UpdateMobileAppsSubmissionStatus | 
 
             try
             {
                 // Update submission status
-                RestApiResultUpdateMobileAppsSubmissionStatus result = apiInstance.UpdateSubmissionStatus(appId, mobileAppsSubmissionId, updateMobileAppsSubmissionStatus);
+                RestApiResultUpdateMobileAppsSubmissionStatus result = apiInstance.UpdateSubmissionStatus(appId, submissionId, updateMobileAppsSubmissionStatus);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -442,7 +641,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **mobileAppsSubmissionId** | **int?**|  | 
+ **submissionId** | **int?**|  | 
  **updateMobileAppsSubmissionStatus** | [**UpdateMobileAppsSubmissionStatus**](UpdateMobileAppsSubmissionStatus.md)|  | 
 
 ### Return type

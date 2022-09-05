@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**SubmissionId** | **int?** | Mobile Apps Submission Id | [optional] 
 **AppName** | **string** | App Name | 
 **AppDescription** | **string** | App Description | 
 **AppShortDescription** | **string** | App Description | 

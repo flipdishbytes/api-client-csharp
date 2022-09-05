@@ -36,12 +36,13 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MobileAppsSubmission" /> class.
         /// </summary>
+        /// <param name="submissionId">Mobile Apps Submission Id.</param>
         /// <param name="appName">App Name (required).</param>
         /// <param name="appDescription">App Description (required).</param>
         /// <param name="appShortDescription">App Description (required).</param>
         /// <param name="keywords">Keywords.</param>
         /// <param name="autoPublish">Publish automatically.</param>
-        public MobileAppsSubmission(string appName = default(string), string appDescription = default(string), string appShortDescription = default(string), List<string> keywords = default(List<string>), bool? autoPublish = default(bool?))
+        public MobileAppsSubmission(int? submissionId = default(int?), string appName = default(string), string appDescription = default(string), string appShortDescription = default(string), List<string> keywords = default(List<string>), bool? autoPublish = default(bool?))
         {
             // to ensure "appName" is required (not null)
             if (appName == null)
@@ -70,10 +71,18 @@ namespace Flipdish.Model
             {
                 this.AppShortDescription = appShortDescription;
             }
+            this.SubmissionId = submissionId;
             this.Keywords = keywords;
             this.AutoPublish = autoPublish;
         }
         
+        /// <summary>
+        /// Mobile Apps Submission Id
+        /// </summary>
+        /// <value>Mobile Apps Submission Id</value>
+        [DataMember(Name="SubmissionId", EmitDefaultValue=false)]
+        public int? SubmissionId { get; set; }
+
         /// <summary>
         /// App Name
         /// </summary>
@@ -117,6 +126,7 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MobileAppsSubmission {\n");
+            sb.Append("  SubmissionId: ").Append(SubmissionId).Append("\n");
             sb.Append("  AppName: ").Append(AppName).Append("\n");
             sb.Append("  AppDescription: ").Append(AppDescription).Append("\n");
             sb.Append("  AppShortDescription: ").Append(AppShortDescription).Append("\n");
@@ -157,6 +167,11 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.SubmissionId == input.SubmissionId ||
+                    (this.SubmissionId != null &&
+                    this.SubmissionId.Equals(input.SubmissionId))
+                ) && 
+                (
                     this.AppName == input.AppName ||
                     (this.AppName != null &&
                     this.AppName.Equals(input.AppName))
@@ -192,6 +207,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.SubmissionId != null)
+                    hashCode = hashCode * 59 + this.SubmissionId.GetHashCode();
                 if (this.AppName != null)
                     hashCode = hashCode * 59 + this.AppName.GetHashCode();
                 if (this.AppDescription != null)
