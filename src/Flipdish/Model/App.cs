@@ -933,64 +933,88 @@ namespace Flipdish.Model
             UpdateOnboarding = 137,
             
             /// <summary>
+            /// Enum ViewClientDevices for value: ViewClientDevices
+            /// </summary>
+            [EnumMember(Value = "ViewClientDevices")]
+            ViewClientDevices = 138,
+            
+            /// <summary>
+            /// Enum UpdateClientDevices for value: UpdateClientDevices
+            /// </summary>
+            [EnumMember(Value = "UpdateClientDevices")]
+            UpdateClientDevices = 139,
+            
+            /// <summary>
+            /// Enum EnrollClientDevices for value: EnrollClientDevices
+            /// </summary>
+            [EnumMember(Value = "EnrollClientDevices")]
+            EnrollClientDevices = 140,
+            
+            /// <summary>
+            /// Enum AssignClientDevices for value: AssignClientDevices
+            /// </summary>
+            [EnumMember(Value = "AssignClientDevices")]
+            AssignClientDevices = 141,
+            
+            /// <summary>
             /// Enum CreateAppStoreAppConfiguration for value: CreateAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "CreateAppStoreAppConfiguration")]
-            CreateAppStoreAppConfiguration = 138,
+            CreateAppStoreAppConfiguration = 142,
             
             /// <summary>
             /// Enum ViewAppStoreAppConfiguration for value: ViewAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "ViewAppStoreAppConfiguration")]
-            ViewAppStoreAppConfiguration = 139,
+            ViewAppStoreAppConfiguration = 143,
             
             /// <summary>
             /// Enum UpdateAppStoreAppConfiguration for value: UpdateAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "UpdateAppStoreAppConfiguration")]
-            UpdateAppStoreAppConfiguration = 140,
+            UpdateAppStoreAppConfiguration = 144,
             
             /// <summary>
             /// Enum DeleteAppStoreAppConfiguration for value: DeleteAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "DeleteAppStoreAppConfiguration")]
-            DeleteAppStoreAppConfiguration = 141,
+            DeleteAppStoreAppConfiguration = 145,
             
             /// <summary>
             /// Enum ViewSalesChannels for value: ViewSalesChannels
             /// </summary>
             [EnumMember(Value = "ViewSalesChannels")]
-            ViewSalesChannels = 142,
+            ViewSalesChannels = 146,
             
             /// <summary>
             /// Enum EditSalesChannels for value: EditSalesChannels
             /// </summary>
             [EnumMember(Value = "EditSalesChannels")]
-            EditSalesChannels = 143,
+            EditSalesChannels = 147,
             
             /// <summary>
             /// Enum ViewPayGreenWhiteLabelConfiguration for value: ViewPayGreenWhiteLabelConfiguration
             /// </summary>
             [EnumMember(Value = "ViewPayGreenWhiteLabelConfiguration")]
-            ViewPayGreenWhiteLabelConfiguration = 144,
+            ViewPayGreenWhiteLabelConfiguration = 148,
             
             /// <summary>
             /// Enum CreatePayGreenWhiteLabelConfiguration for value: CreatePayGreenWhiteLabelConfiguration
             /// </summary>
             [EnumMember(Value = "CreatePayGreenWhiteLabelConfiguration")]
-            CreatePayGreenWhiteLabelConfiguration = 145,
+            CreatePayGreenWhiteLabelConfiguration = 149,
             
             /// <summary>
             /// Enum UpdatePayGreenWhiteLabelConfiguration for value: UpdatePayGreenWhiteLabelConfiguration
             /// </summary>
             [EnumMember(Value = "UpdatePayGreenWhiteLabelConfiguration")]
-            UpdatePayGreenWhiteLabelConfiguration = 146,
+            UpdatePayGreenWhiteLabelConfiguration = 150,
             
             /// <summary>
             /// Enum UpdatePayGreenStoreConfiguration for value: UpdatePayGreenStoreConfiguration
             /// </summary>
             [EnumMember(Value = "UpdatePayGreenStoreConfiguration")]
-            UpdatePayGreenStoreConfiguration = 147
+            UpdatePayGreenStoreConfiguration = 151
         }
 
 
