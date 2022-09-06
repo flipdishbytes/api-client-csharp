@@ -36,11 +36,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PasswordResetModel" /> class.
         /// </summary>
+        /// <param name="tokenId">Token Id.</param>
         /// <param name="email">Email address.</param>
         /// <param name="password">Password (required).</param>
         /// <param name="passwordConfirmation">Password confirmation (required).</param>
         /// <param name="token">Password reset token.</param>
-        public PasswordResetModel(string email = default(string), string password = default(string), string passwordConfirmation = default(string), string token = default(string))
+        public PasswordResetModel(string tokenId = default(string), string email = default(string), string password = default(string), string passwordConfirmation = default(string), string token = default(string))
         {
             // to ensure "password" is required (not null)
             if (password == null)
@@ -60,10 +61,18 @@ namespace Flipdish.Model
             {
                 this.PasswordConfirmation = passwordConfirmation;
             }
+            this.TokenId = tokenId;
             this.Email = email;
             this.Token = token;
         }
         
+        /// <summary>
+        /// Token Id
+        /// </summary>
+        /// <value>Token Id</value>
+        [DataMember(Name="TokenId", EmitDefaultValue=false)]
+        public string TokenId { get; set; }
+
         /// <summary>
         /// Email address
         /// </summary>
@@ -100,6 +109,7 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PasswordResetModel {\n");
+            sb.Append("  TokenId: ").Append(TokenId).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  Password: ").Append(Password).Append("\n");
             sb.Append("  PasswordConfirmation: ").Append(PasswordConfirmation).Append("\n");
@@ -139,6 +149,11 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.TokenId == input.TokenId ||
+                    (this.TokenId != null &&
+                    this.TokenId.Equals(input.TokenId))
+                ) && 
+                (
                     this.Email == input.Email ||
                     (this.Email != null &&
                     this.Email.Equals(input.Email))
@@ -169,6 +184,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.TokenId != null)
+                    hashCode = hashCode * 59 + this.TokenId.GetHashCode();
                 if (this.Email != null)
                     hashCode = hashCode * 59 + this.Email.GetHashCode();
                 if (this.Password != null)

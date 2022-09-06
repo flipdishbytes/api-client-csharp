@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**TokenId** | **string** | Token Id | [optional] 
 **Email** | **string** | Email address | [optional] 
 **Password** | **string** | Password | 
 **PasswordConfirmation** | **string** | Password confirmation | 
