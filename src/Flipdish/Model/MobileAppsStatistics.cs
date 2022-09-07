@@ -37,16 +37,22 @@ namespace Flipdish.Model
         {
             
             /// <summary>
+            /// Enum None for value: None
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None = 1,
+            
+            /// <summary>
             /// Enum Android for value: Android
             /// </summary>
             [EnumMember(Value = "Android")]
-            Android = 1,
+            Android = 2,
             
             /// <summary>
             /// Enum IOS for value: IOS
             /// </summary>
             [EnumMember(Value = "IOS")]
-            IOS = 2
+            IOS = 3
         }
 
         /// <summary>

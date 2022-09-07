@@ -595,7 +595,7 @@ Name | Type | Description  | Notes
 
 <a name="updatesubmissionstatus"></a>
 # **UpdateSubmissionStatus**
-> RestApiResultUpdateMobileAppsSubmissionStatus UpdateSubmissionStatus (string appId, int? submissionId, UpdateMobileAppsSubmissionStatus updateMobileAppsSubmissionStatus)
+> RestApiResultUpdateMobileAppsSubmissionStatus UpdateSubmissionStatus (string appId, int? submissionId, UpdateMobileAppsSubmissionStatus updateSubmissionStatus)
 
 Update submission status
 
@@ -619,12 +619,12 @@ namespace Example
             var apiInstance = new MobileAppsApi();
             var appId = appId_example;  // string | 
             var submissionId = 56;  // int? | 
-            var updateMobileAppsSubmissionStatus = new UpdateMobileAppsSubmissionStatus(); // UpdateMobileAppsSubmissionStatus | 
+            var updateSubmissionStatus = new UpdateMobileAppsSubmissionStatus(); // UpdateMobileAppsSubmissionStatus | 
 
             try
             {
                 // Update submission status
-                RestApiResultUpdateMobileAppsSubmissionStatus result = apiInstance.UpdateSubmissionStatus(appId, submissionId, updateMobileAppsSubmissionStatus);
+                RestApiResultUpdateMobileAppsSubmissionStatus result = apiInstance.UpdateSubmissionStatus(appId, submissionId, updateSubmissionStatus);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -642,7 +642,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
  **submissionId** | **int?**|  | 
- **updateMobileAppsSubmissionStatus** | [**UpdateMobileAppsSubmissionStatus**](UpdateMobileAppsSubmissionStatus.md)|  | 
+ **updateSubmissionStatus** | [**UpdateMobileAppsSubmissionStatus**](UpdateMobileAppsSubmissionStatus.md)|  | 
 
 ### Return type
 
