@@ -70,22 +70,28 @@ namespace Flipdish.Model
         {
             
             /// <summary>
+            /// Enum Boolean for value: Boolean
+            /// </summary>
+            [EnumMember(Value = "Boolean")]
+            Boolean = 1,
+            
+            /// <summary>
             /// Enum Json for value: Json
             /// </summary>
             [EnumMember(Value = "Json")]
-            Json = 1,
+            Json = 2,
             
             /// <summary>
             /// Enum SingleLineString for value: SingleLineString
             /// </summary>
             [EnumMember(Value = "SingleLineString")]
-            SingleLineString = 2,
+            SingleLineString = 3,
             
             /// <summary>
             /// Enum MultiLineString for value: MultiLineString
             /// </summary>
             [EnumMember(Value = "MultiLineString")]
-            MultiLineString = 3
+            MultiLineString = 4
         }
 
         /// <summary>
