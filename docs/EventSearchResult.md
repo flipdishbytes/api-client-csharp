@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **OrderDispatchedEvent** | [**List&lt;OrderDispatchedEvent&gt;**](OrderDispatchedEvent.md) | Order dispatched events | [optional] 
 **OrderCustomerTrackingCreatedEvent** | [**List&lt;OrderCustomerTrackingCreatedEvent&gt;**](OrderCustomerTrackingCreatedEvent.md) | Order delivery tracking created events | [optional] 
 **OrderDeliveryTrackingStatusUpdatedEvent** | [**List&lt;OrderDeliveryTrackingStatusUpdatedEvent&gt;**](OrderDeliveryTrackingStatusUpdatedEvent.md) | Order delivery tracking updated events | [optional] 
+**OrderBatchPublishedEvent** | [**List&lt;OrderBatchPublishedEvent&gt;**](OrderBatchPublishedEvent.md) | Order Batch published event | [optional] 
 **OrderCreatedEvent** | [**List&lt;OrderCreatedEvent&gt;**](OrderCreatedEvent.md) | Order created events | [optional] 
 **OrderRatingUpdatedEvent** | [**List&lt;OrderRatingUpdatedEvent&gt;**](OrderRatingUpdatedEvent.md) | Order rating updated events | [optional] 
 **OrderRefundedEvent** | [**List&lt;OrderRefundedEvent&gt;**](OrderRefundedEvent.md) | Order refunded events | [optional] 
