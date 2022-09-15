@@ -32,10 +32,12 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="SetOrderBatchingConfiguration" /> class.
         /// </summary>
         /// <param name="batchIntervalInMinutes">Batch sending interval in minutes.</param>
+        /// <param name="batchIntervalInSeconds">Batch sending interval in seconds.</param>
         /// <param name="enabled">OrderBatching is enabled or not.</param>
-        public SetOrderBatchingConfiguration(int? batchIntervalInMinutes = default(int?), bool? enabled = default(bool?))
+        public SetOrderBatchingConfiguration(int? batchIntervalInMinutes = default(int?), int? batchIntervalInSeconds = default(int?), bool? enabled = default(bool?))
         {
             this.BatchIntervalInMinutes = batchIntervalInMinutes;
+            this.BatchIntervalInSeconds = batchIntervalInSeconds;
             this.Enabled = enabled;
         }
         
@@ -45,6 +47,13 @@ namespace Flipdish.Model
         /// <value>Batch sending interval in minutes</value>
         [DataMember(Name="BatchIntervalInMinutes", EmitDefaultValue=false)]
         public int? BatchIntervalInMinutes { get; set; }
+
+        /// <summary>
+        /// Batch sending interval in seconds
+        /// </summary>
+        /// <value>Batch sending interval in seconds</value>
+        [DataMember(Name="BatchIntervalInSeconds", EmitDefaultValue=false)]
+        public int? BatchIntervalInSeconds { get; set; }
 
         /// <summary>
         /// OrderBatching is enabled or not
@@ -62,6 +71,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class SetOrderBatchingConfiguration {\n");
             sb.Append("  BatchIntervalInMinutes: ").Append(BatchIntervalInMinutes).Append("\n");
+            sb.Append("  BatchIntervalInSeconds: ").Append(BatchIntervalInSeconds).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -103,6 +113,11 @@ namespace Flipdish.Model
                     this.BatchIntervalInMinutes.Equals(input.BatchIntervalInMinutes))
                 ) && 
                 (
+                    this.BatchIntervalInSeconds == input.BatchIntervalInSeconds ||
+                    (this.BatchIntervalInSeconds != null &&
+                    this.BatchIntervalInSeconds.Equals(input.BatchIntervalInSeconds))
+                ) && 
+                (
                     this.Enabled == input.Enabled ||
                     (this.Enabled != null &&
                     this.Enabled.Equals(input.Enabled))
@@ -120,6 +135,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.BatchIntervalInMinutes != null)
                     hashCode = hashCode * 59 + this.BatchIntervalInMinutes.GetHashCode();
+                if (this.BatchIntervalInSeconds != null)
+                    hashCode = hashCode * 59 + this.BatchIntervalInSeconds.GetHashCode();
                 if (this.Enabled != null)
                     hashCode = hashCode * 59 + this.Enabled.GetHashCode();
                 return hashCode;
