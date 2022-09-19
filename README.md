@@ -806,6 +806,8 @@ Class | Method | HTTP request | Description
  - [Model.MobileAppsSubmission](docs/MobileAppsSubmission.md)
  - [Model.MobileAppsSubmissionDetails](docs/MobileAppsSubmissionDetails.md)
  - [Model.MobileAppsSubmissionStatus](docs/MobileAppsSubmissionStatus.md)
+ - [Model.MobileAppsSubmissionStatusUpdatedEvent](docs/MobileAppsSubmissionStatusUpdatedEvent.md)
+ - [Model.MobileAppsSubmissionUpdatedEvent](docs/MobileAppsSubmissionUpdatedEvent.md)
  - [Model.ModelBase](docs/ModelBase.md)
  - [Model.NextStatusWithOrderType](docs/NextStatusWithOrderType.md)
  - [Model.OAuthApp](docs/OAuthApp.md)

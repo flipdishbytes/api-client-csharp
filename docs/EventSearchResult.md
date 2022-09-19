@@ -136,6 +136,8 @@ Name | Type | Description | Notes
 **LocationCreatedEvent** | [**List&lt;LocationCreatedEvent&gt;**](LocationCreatedEvent.md) | Location created event | [optional] 
 **LocationDeletedEvent** | [**List&lt;LocationDeletedEvent&gt;**](LocationDeletedEvent.md) | Location deleted event | [optional] 
 **StoreServiceChargeUpdatedEvent** | [**List&lt;StoreServiceChargeUpdatedEvent&gt;**](StoreServiceChargeUpdatedEvent.md) | Service Charge Updated Event | [optional] 
+**MobileAppsSubmissionStatusUpdatedEvent** | [**List&lt;MobileAppsSubmissionStatusUpdatedEvent&gt;**](MobileAppsSubmissionStatusUpdatedEvent.md) | Mobile Submission Status Updated Event | [optional] 
+**MobileAppsSubmissionUpdatedEvent** | [**List&lt;MobileAppsSubmissionUpdatedEvent&gt;**](MobileAppsSubmissionUpdatedEvent.md) | Mobile Submission Updated Event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
