@@ -3,7 +3,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BatchIntervalInMinutes** | **int?** | Batch sending interval in minutes | [optional] 
 **BatchIntervalInSeconds** | **int?** | Batch sending interval in seconds | [optional] 
 **Enabled** | **bool?** | OrderBatching is enabled or not | [optional] 
 
