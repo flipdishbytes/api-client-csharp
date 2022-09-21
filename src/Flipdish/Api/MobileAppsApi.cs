@@ -121,9 +121,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>RestApiResultRestApiIntegerResult</returns>
-        RestApiResultRestApiIntegerResult Publish (string appId, int? submissionId, string platformType);
+        RestApiResultRestApiIntegerResult Publish (string appId, int? submissionId, string platformType = null);
 
         /// <summary>
         /// Publish mobile apps
@@ -134,9 +134,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultRestApiIntegerResult</returns>
-        ApiResponse<RestApiResultRestApiIntegerResult> PublishWithHttpInfo (string appId, int? submissionId, string platformType);
+        ApiResponse<RestApiResultRestApiIntegerResult> PublishWithHttpInfo (string appId, int? submissionId, string platformType = null);
         /// <summary>
         /// Re-submission form mobile apps
         /// </summary>
@@ -192,9 +192,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>RestApiIntegerResult</returns>
-        RestApiIntegerResult Unpublish (string appId, int? submissionId, string platformType);
+        RestApiIntegerResult Unpublish (string appId, int? submissionId, string platformType = null);
 
         /// <summary>
         /// Unpublish mobile apps
@@ -205,9 +205,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>ApiResponse of RestApiIntegerResult</returns>
-        ApiResponse<RestApiIntegerResult> UnpublishWithHttpInfo (string appId, int? submissionId, string platformType);
+        ApiResponse<RestApiIntegerResult> UnpublishWithHttpInfo (string appId, int? submissionId, string platformType = null);
         /// <summary>
         /// Update the application sales channel configuration
         /// </summary>
@@ -378,9 +378,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>Task of RestApiResultRestApiIntegerResult</returns>
-        System.Threading.Tasks.Task<RestApiResultRestApiIntegerResult> PublishAsync (string appId, int? submissionId, string platformType);
+        System.Threading.Tasks.Task<RestApiResultRestApiIntegerResult> PublishAsync (string appId, int? submissionId, string platformType = null);
 
         /// <summary>
         /// Publish mobile apps
@@ -391,9 +391,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultRestApiIntegerResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultRestApiIntegerResult>> PublishAsyncWithHttpInfo (string appId, int? submissionId, string platformType);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultRestApiIntegerResult>> PublishAsyncWithHttpInfo (string appId, int? submissionId, string platformType = null);
         /// <summary>
         /// Re-submission form mobile apps
         /// </summary>
@@ -449,9 +449,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>Task of RestApiIntegerResult</returns>
-        System.Threading.Tasks.Task<RestApiIntegerResult> UnpublishAsync (string appId, int? submissionId, string platformType);
+        System.Threading.Tasks.Task<RestApiIntegerResult> UnpublishAsync (string appId, int? submissionId, string platformType = null);
 
         /// <summary>
         /// Unpublish mobile apps
@@ -462,9 +462,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiIntegerResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> UnpublishAsyncWithHttpInfo (string appId, int? submissionId, string platformType);
+        System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> UnpublishAsyncWithHttpInfo (string appId, int? submissionId, string platformType = null);
         /// <summary>
         /// Update the application sales channel configuration
         /// </summary>
@@ -1270,9 +1270,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>RestApiResultRestApiIntegerResult</returns>
-        public RestApiResultRestApiIntegerResult Publish (string appId, int? submissionId, string platformType)
+        public RestApiResultRestApiIntegerResult Publish (string appId, int? submissionId, string platformType = null)
         {
              ApiResponse<RestApiResultRestApiIntegerResult> localVarResponse = PublishWithHttpInfo(appId, submissionId, platformType);
              return localVarResponse.Data;
@@ -1284,9 +1284,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultRestApiIntegerResult</returns>
-        public ApiResponse< RestApiResultRestApiIntegerResult > PublishWithHttpInfo (string appId, int? submissionId, string platformType)
+        public ApiResponse< RestApiResultRestApiIntegerResult > PublishWithHttpInfo (string appId, int? submissionId, string platformType = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1294,9 +1294,6 @@ namespace Flipdish.Api
             // verify the required parameter 'submissionId' is set
             if (submissionId == null)
                 throw new ApiException(400, "Missing required parameter 'submissionId' when calling MobileAppsApi->Publish");
-            // verify the required parameter 'platformType' is set
-            if (platformType == null)
-                throw new ApiException(400, "Missing required parameter 'platformType' when calling MobileAppsApi->Publish");
 
             var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/{submissionId}/publish";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1357,9 +1354,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>Task of RestApiResultRestApiIntegerResult</returns>
-        public async System.Threading.Tasks.Task<RestApiResultRestApiIntegerResult> PublishAsync (string appId, int? submissionId, string platformType)
+        public async System.Threading.Tasks.Task<RestApiResultRestApiIntegerResult> PublishAsync (string appId, int? submissionId, string platformType = null)
         {
              ApiResponse<RestApiResultRestApiIntegerResult> localVarResponse = await PublishAsyncWithHttpInfo(appId, submissionId, platformType);
              return localVarResponse.Data;
@@ -1372,9 +1369,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultRestApiIntegerResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultRestApiIntegerResult>> PublishAsyncWithHttpInfo (string appId, int? submissionId, string platformType)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultRestApiIntegerResult>> PublishAsyncWithHttpInfo (string appId, int? submissionId, string platformType = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1382,9 +1379,6 @@ namespace Flipdish.Api
             // verify the required parameter 'submissionId' is set
             if (submissionId == null)
                 throw new ApiException(400, "Missing required parameter 'submissionId' when calling MobileAppsApi->Publish");
-            // verify the required parameter 'platformType' is set
-            if (platformType == null)
-                throw new ApiException(400, "Missing required parameter 'platformType' when calling MobileAppsApi->Publish");
 
             var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/{submissionId}/publish";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1819,9 +1813,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>RestApiIntegerResult</returns>
-        public RestApiIntegerResult Unpublish (string appId, int? submissionId, string platformType)
+        public RestApiIntegerResult Unpublish (string appId, int? submissionId, string platformType = null)
         {
              ApiResponse<RestApiIntegerResult> localVarResponse = UnpublishWithHttpInfo(appId, submissionId, platformType);
              return localVarResponse.Data;
@@ -1833,9 +1827,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>ApiResponse of RestApiIntegerResult</returns>
-        public ApiResponse< RestApiIntegerResult > UnpublishWithHttpInfo (string appId, int? submissionId, string platformType)
+        public ApiResponse< RestApiIntegerResult > UnpublishWithHttpInfo (string appId, int? submissionId, string platformType = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1843,9 +1837,6 @@ namespace Flipdish.Api
             // verify the required parameter 'submissionId' is set
             if (submissionId == null)
                 throw new ApiException(400, "Missing required parameter 'submissionId' when calling MobileAppsApi->Unpublish");
-            // verify the required parameter 'platformType' is set
-            if (platformType == null)
-                throw new ApiException(400, "Missing required parameter 'platformType' when calling MobileAppsApi->Unpublish");
 
             var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/{submissionId}/unpublish";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1906,9 +1897,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>Task of RestApiIntegerResult</returns>
-        public async System.Threading.Tasks.Task<RestApiIntegerResult> UnpublishAsync (string appId, int? submissionId, string platformType)
+        public async System.Threading.Tasks.Task<RestApiIntegerResult> UnpublishAsync (string appId, int? submissionId, string platformType = null)
         {
              ApiResponse<RestApiIntegerResult> localVarResponse = await UnpublishAsyncWithHttpInfo(appId, submissionId, platformType);
              return localVarResponse.Data;
@@ -1921,9 +1912,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="submissionId"></param>
-        /// <param name="platformType"></param>
+        /// <param name="platformType"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiIntegerResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> UnpublishAsyncWithHttpInfo (string appId, int? submissionId, string platformType)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> UnpublishAsyncWithHttpInfo (string appId, int? submissionId, string platformType = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1931,9 +1922,6 @@ namespace Flipdish.Api
             // verify the required parameter 'submissionId' is set
             if (submissionId == null)
                 throw new ApiException(400, "Missing required parameter 'submissionId' when calling MobileAppsApi->Unpublish");
-            // verify the required parameter 'platformType' is set
-            if (platformType == null)
-                throw new ApiException(400, "Missing required parameter 'platformType' when calling MobileAppsApi->Unpublish");
 
             var localVarPath = "./api/v1.0/mobileapps/{appId}/submission/{submissionId}/unpublish";
             var localVarPathParams = new Dictionary<String, String>();

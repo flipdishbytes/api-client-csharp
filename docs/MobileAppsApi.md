@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 <a name="publish"></a>
 # **Publish**
-> RestApiResultRestApiIntegerResult Publish (string appId, int? submissionId, string platformType)
+> RestApiResultRestApiIntegerResult Publish (string appId, int? submissionId, string platformType = null)
 
 Publish mobile apps
 
@@ -295,7 +295,7 @@ namespace Example
             var apiInstance = new MobileAppsApi();
             var appId = appId_example;  // string | 
             var submissionId = 56;  // int? | 
-            var platformType = platformType_example;  // string | 
+            var platformType = platformType_example;  // string |  (optional) 
 
             try
             {
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
  **submissionId** | **int?**|  | 
- **platformType** | **string**|  | 
+ **platformType** | **string**|  | [optional] 
 
 ### Return type
 
@@ -465,7 +465,7 @@ Name | Type | Description  | Notes
 
 <a name="unpublish"></a>
 # **Unpublish**
-> RestApiIntegerResult Unpublish (string appId, int? submissionId, string platformType)
+> RestApiIntegerResult Unpublish (string appId, int? submissionId, string platformType = null)
 
 Unpublish mobile apps
 
@@ -489,7 +489,7 @@ namespace Example
             var apiInstance = new MobileAppsApi();
             var appId = appId_example;  // string | 
             var submissionId = 56;  // int? | 
-            var platformType = platformType_example;  // string | 
+            var platformType = platformType_example;  // string |  (optional) 
 
             try
             {
@@ -512,7 +512,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
  **submissionId** | **int?**|  | 
- **platformType** | **string**|  | 
+ **platformType** | **string**|  | [optional] 
 
 ### Return type
 
