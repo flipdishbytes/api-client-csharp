@@ -52,17 +52,15 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var signupStepAction = signupStepAction_example;  // string | Signup step action
-            var answerId = 56;  // int? | Identifier of the answer
 
             try
             {
-                // Answer a signup question
-                apiInstance.AnswerSignUpQuestion(signupStepAction, answerId);
+                // [PRIVATE API] Temporary endpoint to return recaptcha FF
+                apiInstance.AccountsIsRecaptchaOn();
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AccountsApi.AnswerSignUpQuestion: " + e.Message );
+                Debug.Print("Exception when calling AccountsApi.AccountsIsRecaptchaOn: " + e.Message );
             }
 
         }
@@ -77,6 +75,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccountsApi* | [**AccountsIsRecaptchaOn**](docs/AccountsApi.md#accountsisrecaptchaon) | **GET** /api/v1.0/accounts/recaptcha/check | [PRIVATE API] Temporary endpoint to return recaptcha FF
 *AccountsApi* | [**AnswerSignUpQuestion**](docs/AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | Answer a signup question
 *AccountsApi* | [**ChangePassword**](docs/AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | Change password
 *AccountsApi* | [**ChangePasswordWithPin**](docs/AccountsApi.md#changepasswordwithpin) | **PUT** /api/v1.0/accounts/password/pin | Change password

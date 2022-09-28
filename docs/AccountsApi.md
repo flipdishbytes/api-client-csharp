@@ -4,6 +4,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**AccountsIsRecaptchaOn**](AccountsApi.md#accountsisrecaptchaon) | **GET** /api/v1.0/accounts/recaptcha/check | [PRIVATE API] Temporary endpoint to return recaptcha FF
 [**AnswerSignUpQuestion**](AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | Answer a signup question
 [**ChangePassword**](AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | Change password
 [**ChangePasswordWithPin**](AccountsApi.md#changepasswordwithpin) | **PUT** /api/v1.0/accounts/password/pin | Change password
@@ -21,6 +22,63 @@ Method | HTTP request | Description
 [**SkipSignupStep**](AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | Skip a signup question
 [**UpdateAccount**](AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | Update account with name and language
 
+
+<a name="accountsisrecaptchaon"></a>
+# **AccountsIsRecaptchaOn**
+> void AccountsIsRecaptchaOn ()
+
+[PRIVATE API] Temporary endpoint to return recaptcha FF
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class AccountsIsRecaptchaOnExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AccountsApi();
+
+            try
+            {
+                // [PRIVATE API] Temporary endpoint to return recaptcha FF
+                apiInstance.AccountsIsRecaptchaOn();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AccountsApi.AccountsIsRecaptchaOn: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="answersignupquestion"></a>
 # **AnswerSignUpQuestion**
