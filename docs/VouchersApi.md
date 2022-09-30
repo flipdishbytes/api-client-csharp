@@ -305,7 +305,7 @@ namespace Example
             var apiInstance = new VouchersApi();
             var voucherId = 56;  // int? | Id of the voucher
             var voucher = new VoucherBase(); // VoucherBase | Updated details for the voucher
-            var storeId = new List<int?>(); // List<int?> |  (optional) 
+            var storeId = new List<int?>(); // List<int?> | List of store ids associated (optional) 
             var percentValue = 56;  // int? | Percent voucher value (can have 1 of 3) (optional) 
             var lumpValue = 1.2;  // double? | Lump voucher value (can have 1 of 3) (optional) 
             var freeItemId = 56;  // int? | Free Item Id (can have 1 of 3) (optional) 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **voucherId** | **int?**| Id of the voucher | 
  **voucher** | [**VoucherBase**](VoucherBase.md)| Updated details for the voucher | 
- **storeId** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)| List of store ids associated | [optional] 
  **percentValue** | **int?**| Percent voucher value (can have 1 of 3) | [optional] 
  **lumpValue** | **double?**| Lump voucher value (can have 1 of 3) | [optional] 
  **freeItemId** | **int?**| Free Item Id (can have 1 of 3) | [optional] 

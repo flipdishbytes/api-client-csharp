@@ -137,7 +137,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId"> (optional)</param>
+        /// <param name="storeId">List of store ids associated (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
@@ -153,7 +153,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId"> (optional)</param>
+        /// <param name="storeId">List of store ids associated (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
@@ -274,7 +274,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId"> (optional)</param>
+        /// <param name="storeId">List of store ids associated (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
@@ -290,7 +290,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId"> (optional)</param>
+        /// <param name="storeId">List of store ids associated (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
@@ -1102,7 +1102,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId"> (optional)</param>
+        /// <param name="storeId">List of store ids associated (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
@@ -1119,7 +1119,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId"> (optional)</param>
+        /// <param name="storeId">List of store ids associated (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
@@ -1207,7 +1207,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId"> (optional)</param>
+        /// <param name="storeId">List of store ids associated (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
@@ -1225,7 +1225,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voucherId">Id of the voucher</param>
         /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId"> (optional)</param>
+        /// <param name="storeId">List of store ids associated (optional)</param>
         /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
         /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
         /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
