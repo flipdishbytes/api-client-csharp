@@ -32,7 +32,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="OrderBatchPublishedEvent" /> class.
         /// </summary>
         /// <param name="eventName">The event name.</param>
-        /// <param name="batchId">Order Batch Id.</param>
+        /// <param name="orderBatchId">Order Batch Id.</param>
         /// <param name="storeId">Store id the order batch belogs to.</param>
         /// <param name="orderIds">Orders&#39; ids on the batch.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
@@ -40,10 +40,10 @@ namespace Flipdish.Model
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public OrderBatchPublishedEvent(string eventName = default(string), int? batchId = default(int?), int? storeId = default(int?), List<int?> orderIds = default(List<int?>), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public OrderBatchPublishedEvent(string eventName = default(string), int? orderBatchId = default(int?), int? storeId = default(int?), List<int?> orderIds = default(List<int?>), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
             this.EventName = eventName;
-            this.BatchId = batchId;
+            this.OrderBatchId = orderBatchId;
             this.StoreId = storeId;
             this.OrderIds = orderIds;
             this.FlipdishEventId = flipdishEventId;
@@ -64,8 +64,8 @@ namespace Flipdish.Model
         /// Order Batch Id
         /// </summary>
         /// <value>Order Batch Id</value>
-        [DataMember(Name="BatchId", EmitDefaultValue=false)]
-        public int? BatchId { get; set; }
+        [DataMember(Name="OrderBatchId", EmitDefaultValue=false)]
+        public int? OrderBatchId { get; set; }
 
         /// <summary>
         /// Store id the order batch belogs to
@@ -125,7 +125,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class OrderBatchPublishedEvent {\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
-            sb.Append("  BatchId: ").Append(BatchId).Append("\n");
+            sb.Append("  OrderBatchId: ").Append(OrderBatchId).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  OrderIds: ").Append(OrderIds).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
@@ -173,9 +173,9 @@ namespace Flipdish.Model
                     this.EventName.Equals(input.EventName))
                 ) && 
                 (
-                    this.BatchId == input.BatchId ||
-                    (this.BatchId != null &&
-                    this.BatchId.Equals(input.BatchId))
+                    this.OrderBatchId == input.OrderBatchId ||
+                    (this.OrderBatchId != null &&
+                    this.OrderBatchId.Equals(input.OrderBatchId))
                 ) && 
                 (
                     this.StoreId == input.StoreId ||
@@ -225,8 +225,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
-                if (this.BatchId != null)
-                    hashCode = hashCode * 59 + this.BatchId.GetHashCode();
+                if (this.OrderBatchId != null)
+                    hashCode = hashCode * 59 + this.OrderBatchId.GetHashCode();
                 if (this.StoreId != null)
                     hashCode = hashCode * 59 + this.StoreId.GetHashCode();
                 if (this.OrderIds != null)

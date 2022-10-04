@@ -394,7 +394,7 @@ Class | Method | HTTP request | Description
 *OnboardingApi* | [**OnboardingUpdateOnboardingConfig**](docs/OnboardingApi.md#onboardingupdateonboardingconfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
 *OnboardingApi* | [**OnboardingUpdateOnboardingItem**](docs/OnboardingApi.md#onboardingupdateonboardingitem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
 *OrderBatchesApi* | [**GetAllOrderBatches**](docs/OrderBatchesApi.md#getallorderbatches) | **GET** /api/v1.0/{appId}/stores/{storeId}/order-batches | Returns order batches
-*OrderBatchesApi* | [**GetOrderBatch**](docs/OrderBatchesApi.md#getorderbatch) | **GET** /api/v1.0/{appId}/stores/{storeId}/order-batches/{batchId} | Returns the order batch details
+*OrderBatchesApi* | [**GetOrderBatch**](docs/OrderBatchesApi.md#getorderbatch) | **GET** /api/v1.0/{appId}/stores/{storeId}/order-batches/{orderBatchId} | Returns the order batch details
 *OrderBatchingConfigurationApi* | [**Get**](docs/OrderBatchingConfigurationApi.md#get) | **GET** /api/v1.0/stores/{storeId}/order-batching-configuration | Returns order batching configuration for a specific store
 *OrderBatchingConfigurationApi* | [**Post**](docs/OrderBatchingConfigurationApi.md#post) | **POST** /api/v1.0/stores/{storeId}/order-batching-configuration | Sets order batching configuration for a specific store
 *OrderIngestApi* | [**OrderIngestSubmitNewOrder**](docs/OrderIngestApi.md#orderingestsubmitneworder) | **POST** /api/v1.0/{appNameId}/order-ingest/submit | Provides an ability to ingest a 3rd party order into Flipdish ecosystem
@@ -821,9 +821,8 @@ Class | Method | HTTP request | Description
  - [Model.Order](docs/Order.md)
  - [Model.OrderAcceptedEvent](docs/OrderAcceptedEvent.md)
  - [Model.OrderBatch](docs/OrderBatch.md)
- - [Model.OrderBatchDetails](docs/OrderBatchDetails.md)
- - [Model.OrderBatchItem](docs/OrderBatchItem.md)
  - [Model.OrderBatchPublishedEvent](docs/OrderBatchPublishedEvent.md)
+ - [Model.OrderBatchSummary](docs/OrderBatchSummary.md)
  - [Model.OrderBatchingConfiguration](docs/OrderBatchingConfiguration.md)
  - [Model.OrderCapacityConfigUpdatedEvent](docs/OrderCapacityConfigUpdatedEvent.md)
  - [Model.OrderCreatedEvent](docs/OrderCreatedEvent.md)
@@ -938,7 +937,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultMobileAppsStatistics](docs/RestApiArrayResultMobileAppsStatistics.md)
  - [Model.RestApiArrayResultOAuthApp](docs/RestApiArrayResultOAuthApp.md)
  - [Model.RestApiArrayResultOauthClientRedirectUri](docs/RestApiArrayResultOauthClientRedirectUri.md)
- - [Model.RestApiArrayResultOrderBatchItem](docs/RestApiArrayResultOrderBatchItem.md)
+ - [Model.RestApiArrayResultOrderBatchSummary](docs/RestApiArrayResultOrderBatchSummary.md)
  - [Model.RestApiArrayResultOrderFulfillmentStatus](docs/RestApiArrayResultOrderFulfillmentStatus.md)
  - [Model.RestApiArrayResultPayoutSummary](docs/RestApiArrayResultPayoutSummary.md)
  - [Model.RestApiArrayResultPendingMenuChangesSummaries](docs/RestApiArrayResultPendingMenuChangesSummaries.md)

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EventName** | **string** | The event name | [optional] 
-**BatchId** | **int?** | Order Batch Id | [optional] 
+**OrderBatchId** | **int?** | Order Batch Id | [optional] 
 **StoreId** | **int?** | Store id the order batch belogs to | [optional] 
 **OrderIds** | **List&lt;int?&gt;** | Orders&#39; ids on the batch | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 

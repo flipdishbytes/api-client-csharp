@@ -23,35 +23,26 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Order batch detailed information
+    /// Order batch info
     /// </summary>
     [DataContract]
-    public partial class OrderBatch :  IEquatable<OrderBatch>
+    public partial class OrderBatchSummary :  IEquatable<OrderBatchSummary>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrderBatch" /> class.
+        /// Initializes a new instance of the <see cref="OrderBatchSummary" /> class.
         /// </summary>
-        /// <param name="orderIds">Orders&#39; ids on the batch.</param>
         /// <param name="id">Order batch id.</param>
         /// <param name="displayCode">Order batch 6-sign human readable code.</param>
         /// <param name="createTime">Batch creation date and time.</param>
         /// <param name="isPublished">If the batch is already published.</param>
-        public OrderBatch(List<int?> orderIds = default(List<int?>), int? id = default(int?), string displayCode = default(string), DateTime? createTime = default(DateTime?), bool? isPublished = default(bool?))
+        public OrderBatchSummary(int? id = default(int?), string displayCode = default(string), DateTime? createTime = default(DateTime?), bool? isPublished = default(bool?))
         {
-            this.OrderIds = orderIds;
             this.Id = id;
             this.DisplayCode = displayCode;
             this.CreateTime = createTime;
             this.IsPublished = isPublished;
         }
         
-        /// <summary>
-        /// Orders&#39; ids on the batch
-        /// </summary>
-        /// <value>Orders&#39; ids on the batch</value>
-        [DataMember(Name="OrderIds", EmitDefaultValue=false)]
-        public List<int?> OrderIds { get; set; }
-
         /// <summary>
         /// Order batch id
         /// </summary>
@@ -87,8 +78,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class OrderBatch {\n");
-            sb.Append("  OrderIds: ").Append(OrderIds).Append("\n");
+            sb.Append("class OrderBatchSummary {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DisplayCode: ").Append(DisplayCode).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
@@ -113,25 +103,20 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as OrderBatch);
+            return this.Equals(input as OrderBatchSummary);
         }
 
         /// <summary>
-        /// Returns true if OrderBatch instances are equal
+        /// Returns true if OrderBatchSummary instances are equal
         /// </summary>
-        /// <param name="input">Instance of OrderBatch to be compared</param>
+        /// <param name="input">Instance of OrderBatchSummary to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OrderBatch input)
+        public bool Equals(OrderBatchSummary input)
         {
             if (input == null)
                 return false;
 
             return 
-                (
-                    this.OrderIds == input.OrderIds ||
-                    this.OrderIds != null &&
-                    this.OrderIds.SequenceEqual(input.OrderIds)
-                ) && 
                 (
                     this.Id == input.Id ||
                     (this.Id != null &&
@@ -163,8 +148,6 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.OrderIds != null)
-                    hashCode = hashCode * 59 + this.OrderIds.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.DisplayCode != null)

@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **ChannelOrderId** | **string** | ChannelOrderId from external channel | [optional] 
 **ChannelOrderDisplayId** | **string** | ChannelOrderDisplayId from external channel | [optional] 
 **OrderDropOffLocation** | [**OrderDropOffLocation**](OrderDropOffLocation.md) | DropOffLocation selected for this order | [optional] 
+**OrderBatchInfo** | [**OrderBatchSummary**](OrderBatchSummary.md) | OrderBatch information | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

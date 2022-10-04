@@ -35,8 +35,8 @@ namespace Flipdish.Api
         /// <param name="storeId">Store Id</param>
         /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
         /// <param name="createdTo">End date for retrieving the entries (optional)</param>
-        /// <returns>RestApiArrayResultOrderBatchItem</returns>
-        RestApiArrayResultOrderBatchItem GetAllOrderBatches (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null);
+        /// <returns>RestApiArrayResultOrderBatchSummary</returns>
+        RestApiArrayResultOrderBatchSummary GetAllOrderBatches (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null);
 
         /// <summary>
         /// Returns order batches
@@ -49,8 +49,8 @@ namespace Flipdish.Api
         /// <param name="storeId">Store Id</param>
         /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
         /// <param name="createdTo">End date for retrieving the entries (optional)</param>
-        /// <returns>ApiResponse of RestApiArrayResultOrderBatchItem</returns>
-        ApiResponse<RestApiArrayResultOrderBatchItem> GetAllOrderBatchesWithHttpInfo (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null);
+        /// <returns>ApiResponse of RestApiArrayResultOrderBatchSummary</returns>
+        ApiResponse<RestApiArrayResultOrderBatchSummary> GetAllOrderBatchesWithHttpInfo (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null);
         /// <summary>
         /// Returns the order batch details
         /// </summary>
@@ -60,9 +60,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="storeId">Store Id</param>
-        /// <param name="batchId">Order Batch Id</param>
+        /// <param name="orderBatchId">Order Batch Id</param>
         /// <returns>RestApiResultOrderBatch</returns>
-        RestApiResultOrderBatch GetOrderBatch (string appId, int? storeId, int? batchId);
+        RestApiResultOrderBatch GetOrderBatch (string appId, int? storeId, int? orderBatchId);
 
         /// <summary>
         /// Returns the order batch details
@@ -73,9 +73,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="storeId">Store Id</param>
-        /// <param name="batchId">Order Batch Id</param>
+        /// <param name="orderBatchId">Order Batch Id</param>
         /// <returns>ApiResponse of RestApiResultOrderBatch</returns>
-        ApiResponse<RestApiResultOrderBatch> GetOrderBatchWithHttpInfo (string appId, int? storeId, int? batchId);
+        ApiResponse<RestApiResultOrderBatch> GetOrderBatchWithHttpInfo (string appId, int? storeId, int? orderBatchId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -89,8 +89,8 @@ namespace Flipdish.Api
         /// <param name="storeId">Store Id</param>
         /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
         /// <param name="createdTo">End date for retrieving the entries (optional)</param>
-        /// <returns>Task of RestApiArrayResultOrderBatchItem</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultOrderBatchItem> GetAllOrderBatchesAsync (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null);
+        /// <returns>Task of RestApiArrayResultOrderBatchSummary</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultOrderBatchSummary> GetAllOrderBatchesAsync (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null);
 
         /// <summary>
         /// Returns order batches
@@ -103,8 +103,8 @@ namespace Flipdish.Api
         /// <param name="storeId">Store Id</param>
         /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
         /// <param name="createdTo">End date for retrieving the entries (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultOrderBatchItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOrderBatchItem>> GetAllOrderBatchesAsyncWithHttpInfo (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null);
+        /// <returns>Task of ApiResponse (RestApiArrayResultOrderBatchSummary)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOrderBatchSummary>> GetAllOrderBatchesAsyncWithHttpInfo (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null);
         /// <summary>
         /// Returns the order batch details
         /// </summary>
@@ -114,9 +114,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="storeId">Store Id</param>
-        /// <param name="batchId">Order Batch Id</param>
+        /// <param name="orderBatchId">Order Batch Id</param>
         /// <returns>Task of RestApiResultOrderBatch</returns>
-        System.Threading.Tasks.Task<RestApiResultOrderBatch> GetOrderBatchAsync (string appId, int? storeId, int? batchId);
+        System.Threading.Tasks.Task<RestApiResultOrderBatch> GetOrderBatchAsync (string appId, int? storeId, int? orderBatchId);
 
         /// <summary>
         /// Returns the order batch details
@@ -127,9 +127,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="storeId">Store Id</param>
-        /// <param name="batchId">Order Batch Id</param>
+        /// <param name="orderBatchId">Order Batch Id</param>
         /// <returns>Task of ApiResponse (RestApiResultOrderBatch)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderBatch>> GetOrderBatchAsyncWithHttpInfo (string appId, int? storeId, int? batchId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderBatch>> GetOrderBatchAsyncWithHttpInfo (string appId, int? storeId, int? orderBatchId);
         #endregion Asynchronous Operations
     }
 
@@ -238,10 +238,10 @@ namespace Flipdish.Api
         /// <param name="storeId">Store Id</param>
         /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
         /// <param name="createdTo">End date for retrieving the entries (optional)</param>
-        /// <returns>RestApiArrayResultOrderBatchItem</returns>
-        public RestApiArrayResultOrderBatchItem GetAllOrderBatches (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null)
+        /// <returns>RestApiArrayResultOrderBatchSummary</returns>
+        public RestApiArrayResultOrderBatchSummary GetAllOrderBatches (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null)
         {
-             ApiResponse<RestApiArrayResultOrderBatchItem> localVarResponse = GetAllOrderBatchesWithHttpInfo(appId, storeId, createdFrom, createdTo);
+             ApiResponse<RestApiArrayResultOrderBatchSummary> localVarResponse = GetAllOrderBatchesWithHttpInfo(appId, storeId, createdFrom, createdTo);
              return localVarResponse.Data;
         }
 
@@ -253,8 +253,8 @@ namespace Flipdish.Api
         /// <param name="storeId">Store Id</param>
         /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
         /// <param name="createdTo">End date for retrieving the entries (optional)</param>
-        /// <returns>ApiResponse of RestApiArrayResultOrderBatchItem</returns>
-        public ApiResponse< RestApiArrayResultOrderBatchItem > GetAllOrderBatchesWithHttpInfo (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null)
+        /// <returns>ApiResponse of RestApiArrayResultOrderBatchSummary</returns>
+        public ApiResponse< RestApiArrayResultOrderBatchSummary > GetAllOrderBatchesWithHttpInfo (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -312,9 +312,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultOrderBatchItem>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultOrderBatchSummary>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiArrayResultOrderBatchItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultOrderBatchItem)));
+                (RestApiArrayResultOrderBatchSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultOrderBatchSummary)));
         }
 
         /// <summary>
@@ -325,10 +325,10 @@ namespace Flipdish.Api
         /// <param name="storeId">Store Id</param>
         /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
         /// <param name="createdTo">End date for retrieving the entries (optional)</param>
-        /// <returns>Task of RestApiArrayResultOrderBatchItem</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultOrderBatchItem> GetAllOrderBatchesAsync (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null)
+        /// <returns>Task of RestApiArrayResultOrderBatchSummary</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultOrderBatchSummary> GetAllOrderBatchesAsync (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null)
         {
-             ApiResponse<RestApiArrayResultOrderBatchItem> localVarResponse = await GetAllOrderBatchesAsyncWithHttpInfo(appId, storeId, createdFrom, createdTo);
+             ApiResponse<RestApiArrayResultOrderBatchSummary> localVarResponse = await GetAllOrderBatchesAsyncWithHttpInfo(appId, storeId, createdFrom, createdTo);
              return localVarResponse.Data;
 
         }
@@ -341,8 +341,8 @@ namespace Flipdish.Api
         /// <param name="storeId">Store Id</param>
         /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
         /// <param name="createdTo">End date for retrieving the entries (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultOrderBatchItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOrderBatchItem>> GetAllOrderBatchesAsyncWithHttpInfo (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null)
+        /// <returns>Task of ApiResponse (RestApiArrayResultOrderBatchSummary)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOrderBatchSummary>> GetAllOrderBatchesAsyncWithHttpInfo (string appId, int? storeId, DateTime? createdFrom = null, DateTime? createdTo = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -400,9 +400,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultOrderBatchItem>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultOrderBatchSummary>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiArrayResultOrderBatchItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultOrderBatchItem)));
+                (RestApiArrayResultOrderBatchSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultOrderBatchSummary)));
         }
 
         /// <summary>
@@ -411,11 +411,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="storeId">Store Id</param>
-        /// <param name="batchId">Order Batch Id</param>
+        /// <param name="orderBatchId">Order Batch Id</param>
         /// <returns>RestApiResultOrderBatch</returns>
-        public RestApiResultOrderBatch GetOrderBatch (string appId, int? storeId, int? batchId)
+        public RestApiResultOrderBatch GetOrderBatch (string appId, int? storeId, int? orderBatchId)
         {
-             ApiResponse<RestApiResultOrderBatch> localVarResponse = GetOrderBatchWithHttpInfo(appId, storeId, batchId);
+             ApiResponse<RestApiResultOrderBatch> localVarResponse = GetOrderBatchWithHttpInfo(appId, storeId, orderBatchId);
              return localVarResponse.Data;
         }
 
@@ -425,9 +425,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="storeId">Store Id</param>
-        /// <param name="batchId">Order Batch Id</param>
+        /// <param name="orderBatchId">Order Batch Id</param>
         /// <returns>ApiResponse of RestApiResultOrderBatch</returns>
-        public ApiResponse< RestApiResultOrderBatch > GetOrderBatchWithHttpInfo (string appId, int? storeId, int? batchId)
+        public ApiResponse< RestApiResultOrderBatch > GetOrderBatchWithHttpInfo (string appId, int? storeId, int? orderBatchId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -435,11 +435,11 @@ namespace Flipdish.Api
             // verify the required parameter 'storeId' is set
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling OrderBatchesApi->GetOrderBatch");
-            // verify the required parameter 'batchId' is set
-            if (batchId == null)
-                throw new ApiException(400, "Missing required parameter 'batchId' when calling OrderBatchesApi->GetOrderBatch");
+            // verify the required parameter 'orderBatchId' is set
+            if (orderBatchId == null)
+                throw new ApiException(400, "Missing required parameter 'orderBatchId' when calling OrderBatchesApi->GetOrderBatch");
 
-            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/order-batches/{batchId}";
+            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/order-batches/{orderBatchId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -465,7 +465,7 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
-            if (batchId != null) localVarPathParams.Add("batchId", this.Configuration.ApiClient.ParameterToString(batchId)); // path parameter
+            if (orderBatchId != null) localVarPathParams.Add("orderBatchId", this.Configuration.ApiClient.ParameterToString(orderBatchId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -498,11 +498,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="storeId">Store Id</param>
-        /// <param name="batchId">Order Batch Id</param>
+        /// <param name="orderBatchId">Order Batch Id</param>
         /// <returns>Task of RestApiResultOrderBatch</returns>
-        public async System.Threading.Tasks.Task<RestApiResultOrderBatch> GetOrderBatchAsync (string appId, int? storeId, int? batchId)
+        public async System.Threading.Tasks.Task<RestApiResultOrderBatch> GetOrderBatchAsync (string appId, int? storeId, int? orderBatchId)
         {
-             ApiResponse<RestApiResultOrderBatch> localVarResponse = await GetOrderBatchAsyncWithHttpInfo(appId, storeId, batchId);
+             ApiResponse<RestApiResultOrderBatch> localVarResponse = await GetOrderBatchAsyncWithHttpInfo(appId, storeId, orderBatchId);
              return localVarResponse.Data;
 
         }
@@ -513,9 +513,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="storeId">Store Id</param>
-        /// <param name="batchId">Order Batch Id</param>
+        /// <param name="orderBatchId">Order Batch Id</param>
         /// <returns>Task of ApiResponse (RestApiResultOrderBatch)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderBatch>> GetOrderBatchAsyncWithHttpInfo (string appId, int? storeId, int? batchId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderBatch>> GetOrderBatchAsyncWithHttpInfo (string appId, int? storeId, int? orderBatchId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -523,11 +523,11 @@ namespace Flipdish.Api
             // verify the required parameter 'storeId' is set
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling OrderBatchesApi->GetOrderBatch");
-            // verify the required parameter 'batchId' is set
-            if (batchId == null)
-                throw new ApiException(400, "Missing required parameter 'batchId' when calling OrderBatchesApi->GetOrderBatch");
+            // verify the required parameter 'orderBatchId' is set
+            if (orderBatchId == null)
+                throw new ApiException(400, "Missing required parameter 'orderBatchId' when calling OrderBatchesApi->GetOrderBatch");
 
-            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/order-batches/{batchId}";
+            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/order-batches/{orderBatchId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -553,7 +553,7 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
-            if (batchId != null) localVarPathParams.Add("batchId", this.Configuration.ApiClient.ParameterToString(batchId)); // path parameter
+            if (orderBatchId != null) localVarPathParams.Add("orderBatchId", this.Configuration.ApiClient.ParameterToString(orderBatchId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
