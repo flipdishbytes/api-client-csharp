@@ -34,9 +34,10 @@ namespace Flipdish.Api
         /// <param name="menuId">Requested MenuId</param>
         /// <param name="menuItemId">Selected Menu items</param>
         /// <param name="limit">Set the limit of items returned</param>
+        /// <param name="totalValue">Get the total cost of items in the basket</param>
         /// <param name="appId"></param>
         /// <returns>RestApiResultCrossSellMenuItems</returns>
-        RestApiResultCrossSellMenuItems GetCrossSellMenuItems (int? menuId, List<int?> menuItemId, int? limit, string appId);
+        RestApiResultCrossSellMenuItems GetCrossSellMenuItems (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId);
 
         /// <summary>
         /// Get all Menu items by MenuId for cross sells
@@ -48,9 +49,10 @@ namespace Flipdish.Api
         /// <param name="menuId">Requested MenuId</param>
         /// <param name="menuItemId">Selected Menu items</param>
         /// <param name="limit">Set the limit of items returned</param>
+        /// <param name="totalValue">Get the total cost of items in the basket</param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultCrossSellMenuItems</returns>
-        ApiResponse<RestApiResultCrossSellMenuItems> GetCrossSellMenuItemsWithHttpInfo (int? menuId, List<int?> menuItemId, int? limit, string appId);
+        ApiResponse<RestApiResultCrossSellMenuItems> GetCrossSellMenuItemsWithHttpInfo (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -63,9 +65,10 @@ namespace Flipdish.Api
         /// <param name="menuId">Requested MenuId</param>
         /// <param name="menuItemId">Selected Menu items</param>
         /// <param name="limit">Set the limit of items returned</param>
+        /// <param name="totalValue">Get the total cost of items in the basket</param>
         /// <param name="appId"></param>
         /// <returns>Task of RestApiResultCrossSellMenuItems</returns>
-        System.Threading.Tasks.Task<RestApiResultCrossSellMenuItems> GetCrossSellMenuItemsAsync (int? menuId, List<int?> menuItemId, int? limit, string appId);
+        System.Threading.Tasks.Task<RestApiResultCrossSellMenuItems> GetCrossSellMenuItemsAsync (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId);
 
         /// <summary>
         /// Get all Menu items by MenuId for cross sells
@@ -77,9 +80,10 @@ namespace Flipdish.Api
         /// <param name="menuId">Requested MenuId</param>
         /// <param name="menuItemId">Selected Menu items</param>
         /// <param name="limit">Set the limit of items returned</param>
+        /// <param name="totalValue">Get the total cost of items in the basket</param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultCrossSellMenuItems)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultCrossSellMenuItems>> GetCrossSellMenuItemsAsyncWithHttpInfo (int? menuId, List<int?> menuItemId, int? limit, string appId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultCrossSellMenuItems>> GetCrossSellMenuItemsAsyncWithHttpInfo (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId);
         #endregion Asynchronous Operations
     }
 
@@ -187,11 +191,12 @@ namespace Flipdish.Api
         /// <param name="menuId">Requested MenuId</param>
         /// <param name="menuItemId">Selected Menu items</param>
         /// <param name="limit">Set the limit of items returned</param>
+        /// <param name="totalValue">Get the total cost of items in the basket</param>
         /// <param name="appId"></param>
         /// <returns>RestApiResultCrossSellMenuItems</returns>
-        public RestApiResultCrossSellMenuItems GetCrossSellMenuItems (int? menuId, List<int?> menuItemId, int? limit, string appId)
+        public RestApiResultCrossSellMenuItems GetCrossSellMenuItems (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId)
         {
-             ApiResponse<RestApiResultCrossSellMenuItems> localVarResponse = GetCrossSellMenuItemsWithHttpInfo(menuId, menuItemId, limit, appId);
+             ApiResponse<RestApiResultCrossSellMenuItems> localVarResponse = GetCrossSellMenuItemsWithHttpInfo(menuId, menuItemId, limit, totalValue, appId);
              return localVarResponse.Data;
         }
 
@@ -202,9 +207,10 @@ namespace Flipdish.Api
         /// <param name="menuId">Requested MenuId</param>
         /// <param name="menuItemId">Selected Menu items</param>
         /// <param name="limit">Set the limit of items returned</param>
+        /// <param name="totalValue">Get the total cost of items in the basket</param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultCrossSellMenuItems</returns>
-        public ApiResponse< RestApiResultCrossSellMenuItems > GetCrossSellMenuItemsWithHttpInfo (int? menuId, List<int?> menuItemId, int? limit, string appId)
+        public ApiResponse< RestApiResultCrossSellMenuItems > GetCrossSellMenuItemsWithHttpInfo (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -215,6 +221,9 @@ namespace Flipdish.Api
             // verify the required parameter 'limit' is set
             if (limit == null)
                 throw new ApiException(400, "Missing required parameter 'limit' when calling CrossSellApi->GetCrossSellMenuItems");
+            // verify the required parameter 'totalValue' is set
+            if (totalValue == null)
+                throw new ApiException(400, "Missing required parameter 'totalValue' when calling CrossSellApi->GetCrossSellMenuItems");
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CrossSellApi->GetCrossSellMenuItems");
@@ -247,6 +256,7 @@ namespace Flipdish.Api
             if (menuId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "menuId", menuId)); // query parameter
             if (menuItemId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "menuItemId", menuItemId)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (totalValue != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "totalValue", totalValue)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -280,11 +290,12 @@ namespace Flipdish.Api
         /// <param name="menuId">Requested MenuId</param>
         /// <param name="menuItemId">Selected Menu items</param>
         /// <param name="limit">Set the limit of items returned</param>
+        /// <param name="totalValue">Get the total cost of items in the basket</param>
         /// <param name="appId"></param>
         /// <returns>Task of RestApiResultCrossSellMenuItems</returns>
-        public async System.Threading.Tasks.Task<RestApiResultCrossSellMenuItems> GetCrossSellMenuItemsAsync (int? menuId, List<int?> menuItemId, int? limit, string appId)
+        public async System.Threading.Tasks.Task<RestApiResultCrossSellMenuItems> GetCrossSellMenuItemsAsync (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId)
         {
-             ApiResponse<RestApiResultCrossSellMenuItems> localVarResponse = await GetCrossSellMenuItemsAsyncWithHttpInfo(menuId, menuItemId, limit, appId);
+             ApiResponse<RestApiResultCrossSellMenuItems> localVarResponse = await GetCrossSellMenuItemsAsyncWithHttpInfo(menuId, menuItemId, limit, totalValue, appId);
              return localVarResponse.Data;
 
         }
@@ -296,9 +307,10 @@ namespace Flipdish.Api
         /// <param name="menuId">Requested MenuId</param>
         /// <param name="menuItemId">Selected Menu items</param>
         /// <param name="limit">Set the limit of items returned</param>
+        /// <param name="totalValue">Get the total cost of items in the basket</param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultCrossSellMenuItems)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCrossSellMenuItems>> GetCrossSellMenuItemsAsyncWithHttpInfo (int? menuId, List<int?> menuItemId, int? limit, string appId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCrossSellMenuItems>> GetCrossSellMenuItemsAsyncWithHttpInfo (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -309,6 +321,9 @@ namespace Flipdish.Api
             // verify the required parameter 'limit' is set
             if (limit == null)
                 throw new ApiException(400, "Missing required parameter 'limit' when calling CrossSellApi->GetCrossSellMenuItems");
+            // verify the required parameter 'totalValue' is set
+            if (totalValue == null)
+                throw new ApiException(400, "Missing required parameter 'totalValue' when calling CrossSellApi->GetCrossSellMenuItems");
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling CrossSellApi->GetCrossSellMenuItems");
@@ -341,6 +356,7 @@ namespace Flipdish.Api
             if (menuId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "menuId", menuId)); // query parameter
             if (menuItemId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "menuItemId", menuItemId)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (totalValue != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "totalValue", totalValue)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
