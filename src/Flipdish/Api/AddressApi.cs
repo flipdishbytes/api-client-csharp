@@ -77,7 +77,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is retuned from the maps API.</param>
+        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
         /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
         /// <returns>RestApiResultAddressFormResponse</returns>
         RestApiResultAddressFormResponse FormatGoogleAddress (GoogleAddress googleAddress, string language = null);
@@ -89,7 +89,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is retuned from the maps API.</param>
+        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
         /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
         /// <returns>ApiResponse of RestApiResultAddressFormResponse</returns>
         ApiResponse<RestApiResultAddressFormResponse> FormatGoogleAddressWithHttpInfo (GoogleAddress googleAddress, string language = null);
@@ -169,7 +169,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is retuned from the maps API.</param>
+        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
         /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
         /// <returns>Task of RestApiResultAddressFormResponse</returns>
         System.Threading.Tasks.Task<RestApiResultAddressFormResponse> FormatGoogleAddressAsync (GoogleAddress googleAddress, string language = null);
@@ -181,7 +181,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is retuned from the maps API.</param>
+        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
         /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultAddressFormResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAddressFormResponse>> FormatGoogleAddressAsyncWithHttpInfo (GoogleAddress googleAddress, string language = null);
@@ -624,7 +624,7 @@ namespace Flipdish.Api
         /// Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is retuned from the maps API.</param>
+        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
         /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
         /// <returns>RestApiResultAddressFormResponse</returns>
         public RestApiResultAddressFormResponse FormatGoogleAddress (GoogleAddress googleAddress, string language = null)
@@ -637,7 +637,7 @@ namespace Flipdish.Api
         /// Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is retuned from the maps API.</param>
+        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
         /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
         /// <returns>ApiResponse of RestApiResultAddressFormResponse</returns>
         public ApiResponse< RestApiResultAddressFormResponse > FormatGoogleAddressWithHttpInfo (GoogleAddress googleAddress, string language = null)
@@ -714,7 +714,7 @@ namespace Flipdish.Api
         /// Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is retuned from the maps API.</param>
+        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
         /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
         /// <returns>Task of RestApiResultAddressFormResponse</returns>
         public async System.Threading.Tasks.Task<RestApiResultAddressFormResponse> FormatGoogleAddressAsync (GoogleAddress googleAddress, string language = null)
@@ -728,7 +728,7 @@ namespace Flipdish.Api
         /// Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is retuned from the maps API.</param>
+        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
         /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultAddressFormResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAddressFormResponse>> FormatGoogleAddressAsyncWithHttpInfo (GoogleAddress googleAddress, string language = null)

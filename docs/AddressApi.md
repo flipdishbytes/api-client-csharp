@@ -162,7 +162,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AddressApi();
-            var googleAddress = new GoogleAddress(); // GoogleAddress | A Google address object, as it is retuned from the maps API.
+            var googleAddress = new GoogleAddress(); // GoogleAddress | A Google address object, as it is returned from the maps API.
             var language = language_example;  // string | (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional) 
 
             try
@@ -184,7 +184,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **googleAddress** | [**GoogleAddress**](GoogleAddress.md)| A Google address object, as it is retuned from the maps API. | 
+ **googleAddress** | [**GoogleAddress**](GoogleAddress.md)| A Google address object, as it is returned from the maps API. | 
  **language** | **string**| (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. | [optional] 
 
 ### Return type
