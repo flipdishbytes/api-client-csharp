@@ -475,7 +475,7 @@ Name | Type | Description  | Notes
 
 <a name="getorderssummary"></a>
 # **GetOrdersSummary**
-> RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null)
+> RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null)
 
 [PRIVATE API] Get summary of orders by filter
 
@@ -505,11 +505,12 @@ namespace Example
             var limit = 56;  // int? | Requested page limit (optional) 
             var orderByRequestedForTime = true;  // bool? |  (optional) 
             var channels = channels_example;  // List<string> |  (optional) 
+            var orderIds = new List<int?>(); // List<int?> | Filter by the given orders (optional) 
 
             try
             {
                 // [PRIVATE API] Get summary of orders by filter
-                RestApiPaginationResultOrderSummary result = apiInstance.GetOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels);
+                RestApiPaginationResultOrderSummary result = apiInstance.GetOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -533,6 +534,7 @@ Name | Type | Description  | Notes
  **limit** | **int?**| Requested page limit | [optional] 
  **orderByRequestedForTime** | **bool?**|  | [optional] 
  **channels** | **List&lt;string&gt;**|  | [optional] 
+ **orderIds** | [**List&lt;int?&gt;**](int?.md)| Filter by the given orders | [optional] 
 
 ### Return type
 
