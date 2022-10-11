@@ -36,12 +36,13 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAccountModel" /> class.
         /// </summary>
-        /// <param name="email">Email addres (required).</param>
+        /// <param name="email">Email address (required).</param>
         /// <param name="storeName">Store name (required).</param>
         /// <param name="languageId">LanguageId.</param>
         /// <param name="rid">Referral ID.</param>
         /// <param name="cid">Campaign ID.</param>
-        public CreateAccountModel(string email = default(string), string storeName = default(string), string languageId = default(string), int? rid = default(int?), string cid = default(string))
+        /// <param name="recaptchaToken">Google Recaptcha Token.</param>
+        public CreateAccountModel(string email = default(string), string storeName = default(string), string languageId = default(string), int? rid = default(int?), string cid = default(string), string recaptchaToken = default(string))
         {
             // to ensure "email" is required (not null)
             if (email == null)
@@ -64,12 +65,13 @@ namespace Flipdish.Model
             this.LanguageId = languageId;
             this.Rid = rid;
             this.Cid = cid;
+            this.RecaptchaToken = recaptchaToken;
         }
         
         /// <summary>
-        /// Email addres
+        /// Email address
         /// </summary>
-        /// <value>Email addres</value>
+        /// <value>Email address</value>
         [DataMember(Name="Email", EmitDefaultValue=false)]
         public string Email { get; set; }
 
@@ -102,6 +104,13 @@ namespace Flipdish.Model
         public string Cid { get; set; }
 
         /// <summary>
+        /// Google Recaptcha Token
+        /// </summary>
+        /// <value>Google Recaptcha Token</value>
+        [DataMember(Name="RecaptchaToken", EmitDefaultValue=false)]
+        public string RecaptchaToken { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -114,6 +123,7 @@ namespace Flipdish.Model
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  Rid: ").Append(Rid).Append("\n");
             sb.Append("  Cid: ").Append(Cid).Append("\n");
+            sb.Append("  RecaptchaToken: ").Append(RecaptchaToken).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -172,6 +182,11 @@ namespace Flipdish.Model
                     this.Cid == input.Cid ||
                     (this.Cid != null &&
                     this.Cid.Equals(input.Cid))
+                ) && 
+                (
+                    this.RecaptchaToken == input.RecaptchaToken ||
+                    (this.RecaptchaToken != null &&
+                    this.RecaptchaToken.Equals(input.RecaptchaToken))
                 );
         }
 
@@ -194,6 +209,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Rid.GetHashCode();
                 if (this.Cid != null)
                     hashCode = hashCode * 59 + this.Cid.GetHashCode();
+                if (this.RecaptchaToken != null)
+                    hashCode = hashCode * 59 + this.RecaptchaToken.GetHashCode();
                 return hashCode;
             }
         }
