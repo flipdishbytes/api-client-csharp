@@ -32,9 +32,11 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="RequestPasswordResetModel" /> class.
         /// </summary>
         /// <param name="email">Email address.</param>
-        public RequestPasswordResetModel(string email = default(string))
+        /// <param name="recaptchaToken">Google Recaptcha Token.</param>
+        public RequestPasswordResetModel(string email = default(string), string recaptchaToken = default(string))
         {
             this.Email = email;
+            this.RecaptchaToken = recaptchaToken;
         }
         
         /// <summary>
@@ -45,6 +47,13 @@ namespace Flipdish.Model
         public string Email { get; set; }
 
         /// <summary>
+        /// Google Recaptcha Token
+        /// </summary>
+        /// <value>Google Recaptcha Token</value>
+        [DataMember(Name="RecaptchaToken", EmitDefaultValue=false)]
+        public string RecaptchaToken { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -53,6 +62,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class RequestPasswordResetModel {\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  RecaptchaToken: ").Append(RecaptchaToken).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,6 +101,11 @@ namespace Flipdish.Model
                     this.Email == input.Email ||
                     (this.Email != null &&
                     this.Email.Equals(input.Email))
+                ) && 
+                (
+                    this.RecaptchaToken == input.RecaptchaToken ||
+                    (this.RecaptchaToken != null &&
+                    this.RecaptchaToken.Equals(input.RecaptchaToken))
                 );
         }
 
@@ -105,6 +120,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.Email != null)
                     hashCode = hashCode * 59 + this.Email.GetHashCode();
+                if (this.RecaptchaToken != null)
+                    hashCode = hashCode * 59 + this.RecaptchaToken.GetHashCode();
                 return hashCode;
             }
         }

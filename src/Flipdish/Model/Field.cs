@@ -88,7 +88,13 @@ namespace Flipdish.Model
             /// Enum Boolean for value: Boolean
             /// </summary>
             [EnumMember(Value = "Boolean")]
-            Boolean = 9
+            Boolean = 9,
+            
+            /// <summary>
+            /// Enum ActionButton for value: ActionButton
+            /// </summary>
+            [EnumMember(Value = "ActionButton")]
+            ActionButton = 10
         }
 
         /// <summary>
