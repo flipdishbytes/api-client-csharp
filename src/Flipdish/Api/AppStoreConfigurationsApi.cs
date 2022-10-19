@@ -25,6 +25,27 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Object</returns>
+        Object AppStoreConfigurationsAppStoreHandleOauthResponseCode (string appStoreAppId);
+
+        /// <summary>
+        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> AppStoreConfigurationsAppStoreHandleOauthResponseCodeWithHttpInfo (string appStoreAppId);
+        /// <summary>
         /// Create App store app configuration
         /// </summary>
         /// <remarks>
@@ -72,6 +93,33 @@ namespace Flipdish.Api
         /// <param name="configId">App store app configuration id</param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         ApiResponse<RestApiStringResult> DeleteAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId);
+        /// <summary>
+        /// Execute configuration action on a configuration item (eg. handle button press)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="appStoreAppId">AppStore App Id</param>
+        /// <param name="configId">AppStore App configuration Id</param>
+        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <returns>ExecuteConfigurationActionResult</returns>
+        ExecuteConfigurationActionResult ExecuteConfigurationAction (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
+
+        /// <summary>
+        /// Execute configuration action on a configuration item (eg. handle button press)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="appStoreAppId">AppStore App Id</param>
+        /// <param name="configId">AppStore App configuration Id</param>
+        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <returns>ApiResponse of ExecuteConfigurationActionResult</returns>
+        ApiResponse<ExecuteConfigurationActionResult> ExecuteConfigurationActionWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
         /// <summary>
         /// Get App store app configuration
         /// </summary>
@@ -171,6 +219,27 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
+        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> AppStoreConfigurationsAppStoreHandleOauthResponseCodeAsync (string appStoreAppId);
+
+        /// <summary>
+        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> AppStoreConfigurationsAppStoreHandleOauthResponseCodeAsyncWithHttpInfo (string appStoreAppId);
+        /// <summary>
         /// Create App store app configuration
         /// </summary>
         /// <remarks>
@@ -218,6 +287,33 @@ namespace Flipdish.Api
         /// <param name="configId">App store app configuration id</param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> DeleteAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId);
+        /// <summary>
+        /// Execute configuration action on a configuration item (eg. handle button press)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="appStoreAppId">AppStore App Id</param>
+        /// <param name="configId">AppStore App configuration Id</param>
+        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <returns>Task of ExecuteConfigurationActionResult</returns>
+        System.Threading.Tasks.Task<ExecuteConfigurationActionResult> ExecuteConfigurationActionAsync (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
+
+        /// <summary>
+        /// Execute configuration action on a configuration item (eg. handle button press)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="appStoreAppId">AppStore App Id</param>
+        /// <param name="configId">AppStore App configuration Id</param>
+        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <returns>Task of ApiResponse (ExecuteConfigurationActionResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExecuteConfigurationActionResult>> ExecuteConfigurationActionAsyncWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
         /// <summary>
         /// Get App store app configuration
         /// </summary>
@@ -412,6 +508,157 @@ namespace Flipdish.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Object</returns>
+        public Object AppStoreConfigurationsAppStoreHandleOauthResponseCode (string appStoreAppId)
+        {
+             ApiResponse<Object> localVarResponse = AppStoreConfigurationsAppStoreHandleOauthResponseCodeWithHttpInfo(appStoreAppId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > AppStoreConfigurationsAppStoreHandleOauthResponseCodeWithHttpInfo (string appStoreAppId)
+        {
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreConfigurationsApi->AppStoreConfigurationsAppStoreHandleOauthResponseCode");
+
+            var localVarPath = "./api/v1.0/appstore/oauthresponse/{appStoreAppId}/responsecode";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AppStoreConfigurationsAppStoreHandleOauthResponseCode", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> AppStoreConfigurationsAppStoreHandleOauthResponseCodeAsync (string appStoreAppId)
+        {
+             ApiResponse<Object> localVarResponse = await AppStoreConfigurationsAppStoreHandleOauthResponseCodeAsyncWithHttpInfo(appStoreAppId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AppStoreConfigurationsAppStoreHandleOauthResponseCodeAsyncWithHttpInfo (string appStoreAppId)
+        {
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreConfigurationsApi->AppStoreConfigurationsAppStoreHandleOauthResponseCode");
+
+            var localVarPath = "./api/v1.0/appstore/oauthresponse/{appStoreAppId}/responsecode";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AppStoreConfigurationsAppStoreHandleOauthResponseCode", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -750,6 +997,217 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiStringResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+        }
+
+        /// <summary>
+        /// Execute configuration action on a configuration item (eg. handle button press) 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="appStoreAppId">AppStore App Id</param>
+        /// <param name="configId">AppStore App configuration Id</param>
+        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <returns>ExecuteConfigurationActionResult</returns>
+        public ExecuteConfigurationActionResult ExecuteConfigurationAction (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
+        {
+             ApiResponse<ExecuteConfigurationActionResult> localVarResponse = ExecuteConfigurationActionWithHttpInfo(appId, appStoreAppId, configId, executeConfigurationActionRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Execute configuration action on a configuration item (eg. handle button press) 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="appStoreAppId">AppStore App Id</param>
+        /// <param name="configId">AppStore App configuration Id</param>
+        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <returns>ApiResponse of ExecuteConfigurationActionResult</returns>
+        public ApiResponse< ExecuteConfigurationActionResult > ExecuteConfigurationActionWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreConfigurationsApi->ExecuteConfigurationAction");
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreConfigurationsApi->ExecuteConfigurationAction");
+            // verify the required parameter 'configId' is set
+            if (configId == null)
+                throw new ApiException(400, "Missing required parameter 'configId' when calling AppStoreConfigurationsApi->ExecuteConfigurationAction");
+            // verify the required parameter 'executeConfigurationActionRequest' is set
+            if (executeConfigurationActionRequest == null)
+                throw new ApiException(400, "Missing required parameter 'executeConfigurationActionRequest' when calling AppStoreConfigurationsApi->ExecuteConfigurationAction");
+
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/action";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+            if (configId != null) localVarPathParams.Add("configId", this.Configuration.ApiClient.ParameterToString(configId)); // path parameter
+            if (executeConfigurationActionRequest != null && executeConfigurationActionRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(executeConfigurationActionRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = executeConfigurationActionRequest; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ExecuteConfigurationAction", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ExecuteConfigurationActionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (ExecuteConfigurationActionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExecuteConfigurationActionResult)));
+        }
+
+        /// <summary>
+        /// Execute configuration action on a configuration item (eg. handle button press) 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="appStoreAppId">AppStore App Id</param>
+        /// <param name="configId">AppStore App configuration Id</param>
+        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <returns>Task of ExecuteConfigurationActionResult</returns>
+        public async System.Threading.Tasks.Task<ExecuteConfigurationActionResult> ExecuteConfigurationActionAsync (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
+        {
+             ApiResponse<ExecuteConfigurationActionResult> localVarResponse = await ExecuteConfigurationActionAsyncWithHttpInfo(appId, appStoreAppId, configId, executeConfigurationActionRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Execute configuration action on a configuration item (eg. handle button press) 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="appStoreAppId">AppStore App Id</param>
+        /// <param name="configId">AppStore App configuration Id</param>
+        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <returns>Task of ApiResponse (ExecuteConfigurationActionResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ExecuteConfigurationActionResult>> ExecuteConfigurationActionAsyncWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreConfigurationsApi->ExecuteConfigurationAction");
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreConfigurationsApi->ExecuteConfigurationAction");
+            // verify the required parameter 'configId' is set
+            if (configId == null)
+                throw new ApiException(400, "Missing required parameter 'configId' when calling AppStoreConfigurationsApi->ExecuteConfigurationAction");
+            // verify the required parameter 'executeConfigurationActionRequest' is set
+            if (executeConfigurationActionRequest == null)
+                throw new ApiException(400, "Missing required parameter 'executeConfigurationActionRequest' when calling AppStoreConfigurationsApi->ExecuteConfigurationAction");
+
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/action";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+            if (configId != null) localVarPathParams.Add("configId", this.Configuration.ApiClient.ParameterToString(configId)); // path parameter
+            if (executeConfigurationActionRequest != null && executeConfigurationActionRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(executeConfigurationActionRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = executeConfigurationActionRequest; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ExecuteConfigurationAction", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ExecuteConfigurationActionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (ExecuteConfigurationActionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExecuteConfigurationActionResult)));
         }
 
         /// <summary>

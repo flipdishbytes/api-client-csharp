@@ -104,8 +104,10 @@ Class | Method | HTTP request | Description
 *ApmApi* | [**GetPaginatedCallList**](docs/ApmApi.md#getpaginatedcalllist) | **GET** /api/v1.0/{appId}/apm/calls | [PRIVATE API] Get paginated APM call list
 *AppStoreApi* | [**GetAppStoreApp**](docs/AppStoreApi.md#getappstoreapp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | Get App store app
 *AppStoreApi* | [**GetAppStoreApps**](docs/AppStoreApi.md#getappstoreapps) | **GET** /api/v1.0/appstore/apps | Get list of App store app summaries
+*AppStoreConfigurationsApi* | [**AppStoreConfigurationsAppStoreHandleOauthResponseCode**](docs/AppStoreConfigurationsApi.md#appstoreconfigurationsappstorehandleoauthresponsecode) | **GET** /api/v1.0/appstore/oauthresponse/{appStoreAppId}/responsecode | Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
 *AppStoreConfigurationsApi* | [**CreateAppStoreConfig**](docs/AppStoreConfigurationsApi.md#createappstoreconfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | Create App store app configuration
 *AppStoreConfigurationsApi* | [**DeleteAppStoreConfig**](docs/AppStoreConfigurationsApi.md#deleteappstoreconfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Delete App store app configuration
+*AppStoreConfigurationsApi* | [**ExecuteConfigurationAction**](docs/AppStoreConfigurationsApi.md#executeconfigurationaction) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/action | Execute configuration action on a configuration item (eg. handle button press)
 *AppStoreConfigurationsApi* | [**GetAppStoreConfig**](docs/AppStoreConfigurationsApi.md#getappstoreconfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Get App store app configuration
 *AppStoreConfigurationsApi* | [**GetConfiguredAppSingleApp**](docs/AppStoreConfigurationsApi.md#getconfiguredappsingleapp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of App store app configurations for one App store app
 *AppStoreConfigurationsApi* | [**GetConfiguredApps**](docs/AppStoreConfigurationsApi.md#getconfiguredapps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of App store apps which have been configured
@@ -668,6 +670,8 @@ Class | Method | HTTP request | Description
  - [Model.EmvTerminal](docs/EmvTerminal.md)
  - [Model.EmvTerminalWithAssignments](docs/EmvTerminalWithAssignments.md)
  - [Model.EventSearchResult](docs/EventSearchResult.md)
+ - [Model.ExecuteConfigurationActionRequest](docs/ExecuteConfigurationActionRequest.md)
+ - [Model.ExecuteConfigurationActionResult](docs/ExecuteConfigurationActionResult.md)
  - [Model.ExternalStoreAuditLog](docs/ExternalStoreAuditLog.md)
  - [Model.ExternalStoreEvent](docs/ExternalStoreEvent.md)
  - [Model.FeeSummary](docs/FeeSummary.md)
