@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**GetConfiguredAppSingleApp**](AppStoreConfigurationsApi.md#getconfiguredappsingleapp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of App store app configurations for one App store app
 [**GetConfiguredApps**](AppStoreConfigurationsApi.md#getconfiguredapps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of App store apps which have been configured
 [**UpdateAppStoreConfig**](AppStoreConfigurationsApi.md#updateappstoreconfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update App store app configuration
+[**UpdateAppStoreConfigSettingValues**](AppStoreConfigurationsApi.md#updateappstoreconfigsettingvalues) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/updatesettings | Update AppStore App Configuration values, specified settings only
 
 
 <a name="appstoreconfigurationsappstorehandleoauthresponsecode"></a>
@@ -529,6 +530,75 @@ Name | Type | Description  | Notes
  **appStoreAppId** | **string**| App store app id | 
  **configId** | **string**| App store app configuration id | 
  **updateAppStoreAppConfiguration** | [**UpdateAppStoreAppConfiguration**](UpdateAppStoreAppConfiguration.md)| Update App store app configuration | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="updateappstoreconfigsettingvalues"></a>
+# **UpdateAppStoreConfigSettingValues**
+> void UpdateAppStoreConfigSettingValues (string appId, string appStoreAppId, string configId, UpdateAppStoreAppConfigurationValuesBatch updateAppStoreAppConfigurationValues)
+
+Update AppStore App Configuration values, specified settings only
+
+[BETA - this endpoint is under development, do not use it in your production system]
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UpdateAppStoreConfigSettingValuesExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppStoreConfigurationsApi();
+            var appId = appId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
+            var configId = configId_example;  // string | 
+            var updateAppStoreAppConfigurationValues = new UpdateAppStoreAppConfigurationValuesBatch(); // UpdateAppStoreAppConfigurationValuesBatch | 
+
+            try
+            {
+                // Update AppStore App Configuration values, specified settings only
+                apiInstance.UpdateAppStoreConfigSettingValues(appId, appStoreAppId, configId, updateAppStoreAppConfigurationValues);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppStoreConfigurationsApi.UpdateAppStoreConfigSettingValues: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
+ **configId** | **string**|  | 
+ **updateAppStoreAppConfigurationValues** | [**UpdateAppStoreAppConfigurationValuesBatch**](UpdateAppStoreAppConfigurationValuesBatch.md)|  | 
 
 ### Return type
 
