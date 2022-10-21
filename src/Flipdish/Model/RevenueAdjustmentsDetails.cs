@@ -35,13 +35,17 @@ namespace Flipdish.Model
         /// <param name="cashSalesRefundedAmount">Cash sales refunds.</param>
         /// <param name="customerCashFees">Customer cash fees.</param>
         /// <param name="refundsCount">Number of refunds.</param>
+        /// <param name="payGreenSalesAmount">PayGreen sales.</param>
+        /// <param name="payGreenProcessingFees">PayGreen processing fees charged to end-user.</param>
         /// <param name="totalOnlineRevenueAdjustments">Total revenue adjustments.</param>
-        public RevenueAdjustmentsDetails(double? onlineSalesRefundedAmount = default(double?), double? cashSalesRefundedAmount = default(double?), double? customerCashFees = default(double?), int? refundsCount = default(int?), double? totalOnlineRevenueAdjustments = default(double?))
+        public RevenueAdjustmentsDetails(double? onlineSalesRefundedAmount = default(double?), double? cashSalesRefundedAmount = default(double?), double? customerCashFees = default(double?), int? refundsCount = default(int?), double? payGreenSalesAmount = default(double?), double? payGreenProcessingFees = default(double?), double? totalOnlineRevenueAdjustments = default(double?))
         {
             this.OnlineSalesRefundedAmount = onlineSalesRefundedAmount;
             this.CashSalesRefundedAmount = cashSalesRefundedAmount;
             this.CustomerCashFees = customerCashFees;
             this.RefundsCount = refundsCount;
+            this.PayGreenSalesAmount = payGreenSalesAmount;
+            this.PayGreenProcessingFees = payGreenProcessingFees;
             this.TotalOnlineRevenueAdjustments = totalOnlineRevenueAdjustments;
         }
         
@@ -74,6 +78,20 @@ namespace Flipdish.Model
         public int? RefundsCount { get; set; }
 
         /// <summary>
+        /// PayGreen sales
+        /// </summary>
+        /// <value>PayGreen sales</value>
+        [DataMember(Name="PayGreenSalesAmount", EmitDefaultValue=false)]
+        public double? PayGreenSalesAmount { get; set; }
+
+        /// <summary>
+        /// PayGreen processing fees charged to end-user
+        /// </summary>
+        /// <value>PayGreen processing fees charged to end-user</value>
+        [DataMember(Name="PayGreenProcessingFees", EmitDefaultValue=false)]
+        public double? PayGreenProcessingFees { get; set; }
+
+        /// <summary>
         /// Total revenue adjustments
         /// </summary>
         /// <value>Total revenue adjustments</value>
@@ -92,6 +110,8 @@ namespace Flipdish.Model
             sb.Append("  CashSalesRefundedAmount: ").Append(CashSalesRefundedAmount).Append("\n");
             sb.Append("  CustomerCashFees: ").Append(CustomerCashFees).Append("\n");
             sb.Append("  RefundsCount: ").Append(RefundsCount).Append("\n");
+            sb.Append("  PayGreenSalesAmount: ").Append(PayGreenSalesAmount).Append("\n");
+            sb.Append("  PayGreenProcessingFees: ").Append(PayGreenProcessingFees).Append("\n");
             sb.Append("  TotalOnlineRevenueAdjustments: ").Append(TotalOnlineRevenueAdjustments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -148,6 +168,16 @@ namespace Flipdish.Model
                     this.RefundsCount.Equals(input.RefundsCount))
                 ) && 
                 (
+                    this.PayGreenSalesAmount == input.PayGreenSalesAmount ||
+                    (this.PayGreenSalesAmount != null &&
+                    this.PayGreenSalesAmount.Equals(input.PayGreenSalesAmount))
+                ) && 
+                (
+                    this.PayGreenProcessingFees == input.PayGreenProcessingFees ||
+                    (this.PayGreenProcessingFees != null &&
+                    this.PayGreenProcessingFees.Equals(input.PayGreenProcessingFees))
+                ) && 
+                (
                     this.TotalOnlineRevenueAdjustments == input.TotalOnlineRevenueAdjustments ||
                     (this.TotalOnlineRevenueAdjustments != null &&
                     this.TotalOnlineRevenueAdjustments.Equals(input.TotalOnlineRevenueAdjustments))
@@ -171,6 +201,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CustomerCashFees.GetHashCode();
                 if (this.RefundsCount != null)
                     hashCode = hashCode * 59 + this.RefundsCount.GetHashCode();
+                if (this.PayGreenSalesAmount != null)
+                    hashCode = hashCode * 59 + this.PayGreenSalesAmount.GetHashCode();
+                if (this.PayGreenProcessingFees != null)
+                    hashCode = hashCode * 59 + this.PayGreenProcessingFees.GetHashCode();
                 if (this.TotalOnlineRevenueAdjustments != null)
                     hashCode = hashCode * 59 + this.TotalOnlineRevenueAdjustments.GetHashCode();
                 return hashCode;

@@ -830,7 +830,8 @@ namespace Flipdish.Model
         /// <param name="totalOtherCharges">Payout other charges total.</param>
         /// <param name="openingBalance">Payout opening balance.</param>
         /// <param name="closingBalance">Payout closing balance.</param>
-        public Payout(int? payoutId = default(int?), int? payeeBankAccountId = default(int?), string accountName = default(string), PayoutStatusEnum? payoutStatus = default(PayoutStatusEnum?), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), PayoutTypeEnum? payoutType = default(PayoutTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), DateTime? cutoffDate = default(DateTime?), double? onlineSalesAmount = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? onlineSalesServiceCharges = default(double?), double? onlineSalesRefundedFees = default(double?), double? onlineSalesFees = default(double?), double? onlineSalesRefundedAmount = default(double?), double? onlineSalesTax = default(double?), double? totalOnlineRevenue = default(double?), double? cashSalesFees = default(double?), double? cashSalesRefundedFees = default(double?), double? customerCashFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?), double? totalOnlineRevenueAdjustments = default(double?), double? chargebackAmount = default(double?), double? chargebackRefundedFees = default(double?), double? totalChargebackCost = default(double?), double? totalOtherCharges = default(double?), double? openingBalance = default(double?), double? closingBalance = default(double?))
+        /// <param name="payGreenSalesAmount">Amount of sales through PayGreen (restaurant vouchers).</param>
+        public Payout(int? payoutId = default(int?), int? payeeBankAccountId = default(int?), string accountName = default(string), PayoutStatusEnum? payoutStatus = default(PayoutStatusEnum?), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), PayoutTypeEnum? payoutType = default(PayoutTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), DateTime? cutoffDate = default(DateTime?), double? onlineSalesAmount = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? onlineSalesServiceCharges = default(double?), double? onlineSalesRefundedFees = default(double?), double? onlineSalesFees = default(double?), double? onlineSalesRefundedAmount = default(double?), double? onlineSalesTax = default(double?), double? totalOnlineRevenue = default(double?), double? cashSalesFees = default(double?), double? cashSalesRefundedFees = default(double?), double? customerCashFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?), double? totalOnlineRevenueAdjustments = default(double?), double? chargebackAmount = default(double?), double? chargebackRefundedFees = default(double?), double? totalChargebackCost = default(double?), double? totalOtherCharges = default(double?), double? openingBalance = default(double?), double? closingBalance = default(double?), double? payGreenSalesAmount = default(double?))
         {
             this.PayoutId = payoutId;
             this.PayeeBankAccountId = payeeBankAccountId;
@@ -866,6 +867,7 @@ namespace Flipdish.Model
             this.TotalOtherCharges = totalOtherCharges;
             this.OpeningBalance = openingBalance;
             this.ClosingBalance = closingBalance;
+            this.PayGreenSalesAmount = payGreenSalesAmount;
         }
         
         /// <summary>
@@ -1089,6 +1091,13 @@ namespace Flipdish.Model
         public double? ClosingBalance { get; set; }
 
         /// <summary>
+        /// Amount of sales through PayGreen (restaurant vouchers)
+        /// </summary>
+        /// <value>Amount of sales through PayGreen (restaurant vouchers)</value>
+        [DataMember(Name="PayGreenSalesAmount", EmitDefaultValue=false)]
+        public double? PayGreenSalesAmount { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -1130,6 +1139,7 @@ namespace Flipdish.Model
             sb.Append("  TotalOtherCharges: ").Append(TotalOtherCharges).Append("\n");
             sb.Append("  OpeningBalance: ").Append(OpeningBalance).Append("\n");
             sb.Append("  ClosingBalance: ").Append(ClosingBalance).Append("\n");
+            sb.Append("  PayGreenSalesAmount: ").Append(PayGreenSalesAmount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1333,6 +1343,11 @@ namespace Flipdish.Model
                     this.ClosingBalance == input.ClosingBalance ||
                     (this.ClosingBalance != null &&
                     this.ClosingBalance.Equals(input.ClosingBalance))
+                ) && 
+                (
+                    this.PayGreenSalesAmount == input.PayGreenSalesAmount ||
+                    (this.PayGreenSalesAmount != null &&
+                    this.PayGreenSalesAmount.Equals(input.PayGreenSalesAmount))
                 );
         }
 
@@ -1413,6 +1428,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OpeningBalance.GetHashCode();
                 if (this.ClosingBalance != null)
                     hashCode = hashCode * 59 + this.ClosingBalance.GetHashCode();
+                if (this.PayGreenSalesAmount != null)
+                    hashCode = hashCode * 59 + this.PayGreenSalesAmount.GetHashCode();
                 return hashCode;
             }
         }

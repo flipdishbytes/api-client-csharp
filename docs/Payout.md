@@ -37,6 +37,7 @@ Name | Type | Description | Notes
 **TotalOtherCharges** | **double?** | Payout other charges total | [optional] 
 **OpeningBalance** | **double?** | Payout opening balance | [optional] 
 **ClosingBalance** | **double?** | Payout closing balance | [optional] 
+**PayGreenSalesAmount** | **double?** | Amount of sales through PayGreen (restaurant vouchers) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
