@@ -60,10 +60,12 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="appId">App ID.</param>
         /// <param name="complianceType">Type of compliance.  This controls if the Flipdish websites and apps display cookie consent banners and adjust cookies to be inline with various regulations.   You should set this correctly based on your region..</param>
-        public AppCompliance(string appId = default(string), ComplianceTypeEnum? complianceType = default(ComplianceTypeEnum?))
+        /// <param name="allowDisablingOfGdpr">For EU countries, we should not allow to change the option to “Default banner”, but all other countries should be able to do so..</param>
+        public AppCompliance(string appId = default(string), ComplianceTypeEnum? complianceType = default(ComplianceTypeEnum?), bool? allowDisablingOfGdpr = default(bool?))
         {
             this.AppId = appId;
             this.ComplianceType = complianceType;
+            this.AllowDisablingOfGdpr = allowDisablingOfGdpr;
         }
         
         /// <summary>
@@ -75,6 +77,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// For EU countries, we should not allow to change the option to “Default banner”, but all other countries should be able to do so.
+        /// </summary>
+        /// <value>For EU countries, we should not allow to change the option to “Default banner”, but all other countries should be able to do so.</value>
+        [DataMember(Name="AllowDisablingOfGdpr", EmitDefaultValue=false)]
+        public bool? AllowDisablingOfGdpr { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -84,6 +93,7 @@ namespace Flipdish.Model
             sb.Append("class AppCompliance {\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  ComplianceType: ").Append(ComplianceType).Append("\n");
+            sb.Append("  AllowDisablingOfGdpr: ").Append(AllowDisablingOfGdpr).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -127,6 +137,11 @@ namespace Flipdish.Model
                     this.ComplianceType == input.ComplianceType ||
                     (this.ComplianceType != null &&
                     this.ComplianceType.Equals(input.ComplianceType))
+                ) && 
+                (
+                    this.AllowDisablingOfGdpr == input.AllowDisablingOfGdpr ||
+                    (this.AllowDisablingOfGdpr != null &&
+                    this.AllowDisablingOfGdpr.Equals(input.AllowDisablingOfGdpr))
                 );
         }
 
@@ -143,6 +158,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 if (this.ComplianceType != null)
                     hashCode = hashCode * 59 + this.ComplianceType.GetHashCode();
+                if (this.AllowDisablingOfGdpr != null)
+                    hashCode = hashCode * 59 + this.AllowDisablingOfGdpr.GetHashCode();
                 return hashCode;
             }
         }
