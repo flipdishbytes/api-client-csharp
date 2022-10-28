@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **ValidValues** | [**List&lt;ValidValue&gt;**](ValidValue.md) | Valid Values  &lt;remarks&gt;Used typically for dropdown/select&lt;/remarks&gt; | [optional] 
 **ValidationRegex** | **string** | Validation Regex | [optional] 
 **FieldType** | **string** | Field Type | 
+**IsFlipdishRestricted** | **bool?** | Is this field only editable by Flipdish? | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

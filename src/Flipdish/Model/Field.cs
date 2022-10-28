@@ -120,7 +120,8 @@ namespace Flipdish.Model
         /// <param name="validValues">Valid Values  &lt;remarks&gt;Used typically for dropdown/select&lt;/remarks&gt;.</param>
         /// <param name="validationRegex">Validation Regex.</param>
         /// <param name="fieldType">Field Type (required).</param>
-        public Field(string name = default(string), string description = default(string), string key = default(string), string tooltip = default(string), int? position = default(int?), string defaultValue = default(string), List<ValidValue> validValues = default(List<ValidValue>), string validationRegex = default(string), FieldTypeEnum fieldType = default(FieldTypeEnum))
+        /// <param name="isFlipdishRestricted">Is this field only editable by Flipdish?.</param>
+        public Field(string name = default(string), string description = default(string), string key = default(string), string tooltip = default(string), int? position = default(int?), string defaultValue = default(string), List<ValidValue> validValues = default(List<ValidValue>), string validationRegex = default(string), FieldTypeEnum fieldType = default(FieldTypeEnum), bool? isFlipdishRestricted = default(bool?))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -171,6 +172,7 @@ namespace Flipdish.Model
             this.DefaultValue = defaultValue;
             this.ValidValues = validValues;
             this.ValidationRegex = validationRegex;
+            this.IsFlipdishRestricted = isFlipdishRestricted;
         }
         
         /// <summary>
@@ -231,6 +233,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Is this field only editable by Flipdish?
+        /// </summary>
+        /// <value>Is this field only editable by Flipdish?</value>
+        [DataMember(Name="IsFlipdishRestricted", EmitDefaultValue=false)]
+        public bool? IsFlipdishRestricted { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -247,6 +256,7 @@ namespace Flipdish.Model
             sb.Append("  ValidValues: ").Append(ValidValues).Append("\n");
             sb.Append("  ValidationRegex: ").Append(ValidationRegex).Append("\n");
             sb.Append("  FieldType: ").Append(FieldType).Append("\n");
+            sb.Append("  IsFlipdishRestricted: ").Append(IsFlipdishRestricted).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -325,6 +335,11 @@ namespace Flipdish.Model
                     this.FieldType == input.FieldType ||
                     (this.FieldType != null &&
                     this.FieldType.Equals(input.FieldType))
+                ) && 
+                (
+                    this.IsFlipdishRestricted == input.IsFlipdishRestricted ||
+                    (this.IsFlipdishRestricted != null &&
+                    this.IsFlipdishRestricted.Equals(input.IsFlipdishRestricted))
                 );
         }
 
@@ -355,6 +370,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ValidationRegex.GetHashCode();
                 if (this.FieldType != null)
                     hashCode = hashCode * 59 + this.FieldType.GetHashCode();
+                if (this.IsFlipdishRestricted != null)
+                    hashCode = hashCode * 59 + this.IsFlipdishRestricted.GetHashCode();
                 return hashCode;
             }
         }
