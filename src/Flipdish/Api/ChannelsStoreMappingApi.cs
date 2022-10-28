@@ -25,101 +25,101 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// Gets the relationship between Flipdish Store and Channel Store
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
         /// <returns>RestApiArrayResultStoreChannelStoreMapping</returns>
         RestApiArrayResultStoreChannelStoreMapping ChannelsGetStoreChannelStoreMapping (string appId, int? channelId);
 
         /// <summary>
-        /// 
+        /// Gets the relationship between Flipdish Store and Channel Store
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
         /// <returns>ApiResponse of RestApiArrayResultStoreChannelStoreMapping</returns>
         ApiResponse<RestApiArrayResultStoreChannelStoreMapping> ChannelsGetStoreChannelStoreMappingWithHttpInfo (string appId, int? channelId);
         /// <summary>
-        /// 
+        /// Sets the relationship between Flipdish Store and Channel Store
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
+        /// <param name="stores">Flipdish and Channel Store configuration</param>
         /// <returns>RestApiArrayResultStoreChannelStoreMapping</returns>
         RestApiArrayResultStoreChannelStoreMapping ChannelsSetStoreChannelStoreMapping (string appId, int? channelId, List<ChannelStoreMapping> stores);
 
         /// <summary>
-        /// 
+        /// Sets the relationship between Flipdish Store and Channel Store
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
+        /// <param name="stores">Flipdish and Channel Store configuration</param>
         /// <returns>ApiResponse of RestApiArrayResultStoreChannelStoreMapping</returns>
         ApiResponse<RestApiArrayResultStoreChannelStoreMapping> ChannelsSetStoreChannelStoreMappingWithHttpInfo (string appId, int? channelId, List<ChannelStoreMapping> stores);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// Gets the relationship between Flipdish Store and Channel Store
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
         /// <returns>Task of RestApiArrayResultStoreChannelStoreMapping</returns>
         System.Threading.Tasks.Task<RestApiArrayResultStoreChannelStoreMapping> ChannelsGetStoreChannelStoreMappingAsync (string appId, int? channelId);
 
         /// <summary>
-        /// 
+        /// Gets the relationship between Flipdish Store and Channel Store
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultStoreChannelStoreMapping)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreChannelStoreMapping>> ChannelsGetStoreChannelStoreMappingAsyncWithHttpInfo (string appId, int? channelId);
         /// <summary>
-        /// 
+        /// Sets the relationship between Flipdish Store and Channel Store
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
+        /// <param name="stores">Flipdish and Channel Store configuration</param>
         /// <returns>Task of RestApiArrayResultStoreChannelStoreMapping</returns>
         System.Threading.Tasks.Task<RestApiArrayResultStoreChannelStoreMapping> ChannelsSetStoreChannelStoreMappingAsync (string appId, int? channelId, List<ChannelStoreMapping> stores);
 
         /// <summary>
-        /// 
+        /// Sets the relationship between Flipdish Store and Channel Store
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
+        /// <param name="stores">Flipdish and Channel Store configuration</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultStoreChannelStoreMapping)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreChannelStoreMapping>> ChannelsSetStoreChannelStoreMappingAsyncWithHttpInfo (string appId, int? channelId, List<ChannelStoreMapping> stores);
         #endregion Asynchronous Operations
@@ -223,11 +223,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Gets the relationship between Flipdish Store and Channel Store 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
         /// <returns>RestApiArrayResultStoreChannelStoreMapping</returns>
         public RestApiArrayResultStoreChannelStoreMapping ChannelsGetStoreChannelStoreMapping (string appId, int? channelId)
         {
@@ -236,11 +236,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Gets the relationship between Flipdish Store and Channel Store 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
         /// <returns>ApiResponse of RestApiArrayResultStoreChannelStoreMapping</returns>
         public ApiResponse< RestApiArrayResultStoreChannelStoreMapping > ChannelsGetStoreChannelStoreMappingWithHttpInfo (string appId, int? channelId)
         {
@@ -304,11 +304,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Gets the relationship between Flipdish Store and Channel Store 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
         /// <returns>Task of RestApiArrayResultStoreChannelStoreMapping</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultStoreChannelStoreMapping> ChannelsGetStoreChannelStoreMappingAsync (string appId, int? channelId)
         {
@@ -318,11 +318,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Gets the relationship between Flipdish Store and Channel Store 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultStoreChannelStoreMapping)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreChannelStoreMapping>> ChannelsGetStoreChannelStoreMappingAsyncWithHttpInfo (string appId, int? channelId)
         {
@@ -386,12 +386,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Sets the relationship between Flipdish Store and Channel Store 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
+        /// <param name="stores">Flipdish and Channel Store configuration</param>
         /// <returns>RestApiArrayResultStoreChannelStoreMapping</returns>
         public RestApiArrayResultStoreChannelStoreMapping ChannelsSetStoreChannelStoreMapping (string appId, int? channelId, List<ChannelStoreMapping> stores)
         {
@@ -400,12 +400,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Sets the relationship between Flipdish Store and Channel Store 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
+        /// <param name="stores">Flipdish and Channel Store configuration</param>
         /// <returns>ApiResponse of RestApiArrayResultStoreChannelStoreMapping</returns>
         public ApiResponse< RestApiArrayResultStoreChannelStoreMapping > ChannelsSetStoreChannelStoreMappingWithHttpInfo (string appId, int? channelId, List<ChannelStoreMapping> stores)
         {
@@ -485,12 +485,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Sets the relationship between Flipdish Store and Channel Store 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
+        /// <param name="stores">Flipdish and Channel Store configuration</param>
         /// <returns>Task of RestApiArrayResultStoreChannelStoreMapping</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultStoreChannelStoreMapping> ChannelsSetStoreChannelStoreMappingAsync (string appId, int? channelId, List<ChannelStoreMapping> stores)
         {
@@ -500,12 +500,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Sets the relationship between Flipdish Store and Channel Store 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="channelId"></param>
-        /// <param name="stores"></param>
+        /// <param name="appId">Flipdish App Name Id</param>
+        /// <param name="channelId">Flipdish Channel ID</param>
+        /// <param name="stores">Flipdish and Channel Store configuration</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultStoreChannelStoreMapping)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreChannelStoreMapping>> ChannelsSetStoreChannelStoreMappingAsyncWithHttpInfo (string appId, int? channelId, List<ChannelStoreMapping> stores)
         {
