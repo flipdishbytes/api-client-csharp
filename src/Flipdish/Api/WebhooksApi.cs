@@ -35,7 +35,7 @@ namespace Flipdish.Api
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <param name="appId"></param>
         /// <returns>RestApiIntegerResult</returns>
-        RestApiIntegerResult CraeteWebhookSubscription (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
+        RestApiIntegerResult CreateWebhookSubscription (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
 
         /// <summary>
         /// Create a webhook subscription for you Oauth App
@@ -48,7 +48,7 @@ namespace Flipdish.Api
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiIntegerResult</returns>
-        ApiResponse<RestApiIntegerResult> CraeteWebhookSubscriptionWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
+        ApiResponse<RestApiIntegerResult> CreateWebhookSubscriptionWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
         /// <summary>
         /// Add event name to your webhook subscription
         /// </summary>
@@ -303,7 +303,7 @@ namespace Flipdish.Api
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <param name="appId"></param>
         /// <returns>Task of RestApiIntegerResult</returns>
-        System.Threading.Tasks.Task<RestApiIntegerResult> CraeteWebhookSubscriptionAsync (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
+        System.Threading.Tasks.Task<RestApiIntegerResult> CreateWebhookSubscriptionAsync (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
 
         /// <summary>
         /// Create a webhook subscription for you Oauth App
@@ -316,7 +316,7 @@ namespace Flipdish.Api
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiIntegerResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> CraeteWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> CreateWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
         /// <summary>
         /// Add event name to your webhook subscription
         /// </summary>
@@ -666,9 +666,9 @@ namespace Flipdish.Api
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <param name="appId"></param>
         /// <returns>RestApiIntegerResult</returns>
-        public RestApiIntegerResult CraeteWebhookSubscription (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
+        public RestApiIntegerResult CreateWebhookSubscription (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
         {
-             ApiResponse<RestApiIntegerResult> localVarResponse = CraeteWebhookSubscriptionWithHttpInfo(oauthAppId, webhookSubscription, appId);
+             ApiResponse<RestApiIntegerResult> localVarResponse = CreateWebhookSubscriptionWithHttpInfo(oauthAppId, webhookSubscription, appId);
              return localVarResponse.Data;
         }
 
@@ -680,17 +680,17 @@ namespace Flipdish.Api
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiIntegerResult</returns>
-        public ApiResponse< RestApiIntegerResult > CraeteWebhookSubscriptionWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
+        public ApiResponse< RestApiIntegerResult > CreateWebhookSubscriptionWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
         {
             // verify the required parameter 'oauthAppId' is set
             if (oauthAppId == null)
-                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->CraeteWebhookSubscription");
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->CreateWebhookSubscription");
             // verify the required parameter 'webhookSubscription' is set
             if (webhookSubscription == null)
-                throw new ApiException(400, "Missing required parameter 'webhookSubscription' when calling WebhooksApi->CraeteWebhookSubscription");
+                throw new ApiException(400, "Missing required parameter 'webhookSubscription' when calling WebhooksApi->CreateWebhookSubscription");
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->CraeteWebhookSubscription");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->CreateWebhookSubscription");
 
             var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -748,7 +748,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CraeteWebhookSubscription", localVarResponse);
+                Exception exception = ExceptionFactory("CreateWebhookSubscription", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -765,9 +765,9 @@ namespace Flipdish.Api
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <param name="appId"></param>
         /// <returns>Task of RestApiIntegerResult</returns>
-        public async System.Threading.Tasks.Task<RestApiIntegerResult> CraeteWebhookSubscriptionAsync (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
+        public async System.Threading.Tasks.Task<RestApiIntegerResult> CreateWebhookSubscriptionAsync (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
         {
-             ApiResponse<RestApiIntegerResult> localVarResponse = await CraeteWebhookSubscriptionAsyncWithHttpInfo(oauthAppId, webhookSubscription, appId);
+             ApiResponse<RestApiIntegerResult> localVarResponse = await CreateWebhookSubscriptionAsyncWithHttpInfo(oauthAppId, webhookSubscription, appId);
              return localVarResponse.Data;
 
         }
@@ -780,17 +780,17 @@ namespace Flipdish.Api
         /// <param name="webhookSubscription">Webhook subscription object</param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiIntegerResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> CraeteWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> CreateWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
         {
             // verify the required parameter 'oauthAppId' is set
             if (oauthAppId == null)
-                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->CraeteWebhookSubscription");
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling WebhooksApi->CreateWebhookSubscription");
             // verify the required parameter 'webhookSubscription' is set
             if (webhookSubscription == null)
-                throw new ApiException(400, "Missing required parameter 'webhookSubscription' when calling WebhooksApi->CraeteWebhookSubscription");
+                throw new ApiException(400, "Missing required parameter 'webhookSubscription' when calling WebhooksApi->CreateWebhookSubscription");
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->CraeteWebhookSubscription");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WebhooksApi->CreateWebhookSubscription");
 
             var localVarPath = "./api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -848,7 +848,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CraeteWebhookSubscription", localVarResponse);
+                Exception exception = ExceptionFactory("CreateWebhookSubscription", localVarResponse);
                 if (exception != null) throw exception;
             }
 

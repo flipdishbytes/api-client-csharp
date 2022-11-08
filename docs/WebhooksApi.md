@@ -4,7 +4,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CraeteWebhookSubscription**](WebhooksApi.md#craetewebhooksubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Create a webhook subscription for you Oauth App
+[**CreateWebhookSubscription**](WebhooksApi.md#createwebhooksubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Create a webhook subscription for you Oauth App
 [**CreateWebhookSubscriptionEventNames**](WebhooksApi.md#createwebhooksubscriptioneventnames) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Add event name to your webhook subscription
 [**DeleteWebhookSubscription**](WebhooksApi.md#deletewebhooksubscription) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Delete you webhook subscription
 [**DeleteWebhookSubscriptionEventName**](WebhooksApi.md#deletewebhooksubscriptioneventname) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Remove event name to your webhook subscription
@@ -16,9 +16,9 @@ Method | HTTP request | Description
 [**UpdateWebhookSubscription**](WebhooksApi.md#updatewebhooksubscription) | **PUT** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Update a webhook subscription object
 
 
-<a name="craetewebhooksubscription"></a>
-# **CraeteWebhookSubscription**
-> RestApiIntegerResult CraeteWebhookSubscription (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
+<a name="createwebhooksubscription"></a>
+# **CreateWebhookSubscription**
+> RestApiIntegerResult CreateWebhookSubscription (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
 
 Create a webhook subscription for you Oauth App
 
@@ -32,7 +32,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class CraeteWebhookSubscriptionExample
+    public class CreateWebhookSubscriptionExample
     {
         public void main()
         {
@@ -47,12 +47,12 @@ namespace Example
             try
             {
                 // Create a webhook subscription for you Oauth App
-                RestApiIntegerResult result = apiInstance.CraeteWebhookSubscription(oauthAppId, webhookSubscription, appId);
+                RestApiIntegerResult result = apiInstance.CreateWebhookSubscription(oauthAppId, webhookSubscription, appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling WebhooksApi.CraeteWebhookSubscription: " + e.Message );
+                Debug.Print("Exception when calling WebhooksApi.CreateWebhookSubscription: " + e.Message );
             }
         }
     }
