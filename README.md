@@ -279,6 +279,7 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**UnAssign**](docs/HydraApi.md#unassign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | [Private]
 *HydraApi* | [**UnassignEmv**](docs/HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | Unassign the currently assigned EMV terminal from a kiosk
 *HydraApi* | [**UpdateKioskCashVisibilitySettings**](docs/HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | Update the Cash Payment Methon Visiability on Kisok
+*IntercomApi* | [**UserHash**](docs/IntercomApi.md#userhash) | **GET** /api/v1.0/intercom/userHash | 
 *KioskIotApi* | [**GetKioskIotConnection**](docs/KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
 *KioskIotApi* | [**QueryTelemetrySeries**](docs/KioskIotApi.md#querytelemetryseries) | **POST** /api/v1.0/{appId}/kioskiot/timeseries/query | Get the IoT time series values for a given Kiosk Id, properties and time range
 *KioskStoreSettingsApi* | [**GetAllKioskSettingsForStore**](docs/KioskStoreSettingsApi.md#getallkiosksettingsforstore) | **GET** /api/v1.0/{appId}/kiosksettings/store/{storeId} | Get all kiosk settings associated with a store
@@ -718,6 +719,7 @@ Class | Method | HTTP request | Description
  - [Model.HydraUnAssignedEvent](docs/HydraUnAssignedEvent.md)
  - [Model.IndexPage](docs/IndexPage.md)
  - [Model.IndexPageBase](docs/IndexPageBase.md)
+ - [Model.IntercomUserHash](docs/IntercomUserHash.md)
  - [Model.JobAddress](docs/JobAddress.md)
  - [Model.JobCancellation](docs/JobCancellation.md)
  - [Model.JobContact](docs/JobContact.md)
@@ -1033,6 +1035,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultHydraStatus](docs/RestApiResultHydraStatus.md)
  - [Model.RestApiResultIndexPage](docs/RestApiResultIndexPage.md)
  - [Model.RestApiResultIndexPageBase](docs/RestApiResultIndexPageBase.md)
+ - [Model.RestApiResultIntercomUserHash](docs/RestApiResultIntercomUserHash.md)
  - [Model.RestApiResultJobResponse](docs/RestApiResultJobResponse.md)
  - [Model.RestApiResultKioskCashSetting](docs/RestApiResultKioskCashSetting.md)
  - [Model.RestApiResultKioskIotConnectionParameters](docs/RestApiResultKioskIotConnectionParameters.md)
