@@ -244,6 +244,8 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**GetUserEvents**](docs/EventsApi.md#getuserevents) | **GET** /api/v1.0/events/user/{userId} | Get user events  For technical reasons, the number of records returned is limited to 100.
 *EventsApi* | [**GetWhiteLabelEvents**](docs/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 *FilesApi* | [**DownloadFile**](docs/FilesApi.md#downloadfile) | **GET** /api/v1.0/{appId}/files/download/{fileId} | Get file from storage
+*FirebaseAppsApi* | [**FirebaseAppsAddFirebaseApp**](docs/FirebaseAppsApi.md#firebaseappsaddfirebaseapp) | **POST** /api/v1.0/FirebaseApp | 
+*FirebaseAppsApi* | [**FirebaseAppsGetFirebaseApp**](docs/FirebaseAppsApi.md#firebaseappsgetfirebaseapp) | **GET** /api/v1.0/FirebaseApp/{whitelabelId} | 
 *FulfillmentStateConfigurationApi* | [**CreateFulfillmentStatesConfig**](docs/FulfillmentStateConfigurationApi.md#createfulfillmentstatesconfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states | Create fulfillment configuration
 *FulfillmentStateConfigurationApi* | [**DeleteFulfillmentStatesConfig**](docs/FulfillmentStateConfigurationApi.md#deletefulfillmentstatesconfig) | **DELETE** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Delete fulfillment states configuration
 *FulfillmentStateConfigurationApi* | [**GetFulfillmentStatesConfiguration**](docs/FulfillmentStateConfigurationApi.md#getfulfillmentstatesconfiguration) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Get fulfillment configuration
@@ -682,6 +684,7 @@ Class | Method | HTTP request | Description
  - [Model.Field](docs/Field.md)
  - [Model.FieldChangeInformation](docs/FieldChangeInformation.md)
  - [Model.FieldGroup](docs/FieldGroup.md)
+ - [Model.FirebaseApp](docs/FirebaseApp.md)
  - [Model.FlipdishEventBase](docs/FlipdishEventBase.md)
  - [Model.FlipdishFeesDetails](docs/FlipdishFeesDetails.md)
  - [Model.FulfillentStatusActionItem](docs/FulfillentStatusActionItem.md)
