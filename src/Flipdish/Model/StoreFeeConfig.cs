@@ -53,6 +53,8 @@ namespace Flipdish.Model
         /// <param name="percentFeeCashOrdersChargedToCustomerIncludingVat">percentFeeCashOrdersChargedToCustomerIncludingVat.</param>
         /// <param name="fixedFeeCashOrdersChargedToCustomerIncludingVat">fixedFeeCashOrdersChargedToCustomerIncludingVat.</param>
         /// <param name="percentFeeTips">Gets or sets the percent fee tips..</param>
+        /// <param name="percentFeeTipsCollection">Gets or sets the percent fee tips for collection..</param>
+        /// <param name="percentFeeTipsDelivery">Gets or sets the percent fee tips for delivery..</param>
         /// <param name="taxRatePercent">Gets or sets the tax rate percent..</param>
         /// <param name="percentFeeCardOrdersLocationService">Gets or sets the percent fee card orders location service..</param>
         /// <param name="percentFeeCashOrdersLocationService">Gets or sets the percent fee cash orders location service..</param>
@@ -66,7 +68,7 @@ namespace Flipdish.Model
         /// <param name="percentFeeCashOrdersIngest">Gets or sets the percent fee cash orders ingest..</param>
         /// <param name="fixedFeeCardOrdersIngest">Gets or sets the fixed fee card orders ingest..</param>
         /// <param name="fixedFeeCashOrdersIngest">Gets or sets the fixed fee cash orders ingest..</param>
-        public StoreFeeConfig(int? feeConfigId = default(int?), int? storeId = default(int?), DateTime? startTime = default(DateTime?), double? percentFeeCardOrders = default(double?), double? percentFeeCashOrders = default(double?), double? percentFeeCardOrdersWeb = default(double?), double? percentFeeCashOrdersWeb = default(double?), double? percentFeeCardOrdersKiosk = default(double?), double? percentFeeCashOrdersKiosk = default(double?), double? fixedFeeCardOrdersKiosk = default(double?), double? fixedFeeCashOrdersKiosk = default(double?), double? percentFeeCardOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersKioskChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrders = default(double?), double? fixedFeeCashOrders = default(double?), double? percentFeeCardOrdersChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersChargedToCustomerIncludingVat = default(double?), double? percentFeeTips = default(double?), double? taxRatePercent = default(double?), double? percentFeeCardOrdersLocationService = default(double?), double? percentFeeCashOrdersLocationService = default(double?), double? fixedFeeCardOrdersLocationService = default(double?), double? fixedFeeCashOrdersLocationService = default(double?), double? percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? percentFeeCardOrdersIngest = default(double?), double? percentFeeCashOrdersIngest = default(double?), double? fixedFeeCardOrdersIngest = default(double?), double? fixedFeeCashOrdersIngest = default(double?))
+        public StoreFeeConfig(int? feeConfigId = default(int?), int? storeId = default(int?), DateTime? startTime = default(DateTime?), double? percentFeeCardOrders = default(double?), double? percentFeeCashOrders = default(double?), double? percentFeeCardOrdersWeb = default(double?), double? percentFeeCashOrdersWeb = default(double?), double? percentFeeCardOrdersKiosk = default(double?), double? percentFeeCashOrdersKiosk = default(double?), double? fixedFeeCardOrdersKiosk = default(double?), double? fixedFeeCashOrdersKiosk = default(double?), double? percentFeeCardOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersKioskChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrders = default(double?), double? fixedFeeCashOrders = default(double?), double? percentFeeCardOrdersChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersChargedToCustomerIncludingVat = default(double?), double? percentFeeTips = default(double?), double? percentFeeTipsCollection = default(double?), double? percentFeeTipsDelivery = default(double?), double? taxRatePercent = default(double?), double? percentFeeCardOrdersLocationService = default(double?), double? percentFeeCashOrdersLocationService = default(double?), double? fixedFeeCardOrdersLocationService = default(double?), double? fixedFeeCashOrdersLocationService = default(double?), double? percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? percentFeeCardOrdersIngest = default(double?), double? percentFeeCashOrdersIngest = default(double?), double? fixedFeeCardOrdersIngest = default(double?), double? fixedFeeCashOrdersIngest = default(double?))
         {
             this.FeeConfigId = feeConfigId;
             this.StoreId = storeId;
@@ -90,6 +92,8 @@ namespace Flipdish.Model
             this.PercentFeeCashOrdersChargedToCustomerIncludingVat = percentFeeCashOrdersChargedToCustomerIncludingVat;
             this.FixedFeeCashOrdersChargedToCustomerIncludingVat = fixedFeeCashOrdersChargedToCustomerIncludingVat;
             this.PercentFeeTips = percentFeeTips;
+            this.PercentFeeTipsCollection = percentFeeTipsCollection;
+            this.PercentFeeTipsDelivery = percentFeeTipsDelivery;
             this.TaxRatePercent = taxRatePercent;
             this.PercentFeeCardOrdersLocationService = percentFeeCardOrdersLocationService;
             this.PercentFeeCashOrdersLocationService = percentFeeCashOrdersLocationService;
@@ -239,6 +243,20 @@ namespace Flipdish.Model
         public double? PercentFeeTips { get; set; }
 
         /// <summary>
+        /// Gets or sets the percent fee tips for collection.
+        /// </summary>
+        /// <value>Gets or sets the percent fee tips for collection.</value>
+        [DataMember(Name="PercentFeeTipsCollection", EmitDefaultValue=false)]
+        public double? PercentFeeTipsCollection { get; set; }
+
+        /// <summary>
+        /// Gets or sets the percent fee tips for delivery.
+        /// </summary>
+        /// <value>Gets or sets the percent fee tips for delivery.</value>
+        [DataMember(Name="PercentFeeTipsDelivery", EmitDefaultValue=false)]
+        public double? PercentFeeTipsDelivery { get; set; }
+
+        /// <summary>
         /// Gets or sets the tax rate percent.
         /// </summary>
         /// <value>Gets or sets the tax rate percent.</value>
@@ -359,6 +377,8 @@ namespace Flipdish.Model
             sb.Append("  PercentFeeCashOrdersChargedToCustomerIncludingVat: ").Append(PercentFeeCashOrdersChargedToCustomerIncludingVat).Append("\n");
             sb.Append("  FixedFeeCashOrdersChargedToCustomerIncludingVat: ").Append(FixedFeeCashOrdersChargedToCustomerIncludingVat).Append("\n");
             sb.Append("  PercentFeeTips: ").Append(PercentFeeTips).Append("\n");
+            sb.Append("  PercentFeeTipsCollection: ").Append(PercentFeeTipsCollection).Append("\n");
+            sb.Append("  PercentFeeTipsDelivery: ").Append(PercentFeeTipsDelivery).Append("\n");
             sb.Append("  TaxRatePercent: ").Append(TaxRatePercent).Append("\n");
             sb.Append("  PercentFeeCardOrdersLocationService: ").Append(PercentFeeCardOrdersLocationService).Append("\n");
             sb.Append("  PercentFeeCashOrdersLocationService: ").Append(PercentFeeCashOrdersLocationService).Append("\n");
@@ -517,6 +537,16 @@ namespace Flipdish.Model
                     this.PercentFeeTips.Equals(input.PercentFeeTips))
                 ) && 
                 (
+                    this.PercentFeeTipsCollection == input.PercentFeeTipsCollection ||
+                    (this.PercentFeeTipsCollection != null &&
+                    this.PercentFeeTipsCollection.Equals(input.PercentFeeTipsCollection))
+                ) && 
+                (
+                    this.PercentFeeTipsDelivery == input.PercentFeeTipsDelivery ||
+                    (this.PercentFeeTipsDelivery != null &&
+                    this.PercentFeeTipsDelivery.Equals(input.PercentFeeTipsDelivery))
+                ) && 
+                (
                     this.TaxRatePercent == input.TaxRatePercent ||
                     (this.TaxRatePercent != null &&
                     this.TaxRatePercent.Equals(input.TaxRatePercent))
@@ -636,6 +666,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.FixedFeeCashOrdersChargedToCustomerIncludingVat.GetHashCode();
                 if (this.PercentFeeTips != null)
                     hashCode = hashCode * 59 + this.PercentFeeTips.GetHashCode();
+                if (this.PercentFeeTipsCollection != null)
+                    hashCode = hashCode * 59 + this.PercentFeeTipsCollection.GetHashCode();
+                if (this.PercentFeeTipsDelivery != null)
+                    hashCode = hashCode * 59 + this.PercentFeeTipsDelivery.GetHashCode();
                 if (this.TaxRatePercent != null)
                     hashCode = hashCode * 59 + this.TaxRatePercent.GetHashCode();
                 if (this.PercentFeeCardOrdersLocationService != null)
