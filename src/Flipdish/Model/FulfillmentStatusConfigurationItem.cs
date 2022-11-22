@@ -117,8 +117,7 @@ namespace Flipdish.Model
         /// <param name="isCustom">Is custom state. If not, then it&#39;s a system state.</param>
         /// <param name="orderTypes">If empty then applies to all ordertypes, otherwise a list of order types this state applies to.</param>
         /// <param name="communication">Whether state should fire off a notification to the customer.</param>
-        /// <param name="visualOrder">Integer for ordering results in choices (eg. dropdowns).</param>
-        public FulfillmentStatusConfigurationItem(string statusId = default(string), string statusName = default(string), bool? enabled = default(bool?), string displayName = default(string), string icon = default(string), string publicDescription = default(string), bool? _internal = default(bool?), List<string> nextStatuses = default(List<string>), List<NextStatusWithOrderType> defaultNextStatus = default(List<NextStatusWithOrderType>), ChangeTypeEnum? changeType = default(ChangeTypeEnum?), bool? includeInReports = default(bool?), bool? isCustom = default(bool?), List<OrderTypesEnum> orderTypes = default(List<OrderTypesEnum>), bool? communication = default(bool?), int? visualOrder = default(int?))
+        public FulfillmentStatusConfigurationItem(string statusId = default(string), string statusName = default(string), bool? enabled = default(bool?), string displayName = default(string), string icon = default(string), string publicDescription = default(string), bool? _internal = default(bool?), List<string> nextStatuses = default(List<string>), List<NextStatusWithOrderType> defaultNextStatus = default(List<NextStatusWithOrderType>), ChangeTypeEnum? changeType = default(ChangeTypeEnum?), bool? includeInReports = default(bool?), bool? isCustom = default(bool?), List<OrderTypesEnum> orderTypes = default(List<OrderTypesEnum>), bool? communication = default(bool?))
         {
             this.StatusId = statusId;
             this.StatusName = statusName;
@@ -134,7 +133,6 @@ namespace Flipdish.Model
             this.IsCustom = isCustom;
             this.OrderTypes = orderTypes;
             this.Communication = communication;
-            this.VisualOrder = visualOrder;
         }
         
         /// <summary>
@@ -224,13 +222,6 @@ namespace Flipdish.Model
         public bool? Communication { get; set; }
 
         /// <summary>
-        /// Integer for ordering results in choices (eg. dropdowns)
-        /// </summary>
-        /// <value>Integer for ordering results in choices (eg. dropdowns)</value>
-        [DataMember(Name="VisualOrder", EmitDefaultValue=false)]
-        public int? VisualOrder { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -252,7 +243,6 @@ namespace Flipdish.Model
             sb.Append("  IsCustom: ").Append(IsCustom).Append("\n");
             sb.Append("  OrderTypes: ").Append(OrderTypes).Append("\n");
             sb.Append("  Communication: ").Append(Communication).Append("\n");
-            sb.Append("  VisualOrder: ").Append(VisualOrder).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -356,11 +346,6 @@ namespace Flipdish.Model
                     this.Communication == input.Communication ||
                     (this.Communication != null &&
                     this.Communication.Equals(input.Communication))
-                ) && 
-                (
-                    this.VisualOrder == input.VisualOrder ||
-                    (this.VisualOrder != null &&
-                    this.VisualOrder.Equals(input.VisualOrder))
                 );
         }
 
@@ -401,8 +386,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OrderTypes.GetHashCode();
                 if (this.Communication != null)
                     hashCode = hashCode * 59 + this.Communication.GetHashCode();
-                if (this.VisualOrder != null)
-                    hashCode = hashCode * 59 + this.VisualOrder.GetHashCode();
                 return hashCode;
             }
         }
