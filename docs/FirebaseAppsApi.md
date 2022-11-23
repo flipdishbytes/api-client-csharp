@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 <a name="firebaseappsgetfirebaseapp"></a>
 # **FirebaseAppsGetFirebaseApp**
-> Object FirebaseAppsGetFirebaseApp (string whitelabelId)
+> Object FirebaseAppsGetFirebaseApp (int? whitelabelId)
 
 
 
@@ -93,7 +93,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new FirebaseAppsApi();
-            var whitelabelId = whitelabelId_example;  // string | 
+            var whitelabelId = 56;  // int? | 
 
             try
             {
@@ -113,7 +113,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **whitelabelId** | **string**|  | 
+ **whitelabelId** | **int?**|  | 
 
 ### Return type
 

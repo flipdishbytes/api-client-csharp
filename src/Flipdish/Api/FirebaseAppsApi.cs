@@ -54,7 +54,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
         /// <returns>Object</returns>
-        Object FirebaseAppsGetFirebaseApp (string whitelabelId);
+        Object FirebaseAppsGetFirebaseApp (int? whitelabelId);
 
         /// <summary>
         /// 
@@ -65,7 +65,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> FirebaseAppsGetFirebaseAppWithHttpInfo (string whitelabelId);
+        ApiResponse<Object> FirebaseAppsGetFirebaseAppWithHttpInfo (int? whitelabelId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -98,7 +98,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> FirebaseAppsGetFirebaseAppAsync (string whitelabelId);
+        System.Threading.Tasks.Task<Object> FirebaseAppsGetFirebaseAppAsync (int? whitelabelId);
 
         /// <summary>
         /// 
@@ -109,7 +109,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FirebaseAppsGetFirebaseAppAsyncWithHttpInfo (string whitelabelId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> FirebaseAppsGetFirebaseAppAsyncWithHttpInfo (int? whitelabelId);
         #endregion Asynchronous Operations
     }
 
@@ -391,7 +391,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
         /// <returns>Object</returns>
-        public Object FirebaseAppsGetFirebaseApp (string whitelabelId)
+        public Object FirebaseAppsGetFirebaseApp (int? whitelabelId)
         {
              ApiResponse<Object> localVarResponse = FirebaseAppsGetFirebaseAppWithHttpInfo(whitelabelId);
              return localVarResponse.Data;
@@ -403,7 +403,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > FirebaseAppsGetFirebaseAppWithHttpInfo (string whitelabelId)
+        public ApiResponse< Object > FirebaseAppsGetFirebaseAppWithHttpInfo (int? whitelabelId)
         {
             // verify the required parameter 'whitelabelId' is set
             if (whitelabelId == null)
@@ -466,7 +466,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> FirebaseAppsGetFirebaseAppAsync (string whitelabelId)
+        public async System.Threading.Tasks.Task<Object> FirebaseAppsGetFirebaseAppAsync (int? whitelabelId)
         {
              ApiResponse<Object> localVarResponse = await FirebaseAppsGetFirebaseAppAsyncWithHttpInfo(whitelabelId);
              return localVarResponse.Data;
@@ -479,7 +479,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> FirebaseAppsGetFirebaseAppAsyncWithHttpInfo (string whitelabelId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> FirebaseAppsGetFirebaseAppAsyncWithHttpInfo (int? whitelabelId)
         {
             // verify the required parameter 'whitelabelId' is set
             if (whitelabelId == null)
