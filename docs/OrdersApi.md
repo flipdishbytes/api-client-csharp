@@ -475,7 +475,7 @@ Name | Type | Description  | Notes
 
 <a name="getorderssummary"></a>
 # **GetOrdersSummary**
-> RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null)
+> RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null)
 
 [PRIVATE API] Get summary of orders by filter
 
@@ -506,11 +506,13 @@ namespace Example
             var orderByRequestedForTime = true;  // bool? |  (optional) 
             var channels = channels_example;  // List<string> |  (optional) 
             var orderIds = new List<int?>(); // List<int?> | Filter by the given orders (optional) 
+            var from = 2013-10-20T19:20:30+01:00;  // DateTime? | Filter by date from (optional) 
+            var to = 2013-10-20T19:20:30+01:00;  // DateTime? | Filter by date to (optional) 
 
             try
             {
                 // [PRIVATE API] Get summary of orders by filter
-                RestApiPaginationResultOrderSummary result = apiInstance.GetOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds);
+                RestApiPaginationResultOrderSummary result = apiInstance.GetOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -535,6 +537,8 @@ Name | Type | Description  | Notes
  **orderByRequestedForTime** | **bool?**|  | [optional] 
  **channels** | **List&lt;string&gt;**|  | [optional] 
  **orderIds** | [**List&lt;int?&gt;**](int?.md)| Filter by the given orders | [optional] 
+ **from** | **DateTime?**| Filter by date from | [optional] 
+ **to** | **DateTime?**| Filter by date to | [optional] 
 
 ### Return type
 
