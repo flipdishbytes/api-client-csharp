@@ -65,14 +65,16 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="FulfillmentStatesConfiguration" /> class.
         /// </summary>
         /// <param name="states">States.</param>
+        /// <param name="automaticTransitionsEnabled">Enable automatic transitions.</param>
         /// <param name="appId">AppId.</param>
         /// <param name="configurationUid">Configuration Uid.</param>
         /// <param name="storeSelectorType">Store Selector Type.</param>
         /// <param name="storeIds">Store Ids.</param>
         /// <param name="name">Name.</param>
-        public FulfillmentStatesConfiguration(List<FulfillmentStatusConfigurationItem> states = default(List<FulfillmentStatusConfigurationItem>), string appId = default(string), string configurationUid = default(string), StoreSelectorTypeEnum? storeSelectorType = default(StoreSelectorTypeEnum?), List<int?> storeIds = default(List<int?>), string name = default(string))
+        public FulfillmentStatesConfiguration(List<FulfillmentStatusConfigurationItem> states = default(List<FulfillmentStatusConfigurationItem>), bool? automaticTransitionsEnabled = default(bool?), string appId = default(string), string configurationUid = default(string), StoreSelectorTypeEnum? storeSelectorType = default(StoreSelectorTypeEnum?), List<int?> storeIds = default(List<int?>), string name = default(string))
         {
             this.States = states;
+            this.AutomaticTransitionsEnabled = automaticTransitionsEnabled;
             this.AppId = appId;
             this.ConfigurationUid = configurationUid;
             this.StoreSelectorType = storeSelectorType;
@@ -86,6 +88,13 @@ namespace Flipdish.Model
         /// <value>States</value>
         [DataMember(Name="States", EmitDefaultValue=false)]
         public List<FulfillmentStatusConfigurationItem> States { get; set; }
+
+        /// <summary>
+        /// Enable automatic transitions
+        /// </summary>
+        /// <value>Enable automatic transitions</value>
+        [DataMember(Name="AutomaticTransitionsEnabled", EmitDefaultValue=false)]
+        public bool? AutomaticTransitionsEnabled { get; set; }
 
         /// <summary>
         /// AppId
@@ -125,6 +134,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class FulfillmentStatesConfiguration {\n");
             sb.Append("  States: ").Append(States).Append("\n");
+            sb.Append("  AutomaticTransitionsEnabled: ").Append(AutomaticTransitionsEnabled).Append("\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  ConfigurationUid: ").Append(ConfigurationUid).Append("\n");
             sb.Append("  StoreSelectorType: ").Append(StoreSelectorType).Append("\n");
@@ -170,6 +180,11 @@ namespace Flipdish.Model
                     this.States.SequenceEqual(input.States)
                 ) && 
                 (
+                    this.AutomaticTransitionsEnabled == input.AutomaticTransitionsEnabled ||
+                    (this.AutomaticTransitionsEnabled != null &&
+                    this.AutomaticTransitionsEnabled.Equals(input.AutomaticTransitionsEnabled))
+                ) && 
+                (
                     this.AppId == input.AppId ||
                     (this.AppId != null &&
                     this.AppId.Equals(input.AppId))
@@ -207,6 +222,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.States != null)
                     hashCode = hashCode * 59 + this.States.GetHashCode();
+                if (this.AutomaticTransitionsEnabled != null)
+                    hashCode = hashCode * 59 + this.AutomaticTransitionsEnabled.GetHashCode();
                 if (this.AppId != null)
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 if (this.ConfigurationUid != null)

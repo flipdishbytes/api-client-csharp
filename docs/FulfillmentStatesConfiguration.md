@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **States** | [**List&lt;FulfillmentStatusConfigurationItem&gt;**](FulfillmentStatusConfigurationItem.md) | States | [optional] 
+**AutomaticTransitionsEnabled** | **bool?** | Enable automatic transitions | [optional] 
 **AppId** | **string** | AppId | [optional] 
 **ConfigurationUid** | **string** | Configuration Uid | [optional] 
 **StoreSelectorType** | **string** | Store Selector Type | [optional] 
