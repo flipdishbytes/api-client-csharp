@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **IsCustom** | **bool?** | Is custom state. If not, then it&#39;s a system state | [optional] 
 **OrderTypes** | **List&lt;string&gt;** | If empty then applies to all ordertypes, otherwise a list of order types this state applies to | [optional] 
 **Communication** | **bool?** | Whether state should fire off a notification to the customer | [optional] 
+**Image** | **string** | Image (image filename, relative, not absolute URL) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -117,7 +117,8 @@ namespace Flipdish.Model
         /// <param name="isCustom">Is custom state. If not, then it&#39;s a system state.</param>
         /// <param name="orderTypes">If empty then applies to all ordertypes, otherwise a list of order types this state applies to.</param>
         /// <param name="communication">Whether state should fire off a notification to the customer.</param>
-        public FulfillmentStatusConfigurationItem(string statusId = default(string), string statusName = default(string), bool? enabled = default(bool?), string displayName = default(string), string icon = default(string), string publicDescription = default(string), bool? _internal = default(bool?), List<string> nextStatuses = default(List<string>), List<NextStatusWithOrderType> defaultNextStatus = default(List<NextStatusWithOrderType>), ChangeTypeEnum? changeType = default(ChangeTypeEnum?), bool? includeInReports = default(bool?), bool? isCustom = default(bool?), List<OrderTypesEnum> orderTypes = default(List<OrderTypesEnum>), bool? communication = default(bool?))
+        /// <param name="image">Image (image filename, relative, not absolute URL).</param>
+        public FulfillmentStatusConfigurationItem(string statusId = default(string), string statusName = default(string), bool? enabled = default(bool?), string displayName = default(string), string icon = default(string), string publicDescription = default(string), bool? _internal = default(bool?), List<string> nextStatuses = default(List<string>), List<NextStatusWithOrderType> defaultNextStatus = default(List<NextStatusWithOrderType>), ChangeTypeEnum? changeType = default(ChangeTypeEnum?), bool? includeInReports = default(bool?), bool? isCustom = default(bool?), List<OrderTypesEnum> orderTypes = default(List<OrderTypesEnum>), bool? communication = default(bool?), string image = default(string))
         {
             this.StatusId = statusId;
             this.StatusName = statusName;
@@ -133,6 +134,7 @@ namespace Flipdish.Model
             this.IsCustom = isCustom;
             this.OrderTypes = orderTypes;
             this.Communication = communication;
+            this.Image = image;
         }
         
         /// <summary>
@@ -222,6 +224,13 @@ namespace Flipdish.Model
         public bool? Communication { get; set; }
 
         /// <summary>
+        /// Image (image filename, relative, not absolute URL)
+        /// </summary>
+        /// <value>Image (image filename, relative, not absolute URL)</value>
+        [DataMember(Name="Image", EmitDefaultValue=false)]
+        public string Image { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -243,6 +252,7 @@ namespace Flipdish.Model
             sb.Append("  IsCustom: ").Append(IsCustom).Append("\n");
             sb.Append("  OrderTypes: ").Append(OrderTypes).Append("\n");
             sb.Append("  Communication: ").Append(Communication).Append("\n");
+            sb.Append("  Image: ").Append(Image).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -346,6 +356,11 @@ namespace Flipdish.Model
                     this.Communication == input.Communication ||
                     (this.Communication != null &&
                     this.Communication.Equals(input.Communication))
+                ) && 
+                (
+                    this.Image == input.Image ||
+                    (this.Image != null &&
+                    this.Image.Equals(input.Image))
                 );
         }
 
@@ -386,6 +401,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OrderTypes.GetHashCode();
                 if (this.Communication != null)
                     hashCode = hashCode * 59 + this.Communication.GetHashCode();
+                if (this.Image != null)
+                    hashCode = hashCode * 59 + this.Image.GetHashCode();
                 return hashCode;
             }
         }
