@@ -84,7 +84,8 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**GetAccountDetails**](docs/AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | Gets the current account detail
 *AccountsApi* | [**GetLocalisedTimeZones**](docs/AccountsApi.md#getlocalisedtimezones) | **GET** /api/v1.0/accounts/timezones | [PRIVATE API] Get timezones localised to users language
 *AccountsApi* | [**Login**](docs/AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | Login with username and password
-*AccountsApi* | [**LoginWithPin**](docs/AccountsApi.md#loginwithpin) | **POST** /api/v1.0/accounts/login/pin | Login with username and password
+*AccountsApi* | [**LoginSso**](docs/AccountsApi.md#loginsso) | **POST** /api/v1.0/accounts/login/sso | Login with SSO token
+*AccountsApi* | [**LoginWithPin**](docs/AccountsApi.md#loginwithpin) | **POST** /api/v1.0/accounts/login/pin | Login with email and pin
 *AccountsApi* | [**Logout**](docs/AccountsApi.md#logout) | **POST** /api/v1.0/accounts/logout | Log out. It removes Flipdish authorization Cookie.
 *AccountsApi* | [**PasswordResetWithToken**](docs/AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
 *AccountsApi* | [**RecaptchaValidate**](docs/AccountsApi.md#recaptchavalidate) | **POST** /api/v1.0/accounts/recaptcha | Validate recaptcha from flipdish portal
@@ -909,7 +910,7 @@ Class | Method | HTTP request | Description
  - [Model.Refund](docs/Refund.md)
  - [Model.Reject](docs/Reject.md)
  - [Model.RequestLoginPinModel](docs/RequestLoginPinModel.md)
- - [Model.RequestLoginPinResposne](docs/RequestLoginPinResposne.md)
+ - [Model.RequestLoginPinResponse](docs/RequestLoginPinResponse.md)
  - [Model.RequestPasswordResetModel](docs/RequestPasswordResetModel.md)
  - [Model.RequestPasswordResetPinResponse](docs/RequestPasswordResetPinResponse.md)
  - [Model.Response](docs/Response.md)

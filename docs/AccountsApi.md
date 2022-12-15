@@ -11,7 +11,8 @@ Method | HTTP request | Description
 [**GetAccountDetails**](AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | Gets the current account detail
 [**GetLocalisedTimeZones**](AccountsApi.md#getlocalisedtimezones) | **GET** /api/v1.0/accounts/timezones | [PRIVATE API] Get timezones localised to users language
 [**Login**](AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | Login with username and password
-[**LoginWithPin**](AccountsApi.md#loginwithpin) | **POST** /api/v1.0/accounts/login/pin | Login with username and password
+[**LoginSso**](AccountsApi.md#loginsso) | **POST** /api/v1.0/accounts/login/sso | Login with SSO token
+[**LoginWithPin**](AccountsApi.md#loginwithpin) | **POST** /api/v1.0/accounts/login/pin | Login with email and pin
 [**Logout**](AccountsApi.md#logout) | **POST** /api/v1.0/accounts/logout | Log out. It removes Flipdish authorization Cookie.
 [**PasswordResetWithToken**](AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
 [**RecaptchaValidate**](AccountsApi.md#recaptchavalidate) | **POST** /api/v1.0/accounts/recaptcha | Validate recaptcha from flipdish portal
@@ -445,11 +446,68 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="loginsso"></a>
+# **LoginSso**
+> void LoginSso ()
+
+Login with SSO token
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class LoginSsoExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AccountsApi();
+
+            try
+            {
+                // Login with SSO token
+                apiInstance.LoginSso();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AccountsApi.LoginSso: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="loginwithpin"></a>
 # **LoginWithPin**
 > void LoginWithPin (LoginWithPinModel loginModel)
 
-Login with username and password
+Login with email and pin
 
 ### Example
 ```csharp
@@ -469,11 +527,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var loginModel = new LoginWithPinModel(); // LoginWithPinModel | Login model
+            var loginModel = new LoginWithPinModel(); // LoginWithPinModel | Login with pin model
 
             try
             {
-                // Login with username and password
+                // Login with email and pin
                 apiInstance.LoginWithPin(loginModel);
             }
             catch (Exception e)
@@ -489,7 +547,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **loginModel** | [**LoginWithPinModel**](LoginWithPinModel.md)| Login model | 
+ **loginModel** | [**LoginWithPinModel**](LoginWithPinModel.md)| Login with pin model | 
 
 ### Return type
 
@@ -687,7 +745,7 @@ void (empty response body)
 
 <a name="requestloginpin"></a>
 # **RequestLoginPin**
-> RequestLoginPinResposne RequestLoginPin (RequestLoginPinModel requestLoginPinRequest)
+> RequestLoginPinResponse RequestLoginPin (RequestLoginPinModel requestLoginPinRequest)
 
 Request login PIN. The server sends the PIN to the email address.
 
@@ -714,7 +772,7 @@ namespace Example
             try
             {
                 // Request login PIN. The server sends the PIN to the email address.
-                RequestLoginPinResposne result = apiInstance.RequestLoginPin(requestLoginPinRequest);
+                RequestLoginPinResponse result = apiInstance.RequestLoginPin(requestLoginPinRequest);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -734,7 +792,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RequestLoginPinResposne**](RequestLoginPinResposne.md)
+[**RequestLoginPinResponse**](RequestLoginPinResponse.md)
 
 ### Authorization
 

@@ -170,24 +170,43 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> LoginWithHttpInfo (LoginModel loginModel);
         /// <summary>
-        /// Login with username and password
+        /// Login with SSO token
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="loginModel">Login model</param>
+        /// <returns></returns>
+        void LoginSso ();
+
+        /// <summary>
+        /// Login with SSO token
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> LoginSsoWithHttpInfo ();
+        /// <summary>
+        /// Login with email and pin
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="loginModel">Login with pin model</param>
         /// <returns></returns>
         void LoginWithPin (LoginWithPinModel loginModel);
 
         /// <summary>
-        /// Login with username and password
+        /// Login with email and pin
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="loginModel">Login model</param>
+        /// <param name="loginModel">Login with pin model</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> LoginWithPinWithHttpInfo (LoginWithPinModel loginModel);
         /// <summary>
@@ -259,8 +278,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestLoginPinRequest">Request login PIN request</param>
-        /// <returns>RequestLoginPinResposne</returns>
-        RequestLoginPinResposne RequestLoginPin (RequestLoginPinModel requestLoginPinRequest);
+        /// <returns>RequestLoginPinResponse</returns>
+        RequestLoginPinResponse RequestLoginPin (RequestLoginPinModel requestLoginPinRequest);
 
         /// <summary>
         /// Request login PIN. The server sends the PIN to the email address.
@@ -270,8 +289,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestLoginPinRequest">Request login PIN request</param>
-        /// <returns>ApiResponse of RequestLoginPinResposne</returns>
-        ApiResponse<RequestLoginPinResposne> RequestLoginPinWithHttpInfo (RequestLoginPinModel requestLoginPinRequest);
+        /// <returns>ApiResponse of RequestLoginPinResponse</returns>
+        ApiResponse<RequestLoginPinResponse> RequestLoginPinWithHttpInfo (RequestLoginPinModel requestLoginPinRequest);
         /// <summary>
         /// Request password reset. Flipdish system will send a token via email.
         /// </summary>
@@ -504,24 +523,43 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> LoginAsyncWithHttpInfo (LoginModel loginModel);
         /// <summary>
-        /// Login with username and password
+        /// Login with SSO token
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="loginModel">Login model</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task LoginSsoAsync ();
+
+        /// <summary>
+        /// Login with SSO token
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> LoginSsoAsyncWithHttpInfo ();
+        /// <summary>
+        /// Login with email and pin
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="loginModel">Login with pin model</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task LoginWithPinAsync (LoginWithPinModel loginModel);
 
         /// <summary>
-        /// Login with username and password
+        /// Login with email and pin
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="loginModel">Login model</param>
+        /// <param name="loginModel">Login with pin model</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> LoginWithPinAsyncWithHttpInfo (LoginWithPinModel loginModel);
         /// <summary>
@@ -593,8 +631,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestLoginPinRequest">Request login PIN request</param>
-        /// <returns>Task of RequestLoginPinResposne</returns>
-        System.Threading.Tasks.Task<RequestLoginPinResposne> RequestLoginPinAsync (RequestLoginPinModel requestLoginPinRequest);
+        /// <returns>Task of RequestLoginPinResponse</returns>
+        System.Threading.Tasks.Task<RequestLoginPinResponse> RequestLoginPinAsync (RequestLoginPinModel requestLoginPinRequest);
 
         /// <summary>
         /// Request login PIN. The server sends the PIN to the email address.
@@ -604,8 +642,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestLoginPinRequest">Request login PIN request</param>
-        /// <returns>Task of ApiResponse (RequestLoginPinResposne)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RequestLoginPinResposne>> RequestLoginPinAsyncWithHttpInfo (RequestLoginPinModel requestLoginPinRequest);
+        /// <returns>Task of ApiResponse (RequestLoginPinResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RequestLoginPinResponse>> RequestLoginPinAsyncWithHttpInfo (RequestLoginPinModel requestLoginPinRequest);
         /// <summary>
         /// Request password reset. Flipdish system will send a token via email.
         /// </summary>
@@ -1946,10 +1984,147 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Login with username and password 
+        /// Login with SSO token 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="loginModel">Login model</param>
+        /// <returns></returns>
+        public void LoginSso ()
+        {
+             LoginSsoWithHttpInfo();
+        }
+
+        /// <summary>
+        /// Login with SSO token 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> LoginSsoWithHttpInfo ()
+        {
+
+            var localVarPath = "./api/v1.0/accounts/login/sso";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LoginSso", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Login with SSO token 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task LoginSsoAsync ()
+        {
+             await LoginSsoAsyncWithHttpInfo();
+
+        }
+
+        /// <summary>
+        /// Login with SSO token 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> LoginSsoAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "./api/v1.0/accounts/login/sso";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LoginSso", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Login with email and pin 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="loginModel">Login with pin model</param>
         /// <returns></returns>
         public void LoginWithPin (LoginWithPinModel loginModel)
         {
@@ -1957,10 +2132,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Login with username and password 
+        /// Login with email and pin 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="loginModel">Login model</param>
+        /// <param name="loginModel">Login with pin model</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> LoginWithPinWithHttpInfo (LoginWithPinModel loginModel)
         {
@@ -2032,10 +2207,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Login with username and password 
+        /// Login with email and pin 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="loginModel">Login model</param>
+        /// <param name="loginModel">Login with pin model</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task LoginWithPinAsync (LoginWithPinModel loginModel)
         {
@@ -2044,10 +2219,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Login with username and password 
+        /// Login with email and pin 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="loginModel">Login model</param>
+        /// <param name="loginModel">Login with pin model</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> LoginWithPinAsyncWithHttpInfo (LoginWithPinModel loginModel)
         {
@@ -2582,10 +2757,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestLoginPinRequest">Request login PIN request</param>
-        /// <returns>RequestLoginPinResposne</returns>
-        public RequestLoginPinResposne RequestLoginPin (RequestLoginPinModel requestLoginPinRequest)
+        /// <returns>RequestLoginPinResponse</returns>
+        public RequestLoginPinResponse RequestLoginPin (RequestLoginPinModel requestLoginPinRequest)
         {
-             ApiResponse<RequestLoginPinResposne> localVarResponse = RequestLoginPinWithHttpInfo(requestLoginPinRequest);
+             ApiResponse<RequestLoginPinResponse> localVarResponse = RequestLoginPinWithHttpInfo(requestLoginPinRequest);
              return localVarResponse.Data;
         }
 
@@ -2594,8 +2769,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestLoginPinRequest">Request login PIN request</param>
-        /// <returns>ApiResponse of RequestLoginPinResposne</returns>
-        public ApiResponse< RequestLoginPinResposne > RequestLoginPinWithHttpInfo (RequestLoginPinModel requestLoginPinRequest)
+        /// <returns>ApiResponse of RequestLoginPinResponse</returns>
+        public ApiResponse< RequestLoginPinResponse > RequestLoginPinWithHttpInfo (RequestLoginPinModel requestLoginPinRequest)
         {
             // verify the required parameter 'requestLoginPinRequest' is set
             if (requestLoginPinRequest == null)
@@ -2659,9 +2834,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestLoginPinResposne>(localVarStatusCode,
+            return new ApiResponse<RequestLoginPinResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RequestLoginPinResposne) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestLoginPinResposne)));
+                (RequestLoginPinResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestLoginPinResponse)));
         }
 
         /// <summary>
@@ -2669,10 +2844,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestLoginPinRequest">Request login PIN request</param>
-        /// <returns>Task of RequestLoginPinResposne</returns>
-        public async System.Threading.Tasks.Task<RequestLoginPinResposne> RequestLoginPinAsync (RequestLoginPinModel requestLoginPinRequest)
+        /// <returns>Task of RequestLoginPinResponse</returns>
+        public async System.Threading.Tasks.Task<RequestLoginPinResponse> RequestLoginPinAsync (RequestLoginPinModel requestLoginPinRequest)
         {
-             ApiResponse<RequestLoginPinResposne> localVarResponse = await RequestLoginPinAsyncWithHttpInfo(requestLoginPinRequest);
+             ApiResponse<RequestLoginPinResponse> localVarResponse = await RequestLoginPinAsyncWithHttpInfo(requestLoginPinRequest);
              return localVarResponse.Data;
 
         }
@@ -2682,8 +2857,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestLoginPinRequest">Request login PIN request</param>
-        /// <returns>Task of ApiResponse (RequestLoginPinResposne)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RequestLoginPinResposne>> RequestLoginPinAsyncWithHttpInfo (RequestLoginPinModel requestLoginPinRequest)
+        /// <returns>Task of ApiResponse (RequestLoginPinResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RequestLoginPinResponse>> RequestLoginPinAsyncWithHttpInfo (RequestLoginPinModel requestLoginPinRequest)
         {
             // verify the required parameter 'requestLoginPinRequest' is set
             if (requestLoginPinRequest == null)
@@ -2747,9 +2922,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestLoginPinResposne>(localVarStatusCode,
+            return new ApiResponse<RequestLoginPinResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RequestLoginPinResposne) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestLoginPinResposne)));
+                (RequestLoginPinResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestLoginPinResponse)));
         }
 
         /// <summary>
