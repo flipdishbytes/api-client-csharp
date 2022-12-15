@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Item** | [**Product**](Product.md) | Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product} | [optional] 
-**Product** | [**Product**](Product.md) | Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product} | [optional] 
+**Item** | [**Product**](Product.md) | Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Groups.ProductReference.Product} | [optional] 
+**Product** | [**Product**](Product.md) | Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Groups.ProductReference.Product} | [optional] 
 **CatalogItemId** | **string** | Identifier of the CatalogItemId to use as SubProduct | 
 **ProductType** | **string** | Type of the SupProduct | 
 **PreselectedQuantity** | **int?** | Quantity of the modifier that will be set when the parent product is placed in the basket | [optional] 

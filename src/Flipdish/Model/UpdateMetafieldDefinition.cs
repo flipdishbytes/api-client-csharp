@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Information to update a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}
+    /// Information to update a {Flipdish.Metafields.PublicModels.V1.MetafieldDefinition}
     /// </summary>
     [DataContract]
     public partial class UpdateMetafieldDefinition :  IEquatable<UpdateMetafieldDefinition>

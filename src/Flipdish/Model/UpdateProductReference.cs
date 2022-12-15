@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Data to update a {Flipdish.PublicModels.V1.Catalog.Groups.UpdateProductReference}
+    /// Data to update a {Flipdish.Menus.PublicModels.V1.Catalog.Groups.UpdateProductReference}
     /// </summary>
     [DataContract]
     public partial class UpdateProductReference :  IEquatable<UpdateProductReference>

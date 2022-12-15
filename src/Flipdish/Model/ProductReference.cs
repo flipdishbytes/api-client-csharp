@@ -63,8 +63,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProductReference" /> class.
         /// </summary>
-        /// <param name="item">Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}.</param>
-        /// <param name="product">Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}.</param>
+        /// <param name="item">Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Groups.ProductReference.Product}.</param>
+        /// <param name="product">Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Groups.ProductReference.Product}.</param>
         /// <param name="catalogItemId">Identifier of the CatalogItemId to use as SubProduct (required).</param>
         /// <param name="productType">Type of the SupProduct (required).</param>
         /// <param name="preselectedQuantity">Quantity of the modifier that will be set when the parent product is placed in the basket.</param>
@@ -94,16 +94,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}
+        /// Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Groups.ProductReference.Product}
         /// </summary>
-        /// <value>Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}</value>
+        /// <value>Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Groups.ProductReference.Product}</value>
         [DataMember(Name="Item", EmitDefaultValue=false)]
         public Product Item { get; set; }
 
         /// <summary>
-        /// Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}
+        /// Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Groups.ProductReference.Product}
         /// </summary>
-        /// <value>Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}</value>
+        /// <value>Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Groups.ProductReference.Product}</value>
         [DataMember(Name="Product", EmitDefaultValue=false)]
         public Product Product { get; set; }
 

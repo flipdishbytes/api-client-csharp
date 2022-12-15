@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Group** | [**Group**](Group.md) | Details of the referenced {Flipdish.PublicModels.V1.Catalog.Products.GroupReference.Group} | [optional] 
+**Group** | [**Group**](Group.md) | Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Products.GroupReference.Group} | [optional] 
 **CatalogItemId** | **string** | Identifier of the ProductId to use as SubProduct | 
 **GroupType** | **string** | Type of the SupProduct | 
 

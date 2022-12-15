@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.Group}
+    /// Reference to an existing {Flipdish.Menus.PublicModels.V1.Catalog.Groups.Group}
     /// </summary>
     [DataContract]
     public partial class GroupReference :  IEquatable<GroupReference>
@@ -57,7 +57,7 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupReference" /> class.
         /// </summary>
-        /// <param name="group">Details of the referenced {Flipdish.PublicModels.V1.Catalog.Products.GroupReference.Group}.</param>
+        /// <param name="group">Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Products.GroupReference.Group}.</param>
         /// <param name="catalogItemId">Identifier of the ProductId to use as SubProduct (required).</param>
         /// <param name="groupType">Type of the SupProduct (required).</param>
         public GroupReference(Group group = default(Group), string catalogItemId = default(string), GroupTypeEnum groupType = default(GroupTypeEnum))
@@ -84,9 +84,9 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Details of the referenced {Flipdish.PublicModels.V1.Catalog.Products.GroupReference.Group}
+        /// Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Products.GroupReference.Group}
         /// </summary>
-        /// <value>Details of the referenced {Flipdish.PublicModels.V1.Catalog.Products.GroupReference.Group}</value>
+        /// <value>Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Products.GroupReference.Group}</value>
         [DataMember(Name="Group", EmitDefaultValue=false)]
         public Group Group { get; set; }
 

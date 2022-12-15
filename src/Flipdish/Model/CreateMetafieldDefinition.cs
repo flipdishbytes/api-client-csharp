@@ -23,15 +23,15 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Information to create a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}
+    /// Information to create a {Flipdish.Metafields.PublicModels.V1.MetafieldDefinition}
     /// </summary>
     [DataContract]
     public partial class CreateMetafieldDefinition :  IEquatable<CreateMetafieldDefinition>
     {
         /// <summary>
-        /// The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}
+        /// The Metafield will extend the specified {Flipdish.Metafields.PublicModels.V1.MetafieldDefinitionBase.OwnerEntity}
         /// </summary>
-        /// <value>The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}</value>
+        /// <value>The Metafield will extend the specified {Flipdish.Metafields.PublicModels.V1.MetafieldDefinitionBase.OwnerEntity}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OwnerEntityEnum
         {
@@ -56,9 +56,9 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}
+        /// The Metafield will extend the specified {Flipdish.Metafields.PublicModels.V1.MetafieldDefinitionBase.OwnerEntity}
         /// </summary>
-        /// <value>The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}</value>
+        /// <value>The Metafield will extend the specified {Flipdish.Metafields.PublicModels.V1.MetafieldDefinitionBase.OwnerEntity}</value>
         [DataMember(Name="OwnerEntity", EmitDefaultValue=false)]
         public OwnerEntityEnum? OwnerEntity { get; set; }
         /// <summary>
@@ -136,7 +136,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="CreateMetafieldDefinition" /> class.
         /// </summary>
         /// <param name="isReadOnly">Indicates if a definition can be edited or not.</param>
-        /// <param name="ownerEntity">The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}.</param>
+        /// <param name="ownerEntity">The Metafield will extend the specified {Flipdish.Metafields.PublicModels.V1.MetafieldDefinitionBase.OwnerEntity}.</param>
         /// <param name="key">Key of the metafield.  The key must have two parts, separated by a dot. The first part acts as a category, for organizational purposes.  The parts can be composed of lowercase letters, numbers, hyphen and underscore (required).</param>
         /// <param name="valueType">The excepted type for the Value field.</param>
         /// <param name="name">Field Name (required).</param>
