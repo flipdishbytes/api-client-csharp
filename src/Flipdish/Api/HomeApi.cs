@@ -110,6 +110,25 @@ namespace Flipdish.Api
         /// <param name="appId">App Name Id</param>
         /// <returns>ApiResponse of RestApiResultHomeStatistics</returns>
         ApiResponse<RestApiResultHomeStatistics> GetHomeStatisticsWithHttpInfo (string appId);
+        /// <summary>
+        /// [PRIVATE API] Get Okta Portal feature flag value
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>RestApiResultOktaPortalFeatureFlag</returns>
+        RestApiResultOktaPortalFeatureFlag GetOktaPortalFeatureFlag ();
+
+        /// <summary>
+        /// [PRIVATE API] Get Okta Portal feature flag value
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of RestApiResultOktaPortalFeatureFlag</returns>
+        ApiResponse<RestApiResultOktaPortalFeatureFlag> GetOktaPortalFeatureFlagWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -198,6 +217,25 @@ namespace Flipdish.Api
         /// <param name="appId">App Name Id</param>
         /// <returns>Task of ApiResponse (RestApiResultHomeStatistics)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultHomeStatistics>> GetHomeStatisticsAsyncWithHttpInfo (string appId);
+        /// <summary>
+        /// [PRIVATE API] Get Okta Portal feature flag value
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of RestApiResultOktaPortalFeatureFlag</returns>
+        System.Threading.Tasks.Task<RestApiResultOktaPortalFeatureFlag> GetOktaPortalFeatureFlagAsync ();
+
+        /// <summary>
+        /// [PRIVATE API] Get Okta Portal feature flag value
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (RestApiResultOktaPortalFeatureFlag)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultOktaPortalFeatureFlag>> GetOktaPortalFeatureFlagAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -912,6 +950,145 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultHomeStatistics>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultHomeStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHomeStatistics)));
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Get Okta Portal feature flag value 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>RestApiResultOktaPortalFeatureFlag</returns>
+        public RestApiResultOktaPortalFeatureFlag GetOktaPortalFeatureFlag ()
+        {
+             ApiResponse<RestApiResultOktaPortalFeatureFlag> localVarResponse = GetOktaPortalFeatureFlagWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Get Okta Portal feature flag value 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of RestApiResultOktaPortalFeatureFlag</returns>
+        public ApiResponse< RestApiResultOktaPortalFeatureFlag > GetOktaPortalFeatureFlagWithHttpInfo ()
+        {
+
+            var localVarPath = "./api/v1.0/home/okta-portal";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOktaPortalFeatureFlag", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultOktaPortalFeatureFlag>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultOktaPortalFeatureFlag) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOktaPortalFeatureFlag)));
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Get Okta Portal feature flag value 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of RestApiResultOktaPortalFeatureFlag</returns>
+        public async System.Threading.Tasks.Task<RestApiResultOktaPortalFeatureFlag> GetOktaPortalFeatureFlagAsync ()
+        {
+             ApiResponse<RestApiResultOktaPortalFeatureFlag> localVarResponse = await GetOktaPortalFeatureFlagAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// [PRIVATE API] Get Okta Portal feature flag value 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (RestApiResultOktaPortalFeatureFlag)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOktaPortalFeatureFlag>> GetOktaPortalFeatureFlagAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "./api/v1.0/home/okta-portal";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOktaPortalFeatureFlag", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultOktaPortalFeatureFlag>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultOktaPortalFeatureFlag) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOktaPortalFeatureFlag)));
         }
 
     }
