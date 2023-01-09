@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**GetAttachedDevices**](HydraApi.md#getattacheddevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | [Private]
 [**GetEMVTerminalDetails**](HydraApi.md#getemvterminaldetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | [Private]
 [**GetEmvOrderState**](HydraApi.md#getemvorderstate) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | [Private]
-[**GetKioskCashPaymentSettings**](HydraApi.md#getkioskcashpaymentsettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | Get the status of Cash Payment Methon on Kisok
+[**GetKioskCashPaymentSettings**](HydraApi.md#getkioskcashpaymentsettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | Get the status of Cash Payment Method on Kiosk
 [**GetRegistration**](HydraApi.md#getregistration) | **GET** /api/v1.0/hydra/registration | 
 [**GetSettings**](HydraApi.md#getsettings) | **GET** /api/v1.0/hydra/settings | [Private]
 [**HydraCreateEmv**](HydraApi.md#hydracreateemv) | **POST** /api/v1.0/{appId}/emvterminals | [Private]
@@ -24,7 +24,7 @@ Method | HTTP request | Description
 [**Register**](HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | [Private]
 [**UnAssign**](HydraApi.md#unassign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | [Private]
 [**UnassignEmv**](HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | Unassign the currently assigned EMV terminal from a kiosk
-[**UpdateKioskCashVisibilitySettings**](HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | Update the Cash Payment Methon Visiability on Kisok
+[**UpdateKioskCashVisibilitySettings**](HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | Update the Cash Payment Method Visibility on Kiosk
 
 
 <a name="assignemv"></a>
@@ -622,7 +622,7 @@ Name | Type | Description  | Notes
 # **GetKioskCashPaymentSettings**
 > RestApiArrayResultKioskCashPaymentSettings GetKioskCashPaymentSettings (string appId, string deviceId)
 
-Get the status of Cash Payment Methon on Kisok
+Get the status of Cash Payment Method on Kiosk
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -649,7 +649,7 @@ namespace Example
 
             try
             {
-                // Get the status of Cash Payment Methon on Kisok
+                // Get the status of Cash Payment Method on Kiosk
                 RestApiArrayResultKioskCashPaymentSettings result = apiInstance.GetKioskCashPaymentSettings(appId, deviceId);
                 Debug.WriteLine(result);
             }
@@ -1314,7 +1314,7 @@ void (empty response body)
 # **UpdateKioskCashVisibilitySettings**
 > void UpdateKioskCashVisibilitySettings (string appId, string deviceId, bool? isCashEnabled)
 
-Update the Cash Payment Methon Visiability on Kisok
+Update the Cash Payment Method Visibility on Kiosk
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -1342,7 +1342,7 @@ namespace Example
 
             try
             {
-                // Update the Cash Payment Methon Visiability on Kisok
+                // Update the Cash Payment Method Visibility on Kiosk
                 apiInstance.UpdateKioskCashVisibilitySettings(appId, deviceId, isCashEnabled);
             }
             catch (Exception e)

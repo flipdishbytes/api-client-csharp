@@ -250,7 +250,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultPaymentTerminalTransactionDetails</returns>
         ApiResponse<RestApiResultPaymentTerminalTransactionDetails> GetEmvOrderStateWithHttpInfo (int? orderId, string appId);
         /// <summary>
-        /// Get the status of Cash Payment Methon on Kisok
+        /// Get the status of Cash Payment Method on Kiosk
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -262,7 +262,7 @@ namespace Flipdish.Api
         RestApiArrayResultKioskCashPaymentSettings GetKioskCashPaymentSettings (string appId, string deviceId);
 
         /// <summary>
-        /// Get the status of Cash Payment Methon on Kisok
+        /// Get the status of Cash Payment Method on Kiosk
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -497,7 +497,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UnassignEmvWithHttpInfo (string appId, int? hydraConfigId);
         /// <summary>
-        /// Update the Cash Payment Methon Visiability on Kisok
+        /// Update the Cash Payment Method Visibility on Kiosk
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -510,7 +510,7 @@ namespace Flipdish.Api
         void UpdateKioskCashVisibilitySettings (string appId, string deviceId, bool? isCashEnabled);
 
         /// <summary>
-        /// Update the Cash Payment Methon Visiability on Kisok
+        /// Update the Cash Payment Method Visibility on Kiosk
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -749,7 +749,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultPaymentTerminalTransactionDetails)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultPaymentTerminalTransactionDetails>> GetEmvOrderStateAsyncWithHttpInfo (int? orderId, string appId);
         /// <summary>
-        /// Get the status of Cash Payment Methon on Kisok
+        /// Get the status of Cash Payment Method on Kiosk
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -761,7 +761,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultKioskCashPaymentSettings> GetKioskCashPaymentSettingsAsync (string appId, string deviceId);
 
         /// <summary>
-        /// Get the status of Cash Payment Methon on Kisok
+        /// Get the status of Cash Payment Method on Kiosk
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -996,7 +996,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UnassignEmvAsyncWithHttpInfo (string appId, int? hydraConfigId);
         /// <summary>
-        /// Update the Cash Payment Methon Visiability on Kisok
+        /// Update the Cash Payment Method Visibility on Kiosk
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -1009,7 +1009,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task UpdateKioskCashVisibilitySettingsAsync (string appId, string deviceId, bool? isCashEnabled);
 
         /// <summary>
-        /// Update the Cash Payment Methon Visiability on Kisok
+        /// Update the Cash Payment Method Visibility on Kiosk
         /// </summary>
         /// <remarks>
         /// [BETA - this endpoint is under development, do not use it in your production system]
@@ -2662,7 +2662,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the status of Cash Payment Methon on Kisok [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get the status of Cash Payment Method on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2675,7 +2675,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the status of Cash Payment Methon on Kisok [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get the status of Cash Payment Method on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2743,7 +2743,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the status of Cash Payment Methon on Kisok [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get the status of Cash Payment Method on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2757,7 +2757,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the status of Cash Payment Methon on Kisok [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get the status of Cash Payment Method on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4449,7 +4449,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update the Cash Payment Methon Visiability on Kisok [BETA - this endpoint is under development, do not use it in your production system]
+        /// Update the Cash Payment Method Visibility on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4462,7 +4462,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update the Cash Payment Methon Visiability on Kisok [BETA - this endpoint is under development, do not use it in your production system]
+        /// Update the Cash Payment Method Visibility on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4535,7 +4535,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update the Cash Payment Methon Visiability on Kisok [BETA - this endpoint is under development, do not use it in your production system]
+        /// Update the Cash Payment Method Visibility on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4549,7 +4549,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update the Cash Payment Methon Visiability on Kisok [BETA - this endpoint is under development, do not use it in your production system]
+        /// Update the Cash Payment Method Visibility on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
