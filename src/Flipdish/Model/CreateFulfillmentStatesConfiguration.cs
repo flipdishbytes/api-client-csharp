@@ -23,10 +23,10 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Update fulfillment states configuration
+    /// Create fulfillment states configuration
     /// </summary>
     [DataContract]
-    public partial class UpdateFulfillmentStatesConfiguration :  IEquatable<UpdateFulfillmentStatesConfiguration>
+    public partial class CreateFulfillmentStatesConfiguration :  IEquatable<CreateFulfillmentStatesConfiguration>
     {
         /// <summary>
         /// Store Selector Type
@@ -62,17 +62,15 @@ namespace Flipdish.Model
         [DataMember(Name="StoreSelectorType", EmitDefaultValue=false)]
         public StoreSelectorTypeEnum? StoreSelectorType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="UpdateFulfillmentStatesConfiguration" /> class.
+        /// Initializes a new instance of the <see cref="CreateFulfillmentStatesConfiguration" /> class.
         /// </summary>
-        /// <param name="overwriteSystemTemplate">Set to true if a system configuration template is to be updated (permissions also needed).</param>
         /// <param name="storeIds">Stores id&#39;s.</param>
         /// <param name="storeSelectorType">Store Selector Type.</param>
         /// <param name="states">Settings.</param>
         /// <param name="automaticTransitionsEnabled">Enable automatic transitions.</param>
         /// <param name="name">Name.</param>
-        public UpdateFulfillmentStatesConfiguration(bool? overwriteSystemTemplate = default(bool?), List<int?> storeIds = default(List<int?>), StoreSelectorTypeEnum? storeSelectorType = default(StoreSelectorTypeEnum?), List<FulfillmentStatusConfigurationItem> states = default(List<FulfillmentStatusConfigurationItem>), bool? automaticTransitionsEnabled = default(bool?), string name = default(string))
+        public CreateFulfillmentStatesConfiguration(List<int?> storeIds = default(List<int?>), StoreSelectorTypeEnum? storeSelectorType = default(StoreSelectorTypeEnum?), List<FulfillmentStatusConfigurationItem> states = default(List<FulfillmentStatusConfigurationItem>), bool? automaticTransitionsEnabled = default(bool?), string name = default(string))
         {
-            this.OverwriteSystemTemplate = overwriteSystemTemplate;
             this.StoreIds = storeIds;
             this.StoreSelectorType = storeSelectorType;
             this.States = states;
@@ -80,13 +78,6 @@ namespace Flipdish.Model
             this.Name = name;
         }
         
-        /// <summary>
-        /// Set to true if a system configuration template is to be updated (permissions also needed)
-        /// </summary>
-        /// <value>Set to true if a system configuration template is to be updated (permissions also needed)</value>
-        [DataMember(Name="OverwriteSystemTemplate", EmitDefaultValue=false)]
-        public bool? OverwriteSystemTemplate { get; set; }
-
         /// <summary>
         /// Stores id&#39;s
         /// </summary>
@@ -123,8 +114,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UpdateFulfillmentStatesConfiguration {\n");
-            sb.Append("  OverwriteSystemTemplate: ").Append(OverwriteSystemTemplate).Append("\n");
+            sb.Append("class CreateFulfillmentStatesConfiguration {\n");
             sb.Append("  StoreIds: ").Append(StoreIds).Append("\n");
             sb.Append("  StoreSelectorType: ").Append(StoreSelectorType).Append("\n");
             sb.Append("  States: ").Append(States).Append("\n");
@@ -150,25 +140,20 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as UpdateFulfillmentStatesConfiguration);
+            return this.Equals(input as CreateFulfillmentStatesConfiguration);
         }
 
         /// <summary>
-        /// Returns true if UpdateFulfillmentStatesConfiguration instances are equal
+        /// Returns true if CreateFulfillmentStatesConfiguration instances are equal
         /// </summary>
-        /// <param name="input">Instance of UpdateFulfillmentStatesConfiguration to be compared</param>
+        /// <param name="input">Instance of CreateFulfillmentStatesConfiguration to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UpdateFulfillmentStatesConfiguration input)
+        public bool Equals(CreateFulfillmentStatesConfiguration input)
         {
             if (input == null)
                 return false;
 
             return 
-                (
-                    this.OverwriteSystemTemplate == input.OverwriteSystemTemplate ||
-                    (this.OverwriteSystemTemplate != null &&
-                    this.OverwriteSystemTemplate.Equals(input.OverwriteSystemTemplate))
-                ) && 
                 (
                     this.StoreIds == input.StoreIds ||
                     this.StoreIds != null &&
@@ -205,8 +190,6 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.OverwriteSystemTemplate != null)
-                    hashCode = hashCode * 59 + this.OverwriteSystemTemplate.GetHashCode();
                 if (this.StoreIds != null)
                     hashCode = hashCode * 59 + this.StoreIds.GetHashCode();
                 if (this.StoreSelectorType != null)

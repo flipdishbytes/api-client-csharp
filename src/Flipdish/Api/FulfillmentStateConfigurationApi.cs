@@ -34,7 +34,7 @@ namespace Flipdish.Api
         /// <param name="appId">App id</param>
         /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>RestApiResultFulfillmentStatesConfiguration</returns>
-        RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration);
+        RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration);
 
         /// <summary>
         /// Create fulfillment configuration
@@ -46,7 +46,7 @@ namespace Flipdish.Api
         /// <param name="appId">App id</param>
         /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>ApiResponse of RestApiResultFulfillmentStatesConfiguration</returns>
-        ApiResponse<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigWithHttpInfo (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration);
+        ApiResponse<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigWithHttpInfo (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration);
         /// <summary>
         /// Delete fulfillment states configuration
         /// </summary>
@@ -93,6 +93,27 @@ namespace Flipdish.Api
         /// <param name="configId">App store app configuration id</param>
         /// <returns>ApiResponse of FulfillmentStatesConfiguration</returns>
         ApiResponse<FulfillmentStatesConfiguration> GetFulfillmentStatesConfigurationWithHttpInfo (string appId, string configId);
+        /// <summary>
+        /// Get fulfillment configuration template
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App id</param>
+        /// <returns>FulfillmentStatesConfiguration</returns>
+        FulfillmentStatesConfiguration GetFulfillmentStatesConfigurationTemplate (string appId);
+
+        /// <summary>
+        /// Get fulfillment configuration template
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App id</param>
+        /// <returns>ApiResponse of FulfillmentStatesConfiguration</returns>
+        ApiResponse<FulfillmentStatesConfiguration> GetFulfillmentStatesConfigurationTemplateWithHttpInfo (string appId);
         /// <summary>
         /// List fulfillment configurations for AppId
         /// </summary>
@@ -151,7 +172,7 @@ namespace Flipdish.Api
         /// <param name="appId">App id</param>
         /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>Task of RestApiResultFulfillmentStatesConfiguration</returns>
-        System.Threading.Tasks.Task<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigAsync (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration);
+        System.Threading.Tasks.Task<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigAsync (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration);
 
         /// <summary>
         /// Create fulfillment configuration
@@ -163,7 +184,7 @@ namespace Flipdish.Api
         /// <param name="appId">App id</param>
         /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>Task of ApiResponse (RestApiResultFulfillmentStatesConfiguration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultFulfillmentStatesConfiguration>> CreateFulfillmentStatesConfigAsyncWithHttpInfo (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultFulfillmentStatesConfiguration>> CreateFulfillmentStatesConfigAsyncWithHttpInfo (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration);
         /// <summary>
         /// Delete fulfillment states configuration
         /// </summary>
@@ -210,6 +231,27 @@ namespace Flipdish.Api
         /// <param name="configId">App store app configuration id</param>
         /// <returns>Task of ApiResponse (FulfillmentStatesConfiguration)</returns>
         System.Threading.Tasks.Task<ApiResponse<FulfillmentStatesConfiguration>> GetFulfillmentStatesConfigurationAsyncWithHttpInfo (string appId, string configId);
+        /// <summary>
+        /// Get fulfillment configuration template
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App id</param>
+        /// <returns>Task of FulfillmentStatesConfiguration</returns>
+        System.Threading.Tasks.Task<FulfillmentStatesConfiguration> GetFulfillmentStatesConfigurationTemplateAsync (string appId);
+
+        /// <summary>
+        /// Get fulfillment configuration template
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App id</param>
+        /// <returns>Task of ApiResponse (FulfillmentStatesConfiguration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FulfillmentStatesConfiguration>> GetFulfillmentStatesConfigurationTemplateAsyncWithHttpInfo (string appId);
         /// <summary>
         /// List fulfillment configurations for AppId
         /// </summary>
@@ -363,7 +405,7 @@ namespace Flipdish.Api
         /// <param name="appId">App id</param>
         /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>RestApiResultFulfillmentStatesConfiguration</returns>
-        public RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration)
+        public RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration)
         {
              ApiResponse<RestApiResultFulfillmentStatesConfiguration> localVarResponse = CreateFulfillmentStatesConfigWithHttpInfo(appId, fulfillmentStateConfiguration);
              return localVarResponse.Data;
@@ -376,7 +418,7 @@ namespace Flipdish.Api
         /// <param name="appId">App id</param>
         /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>ApiResponse of RestApiResultFulfillmentStatesConfiguration</returns>
-        public ApiResponse< RestApiResultFulfillmentStatesConfiguration > CreateFulfillmentStatesConfigWithHttpInfo (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration)
+        public ApiResponse< RestApiResultFulfillmentStatesConfiguration > CreateFulfillmentStatesConfigWithHttpInfo (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -456,7 +498,7 @@ namespace Flipdish.Api
         /// <param name="appId">App id</param>
         /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>Task of RestApiResultFulfillmentStatesConfiguration</returns>
-        public async System.Threading.Tasks.Task<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigAsync (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration)
+        public async System.Threading.Tasks.Task<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigAsync (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration)
         {
              ApiResponse<RestApiResultFulfillmentStatesConfiguration> localVarResponse = await CreateFulfillmentStatesConfigAsyncWithHttpInfo(appId, fulfillmentStateConfiguration);
              return localVarResponse.Data;
@@ -470,7 +512,7 @@ namespace Flipdish.Api
         /// <param name="appId">App id</param>
         /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
         /// <returns>Task of ApiResponse (RestApiResultFulfillmentStatesConfiguration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFulfillmentStatesConfiguration>> CreateFulfillmentStatesConfigAsyncWithHttpInfo (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFulfillmentStatesConfiguration>> CreateFulfillmentStatesConfigAsyncWithHttpInfo (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -861,6 +903,157 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetFulfillmentStatesConfiguration", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FulfillmentStatesConfiguration>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (FulfillmentStatesConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FulfillmentStatesConfiguration)));
+        }
+
+        /// <summary>
+        /// Get fulfillment configuration template [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App id</param>
+        /// <returns>FulfillmentStatesConfiguration</returns>
+        public FulfillmentStatesConfiguration GetFulfillmentStatesConfigurationTemplate (string appId)
+        {
+             ApiResponse<FulfillmentStatesConfiguration> localVarResponse = GetFulfillmentStatesConfigurationTemplateWithHttpInfo(appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get fulfillment configuration template [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App id</param>
+        /// <returns>ApiResponse of FulfillmentStatesConfiguration</returns>
+        public ApiResponse< FulfillmentStatesConfiguration > GetFulfillmentStatesConfigurationTemplateWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling FulfillmentStateConfigurationApi->GetFulfillmentStatesConfigurationTemplate");
+
+            var localVarPath = "./api/v1.0/{appId}/fulfillment/configuration/states_template";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetFulfillmentStatesConfigurationTemplate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FulfillmentStatesConfiguration>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (FulfillmentStatesConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FulfillmentStatesConfiguration)));
+        }
+
+        /// <summary>
+        /// Get fulfillment configuration template [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App id</param>
+        /// <returns>Task of FulfillmentStatesConfiguration</returns>
+        public async System.Threading.Tasks.Task<FulfillmentStatesConfiguration> GetFulfillmentStatesConfigurationTemplateAsync (string appId)
+        {
+             ApiResponse<FulfillmentStatesConfiguration> localVarResponse = await GetFulfillmentStatesConfigurationTemplateAsyncWithHttpInfo(appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get fulfillment configuration template [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App id</param>
+        /// <returns>Task of ApiResponse (FulfillmentStatesConfiguration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FulfillmentStatesConfiguration>> GetFulfillmentStatesConfigurationTemplateAsyncWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling FulfillmentStateConfigurationApi->GetFulfillmentStatesConfigurationTemplate");
+
+            var localVarPath = "./api/v1.0/{appId}/fulfillment/configuration/states_template";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetFulfillmentStatesConfigurationTemplate", localVarResponse);
                 if (exception != null) throw exception;
             }
 

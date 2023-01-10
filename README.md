@@ -250,6 +250,7 @@ Class | Method | HTTP request | Description
 *FulfillmentStateConfigurationApi* | [**CreateFulfillmentStatesConfig**](docs/FulfillmentStateConfigurationApi.md#createfulfillmentstatesconfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states | Create fulfillment configuration
 *FulfillmentStateConfigurationApi* | [**DeleteFulfillmentStatesConfig**](docs/FulfillmentStateConfigurationApi.md#deletefulfillmentstatesconfig) | **DELETE** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Delete fulfillment states configuration
 *FulfillmentStateConfigurationApi* | [**GetFulfillmentStatesConfiguration**](docs/FulfillmentStateConfigurationApi.md#getfulfillmentstatesconfiguration) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Get fulfillment configuration
+*FulfillmentStateConfigurationApi* | [**GetFulfillmentStatesConfigurationTemplate**](docs/FulfillmentStateConfigurationApi.md#getfulfillmentstatesconfigurationtemplate) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states_template | Get fulfillment configuration template
 *FulfillmentStateConfigurationApi* | [**SearchFulfillmentStatesConfigurations**](docs/FulfillmentStateConfigurationApi.md#searchfulfillmentstatesconfigurations) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states | List fulfillment configurations for AppId
 *FulfillmentStateConfigurationApi* | [**UpdateFulfillmentStatesConfig**](docs/FulfillmentStateConfigurationApi.md#updatefulfillmentstatesconfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Update fulfillment configuration
 *HeartbeatApi* | [**HeadHostname**](docs/HeartbeatApi.md#headhostname) | **HEAD** /api/v1.0/heartbeat/Hostname | 
@@ -623,6 +624,7 @@ Class | Method | HTTP request | Description
  - [Model.CreateAppStoreApp](docs/CreateAppStoreApp.md)
  - [Model.CreateCatalogGroupReference](docs/CreateCatalogGroupReference.md)
  - [Model.CreateCatalogItem](docs/CreateCatalogItem.md)
+ - [Model.CreateFulfillmentStatesConfiguration](docs/CreateFulfillmentStatesConfiguration.md)
  - [Model.CreateFullMenu](docs/CreateFullMenu.md)
  - [Model.CreateFullMenuItemOptionSet](docs/CreateFullMenuItemOptionSet.md)
  - [Model.CreateFullMenuItemOptionSetItem](docs/CreateFullMenuItemOptionSetItem.md)
@@ -692,7 +694,6 @@ Class | Method | HTTP request | Description
  - [Model.FulfillentStatusActionItem](docs/FulfillentStatusActionItem.md)
  - [Model.FulfillmentInfo](docs/FulfillmentInfo.md)
  - [Model.FulfillmentStatesConfiguration](docs/FulfillmentStatesConfiguration.md)
- - [Model.FulfillmentStatesConfigurationCreateBase](docs/FulfillmentStatesConfigurationCreateBase.md)
  - [Model.FulfillmentStatesConfigurationSummary](docs/FulfillmentStatesConfigurationSummary.md)
  - [Model.FulfillmentStatesConfiguredStore](docs/FulfillmentStatesConfiguredStore.md)
  - [Model.FulfillmentStatusConfigurationItem](docs/FulfillmentStatusConfigurationItem.md)

@@ -7,13 +7,14 @@ Method | HTTP request | Description
 [**CreateFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#createfulfillmentstatesconfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states | Create fulfillment configuration
 [**DeleteFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#deletefulfillmentstatesconfig) | **DELETE** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Delete fulfillment states configuration
 [**GetFulfillmentStatesConfiguration**](FulfillmentStateConfigurationApi.md#getfulfillmentstatesconfiguration) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Get fulfillment configuration
+[**GetFulfillmentStatesConfigurationTemplate**](FulfillmentStateConfigurationApi.md#getfulfillmentstatesconfigurationtemplate) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states_template | Get fulfillment configuration template
 [**SearchFulfillmentStatesConfigurations**](FulfillmentStateConfigurationApi.md#searchfulfillmentstatesconfigurations) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states | List fulfillment configurations for AppId
 [**UpdateFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#updatefulfillmentstatesconfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Update fulfillment configuration
 
 
 <a name="createfulfillmentstatesconfig"></a>
 # **CreateFulfillmentStatesConfig**
-> RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration)
+> RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration)
 
 Create fulfillment configuration
 
@@ -38,7 +39,7 @@ namespace Example
 
             var apiInstance = new FulfillmentStateConfigurationApi();
             var appId = appId_example;  // string | App id
-            var fulfillmentStateConfiguration = new FulfillmentStatesConfigurationCreateBase(); // FulfillmentStatesConfigurationCreateBase | Fulfillment state configuration
+            var fulfillmentStateConfiguration = new CreateFulfillmentStatesConfiguration(); // CreateFulfillmentStatesConfiguration | Fulfillment state configuration
 
             try
             {
@@ -60,7 +61,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App id | 
- **fulfillmentStateConfiguration** | [**FulfillmentStatesConfigurationCreateBase**](FulfillmentStatesConfigurationCreateBase.md)| Fulfillment state configuration | 
+ **fulfillmentStateConfiguration** | [**CreateFulfillmentStatesConfiguration**](CreateFulfillmentStatesConfiguration.md)| Fulfillment state configuration | 
 
 ### Return type
 
@@ -193,6 +194,70 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App id | 
  **configId** | **string**| App store app configuration id | 
+
+### Return type
+
+[**FulfillmentStatesConfiguration**](FulfillmentStatesConfiguration.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getfulfillmentstatesconfigurationtemplate"></a>
+# **GetFulfillmentStatesConfigurationTemplate**
+> FulfillmentStatesConfiguration GetFulfillmentStatesConfigurationTemplate (string appId)
+
+Get fulfillment configuration template
+
+[BETA - this endpoint is under development, do not use it in your production system]
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetFulfillmentStatesConfigurationTemplateExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new FulfillmentStateConfigurationApi();
+            var appId = appId_example;  // string | App id
+
+            try
+            {
+                // Get fulfillment configuration template
+                FulfillmentStatesConfiguration result = apiInstance.GetFulfillmentStatesConfigurationTemplate(appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FulfillmentStateConfigurationApi.GetFulfillmentStatesConfigurationTemplate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**| App id | 
 
 ### Return type
 
