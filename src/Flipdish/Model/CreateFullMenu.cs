@@ -87,7 +87,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="name">Name of Menu, only shown in portal.</param>
         /// <param name="imageUrl">Image url.</param>
-        /// <param name="menuSections">Menu sections (startes, main etc).</param>
+        /// <param name="menuSections">Menu sections (starters, main etc).</param>
         /// <param name="taxRates">Menu tax rates.</param>
         /// <param name="displaySectionLinks">Display menu section link on UI.</param>
         /// <param name="menuSectionBehaviour">Menu section behaviour.</param>
@@ -118,9 +118,9 @@ namespace Flipdish.Model
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// Menu sections (startes, main etc)
+        /// Menu sections (starters, main etc)
         /// </summary>
-        /// <value>Menu sections (startes, main etc)</value>
+        /// <value>Menu sections (starters, main etc)</value>
         [DataMember(Name="MenuSections", EmitDefaultValue=false)]
         public List<CreateFullMenuSection> MenuSections { get; set; }
 

@@ -68,13 +68,15 @@ namespace Flipdish.Model
         /// <param name="storeSelectorType">Store Selector Type.</param>
         /// <param name="states">Settings.</param>
         /// <param name="automaticTransitionsEnabled">Enable automatic transitions.</param>
+        /// <param name="overwriteSystemTemplate">Set to true if a system configuration template is to be updated (permissions also needed).</param>
         /// <param name="name">Name.</param>
-        public UpdateFulfillmentStatesConfiguration(List<int?> storeIds = default(List<int?>), StoreSelectorTypeEnum? storeSelectorType = default(StoreSelectorTypeEnum?), List<FulfillmentStatusConfigurationItem> states = default(List<FulfillmentStatusConfigurationItem>), bool? automaticTransitionsEnabled = default(bool?), string name = default(string))
+        public UpdateFulfillmentStatesConfiguration(List<int?> storeIds = default(List<int?>), StoreSelectorTypeEnum? storeSelectorType = default(StoreSelectorTypeEnum?), List<FulfillmentStatusConfigurationItem> states = default(List<FulfillmentStatusConfigurationItem>), bool? automaticTransitionsEnabled = default(bool?), bool? overwriteSystemTemplate = default(bool?), string name = default(string))
         {
             this.StoreIds = storeIds;
             this.StoreSelectorType = storeSelectorType;
             this.States = states;
             this.AutomaticTransitionsEnabled = automaticTransitionsEnabled;
+            this.OverwriteSystemTemplate = overwriteSystemTemplate;
             this.Name = name;
         }
         
@@ -101,6 +103,13 @@ namespace Flipdish.Model
         public bool? AutomaticTransitionsEnabled { get; set; }
 
         /// <summary>
+        /// Set to true if a system configuration template is to be updated (permissions also needed)
+        /// </summary>
+        /// <value>Set to true if a system configuration template is to be updated (permissions also needed)</value>
+        [DataMember(Name="OverwriteSystemTemplate", EmitDefaultValue=false)]
+        public bool? OverwriteSystemTemplate { get; set; }
+
+        /// <summary>
         /// Name
         /// </summary>
         /// <value>Name</value>
@@ -119,6 +128,7 @@ namespace Flipdish.Model
             sb.Append("  StoreSelectorType: ").Append(StoreSelectorType).Append("\n");
             sb.Append("  States: ").Append(States).Append("\n");
             sb.Append("  AutomaticTransitionsEnabled: ").Append(AutomaticTransitionsEnabled).Append("\n");
+            sb.Append("  OverwriteSystemTemplate: ").Append(OverwriteSystemTemplate).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -175,6 +185,11 @@ namespace Flipdish.Model
                     this.AutomaticTransitionsEnabled.Equals(input.AutomaticTransitionsEnabled))
                 ) && 
                 (
+                    this.OverwriteSystemTemplate == input.OverwriteSystemTemplate ||
+                    (this.OverwriteSystemTemplate != null &&
+                    this.OverwriteSystemTemplate.Equals(input.OverwriteSystemTemplate))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -198,6 +213,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.States.GetHashCode();
                 if (this.AutomaticTransitionsEnabled != null)
                     hashCode = hashCode * 59 + this.AutomaticTransitionsEnabled.GetHashCode();
+                if (this.OverwriteSystemTemplate != null)
+                    hashCode = hashCode * 59 + this.OverwriteSystemTemplate.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 return hashCode;

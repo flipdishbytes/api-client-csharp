@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **StoreSelectorType** | **string** | Store Selector Type | [optional] 
 **States** | [**List&lt;FulfillmentStatusConfigurationItem&gt;**](FulfillmentStatusConfigurationItem.md) | Settings | [optional] 
 **AutomaticTransitionsEnabled** | **bool?** | Enable automatic transitions | [optional] 
+**OverwriteSystemTemplate** | **bool?** | Set to true if a system configuration template is to be updated (permissions also needed) | [optional] 
 **Name** | **string** | Name | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
