@@ -171,7 +171,7 @@ namespace Example
 
             var apiInstance = new FulfillmentStateConfigurationApi();
             var appId = appId_example;  // string | App id
-            var configId = configId_example;  // string | App store app configuration id
+            var configId = configId_example;  // string | Fulfillment configuration id
 
             try
             {
@@ -193,7 +193,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App id | 
- **configId** | **string**| App store app configuration id | 
+ **configId** | **string**| Fulfillment configuration id | 
 
 ### Return type
 

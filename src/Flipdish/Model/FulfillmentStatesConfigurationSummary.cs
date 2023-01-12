@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// App store app configuration header information
+    /// Fulfillment configuration header information
     /// </summary>
     [DataContract]
     public partial class FulfillmentStatesConfigurationSummary :  IEquatable<FulfillmentStatesConfigurationSummary>

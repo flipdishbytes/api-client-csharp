@@ -78,7 +78,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="configId">Fulfillment configuration id</param>
         /// <returns>FulfillmentStatesConfiguration</returns>
         FulfillmentStatesConfiguration GetFulfillmentStatesConfiguration (string appId, string configId);
 
@@ -90,7 +90,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="configId">Fulfillment configuration id</param>
         /// <returns>ApiResponse of FulfillmentStatesConfiguration</returns>
         ApiResponse<FulfillmentStatesConfiguration> GetFulfillmentStatesConfigurationWithHttpInfo (string appId, string configId);
         /// <summary>
@@ -216,7 +216,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="configId">Fulfillment configuration id</param>
         /// <returns>Task of FulfillmentStatesConfiguration</returns>
         System.Threading.Tasks.Task<FulfillmentStatesConfiguration> GetFulfillmentStatesConfigurationAsync (string appId, string configId);
 
@@ -228,7 +228,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="configId">Fulfillment configuration id</param>
         /// <returns>Task of ApiResponse (FulfillmentStatesConfiguration)</returns>
         System.Threading.Tasks.Task<ApiResponse<FulfillmentStatesConfiguration>> GetFulfillmentStatesConfigurationAsyncWithHttpInfo (string appId, string configId);
         /// <summary>
@@ -753,7 +753,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="configId">Fulfillment configuration id</param>
         /// <returns>FulfillmentStatesConfiguration</returns>
         public FulfillmentStatesConfiguration GetFulfillmentStatesConfiguration (string appId, string configId)
         {
@@ -766,7 +766,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="configId">Fulfillment configuration id</param>
         /// <returns>ApiResponse of FulfillmentStatesConfiguration</returns>
         public ApiResponse< FulfillmentStatesConfiguration > GetFulfillmentStatesConfigurationWithHttpInfo (string appId, string configId)
         {
@@ -834,7 +834,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="configId">Fulfillment configuration id</param>
         /// <returns>Task of FulfillmentStatesConfiguration</returns>
         public async System.Threading.Tasks.Task<FulfillmentStatesConfiguration> GetFulfillmentStatesConfigurationAsync (string appId, string configId)
         {
@@ -848,7 +848,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="configId">Fulfillment configuration id</param>
         /// <returns>Task of ApiResponse (FulfillmentStatesConfiguration)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<FulfillmentStatesConfiguration>> GetFulfillmentStatesConfigurationAsyncWithHttpInfo (string appId, string configId)
         {
