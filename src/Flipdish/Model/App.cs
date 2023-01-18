@@ -1079,13 +1079,14 @@ namespace Flipdish.Model
         /// <param name="mapCenter">Center of the map coordinates. This is used to center the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App..</param>
         /// <param name="mapNorthEast">North East(Top Right) Corner of the map coordinates. This is used to frame the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App..</param>
         /// <param name="mapSouthWest">South West (Bottom Left) Corner of the map coordinates. This is used to frame the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App..</param>
+        /// <param name="googleMapsApiKeyWeb">Key to be passed with Google Maps requests.</param>
         /// <param name="name">App name.   This is used in various places on the Apple App Store, Google Play Store, mobile apps and websites..</param>
         /// <param name="hostName">HostName on which the web-ordering system is allowed to be hosted or that a Flipdish website is hosted on..</param>
         /// <param name="mainColor">Main color of the web / Android / iOS applications.</param>
         /// <param name="applicationCategory">Application Category.</param>
         /// <param name="isPanaceaEnabled">Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain..</param>
         /// <param name="cookieConsentPromptEnabled">Cookie Consent Prompt Enabled.</param>
-        public App(string appId = default(string), bool? hasIosApp = default(bool?), bool? hasAndroidApp = default(bool?), string countryId = default(string), string logoImageUrl = default(string), List<Language> languages = default(List<Language>), List<Language> availableAppLanguages = default(List<Language>), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), List<AppResourceSetEnum> appResourceSet = default(List<AppResourceSetEnum>), List<string> features = default(List<string>), Coordinates mapCenter = default(Coordinates), Coordinates mapNorthEast = default(Coordinates), Coordinates mapSouthWest = default(Coordinates), string name = default(string), string hostName = default(string), string mainColor = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), bool? cookieConsentPromptEnabled = default(bool?))
+        public App(string appId = default(string), bool? hasIosApp = default(bool?), bool? hasAndroidApp = default(bool?), string countryId = default(string), string logoImageUrl = default(string), List<Language> languages = default(List<Language>), List<Language> availableAppLanguages = default(List<Language>), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), List<AppResourceSetEnum> appResourceSet = default(List<AppResourceSetEnum>), List<string> features = default(List<string>), Coordinates mapCenter = default(Coordinates), Coordinates mapNorthEast = default(Coordinates), Coordinates mapSouthWest = default(Coordinates), string googleMapsApiKeyWeb = default(string), string name = default(string), string hostName = default(string), string mainColor = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), bool? cookieConsentPromptEnabled = default(bool?))
         {
             this.AppId = appId;
             this.HasIosApp = hasIosApp;
@@ -1100,6 +1101,7 @@ namespace Flipdish.Model
             this.MapCenter = mapCenter;
             this.MapNorthEast = mapNorthEast;
             this.MapSouthWest = mapSouthWest;
+            this.GoogleMapsApiKeyWeb = googleMapsApiKeyWeb;
             this.Name = name;
             this.HostName = hostName;
             this.MainColor = mainColor;
@@ -1188,6 +1190,13 @@ namespace Flipdish.Model
         public Coordinates MapSouthWest { get; set; }
 
         /// <summary>
+        /// Key to be passed with Google Maps requests
+        /// </summary>
+        /// <value>Key to be passed with Google Maps requests</value>
+        [DataMember(Name="GoogleMapsApiKeyWeb", EmitDefaultValue=false)]
+        public string GoogleMapsApiKeyWeb { get; set; }
+
+        /// <summary>
         /// App name.   This is used in various places on the Apple App Store, Google Play Store, mobile apps and websites.
         /// </summary>
         /// <value>App name.   This is used in various places on the Apple App Store, Google Play Store, mobile apps and websites.</value>
@@ -1244,6 +1253,7 @@ namespace Flipdish.Model
             sb.Append("  MapCenter: ").Append(MapCenter).Append("\n");
             sb.Append("  MapNorthEast: ").Append(MapNorthEast).Append("\n");
             sb.Append("  MapSouthWest: ").Append(MapSouthWest).Append("\n");
+            sb.Append("  GoogleMapsApiKeyWeb: ").Append(GoogleMapsApiKeyWeb).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  HostName: ").Append(HostName).Append("\n");
             sb.Append("  MainColor: ").Append(MainColor).Append("\n");
@@ -1350,6 +1360,11 @@ namespace Flipdish.Model
                     this.MapSouthWest.Equals(input.MapSouthWest))
                 ) && 
                 (
+                    this.GoogleMapsApiKeyWeb == input.GoogleMapsApiKeyWeb ||
+                    (this.GoogleMapsApiKeyWeb != null &&
+                    this.GoogleMapsApiKeyWeb.Equals(input.GoogleMapsApiKeyWeb))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -1416,6 +1431,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MapNorthEast.GetHashCode();
                 if (this.MapSouthWest != null)
                     hashCode = hashCode * 59 + this.MapSouthWest.GetHashCode();
+                if (this.GoogleMapsApiKeyWeb != null)
+                    hashCode = hashCode * 59 + this.GoogleMapsApiKeyWeb.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.HostName != null)
