@@ -1020,7 +1020,13 @@ namespace Flipdish.Model
             /// Enum UpdatePayGreenStoreConfiguration for value: UpdatePayGreenStoreConfiguration
             /// </summary>
             [EnumMember(Value = "UpdatePayGreenStoreConfiguration")]
-            UpdatePayGreenStoreConfiguration = 152
+            UpdatePayGreenStoreConfiguration = 152,
+            
+            /// <summary>
+            /// Enum ViewSubscriptions for value: ViewSubscriptions
+            /// </summary>
+            [EnumMember(Value = "ViewSubscriptions")]
+            ViewSubscriptions = 153
         }
 
 
