@@ -138,6 +138,7 @@ Name | Type | Description | Notes
 **StoreServiceChargeUpdatedEvent** | [**List&lt;StoreServiceChargeUpdatedEvent&gt;**](StoreServiceChargeUpdatedEvent.md) | Service Charge Updated Event | [optional] 
 **MobileAppsSubmissionStatusUpdatedEvent** | [**List&lt;MobileAppsSubmissionStatusUpdatedEvent&gt;**](MobileAppsSubmissionStatusUpdatedEvent.md) | Mobile Submission Status Updated Event | [optional] 
 **MobileAppsSubmissionUpdatedEvent** | [**List&lt;MobileAppsSubmissionUpdatedEvent&gt;**](MobileAppsSubmissionUpdatedEvent.md) | Mobile Submission Updated Event | [optional] 
+**StoreFeeConfigUpdatedEvent** | [**List&lt;StoreFeeConfigUpdatedEvent&gt;**](StoreFeeConfigUpdatedEvent.md) | Store Fee Config Updated Event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
