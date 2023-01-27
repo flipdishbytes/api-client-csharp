@@ -96,6 +96,29 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
         ApiResponse<RestApiResultStripeConnectedAccount> CreateStripeConnectedAccountLinkWithHttpInfo (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest);
         /// <summary>
+        /// Gets a list of stripe custom connect ids information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <returns>RestApiArrayResultStripeCustomConnectedAccount</returns>
+        RestApiArrayResultStripeCustomConnectedAccount GetCustomConnect (int? storeId, string appId);
+
+        /// <summary>
+        /// Gets a list of stripe custom connect ids information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiArrayResultStripeCustomConnectedAccount</returns>
+        ApiResponse<RestApiArrayResultStripeCustomConnectedAccount> GetCustomConnectWithHttpInfo (int? storeId, string appId);
+        /// <summary>
         /// Gets the current verification status of the given connected account
         /// </summary>
         /// <remarks>
@@ -289,6 +312,29 @@ namespace Flipdish.Api
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> CreateStripeConnectedAccountLinkAsyncWithHttpInfo (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest);
+        /// <summary>
+        /// Gets a list of stripe custom connect ids information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiArrayResultStripeCustomConnectedAccount</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultStripeCustomConnectedAccount> GetCustomConnectAsync (int? storeId, string appId);
+
+        /// <summary>
+        /// Gets a list of stripe custom connect ids information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultStripeCustomConnectedAccount)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStripeCustomConnectedAccount>> GetCustomConnectAsyncWithHttpInfo (int? storeId, string appId);
         /// <summary>
         /// Gets the current verification status of the given connected account
         /// </summary>
@@ -1057,6 +1103,169 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultStripeConnectedAccount>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultStripeConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStripeConnectedAccount)));
+        }
+
+        /// <summary>
+        /// Gets a list of stripe custom connect ids information 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <returns>RestApiArrayResultStripeCustomConnectedAccount</returns>
+        public RestApiArrayResultStripeCustomConnectedAccount GetCustomConnect (int? storeId, string appId)
+        {
+             ApiResponse<RestApiArrayResultStripeCustomConnectedAccount> localVarResponse = GetCustomConnectWithHttpInfo(storeId, appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets a list of stripe custom connect ids information 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiArrayResultStripeCustomConnectedAccount</returns>
+        public ApiResponse< RestApiArrayResultStripeCustomConnectedAccount > GetCustomConnectWithHttpInfo (int? storeId, string appId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StripeCustomConnectApi->GetCustomConnect");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->GetCustomConnect");
+
+            var localVarPath = "./api/v1.0/{appId}/customconnect/{storeId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCustomConnect", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultStripeCustomConnectedAccount>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiArrayResultStripeCustomConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultStripeCustomConnectedAccount)));
+        }
+
+        /// <summary>
+        /// Gets a list of stripe custom connect ids information 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiArrayResultStripeCustomConnectedAccount</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultStripeCustomConnectedAccount> GetCustomConnectAsync (int? storeId, string appId)
+        {
+             ApiResponse<RestApiArrayResultStripeCustomConnectedAccount> localVarResponse = await GetCustomConnectAsyncWithHttpInfo(storeId, appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets a list of stripe custom connect ids information 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultStripeCustomConnectedAccount)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStripeCustomConnectedAccount>> GetCustomConnectAsyncWithHttpInfo (int? storeId, string appId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StripeCustomConnectApi->GetCustomConnect");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StripeCustomConnectApi->GetCustomConnect");
+
+            var localVarPath = "./api/v1.0/{appId}/customconnect/{storeId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCustomConnect", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultStripeCustomConnectedAccount>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiArrayResultStripeCustomConnectedAccount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultStripeCustomConnectedAccount)));
         }
 
         /// <summary>
