@@ -789,7 +789,9 @@ namespace Flipdish.Model
         /// <param name="subscriptionId">The subscription identifier (required).</param>
         /// <param name="status">Status (required).</param>
         /// <param name="currency">Currency (required).</param>
-        public SubscriptionSummary(string subscriptionId = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum))
+        /// <param name="nextInvoiceAmount">Next invoice amount.</param>
+        /// <param name="nextInvoiceBillingDate">Next invoice billing date.</param>
+        public SubscriptionSummary(string subscriptionId = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), long? nextInvoiceAmount = default(long?), DateTime? nextInvoiceBillingDate = default(DateTime?))
         {
             // to ensure "subscriptionId" is required (not null)
             if (subscriptionId == null)
@@ -818,6 +820,8 @@ namespace Flipdish.Model
             {
                 this.Currency = currency;
             }
+            this.NextInvoiceAmount = nextInvoiceAmount;
+            this.NextInvoiceBillingDate = nextInvoiceBillingDate;
         }
         
         /// <summary>
@@ -830,6 +834,20 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Next invoice amount
+        /// </summary>
+        /// <value>Next invoice amount</value>
+        [DataMember(Name="NextInvoiceAmount", EmitDefaultValue=false)]
+        public long? NextInvoiceAmount { get; set; }
+
+        /// <summary>
+        /// Next invoice billing date
+        /// </summary>
+        /// <value>Next invoice billing date</value>
+        [DataMember(Name="NextInvoiceBillingDate", EmitDefaultValue=false)]
+        public DateTime? NextInvoiceBillingDate { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -840,6 +858,8 @@ namespace Flipdish.Model
             sb.Append("  SubscriptionId: ").Append(SubscriptionId).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
+            sb.Append("  NextInvoiceAmount: ").Append(NextInvoiceAmount).Append("\n");
+            sb.Append("  NextInvoiceBillingDate: ").Append(NextInvoiceBillingDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -888,6 +908,16 @@ namespace Flipdish.Model
                     this.Currency == input.Currency ||
                     (this.Currency != null &&
                     this.Currency.Equals(input.Currency))
+                ) && 
+                (
+                    this.NextInvoiceAmount == input.NextInvoiceAmount ||
+                    (this.NextInvoiceAmount != null &&
+                    this.NextInvoiceAmount.Equals(input.NextInvoiceAmount))
+                ) && 
+                (
+                    this.NextInvoiceBillingDate == input.NextInvoiceBillingDate ||
+                    (this.NextInvoiceBillingDate != null &&
+                    this.NextInvoiceBillingDate.Equals(input.NextInvoiceBillingDate))
                 );
         }
 
@@ -906,6 +936,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.Currency != null)
                     hashCode = hashCode * 59 + this.Currency.GetHashCode();
+                if (this.NextInvoiceAmount != null)
+                    hashCode = hashCode * 59 + this.NextInvoiceAmount.GetHashCode();
+                if (this.NextInvoiceBillingDate != null)
+                    hashCode = hashCode * 59 + this.NextInvoiceBillingDate.GetHashCode();
                 return hashCode;
             }
         }
