@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **TeammateAppAccessLevel** | **string** | Teammate app access level | [optional] 
 **PermissionsType** | **string** | Permissions type | 
 **Support** | [**AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) | Support information | [optional] 
+**ExternalFunctionActionUrl** | **string** | Action URL for external functions, used for handling Portal configuration action buttons | [optional] 
 **Name** | **string** | Name | 
 **Description** | **string** | Description | 
 **IsEnabled** | **bool?** | Is application enabled | [optional] 
