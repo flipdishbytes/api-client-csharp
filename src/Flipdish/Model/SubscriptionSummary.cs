@@ -787,11 +787,12 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="SubscriptionSummary" /> class.
         /// </summary>
         /// <param name="subscriptionId">The subscription identifier (required).</param>
+        /// <param name="name">name (required).</param>
         /// <param name="status">Status (required).</param>
         /// <param name="currency">Currency (required).</param>
         /// <param name="nextInvoiceAmount">Next invoice amount.</param>
         /// <param name="nextInvoiceBillingDate">Next invoice billing date.</param>
-        public SubscriptionSummary(string subscriptionId = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), long? nextInvoiceAmount = default(long?), DateTime? nextInvoiceBillingDate = default(DateTime?))
+        public SubscriptionSummary(string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), long? nextInvoiceAmount = default(long?), DateTime? nextInvoiceBillingDate = default(DateTime?))
         {
             // to ensure "subscriptionId" is required (not null)
             if (subscriptionId == null)
@@ -801,6 +802,15 @@ namespace Flipdish.Model
             else
             {
                 this.SubscriptionId = subscriptionId;
+            }
+            // to ensure "name" is required (not null)
+            if (name == null)
+            {
+                throw new InvalidDataException("name is a required property for SubscriptionSummary and cannot be null");
+            }
+            else
+            {
+                this.Name = name;
             }
             // to ensure "status" is required (not null)
             if (status == null)
@@ -831,6 +841,12 @@ namespace Flipdish.Model
         [DataMember(Name="SubscriptionId", EmitDefaultValue=false)]
         public string SubscriptionId { get; set; }
 
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="Name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+
 
 
         /// <summary>
@@ -856,6 +872,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class SubscriptionSummary {\n");
             sb.Append("  SubscriptionId: ").Append(SubscriptionId).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  NextInvoiceAmount: ").Append(NextInvoiceAmount).Append("\n");
@@ -900,6 +917,11 @@ namespace Flipdish.Model
                     this.SubscriptionId.Equals(input.SubscriptionId))
                 ) && 
                 (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
+                ) && 
+                (
                     this.Status == input.Status ||
                     (this.Status != null &&
                     this.Status.Equals(input.Status))
@@ -932,6 +954,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.SubscriptionId != null)
                     hashCode = hashCode * 59 + this.SubscriptionId.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Status != null)
                     hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.Currency != null)
