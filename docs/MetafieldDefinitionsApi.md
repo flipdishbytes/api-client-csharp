@@ -4,21 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateMetafieldDefinition**](MetafieldDefinitionsApi.md#createmetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Create a Metafield Definition
-[**GetMetafieldDefinitionByKey**](MetafieldDefinitionsApi.md#getmetafielddefinitionbykey) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Get a Metafield Definition for the specified owner entity and key.
-[**GetMetafieldDefinitions**](MetafieldDefinitionsApi.md#getmetafielddefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Get Metafield Definitions for the specified owner entity.
-[**GetOwnerEntityConfigurations**](MetafieldDefinitionsApi.md#getownerentityconfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | Get OwnerEntity Configurations which contain information to manage Metafield Definitions
-[**GetOwnerEntityRecommendations**](MetafieldDefinitionsApi.md#getownerentityrecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | Get OwnerEntity Definition Recommendations
-[**UpdateMetafieldDefinition**](MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Update a Metafield Definition
+[**CreateMetafieldDefinition**](MetafieldDefinitionsApi.md#createmetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | 
+[**GetMetafieldDefinitionByKey**](MetafieldDefinitionsApi.md#getmetafielddefinitionbykey) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | 
+[**GetMetafieldDefinitions**](MetafieldDefinitionsApi.md#getmetafielddefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | 
+[**GetOwnerEntityConfigurations**](MetafieldDefinitionsApi.md#getownerentityconfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | 
+[**GetOwnerEntityRecommendations**](MetafieldDefinitionsApi.md#getownerentityrecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | 
+[**UpdateMetafieldDefinition**](MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | 
 
 
 <a name="createmetafielddefinition"></a>
 # **CreateMetafieldDefinition**
 > RestApiResultMetafieldDefinition CreateMetafieldDefinition (string appId, string ownerEntity, CreateMetafieldDefinition createMetafieldDefinition)
 
-Create a Metafield Definition
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -44,7 +42,6 @@ namespace Example
 
             try
             {
-                // Create a Metafield Definition
                 RestApiResultMetafieldDefinition result = apiInstance.CreateMetafieldDefinition(appId, ownerEntity, createMetafieldDefinition);
                 Debug.WriteLine(result);
             }
@@ -84,9 +81,7 @@ Name | Type | Description  | Notes
 # **GetMetafieldDefinitionByKey**
 > RestApiResultMetafieldDefinition GetMetafieldDefinitionByKey (string appId, string ownerEntity, string key)
 
-Get a Metafield Definition for the specified owner entity and key.
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -112,7 +107,6 @@ namespace Example
 
             try
             {
-                // Get a Metafield Definition for the specified owner entity and key.
                 RestApiResultMetafieldDefinition result = apiInstance.GetMetafieldDefinitionByKey(appId, ownerEntity, key);
                 Debug.WriteLine(result);
             }
@@ -152,9 +146,7 @@ Name | Type | Description  | Notes
 # **GetMetafieldDefinitions**
 > RestApiPaginationResultMetafieldDefinition GetMetafieldDefinitions (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null)
 
-Get Metafield Definitions for the specified owner entity.
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -182,7 +174,6 @@ namespace Example
 
             try
             {
-                // Get Metafield Definitions for the specified owner entity.
                 RestApiPaginationResultMetafieldDefinition result = apiInstance.GetMetafieldDefinitions(appId, ownerEntity, searchTerm, page, limit);
                 Debug.WriteLine(result);
             }
@@ -224,9 +215,7 @@ Name | Type | Description  | Notes
 # **GetOwnerEntityConfigurations**
 > OwnerEntityConfigurations GetOwnerEntityConfigurations (string appId)
 
-Get OwnerEntity Configurations which contain information to manage Metafield Definitions
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -250,7 +239,6 @@ namespace Example
 
             try
             {
-                // Get OwnerEntity Configurations which contain information to manage Metafield Definitions
                 OwnerEntityConfigurations result = apiInstance.GetOwnerEntityConfigurations(appId);
                 Debug.WriteLine(result);
             }
@@ -288,9 +276,7 @@ Name | Type | Description  | Notes
 # **GetOwnerEntityRecommendations**
 > RestApiPaginationResultMetafieldDefinitionRecommendation GetOwnerEntityRecommendations (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null)
 
-Get OwnerEntity Definition Recommendations
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -318,7 +304,6 @@ namespace Example
 
             try
             {
-                // Get OwnerEntity Definition Recommendations
                 RestApiPaginationResultMetafieldDefinitionRecommendation result = apiInstance.GetOwnerEntityRecommendations(appId, ownerEntity, searchTerm, page, limit);
                 Debug.WriteLine(result);
             }
@@ -360,9 +345,7 @@ Name | Type | Description  | Notes
 # **UpdateMetafieldDefinition**
 > RestApiResultMetafieldDefinition UpdateMetafieldDefinition (string appId, string ownerEntity, string key, UpdateMetafieldDefinition updateMetafieldDefinition)
 
-Update a Metafield Definition
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -389,7 +372,6 @@ namespace Example
 
             try
             {
-                // Update a Metafield Definition
                 RestApiResultMetafieldDefinition result = apiInstance.UpdateMetafieldDefinition(appId, ownerEntity, key, updateMetafieldDefinition);
                 Debug.WriteLine(result);
             }

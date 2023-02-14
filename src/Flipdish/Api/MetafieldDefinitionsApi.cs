@@ -25,10 +25,10 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a Metafield Definition
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -38,10 +38,10 @@ namespace Flipdish.Api
         RestApiResultMetafieldDefinition CreateMetafieldDefinition (string appId, string ownerEntity, CreateMetafieldDefinition createMetafieldDefinition);
 
         /// <summary>
-        /// Create a Metafield Definition
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -50,10 +50,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultMetafieldDefinition</returns>
         ApiResponse<RestApiResultMetafieldDefinition> CreateMetafieldDefinitionWithHttpInfo (string appId, string ownerEntity, CreateMetafieldDefinition createMetafieldDefinition);
         /// <summary>
-        /// Get a Metafield Definition for the specified owner entity and key.
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -63,10 +63,10 @@ namespace Flipdish.Api
         RestApiResultMetafieldDefinition GetMetafieldDefinitionByKey (string appId, string ownerEntity, string key);
 
         /// <summary>
-        /// Get a Metafield Definition for the specified owner entity and key.
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -75,10 +75,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultMetafieldDefinition</returns>
         ApiResponse<RestApiResultMetafieldDefinition> GetMetafieldDefinitionByKeyWithHttpInfo (string appId, string ownerEntity, string key);
         /// <summary>
-        /// Get Metafield Definitions for the specified owner entity.
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -90,10 +90,10 @@ namespace Flipdish.Api
         RestApiPaginationResultMetafieldDefinition GetMetafieldDefinitions (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get Metafield Definitions for the specified owner entity.
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -104,10 +104,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultMetafieldDefinition</returns>
         ApiResponse<RestApiPaginationResultMetafieldDefinition> GetMetafieldDefinitionsWithHttpInfo (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -115,20 +115,20 @@ namespace Flipdish.Api
         OwnerEntityConfigurations GetOwnerEntityConfigurations (string appId);
 
         /// <summary>
-        /// Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of OwnerEntityConfigurations</returns>
         ApiResponse<OwnerEntityConfigurations> GetOwnerEntityConfigurationsWithHttpInfo (string appId);
         /// <summary>
-        /// Get OwnerEntity Definition Recommendations
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -140,10 +140,10 @@ namespace Flipdish.Api
         RestApiPaginationResultMetafieldDefinitionRecommendation GetOwnerEntityRecommendations (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get OwnerEntity Definition Recommendations
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -154,10 +154,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultMetafieldDefinitionRecommendation</returns>
         ApiResponse<RestApiPaginationResultMetafieldDefinitionRecommendation> GetOwnerEntityRecommendationsWithHttpInfo (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Update a Metafield Definition
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -168,10 +168,10 @@ namespace Flipdish.Api
         RestApiResultMetafieldDefinition UpdateMetafieldDefinition (string appId, string ownerEntity, string key, UpdateMetafieldDefinition updateMetafieldDefinition);
 
         /// <summary>
-        /// Update a Metafield Definition
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -183,10 +183,10 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a Metafield Definition
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -196,10 +196,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultMetafieldDefinition> CreateMetafieldDefinitionAsync (string appId, string ownerEntity, CreateMetafieldDefinition createMetafieldDefinition);
 
         /// <summary>
-        /// Create a Metafield Definition
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -208,10 +208,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultMetafieldDefinition)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMetafieldDefinition>> CreateMetafieldDefinitionAsyncWithHttpInfo (string appId, string ownerEntity, CreateMetafieldDefinition createMetafieldDefinition);
         /// <summary>
-        /// Get a Metafield Definition for the specified owner entity and key.
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -221,10 +221,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultMetafieldDefinition> GetMetafieldDefinitionByKeyAsync (string appId, string ownerEntity, string key);
 
         /// <summary>
-        /// Get a Metafield Definition for the specified owner entity and key.
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -233,10 +233,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultMetafieldDefinition)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMetafieldDefinition>> GetMetafieldDefinitionByKeyAsyncWithHttpInfo (string appId, string ownerEntity, string key);
         /// <summary>
-        /// Get Metafield Definitions for the specified owner entity.
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -248,10 +248,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiPaginationResultMetafieldDefinition> GetMetafieldDefinitionsAsync (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get Metafield Definitions for the specified owner entity.
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -262,10 +262,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiPaginationResultMetafieldDefinition)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultMetafieldDefinition>> GetMetafieldDefinitionsAsyncWithHttpInfo (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -273,20 +273,20 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<OwnerEntityConfigurations> GetOwnerEntityConfigurationsAsync (string appId);
 
         /// <summary>
-        /// Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (OwnerEntityConfigurations)</returns>
         System.Threading.Tasks.Task<ApiResponse<OwnerEntityConfigurations>> GetOwnerEntityConfigurationsAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Get OwnerEntity Definition Recommendations
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -298,10 +298,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiPaginationResultMetafieldDefinitionRecommendation> GetOwnerEntityRecommendationsAsync (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get OwnerEntity Definition Recommendations
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -312,10 +312,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiPaginationResultMetafieldDefinitionRecommendation)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultMetafieldDefinitionRecommendation>> GetOwnerEntityRecommendationsAsyncWithHttpInfo (string appId, string ownerEntity, string searchTerm = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Update a Metafield Definition
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -326,10 +326,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultMetafieldDefinition> UpdateMetafieldDefinitionAsync (string appId, string ownerEntity, string key, UpdateMetafieldDefinition updateMetafieldDefinition);
 
         /// <summary>
-        /// Update a Metafield Definition
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -439,7 +439,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -453,7 +453,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -538,7 +538,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -553,7 +553,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -638,7 +638,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a Metafield Definition for the specified owner entity and key. [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -652,7 +652,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a Metafield Definition for the specified owner entity and key. [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -725,7 +725,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a Metafield Definition for the specified owner entity and key. [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -740,7 +740,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a Metafield Definition for the specified owner entity and key. [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -813,7 +813,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Metafield Definitions for the specified owner entity. [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -829,7 +829,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Metafield Definitions for the specified owner entity. [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -903,7 +903,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Metafield Definitions for the specified owner entity. [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -920,7 +920,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Metafield Definitions for the specified owner entity. [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -994,7 +994,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get OwnerEntity Configurations which contain information to manage Metafield Definitions [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1006,7 +1006,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get OwnerEntity Configurations which contain information to manage Metafield Definitions [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1069,7 +1069,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get OwnerEntity Configurations which contain information to manage Metafield Definitions [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1082,7 +1082,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get OwnerEntity Configurations which contain information to manage Metafield Definitions [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1145,7 +1145,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get OwnerEntity Definition Recommendations [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1161,7 +1161,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get OwnerEntity Definition Recommendations [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1235,7 +1235,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get OwnerEntity Definition Recommendations [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1252,7 +1252,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get OwnerEntity Definition Recommendations [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1326,7 +1326,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1341,7 +1341,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1431,7 +1431,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1447,7 +1447,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a Metafield Definition [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

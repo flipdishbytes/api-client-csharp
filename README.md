@@ -371,12 +371,12 @@ Class | Method | HTTP request | Description
 *MenusApi* | [**UpdateMenu**](docs/MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
 *MenusApi* | [**UploadMenuImage**](docs/MenusApi.md#uploadmenuimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
 *MenusApi* | [**UploadNewMenuForApp**](docs/MenusApi.md#uploadnewmenuforapp) | **POST** /api/v1.0/{appId}/menus/xlsx | Create a new menu from xlsx file.
-*MetafieldDefinitionsApi* | [**CreateMetafieldDefinition**](docs/MetafieldDefinitionsApi.md#createmetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Create a Metafield Definition
-*MetafieldDefinitionsApi* | [**GetMetafieldDefinitionByKey**](docs/MetafieldDefinitionsApi.md#getmetafielddefinitionbykey) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Get a Metafield Definition for the specified owner entity and key.
-*MetafieldDefinitionsApi* | [**GetMetafieldDefinitions**](docs/MetafieldDefinitionsApi.md#getmetafielddefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Get Metafield Definitions for the specified owner entity.
-*MetafieldDefinitionsApi* | [**GetOwnerEntityConfigurations**](docs/MetafieldDefinitionsApi.md#getownerentityconfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | Get OwnerEntity Configurations which contain information to manage Metafield Definitions
-*MetafieldDefinitionsApi* | [**GetOwnerEntityRecommendations**](docs/MetafieldDefinitionsApi.md#getownerentityrecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | Get OwnerEntity Definition Recommendations
-*MetafieldDefinitionsApi* | [**UpdateMetafieldDefinition**](docs/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Update a Metafield Definition
+*MetafieldDefinitionsApi* | [**CreateMetafieldDefinition**](docs/MetafieldDefinitionsApi.md#createmetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | 
+*MetafieldDefinitionsApi* | [**GetMetafieldDefinitionByKey**](docs/MetafieldDefinitionsApi.md#getmetafielddefinitionbykey) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | 
+*MetafieldDefinitionsApi* | [**GetMetafieldDefinitions**](docs/MetafieldDefinitionsApi.md#getmetafielddefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | 
+*MetafieldDefinitionsApi* | [**GetOwnerEntityConfigurations**](docs/MetafieldDefinitionsApi.md#getownerentityconfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | 
+*MetafieldDefinitionsApi* | [**GetOwnerEntityRecommendations**](docs/MetafieldDefinitionsApi.md#getownerentityrecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | 
+*MetafieldDefinitionsApi* | [**UpdateMetafieldDefinition**](docs/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | 
 *MobileAppsApi* | [**GetAppConfigSalesChannel**](docs/MobileAppsApi.md#getappconfigsaleschannel) | **GET** /api/v1.0/mobileapps/{appId}/saleschannel/details | Get sales channel configuration
 *MobileAppsApi* | [**GetStatistics**](docs/MobileAppsApi.md#getstatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
 *MobileAppsApi* | [**GetSubmissionDetails**](docs/MobileAppsApi.md#getsubmissiondetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | Get submission details mobile apps
