@@ -111,7 +111,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultHomeStatistics</returns>
         ApiResponse<RestApiResultHomeStatistics> GetHomeStatisticsWithHttpInfo (string appId);
         /// <summary>
-        /// [PRIVATE API] Get Okta Portal feature flag value
+        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
         /// </summary>
         /// <remarks>
         /// 
@@ -121,7 +121,7 @@ namespace Flipdish.Api
         RestApiResultOktaPortalFeatureFlag GetOktaPortalFeatureFlag ();
 
         /// <summary>
-        /// [PRIVATE API] Get Okta Portal feature flag value
+        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
         /// </summary>
         /// <remarks>
         /// 
@@ -218,7 +218,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultHomeStatistics)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultHomeStatistics>> GetHomeStatisticsAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// [PRIVATE API] Get Okta Portal feature flag value
+        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
         /// </summary>
         /// <remarks>
         /// 
@@ -228,7 +228,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultOktaPortalFeatureFlag> GetOktaPortalFeatureFlagAsync ();
 
         /// <summary>
-        /// [PRIVATE API] Get Okta Portal feature flag value
+        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
         /// </summary>
         /// <remarks>
         /// 
@@ -953,7 +953,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Okta Portal feature flag value 
+        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RestApiResultOktaPortalFeatureFlag</returns>
@@ -964,7 +964,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Okta Portal feature flag value 
+        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RestApiResultOktaPortalFeatureFlag</returns>
@@ -1022,7 +1022,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Okta Portal feature flag value 
+        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RestApiResultOktaPortalFeatureFlag</returns>
@@ -1034,7 +1034,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Okta Portal feature flag value 
+        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RestApiResultOktaPortalFeatureFlag)</returns>

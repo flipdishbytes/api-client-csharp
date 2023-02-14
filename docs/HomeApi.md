@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**DismissOldPortalAction**](HomeApi.md#dismissoldportalaction) | **POST** /api/v1.0/home/dismissoldportalaction | [PRIVATE API] Complete Home Action
 [**GetHomeActions**](HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | [PRIVATE API] Get Home Actions
 [**GetHomeStatistics**](HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
-[**GetOktaPortalFeatureFlag**](HomeApi.md#getoktaportalfeatureflag) | **GET** /api/v1.0/home/okta-portal | [PRIVATE API] Get Okta Portal feature flag value
+[**GetOktaPortalFeatureFlag**](HomeApi.md#getoktaportalfeatureflag) | **GET** /api/v1.0/home/okta-portal | [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
 
 
 <a name="completehomeaction"></a>
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 # **GetOktaPortalFeatureFlag**
 > RestApiResultOktaPortalFeatureFlag GetOktaPortalFeatureFlag ()
 
-[PRIVATE API] Get Okta Portal feature flag value
+[PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
 
 ### Example
 ```csharp
@@ -286,7 +286,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API] Get Okta Portal feature flag value
+                // [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
                 RestApiResultOktaPortalFeatureFlag result = apiInstance.GetOktaPortalFeatureFlag();
                 Debug.WriteLine(result);
             }
