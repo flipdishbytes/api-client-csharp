@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="getcustomerevents"></a>
 # **GetCustomerEvents**
-> RestApiEventSearchPaginationResult GetCustomerEvents (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
+> RestApiEventSearchPaginationResult GetCustomerEvents (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, int? menuId = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get customer events  For technical reasons, the number of records returned is limited to 100.
 
@@ -48,6 +48,8 @@ namespace Example
             var storeId = 56;  // int? | Events that have Store Id (optional) 
             var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
             var userId = 56;  // int? | Events that have User Id (optional) 
+            var menuId = 56;  // int? | Events that have Menu Id (optional) 
+            var campaignId = 56;  // int? | Events that have Campaign Id (optional) 
             var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
             var userName = userName_example;  // string | Events that have User Name (optional) 
             var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
@@ -57,7 +59,7 @@ namespace Example
             try
             {
                 // Get customer events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetCustomerEvents(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+                RestApiEventSearchPaginationResult result = apiInstance.GetCustomerEvents(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -82,6 +84,8 @@ Name | Type | Description  | Notes
  **storeId** | **int?**| Events that have Store Id | [optional] 
  **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
  **userId** | **int?**| Events that have User Id | [optional] 
+ **menuId** | **int?**| Events that have Menu Id | [optional] 
+ **campaignId** | **int?**| Events that have Campaign Id | [optional] 
  **userEmail** | **string**| Events that have User Email | [optional] 
  **userName** | **string**| Events that have User Name | [optional] 
  **voucherCode** | **string**| Events that have voucher code | [optional] 
@@ -105,7 +109,7 @@ Name | Type | Description  | Notes
 
 <a name="getevents"></a>
 # **GetEvents**
-> RestApiEventSearchPaginationResult GetEvents (int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
+> RestApiEventSearchPaginationResult GetEvents (int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, int? menuId = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get events  For technical reasons, the number of records returned is limited to 100.
 
@@ -137,6 +141,8 @@ namespace Example
             var storeId = 56;  // int? | Events that have Store Id (optional) 
             var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
             var userId = 56;  // int? | Events that have User Id (optional) 
+            var menuId = 56;  // int? | Events that have Menu Id (optional) 
+            var campaignId = 56;  // int? | Events that have Campaign Id (optional) 
             var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
             var userName = userName_example;  // string | Events that have User Name (optional) 
             var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
@@ -146,7 +152,7 @@ namespace Example
             try
             {
                 // Get events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetEvents(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+                RestApiEventSearchPaginationResult result = apiInstance.GetEvents(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -172,6 +178,8 @@ Name | Type | Description  | Notes
  **storeId** | **int?**| Events that have Store Id | [optional] 
  **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
  **userId** | **int?**| Events that have User Id | [optional] 
+ **menuId** | **int?**| Events that have Menu Id | [optional] 
+ **campaignId** | **int?**| Events that have Campaign Id | [optional] 
  **userEmail** | **string**| Events that have User Email | [optional] 
  **userName** | **string**| Events that have User Name | [optional] 
  **voucherCode** | **string**| Events that have voucher code | [optional] 
@@ -257,7 +265,7 @@ Name | Type | Description  | Notes
 
 <a name="getmenuevents"></a>
 # **GetMenuEvents**
-> RestApiEventSearchPaginationResult GetMenuEvents (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
+> RestApiEventSearchPaginationResult GetMenuEvents (int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, int? menuId2 = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get menu events  For technical reasons, the number of records returned is limited to 100.
 
@@ -288,6 +296,8 @@ namespace Example
             var storeId = 56;  // int? | Events that have Store Id (optional) 
             var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
             var userId = 56;  // int? | Events that have User Id (optional) 
+            var menuId2 = 56;  // int? | Events that have Menu Id (optional) 
+            var campaignId = 56;  // int? | Events that have Campaign Id (optional) 
             var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
             var userName = userName_example;  // string | Events that have User Name (optional) 
             var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
@@ -297,7 +307,7 @@ namespace Example
             try
             {
                 // Get menu events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetMenuEvents(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+                RestApiEventSearchPaginationResult result = apiInstance.GetMenuEvents(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId2, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -322,6 +332,8 @@ Name | Type | Description  | Notes
  **storeId** | **int?**| Events that have Store Id | [optional] 
  **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
  **userId** | **int?**| Events that have User Id | [optional] 
+ **menuId2** | **int?**| Events that have Menu Id | [optional] 
+ **campaignId** | **int?**| Events that have Campaign Id | [optional] 
  **userEmail** | **string**| Events that have User Email | [optional] 
  **userName** | **string**| Events that have User Name | [optional] 
  **voucherCode** | **string**| Events that have voucher code | [optional] 
@@ -345,7 +357,7 @@ Name | Type | Description  | Notes
 
 <a name="getorderevents"></a>
 # **GetOrderEvents**
-> RestApiEventSearchPaginationResult GetOrderEvents (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
+> RestApiEventSearchPaginationResult GetOrderEvents (int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId2 = null, int? storeId = null, int? storeGroupId = null, int? userId = null, int? menuId = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get order events  For technical reasons, the number of records returned is limited to 100.
 
@@ -376,6 +388,8 @@ namespace Example
             var storeId = 56;  // int? | Events that have Store Id (optional) 
             var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
             var userId = 56;  // int? | Events that have User Id (optional) 
+            var menuId = 56;  // int? | Events that have Menu Id (optional) 
+            var campaignId = 56;  // int? | Events that have Campaign Id (optional) 
             var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
             var userName = userName_example;  // string | Events that have User Name (optional) 
             var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
@@ -385,7 +399,7 @@ namespace Example
             try
             {
                 // Get order events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetOrderEvents(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+                RestApiEventSearchPaginationResult result = apiInstance.GetOrderEvents(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -410,6 +424,8 @@ Name | Type | Description  | Notes
  **storeId** | **int?**| Events that have Store Id | [optional] 
  **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
  **userId** | **int?**| Events that have User Id | [optional] 
+ **menuId** | **int?**| Events that have Menu Id | [optional] 
+ **campaignId** | **int?**| Events that have Campaign Id | [optional] 
  **userEmail** | **string**| Events that have User Email | [optional] 
  **userName** | **string**| Events that have User Name | [optional] 
  **voucherCode** | **string**| Events that have voucher code | [optional] 
@@ -433,7 +449,7 @@ Name | Type | Description  | Notes
 
 <a name="getordereventsbycustomer"></a>
 # **GetOrderEventsByCustomer**
-> RestApiEventSearchPaginationResult GetOrderEventsByCustomer (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
+> RestApiEventSearchPaginationResult GetOrderEventsByCustomer (int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, int? menuId = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get order events by customer  For technical reasons, the number of records returned is limited to 100.
 
@@ -464,6 +480,8 @@ namespace Example
             var storeId = 56;  // int? | Events that have Store Id (optional) 
             var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
             var userId = 56;  // int? | Events that have User Id (optional) 
+            var menuId = 56;  // int? | Events that have Menu Id (optional) 
+            var campaignId = 56;  // int? | Events that have Campaign Id (optional) 
             var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
             var userName = userName_example;  // string | Events that have User Name (optional) 
             var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
@@ -473,7 +491,7 @@ namespace Example
             try
             {
                 // Get order events by customer  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetOrderEventsByCustomer(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+                RestApiEventSearchPaginationResult result = apiInstance.GetOrderEventsByCustomer(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -498,6 +516,8 @@ Name | Type | Description  | Notes
  **storeId** | **int?**| Events that have Store Id | [optional] 
  **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
  **userId** | **int?**| Events that have User Id | [optional] 
+ **menuId** | **int?**| Events that have Menu Id | [optional] 
+ **campaignId** | **int?**| Events that have Campaign Id | [optional] 
  **userEmail** | **string**| Events that have User Email | [optional] 
  **userName** | **string**| Events that have User Name | [optional] 
  **voucherCode** | **string**| Events that have voucher code | [optional] 
@@ -521,7 +541,7 @@ Name | Type | Description  | Notes
 
 <a name="getstoreevents"></a>
 # **GetStoreEvents**
-> RestApiEventSearchPaginationResult GetStoreEvents (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
+> RestApiEventSearchPaginationResult GetStoreEvents (int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, int? storeGroupId = null, int? userId = null, int? menuId = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get store events  For technical reasons, the number of records returned is limited to 100.
 
@@ -552,6 +572,8 @@ namespace Example
             var storeId2 = 56;  // int? | Events that have Store Id (optional) 
             var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
             var userId = 56;  // int? | Events that have User Id (optional) 
+            var menuId = 56;  // int? | Events that have Menu Id (optional) 
+            var campaignId = 56;  // int? | Events that have Campaign Id (optional) 
             var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
             var userName = userName_example;  // string | Events that have User Name (optional) 
             var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
@@ -561,7 +583,7 @@ namespace Example
             try
             {
                 // Get store events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetStoreEvents(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+                RestApiEventSearchPaginationResult result = apiInstance.GetStoreEvents(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -586,6 +608,8 @@ Name | Type | Description  | Notes
  **storeId2** | **int?**| Events that have Store Id | [optional] 
  **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
  **userId** | **int?**| Events that have User Id | [optional] 
+ **menuId** | **int?**| Events that have Menu Id | [optional] 
+ **campaignId** | **int?**| Events that have Campaign Id | [optional] 
  **userEmail** | **string**| Events that have User Email | [optional] 
  **userName** | **string**| Events that have User Name | [optional] 
  **voucherCode** | **string**| Events that have voucher code | [optional] 
@@ -609,7 +633,7 @@ Name | Type | Description  | Notes
 
 <a name="getuserevents"></a>
 # **GetUserEvents**
-> RestApiEventSearchPaginationResult GetUserEvents (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
+> RestApiEventSearchPaginationResult GetUserEvents (int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId2 = null, int? menuId = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get user events  For technical reasons, the number of records returned is limited to 100.
 
@@ -640,6 +664,8 @@ namespace Example
             var storeId = 56;  // int? | Events that have Store Id (optional) 
             var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
             var userId2 = 56;  // int? | Events that have User Id (optional) 
+            var menuId = 56;  // int? | Events that have Menu Id (optional) 
+            var campaignId = 56;  // int? | Events that have Campaign Id (optional) 
             var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
             var userName = userName_example;  // string | Events that have User Name (optional) 
             var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
@@ -649,7 +675,7 @@ namespace Example
             try
             {
                 // Get user events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetUserEvents(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, userEmail, userName, voucherCode, eventType, flipdishEventId);
+                RestApiEventSearchPaginationResult result = apiInstance.GetUserEvents(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -674,6 +700,8 @@ Name | Type | Description  | Notes
  **storeId** | **int?**| Events that have Store Id | [optional] 
  **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
  **userId2** | **int?**| Events that have User Id | [optional] 
+ **menuId** | **int?**| Events that have Menu Id | [optional] 
+ **campaignId** | **int?**| Events that have Campaign Id | [optional] 
  **userEmail** | **string**| Events that have User Email | [optional] 
  **userName** | **string**| Events that have User Name | [optional] 
  **voucherCode** | **string**| Events that have voucher code | [optional] 
@@ -697,7 +725,7 @@ Name | Type | Description  | Notes
 
 <a name="getwhitelabelevents"></a>
 # **GetWhiteLabelEvents**
-> RestApiEventSearchPaginationResult GetWhiteLabelEvents (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
+> RestApiEventSearchPaginationResult GetWhiteLabelEvents (int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, int? storeGroupId = null, int? userId = null, int? menuId = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
 Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 
@@ -728,6 +756,8 @@ namespace Example
             var storeId = 56;  // int? | Events that have Store Id (optional) 
             var storeGroupId = 56;  // int? | Events that have Store Group Id (optional) 
             var userId = 56;  // int? | Events that have User Id (optional) 
+            var menuId = 56;  // int? | Events that have Menu Id (optional) 
+            var campaignId = 56;  // int? | Events that have Campaign Id (optional) 
             var userEmail = userEmail_example;  // string | Events that have User Email (optional) 
             var userName = userName_example;  // string | Events that have User Name (optional) 
             var voucherCode = voucherCode_example;  // string | Events that have voucher code (optional) 
@@ -737,7 +767,7 @@ namespace Example
             try
             {
                 // Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
-                RestApiEventSearchPaginationResult result = apiInstance.GetWhiteLabelEvents(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+                RestApiEventSearchPaginationResult result = apiInstance.GetWhiteLabelEvents(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -762,6 +792,8 @@ Name | Type | Description  | Notes
  **storeId** | **int?**| Events that have Store Id | [optional] 
  **storeGroupId** | **int?**| Events that have Store Group Id | [optional] 
  **userId** | **int?**| Events that have User Id | [optional] 
+ **menuId** | **int?**| Events that have Menu Id | [optional] 
+ **campaignId** | **int?**| Events that have Campaign Id | [optional] 
  **userEmail** | **string**| Events that have User Email | [optional] 
  **userName** | **string**| Events that have User Name | [optional] 
  **voucherCode** | **string**| Events that have voucher code | [optional] 

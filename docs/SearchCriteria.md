@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **StoreId** | **int?** | Events that have Store Id | [optional] 
 **StoreGroupId** | **int?** | Events that have Store Group Id | [optional] 
 **UserId** | **int?** | Events that have User Id | [optional] 
+**MenuId** | **int?** | Events that have Menu Id | [optional] 
+**CampaignId** | **int?** | Events that have Campaign Id | [optional] 
 **UserEmail** | **string** | Events that have User Email | [optional] 
 **UserName** | **string** | Events that have User Name | [optional] 
 **VoucherCode** | **string** | Events that have voucher code | [optional] 

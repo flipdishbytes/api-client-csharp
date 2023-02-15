@@ -39,12 +39,14 @@ namespace Flipdish.Model
         /// <param name="storeId">Events that have Store Id.</param>
         /// <param name="storeGroupId">Events that have Store Group Id.</param>
         /// <param name="userId">Events that have User Id.</param>
+        /// <param name="menuId">Events that have Menu Id.</param>
+        /// <param name="campaignId">Events that have Campaign Id.</param>
         /// <param name="userEmail">Events that have User Email.</param>
         /// <param name="userName">Events that have User Name.</param>
         /// <param name="voucherCode">Events that have voucher code.</param>
         /// <param name="eventType">Events that have event type\\s.</param>
         /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored..</param>
-        public SearchCriteria(int? limit = default(int?), int? page = default(int?), DateTime? start = default(DateTime?), DateTime? end = default(DateTime?), int? orderId = default(int?), int? storeId = default(int?), int? storeGroupId = default(int?), int? userId = default(int?), string userEmail = default(string), string userName = default(string), string voucherCode = default(string), List<string> eventType = default(List<string>), string flipdishEventId = default(string))
+        public SearchCriteria(int? limit = default(int?), int? page = default(int?), DateTime? start = default(DateTime?), DateTime? end = default(DateTime?), int? orderId = default(int?), int? storeId = default(int?), int? storeGroupId = default(int?), int? userId = default(int?), int? menuId = default(int?), int? campaignId = default(int?), string userEmail = default(string), string userName = default(string), string voucherCode = default(string), List<string> eventType = default(List<string>), string flipdishEventId = default(string))
         {
             this.Limit = limit;
             this.Page = page;
@@ -54,6 +56,8 @@ namespace Flipdish.Model
             this.StoreId = storeId;
             this.StoreGroupId = storeGroupId;
             this.UserId = userId;
+            this.MenuId = menuId;
+            this.CampaignId = campaignId;
             this.UserEmail = userEmail;
             this.UserName = userName;
             this.VoucherCode = voucherCode;
@@ -118,6 +122,20 @@ namespace Flipdish.Model
         public int? UserId { get; set; }
 
         /// <summary>
+        /// Events that have Menu Id
+        /// </summary>
+        /// <value>Events that have Menu Id</value>
+        [DataMember(Name="MenuId", EmitDefaultValue=false)]
+        public int? MenuId { get; set; }
+
+        /// <summary>
+        /// Events that have Campaign Id
+        /// </summary>
+        /// <value>Events that have Campaign Id</value>
+        [DataMember(Name="CampaignId", EmitDefaultValue=false)]
+        public int? CampaignId { get; set; }
+
+        /// <summary>
         /// Events that have User Email
         /// </summary>
         /// <value>Events that have User Email</value>
@@ -168,6 +186,8 @@ namespace Flipdish.Model
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
+            sb.Append("  MenuId: ").Append(MenuId).Append("\n");
+            sb.Append("  CampaignId: ").Append(CampaignId).Append("\n");
             sb.Append("  UserEmail: ").Append(UserEmail).Append("\n");
             sb.Append("  UserName: ").Append(UserName).Append("\n");
             sb.Append("  VoucherCode: ").Append(VoucherCode).Append("\n");
@@ -248,6 +268,16 @@ namespace Flipdish.Model
                     this.UserId.Equals(input.UserId))
                 ) && 
                 (
+                    this.MenuId == input.MenuId ||
+                    (this.MenuId != null &&
+                    this.MenuId.Equals(input.MenuId))
+                ) && 
+                (
+                    this.CampaignId == input.CampaignId ||
+                    (this.CampaignId != null &&
+                    this.CampaignId.Equals(input.CampaignId))
+                ) && 
+                (
                     this.UserEmail == input.UserEmail ||
                     (this.UserEmail != null &&
                     this.UserEmail.Equals(input.UserEmail))
@@ -299,6 +329,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreGroupId.GetHashCode();
                 if (this.UserId != null)
                     hashCode = hashCode * 59 + this.UserId.GetHashCode();
+                if (this.MenuId != null)
+                    hashCode = hashCode * 59 + this.MenuId.GetHashCode();
+                if (this.CampaignId != null)
+                    hashCode = hashCode * 59 + this.CampaignId.GetHashCode();
                 if (this.UserEmail != null)
                     hashCode = hashCode * 59 + this.UserEmail.GetHashCode();
                 if (this.UserName != null)
