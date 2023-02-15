@@ -792,8 +792,9 @@ namespace Flipdish.Model
         /// <param name="currency">Currency (required).</param>
         /// <param name="nextInvoiceAmount">Next invoice amount.</param>
         /// <param name="nextInvoiceBillingDate">Next invoice billing date.</param>
-        /// <param name="user">User.</param>
-        public SubscriptionSummary(string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), long? nextInvoiceAmount = default(long?), DateTime? nextInvoiceBillingDate = default(DateTime?), string user = default(string))
+        /// <param name="user">User (required).</param>
+        /// <param name="defaultPaymentDescription">Default payment description (required).</param>
+        public SubscriptionSummary(string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), long? nextInvoiceAmount = default(long?), DateTime? nextInvoiceBillingDate = default(DateTime?), string user = default(string), string defaultPaymentDescription = default(string))
         {
             // to ensure "subscriptionId" is required (not null)
             if (subscriptionId == null)
@@ -831,9 +832,26 @@ namespace Flipdish.Model
             {
                 this.Currency = currency;
             }
+            // to ensure "user" is required (not null)
+            if (user == null)
+            {
+                throw new InvalidDataException("user is a required property for SubscriptionSummary and cannot be null");
+            }
+            else
+            {
+                this.User = user;
+            }
+            // to ensure "defaultPaymentDescription" is required (not null)
+            if (defaultPaymentDescription == null)
+            {
+                throw new InvalidDataException("defaultPaymentDescription is a required property for SubscriptionSummary and cannot be null");
+            }
+            else
+            {
+                this.DefaultPaymentDescription = defaultPaymentDescription;
+            }
             this.NextInvoiceAmount = nextInvoiceAmount;
             this.NextInvoiceBillingDate = nextInvoiceBillingDate;
-            this.User = user;
         }
         
         /// <summary>
@@ -873,6 +891,13 @@ namespace Flipdish.Model
         public string User { get; set; }
 
         /// <summary>
+        /// Default payment description
+        /// </summary>
+        /// <value>Default payment description</value>
+        [DataMember(Name="DefaultPaymentDescription", EmitDefaultValue=false)]
+        public string DefaultPaymentDescription { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -887,6 +912,7 @@ namespace Flipdish.Model
             sb.Append("  NextInvoiceAmount: ").Append(NextInvoiceAmount).Append("\n");
             sb.Append("  NextInvoiceBillingDate: ").Append(NextInvoiceBillingDate).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  DefaultPaymentDescription: ").Append(DefaultPaymentDescription).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -955,6 +981,11 @@ namespace Flipdish.Model
                     this.User == input.User ||
                     (this.User != null &&
                     this.User.Equals(input.User))
+                ) && 
+                (
+                    this.DefaultPaymentDescription == input.DefaultPaymentDescription ||
+                    (this.DefaultPaymentDescription != null &&
+                    this.DefaultPaymentDescription.Equals(input.DefaultPaymentDescription))
                 );
         }
 
@@ -981,6 +1012,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.NextInvoiceBillingDate.GetHashCode();
                 if (this.User != null)
                     hashCode = hashCode * 59 + this.User.GetHashCode();
+                if (this.DefaultPaymentDescription != null)
+                    hashCode = hashCode * 59 + this.DefaultPaymentDescription.GetHashCode();
                 return hashCode;
             }
         }
