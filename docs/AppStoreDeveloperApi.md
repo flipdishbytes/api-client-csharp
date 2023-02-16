@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**AppVerificationUpdate**](AppStoreDeveloperApi.md#appverificationupdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | Update App store app verification
 [**CreateAppStoreApp**](AppStoreDeveloperApi.md#createappstoreapp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | Create App store app
 [**DeleteAppStoreApp**](AppStoreDeveloperApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Delete App store app
+[**GetExternalFunctionSigningKey**](AppStoreDeveloperApi.md#getexternalfunctionsigningkey) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_function_signing_key | Get external function action signing key for app
 [**UpdateAppStoreApp**](AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Update App store app
 [**UploadAppStoreAppLogo**](AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | Upload the App store app logo \\ icon
 
@@ -198,6 +199,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiStringResult**](RestApiStringResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getexternalfunctionsigningkey"></a>
+# **GetExternalFunctionSigningKey**
+> void GetExternalFunctionSigningKey (string oauthAppId, string appStoreAppId)
+
+Get external function action signing key for app
+
+[BETA - this endpoint is under development, do not use it in your production system]
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetExternalFunctionSigningKeyExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppStoreDeveloperApi();
+            var oauthAppId = oauthAppId_example;  // string | OAuth App identifier
+            var appStoreAppId = appStoreAppId_example;  // string | App store app id
+
+            try
+            {
+                // Get external function action signing key for app
+                apiInstance.GetExternalFunctionSigningKey(oauthAppId, appStoreAppId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppStoreDeveloperApi.GetExternalFunctionSigningKey: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **oauthAppId** | **string**| OAuth App identifier | 
+ **appStoreAppId** | **string**| App store app id | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
