@@ -32,15 +32,17 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="BankAccountDeletedEvent" /> class.
         /// </summary>
         /// <param name="bankAccount">The create bank account.</param>
+        /// <param name="user">Updated by user.</param>
         /// <param name="eventName">The event name.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public BankAccountDeletedEvent(BankAccount bankAccount = default(BankAccount), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public BankAccountDeletedEvent(BankAccount bankAccount = default(BankAccount), UserEventInfo user = default(UserEventInfo), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
             this.BankAccount = bankAccount;
+            this.User = user;
             this.EventName = eventName;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
@@ -55,6 +57,13 @@ namespace Flipdish.Model
         /// <value>The create bank account</value>
         [DataMember(Name="BankAccount", EmitDefaultValue=false)]
         public BankAccount BankAccount { get; set; }
+
+        /// <summary>
+        /// Updated by user
+        /// </summary>
+        /// <value>Updated by user</value>
+        [DataMember(Name="User", EmitDefaultValue=false)]
+        public UserEventInfo User { get; set; }
 
         /// <summary>
         /// The event name
@@ -107,6 +116,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class BankAccountDeletedEvent {\n");
             sb.Append("  BankAccount: ").Append(BankAccount).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
@@ -153,6 +163,11 @@ namespace Flipdish.Model
                     this.BankAccount.Equals(input.BankAccount))
                 ) && 
                 (
+                    this.User == input.User ||
+                    (this.User != null &&
+                    this.User.Equals(input.User))
+                ) && 
+                (
                     this.EventName == input.EventName ||
                     (this.EventName != null &&
                     this.EventName.Equals(input.EventName))
@@ -195,6 +210,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.BankAccount != null)
                     hashCode = hashCode * 59 + this.BankAccount.GetHashCode();
+                if (this.User != null)
+                    hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.FlipdishEventId != null)

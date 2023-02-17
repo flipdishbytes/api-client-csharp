@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **BankAccount** | [**BankAccount**](BankAccount.md) | The create bank account | [optional] 
+**User** | [**UserEventInfo**](UserEventInfo.md) | Updated by user | [optional] 
 **EventName** | **string** | The event name | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 
