@@ -33,18 +33,22 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="onlineSalesFees">Fees on online sales.</param>
         /// <param name="cashSalesFees">Fees on cash sales.</param>
+        /// <param name="posSalesFees">Fees of POS sales.</param>
         /// <param name="totalSalesFees">Total online and cash sales.</param>
         /// <param name="onlineSalesRefundedFees">Fees on refunds for online sales.</param>
         /// <param name="cashSalesRefundedFees">Fees on refunds for cash sales.</param>
+        /// <param name="posSalesRefundedFees">Fees on refunds for POS sales.</param>
         /// <param name="salesFeesVat">VAT on sales fees.</param>
         /// <param name="totalFees">Total fees.</param>
-        public FlipdishFeesDetails(double? onlineSalesFees = default(double?), double? cashSalesFees = default(double?), double? totalSalesFees = default(double?), double? onlineSalesRefundedFees = default(double?), double? cashSalesRefundedFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?))
+        public FlipdishFeesDetails(double? onlineSalesFees = default(double?), double? cashSalesFees = default(double?), double? posSalesFees = default(double?), double? totalSalesFees = default(double?), double? onlineSalesRefundedFees = default(double?), double? cashSalesRefundedFees = default(double?), double? posSalesRefundedFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?))
         {
             this.OnlineSalesFees = onlineSalesFees;
             this.CashSalesFees = cashSalesFees;
+            this.PosSalesFees = posSalesFees;
             this.TotalSalesFees = totalSalesFees;
             this.OnlineSalesRefundedFees = onlineSalesRefundedFees;
             this.CashSalesRefundedFees = cashSalesRefundedFees;
+            this.PosSalesRefundedFees = posSalesRefundedFees;
             this.SalesFeesVat = salesFeesVat;
             this.TotalFees = totalFees;
         }
@@ -62,6 +66,13 @@ namespace Flipdish.Model
         /// <value>Fees on cash sales</value>
         [DataMember(Name="CashSalesFees", EmitDefaultValue=false)]
         public double? CashSalesFees { get; set; }
+
+        /// <summary>
+        /// Fees of POS sales
+        /// </summary>
+        /// <value>Fees of POS sales</value>
+        [DataMember(Name="PosSalesFees", EmitDefaultValue=false)]
+        public double? PosSalesFees { get; set; }
 
         /// <summary>
         /// Total online and cash sales
@@ -83,6 +94,13 @@ namespace Flipdish.Model
         /// <value>Fees on refunds for cash sales</value>
         [DataMember(Name="CashSalesRefundedFees", EmitDefaultValue=false)]
         public double? CashSalesRefundedFees { get; set; }
+
+        /// <summary>
+        /// Fees on refunds for POS sales
+        /// </summary>
+        /// <value>Fees on refunds for POS sales</value>
+        [DataMember(Name="PosSalesRefundedFees", EmitDefaultValue=false)]
+        public double? PosSalesRefundedFees { get; set; }
 
         /// <summary>
         /// VAT on sales fees
@@ -108,9 +126,11 @@ namespace Flipdish.Model
             sb.Append("class FlipdishFeesDetails {\n");
             sb.Append("  OnlineSalesFees: ").Append(OnlineSalesFees).Append("\n");
             sb.Append("  CashSalesFees: ").Append(CashSalesFees).Append("\n");
+            sb.Append("  PosSalesFees: ").Append(PosSalesFees).Append("\n");
             sb.Append("  TotalSalesFees: ").Append(TotalSalesFees).Append("\n");
             sb.Append("  OnlineSalesRefundedFees: ").Append(OnlineSalesRefundedFees).Append("\n");
             sb.Append("  CashSalesRefundedFees: ").Append(CashSalesRefundedFees).Append("\n");
+            sb.Append("  PosSalesRefundedFees: ").Append(PosSalesRefundedFees).Append("\n");
             sb.Append("  SalesFeesVat: ").Append(SalesFeesVat).Append("\n");
             sb.Append("  TotalFees: ").Append(TotalFees).Append("\n");
             sb.Append("}\n");
@@ -158,6 +178,11 @@ namespace Flipdish.Model
                     this.CashSalesFees.Equals(input.CashSalesFees))
                 ) && 
                 (
+                    this.PosSalesFees == input.PosSalesFees ||
+                    (this.PosSalesFees != null &&
+                    this.PosSalesFees.Equals(input.PosSalesFees))
+                ) && 
+                (
                     this.TotalSalesFees == input.TotalSalesFees ||
                     (this.TotalSalesFees != null &&
                     this.TotalSalesFees.Equals(input.TotalSalesFees))
@@ -171,6 +196,11 @@ namespace Flipdish.Model
                     this.CashSalesRefundedFees == input.CashSalesRefundedFees ||
                     (this.CashSalesRefundedFees != null &&
                     this.CashSalesRefundedFees.Equals(input.CashSalesRefundedFees))
+                ) && 
+                (
+                    this.PosSalesRefundedFees == input.PosSalesRefundedFees ||
+                    (this.PosSalesRefundedFees != null &&
+                    this.PosSalesRefundedFees.Equals(input.PosSalesRefundedFees))
                 ) && 
                 (
                     this.SalesFeesVat == input.SalesFeesVat ||
@@ -197,12 +227,16 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OnlineSalesFees.GetHashCode();
                 if (this.CashSalesFees != null)
                     hashCode = hashCode * 59 + this.CashSalesFees.GetHashCode();
+                if (this.PosSalesFees != null)
+                    hashCode = hashCode * 59 + this.PosSalesFees.GetHashCode();
                 if (this.TotalSalesFees != null)
                     hashCode = hashCode * 59 + this.TotalSalesFees.GetHashCode();
                 if (this.OnlineSalesRefundedFees != null)
                     hashCode = hashCode * 59 + this.OnlineSalesRefundedFees.GetHashCode();
                 if (this.CashSalesRefundedFees != null)
                     hashCode = hashCode * 59 + this.CashSalesRefundedFees.GetHashCode();
+                if (this.PosSalesRefundedFees != null)
+                    hashCode = hashCode * 59 + this.PosSalesRefundedFees.GetHashCode();
                 if (this.SalesFeesVat != null)
                     hashCode = hashCode * 59 + this.SalesFeesVat.GetHashCode();
                 if (this.TotalFees != null)
