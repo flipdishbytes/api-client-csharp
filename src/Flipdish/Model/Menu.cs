@@ -94,10 +94,11 @@ namespace Flipdish.Model
         /// <param name="locked">Locked: is menu locked against modifcation.</param>
         /// <param name="menuSections">Menu sections (startes, main etc).</param>
         /// <param name="taxRates">Menu tax rates.</param>
+        /// <param name="appId">Identifier of App the menu is attached to.</param>
         /// <param name="displaySectionLinks">Display menu section link on UI.</param>
         /// <param name="menuSectionBehaviour">Menu section behaviour.</param>
         /// <param name="taxType">Tax type.</param>
-        public Menu(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string imageName = default(string), string imageUrl = default(string), string name = default(string), bool? locked = default(bool?), List<MenuSection> menuSections = default(List<MenuSection>), List<MenuTaxRate> taxRates = default(List<MenuTaxRate>), bool? displaySectionLinks = default(bool?), MenuSectionBehaviourEnum? menuSectionBehaviour = default(MenuSectionBehaviourEnum?), TaxTypeEnum? taxType = default(TaxTypeEnum?))
+        public Menu(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string imageName = default(string), string imageUrl = default(string), string name = default(string), bool? locked = default(bool?), List<MenuSection> menuSections = default(List<MenuSection>), List<MenuTaxRate> taxRates = default(List<MenuTaxRate>), string appId = default(string), bool? displaySectionLinks = default(bool?), MenuSectionBehaviourEnum? menuSectionBehaviour = default(MenuSectionBehaviourEnum?), TaxTypeEnum? taxType = default(TaxTypeEnum?))
         {
             this.MenuId = menuId;
             this.ModifiedTime = modifiedTime;
@@ -108,6 +109,7 @@ namespace Flipdish.Model
             this.Locked = locked;
             this.MenuSections = menuSections;
             this.TaxRates = taxRates;
+            this.AppId = appId;
             this.DisplaySectionLinks = displaySectionLinks;
             this.MenuSectionBehaviour = menuSectionBehaviour;
             this.TaxType = taxType;
@@ -177,6 +179,13 @@ namespace Flipdish.Model
         public List<MenuTaxRate> TaxRates { get; set; }
 
         /// <summary>
+        /// Identifier of App the menu is attached to
+        /// </summary>
+        /// <value>Identifier of App the menu is attached to</value>
+        [DataMember(Name="AppId", EmitDefaultValue=false)]
+        public string AppId { get; set; }
+
+        /// <summary>
         /// Display menu section link on UI
         /// </summary>
         /// <value>Display menu section link on UI</value>
@@ -202,6 +211,7 @@ namespace Flipdish.Model
             sb.Append("  Locked: ").Append(Locked).Append("\n");
             sb.Append("  MenuSections: ").Append(MenuSections).Append("\n");
             sb.Append("  TaxRates: ").Append(TaxRates).Append("\n");
+            sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  DisplaySectionLinks: ").Append(DisplaySectionLinks).Append("\n");
             sb.Append("  MenuSectionBehaviour: ").Append(MenuSectionBehaviour).Append("\n");
             sb.Append("  TaxType: ").Append(TaxType).Append("\n");
@@ -285,6 +295,11 @@ namespace Flipdish.Model
                     this.TaxRates.SequenceEqual(input.TaxRates)
                 ) && 
                 (
+                    this.AppId == input.AppId ||
+                    (this.AppId != null &&
+                    this.AppId.Equals(input.AppId))
+                ) && 
+                (
                     this.DisplaySectionLinks == input.DisplaySectionLinks ||
                     (this.DisplaySectionLinks != null &&
                     this.DisplaySectionLinks.Equals(input.DisplaySectionLinks))
@@ -328,6 +343,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MenuSections.GetHashCode();
                 if (this.TaxRates != null)
                     hashCode = hashCode * 59 + this.TaxRates.GetHashCode();
+                if (this.AppId != null)
+                    hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 if (this.DisplaySectionLinks != null)
                     hashCode = hashCode * 59 + this.DisplaySectionLinks.GetHashCode();
                 if (this.MenuSectionBehaviour != null)
