@@ -32,15 +32,17 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="RevenueAdjustmentsDetails" /> class.
         /// </summary>
         /// <param name="onlineSalesRefundedAmount">Online sales refunds.</param>
+        /// <param name="posSalesRefundedAmount">POS Online sales refunds.</param>
         /// <param name="cashSalesRefundedAmount">Cash sales refunds.</param>
         /// <param name="customerCashFees">Customer cash fees.</param>
         /// <param name="refundsCount">Number of refunds.</param>
         /// <param name="payGreenSalesAmount">PayGreen sales.</param>
         /// <param name="payGreenProcessingFees">PayGreen processing fees charged to end-user.</param>
         /// <param name="totalOnlineRevenueAdjustments">Total revenue adjustments.</param>
-        public RevenueAdjustmentsDetails(double? onlineSalesRefundedAmount = default(double?), double? cashSalesRefundedAmount = default(double?), double? customerCashFees = default(double?), int? refundsCount = default(int?), double? payGreenSalesAmount = default(double?), double? payGreenProcessingFees = default(double?), double? totalOnlineRevenueAdjustments = default(double?))
+        public RevenueAdjustmentsDetails(double? onlineSalesRefundedAmount = default(double?), double? posSalesRefundedAmount = default(double?), double? cashSalesRefundedAmount = default(double?), double? customerCashFees = default(double?), int? refundsCount = default(int?), double? payGreenSalesAmount = default(double?), double? payGreenProcessingFees = default(double?), double? totalOnlineRevenueAdjustments = default(double?))
         {
             this.OnlineSalesRefundedAmount = onlineSalesRefundedAmount;
+            this.PosSalesRefundedAmount = posSalesRefundedAmount;
             this.CashSalesRefundedAmount = cashSalesRefundedAmount;
             this.CustomerCashFees = customerCashFees;
             this.RefundsCount = refundsCount;
@@ -55,6 +57,13 @@ namespace Flipdish.Model
         /// <value>Online sales refunds</value>
         [DataMember(Name="OnlineSalesRefundedAmount", EmitDefaultValue=false)]
         public double? OnlineSalesRefundedAmount { get; set; }
+
+        /// <summary>
+        /// POS Online sales refunds
+        /// </summary>
+        /// <value>POS Online sales refunds</value>
+        [DataMember(Name="PosSalesRefundedAmount", EmitDefaultValue=false)]
+        public double? PosSalesRefundedAmount { get; set; }
 
         /// <summary>
         /// Cash sales refunds
@@ -107,6 +116,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class RevenueAdjustmentsDetails {\n");
             sb.Append("  OnlineSalesRefundedAmount: ").Append(OnlineSalesRefundedAmount).Append("\n");
+            sb.Append("  PosSalesRefundedAmount: ").Append(PosSalesRefundedAmount).Append("\n");
             sb.Append("  CashSalesRefundedAmount: ").Append(CashSalesRefundedAmount).Append("\n");
             sb.Append("  CustomerCashFees: ").Append(CustomerCashFees).Append("\n");
             sb.Append("  RefundsCount: ").Append(RefundsCount).Append("\n");
@@ -153,6 +163,11 @@ namespace Flipdish.Model
                     this.OnlineSalesRefundedAmount.Equals(input.OnlineSalesRefundedAmount))
                 ) && 
                 (
+                    this.PosSalesRefundedAmount == input.PosSalesRefundedAmount ||
+                    (this.PosSalesRefundedAmount != null &&
+                    this.PosSalesRefundedAmount.Equals(input.PosSalesRefundedAmount))
+                ) && 
+                (
                     this.CashSalesRefundedAmount == input.CashSalesRefundedAmount ||
                     (this.CashSalesRefundedAmount != null &&
                     this.CashSalesRefundedAmount.Equals(input.CashSalesRefundedAmount))
@@ -195,6 +210,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.OnlineSalesRefundedAmount != null)
                     hashCode = hashCode * 59 + this.OnlineSalesRefundedAmount.GetHashCode();
+                if (this.PosSalesRefundedAmount != null)
+                    hashCode = hashCode * 59 + this.PosSalesRefundedAmount.GetHashCode();
                 if (this.CashSalesRefundedAmount != null)
                     hashCode = hashCode * 59 + this.CashSalesRefundedAmount.GetHashCode();
                 if (this.CustomerCashFees != null)

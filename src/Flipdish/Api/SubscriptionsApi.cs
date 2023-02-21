@@ -55,9 +55,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store id to filter subscriptions (optional)</param>
         /// <returns>RestApiArrayResultSubscriptionSummary</returns>
-        RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId, List<int?> storeId);
+        RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId);
 
         /// <summary>
         /// Get list of subscriptions for an App
@@ -67,9 +66,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store id to filter subscriptions (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultSubscriptionSummary</returns>
-        ApiResponse<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppWithHttpInfo (string appId, List<int?> storeId);
+        ApiResponse<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppWithHttpInfo (string appId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -103,9 +101,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store id to filter subscriptions (optional)</param>
         /// <returns>Task of RestApiArrayResultSubscriptionSummary</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppAsync (string appId, List<int?> storeId);
+        System.Threading.Tasks.Task<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppAsync (string appId);
 
         /// <summary>
         /// Get list of subscriptions for an App
@@ -115,9 +112,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store id to filter subscriptions (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultSubscriptionSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultSubscriptionSummary>> GetSubscriptionsForAppAsyncWithHttpInfo (string appId, List<int?> storeId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultSubscriptionSummary>> GetSubscriptionsForAppAsyncWithHttpInfo (string appId);
         #endregion Asynchronous Operations
     }
 
@@ -386,11 +382,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store id to filter subscriptions (optional)</param>
         /// <returns>RestApiArrayResultSubscriptionSummary</returns>
-        public RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId, List<int?> storeId)
+        public RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId)
         {
-             ApiResponse<RestApiArrayResultSubscriptionSummary> localVarResponse = GetSubscriptionsForAppWithHttpInfo(appId, storeId);
+             ApiResponse<RestApiArrayResultSubscriptionSummary> localVarResponse = GetSubscriptionsForAppWithHttpInfo(appId);
              return localVarResponse.Data;
         }
 
@@ -399,16 +394,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store id to filter subscriptions (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultSubscriptionSummary</returns>
-        public ApiResponse< RestApiArrayResultSubscriptionSummary > GetSubscriptionsForAppWithHttpInfo (string appId, List<int?> storeId)
+        public ApiResponse< RestApiArrayResultSubscriptionSummary > GetSubscriptionsForAppWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling SubscriptionsApi->GetSubscriptionsForApp");
-            // verify the required parameter 'storeId' is set
-            if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling SubscriptionsApi->GetSubscriptionsForApp");
 
             var localVarPath = "./api/v1.0/{appId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -435,7 +426,6 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeId", storeId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -467,11 +457,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store id to filter subscriptions (optional)</param>
         /// <returns>Task of RestApiArrayResultSubscriptionSummary</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppAsync (string appId, List<int?> storeId)
+        public async System.Threading.Tasks.Task<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppAsync (string appId)
         {
-             ApiResponse<RestApiArrayResultSubscriptionSummary> localVarResponse = await GetSubscriptionsForAppAsyncWithHttpInfo(appId, storeId);
+             ApiResponse<RestApiArrayResultSubscriptionSummary> localVarResponse = await GetSubscriptionsForAppAsyncWithHttpInfo(appId);
              return localVarResponse.Data;
 
         }
@@ -481,16 +470,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store id to filter subscriptions (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultSubscriptionSummary)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultSubscriptionSummary>> GetSubscriptionsForAppAsyncWithHttpInfo (string appId, List<int?> storeId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultSubscriptionSummary>> GetSubscriptionsForAppAsyncWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling SubscriptionsApi->GetSubscriptionsForApp");
-            // verify the required parameter 'storeId' is set
-            if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling SubscriptionsApi->GetSubscriptionsForApp");
 
             var localVarPath = "./api/v1.0/{appId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -517,7 +502,6 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeId", storeId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required

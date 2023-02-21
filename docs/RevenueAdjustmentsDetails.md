@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **OnlineSalesRefundedAmount** | **double?** | Online sales refunds | [optional] 
+**PosSalesRefundedAmount** | **double?** | POS Online sales refunds | [optional] 
 **CashSalesRefundedAmount** | **double?** | Cash sales refunds | [optional] 
 **CustomerCashFees** | **double?** | Customer cash fees | [optional] 
 **RefundsCount** | **int?** | Number of refunds | [optional] 

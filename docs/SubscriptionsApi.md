@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 <a name="getsubscriptionsforapp"></a>
 # **GetSubscriptionsForApp**
-> RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId, List<int?> storeId)
+> RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId)
 
 Get list of subscriptions for an App
 
@@ -101,12 +101,11 @@ namespace Example
 
             var apiInstance = new SubscriptionsApi();
             var appId = appId_example;  // string | App Id
-            var storeId = new List<int?>(); // List<int?> | Store id to filter subscriptions (optional)
 
             try
             {
                 // Get list of subscriptions for an App
-                RestApiArrayResultSubscriptionSummary result = apiInstance.GetSubscriptionsForApp(appId, storeId);
+                RestApiArrayResultSubscriptionSummary result = apiInstance.GetSubscriptionsForApp(appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -123,7 +122,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App Id | 
- **storeId** | [**List&lt;int?&gt;**](int?.md)| Store id to filter subscriptions (optional) | 
 
 ### Return type
 
