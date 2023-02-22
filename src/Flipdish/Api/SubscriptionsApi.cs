@@ -48,6 +48,29 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultSubscription</returns>
         ApiResponse<RestApiResultSubscription> GetSubscriptionByIdWithHttpInfo (string appId, string subscriptionId);
         /// <summary>
+        /// Get list of invoices for a subscription by id
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="subscriptionId">Subscription Id</param>
+        /// <returns>RestApiResultSubscription</returns>
+        RestApiResultSubscription GetSubscriptionInvoices (string appId, string subscriptionId);
+
+        /// <summary>
+        /// Get list of invoices for a subscription by id
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="subscriptionId">Subscription Id</param>
+        /// <returns>ApiResponse of RestApiResultSubscription</returns>
+        ApiResponse<RestApiResultSubscription> GetSubscriptionInvoicesWithHttpInfo (string appId, string subscriptionId);
+        /// <summary>
         /// Get list of subscriptions for an App
         /// </summary>
         /// <remarks>
@@ -93,6 +116,29 @@ namespace Flipdish.Api
         /// <param name="subscriptionId">Subscription Id</param>
         /// <returns>Task of ApiResponse (RestApiResultSubscription)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultSubscription>> GetSubscriptionByIdAsyncWithHttpInfo (string appId, string subscriptionId);
+        /// <summary>
+        /// Get list of invoices for a subscription by id
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="subscriptionId">Subscription Id</param>
+        /// <returns>Task of RestApiResultSubscription</returns>
+        System.Threading.Tasks.Task<RestApiResultSubscription> GetSubscriptionInvoicesAsync (string appId, string subscriptionId);
+
+        /// <summary>
+        /// Get list of invoices for a subscription by id
+        /// </summary>
+        /// <remarks>
+        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="subscriptionId">Subscription Id</param>
+        /// <returns>Task of ApiResponse (RestApiResultSubscription)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultSubscription>> GetSubscriptionInvoicesAsyncWithHttpInfo (string appId, string subscriptionId);
         /// <summary>
         /// Get list of subscriptions for an App
         /// </summary>
@@ -369,6 +415,169 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetSubscriptionById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultSubscription>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultSubscription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultSubscription)));
+        }
+
+        /// <summary>
+        /// Get list of invoices for a subscription by id [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="subscriptionId">Subscription Id</param>
+        /// <returns>RestApiResultSubscription</returns>
+        public RestApiResultSubscription GetSubscriptionInvoices (string appId, string subscriptionId)
+        {
+             ApiResponse<RestApiResultSubscription> localVarResponse = GetSubscriptionInvoicesWithHttpInfo(appId, subscriptionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of invoices for a subscription by id [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="subscriptionId">Subscription Id</param>
+        /// <returns>ApiResponse of RestApiResultSubscription</returns>
+        public ApiResponse< RestApiResultSubscription > GetSubscriptionInvoicesWithHttpInfo (string appId, string subscriptionId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling SubscriptionsApi->GetSubscriptionInvoices");
+            // verify the required parameter 'subscriptionId' is set
+            if (subscriptionId == null)
+                throw new ApiException(400, "Missing required parameter 'subscriptionId' when calling SubscriptionsApi->GetSubscriptionInvoices");
+
+            var localVarPath = "./api/v1.0/{appId}/subscriptions/{subscriptionId}/invoices";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (subscriptionId != null) localVarPathParams.Add("subscriptionId", this.Configuration.ApiClient.ParameterToString(subscriptionId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSubscriptionInvoices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultSubscription>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultSubscription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultSubscription)));
+        }
+
+        /// <summary>
+        /// Get list of invoices for a subscription by id [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="subscriptionId">Subscription Id</param>
+        /// <returns>Task of RestApiResultSubscription</returns>
+        public async System.Threading.Tasks.Task<RestApiResultSubscription> GetSubscriptionInvoicesAsync (string appId, string subscriptionId)
+        {
+             ApiResponse<RestApiResultSubscription> localVarResponse = await GetSubscriptionInvoicesAsyncWithHttpInfo(appId, subscriptionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of invoices for a subscription by id [BETA - this endpoint is under development, do not use it in your production system]
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId">App Id</param>
+        /// <param name="subscriptionId">Subscription Id</param>
+        /// <returns>Task of ApiResponse (RestApiResultSubscription)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultSubscription>> GetSubscriptionInvoicesAsyncWithHttpInfo (string appId, string subscriptionId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling SubscriptionsApi->GetSubscriptionInvoices");
+            // verify the required parameter 'subscriptionId' is set
+            if (subscriptionId == null)
+                throw new ApiException(400, "Missing required parameter 'subscriptionId' when calling SubscriptionsApi->GetSubscriptionInvoices");
+
+            var localVarPath = "./api/v1.0/{appId}/subscriptions/{subscriptionId}/invoices";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (subscriptionId != null) localVarPathParams.Add("subscriptionId", this.Configuration.ApiClient.ParameterToString(subscriptionId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSubscriptionInvoices", localVarResponse);
                 if (exception != null) throw exception;
             }
 

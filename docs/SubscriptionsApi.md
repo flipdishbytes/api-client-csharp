@@ -5,6 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetSubscriptionById**](SubscriptionsApi.md#getsubscriptionbyid) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | Get subscription by id
+[**GetSubscriptionInvoices**](SubscriptionsApi.md#getsubscriptioninvoices) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId}/invoices | Get list of invoices for a subscription by id
 [**GetSubscriptionsForApp**](SubscriptionsApi.md#getsubscriptionsforapp) | **GET** /api/v1.0/{appId}/subscriptions | Get list of subscriptions for an App
 
 
@@ -46,6 +47,72 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling SubscriptionsApi.GetSubscriptionById: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**| App Id | 
+ **subscriptionId** | **string**| Subscription Id | 
+
+### Return type
+
+[**RestApiResultSubscription**](RestApiResultSubscription.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsubscriptioninvoices"></a>
+# **GetSubscriptionInvoices**
+> RestApiResultSubscription GetSubscriptionInvoices (string appId, string subscriptionId)
+
+Get list of invoices for a subscription by id
+
+[BETA - this endpoint is under development, do not use it in your production system]
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetSubscriptionInvoicesExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new SubscriptionsApi();
+            var appId = appId_example;  // string | App Id
+            var subscriptionId = subscriptionId_example;  // string | Subscription Id
+
+            try
+            {
+                // Get list of invoices for a subscription by id
+                RestApiResultSubscription result = apiInstance.GetSubscriptionInvoices(appId, subscriptionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SubscriptionsApi.GetSubscriptionInvoices: " + e.Message );
             }
         }
     }

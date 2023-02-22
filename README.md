@@ -506,6 +506,7 @@ Class | Method | HTTP request | Description
 *StuartApi* | [**StuartGetStuartSettings**](docs/StuartApi.md#stuartgetstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | Get stuart settings for a store
 *StuartApi* | [**StuartPostStuartSettings**](docs/StuartApi.md#stuartpoststuartsettings) | **POST** /api/v1.0/stuart/settings/{storeId} | Set stuart settings for a store
 *SubscriptionsApi* | [**GetSubscriptionById**](docs/SubscriptionsApi.md#getsubscriptionbyid) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | Get subscription by id
+*SubscriptionsApi* | [**GetSubscriptionInvoices**](docs/SubscriptionsApi.md#getsubscriptioninvoices) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId}/invoices | Get list of invoices for a subscription by id
 *SubscriptionsApi* | [**GetSubscriptionsForApp**](docs/SubscriptionsApi.md#getsubscriptionsforapp) | **GET** /api/v1.0/{appId}/subscriptions | Get list of subscriptions for an App
 *TeammatesApi* | [**CreateTeammate**](docs/TeammatesApi.md#createteammate) | **POST** /api/v1.0/{appId}/teammates | Create teammate and send an invite.
 *TeammatesApi* | [**DeleteTeammate**](docs/TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | Delete teammate
