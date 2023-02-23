@@ -77,11 +77,11 @@ Name | Type | Description  | Notes
 
 <a name="getsubscriptioninvoices"></a>
 # **GetSubscriptionInvoices**
-> RestApiResultSubscription GetSubscriptionInvoices (string appId, string subscriptionId)
+> RestApiPaginationResultInvoice GetSubscriptionInvoices (string appId, string subscriptionId, int? limit = null, string startingAfterId = null)
 
 Get list of invoices for a subscription by id
 
-[BETA - this endpoint is under development, do not use it in your production system]
+[BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
 
 ### Example
 ```csharp
@@ -103,11 +103,13 @@ namespace Example
             var apiInstance = new SubscriptionsApi();
             var appId = appId_example;  // string | App Id
             var subscriptionId = subscriptionId_example;  // string | Subscription Id
+            var limit = 56;  // int? | Limit of invoices to return (optional) 
+            var startingAfterId = startingAfterId_example;  // string | Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId=in_xxx in order to fetch the next page of the invoices list. (optional) 
 
             try
             {
                 // Get list of invoices for a subscription by id
-                RestApiResultSubscription result = apiInstance.GetSubscriptionInvoices(appId, subscriptionId);
+                RestApiPaginationResultInvoice result = apiInstance.GetSubscriptionInvoices(appId, subscriptionId, limit, startingAfterId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -125,10 +127,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App Id | 
  **subscriptionId** | **string**| Subscription Id | 
+ **limit** | **int?**| Limit of invoices to return | [optional] 
+ **startingAfterId** | **string**| Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. | [optional] 
 
 ### Return type
 
-[**RestApiResultSubscription**](RestApiResultSubscription.md)
+[**RestApiPaginationResultInvoice**](RestApiPaginationResultInvoice.md)
 
 ### Authorization
 

@@ -51,25 +51,29 @@ namespace Flipdish.Api
         /// Get list of invoices for a subscription by id
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>RestApiResultSubscription</returns>
-        RestApiResultSubscription GetSubscriptionInvoices (string appId, string subscriptionId);
+        /// <param name="limit">Limit of invoices to return (optional)</param>
+        /// <param name="startingAfterId">Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)</param>
+        /// <returns>RestApiPaginationResultInvoice</returns>
+        RestApiPaginationResultInvoice GetSubscriptionInvoices (string appId, string subscriptionId, int? limit = null, string startingAfterId = null);
 
         /// <summary>
         /// Get list of invoices for a subscription by id
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>ApiResponse of RestApiResultSubscription</returns>
-        ApiResponse<RestApiResultSubscription> GetSubscriptionInvoicesWithHttpInfo (string appId, string subscriptionId);
+        /// <param name="limit">Limit of invoices to return (optional)</param>
+        /// <param name="startingAfterId">Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultInvoice</returns>
+        ApiResponse<RestApiPaginationResultInvoice> GetSubscriptionInvoicesWithHttpInfo (string appId, string subscriptionId, int? limit = null, string startingAfterId = null);
         /// <summary>
         /// Get list of subscriptions for an App
         /// </summary>
@@ -120,25 +124,29 @@ namespace Flipdish.Api
         /// Get list of invoices for a subscription by id
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>Task of RestApiResultSubscription</returns>
-        System.Threading.Tasks.Task<RestApiResultSubscription> GetSubscriptionInvoicesAsync (string appId, string subscriptionId);
+        /// <param name="limit">Limit of invoices to return (optional)</param>
+        /// <param name="startingAfterId">Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)</param>
+        /// <returns>Task of RestApiPaginationResultInvoice</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultInvoice> GetSubscriptionInvoicesAsync (string appId, string subscriptionId, int? limit = null, string startingAfterId = null);
 
         /// <summary>
         /// Get list of invoices for a subscription by id
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>Task of ApiResponse (RestApiResultSubscription)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultSubscription>> GetSubscriptionInvoicesAsyncWithHttpInfo (string appId, string subscriptionId);
+        /// <param name="limit">Limit of invoices to return (optional)</param>
+        /// <param name="startingAfterId">Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultInvoice)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultInvoice>> GetSubscriptionInvoicesAsyncWithHttpInfo (string appId, string subscriptionId, int? limit = null, string startingAfterId = null);
         /// <summary>
         /// Get list of subscriptions for an App
         /// </summary>
@@ -424,26 +432,30 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of invoices for a subscription by id [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get list of invoices for a subscription by id [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>RestApiResultSubscription</returns>
-        public RestApiResultSubscription GetSubscriptionInvoices (string appId, string subscriptionId)
+        /// <param name="limit">Limit of invoices to return (optional)</param>
+        /// <param name="startingAfterId">Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)</param>
+        /// <returns>RestApiPaginationResultInvoice</returns>
+        public RestApiPaginationResultInvoice GetSubscriptionInvoices (string appId, string subscriptionId, int? limit = null, string startingAfterId = null)
         {
-             ApiResponse<RestApiResultSubscription> localVarResponse = GetSubscriptionInvoicesWithHttpInfo(appId, subscriptionId);
+             ApiResponse<RestApiPaginationResultInvoice> localVarResponse = GetSubscriptionInvoicesWithHttpInfo(appId, subscriptionId, limit, startingAfterId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get list of invoices for a subscription by id [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get list of invoices for a subscription by id [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>ApiResponse of RestApiResultSubscription</returns>
-        public ApiResponse< RestApiResultSubscription > GetSubscriptionInvoicesWithHttpInfo (string appId, string subscriptionId)
+        /// <param name="limit">Limit of invoices to return (optional)</param>
+        /// <param name="startingAfterId">Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultInvoice</returns>
+        public ApiResponse< RestApiPaginationResultInvoice > GetSubscriptionInvoicesWithHttpInfo (string appId, string subscriptionId, int? limit = null, string startingAfterId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -478,6 +490,8 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (subscriptionId != null) localVarPathParams.Add("subscriptionId", this.Configuration.ApiClient.ParameterToString(subscriptionId)); // path parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfterId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startingAfterId", startingAfterId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -499,33 +513,37 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultSubscription>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultInvoice>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultSubscription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultSubscription)));
+                (RestApiPaginationResultInvoice) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultInvoice)));
         }
 
         /// <summary>
-        /// Get list of invoices for a subscription by id [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get list of invoices for a subscription by id [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>Task of RestApiResultSubscription</returns>
-        public async System.Threading.Tasks.Task<RestApiResultSubscription> GetSubscriptionInvoicesAsync (string appId, string subscriptionId)
+        /// <param name="limit">Limit of invoices to return (optional)</param>
+        /// <param name="startingAfterId">Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)</param>
+        /// <returns>Task of RestApiPaginationResultInvoice</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultInvoice> GetSubscriptionInvoicesAsync (string appId, string subscriptionId, int? limit = null, string startingAfterId = null)
         {
-             ApiResponse<RestApiResultSubscription> localVarResponse = await GetSubscriptionInvoicesAsyncWithHttpInfo(appId, subscriptionId);
+             ApiResponse<RestApiPaginationResultInvoice> localVarResponse = await GetSubscriptionInvoicesAsyncWithHttpInfo(appId, subscriptionId, limit, startingAfterId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get list of invoices for a subscription by id [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get list of invoices for a subscription by id [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>Task of ApiResponse (RestApiResultSubscription)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultSubscription>> GetSubscriptionInvoicesAsyncWithHttpInfo (string appId, string subscriptionId)
+        /// <param name="limit">Limit of invoices to return (optional)</param>
+        /// <param name="startingAfterId">Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultInvoice)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultInvoice>> GetSubscriptionInvoicesAsyncWithHttpInfo (string appId, string subscriptionId, int? limit = null, string startingAfterId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -560,6 +578,8 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (subscriptionId != null) localVarPathParams.Add("subscriptionId", this.Configuration.ApiClient.ParameterToString(subscriptionId)); // path parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfterId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startingAfterId", startingAfterId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -581,9 +601,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultSubscription>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultInvoice>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultSubscription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultSubscription)));
+                (RestApiPaginationResultInvoice) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultInvoice)));
         }
 
         /// <summary>
