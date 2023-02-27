@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ChargebackAmount** | **double?** | Chargeback amount | [optional] 
+**PosSalesChargebackAmount** | **double?** | POS Chargeback amount | [optional] 
 **ChargebackRefundedFees** | **double?** | Chargeback refunded feeds | [optional] 
 **ChargebacksCount** | **int?** | Number of chargebacks | [optional] 
 **TotalChargebackCost** | **double?** | Total amount | [optional] 

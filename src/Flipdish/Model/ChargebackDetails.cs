@@ -32,12 +32,14 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="ChargebackDetails" /> class.
         /// </summary>
         /// <param name="chargebackAmount">Chargeback amount.</param>
+        /// <param name="posSalesChargebackAmount">POS Chargeback amount.</param>
         /// <param name="chargebackRefundedFees">Chargeback refunded feeds.</param>
         /// <param name="chargebacksCount">Number of chargebacks.</param>
         /// <param name="totalChargebackCost">Total amount.</param>
-        public ChargebackDetails(double? chargebackAmount = default(double?), double? chargebackRefundedFees = default(double?), int? chargebacksCount = default(int?), double? totalChargebackCost = default(double?))
+        public ChargebackDetails(double? chargebackAmount = default(double?), double? posSalesChargebackAmount = default(double?), double? chargebackRefundedFees = default(double?), int? chargebacksCount = default(int?), double? totalChargebackCost = default(double?))
         {
             this.ChargebackAmount = chargebackAmount;
+            this.PosSalesChargebackAmount = posSalesChargebackAmount;
             this.ChargebackRefundedFees = chargebackRefundedFees;
             this.ChargebacksCount = chargebacksCount;
             this.TotalChargebackCost = totalChargebackCost;
@@ -49,6 +51,13 @@ namespace Flipdish.Model
         /// <value>Chargeback amount</value>
         [DataMember(Name="ChargebackAmount", EmitDefaultValue=false)]
         public double? ChargebackAmount { get; set; }
+
+        /// <summary>
+        /// POS Chargeback amount
+        /// </summary>
+        /// <value>POS Chargeback amount</value>
+        [DataMember(Name="PosSalesChargebackAmount", EmitDefaultValue=false)]
+        public double? PosSalesChargebackAmount { get; set; }
 
         /// <summary>
         /// Chargeback refunded feeds
@@ -80,6 +89,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class ChargebackDetails {\n");
             sb.Append("  ChargebackAmount: ").Append(ChargebackAmount).Append("\n");
+            sb.Append("  PosSalesChargebackAmount: ").Append(PosSalesChargebackAmount).Append("\n");
             sb.Append("  ChargebackRefundedFees: ").Append(ChargebackRefundedFees).Append("\n");
             sb.Append("  ChargebacksCount: ").Append(ChargebacksCount).Append("\n");
             sb.Append("  TotalChargebackCost: ").Append(TotalChargebackCost).Append("\n");
@@ -123,6 +133,11 @@ namespace Flipdish.Model
                     this.ChargebackAmount.Equals(input.ChargebackAmount))
                 ) && 
                 (
+                    this.PosSalesChargebackAmount == input.PosSalesChargebackAmount ||
+                    (this.PosSalesChargebackAmount != null &&
+                    this.PosSalesChargebackAmount.Equals(input.PosSalesChargebackAmount))
+                ) && 
+                (
                     this.ChargebackRefundedFees == input.ChargebackRefundedFees ||
                     (this.ChargebackRefundedFees != null &&
                     this.ChargebackRefundedFees.Equals(input.ChargebackRefundedFees))
@@ -150,6 +165,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.ChargebackAmount != null)
                     hashCode = hashCode * 59 + this.ChargebackAmount.GetHashCode();
+                if (this.PosSalesChargebackAmount != null)
+                    hashCode = hashCode * 59 + this.PosSalesChargebackAmount.GetHashCode();
                 if (this.ChargebackRefundedFees != null)
                     hashCode = hashCode * 59 + this.ChargebackRefundedFees.GetHashCode();
                 if (this.ChargebacksCount != null)
