@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getsubscriptionbyid"></a>
 # **GetSubscriptionById**
-> Subscription GetSubscriptionById (string appId, string subscriptionId)
+> RestApiResultSubscription GetSubscriptionById (string appId, string subscriptionId)
 
 Get subscription by id
 
@@ -41,7 +41,7 @@ namespace Example
             try
             {
                 // Get subscription by id
-                Subscription result = apiInstance.GetSubscriptionById(appId, subscriptionId);
+                RestApiResultSubscription result = apiInstance.GetSubscriptionById(appId, subscriptionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Subscription**](Subscription.md)
+[**RestApiResultSubscription**](RestApiResultSubscription.md)
 
 ### Authorization
 

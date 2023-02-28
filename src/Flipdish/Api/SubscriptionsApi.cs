@@ -33,8 +33,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>Subscription</returns>
-        Subscription GetSubscriptionById (string appId, string subscriptionId);
+        /// <returns>RestApiResultSubscription</returns>
+        RestApiResultSubscription GetSubscriptionById (string appId, string subscriptionId);
 
         /// <summary>
         /// Get subscription by id
@@ -45,8 +45,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>ApiResponse of Subscription</returns>
-        ApiResponse<Subscription> GetSubscriptionByIdWithHttpInfo (string appId, string subscriptionId);
+        /// <returns>ApiResponse of RestApiResultSubscription</returns>
+        ApiResponse<RestApiResultSubscription> GetSubscriptionByIdWithHttpInfo (string appId, string subscriptionId);
         /// <summary>
         /// Get list of invoices for a subscription by id
         /// </summary>
@@ -108,8 +108,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>Task of Subscription</returns>
-        System.Threading.Tasks.Task<Subscription> GetSubscriptionByIdAsync (string appId, string subscriptionId);
+        /// <returns>Task of RestApiResultSubscription</returns>
+        System.Threading.Tasks.Task<RestApiResultSubscription> GetSubscriptionByIdAsync (string appId, string subscriptionId);
 
         /// <summary>
         /// Get subscription by id
@@ -120,8 +120,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>Task of ApiResponse (Subscription)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Subscription>> GetSubscriptionByIdAsyncWithHttpInfo (string appId, string subscriptionId);
+        /// <returns>Task of ApiResponse (RestApiResultSubscription)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultSubscription>> GetSubscriptionByIdAsyncWithHttpInfo (string appId, string subscriptionId);
         /// <summary>
         /// Get list of invoices for a subscription by id
         /// </summary>
@@ -278,10 +278,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>Subscription</returns>
-        public Subscription GetSubscriptionById (string appId, string subscriptionId)
+        /// <returns>RestApiResultSubscription</returns>
+        public RestApiResultSubscription GetSubscriptionById (string appId, string subscriptionId)
         {
-             ApiResponse<Subscription> localVarResponse = GetSubscriptionByIdWithHttpInfo(appId, subscriptionId);
+             ApiResponse<RestApiResultSubscription> localVarResponse = GetSubscriptionByIdWithHttpInfo(appId, subscriptionId);
              return localVarResponse.Data;
         }
 
@@ -291,8 +291,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>ApiResponse of Subscription</returns>
-        public ApiResponse< Subscription > GetSubscriptionByIdWithHttpInfo (string appId, string subscriptionId)
+        /// <returns>ApiResponse of RestApiResultSubscription</returns>
+        public ApiResponse< RestApiResultSubscription > GetSubscriptionByIdWithHttpInfo (string appId, string subscriptionId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -348,9 +348,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Subscription>(localVarStatusCode,
+            return new ApiResponse<RestApiResultSubscription>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (Subscription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Subscription)));
+                (RestApiResultSubscription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultSubscription)));
         }
 
         /// <summary>
@@ -359,10 +359,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>Task of Subscription</returns>
-        public async System.Threading.Tasks.Task<Subscription> GetSubscriptionByIdAsync (string appId, string subscriptionId)
+        /// <returns>Task of RestApiResultSubscription</returns>
+        public async System.Threading.Tasks.Task<RestApiResultSubscription> GetSubscriptionByIdAsync (string appId, string subscriptionId)
         {
-             ApiResponse<Subscription> localVarResponse = await GetSubscriptionByIdAsyncWithHttpInfo(appId, subscriptionId);
+             ApiResponse<RestApiResultSubscription> localVarResponse = await GetSubscriptionByIdAsyncWithHttpInfo(appId, subscriptionId);
              return localVarResponse.Data;
 
         }
@@ -373,8 +373,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id</param>
-        /// <returns>Task of ApiResponse (Subscription)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Subscription>> GetSubscriptionByIdAsyncWithHttpInfo (string appId, string subscriptionId)
+        /// <returns>Task of ApiResponse (RestApiResultSubscription)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultSubscription>> GetSubscriptionByIdAsyncWithHttpInfo (string appId, string subscriptionId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -430,9 +430,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Subscription>(localVarStatusCode,
+            return new ApiResponse<RestApiResultSubscription>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (Subscription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Subscription)));
+                (RestApiResultSubscription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultSubscription)));
         }
 
         /// <summary>
