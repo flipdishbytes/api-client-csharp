@@ -28,7 +28,7 @@ namespace Flipdish.Api
         /// Get list of invoices
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
@@ -42,7 +42,7 @@ namespace Flipdish.Api
         /// Get list of invoices
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
@@ -57,7 +57,7 @@ namespace Flipdish.Api
         /// Get list of invoices
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
@@ -71,7 +71,7 @@ namespace Flipdish.Api
         /// Get list of invoices
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
@@ -181,7 +181,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of invoices [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
+        /// Get list of invoices [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
@@ -196,7 +196,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of invoices [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
+        /// Get list of invoices [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
@@ -265,7 +265,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of invoices [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
+        /// Get list of invoices [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
@@ -281,7 +281,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of invoices [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
+        /// Get list of invoices [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
