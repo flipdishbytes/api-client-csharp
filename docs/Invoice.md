@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Total** | **long?** | Total | [optional] 
 **Currency** | **string** | Currency | 
 **Status** | **string** | Status | 
+**SubscriptionId** | **string** | The subscription identifier | [optional] 
 **DueDate** | **DateTime?** | Due Date | [optional] 
 **PdfLink** | **string** | Pdf Link | 
 

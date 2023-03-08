@@ -286,6 +286,7 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**UnassignEmv**](docs/HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | Unassign the currently assigned EMV terminal from a kiosk
 *HydraApi* | [**UpdateKioskCashVisibilitySettings**](docs/HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | Update the Cash Payment Method Visibility on Kiosk
 *IntercomApi* | [**UserHash**](docs/IntercomApi.md#userhash) | **GET** /api/v1.0/intercom/userHash | 
+*InvoicesApi* | [**GetInvoices**](docs/InvoicesApi.md#getinvoices) | **GET** /api/v1.0/{appId}/invoices | Get list of invoices
 *KioskIotApi* | [**GetKioskIotConnection**](docs/KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
 *KioskIotApi* | [**QueryTelemetrySeries**](docs/KioskIotApi.md#querytelemetryseries) | **POST** /api/v1.0/{appId}/kioskiot/timeseries/query | Get the IoT time series values for a given Kiosk Id, properties and time range
 *KioskStoreSettingsApi* | [**GetAllKioskSettingsForStore**](docs/KioskStoreSettingsApi.md#getallkiosksettingsforstore) | **GET** /api/v1.0/{appId}/kiosksettings/store/{storeId} | Get all kiosk settings associated with a store
@@ -506,7 +507,6 @@ Class | Method | HTTP request | Description
 *StuartApi* | [**StuartGetStuartSettings**](docs/StuartApi.md#stuartgetstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | Get stuart settings for a store
 *StuartApi* | [**StuartPostStuartSettings**](docs/StuartApi.md#stuartpoststuartsettings) | **POST** /api/v1.0/stuart/settings/{storeId} | Set stuart settings for a store
 *SubscriptionsApi* | [**GetSubscriptionById**](docs/SubscriptionsApi.md#getsubscriptionbyid) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | Get subscription by id
-*SubscriptionsApi* | [**GetSubscriptionInvoices**](docs/SubscriptionsApi.md#getsubscriptioninvoices) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId}/invoices | Get list of invoices for a subscription by id
 *SubscriptionsApi* | [**GetSubscriptionsForApp**](docs/SubscriptionsApi.md#getsubscriptionsforapp) | **GET** /api/v1.0/{appId}/subscriptions | Get list of subscriptions for an App
 *TeammatesApi* | [**CreateTeammate**](docs/TeammatesApi.md#createteammate) | **POST** /api/v1.0/{appId}/teammates | Create teammate and send an invite.
 *TeammatesApi* | [**DeleteTeammate**](docs/TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | Delete teammate
@@ -982,6 +982,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiDefaultResponse](docs/RestApiDefaultResponse.md)
  - [Model.RestApiErrorResult](docs/RestApiErrorResult.md)
  - [Model.RestApiEventSearchPaginationResult](docs/RestApiEventSearchPaginationResult.md)
+ - [Model.RestApiFinanceSearchPaginationResultInvoice](docs/RestApiFinanceSearchPaginationResultInvoice.md)
  - [Model.RestApiForbiddenResult](docs/RestApiForbiddenResult.md)
  - [Model.RestApiIntegerResult](docs/RestApiIntegerResult.md)
  - [Model.RestApiPaginationResultApp](docs/RestApiPaginationResultApp.md)
@@ -991,7 +992,6 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultGroup](docs/RestApiPaginationResultGroup.md)
  - [Model.RestApiPaginationResultHttpRequestAndResponseLog](docs/RestApiPaginationResultHttpRequestAndResponseLog.md)
  - [Model.RestApiPaginationResultHydraDeviceDetails](docs/RestApiPaginationResultHydraDeviceDetails.md)
- - [Model.RestApiPaginationResultInvoice](docs/RestApiPaginationResultInvoice.md)
  - [Model.RestApiPaginationResultMetafieldDefinition](docs/RestApiPaginationResultMetafieldDefinition.md)
  - [Model.RestApiPaginationResultMetafieldDefinitionRecommendation](docs/RestApiPaginationResultMetafieldDefinitionRecommendation.md)
  - [Model.RestApiPaginationResultOAuthTokenModel](docs/RestApiPaginationResultOAuthTokenModel.md)
