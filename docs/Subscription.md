@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Name** | **string** |  | 
 **Status** | **string** | Status | 
 **Currency** | **string** | Currency | 
-**NextInvoiceAmount** | **long?** | Next invoice amount | [optional] 
+**NextInvoiceAmount** | **double?** | Next invoice amount | [optional] 
 **NextInvoiceBillingDate** | **DateTime?** | Next invoice billing date | [optional] 
 **User** | **string** | User | 
 **DefaultPaymentDescription** | **string** | Default payment description | 

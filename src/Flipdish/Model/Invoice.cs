@@ -782,7 +782,7 @@ namespace Flipdish.Model
         /// <param name="subscriptionId">The subscription identifier.</param>
         /// <param name="dueDate">Due Date.</param>
         /// <param name="pdfLink">Pdf Link (required).</param>
-        public Invoice(string invoiceId = default(string), string number = default(string), long? total = default(long?), CurrencyEnum currency = default(CurrencyEnum), StatusEnum status = default(StatusEnum), string subscriptionId = default(string), DateTime? dueDate = default(DateTime?), string pdfLink = default(string))
+        public Invoice(string invoiceId = default(string), string number = default(string), double? total = default(double?), CurrencyEnum currency = default(CurrencyEnum), StatusEnum status = default(StatusEnum), string subscriptionId = default(string), DateTime? dueDate = default(DateTime?), string pdfLink = default(string))
         {
             // to ensure "invoiceId" is required (not null)
             if (invoiceId == null)
@@ -853,7 +853,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Total</value>
         [DataMember(Name="Total", EmitDefaultValue=false)]
-        public long? Total { get; set; }
+        public double? Total { get; set; }
 
 
 

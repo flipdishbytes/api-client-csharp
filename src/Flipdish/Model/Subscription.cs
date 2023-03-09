@@ -794,7 +794,7 @@ namespace Flipdish.Model
         /// <param name="nextInvoiceBillingDate">Next invoice billing date.</param>
         /// <param name="user">User (required).</param>
         /// <param name="defaultPaymentDescription">Default payment description (required).</param>
-        public Subscription(string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), long? nextInvoiceAmount = default(long?), DateTime? nextInvoiceBillingDate = default(DateTime?), string user = default(string), string defaultPaymentDescription = default(string))
+        public Subscription(string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), double? nextInvoiceAmount = default(double?), DateTime? nextInvoiceBillingDate = default(DateTime?), string user = default(string), string defaultPaymentDescription = default(string))
         {
             // to ensure "subscriptionId" is required (not null)
             if (subscriptionId == null)
@@ -874,7 +874,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Next invoice amount</value>
         [DataMember(Name="NextInvoiceAmount", EmitDefaultValue=false)]
-        public long? NextInvoiceAmount { get; set; }
+        public double? NextInvoiceAmount { get; set; }
 
         /// <summary>
         /// Next invoice billing date
