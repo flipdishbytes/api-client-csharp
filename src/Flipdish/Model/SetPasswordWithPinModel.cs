@@ -38,7 +38,8 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="pin">PIN code (received via email) (required).</param>
         /// <param name="newPassword">New Password (required).</param>
-        public SetPasswordWithPinModel(int? pin = default(int?), string newPassword = default(string))
+        /// <param name="recaptchaToken">Google Recaptcha Token.</param>
+        public SetPasswordWithPinModel(int? pin = default(int?), string newPassword = default(string), string recaptchaToken = default(string))
         {
             // to ensure "pin" is required (not null)
             if (pin == null)
@@ -58,6 +59,7 @@ namespace Flipdish.Model
             {
                 this.NewPassword = newPassword;
             }
+            this.RecaptchaToken = recaptchaToken;
         }
         
         /// <summary>
@@ -75,6 +77,13 @@ namespace Flipdish.Model
         public string NewPassword { get; set; }
 
         /// <summary>
+        /// Google Recaptcha Token
+        /// </summary>
+        /// <value>Google Recaptcha Token</value>
+        [DataMember(Name="RecaptchaToken", EmitDefaultValue=false)]
+        public string RecaptchaToken { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -84,6 +93,7 @@ namespace Flipdish.Model
             sb.Append("class SetPasswordWithPinModel {\n");
             sb.Append("  Pin: ").Append(Pin).Append("\n");
             sb.Append("  NewPassword: ").Append(NewPassword).Append("\n");
+            sb.Append("  RecaptchaToken: ").Append(RecaptchaToken).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -127,6 +137,11 @@ namespace Flipdish.Model
                     this.NewPassword == input.NewPassword ||
                     (this.NewPassword != null &&
                     this.NewPassword.Equals(input.NewPassword))
+                ) && 
+                (
+                    this.RecaptchaToken == input.RecaptchaToken ||
+                    (this.RecaptchaToken != null &&
+                    this.RecaptchaToken.Equals(input.RecaptchaToken))
                 );
         }
 
@@ -143,6 +158,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Pin.GetHashCode();
                 if (this.NewPassword != null)
                     hashCode = hashCode * 59 + this.NewPassword.GetHashCode();
+                if (this.RecaptchaToken != null)
+                    hashCode = hashCode * 59 + this.RecaptchaToken.GetHashCode();
                 return hashCode;
             }
         }
