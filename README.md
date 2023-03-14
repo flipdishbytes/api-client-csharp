@@ -1207,6 +1207,7 @@ Class | Method | HTTP request | Description
  - [Model.StuartSettings](docs/StuartSettings.md)
  - [Model.StuartSettingsTransportPrices](docs/StuartSettingsTransportPrices.md)
  - [Model.Subscription](docs/Subscription.md)
+ - [Model.SubscriptionProduct](docs/SubscriptionProduct.md)
  - [Model.SubscriptionSummary](docs/SubscriptionSummary.md)
  - [Model.SupportedCountry](docs/SupportedCountry.md)
  - [Model.Teammate](docs/Teammate.md)

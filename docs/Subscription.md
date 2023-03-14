@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Products** | [**List&lt;SubscriptionProduct&gt;**](SubscriptionProduct.md) | Products | 
 **SubscriptionId** | **string** | The subscription identifier | 
 **Name** | **string** |  | 
 **Status** | **string** | Status | 
