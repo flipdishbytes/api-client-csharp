@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getinvoices"></a>
 # **GetInvoices**
-> RestApiFinanceSearchPaginationResultInvoice GetInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null)
+> RestApiFinanceSearchPaginationResultInvoice GetInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null)
 
 Get list of invoices
 
@@ -37,11 +37,12 @@ namespace Example
             var subscriptionId = subscriptionId_example;  // string | Subscription Id (optional) (optional) 
             var limit = 56;  // int? | Limit of invoices to return (optional) 
             var pageId = pageId_example;  // string | Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) 
+            var excludeNotOwnedInvoices = true;  // bool? | Exclude not owned invoices. Set to true to only view your invoices (optional) 
 
             try
             {
                 // Get list of invoices
-                RestApiFinanceSearchPaginationResultInvoice result = apiInstance.GetInvoices(appId, subscriptionId, limit, pageId);
+                RestApiFinanceSearchPaginationResultInvoice result = apiInstance.GetInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -61,6 +62,7 @@ Name | Type | Description  | Notes
  **subscriptionId** | **string**| Subscription Id (optional) | [optional] 
  **limit** | **int?**| Limit of invoices to return | [optional] 
  **pageId** | **string**| Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call | [optional] 
+ **excludeNotOwnedInvoices** | **bool?**| Exclude not owned invoices. Set to true to only view your invoices | [optional] 
 
 ### Return type
 
