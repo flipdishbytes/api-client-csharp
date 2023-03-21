@@ -33,11 +33,13 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id (optional) (optional)</param>
-        /// <param name="limit">Limit of invoices to return (optional)</param>
-        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)</param>
-        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional)</param>
+        /// <param name="limit">Limit of invoices to return (optional) (optional)</param>
+        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)</param>
+        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)</param>
+        /// <param name="dateFrom">Filter starting from this date (optional) (optional)</param>
+        /// <param name="dateTo">Filter ending from this date (optional) (optional)</param>
         /// <returns>RestApiFinanceSearchPaginationResultInvoice</returns>
-        RestApiFinanceSearchPaginationResultInvoice GetInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null);
+        RestApiFinanceSearchPaginationResultInvoice GetInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null);
 
         /// <summary>
         /// Get list of invoices
@@ -48,11 +50,13 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id (optional) (optional)</param>
-        /// <param name="limit">Limit of invoices to return (optional)</param>
-        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)</param>
-        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional)</param>
+        /// <param name="limit">Limit of invoices to return (optional) (optional)</param>
+        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)</param>
+        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)</param>
+        /// <param name="dateFrom">Filter starting from this date (optional) (optional)</param>
+        /// <param name="dateTo">Filter ending from this date (optional) (optional)</param>
         /// <returns>ApiResponse of RestApiFinanceSearchPaginationResultInvoice</returns>
-        ApiResponse<RestApiFinanceSearchPaginationResultInvoice> GetInvoicesWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null);
+        ApiResponse<RestApiFinanceSearchPaginationResultInvoice> GetInvoicesWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -64,11 +68,13 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id (optional) (optional)</param>
-        /// <param name="limit">Limit of invoices to return (optional)</param>
-        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)</param>
-        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional)</param>
+        /// <param name="limit">Limit of invoices to return (optional) (optional)</param>
+        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)</param>
+        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)</param>
+        /// <param name="dateFrom">Filter starting from this date (optional) (optional)</param>
+        /// <param name="dateTo">Filter ending from this date (optional) (optional)</param>
         /// <returns>Task of RestApiFinanceSearchPaginationResultInvoice</returns>
-        System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultInvoice> GetInvoicesAsync (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null);
+        System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultInvoice> GetInvoicesAsync (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null);
 
         /// <summary>
         /// Get list of invoices
@@ -79,11 +85,13 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id (optional) (optional)</param>
-        /// <param name="limit">Limit of invoices to return (optional)</param>
-        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)</param>
-        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional)</param>
+        /// <param name="limit">Limit of invoices to return (optional) (optional)</param>
+        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)</param>
+        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)</param>
+        /// <param name="dateFrom">Filter starting from this date (optional) (optional)</param>
+        /// <param name="dateTo">Filter ending from this date (optional) (optional)</param>
         /// <returns>Task of ApiResponse (RestApiFinanceSearchPaginationResultInvoice)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultInvoice>> GetInvoicesAsyncWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultInvoice>> GetInvoicesAsyncWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null);
         #endregion Asynchronous Operations
     }
 
@@ -190,13 +198,15 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id (optional) (optional)</param>
-        /// <param name="limit">Limit of invoices to return (optional)</param>
-        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)</param>
-        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional)</param>
+        /// <param name="limit">Limit of invoices to return (optional) (optional)</param>
+        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)</param>
+        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)</param>
+        /// <param name="dateFrom">Filter starting from this date (optional) (optional)</param>
+        /// <param name="dateTo">Filter ending from this date (optional) (optional)</param>
         /// <returns>RestApiFinanceSearchPaginationResultInvoice</returns>
-        public RestApiFinanceSearchPaginationResultInvoice GetInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null)
+        public RestApiFinanceSearchPaginationResultInvoice GetInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null)
         {
-             ApiResponse<RestApiFinanceSearchPaginationResultInvoice> localVarResponse = GetInvoicesWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices);
+             ApiResponse<RestApiFinanceSearchPaginationResultInvoice> localVarResponse = GetInvoicesWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo);
              return localVarResponse.Data;
         }
 
@@ -206,11 +216,13 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id (optional) (optional)</param>
-        /// <param name="limit">Limit of invoices to return (optional)</param>
-        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)</param>
-        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional)</param>
+        /// <param name="limit">Limit of invoices to return (optional) (optional)</param>
+        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)</param>
+        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)</param>
+        /// <param name="dateFrom">Filter starting from this date (optional) (optional)</param>
+        /// <param name="dateTo">Filter ending from this date (optional) (optional)</param>
         /// <returns>ApiResponse of RestApiFinanceSearchPaginationResultInvoice</returns>
-        public ApiResponse< RestApiFinanceSearchPaginationResultInvoice > GetInvoicesWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null)
+        public ApiResponse< RestApiFinanceSearchPaginationResultInvoice > GetInvoicesWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -245,6 +257,8 @@ namespace Flipdish.Api
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
             if (pageId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pageId", pageId)); // query parameter
             if (excludeNotOwnedInvoices != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "excludeNotOwnedInvoices", excludeNotOwnedInvoices)); // query parameter
+            if (dateFrom != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "dateFrom", dateFrom)); // query parameter
+            if (dateTo != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "dateTo", dateTo)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -277,13 +291,15 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id (optional) (optional)</param>
-        /// <param name="limit">Limit of invoices to return (optional)</param>
-        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)</param>
-        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional)</param>
+        /// <param name="limit">Limit of invoices to return (optional) (optional)</param>
+        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)</param>
+        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)</param>
+        /// <param name="dateFrom">Filter starting from this date (optional) (optional)</param>
+        /// <param name="dateTo">Filter ending from this date (optional) (optional)</param>
         /// <returns>Task of RestApiFinanceSearchPaginationResultInvoice</returns>
-        public async System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultInvoice> GetInvoicesAsync (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null)
+        public async System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultInvoice> GetInvoicesAsync (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null)
         {
-             ApiResponse<RestApiFinanceSearchPaginationResultInvoice> localVarResponse = await GetInvoicesAsyncWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices);
+             ApiResponse<RestApiFinanceSearchPaginationResultInvoice> localVarResponse = await GetInvoicesAsyncWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo);
              return localVarResponse.Data;
 
         }
@@ -294,11 +310,13 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="subscriptionId">Subscription Id (optional) (optional)</param>
-        /// <param name="limit">Limit of invoices to return (optional)</param>
-        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)</param>
-        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional)</param>
+        /// <param name="limit">Limit of invoices to return (optional) (optional)</param>
+        /// <param name="pageId">Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)</param>
+        /// <param name="excludeNotOwnedInvoices">Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)</param>
+        /// <param name="dateFrom">Filter starting from this date (optional) (optional)</param>
+        /// <param name="dateTo">Filter ending from this date (optional) (optional)</param>
         /// <returns>Task of ApiResponse (RestApiFinanceSearchPaginationResultInvoice)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultInvoice>> GetInvoicesAsyncWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultInvoice>> GetInvoicesAsyncWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -333,6 +351,8 @@ namespace Flipdish.Api
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
             if (pageId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pageId", pageId)); // query parameter
             if (excludeNotOwnedInvoices != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "excludeNotOwnedInvoices", excludeNotOwnedInvoices)); // query parameter
+            if (dateFrom != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "dateFrom", dateFrom)); // query parameter
+            if (dateTo != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "dateTo", dateTo)); // query parameter
 
             // authentication (oauth2) required
             // oauth required

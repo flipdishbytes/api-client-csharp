@@ -81,7 +81,8 @@ namespace Flipdish.Model
         /// <param name="pricePerUnit">Price Per Unit.</param>
         /// <param name="priceTotal">Price Total.</param>
         /// <param name="paymentFrequency">Payment Frequency (required).</param>
-        public SubscriptionProduct(string productId = default(string), string name = default(string), long? quantity = default(long?), double? pricePerUnit = default(double?), double? priceTotal = default(double?), PaymentFrequencyEnum paymentFrequency = default(PaymentFrequencyEnum))
+        /// <param name="stores">Stores.</param>
+        public SubscriptionProduct(string productId = default(string), string name = default(string), long? quantity = default(long?), double? pricePerUnit = default(double?), double? priceTotal = default(double?), PaymentFrequencyEnum paymentFrequency = default(PaymentFrequencyEnum), List<SubscriptionStore> stores = default(List<SubscriptionStore>))
         {
             // to ensure "productId" is required (not null)
             if (productId == null)
@@ -121,6 +122,7 @@ namespace Flipdish.Model
             }
             this.PricePerUnit = pricePerUnit;
             this.PriceTotal = priceTotal;
+            this.Stores = stores;
         }
         
         /// <summary>
@@ -160,6 +162,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Stores
+        /// </summary>
+        /// <value>Stores</value>
+        [DataMember(Name="Stores", EmitDefaultValue=false)]
+        public List<SubscriptionStore> Stores { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -173,6 +182,7 @@ namespace Flipdish.Model
             sb.Append("  PricePerUnit: ").Append(PricePerUnit).Append("\n");
             sb.Append("  PriceTotal: ").Append(PriceTotal).Append("\n");
             sb.Append("  PaymentFrequency: ").Append(PaymentFrequency).Append("\n");
+            sb.Append("  Stores: ").Append(Stores).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -236,6 +246,11 @@ namespace Flipdish.Model
                     this.PaymentFrequency == input.PaymentFrequency ||
                     (this.PaymentFrequency != null &&
                     this.PaymentFrequency.Equals(input.PaymentFrequency))
+                ) && 
+                (
+                    this.Stores == input.Stores ||
+                    this.Stores != null &&
+                    this.Stores.SequenceEqual(input.Stores)
                 );
         }
 
@@ -260,6 +275,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PriceTotal.GetHashCode();
                 if (this.PaymentFrequency != null)
                     hashCode = hashCode * 59 + this.PaymentFrequency.GetHashCode();
+                if (this.Stores != null)
+                    hashCode = hashCode * 59 + this.Stores.GetHashCode();
                 return hashCode;
             }
         }
