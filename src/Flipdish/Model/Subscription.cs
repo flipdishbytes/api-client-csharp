@@ -787,6 +787,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="Subscription" /> class.
         /// </summary>
         /// <param name="products">Products (required).</param>
+        /// <param name="upcomingInvoiceItems">Upcoming invoice items (required).</param>
         /// <param name="subscriptionId">The subscription identifier (required).</param>
         /// <param name="name">name (required).</param>
         /// <param name="status">Status (required).</param>
@@ -795,7 +796,7 @@ namespace Flipdish.Model
         /// <param name="nextInvoiceBillingDate">Next invoice billing date.</param>
         /// <param name="user">User (required).</param>
         /// <param name="defaultPaymentDescription">Default payment description (required).</param>
-        public Subscription(List<SubscriptionProduct> products = default(List<SubscriptionProduct>), string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), double? nextInvoiceAmount = default(double?), DateTime? nextInvoiceBillingDate = default(DateTime?), string user = default(string), string defaultPaymentDescription = default(string))
+        public Subscription(List<SubscriptionProduct> products = default(List<SubscriptionProduct>), List<InvoiceItem> upcomingInvoiceItems = default(List<InvoiceItem>), string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), double? nextInvoiceAmount = default(double?), DateTime? nextInvoiceBillingDate = default(DateTime?), string user = default(string), string defaultPaymentDescription = default(string))
         {
             // to ensure "products" is required (not null)
             if (products == null)
@@ -805,6 +806,15 @@ namespace Flipdish.Model
             else
             {
                 this.Products = products;
+            }
+            // to ensure "upcomingInvoiceItems" is required (not null)
+            if (upcomingInvoiceItems == null)
+            {
+                throw new InvalidDataException("upcomingInvoiceItems is a required property for Subscription and cannot be null");
+            }
+            else
+            {
+                this.UpcomingInvoiceItems = upcomingInvoiceItems;
             }
             // to ensure "subscriptionId" is required (not null)
             if (subscriptionId == null)
@@ -872,6 +882,13 @@ namespace Flipdish.Model
         public List<SubscriptionProduct> Products { get; set; }
 
         /// <summary>
+        /// Upcoming invoice items
+        /// </summary>
+        /// <value>Upcoming invoice items</value>
+        [DataMember(Name="UpcomingInvoiceItems", EmitDefaultValue=false)]
+        public List<InvoiceItem> UpcomingInvoiceItems { get; set; }
+
+        /// <summary>
         /// The subscription identifier
         /// </summary>
         /// <value>The subscription identifier</value>
@@ -923,6 +940,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class Subscription {\n");
             sb.Append("  Products: ").Append(Products).Append("\n");
+            sb.Append("  UpcomingInvoiceItems: ").Append(UpcomingInvoiceItems).Append("\n");
             sb.Append("  SubscriptionId: ").Append(SubscriptionId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -969,6 +987,11 @@ namespace Flipdish.Model
                     this.Products == input.Products ||
                     this.Products != null &&
                     this.Products.SequenceEqual(input.Products)
+                ) && 
+                (
+                    this.UpcomingInvoiceItems == input.UpcomingInvoiceItems ||
+                    this.UpcomingInvoiceItems != null &&
+                    this.UpcomingInvoiceItems.SequenceEqual(input.UpcomingInvoiceItems)
                 ) && 
                 (
                     this.SubscriptionId == input.SubscriptionId ||
@@ -1023,6 +1046,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.Products != null)
                     hashCode = hashCode * 59 + this.Products.GetHashCode();
+                if (this.UpcomingInvoiceItems != null)
+                    hashCode = hashCode * 59 + this.UpcomingInvoiceItems.GetHashCode();
                 if (this.SubscriptionId != null)
                     hashCode = hashCode * 59 + this.SubscriptionId.GetHashCode();
                 if (this.Name != null)
