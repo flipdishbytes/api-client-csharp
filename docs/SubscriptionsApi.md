@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 <a name="getsubscriptionsforapp"></a>
 # **GetSubscriptionsForApp**
-> RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId, bool? excludeNotOwnedSubscriptions = null)
+> RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null)
 
 Get list of subscriptions for an App
 
@@ -102,11 +102,12 @@ namespace Example
             var apiInstance = new SubscriptionsApi();
             var appId = appId_example;  // string | App Id
             var excludeNotOwnedSubscriptions = true;  // bool? | Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) 
+            var storeId = new List<int?>(); // List<int?> | Store Ids (optional) 
 
             try
             {
                 // Get list of subscriptions for an App
-                RestApiArrayResultSubscriptionSummary result = apiInstance.GetSubscriptionsForApp(appId, excludeNotOwnedSubscriptions);
+                RestApiArrayResultSubscriptionSummary result = apiInstance.GetSubscriptionsForApp(appId, excludeNotOwnedSubscriptions, storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -124,6 +125,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App Id | 
  **excludeNotOwnedSubscriptions** | **bool?**| Exclude not owned subscriptions. Set to true to only view your subscriptions | [optional] 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)| Store Ids | [optional] 
 
 ### Return type
 

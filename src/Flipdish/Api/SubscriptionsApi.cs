@@ -56,8 +56,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)</param>
+        /// <param name="storeId">Store Ids (optional)</param>
         /// <returns>RestApiArrayResultSubscriptionSummary</returns>
-        RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId, bool? excludeNotOwnedSubscriptions = null);
+        RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null);
 
         /// <summary>
         /// Get list of subscriptions for an App
@@ -68,8 +69,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)</param>
+        /// <param name="storeId">Store Ids (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultSubscriptionSummary</returns>
-        ApiResponse<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppWithHttpInfo (string appId, bool? excludeNotOwnedSubscriptions = null);
+        ApiResponse<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppWithHttpInfo (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -104,8 +106,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)</param>
+        /// <param name="storeId">Store Ids (optional)</param>
         /// <returns>Task of RestApiArrayResultSubscriptionSummary</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppAsync (string appId, bool? excludeNotOwnedSubscriptions = null);
+        System.Threading.Tasks.Task<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppAsync (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null);
 
         /// <summary>
         /// Get list of subscriptions for an App
@@ -116,8 +119,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)</param>
+        /// <param name="storeId">Store Ids (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultSubscriptionSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultSubscriptionSummary>> GetSubscriptionsForAppAsyncWithHttpInfo (string appId, bool? excludeNotOwnedSubscriptions = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultSubscriptionSummary>> GetSubscriptionsForAppAsyncWithHttpInfo (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null);
         #endregion Asynchronous Operations
     }
 
@@ -387,10 +391,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)</param>
+        /// <param name="storeId">Store Ids (optional)</param>
         /// <returns>RestApiArrayResultSubscriptionSummary</returns>
-        public RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId, bool? excludeNotOwnedSubscriptions = null)
+        public RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null)
         {
-             ApiResponse<RestApiArrayResultSubscriptionSummary> localVarResponse = GetSubscriptionsForAppWithHttpInfo(appId, excludeNotOwnedSubscriptions);
+             ApiResponse<RestApiArrayResultSubscriptionSummary> localVarResponse = GetSubscriptionsForAppWithHttpInfo(appId, excludeNotOwnedSubscriptions, storeId);
              return localVarResponse.Data;
         }
 
@@ -400,8 +405,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)</param>
+        /// <param name="storeId">Store Ids (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultSubscriptionSummary</returns>
-        public ApiResponse< RestApiArrayResultSubscriptionSummary > GetSubscriptionsForAppWithHttpInfo (string appId, bool? excludeNotOwnedSubscriptions = null)
+        public ApiResponse< RestApiArrayResultSubscriptionSummary > GetSubscriptionsForAppWithHttpInfo (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -433,6 +439,7 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (excludeNotOwnedSubscriptions != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "excludeNotOwnedSubscriptions", excludeNotOwnedSubscriptions)); // query parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeId", storeId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -465,10 +472,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)</param>
+        /// <param name="storeId">Store Ids (optional)</param>
         /// <returns>Task of RestApiArrayResultSubscriptionSummary</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppAsync (string appId, bool? excludeNotOwnedSubscriptions = null)
+        public async System.Threading.Tasks.Task<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppAsync (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null)
         {
-             ApiResponse<RestApiArrayResultSubscriptionSummary> localVarResponse = await GetSubscriptionsForAppAsyncWithHttpInfo(appId, excludeNotOwnedSubscriptions);
+             ApiResponse<RestApiArrayResultSubscriptionSummary> localVarResponse = await GetSubscriptionsForAppAsyncWithHttpInfo(appId, excludeNotOwnedSubscriptions, storeId);
              return localVarResponse.Data;
 
         }
@@ -479,8 +487,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
         /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)</param>
+        /// <param name="storeId">Store Ids (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultSubscriptionSummary)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultSubscriptionSummary>> GetSubscriptionsForAppAsyncWithHttpInfo (string appId, bool? excludeNotOwnedSubscriptions = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultSubscriptionSummary>> GetSubscriptionsForAppAsyncWithHttpInfo (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -512,6 +521,7 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (excludeNotOwnedSubscriptions != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "excludeNotOwnedSubscriptions", excludeNotOwnedSubscriptions)); // query parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeId", storeId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required

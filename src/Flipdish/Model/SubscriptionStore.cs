@@ -36,10 +36,19 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriptionStore" /> class.
         /// </summary>
-        /// <param name="id">Store Id.</param>
+        /// <param name="id">Store Id (required).</param>
         /// <param name="name">Name (required).</param>
         public SubscriptionStore(int? id = default(int?), string name = default(string))
         {
+            // to ensure "id" is required (not null)
+            if (id == null)
+            {
+                throw new InvalidDataException("id is a required property for SubscriptionStore and cannot be null");
+            }
+            else
+            {
+                this.Id = id;
+            }
             // to ensure "name" is required (not null)
             if (name == null)
             {
@@ -49,7 +58,6 @@ namespace Flipdish.Model
             {
                 this.Name = name;
             }
-            this.Id = id;
         }
         
         /// <summary>
