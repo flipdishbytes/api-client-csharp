@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getinvoices"></a>
 # **GetInvoices**
-> RestApiFinanceSearchPaginationResultInvoice GetInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null)
+> RestApiFinanceSearchPaginationResultInvoice GetInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
 
 Get list of invoices
 
@@ -41,11 +41,12 @@ namespace Example
             var dateFrom = 2013-10-20T19:20:30+01:00;  // DateTime? | Filter starting from this date (optional) (optional) 
             var dateTo = 2013-10-20T19:20:30+01:00;  // DateTime? | Filter ending from this date (optional) (optional) 
             var invoiceNumber = invoiceNumber_example;  // string | Invoice number (optional) (optional) 
+            var storeId = new List<int?>(); // List<int?> | Store Ids (optional) (optional) 
 
             try
             {
                 // Get list of invoices
-                RestApiFinanceSearchPaginationResultInvoice result = apiInstance.GetInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber);
+                RestApiFinanceSearchPaginationResultInvoice result = apiInstance.GetInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -69,6 +70,7 @@ Name | Type | Description  | Notes
  **dateFrom** | **DateTime?**| Filter starting from this date (optional) | [optional] 
  **dateTo** | **DateTime?**| Filter ending from this date (optional) | [optional] 
  **invoiceNumber** | **string**| Invoice number (optional) | [optional] 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)| Store Ids (optional) | [optional] 
 
 ### Return type
 

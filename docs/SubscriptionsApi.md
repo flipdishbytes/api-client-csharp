@@ -101,8 +101,8 @@ namespace Example
 
             var apiInstance = new SubscriptionsApi();
             var appId = appId_example;  // string | App Id
-            var excludeNotOwnedSubscriptions = true;  // bool? | Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) 
-            var storeId = new List<int?>(); // List<int?> | Store Ids (optional) 
+            var excludeNotOwnedSubscriptions = true;  // bool? | Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional) 
+            var storeId = new List<int?>(); // List<int?> | Store Ids (optional) (optional) 
 
             try
             {
@@ -124,8 +124,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App Id | 
- **excludeNotOwnedSubscriptions** | **bool?**| Exclude not owned subscriptions. Set to true to only view your subscriptions | [optional] 
- **storeId** | [**List&lt;int?&gt;**](int?.md)| Store Ids | [optional] 
+ **excludeNotOwnedSubscriptions** | **bool?**| Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) | [optional] 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)| Store Ids (optional) | [optional] 
 
 ### Return type
 
