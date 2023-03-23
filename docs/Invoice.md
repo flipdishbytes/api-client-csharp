@@ -9,7 +9,8 @@ Name | Type | Description | Notes
 **Currency** | **string** | Currency | 
 **Status** | **string** | Status | 
 **SubscriptionId** | **string** | The subscription identifier | [optional] 
-**DueDate** | **DateTime?** | Due Date | [optional] 
+**PaidAt** | **DateTime?** | Paid At | [optional] 
+**FinalisedAt** | **DateTime?** | Finalised At | [optional] 
 **PdfLink** | **string** | Pdf Link | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

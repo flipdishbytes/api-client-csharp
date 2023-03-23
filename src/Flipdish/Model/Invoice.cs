@@ -780,9 +780,10 @@ namespace Flipdish.Model
         /// <param name="currency">Currency (required).</param>
         /// <param name="status">Status (required).</param>
         /// <param name="subscriptionId">The subscription identifier.</param>
-        /// <param name="dueDate">Due Date.</param>
+        /// <param name="paidAt">Paid At.</param>
+        /// <param name="finalisedAt">Finalised At.</param>
         /// <param name="pdfLink">Pdf Link (required).</param>
-        public Invoice(string invoiceId = default(string), string number = default(string), double? total = default(double?), CurrencyEnum currency = default(CurrencyEnum), StatusEnum status = default(StatusEnum), string subscriptionId = default(string), DateTime? dueDate = default(DateTime?), string pdfLink = default(string))
+        public Invoice(string invoiceId = default(string), string number = default(string), double? total = default(double?), CurrencyEnum currency = default(CurrencyEnum), StatusEnum status = default(StatusEnum), string subscriptionId = default(string), DateTime? paidAt = default(DateTime?), DateTime? finalisedAt = default(DateTime?), string pdfLink = default(string))
         {
             // to ensure "invoiceId" is required (not null)
             if (invoiceId == null)
@@ -831,7 +832,8 @@ namespace Flipdish.Model
             }
             this.Total = total;
             this.SubscriptionId = subscriptionId;
-            this.DueDate = dueDate;
+            this.PaidAt = paidAt;
+            this.FinalisedAt = finalisedAt;
         }
         
         /// <summary>
@@ -865,11 +867,18 @@ namespace Flipdish.Model
         public string SubscriptionId { get; set; }
 
         /// <summary>
-        /// Due Date
+        /// Paid At
         /// </summary>
-        /// <value>Due Date</value>
-        [DataMember(Name="DueDate", EmitDefaultValue=false)]
-        public DateTime? DueDate { get; set; }
+        /// <value>Paid At</value>
+        [DataMember(Name="PaidAt", EmitDefaultValue=false)]
+        public DateTime? PaidAt { get; set; }
+
+        /// <summary>
+        /// Finalised At
+        /// </summary>
+        /// <value>Finalised At</value>
+        [DataMember(Name="FinalisedAt", EmitDefaultValue=false)]
+        public DateTime? FinalisedAt { get; set; }
 
         /// <summary>
         /// Pdf Link
@@ -892,7 +901,8 @@ namespace Flipdish.Model
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  SubscriptionId: ").Append(SubscriptionId).Append("\n");
-            sb.Append("  DueDate: ").Append(DueDate).Append("\n");
+            sb.Append("  PaidAt: ").Append(PaidAt).Append("\n");
+            sb.Append("  FinalisedAt: ").Append(FinalisedAt).Append("\n");
             sb.Append("  PdfLink: ").Append(PdfLink).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -959,9 +969,14 @@ namespace Flipdish.Model
                     this.SubscriptionId.Equals(input.SubscriptionId))
                 ) && 
                 (
-                    this.DueDate == input.DueDate ||
-                    (this.DueDate != null &&
-                    this.DueDate.Equals(input.DueDate))
+                    this.PaidAt == input.PaidAt ||
+                    (this.PaidAt != null &&
+                    this.PaidAt.Equals(input.PaidAt))
+                ) && 
+                (
+                    this.FinalisedAt == input.FinalisedAt ||
+                    (this.FinalisedAt != null &&
+                    this.FinalisedAt.Equals(input.FinalisedAt))
                 ) && 
                 (
                     this.PdfLink == input.PdfLink ||
@@ -991,8 +1006,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.SubscriptionId != null)
                     hashCode = hashCode * 59 + this.SubscriptionId.GetHashCode();
-                if (this.DueDate != null)
-                    hashCode = hashCode * 59 + this.DueDate.GetHashCode();
+                if (this.PaidAt != null)
+                    hashCode = hashCode * 59 + this.PaidAt.GetHashCode();
+                if (this.FinalisedAt != null)
+                    hashCode = hashCode * 59 + this.FinalisedAt.GetHashCode();
                 if (this.PdfLink != null)
                     hashCode = hashCode * 59 + this.PdfLink.GetHashCode();
                 return hashCode;
