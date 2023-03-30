@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **PaidAt** | **DateTime?** | Paid At | [optional] 
 **FinalisedAt** | **DateTime?** | Finalised At | [optional] 
 **PdfLink** | **string** | Pdf Link | 
+**HostedUrl** | **string** | Hosted Url | 
+**Overdue** | **bool?** | Overdue | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

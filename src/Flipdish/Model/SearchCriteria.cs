@@ -37,6 +37,7 @@ namespace Flipdish.Model
         /// <param name="end">End date.</param>
         /// <param name="orderId">Events that have Order Id.</param>
         /// <param name="storeId">Events that have Store Id.</param>
+        /// <param name="storeIdList">Events that have Store Id List.</param>
         /// <param name="storeGroupId">Events that have Store Group Id.</param>
         /// <param name="userId">Events that have User Id.</param>
         /// <param name="menuId">Events that have Menu Id.</param>
@@ -46,7 +47,7 @@ namespace Flipdish.Model
         /// <param name="voucherCode">Events that have voucher code.</param>
         /// <param name="eventType">Events that have event type\\s.</param>
         /// <param name="flipdishEventId">Unique Identifier of Event, if this is specified, all other criteria are ignored..</param>
-        public SearchCriteria(int? limit = default(int?), int? page = default(int?), DateTime? start = default(DateTime?), DateTime? end = default(DateTime?), int? orderId = default(int?), int? storeId = default(int?), int? storeGroupId = default(int?), int? userId = default(int?), int? menuId = default(int?), int? campaignId = default(int?), string userEmail = default(string), string userName = default(string), string voucherCode = default(string), List<string> eventType = default(List<string>), string flipdishEventId = default(string))
+        public SearchCriteria(int? limit = default(int?), int? page = default(int?), DateTime? start = default(DateTime?), DateTime? end = default(DateTime?), int? orderId = default(int?), int? storeId = default(int?), List<int?> storeIdList = default(List<int?>), int? storeGroupId = default(int?), int? userId = default(int?), int? menuId = default(int?), int? campaignId = default(int?), string userEmail = default(string), string userName = default(string), string voucherCode = default(string), List<string> eventType = default(List<string>), string flipdishEventId = default(string))
         {
             this.Limit = limit;
             this.Page = page;
@@ -54,6 +55,7 @@ namespace Flipdish.Model
             this.End = end;
             this.OrderId = orderId;
             this.StoreId = storeId;
+            this.StoreIdList = storeIdList;
             this.StoreGroupId = storeGroupId;
             this.UserId = userId;
             this.MenuId = menuId;
@@ -106,6 +108,13 @@ namespace Flipdish.Model
         /// <value>Events that have Store Id</value>
         [DataMember(Name="StoreId", EmitDefaultValue=false)]
         public int? StoreId { get; set; }
+
+        /// <summary>
+        /// Events that have Store Id List
+        /// </summary>
+        /// <value>Events that have Store Id List</value>
+        [DataMember(Name="StoreIdList", EmitDefaultValue=false)]
+        public List<int?> StoreIdList { get; set; }
 
         /// <summary>
         /// Events that have Store Group Id
@@ -184,6 +193,7 @@ namespace Flipdish.Model
             sb.Append("  End: ").Append(End).Append("\n");
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  StoreIdList: ").Append(StoreIdList).Append("\n");
             sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  MenuId: ").Append(MenuId).Append("\n");
@@ -258,6 +268,11 @@ namespace Flipdish.Model
                     this.StoreId.Equals(input.StoreId))
                 ) && 
                 (
+                    this.StoreIdList == input.StoreIdList ||
+                    this.StoreIdList != null &&
+                    this.StoreIdList.SequenceEqual(input.StoreIdList)
+                ) && 
+                (
                     this.StoreGroupId == input.StoreGroupId ||
                     (this.StoreGroupId != null &&
                     this.StoreGroupId.Equals(input.StoreGroupId))
@@ -325,6 +340,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OrderId.GetHashCode();
                 if (this.StoreId != null)
                     hashCode = hashCode * 59 + this.StoreId.GetHashCode();
+                if (this.StoreIdList != null)
+                    hashCode = hashCode * 59 + this.StoreIdList.GetHashCode();
                 if (this.StoreGroupId != null)
                     hashCode = hashCode * 59 + this.StoreGroupId.GetHashCode();
                 if (this.UserId != null)

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **End** | **DateTime?** | End date | [optional] 
 **OrderId** | **int?** | Events that have Order Id | [optional] 
 **StoreId** | **int?** | Events that have Store Id | [optional] 
+**StoreIdList** | **List&lt;int?&gt;** | Events that have Store Id List | [optional] 
 **StoreGroupId** | **int?** | Events that have Store Group Id | [optional] 
 **UserId** | **int?** | Events that have User Id | [optional] 
 **MenuId** | **int?** | Events that have Menu Id | [optional] 

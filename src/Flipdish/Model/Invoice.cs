@@ -783,7 +783,9 @@ namespace Flipdish.Model
         /// <param name="paidAt">Paid At.</param>
         /// <param name="finalisedAt">Finalised At.</param>
         /// <param name="pdfLink">Pdf Link (required).</param>
-        public Invoice(string invoiceId = default(string), string number = default(string), double? total = default(double?), CurrencyEnum currency = default(CurrencyEnum), StatusEnum status = default(StatusEnum), string subscriptionId = default(string), DateTime? paidAt = default(DateTime?), DateTime? finalisedAt = default(DateTime?), string pdfLink = default(string))
+        /// <param name="hostedUrl">Hosted Url (required).</param>
+        /// <param name="overdue">Overdue (required).</param>
+        public Invoice(string invoiceId = default(string), string number = default(string), double? total = default(double?), CurrencyEnum currency = default(CurrencyEnum), StatusEnum status = default(StatusEnum), string subscriptionId = default(string), DateTime? paidAt = default(DateTime?), DateTime? finalisedAt = default(DateTime?), string pdfLink = default(string), string hostedUrl = default(string), bool? overdue = default(bool?))
         {
             // to ensure "invoiceId" is required (not null)
             if (invoiceId == null)
@@ -829,6 +831,24 @@ namespace Flipdish.Model
             else
             {
                 this.PdfLink = pdfLink;
+            }
+            // to ensure "hostedUrl" is required (not null)
+            if (hostedUrl == null)
+            {
+                throw new InvalidDataException("hostedUrl is a required property for Invoice and cannot be null");
+            }
+            else
+            {
+                this.HostedUrl = hostedUrl;
+            }
+            // to ensure "overdue" is required (not null)
+            if (overdue == null)
+            {
+                throw new InvalidDataException("overdue is a required property for Invoice and cannot be null");
+            }
+            else
+            {
+                this.Overdue = overdue;
             }
             this.Total = total;
             this.SubscriptionId = subscriptionId;
@@ -888,6 +908,20 @@ namespace Flipdish.Model
         public string PdfLink { get; set; }
 
         /// <summary>
+        /// Hosted Url
+        /// </summary>
+        /// <value>Hosted Url</value>
+        [DataMember(Name="HostedUrl", EmitDefaultValue=false)]
+        public string HostedUrl { get; set; }
+
+        /// <summary>
+        /// Overdue
+        /// </summary>
+        /// <value>Overdue</value>
+        [DataMember(Name="Overdue", EmitDefaultValue=false)]
+        public bool? Overdue { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -904,6 +938,8 @@ namespace Flipdish.Model
             sb.Append("  PaidAt: ").Append(PaidAt).Append("\n");
             sb.Append("  FinalisedAt: ").Append(FinalisedAt).Append("\n");
             sb.Append("  PdfLink: ").Append(PdfLink).Append("\n");
+            sb.Append("  HostedUrl: ").Append(HostedUrl).Append("\n");
+            sb.Append("  Overdue: ").Append(Overdue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -982,6 +1018,16 @@ namespace Flipdish.Model
                     this.PdfLink == input.PdfLink ||
                     (this.PdfLink != null &&
                     this.PdfLink.Equals(input.PdfLink))
+                ) && 
+                (
+                    this.HostedUrl == input.HostedUrl ||
+                    (this.HostedUrl != null &&
+                    this.HostedUrl.Equals(input.HostedUrl))
+                ) && 
+                (
+                    this.Overdue == input.Overdue ||
+                    (this.Overdue != null &&
+                    this.Overdue.Equals(input.Overdue))
                 );
         }
 
@@ -1012,6 +1058,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.FinalisedAt.GetHashCode();
                 if (this.PdfLink != null)
                     hashCode = hashCode * 59 + this.PdfLink.GetHashCode();
+                if (this.HostedUrl != null)
+                    hashCode = hashCode * 59 + this.HostedUrl.GetHashCode();
+                if (this.Overdue != null)
+                    hashCode = hashCode * 59 + this.Overdue.GetHashCode();
                 return hashCode;
             }
         }
