@@ -525,7 +525,7 @@ Name | Type | Description  | Notes
 
 <a name="setapphostname"></a>
 # **SetAppHostname**
-> RestApiStringResult SetAppHostname (string appId, string hostname, bool? isEmbed = null)
+> RestApiStringResult SetAppHostname (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null)
 
 Set the application hostname.
 
@@ -552,11 +552,12 @@ namespace Example
             var appId = appId_example;  // string | Application identifier.
             var hostname = hostname_example;  // string | The new Hostname.
             var isEmbed = true;  // bool? | Will the website be embedded (optional) 
+            var isNextGenWeb = true;  // bool? | Enables the NextGen web editor (optional) 
 
             try
             {
                 // Set the application hostname.
-                RestApiStringResult result = apiInstance.SetAppHostname(appId, hostname, isEmbed);
+                RestApiStringResult result = apiInstance.SetAppHostname(appId, hostname, isEmbed, isNextGenWeb);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -575,6 +576,7 @@ Name | Type | Description  | Notes
  **appId** | **string**| Application identifier. | 
  **hostname** | **string**| The new Hostname. | 
  **isEmbed** | **bool?**| Will the website be embedded | [optional] 
+ **isNextGenWeb** | **bool?**| Enables the NextGen web editor | [optional] 
 
 ### Return type
 

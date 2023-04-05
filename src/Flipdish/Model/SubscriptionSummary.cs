@@ -793,7 +793,7 @@ namespace Flipdish.Model
         /// <param name="nextInvoiceAmount">Next invoice amount.</param>
         /// <param name="nextInvoiceBillingDate">Next invoice billing date.</param>
         /// <param name="user">User (required).</param>
-        /// <param name="defaultPaymentDescription">Default payment description (required).</param>
+        /// <param name="defaultPaymentDescription">Default payment description.</param>
         public SubscriptionSummary(string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), double? nextInvoiceAmount = default(double?), DateTime? nextInvoiceBillingDate = default(DateTime?), string user = default(string), string defaultPaymentDescription = default(string))
         {
             // to ensure "subscriptionId" is required (not null)
@@ -841,17 +841,9 @@ namespace Flipdish.Model
             {
                 this.User = user;
             }
-            // to ensure "defaultPaymentDescription" is required (not null)
-            if (defaultPaymentDescription == null)
-            {
-                throw new InvalidDataException("defaultPaymentDescription is a required property for SubscriptionSummary and cannot be null");
-            }
-            else
-            {
-                this.DefaultPaymentDescription = defaultPaymentDescription;
-            }
             this.NextInvoiceAmount = nextInvoiceAmount;
             this.NextInvoiceBillingDate = nextInvoiceBillingDate;
+            this.DefaultPaymentDescription = defaultPaymentDescription;
         }
         
         /// <summary>
