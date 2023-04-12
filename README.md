@@ -898,6 +898,7 @@ Class | Method | HTTP request | Description
  - [Model.PhoneCall](docs/PhoneCall.md)
  - [Model.PhoneCallEndedEvent](docs/PhoneCallEndedEvent.md)
  - [Model.PhoneCallStartedEvent](docs/PhoneCallStartedEvent.md)
+ - [Model.PosRevenueDetails](docs/PosRevenueDetails.md)
  - [Model.PreOrderConfig](docs/PreOrderConfig.md)
  - [Model.PreOrderTime](docs/PreOrderTime.md)
  - [Model.PredefinedAnswer](docs/PredefinedAnswer.md)
