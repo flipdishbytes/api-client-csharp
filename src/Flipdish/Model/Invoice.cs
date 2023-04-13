@@ -730,33 +730,33 @@ namespace Flipdish.Model
         {
             
             /// <summary>
-            /// Enum Draft for value: draft
+            /// Enum Draft for value: Draft
             /// </summary>
-            [EnumMember(Value = "draft")]
+            [EnumMember(Value = "Draft")]
             Draft = 1,
             
             /// <summary>
-            /// Enum Open for value: open
+            /// Enum Open for value: Open
             /// </summary>
-            [EnumMember(Value = "open")]
+            [EnumMember(Value = "Open")]
             Open = 2,
             
             /// <summary>
-            /// Enum Paid for value: paid
+            /// Enum Paid for value: Paid
             /// </summary>
-            [EnumMember(Value = "paid")]
+            [EnumMember(Value = "Paid")]
             Paid = 3,
             
             /// <summary>
-            /// Enum Uncollectible for value: uncollectible
+            /// Enum UnCollectible for value: UnCollectible
             /// </summary>
-            [EnumMember(Value = "uncollectible")]
-            Uncollectible = 4,
+            [EnumMember(Value = "UnCollectible")]
+            UnCollectible = 4,
             
             /// <summary>
-            /// Enum Void for value: void
+            /// Enum Void for value: Void
             /// </summary>
-            [EnumMember(Value = "void")]
+            [EnumMember(Value = "Void")]
             Void = 5
         }
 

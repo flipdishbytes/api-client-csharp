@@ -37,45 +37,45 @@ namespace Flipdish.Model
         {
             
             /// <summary>
-            /// Enum Incomplete for value: incomplete
+            /// Enum Incomplete for value: Incomplete
             /// </summary>
-            [EnumMember(Value = "incomplete")]
+            [EnumMember(Value = "Incomplete")]
             Incomplete = 1,
             
             /// <summary>
-            /// Enum Incompleteexpired for value: incomplete_expired
+            /// Enum IncompleteExpired for value: IncompleteExpired
             /// </summary>
-            [EnumMember(Value = "incomplete_expired")]
-            Incompleteexpired = 2,
+            [EnumMember(Value = "IncompleteExpired")]
+            IncompleteExpired = 2,
             
             /// <summary>
-            /// Enum Trialing for value: trialing
+            /// Enum Trialing for value: Trialing
             /// </summary>
-            [EnumMember(Value = "trialing")]
+            [EnumMember(Value = "Trialing")]
             Trialing = 3,
             
             /// <summary>
-            /// Enum Active for value: active
+            /// Enum Active for value: Active
             /// </summary>
-            [EnumMember(Value = "active")]
+            [EnumMember(Value = "Active")]
             Active = 4,
             
             /// <summary>
-            /// Enum Pastdue for value: past_due
+            /// Enum PastDue for value: PastDue
             /// </summary>
-            [EnumMember(Value = "past_due")]
-            Pastdue = 5,
+            [EnumMember(Value = "PastDue")]
+            PastDue = 5,
             
             /// <summary>
-            /// Enum Canceled for value: canceled
+            /// Enum Canceled for value: Canceled
             /// </summary>
-            [EnumMember(Value = "canceled")]
+            [EnumMember(Value = "Canceled")]
             Canceled = 6,
             
             /// <summary>
-            /// Enum Unpaid for value: unpaid
+            /// Enum Unpaid for value: Unpaid
             /// </summary>
-            [EnumMember(Value = "unpaid")]
+            [EnumMember(Value = "Unpaid")]
             Unpaid = 7
         }
 
