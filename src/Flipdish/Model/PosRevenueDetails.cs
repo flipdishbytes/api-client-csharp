@@ -32,11 +32,15 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="PosRevenueDetails" /> class.
         /// </summary>
         /// <param name="posSalesAmount">POS sale amount for the store.</param>
+        /// <param name="posSalesTax">POS sale Tax for the store.</param>
         /// <param name="posSalesTips">POS sale tips for the store.</param>
-        public PosRevenueDetails(double? posSalesAmount = default(double?), double? posSalesTips = default(double?))
+        /// <param name="totalPosRevenue">POS Total Revenue for the store.</param>
+        public PosRevenueDetails(double? posSalesAmount = default(double?), double? posSalesTax = default(double?), double? posSalesTips = default(double?), double? totalPosRevenue = default(double?))
         {
             this.PosSalesAmount = posSalesAmount;
+            this.PosSalesTax = posSalesTax;
             this.PosSalesTips = posSalesTips;
+            this.TotalPosRevenue = totalPosRevenue;
         }
         
         /// <summary>
@@ -47,11 +51,25 @@ namespace Flipdish.Model
         public double? PosSalesAmount { get; set; }
 
         /// <summary>
+        /// POS sale Tax for the store
+        /// </summary>
+        /// <value>POS sale Tax for the store</value>
+        [DataMember(Name="PosSalesTax", EmitDefaultValue=false)]
+        public double? PosSalesTax { get; set; }
+
+        /// <summary>
         /// POS sale tips for the store
         /// </summary>
         /// <value>POS sale tips for the store</value>
         [DataMember(Name="PosSalesTips", EmitDefaultValue=false)]
         public double? PosSalesTips { get; set; }
+
+        /// <summary>
+        /// POS Total Revenue for the store
+        /// </summary>
+        /// <value>POS Total Revenue for the store</value>
+        [DataMember(Name="TotalPosRevenue", EmitDefaultValue=false)]
+        public double? TotalPosRevenue { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,7 +80,9 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class PosRevenueDetails {\n");
             sb.Append("  PosSalesAmount: ").Append(PosSalesAmount).Append("\n");
+            sb.Append("  PosSalesTax: ").Append(PosSalesTax).Append("\n");
             sb.Append("  PosSalesTips: ").Append(PosSalesTips).Append("\n");
+            sb.Append("  TotalPosRevenue: ").Append(TotalPosRevenue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -103,9 +123,19 @@ namespace Flipdish.Model
                     this.PosSalesAmount.Equals(input.PosSalesAmount))
                 ) && 
                 (
+                    this.PosSalesTax == input.PosSalesTax ||
+                    (this.PosSalesTax != null &&
+                    this.PosSalesTax.Equals(input.PosSalesTax))
+                ) && 
+                (
                     this.PosSalesTips == input.PosSalesTips ||
                     (this.PosSalesTips != null &&
                     this.PosSalesTips.Equals(input.PosSalesTips))
+                ) && 
+                (
+                    this.TotalPosRevenue == input.TotalPosRevenue ||
+                    (this.TotalPosRevenue != null &&
+                    this.TotalPosRevenue.Equals(input.TotalPosRevenue))
                 );
         }
 
@@ -120,8 +150,12 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.PosSalesAmount != null)
                     hashCode = hashCode * 59 + this.PosSalesAmount.GetHashCode();
+                if (this.PosSalesTax != null)
+                    hashCode = hashCode * 59 + this.PosSalesTax.GetHashCode();
                 if (this.PosSalesTips != null)
                     hashCode = hashCode * 59 + this.PosSalesTips.GetHashCode();
+                if (this.TotalPosRevenue != null)
+                    hashCode = hashCode * 59 + this.TotalPosRevenue.GetHashCode();
                 return hashCode;
             }
         }

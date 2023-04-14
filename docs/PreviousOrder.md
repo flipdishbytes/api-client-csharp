@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **TotalAmount** | **double?** |  | [optional] 
 **Items** | [**List&lt;PreviousOrderItem&gt;**](PreviousOrderItem.md) |  | [optional] 
 **TaxRates** | [**List&lt;TaxRate&gt;**](TaxRate.md) |  | [optional] 
+**WhiteLabelId** | **int?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

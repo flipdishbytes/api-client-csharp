@@ -743,7 +743,8 @@ namespace Flipdish.Model
         /// <param name="totalAmount">totalAmount.</param>
         /// <param name="items">items.</param>
         /// <param name="taxRates">taxRates.</param>
-        public PreviousOrder(string deliveryType = default(string), string deliveryLocationAddressString = default(string), string paymentAccountType = default(string), int? orderId = default(int?), string restaurantName = default(string), string localOrderId = default(string), string tableServiceCategory = default(string), string pickupLocationOptionValue = default(string), string customerName = default(string), string phoneNumberInternationalFormatString = default(string), string deliveryInstructions = default(string), CurrencyEnum? currency = default(CurrencyEnum?), double? processingFee = default(double?), double? serviceChargePercentage = default(double?), double? serviceChargeAmount = default(double?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? totalTax = default(double?), double? totalAmount = default(double?), List<PreviousOrderItem> items = default(List<PreviousOrderItem>), List<TaxRate> taxRates = default(List<TaxRate>))
+        /// <param name="whiteLabelId">whiteLabelId.</param>
+        public PreviousOrder(string deliveryType = default(string), string deliveryLocationAddressString = default(string), string paymentAccountType = default(string), int? orderId = default(int?), string restaurantName = default(string), string localOrderId = default(string), string tableServiceCategory = default(string), string pickupLocationOptionValue = default(string), string customerName = default(string), string phoneNumberInternationalFormatString = default(string), string deliveryInstructions = default(string), CurrencyEnum? currency = default(CurrencyEnum?), double? processingFee = default(double?), double? serviceChargePercentage = default(double?), double? serviceChargeAmount = default(double?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? totalTax = default(double?), double? totalAmount = default(double?), List<PreviousOrderItem> items = default(List<PreviousOrderItem>), List<TaxRate> taxRates = default(List<TaxRate>), int? whiteLabelId = default(int?))
         {
             this.DeliveryType = deliveryType;
             this.DeliveryLocationAddressString = deliveryLocationAddressString;
@@ -766,6 +767,7 @@ namespace Flipdish.Model
             this.TotalAmount = totalAmount;
             this.Items = items;
             this.TaxRates = taxRates;
+            this.WhiteLabelId = whiteLabelId;
         }
         
         /// <summary>
@@ -890,6 +892,12 @@ namespace Flipdish.Model
         public List<TaxRate> TaxRates { get; set; }
 
         /// <summary>
+        /// Gets or Sets WhiteLabelId
+        /// </summary>
+        [DataMember(Name="WhiteLabelId", EmitDefaultValue=false)]
+        public int? WhiteLabelId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -918,6 +926,7 @@ namespace Flipdish.Model
             sb.Append("  TotalAmount: ").Append(TotalAmount).Append("\n");
             sb.Append("  Items: ").Append(Items).Append("\n");
             sb.Append("  TaxRates: ").Append(TaxRates).Append("\n");
+            sb.Append("  WhiteLabelId: ").Append(WhiteLabelId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1056,6 +1065,11 @@ namespace Flipdish.Model
                     this.TaxRates == input.TaxRates ||
                     this.TaxRates != null &&
                     this.TaxRates.SequenceEqual(input.TaxRates)
+                ) && 
+                (
+                    this.WhiteLabelId == input.WhiteLabelId ||
+                    (this.WhiteLabelId != null &&
+                    this.WhiteLabelId.Equals(input.WhiteLabelId))
                 );
         }
 
@@ -1110,6 +1124,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Items.GetHashCode();
                 if (this.TaxRates != null)
                     hashCode = hashCode * 59 + this.TaxRates.GetHashCode();
+                if (this.WhiteLabelId != null)
+                    hashCode = hashCode * 59 + this.WhiteLabelId.GetHashCode();
                 return hashCode;
             }
         }
