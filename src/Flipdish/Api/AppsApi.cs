@@ -295,6 +295,31 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiStringResult</returns>
         ApiResponse<RestApiStringResult> SetPanaceaVanityUrlWithHttpInfo (string appId, string vanityUrl);
         /// <summary>
+        /// Toggle Next Gen Web
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isNextGenWeb"></param>
+        /// <returns>RestApiStringResult</returns>
+        RestApiStringResult ToggleNextGenWeb (string appId, string hostname, bool? isNextGenWeb);
+
+        /// <summary>
+        /// Toggle Next Gen Web
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isNextGenWeb"></param>
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        ApiResponse<RestApiStringResult> ToggleNextGenWebWithHttpInfo (string appId, string hostname, bool? isNextGenWeb);
+        /// <summary>
         /// Set the application logo \\ icon
         /// </summary>
         /// <remarks>
@@ -589,6 +614,31 @@ namespace Flipdish.Api
         /// <param name="vanityUrl">Vanity url</param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetPanaceaVanityUrlAsyncWithHttpInfo (string appId, string vanityUrl);
+        /// <summary>
+        /// Toggle Next Gen Web
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isNextGenWeb"></param>
+        /// <returns>Task of RestApiStringResult</returns>
+        System.Threading.Tasks.Task<RestApiStringResult> ToggleNextGenWebAsync (string appId, string hostname, bool? isNextGenWeb);
+
+        /// <summary>
+        /// Toggle Next Gen Web
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isNextGenWeb"></param>
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> ToggleNextGenWebAsyncWithHttpInfo (string appId, string hostname, bool? isNextGenWeb);
         /// <summary>
         /// Set the application logo \\ icon
         /// </summary>
@@ -2642,6 +2692,181 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("SetPanaceaVanityUrl", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+        }
+
+        /// <summary>
+        /// Toggle Next Gen Web 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isNextGenWeb"></param>
+        /// <returns>RestApiStringResult</returns>
+        public RestApiStringResult ToggleNextGenWeb (string appId, string hostname, bool? isNextGenWeb)
+        {
+             ApiResponse<RestApiStringResult> localVarResponse = ToggleNextGenWebWithHttpInfo(appId, hostname, isNextGenWeb);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Toggle Next Gen Web 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isNextGenWeb"></param>
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        public ApiResponse< RestApiStringResult > ToggleNextGenWebWithHttpInfo (string appId, string hostname, bool? isNextGenWeb)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->ToggleNextGenWeb");
+            // verify the required parameter 'hostname' is set
+            if (hostname == null)
+                throw new ApiException(400, "Missing required parameter 'hostname' when calling AppsApi->ToggleNextGenWeb");
+            // verify the required parameter 'isNextGenWeb' is set
+            if (isNextGenWeb == null)
+                throw new ApiException(400, "Missing required parameter 'isNextGenWeb' when calling AppsApi->ToggleNextGenWeb");
+
+            var localVarPath = "./api/v1.0/apps/{appId}/nextgenweb";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (hostname != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "hostname", hostname)); // query parameter
+            if (isNextGenWeb != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isNextGenWeb", isNextGenWeb)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ToggleNextGenWeb", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+        }
+
+        /// <summary>
+        /// Toggle Next Gen Web 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isNextGenWeb"></param>
+        /// <returns>Task of RestApiStringResult</returns>
+        public async System.Threading.Tasks.Task<RestApiStringResult> ToggleNextGenWebAsync (string appId, string hostname, bool? isNextGenWeb)
+        {
+             ApiResponse<RestApiStringResult> localVarResponse = await ToggleNextGenWebAsyncWithHttpInfo(appId, hostname, isNextGenWeb);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Toggle Next Gen Web 
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isNextGenWeb"></param>
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> ToggleNextGenWebAsyncWithHttpInfo (string appId, string hostname, bool? isNextGenWeb)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->ToggleNextGenWeb");
+            // verify the required parameter 'hostname' is set
+            if (hostname == null)
+                throw new ApiException(400, "Missing required parameter 'hostname' when calling AppsApi->ToggleNextGenWeb");
+            // verify the required parameter 'isNextGenWeb' is set
+            if (isNextGenWeb == null)
+                throw new ApiException(400, "Missing required parameter 'isNextGenWeb' when calling AppsApi->ToggleNextGenWeb");
+
+            var localVarPath = "./api/v1.0/apps/{appId}/nextgenweb";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (hostname != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "hostname", hostname)); // query parameter
+            if (isNextGenWeb != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isNextGenWeb", isNextGenWeb)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ToggleNextGenWeb", localVarResponse);
                 if (exception != null) throw exception;
             }
 
