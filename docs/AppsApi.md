@@ -790,7 +790,7 @@ Name | Type | Description  | Notes
 
 <a name="togglenextgenweb"></a>
 # **ToggleNextGenWeb**
-> RestApiStringResult ToggleNextGenWeb (string appId, string hostname, bool? isNextGenWeb)
+> RestApiStringResult ToggleNextGenWeb (string appId, string hostname, string vanityUrl, bool? isNextGenWeb)
 
 Toggle Next Gen Web
 
@@ -814,12 +814,13 @@ namespace Example
             var apiInstance = new AppsApi();
             var appId = appId_example;  // string | 
             var hostname = hostname_example;  // string | 
+            var vanityUrl = vanityUrl_example;  // string | 
             var isNextGenWeb = true;  // bool? | 
 
             try
             {
                 // Toggle Next Gen Web
-                RestApiStringResult result = apiInstance.ToggleNextGenWeb(appId, hostname, isNextGenWeb);
+                RestApiStringResult result = apiInstance.ToggleNextGenWeb(appId, hostname, vanityUrl, isNextGenWeb);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -837,6 +838,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
  **hostname** | **string**|  | 
+ **vanityUrl** | **string**|  | 
  **isNextGenWeb** | **bool?**|  | 
 
 ### Return type

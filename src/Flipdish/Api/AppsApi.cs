@@ -303,9 +303,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
+        /// <param name="vanityUrl"></param>
         /// <param name="isNextGenWeb"></param>
         /// <returns>RestApiStringResult</returns>
-        RestApiStringResult ToggleNextGenWeb (string appId, string hostname, bool? isNextGenWeb);
+        RestApiStringResult ToggleNextGenWeb (string appId, string hostname, string vanityUrl, bool? isNextGenWeb);
 
         /// <summary>
         /// Toggle Next Gen Web
@@ -316,9 +317,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
+        /// <param name="vanityUrl"></param>
         /// <param name="isNextGenWeb"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
-        ApiResponse<RestApiStringResult> ToggleNextGenWebWithHttpInfo (string appId, string hostname, bool? isNextGenWeb);
+        ApiResponse<RestApiStringResult> ToggleNextGenWebWithHttpInfo (string appId, string hostname, string vanityUrl, bool? isNextGenWeb);
         /// <summary>
         /// Set the application logo \\ icon
         /// </summary>
@@ -623,9 +625,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
+        /// <param name="vanityUrl"></param>
         /// <param name="isNextGenWeb"></param>
         /// <returns>Task of RestApiStringResult</returns>
-        System.Threading.Tasks.Task<RestApiStringResult> ToggleNextGenWebAsync (string appId, string hostname, bool? isNextGenWeb);
+        System.Threading.Tasks.Task<RestApiStringResult> ToggleNextGenWebAsync (string appId, string hostname, string vanityUrl, bool? isNextGenWeb);
 
         /// <summary>
         /// Toggle Next Gen Web
@@ -636,9 +639,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
+        /// <param name="vanityUrl"></param>
         /// <param name="isNextGenWeb"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> ToggleNextGenWebAsyncWithHttpInfo (string appId, string hostname, bool? isNextGenWeb);
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> ToggleNextGenWebAsyncWithHttpInfo (string appId, string hostname, string vanityUrl, bool? isNextGenWeb);
         /// <summary>
         /// Set the application logo \\ icon
         /// </summary>
@@ -2706,11 +2710,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
+        /// <param name="vanityUrl"></param>
         /// <param name="isNextGenWeb"></param>
         /// <returns>RestApiStringResult</returns>
-        public RestApiStringResult ToggleNextGenWeb (string appId, string hostname, bool? isNextGenWeb)
+        public RestApiStringResult ToggleNextGenWeb (string appId, string hostname, string vanityUrl, bool? isNextGenWeb)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = ToggleNextGenWebWithHttpInfo(appId, hostname, isNextGenWeb);
+             ApiResponse<RestApiStringResult> localVarResponse = ToggleNextGenWebWithHttpInfo(appId, hostname, vanityUrl, isNextGenWeb);
              return localVarResponse.Data;
         }
 
@@ -2720,9 +2725,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
+        /// <param name="vanityUrl"></param>
         /// <param name="isNextGenWeb"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
-        public ApiResponse< RestApiStringResult > ToggleNextGenWebWithHttpInfo (string appId, string hostname, bool? isNextGenWeb)
+        public ApiResponse< RestApiStringResult > ToggleNextGenWebWithHttpInfo (string appId, string hostname, string vanityUrl, bool? isNextGenWeb)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -2730,6 +2736,9 @@ namespace Flipdish.Api
             // verify the required parameter 'hostname' is set
             if (hostname == null)
                 throw new ApiException(400, "Missing required parameter 'hostname' when calling AppsApi->ToggleNextGenWeb");
+            // verify the required parameter 'vanityUrl' is set
+            if (vanityUrl == null)
+                throw new ApiException(400, "Missing required parameter 'vanityUrl' when calling AppsApi->ToggleNextGenWeb");
             // verify the required parameter 'isNextGenWeb' is set
             if (isNextGenWeb == null)
                 throw new ApiException(400, "Missing required parameter 'isNextGenWeb' when calling AppsApi->ToggleNextGenWeb");
@@ -2760,6 +2769,7 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (hostname != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "hostname", hostname)); // query parameter
+            if (vanityUrl != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "vanityUrl", vanityUrl)); // query parameter
             if (isNextGenWeb != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isNextGenWeb", isNextGenWeb)); // query parameter
 
             // authentication (oauth2) required
@@ -2793,11 +2803,12 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
+        /// <param name="vanityUrl"></param>
         /// <param name="isNextGenWeb"></param>
         /// <returns>Task of RestApiStringResult</returns>
-        public async System.Threading.Tasks.Task<RestApiStringResult> ToggleNextGenWebAsync (string appId, string hostname, bool? isNextGenWeb)
+        public async System.Threading.Tasks.Task<RestApiStringResult> ToggleNextGenWebAsync (string appId, string hostname, string vanityUrl, bool? isNextGenWeb)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = await ToggleNextGenWebAsyncWithHttpInfo(appId, hostname, isNextGenWeb);
+             ApiResponse<RestApiStringResult> localVarResponse = await ToggleNextGenWebAsyncWithHttpInfo(appId, hostname, vanityUrl, isNextGenWeb);
              return localVarResponse.Data;
 
         }
@@ -2808,9 +2819,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
+        /// <param name="vanityUrl"></param>
         /// <param name="isNextGenWeb"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> ToggleNextGenWebAsyncWithHttpInfo (string appId, string hostname, bool? isNextGenWeb)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> ToggleNextGenWebAsyncWithHttpInfo (string appId, string hostname, string vanityUrl, bool? isNextGenWeb)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -2818,6 +2830,9 @@ namespace Flipdish.Api
             // verify the required parameter 'hostname' is set
             if (hostname == null)
                 throw new ApiException(400, "Missing required parameter 'hostname' when calling AppsApi->ToggleNextGenWeb");
+            // verify the required parameter 'vanityUrl' is set
+            if (vanityUrl == null)
+                throw new ApiException(400, "Missing required parameter 'vanityUrl' when calling AppsApi->ToggleNextGenWeb");
             // verify the required parameter 'isNextGenWeb' is set
             if (isNextGenWeb == null)
                 throw new ApiException(400, "Missing required parameter 'isNextGenWeb' when calling AppsApi->ToggleNextGenWeb");
@@ -2848,6 +2863,7 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (hostname != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "hostname", hostname)); // query parameter
+            if (vanityUrl != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "vanityUrl", vanityUrl)); // query parameter
             if (isNextGenWeb != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isNextGenWeb", isNextGenWeb)); // query parameter
 
             // authentication (oauth2) required
