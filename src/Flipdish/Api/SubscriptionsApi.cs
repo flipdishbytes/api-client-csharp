@@ -51,7 +51,7 @@ namespace Flipdish.Api
         /// Get list of subscriptions for an App
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
@@ -64,7 +64,7 @@ namespace Flipdish.Api
         /// Get list of subscriptions for an App
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
@@ -101,7 +101,7 @@ namespace Flipdish.Api
         /// Get list of subscriptions for an App
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
@@ -114,7 +114,7 @@ namespace Flipdish.Api
         /// Get list of subscriptions for an App
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
@@ -386,7 +386,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of subscriptions for an App [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get list of subscriptions for an App [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
@@ -400,7 +400,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of subscriptions for an App [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get list of subscriptions for an App [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
@@ -467,7 +467,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of subscriptions for an App [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get list of subscriptions for an App [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>
@@ -482,7 +482,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of subscriptions for an App [BETA - this endpoint is under development, do not use it in your production system]
+        /// Get list of subscriptions for an App [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App Id</param>

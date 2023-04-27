@@ -787,7 +787,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="Subscription" /> class.
         /// </summary>
         /// <param name="products">Products (required).</param>
-        /// <param name="upcomingInvoiceItems">Upcoming invoice items (required).</param>
+        /// <param name="upcomingInvoiceItems">Upcoming invoice items.</param>
         /// <param name="subscriptionId">The subscription identifier (required).</param>
         /// <param name="name">name (required).</param>
         /// <param name="status">Status (required).</param>
@@ -796,7 +796,8 @@ namespace Flipdish.Model
         /// <param name="nextInvoiceBillingDate">Next invoice billing date.</param>
         /// <param name="user">User (required).</param>
         /// <param name="defaultPaymentDescription">Default payment description.</param>
-        public Subscription(List<SubscriptionProduct> products = default(List<SubscriptionProduct>), List<InvoiceItem> upcomingInvoiceItems = default(List<InvoiceItem>), string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), double? nextInvoiceAmount = default(double?), DateTime? nextInvoiceBillingDate = default(DateTime?), string user = default(string), string defaultPaymentDescription = default(string))
+        /// <param name="cancellationDate">Cancellation Date.</param>
+        public Subscription(List<SubscriptionProduct> products = default(List<SubscriptionProduct>), List<InvoiceItem> upcomingInvoiceItems = default(List<InvoiceItem>), string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), double? nextInvoiceAmount = default(double?), DateTime? nextInvoiceBillingDate = default(DateTime?), string user = default(string), string defaultPaymentDescription = default(string), DateTime? cancellationDate = default(DateTime?))
         {
             // to ensure "products" is required (not null)
             if (products == null)
@@ -806,15 +807,6 @@ namespace Flipdish.Model
             else
             {
                 this.Products = products;
-            }
-            // to ensure "upcomingInvoiceItems" is required (not null)
-            if (upcomingInvoiceItems == null)
-            {
-                throw new InvalidDataException("upcomingInvoiceItems is a required property for Subscription and cannot be null");
-            }
-            else
-            {
-                this.UpcomingInvoiceItems = upcomingInvoiceItems;
             }
             // to ensure "subscriptionId" is required (not null)
             if (subscriptionId == null)
@@ -861,9 +853,11 @@ namespace Flipdish.Model
             {
                 this.User = user;
             }
+            this.UpcomingInvoiceItems = upcomingInvoiceItems;
             this.NextInvoiceAmount = nextInvoiceAmount;
             this.NextInvoiceBillingDate = nextInvoiceBillingDate;
             this.DefaultPaymentDescription = defaultPaymentDescription;
+            this.CancellationDate = cancellationDate;
         }
         
         /// <summary>
@@ -924,6 +918,13 @@ namespace Flipdish.Model
         public string DefaultPaymentDescription { get; set; }
 
         /// <summary>
+        /// Cancellation Date
+        /// </summary>
+        /// <value>Cancellation Date</value>
+        [DataMember(Name="CancellationDate", EmitDefaultValue=false)]
+        public DateTime? CancellationDate { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -941,6 +942,7 @@ namespace Flipdish.Model
             sb.Append("  NextInvoiceBillingDate: ").Append(NextInvoiceBillingDate).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  DefaultPaymentDescription: ").Append(DefaultPaymentDescription).Append("\n");
+            sb.Append("  CancellationDate: ").Append(CancellationDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1024,6 +1026,11 @@ namespace Flipdish.Model
                     this.DefaultPaymentDescription == input.DefaultPaymentDescription ||
                     (this.DefaultPaymentDescription != null &&
                     this.DefaultPaymentDescription.Equals(input.DefaultPaymentDescription))
+                ) && 
+                (
+                    this.CancellationDate == input.CancellationDate ||
+                    (this.CancellationDate != null &&
+                    this.CancellationDate.Equals(input.CancellationDate))
                 );
         }
 
@@ -1056,6 +1063,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.DefaultPaymentDescription != null)
                     hashCode = hashCode * 59 + this.DefaultPaymentDescription.GetHashCode();
+                if (this.CancellationDate != null)
+                    hashCode = hashCode * 59 + this.CancellationDate.GetHashCode();
                 return hashCode;
             }
         }
