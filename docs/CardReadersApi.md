@@ -4,7 +4,6 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AuthorizeStripeTerminal**](CardReadersApi.md#authorizestripeterminal) | **POST** /api/v1.0/{appId}/stripeterminal/authorize | Get Authorization Key for Stripe Terminal
 [**CancelCurrentlyInitiatedBluetoothDeviceUpdate**](CardReadersApi.md#cancelcurrentlyinitiatedbluetoothdeviceupdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | Cancel currently initiated install update for bluetooth terminal
 [**CancelReaderAction**](CardReadersApi.md#cancelreaderaction) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action | Cancel terminals action
 [**CardReadersGetReader**](CardReadersApi.md#cardreadersgetreader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | Get reader
@@ -19,70 +18,6 @@ Method | HTTP request | Description
 [**UnRegisterTerminal**](CardReadersApi.md#unregisterterminal) | **DELETE** /api/v1.0/{appId}/payments/terminals/stripe/unregister | Un-register terminal by deleting it from stripe
 [**UnpairCurrentlyPairedBluetoothDevice**](CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
 
-
-<a name="authorizestripeterminal"></a>
-# **AuthorizeStripeTerminal**
-> RestApiResultStripeTerminalPrivateKey AuthorizeStripeTerminal (string appId)
-
-Get Authorization Key for Stripe Terminal
-
-Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class AuthorizeStripeTerminalExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new CardReadersApi();
-            var appId = appId_example;  // string | 
-
-            try
-            {
-                // Get Authorization Key for Stripe Terminal
-                RestApiResultStripeTerminalPrivateKey result = apiInstance.AuthorizeStripeTerminal(appId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling CardReadersApi.AuthorizeStripeTerminal: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
-
-### Return type
-
-[**RestApiResultStripeTerminalPrivateKey**](RestApiResultStripeTerminalPrivateKey.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="cancelcurrentlyinitiatedbluetoothdeviceupdate"></a>
 # **CancelCurrentlyInitiatedBluetoothDeviceUpdate**
