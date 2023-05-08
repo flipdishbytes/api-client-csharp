@@ -724,6 +724,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreGroupExtended" /> class.
         /// </summary>
+        /// <param name="deliveryMenuMessage">Delivery Menu Message.</param>
+        /// <param name="pickupMenuMessage">Pickup Menu Message.</param>
         /// <param name="totalStores">Total Amount of Stores.</param>
         /// <param name="groupedCoordinates">Grouped store coordinates.</param>
         /// <param name="storeHeaders">Store Headers associated with Store Group.</param>
@@ -732,8 +734,10 @@ namespace Flipdish.Model
         /// <param name="generalRatingCount">Store Group rating count.</param>
         /// <param name="name">Store Group Name.</param>
         /// <param name="currency">Currency used by the stores in this group.</param>
-        public StoreGroupExtended(int? totalStores = default(int?), List<GroupedCoordinates> groupedCoordinates = default(List<GroupedCoordinates>), List<StoreHeader> storeHeaders = default(List<StoreHeader>), int? storeGroupId = default(int?), double? generalRating = default(double?), int? generalRatingCount = default(int?), string name = default(string), CurrencyEnum? currency = default(CurrencyEnum?))
+        public StoreGroupExtended(string deliveryMenuMessage = default(string), string pickupMenuMessage = default(string), int? totalStores = default(int?), List<GroupedCoordinates> groupedCoordinates = default(List<GroupedCoordinates>), List<StoreHeader> storeHeaders = default(List<StoreHeader>), int? storeGroupId = default(int?), double? generalRating = default(double?), int? generalRatingCount = default(int?), string name = default(string), CurrencyEnum? currency = default(CurrencyEnum?))
         {
+            this.DeliveryMenuMessage = deliveryMenuMessage;
+            this.PickupMenuMessage = pickupMenuMessage;
             this.TotalStores = totalStores;
             this.GroupedCoordinates = groupedCoordinates;
             this.StoreHeaders = storeHeaders;
@@ -744,6 +748,20 @@ namespace Flipdish.Model
             this.Currency = currency;
         }
         
+        /// <summary>
+        /// Delivery Menu Message
+        /// </summary>
+        /// <value>Delivery Menu Message</value>
+        [DataMember(Name="DeliveryMenuMessage", EmitDefaultValue=false)]
+        public string DeliveryMenuMessage { get; set; }
+
+        /// <summary>
+        /// Pickup Menu Message
+        /// </summary>
+        /// <value>Pickup Menu Message</value>
+        [DataMember(Name="PickupMenuMessage", EmitDefaultValue=false)]
+        public string PickupMenuMessage { get; set; }
+
         /// <summary>
         /// Total Amount of Stores
         /// </summary>
@@ -802,6 +820,8 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StoreGroupExtended {\n");
+            sb.Append("  DeliveryMenuMessage: ").Append(DeliveryMenuMessage).Append("\n");
+            sb.Append("  PickupMenuMessage: ").Append(PickupMenuMessage).Append("\n");
             sb.Append("  TotalStores: ").Append(TotalStores).Append("\n");
             sb.Append("  GroupedCoordinates: ").Append(GroupedCoordinates).Append("\n");
             sb.Append("  StoreHeaders: ").Append(StoreHeaders).Append("\n");
@@ -844,6 +864,16 @@ namespace Flipdish.Model
                 return false;
 
             return 
+                (
+                    this.DeliveryMenuMessage == input.DeliveryMenuMessage ||
+                    (this.DeliveryMenuMessage != null &&
+                    this.DeliveryMenuMessage.Equals(input.DeliveryMenuMessage))
+                ) && 
+                (
+                    this.PickupMenuMessage == input.PickupMenuMessage ||
+                    (this.PickupMenuMessage != null &&
+                    this.PickupMenuMessage.Equals(input.PickupMenuMessage))
+                ) && 
                 (
                     this.TotalStores == input.TotalStores ||
                     (this.TotalStores != null &&
@@ -895,6 +925,10 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.DeliveryMenuMessage != null)
+                    hashCode = hashCode * 59 + this.DeliveryMenuMessage.GetHashCode();
+                if (this.PickupMenuMessage != null)
+                    hashCode = hashCode * 59 + this.PickupMenuMessage.GetHashCode();
                 if (this.TotalStores != null)
                     hashCode = hashCode * 59 + this.TotalStores.GetHashCode();
                 if (this.GroupedCoordinates != null)

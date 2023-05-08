@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**GetStoreGroups**](StoreGroupsApi.md#getstoregroups) | **GET** /api/v1.0/{appNameId}/storegroups | Returns a paginated list of Store Groups
 [**GetStoreGroupsExtended**](StoreGroupsApi.md#getstoregroupsextended) | **GET** /api/v1.0/{appNameId}/storegroups/extended | [PRIVATE API] Returns a paginated list of Extended Store Groups
 [**RemoveStoreGroup**](StoreGroupsApi.md#removestoregroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
+[**SetMenuMessagePerDeliveryType**](StoreGroupsApi.md#setmenumessageperdeliverytype) | **POST** /api/v1.0/storegroups/{storeGroupId}/{deliveryType}/MenuMessagePerDeliveryType | 
 [**UpdateStoreGroup**](StoreGroupsApi.md#updatestoregroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | Updates Store Group
 
 
@@ -333,6 +334,70 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="setmenumessageperdeliverytype"></a>
+# **SetMenuMessagePerDeliveryType**
+> void SetMenuMessagePerDeliveryType (int? storeGroupId, string deliveryType, string menuMessage)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SetMenuMessagePerDeliveryTypeExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoreGroupsApi();
+            var storeGroupId = 56;  // int? | 
+            var deliveryType = deliveryType_example;  // string | 
+            var menuMessage = menuMessage_example;  // string | 
+
+            try
+            {
+                apiInstance.SetMenuMessagePerDeliveryType(storeGroupId, deliveryType, menuMessage);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoreGroupsApi.SetMenuMessagePerDeliveryType: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeGroupId** | **int?**|  | 
+ **deliveryType** | **string**|  | 
+ **menuMessage** | **string**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
